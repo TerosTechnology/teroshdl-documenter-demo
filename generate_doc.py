@@ -64,7 +64,7 @@ dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 ################################################################################
 if (OUTPUT_TYPE == 'html'):
     html_index = '<h1>Open source projects:</h1>\n\n<ul>\n'
-    html_index += f"Created: {dt_string}\n"
+    html_index += f"Created: {dt_string}\n\n"
     repositories = read_repositories(CONFIG_PATH)
     for rep in repositories:
         name = rep
