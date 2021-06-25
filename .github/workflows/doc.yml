@@ -17,6 +17,7 @@ jobs:
 
     - name: '📓 Install TerosHDL'
       run: |
+        sudo pip3 install vunit_hdl
         git clone https://github.com/TerosTechnology/colibri.git
         cd colibri
         sudo npm install -g .
