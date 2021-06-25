@@ -1,31 +1,13 @@
-<p align="center">
-  <a title="Join the chat at https://gitter.im/TerosHDL/community" href="https://gitter.im/TerosHDL/community"><img src="https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef"></a><!--
-  -->
-</p>
-
-<p align="left">
-  <img src="teroshdl_logo.png" alt="TerosHDL logo">
-</p>
-
-Ismael Pérez Rojo: ismaelprojo@gmail.com\
-Carlos Alberto Ruiz Naranjo carlosruiznaranjo@gmail.com\
-Teros Technology: terostechnology@gmail.com
-
-# TerosHDL CLI examples
-
-**Check te example!:** https://terostechnology.github.io/teroshdl-documenter-demo/
-
-This is an example of how TerosHDL can generate your documentation project from the command line. So you can integrate it
-in your CI workflow.
-
-Feel free to do a PR with your favourite open source proyect: https://github.com/TerosTechnology/teroshdl-documenter-demo/blob/main/config.yml
-
-
-# I want to use TerosHDL
-
-Check the documentation: https://terostechnology.github.io/terosHDLdoc/
-
-It uses the TerosHDL CLI version: https://github.com/TerosTechnology/colibri
-
-Also you can use TerosHDL IDE: https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl
+# Open source projects:
+Project: [CordicHDL ](./CordicHDL_doc/README.md) ([go to Github project](https://github.com/qarlosalberto/cordicHDL.git))
+Project: [SERV ](./SERV_doc/README.md) ([go to Github project](https://github.com/olofk/serv))
+Project: [zx128-MiSTer ](./zx128-MiSTer_doc/README.md) ([go to Github project](https://github.com/Kyp069/zx128-MiSTer.git))
+Project: [NEORV32 ](./NEORV32_doc/README.md) ([go to Github project](https://github.com/stnolting/neorv32.git))
+Project: [VUnit ](./VUnit_doc/README.md) ([go to Github project](https://github.com/VUnit/vunit.git))
+Project: [opentitan ](./opentitan_doc/README.md) ([go to Github project](https://github.com/lowRISC/opentitan.git))
+Project: [Microwatt ](./Microwatt_doc/README.md) ([go to Github project](https://github.com/antonblanchard/microwatt.git))
+Project: [PULP ](./PULP_doc/README.md) ([go to Github project](https://github.com/pulp-platform/pulp.git))
+Project: [PoC-Library ](./PoC-Library_doc/README.md) ([go to Github project](https://github.com/VLSI-EDA/PoC.git))
+Project: [UVVM ](./UVVM_doc/README.md) ([go to Github project](https://github.com/UVVM/UVVM.git))
+Project: [OSVVM ](./OSVVM_doc/README.md) ([go to Github project](https://github.com/OSVVM/OSVVM.git))
 

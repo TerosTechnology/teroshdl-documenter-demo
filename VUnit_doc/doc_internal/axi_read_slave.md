@@ -1,0 +1,35 @@
+# Entity: axi_read_slave
+## Diagram
+![Diagram](axi_read_slave.svg "Diagram")
+## Generics
+| Generic name | Type        | Value | Description |
+| ------------ | ----------- | ----- | ----------- |
+| axi_slave    | axi_slave_t |       |             |
+## Ports
+| Port name | Direction | Type             | Description |
+| --------- | --------- | ---------------- | ----------- |
+| aclk      | in        | std_logic        |             |
+| arvalid   | in        | std_logic        |             |
+| arready   | out       | std_logic        |             |
+| arid      | in        | std_logic_vector |             |
+| araddr    | in        | std_logic_vector |             |
+| arlen     | in        | std_logic_vector |             |
+| arsize    | in        | std_logic_vector |             |
+| arburst   | in        | axi_burst_type_t |             |
+| rvalid    | out       | std_logic        |             |
+| rready    | in        | std_logic        |             |
+| rid       | out       | std_logic_vector |             |
+| rdata     | out       | std_logic_vector |             |
+| rresp     | out       | axi_resp_t       |             |
+| rlast     | out       | std_logic        |             |
+## Signals
+| Name        | Type    | Description |
+| ----------- | ------- | ----------- |
+| initialized | boolean |             |
+## Processes
+- control_process: _(  )_
+
+- axi_process: _(  )_
+
+- well_behaved_check: _(  )_
+

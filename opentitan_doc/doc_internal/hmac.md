@@ -1,0 +1,152 @@
+# Entity: hmac
+## Diagram
+![Diagram](hmac.svg "Diagram")
+## Description
+Copyright lowRISC contributors.
+ Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ SPDX-License-Identifier: Apache-2.0
+ HMAC-SHA256
+ 
+## Generics
+| Generic name | Type                  | Value     | Description |
+| ------------ | --------------------- | --------- | ----------- |
+| NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
+## Ports
+| Port name         | Direction | Type            | Description |
+| ----------------- | --------- | --------------- | ----------- |
+| clk_i             | input     |                 |             |
+| rst_ni            | input     |                 |             |
+| tl_i              | input     |                 |             |
+| tl_o              | output    |                 |             |
+| alert_rx_i        | input     | [NumAlerts-1:0] |             |
+| alert_tx_o        | output    | [NumAlerts-1:0] |             |
+| intr_hmac_done_o  | output    |                 |             |
+| intr_fifo_empty_o | output    |                 |             |
+| intr_hmac_err_o   | output    |                 |             |
+| idle_o            | output    |                 |             |
+## Signals
+| Name                    | Type                     | Description                                                                                                                                                                                                                                                                                                |
+| ----------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reg2hw                  | hmac_reg2hw_t            |                                                                                                                                                                                                                                                                                                            |
+| hw2reg                  | hmac_hw2reg_t            |                                                                                                                                                                                                                                                                                                            |
+| tl_win_h2d              | tlul_pkg::tl_h2d_t       |                                                                                                                                                                                                                                                                                                            |
+| tl_win_d2h              | tlul_pkg::tl_d2h_t       |                                                                                                                                                                                                                                                                                                            |
+| secret_key              | logic [255:0]            |                                                                                                                                                                                                                                                                                                            |
+| wipe_secret             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| wipe_v                  | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| fifo_rvalid             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_rready             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_rdata              | sha_fifo_t               |                                                                                                                                                                                                                                                                                                            |
+| fifo_wvalid             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_wready             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_wdata              | sha_fifo_t               |                                                                                                                                                                                                                                                                                                            |
+| fifo_full               | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_empty              | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_depth              | logic [4:0]              |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_req            | logic                    |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_gnt            | logic                    |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_we             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_wdata          | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_wmask          | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_rdata          | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_rvalid         | logic                    |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_rerror         | logic [1:0]              |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_wdata_endian   | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| msg_fifo_wmask_endian   | logic [31:0]             |                                                                                                                                                                                                                                                                                                            |
+| packer_ready            | logic                    |                                                                                                                                                                                                                                                                                                            |
+| packer_flush_done       | logic                    |                                                                                                                                                                                                                                                                                                            |
+| reg_fifo_wvalid         | logic                    |                                                                                                                                                                                                                                                                                                            |
+| reg_fifo_wdata          | sha_word_t               |                                                                                                                                                                                                                                                                                                            |
+| reg_fifo_wmask          | sha_word_t               |                                                                                                                                                                                                                                                                                                            |
+| hmac_fifo_wsel          | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hmac_fifo_wvalid        | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hmac_fifo_wdata_sel     | logic [2:0]              |                                                                                                                                                                                                                                                                                                            |
+| shaf_rvalid             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| shaf_rdata              | sha_fifo_t               |                                                                                                                                                                                                                                                                                                            |
+| shaf_rready             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| sha_en                  | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hmac_en                 | logic                    |                                                                                                                                                                                                                                                                                                            |
+| endian_swap             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| digest_swap             | logic                    |                                                                                                                                                                                                                                                                                                            |
+| reg_hash_start          | logic                    |                                                                                                                                                                                                                                                                                                            |
+| sha_hash_start          | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hash_start              | logic                    | Valid hash_start_signal                                                                                                                                                                                                                                                                                    |
+| reg_hash_process        | logic                    |                                                                                                                                                                                                                                                                                                            |
+| sha_hash_process        | logic                    |                                                                                                                                                                                                                                                                                                            |
+| reg_hash_done           | logic                    |                                                                                                                                                                                                                                                                                                            |
+| sha_hash_done           | logic                    |                                                                                                                                                                                                                                                                                                            |
+| message_length          | logic [63:0]             |                                                                                                                                                                                                                                                                                                            |
+| sha_message_length      | logic [63:0]             |                                                                                                                                                                                                                                                                                                            |
+| err_code                | err_code_e               |                                                                                                                                                                                                                                                                                                            |
+| err_valid               | logic                    |                                                                                                                                                                                                                                                                                                            |
+| digest                  | sha_word_t [7:0]         |                                                                                                                                                                                                                                                                                                            |
+| cfg_reg                 | hmac_reg2hw_cfg_reg_t    |                                                                                                                                                                                                                                                                                                            |
+| cfg_block               | logic                    | Prevent changing config                                                                                                                                                                                                                                                                                    |
+| msg_allowed             | logic                    | MSG_FIFO from software is allowed                                                                                                                                                                                                                                                                          |
+| hmac_core_idle          | logic                    |                                                                                                                                                                                                                                                                                                            |
+| sha_core_idle           | logic                    |                                                                                                                                                                                                                                                                                                            |
+| unused_cfg_qe           | logic [3:0]              |                                                                                                                                                                                                                                                                                                            |
+| fifo_empty_q            | logic                    |                                                                                                                                                                                                                                                                                                            |
+| fifo_empty_event        | logic                    |                                                                                                                                                                                                                                                                                                            |
+| event_intr              | logic [2:0]              |                                                                                                                                                                                                                                                                                                            |
+| reg_fifo_wentry         | sha_fifo_t               | FIFO control                                                                                                                                                                                                                                                                                               |
+| msg_write               | logic                    | TL-UL to MSG_FIFO byte write handling                                                                                                                                                                                                                                                                      |
+| wmask_ones              | logic [$clog2(32+1)-1:0] |                                                                                                                                                                                                                                                                                                            |
+| msg_push_sha_disabled   | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hash_start_sha_disabled | logic                    |                                                                                                                                                                                                                                                                                                            |
+| update_seckey_inprocess | logic                    |                                                                                                                                                                                                                                                                                                            |
+| hash_start_active       | logic                    | `reg_hash_start` set when hash already in active                                                                                                                                                                                                                                                           |
+| msg_push_not_allowed    | logic                    | Message is received when `hash_start` isn't set                                                                                                                                                                                                                                                            |
+| unused_wmask            | logic                    |                                                                                                                                                                                                                                                                                                            |
+| idle                    | logic                    | TBD this should be connected later Idle: AND condition of: - packer empty: Currently no way to guarantee the packer is empty. temporary, the logic uses packer output (reg_fifo_wvalid) - MSG_FIFO  --> fifo_rvalid - HMAC_CORE --> hmac_core_idle - SHA2_CORE --> sha_core_idle - Clean interrupt status  |
+| in_process              | logic                    | To pass FPV, this shouldn't add pragma translate_off even these two signals are used in Assertion only                                                                                                                                                                                                     |
+| initiated               | logic                    |                                                                                                                                                                                                                                                                                                            |
+| initiated               | in_process               |                                                                                                                                                                                                                                                                                                            |
+## Processes
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+Hold the configuration during the process
+
+**Description**
+Hold the configuration during the process
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+Open up the MSG_FIFO from the TL-UL port when it is ready
+
+**Description**
+Open up the MSG_FIFO from the TL-UL port when it is ready
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+- unnamed: _(  )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+Calculate written message
+
+**Description**
+Calculate written message
+
+- unnamed: _(  )_
+
+- unnamed: _(  )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
+
+## Instantiations
+- intr_hw_hmac_done: prim_intr_hw
+**Description**
+instantiate interrupt hardware primitive
+
+- intr_hw_fifo_empty: prim_intr_hw
+- intr_hw_hmac_err: prim_intr_hw
+- u_tlul_adapter: tlul_adapter_sram
+**Description**
+TL ADAPTER SRAM
+

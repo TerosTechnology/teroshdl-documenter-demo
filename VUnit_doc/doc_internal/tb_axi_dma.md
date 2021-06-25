@@ -1,0 +1,36 @@
+# Entity: tb_axi_dma
+## Diagram
+![Diagram](tb_axi_dma.svg "Diagram")
+## Generics
+| Generic name | Type   | Value | Description |
+| ------------ | ------ | ----- | ----------- |
+| runner_cfg   | string |       |             |
+## Signals
+| Name       | Type         | Description |
+| ---------- | ------------ | ----------- |
+| clk        | std_logic    |             |
+| axil_m2s   | axil_m2s_t   |             |
+| axil_s2m   | axil_s2m_t   |             |
+| axi_rd_m2s | axi_rd_m2s_t |             |
+| axi_rd_s2m | axi_rd_s2m_t |             |
+| axi_wr_m2s | axi_wr_m2s_t |             |
+| axi_wr_s2m | axi_wr_s2m_t |             |
+## Constants
+| Name             | Type         | Value                                                                                                                                                                           | Description |
+| ---------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| clk_period       | time         |  1 ns                                                                                                                                                                           |             |
+| axil_bus         | bus_master_t |  new_bus(data_length => 32,                                               address_length => 32,                                               logger => get_logger("axil_bus")) |             |
+| memory           | memory_t     |  new_memory                                                                                                                                                                     |             |
+| axi_rd_slave     | axi_slave_t  |  new_axi_slave(memory => memory,                                                        logger => get_logger("axi_rd_slave"))                                                   |             |
+| axi_wr_slave     | axi_slave_t  |  new_axi_slave(memory => memory,                                                        logger => get_logger("axi_wr_slave"))                                                   |             |
+| max_burst_length | natural      |  256                                                                                                                                                                            |             |
+| bytes_per_beat   | natural      |  axi_rd_s2m.r.data'length / 8                                                                                                                                                   |             |
+## Functions
+## Processes
+- main: _(  )_
+
+## Instantiations
+- dut: work.axi_dma
+- axi_lite_master_inst: vunit_lib.axi_lite_master
+- axi_read_slave_inst: vunit_lib.axi_read_slave
+- axi_write_slave_inst: vunit_lib.axi_write_slave
