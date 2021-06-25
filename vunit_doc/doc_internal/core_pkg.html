@@ -1,0 +1,80 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=core_pkg><h1 id="package-core_pkg">Package: core_pkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>setup <font id="function_arguments">(file_name : string)</font> <font id="function_return">return ()</font></li>
+<li>test_start <font id="function_arguments">(test_name : string)</font> <font id="function_return">return ()</font></li>
+<li>test_suite_done <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>stop <font id="function_arguments">(status : natural)</font> <font id="function_return">return ()</font></li>
+<li>core_failure <font id="function_arguments">(msg : string)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+<a href="https://github.com/TODO">@TODO</a> add core acceptance tests</li>
+<li>mock_core_failure <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>check_core_failure <font id="function_arguments">(msg : string := "")</font> <font id="function_return">return ()</font></li>
+<li>unmock_core_failure <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>check_and_unmock_core_failure <font id="function_arguments">(msg : string := "")</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

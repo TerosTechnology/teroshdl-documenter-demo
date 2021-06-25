@@ -1,0 +1,248 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=otbn_mac_bignum><h1 id="entity-otbn_mac_bignum">Entity: otbn_mac_bignum</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 885 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="265,0 280,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="460" height="130" fill="black" x="280" y="15"></rect><rect id="SvgjsRect1007" width="456" height="125" fill="#fdfd96" x="282" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="260" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="295" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="265" y1="30" x2="280" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="260" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="295" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="265" y1="50" x2="280" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="260" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   mac_bignum_operation_t </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="295" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   operation_i </tspan></text><line id="SvgjsLine1022" x1="265" y1="70" x2="280" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="260" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="295" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   mac_en_i </tspan></text><line id="SvgjsLine1027" x1="265" y1="90" x2="280" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="260" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [WLEN-1:0] </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="295" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   ispr_acc_wr_data_i </tspan></text><line id="SvgjsLine1032" x1="265" y1="110" x2="280" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="260" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="295" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   ispr_acc_wr_en_i </tspan></text><line id="SvgjsLine1037" x1="265" y1="130" x2="280" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="760" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   [WLEN-1:0] </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="725" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   operation_result_o </tspan></text><line id="SvgjsLine1042" x1="740" y1="30" x2="755" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="760" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   flags_t </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="725" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   operation_flags_o </tspan></text><line id="SvgjsLine1047" x1="740" y1="50" x2="755" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="760" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   flags_t </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="725" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   operation_flags_en_o </tspan></text><line id="SvgjsLine1052" x1="740" y1="70" x2="755" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="760" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   [WLEN-1:0] </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="725" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   ispr_acc_o </tspan></text><line id="SvgjsLine1057" x1="740" y1="90" x2="755" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0</p></div><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>operation_i</td>
+<td>input</td>
+<td>mac_bignum_operation_t</td>
+<td></td>
+</tr>
+<tr>
+<td>mac_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>operation_result_o</td>
+<td>output</td>
+<td>[WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>operation_flags_o</td>
+<td>output</td>
+<td>flags_t</td>
+<td></td>
+</tr>
+<tr>
+<td>operation_flags_en_o</td>
+<td>output</td>
+<td>flags_t</td>
+<td></td>
+</tr>
+<tr>
+<td>ispr_acc_o</td>
+<td>output</td>
+<td>[WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ispr_acc_wr_data_i</td>
+<td>input</td>
+<td>[WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ispr_acc_wr_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adder_op_a</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>adder_op_b</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>adder_result</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>adder_result_hw_is_zero</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mul_op_a</td>
+<td>logic [QWLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mul_op_b</td>
+<td>logic [QWLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mul_res</td>
+<td>logic [WLEN/2-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mul_res_shifted</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>acc</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>acc_d</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>acc_q</td>
+<td>logic [WLEN-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>acc_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QWLEN</td>
+<td>int unsigned</td>
+<td>WLEN / 4</td>
+<td>The MAC operates on quarter-words, QWLEN gives the number of bits in a quarter-word.</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>(  )</em><br />
+Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the<br />
+instruction (operand_[a|b]_qw_sel).</li>
+</ul>
+<p><strong>Description</strong><br />
+Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the<br />
+instruction (operand_[a|b]_qw_sel).</p>
+<ul>
+<li>unnamed: <em>(  )</em><br />
+Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount<br />
+supplied in the instruction (pre_acc_shift_imm).</li>
+</ul>
+<p><strong>Description</strong><br />
+Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount<br />
+supplied in the instruction (pre_acc_shift_imm).</p>
+<ul>
+<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></li>
+</ul><br><br><br><br><br><br>

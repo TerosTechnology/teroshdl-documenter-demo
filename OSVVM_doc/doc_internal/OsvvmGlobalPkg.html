@@ -1,0 +1,198 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=OsvvmGlobalPkg><h1 id="package-osvvmglobalpkg">Package: OsvvmGlobalPkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSVVM_DEFAULT_ALERT_PREFIX</td>
+<td>string</td>
+<td>"%% Alert"</td>
+<td>Defaults for String values</td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_LOG_PREFIX</td>
+<td>string</td>
+<td>"%% Log  "</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_WRITE_PREFIX</td>
+<td>string</td>
+<td>"%% "</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_DONE_NAME</td>
+<td>string</td>
+<td>"DONE"</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_PASS_NAME</td>
+<td>string</td>
+<td>"PASSED"</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_FAIL_NAME</td>
+<td>string</td>
+<td>"FAILED"</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_STRING_INIT_PARM_DETECT</td>
+<td>string</td>
+<td>NUL &amp; NUL &amp; NUL</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_STRING_USE_DEFAULT</td>
+<td>string</td>
+<td>NUL &amp; ""</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_WRITE_PASS_FAIL</td>
+<td>OsvvmOptionsType</td>
+<td>FALSE</td>
+<td>Coverage Settings</td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_WRITE_BIN_INFO</td>
+<td>OsvvmOptionsType</td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_WRITE_COUNT</td>
+<td>OsvvmOptionsType</td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td>OSVVM_DEFAULT_WRITE_ANY_ILLEGAL</td>
+<td>OsvvmOptionsType</td>
+<td>FALSE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OsvvmOptionsType</td>
+<td>(OPT_INIT_PARM_DETECT, OPT_USE_DEFAULT, DISABLED, FALSE, ENABLED, TRUE)</td>
+<td></td>
+</tr>
+<tr>
+<td>OptionsPType</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>IsEnabled <font id="function_arguments">(A : OsvvmOptionsType)</font> <font id="function_return">return boolean</font><br />
+<strong>Description</strong><br />
+Requires that TRUE is last and ENABLED is 2nd to last</li>
+<li>to_OsvvmOptionsType <font id="function_arguments">(A : boolean)</font> <font id="function_return">return OsvvmOptionsType</font></li>
+<li>SetOsvvmGlobalOptions <font id="function_arguments">(  
+WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;
+WriteBinInfo    : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;
+WriteCount      : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;
+WriteAnyIllegal : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;
+WritePrefix     : string := OSVVM_STRING_INIT_PARM_DETECT ;
+DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ;
+PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ;
+FailName        : string := OSVVM_STRING_INIT_PARM_DETECT
+)</font> <font id="function_return">return ()</font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : OsvvmOptionsType)</font> <font id="function_return">return OsvvmOptionsType</font><br />
+<strong>Description</strong><br />
+Accessor Functions</li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C, D : OsvvmOptionsType)</font> <font id="function_return">return OsvvmOptionsType</font></li>
+<li>IsOsvvmStringSet <font id="function_arguments">(A : string)</font> <font id="function_return">return boolean</font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B : string)</font> <font id="function_return">return string</font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : string)</font> <font id="function_return">return string</font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C, D : string)</font> <font id="function_return">return string</font></li>
+<li>OsvvmDeallocate <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,95 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=log_deprecated_pkg><h1 id="package-log_deprecated_pkg">Package: log_deprecated_pkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>logger_init <font id="function_arguments">(    variable logger : inout logger_t;
+default_src     :       string                  := "";
+file_name       :       string                  := "log.csv";
+display_format  :       deprecated_log_format_t := raw;
+file_format     :       deprecated_log_format_t := off;
+stop_level      :       log_level_t             := failure;
+separator       :       character               := ',';
+append          :       boolean                 := false)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong></li>
+<li>default_src sets the name of an uninitialized logger. Empty string names are not supported  and will be replaced with "anonymous<a unique number>". Changing logger  name of an already initialized logger is not allowed. In this case the  empty string is the only valid value.* Changing the separator and append parameters to non-default values is not  supported* The logger is configured with private display and file log handlers independent  of the predefined handlers used by default_logger</li>
+<li>logger_init <font id="function_arguments">(    default_src    : string                  := "";
+file_name      : string                  := "log.csv";
+display_format : deprecated_log_format_t := raw;
+file_format    : deprecated_log_format_t := off;
+stop_level     : log_level_t             := failure;
+separator      : character               := ',';
+append         : boolean                 := false)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This logger_init is used to reinitialize the default_logger and its predefineddisplay and file handlers</li>
+<li>verbose <font id="function_arguments">(logger : logger_t;                    msg : string;
+                line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+VERBOSE is alias for TRACE</li>
+<li>verbose <font id="function_arguments">(msg : string;                    line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

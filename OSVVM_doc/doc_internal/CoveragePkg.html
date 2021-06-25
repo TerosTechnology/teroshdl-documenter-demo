@@ -1,0 +1,427 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=CoveragePkg><h1 id="package-coveragepkg">Package: CoveragePkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MIN_NUM_BINS</td>
+<td>integer</td>
+<td>2**7</td>
+<td>power of 2</td>
+</tr>
+<tr>
+<td>ALL_RANGE</td>
+<td>RangeArrayType</td>
+<td>(1=&gt;(Integer'left, Integer'right))</td>
+<td></td>
+</tr>
+<tr>
+<td>COV_COUNT</td>
+<td>integer</td>
+<td>1</td>
+<td>CovBinBaseType.action values. Note that coverage counting depends on these values</td>
+</tr>
+<tr>
+<td>COV_IGNORE</td>
+<td>integer</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>COV_ILLEGAL</td>
+<td>integer</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>COV_OPT_INIT_PARM_DETECT</td>
+<td>CovOptionsType</td>
+<td>work.OsvvmGlobalPkg.OPT_INIT_PARM_DETECT</td>
+<td></td>
+</tr>
+<tr>
+<td>ALL_BIN</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; ALL_RANGE,  Action =&gt; COV_COUNT,   Count =&gt; 0, AtLeast =&gt; 1, Weight =&gt; 1 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>ALL_COUNT</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; ALL_RANGE,  Action =&gt; COV_COUNT,   Count =&gt; 0, AtLeast =&gt; 1, Weight =&gt; 1 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>ALL_ILLEGAL</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; ALL_RANGE,  Action =&gt; COV_ILLEGAL, Count =&gt; 0, AtLeast =&gt; 0, Weight =&gt; 0 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>ALL_IGNORE</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; ALL_RANGE,  Action =&gt; COV_IGNORE,  Count =&gt; 0, AtLeast =&gt; 0, Weight =&gt; 0 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>ZERO_BIN</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; (1=&gt;(0,0)), Action =&gt; COV_COUNT,   Count =&gt; 0, AtLeast =&gt; 1, Weight =&gt; 1 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>ONE_BIN</td>
+<td>CovBinType</td>
+<td>(0 =&gt; ( BinVal =&gt; (1=&gt;(1,1)), Action =&gt; COV_COUNT,   Count =&gt; 0, AtLeast =&gt; 1, Weight =&gt; 1 ))</td>
+<td></td>
+</tr>
+<tr>
+<td>NULL_BIN</td>
+<td>CovBinType(work.RandomPkg.NULL_RANGE_TYPE)</td>
+<td>(others =&gt; ( BinVal =&gt; ALL_RANGE,  Action =&gt; integer'high, Count =&gt; 0, AtLeast =&gt; integer'high, Weight =&gt; integer'high ))</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RangeType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RangeArrayType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovBinBaseType</td>
+<td></td>
+<td>Deprecated Used for easy manual entry.  Order: min, max, action Intentionally did not use a record to allow other input formats in the future with VHDL-2008 unconstrained arrays of unconstrained elements  type CovBinManualType is array (natural range &lt;&gt;) of integer_vector(0 to 2) ;</td>
+</tr>
+<tr>
+<td>CovBinType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NextPointModeType</td>
+<td>(RANDOM, INCREMENT, MODE_MINIMUM)</td>
+<td></td>
+</tr>
+<tr>
+<td>CountModeType</td>
+<td>(COUNT_FIRST, COUNT_ALL)</td>
+<td></td>
+</tr>
+<tr>
+<td>IllegalModeType</td>
+<td>(ILLEGAL_ON, ILLEGAL_FAILURE, ILLEGAL_OFF)</td>
+<td></td>
+</tr>
+<tr>
+<td>WeightModeType</td>
+<td>(AT_LEAST, WEIGHT, REMAIN, REMAIN_EXP, REMAIN_SCALED, REMAIN_WEIGHT )</td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix2BaseType</td>
+<td></td>
+<td>In VHDL-2008 CovMatrix?BaseType and CovMatrix?Type will be subsumed by CovBinBaseType and CovBinType with RangeArrayType as an unconstrained array.</td>
+</tr>
+<tr>
+<td>CovMatrix2Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix3BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix3Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix4BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix4Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix5BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix5Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix6BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix6Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix7BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix7Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix8BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix8Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix9BaseType</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovMatrix9Type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CovPType</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li><p>write <font id="function_arguments">( file f :  text ;  BinVal : RangeArrayType )</font> <font id="function_return">return ()</font></p></li>
+<li><p>write <font id="function_arguments">( variable buf : inout line ; constant BinVal : in RangeArrayType)</font> <font id="function_return">return ()</font></p></li>
+<li><p>ToVendorCovBinVal <font id="function_arguments">(BinVal : RangeArrayType)</font> <font id="function_return">return VendorCovRangeArrayType</font><br />
+<strong>Description</strong><br />
+VendorCov Conversion for Vendor supported functional coverage modeling</p></li>
+<li><p>ToMinPoint <font id="function_arguments">(A : RangeArrayType)</font> <font id="function_return">return integer</font></p></li>
+<li><p>ToMinPoint <font id="function_arguments">(A : RangeArrayType)</font> <font id="function_return">return integer_vector</font></p></li>
+<li><p>ToRandPoint <font id="function_arguments">(<br />
+BinVal to Random Point<br />
+better as a function, however, inout not supported on functions</p>
+<p>variable RV       : inout RandomPType ;<br />
+constant BinVal   : in    RangeArrayType ;<br />
+variable result   : out   integer<br />
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>ToRandPoint <font id="function_arguments">(<br />
+BinVal to Random Point</p>
+<p>variable RV       : inout RandomPType ;<br />
+constant BinVal   : in    RangeArrayType ;<br />
+variable result   : out   integer_vector<br />
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>CompareBins <font id="function_arguments">(</p>
+<p>variable Bin1       : inout CovPType ;<br />
+variable Bin2       : inout CovPType ;<br />
+variable ErrorCount : inout integer<br />
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Experimental.  Intended primarily for development.</p></li>
+<li><p>CompareBins <font id="function_arguments">(</p>
+<p>variable Bin1       : inout CovPType ;<br />
+variable Bin2       : inout CovPType <br />
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Experimental.  Intended primarily for development.</p></li>
+<li><p>GenBin <font id="function_arguments">(</p>
+<p>AtLeast       : integer ;<br />
+Weight        : integer ;<br />
+Min, Max      : integer ;<br />
+NumBin        : integer<br />
+)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">(AtLeast : integer ;  Min, Max, NumBin : integer )</font> <font id="function_return">return CovBinType</font><br />
+<strong>Description</strong><br />
+Each item in range in a separate CovBin</p></li>
+<li><p>GenBin <font id="function_arguments">(Min, Max, NumBin : integer )</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">(Min, Max : integer)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">(A : integer)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">(</p>
+<p>AtLeast       : integer ;<br />
+Weight        : integer ;<br />
+A             : integer_vector<br />
+)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">( AtLeast : integer ;  A : integer_vector )</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenBin <font id="function_arguments">( A : integer_vector )</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>IllegalBin <font id="function_arguments">( Min, Max, NumBin : integer )</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>IllegalBin <font id="function_arguments">( Min, Max : integer )</font> <font id="function_return">return CovBinType</font><br />
+<strong>Description</strong><br />
+All items in range in a single CovBin</p></li>
+<li><p>IllegalBin <font id="function_arguments">( A : integer )</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>IgnoreBin <font id="function_arguments">(Min, Max, NumBin : integer)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>IgnoreBin <font id="function_arguments">(Min, Max : integer)</font> <font id="function_return">return CovBinType</font><br />
+<strong>Description</strong><br />
+All items in range in a single CovBin</p></li>
+<li><p>IgnoreBin <font id="function_arguments">(A : integer)</font> <font id="function_return">return CovBinType</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   2<br />
+Cross existing bins<br />
+Use AddCross for adding values directly to coverage database<br />
+Use GenCross for constants</p>
+<p>AtLeast     : integer ;<br />
+Weight      : integer ;<br />
+Bin1, Bin2  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix2Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(AtLeast : integer ; Bin1, Bin2 : CovBinType)</font> <font id="function_return">return CovMatrix2Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(Bin1, Bin2 : CovBinType)</font> <font id="function_return">return CovMatrix2Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   3</p>
+<p>AtLeast           : integer ;<br />
+Weight            : integer ;<br />
+Bin1, Bin2, Bin3  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix3Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3 : CovBinType )</font> <font id="function_return">return CovMatrix3Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3 : CovBinType )</font> <font id="function_return">return CovMatrix3Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   4</p>
+<p>AtLeast                 : integer ;<br />
+Weight                  : integer ;<br />
+Bin1, Bin2, Bin3, Bin4  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix4Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4 : CovBinType )</font> <font id="function_return">return CovMatrix4Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4 : CovBinType )</font> <font id="function_return">return CovMatrix4Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   5</p>
+<p>AtLeast                       : integer ;<br />
+Weight                        : integer ;<br />
+Bin1, Bin2, Bin3, Bin4, Bin5  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix5Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4, Bin5 : CovBinType )</font> <font id="function_return">return CovMatrix5Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4, Bin5 : CovBinType )</font> <font id="function_return">return CovMatrix5Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   6</p>
+<p>AtLeast                             : integer ;<br />
+Weight                              : integer ;<br />
+Bin1, Bin2, Bin3, Bin4, Bin5, Bin6  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix6Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4, Bin5, Bin6 : CovBinType )</font> <font id="function_return">return CovMatrix6Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4, Bin5, Bin6 : CovBinType )</font> <font id="function_return">return CovMatrix6Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   7</p>
+<p>AtLeast                                   : integer ;<br />
+Weight                                    : integer ;<br />
+Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix7Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7 : CovBinType )</font> <font id="function_return">return CovMatrix7Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7 : CovBinType )</font> <font id="function_return">return CovMatrix7Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   8</p>
+<p>AtLeast                                         : integer ;<br />
+Weight                                          : integer ;<br />
+Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix8Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8 : CovBinType )</font> <font id="function_return">return CovMatrix8Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8 : CovBinType )</font> <font id="function_return">return CovMatrix8Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">(   9</p>
+<p>AtLeast                                               : integer ;<br />
+Weight                                                : integer ;<br />
+Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8, Bin9  : CovBinType<br />
+)</font> <font id="function_return">return CovMatrix9Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( AtLeast : integer ; Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8, Bin9 : CovBinType )</font> <font id="function_return">return CovMatrix9Type</font></p></li>
+<li><p>GenCross <font id="function_arguments">( Bin1, Bin2, Bin3, Bin4, Bin5, Bin6, Bin7, Bin8, Bin9 : CovBinType )</font> <font id="function_return">return CovMatrix9Type</font></p></li>
+<li><p>to_integer <font id="function_arguments">( B : boolean )</font> <font id="function_return">return integer</font><br />
+<strong>Description</strong><br />
+Utilities.  Remove if added to std.standard</p></li>
+<li><p>to_boolean <font id="function_arguments">( I : integer )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>to_integer <font id="function_arguments">( SL : std_logic )</font> <font id="function_return">return integer</font></p></li>
+<li><p>to_std_logic <font id="function_arguments">( I : integer )</font> <font id="function_return">return std_logic</font></p></li>
+<li><p>to_integer_vector <font id="function_arguments">( BV : boolean_vector )</font> <font id="function_return">return integer_vector</font></p></li>
+<li><p>to_boolean_vector <font id="function_arguments">( IV : integer_vector )</font> <font id="function_return">return boolean_vector</font></p></li>
+<li><p>to_integer_vector <font id="function_arguments">( SLV : std_logic_vector )</font> <font id="function_return">return integer_vector</font></p></li>
+<li><p>to_std_logic_vector <font id="function_arguments">( IV : integer_vector )</font> <font id="function_return">return std_logic_vector</font></p></li>
+</ul><br><br><br><br><br><br>

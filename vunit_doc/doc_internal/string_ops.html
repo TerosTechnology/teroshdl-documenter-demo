@@ -1,0 +1,139 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=string_ops><h1 id="package-string_ops">Package: string_ops</h1></a><h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>line_vector</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lines_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>count <font id="function_arguments">(    constant s : string;
+constant substring : string;
+constant start : natural := 0;
+constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
+<li>count <font id="function_arguments">(    constant s : string;
+constant char : character := ' ';
+constant start : natural := 0;
+constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
+<li>find <font id="function_arguments">(    constant s : string;
+constant substring : string;
+constant start : natural := 0;
+constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
+<li>find <font id="function_arguments">(    constant s : string;
+constant char : character;
+constant start : natural := 0;
+constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
+<li>strip <font id="function_arguments">(    str : string;
+chars : string := " ")</font> <font id="function_return">return string</font></li>
+<li>rstrip <font id="function_arguments">(    str : string;
+chars : string := " ")</font> <font id="function_return">return string</font></li>
+<li>lstrip <font id="function_arguments">(    str : string;
+chars : string := " ")</font> <font id="function_return">return string</font></li>
+<li>image <font id="function_arguments">(    constant data : std_logic_vector)</font> <font id="function_return">return string</font></li>
+<li>hex_image <font id="function_arguments">(    constant data : std_logic_vector)</font> <font id="function_return">return string</font></li>
+<li>replace <font id="function_arguments">(    constant s      : string;
+constant old_segment : character;
+constant new_segment : character;
+constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
+<li>replace <font id="function_arguments">(    constant s      : string;
+constant old_segment : string;
+constant new_segment : character;
+constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
+<li>replace <font id="function_arguments">(    constant s      : string;
+constant old_segment : character;
+constant new_segment : string;
+constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
+<li>replace <font id="function_arguments">(    constant s      : string;
+constant old_segment : string;
+constant new_segment : string;
+constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
+<li>title <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
+<li>upper <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
+<li>lower <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
+<li>to_integer_string <font id="function_arguments">(    constant value : unsigned)</font> <font id="function_return">return string</font></li>
+<li>to_integer_string <font id="function_arguments">(    constant value : signed)</font> <font id="function_return">return string</font></li>
+<li>to_integer_string <font id="function_arguments">(    constant value : std_logic_vector)</font> <font id="function_return">return string</font></li>
+<li>to_nibble_string <font id="function_arguments">(    constant value : unsigned)</font> <font id="function_return">return string</font></li>
+<li>to_nibble_string <font id="function_arguments">(    constant value : std_logic_vector)</font> <font id="function_return">return string</font></li>
+<li>to_nibble_string <font id="function_arguments">(    constant value : signed)</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,324 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=uart_core><h1 id="entity-uart_core">Entity: uart_core</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 568.3333333333333 190"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="135,0 150,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="283.3333333333333" height="90" fill="black" x="150" y="0"></rect><rect id="SvgjsRect1007" width="279.3333333333333" height="85" fill="#bdecb6" x="152" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="130" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="165" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   GC_START_BIT </tspan></text><line id="SvgjsLine1012" x1="135" y1="15" x2="150" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="130" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="165" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   GC_STOP_BIT </tspan></text><line id="SvgjsLine1017" x1="135" y1="35" x2="150" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="130" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="165" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   GC_CLOCKS_PER_BIT </tspan></text><line id="SvgjsLine1022" x1="135" y1="55" x2="150" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="130" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="165" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   GC_MIN_EQUAL_SAMPLES_PER_BIT </tspan></text><line id="SvgjsLine1027" x1="135" y1="75" x2="150" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1028" width="283.3333333333333" height="90" fill="black" x="150" y="95"></rect><rect id="SvgjsRect1029" width="279.3333333333333" height="85" fill="#fdfd96" x="152" y="97"></rect><text id="SvgjsText1030" font-family="Helvetica" x="130" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="165" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1034" x1="135" y1="110" x2="150" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="130" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="165" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   arst </tspan></text><line id="SvgjsLine1039" x1="135" y1="130" x2="150" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="130" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   t_p2c </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="165" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   p2c </tspan></text><line id="SvgjsLine1044" x1="135" y1="150" x2="150" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="130" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="165" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   rx_a </tspan></text><line id="SvgjsLine1049" x1="135" y1="170" x2="150" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="453.3333333333333" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="453.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   t_c2p </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="418.3333333333333" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="418.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   c2p </tspan></text><line id="SvgjsLine1054" x1="433.3333333333333" y1="110" x2="448.3333333333333" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="453.3333333333333" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="453.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="418.3333333333333" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="418.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   tx </tspan></text><line id="SvgjsLine1059" x1="433.3333333333333" y1="130" x2="448.3333333333333" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright 2020 Bitvis Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Note : Any functionality not explicitly described in the documentation is subject to change at any time Description   : This is NOT an example of how to implement a UART core. This is just a simple test vehicle that can be used to demonstrate the functionality of the UVVM VVC Framework. See library quick reference (under 'doc') and README-file(s)</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GC_START_BIT</td>
+<td>std_logic</td>
+<td>'0'</td>
+<td></td>
+</tr>
+<tr>
+<td>GC_STOP_BIT</td>
+<td>std_logic</td>
+<td>'1'</td>
+<td></td>
+</tr>
+<tr>
+<td>GC_CLOCKS_PER_BIT</td>
+<td>integer</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>GC_MIN_EQUAL_SAMPLES_PER_BIT</td>
+<td>integer</td>
+<td>15</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td>DSP interface and general control signals</td>
+</tr>
+<tr>
+<td>arst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>p2c</td>
+<td>in</td>
+<td>t_p2c</td>
+<td>PIF-core interface</td>
+</tr>
+<tr>
+<td>c2p</td>
+<td>out</td>
+<td>t_c2p</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_a</td>
+<td>in</td>
+<td>std_logic</td>
+<td>Interrupt related signals</td>
+</tr>
+<tr>
+<td>tx</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tx_data</td>
+<td>t_slv_array</td>
+<td>tx signals</td>
+</tr>
+<tr>
+<td>tx_buffer</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_data_valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_ready</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_active</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_clk_counter</td>
+<td>unsigned(f_log2(GC_CLOCKS_PER_BIT)-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_bit_counter</td>
+<td>unsigned(3 downto 0)</td>
+<td>count through the bits (12 total)</td>
+</tr>
+<tr>
+<td>rx_buffer</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td>receive signals</td>
+</tr>
+<tr>
+<td>rx_active</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_clk_counter</td>
+<td>unsigned(f_log2(GC_CLOCKS_PER_BIT)-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_bit_counter</td>
+<td>unsigned(3 downto 0)</td>
+<td>count through the bits (12 total)</td>
+</tr>
+<tr>
+<td>rx_bit_samples</td>
+<td>std_logic_vector(GC_CLOCKS_PER_BIT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_data</td>
+<td>t_slv_array</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_data_valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_data_full</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_s</td>
+<td>std_logic_vector(1 downto 0)</td>
+<td>synchronized serial data input</td>
+</tr>
+<tr>
+<td>rx_just_active</td>
+<td>boolean</td>
+<td>helper signal when we start receiving</td>
+</tr>
+<tr>
+<td>parity_err</td>
+<td>std_logic</td>
+<td>parity error detected</td>
+</tr>
+<tr>
+<td>stop_err</td>
+<td>std_logic</td>
+<td>stop error detected</td>
+</tr>
+<tr>
+<td>transient_err</td>
+<td>std_logic</td>
+<td>data value is transient</td>
+</tr>
+<tr>
+<td>c2p_i</td>
+<td>t_c2p</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_slv_array</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>p_rx_s: <em>( clk, arst )</em><br />
+synchronize rx input (async)</li>
+</ul>
+<p><strong>Description</strong><br />
+synchronize rx input (async)</p>
+<ul>
+<li>uart_tx: <em>( clk, arst )</em><br />
+Transmit process; drives tx serial output.<br />
+Stores 4 pending bytes in the tx_data array, and the byte currently<br />
+being output in the tx_buffer register.<br />
+Tx_buffer is filled with data from tx_data(0) if there is valid data<br />
+available (tx_data_valid is active), and no other byte is currently<br />
+being output (tx_active is inactive).<br />
+Data received via SBI is inserted in tx_data at the index pointed to<br />
+by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is<br />
+received via SBI, and decremented when a new byte is loaded into<br />
+tx_buffer.</li>
+</ul>
+<p><strong>Description</strong><br />
+Transmit process; drives tx serial output.<br />
+Stores 4 pending bytes in the tx_data array, and the byte currently<br />
+being output in the tx_buffer register.<br />
+Tx_buffer is filled with data from tx_data(0) if there is valid data<br />
+available (tx_data_valid is active), and no other byte is currently<br />
+being output (tx_active is inactive).<br />
+Data received via SBI is inserted in tx_data at the index pointed to<br />
+by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is<br />
+received via SBI, and decremented when a new byte is loaded into<br />
+tx_buffer.</p>
+<ul>
+<li>uart_rx: <em>( clk, arst )</em><br />
+Receive process</li>
+</ul>
+<p><strong>Description</strong><br />
+Receive process</p>
+<ul>
+<li>p_busy_assert: <em>( clk )</em></li>
+</ul><br><br><br><br><br><br>

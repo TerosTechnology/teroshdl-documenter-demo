@@ -1,0 +1,303 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=neorv32_trng><h1 id="entity-neorv32_trng">Entity: neorv32_trng</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 905 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="345,0 360,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="200" height="110" fill="black" x="360" y="15"></rect><rect id="SvgjsRect1007" width="196" height="105" fill="#fdfd96" x="362" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="340" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="375" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="345" y1="30" x2="360" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="340" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic_vector(31 downto 0) </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="375" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   addr_i </tspan></text><line id="SvgjsLine1017" x1="345" y1="50" x2="360" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="340" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="375" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   rden_i </tspan></text><line id="SvgjsLine1022" x1="345" y1="70" x2="360" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="340" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="375" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   wren_i </tspan></text><line id="SvgjsLine1027" x1="345" y1="90" x2="360" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="340" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic_vector(31 downto 0) </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="375" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   data_i </tspan></text><line id="SvgjsLine1032" x1="345" y1="110" x2="360" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="580" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="580" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic_vector(31 downto 0) </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="545" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   data_o </tspan></text><line id="SvgjsLine1037" x1="560" y1="30" x2="575" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="580" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="580" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="545" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ack_o </tspan></text><line id="SvgjsLine1042" x1="560" y1="50" x2="575" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>################################################################################################# # << NEORV32 - True Random Number Generator (TRNG) >&gt;                                           # # <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>* # # This unit implements a <em>true</em> random number generator which uses several ring oscillators as  # # entropy source. The outputs of all chains are XORed and de-biased using a John von Neumann    # # randomness extractor. The de-biased signal is further processed by a simple LFSR for improved # # whitening.                                                                                    # # <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>* # # BSD 3-Clause License                                                                          # #                                                                                               # # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     # #                                                                                               # # Redistribution and use in source and binary forms, with or without modification, are          # # permitted provided that the following conditions are met:                                     # #                                                                                               # # 1. Redistributions of source code must retain the above copyright notice, this list of        # #    conditions and the following disclaimer.                                                   # #                                                                                               # # 2. Redistributions in binary form must reproduce the above copyright notice, this list of     # #    conditions and the following disclaimer in the documentation and/or other materials        # #    provided with the distribution.                                                            # #                                                                                               # # 3. Neither the name of the copyright holder nor the names of its contributors may be used to  # #    endorse or promote products derived from this software without specific prior written      # #    permission.                                                                                # #                                                                                               # # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS   # # OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF               # # MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE    # # COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,     # # EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE # # GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED    # # AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING     # # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED  # # OF THE POSSIBILITY OF SUCH DAMAGE.                                                            # # <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>* # # The NEORV32 Processor - <a href="https://github.com/stnolting/neorv32">https://github.com/stnolting/neorv32</a>              (c) Stephan Nolting # #################################################################################################</p></div><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>global clock line</td>
+</tr>
+<tr>
+<td>addr_i</td>
+<td>in</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>address</td>
+</tr>
+<tr>
+<td>rden_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>read enable</td>
+</tr>
+<tr>
+<td>wren_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>write enable</td>
+</tr>
+<tr>
+<td>data_i</td>
+<td>in</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>data in</td>
+</tr>
+<tr>
+<td>data_o</td>
+<td>out</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>data out</td>
+</tr>
+<tr>
+<td>ack_o</td>
+<td>out</td>
+<td>std_ulogic</td>
+<td>transfer acknowledge</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>acc_en</td>
+<td>std_ulogic</td>
+<td>module access enable</td>
+</tr>
+<tr>
+<td>wren</td>
+<td>std_ulogic</td>
+<td>full word write enable</td>
+</tr>
+<tr>
+<td>rden</td>
+<td>std_ulogic</td>
+<td>read enable</td>
+</tr>
+<tr>
+<td>osc_array_en_in</td>
+<td>std_ulogic_vector(num_roscs_c-1 downto 0)</td>
+<td>ring-oscillator array --</td>
+</tr>
+<tr>
+<td>osc_array_en_out</td>
+<td>std_ulogic_vector(num_roscs_c-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>osc_array_data</td>
+<td>std_ulogic_vector(num_roscs_c-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>debiasing</td>
+<td>debiasing_t</td>
+<td></td>
+</tr>
+<tr>
+<td>processing</td>
+<td>processing_t</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num_roscs_c</td>
+<td>natural</td>
+<td>4</td>
+<td>total number of ring oscillators</td>
+</tr>
+<tr>
+<td>num_inv_start_c</td>
+<td>natural</td>
+<td>5</td>
+<td>number of inverters in FIRST ring oscillator (has to be odd)</td>
+</tr>
+<tr>
+<td>num_inv_inc_c</td>
+<td>natural</td>
+<td>2</td>
+<td>number of inverters increment for each next ring oscillator (has to be even)</td>
+</tr>
+<tr>
+<td>lfsr_en_c</td>
+<td>boolean</td>
+<td>true</td>
+<td>use LFSR-based post-processing</td>
+</tr>
+<tr>
+<td>lfsr_taps_c</td>
+<td>std_ulogic_vector(7 downto 0)</td>
+<td>"10111000"</td>
+<td>Fibonacci post-processing LFSR feedback taps</td>
+</tr>
+<tr>
+<td>ctrl_data_lsb_c</td>
+<td>natural</td>
+<td>0</td>
+<td>r/-: Random data byte LSB</td>
+</tr>
+<tr>
+<td>ctrl_data_msb_c</td>
+<td>natural</td>
+<td>7</td>
+<td>r/-: Random data byte MSB</td>
+</tr>
+<tr>
+<td>ctrl_en_c</td>
+<td>natural</td>
+<td>30</td>
+<td>r/w: TRNG enable</td>
+</tr>
+<tr>
+<td>ctrl_valid_c</td>
+<td>natural</td>
+<td>31</td>
+<td>r/-: Output data valid</td>
+</tr>
+<tr>
+<td>hi_abb_c</td>
+<td>natural</td>
+<td>index_size_f(io_size_c)-1</td>
+<td>high address boundary bit</td>
+</tr>
+<tr>
+<td>lo_abb_c</td>
+<td>natural</td>
+<td>index_size_f(trng_size_c)</td>
+<td>low address boundary bit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>debiasing_t</td>
+<td></td>
+<td>von-Neumann de-biasing --</td>
+</tr>
+<tr>
+<td>processing_t</td>
+<td></td>
+<td>(post-)processing core --</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>rw_access: <em>( clk_i )</em></li>
+</ul>
+<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
+<p><strong>Description</strong></p>
+<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
+<ul>
+<li>array_intercon: <em>( processing.enable, osc_array_en_out )</em><br />
+RO enable chain --</li>
+</ul>
+<p><strong>Description</strong><br />
+RO enable chain --</p>
+<ul>
+<li>neumann_debiasing_sync: <em>( clk_i )</em></li>
+</ul>
+<h2 id="john-von-neumann-de-biasing-------------------------------------------------------------">John von Neumann De-Biasing ------------------------------------------------------------</h2>
+<p><strong>Description</strong></p>
+<h2 id="john-von-neumann-de-biasing--------------------------------------------------------------1">John von Neumann De-Biasing ------------------------------------------------------------</h2>
+<ul>
+<li>neumann_debiasing_comb: <em>( debiasing )</em><br />
+Edge detector --</li>
+</ul>
+<p><strong>Description</strong><br />
+Edge detector --</p>
+<ul>
+<li>processing_core: <em>( clk_i )</em></li>
+</ul>
+<h2 id="processing-core-------------------------------------------------------------------------">Processing Core ------------------------------------------------------------------------</h2>
+<p><strong>Description</strong></p>
+<h2 id="processing-core--------------------------------------------------------------------------1">Processing Core ------------------------------------------------------------------------</h2><br><br><br><br><br><br>

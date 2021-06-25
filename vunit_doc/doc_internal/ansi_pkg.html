@@ -1,0 +1,117 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=ansi_pkg><h1 id="package-ansi_pkg">Package: ansi_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no_colors</td>
+<td>ansi_colors_t</td>
+<td>(fg =&gt; no_color, bg =&gt; no_color, style =&gt; normal)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ansi_color_t</td>
+<td>(     no_color,      black,     red,     green,     yellow,     blue,     magenta,     cyan,     white,       Non standard foregrounds     lightblack,     lightred,     lightgreen,     lightyellow,     lightblue,     lightmagenta,     lightcyan,     lightwhite     )</td>
+<td></td>
+</tr>
+<tr>
+<td>ansi_style_t</td>
+<td>(     dim,     normal,     bright     )</td>
+<td></td>
+</tr>
+<tr>
+<td>ansi_colors_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>disable_colors <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>enable_colors <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>ansi_color_demo <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

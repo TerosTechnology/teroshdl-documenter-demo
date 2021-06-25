@@ -1,0 +1,132 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=memory_bfm_pkg><h1 id="package-memory_bfm_pkg">Package: memory_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>write_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("write")</td>
+<td></td>
+</tr>
+<tr>
+<td>write_with_acknowledge_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("write with acknowledge")</td>
+<td></td>
+</tr>
+<tr>
+<td>read_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("read")</td>
+<td></td>
+</tr>
+<tr>
+<td>read_reply_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("read reply")</td>
+<td></td>
+</tr>
+<tr>
+<td>actor</td>
+<td>actor_t</td>
+<td>new_actor("memory BFM")</td>
+<td></td>
+</tr>
+<tr>
+<td>memory_bfm_logger</td>
+<td>logger_t</td>
+<td>get_logger("memory BFM")</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>write <font id="function_arguments">(    signal net       : inout network_t;
+constant address : in    unsigned(7 downto 0);
+constant data    : in    std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
+<li>blocking_write <font id="function_arguments">(    signal net       : inout network_t;
+constant address : in    unsigned(7 downto 0);
+constant data    : in    std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
+<li>read <font id="function_arguments">(    signal net       : inout network_t;
+constant address : in    unsigned(7 downto 0);
+variable future  : out   msg_t)</font> <font id="function_return">return ()</font></li>
+<li>get <font id="function_arguments">(    signal net      : inout network_t;
+variable future : inout msg_t;
+variable data   : out   std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
+<li>read <font id="function_arguments">(    signal net       : inout network_t;
+constant address : in    unsigned(7 downto 0);
+variable data    : out   std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

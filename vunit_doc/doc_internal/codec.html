@@ -1,0 +1,125 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=codec_pkg><h1 id="package-codec_pkg">Package: codec_pkg</h1></a><h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>range_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>encode <font id="function_arguments">(    constant data : integer)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return integer</font></li>
+<li>encode <font id="function_arguments">(    constant data : real)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return real</font></li>
+<li>encode <font id="function_arguments">(    constant data : time)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return time</font></li>
+<li>encode <font id="function_arguments">(    constant data : boolean)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return boolean</font></li>
+<li>encode <font id="function_arguments">(    constant data : bit)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return bit</font></li>
+<li>encode <font id="function_arguments">(    constant data : std_ulogic)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return std_ulogic</font></li>
+<li>encode <font id="function_arguments">(    constant data : severity_level)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return severity_level</font></li>
+<li>encode <font id="function_arguments">(    constant data : file_open_status)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return file_open_status</font></li>
+<li>encode <font id="function_arguments">(    constant data : file_open_kind)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return file_open_kind</font></li>
+<li>encode <font id="function_arguments">(    constant data : character)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return character</font></li>
+<li>encode <font id="function_arguments">(    constant data : string)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return string</font></li>
+<li>encode <font id="function_arguments">(    constant data : bit_vector)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return bit_vector</font></li>
+<li>encode <font id="function_arguments">(    constant data : std_ulogic_vector)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return std_ulogic_vector</font></li>
+<li>encode <font id="function_arguments">(    constant data : complex)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return complex</font></li>
+<li>encode <font id="function_arguments">(    constant data : complex_polar)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return complex_polar</font></li>
+<li>encode <font id="function_arguments">(    constant data : ieee.numeric_bit.unsigned)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return ieee.numeric_bit.unsigned</font></li>
+<li>encode <font id="function_arguments">(    constant data : ieee.numeric_bit.signed)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return ieee.numeric_bit.signed</font></li>
+<li>encode <font id="function_arguments">(    constant data : ieee.numeric_std.unsigned)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return ieee.numeric_std.unsigned</font></li>
+<li>encode <font id="function_arguments">(    constant data : ieee.numeric_std.signed)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return ieee.numeric_std.signed</font></li>
+<li>get_range <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return range_t</font></li>
+<li>encode <font id="function_arguments">(    constant data : std_ulogic_array)</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

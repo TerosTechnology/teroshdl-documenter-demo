@@ -1,0 +1,201 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axil_pkg><h1 id="package-axil_pkg">Package: axil_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>axil_addr_m2s_init</td>
+<td>axil_addr_m2s_t</td>
+<td>(valid =&gt; '0',                                                     addr =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_addr_s2m_init</td>
+<td>axil_addr_s2m_t</td>
+<td>(ready =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_read_m2s_init</td>
+<td>axil_read_m2s_t</td>
+<td>(ready =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_read_s2m_init</td>
+<td>axil_read_s2m_t</td>
+<td>(valid =&gt; '0',                                                     data =&gt; (others =&gt; '0'),                                                     resp =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_write_m2s_init</td>
+<td>axil_write_m2s_t</td>
+<td>(valid =&gt; '0',                                                       data =&gt; (others =&gt; '0'),                                                       strb =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_write_s2m_init</td>
+<td>axil_write_s2m_t</td>
+<td>(ready =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_wresp_m2s_init</td>
+<td>axil_wresp_m2s_t</td>
+<td>(ready =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_wresp_s2m_init</td>
+<td>axil_wresp_s2m_t</td>
+<td>(valid =&gt; '0',                                                       resp =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_m2s_init</td>
+<td>axil_m2s_t</td>
+<td>(ar =&gt; axil_addr_m2s_init,                                           aw =&gt; axil_addr_m2s_init,                                           r =&gt; axil_read_m2s_init,                                           w =&gt; axil_write_m2s_init,                                           b =&gt; axil_wresp_m2s_init)</td>
+<td></td>
+</tr>
+<tr>
+<td>axil_s2m_init</td>
+<td>axil_s2m_t</td>
+<td>(ar =&gt; axil_addr_s2m_init,                                           aw =&gt; axil_addr_s2m_init,                                           r =&gt; axil_read_s2m_init,                                           w =&gt; axil_write_s2m_init,                                           b =&gt; axil_wresp_s2m_init)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>axil_addr_m2s_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_addr_s2m_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_read_m2s_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_read_s2m_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_write_m2s_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_write_s2m_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_wresp_m2s_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_wresp_s2m_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_m2s_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axil_s2m_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

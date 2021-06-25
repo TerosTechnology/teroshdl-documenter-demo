@@ -1,0 +1,103 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=com_debug_codec_builder_pkg><h1 id="package-com_debug_codec_builder_pkg">Package: com_debug_codec_builder_pkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>open_group <font id="function_arguments">(    variable l : inout line)</font> <font id="function_return">return ()</font></li>
+<li>append_group <font id="function_arguments">(    variable l       : inout line;
+constant element : in    string)</font> <font id="function_return">return ()</font></li>
+<li>close_group <font id="function_arguments">(    variable l      : inout line;
+variable code   : out   string;
+variable length : out   natural)</font> <font id="function_return">return ()</font></li>
+<li>create_group <font id="function_arguments">(    constant num_of_elements : natural range 0 to 10;
+constant element1        : string := "";
+constant element2        : string := "";
+constant element3        : string := "";
+constant element4        : string := "";
+constant element5        : string := "";
+constant element6        : string := "";
+constant element7        : string := "";
+constant element8        : string := "";
+constant element9        : string := "";
+constant element10       : string := "")</font> <font id="function_return">return string</font></li>
+<li>create_array_group <font id="function_arguments">(    constant arr           : string;
+constant range_left1   : string;
+constant range_right1  : string;
+constant is_ascending1 : boolean;
+constant range_left2   : string  := "";
+constant range_right2  : string  := "";
+constant is_ascending2 : boolean := true)</font> <font id="function_return">return string</font></li>
+<li>escape_special_characters <font id="function_arguments">(    constant data : string)</font> <font id="function_return">return string</font></li>
+<li>split_group <font id="function_arguments">(    constant grp                 : in    string;
+variable elements            : inout lines_t;
+constant max_num_of_elements : in    natural;
+variable length              : inout natural)</font> <font id="function_return">return ()</font></li>
+<li>get_element <font id="function_arguments">(    constant grp      : in string;
+constant position : in natural)</font> <font id="function_return">return string</font></li>
+<li>get_first_element <font id="function_arguments">(    constant grp : string)</font> <font id="function_return">return string</font></li>
+<li>deallocate_elements <font id="function_arguments">(    variable elements : inout lines_t)</font> <font id="function_return">return ()</font></li>
+<li>unescape_special_characters <font id="function_arguments">(    constant code : string)</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

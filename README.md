@@ -1,1 +1,0 @@
-# teroshdl-documenter-dmo

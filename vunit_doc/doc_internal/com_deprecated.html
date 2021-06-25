@@ -1,0 +1,236 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=com_deprecated_pkg><h1 id="package-com_deprecated_pkg">Package: com_deprecated_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null_actor_c</td>
+<td>actor_t</td>
+<td>null_actor</td>
+<td></td>
+</tr>
+<tr>
+<td>no_message_id_c</td>
+<td>message_id_t</td>
+<td>no_message_id</td>
+<td></td>
+</tr>
+<tr>
+<td>max_timeout_c</td>
+<td>time</td>
+<td>max_timeout</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>destroy <font id="function_arguments">(actor     : inout actor_t; status : out com_status_t)</font> <font id="function_return">return ()</font></li>
+<li>copy <font id="function_arguments">(src : inout message_ptr_t; dst : inout message_ptr_t)</font> <font id="function_return">return ()</font></li>
+<li>delete <font id="function_arguments">(message : inout message_ptr_t)</font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">(    signal net            : inout network_t;
+constant receiver     : in    actor_t;
+variable message      : inout message_ptr_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>receive <font id="function_arguments">(    signal net        : inout network_t;
+constant receiver : in    actor_t;
+variable message  : inout message_ptr_t;
+constant timeout  : in    time := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>reply <font id="function_arguments">(    signal net            : inout network_t;
+variable request      : inout message_ptr_t;
+variable message      : inout message_ptr_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>receive_reply <font id="function_arguments">(    signal net       : inout network_t;
+variable request : inout message_ptr_t;
+variable message : inout message_ptr_t;
+constant timeout : in    time := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">(    signal net            : inout network_t;
+constant receiver     : in    actor_t;
+variable message      : inout message_ptr_t;
+variable receipt      : out   receipt_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>reply <font id="function_arguments">(    signal net          : inout network_t;
+constant sender     : in    actor_t;
+constant receiver   : in    actor_t;
+constant request_id : in    message_id_t;
+constant payload    : in    string := "";
+variable receipt    : out   receipt_t;
+constant timeout    : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>reply <font id="function_arguments">(    signal net          : inout network_t;
+constant receiver   : in    actor_t;
+constant request_id : in    message_id_t;
+constant payload    : in    string := "";
+variable receipt    : out   receipt_t;
+constant timeout    : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>reply <font id="function_arguments">(    signal net            : inout network_t;
+constant receiver     : in    actor_t;
+variable message      : inout message_ptr_t;
+variable receipt      : out   receipt_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>receive_reply <font id="function_arguments">(    signal net          : inout network_t;
+constant receiver   : in    actor_t;
+constant request_id : in    message_id_t;
+variable message    : inout message_ptr_t;
+constant timeout    : in    time := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>receive_reply <font id="function_arguments">(    signal net            : inout network_t;
+constant receiver     : in    actor_t;
+constant request_id   : in    message_id_t;
+variable positive_ack : out   boolean;
+variable status       : out   com_status_t;
+constant timeout      : in    time := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">(    signal net        : inout network_t;
+constant sender   : in    actor_t;
+constant receiver : in    actor_t;
+constant payload  : in    string := "";
+variable receipt  : out   receipt_t;
+constant timeout  : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">(    signal net        : inout network_t;
+constant receiver : in    actor_t;
+constant payload  : in    string := "";
+variable receipt  : out   receipt_t;
+constant timeout  : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">(    signal net               : inout network_t;
+constant sender          : in    actor_t;
+constant receiver        : in    actor_t;
+constant request_payload : in    string := "";
+variable reply_message   : inout message_ptr_t;
+constant timeout         : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">(    signal net               : inout network_t;
+constant receiver        : in    actor_t;
+variable request_message : inout message_ptr_t;
+variable reply_message   : inout message_ptr_t;
+constant timeout         : in    time    := max_timeout_c;
+constant keep_message    : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">(    signal net               : inout network_t;
+constant receiver        : in    actor_t;
+variable request_message : inout message_ptr_t;
+variable positive_ack    : out   boolean;
+constant timeout         : in    time    := max_timeout_c;
+constant keep_message    : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>publish <font id="function_arguments">(    signal net            : inout network_t;
+variable message      : inout message_ptr_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">(    signal net               : inout network_t;
+constant sender          : in    actor_t;
+constant receiver        : in    actor_t;
+constant request_payload : in    string := "";
+variable positive_ack    : out   boolean;
+variable status          : out   com_status_t;
+constant timeout         : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">(    signal net               : inout network_t;
+constant receiver        : in    actor_t;
+variable request_message : inout message_ptr_t;
+variable positive_ack    : out   boolean;
+variable status          : out   com_status_t;
+constant timeout         : in    time    := max_timeout_c;
+constant keep_message    : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>publish <font id="function_arguments">(    signal net       : inout network_t;
+constant sender  : in    actor_t;
+constant payload : in    string := "";
+variable status  : out   com_status_t;
+constant timeout : in    time   := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>publish <font id="function_arguments">(    signal net            : inout network_t;
+variable message      : inout message_ptr_t;
+variable status       : out   com_status_t;
+constant timeout      : in    time    := max_timeout_c;
+constant keep_message : in    boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>acknowledge <font id="function_arguments">(    signal net            : inout network_t;
+constant sender       : in    actor_t;
+constant receiver     : in    actor_t;
+constant request_id   : in    message_id_t;
+constant positive_ack : in    boolean := true;
+variable receipt      : out   receipt_t;
+constant timeout      : in    time    := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>acknowledge <font id="function_arguments">(    signal net            : inout network_t;
+constant receiver     : in    actor_t;
+constant request_id   : in    message_id_t;
+constant positive_ack : in    boolean := true;
+variable receipt      : out   receipt_t;
+constant timeout      : in    time    := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>wait_for_messages <font id="function_arguments">(    signal net               : in  network_t;
+constant receiver        : in  actor_t;
+variable status          : out com_status_t;
+constant receive_timeout : in  time := max_timeout_c)</font> <font id="function_return">return ()</font></li>
+<li>subscribe <font id="function_arguments">(    constant subscriber : in  actor_t;
+constant publisher  : in  actor_t;
+variable status     : out com_status_t)</font> <font id="function_return">return ()</font></li>
+<li>unsubscribe <font id="function_arguments">(    constant subscriber : in  actor_t;
+constant publisher  : in  actor_t;
+variable status     : out com_status_t)</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

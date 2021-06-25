@@ -1,0 +1,113 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=signal_checker_pkg><h1 id="package-signal_checker_pkg">Package: signal_checker_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expect_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("expect")</td>
+<td>Private message type definitions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>signal_checker_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>expect <font id="function_arguments">(signal net : inout network_t;                   signal_checker : signal_checker_t;
+               value : std_logic_vector;
+               event_time : delay_length;
+               margin : delay_length := 0 ns)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Add one value to the expect queueAllow event to occur within event_time += margin including end points</li>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;                            signal_checker : signal_checker_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Wait until all expected values have been checked</li>
+</ul><br><br><br><br><br><br>

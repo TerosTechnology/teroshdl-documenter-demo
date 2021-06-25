@@ -1,0 +1,99 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=VendorCovApiPkg><h1 id="package-vendorcovapipkg">Package: VendorCovApiPkg</h1></a><h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VendorCovRangeType</td>
+<td></td>
+<td>Types for how coverage bins are represented.  Matches OSVVM types.</td>
+</tr>
+<tr>
+<td>VendorCovRangeArrayType</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>VendorCovSetName <font id="function_arguments">( obj: VendorCovHandleType; name: string )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Sets/Updates the name of the Coverage Model. Should not be called until the data structure is created by VendorCovPointCreate or VendorCovCrossCreate. Replaces name that was set by VendorCovPointCreate or VendorCovCrossCreate.</li>
+<li>VendorCovBinAdd <font id="function_arguments">( obj: VendorCovHandleType; bins: VendorCovRangeArrayType; Action: integer; atleast: integer; name: string )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Add a bin or set of bins to either a Point/Item or Cross Functional Coverage Model Checking for sizing that is different from original sizing already done in OSVVM CoveragePkg It is important to maintain an index that corresponds to the order the bins were entered as  that is used when coverage is recorded.</li>
+<li>VendorCovBinInc <font id="function_arguments">( obj: VendorCovHandleType; index: integer )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Increment the coverage of bin identified by index number. Index ranges from 1 to Number of Bins.   Index corresponds to the order the bins were entered (starting from 1)</li>
+</ul><br><br><br><br><br><br>

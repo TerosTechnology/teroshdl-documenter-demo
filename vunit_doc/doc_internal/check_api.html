@@ -1,0 +1,1324 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=check_pkg><h1 id="package-check_pkg">Package: check_pkg</h1></a><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_enabled</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_checker</td>
+<td>checker_t</td>
+<td>new_checker("check")</td>
+<td></td>
+</tr>
+<tr>
+<td>check_logger</td>
+<td>logger_t</td>
+<td>get_logger(default_checker)</td>
+<td></td>
+</tr>
+<tr>
+<td>check_result_tag</td>
+<td>string</td>
+<td>"<+/->"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>edge_t</td>
+<td>(rising_edge, falling_edge, both_edges)</td>
+<td></td>
+</tr>
+<tr>
+<td>trigger_event_t</td>
+<td>(first_pipe, first_no_pipe, penultimate)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>get_checker_stat <font id="function_arguments">(variable stat : out checker_stat_t)</font> <font id="function_return">return ()</font></li>
+<li>reset_checker_stat <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>result <font id="function_arguments">(msg : string := "")</font> <font id="function_return">return string</font></li>
+<li>check <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check <font id="function_arguments">(    constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_passed <font id="function_arguments">(    constant checker   : in checker_t;
+constant msg       : in string  := check_result_tag & ".";
+constant line_num  : in natural := 0;
+constant file_name : in string  := "")</font> <font id="function_return">return ()</font></li>
+<li>check_passed <font id="function_arguments">(    constant msg       : in string  := check_result_tag & ".";
+constant line_num  : in natural := 0;
+constant file_name : in string  := "")</font> <font id="function_return">return ()</font></li>
+<li>check_failed <font id="function_arguments">(    constant checker   : in checker_t;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_failed <font id="function_arguments">(    constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_true <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    constant expr      : in boolean;
+constant msg       : in string      := check_result_tag & ".";
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  boolean;
+constant msg       : in  string      := check_result_tag & ".";
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_false <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal antecedent_expr     : in std_logic;
+signal consequent_expr     : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal antecedent_expr     : in std_logic;
+signal consequent_expr     : in std_logic;
+constant msg               : in string      := check_result_tag & ".";
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    constant checker         : in checker_t;
+constant antecedent_expr : in boolean;
+constant consequent_expr : in boolean;
+constant msg             : in string      := check_result_tag & ".";
+constant level           : in log_level_t := null_log_level;
+constant line_num        : in natural     := 0;
+constant file_name       : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    constant checker         : in  checker_t;
+variable pass            : out boolean;
+constant antecedent_expr : in  boolean;
+constant consequent_expr : in  boolean;
+constant msg             : in  string      := check_result_tag & ".";
+constant level           : in  log_level_t := null_log_level;
+constant line_num        : in  natural     := 0;
+constant file_name       : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    constant antecedent_expr : in boolean;
+constant consequent_expr : in boolean;
+constant msg             : in string      := check_result_tag & ".";
+constant level           : in log_level_t := null_log_level;
+constant line_num        : in natural     := 0;
+constant file_name       : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_implication <font id="function_arguments">(    variable pass            : out boolean;
+constant antecedent_expr : in  boolean;
+constant consequent_expr : in  boolean;
+constant msg             : in  string      := check_result_tag & ".";
+constant level           : in  log_level_t := null_log_level;
+constant line_num        : in  natural     := 0;
+constant file_name       : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_stable <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal start_event         : in std_logic;
+signal end_event           : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant allow_restart     : in boolean     := false;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_stable <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal start_event         : in std_logic;
+signal end_event           : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant allow_restart     : in boolean     := false;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_stable <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal start_event         : in std_logic;
+signal end_event           : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant allow_restart     : in boolean     := false;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_stable <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal start_event         : in std_logic;
+signal end_event           : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant allow_restart     : in boolean     := false;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  std_logic;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    constant expr      : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_not_unknown <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  std_logic;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_zero_one_hot <font id="function_arguments">(    constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal expr                : in std_logic_vector;
+constant msg               : in string      := check_result_tag;
+constant level             : in log_level_t := null_log_level;
+constant active_clock_edge : in edge_t      := rising_edge;
+constant line_num          : in natural     := 0;
+constant file_name         : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    constant checker   : in  checker_t;
+variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    variable pass      : out boolean;
+constant expr      : in  std_logic_vector;
+constant msg       : in  string      := check_result_tag;
+constant level     : in  log_level_t := null_log_level;
+constant line_num  : in  natural     := 0;
+constant file_name : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    constant checker   : in checker_t;
+constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_one_hot <font id="function_arguments">(    constant expr      : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_next <font id="function_arguments">(    constant checker             : in checker_t;
+signal clock                 : in std_logic;
+signal en                    : in std_logic;
+signal start_event           : in std_logic;
+signal expr                  : in std_logic;
+constant msg                 : in string      := check_result_tag;
+constant num_cks             : in natural     := 1;
+constant allow_overlapping   : in boolean     := true;
+constant allow_missing_start : in boolean     := true;
+constant level               : in log_level_t := null_log_level;
+constant active_clock_edge   : in edge_t      := rising_edge;
+constant line_num            : in natural     := 0;
+constant file_name           : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_next <font id="function_arguments">(    signal clock                 : in std_logic;
+signal en                    : in std_logic;
+signal start_event           : in std_logic;
+signal expr                  : in std_logic;
+constant msg                 : in string      := check_result_tag;
+constant num_cks             : in natural     := 1;
+constant allow_overlapping   : in boolean     := true;
+constant allow_missing_start : in boolean     := true;
+constant level               : in log_level_t := null_log_level;
+constant active_clock_edge   : in edge_t      := rising_edge;
+constant line_num            : in natural     := 0;
+constant file_name           : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_sequence <font id="function_arguments">(    constant checker           : in checker_t;
+signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal event_sequence      : in std_logic_vector;
+constant msg               : in string          := check_result_tag;
+constant trigger_event     : in trigger_event_t := penultimate;
+constant level             : in log_level_t     := null_log_level;
+constant active_clock_edge : in edge_t          := rising_edge;
+constant line_num          : in natural         := 0;
+constant file_name         : in string          := "")</font> <font id="function_return">return ()</font></li>
+<li>check_sequence <font id="function_arguments">(    signal clock               : in std_logic;
+signal en                  : in std_logic;
+signal event_sequence      : in std_logic_vector;
+constant msg               : in string          := check_result_tag;
+constant trigger_event     : in trigger_event_t := penultimate;
+constant level             : in log_level_t     := null_log_level;
+constant active_clock_edge : in edge_t          := rising_edge;
+constant line_num          : in natural         := 0;
+constant file_name         : in string          := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in checker_t;
+constant expr        : in boolean;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in  checker_t;
+variable pass        : out boolean;
+constant expr        : in  boolean;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant expr        : in boolean;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    variable pass        : out boolean;
+constant expr        : in  boolean;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in checker_t;
+constant expr        : in std_ulogic;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in  checker_t;
+variable pass        : out boolean;
+constant expr        : in  std_ulogic;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant expr        : in std_ulogic;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    variable pass        : out boolean;
+constant expr        : in  std_ulogic;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in checker_t;
+constant expr        : in bit;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant checker     : in  checker_t;
+variable pass        : out boolean;
+constant expr        : in  bit;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    constant expr        : in bit;
+constant msg         : in string      := check_result_tag;
+constant level       : in log_level_t := null_log_level;
+constant context_msg : in string      := "";
+constant line_num    : in natural     := 0;
+constant file_name   : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_relation <font id="function_arguments">(    variable pass        : out boolean;
+constant expr        : in  bit;
+constant msg         : in  string      := check_result_tag;
+constant level       : in  log_level_t := null_log_level;
+constant context_msg : in  string      := "";
+constant line_num    : in  natural     := 0;
+constant file_name   : in  string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in real;
+constant expected  : in real;
+constant msg       : in string      := check_result_tag;
+constant max_diff  : in real        := 0.0;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in real;
+constant expected  : in real;
+constant msg       : in string      := check_result_tag;
+constant max_diff  : in real        := 0.0;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in unsigned;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in unsigned;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in natural;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in natural;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in natural;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in natural;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in unsigned;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in unsigned;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in std_logic_vector;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic_vector;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in std_logic_vector;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic_vector;
+constant expected  : in natural;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in natural;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in natural;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in natural;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in natural;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in signed;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in signed;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in integer;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in integer;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in integer;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in integer;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in integer;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in integer;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in integer;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in integer;
+constant expected  : in integer;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in std_logic;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in boolean;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in boolean;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in boolean;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in boolean;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in boolean;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in boolean;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in boolean;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in boolean;
+constant expected  : in boolean;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in string;
+constant expected  : in string;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in string;
+constant expected  : in string;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in string;
+constant expected  : in string;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in string;
+constant expected  : in string;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in character;
+constant expected  : in character;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in character;
+constant expected  : in character;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in character;
+constant expected  : in character;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in character;
+constant expected  : in character;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant got       : in time;
+constant expected  : in time;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in time;
+constant expected  : in time;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in time;
+constant expected  : in time;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_equal <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in time;
+constant expected  : in time;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in unsigned;
+constant expected  : in unsigned;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic_vector;
+constant expected  : in std_logic_vector;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in signed;
+constant expected  : in signed;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+variable pass      : out boolean;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+<li>check_match <font id="function_arguments">(    constant checker   : in checker_t;
+constant got       : in std_logic;
+constant expected  : in std_logic;
+constant msg       : in string      := check_result_tag;
+constant level     : in log_level_t := null_log_level;
+constant line_num  : in natural     := 0;
+constant file_name : in string      := "")</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

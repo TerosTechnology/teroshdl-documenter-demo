@@ -1,0 +1,189 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=transaction_pkg><h1 id="package-transaction_pkg">Package: transaction_pkg</h1></a><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global_uart_vvc_transaction_trigger</td>
+<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right, 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
+<td></td>
+</tr>
+<tr>
+<td>global_uart_monitor_transaction_trigger</td>
+<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right, 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
+<td>Global monitor transaction info trigger signal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_VVC_CMD_STRING_MAX_LENGTH</td>
+<td>natural</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td>C_TRANSACTION_STATUS_DEFAULT</td>
+<td>t_transaction_status</td>
+<td>INACTIVE</td>
+<td></td>
+</tr>
+<tr>
+<td>C_VVC_META_DEFAULT</td>
+<td>t_vvc_meta</td>
+<td>(     msg     =&gt; (others =&gt; ' '),     cmd_idx =&gt; -1     )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_ERROR_INFO_DEFAULT</td>
+<td>t_error_info</td>
+<td>(     parity_bit_error  =&gt; false,     stop_bit_error    =&gt; false     )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_BASE_TRANSACTION_SET_DEFAULT</td>
+<td>t_base_transaction</td>
+<td>(     operation           =&gt; NO_OPERATION,     data                =&gt; (others =&gt; '0'),     vvc_meta            =&gt; C_VVC_META_DEFAULT,     transaction_status  =&gt; C_TRANSACTION_STATUS_DEFAULT,     error_info          =&gt; C_ERROR_INFO_DEFAULT     )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_TRANSACTION_GROUP_DEFAULT</td>
+<td>t_transaction_group</td>
+<td>(     bt =&gt; C_BASE_TRANSACTION_SET_DEFAULT     )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_operation</td>
+<td>(     NO_OPERATION,     AWAIT_COMPLETION,     AWAIT_ANY_COMPLETION,     ENABLE_LOG_MSG,     DISABLE_LOG_MSG,     FLUSH_COMMAND_QUEUE,     FETCH_RESULT,     INSERT_DELAY,     TERMINATE_CURRENT_COMMAND,      Transaction     TRANSMIT, RECEIVE, EXPECT)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_transaction_status</td>
+<td>(INACTIVE, IN_PROGRESS, FAILED, SUCCEEDED)</td>
+<td>Transaction status</td>
+</tr>
+<tr>
+<td>t_vvc_meta</td>
+<td></td>
+<td>VVC Meta</td>
+</tr>
+<tr>
+<td>t_error_info</td>
+<td></td>
+<td>Error info</td>
+</tr>
+<tr>
+<td>t_base_transaction</td>
+<td></td>
+<td>Base transaction</td>
+</tr>
+<tr>
+<td>t_transaction_group</td>
+<td></td>
+<td>Transaction info group</td>
+</tr>
+<tr>
+<td>t_uart_transaction_trigger_array</td>
+<td></td>
+<td>Global transaction info trigger signal</td>
+</tr>
+<tr>
+<td>t_uart_transaction_group_array</td>
+<td></td>
+<td>Shared transaction info variable</td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

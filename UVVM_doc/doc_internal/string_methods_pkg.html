@@ -1,0 +1,253 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=string_methods_pkg><h1 id="package-string_methods_pkg">Package: string_methods_pkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>bitvis_assert <font id="function_arguments">(    val        : boolean;
+severeness : severity_level;
+msg        : string;
+scope      : string
+)</font> <font id="function_return">return ()</font></li>
+<li>justify <font id="function_arguments">(    val       : string;
+width     : natural := 0;
+justified : side := RIGHT;
+format: t_format_string := AS_IS  No defaults on 4 first param - to avoid ambiguity with std.textio
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+DEPRECATED.Function will be removed in future versions of UVVM-Util</li>
+<li>justify <font id="function_arguments">(    val             : string;
+justified       : side;
+width           : natural;
+format_spaces   : t_format_spaces;
+truncate        : t_truncate_string
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+DEPRECATED.Function will be removed in future versions of UVVM-Util</li>
+<li>justify <font id="function_arguments">(    val             : string;
+justified       : t_justify_center;
+width           : natural;
+format_spaces   : t_format_spaces;
+truncate        : t_truncate_string
+)</font> <font id="function_return">return string</font></li>
+<li>pos_of_leftmost <font id="function_arguments">(    target              : character;
+vector              : string;
+result_if_not_found : natural := 1
+)</font> <font id="function_return">return natural</font></li>
+<li>pos_of_rightmost <font id="function_arguments">(    target              : character;
+vector              : string;
+result_if_not_found : natural := 1
+)</font> <font id="function_return">return natural</font></li>
+<li>pos_of_leftmost_non_zero <font id="function_arguments">(    vector              : string;
+result_if_not_found : natural := 1
+)</font> <font id="function_return">return natural</font></li>
+<li>pos_of_rightmost_non_whitespace <font id="function_arguments">(    vector              : string;
+result_if_not_found : natural := 1
+)</font> <font id="function_return">return natural</font></li>
+<li>valid_length <font id="function_arguments">(     of string excluding trailing NULs    vector              : string
+)</font> <font id="function_return">return natural</font></li>
+<li>get_string_between_delimiters <font id="function_arguments">(    val        : string;
+delim_left : character;
+delim_right: character;
+start_from : SIDE;           search from left or right  (Only RIGHT implemented so far)
+occurrence  : positive := 1  stop on N'th occurrence of delimeter pair. Default first occurrence
+)</font> <font id="function_return">return string</font></li>
+<li>return_string_if_true <font id="function_arguments">(    val        : string;
+return_val : boolean
+)</font> <font id="function_return">return string</font></li>
+<li>return_string1_if_true_otherwise_string2 <font id="function_arguments">(    val1        : string;
+val2        : string;
+return_val : boolean
+)</font> <font id="function_return">return string</font></li>
+<li>to_upper <font id="function_arguments">(    val  : string
+)</font> <font id="function_return">return string</font></li>
+<li>fill_string <font id="function_arguments">(    val       : character;
+width     : natural
+)</font> <font id="function_return">return string</font></li>
+<li>pad_string <font id="function_arguments">(    val   : string;
+char  : character;
+width : natural;
+side  : side := LEFT
+)</font> <font id="function_return">return string</font></li>
+<li>replace_backslash_n_with_lf <font id="function_arguments">(    source : string
+)</font> <font id="function_return">return string</font></li>
+<li>replace_backslash_r_with_lf <font id="function_arguments">(    source : string
+)</font> <font id="function_return">return string</font></li>
+<li>remove_initial_chars <font id="function_arguments">(    source : string;
+num    : natural
+)</font> <font id="function_return">return string</font></li>
+<li>wrap_lines <font id="function_arguments">(    constant text_string     : string;
+constant alignment_pos1  : natural;   Line position of first aligned character in line 1
+constant alignment_pos2  : natural;   Line position of first aligned character in line 2, etc…
+constant line_width      : natural
+)</font> <font id="function_return">return string</font></li>
+<li>wrap_lines <font id="function_arguments">(    variable text_lines      : inout line;
+constant alignment_pos1  : natural;   Line position prior to first aligned character (incl. Prefix)
+constant alignment_pos2  : natural;
+constant line_width      : natural
+)</font> <font id="function_return">return ()</font></li>
+<li>prefix_lines <font id="function_arguments">(    variable text_lines  : inout line;
+constant prefix      : string := C_LOG_PREFIX
+)</font> <font id="function_return">return ()</font></li>
+<li>replace <font id="function_arguments">(    val           : string;
+target_char   : character;
+exchange_char : character
+)</font> <font id="function_return">return string</font></li>
+<li>replace <font id="function_arguments">(    variable text_line : inout line;
+target_char        : character;
+exchange_char      : character
+)</font> <font id="function_return">return ()</font></li>
+<li>to_string <font id="function_arguments">(    val             : boolean;
+width           : natural;
+justified       : side;
+format_spaces   : t_format_spaces;
+truncate        : t_truncate_string := DISALLOW_TRUNCATE
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val       : boolean;
+width     : natural;
+justified : side        := right;
+format: t_format_string := AS_IS
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+This function has been deprecated and will be removed in the next major releaseDEPRECATED</li>
+<li>to_string <font id="function_arguments">(    val       : integer;
+width     : natural;
+justified : side            := right;
+format    : t_format_string := AS_IS
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+This function has been deprecated and will be removed in the next major releaseDEPRECATED</li>
+<li>to_string <font id="function_arguments">(    val     : std_logic_vector;
+radix   : t_radix;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : unsigned;
+radix   : t_radix;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : signed;
+radix   : t_radix;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : t_slv_array;
+radix   : t_radix        := HEX_BIN_IF_INVALID;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : t_signed_array;
+radix   : t_radix        := HEX_BIN_IF_INVALID;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : t_unsigned_array;
+radix   : t_radix        := HEX_BIN_IF_INVALID;
+format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
+prefix  : t_radix_prefix := EXCL_RADIX  Insert radix prefix in string?
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : real_vector
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val     : time_vector
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val       : t_alert_level;
+width     : natural;
+justified : side    := right
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val       : t_msg_id;
+width     : natural;
+justified : side    := right
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val       : t_attention;
+width     : natural;
+justified : side    := right
+  )</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val       : t_check_type;
+width     : natural;
+justified : side    := right
+)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(    val   : t_alert_attention_counters;
+order : t_order := FINAL
+)</font> <font id="function_return">return ()</font></li>
+<li>to_string <font id="function_arguments">(    val   : t_check_counters_array;
+order : t_order := FINAL
+)</font> <font id="function_return">return ()</font></li>
+<li>ascii_to_char <font id="function_arguments">(    ascii_pos   : integer range 0 to 255;
+ascii_allow : t_ascii_allow := ALLOW_ALL
+)</font> <font id="function_return">return character</font></li>
+<li>char_to_ascii <font id="function_arguments">(    char   : character
+)</font> <font id="function_return">return integer</font></li>
+<li>to_string <font id="function_arguments">(    val : string
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+return string with only valid ascii characters</li>
+<li>add_msg_delimiter <font id="function_arguments">(    msg : string
+)</font> <font id="function_return">return string</font></li>
+<li>timestamp_header <font id="function_arguments">(    value : time;
+txt   : string)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+Returns a string with a timestamp and a text. Used in report headers</li>
+</ul><br><br><br><br><br><br>

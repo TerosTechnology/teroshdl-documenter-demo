@@ -1,0 +1,167 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axilite_channel_handler_pkg><h1 id="package-axilite_channel_handler_pkg">Package: axilite_channel_handler_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_SCOPE</td>
+<td>string</td>
+<td>"AXILITE_CHANNEL_HANDLER"</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>write_address_channel_write <font id="function_arguments">(    constant awaddr_value : in    std_logic_vector;
+constant msg          : in    string;
+signal   clk          : in    std_logic;
+signal   awaddr       : inout std_logic_vector;
+signal   awvalid      : inout std_logic;
+signal   awprot       : inout std_logic_vector(2 downto 0);  [0: '0' - unpriviliged access, '1' - priviliged access; 1: '0' - secure access, '1' - non-secure access, 2: '0' - Data access, '1' - Instruction accesss]
+signal   awready      : in    std_logic;
+constant scope        : in    string                := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure writes adress on the write address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM</li>
+<li>write_data_channel_write <font id="function_arguments">(    constant wdata_value  : in    std_logic_vector;
+constant wstrb_value  : in    std_logic_vector;
+constant msg          : in    string;
+signal   clk          : in    std_logic;
+signal   wdata        : inout std_logic_vector;
+signal   wstrb        : inout std_logic_vector;
+signal   wvalid       : inout std_logic;
+signal   wready       : in    std_logic;
+constant scope        : in    string                := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure writes data on the write data channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM</li>
+<li>write_response_channel_check <font id="function_arguments">(    constant msg          : in    string;
+signal   clk          : in    std_logic;
+signal   bready       : inout std_logic;
+signal   bresp        : in    std_logic_vector(1 downto 0);
+signal   bvalid       : in    std_logic;
+constant alert_level  : in    t_alert_level         := error;
+constant scope        : in    string                := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure checks the write response on the write response channel- If the received response was inconsistent with config.expected_response,   an alert with severity config.expected_response_severity is issued.- When completed, a log message with ID id_for_bfm is issued.</li>
+<li>read_address_channel_write <font id="function_arguments">(    constant araddr_value : in    std_logic_vector;
+constant msg          : in    string;
+signal   clk          : in    std_logic;
+signal   araddr       : inout std_logic_vector;
+signal   arvalid      : inout std_logic;
+signal   arprot       : inout std_logic_vector(2 downto 0);
+signal   arready      : in    std_logic;
+constant scope        : in    string                := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure writes adress on the read address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM</li>
+<li>read_data_channel_receive <font id="function_arguments">(    variable rdata_value    : out   std_logic_vector;
+constant msg            : in    string;
+signal   clk            : in    std_logic;
+signal   rready         : inout std_logic;
+signal   rdata          : in    std_logic_vector;
+signal   rresp          : in    std_logic_vector(1 downto 0);
+signal   rvalid         : in    std_logic;
+constant scope          : in    string                := C_SCOPE;
+constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config         : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT;
+constant ext_proc_call  : in    string                := ""   External proc_call. Overwrite if called from another BFM procedure
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure receives read data on the read data channel,and returns the read data- If the received response was inconsistent with config.expected_response,   an alert with severity config.expected_response_severity is issued.</li>
+<li>read_data_channel_check <font id="function_arguments">(    constant rdata_exp    : in    std_logic_vector;
+constant msg          : in    string;
+signal   clk          : in    std_logic;
+signal   rready       : inout std_logic;
+signal   rdata        : in    std_logic_vector;
+signal   rresp        : in    std_logic_vector(1 downto 0);
+signal   rvalid       : in    std_logic;
+constant alert_level  : in    t_alert_level         := error;
+constant scope        : in    string                := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
+constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure receives and checks read data and read response on the read data channel- If the received data is inconsistent with rdata_exp,   an alert with severity alert_level is issued.- If the received data is correct, a log message with ID id_for_bfm is issued.</li>
+</ul><br><br><br><br><br><br>

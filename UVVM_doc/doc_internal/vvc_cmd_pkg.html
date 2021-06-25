@@ -1,0 +1,140 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=vvc_cmd_pkg><h1 id="package-vvc_cmd_pkg">Package: vvc_cmd_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_VVC_CMD_DATA_MAX_LENGTH</td>
+<td>natural</td>
+<td>1024</td>
+<td>You can create VVCs with smaller sizes than these constants, but not larger.For example, given a VVC with parallel data bus and address bus, constraints should be added for maximum data lengthand address length Example:</td>
+</tr>
+<tr>
+<td>C_VVC_CMD_ADDR_MAX_LENGTH</td>
+<td>natural</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>C_VVC_CMD_STRING_MAX_LENGTH</td>
+<td>natural</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td>C_VVC_CMD_DEFAULT</td>
+<td>t_vvc_cmd_record</td>
+<td>(     addr                      =&gt; (others =&gt; '0'),     data                      =&gt; (others =&gt; '0'),     max_receptions            =&gt; 1,     -- Common VVC fields     operation                 =&gt; NO_OPERATION,     proc_call                 =&gt; (others =&gt; NUL),     msg                       =&gt; (others =&gt; NUL),     data_routing              =&gt; NA,     cmd_idx                   =&gt; 0,     command_type              =&gt; NO_COMMAND_TYPE,     msg_id                    =&gt; NO_ID,     gen_integer_array         =&gt; (others =&gt; -1),     gen_boolean               =&gt; false,     timeout                   =&gt; 0 ns,     alert_level               =&gt; FAILURE,     delay                     =&gt; 0 ns,     quietness                 =&gt; NON_QUIET,     parent_msg_id_panel       =&gt; C_UNUSED_MSG_ID_PANEL   )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_operation</td>
+<td>(     NO_OPERATION,     AWAIT_COMPLETION,     AWAIT_ANY_COMPLETION,     ENABLE_LOG_MSG,     DISABLE_LOG_MSG,     FLUSH_COMMAND_QUEUE,     FETCH_RESULT,     INSERT_DELAY,     TERMINATE_CURRENT_COMMAND,      VVC local     WRITE, READ, CHECK   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_cmd_record</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_result_queue_element</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_response</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_last_received_cmd_idx</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

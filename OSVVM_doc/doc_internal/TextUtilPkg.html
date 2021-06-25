@@ -1,0 +1,115 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=TextUtilPkg><h1 id="package-textutilpkg">Package: TextUtilPkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li><p>IsUpper <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>IsLower <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>to_lower <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return character</font></p></li>
+<li><p>to_lower <font id="function_arguments">(constant Str : string )</font> <font id="function_return">return string</font></p></li>
+<li><p>to_upper <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return character</font></p></li>
+<li><p>to_upper <font id="function_arguments">(constant Str : string )</font> <font id="function_return">return string</font></p></li>
+<li><p>IsHex <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>IsNumber <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>IsNumber <font id="function_arguments">(Name : string )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>isstd_logic <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font></p></li>
+<li><p>IfElse <font id="function_arguments">(Expr : boolean ; A, B : string)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+Crutch until VHDL-2019 conditional initialization</p></li>
+<li><p>SkipWhiteSpace <font id="function_arguments">(  
+variable L     : InOut line ;
+variable Empty : out   boolean
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>SkipWhiteSpace <font id="function_arguments">(variable L : InOut line)</font> <font id="function_return">return ()</font></p></li>
+<li><p>EmptyOrCommentLine <font id="function_arguments">(  
+variable L                : InOut  line ;
+variable Empty            : InOut  boolean ;
+variable MultiLineComment : inout  boolean 
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>ReadUntilDelimiterOrEOL <font id="function_arguments">(  
+variable L         : InOut line ; 
+variable Name      : InOut line ; 
+constant Delimiter : In    character ;
+variable ReadValid : Out   boolean 
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>FindDelimiter <font id="function_arguments">(  
+variable L                : InOut line ; 
+constant Delimiter        : In    character ;
+variable Found            : Out   boolean 
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>ReadHexToken <font id="function_arguments">(   Reads Upto Result'length values, less is ok.<br />
+Does not skip white space</p>
+<p>variable L      : InOut line ;<br />
+variable Result : Out   std_logic_vector ;<br />
+variable StrLen : Out   integer <br />
+)</font> <font id="function_return">return ()</font></p></li>
+<li><p>ReadBinaryToken <font id="function_arguments">(   Reads Upto Result'length values, less is ok.<br />
+Does not skip white space</p>
+<p>variable L      : InOut line ;<br />
+variable Result : Out   std_logic_vector ;<br />
+variable StrLen : Out   integer <br />
+)</font> <font id="function_return">return ()</font></p></li>
+</ul><br><br><br><br><br><br>

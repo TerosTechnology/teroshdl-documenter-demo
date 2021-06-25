@@ -1,0 +1,135 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=monitor_cmd_pkg><h1 id="package-monitor_cmd_pkg">Package: monitor_cmd_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_MAX_BITS_IN_DATA</td>
+<td>positive</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>C_UART_MONITOR_MSG_ID_PANEL_DEFAULT</td>
+<td>t_msg_id_panel</td>
+<td>(     ID_MONITOR =&gt; ENABLED,     others     =&gt; DISABLED   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT</td>
+<td>t_uart_interface_config</td>
+<td>(     bit_time         =&gt; 0 ns,     num_data_bits    =&gt; 8,     parity           =&gt; PARITY_ODD,     num_stop_bits    =&gt; STOP_BITS_ONE   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_UART_MONITOR_CONFIG_DEFAULT</td>
+<td>t_uart_monitor_config</td>
+<td>(     scope_name               =&gt; (1 to 14 =&gt; "set scope name", others =&gt; NUL),     msg_id_panel             =&gt; C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,     interface_config         =&gt; C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT,     transaction_display_time =&gt; 0 ns   )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_uart_interface_config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_uart_monitor_config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_uart_monitor_config_array</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>monitor_constructor <font id="function_arguments">(    constant monitor_config        : in  t_uart_monitor_config;
+variable shared_monitor_config : out t_uart_monitor_config
+)</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

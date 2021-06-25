@@ -1,0 +1,766 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=kmac><h1 id="entity-kmac">Entity: kmac</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 795 270"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="205,0 220,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="370" height="70" fill="black" x="220" y="0"></rect><rect id="SvgjsRect1007" width="366" height="65" fill="#bdecb6" x="222" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="200" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="235" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   EnMasking </tspan></text><line id="SvgjsLine1012" x1="205" y1="15" x2="220" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="200" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="235" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   ReuseShare </tspan></text><line id="SvgjsLine1017" x1="205" y1="35" x2="220" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="200" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">   logic [NumAlerts-1:0] </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="235" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   NumAlerts </tspan></text><line id="SvgjsLine1022" x1="205" y1="55" x2="220" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="370" height="190" fill="black" x="220" y="75"></rect><rect id="SvgjsRect1024" width="366" height="185" fill="#fdfd96" x="222" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="200" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="235" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1029" x1="205" y1="90" x2="220" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="200" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="235" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1034" x1="205" y1="110" x2="220" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="200" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="235" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   clk_edn_i </tspan></text><line id="SvgjsLine1039" x1="205" y1="130" x2="220" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="200" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="235" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   rst_edn_ni </tspan></text><line id="SvgjsLine1044" x1="205" y1="150" x2="220" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="200" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="235" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1049" x1="205" y1="170" x2="220" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="200" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">   [NumAlerts-1:0] </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="235" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   alert_rx_i </tspan></text><line id="SvgjsLine1054" x1="205" y1="190" x2="220" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="200" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="235" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   keymgr_key_i </tspan></text><line id="SvgjsLine1059" x1="205" y1="210" x2="220" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="200" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">   [NumAppIntf-1:0] </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="235" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   app_i </tspan></text><line id="SvgjsLine1064" x1="205" y1="230" x2="220" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="200" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="200" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="235" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="235" svgjs:data="{&quot;newLined&quot;:true}">   entropy_i </tspan></text><line id="SvgjsLine1069" x1="205" y1="250" x2="220" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="610" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="575" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1074" x1="590" y1="90" x2="605" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="610" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">   [NumAlerts-1:0] </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="575" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   alert_tx_o </tspan></text><line id="SvgjsLine1079" x1="590" y1="110" x2="605" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="610" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">   [NumAppIntf-1:0] </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="575" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   app_o </tspan></text><line id="SvgjsLine1084" x1="590" y1="130" x2="605" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="610" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="575" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   entropy_o </tspan></text><line id="SvgjsLine1089" x1="590" y1="150" x2="605" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="610" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="575" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   intr_kmac_done_o </tspan></text><line id="SvgjsLine1094" x1="590" y1="170" x2="605" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="610" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="575" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   intr_fifo_empty_o </tspan></text><line id="SvgjsLine1099" x1="590" y1="190" x2="605" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="610" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="575" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   intr_kmac_err_o </tspan></text><line id="SvgjsLine1104" x1="590" y1="210" x2="605" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="610" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="575" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   idle_o </tspan></text><line id="SvgjsLine1109" x1="590" y1="230" x2="605" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 KMAC/SHA3</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EnMasking</td>
+<td>bit</td>
+<td>1</td>
+<td>EnMasking: Enable masking security hardening inside keccak_round If it is enabled, the result digest will be two set of 1600bit.</td>
+</tr>
+<tr>
+<td>ReuseShare</td>
+<td>bit</td>
+<td>0</td>
+<td>ReuseShare: If set, keccak_round logic only consumes small portion of entropy, not 1600bit of entropy at every round. It uses adjacent shares as entropy inside Domain-Oriented Masking AND logic. This parameter only affects when <code>EnMasking</code> is set.</td>
+</tr>
+<tr>
+<td>NumAlerts</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_edn_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_edn_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>alert_rx_i</td>
+<td>input</td>
+<td>[NumAlerts-1:0]</td>
+<td>Alerts</td>
+</tr>
+<tr>
+<td>alert_tx_o</td>
+<td>output</td>
+<td>[NumAlerts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>keymgr_key_i</td>
+<td>input</td>
+<td></td>
+<td>KeyMgr sideload (secret key) interface</td>
+</tr>
+<tr>
+<td>app_i</td>
+<td>input</td>
+<td>[NumAppIntf-1:0]</td>
+<td>KeyMgr KDF data path</td>
+</tr>
+<tr>
+<td>app_o</td>
+<td>output</td>
+<td>[NumAppIntf-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_o</td>
+<td>output</td>
+<td></td>
+<td>EDN interface</td>
+</tr>
+<tr>
+<td>entropy_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_kmac_done_o</td>
+<td>output</td>
+<td></td>
+<td>interrupts</td>
+</tr>
+<tr>
+<td>intr_fifo_empty_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_kmac_err_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>idle_o</td>
+<td>output</td>
+<td></td>
+<td>Idle signal</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kmac_st</td>
+<td>kmac_st_e</td>
+<td></td>
+</tr>
+<tr>
+<td>kmac_st_d</td>
+<td>kmac_st_e</td>
+<td></td>
+</tr>
+<tr>
+<td>reg2hw</td>
+<td>kmac_reg2hw_t</td>
+<td></td>
+</tr>
+<tr>
+<td>hw2reg</td>
+<td>kmac_hw2reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>devmode</td>
+<td>logic</td>
+<td>devmode signals comes from LifeCycle. TODO: Implement</td>
+</tr>
+<tr>
+<td>tl_win_h2d</td>
+<td>tlul_pkg::tl_h2d_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_win_d2h</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td></td>
+</tr>
+<tr>
+<td>sha3_start</td>
+<td>logic</td>
+<td>SHA3 core control signals and its response. Sequence: start --&gt; process(multiple) --&gt; get absorbed event --&gt; {run --&gt;} done</td>
+</tr>
+<tr>
+<td>sha3_run</td>
+<td>logic</td>
+<td>SHA3 core control signals and its response. Sequence: start --&gt; process(multiple) --&gt; get absorbed event --&gt; {run --&gt;} done</td>
+</tr>
+<tr>
+<td>sha3_done</td>
+<td>logic</td>
+<td>SHA3 core control signals and its response. Sequence: start --&gt; process(multiple) --&gt; get absorbed event --&gt; {run --&gt;} done</td>
+</tr>
+<tr>
+<td>sha3_absorbed</td>
+<td>logic</td>
+<td>SHA3 core control signals and its response. Sequence: start --&gt; process(multiple) --&gt; get absorbed event --&gt; {run --&gt;} done</td>
+</tr>
+<tr>
+<td>unused_sha3_squeeze</td>
+<td>logic</td>
+<td>SHA3 core control signals and its response. Sequence: start --&gt; process(multiple) --&gt; get absorbed event --&gt; {run --&gt;} done</td>
+</tr>
+<tr>
+<td>sha3_block_processed</td>
+<td>logic</td>
+<td>Indicate one block processed</td>
+</tr>
+<tr>
+<td>entropy_in_progress</td>
+<td>logic</td>
+<td>EStatus for entropy</td>
+</tr>
+<tr>
+<td>entropy_in_keyblock</td>
+<td>logic</td>
+<td>EStatus for entropy</td>
+</tr>
+<tr>
+<td>event_absorbed</td>
+<td>logic</td>
+<td>KeyMgr interface logic generates event_absorbed from sha3_absorbed. It is active only if SW initiates the hashing engine.</td>
+</tr>
+<tr>
+<td>sha3_fsm</td>
+<td>sha3_pkg::sha3_st_e</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_ns_prefix</td>
+<td>logic [sha3_pkg::NSRegisterSize*8-1:0]</td>
+<td>Prefix: kmac_pkg defines Prefix based on N size and S size. Then computes left_encode(len(N)) size and left_encode(len(S)) For given default value 32, 256 bits, the max encode_string(N)</td>
+</tr>
+<tr>
+<td>ns_prefix</td>
+<td>logic [sha3_pkg::NSRegisterSize*8-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>state_valid</td>
+<td>logic</td>
+<td>Output state: this is used to redirect the digest to KeyMgr or Software depends on the configuration.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>logic [sha3_pkg::StateW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_reg_state_valid</td>
+<td>logic</td>
+<td>state is de-muxed in keymgr interface logic. the output from keymgr logic goes into staterd module to be visible to SW</td>
+</tr>
+<tr>
+<td>reg_state</td>
+<td>logic [sha3_pkg::StateW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sha3_rand_valid</td>
+<td>logic</td>
+<td>SHA3 Entropy interface</td>
+</tr>
+<tr>
+<td>sha3_rand_consumed</td>
+<td>logic</td>
+<td>SHA3 Entropy interface</td>
+</tr>
+<tr>
+<td>sha3_rand_data</td>
+<td>logic [sha3_pkg::StateW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_empty</td>
+<td>logic</td>
+<td>FIFO related signals</td>
+</tr>
+<tr>
+<td>msgfifo_full</td>
+<td>logic</td>
+<td>FIFO related signals</td>
+</tr>
+<tr>
+<td>msgfifo_depth</td>
+<td>logic [kmac_pkg::MsgFifoDepthW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_data</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_strb</td>
+<td>logic [kmac_pkg::MsgStrbW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_req</td>
+<td>logic</td>
+<td>TL-UL Adapter(MSG_FIFO) signals</td>
+</tr>
+<tr>
+<td>tlram_gnt</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_addr</td>
+<td>logic [8:0]</td>
+<td>NOT_READ</td>
+</tr>
+<tr>
+<td>tlram_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_wmask</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_rdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_rerror</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_wdata_endian</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tlram_wmask_endian</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_msg_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_msg_data</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_msg_mask</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_msg_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mux2fifo_valid</td>
+<td>logic</td>
+<td>KeyMgr interface to MSG_FIFO</td>
+</tr>
+<tr>
+<td>mux2fifo_data</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mux2fifo_mask</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mux2fifo_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>msg_valid</td>
+<td>logic</td>
+<td>KMAC to SHA3 core</td>
+</tr>
+<tr>
+<td>msg_data</td>
+<td>logic [kmac_pkg::MsgWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msg_strb</td>
+<td>logic [kmac_pkg::MsgStrbW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msg_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reg2msgfifo_process</td>
+<td>logic</td>
+<td>Process control signals Process pulse propagates from register to SHA3 engine one by one. Each module (MSG_FIFO, KMAC core, SHA3 core) generates the process pulse after flushing internal data to the next module.</td>
+</tr>
+<tr>
+<td>msgfifo2kmac_process</td>
+<td>logic</td>
+<td>Process control signals Process pulse propagates from register to SHA3 engine one by one. Each module (MSG_FIFO, KMAC core, SHA3 core) generates the process pulse after flushing internal data to the next module.</td>
+</tr>
+<tr>
+<td>kmac2sha3_process</td>
+<td>logic</td>
+<td>Process control signals Process pulse propagates from register to SHA3 engine one by one. Each module (MSG_FIFO, KMAC core, SHA3 core) generates the process pulse after flushing internal data to the next module.</td>
+</tr>
+<tr>
+<td>sw_key_data</td>
+<td>logic [MaxKeyLen-1:0]</td>
+<td>Secret Key signals</td>
+</tr>
+<tr>
+<td>sw_key_len</td>
+<td>key_len_e</td>
+<td></td>
+</tr>
+<tr>
+<td>key_data</td>
+<td>logic [MaxKeyLen-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_len</td>
+<td>key_len_e</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_kmac_en</td>
+<td>logic</td>
+<td>SHA3 Mode, Strength, KMAC enable for app interface</td>
+</tr>
+<tr>
+<td>app_kmac_en</td>
+<td>logic</td>
+<td>SHA3 Mode, Strength, KMAC enable for app interface</td>
+</tr>
+<tr>
+<td>reg_sha3_mode</td>
+<td>sha3_pkg::sha3_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>app_sha3_mode</td>
+<td>sha3_pkg::sha3_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_keccak_strength</td>
+<td>sha3_pkg::keccak_strength_e</td>
+<td></td>
+</tr>
+<tr>
+<td>app_keccak_strength</td>
+<td>sha3_pkg::keccak_strength_e</td>
+<td></td>
+</tr>
+<tr>
+<td>app_active</td>
+<td>logic</td>
+<td>Indicating AppIntf is active. This signal is used to check SW error</td>
+</tr>
+<tr>
+<td>sw_cmd</td>
+<td>kmac_cmd_e</td>
+<td></td>
+</tr>
+<tr>
+<td>kmac_cmd</td>
+<td>kmac_cmd_e</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_timer_limit</td>
+<td>logic [15:0]</td>
+<td>Entropy configurations</td>
+</tr>
+<tr>
+<td>wait_timer_limit</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_seed_update</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_entropy_seed_upper_qe</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_seed_data</td>
+<td>logic [63:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_mode</td>
+<td>entropy_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>entropy_fast_process</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sha3_err</td>
+<td>sha3_pkg::err_t</td>
+<td>SHA3 Error response</td>
+</tr>
+<tr>
+<td>app_err</td>
+<td>kmac_pkg::err_t</td>
+<td>KeyMgr Error response</td>
+</tr>
+<tr>
+<td>entropy_err</td>
+<td>kmac_pkg::err_t</td>
+<td>Entropy Generator Error</td>
+</tr>
+<tr>
+<td>errchecker_err</td>
+<td>kmac_pkg::err_t</td>
+<td>Error checker</td>
+</tr>
+<tr>
+<td>err_processed</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>engine_stable</td>
+<td>logic</td>
+<td>Configuration Register</td>
+</tr>
+<tr>
+<td>else</td>
+<td>end</td>
+<td></td>
+</tr>
+<tr>
+<td>idle_o</td>
+<td>begin</td>
+<td></td>
+</tr>
+<tr>
+<td>end</td>
+<td>end</td>
+<td></td>
+</tr>
+<tr>
+<td>event_msgfifo_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>msgfifo_empty_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>event_error</td>
+<td>logic</td>
+<td>Error As of now, only SHA3 error exists. More error codes will be added.</td>
+</tr>
+<tr>
+<td>unused_tlram_addr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>alert_test</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>Register top</td>
+</tr>
+<tr>
+<td>alerts</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>Register top</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kmac_st_e</td>
+<td>enum logic [2:0] {          KmacIdle,           KmacPrefix,           KmacKeyBlock,           KmacMsgFeed,           KmacDigest    }</td>
+<td>This state machine is to track the current process based on SW input and KMAC operation.</td>
+</tr>
+<tr>
+<td>tl_window_e</td>
+<td>enum int {     WinState   = 0,     WinMsgFifo = 1   }</td>
+<td>Window</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>(  )</em><br />
+Function-name N and Customization input string S</li>
+</ul>
+<p><strong>Description</strong><br />
+Function-name N and Customization input string S</p>
+<ul>
+<li><p>unnamed: <em>(  )</em></p></li>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+Secret Key<br />
+Secret key is defined as external register. So the logic latches when SW<br />
+writes to KEY_SHARE0 , KEY_SHARE1 registers.</p></li>
+</ul>
+<p><strong>Description</strong><br />
+Secret Key<br />
+Secret key is defined as external register. So the logic latches when SW<br />
+writes to KEY_SHARE0 , KEY_SHARE1 registers.</p>
+<ul>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>(  )</em></p></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li><p>intr_kmac_done: prim_intr_hw<br />
+<strong>Description</strong><br />
+Hash process absorbed interrupt</p></li>
+<li><p>intr_fifo_empty: prim_intr_hw</p></li>
+<li><p>u_kmac_core: kmac_core<br />
+<strong>Description</strong><br />
+KMAC core</p></li>
+<li><p>u_sha3: sha3<br />
+<strong>Description</strong><br />
+SHA3 hashing engine</p></li>
+<li><p>u_app_intf: kmac_app<br />
+<strong>Description</strong><br />
+Application interface Mux/Demux</p></li>
+<li><p>u_msgfifo: kmac_msgfifo<br />
+<strong>Description</strong><br />
+Message FIFO</p></li>
+<li><p>u_staterd: kmac_staterd<br />
+<strong>Description</strong><br />
+State (Digest) reader</p></li>
+<li><p>u_errchk: kmac_errchk<br />
+<strong>Description</strong><br />
+Error checker</p></li>
+<li><p>u_reg: kmac_reg_top</p></li>
+</ul><br><br><br><br><br><br>

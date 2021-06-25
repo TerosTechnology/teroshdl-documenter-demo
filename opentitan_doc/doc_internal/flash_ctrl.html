@@ -1,0 +1,1058 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=flash_ctrl><h1 id="entity-flash_ctrl">Entity: flash_ctrl</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1315 530"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="395,0 410,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="510" height="110" fill="black" x="410" y="0"></rect><rect id="SvgjsRect1007" width="506" height="105" fill="#bdecb6" x="412" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="390" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   logic [NumAlerts-1:0] </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="425" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   NumAlerts </tspan></text><line id="SvgjsLine1012" x1="395" y1="15" x2="410" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="390" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   flash_key_t </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="425" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstAddrKey </tspan></text><line id="SvgjsLine1017" x1="395" y1="35" x2="410" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="390" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   flash_key_t </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="425" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstDataKey </tspan></text><line id="SvgjsLine1022" x1="395" y1="55" x2="410" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="390" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   lfsr_seed_t </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="425" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstLfsrSeed </tspan></text><line id="SvgjsLine1027" x1="395" y1="75" x2="410" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="390" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   lfsr_perm_t </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="425" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstLfsrPerm </tspan></text><line id="SvgjsLine1032" x1="395" y1="95" x2="410" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1033" width="510" height="410" fill="black" x="410" y="115"></rect><rect id="SvgjsRect1034" width="506" height="405" fill="#fdfd96" x="412" y="117"></rect><text id="SvgjsText1035" font-family="Helvetica" x="390" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="425" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1039" x1="395" y1="130" x2="410" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="390" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="425" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1044" x1="395" y1="150" x2="410" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="390" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="425" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   clk_otp_i </tspan></text><line id="SvgjsLine1049" x1="395" y1="170" x2="410" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="390" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="425" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   rst_otp_ni </tspan></text><line id="SvgjsLine1054" x1="395" y1="190" x2="410" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="390" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="425" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_creator_seed_sw_rw_en_i </tspan></text><line id="SvgjsLine1059" x1="395" y1="210" x2="410" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="390" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="425" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_owner_seed_sw_rw_en_i </tspan></text><line id="SvgjsLine1064" x1="395" y1="230" x2="410" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="390" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="425" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_iso_part_sw_rd_en_i </tspan></text><line id="SvgjsLine1069" x1="395" y1="250" x2="410" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="390" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="425" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_iso_part_sw_wr_en_i </tspan></text><line id="SvgjsLine1074" x1="395" y1="270" x2="410" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="390" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="425" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_seed_hw_rd_en_i </tspan></text><line id="SvgjsLine1079" x1="395" y1="290" x2="410" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="390" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="425" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   lc_escalate_en_i </tspan></text><line id="SvgjsLine1084" x1="395" y1="310" x2="410" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="390" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="425" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   core_tl_i </tspan></text><line id="SvgjsLine1089" x1="395" y1="330" x2="410" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="390" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="425" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   prim_tl_i </tspan></text><line id="SvgjsLine1094" x1="395" y1="350" x2="410" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="390" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   flash_rsp_t </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="425" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   flash_i </tspan></text><line id="SvgjsLine1099" x1="395" y1="370" x2="410" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="390" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="425" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   otp_i </tspan></text><line id="SvgjsLine1104" x1="395" y1="390" x2="410" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="390" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="425" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   rma_req_i </tspan></text><line id="SvgjsLine1109" x1="395" y1="410" x2="410" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="390" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="425" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   rma_seed_i </tspan></text><line id="SvgjsLine1114" x1="395" y1="430" x2="410" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="390" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="425" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   cio_tck_i </tspan></text><line id="SvgjsLine1119" x1="395" y1="450" x2="410" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="390" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="425" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   cio_tms_i </tspan></text><line id="SvgjsLine1124" x1="395" y1="470" x2="410" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="390" y="469.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="425" y="469.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   cio_tdi_i </tspan></text><line id="SvgjsLine1129" x1="395" y1="490" x2="410" y2="490" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="390" y="489.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   [flash_ctrl_reg_pkg::NumAlerts-1:0] </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="425" y="489.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   alert_rx_i </tspan></text><line id="SvgjsLine1134" x1="395" y1="510" x2="410" y2="510" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="940" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="905" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   core_tl_o </tspan></text><line id="SvgjsLine1139" x1="920" y1="130" x2="935" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="940" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="905" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   prim_tl_o </tspan></text><line id="SvgjsLine1144" x1="920" y1="150" x2="935" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1145" font-family="Helvetica" x="940" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">   flash_req_t </tspan></text><text id="SvgjsText1147" font-family="Helvetica" x="905" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1148" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   flash_o </tspan></text><line id="SvgjsLine1149" x1="920" y1="170" x2="935" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1150" font-family="Helvetica" x="940" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1151" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1152" font-family="Helvetica" x="905" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1153" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   otp_o </tspan></text><line id="SvgjsLine1154" x1="920" y1="190" x2="935" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1155" font-family="Helvetica" x="940" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1156" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1157" font-family="Helvetica" x="905" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1158" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   rma_ack_o </tspan></text><line id="SvgjsLine1159" x1="920" y1="210" x2="935" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1160" font-family="Helvetica" x="940" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1161" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1162" font-family="Helvetica" x="905" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1163" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   pwrmgr_o </tspan></text><line id="SvgjsLine1164" x1="920" y1="230" x2="935" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1165" font-family="Helvetica" x="940" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1166" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">   keymgr_flash_t </tspan></text><text id="SvgjsText1167" font-family="Helvetica" x="905" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1168" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   keymgr_o </tspan></text><line id="SvgjsLine1169" x1="920" y1="250" x2="935" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1170" font-family="Helvetica" x="940" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1171" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1172" font-family="Helvetica" x="905" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1173" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   cio_tdo_en_o </tspan></text><line id="SvgjsLine1174" x1="920" y1="270" x2="935" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1175" font-family="Helvetica" x="940" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1176" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1177" font-family="Helvetica" x="905" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1178" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   cio_tdo_o </tspan></text><line id="SvgjsLine1179" x1="920" y1="290" x2="935" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1180" font-family="Helvetica" x="940" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1181" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1182" font-family="Helvetica" x="905" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1183" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_err_o </tspan></text><line id="SvgjsLine1184" x1="920" y1="310" x2="935" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1185" font-family="Helvetica" x="940" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1186" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1187" font-family="Helvetica" x="905" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1188" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_prog_empty_o </tspan></text><line id="SvgjsLine1189" x1="920" y1="330" x2="935" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1190" font-family="Helvetica" x="940" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1191" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1192" font-family="Helvetica" x="905" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1193" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_prog_lvl_o </tspan></text><line id="SvgjsLine1194" x1="920" y1="350" x2="935" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1195" font-family="Helvetica" x="940" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1196" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1197" font-family="Helvetica" x="905" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1198" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_rd_full_o </tspan></text><line id="SvgjsLine1199" x1="920" y1="370" x2="935" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1200" font-family="Helvetica" x="940" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1201" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1202" font-family="Helvetica" x="905" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1203" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_rd_lvl_o </tspan></text><line id="SvgjsLine1204" x1="920" y1="390" x2="935" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1205" font-family="Helvetica" x="940" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1206" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1207" font-family="Helvetica" x="905" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1208" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   intr_op_done_o </tspan></text><line id="SvgjsLine1209" x1="920" y1="410" x2="935" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1210" font-family="Helvetica" x="940" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1211" dy="26" x="940" svgjs:data="{&quot;newLined&quot;:true}">   [flash_ctrl_reg_pkg::NumAlerts-1:0] </tspan></text><text id="SvgjsText1212" font-family="Helvetica" x="905" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1213" dy="26" x="905" svgjs:data="{&quot;newLined&quot;:true}">   alert_tx_o </tspan></text><line id="SvgjsLine1214" x1="920" y1="430" x2="935" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Flash Controller Module</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NumAlerts</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>RndCnstAddrKey</td>
+<td>flash_key_t</td>
+<td>RndCnstAddrKeyDefault</td>
+<td></td>
+</tr>
+<tr>
+<td>RndCnstDataKey</td>
+<td>flash_key_t</td>
+<td>RndCnstDataKeyDefault</td>
+<td></td>
+</tr>
+<tr>
+<td>RndCnstLfsrSeed</td>
+<td>lfsr_seed_t</td>
+<td>RndCnstLfsrSeedDefault</td>
+<td></td>
+</tr>
+<tr>
+<td>RndCnstLfsrPerm</td>
+<td>lfsr_perm_t</td>
+<td>RndCnstLfsrPermDefault</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_otp_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_otp_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lc_creator_seed_sw_rw_en_i</td>
+<td>input</td>
+<td></td>
+<td>life cycle interface</td>
+</tr>
+<tr>
+<td>lc_owner_seed_sw_rw_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lc_iso_part_sw_rd_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lc_iso_part_sw_wr_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lc_seed_hw_rd_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lc_escalate_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>core_tl_i</td>
+<td>input</td>
+<td></td>
+<td>Bus Interface</td>
+</tr>
+<tr>
+<td>core_tl_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>prim_tl_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>prim_tl_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>flash_i</td>
+<td>input</td>
+<td>flash_rsp_t</td>
+<td>Flash Interface</td>
+</tr>
+<tr>
+<td>flash_o</td>
+<td>output</td>
+<td>flash_req_t</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_o</td>
+<td>output</td>
+<td></td>
+<td>otp/lc/pwrmgr/keymgr Interface</td>
+</tr>
+<tr>
+<td>otp_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rma_req_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rma_seed_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rma_ack_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pwrmgr_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>keymgr_o</td>
+<td>output</td>
+<td>keymgr_flash_t</td>
+<td></td>
+</tr>
+<tr>
+<td>cio_tck_i</td>
+<td>input</td>
+<td></td>
+<td>IOs</td>
+</tr>
+<tr>
+<td>cio_tms_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cio_tdi_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cio_tdo_en_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cio_tdo_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_err_o</td>
+<td>output</td>
+<td></td>
+<td>ERR_CODE is non-zero</td>
+</tr>
+<tr>
+<td>intr_prog_empty_o</td>
+<td>output</td>
+<td></td>
+<td>Program fifo is empty</td>
+</tr>
+<tr>
+<td>intr_prog_lvl_o</td>
+<td>output</td>
+<td></td>
+<td>Program fifo is empty</td>
+</tr>
+<tr>
+<td>intr_rd_full_o</td>
+<td>output</td>
+<td></td>
+<td>Read fifo is full</td>
+</tr>
+<tr>
+<td>intr_rd_lvl_o</td>
+<td>output</td>
+<td></td>
+<td>Read fifo is full</td>
+</tr>
+<tr>
+<td>intr_op_done_o</td>
+<td>output</td>
+<td></td>
+<td>Requested flash operation (wr/erase) done</td>
+</tr>
+<tr>
+<td>alert_rx_i</td>
+<td>input</td>
+<td>[flash_ctrl_reg_pkg::NumAlerts-1:0]</td>
+<td>Alerts</td>
+</tr>
+<tr>
+<td>alert_tx_o</td>
+<td>output</td>
+<td>[flash_ctrl_reg_pkg::NumAlerts-1:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reg2hw</td>
+<td>flash_ctrl_core_reg2hw_t</td>
+<td></td>
+</tr>
+<tr>
+<td>hw2reg</td>
+<td>flash_ctrl_core_hw2reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_win_h2d</td>
+<td>tlul_pkg::tl_h2d_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_win_d2h</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td></td>
+</tr>
+<tr>
+<td>intg_err</td>
+<td>logic</td>
+<td>Register module</td>
+</tr>
+<tr>
+<td>prog_fifo_wvalid</td>
+<td>logic</td>
+<td>FIFO Connections</td>
+</tr>
+<tr>
+<td>prog_fifo_wready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_fifo_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_fifo_ren</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_fifo_wdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_fifo_rdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_fifo_depth</td>
+<td>logic [FifoDepthW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_wready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_rready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_wen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_ren</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_wdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_rdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_depth</td>
+<td>logic [FifoDepthW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_fifo_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_flash_req</td>
+<td>logic</td>
+<td>Program Control Connections</td>
+</tr>
+<tr>
+<td>prog_flash_ovfl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_flash_addr</td>
+<td>logic [BusAddrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_op_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_flash_req</td>
+<td>logic</td>
+<td>Read Control Connections</td>
+</tr>
+<tr>
+<td>rd_flash_ovfl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_flash_addr</td>
+<td>logic [BusAddrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>erase_flash_req</td>
+<td>logic</td>
+<td>Erase Control Connections</td>
+</tr>
+<tr>
+<td>erase_flash_addr</td>
+<td>logic [BusAddrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>erase_flash_type</td>
+<td>flash_erase_e</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_done</td>
+<td>logic</td>
+<td>Done / Error signaling from ctrl modules</td>
+</tr>
+<tr>
+<td>rd_done</td>
+<td>logic</td>
+<td>Done / Error signaling from ctrl modules</td>
+</tr>
+<tr>
+<td>erase_done</td>
+<td>logic</td>
+<td>Done / Error signaling from ctrl modules</td>
+</tr>
+<tr>
+<td>prog_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>erase_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_addr</td>
+<td>logic [BusAddrW-1:0]</td>
+<td>Flash Memory Properties Connections</td>
+</tr>
+<tr>
+<td>flash_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_rd_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_prog_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_erase_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_mp_error</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_prog_data</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_prog_last</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_prog_type</td>
+<td>flash_prog_e</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_rd_data</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_rd_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_phy_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rd_op</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>prog_op</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>erase_op</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>err_addr</td>
+<td>logic [AllPagesW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>phase</td>
+<td>flash_lcmgr_phase_e</td>
+<td></td>
+</tr>
+<tr>
+<td>addr_key</td>
+<td>flash_key_t</td>
+<td>Flash control arbitration connections to hardware interface</td>
+</tr>
+<tr>
+<td>rand_addr_key</td>
+<td>flash_key_t</td>
+<td></td>
+</tr>
+<tr>
+<td>data_key</td>
+<td>flash_key_t</td>
+<td></td>
+</tr>
+<tr>
+<td>rand_data_key</td>
+<td>flash_key_t</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_ctrl</td>
+<td>flash_ctrl_reg2hw_control_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_addr</td>
+<td>logic [top_pkg::TL_AW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_rready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_wvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_wdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_wready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>if_sel</td>
+<td>flash_sel_e</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_sel</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_phase</td>
+<td>flash_lcmgr_phase_e</td>
+<td></td>
+</tr>
+<tr>
+<td>creator_seed_priv</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>owner_seed_priv</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_ctrl_done</td>
+<td>logic</td>
+<td>Flash control arbitration connections to software interface</td>
+</tr>
+<tr>
+<td>sw_ctrl_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>muxed_ctrl</td>
+<td>flash_ctrl_reg2hw_control_reg_t</td>
+<td>Flash control muxed connections</td>
+</tr>
+<tr>
+<td>muxed_addr</td>
+<td>logic [top_pkg::TL_AW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>op_start</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>op_num_words</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>op_addr</td>
+<td>logic [BusAddrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>op_type</td>
+<td>flash_op_e</td>
+<td></td>
+</tr>
+<tr>
+<td>op_part</td>
+<td>flash_part_e</td>
+<td></td>
+</tr>
+<tr>
+<td>op_info_sel</td>
+<td>logic [InfoTypesWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>op_erase_type</td>
+<td>flash_erase_e</td>
+<td></td>
+</tr>
+<tr>
+<td>op_prog_type</td>
+<td>flash_prog_e</td>
+<td></td>
+</tr>
+<tr>
+<td>ctrl_init_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_clr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_rvalid</td>
+<td>logic</td>
+<td>software tlul to flash control aribration</td>
+</tr>
+<tr>
+<td>adapter_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_wvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_wdata</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_wen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_wready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rand_val</td>
+<td>logic [31:0]</td>
+<td>lfsr for local entropy usage</td>
+</tr>
+<tr>
+<td>lfsr_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>lfsr_seed_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_creator_seed_sw_rw_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td>life cycle connections</td>
+</tr>
+<tr>
+<td>lc_owner_seed_sw_rw_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_iso_part_sw_rd_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_iso_part_sw_wr_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_seed_hw_rd_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_disable</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td>flash functional disable</td>
+</tr>
+<tr>
+<td>prog_type_en</td>
+<td>logic [1:0]</td>
+<td>Program handler is consumer of prog_fifo</td>
+</tr>
+<tr>
+<td>region_cfgs</td>
+<td>mp_region_cfg_t [MpRegions:0]</td>
+<td>extra region is the default region</td>
+</tr>
+<tr>
+<td></td>
+<td>[MpRegions-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reg2hw_info_page_cfgs</td>
+<td>info_page_cfg_t [NumBanks-1:0][InfoTypes-1:0][InfosPerBank-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>info_page_cfgs</td>
+<td>info_page_cfg_t [NumBanks-1:0][InfoTypes-1:0][InfosPerBank-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_part_sel</td>
+<td>flash_part_e</td>
+<td>direct assignment since prog/rd/erase_ctrl do not make use of op_part</td>
+</tr>
+<tr>
+<td>flash_info_sel</td>
+<td>logic [InfoTypesWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_idle_d</td>
+<td>logic</td>
+<td>Interface to pwrmgr flash is not idle as long as there is a stateful operation ongoing</td>
+</tr>
+<tr>
+<td>alert_srcs</td>
+<td>logic [NumAlerts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>alert_tests</td>
+<td>logic [NumAlerts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>recov_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>recov_mp_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>recov_ecc_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fatal_intg_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_escalate_en</td>
+<td>lc_ctrl_pkg::lc_tx_t</td>
+<td></td>
+</tr>
+<tr>
+<td>single_err_cnt_d</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>multi_err_cnt_d</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>err_code_d</td>
+<td>flash_ctrl_reg2hw_err_code_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>err_code_q</td>
+<td>flash_ctrl_reg2hw_err_code_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>err_code_intr_event</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_src_d</td>
+<td>logic [3:0]</td>
+<td>general interrupt events</td>
+</tr>
+<tr>
+<td>intr_src_q</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_assert</td>
+<td>logic [4:0]</td>
+<td>interrupt events</td>
+</tr>
+<tr>
+<td>unused_byte_sel</td>
+<td>logic [BusByteWidth-1:0]</td>
+<td>Unused bits</td>
+</tr>
+<tr>
+<td>unused_higher_addr_bits</td>
+<td>logic [top_pkg::TL_AW-1-BusAddrW:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_scratch</td>
+<td>logic [top_pkg::TL_AW-1:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InfoBits</td>
+<td>int</td>
+<td>$bits(info_page_cfg_t) * InfosPerBank</td>
+<td></td>
+</tr>
+<tr>
+<td>IsFatal</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>{1'b1, 1'b0, 1'b0, 1'b0}</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>(  )</em><br />
+Final muxing to flash macro module</li>
+</ul>
+<p><strong>Description</strong><br />
+Final muxing to flash macro module</p>
+<ul>
+<li><p>unnamed: <em>(  )</em></p></li>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li><p>u_reg_core: flash_ctrl_core_reg_top</p></li>
+<li><p>u_lc_creator_seed_sw_rw_en_sync: prim_lc_sync<br />
+<strong>Description</strong><br />
+synchronize enables into local domain</p></li>
+<li><p>u_lc_owner_seed_sw_rw_en_sync: prim_lc_sync</p></li>
+<li><p>u_lc_iso_part_sw_rd_en_sync: prim_lc_sync</p></li>
+<li><p>u_lc_iso_part_sw_wr_en_sync: prim_lc_sync</p></li>
+<li><p>u_lc_seed_hw_rd_en_sync: prim_lc_sync</p></li>
+<li><p>u_lfsr: prim_lfsr</p></li>
+<li><p>u_ctrl_arb: flash_ctrl_arb<br />
+<strong>Description</strong><br />
+flash control arbitration between softawre / harware interfaces</p></li>
+<li><p>u_flash_hw_if: flash_ctrl_lcmgr<br />
+<strong>Description</strong><br />
+hardware interface</p></li>
+<li><p>u_to_prog_fifo: tlul_adapter_sram</p></li>
+<li><p>u_prog_fifo: prim_fifo_sync</p></li>
+<li><p>u_rd_fifo: prim_fifo_sync</p></li>
+<li><p>u_flash_ctrl_rd: flash_ctrl_rd<br />
+<strong>Description</strong><br />
+Read handler is consumer of rd_fifo</p></li>
+<li><p>u_flash_ctrl_erase: flash_ctrl_erase<br />
+<strong>Description</strong><br />
+Erase handler does not consume fifo</p></li>
+<li><p>u_flash_mp: flash_mp<br />
+<strong>Description</strong><br />
+Flash memory Properties<br />
+Memory property is page based and thus should use phy addressing<br />
+This should move to flash_phy long term</p></li>
+<li><p>u_reg_idle: prim_flop</p></li>
+<li><p>u_lc_escalation_en_sync: prim_lc_sync</p></li>
+</ul><br><br><br><br><br><br>

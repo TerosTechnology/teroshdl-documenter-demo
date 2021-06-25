@@ -1,0 +1,760 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=hmac_reg_top><h1 id="entity-hmac_reg_top">Entity: hmac_reg_top</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="130" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="125" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_win_i </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1042" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_win_o </tspan></text><line id="SvgjsLine1047" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1052" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="350" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="315" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1057" x1="330" y1="90" x2="345" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_win_o</td>
+<td>output</td>
+<td></td>
+<td>Output port for window</td>
+</tr>
+<tr>
+<td>tl_win_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reg2hw</td>
+<td>output</td>
+<td></td>
+<td>Write</td>
+</tr>
+<tr>
+<td>hw2reg</td>
+<td>input</td>
+<td></td>
+<td>Read</td>
+</tr>
+<tr>
+<td>intg_err_o</td>
+<td>output</td>
+<td></td>
+<td>Integrity check errors</td>
+</tr>
+<tr>
+<td>devmode_i</td>
+<td>input</td>
+<td></td>
+<td>If 1, explicit error return for unmapped register access</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reg_we</td>
+<td>logic</td>
+<td>register signals</td>
+</tr>
+<tr>
+<td>reg_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_addr</td>
+<td>logic [AW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_wdata</td>
+<td>logic [DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_be</td>
+<td>logic [DBW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_rdata</td>
+<td>logic [DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_error</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>addrmiss</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>wr_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_rdata_next</td>
+<td>logic [DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_reg_h2d</td>
+<td>tlul_pkg::tl_h2d_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_reg_d2h</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td></td>
+</tr>
+<tr>
+<td>intg_err</td>
+<td>logic</td>
+<td>incoming payload check</td>
+</tr>
+<tr>
+<td>intg_err_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_o_pre</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td>outgoing integrity generation</td>
+</tr>
+<tr>
+<td>tl_socket_h2d</td>
+<td>tlul_pkg::tl_h2d_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_socket_d2h</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_steer</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_we</td>
+<td>logic</td>
+<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+</tr>
+<tr>
+<td>intr_state_hmac_done_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_hmac_done_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_fifo_empty_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_fifo_empty_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_hmac_err_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_hmac_err_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_hmac_done_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_hmac_done_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_fifo_empty_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_fifo_empty_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_hmac_err_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_hmac_err_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_test_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_test_hmac_done_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_test_fifo_empty_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_test_hmac_err_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>alert_test_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>alert_test_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_hmac_en_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_hmac_en_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_sha_en_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_sha_en_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_endian_swap_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_endian_swap_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_digest_swap_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_digest_swap_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_hash_start_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_hash_process_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>status_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>status_fifo_empty_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>status_fifo_full_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>status_fifo_depth_qs</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>err_code_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>wipe_secret_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>wipe_secret_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_0_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_1_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_2_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_3_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_4_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_4_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_5_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_5_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_6_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_6_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_7_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>key_7_wd</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_0_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_0_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_1_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_1_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_2_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_2_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_3_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_3_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_4_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_4_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_5_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_5_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_6_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_6_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_7_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>digest_7_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msg_length_lower_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>msg_length_upper_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>addr_hit</td>
+<td>logic [26:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_wdata</td>
+<td>logic</td>
+<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+</tr>
+<tr>
+<td>unused_be</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AW</td>
+<td>int</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>DW</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>DBW</td>
+<td>int</td>
+<td>DW/8</td>
+<td>Byte Width</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>(  )</em><br />
+Create steering logic</p></li>
+</ul>
+<p><strong>Description</strong><br />
+Create steering logic</p>
+<ul>
+<li><p>unnamed: <em>(  )</em></p></li>
+<li><p>unnamed: <em>(  )</em><br />
+Check sub-word write is permitted</p></li>
+</ul>
+<p><strong>Description</strong><br />
+Check sub-word write is permitted</p>
+<ul>
+<li>unnamed: <em>(  )</em><br />
+Read data return</li>
+</ul>
+<p><strong>Description</strong><br />
+Read data return</p><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li><p>u_chk: tlul_cmd_intg_chk</p></li>
+<li><p>u_rsp_intg_gen: tlul_rsp_intg_gen</p></li>
+<li><p>u_socket: tlul_socket_1n<br />
+<strong>Description</strong><br />
+Create Socket_1n</p></li>
+<li><p>u_reg_if: tlul_adapter_reg</p></li>
+<li><p>u_intr_state_hmac_done: prim_subreg<br />
+<strong>Description</strong><br />
+Register instances<br />
+R[intr_state]: V(False)<br />
+F[hmac_done]: 0:0</p></li>
+<li><p>u_intr_state_fifo_empty: prim_subreg<br />
+<strong>Description</strong><br />
+F[fifo_empty]: 1:1</p></li>
+<li><p>u_intr_state_hmac_err: prim_subreg<br />
+<strong>Description</strong><br />
+F[hmac_err]: 2:2</p></li>
+<li><p>u_intr_enable_hmac_done: prim_subreg<br />
+<strong>Description</strong><br />
+R[intr_enable]: V(False)<br />
+F[hmac_done]: 0:0</p></li>
+<li><p>u_intr_enable_fifo_empty: prim_subreg<br />
+<strong>Description</strong><br />
+F[fifo_empty]: 1:1</p></li>
+<li><p>u_intr_enable_hmac_err: prim_subreg<br />
+<strong>Description</strong><br />
+F[hmac_err]: 2:2</p></li>
+<li><p>u_intr_test_hmac_done: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[intr_test]: V(True)<br />
+F[hmac_done]: 0:0</p></li>
+<li><p>u_intr_test_fifo_empty: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[fifo_empty]: 1:1</p></li>
+<li><p>u_intr_test_hmac_err: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[hmac_err]: 2:2</p></li>
+<li><p>u_alert_test: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[alert_test]: V(True)</p></li>
+<li><p>u_cfg_hmac_en: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[cfg]: V(True)<br />
+F[hmac_en]: 0:0</p></li>
+<li><p>u_cfg_sha_en: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[sha_en]: 1:1</p></li>
+<li><p>u_cfg_endian_swap: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[endian_swap]: 2:2</p></li>
+<li><p>u_cfg_digest_swap: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[digest_swap]: 3:3</p></li>
+<li><p>u_cmd_hash_start: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[cmd]: V(True)<br />
+F[hash_start]: 0:0</p></li>
+<li><p>u_cmd_hash_process: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[hash_process]: 1:1</p></li>
+<li><p>u_status_fifo_empty: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[status]: V(True)<br />
+F[fifo_empty]: 0:0</p></li>
+<li><p>u_status_fifo_full: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[fifo_full]: 1:1</p></li>
+<li><p>u_status_fifo_depth: prim_subreg_ext<br />
+<strong>Description</strong><br />
+F[fifo_depth]: 8:4</p></li>
+<li><p>u_err_code: prim_subreg<br />
+<strong>Description</strong><br />
+R[err_code]: V(False)</p></li>
+<li><p>u_wipe_secret: prim_subreg_ext<br />
+<strong>Description</strong><br />
+R[wipe_secret]: V(True)</p></li>
+<li><p>u_msg_length_lower: prim_subreg<br />
+<strong>Description</strong><br />
+R[msg_length_lower]: V(False)</p></li>
+<li><p>u_msg_length_upper: prim_subreg<br />
+<strong>Description</strong><br />
+R[msg_length_upper]: V(False)</p></li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,199 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axi_slave_pkg><h1 id="package-axi_slave_pkg">Package: axi_slave_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>axi_slave_logger</td>
+<td>logger_t</td>
+<td>get_logger("vunit_lib:axi_slave_pkg")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_set_address_fifo_depth_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave set address channel fifo depth")</td>
+<td>Private constants</td>
+</tr>
+<tr>
+<td>axi_slave_set_write_response_fifo_depth_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("set write response fifo depth")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_set_address_stall_probability_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave set address channel stall probability")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_set_data_stall_probability_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave set data stall probability")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_set_write_response_stall_probability_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave set write response stall probability")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_set_response_latency_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave response latency probability")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_configure_4kbyte_boundary_check_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave configure 4kbyte boundary check")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_get_statistics_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave get statistics")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_slave_enable_well_behaved_check_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi slave enable well behaved check")</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>axi_slave_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>get_logger <font id="function_arguments">(axi_slave : axi_slave_t)</font> <font id="function_return">return logger_t</font><br />
+<strong>Description</strong><br />
+Get the logger used by the axi_slave</li>
+<li>set_address_fifo_depth <font id="function_arguments">(signal net : inout network_t;                                   axi_slave : axi_slave_t;
+                               depth : positive)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the maximum number address channel tokens that can be queued</li>
+<li>set_write_response_fifo_depth <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t;
+                                      depth : positive)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the maximum number write responses that can be queued</li>
+<li>set_address_stall_probability <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t;
+                                      probability : probability_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the address channel stall probability</li>
+<li>set_data_stall_probability <font id="function_arguments">(signal net : inout network_t;                                       axi_slave : axi_slave_t;
+                                   probability : probability_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the data channel stall probability</li>
+<li>set_write_response_stall_probability <font id="function_arguments">(signal net : inout network_t;                                                 axi_slave : axi_slave_t;
+                                             probability : probability_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the write response stall probability</li>
+<li>set_response_latency <font id="function_arguments">(signal net : inout network_t;                                 axi_slave : axi_slave_t;
+                             min_latency, max_latency : delay_length)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+The response latency is randomly choosen in the uniform interval:[min_latency, max_latency]</li>
+<li>set_response_latency <font id="function_arguments">(signal net : inout network_t;                                 axi_slave : axi_slave_t;
+                             latency : delay_length)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Short hand for set_response_latency when min and max are the same</li>
+<li>enable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;                                         axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font></li>
+<li>disable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font></li>
+<li>get_statistics <font id="function_arguments">(signal net : inout network_t;                           axi_slave : axi_slave_t;
+                       variable stat  : inout axi_statistics_t;
+                       clear : boolean := false)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Get statistics object from axi slaveDynamically allocates new statistics object which must he deallocated whenusedThis procedure will automatically deallocate the input statistics objectif it is not null</li>
+<li>enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</li>
+</ul><br><br><br><br><br><br>

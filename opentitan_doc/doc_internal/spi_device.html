@@ -1,0 +1,984 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=spi_device><h1 id="entity-spi_device">Entity: spi_device</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 795 310"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="195,0 210,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="390" height="30" fill="black" x="210" y="0"></rect><rect id="SvgjsRect1007" width="386" height="25" fill="#bdecb6" x="212" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="190" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   logic [NumAlerts-1:0] </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="225" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   NumAlerts </tspan></text><line id="SvgjsLine1012" x1="195" y1="15" x2="210" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="390" height="270" fill="black" x="210" y="35"></rect><rect id="SvgjsRect1014" width="386" height="265" fill="#fdfd96" x="212" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="190" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="225" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1019" x1="195" y1="50" x2="210" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="190" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="225" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1024" x1="195" y1="70" x2="210" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="190" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="225" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1029" x1="195" y1="90" x2="210" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="190" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   [NumAlerts-1:0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="225" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   alert_rx_i </tspan></text><line id="SvgjsLine1034" x1="195" y1="110" x2="210" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="190" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="225" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cio_sck_i </tspan></text><line id="SvgjsLine1039" x1="195" y1="130" x2="210" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="190" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="225" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cio_csb_i </tspan></text><line id="SvgjsLine1044" x1="195" y1="150" x2="210" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="190" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="225" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cio_sd_i </tspan></text><line id="SvgjsLine1049" x1="195" y1="170" x2="210" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="190" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="225" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_i </tspan></text><line id="SvgjsLine1054" x1="195" y1="190" x2="210" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="190" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="225" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   ram_cfg_i </tspan></text><line id="SvgjsLine1059" x1="195" y1="210" x2="210" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="190" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="225" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   mbist_en_i </tspan></text><line id="SvgjsLine1064" x1="195" y1="230" x2="210" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="190" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="225" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   scan_clk_i </tspan></text><line id="SvgjsLine1069" x1="195" y1="250" x2="210" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="190" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="225" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   scan_rst_ni </tspan></text><line id="SvgjsLine1074" x1="195" y1="270" x2="210" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="190" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="225" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   scanmode_i </tspan></text><line id="SvgjsLine1079" x1="195" y1="290" x2="210" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="620" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="585" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1084" x1="600" y1="50" x2="615" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="620" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">   [NumAlerts-1:0] </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="585" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   alert_tx_o </tspan></text><line id="SvgjsLine1089" x1="600" y1="70" x2="615" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="620" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="585" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   cio_sd_o </tspan></text><line id="SvgjsLine1094" x1="600" y1="90" x2="615" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="620" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="585" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   cio_sd_en_o </tspan></text><line id="SvgjsLine1099" x1="600" y1="110" x2="615" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="620" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="585" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_o </tspan></text><line id="SvgjsLine1104" x1="600" y1="130" x2="615" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="620" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="585" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_rxf_o </tspan></text><line id="SvgjsLine1109" x1="600" y1="150" x2="615" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="620" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="585" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_rxlvl_o </tspan></text><line id="SvgjsLine1114" x1="600" y1="170" x2="615" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="620" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="585" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_txlvl_o </tspan></text><line id="SvgjsLine1119" x1="600" y1="190" x2="615" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="620" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="585" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_rxerr_o </tspan></text><line id="SvgjsLine1124" x1="600" y1="210" x2="615" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="620" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="585" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_rxoverflow_o </tspan></text><line id="SvgjsLine1129" x1="600" y1="230" x2="615" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="620" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="620" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="585" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="585" svgjs:data="{&quot;newLined&quot;:true}">   intr_txunderflow_o </tspan></text><line id="SvgjsLine1134" x1="600" y1="250" x2="615" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Serial Peripheral Interface (SPI) Device module.</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NumAlerts</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_i</td>
+<td>input</td>
+<td></td>
+<td>Register interface</td>
+</tr>
+<tr>
+<td>tl_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>alert_rx_i</td>
+<td>input</td>
+<td>[NumAlerts-1:0]</td>
+<td>Alerts</td>
+</tr>
+<tr>
+<td>alert_tx_o</td>
+<td>output</td>
+<td>[NumAlerts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cio_sck_i</td>
+<td>input</td>
+<td></td>
+<td>SPI Interface</td>
+</tr>
+<tr>
+<td>cio_csb_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cio_sd_o</td>
+<td>output</td>
+<td>[3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cio_sd_en_o</td>
+<td>output</td>
+<td>[3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cio_sd_i</td>
+<td>input</td>
+<td>[3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>passthrough_o</td>
+<td>output</td>
+<td></td>
+<td>Passthrough interface</td>
+</tr>
+<tr>
+<td>passthrough_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_rxf_o</td>
+<td>output</td>
+<td></td>
+<td>RX FIFO Full</td>
+</tr>
+<tr>
+<td>intr_rxlvl_o</td>
+<td>output</td>
+<td></td>
+<td>RX FIFO above level</td>
+</tr>
+<tr>
+<td>intr_txlvl_o</td>
+<td>output</td>
+<td></td>
+<td>TX FIFO below level</td>
+</tr>
+<tr>
+<td>intr_rxerr_o</td>
+<td>output</td>
+<td></td>
+<td>RX Frame error</td>
+</tr>
+<tr>
+<td>intr_rxoverflow_o</td>
+<td>output</td>
+<td></td>
+<td>RX Async FIFO Overflow</td>
+</tr>
+<tr>
+<td>intr_txunderflow_o</td>
+<td>output</td>
+<td></td>
+<td>TX Async FIFO Underflow</td>
+</tr>
+<tr>
+<td>ram_cfg_i</td>
+<td>input</td>
+<td></td>
+<td>Memory configuration</td>
+</tr>
+<tr>
+<td>mbist_en_i</td>
+<td>input</td>
+<td></td>
+<td>DFT related controls</td>
+</tr>
+<tr>
+<td>scan_clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>scan_rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>scanmode_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_spi_in</td>
+<td>logic</td>
+<td>clock for latch SDI</td>
+</tr>
+<tr>
+<td>clk_spi_in_muxed</td>
+<td>logic</td>
+<td>clock for latch SDI</td>
+</tr>
+<tr>
+<td>clk_spi_in_buf</td>
+<td>logic</td>
+<td>clock for latch SDI</td>
+</tr>
+<tr>
+<td>clk_spi_out</td>
+<td>logic</td>
+<td>clock for driving SDO</td>
+</tr>
+<tr>
+<td>clk_spi_out_muxed</td>
+<td>logic</td>
+<td>clock for driving SDO</td>
+</tr>
+<tr>
+<td>clk_spi_out_buf</td>
+<td>logic</td>
+<td>clock for driving SDO</td>
+</tr>
+<tr>
+<td>reg2hw</td>
+<td>spi_device_reg2hw_t</td>
+<td></td>
+</tr>
+<tr>
+<td>hw2reg</td>
+<td>spi_device_hw2reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_sram_h2d</td>
+<td>tlul_pkg::tl_h2d_t</td>
+<td></td>
+</tr>
+<tr>
+<td>tl_sram_d2h</td>
+<td>tlul_pkg::tl_d2h_t</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_clk</td>
+<td>logic</td>
+<td>Dual-port SRAM Interface: Refer prim_ram_2p_wrapper.sv</td>
+</tr>
+<tr>
+<td>sram_clk_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_clk_ungated</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_clk_muxed</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rst_n</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rst_n_noscan</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_write</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_addr</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_wdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_rdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_a_rerror</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_write</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_addr</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_wdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_rdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mem_b_rerror</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_req</td>
+<td>logic</td>
+<td>Submoule SRAM Requests</td>
+</tr>
+<tr>
+<td>sub_sram_write</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_addr</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_wdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_rdata</td>
+<td>logic [SramDw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_sram_rerror</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>internal_sd</td>
+<td>logic [3:0]</td>
+<td>Host return path mux</td>
+</tr>
+<tr>
+<td>internal_sd_en</td>
+<td>logic [3:0]</td>
+<td>Host return path mux</td>
+</tr>
+<tr>
+<td>passthrough_sd</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>passthrough_sd_en</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cpol</td>
+<td>logic</td>
+<td>Clock polarity</td>
+</tr>
+<tr>
+<td>cpha</td>
+<td>logic</td>
+<td>Phase : Not complete</td>
+</tr>
+<tr>
+<td>txorder</td>
+<td>logic</td>
+<td>TX bitstream order: 0(bit 7 to 0), 1(bit 0 to 7)</td>
+</tr>
+<tr>
+<td>rxorder</td>
+<td>logic</td>
+<td>RX bitstream order: 0(bit 7 to 0), 1(bit 0 to 7)</td>
+</tr>
+<tr>
+<td>abort</td>
+<td>logic</td>
+<td>Abort current operations (txf only at this time)</td>
+</tr>
+<tr>
+<td>csb_syncd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst_txfifo_n</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst_rxfifo_n</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst_txfifo_reg</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst_rxfifo_reg</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>spi_mode</td>
+<td>spi_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_upload_mask</td>
+<td>logic [255:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cfg_addr_4b_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_sram_rxf_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_fwm_rxerr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_fwm_rxlvl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxlvl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxlvl_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_fwm_txlvl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txlvl</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txlvl_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_fwm_rxoverflow</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_fwm_txunderflow</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxf_overflow</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txf_underflow</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>timer_v</td>
+<td>logic        [7:0]</td>
+<td>Wait timer inside rxf control</td>
+</tr>
+<tr>
+<td>sram_rxf_rptr</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rxf_wptr</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_txf_rptr</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_txf_wptr</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rxf_depth</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_txf_depth</td>
+<td>logic   [PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rxf_bindex</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_txf_bindex</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rxf_lindex</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_txf_lindex</td>
+<td>logic [SramAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>as_txfifo_depth</td>
+<td>logic [AsFifoDepthW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>as_rxfifo_depth</td>
+<td>logic [AsFifoDepthW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rxf_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxf_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txf_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txf_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxf_full_syncd</td>
+<td>logic</td>
+<td>sync signals</td>
+</tr>
+<tr>
+<td>txf_empty_syncd</td>
+<td>logic</td>
+<td>sync signals</td>
+</tr>
+<tr>
+<td>io_mode</td>
+<td>io_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>io_mode_outclk</td>
+<td>io_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_iomode</td>
+<td>io_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>s2p_data_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>s2p_data</td>
+<td>spi_byte_t</td>
+<td></td>
+</tr>
+<tr>
+<td>s2p_bitcnt</td>
+<td>logic [BitCntW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>p2s_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>p2s_data</td>
+<td>spi_byte_t</td>
+<td></td>
+</tr>
+<tr>
+<td>p2s_sent</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_p2s_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_p2s_data</td>
+<td>spi_byte_t</td>
+<td></td>
+</tr>
+<tr>
+<td>sub_p2s_sent</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_dp_sel</td>
+<td>sel_datapath_e</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_dp_sel_outclk</td>
+<td>sel_datapath_e</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_opcode</td>
+<td>spi_byte_t</td>
+<td></td>
+</tr>
+<tr>
+<td>mailbox_assumed</td>
+<td>logic</td>
+<td>Mailbox in Passthrough needs to take SPI if readcmd hits mailbox address</td>
+</tr>
+<tr>
+<td>passthrough_assumed_by_internal</td>
+<td>logic</td>
+<td>Mailbox in Passthrough needs to take SPI if readcmd hits mailbox address</td>
+</tr>
+<tr>
+<td>cmd_filter</td>
+<td>logic [255:0]</td>
+<td>Passthrouth config signals</td>
+</tr>
+<tr>
+<td>addr_swap_mask</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>addr_swap_data</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_info</td>
+<td>cmd_info_t [spi_device_reg_pkg::NumCmdInfo-1:0]</td>
+<td>Command Info structure</td>
+</tr>
+<tr>
+<td></td>
+<td>[SDW+:SramAw]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[SDW+:SramAw]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[SDW+:SramAw]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[SDW+:SramAw]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[PtrW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rxf_full_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txf_empty_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sram_rxf_full_q</td>
+<td>logic</td>
+<td>Interrupt Edge</td>
+</tr>
+<tr>
+<td>fwm_rxerr_q</td>
+<td>logic</td>
+<td>Interrupt Edge</td>
+</tr>
+<tr>
+<td>sram_rxf_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fwm_rxerr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sck_n</td>
+<td>logic</td>
+<td>clk_spi cannot use glitch-free clock mux as clock switching in glitch-free requires two clocks to propagate clock selection and enable but SPI clock doesn't exist until it transmits data through SDI</td>
+</tr>
+<tr>
+<td>rst_spi_n</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>scanmode</td>
+<td>lc_ctrl_pkg::lc_tx_t [ScanModeUseLast-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>alert_test</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>Register module</td>
+</tr>
+<tr>
+<td>alerts</td>
+<td>logic [NumAlerts-1:0]</td>
+<td>Register module</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FifoWidth</td>
+<td>int</td>
+<td>$bits(spi_byte_t)</td>
+<td></td>
+</tr>
+<tr>
+<td>FifoDepth</td>
+<td>int</td>
+<td>8</td>
+<td>2 DWords</td>
+</tr>
+<tr>
+<td>SDW</td>
+<td>int</td>
+<td>$clog2(SramDw/FifoWidth)</td>
+<td></td>
+</tr>
+<tr>
+<td>PtrW</td>
+<td>int</td>
+<td>SramAw + 1 + SDW</td>
+<td></td>
+</tr>
+<tr>
+<td>AsFifoDepthW</td>
+<td>int</td>
+<td>$clog2(FifoDepth+1)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>unnamed: <em>( @(posedge clk_spi_in_buf or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>( @(posedge clk_spi_out_buf or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+<li><p>unnamed: <em>(  )</em></p></li>
+<li><p>unnamed: <em>(  )</em><br />
+Connect command info</p></li>
+</ul>
+<p><strong>Description</strong><br />
+Connect command info</p>
+<ul>
+<li>unnamed: <em>( @(posedge clk_spi_out_buf or negedge rst_spi_n) )</em><br />
+example: cmdparse triggers sel_dp at 8th beat of CMD bit.<br />
+-&gt; readcmd activates, it also changes IoMode if opcode is DualIO<br />
+or QuadIO commands<br />
+-&gt; changed io_mode affects spi_s2p module, which again affects<br />
+cmdparse module.</li>
+</ul>
+<p><strong>Description</strong><br />
+example: cmdparse triggers sel_dp at 8th beat of CMD bit.<br />
+-&gt; readcmd activates, it also changes IoMode if opcode is DualIO<br />
+or QuadIO commands<br />
+-&gt; changed io_mode affects spi_s2p module, which again affects<br />
+cmdparse module.</p>
+<ul>
+<li><p>unnamed: <em>( @(posedge clk_spi_out_buf or negedge rst_spi_n) )</em></p></li>
+<li><p>unnamed: <em>(  )</em></p></li>
+<li><p>unnamed: <em>(  )</em></p></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li>u_sync_csb: prim_flop_2sync</li>
+<li>u_sync_rxf: prim_flop_2sync</li>
+<li>u_sync_txe: prim_flop_2sync</li>
+<li>u_scanmode_sync: prim_lc_sync</li>
+<li>u_clk_spi: prim_clock_inv</li>
+<li>u_clk_spi_in_mux: prim_clock_mux2</li>
+<li>u_clk_spi_in_buf: prim_clock_buf</li>
+<li>u_clk_spi_out_mux: prim_clock_mux2</li>
+<li>u_clk_spi_out_buf: prim_clock_buf</li>
+<li>u_csb_rst_scan_mux: prim_clock_mux2</li>
+<li>u_tx_rst_scan_mux: prim_clock_mux2</li>
+<li>u_rx_rst_scan_mux: prim_clock_mux2</li>
+<li>u_sram_clk_sel: prim_clock_mux2<br />
+<strong>Description</strong><br />
+Programming sequence:<br />
+Change to SPI_CLK</li>
+</ul>
+<ol>
+<li>Check if SPI line is idle.</li>
+<li>Clear sram_clk_en to 0.</li>
+<li>Change mode to FlashMode or PassThrough</li>
+<li>Set sram_clk_en to 1.<br />
+Change to peripheral clk</li>
+<li>Check if SPI_CLK is idle</li>
+<li>Clear sram_clk_en to 0.</li>
+<li>Change mode to FwMode</li>
+<li>Set sram_clk_en to 1.</li>
+</ol>
+<ul>
+<li><p>u_sram_clk_scan: prim_clock_mux2</p></li>
+<li><p>u_sram_clk_cg: prim_clock_gating</p></li>
+<li><p>u_sram_rst_sel: prim_clock_mux2</p></li>
+<li><p>u_sram_rst_scanmux: prim_clock_mux2</p></li>
+<li><p>u_s2p: spi_s2p</p></li>
+<li><p>u_p2s: spi_p2s</p></li>
+<li><p>u_fwmode: spi_fwmode</p></li>
+<li><p>u_cmdparse: spi_cmdparse</p></li>
+<li><p>u_tlul2sram: tlul_adapter_sram</p></li>
+<li><p>u_memory_2p: prim_ram_2p_async_adv<br />
+<strong>Description</strong><br />
+SRAM Wrapper</p></li>
+<li><p>u_reg: spi_device_reg_top</p></li>
+</ul><br><br><br><br><br><br>

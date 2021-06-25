@@ -1,0 +1,776 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=edn_core><h1 id="entity-edn_core">Entity: edn_core</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 885 230"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="225,0 240,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="420" height="70" fill="black" x="240" y="0"></rect><rect id="SvgjsRect1007" width="416" height="65" fill="#bdecb6" x="242" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="220" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="255" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   NumEndPoints </tspan></text><line id="SvgjsLine1012" x1="225" y1="15" x2="240" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="220" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="255" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   BootInsCmd </tspan></text><line id="SvgjsLine1017" x1="225" y1="35" x2="240" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="220" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="255" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   BootGenCmd </tspan></text><line id="SvgjsLine1022" x1="225" y1="55" x2="240" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="420" height="150" fill="black" x="240" y="75"></rect><rect id="SvgjsRect1024" width="416" height="145" fill="#fdfd96" x="242" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="220" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="255" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1029" x1="225" y1="90" x2="240" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="220" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="255" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1034" x1="225" y1="110" x2="240" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="220" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="255" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1039" x1="225" y1="130" x2="240" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="220" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [NumEndPoints-1:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="255" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   edn_i </tspan></text><line id="SvgjsLine1044" x1="225" y1="150" x2="240" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="220" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="255" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   csrng_cmd_i </tspan></text><line id="SvgjsLine1049" x1="225" y1="170" x2="240" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="680" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="645" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1054" x1="660" y1="90" x2="675" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="680" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">   [NumEndPoints-1:0] </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="645" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   edn_o </tspan></text><line id="SvgjsLine1059" x1="660" y1="110" x2="675" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="680" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="645" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   csrng_cmd_o </tspan></text><line id="SvgjsLine1064" x1="660" y1="130" x2="675" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="680" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="645" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   alert_test_o </tspan></text><line id="SvgjsLine1069" x1="660" y1="150" x2="675" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="680" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="645" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   fatal_alert_o </tspan></text><line id="SvgjsLine1074" x1="660" y1="170" x2="675" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="680" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="645" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   intr_edn_cmd_req_done_o </tspan></text><line id="SvgjsLine1079" x1="660" y1="190" x2="675" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="680" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="680" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="645" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="645" svgjs:data="{&quot;newLined&quot;:true}">   intr_edn_fatal_err_o </tspan></text><line id="SvgjsLine1084" x1="660" y1="210" x2="675" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Description: entropy distrubution network core module</p><ul><li>this module will make requests to the CSRNG moduleand return the genbits back to up four requestingend points.</li></ul></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NumEndPoints</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>BootInsCmd</td>
+<td>int</td>
+<td>32'h0000_0001</td>
+<td></td>
+</tr>
+<tr>
+<td>BootGenCmd</td>
+<td>int</td>
+<td>32'h0000_1003</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reg2hw</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hw2reg</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>edn_i</td>
+<td>input</td>
+<td>[NumEndPoints-1:0]</td>
+<td>EDN interfaces</td>
+</tr>
+<tr>
+<td>edn_o</td>
+<td>output</td>
+<td>[NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>csrng_cmd_o</td>
+<td>output</td>
+<td></td>
+<td>CSRNG Application Interface</td>
+</tr>
+<tr>
+<td>csrng_cmd_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>alert_test_o</td>
+<td>output</td>
+<td></td>
+<td>Alerts</td>
+</tr>
+<tr>
+<td>fatal_alert_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_edn_cmd_req_done_o</td>
+<td>output</td>
+<td></td>
+<td>Interrupts</td>
+</tr>
+<tr>
+<td>intr_edn_fatal_err_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event_edn_cmd_req_done</td>
+<td>logic</td>
+<td>signals</td>
+</tr>
+<tr>
+<td>event_edn_fatal_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_enable</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_fifo_rst</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_arb_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_arb_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_arb_req</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_arb_gnt</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>auto_req_mode</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>seq_auto_req_mode</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>auto_req_mode_end</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>capt_gencmd_fifo_cnt</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>capt_rescmd_fifo_cnt</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_cnt_zero</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_cnt_load</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_between_reseed_load</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_between_reseed_bus</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>csrng_cmd_ack</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_rescmd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_sent</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_gencmd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_cmd_req_load</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sw_cmd_req_bus</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reseed_cmd_load</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reseed_cmd_bus</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>generate_cmd_load</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>generate_cmd_bus</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_clr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_push</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_wdata</td>
+<td>logic [CSGenBitsWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_wready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_rready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_cs_rdata</td>
+<td>logic [CSGenBitsWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_request</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_wr_cmd_reg</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_wr_cmd_genfifo</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_auto_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_clr</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_ack</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_push</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_wdata</td>
+<td>logic [CSGenBitsWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_wready</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_rvalid</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_rready</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_ack_sm_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_ack_sm_err</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>packer_ep_rdata</td>
+<td>logic [EndPointBusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_depth</td>
+<td>logic [RescmdFifoIdxWidth-1:0]</td>
+<td>rescmd fifo</td>
+</tr>
+<tr>
+<td>sfifo_rescmd_rdata</td>
+<td>logic [RescmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_clr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_push</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_wdata</td>
+<td>logic [RescmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_pop</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_err</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_rescmd_not_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_rdata</td>
+<td>logic [GencmdFifoWidth-1:0]</td>
+<td>gencmd fifo</td>
+</tr>
+<tr>
+<td>sfifo_gencmd_depth</td>
+<td>logic [$clog2(GencmdFifoDepth)-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_clr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_push</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_wdata</td>
+<td>logic [GencmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_pop</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_err</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_gencmd_not_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_main_sm_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_main_sm_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>err_code_test_bit</td>
+<td>logic [30:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_write_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_read_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_status_err_sum</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_err_code_test_bit</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_reg2hw_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_q</td>
+<td>logic [31:0]</td>
+<td>flops</td>
+</tr>
+<tr>
+<td>cs_cmd_req_d</td>
+<td>logic [31:0]</td>
+<td>flops</td>
+</tr>
+<tr>
+<td>cs_cmd_req_vld_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_vld_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_out_q</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_out_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_vld_out_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cs_cmd_req_vld_out_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_fifo_cnt_q</td>
+<td>logic [RescmdFifoIdxWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_fifo_cnt_d</td>
+<td>logic [RescmdFifoIdxWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>send_rescmd_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_rescmd_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_gencmd_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_gencmd_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_cnt_q</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>max_reqs_cnt_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>csrng_fips_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>csrng_fips_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_fips_q</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>edn_fips_d</td>
+<td>logic [NumEndPoints-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_req_q</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_req_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_auto_req_wack_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_auto_req_wack_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_auto_req_dly_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>boot_auto_req_dly_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RescmdFifoWidth</td>
+<td>int</td>
+<td>32</td>
+<td>localparam int EndPointBusWidth = 32;</td>
+</tr>
+<tr>
+<td>RescmdFifoDepth</td>
+<td>int</td>
+<td>13</td>
+<td></td>
+</tr>
+<tr>
+<td>GencmdFifoWidth</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>GencmdFifoDepth</td>
+<td>int</td>
+<td>13</td>
+<td></td>
+</tr>
+<tr>
+<td>CSGenBitsWidth</td>
+<td>int</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td>EndPointBusWidth</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>RescmdFifoIdxWidth</td>
+<td>int</td>
+<td>$clog2(RescmdFifoDepth)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li><p>u_intr_hw_edn_cmd_req_done: prim_intr_hw</p></li>
+<li><p>u_intr_hw_edn_fatal_err: prim_intr_hw</p></li>
+<li><p>u_prim_fifo_sync_rescmd: prim_fifo_sync<br />
+<strong>Description</strong><br />
+rescmd fifo</p></li>
+<li><p>u_prim_fifo_sync_gencmd: prim_fifo_sync<br />
+<strong>Description</strong><br />
+gencmd fifo</p></li>
+<li><p>u_edn_main_sm: edn_main_sm<br />
+<strong>Description</strong><br />
+sm to process csrng commands</p></li>
+<li><p>u_prim_arbiter_ppc_packer_arb: prim_arbiter_ppc</p></li>
+<li><p>u_prim_packer_fifo_cs: prim_packer_fifo</p></li>
+</ul><br><br><br><br><br><br>

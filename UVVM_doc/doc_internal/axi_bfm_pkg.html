@@ -1,0 +1,269 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axi_bfm_pkg><h1 id="package-axi_bfm_pkg">Package: axi_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_SCOPE</td>
+<td>string</td>
+<td>"AXI_BFM"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_EMPTY_SLV_ARRAY</td>
+<td>t_slv_array(0 to 0)(0 downto 0)</td>
+<td>(others=&gt;"U")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_EMPTY_XRESP_ARRAY</td>
+<td>t_xresp_array(0 to 0)</td>
+<td>(others=&gt;ILLEGAL)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_AXI_BFM_CONFIG_DEFAULT</td>
+<td>t_axi_bfm_config</td>
+<td>(     max_wait_cycles             =&gt; 1000,     max_wait_cycles_severity    =&gt; TB_FAILURE,     clock_period                =&gt; -1 ns,     clock_period_margin         =&gt; 0 ns,     clock_margin_severity       =&gt; TB_ERROR,     setup_time                  =&gt; -1 ns,     hold_time                   =&gt; -1 ns,     bfm_sync                    =&gt; SYNC_ON_CLOCK_ONLY,     match_strictness            =&gt; MATCH_EXACT,     num_aw_pipe_stages          =&gt; 1,     num_w_pipe_stages           =&gt; 1,     num_ar_pipe_stages          =&gt; 1,     num_r_pipe_stages           =&gt; 1,     num_b_pipe_stages           =&gt; 1,     id_for_bfm                  =&gt; ID_BFM,     id_for_bfm_wait             =&gt; ID_BFM_WAIT,     id_for_bfm_poll             =&gt; ID_BFM_POLL     )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_xresp</td>
+<td>(     OKAY,     EXOKAY,     SLVERR,     DECERR,     ILLEGAL   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_xresp_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_axprot</td>
+<td>(     UNPRIVILEGED_NONSECURE_DATA,     UNPRIVILEGED_NONSECURE_INSTRUCTION,     UNPRIVILEGED_SECURE_DATA,     UNPRIVILEGED_SECURE_INSTRUCTION,     PRIVILEGED_NONSECURE_DATA,     PRIVILEGED_NONSECURE_INSTRUCTION,     PRIVILEGED_SECURE_DATA,     PRIVILEGED_SECURE_INSTRUCTION   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_axburst</td>
+<td>(     FIXED,     INCR,     WRAP   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_axlock</td>
+<td>(     NORMAL,     EXCLUSIVE   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_axi_bfm_config</td>
+<td></td>
+<td>Configuration record to be assigned in the test harness.</td>
+</tr>
+<tr>
+<td>t_axi_write_address_channel</td>
+<td></td>
+<td>AXI Interface signals</td>
+</tr>
+<tr>
+<td>t_axi_write_data_channel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_axi_write_response_channel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_axi_read_address_channel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_axi_read_data_channel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_axi_if</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>init_axi_if_signals <font id="function_arguments">(    addr_width : natural;
+data_width : natural;
+id_width   : natural;
+user_width : natural
+)</font> <font id="function_return">return t_axi_if</font><br />
+<strong>Description</strong></li>
+<li>This function returns an AXI interface with initialized signals.- All AXI input signals are initialized to 0- All AXI output signals are initialized to Z</li>
+<li>axprot_to_slv <font id="function_arguments">(    axprot : t_axprot
+)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>xresp_to_slv <font id="function_arguments">(    xresp : t_xresp
+)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>slv_to_xresp <font id="function_arguments">(    value : std_logic_vector(1 downto 0)
+)</font> <font id="function_return">return t_xresp</font></li>
+<li>axburst_to_slv <font id="function_arguments">(    axburst : t_axburst
+)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bytes_to_axsize <font id="function_arguments">(    constant bytes : positive
+)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>axlock_to_sl <font id="function_arguments">(    constant axlock : t_axlock
+)</font> <font id="function_return">return std_logic</font></li>
+<li>axi_write <font id="function_arguments">(    constant awid_value         : in    std_logic_vector              := "";
+constant awaddr_value       : in    unsigned;
+constant awlen_value        : in    unsigned(7 downto 0)          := (others=>'0');
+constant awsize_value       : in    integer range 1 to 128        := 4;
+constant awburst_value      : in    t_axburst                     := INCR;
+constant awlock_value       : in    t_axlock                      := NORMAL;
+constant awcache_value      : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant awprot_value       : in    t_axprot                      := UNPRIVILEGED_NONSECURE_DATA;
+constant awqos_value        : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant awregion_value     : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant awuser_value       : in    std_logic_vector              := "";
+constant wdata_value        : in    t_slv_array;
+constant wstrb_value        : in    t_slv_array                   := C_EMPTY_SLV_ARRAY;
+constant wuser_value        : in    t_slv_array                   := C_EMPTY_SLV_ARRAY;
+variable buser_value        : out   std_logic_vector;
+variable bresp_value        : out   t_xresp;
+constant msg                : in    string;
+signal   clk                : in    std_logic;
+signal   axi_if             : inout t_axi_if;
+constant scope              : in    string                        := C_SCOPE;
+constant msg_id_panel       : in    t_msg_id_panel                := shared_msg_id_panel;
+constant config             : in    t_axi_bfm_config              := C_AXI_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure writes data to the AXI interface specified in axi_if- When the write is completed, a log message is issued with log ID id_for_bfm</li>
+<li>axi_read <font id="function_arguments">(    constant arid_value     : in    std_logic_vector              := "";
+constant araddr_value   : in    unsigned;
+constant arlen_value    : in    unsigned(7 downto 0)          := (others=>'0');
+constant arsize_value   : in    integer range 1 to 128        := 4;
+constant arburst_value  : in    t_axburst                     := INCR;
+constant arlock_value   : in    t_axlock                      := NORMAL;
+constant arcache_value  : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant arprot_value   : in    t_axprot                      := UNPRIVILEGED_NONSECURE_DATA;
+constant arqos_value    : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant arregion_value : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant aruser_value   : in    std_logic_vector              := "";
+variable rdata_value    : out   t_slv_array;
+variable rresp_value    : out   t_xresp_array;
+variable ruser_value    : out   t_slv_array;
+constant msg            : in    string;
+signal   clk            : in    std_logic;
+signal   axi_if         : inout t_axi_if;
+constant scope          : in    string                        := C_SCOPE;
+constant msg_id_panel   : in    t_msg_id_panel                := shared_msg_id_panel;
+constant config         : in    t_axi_bfm_config              := C_AXI_BFM_CONFIG_DEFAULT;
+constant ext_proc_call  : in    string                        := ""   External proc_call. Overwrite if called from another BFM procedure
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure reads data from the AXI interface specified in axi_if,and returns the read data in rdata_value.</li>
+<li>axi_check <font id="function_arguments">(    constant arid_value     : in    std_logic_vector              := "";
+constant araddr_value   : in    unsigned;
+constant arlen_value    : in    unsigned(7 downto 0)          := (others=>'0');
+constant arsize_value   : in    integer range 1 to 128        := 4;
+constant arburst_value  : in    t_axburst                     := INCR;
+constant arlock_value   : in    t_axlock                      := NORMAL;
+constant arcache_value  : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant arprot_value   : in    t_axprot                      := UNPRIVILEGED_NONSECURE_DATA;
+constant arqos_value    : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant arregion_value : in    std_logic_vector(3 downto 0)  := (others=>'0');
+constant aruser_value   : in    std_logic_vector              := "";
+constant rdata_exp      : in    t_slv_array;
+constant rresp_exp      : in    t_xresp_array                 := C_EMPTY_XRESP_ARRAY;
+constant ruser_exp      : in    t_slv_array                   := C_EMPTY_SLV_ARRAY;
+constant msg            : in    string;
+signal   clk            : in    std_logic;
+signal   axi_if         : inout t_axi_if;
+constant alert_level    : in    t_alert_level                 := error;
+constant scope          : in    string                        := C_SCOPE;
+constant msg_id_panel   : in    t_msg_id_panel                := shared_msg_id_panel;
+constant config         : in    t_axi_bfm_config              := C_AXI_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure reads data from the AXI interface specified in axi_if,and compares it to the data in data_exp.- If the received data inconsistent with data_exp, an alert with severity  alert_level is issued.- If the received data was correct, a log message with ID id_for_bfm is issued.</li>
+</ul><br><br><br><br><br><br>

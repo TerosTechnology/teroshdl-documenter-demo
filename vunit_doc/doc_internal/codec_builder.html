@@ -1,0 +1,233 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=codec_builder_pkg><h1 id="package-codec_builder_pkg">Package: codec_builder_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer_code_length</td>
+<td>positive</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>real_code_length</td>
+<td>positive</td>
+<td>boolean_code_length + 3 * integer_code_length</td>
+<td></td>
+</tr>
+<tr>
+<td>std_ulogic_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>bit_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>time_code_length</td>
+<td>positive</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>severity_level_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>file_open_status_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>file_open_kind_code_length</td>
+<td>positive</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>complex_code_length</td>
+<td>positive</td>
+<td>2 * real_code_length</td>
+<td></td>
+</tr>
+<tr>
+<td>complex_polar_code_length</td>
+<td>positive</td>
+<td>2 * real_code_length</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std_ulogic_array</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>get_simulator_resolution <font id="function_arguments">()</font> <font id="function_return">return time</font></li>
+<li>to_byte_array <font id="function_arguments">(    constant value : bit_vector)</font> <font id="function_return">return string</font></li>
+<li>from_byte_array <font id="function_arguments">(    constant byte_array : string)</font> <font id="function_return">return bit_vector</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   integer)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   real)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   time)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   boolean)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   bit)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   std_ulogic)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   severity_level)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   file_open_status)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   file_open_kind)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   character)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   std_ulogic_array)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   string)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   bit_vector)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   std_ulogic_vector)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   complex)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   complex_polar)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   ieee.numeric_bit.unsigned)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   ieee.numeric_bit.signed)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   ieee.numeric_std.unsigned)</font> <font id="function_return">return ()</font></li>
+<li>decode <font id="function_arguments">(    constant code   :       string;
+variable index  : inout positive;
+variable result : out   ieee.numeric_std.signed)</font> <font id="function_return">return ()</font></li>
+<li>encode_array_header <font id="function_arguments">(    constant range_left1   : string;
+constant range_right1  : string;
+constant is_ascending1 : string;
+constant range_left2   : string := "";
+constant range_right2  : string := "";
+constant is_ascending2 : string := "T")</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

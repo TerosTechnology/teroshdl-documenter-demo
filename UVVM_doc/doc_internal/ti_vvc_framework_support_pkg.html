@@ -1,0 +1,328 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=ti_vvc_framework_support_pkg><h1 id="package-ti_vvc_framework_support_pkg">Package: ti_vvc_framework_support_pkg</h1></a><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VVC_BROADCAST</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>global_trigger_vvc_activity_register</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>global_awaiting_completion</td>
+<td>std_logic_vector(C_MAX_NUM_SEQUENCERS-1 downto 0)</td>
+<td>ACK on global triggers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_VVC_NAME_MAX_LENGTH</td>
+<td>natural</td>
+<td>C_MAX_VVC_NAME_LENGTH</td>
+<td></td>
+</tr>
+<tr>
+<td>C_BROADCAST_CMD_STRING_MAX_LENGTH</td>
+<td>natural</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td>C_VVC_BROADCAST_CMD_DEFAULT</td>
+<td>t_vvc_broadcast_cmd_record</td>
+<td>(     operation           =&gt; NO_CMD,     msg_id              =&gt; NO_ID,     msg                 =&gt; (others =&gt; NUL),     proc_call           =&gt; (others =&gt; NUL),     quietness           =&gt; NON_QUIET,     delay               =&gt; 0 ns,     timeout             =&gt; 0 ns,     gen_integer         =&gt; -1   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_DUT_IF_FIELD_CONFIG_DEFAULT</td>
+<td>t_dut_if_field_config(dut_address(0 downto 0))</td>
+<td>(     dut_address                =&gt; (others =&gt; '0'),     dut_address_increment      =&gt; 0,     data_width                 =&gt; 8,     use_field                  =&gt; true,     field_description          =&gt; "default")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_DUT_IF_FIELD_CONFIG_DIRECTION_ARRAY_DEFAULT</td>
+<td>t_dut_if_field_config_direction_array(t_direction'low to t_direction'high)(0 to 0)(dut_address(0 downto 0), field_description(1 to 7))</td>
+<td>(others =&gt; (others =&gt; C_DUT_IF_FIELD_CONFIG_DEFAULT))</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_immediate_or_queued</td>
+<td>(NO_command_type, IMMEDIATE, QUEUED)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_flag_record</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_uvvm_state</td>
+<td>(IDLE, PHASE_A, PHASE_B, INIT_COMPLETED)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_lastness</td>
+<td>(LAST, NOT_LAST)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_broadcastable_cmd</td>
+<td>(NO_CMD, ENABLE_LOG_MSG, DISABLE_LOG_MSG, FLUSH_COMMAND_QUEUE, INSERT_DELAY, AWAIT_COMPLETION, TERMINATE_CURRENT_COMMAND)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_broadcast_cmd_record</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_operation</td>
+<td>(TRANSMIT, RECEIVE)</td>
+<td>Type of operation to be executed by the VVC</td>
+</tr>
+<tr>
+<td>t_direction</td>
+<td>(TRANSMIT, RECEIVE)</td>
+<td>Direction of the interface (used by the IF field config)</td>
+</tr>
+<tr>
+<td>t_field_position</td>
+<td>(FIRST, MIDDLE, LAST, FIRST_AND_LAST)</td>
+<td>Position of a field within a packet</td>
+</tr>
+<tr>
+<td>t_hvvc_to_bridge</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_bridge_to_hvvc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_dut_if_field_config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_dut_if_field_config_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_dut_if_field_config_direction_array</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>flag_handler <font id="function_arguments">(    signal flag : inout t_flag_record
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Flag handler is a general flag/semaphore handling mechanism between two separate processes/threadsThe idea is to allow one process to set a flag and another to reset it. The flag may then be used by both - or othersMay be used for a message from process 1 to process 2 with acknowledge; - like do-something &amp; done, or valid &amp; ack</li>
+<li>set_flag <font id="function_arguments">(    signal flag : inout t_flag_record
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Sets reset and is_active to 'Z' and pulses set_flag</li>
+<li>reset_flag <font id="function_arguments">(    signal flag : inout t_flag_record
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Sets set and is_active to 'Z' and pulses reset_flag</li>
+<li>await_uvvm_initialization <font id="function_arguments">(    constant dummy : in t_void
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Waits until uvvm has been initialized</li>
+<li>enable_log_msg <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant msg_id             : in t_msg_id;
+constant msg                : in string := "";
+constant quietness          : in t_quietness := NON_QUIET;
+constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Enables a log message for all VVCs</li>
+<li>disable_log_msg <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant msg_id             : in t_msg_id;
+constant msg                : in string := "";
+constant quietness          : in t_quietness := NON_QUIET;
+constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Disables a log message for all VVCs</li>
+<li>flush_command_queue <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant msg                : in string := "";
+constant scope              : in string := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Flushes the command queue for all VVCs</li>
+<li>insert_delay <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant delay              : in natural;   in clock cycles
+constant msg                : in string  := "";
+constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Inserts delay into all VVCs (specified as number of clock cycles)</li>
+<li>insert_delay <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant delay              : in time;
+constant msg                : in string  := "";
+constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Inserts delay into all VVCs (specified as time)</li>
+<li>await_completion <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant timeout            : in time;
+constant msg                : in string  := "";
+constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Wait for all VVCs to finish (specified as time)</li>
+<li>terminate_current_command <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant msg                : in string  := "";
+constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+terminates all current tasks</li>
+<li>terminate_all_commands <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant msg                : in string  := "";
+constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+terminates all tasks</li>
+<li>transmit_broadcast <font id="function_arguments">(    signal VVC_BROADCAST        : inout std_logic;
+constant operation          : in t_broadcastable_cmd;
+constant proc_call          : in string;
+constant msg_id             : in t_msg_id;
+constant msg                : in string       := "";
+constant quietness          : in t_quietness  := NON_QUIET;
+constant delay              : in time         := 0 ns;
+constant delay_int          : in integer      := -1;
+constant timeout            : in time         := std.env.resolution_limit;
+constant scope              : in string       := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Common broadcast transmission routine</li>
+<li>await_completion <font id="function_arguments">(    constant vvc_select    : in    t_vvc_select;
+variable vvc_info_list : inout t_vvc_info_list;
+constant timeout       : in    time;
+constant list_action   : in    t_list_action := CLEAR_LIST;
+constant msg           : in    string := "";
+constant scope         : in    string := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Awaits completion of any VVC in the list or until timeout.</li>
+<li>await_completion <font id="function_arguments">(    constant vvc_select  : in    t_vvc_select;
+constant timeout     : in    time;
+constant list_action : in    t_list_action := CLEAR_LIST;
+constant msg         : in    string := "";
+constant scope       : in    string := C_VVC_CMD_SCOPE_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Awaits completion of all the VVCs in the activity register or until timeout.</li>
+<li>activity_watchdog <font id="function_arguments">(    constant num_exp_vvc  : natural;
+constant timeout      : time;
+constant alert_level  : t_alert_level := TB_ERROR;
+constant msg          : string := "Activity_Watchdog"
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+============================================================================Activity Watchdog============================================================================</li>
+</ul><br><br><br><br><br><br>

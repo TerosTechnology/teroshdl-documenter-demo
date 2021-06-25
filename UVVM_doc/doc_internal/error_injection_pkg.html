@@ -1,0 +1,118 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=error_injection_pkg><h1 id="package-error_injection_pkg">Package: error_injection_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_EI_CONFIG_DEFAULT</td>
+<td>t_error_injection_config</td>
+<td>(     error_type          =&gt; BYPASS,     initial_delay_min   =&gt; 0 ns,     initial_delay_max   =&gt; 0 ns,     return_delay_min    =&gt; 0 ns,     return_delay_max    =&gt; 0 ns,     width_min           =&gt; 0 ns,     width_max           =&gt; 0 ns,     interval            =&gt; 1,     base_value          =&gt; '0',     randomization_seed1 =&gt; 1,     randomization_seed2 =&gt; 2   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_MAX_EI_INSTANCE_NUM</td>
+<td>natural</td>
+<td>100</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_error_injection_types</td>
+<td>(     BYPASS,     PULSE,     DELAY,     JITTER,     INVERT,     STUCK_AT_OLD,     STUCK_AT_NEW   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_error_injection_config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_error_injection_config_array</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

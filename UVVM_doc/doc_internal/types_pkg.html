@@ -1,0 +1,473 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=types_pkg><h1 id="package-types_pkg">Package: types_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_LOG_HDR_FOR_WAVEVIEW_WIDTH</td>
+<td>natural</td>
+<td>100</td>
+<td>For string in waveview indicating last log header</td>
+</tr>
+<tr>
+<td>C_FLAG_NAME_LENGTH</td>
+<td>positive</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SYNC_FLAG_DEFAULT</td>
+<td>t_sync_flag_record</td>
+<td>(     flag_name   =&gt; (others =&gt; NUL),     is_blocked  =&gt; true   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_WATCHDOG_CTRL_DEFAULT</td>
+<td>t_watchdog_ctrl</td>
+<td>(     extend      =&gt; false,     restart     =&gt; false,     terminate   =&gt; false,     extension   =&gt; 0 ns,     new_timeout =&gt; 0 ns   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_INFO_ON_FINISHING_AWAIT_ANY_COMPLETION_VVC_NAME_DEFAULT</td>
+<td>string</td>
+<td>"no await_any_completion() finshed yet\n"</td>
+<td>defaults for t_uvvm_status and t_info_on_finishing_await_any_completion</td>
+</tr>
+<tr>
+<td>C_UVVM_STATUS_DEFAULT</td>
+<td>t_uvvm_status</td>
+<td>(     found_unexpected_simulation_warnings_or_worse     =&gt; 0,     found_unexpected_simulation_errors_or_worse       =&gt; 0,     mismatch_on_expected_simulation_warnings_or_worse =&gt; 0,     mismatch_on_expected_simulation_errors_or_worse   =&gt; 0,     info_on_finishing_await_any_completion            =&gt; (vvc_name    =&gt; (C_INFO_ON_FINISHING_AWAIT_ANY_COMPLETION_VVC_NAME_DEFAULT, others =&gt; ' '),                                                           vvc_cmd_idx =&gt; 0,                                                           vvc_time_of_completion =&gt; 0 ns)   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_VOID_BFM_CONFIG</td>
+<td>t_void_bfm_config</td>
+<td>VOID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_void</td>
+<td>(VOID)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_natural_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_integer_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_slv_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_slv_array_ptr</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_signed_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_unsigned_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_natural_vector</td>
+<td></td>
+<td>Additions to predefined vector types</td>
+</tr>
+<tr>
+<td>t_positive_vector</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_info_target</td>
+<td>(LOG_INFO, ALERT_INFO, USER_INFO)</td>
+<td>Note: Most types below have a matching to_string() in 'string_methods_pkg.vhd'</td>
+</tr>
+<tr>
+<td>t_alert_level</td>
+<td>(NO_ALERT, NOTE, TB_NOTE, WARNING, TB_WARNING, MANUAL_CHECK, ERROR, TB_ERROR, FAILURE, TB_FAILURE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_enabled</td>
+<td>(ENABLED, DISABLED, NA)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_attention</td>
+<td>(REGARD, EXPECT, IGNORE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_radix</td>
+<td>(BIN, HEX, DEC, HEX_BIN_IF_INVALID)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_radix_prefix</td>
+<td>(EXCL_RADIX, INCL_RADIX)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_order</td>
+<td>(INTERMEDIATE, FINAL)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_ascii_allow</td>
+<td>(ALLOW_ALL, ALLOW_PRINTABLE_ONLY)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_blocking_mode</td>
+<td>(BLOCKING, NON_BLOCKING)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_from_point_in_time</td>
+<td>(FROM_NOW, FROM_LAST_EVENT)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_vvc_select</td>
+<td>(ANY_OF, ALL_OF, ALL_VVCS)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_list_action</td>
+<td>(KEEP_LIST, CLEAR_LIST)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_format_zeros</td>
+<td>(AS_IS, KEEP_LEADING_0, SKIP_LEADING_0)</td>
+<td>AS_IS is deprecated and will be removed. Use KEEP_LEADING_0.</td>
+</tr>
+<tr>
+<td>t_format_string</td>
+<td>(AS_IS, TRUNCATE, SKIP_LEADING_SPACE)</td>
+<td>Deprecated, will be removed.</td>
+</tr>
+<tr>
+<td>t_format_spaces</td>
+<td>(KEEP_LEADING_SPACE, SKIP_LEADING_SPACE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_truncate_string</td>
+<td>(ALLOW_TRUNCATE, DISALLOW_TRUNCATE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_log_format</td>
+<td>(FORMATTED, UNFORMATTED)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_log_if_block_empty</td>
+<td>(WRITE_HDR_IF_BLOCK_EMPTY, SKIP_LOG_IF_BLOCK_EMPTY, NOTIFY_IF_BLOCK_EMPTY)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_log_destination</td>
+<td>(CONSOLE_AND_LOG, CONSOLE_ONLY, LOG_ONLY)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_match_strictness</td>
+<td>(MATCH_STD, MATCH_STD_INCL_Z, MATCH_EXACT)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_alert_counters</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_alert_attention</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_attention_counters</td>
+<td></td>
+<td>Only used to build below type</td>
+</tr>
+<tr>
+<td>t_alert_attention_counters</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_quietness</td>
+<td>(NON_QUIET, QUIET)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_deprecate_setting</td>
+<td>(NO_DEPRECATE, DEPRECATE_ONCE, ALWAYS_DEPRECATE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_deprecate_list</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_action_when_transfer_is_done</td>
+<td>(RELEASE_LINE_AFTER_TRANSFER, HOLD_LINE_AFTER_TRANSFER)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_when_to_start_transfer</td>
+<td>(START_TRANSFER_IMMEDIATE, START_TRANSFER_ON_NEXT_SS)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_action_between_words</td>
+<td>(RELEASE_LINE_BETWEEN_WORDS, HOLD_LINE_BETWEEN_WORDS)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_byte_endianness</td>
+<td>(LOWER_BYTE_LEFT, LOWER_BYTE_RIGHT, LOWER_WORD_LEFT, LOWER_WORD_RIGHT, FIRST_BYTE_LEFT, FIRST_BYTE_RIGHT)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_pulse_continuation</td>
+<td>(ALLOW_PULSE_CONTINUATION, NO_PULSE_CONTINUATION_ALLOWED)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_global_ctrl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_current_log_hdr</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_flag_returning</td>
+<td>(KEEP_UNBLOCKED, RETURN_TO_BLOCK)</td>
+<td>value after unblock</td>
+</tr>
+<tr>
+<td>t_sync_flag_record</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_sync_flag_record_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_watchdog_ctrl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_info_on_finishing_await_any_completion</td>
+<td></td>
+<td>type for identifying VVC and command index finishing await_any_completion()</td>
+</tr>
+<tr>
+<td>t_uvvm_status</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_justify_center</td>
+<td>(center)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_parity</td>
+<td>(     PARITY_NONE,     PARITY_ODD,     PARITY_EVEN   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_stop_bits</td>
+<td>(     STOP_BITS_ONE,     STOP_BITS_ONE_AND_HALF,     STOP_BITS_TWO   )</td>
+<td></td>
+</tr>
+<tr>
+<td>t_check_type</td>
+<td>(CHECK_VALUE,                          CHECK_VALUE_IN_RANGE,                          CHECK_STABLE,                         CHECK_TIME_WINDOW)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_check_counters_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_transaction_result</td>
+<td>(ACK, NAK, ERROR)</td>
+<td>add more when needed</td>
+</tr>
+<tr>
+<td>t_hierarchy_alert_level_print</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_hierarchy_node</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_bfm_delay_type</td>
+<td>(NO_DELAY, TIME_FINISH2START, TIME_START2START)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_inter_bfm_delay</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_void_bfm_config</td>
+<td>(VOID)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_data_routing</td>
+<td>(     NA,     TO_SB,     TO_BUFFER,     FROM_BUFFER,     TO_RECEIVE_BUFFER)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_bfm_sync</td>
+<td>(     SYNC_ON_CLOCK_ONLY,     SYNC_WITH_SETUP_AND_HOLD   )</td>
+<td>TO_FILE and FROM_FILE may be added later on</td>
+</tr>
+<tr>
+<td>t_test_status</td>
+<td>(NA, PASS, FAIL)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_activity</td>
+<td>(ACTIVE, INACTIVE)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_extent_tickoff</td>
+<td>(LIST_SINGLE_TICKOFF, LIST_EVERY_TICKOFF)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_identifier_option</td>
+<td>(ENTRY_NUM, POSITION)</td>
+<td>Identifier_option: Typically describes what the next parameter means.- ENTRY_NUM :    Incremented for each entry added to the queue.    Unlike POSITION, the ENTRY_NUMBER will stay the same for this entry, even if entries are inserted before this entry- POSITION :    Position of entry in queue, independent of when the entry was inserted.</td>
+</tr>
+<tr>
+<td>t_range_option</td>
+<td>(SINGLE, AND_LOWER, AND_HIGHER)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_tag_usage</td>
+<td>(TAG, NO_TAG)</td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

@@ -1,0 +1,133 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axi_dma_regs_pkg><h1 id="package-axi_dma_regs_pkg">Package: axi_dma_regs_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command_reg_addr</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>status_reg_addr</td>
+<td>natural</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>src_address_reg_addr</td>
+<td>natural</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_address_reg_addr</td>
+<td>natural</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>num_bytes_reg_addr</td>
+<td>natural</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>start_transfer_command_bit</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>start_transfer_command</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>(     start_transfer_command_bit =&gt; '1',     others =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>transfer_done_status_bit</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>transfer_done_status</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>(     transfer_done_status_bit =&gt; '1',     others =&gt; '0')</td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

@@ -1,0 +1,138 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=string_ptr_pkg><h1 id="package-string_ptr_pkg">Package: string_ptr_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null_string_ptr</td>
+<td>string_ptr_t</td>
+<td>(ref =&gt; -1)</td>
+<td></td>
+</tr>
+<tr>
+<td>string_ptr_t_code_length</td>
+<td>positive</td>
+<td>integer_code_length</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string_ptr_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>to_integer <font id="function_arguments">(    value : ptr_t
+)</font> <font id="function_return">return integer</font></li>
+<li>deallocate <font id="function_arguments">(    ptr : ptr_t
+)</font> <font id="function_return">return ()</font></li>
+<li>set <font id="function_arguments">(    ptr   : ptr_t;
+index : positive;
+value : val_t
+)</font> <font id="function_return">return ()</font></li>
+<li>reallocate <font id="function_arguments">(    ptr    : ptr_t;
+length : natural;
+value  : val_t := val_t'low
+)</font> <font id="function_return">return ()</font></li>
+<li>reallocate <font id="function_arguments">(    ptr   : ptr_t;
+value : vec_t
+)</font> <font id="function_return">return ()</font></li>
+<li>resize <font id="function_arguments">(    ptr    : ptr_t;
+length : natural;
+drop   : natural := 0;
+value  : val_t   := val_t'low
+)</font> <font id="function_return">return ()</font></li>
+<li>encode <font id="function_arguments">(    data : ptr_t
+)</font> <font id="function_return">return string</font></li>
+<li>decode <font id="function_arguments">(    code : string
+)</font> <font id="function_return">return ptr_t</font></li>
+<li>decode <font id="function_arguments">(    constant code   : string;
+variable index  : inout positive;
+variable result : out ptr_t
+)</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

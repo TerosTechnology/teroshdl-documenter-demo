@@ -1,0 +1,169 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=gpio_bfm_pkg><h1 id="package-gpio_bfm_pkg">Package: gpio_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_SCOPE</td>
+<td>string</td>
+<td>"GPIO BFM"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_GPIO_BFM_CONFIG_DEFAULT</td>
+<td>t_gpio_bfm_config</td>
+<td>(     clock_period     =&gt; -1 ns,     match_strictness =&gt; MATCH_STD,     id_for_bfm       =&gt; ID_BFM,     id_for_bfm_wait  =&gt; ID_BFM_WAIT,     timeout          =&gt; -1 ns     )</td>
+<td>Define the default value for the BFM config</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_gpio_bfm_config</td>
+<td></td>
+<td>Configuration record to be assigned in the test harness.</td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>gpio_set <font id="function_arguments">(    constant data_value   : in    std_logic_vector;   '-' means don't change
+constant msg          : in    string;
+signal data_port      : inout std_logic_vector;
+constant scope        : in    string            := C_SCOPE;
+constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;
+constant config       : in    t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font></li>
+<li>gpio_get <font id="function_arguments">(    variable data_value   : out std_logic_vector;
+constant msg          : in  string;
+signal data_port      : in  std_logic_vector;
+constant scope        : in  string            := C_SCOPE;
+constant msg_id_panel : in  t_msg_id_panel    := shared_msg_id_panel;
+constant config       : in  t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font></li>
+<li>gpio_check <font id="function_arguments">(    constant data_exp     : in std_logic_vector;   '-' means don't care
+constant msg          : in string;
+signal data_port      : in std_logic_vector;
+constant alert_level  : in t_alert_level     := error;
+constant scope        : in string            := C_SCOPE;
+constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
+constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.</li>
+<li>gpio_check_stable <font id="function_arguments">(    constant data_exp     : in std_logic_vector;   '-' means don't care
+constant stable_req   : in time;
+constant msg          : in string;
+signal data_port      : in std_logic_vector;
+constant alert_level  : in t_alert_level     := error;
+constant scope        : in string            := C_SCOPE;
+constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
+constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.Verify that the read value has been stable for a certain time.</li>
+<li>gpio_expect <font id="function_arguments">(    constant data_exp     : in std_logic_vector;
+constant msg          : in string;
+signal data_port      : in std_logic_vector;
+constant timeout      : in time              := -1 ns;   -1 = no timeout
+constant alert_level  : in t_alert_level     := error;
+constant scope        : in string            := C_SCOPE;
+constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
+constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.</li>
+<li>gpio_expect_stable <font id="function_arguments">(    constant data_exp        : in std_logic_vector;
+constant stable_req      : in time;
+constant stable_req_from : in t_from_point_in_time;   Which point in time stable_req starts
+constant msg             : in string;
+signal data_port         : in std_logic_vector;
+constant timeout         : in time              := -1 ns;   -1 = no timeout
+constant alert_level     : in t_alert_level     := error;
+constant scope           : in string            := C_SCOPE;
+constant msg_id_panel    : in t_msg_id_panel    := shared_msg_id_panel;
+constant config          : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.Verify that the read value remains stable for a certain time after the datais same as expected or after the data last event.</li>
+</ul><br><br><br><br><br><br>

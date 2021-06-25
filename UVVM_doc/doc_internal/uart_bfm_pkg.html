@@ -1,0 +1,174 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=uart_bfm_pkg><h1 id="package-uart_bfm_pkg">Package: uart_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_SCOPE</td>
+<td>string</td>
+<td>"UART BFM"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_DATA_MAX_LENGTH</td>
+<td>natural</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>C_EXPECT_RECEIVED_DATA_STRING_SEPARATOR</td>
+<td>string</td>
+<td>"; "</td>
+<td></td>
+</tr>
+<tr>
+<td>C_BFM_ERROR_INJECTION_INACTIVE</td>
+<td>t_bfm_error_injection</td>
+<td>(     parity_bit_error  =&gt; false,     stop_bit_error    =&gt; false   )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_UART_BFM_CONFIG_DEFAULT</td>
+<td>t_uart_bfm_config</td>
+<td>(     bit_time                                  =&gt; -1 ns,     num_data_bits                             =&gt; 8,     idle_state                                =&gt; '1',     num_stop_bits                             =&gt; STOP_BITS_ONE,     parity                                    =&gt; PARITY_ODD,     timeout                                   =&gt; 0 ns,                -- will default never time out     timeout_severity                          =&gt; error,     num_bytes_to_log_before_expected_data     =&gt; 10,     match_strictness                          =&gt; MATCH_EXACT,     id_for_bfm                                =&gt; ID_BFM,     id_for_bfm_wait                           =&gt; ID_BFM_WAIT,     id_for_bfm_poll                           =&gt; ID_BFM_POLL,     id_for_bfm_poll_summary                   =&gt; ID_BFM_POLL_SUMMARY,     error_injection                           =&gt; C_BFM_ERROR_INJECTION_INACTIVE     )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uart_expect_received_data_array</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_bfm_error_injection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t_uart_bfm_config</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>uart_transmit <font id="function_arguments">(    constant data_value         : in  std_logic_vector;
+constant msg                : in  string;
+signal tx                   : inout std_logic;
+constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT;
+constant scope              : in  string             := C_SCOPE;
+constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong></li>
+<li>This procedure transmits data 'data_value' to the UART DUT- The TX configuration can be set in the config parameter</li>
+<li>uart_receive <font id="function_arguments">(    variable data_value         : out std_logic_vector;
+constant msg                : in  string;
+signal rx                   : in  std_logic;
+signal terminate_loop       : in  std_logic;
+constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;
+constant scope              : in  string            := C_SCOPE;
+constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel;
+constant ext_proc_call      : in  string            := ""  External proc_call. Overwrite if called from another BFM procedure
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong></li>
+<li>This procedure reads data from the UART DUT and returns it in 'data_value'- The RX configuration can be set in the config parameter</li>
+<li>uart_expect <font id="function_arguments">(    constant data_exp           : in std_logic_vector;
+constant msg                : in string;
+signal rx                   : in std_logic;
+signal terminate_loop       : in std_logic;
+constant max_receptions     : in natural           := 1;
+constant timeout            : in time              := -1 ns;
+constant alert_level        : in t_alert_level     := ERROR;
+constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;
+constant scope              : in string            := C_SCOPE;
+constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong></li>
+<li>This procedure reads data from the UART DUT and compares it to the data in  'data_exp'.- If the read data is inconsistent with the 'data_exp' data, a new read will  be performed, and the new read data will be compared with 'data_exp'.  This process will continue untill one of the following conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_receptions'    c) The time spent reading is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_receptions' is set to 0, it will be interpreted as no limitation on number of reads- The RX configuration can be set in the config parameter</li>
+<li>odd_parity <font id="function_arguments">(    constant data : std_logic_vector(7 downto 0))</font> <font id="function_return">return std_logic</font><br />
+<strong>Description</strong></li>
+<li>This function checks if the data parity is odd or even- If the number of '1' in the 'data' input is odd, '1' will be returned- If the number of '1' in the 'data' input is even, '0' will be returned</li>
+</ul><br><br><br><br><br><br>

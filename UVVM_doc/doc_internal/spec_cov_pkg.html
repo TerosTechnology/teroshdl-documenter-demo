@@ -1,0 +1,108 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=spec_cov_pkg><h1 id="package-spec_cov_pkg">Package: spec_cov_pkg</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>initialize_req_cov <font id="function_arguments">(    constant testcase         : string;
+constant req_list_file    : string;
+constant partial_cov_file : string
+)</font> <font id="function_return">return ()</font></li>
+<li>initialize_req_cov <font id="function_arguments">(    constant testcase         : string;
+constant partial_cov_file : string
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Overloading procedure</li>
+<li>tick_off_req_cov <font id="function_arguments">(    constant requirement    : string;
+constant test_status    : t_test_status    := NA;
+constant msg            : string           := "";
+constant tickoff_extent : t_extent_tickoff := LIST_SINGLE_TICKOFF;
+constant scope          : string           := C_SCOPE
+)</font> <font id="function_return">return ()</font></li>
+<li>cond_tick_off_req_cov <font id="function_arguments">(    constant requirement    : string;
+constant test_status    : t_test_status    := NA;
+constant msg            : string           := "";
+constant tickoff_extent : t_extent_tickoff := LIST_SINGLE_TICKOFF;
+constant scope          : string           := C_SCOPE
+)</font> <font id="function_return">return ()</font></li>
+<li>disable_cond_tick_off_req_cov <font id="function_arguments">(    constant requirement    : string
+)</font> <font id="function_return">return ()</font></li>
+<li>enable_cond_tick_off_req_cov <font id="function_arguments">(    constant requirement    : string
+)</font> <font id="function_return">return ()</font></li>
+<li>finalize_req_cov <font id="function_arguments">(    constant VOID : t_void
+)</font> <font id="function_return">return ()</font></li>
+<li>priv_log_entry <font id="function_arguments">(    constant index : natural
+)</font> <font id="function_return">return ()</font></li>
+<li>priv_read_and_parse_csv_file <font id="function_arguments">(    constant req_list_file  : string
+)</font> <font id="function_return">return ()</font></li>
+<li>priv_initialize_result_file <font id="function_arguments">(    constant file_name : string
+)</font> <font id="function_return">return ()</font></li>
+<li>priv_inc_num_requirement_tick_offs <font id="function_arguments">(    requirement : string
+)</font> <font id="function_return">return ()</font></li>
+<li>priv_test_status_to_string <font id="function_arguments">(    constant test_status : t_test_status
+)</font> <font id="function_return">return string</font></li>
+<li>priv_set_default_testcase_name <font id="function_arguments">(    constant testcase : string
+)</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>
