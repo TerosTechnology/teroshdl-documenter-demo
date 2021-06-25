@@ -28,13 +28,15 @@ def git_clone(repository):
     exec_command(cmd)
 
 
-def execute_teroshdl(name, folder, output_type):
+def execute_teroshdl(name, folder, output_type, vhdl_symbol, verilog_symbol):
     signal_extract = 'all'
     constants_extract = 'all'
     processes_extract = 'all'
+    vhdl_symbol_cmd = f"--symbol_vhdl {vhdl_symbol}"
+    verilog_symbol_cmd = f"--symbol_verilog {verilog_symbol}"
 
     output_path = f"./teroshdl_doc/{name}_doc"
-    cmd = f"teroshdl-hdl-documenter -o {output_type} --fsm -s {signal_extract} -c {constants_extract} -p {processes_extract} --dep --outpath {output_path} --input {folder}"
+    cmd = f"teroshdl-hdl-documenter -o {output_type} {vhdl_symbol_cmd} {verilog_symbol_cmd} --fsm -s {signal_extract} -c {constants_extract} -p {processes_extract} --dep --outpath {output_path} --input {folder}"
     exec_command(cmd)
 
 
@@ -65,10 +67,12 @@ if (OUTPUT_TYPE == 'html'):
         repository = repositories[name]
         url = repository['url']
         folder = repository['folder']
+        vhdl_symbol = repository['vhdl_symbol']
+        verilog_symbol = repository['verilog_symbol']
 
         html_index += f"    <li>Project: <a href=\"{name}_doc/index.html\">{name}</a></li>\n"
         git_clone(url)
-        execute_teroshdl(name, folder, OUTPUT_TYPE)
+        execute_teroshdl(name, folder, OUTPUT_TYPE, vhdl_symbol, verilog_symbol)
     html_index += '</ul>\n'
 
     with open('teroshdl_doc/index.html', "w") as text_file:
@@ -85,10 +89,12 @@ if (OUTPUT_TYPE == 'markdown'):
         repository = repositories[name]
         url = repository['url']
         folder = repository['folder']
+        vhdl_symbol = repository['vhdl_symbol']
+        verilog_symbol = repository['verilog_symbol']
 
         html_index += f"Project: [${name} ](./{name}_doc/README.md)\n"
         git_clone(url)
-        execute_teroshdl(name, folder, OUTPUT_TYPE)
+        execute_teroshdl(name, folder, OUTPUT_TYPE, vhdl_symbol, verilog_symbol)
 
     with open('teroshdl_doc/README.md', "w") as text_file:
         print(html_index, file=text_file)

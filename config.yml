@@ -1,42 +1,68 @@
+CordicHDL:
+    url: https://github.com/qarlosalberto/cordicHDL.git
+    folder: cordicHDL/hdl
+    vhdl_symbol: "!"
+    verilog_symbol: "!"
+
 SERV:
     url: https://github.com/olofk/serv
-    folder: serv/rtl/    
+    folder: serv/rtl/
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 zx128-MiSTer:
     url: https://github.com/Kyp069/zx128-MiSTer.git
-    folder: zx128-MiSTer/rtl/   
+    folder: zx128-MiSTer/rtl/  
+    vhdl_symbol: ""
+    verilog_symbol: "" 
 
 NEORV32:
     url: https://github.com/stnolting/neorv32.git
     folder: neorv32/rtl  
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 vunit:
     url: https://github.com/VUnit/vunit.git
     folder: vunit/ 
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 opentitan:
     url: https://github.com/lowRISC/opentitan.git
     folder: opentitan/hw/ip
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 Microwatt:
     url: https://github.com/antonblanchard/microwatt.git
     folder: microwatt/fpga
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 PULP:
     url: https://github.com/pulp-platform/pulp.git
     folder: pulp/rtl/pulp
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 PoC-Library:
     url: https://github.com/VLSI-EDA/PoC/tree/master/src
     folder: PoC/src
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 UVVM:
     url: https://github.com/UVVM/UVVM.git
     folder: UVVM/
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 OSVVM:
     url: https://github.com/OSVVM/OSVVM.git
     folder: OSVVM/
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 
 
