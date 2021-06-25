@@ -1,0 +1,217 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=vectors><h1 id="package-vectors">Package: vectors</h1></a><h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_SLVV_2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_12</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_48</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_64</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_128</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_256</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLVV_512</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SLM</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>low <font id="function_arguments">(lenvec : T_POSVEC; index : natural)</font> <font id="function_return">return natural</font></li>
+<li>high <font id="function_arguments">(lenvec : T_POSVEC; index : natural)</font> <font id="function_return">return natural</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural)</font> <font id="function_return">return ()</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural; Position : natural)</font> <font id="function_return">return ()</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural; High : natural; Low : natural)</font> <font id="function_return">return ()</font></li>
+<li>assign_col <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant ColIndex : natural)</font> <font id="function_return">return ()</font></li>
+<li>slm_slice <font id="function_arguments">(slm : T_SLM; RowIndex : natural; ColIndex : natural; Height : natural; Width : natural)</font> <font id="function_return">return T_SLM</font></li>
+<li>slm_slice_rows <font id="function_arguments">(slm : T_SLM; High : natural; Low : natural)</font> <font id="function_return">return T_SLM</font></li>
+<li>slm_slice_cols <font id="function_arguments">(slm : T_SLM; High : natural; Low : natural)</font> <font id="function_return">return T_SLM</font></li>
+<li>slm_merge_rows <font id="function_arguments">(slm1 : T_SLM; slm2 : T_SLM)</font> <font id="function_return">return T_SLM</font></li>
+<li>slm_merge_cols <font id="function_arguments">(slm1 : T_SLM; slm2 : T_SLM)</font> <font id="function_return">return T_SLM</font></li>
+<li>get_col <font id="function_arguments">(slm : T_SLM; ColIndex : natural)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural; Length : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural; High : natural; Low : natural)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_2)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_4)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_12)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_16)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_24)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_32)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_64)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slvv : T_SLVV_128)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slvv_4 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_4</font></li>
+<li>to_slvv_8 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_slvv_12 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_12</font></li>
+<li>to_slvv_16 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_16</font></li>
+<li>to_slvv_32 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_32</font></li>
+<li>to_slvv_64 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_64</font></li>
+<li>to_slvv_128 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_128</font></li>
+<li>to_slvv_256 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_256</font></li>
+<li>to_slvv_512 <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_SLVV_512</font></li>
+<li>to_slvv_4 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_4</font></li>
+<li>to_slvv_8 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_slvv_12 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_12</font></li>
+<li>to_slvv_16 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_16</font></li>
+<li>to_slvv_32 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_32</font></li>
+<li>to_slvv_64 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_64</font></li>
+<li>to_slvv_128 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_128</font></li>
+<li>to_slvv_256 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_256</font></li>
+<li>to_slvv_512 <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_SLVV_512</font></li>
+<li>to_slm <font id="function_arguments">(slv : std_logic_vector; ROWS : positive; COLS : positive)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_4)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_12)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_16)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_32)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_48)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_64)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_128)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_256)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_slm <font id="function_arguments">(slvv : T_SLVV_512)</font> <font id="function_return">return T_SLM</font></li>
+<li>dir <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_4)</font> <font id="function_return">return T_SLVV_4</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_12)</font> <font id="function_return">return T_SLVV_12</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_16)</font> <font id="function_return">return T_SLVV_16</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_32)</font> <font id="function_return">return T_SLVV_32</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_64)</font> <font id="function_return">return T_SLVV_64</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_128)</font> <font id="function_return">return T_SLVV_128</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_256)</font> <font id="function_return">return T_SLVV_256</font></li>
+<li>rev <font id="function_arguments">(slvv : T_SLVV_512)</font> <font id="function_return">return T_SLVV_512</font></li>
+<li>resize <font id="function_arguments">(slm : T_SLM; size : positive)</font> <font id="function_return">return T_SLM</font></li>
+<li>to_string <font id="function_arguments">(slvv : T_SLVV_8; sep : character := ':')</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(slm : T_SLM; groups : positive := 4; format : character := 'b')</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

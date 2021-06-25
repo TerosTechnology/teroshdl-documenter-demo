@@ -1,0 +1,145 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=io><h1 id="package-io">Package: io</h1></a><h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_IO_TRISTATE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_LVDS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_TRISTATE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_LVDS_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_DATARATE</td>
+<td>(IO_DATARATE_SDR, IO_DATARATE_DDR, IO_DATARATE_QDR)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_7SEGMENT_CHAR</td>
+<td>(         IO_7SEGMENT_CHAR_0, IO_7SEGMENT_CHAR_1, IO_7SEGMENT_CHAR_2, IO_7SEGMENT_CHAR_3,         IO_7SEGMENT_CHAR_4, IO_7SEGMENT_CHAR_5, IO_7SEGMENT_CHAR_6, IO_7SEGMENT_CHAR_7,         IO_7SEGMENT_CHAR_8, IO_7SEGMENT_CHAR_9, IO_7SEGMENT_CHAR_A, IO_7SEGMENT_CHAR_B,         IO_7SEGMENT_CHAR_C, IO_7SEGMENT_CHAR_D, IO_7SEGMENT_CHAR_E, IO_7SEGMENT_CHAR_F,         IO_7SEGMENT_CHAR_H, IO_7SEGMENT_CHAR_O, IO_7SEGMENT_CHAR_U, IO_7SEGMENT_CHAR_MINUS  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_7SEGMENT_CHAR_ENCODING</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_MDIO_MDIOCONTROLLER_COMMAND</td>
+<td>(         IO_MDIO_MDIOC_CMD_NONE,         IO_MDIO_MDIOC_CMD_CHECK_ADDRESS,        IO_MDIO_MDIOC_CMD_READ,         IO_MDIO_MDIOC_CMD_WRITE,        IO_MDIO_MDIOC_CMD_ABORT     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_MDIO_MDIOCONTROLLER_STATUS</td>
+<td>(         IO_MDIO_MDIOC_STATUS_IDLE,      IO_MDIO_MDIOC_STATUS_CHECKING,      IO_MDIO_MDIOC_STATUS_CHECK_OK,      IO_MDIO_MDIOC_STATUS_CHECK_FAILED,      IO_MDIO_MDIOC_STATUS_READING,       IO_MDIO_MDIOC_STATUS_READ_COMPLETE,         IO_MDIO_MDIOC_STATUS_WRITING,       IO_MDIO_MDIOC_STATUS_WRITE_COMPLETE,        IO_MDIO_MDIOC_STATUS_ERROR  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_MDIO_MDIOCONTROLLER_ERROR</td>
+<td>(         IO_MDIO_MDIOC_ERROR_NONE,       IO_MDIO_MDIOC_ERROR_ADDRESS_NOT_FOUND,      IO_MDIO_MDIOC_ERROR_FSM     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_LCDBUS_COMMAND</td>
+<td>(         IO_LCDBUS_CMD_NONE,         IO_LCDBUS_CMD_READ,         IO_LCDBUS_CMD_WRITE     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_IO_LCDBUS_STATUS</td>
+<td>(         IO_LCDBUS_STATUS_RESETTING,         IO_LCDBUS_STATUS_IDLE,      IO_LCDBUS_STATUS_READING,       IO_LCDBUS_STATUS_READ_COMPLETE,         IO_LCDBUS_STATUS_WRITING,       IO_LCDBUS_STATUS_WRITE_COMPLETE,        IO_LCDBUS_STATUS_ERROR  )</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>io_tristate_driver <font id="function_arguments">(        signal pad      : inout std_logic_vector;
+    signal tristate : inout T_IO_TRISTATE_VECTOR
+)</font> <font id="function_return">return ()</font></li>
+<li>io_7SegmentDisplayEncoding <font id="function_arguments">(hex    : std_logic_vector(3 downto 0); dot : std_logic := '0'; WITH_DOT : boolean := FALSE)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>io_7SegmentDisplayEncoding <font id="function_arguments">(digit    : T_BCD; dot : std_logic := '0'; WITH_DOT : boolean := FALSE)</font> <font id="function_return">return std_logic_vector</font></li>
+</ul><br><br><br><br><br><br>

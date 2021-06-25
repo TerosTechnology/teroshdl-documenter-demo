@@ -1,0 +1,99 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=components><h1 id="package-components">Package: components</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>registered <font id="function_arguments">(signal Clock : std_logic; constant IsRegistered : boolean)</font> <font id="function_return">return boolean</font></li>
+<li>ffrs <font id="function_arguments">(q : std_logic;    rst : std_logic := '0'; set : std_logic := '0')</font> <font id="function_return">return std_logic</font></li>
+<li>ffsr <font id="function_arguments">(q : std_logic;    rst : std_logic := '0'; set : std_logic := '0')</font> <font id="function_return">return std_logic</font></li>
+<li>ffdre <font id="function_arguments">(q : std_logic;                    d : std_logic;              rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0')</font> <font id="function_return">return std_logic</font></li>
+<li>ffdre <font id="function_arguments">(q : std_logic_vector;    d : std_logic_vector;   rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic_vector := (0 to 0 => '0'))</font> <font id="function_return">return std_logic_vector</font></li>
+<li>ffdse <font id="function_arguments">(q : std_logic;                    d : std_logic;              set : std_logic := '0'; en : std_logic := '1')</font> <font id="function_return">return std_logic</font></li>
+<li>fftre <font id="function_arguments">(q : std_logic;                    t : std_logic;              rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0')</font> <font id="function_return">return std_logic</font></li>
+<li>fftse <font id="function_arguments">(q : std_logic;                    t : std_logic;              set : std_logic := '0'; en : std_logic := '1')</font> <font id="function_return">return std_logic</font></li>
+<li>upcounter_next <font id="function_arguments">(cnt : unsigned; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : natural := 0)</font> <font id="function_return">return unsigned</font></li>
+<li>upcounter_equal <font id="function_arguments">(cnt : unsigned; value : natural)</font> <font id="function_return">return std_logic</font></li>
+<li>downcounter_next <font id="function_arguments">(cnt : signed; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : integer := 0)</font> <font id="function_return">return signed</font></li>
+<li>downcounter_equal <font id="function_arguments">(cnt : signed; value : integer)</font> <font id="function_return">return std_logic</font></li>
+<li>downcounter_neg <font id="function_arguments">(cnt : signed)</font> <font id="function_return">return std_logic</font></li>
+<li>shreg_left <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>shreg_right <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>rreg_left <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>rreg_right <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>comp <font id="function_arguments">(value1 : std_logic_vector; value2 : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>comp <font id="function_arguments">(value1 : unsigned; value2 : unsigned)</font> <font id="function_return">return unsigned</font></li>
+<li>comp <font id="function_arguments">(value1 : signed; value2 : signed)</font> <font id="function_return">return signed</font></li>
+<li>comp_allzero <font id="function_arguments">(value    : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>comp_allzero <font id="function_arguments">(value    : unsigned)</font> <font id="function_return">return std_logic</font></li>
+<li>comp_allzero <font id="function_arguments">(value    : signed)</font> <font id="function_return">return std_logic</font></li>
+<li>comp_allone <font id="function_arguments">(value    : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>comp_allone <font id="function_arguments">(value    : unsigned)</font> <font id="function_return">return std_logic</font></li>
+<li>comp_allone <font id="function_arguments">(value    : signed)</font> <font id="function_return">return std_logic</font></li>
+<li>mux <font id="function_arguments">(sel : std_logic; sl0        : std_logic;                sl1     : std_logic)</font> <font id="function_return">return std_logic</font></li>
+<li>mux <font id="function_arguments">(sel : std_logic; slv0    : std_logic_vector; slv1    : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>mux <font id="function_arguments">(sel : std_logic; us0        : unsigned;                 us1     : unsigned)</font> <font id="function_return">return unsigned</font></li>
+<li>mux <font id="function_arguments">(sel : std_logic; s0        : signed;                       s1      : signed)</font> <font id="function_return">return signed</font></li>
+</ul><br><br><br><br><br><br>

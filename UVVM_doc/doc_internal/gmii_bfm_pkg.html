@@ -85,7 +85,7 @@
 <td>C_GMII_BFM_CONFIG_DEFAULT</td>
 <td>t_gmii_bfm_config</td>
 <td>(     max_wait_cycles          =&gt; 12, -- Standard minimum interpacket gap (Gigabith Ethernet)     max_wait_cycles_severity =&gt; ERROR,     clock_period             =&gt; -1 ns,     clock_period_margin      =&gt; 0 ns,     clock_margin_severity    =&gt; TB_ERROR,     setup_time               =&gt; -1 ns,     hold_time                =&gt; -1 ns,     bfm_sync                 =&gt; SYNC_ON_CLOCK_ONLY,     match_strictness         =&gt; MATCH_EXACT,     id_for_bfm               =&gt; ID_BFM   )</td>
-<td>Define the default value for the BFM config</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -102,24 +102,22 @@
 <tr>
 <td>t_gmii_tx_if</td>
 <td></td>
-<td>Interface record for BFM signals to DUT</td>
+<td></td>
 </tr>
 <tr>
 <td>t_gmii_rx_if</td>
 <td></td>
-<td>Interface record for BFM signals from DUT</td>
+<td></td>
 </tr>
 <tr>
 <td>t_gmii_bfm_config</td>
 <td></td>
-<td>Configuration record to be assigned in the test harness.</td>
+<td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_tx_if</font><br />
-<strong>Description</strong><br />
-This function returns a GMII interface with initialized signals.All input signals are initialized to 0All output signals are initialized to Z</li>
+<li>init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_tx_if</font></li>
 <li>init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_rx_if</font></li>
 <li>gmii_write <font id="function_arguments">(    constant data_array   : in    t_slv_array;
 constant msg          : in    string            := "";

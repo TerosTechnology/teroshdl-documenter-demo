@@ -64,7 +64,7 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=uart_vvc_demo_th><h1 id="entity-uart_vvc_demo_th">Entity: uart_vvc_demo_th</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 146.66666666666666 30"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="26.666666666666664" height="10" fill="black" x="33.33333333333333" y="15"></rect><rect id="SvgjsRect1007" width="22.666666666666664" height="5" fill="#fdfd96" x="35.33333333333333" y="17"></rect></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright 2020 Bitvis Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Note : Any functionality not explicitly described in the documentation is subject to change at any time Description   : See library quick reference (under 'doc') and README-file(s) Test harness entity</p></div><h2 id="signals">Signals</h2>
+<a id=uart_vvc_demo_th><h1 id="entity-uart_vvc_demo_th">Entity: uart_vvc_demo_th</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 146.66666666666666 30"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="26.666666666666664" height="10" fill="black" x="33.33333333333333" y="15"></rect><rect id="SvgjsRect1007" width="22.666666666666664" height="5" fill="#fdfd96" x="35.33333333333333" y="17"></rect></svg></p><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -87,7 +87,7 @@
 <tr>
 <td>cs</td>
 <td>std_logic</td>
-<td>SBI VVC signals</td>
+<td></td>
 </tr>
 <tr>
 <td>addr</td>
@@ -122,7 +122,7 @@
 <tr>
 <td>uart_vvc_rx</td>
 <td>std_logic</td>
-<td>UART VVC signals</td>
+<td></td>
 </tr>
 <tr>
 <td>uart_vvc_tx</td>
@@ -146,7 +146,7 @@
 <td>C_CLK_PERIOD</td>
 <td>time</td>
 <td>10 ns</td>
-<td>100 MHz</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CLOCK_GEN</td>
@@ -157,17 +157,9 @@
 </tbody>
 </table><h2 id="instantiations">Instantiations</h2>
 <ul>
-<li><p>i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine</p></li>
-<li><p>i_uart: work.uart<br />
-<strong>Description</strong><br />
-Instantiate DUT</p></li>
-<li><p>i1_sbi_vvc: bitvis_vip_sbi.sbi_vvc<br />
-<strong>Description</strong><br />
-SBI VVC</p></li>
-<li><p>i1_uart_vvc: bitvis_vip_uart.uart_vvc<br />
-<strong>Description</strong><br />
-UART VVC</p></li>
-<li><p>i_clock_generator_vvc: bitvis_vip_clock_generator.clock_generator_vvc<br />
-<strong>Description</strong><br />
-Clock Generator VVC</p></li>
+<li>i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine</li>
+<li>i_uart: work.uart</li>
+<li>i1_sbi_vvc: bitvis_vip_sbi.sbi_vvc</li>
+<li>i1_uart_vvc: bitvis_vip_uart.uart_vvc</li>
+<li>i_clock_generator_vvc: bitvis_vip_clock_generator.clock_generator_vvc</li>
 </ul><br><br><br><br><br><br>

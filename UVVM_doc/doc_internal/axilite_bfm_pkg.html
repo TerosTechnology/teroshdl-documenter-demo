@@ -102,7 +102,7 @@
 <tr>
 <td>t_xresp</td>
 <td>(     OKAY,      SLVERR,      DECERR,      EXOKAY   )</td>
-<td>EXOKAY not supported for AXI-Lite, will raise TB_FAILURE</td>
+<td></td>
 </tr>
 <tr>
 <td>t_axprot</td>
@@ -112,12 +112,12 @@
 <tr>
 <td>t_axilite_bfm_config</td>
 <td></td>
-<td>Configuration record to be assigned in the test harness.</td>
+<td></td>
 </tr>
 <tr>
 <td>t_axilite_write_address_channel</td>
 <td></td>
-<td>AXI-Lite Interface signals</td>
+<td></td>
 </tr>
 <tr>
 <td>t_axilite_write_data_channel</td>
@@ -149,9 +149,7 @@
 <ul>
 <li>init_axilite_if_signals <font id="function_arguments">(    addr_width : natural;
 data_width : natural
-)</font> <font id="function_return">return t_axilite_if</font><br />
-<strong>Description</strong></li>
-<li>This function returns an AXILITE interface with initialized signals.- All AXILITE input signals are initialized to 0- All AXILITE output signals are initialized to Z- awprot and arprot are initialized to UNPRIVILEGED_NONSECURE_DATA</li>
+)</font> <font id="function_return">return t_axilite_if</font></li>
 <li>axilite_write <font id="function_arguments">(    constant addr_value         : in    unsigned;
 constant data_value         : in    std_logic_vector;
 constant msg                : in    string;
@@ -160,9 +158,7 @@ signal   axilite_if         : inout t_axilite_if;
 constant scope              : in    string                := C_SCOPE;
 constant msg_id_panel       : in    t_msg_id_panel        := shared_msg_id_panel;
 constant config             : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure writes data to the AXILITE interface specified in axilite_if- The protection setting is set to UNPRIVILEGED_NONSECURE_DATA in this procedure- The byte enable input is set to 1 for all bytes in this procedure- When the write is completed, a log message is issued with log ID id_for_bfm</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axilite_write <font id="function_arguments">(    constant addr_value         : in    unsigned;
 constant data_value         : in    std_logic_vector;
 constant byte_enable        : in    std_logic_vector;
@@ -172,9 +168,7 @@ signal   axilite_if         : inout t_axilite_if;
 constant scope              : in    string                := C_SCOPE;
 constant msg_id_panel       : in    t_msg_id_panel        := shared_msg_id_panel;
 constant config             : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure writes data to the AXILITE interface specified in axilite_if- When the write is completed, a log message is issued with log ID id_for_bfm</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axilite_read <font id="function_arguments">(    constant addr_value     : in  unsigned;
 variable data_value     : out std_logic_vector;
 constant msg            : in  string;
@@ -184,9 +178,7 @@ constant scope          : in  string                := C_SCOPE;
 constant msg_id_panel   : in  t_msg_id_panel        := shared_msg_id_panel;
 constant config         : in  t_axilite_bfm_config := C_AXILITE_BFM_CONFIG_DEFAULT;
 constant ext_proc_call  : in  string                    := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure reads data from the AXILITE interface specified in axilite_if,and returns the read data in data_value.</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axilite_check <font id="function_arguments">(    constant addr_value         : in  unsigned;
 constant data_exp           : in  std_logic_vector;
 constant msg                : in  string;
@@ -196,9 +188,7 @@ constant alert_level        : in  t_alert_level         := error;
 constant scope              : in  string                := C_SCOPE;
 constant msg_id_panel       : in  t_msg_id_panel        := shared_msg_id_panel;
 constant config             : in  t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure reads data from the AXILITE interface specified in axilite_if,and compares it to the data in data_exp.- If the received data inconsistent with data_exp, an alert with severity  alert_level is issued.- If the received data was correct, a log message with ID id_for_bfm is issued.</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axprot_to_slv <font id="function_arguments">(    axprot : t_axprot
 )</font> <font id="function_return">return std_logic_vector</font></li>
 <li>xresp_to_slv <font id="function_arguments">(    constant axilite_response_status : in  t_xresp;

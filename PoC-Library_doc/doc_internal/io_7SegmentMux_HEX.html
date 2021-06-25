@@ -1,0 +1,172 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=io_7SegmentMux_HEX><h1 id="entity-io_7segmentmux_hex">Entity: io_7SegmentMux_HEX</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1155 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="415,0 430,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="310" height="70" fill="black" x="430" y="0"></rect><rect id="SvgjsRect1007" width="306" height="65" fill="#bdecb6" x="432" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="410" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   FREQ </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="445" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   CLOCK_FREQ </tspan></text><line id="SvgjsLine1012" x1="415" y1="15" x2="430" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="410" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   FREQ </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="445" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   REFRESH_RATE </tspan></text><line id="SvgjsLine1017" x1="415" y1="35" x2="430" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="410" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="445" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   DIGITS </tspan></text><line id="SvgjsLine1022" x1="415" y1="55" x2="430" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="310" height="70" fill="black" x="430" y="75"></rect><rect id="SvgjsRect1024" width="306" height="65" fill="#fdfd96" x="432" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="410" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="445" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   Clock </tspan></text><line id="SvgjsLine1029" x1="415" y1="90" x2="430" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="410" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_4(DIGITS - 1 downto 0) </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="445" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   HexDigits </tspan></text><line id="SvgjsLine1034" x1="415" y1="110" x2="430" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="410" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(DIGITS - 1 downto 0) </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="445" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   HexDots </tspan></text><line id="SvgjsLine1039" x1="415" y1="130" x2="430" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="760" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(7 downto 0) </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="725" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   SegmentControl </tspan></text><line id="SvgjsLine1044" x1="740" y1="90" x2="755" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="760" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="760" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(DIGITS - 1 downto 0) </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="725" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="725" svgjs:data="{&quot;newLined&quot;:true}">   DigitControl </tspan></text><line id="SvgjsLine1049" x1="740" y1="110" x2="755" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLOCK_FREQ</td>
+<td>FREQ</td>
+<td>100 MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>REFRESH_RATE</td>
+<td>FREQ</td>
+<td>1 kHz</td>
+<td></td>
+</tr>
+<tr>
+<td>DIGITS</td>
+<td>positive</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>HexDigits</td>
+<td>in</td>
+<td>T_SLVV_4(DIGITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>HexDots</td>
+<td>in</td>
+<td>std_logic_vector(DIGITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>SegmentControl</td>
+<td>out</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>DigitControl</td>
+<td>out</td>
+<td>std_logic_vector(DIGITS - 1 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DigitCounter_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>DigitCounter_en</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>DigitCounter_us</td>
+<td>unsigned(log2ceilnz(DIGITS) - 1 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>( HexDigits, HexDots, DigitCounter_us )</em></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li>Strobe: PoC.misc_StrobeGenerator</li>
+</ul><br><br><br><br><br><br>

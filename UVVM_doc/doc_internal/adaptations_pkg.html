@@ -108,25 +108,25 @@
 <td>C_SHOW_UVVM_UTILITY_LIBRARY_INFO</td>
 <td>boolean</td>
 <td>true</td>
-<td>Set this to false when you no longer need the initial info</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SHOW_UVVM_UTILITY_LIBRARY_RELEASE_INFO</td>
 <td>boolean</td>
 <td>true</td>
-<td>Set this to false when you no longer need the release info</td>
+<td></td>
 </tr>
 <tr>
 <td>C_UVVM_TIMEOUT</td>
 <td>time</td>
 <td>100 us</td>
-<td>General timeout for UVVM wait statements</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_PREFIX</td>
 <td>string</td>
 <td>"UVVM: "</td>
-<td>Note: ': ' is recommended as final characters</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_PREFIX_WIDTH</td>
@@ -144,25 +144,25 @@
 <td>C_LOG_TIME_WIDTH</td>
 <td>natural</td>
 <td>16</td>
-<td>3 chars used for unit eg. " ns"</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_TIME_BASE</td>
 <td>time</td>
 <td>ns</td>
-<td>Unit in which time is shown in log (ns</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_TIME_DECIMALS</td>
 <td>natural</td>
 <td>1</td>
-<td>Decimals to show for given C_LOG_TIME_BASE</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_SCOPE_WIDTH</td>
 <td>natural</td>
 <td>30</td>
-<td>Maximum scope length</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_LINE_WIDTH</td>
@@ -180,31 +180,31 @@
 <td>C_USE_BACKSLASH_N_AS_LF</td>
 <td>boolean</td>
 <td>true</td>
-<td>If true interprets '\n' as Line feed</td>
+<td></td>
 </tr>
 <tr>
 <td>C_USE_BACKSLASH_R_AS_LF</td>
 <td>boolean</td>
 <td>true</td>
-<td>If true, inserts an empty line if '\r'</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SINGLE_LINE_ALERT</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true prints alerts on a single line.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SINGLE_LINE_LOG</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true prints log messages on a single line.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_TB_SCOPE_DEFAULT</td>
 <td>string</td>
 <td>"TB seq."</td>
-<td>Default scope in test sequencer</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SCOPE</td>
@@ -216,25 +216,25 @@
 <td>C_VVC_CMD_SCOPE_DEFAULT</td>
 <td>string</td>
 <td>C_TB_SCOPE_DEFAULT &amp; "(uvvm)"</td>
-<td>Default scope in VVC commands</td>
+<td></td>
 </tr>
 <tr>
 <td>C_LOG_TIME_TRUNC_WARNING</td>
 <td>boolean</td>
 <td>true</td>
-<td>Yields a single TB_WARNING if time stamp truncated. Otherwise none</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SHOW_LOG_ID</td>
 <td>boolean</td>
 <td>true</td>
-<td>This constant has replaced the global_show_log_id</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SHOW_LOG_SCOPE</td>
 <td>boolean</td>
 <td>true</td>
-<td>This constant has replaced the global_show_log_scope</td>
+<td></td>
 </tr>
 <tr>
 <td>C_WARNING_ON_LOG_ALERT_FILE_RUNTIME_RENAME</td>
@@ -246,25 +246,25 @@
 <td>C_USE_STD_STOP_ON_ALERT_STOP_LIMIT</td>
 <td>boolean</td>
 <td>true</td>
-<td>true: break using std.env.stop, false: break using failure</td>
+<td></td>
 </tr>
 <tr>
 <td>C_ENABLE_CHECK_COUNTER</td>
 <td>boolean</td>
 <td>False</td>
-<td>enable/disable check_counter to count number of check calls.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_TB_MSG_ID_DEFAULT</td>
 <td>t_msg_id</td>
 <td>ID_SEQUENCER</td>
-<td>msg ID used when calling the log method without any msg ID switch.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
 <td>(     ID_NEVER            =&gt; DISABLED,     ID_UTIL_BURIED      =&gt; DISABLED,     ID_BITVIS_DEBUG     =&gt; DISABLED,     ID_COVERAGE_MAKEBIN =&gt; DISABLED,     ID_COVERAGE_ADDBIN  =&gt; DISABLED,     ID_COVERAGE_ICOVER  =&gt; DISABLED,     others              =&gt; ENABLED   )</td>
-<td>Default message Id panel to be used for all message Id panels, except: - VVC message Id panels, see constant C_VVC_MSG_ID_PANEL_DEFAULT</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MSG_ID_INDENT</td>
@@ -282,13 +282,13 @@
 <td>C_DEFAULT_ALERT_ATTENTION</td>
 <td>t_alert_attention</td>
 <td>(others =&gt; REGARD)</td>
-<td>Default values. These can be overwritten in each sequencer by usingset_alert_attention or set_alert_stop_limit (see quick ref).</td>
+<td></td>
 </tr>
 <tr>
 <td>C_DEFAULT_STOP_LIMIT</td>
 <td>t_alert_counters</td>
 <td>(note to manual_check =&gt; 0,                                                        others               =&gt; 1)</td>
-<td>0 = Never stop</td>
+<td></td>
 </tr>
 <tr>
 <td>C_ENABLE_HIERARCHICAL_ALERTS</td>
@@ -318,13 +318,13 @@
 <td>C_NUM_SYNC_FLAGS</td>
 <td>positive</td>
 <td>100</td>
-<td>Maximum number of sync flags</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CMD_QUEUE_COUNT_MAX</td>
 <td>natural</td>
 <td>20</td>
-<td>(VVC Command queue)  May be overwritten for dedicated VVC</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CMD_QUEUE_COUNT_THRESHOLD_SEVERITY</td>
@@ -342,7 +342,7 @@
 <td>C_RESULT_QUEUE_COUNT_MAX</td>
 <td>natural</td>
 <td>20</td>
-<td>(VVC Result queue)  May be overwritten for dedicated VVC</td>
+<td></td>
 </tr>
 <tr>
 <td>C_RESULT_QUEUE_COUNT_THRESHOLD_SEVERITY</td>
@@ -366,25 +366,25 @@
 <td>C_MAX_NUM_SEQUENCERS</td>
 <td>natural</td>
 <td>10</td>
-<td>Max number of sequencers</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MAX_TB_VVC_NUM</td>
 <td>natural</td>
 <td>20</td>
-<td>Max number of VVCs in testbench (including all channels)</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MAX_VVC_NAME_LENGTH</td>
 <td>positive</td>
 <td>20</td>
-<td>Maximum allowed length of VVC names</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MINIMUM_CHANNEL_SCOPE_WIDTH</td>
 <td>natural</td>
 <td>10</td>
-<td>Minimum width of vvc name and channel displayed in scope.These combined + the length of instance + 2 (commas), cannot exceed C_LOG_SCOPE_WIDTH.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MINIMUM_VVC_NAME_SCOPE_WIDTH</td>
@@ -408,7 +408,7 @@
 <td>C_VVC_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
 <td>(     ID_NEVER                  =&gt; DISABLED,     ID_UTIL_BURIED            =&gt; DISABLED,     ID_CHANNEL_BFM            =&gt; DISABLED,     ID_CHANNEL_EXECUTOR       =&gt; DISABLED,     ID_CHANNEL_EXECUTOR_WAIT  =&gt; DISABLED,     others                    =&gt; ENABLED   )</td>
-<td>Default message Id panel intended for use in the VVCs</td>
+<td></td>
 </tr>
 <tr>
 <td>C_NUM_SEMAPHORE_LOCK_TRIES</td>
@@ -420,49 +420,49 @@
 <td>C_MAX_QUEUE_INSTANCE_NUM</td>
 <td>positive</td>
 <td>100</td>
-<td>Maximum number of generic queue instances</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SB_TAG_WIDTH</td>
 <td>positive</td>
 <td>128</td>
-<td>Number of characters in SB tag</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SB_SOURCE_WIDTH</td>
 <td>positive</td>
 <td>128</td>
-<td>Number of characters in SB source element</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SB_SLV_WIDTH</td>
 <td>positive</td>
 <td>128</td>
-<td>Width of the SLV in the predefined SLV SB</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SB_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
 <td>(     ID_CTRL =&gt; ENABLED,     ID_DATA =&gt; DISABLED,     others  =&gt; DISABLED   )</td>
-<td>Default message Id panel intended for use in SB</td>
+<td></td>
 </tr>
 <tr>
 <td>C_SPI_VVC_DATA_ARRAY_WIDTH</td>
 <td>natural</td>
 <td>31</td>
-<td>Width of SPI VVC data array for SPI VVC and transaction package defaults.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_UNUSED_MSG_ID_PANEL</td>
 <td>t_msg_id_panel</td>
 <td>(     others =&gt; NA   )</td>
-<td>Message Id panel with all IDs as NA</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CRC_32_START_VALUE</td>
 <td>std_logic_vector(31 downto 0)</td>
 <td>x"FFFFFFFF"</td>
-<td>CRC-32 (IEEE 802.3)</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CRC_32_POLYNOMIAL</td>
@@ -474,7 +474,7 @@
 <td>C_CRC_32_RESIDUE</td>
 <td>std_logic_vector(31 downto 0)</td>
 <td>x"C704DD7B"</td>
-<td>using left shifting CRC</td>
+<td></td>
 </tr>
 <tr>
 <td>C_CMD_IDX_PREFIX</td>
@@ -516,7 +516,7 @@
 <td>C_DEPRECATE_SETTING</td>
 <td>t_deprecate_setting</td>
 <td>DEPRECATE_ONCE</td>
-<td>These values are used to indicate outdated sub-programs</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -548,12 +548,12 @@
 <tr>
 <td>t_data_source</td>
 <td>(     NA,     FROM_BUFFER,     RANDOM,     RANDOM_TO_BUFFER   )</td>
-<td>Deprecated, will be removed.</td>
+<td></td>
 </tr>
 <tr>
 <td>t_error_injection</td>
 <td>(     NA,     RANDOM_BIT_ERROR,     RANDOM_DATA_ERROR,     RANDOM_ADDRESS_ERROR   )</td>
-<td>Deprecated, will be removed.</td>
+<td></td>
 </tr>
 <tr>
 <td>t_randomisation</td>
@@ -568,12 +568,12 @@
 <tr>
 <td>t_interface</td>
 <td>(SBI, GMII)</td>
-<td>HVVC supported interfaces</td>
+<td></td>
 </tr>
 <tr>
 <td>t_frame_field</td>
 <td>(     HEADER,     PAYLOAD,     CHECKSUM   )</td>
-<td>For frame-based communication</td>
+<td></td>
 </tr>
 <tr>
 <td>t_vvc_id</td>

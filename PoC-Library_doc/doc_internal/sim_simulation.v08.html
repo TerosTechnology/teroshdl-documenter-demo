@@ -1,0 +1,76 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=simulation><h1 id="package-simulation">Package: simulation</h1></a><h2 id="functions">Functions</h2>
+<ul>
+<li>simInitialize <font id="function_arguments">(MaxAssertFailures : natural := natural'high; MaxSimulationRuntime : TIME := TIME'high)</font> <font id="function_return">return ()</font></li>
+<li>simFinalize <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+<li>simFinalizeTest <font id="function_arguments">(constant TestID : T_SIM_TEST_ID)</font> <font id="function_return">return ()</font></li>
+<li>simDeactivateProcess <font id="function_arguments">(ProcID : T_SIM_PROCESS_ID)</font> <font id="function_return">return ()</font></li>
+<li>simAssertion <font id="function_arguments">(cond : in boolean; Message : in string := "")</font> <font id="function_return">return ()</font></li>
+<li>simFail <font id="function_arguments">(Message : in string := "")</font> <font id="function_return">return ()</font></li>
+<li>simWriteMessage <font id="function_arguments">(Message : in string := "")</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

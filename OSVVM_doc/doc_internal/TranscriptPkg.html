@@ -66,19 +66,11 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=TranscriptPkg><h1 id="package-transcriptpkg">Package: TranscriptPkg</h1></a><h2 id="functions">Functions</h2>
 <ul>
-<li>TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS; ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Open and close TranscriptFile.  Function allows declarative opens </li>
+<li>TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS; ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font></li>
 <li>TranscriptOpen <font id="function_arguments">(ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font></li>
 <li>TranscriptClose <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
-<li>SetTranscriptMirror <font id="function_arguments">(A : boolean := TRUE)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Mirroring.  When using TranscriptPkw WriteLine and Print, uses both TranscriptFile and OUTPUT </li>
-<li>WriteLine <font id="function_arguments">(buf : inout line)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Write to TranscriptFile when open.  Write to OUTPUT when not open or IsTranscriptMirrored</li>
+<li>SetTranscriptMirror <font id="function_arguments">(A : boolean := TRUE)</font> <font id="function_return">return ()</font></li>
+<li>WriteLine <font id="function_arguments">(buf : inout line)</font> <font id="function_return">return ()</font></li>
 <li>Print <font id="function_arguments">(s : string)</font> <font id="function_return">return ()</font></li>
-<li>BlankLine <font id="function_arguments">(count : integer := 1)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Create "count" number of blank lines</li>
+<li>BlankLine <font id="function_arguments">(count : integer := 1)</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

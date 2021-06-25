@@ -1,0 +1,184 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=run_types_pkg><h1 id="package-run_types_pkg">Package: run_types_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max_locked_time</td>
+<td>time</td>
+<td>1 ms</td>
+<td></td>
+</tr>
+<tr>
+<td>max_n_test_cases</td>
+<td>natural</td>
+<td>1024</td>
+<td></td>
+</tr>
+<tr>
+<td>max_locked_time_c</td>
+<td>time</td>
+<td>max_locked_time</td>
+<td></td>
+</tr>
+<tr>
+<td>max_n_test_cases_c</td>
+<td>natural</td>
+<td>max_n_test_cases</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_cfg_default</td>
+<td>string</td>
+<td>"enabled_test_cases : <strong>all</strong>, output path : , active python runner : false"</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_event_idx</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_exit_status_idx</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_timeout_update_idx</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_timeout_idx</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_event</td>
+<td>std_logic</td>
+<td>'1'</td>
+<td></td>
+</tr>
+<tr>
+<td>idle_runner</td>
+<td>std_logic</td>
+<td>'Z'</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_exit_with_errors</td>
+<td>std_logic</td>
+<td>'Z'</td>
+<td></td>
+</tr>
+<tr>
+<td>runner_exit_without_errors</td>
+<td>std_logic</td>
+<td>'1'</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>runner_phase_t</td>
+<td>(test_runner_entry, test_runner_setup, test_suite_setup, test_case_setup,                           test_case, test_case_cleanup, test_suite_cleanup, test_runner_cleanup,                           test_runner_exit)</td>
+<td></td>
+</tr>
+<tr>
+<td>phase_locks_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>boolean_array_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><br><br><br><br><br><br>

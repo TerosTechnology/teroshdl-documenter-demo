@@ -1,0 +1,233 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=logger_pkg><h1 id="package-logger_pkg">Package: logger_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null_logger</td>
+<td>logger_t</td>
+<td>(p_data =&gt; null_ptr)</td>
+<td></td>
+</tr>
+<tr>
+<td>no_time_check</td>
+<td>time</td>
+<td>-1 ns</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>logger_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>logger_vec_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>trace <font id="function_arguments">(logger : logger_t;                  msg : string;
+              line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>debug <font id="function_arguments">(logger : logger_t;                  msg : string;
+              line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>pass <font id="function_arguments">(logger : logger_t;                 msg : string;
+             line_num : natural := 0;
+             file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>info <font id="function_arguments">(logger : logger_t;                 msg : string;
+             line_num : natural := 0;
+             file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>warning <font id="function_arguments">(logger : logger_t;                    msg : string;
+                line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>error <font id="function_arguments">(logger : logger_t;                  msg : string;
+              line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>failure <font id="function_arguments">(logger : logger_t;                    msg : string;
+                line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>warning_if <font id="function_arguments">(logger : logger_t;                       condition : boolean;
+                   msg : string;
+                   line_num : natural := 0;
+                   file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>error_if <font id="function_arguments">(logger : logger_t;                     condition : boolean;
+                 msg : string;
+                 line_num : natural := 0;
+                 file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>failure_if <font id="function_arguments">(logger : logger_t;                       condition : boolean;
+                   msg : string;
+                   line_num : natural := 0;
+                   file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>trace <font id="function_arguments">(msg : string;                  line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>debug <font id="function_arguments">(msg : string;                  line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>pass <font id="function_arguments">(msg : string;                 line_num : natural := 0;
+             file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>info <font id="function_arguments">(msg : string;                 line_num : natural := 0;
+             file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>warning <font id="function_arguments">(msg : string;                    line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>error <font id="function_arguments">(msg : string;                  line_num : natural := 0;
+              file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>failure <font id="function_arguments">(msg : string;                    line_num : natural := 0;
+                file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>warning_if <font id="function_arguments">(condition : boolean;                       msg : string;
+                   line_num : natural := 0;
+                   file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>error_if <font id="function_arguments">(condition : boolean;                     msg : string;
+                 line_num : natural := 0;
+                 file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>failure_if <font id="function_arguments">(condition : boolean;                       msg : string;
+                   line_num : natural := 0;
+                   file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>log <font id="function_arguments">(logger : logger_t;                msg : string;
+            log_level : log_level_t := info;
+            line_num : natural := 0;
+            file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>log <font id="function_arguments">(msg : string;                log_level : log_level_t := info;
+            line_num : natural := 0;
+            file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>set_stop_count <font id="function_arguments">(logger : logger_t;                           log_level : log_level_t;
+                       value : positive;
+                       unset_children : boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>disable_stop <font id="function_arguments">(logger : logger_t;                         log_level : log_level_t;
+                     unset_children : boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>set_stop_count <font id="function_arguments">(log_level : log_level_t;                           value : positive)</font> <font id="function_return">return ()</font></li>
+<li>disable_stop <font id="function_arguments">(log_level : log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>set_stop_level <font id="function_arguments">(logger : logger_t;                           log_level : alert_log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>set_stop_level <font id="function_arguments">(level : alert_log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>unset_stop_count <font id="function_arguments">(logger : logger_t;                             log_level : log_level_t;
+                         unset_children : boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>disable <font id="function_arguments">(logger : logger_t;                    log_level : log_level_t;
+                include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>hide <font id="function_arguments">(log_handler : log_handler_t;                 log_level : log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>hide <font id="function_arguments">(logger : logger_t;                 log_handler : log_handler_t;
+             log_level : log_level_t;
+             include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>hide <font id="function_arguments">(log_handler : log_handler_t;                 log_levels : log_level_vec_t)</font> <font id="function_return">return ()</font></li>
+<li>hide <font id="function_arguments">(logger : logger_t;                 log_handler : log_handler_t;
+             log_levels : log_level_vec_t;
+             include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>show <font id="function_arguments">(log_handler : log_handler_t;                 log_level : log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>show <font id="function_arguments">(logger : logger_t;                 log_handler : log_handler_t;
+             log_level : log_level_t;
+             include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>show <font id="function_arguments">(log_handler : log_handler_t;                 log_levels : log_level_vec_t)</font> <font id="function_return">return ()</font></li>
+<li>show <font id="function_arguments">(logger : logger_t;                 log_handler : log_handler_t;
+             log_levels : log_level_vec_t;
+             include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>show_all <font id="function_arguments">(log_handler : log_handler_t)</font> <font id="function_return">return ()</font></li>
+<li>show_all <font id="function_arguments">(logger : logger_t;                     log_handler : log_handler_t;
+                 include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>hide_all <font id="function_arguments">(log_handler : log_handler_t)</font> <font id="function_return">return ()</font></li>
+<li>hide_all <font id="function_arguments">(logger : logger_t;                     log_handler : log_handler_t;
+                 include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>set_log_handlers <font id="function_arguments">(logger : logger_t;                             log_handlers : log_handler_vec_t;
+                         include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>reset_log_count <font id="function_arguments">(logger : logger_t;                            log_level : log_level_t := null_log_level;
+                        include_children : boolean := true)</font> <font id="function_return">return ()</font></li>
+<li>final_log_check <font id="function_arguments">(allow_disabled_errors : boolean := false;                            allow_disabled_failures : boolean := false;
+                        fail_on_warning : boolean := false)</font> <font id="function_return">return ()</font></li>
+<li>mock <font id="function_arguments">(logger : logger_t)</font> <font id="function_return">return ()</font></li>
+<li>mock <font id="function_arguments">(logger : logger_t; log_level : log_level_t)</font> <font id="function_return">return ()</font></li>
+<li>unmock <font id="function_arguments">(logger : logger_t)</font> <font id="function_return">return ()</font></li>
+<li>check_log <font id="function_arguments">(logger : logger_t;                      msg : string;
+                  log_level : log_level_t;
+                  log_time : time := no_time_check;
+                  line_num : natural := 0;
+                  file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>check_only_log <font id="function_arguments">(logger : logger_t;                           msg : string;
+                       log_level : log_level_t;
+                       log_time : time := no_time_check;
+                       line_num : natural := 0;
+                       file_name : string := "")</font> <font id="function_return">return ()</font></li>
+<li>check_no_log <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>

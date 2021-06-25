@@ -1,0 +1,363 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=cordic_sincos_engine><h1 id="entity-cordic_sincos_engine">Entity: cordic_sincos_engine</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 925 90"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="345,0 360,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="220" height="70" fill="black" x="360" y="15"></rect><rect id="SvgjsRect1007" width="216" height="65" fill="#fdfd96" x="362" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="340" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="375" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1012" x1="345" y1="30" x2="360" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="340" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="375" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   dv_in </tspan></text><line id="SvgjsLine1017" x1="345" y1="50" x2="360" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="340" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="340" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector (19 downto 0) </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="375" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   data_in </tspan></text><line id="SvgjsLine1022" x1="345" y1="70" x2="360" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="600" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="600" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector (19 downto 0) </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="565" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="565" svgjs:data="{&quot;newLined&quot;:true}">   cos_out </tspan></text><line id="SvgjsLine1027" x1="580" y1="30" x2="595" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="600" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="600" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector (19 downto 0) </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="565" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="565" svgjs:data="{&quot;newLined&quot;:true}">   sin_out </tspan></text><line id="SvgjsLine1032" x1="580" y1="50" x2="595" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="600" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="600" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="565" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="565" svgjs:data="{&quot;newLined&quot;:true}">   dv_out </tspan></text><line id="SvgjsLine1037" x1="580" y1="70" x2="595" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Standard library. Sine and cosine cordic.</p></div><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td>Clock.</td>
+</tr>
+<tr>
+<td>dv_in</td>
+<td>in</td>
+<td>std_logic</td>
+<td>Data valid input.</td>
+</tr>
+<tr>
+<td>data_in</td>
+<td>in</td>
+<td>std_logic_vector (19 downto 0)</td>
+<td>Angle in radians Q2.17 format [-pi,pi]</td>
+</tr>
+<tr>
+<td>cos_out</td>
+<td>out</td>
+<td>std_logic_vector (19 downto 0)</td>
+<td>Cosine.</td>
+</tr>
+<tr>
+<td>sin_out</td>
+<td>out</td>
+<td>std_logic_vector (19 downto 0)</td>
+<td>Sine.</td>
+</tr>
+<tr>
+<td>dv_out</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Data valid output.</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r0_data_in</td>
+<td>std_logic_vector(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r0_dv</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>r1_signCos</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>r1_input</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r1_dv</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_input</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_x</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2b_x_bis</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_y</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2b_y_bis</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_a</td>
+<td>typea_input</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_signCos</td>
+<td>std_logic_vector(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_shift_dv</td>
+<td>std_logic_vector(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r3_sin</td>
+<td>signed(2*c_SIZE_INPUT-c_SIZE_INT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r3_cos</td>
+<td>signed(2*c_SIZE_INPUT-c_SIZE_INT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r3b_sin</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r3b_cos</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r3_signCos</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>r3_dv</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>r4_sin</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r4_cos</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>r4_dv</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c_SIZE_INPUT</td>
+<td>integer</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>c_SIZE_INT</td>
+<td>integer</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>c_SIZE_DECIM</td>
+<td>integer</td>
+<td>17</td>
+<td></td>
+</tr>
+<tr>
+<td>c_PI_HALF</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"00110010010000111111"</td>
+<td></td>
+</tr>
+<tr>
+<td>c_PI_HALF_NEG</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"11001101101111000001"</td>
+<td></td>
+</tr>
+<tr>
+<td>c_PI</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"01100100100001111110"</td>
+<td></td>
+</tr>
+<tr>
+<td>c_PI_NEG</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"10011011011110000010"</td>
+<td></td>
+</tr>
+<tr>
+<td>X_INIT</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"00100000000000000000"</td>
+<td></td>
+</tr>
+<tr>
+<td>Y_INIT</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"00000000000000000000"</td>
+<td></td>
+</tr>
+<tr>
+<td>X_BIS_INIT</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"00100000000000000000"</td>
+<td></td>
+</tr>
+<tr>
+<td>Y_BIS_INIT</td>
+<td>signed(c_SIZE_INPUT-1 downto 0)</td>
+<td>"00000000000000000000"</td>
+<td></td>
+</tr>
+<tr>
+<td>c_NUM_STAGES</td>
+<td>integer</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>r2_ang</td>
+<td>typea_inputa</td>
+<td>(     "011001001000011111","001110110101100011","000111110101101101","000011111110101011",     "000001111111110101","000000111111111110","000000011111111111","000000001111111111",     "000000000111111111","000000000011111111","000000000001111111","000000000000111111",     "000000000000011111","000000000000001111","000000000000000111","000000000000000011"   )</td>
+<td></td>
+</tr>
+<tr>
+<td>c_CORRECTION</td>
+<td>signed(c_SIZE_INPUT-c_SIZE_INT-1 downto 0)</td>
+<td>"010011011011101001"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typea_input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>typea_inputa</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>r0_reg_input: <em>( clk )</em></p></li>
+<li><p>r1_adapter_input: <em>( clk )</em></p></li>
+<li><p>r2_shift: <em>( clk )</em></p></li>
+<li><p>r2_start_cordic: <em>( clk )</em></p></li>
+<li><p>r3_cordic_correction: <em>( clk )</em></p></li>
+<li><p>r4_adapter_output: <em>( clk )</em></p></li>
+</ul><br><br><br><br><br><br>

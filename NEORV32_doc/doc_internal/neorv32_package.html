@@ -79,145 +79,145 @@
 <td>ispace_base_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"00000000"</td>
-<td>default instruction memory address space base address</td>
+<td></td>
 </tr>
 <tr>
 <td>dspace_base_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"80000000"</td>
-<td>default data memory address space base address</td>
+<td></td>
 </tr>
 <tr>
 <td>wb_pipe_mode_c</td>
 <td>boolean</td>
 <td>false</td>
-<td>protocol: false=classic/standard wishbone mode (default), true=pipelined wishbone mode</td>
+<td></td>
 </tr>
 <tr>
 <td>wb_big_endian_c</td>
 <td>boolean</td>
 <td>false</td>
-<td>byte order: true=big-endian, false=little-endian (default)</td>
+<td></td>
 </tr>
 <tr>
 <td>wb_rx_buffer_c</td>
 <td>boolean</td>
 <td>true</td>
-<td>use register buffer for RX data when true (default)</td>
+<td></td>
 </tr>
 <tr>
 <td>ipb_entries_c</td>
 <td>natural</td>
 <td>4</td>
-<td>entries in CPU instruction prefetch buffer, has to be a power of 2, default=2</td>
+<td></td>
 </tr>
 <tr>
 <td>cp_timeout_en_c</td>
 <td>boolean</td>
 <td>false</td>
-<td>auto-terminate pending co-processor operations after 256 cycles (for debugging only), default = false</td>
+<td></td>
 </tr>
 <tr>
 <td>dedicated_reset_c</td>
 <td>boolean</td>
 <td>false</td>
-<td>use dedicated hardware reset value for UNCRITICAL registers (FALSE=reset value is irrelevant (might simplify HW), default; TRUE=defined LOW reset value)</td>
+<td></td>
 </tr>
 <tr>
 <td>pmp_num_regions_critical_c</td>
 <td>natural</td>
 <td>8</td>
-<td>default=8</td>
+<td></td>
 </tr>
 <tr>
 <td>max_proc_int_response_time_c</td>
 <td>natural</td>
 <td>15</td>
-<td>cycles after which an <em>unacknowledged</em> internal bus access will timeout and trigger a bus fault exception (min 2)</td>
+<td></td>
 </tr>
 <tr>
 <td>jtag_tap_idcode_version_c</td>
 <td>std_ulogic_vector(03 downto 0)</td>
 <td>x"0"</td>
-<td>version</td>
+<td></td>
 </tr>
 <tr>
 <td>jtag_tap_idcode_partid_c</td>
 <td>std_ulogic_vector(15 downto 0)</td>
 <td>x"cafe"</td>
-<td>part number</td>
+<td></td>
 </tr>
 <tr>
 <td>jtag_tap_idcode_manid_c</td>
 <td>std_ulogic_vector(10 downto 0)</td>
 <td>"00000000000"</td>
-<td>manufacturer id</td>
+<td></td>
 </tr>
 <tr>
 <td>data_width_c</td>
 <td>natural</td>
 <td>32</td>
-<td>native data path width - do not change!</td>
+<td></td>
 </tr>
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"01050702"</td>
-<td>no touchy!</td>
+<td></td>
 </tr>
 <tr>
 <td>archid_c</td>
 <td>natural</td>
 <td>19</td>
-<td>official NEORV32 architecture ID - hands off!</td>
+<td></td>
 </tr>
 <tr>
 <td>rf_r0_is_reg_c</td>
 <td>boolean</td>
 <td>true</td>
-<td>x0 is a <em>physical register</em> that has to be initialized to zero by the CPU</td>
+<td></td>
 </tr>
 <tr>
 <td>def_rst_val_c</td>
 <td>std_ulogic</td>
 <td>cond_sel_stdulogic_f(dedicated_reset_c, '0', '-')</td>
-<td>Internal (auto-generated) Configurations ------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td></td>
 </tr>
 <tr>
 <td>imem_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>ispace_base_c</td>
-<td>internal instruction memory base address</td>
+<td></td>
 </tr>
 <tr>
 <td>dmem_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>dspace_base_c</td>
-<td>internal data memory base address</td>
+<td></td>
 </tr>
 <tr>
 <td>boot_rom_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffff0000"</td>
-<td>bootloader base address, fixed!</td>
+<td></td>
 </tr>
 <tr>
 <td>boot_rom_max_size_c</td>
 <td>natural</td>
 <td>32*1024</td>
-<td>max module's address space size in bytes, fixed!</td>
+<td></td>
 </tr>
 <tr>
 <td>dm_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffff800"</td>
-<td>base address, fixed!</td>
+<td></td>
 </tr>
 <tr>
 <td>dm_size_c</td>
 <td>natural</td>
 <td>4<em>32</em>4</td>
-<td>debug ROM address space size in bytes, fixed</td>
+<td></td>
 </tr>
 <tr>
 <td>dm_code_base_c</td>
@@ -247,25 +247,25 @@
 <td>io_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffffe00"</td>
-<td>IO: Peripheral Devices ("IO") Area --Control register(s) (including the device-enable) should be located at the base address of each device</td>
+<td></td>
 </tr>
 <tr>
 <td>io_size_c</td>
 <td>natural</td>
 <td>512</td>
-<td>IO address space size in bytes, fixed!</td>
+<td></td>
 </tr>
 <tr>
 <td>cfs_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffffe00"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>cfs_size_c</td>
 <td>natural</td>
 <td>64*4</td>
-<td>module's address space in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>cfs_reg0_addr_c</td>
@@ -463,13 +463,13 @@
 <td>pwm_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffffe80"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>pwm_size_c</td>
 <td>natural</td>
 <td>16*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>pwm_ctrl_addr_c</td>
@@ -571,13 +571,13 @@
 <td>gpio_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffff80"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>gpio_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>gpio_in_addr_c</td>
@@ -595,13 +595,13 @@
 <td>trng_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffff88"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>trng_size_c</td>
 <td>natural</td>
 <td>1*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>trng_ctrl_addr_c</td>
@@ -613,13 +613,13 @@
 <td>wdt_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffff8c"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>wdt_size_c</td>
 <td>natural</td>
 <td>1*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>wdt_ctrl_addr_c</td>
@@ -631,13 +631,13 @@
 <td>mtime_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffff90"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>mtime_size_c</td>
 <td>natural</td>
 <td>4*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>mtime_time_lo_addr_c</td>
@@ -667,13 +667,13 @@
 <td>uart0_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffa0"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>uart0_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>uart0_ctrl_addr_c</td>
@@ -691,13 +691,13 @@
 <td>spi_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffa8"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>spi_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>spi_ctrl_addr_c</td>
@@ -715,13 +715,13 @@
 <td>twi_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffb0"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>twi_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>twi_ctrl_addr_c</td>
@@ -739,13 +739,13 @@
 <td>nco_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffc0"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>nco_size_c</td>
 <td>natural</td>
 <td>4*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>nco_ctrl_addr_c</td>
@@ -775,13 +775,13 @@
 <td>uart1_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffd0"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>uart1_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>uart1_ctrl_addr_c</td>
@@ -799,13 +799,13 @@
 <td>neoled_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffd8"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>neoled_size_c</td>
 <td>natural</td>
 <td>2*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>neoled_ctrl_addr_c</td>
@@ -823,1081 +823,1081 @@
 <td>sysinfo_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffe0"</td>
-<td>base address</td>
+<td></td>
 </tr>
 <tr>
 <td>sysinfo_size_c</td>
 <td>natural</td>
 <td>8*4</td>
-<td>module's address space size in bytes</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_in_mux_c</td>
 <td>natural</td>
 <td>0</td>
-<td>input source select lsb (0=MEM, 1=ALU)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs1_adr0_c</td>
 <td>natural</td>
 <td>1</td>
-<td>source register 1 address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs1_adr1_c</td>
 <td>natural</td>
 <td>2</td>
-<td>source register 1 address bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs1_adr2_c</td>
 <td>natural</td>
 <td>3</td>
-<td>source register 1 address bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs1_adr3_c</td>
 <td>natural</td>
 <td>4</td>
-<td>source register 1 address bit 3</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs1_adr4_c</td>
 <td>natural</td>
 <td>5</td>
-<td>source register 1 address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs2_adr0_c</td>
 <td>natural</td>
 <td>6</td>
-<td>source register 2 address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs2_adr1_c</td>
 <td>natural</td>
 <td>7</td>
-<td>source register 2 address bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs2_adr2_c</td>
 <td>natural</td>
 <td>8</td>
-<td>source register 2 address bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs2_adr3_c</td>
 <td>natural</td>
 <td>9</td>
-<td>source register 2 address bit 3</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rs2_adr4_c</td>
 <td>natural</td>
 <td>10</td>
-<td>source register 2 address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rd_adr0_c</td>
 <td>natural</td>
 <td>11</td>
-<td>destination register address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rd_adr1_c</td>
 <td>natural</td>
 <td>12</td>
-<td>destination register address bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rd_adr2_c</td>
 <td>natural</td>
 <td>13</td>
-<td>destination register address bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rd_adr3_c</td>
 <td>natural</td>
 <td>14</td>
-<td>destination register address bit 3</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_rd_adr4_c</td>
 <td>natural</td>
 <td>15</td>
-<td>destination register address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_wb_en_c</td>
 <td>natural</td>
 <td>16</td>
-<td>write back enable</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_rf_r0_we_c</td>
 <td>natural</td>
 <td>17</td>
-<td>force write access and force rd=r0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_arith_c</td>
 <td>natural</td>
 <td>18</td>
-<td>ALU arithmetic command</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_logic0_c</td>
 <td>natural</td>
 <td>19</td>
-<td>ALU logic command bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_logic1_c</td>
 <td>natural</td>
 <td>20</td>
-<td>ALU logic command bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_func0_c</td>
 <td>natural</td>
 <td>21</td>
-<td>ALU function select command bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_func1_c</td>
 <td>natural</td>
 <td>22</td>
-<td>ALU function select command bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_addsub_c</td>
 <td>natural</td>
 <td>23</td>
-<td>0=ADD, 1=SUB</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_opa_mux_c</td>
 <td>natural</td>
 <td>24</td>
-<td>operand A select (0=rs1, 1=PC)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_opb_mux_c</td>
 <td>natural</td>
 <td>25</td>
-<td>operand B select (0=rs2, 1=IMM)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_unsigned_c</td>
 <td>natural</td>
 <td>26</td>
-<td>is unsigned ALU operation</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_shift_dir_c</td>
 <td>natural</td>
 <td>27</td>
-<td>shift direction (0=left, 1=right)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_shift_ar_c</td>
 <td>natural</td>
 <td>28</td>
-<td>is arithmetic shift</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_frm0_c</td>
 <td>natural</td>
 <td>29</td>
-<td>FPU rounding mode bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_frm1_c</td>
 <td>natural</td>
 <td>30</td>
-<td>FPU rounding mode bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_alu_frm2_c</td>
 <td>natural</td>
 <td>31</td>
-<td>FPU rounding mode bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_size_lsb_c</td>
 <td>natural</td>
 <td>32</td>
-<td>transfer size lsb (00=byte, 01=half-word)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_size_msb_c</td>
 <td>natural</td>
 <td>33</td>
-<td>transfer size msb (10=word, 11=?)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_rd_c</td>
 <td>natural</td>
 <td>34</td>
-<td>read data request</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_wr_c</td>
 <td>natural</td>
 <td>35</td>
-<td>write data request</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_if_c</td>
 <td>natural</td>
 <td>36</td>
-<td>instruction fetch request</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_mo_we_c</td>
 <td>natural</td>
 <td>37</td>
-<td>memory address and data output register write enable</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_mi_we_c</td>
 <td>natural</td>
 <td>38</td>
-<td>memory data input register write enable</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_unsigned_c</td>
 <td>natural</td>
 <td>39</td>
-<td>is unsigned load</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_ierr_ack_c</td>
 <td>natural</td>
 <td>40</td>
-<td>acknowledge instruction fetch bus exceptions</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_derr_ack_c</td>
 <td>natural</td>
 <td>41</td>
-<td>acknowledge data access bus exceptions</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_fence_c</td>
 <td>natural</td>
 <td>42</td>
-<td>executed fence operation</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_fencei_c</td>
 <td>natural</td>
 <td>43</td>
-<td>executed fencei operation</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_lock_c</td>
 <td>natural</td>
 <td>44</td>
-<td>make atomic/exclusive access lock</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_de_lock_c</td>
 <td>natural</td>
 <td>45</td>
-<td>remove atomic/exclusive access</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_bus_ch_lock_c</td>
 <td>natural</td>
 <td>46</td>
-<td>evaluate atomic/exclusive lock (SC operation)</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_cp_id_lsb_c</td>
 <td>natural</td>
 <td>47</td>
-<td>cp select ID lsb</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_cp_id_msb_c</td>
 <td>natural</td>
 <td>48</td>
-<td>cp select ID msb</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_0_c</td>
 <td>natural</td>
 <td>49</td>
-<td>funct3 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_1_c</td>
 <td>natural</td>
 <td>50</td>
-<td>funct3 bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_2_c</td>
 <td>natural</td>
 <td>51</td>
-<td>funct3 bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_0_c</td>
 <td>natural</td>
 <td>52</td>
-<td>funct12 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_1_c</td>
 <td>natural</td>
 <td>53</td>
-<td>funct12 bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_2_c</td>
 <td>natural</td>
 <td>54</td>
-<td>funct12 bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_3_c</td>
 <td>natural</td>
 <td>55</td>
-<td>funct12 bit 3</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_4_c</td>
 <td>natural</td>
 <td>56</td>
-<td>funct12 bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_5_c</td>
 <td>natural</td>
 <td>57</td>
-<td>funct12 bit 5</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_6_c</td>
 <td>natural</td>
 <td>58</td>
-<td>funct12 bit 6</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_7_c</td>
 <td>natural</td>
 <td>59</td>
-<td>funct12 bit 7</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_8_c</td>
 <td>natural</td>
 <td>60</td>
-<td>funct12 bit 8</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_9_c</td>
 <td>natural</td>
 <td>61</td>
-<td>funct12 bit 9</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_10_c</td>
 <td>natural</td>
 <td>62</td>
-<td>funct12 bit 10</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_11_c</td>
 <td>natural</td>
 <td>63</td>
-<td>funct12 bit 11</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_0_c</td>
 <td>natural</td>
 <td>64</td>
-<td>opcode7 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_1_c</td>
 <td>natural</td>
 <td>65</td>
-<td>opcode7 bit 1</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_2_c</td>
 <td>natural</td>
 <td>66</td>
-<td>opcode7 bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_3_c</td>
 <td>natural</td>
 <td>67</td>
-<td>opcode7 bit 3</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_4_c</td>
 <td>natural</td>
 <td>68</td>
-<td>opcode7 bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_5_c</td>
 <td>natural</td>
 <td>69</td>
-<td>opcode7 bit 5</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_6_c</td>
 <td>natural</td>
 <td>70</td>
-<td>opcode7 bit 6</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_priv_lvl_lsb_c</td>
 <td>natural</td>
 <td>71</td>
-<td>privilege level lsb</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_priv_lvl_msb_c</td>
 <td>natural</td>
 <td>72</td>
-<td>privilege level msb</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_sleep_c</td>
 <td>natural</td>
 <td>73</td>
-<td>set when CPU is in sleep mode</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_trap_c</td>
 <td>natural</td>
 <td>74</td>
-<td>set when CPU is entering trap execution</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_debug_running_c</td>
 <td>natural</td>
 <td>75</td>
-<td>CPU is in debug mode when set</td>
+<td></td>
 </tr>
 <tr>
 <td>ctrl_width_c</td>
 <td>natural</td>
 <td>76</td>
-<td>control bus size</td>
+<td></td>
 </tr>
 <tr>
 <td>cmp_equal_c</td>
 <td>natural</td>
 <td>0</td>
-<td>Comparator Bus --------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td></td>
 </tr>
 <tr>
 <td>cmp_less_c</td>
 <td>natural</td>
 <td>1</td>
-<td>for signed and unsigned comparisons</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_opcode_lsb_c</td>
 <td>natural</td>
 <td>0</td>
-<td>opcode bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_opcode_msb_c</td>
 <td>natural</td>
 <td>6</td>
-<td>opcode bit 6</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rd_lsb_c</td>
 <td>natural</td>
 <td>7</td>
-<td>destination register address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rd_msb_c</td>
 <td>natural</td>
 <td>11</td>
-<td>destination register address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct3_lsb_c</td>
 <td>natural</td>
 <td>12</td>
-<td>funct3 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct3_msb_c</td>
 <td>natural</td>
 <td>14</td>
-<td>funct3 bit 2</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rs1_lsb_c</td>
 <td>natural</td>
 <td>15</td>
-<td>source register 1 address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rs1_msb_c</td>
 <td>natural</td>
 <td>19</td>
-<td>source register 1 address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rs2_lsb_c</td>
 <td>natural</td>
 <td>20</td>
-<td>source register 2 address bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_rs2_msb_c</td>
 <td>natural</td>
 <td>24</td>
-<td>source register 2 address bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct7_lsb_c</td>
 <td>natural</td>
 <td>25</td>
-<td>funct7 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct7_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>funct7 bit 6</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct12_lsb_c</td>
 <td>natural</td>
 <td>20</td>
-<td>funct12 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct12_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>funct12 bit 11</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_imm12_lsb_c</td>
 <td>natural</td>
 <td>20</td>
-<td>immediate12 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_imm12_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>immediate12 bit 11</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_imm20_lsb_c</td>
 <td>natural</td>
 <td>12</td>
-<td>immediate20 bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_imm20_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>immediate20 bit 21</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_csr_id_lsb_c</td>
 <td>natural</td>
 <td>20</td>
-<td>csr select bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_csr_id_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>csr select bit 11</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct5_lsb_c</td>
 <td>natural</td>
 <td>27</td>
-<td>funct5 select bit 0</td>
+<td></td>
 </tr>
 <tr>
 <td>instr_funct5_msb_c</td>
 <td>natural</td>
 <td>31</td>
-<td>funct5 select bit 4</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_lui_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0110111"</td>
-<td>load upper immediate</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_auipc_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0010111"</td>
-<td>add upper immediate to PC</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_alui_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0010011"</td>
-<td>ALU operation with immediate (operation via funct3 and funct7)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_alu_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0110011"</td>
-<td>ALU operation (operation via funct3 and funct7)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_jal_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1101111"</td>
-<td>jump and link</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_jalr_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1100111"</td>
-<td>jump and link with register</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_branch_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1100011"</td>
-<td>branch (condition set via funct3)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_load_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0000011"</td>
-<td>load (data type via funct3)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_store_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0100011"</td>
-<td>store (data type via funct3)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_fence_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0001111"</td>
-<td>fence / fence.i</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_syscsr_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1110011"</td>
-<td>system/csr access (type via funct3)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_atomic_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0101111"</td>
-<td>atomic operations (A extension)</td>
+<td></td>
 </tr>
 <tr>
 <td>opcode_fop_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1010011"</td>
-<td>dual/single opearand instruction</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_beq_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>branch if equal</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_bne_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>branch if not equal</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_blt_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"100"</td>
-<td>branch if less than</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_bge_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"101"</td>
-<td>branch if greater than or equal</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_bltu_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"110"</td>
-<td>branch if less than (unsigned)</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_bgeu_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"111"</td>
-<td>branch if greater than or equal (unsigned)</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_lb_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>load byte</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_lh_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>load half word</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_lw_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"010"</td>
-<td>load word</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_lbu_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"100"</td>
-<td>load byte (unsigned)</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_lhu_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"101"</td>
-<td>load half word (unsigned)</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sb_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>store byte</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sh_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>store half word</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sw_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"010"</td>
-<td>store word</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_subadd_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>sub/add via funct7</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sll_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>shift logical left</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_slt_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"010"</td>
-<td>set on less</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sltu_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"011"</td>
-<td>set on less unsigned</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_xor_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"100"</td>
-<td>xor</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_sr_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"101"</td>
-<td>shift right via funct7</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_or_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"110"</td>
-<td>or</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_and_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"111"</td>
-<td>and</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_env_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>ecall, ebreak, mret, wfi, …</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrw_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>atomic r/w</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrs_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"010"</td>
-<td>atomic read &amp; set bit</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrc_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"011"</td>
-<td>atomic read &amp; clear bit</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrwi_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"101"</td>
-<td>atomic r/w immediate</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrsi_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"110"</td>
-<td>atomic read &amp; set bit immediate</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_csrrci_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"111"</td>
-<td>atomic read &amp; clear bit immediate</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_fence_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"000"</td>
-<td>fence - order IO/memory access (-&gt;NOP)</td>
+<td></td>
 </tr>
 <tr>
 <td>funct3_fencei_c</td>
 <td>std_ulogic_vector(2 downto 0)</td>
 <td>"001"</td>
-<td>fencei - instructon stream sync</td>
+<td></td>
 </tr>
 <tr>
 <td>funct12_ecall_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"000"</td>
-<td>ECALL</td>
+<td></td>
 </tr>
 <tr>
 <td>funct12_ebreak_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"001"</td>
-<td>EBREAK</td>
+<td></td>
 </tr>
 <tr>
 <td>funct12_mret_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"302"</td>
-<td>MRET</td>
+<td></td>
 </tr>
 <tr>
 <td>funct12_wfi_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"105"</td>
-<td>WFI</td>
+<td></td>
 </tr>
 <tr>
 <td>funct12_dret_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"7b2"</td>
-<td>DRET</td>
+<td></td>
 </tr>
 <tr>
 <td>funct5_a_lr_c</td>
 <td>std_ulogic_vector(4 downto 0)</td>
 <td>"00010"</td>
-<td>LR</td>
+<td></td>
 </tr>
 <tr>
 <td>funct5_a_sc_c</td>
 <td>std_ulogic_vector(4 downto 0)</td>
 <td>"00011"</td>
-<td>SC</td>
+<td></td>
 </tr>
 <tr>
 <td>float_single_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"00"</td>
-<td>single-precision (32-bit)</td>
+<td></td>
 </tr>
 <tr>
 <td>float_double_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"01"</td>
-<td>double-precision (64-bit)</td>
+<td></td>
 </tr>
 <tr>
 <td>float_half_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"10"</td>
-<td>half-precision (16-bit)</td>
+<td></td>
 </tr>
 <tr>
 <td>float_quad_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"11"</td>
-<td>quad-precision (128-bit)</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_neg_inf_c</td>
 <td>natural</td>
 <td>0</td>
-<td>negative infinity</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_neg_norm_c</td>
 <td>natural</td>
 <td>1</td>
-<td>negative normal number</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_neg_denorm_c</td>
 <td>natural</td>
 <td>2</td>
-<td>negative subnormal number</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_neg_zero_c</td>
 <td>natural</td>
 <td>3</td>
-<td>negative zero</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_pos_zero_c</td>
 <td>natural</td>
 <td>4</td>
-<td>positive zero</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_pos_denorm_c</td>
 <td>natural</td>
 <td>5</td>
-<td>positive subnormal number</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_pos_norm_c</td>
 <td>natural</td>
 <td>6</td>
-<td>positive normal number</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_pos_inf_c</td>
 <td>natural</td>
 <td>7</td>
-<td>positive infinity</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_snan_c</td>
 <td>natural</td>
 <td>8</td>
-<td>signaling NaN (sNaN)</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_class_qnan_c</td>
 <td>natural</td>
 <td>9</td>
-<td>quiet NaN (qNaN)</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_exc_nv_c</td>
 <td>natural</td>
 <td>0</td>
-<td>invalid operation</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_exc_dz_c</td>
 <td>natural</td>
 <td>1</td>
-<td>divide by zero</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_exc_of_c</td>
 <td>natural</td>
 <td>2</td>
-<td>overflow</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_exc_uf_c</td>
 <td>natural</td>
 <td>3</td>
-<td>underflow</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_exc_nx_c</td>
 <td>natural</td>
 <td>4</td>
-<td>inexact</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_qnan_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"7fc00000"</td>
-<td>quiet NaN</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_snan_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"7fa00000"</td>
-<td>signaling NaN</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_pos_inf_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"7f800000"</td>
-<td>positive infinity</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_neg_inf_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"ff800000"</td>
-<td>negative infinity</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_pos_zero_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"00000000"</td>
-<td>positive zero</td>
+<td></td>
 </tr>
 <tr>
 <td>fp_single_neg_zero_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
 <td>x"80000000"</td>
-<td>negative zero</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_class_float_c</td>
 <td>std_ulogic_vector(07 downto 0)</td>
 <td>x"00"</td>
-<td>floating point</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_fflags_c</td>
@@ -1921,7 +1921,7 @@
 <td>csr_class_setup_c</td>
 <td>std_ulogic_vector(07 downto 0)</td>
 <td>x"30"</td>
-<td>trap setup</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_mstatus_c</td>
@@ -1957,7 +1957,7 @@
 <td>csr_cnt_setup_c</td>
 <td>std_ulogic_vector(06 downto 0)</td>
 <td>x"3" &amp; "001"</td>
-<td>counter setup</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_mcountinhibit_c</td>
@@ -2143,7 +2143,7 @@
 <td>csr_class_trap_c</td>
 <td>std_ulogic_vector(07 downto 0)</td>
 <td>x"34"</td>
-<td>machine trap handling</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_mscratch_c</td>
@@ -2179,7 +2179,7 @@
 <td>csr_class_pmpcfg_c</td>
 <td>std_ulogic_vector(07 downto 0)</td>
 <td>x"3a"</td>
-<td>pmp configuration</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_pmpcfg0_c</td>
@@ -2281,7 +2281,7 @@
 <td>csr_pmpaddr0_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"3b0"</td>
-<td>physical memory protection - address --</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_pmpaddr1_c</td>
@@ -2665,7 +2665,7 @@
 <td>csr_class_debug_c</td>
 <td>std_ulogic_vector(09 downto 0)</td>
 <td>x"7b" &amp; "00"</td>
-<td>debug registers</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_dcsr_c</td>
@@ -2689,7 +2689,7 @@
 <td>csr_mcycle_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"b00"</td>
-<td>machine counters/timers --</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_minstret_c</td>
@@ -3061,7 +3061,7 @@
 <td>csr_cycle_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"c00"</td>
-<td><<< standard read-only CSRs >&gt;&gt; --user counters/timers --</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_time_c</td>
@@ -3097,7 +3097,7 @@
 <td>csr_mvendorid_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"f11"</td>
-<td>machine information registers --</td>
+<td></td>
 </tr>
 <tr>
 <td>csr_marchid_c</td>
@@ -3121,607 +3121,607 @@
 <td>csr_mzext_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"fc0"</td>
-<td><<< custom (NEORV32-specific) read-only CSRs >&gt;&gt; --</td>
+<td></td>
 </tr>
 <tr>
 <td>cp_sel_shifter_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"00"</td>
-<td>shift operation</td>
+<td></td>
 </tr>
 <tr>
 <td>cp_sel_muldiv_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"01"</td>
-<td>multiplication/division operations ('M' extension)</td>
+<td></td>
 </tr>
 <tr>
 <td>cp_sel_fpu_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"11"</td>
-<td>floating-point unit ('Zfinx' extension)</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_arith_cmd_addsub_c</td>
 <td>std_ulogic</td>
 <td>'0'</td>
-<td>r.arith &lt;= A +/- B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_arith_cmd_slt_c</td>
 <td>std_ulogic</td>
 <td>'1'</td>
-<td>r.arith &lt;= A &lt; B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_logic_cmd_movb_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"00"</td>
-<td>r.logic &lt;= B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_logic_cmd_xor_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"01"</td>
-<td>r.logic &lt;= A xor B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_logic_cmd_or_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"10"</td>
-<td>r.logic &lt;= A or B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_logic_cmd_and_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"11"</td>
-<td>r.logic &lt;= A and B</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_func_cmd_arith_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"00"</td>
-<td>r &lt;= r.arith</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_func_cmd_logic_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"01"</td>
-<td>r &lt;= r.logic</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_func_cmd_csrr_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"10"</td>
-<td>r &lt;= CSR read</td>
+<td></td>
 </tr>
 <tr>
 <td>alu_func_cmd_copro_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"11"</td>
-<td>r &lt;= CP result (multi-cycle)</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_ima_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00000"</td>
-<td>0.0:  instruction misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_iba_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00001"</td>
-<td>0.1:  instruction access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_iil_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00010"</td>
-<td>0.2:  illegal instruction</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_brk_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00011"</td>
-<td>0.3:  breakpoint</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_lma_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00100"</td>
-<td>0.4:  load address misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_lbe_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00101"</td>
-<td>0.5:  load access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_sma_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00110"</td>
-<td>0.6:  store address misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_sbe_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "00111"</td>
-<td>0.7:  store access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_uenv_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "01000"</td>
-<td>0.8:  environment call from u-mode</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_menv_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "0" &amp; "01011"</td>
-<td>0.11: environment call from m-mode</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_nmi_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "00000"</td>
-<td>1.0:  non-maskable interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_msi_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "00011"</td>
-<td>1.3:  machine software interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_mti_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "00111"</td>
-<td>1.7:  machine timer interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_mei_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "01011"</td>
-<td>1.11: machine external interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq0_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10000"</td>
-<td>1.16: fast interrupt 0</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq1_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10001"</td>
-<td>1.17: fast interrupt 1</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq2_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10010"</td>
-<td>1.18: fast interrupt 2</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq3_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10011"</td>
-<td>1.19: fast interrupt 3</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq4_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10100"</td>
-<td>1.20: fast interrupt 4</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq5_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10101"</td>
-<td>1.21: fast interrupt 5</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq6_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10110"</td>
-<td>1.22: fast interrupt 6</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq7_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "10111"</td>
-<td>1.23: fast interrupt 7</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq8_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11000"</td>
-<td>1.24: fast interrupt 8</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq9_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11001"</td>
-<td>1.25: fast interrupt 9</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq10_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11010"</td>
-<td>1.26: fast interrupt 10</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq11_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11011"</td>
-<td>1.27: fast interrupt 11</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq12_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11100"</td>
-<td>1.28: fast interrupt 12</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq13_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11101"</td>
-<td>1.29: fast interrupt 13</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq14_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11110"</td>
-<td>1.30: fast interrupt 14</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_firq15_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "0" &amp; "11111"</td>
-<td>1.31: fast interrupt 15</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_db_break_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"0" &amp; "1" &amp; "00010"</td>
-<td>break instruction (sync / EXCEPTION)</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_db_halt_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "1" &amp; "00011"</td>
-<td>external halt request (async / IRQ)</td>
+<td></td>
 </tr>
 <tr>
 <td>trap_db_step_c</td>
 <td>std_ulogic_vector(6 downto 0)</td>
 <td>"1" &amp; "1" &amp; "00100"</td>
-<td>single-stepping (async / IRQ)</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_iaccess_c</td>
 <td>natural</td>
 <td>0</td>
-<td>instruction access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_iillegal_c</td>
 <td>natural</td>
 <td>1</td>
-<td>illegal instruction</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_ialign_c</td>
 <td>natural</td>
 <td>2</td>
-<td>instruction address misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_m_envcall_c</td>
 <td>natural</td>
 <td>3</td>
-<td>ENV call from m-mode</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_u_envcall_c</td>
 <td>natural</td>
 <td>4</td>
-<td>ENV call from u-mode</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_break_c</td>
 <td>natural</td>
 <td>5</td>
-<td>breakpoint</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_salign_c</td>
 <td>natural</td>
 <td>6</td>
-<td>store address misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_lalign_c</td>
 <td>natural</td>
 <td>7</td>
-<td>load address misaligned</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_saccess_c</td>
 <td>natural</td>
 <td>8</td>
-<td>store access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_laccess_c</td>
 <td>natural</td>
 <td>9</td>
-<td>load access fault</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_db_break_c</td>
 <td>natural</td>
 <td>10</td>
-<td>enter debug mode via ebreak instruction ("sync EXCEPTION")</td>
+<td></td>
 </tr>
 <tr>
 <td>exception_width_c</td>
 <td>natural</td>
 <td>11</td>
-<td>length of this list in bits</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_nm_irq_c</td>
 <td>natural</td>
 <td>0</td>
-<td>non-maskable interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_msw_irq_c</td>
 <td>natural</td>
 <td>1</td>
-<td>machine software interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_mtime_irq_c</td>
 <td>natural</td>
 <td>2</td>
-<td>machine timer interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_mext_irq_c</td>
 <td>natural</td>
 <td>3</td>
-<td>machine external interrupt</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_0_c</td>
 <td>natural</td>
 <td>4</td>
-<td>fast interrupt channel 0</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_1_c</td>
 <td>natural</td>
 <td>5</td>
-<td>fast interrupt channel 1</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_2_c</td>
 <td>natural</td>
 <td>6</td>
-<td>fast interrupt channel 2</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_3_c</td>
 <td>natural</td>
 <td>7</td>
-<td>fast interrupt channel 3</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_4_c</td>
 <td>natural</td>
 <td>8</td>
-<td>fast interrupt channel 4</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_5_c</td>
 <td>natural</td>
 <td>9</td>
-<td>fast interrupt channel 5</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_6_c</td>
 <td>natural</td>
 <td>10</td>
-<td>fast interrupt channel 6</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_7_c</td>
 <td>natural</td>
 <td>11</td>
-<td>fast interrupt channel 7</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_8_c</td>
 <td>natural</td>
 <td>12</td>
-<td>fast interrupt channel 8</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_9_c</td>
 <td>natural</td>
 <td>13</td>
-<td>fast interrupt channel 9</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_10_c</td>
 <td>natural</td>
 <td>14</td>
-<td>fast interrupt channel 10</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_11_c</td>
 <td>natural</td>
 <td>15</td>
-<td>fast interrupt channel 11</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_12_c</td>
 <td>natural</td>
 <td>16</td>
-<td>fast interrupt channel 12</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_13_c</td>
 <td>natural</td>
 <td>17</td>
-<td>fast interrupt channel 13</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_14_c</td>
 <td>natural</td>
 <td>18</td>
-<td>fast interrupt channel 14</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_firq_15_c</td>
 <td>natural</td>
 <td>19</td>
-<td>fast interrupt channel 15</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_db_halt_c</td>
 <td>natural</td>
 <td>20</td>
-<td>enter debug mode via external halt request ("async IRQ")</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_db_step_c</td>
 <td>natural</td>
 <td>21</td>
-<td>enter debug mode via single-stepping ("async IRQ")</td>
+<td></td>
 </tr>
 <tr>
 <td>interrupt_width_c</td>
 <td>natural</td>
 <td>22</td>
-<td>length of this list in bits</td>
+<td></td>
 </tr>
 <tr>
 <td>priv_mode_m_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"11"</td>
-<td>machine mode</td>
+<td></td>
 </tr>
 <tr>
 <td>priv_mode_u_c</td>
 <td>std_ulogic_vector(1 downto 0)</td>
 <td>"00"</td>
-<td>user mode</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_cy_c</td>
 <td>natural</td>
 <td>0</td>
-<td>Active cycle</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_never_c</td>
 <td>natural</td>
 <td>1</td>
-<td>Unused / never (actually, this would be used for TIME)</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_ir_c</td>
 <td>natural</td>
 <td>2</td>
-<td>Retired instruction</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_cir_c</td>
 <td>natural</td>
 <td>3</td>
-<td>Retired compressed instruction</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_wait_if_c</td>
 <td>natural</td>
 <td>4</td>
-<td>Instruction fetch memory wait cycle</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_wait_ii_c</td>
 <td>natural</td>
 <td>5</td>
-<td>Instruction issue wait cycle</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_wait_mc_c</td>
 <td>natural</td>
 <td>6</td>
-<td>Multi-cycle ALU-operation wait cycle</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_load_c</td>
 <td>natural</td>
 <td>7</td>
-<td>Load operation</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_store_c</td>
 <td>natural</td>
 <td>8</td>
-<td>Store operation</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_wait_ls_c</td>
 <td>natural</td>
 <td>9</td>
-<td>Load/store memory wait cycle</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_jump_c</td>
 <td>natural</td>
 <td>10</td>
-<td>Unconditional jump</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_branch_c</td>
 <td>natural</td>
 <td>11</td>
-<td>Conditional branch (taken or not taken)</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_tbranch_c</td>
 <td>natural</td>
 <td>12</td>
-<td>Conditional taken branch</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_trap_c</td>
 <td>natural</td>
 <td>13</td>
-<td>Entered trap</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_illegal_c</td>
 <td>natural</td>
 <td>14</td>
-<td>Illegal instruction exception</td>
+<td></td>
 </tr>
 <tr>
 <td>hpmcnt_event_size_c</td>
 <td>natural</td>
 <td>15</td>
-<td>length of this list</td>
+<td></td>
 </tr>
 <tr>
 <td>clk_div2_c</td>
 <td>natural</td>
 <td>0</td>
-<td>Clock Generator -------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td></td>
 </tr>
 <tr>
 <td>clk_div4_c</td>
@@ -3780,7 +3780,7 @@
 <tr>
 <td>pmp_ctrl_if_t</td>
 <td></td>
-<td>Internal Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td></td>
 </tr>
 <tr>
 <td>pmp_addr_if_t</td>
@@ -3795,19 +3795,17 @@
 <tr>
 <td>mem32_t</td>
 <td></td>
-<td>memory with 32-bit entries</td>
+<td></td>
 </tr>
 <tr>
 <td>mem8_t</td>
 <td></td>
-<td>memory with 8-bit entries</td>
+<td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>index_size_f <font id="function_arguments">(input : natural)</font> <font id="function_return">return natural</font><br />
-<strong>Description</strong><br />
-Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</li>
+<li>index_size_f <font id="function_arguments">(input : natural)</font> <font id="function_return">return natural</font></li>
 <li>cond_sel_natural_f <font id="function_arguments">(cond : boolean; val_t : natural; val_f : natural)</font> <font id="function_return">return natural</font></li>
 <li>cond_sel_int_f <font id="function_arguments">(cond : boolean; val_t : integer; val_f : integer)</font> <font id="function_return">return integer</font></li>
 <li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic_vector; val_f : std_ulogic_vector)</font> <font id="function_return">return std_ulogic_vector</font></li>

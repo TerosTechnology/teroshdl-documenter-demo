@@ -1,0 +1,1033 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=net><h1 id="package-net">Package: net</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_NET_ETH_PREMABLE_LENGTH</td>
+<td>positive</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ETH_INTER_FRAME_GAP_LENGTH</td>
+<td>positive</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ETH_MIN_FRAME_LENGTH</td>
+<td>positive</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ETH_MAX_NORMALFRAME_LENGTH</td>
+<td>positive</td>
+<td>1518</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ETH_MAX_TAGGEDFRAME_LENGTH</td>
+<td>positive</td>
+<td>1522</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ETH_MAX_JUMBOFRAME_LENGTH</td>
+<td>positive</td>
+<td>9018</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ADDRESS_EMPTY</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ADDRESS_BROADCAST</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '1'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_MASK_EMPTY</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_MASK_DEFAULT</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '1'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_EMPTY</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>(others =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_SOURCEFILTER_NONE</td>
+<td>T_NET_MAC_INTERFACE</td>
+<td>(Address =&gt; to_net_mac_address("00:00:00:00:00:01"), Mask =&gt; C_NET_MAC_MASK_EMPTY)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_SFC_TYPE_EMPTY</td>
+<td>T_NET_MAC_SFC_TYPE</td>
+<td>(others =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_ADDRESS_EMPTY</td>
+<td>T_NET_IPV4_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_PROTOCOL_EMPTY</td>
+<td>T_NET_IPV4_PROTOCOL</td>
+<td>(others =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_ROUTINE</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"000"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_PRIORITY</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"001"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_IMMEDIATE</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"010"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_FLASH</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"011"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_FLASH_OVERRIDE</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"100"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_CRITIC_ECP</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"101"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_INTERNETWORK_CONTROL</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"110"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_PRECEDENCE_NETWORK_CONTROL</td>
+<td>T_NET_IPV4_TOS_PRECEDENCE</td>
+<td>"111"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV4_TOS_DEFAULT</td>
+<td>T_NET_IPV4_TYPE_OF_SERVICE</td>
+<td>(Precedence =&gt; C_NET_IPV4_TOS_PRECEDENCE_ROUTINE, Delay =&gt; '0', Throughput =&gt; '0', Relibility =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV6_ADDRESS_EMPTY</td>
+<td>T_NET_IPV6_ADDRESS</td>
+<td>(others =&gt; (others =&gt; '0'))</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IPV6_NEXT_HEADER_EMPTY</td>
+<td>T_NET_IPV6_NEXT_HEADER</td>
+<td>(others =&gt; '0')</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_SSFC</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"A987")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_SWAP</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"FFFE")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_LOOPBACK</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"FFFF")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_IPV4</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"0800")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_ARP</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"0806")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_WOL</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"0842")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_VLAN</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"8100")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_SNMP</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"814C")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_IPV6</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"86DD")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_MACCONTROL</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"8808")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_JUMBOFRAMES</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"8870")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_MAC_ETHERNETTYPE_QINQ</td>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td>to_net_mac_ethernettype(x"9100")</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_LOOPBACK</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"FF"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV4</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"04"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPv6</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"29"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_HOP_BY_HOP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_ROUTING</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"2B"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_FRAGMENTATION</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"2C"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_ICMP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"3A"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_NO_NEXT_HEADER</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"3B"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IPV6_DEST_OPTIONS</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"3C"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_ICMP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_IGMP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"02"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_TCP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"06"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_SCTP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"84"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_UDP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"11"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_UDP_LITE</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"88"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_IP_PROTOCOL_L2TP</td>
+<td>T_NET_IP_PROTOCOL</td>
+<td>x"73"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_EMPTY</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_ECHO_REPLY</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_DEST_UNREACHABLE</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"03"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_SOURCE_QUENCH</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"04"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_REDIRECT</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"05"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_ECHO_REQUEST</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"08"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_TIME_EXCEEDED</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"0B"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_TYPE_PARAMETER_PROBLEM</td>
+<td>T_NET_ICMPV4_TYPE</td>
+<td>x"0C"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_EMPTY</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_NET_UNREACHABLE</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_HOST_UNREACHABLE</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_PROTOCOL_UNREACHABLE</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"02"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_PORT_UNREACHABLE</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"03"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_FRAGMENTATION_NEEDED</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"04"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_SOURCE_ROUTE_FAILED</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"05"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_TIME_TO_LIVE_EXCEEDED</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_FRAG_REASS_TIME_EXCEEDED</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_ECHO_REQUEST</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV4_CODE_ECHO_REPLY</td>
+<td>T_NET_ICMPV4_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_DEST_UNREACHABLE</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_PACKET_TOO_BIG</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"02"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_TIME_EXCEEDED</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"03"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_PARAMETER_PROBLEM</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"04"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_ERROR_EXP</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"7F"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_ECHO_REQUEST</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"80"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_ECHO_REPLY</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"81"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_TYPE_INFORMANTION_EXP</td>
+<td>T_NET_ICMPV6_TYPE</td>
+<td>x"FF"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_EMPTY</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_NO_ROUTE_TO_DEST</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_COM_PROHIBITED</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_BEYOND_SCOPE</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"02"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_ADDRESS_UNREACHABLE</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"03"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_PORT_UNREACHABLE</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"04"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_ADDRESS_FAILED_POLICY</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"05"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_REJECT_ROUTE_TO_DEST</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"06"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_PACKET_TOO_BIG</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_HOP_LIMIT_EXCEEDED</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_REASS_TIME_EXCEEDED</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_HEADER_FIELD_ERROR</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_NEXT_HEADER_ERROR</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"01"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_IPV6_OPTION_ERROR</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"02"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_ECHO_REQUEST</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_ICMPV6_CODE_ECHO_REPLY</td>
+<td>T_NET_ICMPV6_CODE</td>
+<td>x"00"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_TCP_PORTNUMBER_ECHO</td>
+<td>T_NET_TCP_PORT</td>
+<td>x"0007"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_TCP_PORTNUMBER_FTP_DATA</td>
+<td>T_NET_TCP_PORT</td>
+<td>x"0014"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_TCP_PORTNUMBER_FTP_CONTROL</td>
+<td>T_NET_TCP_PORT</td>
+<td>x"0015"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_NET_TCP_PORTNUMBER_LOOPBACK</td>
+<td>T_NET_TCP_PORT</td>
+<td>x"FFFF"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_NET_ETH_PHY_DATA_INTERFACE</td>
+<td>(         NET_ETH_PHY_DATA_INTERFACE_MII,         NET_ETH_PHY_DATA_INTERFACE_GMII,        NET_ETH_PHY_DATA_INTERFACE_RGMII,       NET_ETH_PHY_DATA_INTERFACE_SGMII    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_MANAGEMENT_INTERFACE</td>
+<td>(         NET_ETH_PHY_MANAGEMENT_INTERFACE_NONE,      NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO,      NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO_OVER_IIC  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PCSCORE</td>
+<td>(         NET_ETH_PCSCORE_GENERIC_GMII,       NET_ETH_PCSCORE_XILINX_HARDCORE,        NET_ETH_PCSCORE_XILINX_PCSCORE  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_DEVICE</td>
+<td>(         NET_ETH_PHY_DEVICE_MARVEL_88E1111   )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHYCONTROLLER_COMMAND</td>
+<td>(         NET_ETH_PHYC_CMD_NONE,      NET_ETH_PHYC_CMD_HARD_RESET,        NET_ETH_PHYC_CMD_SOFT_RESET     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHYCONTROLLER_STATUS</td>
+<td>(         NET_ETH_PHYC_STATUS_POWER_DOWN,         NET_ETH_PHYC_STATUS_RESETING,       NET_ETH_PHYC_STATUS_CONNECTING,         NET_ETH_PHYC_STATUS_CONNECTED,      NET_ETH_PHYC_STATUS_DISCONNECTING,      NET_ETH_PHYC_STATUS_DISCONNECTED,       NET_ETH_PHYC_STATUS_ERROR   )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHYCONTROLLER_ERROR</td>
+<td>(         NET_ETH_PHYC_ERROR_NONE,        NET_ETH_PHYC_ERROR_NO_CABLE     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACE_GMII</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACE_RGMII</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACE_SGMII</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACE_MDIO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACE_COMMON</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PHY_INTERFACES</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PCS_1000BASE_X_SYNC_STATUS</td>
+<td>(         NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL,        NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK   )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS</td>
+<td>(         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE,         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG,       NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_RS_DATA_INTERFACE</td>
+<td>(         NET_ETH_RS_DATA_INTERFACE_MII,      NET_ETH_RS_DATA_INTERFACE_GMII,         NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER   )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_COMMAND</td>
+<td>(         NET_ETH_CMD_NONE,       NET_ETH_CMD_HARD_RESET,         NET_ETH_CMD_SOFT_RESET,         NET_ETH_CMD_POWER_DOWN,         NET_ETH_CMD_POWER_UP    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_STATUS</td>
+<td>(         NET_ETH_STATUS_POWER_DOWN,      NET_ETH_STATUS_RESETING,        NET_ETH_STATUS_CONNECTING,      NET_ETH_STATUS_CONNECTED,       NET_ETH_STATUS_DISCONNECTING,       NET_ETH_STATUS_DISCONNECTED,        NET_ETH_STATUS_ERROR    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ETH_ERROR</td>
+<td>(         NET_ETH_ERROR_NONE,         NET_ETH_ERROR_MAC_ERROR,        NET_ETH_ERROR_PHY_ERROR,        NET_ETH_ERROR_PCS_ERROR,        NET_ETH_ERROR_NO_CABLE  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_ADDRESS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_ETHERNETTYPE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_ADDRESS_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_ETHERNETTYPE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_INTERFACE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_INTERFACE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_CONFIGURATION</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_MAC_CONFIGURATION_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_ETH_SFC_TYPE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV4_ADDRESS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV4_TYPE_OF_SERVICE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV4_ADDRESS_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV4_PROTOCOL_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV4_TYPE_OF_SERVICE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV6_ADDRESS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV6_PREFIX</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV6_ADDRESS_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV6_PREFIX_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_IPV6_NEXT_HEADER_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_ARPCACHE_COMMAND</td>
+<td>(         NET_ARP_ARPCACHE_CMD_NONE,      NET_ARP_ARPCACHE_CMD_CLEAR,         NET_ARP_ARPCACHE_CMD_ADD        NET_ARP_ARPCACHE_CMD_INVALIDATE     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_ARPCACHE_STATUS</td>
+<td>(         NET_ARP_ARPCACHE_STATUS_IDLE,       NET_ARP_ARPCACHE_STATUS_UPDATING,       NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_IPPOOL_COMMAND</td>
+<td>(         NET_ARP_IPPOOL_CMD_NONE,        NET_ARP_IPPOOL_CMD_ADD,         NET_ARP_IPPOOL_CMD_EDIT,        NET_ARP_IPPOOL_CMD_REMOVE   )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_ARPCACHE_LINE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_ARPCACHE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_TESTER_COMMAND</td>
+<td>(         NET_ARP_TESTER_CMD_NONE,        NET_ARP_TESTER_CMD_LOOP     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ARP_TESTER_STATUS</td>
+<td>(         NET_ARP_TESTER_STATUS_IDLE,         NET_ARP_TESTER_STATUS_TESTING,      NET_ARP_TESTER_STATUS_TEST_COMPLETE     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_COMMAND</td>
+<td>(         NET_ICMPV4_CMD_NONE,        NET_ICMPV4_CMD_ECHO_REQUEST     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_TX_COMMAND</td>
+<td>(         NET_ICMPV4_TX_CMD_NONE,         NET_ICMPV4_TX_CMD_ECHO_REQUEST,         NET_ICMPV4_TX_CMD_ECHO_REPLY    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_RX_COMMAND</td>
+<td>(         NET_ICMPV4_RX_CMD_NONE,         NET_ICMPV4_RX_CMD_CLEAR     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_STATUS</td>
+<td>(         NET_ICMPV4_STATUS_IDLE,         NET_ICMPV4_STATUS_SENDING,      NET_ICMPV4_STATUS_SEND_COMPLETE,        NET_ICMPV4_STATUS_ERROR     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_TX_STATUS</td>
+<td>(         NET_ICMPV4_TX_STATUS_IDLE,      NET_ICMPV4_TX_STATUS_SENDING,       NET_ICMPV4_TX_STATUS_SEND_COMPLETE,         NET_ICMPV4_TX_STATUS_ERROR  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_RX_STATUS</td>
+<td>(         NET_ICMPV4_RX_STATUS_IDLE,      NET_ICMPV4_RX_STATUS_RECEIVING,         NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REQUEST,         NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REPLY,       NET_ICMPV4_RX_STATUS_ERROR  )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_ERROR</td>
+<td>(         NET_ICMPV4_ERROR_NONE,      NET_ICMPV4_ERROR_TIMEOUT,       NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE,      NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED,         NET_ICMPV4_ERROR_FSM    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_TX_ERROR</td>
+<td>(         NET_ICMPV4_TX_ERROR_NONE,       NET_ICMPV4_TX_ERROR_FSM     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_ICMPV4_RX_ERROR</td>
+<td>(         NET_ICMPV4_RX_ERROR_NONE,       NET_ICMPV4_RX_ERROR_UNKNOWN_CODE,       NET_ICMPV4_RX_ERROR_UNKNOWN_TYPE,       NET_ICMPV4_RX_ERROR_CHECKSUM_ERROR,         NET_ICMPV4_RX_ERROR_FSM     )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_NDP_DESTINATIONCACHE_LINE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_NDP_NEIGHBORCACHE_LINE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_NDP_DESTINATIONCACHE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_NDP_NEIGHBORCACHE_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_NDP_REACHABILITY_STATE</td>
+<td>(         NET_NDP_REACHABILITY_STATE_UNKNOWN,         NET_NDP_REACHABILITY_STATE_INCOMPLETE,      NET_NDP_REACHABILITY_STATE_REACHABLE,       NET_NDP_REACHABILITY_STATE_STALE,       NET_NDP_REACHABILITY_STATE_DELAY,       NET_NDP_REACHABILITY_STATE_PROBE    )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_UDP_PORTPAIR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NET_UDP_PORTPAIR_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE</font></li>
+<li>to_net_eth_PHYDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DATA_INTERFACE</font></li>
+<li>to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE</font></li>
+<li>to_net_eth_PHYDevice <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DEVICE</font></li>
+<li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
+<li>to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
+<li>to_net_mac_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
+<li>to_net_mac_ethernettype <font id="function_arguments">(slv : T_SLV_16)</font> <font id="function_return">return T_NET_MAC_ETHERNETTYPE</font></li>
+<li>to_slv <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slvv_8 <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_slvv_8 <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_string <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return string</font></li>
+<li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return positive</font></li>
+<li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font></li>
+<li>to_net_ipv4_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font></li>
+<li>to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8)</font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE</font></li>
+<li>to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return string</font></li>
+<li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font></li>
+<li>to_net_ipv6_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font></li>
+<li>to_net_ipv6_prefix <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_PREFIX</font></li>
+<li>to_slv <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
+<li>to_string <font id="function_arguments">(IP : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(Prefix : T_NET_IPV6_PREFIX)</font> <font id="function_return">return string</font></li>
+</ul><br><br><br><br><br><br>

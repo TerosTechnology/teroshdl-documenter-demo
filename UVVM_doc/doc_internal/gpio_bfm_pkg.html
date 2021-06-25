@@ -85,7 +85,7 @@
 <td>C_GPIO_BFM_CONFIG_DEFAULT</td>
 <td>t_gpio_bfm_config</td>
 <td>(     clock_period     =&gt; -1 ns,     match_strictness =&gt; MATCH_STD,     id_for_bfm       =&gt; ID_BFM,     id_for_bfm_wait  =&gt; ID_BFM_WAIT,     timeout          =&gt; -1 ns     )</td>
-<td>Define the default value for the BFM config</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +102,7 @@
 <tr>
 <td>t_gpio_bfm_config</td>
 <td></td>
-<td>Configuration record to be assigned in the test harness.</td>
+<td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
@@ -128,9 +128,7 @@ constant alert_level  : in t_alert_level     := error;
 constant scope        : in string            := C_SCOPE;
 constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
 constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>gpio_check_stable <font id="function_arguments">(    constant data_exp     : in std_logic_vector;   '-' means don't care
 constant stable_req   : in time;
 constant msg          : in string;
@@ -139,9 +137,7 @@ constant alert_level  : in t_alert_level     := error;
 constant scope        : in string            := C_SCOPE;
 constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
 constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.Verify that the read value has been stable for a certain time.</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>gpio_expect <font id="function_arguments">(    constant data_exp     : in std_logic_vector;
 constant msg          : in string;
 signal data_port      : in std_logic_vector;
@@ -150,9 +146,7 @@ constant alert_level  : in t_alert_level     := error;
 constant scope        : in string            := C_SCOPE;
 constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
 constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>gpio_expect_stable <font id="function_arguments">(    constant data_exp        : in std_logic_vector;
 constant stable_req      : in time;
 constant stable_req_from : in t_from_point_in_time;   Which point in time stable_req starts
@@ -163,7 +157,5 @@ constant alert_level     : in t_alert_level     := error;
 constant scope           : in string            := C_SCOPE;
 constant msg_id_panel    : in t_msg_id_panel    := shared_msg_id_panel;
 constant config          : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.Verify that the read value remains stable for a certain time after the datais same as expected or after the data last event.</li>
+)</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

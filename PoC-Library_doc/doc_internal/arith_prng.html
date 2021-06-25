@@ -1,0 +1,195 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=arith_prng><h1 id="entity-arith_prng">Entity: arith_prng</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 688.3333333333334 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="138.33333333333334,0 153.33333333333334,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="140" height="50" fill="black" x="153.33333333333334" y="0"></rect><rect id="SvgjsRect1007" width="136" height="45" fill="#bdecb6" x="155.33333333333334" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="133.33333333333334" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="133.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="168.33333333333334" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="168.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   BITS </tspan></text><line id="SvgjsLine1012" x1="138.33333333333334" y1="15" x2="153.33333333333334" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="133.33333333333334" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="133.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="168.33333333333334" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="168.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   SEED </tspan></text><line id="SvgjsLine1017" x1="138.33333333333334" y1="35" x2="153.33333333333334" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="140" height="70" fill="black" x="153.33333333333334" y="55"></rect><rect id="SvgjsRect1019" width="136" height="65" fill="#fdfd96" x="155.33333333333334" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="133.33333333333334" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="133.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="168.33333333333334" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="168.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1024" x1="138.33333333333334" y1="70" x2="153.33333333333334" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="133.33333333333334" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="133.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="168.33333333333334" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="168.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   rst </tspan></text><line id="SvgjsLine1029" x1="138.33333333333334" y1="90" x2="153.33333333333334" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="133.33333333333334" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="133.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="168.33333333333334" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="168.33333333333334" svgjs:data="{&quot;newLined&quot;:true}">   got </tspan></text><line id="SvgjsLine1034" x1="138.33333333333334" y1="110" x2="153.33333333333334" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="313.33333333333337" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="313.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(BITS - 1 downto 0) </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="278.33333333333337" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="278.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   val </tspan></text><line id="SvgjsLine1039" x1="293.33333333333337" y1="70" x2="308.33333333333337" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BITS</td>
+<td>positive</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>SEED</td>
+<td>std_logic_vector</td>
+<td>"0"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>got</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>val</td>
+<td>out</td>
+<td>std_logic_vector(BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit1_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>val_r</td>
+<td>std_logic_vector(BITS downto 1)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_TAPPOSITION_LIST</td>
+<td>T_TAPPOSITION_VECTOR(3 to 168)</td>
+<td>(         3       =&gt; (0 =&gt; 2,                                             others =&gt; 0),       4       =&gt; (0 =&gt; 3,                                             others =&gt; 0),       5       =&gt; (0 =&gt; 3,                                             others =&gt; 0),       6       =&gt; (0 =&gt; 5,                                             others =&gt; 0),       7       =&gt; (0 =&gt; 6,                                             others =&gt; 0),       8       =&gt; (0 =&gt; 6,     1 =&gt; 5,     2 =&gt; 4,     others =&gt; 0),       9       =&gt; (0 =&gt; 5,                                             others =&gt; 0),       10  =&gt; (0 =&gt; 7,                                             others =&gt; 0),       11  =&gt; (0 =&gt; 9,                                             others =&gt; 0),       12  =&gt; (0 =&gt; 6,     1 =&gt; 4,     2 =&gt; 1,     others =&gt; 0),       13  =&gt; (0 =&gt; 4,     1 =&gt; 3,     2 =&gt; 1,     others =&gt; 0),       14  =&gt; (0 =&gt; 5,     1 =&gt; 3,     2 =&gt; 1,     others =&gt; 0),       15  =&gt; (0 =&gt; 14,                                            others =&gt; 0),       16  =&gt; (0 =&gt; 15,    1 =&gt; 13,    2 =&gt; 4,     others =&gt; 0),       17  =&gt; (0 =&gt; 14,                                            others =&gt; 0),       18  =&gt; (0 =&gt; 11,                                            others =&gt; 0),       19  =&gt; (0 =&gt; 6,     1 =&gt; 2,     2 =&gt; 1,     others =&gt; 0),       20  =&gt; (0 =&gt; 17,                                            others =&gt; 0),       21  =&gt; (0 =&gt; 19,                                            others =&gt; 0),       22  =&gt; (0 =&gt; 21,                                            others =&gt; 0),       23  =&gt; (0 =&gt; 18,                                            others =&gt; 0),       24  =&gt; (0 =&gt; 23,    1 =&gt; 22,    2 =&gt; 17,    others =&gt; 0),       25  =&gt; (0 =&gt; 22,                                            others =&gt; 0),       26  =&gt; (0 =&gt; 6,     1 =&gt; 2,     2 =&gt; 1,     others =&gt; 0),       27  =&gt; (0 =&gt; 5,     1 =&gt; 2,     2 =&gt; 1,     others =&gt; 0),       28  =&gt; (0 =&gt; 25,                                            others =&gt; 0),       29  =&gt; (0 =&gt; 27,                                            others =&gt; 0),       30  =&gt; (0 =&gt; 6,     1 =&gt; 4,     2 =&gt; 1,     others =&gt; 0),       31  =&gt; (0 =&gt; 28,                                            others =&gt; 0),       32  =&gt; (0 =&gt; 22,    1 =&gt; 2,     2 =&gt; 1,     others =&gt; 0),       33  =&gt; (0 =&gt; 2,                                             others =&gt; 0),       34  =&gt; (0 =&gt; 27,    1 =&gt; 2,     2 =&gt; 1,     others =&gt; 0),       35  =&gt; (0 =&gt; 33,                                            others =&gt; 0),       36  =&gt; (0 =&gt; 25,                                            others =&gt; 0),       37  =&gt; (0 =&gt; 5,     1 =&gt; 4,     2 =&gt; 3, 3 =&gt; 2, 4 =&gt; 1),        38  =&gt; (0 =&gt; 6,     1 =&gt; 5,     2 =&gt; 1,     others =&gt; 0),       39  =&gt; (0 =&gt; 35,                                            others =&gt; 0),       40  =&gt; (0 =&gt; 38,    1 =&gt; 21,    2 =&gt; 19,    others =&gt; 0),       41  =&gt; (0 =&gt; 38,                                            others =&gt; 0),       42  =&gt; (0 =&gt; 41,    1 =&gt; 20,    2 =&gt; 19,    others =&gt; 0),       43  =&gt; (0 =&gt; 42,    1 =&gt; 38,    2 =&gt; 37,    others =&gt; 0),       44  =&gt; (0 =&gt; 43,    1 =&gt; 18,    2 =&gt; 17,    others =&gt; 0),       45  =&gt; (0 =&gt; 44,    1 =&gt; 42,    2 =&gt; 41,    others =&gt; 0),       46  =&gt; (0 =&gt; 45,    1 =&gt; 26,    2 =&gt; 25,    others =&gt; 0),       47  =&gt; (0 =&gt; 42,                                            others =&gt; 0),       48  =&gt; (0 =&gt; 47,    1 =&gt; 21,    2 =&gt; 20,    others =&gt; 0),       49  =&gt; (0 =&gt; 4,                                             others =&gt; 0),       50  =&gt; (0 =&gt; 49,    1 =&gt; 24,    2 =&gt; 23,    others =&gt; 0),       51  =&gt; (0 =&gt; 50,    1 =&gt; 36,    2 =&gt; 35,    others =&gt; 0),       52  =&gt; (0 =&gt; 49,                                            others =&gt; 0),       53  =&gt; (0 =&gt; 52,    1 =&gt; 38,    2 =&gt; 37,    others =&gt; 0),       54  =&gt; (0 =&gt; 53,    1 =&gt; 18,    2 =&gt; 17,    others =&gt; 0),       55  =&gt; (0 =&gt; 31,                                            others =&gt; 0),       56  =&gt; (0 =&gt; 55,    1 =&gt; 35,    2 =&gt; 34,    others =&gt; 0),       57  =&gt; (0 =&gt; 5,                                             others =&gt; 0),       58  =&gt; (0 =&gt; 39,                                            others =&gt; 0),       59  =&gt; (0 =&gt; 58,    1 =&gt; 38,    2 =&gt; 37,    others =&gt; 0),       60  =&gt; (0 =&gt; 59,                                            others =&gt; 0),       61  =&gt; (0 =&gt; 60,    1 =&gt; 46,    2 =&gt; 45,    others =&gt; 0),       62  =&gt; (0 =&gt; 61,    1 =&gt; 6,     2 =&gt; 5,     others =&gt; 0),       63  =&gt; (0 =&gt; 62,                                            others =&gt; 0),       64  =&gt; (0 =&gt; 63,    1 =&gt; 61,    2 =&gt; 60,    others =&gt; 0),       65  =&gt; (0 =&gt; 47,                                            others =&gt; 0),       66  =&gt; (0 =&gt; 65,    1 =&gt; 57,    2 =&gt; 56,    others =&gt; 0),       67  =&gt; (0 =&gt; 66,    1 =&gt; 58,    2 =&gt; 57,    others =&gt; 0),       68  =&gt; (0 =&gt; 59,                                            others =&gt; 0),       69  =&gt; (0 =&gt; 67,    1 =&gt; 42,    2 =&gt; 40,    others =&gt; 0),       70  =&gt; (0 =&gt; 69,    1 =&gt; 55,    2 =&gt; 54,    others =&gt; 0),       71  =&gt; (0 =&gt; 65,                                            others =&gt; 0),       72  =&gt; (0 =&gt; 66,    1 =&gt; 25,    2 =&gt; 19,    others =&gt; 0),       73  =&gt; (0 =&gt; 48,                                            others =&gt; 0),       74  =&gt; (0 =&gt; 73,    1 =&gt; 59,    2 =&gt; 58,    others =&gt; 0),       75  =&gt; (0 =&gt; 74,    1 =&gt; 65,    2 =&gt; 64,    others =&gt; 0),       76  =&gt; (0 =&gt; 75,    1 =&gt; 41,    2 =&gt; 40,    others =&gt; 0),       77  =&gt; (0 =&gt; 76,    1 =&gt; 47,    2 =&gt; 46,    others =&gt; 0),       78  =&gt; (0 =&gt; 77,    1 =&gt; 59,    2 =&gt; 58,    others =&gt; 0),       79  =&gt; (0 =&gt; 7,                                             others =&gt; 0),       80  =&gt; (0 =&gt; 79,    1 =&gt; 43,    2 =&gt; 42,    others =&gt; 0),       81  =&gt; (0 =&gt; 77,                                            others =&gt; 0),       82  =&gt; (0 =&gt; 79,    1 =&gt; 47,    2 =&gt; 44,    others =&gt; 0),       83  =&gt; (0 =&gt; 82,    1 =&gt; 38,    2 =&gt; 37,    others =&gt; 0),       84  =&gt; (0 =&gt; 71,                                            others =&gt; 0),       85  =&gt; (0 =&gt; 84,    1 =&gt; 58,    2 =&gt; 57,    others =&gt; 0),       86  =&gt; (0 =&gt; 85,    1 =&gt; 74,    2 =&gt; 73,    others =&gt; 0),       87  =&gt; (0 =&gt; 74,                                            others =&gt; 0),       88  =&gt; (0 =&gt; 87,    1 =&gt; 17,    2 =&gt; 16,    others =&gt; 0),       89  =&gt; (0 =&gt; 51,                                            others =&gt; 0),       90  =&gt; (0 =&gt; 89,    1 =&gt; 72,    2 =&gt; 71,    others =&gt; 0),       91  =&gt; (0 =&gt; 90,    1 =&gt; 8,     2 =&gt; 7,     others =&gt; 0),       92  =&gt; (0 =&gt; 91,    1 =&gt; 80,    2 =&gt; 79,    others =&gt; 0),       93  =&gt; (0 =&gt; 91,                                            others =&gt; 0),       94  =&gt; (0 =&gt; 73,                                            others =&gt; 0),       95  =&gt; (0 =&gt; 84,                                            others =&gt; 0),       96  =&gt; (0 =&gt; 94,    1 =&gt; 49,    2 =&gt; 47,    others =&gt; 0),       97  =&gt; (0 =&gt; 91,                                            others =&gt; 0),       98  =&gt; (0 =&gt; 87,                                            others =&gt; 0),       99  =&gt; (0 =&gt; 97,    1 =&gt; 54,    2 =&gt; 52,    others =&gt; 0),       100 =&gt; (0 =&gt; 63,                                            others =&gt; 0),       101 =&gt; (0 =&gt; 100,   1 =&gt; 95,    2 =&gt; 94,    others =&gt; 0),       102 =&gt; (0 =&gt; 101,   1 =&gt; 36,    2 =&gt; 35,    others =&gt; 0),       103 =&gt; (0 =&gt; 94,                                            others =&gt; 0),       104 =&gt; (0 =&gt; 103,   1 =&gt; 94,    2 =&gt; 93,    others =&gt; 0),       105 =&gt; (0 =&gt; 89,                                            others =&gt; 0),       106 =&gt; (0 =&gt; 91,                                            others =&gt; 0),       107 =&gt; (0 =&gt; 105,   1 =&gt; 44,    2 =&gt; 42,    others =&gt; 0),       108 =&gt; (0 =&gt; 77,                                            others =&gt; 0),       109 =&gt; (0 =&gt; 108,   1 =&gt; 103,   2 =&gt; 102, others =&gt; 0),         110 =&gt; (0 =&gt; 109,   1 =&gt; 98,    2 =&gt; 97,    others =&gt; 0),       111 =&gt; (0 =&gt; 101,                                           others =&gt; 0),       112 =&gt; (0 =&gt; 110,   1 =&gt; 69,    2 =&gt; 67,    others =&gt; 0),       113 =&gt; (0 =&gt; 104,                                           others =&gt; 0),       114 =&gt; (0 =&gt; 113,   1 =&gt; 33,    2 =&gt; 32,    others =&gt; 0),       115 =&gt; (0 =&gt; 114,   1 =&gt; 101,   2 =&gt; 100, others =&gt; 0),         116 =&gt; (0 =&gt; 115,   1 =&gt; 46,    2 =&gt; 45,    others =&gt; 0),       117 =&gt; (0 =&gt; 115,   1 =&gt; 99,    2 =&gt; 97,    others =&gt; 0),       118 =&gt; (0 =&gt; 85,                                            others =&gt; 0),       119 =&gt; (0 =&gt; 111,                                           others =&gt; 0),       120 =&gt; (0 =&gt; 113,   1 =&gt; 9,     2 =&gt; 2,     others =&gt; 0),       121 =&gt; (0 =&gt; 103,                                           others =&gt; 0),       122 =&gt; (0 =&gt; 121,   1 =&gt; 63,    2 =&gt; 62,    others =&gt; 0),       123 =&gt; (0 =&gt; 121,                                           others =&gt; 0),       124 =&gt; (0 =&gt; 87,                                            others =&gt; 0),       125 =&gt; (0 =&gt; 124,   1 =&gt; 18,    2 =&gt; 17,    others =&gt; 0),       126 =&gt; (0 =&gt; 125,   1 =&gt; 90,    2 =&gt; 89,    others =&gt; 0),       127 =&gt; (0 =&gt; 126,                                           others =&gt; 0),       128 =&gt; (0 =&gt; 126,   1 =&gt; 101,   2 =&gt; 99,    others =&gt; 0),       129 =&gt; (0 =&gt; 124,                                           others =&gt; 0),       130 =&gt; (0 =&gt; 127,                                           others =&gt; 0),       131 =&gt; (0 =&gt; 130,   1 =&gt; 84,    2 =&gt; 83,    others =&gt; 0),       132 =&gt; (0 =&gt; 103,                                           others =&gt; 0),       133 =&gt; (0 =&gt; 132,   1 =&gt; 82,    2 =&gt; 81,    others =&gt; 0),       134 =&gt; (0 =&gt; 77,                                            others =&gt; 0),       135 =&gt; (0 =&gt; 124,                                           others =&gt; 0),       136 =&gt; (0 =&gt; 135,   1 =&gt; 11,    2 =&gt; 10,    others =&gt; 0),       137 =&gt; (0 =&gt; 116,                                           others =&gt; 0),       138 =&gt; (0 =&gt; 137,   1 =&gt; 131,   2 =&gt; 130, others =&gt; 0),         139 =&gt; (0 =&gt; 136,   1 =&gt; 134,   2 =&gt; 131, others =&gt; 0),         140 =&gt; (0 =&gt; 111,                                           others =&gt; 0),       141 =&gt; (0 =&gt; 140,   1 =&gt; 110,   2 =&gt; 109, others =&gt; 0),         142 =&gt; (0 =&gt; 121,                                           others =&gt; 0),       143 =&gt; (0 =&gt; 142,   1 =&gt; 123,   2 =&gt; 122, others =&gt; 0),         144 =&gt; (0 =&gt; 143,   1 =&gt; 75,    2 =&gt; 74,    others =&gt; 0),       145 =&gt; (0 =&gt; 93,                                            others =&gt; 0),       146 =&gt; (0 =&gt; 145,   1 =&gt; 87,    2 =&gt; 86,    others =&gt; 0),       147 =&gt; (0 =&gt; 146,   1 =&gt; 110,   2 =&gt; 109, others =&gt; 0),         148 =&gt; (0 =&gt; 121,                                           others =&gt; 0),       149 =&gt; (0 =&gt; 148,   1 =&gt; 40,    2 =&gt; 39,    others =&gt; 0),       150 =&gt; (0 =&gt; 97,                                            others =&gt; 0),       151 =&gt; (0 =&gt; 148,                                           others =&gt; 0),       152 =&gt; (0 =&gt; 151,   1 =&gt; 87,    2 =&gt; 86,    others =&gt; 0),       153 =&gt; (0 =&gt; 152,                                           others =&gt; 0),       154 =&gt; (0 =&gt; 152,   1 =&gt; 27,    2 =&gt; 25,    others =&gt; 0),       155 =&gt; (0 =&gt; 154,   1 =&gt; 124,   2 =&gt; 123, others =&gt; 0),         156 =&gt; (0 =&gt; 155,   1 =&gt; 41,    2 =&gt; 40,    others =&gt; 0),       157 =&gt; (0 =&gt; 156,   1 =&gt; 131,   2 =&gt; 130, others =&gt; 0),         158 =&gt; (0 =&gt; 157,   1 =&gt; 132,   2 =&gt; 131, others =&gt; 0),         159 =&gt; (0 =&gt; 128,                                           others =&gt; 0),       160 =&gt; (0 =&gt; 159,   1 =&gt; 142,   2 =&gt; 141, others =&gt; 0),         161 =&gt; (0 =&gt; 143,                                           others =&gt; 0),       162 =&gt; (0 =&gt; 161,   1 =&gt; 75,    2 =&gt; 74,    others =&gt; 0),       163 =&gt; (0 =&gt; 162,   1 =&gt; 104,   2 =&gt; 103, others =&gt; 0),         164 =&gt; (0 =&gt; 163,   1 =&gt; 151,   2 =&gt; 150, others =&gt; 0),         165 =&gt; (0 =&gt; 164,   1 =&gt; 135,   2 =&gt; 134, others =&gt; 0),         166 =&gt; (0 =&gt; 165,   1 =&gt; 128,   2 =&gt; 127, others =&gt; 0),         167 =&gt; (0 =&gt; 161,                                           others =&gt; 0),       168 =&gt; (0 =&gt; 166,   1 =&gt; 153,   2 =&gt; 151, others =&gt; 0)  )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_TAPPOSITIONS</td>
+<td>T_TAPPOSITION</td>
+<td>C_TAPPOSITION_LIST(BITS)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_TAPPOSITION_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>unnamed: <em>( val_r )</em></p></li>
+<li><p>unnamed: <em>( clk )</em></p></li>
+</ul><br><br><br><br><br><br>

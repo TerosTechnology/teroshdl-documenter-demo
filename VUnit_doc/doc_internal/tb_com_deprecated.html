@@ -1,0 +1,180 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=tb_com_deprecated><h1 id="entity-tb_com_deprecated">Entity: tb_com_deprecated</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 466.6666666666667 50"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="71.66666666666667,0 86.66666666666667,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="106.66666666666669" height="30" fill="black" x="86.66666666666667" y="0"></rect><rect id="SvgjsRect1007" width="102.66666666666669" height="25" fill="#bdecb6" x="88.66666666666667" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="66.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="66.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   string </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="101.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="101.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   runner_cfg </tspan></text><line id="SvgjsLine1012" x1="71.66666666666667" y1="15" x2="86.66666666666667" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="106.66666666666669" height="10" fill="black" x="86.66666666666667" y="35"></rect><rect id="SvgjsRect1014" width="102.66666666666669" height="5" fill="#fdfd96" x="88.66666666666667" y="37"></rect></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>runner_cfg</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hello_world_received</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_receiver</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_server</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_server2</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_server3</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_server5</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_subscribers</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_limited_inbox</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>start_limited_inbox_subscriber</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>limited_inbox_actor_done</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>hello_subscriber_received</td>
+<td>std_logic_vector(1 to 2)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com_logger</td>
+<td>logger_t</td>
+<td>get_logger("vunit_lib:com")</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>test_runner: <em>(  )</em></p></li>
+<li><p>receiver: <em>(  )</em></p></li>
+<li><p>server: <em>(  )</em></p></li>
+<li><p>server2: <em>(  )</em></p></li>
+<li><p>server3: <em>(  )</em></p></li>
+<li><p>server5: <em>(  )</em></p></li>
+<li><p>limited_inbox_actor: <em>(  )</em></p></li>
+<li><p>limited_inbox_subscriber: <em>(  )</em></p></li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,105 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=uart><h1 id="package-uart">Package: uart</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_IO_UART_TYPICAL_BAUDRATES</td>
+<td>T_BAUDVEC</td>
+<td>(          0 =&gt;        300 Bd,     1 =&gt;        600 Bd,     2 =&gt;       1200 Bd,     3 =&gt;       1800 Bd,     4 =&gt;       2400 Bd,         5 =&gt;       4000 Bd,     6 =&gt;       4800 Bd,     7 =&gt;       7200 Bd,     8 =&gt;       9600 Bd,     9 =&gt;    14400 Bd,      10 =&gt;    16000 Bd,  11 =&gt;    19200 Bd,  12 =&gt;    28800 Bd,  13 =&gt;    38400 Bd,  14 =&gt;    51200 Bd,      15 =&gt;    56000 Bd,  16 =&gt;    57600 Bd,  17 =&gt;    64000 Bd,  18 =&gt;    76800 Bd,  19 =&gt;   115200 Bd,      20 =&gt;   128000 Bd,  21 =&gt;   153600 Bd,  22 =&gt;   230400 Bd,  23 =&gt;   250000 Bd,  24 =&gt;   256000 Bd,      25 =&gt;   460800 Bd,  26 =&gt;   500000 Bd,  27 =&gt;   576000 Bd,  28 =&gt;   921600 Bd   )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_IO_UART_FLOWCONTROL_KIND</td>
+<td>(         UART_FLOWCONTROL_NONE,      UART_FLOWCONTROL_XON_XOFF,      UART_FLOWCONTROL_RTS_CTS,       UART_FLOWCONTROL_RTR_CTS    )</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>io_UART_IsTypicalBaudRate <font id="function_arguments">(br : BAUD)</font> <font id="function_return">return boolean</font></li>
+</ul><br><br><br><br><br><br>

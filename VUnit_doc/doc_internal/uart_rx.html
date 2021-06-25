@@ -1,0 +1,216 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=uart_rx><h1 id="entity-uart_rx">Entity: uart_rx</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 715 110"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="135,0 150,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="240" height="30" fill="black" x="150" y="0"></rect><rect id="SvgjsRect1007" width="236" height="25" fill="#bdecb6" x="152" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="130" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="165" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   cycles_per_bit </tspan></text><line id="SvgjsLine1012" x1="135" y1="15" x2="150" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="240" height="70" fill="black" x="150" y="35"></rect><rect id="SvgjsRect1014" width="236" height="65" fill="#fdfd96" x="152" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="130" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="165" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1019" x1="135" y1="50" x2="150" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="130" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="165" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   rx </tspan></text><line id="SvgjsLine1024" x1="135" y1="70" x2="150" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="130" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="165" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   tready </tspan></text><line id="SvgjsLine1029" x1="135" y1="90" x2="150" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="410" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="375" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   overflow </tspan></text><line id="SvgjsLine1034" x1="390" y1="50" x2="405" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="410" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   std_Logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="375" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   tvalid </tspan></text><line id="SvgjsLine1039" x1="390" y1="70" x2="405" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="410" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(7 downto 0) </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="375" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   tdata </tspan></text><line id="SvgjsLine1044" x1="390" y1="90" x2="405" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cycles_per_bit</td>
+<td>natural</td>
+<td>434</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rx</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>overflow</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tready</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tvalid</td>
+<td>out</td>
+<td>std_Logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tdata</td>
+<td>out</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tvalid_int</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>main: <em>( clk )</em></li>
+</ul><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="226pt" height="294pt"
+ viewBox="0.00 0.00 225.78 294.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 290)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-290 221.779,-290 221.779,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 192,-8 192,-8 198,-8 204,-14 204,-20 204,-20 204,-266 204,-266 204,-272 198,-278 192,-278 192,-278 20,-278 20,-278 14,-278 8,-272 8,-266 8,-266 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="92.9944" y="-259.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">state</text>
+</g>
+<!-- state -->
+<!-- idle -->
+<g id="node2" class="node state regular">
+<title>idle</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="98,-240 42,-240 42,-204 98,-204 98,-240"/>
+<text text-anchor="start" x="60.6664" y="-218.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">idle</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M54.3333,-205C54.3333,-205 85.6667,-205 85.6667,-205 91.3333,-205 97,-210.6667 97,-216.3333 97,-216.3333 97,-227.6667 97,-227.6667 97,-233.3333 91.3333,-239 85.6667,-239 85.6667,-239 54.3333,-239 54.3333,-239 48.6667,-239 43,-233.3333 43,-227.6667 43,-227.6667 43,-216.3333 43,-216.3333 43,-210.6667 48.6667,-205 54.3333,-205"/>
+</g>
+<!-- receiving -->
+<g id="node3" class="node state regular">
+<title>receiving</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="86,-146 16,-146 16,-110 86,-110 86,-146"/>
+<text text-anchor="start" x="26.9982" y="-124.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">receiving</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.3333,-111C28.3333,-111 73.6667,-111 73.6667,-111 79.3333,-111 85,-116.6667 85,-122.3333 85,-122.3333 85,-133.6667 85,-133.6667 85,-139.3333 79.3333,-145 73.6667,-145 73.6667,-145 28.3333,-145 28.3333,-145 22.6667,-145 17,-139.3333 17,-133.6667 17,-133.6667 17,-122.3333 17,-122.3333 17,-116.6667 22.6667,-111 28.3333,-111"/>
+</g>
+<!-- idle&#45;&gt;receiving -->
+<g id="edge1" class="edge transition">
+<title>idle&#45;&gt;receiving</title>
+<path fill="none" stroke="#000000" d="M60.7247,-203.885C58.396,-198.573 56.1727,-192.6665 54.804,-187 52.4148,-177.1083 51.3056,-166.0295 50.8433,-156.1665"/>
+<polygon fill="#000000" stroke="#000000" points="54.3389,-155.9552 50.5657,-146.0551 47.3416,-156.1474 54.3389,-155.9552"/>
+<text text-anchor="start" x="54" y="-178" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cycles = cycles_per_bit/2 &#45; 1 &#160;&#160;</text>
+<text text-anchor="start" x="54" y="-166" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">rx = &#39;0&#39; &#160;&#160;</text>
+</g>
+<!-- done -->
+<g id="node4" class="node state regular">
+<title>done</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="134,-52 78,-52 78,-16 134,-16 134,-52"/>
+<text text-anchor="start" x="92.6584" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">done</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M90.3333,-17C90.3333,-17 121.6667,-17 121.6667,-17 127.3333,-17 133,-22.6667 133,-28.3333 133,-28.3333 133,-39.6667 133,-39.6667 133,-45.3333 127.3333,-51 121.6667,-51 121.6667,-51 90.3333,-51 90.3333,-51 84.6667,-51 79,-45.3333 79,-39.6667 79,-39.6667 79,-28.3333 79,-28.3333 79,-22.6667 84.6667,-17 90.3333,-17"/>
+</g>
+<!-- receiving&#45;&gt;done -->
+<g id="edge2" class="edge transition">
+<title>receiving&#45;&gt;done</title>
+<path fill="none" stroke="#000000" d="M50.7838,-109.7947C51.4056,-97.4908 53.7774,-81.3076 61.142,-69 63.6115,-64.8731 66.7641,-61.05 70.2508,-57.5644"/>
+<polygon fill="#000000" stroke="#000000" points="72.6097,-60.1505 77.765,-50.8945 67.9628,-54.9154 72.6097,-60.1505"/>
+<text text-anchor="start" x="61" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">index = data&#39;length &#45; 1 &#160;&#160;</text>
+<text text-anchor="start" x="61" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cycles = cycles_per_bit &#45; 1 &#160;&#160;</text>
+</g>
+<!-- done&#45;&gt;idle -->
+<g id="edge3" class="edge transition">
+<title>done&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M134.1785,-38.0793C152.813,-42.3874 175.9525,-51.174 188,-69 241.0433,-147.4853 204.2785,-167.962 190,-187 180.0856,-200.2192 139.5031,-210.0964 108.2475,-215.9298"/>
+<polygon fill="#000000" stroke="#000000" points="107.2903,-212.5454 98.0631,-217.7521 108.5232,-219.436 107.2903,-212.5454"/>
+<text text-anchor="middle" x="216.3895" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+</g>
+</svg>
+</div></div><br><br><br><br><br><br>

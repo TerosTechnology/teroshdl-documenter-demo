@@ -1,0 +1,880 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=ipv6_Wrapper><h1 id="entity-ipv6_wrapper">Entity: ipv6_Wrapper</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1805 690"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="545,0 560,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="700" height="50" fill="black" x="560" y="0"></rect><rect id="SvgjsRect1007" width="696" height="45" fill="#bdecb6" x="562" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="540" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   boolean </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="575" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   DEBUG </tspan></text><line id="SvgjsLine1012" x1="545" y1="15" x2="560" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="540" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_NET_IPV6_NEXT_HEADER_VECTOR </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="575" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   PACKET_TYPES </tspan></text><line id="SvgjsLine1017" x1="545" y1="35" x2="560" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="700" height="630" fill="black" x="560" y="55"></rect><rect id="SvgjsRect1019" width="696" height="625" fill="#fdfd96" x="562" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="540" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="575" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   Clock </tspan></text><line id="SvgjsLine1024" x1="545" y1="70" x2="560" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="540" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="575" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   Reset </tspan></text><line id="SvgjsLine1029" x1="545" y1="90" x2="560" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="540" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="575" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Ack </tspan></text><line id="SvgjsLine1034" x1="545" y1="110" x2="560" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="540" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="575" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Meta_rst </tspan></text><line id="SvgjsLine1039" x1="545" y1="130" x2="560" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="540" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="575" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1044" x1="545" y1="150" x2="560" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="540" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="575" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Valid </tspan></text><line id="SvgjsLine1049" x1="545" y1="170" x2="560" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="540" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="575" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Data </tspan></text><line id="SvgjsLine1054" x1="545" y1="190" x2="560" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="540" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="575" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_SOF </tspan></text><line id="SvgjsLine1059" x1="545" y1="210" x2="560" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="540" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="575" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_EOF </tspan></text><line id="SvgjsLine1064" x1="545" y1="230" x2="560" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="540" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="575" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_SrcMACAddress_Data </tspan></text><line id="SvgjsLine1069" x1="545" y1="250" x2="560" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="540" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="575" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1074" x1="545" y1="270" x2="560" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="540" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_16 </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="575" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_EthType </tspan></text><line id="SvgjsLine1079" x1="545" y1="290" x2="560" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="540" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="575" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_IPv6Address_rst </tspan></text><line id="SvgjsLine1084" x1="545" y1="310" x2="560" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="540" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="575" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_IPv6Address_nxt </tspan></text><line id="SvgjsLine1089" x1="545" y1="330" x2="560" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="540" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="575" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_Valid </tspan></text><line id="SvgjsLine1094" x1="545" y1="350" x2="560" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="540" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="575" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_MACAddress_Data </tspan></text><line id="SvgjsLine1099" x1="545" y1="370" x2="560" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="540" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="575" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Valid </tspan></text><line id="SvgjsLine1104" x1="545" y1="390" x2="560" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="540" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="575" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Data </tspan></text><line id="SvgjsLine1109" x1="545" y1="410" x2="560" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="540" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="575" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_SOF </tspan></text><line id="SvgjsLine1114" x1="545" y1="430" x2="560" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="540" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="575" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_EOF </tspan></text><line id="SvgjsLine1119" x1="545" y1="450" x2="560" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="540" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="575" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_SrcIPv6Address_Data </tspan></text><line id="SvgjsLine1124" x1="545" y1="470" x2="560" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="540" y="469.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="575" y="469.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_DestIPv6Address_Data </tspan></text><line id="SvgjsLine1129" x1="545" y1="490" x2="560" y2="490" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="540" y="489.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="575" y="489.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_TrafficClass </tspan></text><line id="SvgjsLine1134" x1="545" y1="510" x2="560" y2="510" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="540" y="509.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_24(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="575" y="509.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_FlowLabel </tspan></text><line id="SvgjsLine1139" x1="545" y1="530" x2="560" y2="530" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="540" y="529.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_16(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="575" y="529.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_Length </tspan></text><line id="SvgjsLine1144" x1="545" y1="550" x2="560" y2="550" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1145" font-family="Helvetica" x="540" y="549.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1147" font-family="Helvetica" x="575" y="549.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1148" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Ack </tspan></text><line id="SvgjsLine1149" x1="545" y1="570" x2="560" y2="570" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1150" font-family="Helvetica" x="540" y="569.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1151" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1152" font-family="Helvetica" x="575" y="569.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1153" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_rst </tspan></text><line id="SvgjsLine1154" x1="545" y1="590" x2="560" y2="590" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1155" font-family="Helvetica" x="540" y="589.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1156" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1157" font-family="Helvetica" x="575" y="589.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1158" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_SrcMACAddress_nxt </tspan></text><line id="SvgjsLine1159" x1="545" y1="610" x2="560" y2="610" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1160" font-family="Helvetica" x="540" y="609.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1161" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1162" font-family="Helvetica" x="575" y="609.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1163" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1164" x1="545" y1="630" x2="560" y2="630" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1165" font-family="Helvetica" x="540" y="629.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1166" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1167" font-family="Helvetica" x="575" y="629.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1168" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_SrcIPv6Address_nxt </tspan></text><line id="SvgjsLine1169" x1="545" y1="650" x2="560" y2="650" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1170" font-family="Helvetica" x="540" y="649.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1171" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1172" font-family="Helvetica" x="575" y="649.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1173" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_DestIPv6Address_nxt </tspan></text><line id="SvgjsLine1174" x1="545" y1="670" x2="560" y2="670" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1175" font-family="Helvetica" x="1280" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1176" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1177" font-family="Helvetica" x="1245" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1178" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Valid </tspan></text><line id="SvgjsLine1179" x1="1260" y1="70" x2="1275" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1180" font-family="Helvetica" x="1280" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1181" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1182" font-family="Helvetica" x="1245" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1183" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Data </tspan></text><line id="SvgjsLine1184" x1="1260" y1="90" x2="1275" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1185" font-family="Helvetica" x="1280" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1186" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1187" font-family="Helvetica" x="1245" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1188" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_SOF </tspan></text><line id="SvgjsLine1189" x1="1260" y1="110" x2="1275" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1190" font-family="Helvetica" x="1280" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1191" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1192" font-family="Helvetica" x="1245" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1193" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_EOF </tspan></text><line id="SvgjsLine1194" x1="1260" y1="130" x2="1275" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1195" font-family="Helvetica" x="1280" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1196" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1197" font-family="Helvetica" x="1245" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1198" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_TX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1199" x1="1260" y1="150" x2="1275" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1200" font-family="Helvetica" x="1280" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1201" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1202" font-family="Helvetica" x="1245" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1203" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Ack </tspan></text><line id="SvgjsLine1204" x1="1260" y1="170" x2="1275" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1205" font-family="Helvetica" x="1280" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1206" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1207" font-family="Helvetica" x="1245" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1208" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_rst </tspan></text><line id="SvgjsLine1209" x1="1260" y1="190" x2="1275" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1210" font-family="Helvetica" x="1280" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1211" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1212" font-family="Helvetica" x="1245" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1213" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_SrcMACAddress_nxt </tspan></text><line id="SvgjsLine1214" x1="1260" y1="210" x2="1275" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1215" font-family="Helvetica" x="1280" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1216" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1217" font-family="Helvetica" x="1245" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1218" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   MAC_RX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1219" x1="1260" y1="230" x2="1275" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1220" font-family="Helvetica" x="1280" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1221" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1222" font-family="Helvetica" x="1245" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1223" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_Query </tspan></text><line id="SvgjsLine1224" x1="1260" y1="250" x2="1275" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1225" font-family="Helvetica" x="1280" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1226" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1227" font-family="Helvetica" x="1245" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1228" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_IPv6Address_Data </tspan></text><line id="SvgjsLine1229" x1="1260" y1="270" x2="1275" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1230" font-family="Helvetica" x="1280" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1231" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1232" font-family="Helvetica" x="1245" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1233" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_MACAddress_rst </tspan></text><line id="SvgjsLine1234" x1="1260" y1="290" x2="1275" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1235" font-family="Helvetica" x="1280" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1236" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1237" font-family="Helvetica" x="1245" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1238" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   NDP_NextHop_MACAddress_nxt </tspan></text><line id="SvgjsLine1239" x1="1260" y1="310" x2="1275" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1240" font-family="Helvetica" x="1280" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1241" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1242" font-family="Helvetica" x="1245" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1243" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   TX_Ack </tspan></text><line id="SvgjsLine1244" x1="1260" y1="330" x2="1275" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1245" font-family="Helvetica" x="1280" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1246" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1247" font-family="Helvetica" x="1245" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1248" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_rst </tspan></text><line id="SvgjsLine1249" x1="1260" y1="350" x2="1275" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1250" font-family="Helvetica" x="1280" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1251" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1252" font-family="Helvetica" x="1245" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1253" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_SrcIPv6Address_nxt </tspan></text><line id="SvgjsLine1254" x1="1260" y1="370" x2="1275" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1255" font-family="Helvetica" x="1280" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1256" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1257" font-family="Helvetica" x="1245" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1258" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   TX_Meta_DestIPv6Address_nxt </tspan></text><line id="SvgjsLine1259" x1="1260" y1="390" x2="1275" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1260" font-family="Helvetica" x="1280" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1261" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1262" font-family="Helvetica" x="1245" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1263" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Valid </tspan></text><line id="SvgjsLine1264" x1="1260" y1="410" x2="1275" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1265" font-family="Helvetica" x="1280" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1266" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1267" font-family="Helvetica" x="1245" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1268" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Data </tspan></text><line id="SvgjsLine1269" x1="1260" y1="430" x2="1275" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1270" font-family="Helvetica" x="1280" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1271" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1272" font-family="Helvetica" x="1245" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1273" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_SOF </tspan></text><line id="SvgjsLine1274" x1="1260" y1="450" x2="1275" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1275" font-family="Helvetica" x="1280" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1276" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1277" font-family="Helvetica" x="1245" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1278" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_EOF </tspan></text><line id="SvgjsLine1279" x1="1260" y1="470" x2="1275" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1280" font-family="Helvetica" x="1280" y="469.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1281" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1282" font-family="Helvetica" x="1245" y="469.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1283" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_SrcMACAddress_Data </tspan></text><line id="SvgjsLine1284" x1="1260" y1="490" x2="1275" y2="490" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1285" font-family="Helvetica" x="1280" y="489.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1286" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1287" font-family="Helvetica" x="1245" y="489.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1288" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1289" x1="1260" y1="510" x2="1275" y2="510" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1290" font-family="Helvetica" x="1280" y="509.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1291" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_16(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1292" font-family="Helvetica" x="1245" y="509.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1293" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_EthType </tspan></text><line id="SvgjsLine1294" x1="1260" y1="530" x2="1275" y2="530" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1295" font-family="Helvetica" x="1280" y="529.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1296" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1297" font-family="Helvetica" x="1245" y="529.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1298" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_SrcIPv6Address_Data </tspan></text><line id="SvgjsLine1299" x1="1260" y1="550" x2="1275" y2="550" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1300" font-family="Helvetica" x="1280" y="549.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1301" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1302" font-family="Helvetica" x="1245" y="549.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1303" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_DestIPv6Address_Data </tspan></text><line id="SvgjsLine1304" x1="1260" y1="570" x2="1275" y2="570" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1305" font-family="Helvetica" x="1280" y="569.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1306" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1307" font-family="Helvetica" x="1245" y="569.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1308" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_TrafficClass </tspan></text><line id="SvgjsLine1309" x1="1260" y1="590" x2="1275" y2="590" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1310" font-family="Helvetica" x="1280" y="589.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1311" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_24(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1312" font-family="Helvetica" x="1245" y="589.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1313" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_FlowLabel </tspan></text><line id="SvgjsLine1314" x1="1260" y1="610" x2="1275" y2="610" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1315" font-family="Helvetica" x="1280" y="609.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1316" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_16(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1317" font-family="Helvetica" x="1245" y="609.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1318" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_Length </tspan></text><line id="SvgjsLine1319" x1="1260" y1="630" x2="1275" y2="630" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1320" font-family="Helvetica" x="1280" y="629.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1321" dy="26" x="1280" svgjs:data="{&quot;newLined&quot;:true}">   T_SLVV_8(PACKET_TYPES'length - 1 downto 0) </tspan></text><text id="SvgjsText1322" font-family="Helvetica" x="1245" y="629.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1323" dy="26" x="1245" svgjs:data="{&quot;newLined&quot;:true}">   RX_Meta_NextHeader </tspan></text><line id="SvgjsLine1324" x1="1260" y1="650" x2="1275" y2="650" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEBUG</td>
+<td>boolean</td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td>PACKET_TYPES</td>
+<td>T_NET_IPV6_NEXT_HEADER_VECTOR</td>
+<td>(0 =&gt; x"00")</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Valid</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_SOF</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_EOF</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Ack</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Meta_rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Meta_DestMACAddress_nxt</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_TX_Meta_DestMACAddress_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Valid</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_SOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_EOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Ack</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_rst</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_SrcMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_SrcMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_DestMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_DestMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC_RX_Meta_EthType</td>
+<td>in</td>
+<td>T_SLV_16</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_Query</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_IPv6Address_rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_IPv6Address_nxt</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_IPv6Address_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_Valid</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_MACAddress_rst</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_MACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>NDP_NextHop_MACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Valid</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Data</td>
+<td>in</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_SOF</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_EOF</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Ack</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_rst</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_SrcIPv6Address_nxt</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_SrcIPv6Address_Data</td>
+<td>in</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_DestIPv6Address_nxt</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_DestIPv6Address_Data</td>
+<td>in</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_TrafficClass</td>
+<td>in</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_FlowLabel</td>
+<td>in</td>
+<td>T_SLVV_24(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_Meta_Length</td>
+<td>in</td>
+<td>T_SLVV_16(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Valid</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Data</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_SOF</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_EOF</td>
+<td>out</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Ack</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_rst</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_SrcMACAddress_nxt</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_SrcMACAddress_Data</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_DestMACAddress_nxt</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_DestMACAddress_Data</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_EthType</td>
+<td>out</td>
+<td>T_SLVV_16(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_SrcIPv6Address_nxt</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_SrcIPv6Address_Data</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_DestIPv6Address_nxt</td>
+<td>in</td>
+<td>std_logic_vector(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_DestIPv6Address_Data</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_TrafficClass</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_FlowLabel</td>
+<td>out</td>
+<td>T_SLVV_24(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_Length</td>
+<td>out</td>
+<td>T_SLVV_16(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_Meta_NextHeader</td>
+<td>out</td>
+<td>T_SLVV_8(PACKET_TYPES'length - 1 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StmMux_In_Valid</td>
+<td>std_logic_vector(IPV6_SWITCH_PORTS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_Data</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, T_SLV_8'range)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_Meta</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, isum(TXSTMMUX_META_BITS) - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_Meta_rev</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, TXSTMMUX_META_REV_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_SOF</td>
+<td>std_logic_vector(IPV6_SWITCH_PORTS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_EOF</td>
+<td>std_logic_vector(IPV6_SWITCH_PORTS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmMux_In_Ack</td>
+<td>std_logic_vector(IPV6_SWITCH_PORTS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_Valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_Meta</td>
+<td>std_logic_vector(isum(TXSTMMUX_META_BITS) - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_Meta_rev</td>
+<td>std_logic_vector(TXSTMMUX_META_REV_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_SOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_EOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_SrcIPv6Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_DestIPv6Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_Length</td>
+<td>T_SLV_16</td>
+<td></td>
+</tr>
+<tr>
+<td>TX_StmMux_NextHeader</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_TX_Ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_TX_Meta_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_TX_Meta_SrcIPv6Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_TX_Meta_DestIPv6Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_SOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_EOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_SrcMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_DestMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_EthType</td>
+<td>T_SLV_16</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_SrcIPv6Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_DestIPv6Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_TrafficClass</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_FlowLabel</td>
+<td>T_SLV_24</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_Length</td>
+<td>T_SLV_16</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6_RX_Meta_NextHeader</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Meta_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Meta_SrcMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Meta_DestMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Meta_SrcIPv6Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Meta_DestIPv6Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_MetaIn</td>
+<td>std_logic_vector(isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_MetaIn_rev</td>
+<td>std_logic_vector(STMDEMUX_META_REV_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_Data</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, STMDEMUX_DATA_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_MetaOut</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>RX_StmDeMux_MetaOut_rev</td>
+<td>T_SLM(IPV6_SWITCH_PORTS - 1 downto 0, STMDEMUX_META_REV_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>StmDeMux_Control</td>
+<td>std_logic_vector(IPV6_SWITCH_PORTS - 1 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPV6_SWITCH_PORTS</td>
+<td>positive</td>
+<td>PACKET_TYPES'length</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_STREAMID_SRCADR</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_STREAMID_DESTADR</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_STREAMID_LENGTH</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_STREAMID_HEADER</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_BITS</td>
+<td>T_POSVEC</td>
+<td>(         TXSTMMUX_META_STREAMID_SRCADR           =&gt; 8,       TXSTMMUX_META_STREAMID_DESTADR      =&gt; 8,       TXSTMMUX_META_STREAMID_LENGTH           =&gt; 16,      TXSTMMUX_META_STREAMID_HEADER           =&gt; 8    )</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_RST_BIT</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_SRC_NXT_BIT</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_DEST_NXT_BIT</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>TXSTMMUX_META_REV_BITS</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_RST_BIT</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_MACSRC_NXT_BIT</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_MACDEST_NXT_BIT</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_IPV6SRC_NXT_BIT</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_IPV6DEST_NXT_BIT</td>
+<td>natural</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_SRCMAC</td>
+<td>natural</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_DESTMAC</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_ETHTYPE</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_SRCIP</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_DESTIP</td>
+<td>natural</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_LENGTH</td>
+<td>natural</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_STREAMID_HEADER</td>
+<td>natural</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_DATA_BITS</td>
+<td>natural</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_BITS</td>
+<td>T_POSVEC</td>
+<td>(         STMDEMUX_META_STREAMID_SRCMAC       =&gt; 8,       STMDEMUX_META_STREAMID_DESTMAC  =&gt; 8,       STMDEMUX_META_STREAMID_ETHTYPE  =&gt; 16,      STMDEMUX_META_STREAMID_SRCIP        =&gt; 8,       STMDEMUX_META_STREAMID_DESTIP       =&gt; 8,       STMDEMUX_META_STREAMID_LENGTH       =&gt; 16,      STMDEMUX_META_STREAMID_HEADER       =&gt; 8    )</td>
+<td></td>
+</tr>
+<tr>
+<td>STMDEMUX_META_REV_BITS</td>
+<td>natural</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li>TX_StmMux: PoC.stream_Mux</li>
+<li>TX_IPv6: PoC.ipv6_TX</li>
+<li>RX_IPv6: PoC.ipv6_RX</li>
+<li>RX_StmDeMux: PoC.stream_DeMux</li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,230 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=tb_wishbone_master><h1 id="entity-tb_wishbone_master">Entity: tb_wishbone_master</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 533.3333333333334 70"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="71.66666666666667,0 86.66666666666667,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="133.33333333333334" height="50" fill="black" x="86.66666666666667" y="0"></rect><rect id="SvgjsRect1007" width="129.33333333333334" height="45" fill="#bdecb6" x="88.66666666666667" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="66.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="66.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   string </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="101.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="101.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   runner_cfg </tspan></text><line id="SvgjsLine1012" x1="71.66666666666667" y1="15" x2="86.66666666666667" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="66.66666666666667" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="66.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   string </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="101.66666666666667" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="101.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   encoded_tb_cfg </tspan></text><line id="SvgjsLine1017" x1="71.66666666666667" y1="35" x2="86.66666666666667" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="133.33333333333334" height="10" fill="black" x="86.66666666666667" y="55"></rect><rect id="SvgjsRect1019" width="129.33333333333334" height="5" fill="#fdfd96" x="88.66666666666667" y="57"></rect></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>runner_cfg</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>encoded_tb_cfg</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>adr</td>
+<td>std_logic_vector(tb_cfg.adr_width-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>dat_i</td>
+<td>std_logic_vector(tb_cfg.dat_width-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>dat_o</td>
+<td>std_logic_vector(tb_cfg.dat_width-1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>sel</td>
+<td>std_logic_vector(tb_cfg.dat_width/8 -1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>cyc</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>stb</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>we</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>stall</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tb_cfg</td>
+<td>tb_cfg_t</td>
+<td>decode(encoded_tb_cfg)</td>
+<td></td>
+</tr>
+<tr>
+<td>master_logger</td>
+<td>logger_t</td>
+<td>get_logger("master")</td>
+<td></td>
+</tr>
+<tr>
+<td>tb_logger</td>
+<td>logger_t</td>
+<td>get_logger("tb")</td>
+<td></td>
+</tr>
+<tr>
+<td>bus_handle</td>
+<td>bus_master_t</td>
+<td>new_bus(data_length =&gt; tb_cfg.dat_width,       address_length =&gt; tb_cfg.adr_width, logger =&gt; master_logger)</td>
+<td></td>
+</tr>
+<tr>
+<td>memory</td>
+<td>memory_t</td>
+<td>new_memory</td>
+<td></td>
+</tr>
+<tr>
+<td>buf</td>
+<td>buffer_t</td>
+<td>allocate(memory, tb_cfg.num_cycles * sel'length)</td>
+<td></td>
+</tr>
+<tr>
+<td>wishbone_slave</td>
+<td>wishbone_slave_t</td>
+<td>new_wishbone_slave(     memory =&gt; memory,     ack_high_probability =&gt; tb_cfg.ack_prob,     stall_high_probability =&gt; tb_cfg.stall_prob   )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tb_cfg_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><h2 id="processes">Processes</h2>
+<ul>
+<li>main_stim: <em>(  )</em></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li>dut: work.wishbone_master</li>
+</ul><br><br><br><br><br><br>

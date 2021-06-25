@@ -1,0 +1,271 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=axi_stream_pkg><h1 id="package-axi_stream_pkg">Package: axi_stream_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null_stall_config</td>
+<td>stall_config_t</td>
+<td>(     stall_probability =&gt; 0.0,     min_stall_cycles  =&gt; 0,     max_stall_cycles  =&gt; 0     )</td>
+<td></td>
+</tr>
+<tr>
+<td>null_axi_stream_protocol_checker</td>
+<td>axi_stream_protocol_checker_t</td>
+<td>(     p_type        =&gt; null_component,     p_actor       =&gt; null_actor,     p_data_length =&gt; 0,     p_id_length   =&gt; 0,     p_dest_length =&gt; 0,     p_user_length =&gt; 0,     p_logger      =&gt; null_logger,     p_max_waits   =&gt; 0   )</td>
+<td></td>
+</tr>
+<tr>
+<td>default_axi_stream_protocol_checker</td>
+<td>axi_stream_protocol_checker_t</td>
+<td>(     p_type        =&gt; default_component,     p_actor       =&gt; null_actor,     p_data_length =&gt; 0,     p_id_length   =&gt; 0,     p_dest_length =&gt; 0,     p_user_length =&gt; 0,     p_logger      =&gt; null_logger,     p_max_waits   =&gt; 0   )</td>
+<td></td>
+</tr>
+<tr>
+<td>null_axi_stream_monitor</td>
+<td>axi_stream_monitor_t</td>
+<td>(     p_type             =&gt; null_component,     p_actor            =&gt; null_actor,     p_data_length      =&gt; 0,     p_id_length        =&gt; 0,     p_dest_length      =&gt; 0,     p_user_length      =&gt; 0,     p_logger           =&gt; null_logger,     p_protocol_checker =&gt; null_axi_stream_protocol_checker   )</td>
+<td></td>
+</tr>
+<tr>
+<td>default_axi_stream_monitor</td>
+<td>axi_stream_monitor_t</td>
+<td>(     p_type             =&gt; default_component,     p_actor            =&gt; null_actor,     p_data_length      =&gt; 0,     p_id_length        =&gt; 0,     p_dest_length      =&gt; 0,     p_user_length      =&gt; 0,     p_logger           =&gt; null_logger,     p_protocol_checker =&gt; null_axi_stream_protocol_checker   )</td>
+<td></td>
+</tr>
+<tr>
+<td>null_axi_stream_master</td>
+<td>axi_stream_master_t</td>
+<td>(     p_actor            =&gt; null_actor,     p_data_length      =&gt; 0,     p_id_length        =&gt; 0,     p_dest_length      =&gt; 0,     p_user_length      =&gt; 0,     p_stall_config     =&gt; null_stall_config,     p_logger           =&gt; null_logger,     p_monitor          =&gt; null_axi_stream_monitor,     p_protocol_checker =&gt; null_axi_stream_protocol_checker     )</td>
+<td></td>
+</tr>
+<tr>
+<td>null_axi_stream_slave</td>
+<td>axi_stream_slave_t</td>
+<td>(     p_actor            =&gt; null_actor,     p_data_length      =&gt; 0,     p_id_length        =&gt; 0,     p_dest_length      =&gt; 0,     p_user_length      =&gt; 0,     p_stall_config     =&gt; null_stall_config,     p_logger           =&gt; null_logger,     p_monitor          =&gt; null_axi_stream_monitor,     p_protocol_checker =&gt; null_axi_stream_protocol_checker     )</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_logger</td>
+<td>logger_t</td>
+<td>get_logger("vunit_lib:axi_stream_pkg")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_checker</td>
+<td>checker_t</td>
+<td>new_checker(axi_stream_logger)</td>
+<td></td>
+</tr>
+<tr>
+<td>push_axi_stream_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("push axi stream")</td>
+<td></td>
+</tr>
+<tr>
+<td>pop_axi_stream_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("pop axi stream")</td>
+<td></td>
+</tr>
+<tr>
+<td>check_axi_stream_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("check axi stream")</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_transaction_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("axi stream transaction")</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stall_config_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_component_type_t</td>
+<td>(null_component, default_component, custom_component)</td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_protocol_checker_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_monitor_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_master_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_slave_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axi_stream_transaction_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>push_axi_stream <font id="function_arguments">(      signal net : inout network_t;
+  axi_stream : axi_stream_master_t;
+  tdata      : std_logic_vector;
+  tlast      : std_logic        := '1';
+  tkeep      : std_logic_vector := "";
+  tstrb      : std_logic_vector := "";
+  tid        : std_logic_vector := "";
+  tdest      : std_logic_vector := "";
+  tuser      : std_logic_vector := ""
+)</font> <font id="function_return">return ()</font></li>
+<li>pop_axi_stream <font id="function_arguments">(      signal net : inout network_t;
+  axi_stream : axi_stream_slave_t;
+  variable tdata : out std_logic_vector;
+  variable tlast : out std_logic;
+  variable tkeep : out std_logic_vector;
+  variable tstrb : out std_logic_vector;
+  variable tid   : out std_logic_vector;
+  variable tdest : out std_logic_vector;
+  variable tuser : out std_logic_vector
+)</font> <font id="function_return">return ()</font></li>
+<li>pop_axi_stream <font id="function_arguments">(      signal net : inout network_t;
+  axi_stream : axi_stream_slave_t;
+  variable tdata : out std_logic_vector;
+  variable tlast : out std_logic
+)</font> <font id="function_return">return ()</font></li>
+<li>pop_axi_stream <font id="function_arguments">(signal net : inout network_t;                           axi_stream : axi_stream_slave_t;
+                       variable reference : inout axi_stream_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>await_pop_axi_stream_reply <font id="function_arguments">(      signal net : inout network_t;
+  variable reference : inout axi_stream_reference_t;
+  variable tdata     : out std_logic_vector;
+  variable tlast     : out std_logic;
+  variable tkeep     : out std_logic_vector;
+  variable tstrb     : out std_logic_vector;
+  variable tid       : out std_logic_vector;
+  variable tdest     : out std_logic_vector;
+  variable tuser     : out std_logic_vector
+)</font> <font id="function_return">return ()</font></li>
+<li>await_pop_axi_stream_reply <font id="function_arguments">(      signal net : inout network_t;
+  variable reference : inout axi_stream_reference_t;
+  variable tdata     : out std_logic_vector;
+  variable tlast     : out std_logic
+)</font> <font id="function_return">return ()</font></li>
+<li>check_axi_stream <font id="function_arguments">(      signal net : inout network_t;
+  axi_stream   : axi_stream_slave_t;
+  expected : std_logic_vector;
+  tlast    : std_logic        := '1';
+  tkeep    : std_logic_vector := "";
+  tstrb    : std_logic_vector := "";
+  tid      : std_logic_vector := "";
+  tdest    : std_logic_vector := "";
+  tuser    : std_logic_vector := "";
+  msg      : string           := "";
+  blocking : boolean          := true
+)</font> <font id="function_return">return ()</font></li>
+<li>push_axi_stream_transaction <font id="function_arguments">(msg : msg_t; axi_stream_transaction : axi_stream_transaction_t)</font> <font id="function_return">return ()</font></li>
+<li>pop_axi_stream_transaction <font id="function_arguments">(    constant msg                    : in msg_t;
+variable axi_stream_transaction : out axi_stream_transaction_t
+)</font> <font id="function_return">return ()</font></li>
+<li>handle_axi_stream_transaction <font id="function_arguments">(    variable msg_type        : inout msg_type_t;
+variable msg             : inout msg_t;
+variable axi_transaction : out axi_stream_transaction_t)</font> <font id="function_return">return ()</font></li>
+<li>new_stall_config <font id="function_arguments">(    stall_probability : real range 0.0 to 1.0;
+min_stall_cycles  : natural;
+max_stall_cycles  : natural
+)</font> <font id="function_return">return stall_config_t</font></li>
+</ul><br><br><br><br><br><br>

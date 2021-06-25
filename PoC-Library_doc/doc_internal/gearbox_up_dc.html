@@ -1,0 +1,290 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=gearbox_up_dc><h1 id="entity-gearbox_up_dc">Entity: gearbox_up_dc</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1218.3333333333335 190"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="455,0 470,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="283.33333333333337" height="90" fill="black" x="470" y="0"></rect><rect id="SvgjsRect1007" width="279.33333333333337" height="85" fill="#bdecb6" x="472" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="450" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="485" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   INPUT_BITS </tspan></text><line id="SvgjsLine1012" x1="455" y1="15" x2="470" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="450" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   T_BIT_ORDER </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="485" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   INPUT_ORDER </tspan></text><line id="SvgjsLine1017" x1="455" y1="35" x2="470" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="450" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="485" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   OUTPUT_BITS </tspan></text><line id="SvgjsLine1022" x1="455" y1="55" x2="470" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="450" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   boolean </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="485" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   ADD_INPUT_REGISTERS </tspan></text><line id="SvgjsLine1027" x1="455" y1="75" x2="470" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1028" width="283.33333333333337" height="90" fill="black" x="470" y="95"></rect><rect id="SvgjsRect1029" width="279.33333333333337" height="85" fill="#fdfd96" x="472" y="97"></rect><text id="SvgjsText1030" font-family="Helvetica" x="450" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="485" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   Clock1 </tspan></text><line id="SvgjsLine1034" x1="455" y1="110" x2="470" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="450" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="485" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   Clock2 </tspan></text><line id="SvgjsLine1039" x1="455" y1="130" x2="470" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="450" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="485" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   In_Align </tspan></text><line id="SvgjsLine1044" x1="455" y1="150" x2="470" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="450" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(INPUT_BITS - 1 downto 0) </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="485" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   In_Data </tspan></text><line id="SvgjsLine1049" x1="455" y1="170" x2="470" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="773.3333333333334" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="773.3333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(OUTPUT_BITS - 1 downto 0) </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="738.3333333333334" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="738.3333333333334" svgjs:data="{&quot;newLined&quot;:true}">   Out_Data </tspan></text><line id="SvgjsLine1054" x1="753.3333333333334" y1="110" x2="768.3333333333334" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="773.3333333333334" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="773.3333333333334" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="738.3333333333334" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="738.3333333333334" svgjs:data="{&quot;newLined&quot;:true}">   Out_Valid </tspan></text><line id="SvgjsLine1059" x1="753.3333333333334" y1="130" x2="768.3333333333334" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INPUT_BITS</td>
+<td>positive</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>INPUT_ORDER</td>
+<td>T_BIT_ORDER</td>
+<td>LSB_FIRST</td>
+<td></td>
+</tr>
+<tr>
+<td>OUTPUT_BITS</td>
+<td>positive</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>ADD_INPUT_REGISTERS</td>
+<td>boolean</td>
+<td>FALSE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock1</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Clock2</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>In_Align</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>In_Data</td>
+<td>in</td>
+<td>std_logic_vector(INPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Out_Data</td>
+<td>out</td>
+<td>std_logic_vector(OUTPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Out_Valid</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Counter_us</td>
+<td>unsigned(COUNTER_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Select_us</td>
+<td>unsigned(COUNTER_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>In_Data_d</td>
+<td>std_logic_vector(INPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>In_Align_d</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Data_d</td>
+<td>T_CHUNK_VECTOR(INPUT_CHUNKS - 2 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Collected</td>
+<td>std_logic_vector(OUTPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Collected_swapped</td>
+<td>std_logic_vector(OUTPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Collected_en</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Collected_d</td>
+<td>std_logic_vector(OUTPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>DataOut_d</td>
+<td>std_logic_vector(OUTPUT_BITS - 1 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>Valid_r</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Valid_d</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BIT_RATIO</td>
+<td>REAL</td>
+<td>real(OUTPUT_BITS) / real(INPUT_BITS)</td>
+<td></td>
+</tr>
+<tr>
+<td>INPUT_CHUNKS</td>
+<td>positive</td>
+<td>integer(BIT_RATIO)</td>
+<td></td>
+</tr>
+<tr>
+<td>BITS_PER_CHUNK</td>
+<td>positive</td>
+<td>INPUT_BITS</td>
+<td></td>
+</tr>
+<tr>
+<td>COUNTER_MAX</td>
+<td>positive</td>
+<td>INPUT_CHUNKS - 1</td>
+<td></td>
+</tr>
+<tr>
+<td>COUNTER_BITS</td>
+<td>positive</td>
+<td>log2ceil(COUNTER_MAX + 1)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_CHUNK_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR)</font> <font id="function_return">return std_logic_vector</font></li>
+</ul><h2 id="processes">Processes</h2>
+<ul>
+<li><p>unnamed: <em>( Clock1 )</em></p></li>
+<li><p>unnamed: <em>( Clock1 )</em></p></li>
+</ul><br><br><br><br><br><br>

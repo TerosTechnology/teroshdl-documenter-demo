@@ -1,0 +1,258 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=utils><h1 id="package-utils">Package: utils</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_BCD_MINUS</td>
+<td>T_BCD</td>
+<td>"1010"</td>
+<td></td>
+</tr>
+<tr>
+<td>C_BCD_OFF</td>
+<td>T_BCD</td>
+<td>"1011"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_BOOLVEC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_INTVEC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_NATVEC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_POSVEC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_REALVEC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_IPSTYLE</td>
+<td>(IPSTYLE_UNKNOWN, IPSTYLE_HARD, IPSTYLE_SOFT)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_BIT_ORDER</td>
+<td>(LSB_FIRST, MSB_FIRST)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_BYTE_ORDER</td>
+<td>(LITTLE_ENDIAN, BIG_ENDIAN)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_POLARITY</td>
+<td>(HIGH_ACTIVE, LOW_ACTIVE)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_CLOCK_EDGE</td>
+<td>(RISING_EDGE, FALLING_EDGE)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_ROUNDING_STYLE</td>
+<td>(ROUND_TO_NEAREST, ROUND_TO_ZERO, ROUND_TO_INF, ROUND_UP, ROUND_DOWN)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_BCD</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_BCD_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>div_ceil <font id="function_arguments">(a : natural; b : positive)</font> <font id="function_return">return natural</font></li>
+<li>is_pow2 <font id="function_arguments">(int : natural)</font> <font id="function_return">return boolean</font></li>
+<li>ceil_pow2 <font id="function_arguments">(int : natural)</font> <font id="function_return">return positive</font></li>
+<li>floor_pow2 <font id="function_arguments">(int : natural)</font> <font id="function_return">return natural</font></li>
+<li>log2ceil <font id="function_arguments">(arg : positive)</font> <font id="function_return">return natural</font></li>
+<li>log2ceilnz <font id="function_arguments">(arg : positive)</font> <font id="function_return">return positive</font></li>
+<li>log10ceil <font id="function_arguments">(arg        : positive)</font> <font id="function_return">return natural</font></li>
+<li>log10ceilnz <font id="function_arguments">(arg    : positive)</font> <font id="function_return">return positive</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : boolean; value2 : boolean)</font> <font id="function_return">return boolean</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : integer; value2 : integer)</font> <font id="function_return">return integer</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : REAL;    value2 : REAL)</font> <font id="function_return">return REAL</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : std_logic; value2 : std_logic)</font> <font id="function_return">return std_logic</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : std_logic_vector; value2 : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : bit_vector; value2 : bit_vector)</font> <font id="function_return">return bit_vector</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : unsigned; value2 : unsigned)</font> <font id="function_return">return unsigned</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : signed; value2 : signed)</font> <font id="function_return">return signed</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : character; value2 : character)</font> <font id="function_return">return character</font></li>
+<li>ite <font id="function_arguments">(cond : boolean; value1 : string; value2 : string)</font> <font id="function_return">return string</font></li>
+<li>inc_if <font id="function_arguments">(cond : boolean; value : integer; increment : integer := 1)</font> <font id="function_return">return integer</font></li>
+<li>dec_if <font id="function_arguments">(cond : boolean; value : integer; decrement : integer := 1)</font> <font id="function_return">return integer</font></li>
+<li>imin <font id="function_arguments">(arg1 : integer; arg2 : integer)</font> <font id="function_return">return integer</font></li>
+<li>imin <font id="function_arguments">(vec : T_INTVEC)</font> <font id="function_return">return integer</font></li>
+<li>imin <font id="function_arguments">(vec : T_NATVEC)</font> <font id="function_return">return natural</font></li>
+<li>imin <font id="function_arguments">(vec : T_POSVEC)</font> <font id="function_return">return positive</font></li>
+<li>rmin <font id="function_arguments">(vec : T_REALVEC)</font> <font id="function_return">return real</font></li>
+<li>imax <font id="function_arguments">(arg1 : integer; arg2 : integer)</font> <font id="function_return">return integer</font></li>
+<li>imax <font id="function_arguments">(vec : T_INTVEC)</font> <font id="function_return">return integer</font></li>
+<li>imax <font id="function_arguments">(vec : T_NATVEC)</font> <font id="function_return">return natural</font></li>
+<li>imax <font id="function_arguments">(vec : T_POSVEC)</font> <font id="function_return">return positive</font></li>
+<li>rmax <font id="function_arguments">(vec : T_REALVEC)</font> <font id="function_return">return real</font></li>
+<li>isum <font id="function_arguments">(vec : T_NATVEC)</font> <font id="function_return">return natural</font></li>
+<li>isum <font id="function_arguments">(vec : T_POSVEC)</font> <font id="function_return">return natural</font></li>
+<li>isum <font id="function_arguments">(vec : T_INTVEC)</font> <font id="function_return">return integer</font></li>
+<li>rsum <font id="function_arguments">(vec : T_REALVEC)</font> <font id="function_return">return real</font></li>
+<li>to_int <font id="function_arguments">(bool : boolean; zero : integer := 0; one : integer := 1)</font> <font id="function_return">return integer</font></li>
+<li>to_int <font id="function_arguments">(sl : std_logic; zero : integer := 0; one : integer := 1)</font> <font id="function_return">return integer</font></li>
+<li>to_sl <font id="function_arguments">(Value : boolean)</font> <font id="function_return">return std_logic</font></li>
+<li>to_sl <font id="function_arguments">(Value : character)</font> <font id="function_return">return std_logic</font></li>
+<li>to_slv <font id="function_arguments">(Value : natural; Size : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>to_BCD <font id="function_arguments">(Digit : integer)</font> <font id="function_return">return T_BCD</font></li>
+<li>to_BCD <font id="function_arguments">(Digit : character)</font> <font id="function_return">return T_BCD</font></li>
+<li>to_BCD <font id="function_arguments">(Digit : unsigned)</font> <font id="function_return">return T_BCD</font></li>
+<li>to_BCD <font id="function_arguments">(Digit : std_logic_vector)</font> <font id="function_return">return T_BCD</font></li>
+<li>to_BCD_Vector <font id="function_arguments">(Value : integer; Size : natural := 0; Fill : T_BCD := x"0")</font> <font id="function_return">return T_BCD_VECTOR</font></li>
+<li>to_BCD_Vector <font id="function_arguments">(Value : string; Size : natural := 0; Fill : T_BCD := x"0")</font> <font id="function_return">return T_BCD_VECTOR</font></li>
+<li>bound <font id="function_arguments">(index : integer; lowerBound : integer; upperBound : integer)</font> <font id="function_return">return integer</font></li>
+<li>to_index <font id="function_arguments">(slv : unsigned; max : natural := 0)</font> <font id="function_return">return integer</font></li>
+<li>to_index <font id="function_arguments">(slv : std_logic_vector; max : natural := 0)</font> <font id="function_return">return integer</font></li>
+<li>is_sl <font id="function_arguments">(c : character)</font> <font id="function_return">return boolean</font></li>
+<li>slv_or <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>slv_nor <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>slv_and <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>slv_nand <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>slv_xor <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
+<li>reverse <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>reverse <font id="function_arguments">(vec : bit_vector)</font> <font id="function_return">return bit_vector</font></li>
+<li>reverse <font id="function_arguments">(vec : unsigned)</font> <font id="function_return">return unsigned</font></li>
+<li>scale <font id="function_arguments">(Value : integer;    Minimum : integer;  Maximum : integer; RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST)</font> <font id="function_return">return integer</font></li>
+<li>scale <font id="function_arguments">(Value : REAL;        Minimum : integer;  Maximum : integer; RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST)</font> <font id="function_return">return integer</font></li>
+<li>scale <font id="function_arguments">(Value : REAL;        Minimum : REAL;         Maximum : REAL)</font> <font id="function_return">return REAL</font></li>
+<li>resize <font id="function_arguments">(vec : bit_vector; length : natural; fill : bit := '0')</font> <font id="function_return">return bit_vector</font></li>
+<li>resize <font id="function_arguments">(vec : std_logic_vector; length : natural; fill : std_logic := '0')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>move <font id="function_arguments">(vec : std_logic_vector; ofs : integer)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>movez <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>ascend <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>descend <font id="function_arguments">(vec : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>lssb <font id="function_arguments">(arg : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>lssb <font id="function_arguments">(arg : bit_vector)</font> <font id="function_return">return bit_vector</font></li>
+<li>lssb_idx <font id="function_arguments">(arg : std_logic_vector)</font> <font id="function_return">return integer</font></li>
+<li>lssb_idx <font id="function_arguments">(arg : bit_vector)</font> <font id="function_return">return integer</font></li>
+<li>mssb <font id="function_arguments">(arg : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>mssb <font id="function_arguments">(arg : bit_vector)</font> <font id="function_return">return bit_vector</font></li>
+<li>mssb_idx <font id="function_arguments">(arg : std_logic_vector)</font> <font id="function_return">return integer</font></li>
+<li>mssb_idx <font id="function_arguments">(arg : bit_vector)</font> <font id="function_return">return integer</font></li>
+<li>swap <font id="function_arguments">(slv : std_logic_vector; Size : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bit_swap <font id="function_arguments">(slv : std_logic_vector; Chunksize : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>genmask_high <font id="function_arguments">(Bits : natural; MaskLength : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>genmask_low <font id="function_arguments">(Bits : natural; MaskLength : positive)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>genmask_alternate <font id="function_arguments">(len : positive; lsb : std_logic := '0')</font> <font id="function_return">return std_logic_vector</font></li>
+<li>onehot2bin <font id="function_arguments">(onehot : std_logic_vector; empty_val : integer := -1)</font> <font id="function_return">return unsigned</font></li>
+<li>gray2bin <font id="function_arguments">(gray_val : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>gray2bin <font id="function_arguments">(gray_val : std_logic_vector)</font> <font id="function_return">return unsigned</font></li>
+<li>bin2onehot <font id="function_arguments">(value : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bin2onehot <font id="function_arguments">(value : unsigned)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bin2onecold <font id="function_arguments">(value : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bin2onecold <font id="function_arguments">(value : unsigned)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bin2gray <font id="function_arguments">(value : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>bin2gray <font id="function_arguments">(value : unsigned)</font> <font id="function_return">return std_logic_vector</font></li>
+</ul><br><br><br><br><br><br>

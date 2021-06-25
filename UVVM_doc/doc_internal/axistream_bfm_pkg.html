@@ -85,25 +85,25 @@
 <td>C_MAX_TUSER_BITS</td>
 <td>positive</td>
 <td>8</td>
-<td>C_MAX_*_BITS : Maximum number of bits per data word supported by the BFM.These constant can be increased as needed.</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MAX_TSTRB_BITS</td>
 <td>positive</td>
 <td>32</td>
-<td>Must be large enough for number of data bytes per transfer, C_MAX_TSTRB_BITS &gt;= tdata/8</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MAX_TID_BITS</td>
 <td>positive</td>
 <td>8</td>
-<td>Recommended maximum in protocol specification (ARM IHI0051A)</td>
+<td></td>
 </tr>
 <tr>
 <td>C_MAX_TDEST_BITS</td>
 <td>positive</td>
 <td>4</td>
-<td>Recommended maximum in protocol specification (ARM IHI0051A)</td>
+<td></td>
 </tr>
 <tr>
 <td>C_RANDOM</td>
@@ -121,7 +121,7 @@
 <td>C_AXISTREAM_BFM_CONFIG_DEFAULT</td>
 <td>t_axistream_bfm_config</td>
 <td>(     max_wait_cycles                =&gt; 100,     max_wait_cycles_severity       =&gt; ERROR,     clock_period                   =&gt; -1 ns,     clock_period_margin            =&gt; 0 ns,     clock_margin_severity          =&gt; TB_ERROR,     setup_time                     =&gt; -1 ns,     hold_time                      =&gt; -1 ns,     bfm_sync                       =&gt; SYNC_ON_CLOCK_ONLY,     match_strictness               =&gt; MATCH_EXACT,     byte_endianness                =&gt; LOWER_BYTE_LEFT,     valid_low_at_word_num          =&gt; 0,     valid_low_multiple_random_prob =&gt; 0.5,     valid_low_duration             =&gt; 0,     valid_low_max_random_duration  =&gt; 5,     check_packet_length            =&gt; false,     protocol_error_severity        =&gt; ERROR,     ready_low_at_word_num          =&gt; 0,     ready_low_multiple_random_prob =&gt; 0.5,     ready_low_duration             =&gt; 0,     ready_low_max_random_duration  =&gt; 5,     ready_default_value            =&gt; '0',     id_for_bfm                     =&gt; ID_BFM     )</td>
-<td>Define the default value for the BFM config</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -158,12 +158,12 @@
 <tr>
 <td>t_axistream_if</td>
 <td></td>
-<td>Interface record for BFM signals</td>
+<td></td>
 </tr>
 <tr>
 <td>t_axistream_bfm_config</td>
 <td></td>
-<td>Configuration record to be assigned in the test harness.</td>
+<td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
@@ -174,9 +174,7 @@ user_width  : natural;
 id_width    : natural;
 dest_width  : natural;
 config      : t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return t_axistream_if</font><br />
-<strong>Description</strong></li>
-<li>This function returns an AXI Stream interface with initialized signals.- All input signals are initialized to 0- All output signals are initialized to Z</li>
+)</font> <font id="function_return">return t_axistream_if</font></li>
 <li>axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;   Byte in index 0 is transmitted first
 constant user_array   : in    t_user_array;
 constant strb_array   : in    t_strb_array;
@@ -188,9 +186,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;   Byte in index 0 is transmitted first
 constant user_array   : in    t_user_array;
 constant strb_array   : in    t_strb_array;
@@ -202,9 +198,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
 constant user_array   : in    t_user_array;
 constant strb_array   : in    t_strb_array;
@@ -216,9 +210,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit_bytes <font id="function_arguments">(    constant data_array          : in    t_byte_array;
 constant user_array          : in    t_user_array;
 constant strb_array          : in    t_strb_array;
@@ -238,9 +230,7 @@ signal   axistream_if_tready : inout std_logic;
 constant scope               : in    string                 := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overloaded version without recordsDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array          : in    t_slv_array;
 constant user_array          : in    t_user_array;
 constant strb_array          : in    t_strb_array;
@@ -260,9 +250,7 @@ signal   axistream_if_tready : inout std_logic;
 constant scope               : in    string                 := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array          : in    std_logic_vector;
 constant user_array          : in    t_user_array;
 constant strb_array          : in    t_strb_array;
@@ -282,9 +270,7 @@ signal   axistream_if_tready : inout std_logic;
 constant scope               : in    string                 := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;   Byte in index 0 is transmitted first
 constant user_array   : in    t_user_array;
 constant msg          : in    string                 := "";
@@ -293,9 +279,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overload for default strb_array, id_array, dest_arrayDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;   Byte in index 0 is transmitted first
 constant user_array   : in    t_user_array;
 constant msg          : in    string                 := "";
@@ -304,9 +288,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
 constant user_array   : in    t_user_array;
 constant msg          : in    string                 := "";
@@ -315,9 +297,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;
 constant msg          : in    string                 := "";
 signal   clk          : in    std_logic;
@@ -325,9 +305,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overload for default user_array, strb_array, id_array, dest_arrayDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;
 constant msg          : in    string                 := "";
 signal   clk          : in    std_logic;
@@ -335,9 +313,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
 constant msg          : in    string                 := "";
 signal   clk          : in    std_logic;
@@ -345,9 +321,7 @@ signal   axistream_if : inout t_axistream_if;
 constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_receive_bytes <font id="function_arguments">(    variable data_array   : inout t_byte_array;
 variable data_length  : inout natural;   Number of bytes received
 variable user_array   : inout t_user_array;
@@ -361,9 +335,7 @@ constant scope        : in    string                 := C_SCOPE;
 constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT;
 constant ext_proc_call: in    string                 := ""  External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_receive <font id="function_arguments">(    variable data_array   : inout t_slv_array;
 variable data_length  : inout natural;   Number of bytes received
 variable user_array   : inout t_user_array;
@@ -399,9 +371,7 @@ constant scope               : in    string                   := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel           := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config   := C_AXISTREAM_BFM_CONFIG_DEFAULT;
 constant ext_proc_call       : in    string                   := ""  External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overloaded version without recordsDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_receive <font id="function_arguments">(    variable data_array          : inout t_slv_array;
 variable data_length         : inout natural;   Number of bytes received
 variable user_array          : inout t_user_array;
@@ -423,9 +393,7 @@ constant scope               : in    string                   := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel           := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config   := C_AXISTREAM_BFM_CONFIG_DEFAULT;
 constant ext_proc_call       : in    string                   := ""  External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overloaded version without records</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;   Expected data
 constant exp_user_array : in    t_user_array;   Expected tuser
 constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -438,9 +406,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;   Expected data
 constant exp_user_array : in    t_user_array;   Expected tuser
 constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -453,9 +419,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;   Expected data
 constant exp_user_array : in    t_user_array;   Expected tuser
 constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -468,9 +432,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array      : in    t_byte_array;   Expected data
 constant exp_user_array      : in    t_user_array;   Expected tuser
 constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -491,9 +453,7 @@ constant alert_level         : in    t_alert_level           := error;
 constant scope               : in    string                  := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overloaded version without recordsDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array      : in    t_slv_array;   Expected data
 constant exp_user_array      : in    t_user_array;   Expected tuser
 constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -514,9 +474,7 @@ constant alert_level         : in    t_alert_level           := error;
 constant scope               : in    string                  := C_SCOPE;
 constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
 constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(      constant exp_data_array      : in    std_logic_vector;   Expected data
   constant exp_user_array      : in    t_user_array;   Expected tuser
   constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -537,9 +495,7 @@ t_slv_array overload</li>
   constant scope               : in    string                  := C_SCOPE;
   constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
   constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
-  )</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+  )</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;
 constant exp_user_array : in    t_user_array;
 constant msg            : in    string;
@@ -549,9 +505,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overload for default strb_array, id_array, dest_arrayDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;
 constant exp_user_array : in    t_user_array;
 constant msg            : in    string;
@@ -561,9 +515,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;
 constant exp_user_array : in    t_user_array;
 constant msg            : in    string;
@@ -573,9 +525,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;
 constant msg            : in    string;
 signal   clk            : in    std_logic;
@@ -584,9 +534,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Overload for default user_array, strb_array, id_array, dest_arrayDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;
 constant msg            : in    string;
 signal   clk            : in    std_logic;
@@ -595,9 +543,7 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-t_slv_array overload</li>
+)</font> <font id="function_return">return ()</font></li>
 <li>axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;
 constant msg            : in    string;
 signal   clk            : in    std_logic;
@@ -606,7 +552,5 @@ constant alert_level    : in    t_alert_level          := error;
 constant scope          : in    string                 := C_SCOPE;
 constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
 constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-std_logic_vector overload</li>
+)</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

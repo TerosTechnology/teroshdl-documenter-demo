@@ -1,0 +1,529 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=reconfig_icap_fsm><h1 id="entity-reconfig_icap_fsm">Entity: reconfig_icap_fsm</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1035 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="335,0 350,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="350" height="150" fill="black" x="350" y="15"></rect><rect id="SvgjsRect1007" width="346" height="145" fill="#fdfd96" x="352" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="330" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="365" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1012" x1="335" y1="30" x2="350" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="330" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="365" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   reset </tspan></text><line id="SvgjsLine1017" x1="335" y1="50" x2="350" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="330" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(31 downto 0) </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="365" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   icap_out </tspan></text><line id="SvgjsLine1022" x1="335" y1="70" x2="350" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="330" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(31 downto 0) </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="365" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   in_data </tspan></text><line id="SvgjsLine1027" x1="335" y1="90" x2="350" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="330" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="365" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   in_data_valid </tspan></text><line id="SvgjsLine1032" x1="335" y1="110" x2="350" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="330" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="365" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   out_data_full </tspan></text><line id="SvgjsLine1037" x1="335" y1="130" x2="350" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="720" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(31 downto 0) </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="685" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   icap_in </tspan></text><line id="SvgjsLine1042" x1="700" y1="30" x2="715" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="720" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="685" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   icap_csb </tspan></text><line id="SvgjsLine1047" x1="700" y1="50" x2="715" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="720" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="685" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   icap_rw </tspan></text><line id="SvgjsLine1052" x1="700" y1="70" x2="715" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="720" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="685" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   in_data_rden </tspan></text><line id="SvgjsLine1057" x1="700" y1="90" x2="715" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="720" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(31 downto 0) </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="685" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   out_data </tspan></text><line id="SvgjsLine1062" x1="700" y1="110" x2="715" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="720" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="685" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   out_data_valid </tspan></text><line id="SvgjsLine1067" x1="700" y1="130" x2="715" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="720" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="720" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(31 downto 0) </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="685" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="685" svgjs:data="{&quot;newLined&quot;:true}">   status </tspan></text><line id="SvgjsLine1072" x1="700" y1="150" x2="715" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reset</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_in</td>
+<td>out</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_out</td>
+<td>in</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_csb</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_rw</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data</td>
+<td>in</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data_valid</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data_rden</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>out_data</td>
+<td>out</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>out_data_valid</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>out_data_full</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>out</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cur_state</td>
+<td>t_state</td>
+<td></td>
+</tr>
+<tr>
+<td>nxt_state</td>
+<td>t_state</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_state</td>
+<td>t_sync_state</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_state_flag</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_enable</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_read</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_in_r</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data_swap</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_out_swap</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_error</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_sync</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_abort</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>icap_status_valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>readback_cnt</td>
+<td>unsigned(26 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>readback_cnt_en</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>readback_cnt_rst</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data_valid_d</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>in_data_valid_re</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>pr_reset</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>status_error</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sync_s_dummy</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"FFFFFFFF"</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_s_bus_p_0</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"000000BB"</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_s_bus_p_1</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"11220044"</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_s_sync</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"AA995566"</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_s_regW</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"30008001"</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_s_dsync</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"0000000D"</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_nop</td>
+<td>std_logic_vector(31 downto 0)</td>
+<td>x"20000000"</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_reg_wcfg</td>
+<td>std_logic_vector(4 downto 0)</td>
+<td>"00001"</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_fdro</td>
+<td>std_logic_vector(4 downto 0)</td>
+<td>"00011"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t_state</td>
+<td>(ready, abort0, abort1, abort2, abort3, write, writing, pre_reg_read0, pre_reg_read1, pre_stream_read0, read, reading, post_read)</td>
+<td></td>
+</tr>
+<tr>
+<td>t_sync_state</td>
+<td>(none, dummy0, bus_width0, bus_width1, dummy1, synced, cmdWrite, dsynced)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li><p>combi: <em>( reset, nxt_state, cur_state, in_data, in_data_valid, in_data_valid_re,
+                    sync_state, sync_state_flag, out_data_full, readback_cnt, pr_reset )</em></p></li>
+<li><p>readback_cnt_p: <em>( clk )</em></p></li>
+<li><p>sync_p: <em>( clk )</em></p></li>
+</ul><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="451pt" height="680pt"
+ viewBox="0.00 0.00 451.00 680.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 676)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-676 447,-676 447,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_sync_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 423,-8 423,-8 429,-8 435,-14 435,-20 435,-20 435,-652 435,-652 435,-658 429,-664 423,-664 423,-664 20,-664 20,-664 14,-664 8,-658 8,-652 8,-652 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="193.3236" y="-645.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">sync_state</text>
+</g>
+<!-- sync_state -->
+<!-- none -->
+<g id="node2" class="node state regular">
+<title>none</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="386,-626 330,-626 330,-590 386,-590 386,-626"/>
+<text text-anchor="start" x="344.6584" y="-604.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">none</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M342.3333,-591C342.3333,-591 373.6667,-591 373.6667,-591 379.3333,-591 385,-596.6667 385,-602.3333 385,-602.3333 385,-613.6667 385,-613.6667 385,-619.3333 379.3333,-625 373.6667,-625 373.6667,-625 342.3333,-625 342.3333,-625 336.6667,-625 331,-619.3333 331,-613.6667 331,-613.6667 331,-602.3333 331,-602.3333 331,-596.6667 336.6667,-591 342.3333,-591"/>
+</g>
+<!-- dummy0 -->
+<g id="node3" class="node state regular">
+<title>dummy0</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="84,-544 16,-544 16,-508 84,-508 84,-544"/>
+<text text-anchor="start" x="26.999" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">dummy0</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.3333,-509C28.3333,-509 71.6667,-509 71.6667,-509 77.3333,-509 83,-514.6667 83,-520.3333 83,-520.3333 83,-531.6667 83,-531.6667 83,-537.3333 77.3333,-543 71.6667,-543 71.6667,-543 28.3333,-543 28.3333,-543 22.6667,-543 17,-537.3333 17,-531.6667 17,-531.6667 17,-520.3333 17,-520.3333 17,-514.6667 22.6667,-509 28.3333,-509"/>
+</g>
+<!-- none&#45;&gt;dummy0 -->
+<g id="edge1" class="edge transition">
+<title>none&#45;&gt;dummy0</title>
+<path fill="none" stroke="#000000" d="M329.7784,-606.7195C258.2584,-603.2014 74.196,-592.3417 55.02,-573 50.2427,-568.1814 48.0277,-561.5721 47.2183,-554.8318"/>
+<polygon fill="#000000" stroke="#000000" points="50.7046,-554.2726 46.937,-544.3703 43.7072,-554.4608 50.7046,-554.2726"/>
+<text text-anchor="start" x="55" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_dummy &#160;&#160;</text>
+</g>
+<!-- dummy0&#45;&gt;none -->
+<g id="edge3" class="edge transition">
+<title>dummy0&#45;&gt;none</title>
+<path fill="none" stroke="#000000" d="M84.2365,-535.3237C110.0213,-542.355 146.2387,-552.2506 178,-561 197.2283,-566.2969 201.97,-567.8606 221.241,-573 254.5227,-581.8759 292.4807,-591.5552 319.9491,-598.4805"/>
+<polygon fill="#000000" stroke="#000000" points="319.3796,-601.9462 329.9314,-600.9924 321.0879,-595.1578 319.3796,-601.9462"/>
+<text text-anchor="start" x="221" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data /= sync_s_dummy &#160;&#160;</text>
+</g>
+<!-- bus_width0 -->
+<g id="node4" class="node state regular">
+<title>bus_width0</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="123,-462 41,-462 41,-426 123,-426 123,-462"/>
+<text text-anchor="start" x="51.6574" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">bus_width0</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M53.3333,-427C53.3333,-427 110.6667,-427 110.6667,-427 116.3333,-427 122,-432.6667 122,-438.3333 122,-438.3333 122,-449.6667 122,-449.6667 122,-455.3333 116.3333,-461 110.6667,-461 110.6667,-461 53.3333,-461 53.3333,-461 47.6667,-461 42,-455.3333 42,-449.6667 42,-449.6667 42,-438.3333 42,-438.3333 42,-432.6667 47.6667,-427 53.3333,-427"/>
+</g>
+<!-- dummy0&#45;&gt;bus_width0 -->
+<g id="edge2" class="edge transition">
+<title>dummy0&#45;&gt;bus_width0</title>
+<path fill="none" stroke="#000000" d="M49.8878,-507.5919C50.3884,-498.6819 51.827,-487.9935 55.442,-479 56.5995,-476.1204 58.0599,-473.272 59.6977,-470.5177"/>
+<polygon fill="#000000" stroke="#000000" points="62.6762,-472.3611 65.3798,-462.1171 56.878,-468.4393 62.6762,-472.3611"/>
+<text text-anchor="start" x="55" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_bus_p_0 &#160;&#160;</text>
+</g>
+<!-- bus_width0&#45;&gt;none -->
+<g id="edge5" class="edge transition">
+<title>bus_width0&#45;&gt;none</title>
+<path fill="none" stroke="#000000" d="M123.2383,-450.5159C143.4663,-455.4754 167.0582,-464.1029 184,-479 208.1972,-500.2768 189.8945,-525.2634 216.108,-544 263.833,-578.1124 303.483,-521.6604 347,-561 352.3463,-565.833 355.3419,-572.723 356.9629,-579.7425"/>
+<polygon fill="#000000" stroke="#000000" points="353.5393,-580.5164 358.4679,-589.895 360.4636,-579.4899 353.5393,-580.5164"/>
+<text text-anchor="start" x="216" y="-523" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (in_data = sync_s_bus_p_1) &#160;&#160;</text>
+</g>
+<!-- bus_width1 -->
+<g id="node5" class="node state regular">
+<title>bus_width1</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="174,-380 92,-380 92,-344 174,-344 174,-380"/>
+<text text-anchor="start" x="102.6574" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">bus_width1</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M104.3333,-345C104.3333,-345 161.6667,-345 161.6667,-345 167.3333,-345 173,-350.6667 173,-356.3333 173,-356.3333 173,-367.6667 173,-367.6667 173,-373.3333 167.3333,-379 161.6667,-379 161.6667,-379 104.3333,-379 104.3333,-379 98.6667,-379 93,-373.3333 93,-367.6667 93,-367.6667 93,-356.3333 93,-356.3333 93,-350.6667 98.6667,-345 104.3333,-345"/>
+</g>
+<!-- bus_width0&#45;&gt;bus_width1 -->
+<g id="edge4" class="edge transition">
+<title>bus_width0&#45;&gt;bus_width1</title>
+<path fill="none" stroke="#000000" d="M86.8414,-425.7926C89.7163,-416.7299 93.8954,-405.8497 99.442,-397 101.437,-393.8169 103.7562,-390.6801 106.2259,-387.67"/>
+<polygon fill="#000000" stroke="#000000" points="108.9681,-389.8533 112.9957,-380.0538 103.7362,-385.2027 108.9681,-389.8533"/>
+<text text-anchor="start" x="99" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_bus_p_1 &#160;&#160;</text>
+</g>
+<!-- bus_width1&#45;&gt;none -->
+<g id="edge7" class="edge transition">
+<title>bus_width1&#45;&gt;none</title>
+<path fill="none" stroke="#000000" d="M174.0338,-368.0408C192.949,-372.8609 214.2104,-381.5075 228,-397 256.5739,-429.1025 218.9181,-462.0544 250.686,-491 289.629,-526.4833 333.5213,-468.1649 368,-508 384.9324,-527.5629 378.8931,-558.0156 370.8136,-580.1781"/>
+<polygon fill="#000000" stroke="#000000" points="367.467,-579.1226 367.033,-589.7086 373.9738,-581.7038 367.467,-579.1226"/>
+<text text-anchor="start" x="250" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (in_data = sync_s_dummy) &#160;&#160;</text>
+</g>
+<!-- dummy1 -->
+<g id="node6" class="node state regular">
+<title>dummy1</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="232,-298 164,-298 164,-262 232,-262 232,-298"/>
+<text text-anchor="start" x="174.999" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">dummy1</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M176.3333,-263C176.3333,-263 219.6667,-263 219.6667,-263 225.3333,-263 231,-268.6667 231,-274.3333 231,-274.3333 231,-285.6667 231,-285.6667 231,-291.3333 225.3333,-297 219.6667,-297 219.6667,-297 176.3333,-297 176.3333,-297 170.6667,-297 165,-291.3333 165,-285.6667 165,-285.6667 165,-274.3333 165,-274.3333 165,-268.6667 170.6667,-263 176.3333,-263"/>
+</g>
+<!-- bus_width1&#45;&gt;dummy1 -->
+<g id="edge6" class="edge transition">
+<title>bus_width1&#45;&gt;dummy1</title>
+<path fill="none" stroke="#000000" d="M136.8829,-343.8082C139.4999,-334.5379 143.6633,-323.4668 150.02,-315 152.74,-311.3772 155.9396,-307.9669 159.3742,-304.803"/>
+<polygon fill="#000000" stroke="#000000" points="161.7458,-307.3823 167.1732,-298.2832 157.2561,-302.0117 161.7458,-307.3823"/>
+<text text-anchor="start" x="150" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_dummy &#160;&#160;</text>
+</g>
+<!-- dummy1&#45;&gt;none -->
+<g id="edge9" class="edge transition">
+<title>dummy1&#45;&gt;none</title>
+<path fill="none" stroke="#000000" d="M232.3915,-284.1672C254.0742,-288.9371 278,-299.1507 278,-321 278,-417.5 278,-417.5 278,-417.5 278,-438.7103 278.7932,-448.6079 295.241,-462 330.7983,-490.9513 363.4045,-447.7935 397,-479 403.8712,-485.3826 402,-490.1218 402,-499.5 402,-567 402,-567 402,-567 402,-574.4655 398.5677,-580.9591 393.6204,-586.4413"/>
+<polygon fill="#000000" stroke="#000000" points="391.145,-583.9618 386.115,-593.2865 395.8621,-589.1338 391.145,-583.9618"/>
+<text text-anchor="start" x="295" y="-441" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data /= sync_s_dummy &#160;&#160;</text>
+</g>
+<!-- synced -->
+<g id="node7" class="node state regular">
+<title>synced</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="228,-216 168,-216 168,-180 228,-180 228,-216"/>
+<text text-anchor="start" x="178.9938" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">synced</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M180.3333,-181C180.3333,-181 215.6667,-181 215.6667,-181 221.3333,-181 227,-186.6667 227,-192.3333 227,-192.3333 227,-203.6667 227,-203.6667 227,-209.3333 221.3333,-215 215.6667,-215 215.6667,-215 180.3333,-215 180.3333,-215 174.6667,-215 169,-209.3333 169,-203.6667 169,-203.6667 169,-192.3333 169,-192.3333 169,-186.6667 174.6667,-181 180.3333,-181"/>
+</g>
+<!-- dummy1&#45;&gt;synced -->
+<g id="edge8" class="edge transition">
+<title>dummy1&#45;&gt;synced</title>
+<path fill="none" stroke="#000000" d="M198,-261.8015C198,-251.3976 198,-238.1215 198,-226.3768"/>
+<polygon fill="#000000" stroke="#000000" points="201.5001,-226.1476 198,-216.1476 194.5001,-226.1476 201.5001,-226.1476"/>
+<text text-anchor="start" x="198" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_sync &#160;&#160;</text>
+</g>
+<!-- cmdWrite -->
+<g id="node8" class="node state regular">
+<title>cmdWrite</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="298,-134 226,-134 226,-98 298,-98 298,-134"/>
+<text text-anchor="start" x="236.6722" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">cmdWrite</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M238.3333,-99C238.3333,-99 285.6667,-99 285.6667,-99 291.3333,-99 297,-104.6667 297,-110.3333 297,-110.3333 297,-121.6667 297,-121.6667 297,-127.3333 291.3333,-133 285.6667,-133 285.6667,-133 238.3333,-133 238.3333,-133 232.6667,-133 227,-127.3333 227,-121.6667 227,-121.6667 227,-110.3333 227,-110.3333 227,-104.6667 232.6667,-99 238.3333,-99"/>
+</g>
+<!-- synced&#45;&gt;cmdWrite -->
+<g id="edge10" class="edge transition">
+<title>synced&#45;&gt;cmdWrite</title>
+<path fill="none" stroke="#000000" d="M167.8723,-192.3658C151.2713,-187.5574 132.0295,-178.7935 121.91,-163 119.0327,-158.5094 118.6275,-155.2035 121.91,-151 133.5099,-136.1455 179.8125,-126.6662 216.0504,-121.3724"/>
+<polygon fill="#000000" stroke="#000000" points="216.5466,-124.8372 225.9672,-119.9893 215.5796,-117.9043 216.5466,-124.8372"/>
+<text text-anchor="start" x="121" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_regW &#160;&#160;</text>
+</g>
+<!-- cmdWrite&#45;&gt;synced -->
+<g id="edge12" class="edge transition">
+<title>cmdWrite&#45;&gt;synced</title>
+<path fill="none" stroke="#000000" d="M253.6357,-134.2499C249.0576,-143.3233 242.9127,-154.2005 236,-163 233.382,-166.3326 230.4359,-169.6273 227.372,-172.7846"/>
+<polygon fill="#000000" stroke="#000000" points="224.8325,-170.3722 220.1081,-179.8554 229.7151,-175.3882 224.8325,-170.3722"/>
+<text text-anchor="start" x="243" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (in_data = sync_s_dsync) &#160;&#160;</text>
+</g>
+<!-- dsynced -->
+<g id="node9" class="node state regular">
+<title>dsynced</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="361,-52 295,-52 295,-16 361,-16 361,-52"/>
+<text text-anchor="start" x="305.6584" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">dsynced</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M307.3333,-17C307.3333,-17 348.6667,-17 348.6667,-17 354.3333,-17 360,-22.6667 360,-28.3333 360,-28.3333 360,-39.6667 360,-39.6667 360,-45.3333 354.3333,-51 348.6667,-51 348.6667,-51 307.3333,-51 307.3333,-51 301.6667,-51 296,-45.3333 296,-39.6667 296,-39.6667 296,-28.3333 296,-28.3333 296,-22.6667 301.6667,-17 307.3333,-17"/>
+</g>
+<!-- cmdWrite&#45;&gt;dsynced -->
+<g id="edge11" class="edge transition">
+<title>cmdWrite&#45;&gt;dsynced</title>
+<path fill="none" stroke="#000000" d="M276.6475,-97.8015C285.5341,-86.7606 297.0242,-72.4851 306.8818,-60.2378"/>
+<polygon fill="#000000" stroke="#000000" points="309.8498,-62.1323 313.3934,-52.1476 304.3967,-57.7432 309.8498,-62.1323"/>
+<text text-anchor="start" x="299" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">in_data = sync_s_dsync &#160;&#160;</text>
+</g>
+<!-- dsynced&#45;&gt;none -->
+<g id="edge13" class="edge transition">
+<title>dsynced&#45;&gt;none</title>
+<path fill="none" stroke="#000000" d="M361.0378,-41.5512C388.8071,-48.887 424,-60.9546 424,-75 424,-362 424,-362 424,-362 424,-410.2304 426,-422.2696 426,-470.5 426,-567 426,-567 426,-567 426,-575.2395 411.1732,-584.7238 395.3662,-592.4939"/>
+<polygon fill="#000000" stroke="#000000" points="393.6278,-589.443 386.0508,-596.8484 396.5921,-595.7844 393.6278,-589.443"/>
+<text text-anchor="middle" x="425.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+</g>
+</svg>
+</div></div><br><br><br><br><br><br>

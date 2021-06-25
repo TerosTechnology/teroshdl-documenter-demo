@@ -1,0 +1,250 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=stream><h1 id="package-stream">Package: stream</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_SIM_STREAM_MAX_PATTERN_COUNT</td>
+<td>positive</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_MAX_FRAMEGROUP_COUNT</td>
+<td>positive</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_INDEX_BW</td>
+<td>positive</td>
+<td>log2ceilnz(C_SIM_STREAM_MAX_PATTERN_COUNT)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_FRAMEGROUP_INDEX_BW</td>
+<td>positive</td>
+<td>log2ceilnz(C_SIM_STREAM_MAX_FRAMEGROUP_COUNT)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_8_EMPTY</td>
+<td>T_SIM_STREAM_WORD_8</td>
+<td>(Valid =&gt; '0', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_32_EMPTY</td>
+<td>T_SIM_STREAM_WORD_32</td>
+<td>(Valid =&gt; '0', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_8_INVALID</td>
+<td>T_SIM_STREAM_WORD_8</td>
+<td>(Valid    =&gt; '0', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_32_INVALID</td>
+<td>T_SIM_STREAM_WORD_32</td>
+<td>(Valid    =&gt; '0', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_8_ZERO</td>
+<td>T_SIM_STREAM_WORD_8</td>
+<td>(Valid    =&gt; '1', Data =&gt; (others =&gt; 'Z'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_32_ZERO</td>
+<td>T_SIM_STREAM_WORD_32</td>
+<td>(Valid    =&gt; '1', Data =&gt; (others =&gt; 'Z'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_8_UNDEF</td>
+<td>T_SIM_STREAM_WORD_8</td>
+<td>(Valid    =&gt; '1', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_WORD_32_UNDEF</td>
+<td>T_SIM_STREAM_WORD_32</td>
+<td>(Valid    =&gt; '1', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_FRAMEGROUP_8_EMPTY</td>
+<td>T_SIM_STREAM_FRAMEGROUP_8</td>
+<td>(         Active                      =&gt; FALSE,       Name                            =&gt; (others =&gt; C_POC_NUL),       PrePause                    =&gt; 0,       PostPause                   =&gt; 0,       DataCount                   =&gt; 0,       Data                            =&gt; (others =&gt; C_SIM_STREAM_WORD_8_EMPTY)    )</td>
+<td></td>
+</tr>
+<tr>
+<td>C_SIM_STREAM_FRAMEGROUP_32_EMPTY</td>
+<td>T_SIM_STREAM_FRAMEGROUP_32</td>
+<td>(         Active                      =&gt; FALSE,       Name                            =&gt; (others =&gt; C_POC_NUL),       PrePause                    =&gt; 0,       PostPause                   =&gt; 0,       DataCount                   =&gt; 0,       Data                            =&gt; (others =&gt; C_SIM_STREAM_WORD_32_EMPTY)   )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_SIM_STREAM_WORD_8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_WORD_32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_DELAY_VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_WORD_VECTOR_8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_WORD_VECTOR_32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_DIRECTION</td>
+<td>(Send, RECEIVE)</td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_FRAMEGROUP_8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_FRAMEGROUP_32</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_FRAMEGROUP_VECTOR_8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T_SIM_STREAM_FRAMEGROUP_VECTOR_32</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return natural</font></li>
+<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_32)</font> <font id="function_return">return natural</font></li>
+<li>dat <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
+<li>dat <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
+<li>dat <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
+<li>dat <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
+<li>sof <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
+<li>sof <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
+<li>sof <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
+<li>sof <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
+<li>eof <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
+<li>eof <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
+<li>eof <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
+<li>eof <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
+<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
+<li>eof <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
+<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
+<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
+<li>eofg <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
+<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
+<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return string</font></li>
+<li>sim_CRC8 <font id="function_arguments">(words        : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return std_logic_vector</font></li>
+</ul><br><br><br><br><br><br>

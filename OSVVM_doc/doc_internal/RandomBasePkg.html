@@ -64,10 +64,7 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=RandomBasePkg><h1 id="package-randombasepkg">Package: RandomBasePkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>comment out following 2 lines with VHDL-2008.  Leave in for VHDL-2002 <br />
-library ieee_proposed ;                                  -- remove with VHDL-2008<br />
-use ieee_proposed.standard_additions.all ;   -- remove with VHDL-2008<br />
-</div></p><h2 id="types">Types</h2>
+<a id=RandomBasePkg><h1 id="package-randombasepkg">Package: RandomBasePkg</h1></a><h2 id="types">Types</h2>
 <table>
 <thead>
 <tr>
@@ -86,9 +83,7 @@ use ieee_proposed.standard_additions.all ;   -- remove with VHDL-2008<br />
 </table><h2 id="functions">Functions</h2>
 <ul>
 <li>Uniform <font id="function_arguments">(Result : out real ;  Seed : inout RandomSeedType)</font> <font id="function_return">return ()</font></li>
-<li>to_string <font id="function_arguments">(A : RandomSeedType)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-IO for RandomSeedType.  If use subtype, then create aliases herein a similar fashion VHDL-2008 std_logic_textio.Not required by RandomPkg</li>
+<li>to_string <font id="function_arguments">(A : RandomSeedType)</font> <font id="function_return">return string</font></li>
 <li>write <font id="function_arguments">(variable L: inout line ; A : RandomSeedType )</font> <font id="function_return">return ()</font></li>
 <li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ; good : out boolean )</font> <font id="function_return">return ()</font></li>
 <li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType )</font> <font id="function_return">return ()</font></li>

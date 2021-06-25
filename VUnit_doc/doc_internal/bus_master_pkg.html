@@ -1,0 +1,202 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=bus_master_pkg><h1 id="package-bus_master_pkg">Package: bus_master_pkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bus_logger</td>
+<td>logger_t</td>
+<td>get_logger("vunit_lib:bus_master_pkg")</td>
+<td></td>
+</tr>
+<tr>
+<td>bus_write_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("write bus")</td>
+<td></td>
+</tr>
+<tr>
+<td>bus_read_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("read bus")</td>
+<td></td>
+</tr>
+<tr>
+<td>bus_burst_write_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("burst write bus")</td>
+<td></td>
+</tr>
+<tr>
+<td>bus_burst_read_msg</td>
+<td>msg_type_t</td>
+<td>new_msg_type("burst read bus")</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bus_master_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2>
+<ul>
+<li>get_logger <font id="function_arguments">(bus_handle : bus_master_t)</font> <font id="function_return">return logger_t</font></li>
+<li>write_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : std_logic_vector;
+                  constant data : std_logic_vector;
+                   default byte enable is all bytes
+                  constant byte_enable : std_logic_vector := "")</font> <font id="function_return">return ()</font></li>
+<li>write_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : natural;
+                  constant data : std_logic_vector;
+                   default byte enable is all bytes
+                  constant byte_enable : std_logic_vector := "")</font> <font id="function_return">return ()</font></li>
+<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : std_logic_vector;
+                  constant burst_length : positive;
+                  constant data : queue_t)</font> <font id="function_return">return ()</font></li>
+<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : natural;
+                  constant burst_length : positive;
+                  constant data : queue_t)</font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;                     constant bus_handle : bus_master_t;
+                 constant address : std_logic_vector;
+                 variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;                     constant bus_handle : bus_master_t;
+                 constant address : natural;
+                 variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : std_logic_vector;
+                  constant burst_length : positive;
+                  variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : natural;
+                  constant burst_length : positive;
+                  variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>await_read_bus_reply <font id="function_arguments">(signal net : inout network_t;                                 variable reference : inout bus_reference_t;
+                             variable data : inout std_logic_vector)</font> <font id="function_return">return ()</font></li>
+<li>await_burst_read_bus_reply <font id="function_arguments">(signal net : inout network_t;                                 constant bus_handle : bus_master_t;
+                             constant data : queue_t;
+                             variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font></li>
+<li>check_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : std_logic_vector;
+                  constant expected : std_logic_vector;
+                  constant msg : string := "")</font> <font id="function_return">return ()</font></li>
+<li>check_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : natural;
+                  constant expected : std_logic_vector;
+                  constant msg : string := "")</font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;                     constant bus_handle : bus_master_t;
+                 constant address : std_logic_vector;
+                 variable data : inout std_logic_vector)</font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;                     constant bus_handle : bus_master_t;
+                 constant address : natural;
+                 variable data : inout std_logic_vector)</font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : std_logic_vector;
+                  constant burst_length : positive;
+                  constant data : queue_t)</font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;                      constant bus_handle : bus_master_t;
+                  constant address : natural;
+                  constant burst_length : positive;
+                  constant data : queue_t)</font> <font id="function_return">return ()</font></li>
+<li>wait_until_read_equals <font id="function_arguments">(    signal net : inout network_t;
+bus_handle   : bus_master_t;
+addr         : std_logic_vector;
+value        : std_logic_vector;
+timeout      : delay_length := delay_length'high;
+msg    : string       := "")</font> <font id="function_return">return ()</font></li>
+<li>wait_until_read_bit_equals <font id="function_arguments">(    signal net : inout network_t;
+bus_handle   : bus_master_t;
+addr         : std_logic_vector;
+idx          : natural;
+value        : std_logic;
+timeout      : delay_length := delay_length'high;
+msg    : string       := "")</font> <font id="function_return">return ()</font></li>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;                            bus_handle : bus_master_t)</font> <font id="function_return">return ()</font></li>
+</ul><br><br><br><br><br><br>
