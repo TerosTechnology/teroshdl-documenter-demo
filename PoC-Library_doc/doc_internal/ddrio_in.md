@@ -18,7 +18,7 @@ the falling edge directly before this rising edge. Thus sampling starts with
 the falling edge of the clock as depicted in the following waveform.
 .. wavedrom::
    
-![alt text](wavedrom_h4gB0.svg "title") 
+![alt text](wavedrom_It5Q0.svg "title") 
 
 After power-up, the output ports ``DataIn_high`` and ``DataIn_low`` both equal
 INIT_VALUE.
