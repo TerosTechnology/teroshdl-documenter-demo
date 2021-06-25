@@ -1,0 +1,40 @@
+name: 'Documentation Markdown'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  BTD:
+    name: '📓 Docs'
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: '🧰 Checkout'
+      uses: actions/checkout@v2
+
+    - name: '📓 Install TerosHDL and VUnit'
+      run: |
+        sudo pip3 install vunit_hdl
+        git clone https://github.com/TerosTechnology/colibri.git
+        cd colibri
+        sudo npm install -g .
+
+    - name: 'Generate documentation Markdown'
+      run: |
+        python3 generate_doc.py markdown
+
+    - name: '📤 Upload artifact: Markdown'
+      uses: actions/upload-artifact@master
+      with:
+        name: documentation-markdown
+        path: |
+          teroshdl_doc
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages 
+        folder: teroshdl_doc 

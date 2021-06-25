@@ -22,7 +22,7 @@ NEORV32:
     vhdl_symbol: ""
     verilog_symbol: ""
 
-vunit:
+VUnit:
     url: https://github.com/VUnit/vunit.git
     folder: vunit/ 
     vhdl_symbol: ""

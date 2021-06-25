@@ -1,4 +1,4 @@
-name: 'doc'
+name: 'Documentation HTML'
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
     - name: '🧰 Checkout'
       uses: actions/checkout@v2
 
-    - name: '📓 Install TerosHDL'
+    - name: '📓 Install TerosHDL and VUnit'
       run: |
         sudo pip3 install vunit_hdl
         git clone https://github.com/TerosTechnology/colibri.git
@@ -24,13 +24,12 @@ jobs:
 
     - name: 'Generate documentation HTML'
       run: |
-        ls 
         python3 generate_doc.py html
 
     - name: '📤 Upload artifact: HTML'
       uses: actions/upload-artifact@master
       with:
-        name: doc
+        name: documentation-html
         path: |
           teroshdl_doc
 
