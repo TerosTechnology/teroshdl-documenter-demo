@@ -196,6 +196,24 @@
 </tbody>
 </table><h2 id="processes">Processes</h2>
 <ul>
-<li><p>pll_reset_0: <em>( ext_clk )</em></p></li>
-<li><p>soc_reset_0: <em>( pll_clk )</em></p></li>
-</ul><br><br><br><br><br><br>
+<li>pll_reset_0: <em>( ext_clk )</em><br />
+Wait for external clock to become stable before starting the PLL<br />
+By the time the FPGA has been loaded the clock should be well and<br />
+truly stable, but lets give it a few cycles to be sure.<br />
+[BenH] Some designs seem to require a lot more..</li>
+</ul>
+<p><strong>Description</strong><br />
+Wait for external clock to become stable before starting the PLL<br />
+By the time the FPGA has been loaded the clock should be well and<br />
+truly stable, but lets give it a few cycles to be sure.<br />
+[BenH] Some designs seem to require a lot more..</p>
+<ul>
+<li>soc_reset_0: <em>( pll_clk )</em><br />
+Once our clock is stable and the external reset button isn't being<br />
+pressed, assert the SOC reset for long enough for the CPU pipeline<br />
+to clear completely.</li>
+</ul>
+<p><strong>Description</strong><br />
+Once our clock is stable and the external reset button isn't being<br />
+pressed, assert the SOC reset for long enough for the CPU pipeline<br />
+to clear completely.</p><br><br><br><br><br><br>

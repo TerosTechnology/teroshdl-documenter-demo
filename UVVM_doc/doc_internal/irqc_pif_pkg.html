@@ -79,13 +79,13 @@
 <td>C_NUM_SOURCES</td>
 <td>integer</td>
 <td>6</td>
-<td></td>
+<td>1 &lt;= C_NUM_SOURCES &lt;= Data width</td>
 </tr>
 <tr>
 <td>C_ADDR_IRR</td>
 <td>integer</td>
 <td>0</td>
-<td></td>
+<td>Notation for regs: (Included in constant name as info to SW)- RW: Readable and writable reg.- RO: Read only reg. (output from IP)- WO: Write only reg. (typically single cycle strobe to IP)Notation for signals (or fields in record) going between PIF and core:Same notations as for register-constants above, buta preceeding 'a' (e.g. awo) means the register is auxiliary to the PIF.This means no flop in the PIF, but in the core. (Or just a dummy-register with no flop)</td>
 </tr>
 <tr>
 <td>C_ADDR_IER</td>
@@ -144,12 +144,12 @@
 <tr>
 <td>t_p2c</td>
 <td></td>
-<td></td>
+<td>Signals from pif to core</td>
 </tr>
 <tr>
 <td>t_c2p</td>
 <td></td>
-<td></td>
+<td>Signals from core to PIF</td>
 </tr>
 </tbody>
 </table><br><br><br><br><br><br>

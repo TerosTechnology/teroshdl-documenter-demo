@@ -87,7 +87,7 @@
 <tr>
 <td>T_IO_TRISTATE_VECTOR</td>
 <td></td>
-<td></td>
+<td>Do not use this type for <code>inout</code> ports of synthesizable IP cores to drivevalues in both directions, see also:ref:<code>ISSUES:General:inout_records</code>.</td>
 </tr>
 <tr>
 <td>T_IO_LVDS_VECTOR</td>
@@ -112,7 +112,7 @@
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_COMMAND</td>
 <td>(         IO_MDIO_MDIOC_CMD_NONE,         IO_MDIO_MDIOC_CMD_CHECK_ADDRESS,        IO_MDIO_MDIOC_CMD_READ,         IO_MDIO_MDIOC_CMD_WRITE,        IO_MDIO_MDIOC_CMD_ABORT     )</td>
-<td></td>
+<td>MDIOController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_STATUS</td>
@@ -139,7 +139,9 @@
 <ul>
 <li>io_tristate_driver <font id="function_arguments">(        signal pad      : inout std_logic_vector;
     signal tristate : inout T_IO_TRISTATE_VECTOR
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Drive a std_logic_vector from a Tri-State bus and in reverse.Use this procedure only in simulation, see also:ref:<code>ISSUES:General:inout_records</code>.</li>
 <li>io_7SegmentDisplayEncoding <font id="function_arguments">(hex    : std_logic_vector(3 downto 0); dot : std_logic := '0'; WITH_DOT : boolean := FALSE)</font> <font id="function_return">return std_logic_vector</font></li>
 <li>io_7SegmentDisplayEncoding <font id="function_arguments">(digit    : T_BCD; dot : std_logic := '0'; WITH_DOT : boolean := FALSE)</font> <font id="function_return">return std_logic_vector</font></li>
 </ul><br><br><br><br><br><br>

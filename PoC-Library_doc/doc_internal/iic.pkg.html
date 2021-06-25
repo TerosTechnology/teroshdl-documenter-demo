@@ -97,7 +97,7 @@
 <tr>
 <td>T_IO_IIC_BUSMODE</td>
 <td>(         IO_IIC_BUSMODE_SMBUS,                              100 kHz; additional timing restrictions      IO_IIC_BUSMODE_STANDARDMODE,               100 kHz      IO_IIC_BUSMODE_FASTMODE,                       400 kHz      IO_IIC_BUSMODE_FASTMODEPLUS,             1.000 kHz      IO_IIC_BUSMODE_HIGHSPEEDMODE,            3.400 kHz      IO_IIC_BUSMODE_ULTRAFASTMODE             5.000 kHz; unidirectional  )</td>
-<td></td>
+<td>IICBusController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IICBUS_COMMAND</td>
@@ -112,7 +112,7 @@
 <tr>
 <td>T_IO_IIC_COMMAND</td>
 <td>(         IO_IIC_CMD_NONE,        IO_IIC_CMD_QUICKCOMMAND_READ,    use this to check for an device address        IO_IIC_CMD_QUICKCOMMAND_WRITE,      IO_IIC_CMD_SEND_BYTES,      IO_IIC_CMD_RECEIVE_BYTES,       IO_IIC_CMD_PROCESS_CALL     )</td>
-<td></td>
+<td>IICController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IIC_STATUS</td>
@@ -144,5 +144,7 @@
 <ul>
 <li>io_tristate_driver <font id="function_arguments">(        signal pad  : inout T_IO_IIC_SERIAL_PCB;
     signal iot  : inout T_IO_IIC_SERIAL
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Drive std_logic values from Tri-State signals and in reverse.Use this procedure only in simulation</li>
 </ul><br><br><br><br><br><br>

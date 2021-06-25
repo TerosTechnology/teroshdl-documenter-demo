@@ -108,12 +108,12 @@
 <tr>
 <td>t_avalon_mm_if</td>
 <td></td>
-<td></td>
+<td>Avalon Interface signals</td>
 </tr>
 <tr>
 <td>t_avalon_mm_bfm_config</td>
 <td></td>
-<td></td>
+<td>Configuration record to be assigned in the test harness.</td>
 </tr>
 <tr>
 <td>t_avalon_mm_response_status</td>
@@ -140,7 +140,9 @@ signal avalon_mm_if       : inout t_avalon_mm_if;
 constant scope            : in  string                    := C_SCOPE;
 constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
 constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This procedure could be called from an a simple testbench orfrom an executor where there are concurrent BFMs - whereall BFMs could have different configs and msg_id_panels.From a simplified testbench it is not necessary to use argumentswhere defaults are given, e.g.:avalon_mm_write(addr, data, msg, clk, avalon_mm_if);avalon_mm_write overload without byte_enable</li>
 <li>avalon_mm_write <font id="function_arguments">(    constant addr_value       : in  unsigned;
 constant data_value       : in  std_logic_vector;
 constant msg              : in  string;
@@ -150,7 +152,9 @@ constant byte_enable      : in  std_logic_vector;
 constant scope            : in  string                    := C_SCOPE;
 constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
 constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+avalon_mm_write with byte_enable</li>
 <li>avalon_mm_read <font id="function_arguments">(    constant addr_value       : in  unsigned;
 variable data_value       : out std_logic_vector;
 constant msg              : in  string;

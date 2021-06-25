@@ -188,7 +188,7 @@
 <td>uart_main_tx</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>UART0 signals:</td>
 </tr>
 <tr>
 <td>uart_main_rx</td>
@@ -200,7 +200,7 @@
 <td>led0</td>
 <td>out</td>
 <td>std_logic</td>
-<td></td>
+<td>LEDs</td>
 </tr>
 <tr>
 <td>led1</td>
@@ -212,7 +212,7 @@
 <td>spi_flash_cs_n</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>SPI</td>
 </tr>
 <tr>
 <td>spi_flash_mosi</td>
@@ -242,7 +242,7 @@
 <td>ddram_a</td>
 <td>out</td>
 <td>std_logic_vector(14 downto 0)</td>
-<td></td>
+<td>DRAM wires</td>
 </tr>
 <tr>
 <td>ddram_ba</td>
@@ -346,7 +346,7 @@
 <tr>
 <td>system_clk</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Internal clock signals:</td>
 </tr>
 <tr>
 <td>system_clk_locked</td>
@@ -356,7 +356,7 @@
 <tr>
 <td>wb_dram_in</td>
 <td>wishbone_master_out</td>
-<td></td>
+<td>DRAM main data wishbone connection</td>
 </tr>
 <tr>
 <td>wb_dram_out</td>
@@ -366,7 +366,7 @@
 <tr>
 <td>wb_ext_io_in</td>
 <td>wb_io_master_out</td>
-<td></td>
+<td>DRAM control wishbone connection</td>
 </tr>
 <tr>
 <td>wb_ext_io_out</td>
@@ -386,12 +386,12 @@
 <tr>
 <td>core_alt_reset</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Control/status</td>
 </tr>
 <tr>
 <td>spi_sck</td>
 <td>std_ulogic</td>
-<td></td>
+<td>SPI flash</td>
 </tr>
 <tr>
 <td>spi_cs_n</td>
@@ -441,7 +441,9 @@
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font></li>
+<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font><br />
+<strong>Description</strong><br />
+Fixup various memory sizes based on generics</li>
 <li>get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural</font></li>
 </ul><h2 id="instantiations">Instantiations</h2>
 <ul>

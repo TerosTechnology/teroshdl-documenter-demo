@@ -96,72 +96,76 @@
 <tr>
 <td>std_logic_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>unsigned_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>signed_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>bit_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>integer_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>time_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>real_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>string_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>boolean_vector_max_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>integer_vector_sum_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>time_vector_sum_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>real_vector_sum_c</td>
 <td></td>
-<td></td>
+<td>for non VHDL-2008</td>
 </tr>
 <tr>
 <td>resolved_string</td>
 <td></td>
-<td></td>
+<td>will change to subtype -- assert but no init</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>resolved_max <font id="function_arguments">( s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font></li>
+<li>resolved_max <font id="function_arguments">( s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font><br />
+<strong>Description</strong><br />
+resolved_max<br />
+return maximum value.  <br />
+No initializations required on ports, default of type'left is ok</li>
 <li>resolved_max <font id="function_arguments">( s : bit_vector)</font> <font id="function_return">return bit</font></li>
 <li>resolved_max <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font></li>
 <li>resolved_max <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
@@ -174,17 +178,30 @@
 <li>ToTransaction <font id="function_arguments">(A : integer; Size : natural)</font> <font id="function_return">return std_logic_vector_max_c</font></li>
 <li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c)</font> <font id="function_return">return std_logic_vector</font></li>
 <li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c)</font> <font id="function_return">return integer</font></li>
-<li>ToTransaction <font id="function_arguments">(A : std_logic_vector)</font> <font id="function_return">return std_logic_vector_max</font></li>
+<li>ToTransaction <font id="function_arguments">(A : std_logic_vector)</font> <font id="function_return">return std_logic_vector_max</font><br />
+<strong>Description</strong><br />
+ToTransaction and FromTransaction for _max provided to support a <br />
+common methodology, conversions are not needed</li>
 <li>ToTransaction <font id="function_arguments">(A : integer; Size : natural)</font> <font id="function_return">return std_logic_vector_max</font></li>
 <li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max)</font> <font id="function_return">return std_logic_vector</font></li>
 <li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max)</font> <font id="function_return">return integer</font></li>
-<li>resolved_sum <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font></li>
+<li>resolved_sum <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font><br />
+<strong>Description</strong><br />
+return sum of values that /= type'left<br />
+No initializations required on ports, default of type'left is ok</li>
 <li>resolved_sum <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
 <li>resolved_sum <font id="function_arguments">( s : real_vector )</font> <font id="function_return">return real</font></li>
-<li>resolved_weak <font id="function_arguments">(s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font></li>
-<li>resolved <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font></li>
+<li>resolved_weak <font id="function_arguments">(s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font><br />
+<strong>Description</strong><br />
+no init, type'left</li>
+<li>resolved <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font><br />
+<strong>Description</strong><br />
+legacy stuff<br />
+requires ports to be initialized to 0 in the appropriate type.  </li>
 <li>resolved <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
 <li>resolved <font id="function_arguments">( s : real_vector )</font> <font id="function_return">return real</font></li>
-<li>resolved <font id="function_arguments">(s : string)</font> <font id="function_return">return character</font></li>
+<li>resolved <font id="function_arguments">(s : string)</font> <font id="function_return">return character</font><br />
+<strong>Description</strong><br />
+same as resolved_max</li>
 <li>resolved <font id="function_arguments">( s : boolean_vector)</font> <font id="function_return">return boolean</font></li>
 </ul><br><br><br><br><br><br>

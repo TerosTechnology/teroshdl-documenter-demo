@@ -79,7 +79,7 @@
 <td>OSVVM_DEFAULT_ALERT_PREFIX</td>
 <td>string</td>
 <td>"%% Alert"</td>
-<td></td>
+<td>Defaults for String values</td>
 </tr>
 <tr>
 <td>OSVVM_DEFAULT_LOG_PREFIX</td>
@@ -127,7 +127,7 @@
 <td>OSVVM_DEFAULT_WRITE_PASS_FAIL</td>
 <td>OsvvmOptionsType</td>
 <td>FALSE</td>
-<td></td>
+<td>Coverage Settings</td>
 </tr>
 <tr>
 <td>OSVVM_DEFAULT_WRITE_BIN_INFO</td>
@@ -172,7 +172,9 @@
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>IsEnabled <font id="function_arguments">(A : OsvvmOptionsType)</font> <font id="function_return">return boolean</font></li>
+<li>IsEnabled <font id="function_arguments">(A : OsvvmOptionsType)</font> <font id="function_return">return boolean</font><br />
+<strong>Description</strong><br />
+Requires that TRUE is last and ENABLED is 2nd to last</li>
 <li>to_OsvvmOptionsType <font id="function_arguments">(A : boolean)</font> <font id="function_return">return OsvvmOptionsType</font></li>
 <li>SetOsvvmGlobalOptions <font id="function_arguments">(  
 WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;
@@ -184,7 +186,9 @@ DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ;
 PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ;
 FailName        : string := OSVVM_STRING_INIT_PARM_DETECT
 )</font> <font id="function_return">return ()</font></li>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : OsvvmOptionsType)</font> <font id="function_return">return OsvvmOptionsType</font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : OsvvmOptionsType)</font> <font id="function_return">return OsvvmOptionsType</font><br />
+<strong>Description</strong><br />
+Accessor Functions</li>
 <li>ResolveOsvvmOption <font id="function_arguments">(A, B, C, D : OsvvmOptionsType)</font> <font id="function_return">return OsvvmOptionsType</font></li>
 <li>IsOsvvmStringSet <font id="function_arguments">(A : string)</font> <font id="function_return">return boolean</font></li>
 <li>ResolveOsvvmOption <font id="function_arguments">(A, B : string)</font> <font id="function_return">return string</font></li>

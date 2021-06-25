@@ -64,7 +64,11 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=RandomPkg><h1 id="package-randompkg">Package: RandomPkg</h1></a><h2 id="constants">Constants</h2>
+<a id=RandomPkg><h1 id="package-randompkg">Package: RandomPkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>comment out following 3 lines with VHDL-2008.  Leave in for VHDL-2002<br />
+library ieee_proposed ;                                       -- remove with VHDL-2008<br />
+use ieee_proposed.standard_additions.all ;        -- remove with VHDL-2008<br />
+use ieee_proposed.standard_textio_additions.all ; -- remove with VHDL-2008<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -96,7 +100,7 @@
 <tr>
 <td>DistRecType</td>
 <td></td>
-<td></td>
+<td>Supports DistValInt functionality</td>
 </tr>
 <tr>
 <td>DistType</td>
@@ -106,7 +110,7 @@
 <tr>
 <td>NaturalVBoolType</td>
 <td></td>
-<td></td>
+<td>Weight vectors not indexed by integers</td>
 </tr>
 <tr>
 <td>NaturalVSlType</td>
@@ -121,7 +125,7 @@
 <tr>
 <td>RandomDistType</td>
 <td>(NONE, UNIFORM, FAVOR_SMALL, FAVOR_BIG, NORMAL, POISSON)</td>
-<td></td>
+<td>Parameters for randomizationRandomDistType specifies the distribution to use for randomize</td>
 </tr>
 <tr>
 <td>RandomParmType</td>
@@ -136,7 +140,9 @@
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>to_string <font id="function_arguments">(A : RandomDistType)</font> <font id="function_return">return string</font></li>
+<li>to_string <font id="function_arguments">(A : RandomDistType)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+RandomParm IO</li>
 <li>write <font id="function_arguments">(variable L : inout line ; A : RandomDistType )</font> <font id="function_return">return ()</font></li>
 <li>read <font id="function_arguments">(variable L : inout line ; A : out RandomDistType ; good : out boolean )</font> <font id="function_return">return ()</font></li>
 <li>read <font id="function_arguments">(variable L : inout line ; A : out RandomDistType )</font> <font id="function_return">return ()</font></li>

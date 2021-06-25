@@ -79,7 +79,7 @@
 <td>check_result_tag_c</td>
 <td>string</td>
 <td>check_result_tag</td>
-<td></td>
+<td>Deprecated constant with _c suffix. Use without suffix instead</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
@@ -100,8 +100,12 @@ constant display_format : in deprecated_log_format_t := level;
 constant file_format    : in deprecated_log_format_t := off;
 constant stop_level : in log_level_t := failure;
 constant separator      : in character    := ',';
-constant append         : in boolean      := false)</font> <font id="function_return">return ()</font></li>
-<li>enable_pass_msg <font id="function_arguments">(checker : checker_t; handler : log_handler_t)</font> <font id="function_return">return ()</font></li>
+constant append         : in boolean      := false)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+This checker_init is used to reinitialize the default_checker</li>
+<li>enable_pass_msg <font id="function_arguments">(checker : checker_t; handler : log_handler_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Enabling pass messages is done by setting the log level to pass unlessthe current log level already allows pass messages. Disabling pass messageswill set log level to debug unless the current log level already suppressespass messages.</li>
 <li>disable_pass_msg <font id="function_arguments">(checker : checker_t; handler : log_handler_t)</font> <font id="function_return">return ()</font></li>
 <li>enable_pass_msg <font id="function_arguments">(checker : checker_t)</font> <font id="function_return">return ()</font></li>
 <li>disable_pass_msg <font id="function_arguments">(checker : checker_t)</font> <font id="function_return">return ()</font></li>
@@ -109,7 +113,9 @@ constant append         : in boolean      := false)</font> <font id="function_re
 <li>disable_pass_msg <font id="function_arguments">(handler : log_handler_t)</font> <font id="function_return">return ()</font></li>
 <li>enable_pass_msg <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 <li>disable_pass_msg <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
-<li>checker_found_errors <font id="function_arguments">(    variable result : out boolean)</font> <font id="function_return">return ()</font></li>
+<li>checker_found_errors <font id="function_arguments">(    variable result : out boolean)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+These subprograms can be replaced by calls to get_checker_stat and check for n_failed &gt; 0</li>
 <li>checker_found_errors <font id="function_arguments">(    constant checker : in checker_t;
 variable result : out   boolean)</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

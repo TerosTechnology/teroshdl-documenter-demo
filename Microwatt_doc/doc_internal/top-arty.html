@@ -218,7 +218,7 @@
 <td>uart_main_tx</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>UART0 signals:</td>
 </tr>
 <tr>
 <td>uart_main_rx</td>
@@ -230,7 +230,7 @@
 <td>led0_b</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>LEDs</td>
 </tr>
 <tr>
 <td>led0_g</td>
@@ -272,7 +272,7 @@
 <td>spi_flash_cs_n</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>SPI</td>
 </tr>
 <tr>
 <td>spi_flash_clk</td>
@@ -308,13 +308,13 @@
 <td>shield_io</td>
 <td>inout</td>
 <td>std_ulogic_vector(44 downto 0)</td>
-<td></td>
+<td>GPIO</td>
 </tr>
 <tr>
 <td>eth_ref_clk</td>
 <td>out</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Ethernet</td>
 </tr>
 <tr>
 <td>eth_clocks_tx</td>
@@ -392,7 +392,7 @@
 <td>sdcard_data</td>
 <td>inout</td>
 <td>std_ulogic_vector(3 downto 0)</td>
-<td></td>
+<td>SD card</td>
 </tr>
 <tr>
 <td>sdcard_cmd</td>
@@ -416,7 +416,7 @@
 <td>ddram_a</td>
 <td>out</td>
 <td>std_ulogic_vector(13 downto 0)</td>
-<td></td>
+<td>DRAM wires</td>
 </tr>
 <tr>
 <td>ddram_ba</td>
@@ -526,7 +526,7 @@
 <tr>
 <td>system_clk</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Internal clock signals:</td>
 </tr>
 <tr>
 <td>system_clk_locked</td>
@@ -541,7 +541,7 @@
 <tr>
 <td>wb_ext_io_in</td>
 <td>wb_io_master_out</td>
-<td></td>
+<td>External IOs from the SoC</td>
 </tr>
 <tr>
 <td>wb_ext_io_out</td>
@@ -571,7 +571,7 @@
 <tr>
 <td>wb_dram_in</td>
 <td>wishbone_master_out</td>
-<td></td>
+<td>DRAM main data wishbone connection</td>
 </tr>
 <tr>
 <td>wb_dram_out</td>
@@ -581,12 +581,12 @@
 <tr>
 <td>wb_dram_ctrl_out</td>
 <td>wb_io_slave_out</td>
-<td></td>
+<td>DRAM control wishbone connection</td>
 </tr>
 <tr>
 <td>ext_irq_eth</td>
 <td>std_ulogic</td>
-<td></td>
+<td>LiteEth connection</td>
 </tr>
 <tr>
 <td>wb_eth_out</td>
@@ -596,7 +596,7 @@
 <tr>
 <td>ext_irq_sdcard</td>
 <td>std_ulogic</td>
-<td></td>
+<td>LiteSDCard connection</td>
 </tr>
 <tr>
 <td>wb_sdcard_out</td>
@@ -626,17 +626,17 @@
 <tr>
 <td>wb_sddma_stb_sent</td>
 <td>std_ulogic</td>
-<td></td>
+<td>for conversion from non-pipelined wishbone to pipelined</td>
 </tr>
 <tr>
 <td>core_alt_reset</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Control/status</td>
 </tr>
 <tr>
 <td>led0_b_pwm</td>
 <td>std_ulogic</td>
-<td></td>
+<td>Status LED</td>
 </tr>
 <tr>
 <td>led0_r_pwm</td>
@@ -651,12 +651,12 @@
 <tr>
 <td>pwm_counter</td>
 <td>std_ulogic_vector(8 downto 0)</td>
-<td></td>
+<td>Dumb PWM for the LEDs, those RGB LEDs are too bright otherwise</td>
 </tr>
 <tr>
 <td>spi_sck</td>
 <td>std_ulogic</td>
-<td></td>
+<td>SPI flash</td>
 </tr>
 <tr>
 <td>spi_cs_n</td>
@@ -681,7 +681,7 @@
 <tr>
 <td>gpio_in</td>
 <td>std_ulogic_vector(NGPIO - 1 downto 0)</td>
-<td></td>
+<td>GPIO</td>
 </tr>
 <tr>
 <td>gpio_out</td>
@@ -721,7 +721,9 @@
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font></li>
+<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font><br />
+<strong>Description</strong><br />
+Fixup various memory sizes based on generics</li>
 <li>get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural</font></li>
 </ul><h2 id="processes">Processes</h2>
 <ul>

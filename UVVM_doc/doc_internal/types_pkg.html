@@ -79,7 +79,7 @@
 <td>C_LOG_HDR_FOR_WAVEVIEW_WIDTH</td>
 <td>natural</td>
 <td>100</td>
-<td></td>
+<td>For string in waveview indicating last log header</td>
 </tr>
 <tr>
 <td>C_FLAG_NAME_LENGTH</td>
@@ -103,7 +103,7 @@
 <td>C_INFO_ON_FINISHING_AWAIT_ANY_COMPLETION_VVC_NAME_DEFAULT</td>
 <td>string</td>
 <td>"no await_any_completion() finshed yet\n"</td>
-<td></td>
+<td>defaults for t_uvvm_status and t_info_on_finishing_await_any_completion</td>
 </tr>
 <tr>
 <td>C_UVVM_STATUS_DEFAULT</td>
@@ -167,7 +167,7 @@
 <tr>
 <td>t_natural_vector</td>
 <td></td>
-<td></td>
+<td>Additions to predefined vector types</td>
 </tr>
 <tr>
 <td>t_positive_vector</td>
@@ -177,7 +177,7 @@
 <tr>
 <td>t_info_target</td>
 <td>(LOG_INFO, ALERT_INFO, USER_INFO)</td>
-<td></td>
+<td>Note: Most types below have a matching to_string() in 'string_methods_pkg.vhd'</td>
 </tr>
 <tr>
 <td>t_alert_level</td>
@@ -237,12 +237,12 @@
 <tr>
 <td>t_format_zeros</td>
 <td>(AS_IS, KEEP_LEADING_0, SKIP_LEADING_0)</td>
-<td></td>
+<td>AS_IS is deprecated and will be removed. Use KEEP_LEADING_0.</td>
 </tr>
 <tr>
 <td>t_format_string</td>
 <td>(AS_IS, TRUNCATE, SKIP_LEADING_SPACE)</td>
-<td></td>
+<td>Deprecated, will be removed.</td>
 </tr>
 <tr>
 <td>t_format_spaces</td>
@@ -287,7 +287,7 @@
 <tr>
 <td>t_attention_counters</td>
 <td></td>
-<td></td>
+<td>Only used to build below type</td>
 </tr>
 <tr>
 <td>t_alert_attention_counters</td>
@@ -347,7 +347,7 @@
 <tr>
 <td>t_flag_returning</td>
 <td>(KEEP_UNBLOCKED, RETURN_TO_BLOCK)</td>
-<td></td>
+<td>value after unblock</td>
 </tr>
 <tr>
 <td>t_sync_flag_record</td>
@@ -367,7 +367,7 @@
 <tr>
 <td>t_info_on_finishing_await_any_completion</td>
 <td></td>
-<td></td>
+<td>type for identifying VVC and command index finishing await_any_completion()</td>
 </tr>
 <tr>
 <td>t_uvvm_status</td>
@@ -402,7 +402,7 @@
 <tr>
 <td>t_transaction_result</td>
 <td>(ACK, NAK, ERROR)</td>
-<td></td>
+<td>add more when needed</td>
 </tr>
 <tr>
 <td>t_hierarchy_alert_level_print</td>
@@ -437,7 +437,7 @@
 <tr>
 <td>t_bfm_sync</td>
 <td>(     SYNC_ON_CLOCK_ONLY,     SYNC_WITH_SETUP_AND_HOLD   )</td>
-<td></td>
+<td>TO_FILE and FROM_FILE may be added later on</td>
 </tr>
 <tr>
 <td>t_test_status</td>
@@ -457,7 +457,7 @@
 <tr>
 <td>t_identifier_option</td>
 <td>(ENTRY_NUM, POSITION)</td>
-<td></td>
+<td>Identifier_option: Typically describes what the next parameter means.- ENTRY_NUM :    Incremented for each entry added to the queue.    Unlike POSITION, the ENTRY_NUMBER will stay the same for this entry, even if entries are inserted before this entry- POSITION :    Position of entry in queue, independent of when the entry was inserted.</td>
 </tr>
 <tr>
 <td>t_range_option</td>

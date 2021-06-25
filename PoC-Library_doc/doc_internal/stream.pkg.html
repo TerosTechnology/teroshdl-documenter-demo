@@ -79,7 +79,7 @@
 <td>C_SIM_STREAM_MAX_PATTERN_COUNT</td>
 <td>positive</td>
 <td>128</td>
-<td></td>
+<td>* 1024;                -- max data size per testcase</td>
 </tr>
 <tr>
 <td>C_SIM_STREAM_MAX_FRAMEGROUP_COUNT</td>
@@ -103,7 +103,7 @@
 <td>C_SIM_STREAM_WORD_8_EMPTY</td>
 <td>T_SIM_STREAM_WORD_8</td>
 <td>(Valid =&gt; '0', Data =&gt; (others =&gt; 'U'),    SOF =&gt; '0', EOF =&gt; '0', Ready =&gt; '0', EOFG =&gt; FALSE)</td>
-<td></td>
+<td>define constants (stored in RAMB36's parity-bits)</td>
 </tr>
 <tr>
 <td>C_SIM_STREAM_WORD_32_EMPTY</td>
@@ -189,7 +189,7 @@
 <tr>
 <td>T_SIM_STREAM_WORD_VECTOR_8</td>
 <td></td>
-<td></td>
+<td>define array of datawords</td>
 </tr>
 <tr>
 <td>T_SIM_STREAM_WORD_VECTOR_32</td>
@@ -199,12 +199,12 @@
 <tr>
 <td>T_SIM_STREAM_DIRECTION</td>
 <td>(Send, RECEIVE)</td>
-<td></td>
+<td>define link layer directions</td>
 </tr>
 <tr>
 <td>T_SIM_STREAM_FRAMEGROUP_8</td>
 <td></td>
-<td></td>
+<td>define framegroup information</td>
 </tr>
 <tr>
 <td>T_SIM_STREAM_FRAMEGROUP_32</td>
@@ -214,7 +214,7 @@
 <tr>
 <td>T_SIM_STREAM_FRAMEGROUP_VECTOR_8</td>
 <td></td>
-<td></td>
+<td>define array of framegroups</td>
 </tr>
 <tr>
 <td>T_SIM_STREAM_FRAMEGROUP_VECTOR_32</td>
@@ -246,5 +246,7 @@
 <li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
 <li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return string</font></li>
 <li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return string</font></li>
-<li>sim_CRC8 <font id="function_arguments">(words        : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return std_logic_vector</font></li>
+<li>sim_CRC8 <font id="function_arguments">(words        : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return std_logic_vector</font><br />
+<strong>Description</strong><br />
+checksum functions================================================================</li>
 </ul><br><br><br><br><br><br>

@@ -85,7 +85,7 @@
 <td>memory_logger</td>
 <td>logger_t</td>
 <td>get_logger("vunit_lib:memory_pkg")</td>
-<td></td>
+<td>Default memory logger</td>
 </tr>
 <tr>
 <td>null_buffer</td>
@@ -113,7 +113,7 @@
 <tr>
 <td>memory_t</td>
 <td></td>
-<td></td>
+<td>Memory model object</td>
 </tr>
 <tr>
 <td>permissions_t</td>
@@ -123,12 +123,14 @@
 <tr>
 <td>buffer_t</td>
 <td></td>
-<td></td>
+<td>Reference to an allocated buffer with the memory</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>clear <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font></li>
+<li>clear <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Empties the memory by removing all data and permissions</li>
 <li>write_byte <font id="function_arguments">(memory : memory_t;                       address : natural;
                    byte : byte_t)</font> <font id="function_return">return ()</font></li>
 <li>write_word <font id="function_arguments">(memory : memory_t;                       address : natural;
@@ -137,7 +139,9 @@
 <li>write_integer <font id="function_arguments">(memory : memory_t;                          address : natural;
                       word : integer;
                       bytes_per_word : natural range 1 to 4 := 4;
-                      endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font></li>
+                      endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Write integer</li>
 <li>set_permissions <font id="function_arguments">(memory : memory_t;                            address : natural;
                         permissions : permissions_t)</font> <font id="function_return">return ()</font></li>
 <li>clear_expected_byte <font id="function_arguments">(memory : memory_t;                                address : natural)</font> <font id="function_return">return ()</font></li>
@@ -151,8 +155,16 @@
                              bytes_per_word : natural range 1 to 4 := 4;
                              endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font></li>
 <li>check_expected_was_written <font id="function_arguments">(memory : memory_t;                                       address : natural;
-                                   num_bytes : natural)</font> <font id="function_return">return ()</font></li>
-<li>check_expected_was_written <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font></li>
-<li>check_expected_was_written <font id="function_arguments">(buf : buffer_t)</font> <font id="function_return">return ()</font></li>
-<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t)</font> <font id="function_return">return ()</font></li>
+                                   num_bytes : natural)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Check that all expected bytes within address range was writtenwith correct value</li>
+<li>check_expected_was_written <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Check that all expected bytes within the entire memory was writtenwith correct value</li>
+<li>check_expected_was_written <font id="function_arguments">(buf : buffer_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Check that all expected bytes was written with correct value in buffer</li>
+<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Perform write of one byte without running any address or data checks</li>
 </ul><br><br><br><br><br><br>

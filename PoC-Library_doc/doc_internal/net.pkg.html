@@ -79,7 +79,7 @@
 <td>C_NET_ETH_PREMABLE_LENGTH</td>
 <td>positive</td>
 <td>7</td>
-<td></td>
+<td>limitations</td>
 </tr>
 <tr>
 <td>C_NET_ETH_INTER_FRAME_GAP_LENGTH</td>
@@ -115,7 +115,7 @@
 <td>C_NET_MAC_ADDRESS_EMPTY</td>
 <td>T_NET_MAC_ADDRESS</td>
 <td>(others =&gt; (others =&gt; '0'))</td>
-<td></td>
+<td>predefined constants</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ADDRESS_BROADCAST</td>
@@ -151,13 +151,13 @@
 <td>C_NET_MAC_SFC_TYPE_EMPTY</td>
 <td>T_NET_MAC_SFC_TYPE</td>
 <td>(others =&gt; '0')</td>
-<td></td>
+<td>predefined constants</td>
 </tr>
 <tr>
 <td>C_NET_IPV4_ADDRESS_EMPTY</td>
 <td>T_NET_IPV4_ADDRESS</td>
 <td>(others =&gt; (others =&gt; '0'))</td>
-<td></td>
+<td>predefined constants</td>
 </tr>
 <tr>
 <td>C_NET_IPV4_PROTOCOL_EMPTY</td>
@@ -223,7 +223,7 @@
 <td>C_NET_IPV6_ADDRESS_EMPTY</td>
 <td>T_NET_IPV6_ADDRESS</td>
 <td>(others =&gt; (others =&gt; '0'))</td>
-<td></td>
+<td>predefined constants</td>
 </tr>
 <tr>
 <td>C_NET_IPV6_NEXT_HEADER_EMPTY</td>
@@ -235,307 +235,307 @@
 <td>C_NET_MAC_ETHERNETTYPE_SSFC</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"A987")</td>
-<td></td>
+<td>Andreas Hoeer - SFC Protocol - simple version (length-field, type-field)</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_SWAP</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"FFFE")</td>
-<td></td>
+<td>Xilinx Ethernet Frame Swap Module</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_LOOPBACK</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"FFFF")</td>
-<td></td>
+<td>Frame loopback module</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_IPV4</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"0800")</td>
-<td></td>
+<td>Internet Protocol, Version 4 (IPv4)</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_ARP</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"0806")</td>
-<td></td>
+<td>Address Resolution Protocol (ARP)</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_WOL</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"0842")</td>
-<td></td>
+<td>Wake-on-LAN Magic Packet, as used by ether-wake and Sleep Proxy Service</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_VLAN</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"8100")</td>
-<td></td>
+<td>VLAN-tagged frame (IEEE 802.1Q) &amp; Shortest Path Bridging IEEE 802.1aq[3]</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_SNMP</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"814C")</td>
-<td></td>
+<td>Simple Network Management Protocol (SNMP)[4]</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_IPV6</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"86DD")</td>
-<td></td>
+<td>Internet Protocol, Version 6 (IPv6)</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_MACCONTROL</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"8808")</td>
-<td></td>
+<td>MAC Control</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_JUMBOFRAMES</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"8870")</td>
-<td></td>
+<td>Jumbo Frames</td>
 </tr>
 <tr>
 <td>C_NET_MAC_ETHERNETTYPE_QINQ</td>
 <td>T_NET_MAC_ETHERNETTYPE</td>
 <td>to_net_mac_ethernettype(x"9100")</td>
-<td></td>
+<td>Q-in-Q</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_LOOPBACK</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"FF"</td>
-<td></td>
+<td>(255) - IANA reserved (used for loopback)</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV4</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"04"</td>
-<td></td>
+<td>(    4) - IPv4 Header                                                                   RFC 2003</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPv6</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"29"</td>
-<td></td>
+<td>(   41) - IPv6 Header - IPv6 Encapsulation                      RFC 2473</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_HOP_BY_HOP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"00"</td>
-<td></td>
+<td>(    0) - IPv6 Ext. Header - Hop-by-Hop Option              RFC 2460</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_ROUTING</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"2B"</td>
-<td></td>
+<td>(   43) - IPv6 Ext. Header - Routing Header                     RFC 2460</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_FRAGMENTATION</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"2C"</td>
-<td></td>
+<td>(   44) - IPv6 Ext. Header - Fragmentation Header           RFC 2460</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_ICMP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"3A"</td>
-<td></td>
+<td>ICMPv6        (   58) - Internet Control Message Protocol for IPv6    RFC ----</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_NO_NEXT_HEADER</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"3B"</td>
-<td></td>
+<td>(   59) - IPv6 Ext. Header - No Next Header                     RFC 2460</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IPV6_DEST_OPTIONS</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"3C"</td>
-<td></td>
+<td>(   60) - IPv6 Ext. Header - Destination Options            RFC 2460</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_ICMP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"01"</td>
-<td></td>
+<td>ICMP            (    1) - Internet Control Message Protocol                     RFC  792</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_IGMP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"02"</td>
-<td></td>
+<td>IGMP            (    2) - Internet Group Management Protocol                    RFC 1112</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_TCP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"06"</td>
-<td></td>
+<td>TCP            (    6) - Transmission Control Protocol                             RFC  793</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_SCTP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"84"</td>
-<td></td>
+<td>SCTP         (132) - Stream Control Transmission Protocol                RFC ----</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_UDP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"11"</td>
-<td></td>
+<td>UDP            (   17) - User Datagram Protocol                                            RFC  768</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_UDP_LITE</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"88"</td>
-<td></td>
+<td>UDPLite    (136) - UDP Lite                                                                        RFC 3828</td>
 </tr>
 <tr>
 <td>C_NET_IP_PROTOCOL_L2TP</td>
 <td>T_NET_IP_PROTOCOL</td>
 <td>x"73"</td>
-<td></td>
+<td>L2TP            (115) - Layer Two Tunneling Protocol                                RFC 3931</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_EMPTY</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"00"</td>
-<td></td>
+<td>empty type field</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_ECHO_REPLY</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"00"</td>
-<td></td>
+<td>Echo-Reply</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_DEST_UNREACHABLE</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"03"</td>
-<td></td>
+<td>Destination unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_SOURCE_QUENCH</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"04"</td>
-<td></td>
+<td>Source Quench</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_REDIRECT</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"05"</td>
-<td></td>
+<td>Redirect</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_ECHO_REQUEST</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"08"</td>
-<td></td>
+<td>Echo-Request</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_TIME_EXCEEDED</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"0B"</td>
-<td></td>
+<td>Time Exceeded</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_TYPE_PARAMETER_PROBLEM</td>
 <td>T_NET_ICMPV4_TYPE</td>
 <td>x"0C"</td>
-<td></td>
+<td>Parameter Problem</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_EMPTY</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>empty code field</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_NET_UNREACHABLE</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Network unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_HOST_UNREACHABLE</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"01"</td>
-<td></td>
+<td>Host unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_PROTOCOL_UNREACHABLE</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"02"</td>
-<td></td>
+<td>Protocol unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_PORT_UNREACHABLE</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"03"</td>
-<td></td>
+<td>Port unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_FRAGMENTATION_NEEDED</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"04"</td>
-<td></td>
+<td>Fragmentation needed, but DF set</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_SOURCE_ROUTE_FAILED</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"05"</td>
-<td></td>
+<td>Source route failed</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_TIME_TO_LIVE_EXCEEDED</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Hop limit exceeded in transit</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_FRAG_REASS_TIME_EXCEEDED</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"01"</td>
-<td></td>
+<td>Fragment reassembly time exceeded</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_ECHO_REQUEST</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Echo Request</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV4_CODE_ECHO_REPLY</td>
 <td>T_NET_ICMPV4_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Echo Reply</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_DEST_UNREACHABLE</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"01"</td>
-<td></td>
+<td>Destination unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_PACKET_TOO_BIG</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"02"</td>
-<td></td>
+<td>Packet Too Big</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_TIME_EXCEEDED</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"03"</td>
-<td></td>
+<td>Time Exceeded</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_PARAMETER_PROBLEM</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"04"</td>
-<td></td>
+<td>Parameter Problem</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_ERROR_EXP</td>
@@ -547,13 +547,13 @@
 <td>C_NET_ICMPV6_TYPE_ECHO_REQUEST</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"80"</td>
-<td></td>
+<td>Echo Request</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_ECHO_REPLY</td>
 <td>T_NET_ICMPV6_TYPE</td>
 <td>x"81"</td>
-<td></td>
+<td>Echo Reply</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_TYPE_INFORMANTION_EXP</td>
@@ -565,115 +565,115 @@
 <td>C_NET_ICMPV6_CODE_EMPTY</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>empty code field</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_NO_ROUTE_TO_DEST</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>No route to destination</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_COM_PROHIBITED</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"01"</td>
-<td></td>
+<td>Communication with destination administratively prohibited</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_BEYOND_SCOPE</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"02"</td>
-<td></td>
+<td>Beyond scope of source address</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_ADDRESS_UNREACHABLE</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"03"</td>
-<td></td>
+<td>Address unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_PORT_UNREACHABLE</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"04"</td>
-<td></td>
+<td>Port unreachable</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_ADDRESS_FAILED_POLICY</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"05"</td>
-<td></td>
+<td>Source address failed ingress/egress policy</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_REJECT_ROUTE_TO_DEST</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"06"</td>
-<td></td>
+<td>Reject route to destination</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_PACKET_TOO_BIG</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Packet Too Big</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_HOP_LIMIT_EXCEEDED</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Hop limit exceeded in transit</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_REASS_TIME_EXCEEDED</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"01"</td>
-<td></td>
+<td>Fragment reassembly time exceeded</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_HEADER_FIELD_ERROR</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Erroneous header field encountered</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_NEXT_HEADER_ERROR</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"01"</td>
-<td></td>
+<td>Unrecognized Next Header type encountered</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_IPV6_OPTION_ERROR</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"02"</td>
-<td></td>
+<td>Unrecognized IPv6 option encountered</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_ECHO_REQUEST</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Echo Request</td>
 </tr>
 <tr>
 <td>C_NET_ICMPV6_CODE_ECHO_REPLY</td>
 <td>T_NET_ICMPV6_CODE</td>
 <td>x"00"</td>
-<td></td>
+<td>Echo Reply</td>
 </tr>
 <tr>
 <td>C_NET_TCP_PORTNUMBER_ECHO</td>
 <td>T_NET_TCP_PORT</td>
 <td>x"0007"</td>
-<td></td>
+<td>Echo Protocol (7) - RFC 862</td>
 </tr>
 <tr>
 <td>C_NET_TCP_PORTNUMBER_FTP_DATA</td>
 <td>T_NET_TCP_PORT</td>
 <td>x"0014"</td>
-<td></td>
+<td>FTP Protocol (20) - RFC 765</td>
 </tr>
 <tr>
 <td>C_NET_TCP_PORTNUMBER_FTP_CONTROL</td>
 <td>T_NET_TCP_PORT</td>
 <td>x"0015"</td>
-<td></td>
+<td>FTP Protocol (21) - RFC 765</td>
 </tr>
 <tr>
 <td>C_NET_TCP_PORTNUMBER_LOOPBACK</td>
@@ -731,22 +731,22 @@
 <tr>
 <td>T_NET_ETH_PHY_INTERFACE_GMII</td>
 <td></td>
-<td></td>
+<td>FPGA <=> PHY physical interface: GMII (Gigabit Media Independant Interface)</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_INTERFACE_RGMII</td>
 <td></td>
-<td></td>
+<td>FPGA <=> PHY physical interface: RGMII (Reduced Gigabit Media Independant Interface)</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_INTERFACE_SGMII</td>
 <td></td>
-<td></td>
+<td>FPGA <=> PHY physical interface: SGMII (Serial GMII)</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_INTERFACE_MDIO</td>
 <td></td>
-<td></td>
+<td>FPGA <=> PHY management interface: MDIO (Management Data Input/Output)</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_INTERFACE_COMMON</td>
@@ -756,27 +756,27 @@
 <tr>
 <td>T_NET_ETH_PHY_INTERFACES</td>
 <td></td>
-<td></td>
+<td>combined interface definition - union-types are still not supported in VHDL</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_SYNC_STATUS</td>
 <td>(         NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL,        NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK   )</td>
-<td></td>
+<td>==========================================================================================================================================================Ethernet: physical coding sublayer (PCS)==========================================================================================================================================================1000BASE-X - synchronization</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS</td>
 <td>(         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE,         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG,       NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA  )</td>
-<td></td>
+<td>1000BASE-X - autonegotiation</td>
 </tr>
 <tr>
 <td>T_NET_ETH_RS_DATA_INTERFACE</td>
 <td>(         NET_ETH_RS_DATA_INTERFACE_MII,      NET_ETH_RS_DATA_INTERFACE_GMII,         NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER   )</td>
-<td></td>
+<td>==========================================================================================================================================================Ethernet: reconcilation sublayer (RS)==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_COMMAND</td>
 <td>(         NET_ETH_CMD_NONE,       NET_ETH_CMD_HARD_RESET,         NET_ETH_CMD_SOFT_RESET,         NET_ETH_CMD_POWER_DOWN,         NET_ETH_CMD_POWER_UP    )</td>
-<td></td>
+<td>==========================================================================================================================================================Ethernet: MAC Control-Layer==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_STATUS</td>
@@ -791,7 +791,7 @@
 <tr>
 <td>T_NET_MAC_ADDRESS</td>
 <td></td>
-<td></td>
+<td>==========================================================================================================================================================Ethernet: MAC Data-Link-Layer==========================================================================================================================================================types</td>
 </tr>
 <tr>
 <td>T_NET_MAC_ETHERNETTYPE</td>
@@ -801,7 +801,7 @@
 <tr>
 <td>T_NET_MAC_ADDRESS_VECTOR</td>
 <td></td>
-<td></td>
+<td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_MAC_ETHERNETTYPE_VECTOR</td>
@@ -811,7 +811,7 @@
 <tr>
 <td>T_NET_MAC_INTERFACE</td>
 <td></td>
-<td></td>
+<td>==========================================================================================================================================================ETH_Wrapper: configuration data structures==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_MAC_INTERFACE_VECTOR</td>
@@ -826,17 +826,17 @@
 <tr>
 <td>T_NET_MAC_CONFIGURATION_VECTOR</td>
 <td></td>
-<td></td>
+<td>arrays</td>
 </tr>
 <tr>
 <td>T_ETH_SFC_TYPE_VECTOR</td>
 <td></td>
-<td></td>
+<td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_IPV4_ADDRESS</td>
 <td></td>
-<td></td>
+<td>==========================================================================================================================================================internet layer: Internet Protocol Version 4 (IPv4)==========================================================================================================================================================types</td>
 </tr>
 <tr>
 <td>T_NET_IPV4_TYPE_OF_SERVICE</td>
@@ -846,7 +846,7 @@
 <tr>
 <td>T_NET_IPV4_ADDRESS_VECTOR</td>
 <td></td>
-<td></td>
+<td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_IPV4_PROTOCOL_VECTOR</td>
@@ -861,7 +861,7 @@
 <tr>
 <td>T_NET_IPV6_ADDRESS</td>
 <td></td>
-<td></td>
+<td>==========================================================================================================================================================internet layer: Internet Protocol Version 6 (IPv6)==========================================================================================================================================================types</td>
 </tr>
 <tr>
 <td>T_NET_IPV6_PREFIX</td>
@@ -871,7 +871,7 @@
 <tr>
 <td>T_NET_IPV6_ADDRESS_VECTOR</td>
 <td></td>
-<td></td>
+<td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_IPV6_PREFIX_VECTOR</td>
@@ -886,12 +886,12 @@
 <tr>
 <td>T_NET_ARP_ARPCACHE_COMMAND</td>
 <td>(         NET_ARP_ARPCACHE_CMD_NONE,      NET_ARP_ARPCACHE_CMD_CLEAR,         NET_ARP_ARPCACHE_CMD_ADD        NET_ARP_ARPCACHE_CMD_INVALIDATE     )</td>
-<td></td>
+<td>==========================================================================================================================================================internet layer: Address Resolution Protocol (ARP)==========================================================================================================================================================commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_STATUS</td>
 <td>(         NET_ARP_ARPCACHE_STATUS_IDLE,       NET_ARP_ARPCACHE_STATUS_UPDATING,       NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE     )</td>
-<td></td>
+<td>status</td>
 </tr>
 <tr>
 <td>T_NET_ARP_IPPOOL_COMMAND</td>
@@ -911,17 +911,17 @@
 <tr>
 <td>T_NET_ARP_TESTER_COMMAND</td>
 <td>(         NET_ARP_TESTER_CMD_NONE,        NET_ARP_TESTER_CMD_LOOP     )</td>
-<td></td>
+<td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_TESTER_STATUS</td>
 <td>(         NET_ARP_TESTER_STATUS_IDLE,         NET_ARP_TESTER_STATUS_TESTING,      NET_ARP_TESTER_STATUS_TEST_COMPLETE     )</td>
-<td></td>
+<td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_COMMAND</td>
 <td>(         NET_ICMPV4_CMD_NONE,        NET_ICMPV4_CMD_ECHO_REQUEST     )</td>
-<td></td>
+<td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_COMMAND</td>
@@ -936,7 +936,7 @@
 <tr>
 <td>T_NET_ICMPV4_STATUS</td>
 <td>(         NET_ICMPV4_STATUS_IDLE,         NET_ICMPV4_STATUS_SENDING,      NET_ICMPV4_STATUS_SEND_COMPLETE,        NET_ICMPV4_STATUS_ERROR     )</td>
-<td></td>
+<td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_STATUS</td>
@@ -951,7 +951,7 @@
 <tr>
 <td>T_NET_ICMPV4_ERROR</td>
 <td>(         NET_ICMPV4_ERROR_NONE,      NET_ICMPV4_ERROR_TIMEOUT,       NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE,      NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED,         NET_ICMPV4_ERROR_FSM    )</td>
-<td></td>
+<td>errors</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_ERROR</td>
@@ -966,7 +966,7 @@
 <tr>
 <td>T_NET_NDP_DESTINATIONCACHE_LINE</td>
 <td></td>
-<td></td>
+<td>==========================================================================================================================================================internet layer: Neighbor Discovery Protocol (NDP)==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_NDP_NEIGHBORCACHE_LINE</td>
@@ -1001,11 +1001,15 @@
 </tbody>
 </table><h2 id="functions">Functions</h2>
 <ul>
-<li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE</font></li>
+<li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE</font><br />
+<strong>Description</strong><br />
+==========================================================================================================================================================Ethernet: ????????????????????==========================================================================================================================================================</li>
 <li>to_net_eth_PHYDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DATA_INTERFACE</font></li>
 <li>to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE</font></li>
 <li>to_net_eth_PHYDevice <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DEVICE</font></li>
-<li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
+<li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font><br />
+<strong>Description</strong><br />
+type conversion functions</li>
 <li>to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
 <li>to_net_mac_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
 <li>to_net_mac_ethernettype <font id="function_arguments">(slv : T_SLV_16)</font> <font id="function_return">return T_NET_MAC_ETHERNETTYPE</font></li>
@@ -1015,15 +1019,21 @@
 <li>to_slvv_8 <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return T_SLVV_8</font></li>
 <li>to_string <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return string</font></li>
 <li>to_string <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return string</font></li>
-<li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return positive</font></li>
-<li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font></li>
+<li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return positive</font><br />
+<strong>Description</strong><br />
+functions</li>
+<li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font><br />
+<strong>Description</strong><br />
+type conversion functions</li>
 <li>to_net_ipv4_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font></li>
 <li>to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8)</font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE</font></li>
 <li>to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
 <li>to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE)</font> <font id="function_return">return std_logic_vector</font></li>
 <li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
 <li>to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return string</font></li>
-<li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font></li>
+<li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font><br />
+<strong>Description</strong><br />
+type conversion functions</li>
 <li>to_net_ipv6_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font></li>
 <li>to_net_ipv6_prefix <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_PREFIX</font></li>
 <li>to_slv <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>

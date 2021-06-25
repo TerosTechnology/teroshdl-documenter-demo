@@ -79,7 +79,7 @@
 <td>expect_msg</td>
 <td>msg_type_t</td>
 <td>new_msg_type("expect")</td>
-<td></td>
+<td>Private message type definitions</td>
 </tr>
 </tbody>
 </table>
@@ -104,6 +104,10 @@
 <li>expect <font id="function_arguments">(signal net : inout network_t;                   signal_checker : signal_checker_t;
                value : std_logic_vector;
                event_time : delay_length;
-               margin : delay_length := 0 ns)</font> <font id="function_return">return ()</font></li>
-<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;                            signal_checker : signal_checker_t)</font> <font id="function_return">return ()</font></li>
+               margin : delay_length := 0 ns)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Add one value to the expect queueAllow event to occur within event_time += margin including end points</li>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;                            signal_checker : signal_checker_t)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Wait until all expected values have been checked</li>
 </ul><br><br><br><br><br><br>

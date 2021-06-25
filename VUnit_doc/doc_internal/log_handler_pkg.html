@@ -85,7 +85,7 @@
 <td>stdout_file_name</td>
 <td>string</td>
 <td>"&gt;1"</td>
-<td></td>
+<td>File name used by the display handler</td>
 </tr>
 <tr>
 <td>null_file_name</td>
@@ -113,7 +113,7 @@
 <tr>
 <td>log_handler_t</td>
 <td></td>
-<td></td>
+<td>Log handler record, all fields are private</td>
 </tr>
 <tr>
 <td>log_handler_vec_t</td>
@@ -124,9 +124,13 @@
 </table><h2 id="functions">Functions</h2>
 <ul>
 <li>set_format <font id="function_arguments">(log_handler : log_handler_t;                       format : log_format_t;
-                   use_color : boolean := false)</font> <font id="function_return">return ()</font></li>
+                   use_color : boolean := false)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set the format to be used by the log handler</li>
 <li>get_format <font id="function_arguments">(constant log_handler : in log_handler_t;                       variable format : out log_format_t;
-                   variable use_color : out boolean)</font> <font id="function_return">return ()</font></li>
+                   variable use_color : out boolean)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Get the format used by the log handler</li>
 <li>update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t; value : natural)</font> <font id="function_return">return ()</font></li>
 <li>log_to_handler <font id="function_arguments">(log_handler : log_handler_t;                           logger_name : string;
                        msg : string;

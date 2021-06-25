@@ -77,7 +77,7 @@
 <tr>
 <td>T_SIM_WAVEFORM_TUPLE_SL</td>
 <td></td>
-<td></td>
+<td>waveform description===========================================================================</td>
 </tr>
 <tr>
 <td>T_SIM_WAVEFORM_TUPLE_SLV_8</td>
@@ -112,7 +112,7 @@
 <tr>
 <td>T_SIM_WAVEFORM_SL</td>
 <td></td>
-<td></td>
+<td>use predefined physical type TIME here</td>
 </tr>
 <tr>
 <td>T_SIM_WAVEFORM_SLV_8</td>
@@ -181,7 +181,9 @@
 <li>simGenerateWaveform <font id="function_arguments">(        signal   Wave                   : out   boolean;
     constant Waveform           : in    T_SIM_WAVEFORM;
     constant InitialValue   : in    boolean                 := FALSE
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+waveform generation procedures===========================================================================TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others =&gt; 'U') ?</li>
 <li>simGenerateWaveform <font id="function_arguments">(        constant TestID             : in    T_SIM_TEST_ID;
     signal   Wave                   : out   boolean;
     constant Waveform           : in    T_SIM_WAVEFORM;
@@ -259,7 +261,9 @@
     constant Waveform           : in    T_SIM_WAVEFORM_SLV_64;
     constant InitialValue   : in    T_SLV_64                := (others => '0')
 )</font> <font id="function_return">return ()</font></li>
-<li>to_waveform <font id="function_arguments">(bv : bit_vector; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM</font></li>
+<li>to_waveform <font id="function_arguments">(bv : bit_vector; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM</font><br />
+<strong>Description</strong><br />
+function "&lt;" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;convert arrays to waveformsTODO: optimize waveform if input data doesn't changeTODO: write single bit variant</li>
 <li>to_waveform <font id="function_arguments">(slv : std_logic_vector; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SL</font></li>
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_8; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_8</font></li>
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_16; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_16</font></li>
@@ -267,5 +271,7 @@
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_32; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_32</font></li>
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_48; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_48</font></li>
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_64; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_64</font></li>
-<li>simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns; ResetPulse : time := 10 ns)</font> <font id="function_return">return T_SIM_WAVEFORM</font></li>
+<li>simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns; ResetPulse : time := 10 ns)</font> <font id="function_return">return T_SIM_WAVEFORM</font><br />
+<strong>Description</strong><br />
+predefined common waveforms</li>
 </ul><br><br><br><br><br><br>

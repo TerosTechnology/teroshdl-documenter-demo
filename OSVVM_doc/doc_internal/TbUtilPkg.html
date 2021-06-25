@@ -85,7 +85,7 @@
 <td>t_sim_resolution</td>
 <td>time</td>
 <td>std.env.resolution_limit</td>
-<td></td>
+<td>VHDL-2008</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2>
@@ -132,14 +132,26 @@ constant Polarity  : In  std_logic := '1'
 signal Clk     : In  std_logic ;
 signal Rdy     : In  std_logic ;
 signal IntReq  : In  std_logic 
-)</font> <font id="function_return">return ()</font></li>
-<li>StartTransaction <font id="function_arguments">( signal Ack : Out std_logic )</font> <font id="function_return">return ()</font></li>
-<li>FinishTransaction <font id="function_arguments">( signal Ack : Out std_logic )</font> <font id="function_return">return ()</font></li>
-<li>TransactionPending <font id="function_arguments">( signal Rdy : In  std_logic )</font> <font id="function_return">return boolean</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Variation for model that stops waiting when IntReq is asserted<br />
+Intended for models that need to switch between instruction streams<br />
+such as a CPU when interrupt is pending</li>
+<li>StartTransaction <font id="function_arguments">( signal Ack : Out std_logic )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set Ack to Model starting value</li>
+<li>FinishTransaction <font id="function_arguments">( signal Ack : Out std_logic )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Set Ack to Model finishing value</li>
+<li>TransactionPending <font id="function_arguments">( signal Rdy : In  std_logic )</font> <font id="function_return">return boolean</font><br />
+<strong>Description</strong><br />
+If a transaction is pending, return true</li>
 <li>WaitForTransaction <font id="function_arguments">( 
 signal Rdy : In  std_logic ; 
 signal Ack : Out std_logic 
-)</font> <font id="function_return">return ()</font></li>
+)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Variation for clockless models</li>
 <li>Toggle <font id="function_arguments">(
 signal Sig        : InOut std_logic ;
 constant DelayVal : time  
@@ -148,22 +160,34 @@ constant DelayVal : time
 <li>ToggleHS <font id="function_arguments">( signal Sig : InOut std_logic )</font> <font id="function_return">return ()</font></li>
 <li>IsToggle <font id="function_arguments">( signal Sig : In std_logic )</font> <font id="function_return">return boolean</font></li>
 <li>WaitForToggle <font id="function_arguments">( signal Sig : In std_logic )</font> <font id="function_return">return ()</font></li>
-<li>Toggle <font id="function_arguments">( signal Sig : InOut bit ; constant DelayVal : time )</font> <font id="function_return">return ()</font></li>
+<li>Toggle <font id="function_arguments">( signal Sig : InOut bit ; constant DelayVal : time )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Bit type versions</li>
 <li>Toggle <font id="function_arguments">( signal Sig : InOut bit )</font> <font id="function_return">return ()</font></li>
 <li>ToggleHS <font id="function_arguments">( signal Sig : InOut bit )</font> <font id="function_return">return ()</font></li>
 <li>IsToggle <font id="function_arguments">( signal Sig : In bit )</font> <font id="function_return">return boolean</font></li>
 <li>WaitForToggle <font id="function_arguments">( signal Sig : In bit )</font> <font id="function_return">return ()</font></li>
-<li>Increment <font id="function_arguments">( signal Sig : InOut integer ; constant RollOverValue : in integer := 0)</font> <font id="function_return">return ()</font></li>
+<li>Increment <font id="function_arguments">( signal Sig : InOut integer ; constant RollOverValue : in integer := 0)</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Integer type versions</li>
 <li>Increment <font id="function_arguments">(constant Sig : in integer ; constant Amount : in integer := 1)</font> <font id="function_return">return integer</font></li>
 <li>WaitForToggle <font id="function_arguments">( signal Sig : In integer )</font> <font id="function_return">return ()</font></li>
 <li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut std_logic )</font> <font id="function_return">return ()</font></li>
 <li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut std_logic ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1')</font> <font id="function_return">return ()</font></li>
 <li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut std_logic ; constant TimeOut : time )</font> <font id="function_return">return ()</font></li>
-<li>resolved_barrier <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font></li>
-<li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut integer )</font> <font id="function_return">return ()</font></li>
+<li>resolved_barrier <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font><br />
+<strong>Description</strong><br />
+resolved_barrier : summing resolution used in conjunction with integer based barriers</li>
+<li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut integer )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Usage of integer barriers requires resolved_barrier. Initialization to 1 recommended, but not required<br />
+signal barrier1 : resolved_barrier integer := 1 ;     -- using the resolution function<br />
+signal barrier2 : integer_barrier := 1 ;              -- using the subtype that already applies the resolution function</li>
 <li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut integer ; signal TimeOut : std_logic ; constant Polarity : in std_logic := '1')</font> <font id="function_return">return ()</font></li>
 <li>WaitForBarrier <font id="function_arguments">( signal Sig : InOut integer ; constant TimeOut : time )</font> <font id="function_return">return ()</font></li>
-<li>WaitForBarrier2 <font id="function_arguments">( signal SyncOut : out std_logic ; signal SyncIn : in  std_logic )</font> <font id="function_return">return ()</font></li>
+<li>WaitForBarrier2 <font id="function_arguments">( signal SyncOut : out std_logic ; signal SyncIn : in  std_logic )</font> <font id="function_return">return ()</font><br />
+<strong>Description</strong><br />
+Using separate signals</li>
 <li>WaitForBarrier2 <font id="function_arguments">( signal SyncOut : out std_logic ; signal SyncInV : in  std_logic_vector )</font> <font id="function_return">return ()</font></li>
 <li>WaitForClock <font id="function_arguments">( signal Clk : in std_logic ;  constant Delay : in time )</font> <font id="function_return">return ()</font></li>
 <li>WaitForClock <font id="function_arguments">( signal Clk : in std_logic ;  constant NumberOfClocks : in integer := 1)</font> <font id="function_return">return ()</font></li>

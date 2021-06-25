@@ -75,13 +75,17 @@ scope      : string
 width     : natural := 0;
 justified : side := RIGHT;
 format: t_format_string := AS_IS  No defaults on 4 first param - to avoid ambiguity with std.textio
-)</font> <font id="function_return">return string</font></li>
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+DEPRECATED.Function will be removed in future versions of UVVM-Util</li>
 <li>justify <font id="function_arguments">(    val             : string;
 justified       : side;
 width           : natural;
 format_spaces   : t_format_spaces;
 truncate        : t_truncate_string
-)</font> <font id="function_return">return string</font></li>
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+DEPRECATED.Function will be removed in future versions of UVVM-Util</li>
 <li>justify <font id="function_arguments">(    val             : string;
 justified       : t_justify_center;
 width           : natural;
@@ -165,12 +169,16 @@ truncate        : t_truncate_string := DISALLOW_TRUNCATE
 width     : natural;
 justified : side        := right;
 format: t_format_string := AS_IS
-)</font> <font id="function_return">return string</font></li>
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+This function has been deprecated and will be removed in the next major releaseDEPRECATED</li>
 <li>to_string <font id="function_arguments">(    val       : integer;
 width     : natural;
 justified : side            := right;
 format    : t_format_string := AS_IS
-)</font> <font id="function_return">return string</font></li>
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+This function has been deprecated and will be removed in the next major releaseDEPRECATED</li>
 <li>to_string <font id="function_arguments">(    val     : std_logic_vector;
 radix   : t_radix;
 format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
@@ -233,9 +241,13 @@ ascii_allow : t_ascii_allow := ALLOW_ALL
 <li>char_to_ascii <font id="function_arguments">(    char   : character
 )</font> <font id="function_return">return integer</font></li>
 <li>to_string <font id="function_arguments">(    val : string
-)</font> <font id="function_return">return string</font></li>
+)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+return string with only valid ascii characters</li>
 <li>add_msg_delimiter <font id="function_arguments">(    msg : string
 )</font> <font id="function_return">return string</font></li>
 <li>timestamp_header <font id="function_arguments">(    value : time;
-txt   : string)</font> <font id="function_return">return string</font></li>
+txt   : string)</font> <font id="function_return">return string</font><br />
+<strong>Description</strong><br />
+Returns a string with a timestamp and a text. Used in report headers</li>
 </ul><br><br><br><br><br><br>
