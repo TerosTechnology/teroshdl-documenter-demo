@@ -10,12 +10,16 @@
     justified : side := RIGHT;
     format: t_format_string := AS_IS  No defaults on 4 first param - to avoid ambiguity with std.textio
     )</font> <font id="function_return">return string</font>
+**Description**
+DEPRECATED.Function will be removed in future versions of UVVM-Util
 - justify <font id="function_arguments">(    val             : string;
     justified       : side;
     width           : natural;
     format_spaces   : t_format_spaces;
     truncate        : t_truncate_string
     )</font> <font id="function_return">return string</font>
+**Description**
+DEPRECATED.Function will be removed in future versions of UVVM-Util
 - justify <font id="function_arguments">(    val             : string;
     justified       : t_justify_center;
     width           : natural;
@@ -100,11 +104,15 @@
     justified : side        := right;
     format: t_format_string := AS_IS
     )</font> <font id="function_return">return string</font>
+**Description**
+This function has been deprecated and will be removed in the next major releaseDEPRECATED
 - to_string <font id="function_arguments">(    val       : integer;
     width     : natural;
     justified : side            := right;
     format    : t_format_string := AS_IS
     )</font> <font id="function_return">return string</font>
+**Description**
+This function has been deprecated and will be removed in the next major releaseDEPRECATED
 - to_string <font id="function_arguments">(    val     : std_logic_vector;
     radix   : t_radix;
     format  : t_format_zeros := KEEP_LEADING_0;   | SKIP_LEADING_0
@@ -168,7 +176,11 @@
     )</font> <font id="function_return">return integer</font>
 - to_string <font id="function_arguments">(    val : string
     )</font> <font id="function_return">return string</font>
+**Description**
+return string with only valid ascii characters
 - add_msg_delimiter <font id="function_arguments">(    msg : string
   )</font> <font id="function_return">return string</font>
 - timestamp_header <font id="function_arguments">(    value : time;
     txt   : string)</font> <font id="function_return">return string</font>
+**Description**
+Returns a string with a timestamp and a text. Used in report headers

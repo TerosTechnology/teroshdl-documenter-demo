@@ -16,6 +16,8 @@
     allow_disabled_failures : boolean := false;
     fail_on_warning : boolean := false)</font> <font id="function_return">return ()</font>
 - set_timeout <font id="function_arguments">(signal runner : inout runner_sync_t;                        constant timeout : in time)</font> <font id="function_return">return ()</font>
+**Description**
+Set watchdog timeout dynamically relative to current timeOverrides time argument to test_runner_watchdog procedure
 - test_runner_watchdog <font id="function_arguments">(    signal runner                    : inout runner_sync_t;
     constant timeout                 : in    time;
     constant do_runner_cleanup : boolean := true)</font> <font id="function_return">return ()</font>
@@ -49,3 +51,5 @@
 - entry_gate <font id="function_arguments">(    signal runner : inout runner_sync_t)</font> <font id="function_return">return ()</font>
 - exit_gate <font id="function_arguments">(    signal runner : in runner_sync_t)</font> <font id="function_return">return ()</font>
 - notify <font id="function_arguments">(signal runner : inout runner_sync_t;                   idx : natural := runner_event_idx)</font> <font id="function_return">return ()</font>
+**Description**
+Private

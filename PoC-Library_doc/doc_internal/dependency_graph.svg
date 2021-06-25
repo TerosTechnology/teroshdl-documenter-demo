@@ -680,7 +680,7 @@
 <text text-anchor="middle" x="9001.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ddrio_in_altera.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in_altera.vhdl -->
-<g id="edge14" class="edge">
+<g id="edge15" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in_altera.vhdl</title>
 <path fill="none" stroke="#000000" d="M9059.1902,-287.8314C9049.8886,-279.1337 9038.6002,-268.5783 9028.492,-259.1265"/>
 <polygon fill="#000000" stroke="#000000" points="9030.7395,-256.4363 9021.0447,-252.1628 9025.9585,-261.5493 9030.7395,-256.4363"/>
@@ -694,7 +694,7 @@
 <text text-anchor="middle" x="9155.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ddrio_in_xilinx.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in_xilinx.vhdl -->
-<g id="edge15" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_in_xilinx.vhdl</title>
 <path fill="none" stroke="#000000" d="M9098.051,-287.8314C9107.3526,-279.1337 9118.641,-268.5783 9128.7492,-259.1265"/>
 <polygon fill="#000000" stroke="#000000" points="9131.2827,-261.5493 9136.1965,-252.1628 9126.5017,-256.4363 9131.2827,-261.5493"/>
@@ -752,7 +752,7 @@
 <text text-anchor="middle" x="9661.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ddrio_out_altera.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out_altera.vhdl -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out_altera.vhdl</title>
 <path fill="none" stroke="#000000" d="M9722.1809,-287.8314C9712.3001,-279.0485 9700.2882,-268.3712 9689.5756,-258.8489"/>
 <polygon fill="#000000" stroke="#000000" points="9691.8532,-256.1906 9682.0538,-252.1628 9687.2026,-261.4224 9691.8532,-256.1906"/>
@@ -766,7 +766,7 @@
 <text text-anchor="middle" x="9824.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ddrio_out_xilinx.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out_xilinx.vhdl -->
-<g id="edge19" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/io/ddrio/ddrio_out_xilinx.vhdl</title>
 <path fill="none" stroke="#000000" d="M9763.3127,-287.8314C9773.3154,-279.0485 9785.4756,-268.3712 9796.3205,-258.8489"/>
 <polygon fill="#000000" stroke="#000000" points="9798.73,-261.3909 9803.9352,-252.1628 9794.1114,-256.1308 9798.73,-261.3909"/>
@@ -1346,7 +1346,7 @@
 <text text-anchor="middle" x="17281.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">sync_Pulse_Altera.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse_Altera.vhdl -->
-<g id="edge34" class="edge">
+<g id="edge33" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse_Altera.vhdl</title>
 <path fill="none" stroke="#000000" d="M17348.1621,-287.8314C17337.2001,-278.9632 17323.8507,-268.1637 17311.9941,-258.5718"/>
 <polygon fill="#000000" stroke="#000000" points="17314.0477,-255.7313 17304.0719,-252.1628 17309.6451,-261.1734 17314.0477,-255.7313"/>
@@ -1360,7 +1360,7 @@
 <text text-anchor="middle" x="17459.6206" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">sync_Pulse_Xilinx.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse_Xilinx.vhdl -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/PoC/src/misc/sync/sync_Pulse_Xilinx.vhdl</title>
 <path fill="none" stroke="#000000" d="M17393.0791,-287.8314C17404.0411,-278.9632 17417.3905,-268.1637 17429.2471,-258.5718"/>
 <polygon fill="#000000" stroke="#000000" points="17431.5961,-261.1734 17437.1693,-252.1628 17427.1935,-255.7313 17431.5961,-261.1734"/>

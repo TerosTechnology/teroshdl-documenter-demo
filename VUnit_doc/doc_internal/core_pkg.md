@@ -5,6 +5,8 @@
 - test_suite_done <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - stop <font id="function_arguments">(status : natural)</font> <font id="function_return">return ()</font>
 - core_failure <font id="function_arguments">(msg : string)</font> <font id="function_return">return ()</font>
+**Description**
+@TODO add core acceptance tests
 - mock_core_failure <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - check_core_failure <font id="function_arguments">(msg : string := "")</font> <font id="function_return">return ()</font>
 - unmock_core_failure <font id="function_arguments">()</font> <font id="function_return">return ()</font>

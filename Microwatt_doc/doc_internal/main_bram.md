@@ -1,6 +1,8 @@
 # Entity: main_bram
 ## Diagram
 ![Diagram](main_bram.svg "Diagram")
+## Description
+Single port Block RAM with one cycle output buffer
 ## Generics
 | Generic name  | Type    | Value | Description |
 | ------------- | ------- | ----- | ----------- |
@@ -19,18 +21,18 @@
 | re        | in        | std_ulogic                                 |             |
 | we        | in        | std_ulogic                                 |             |
 ## Signals
-| Name   | Type                               | Description |
-| ------ | ---------------------------------- | ----------- |
-| memory | ram_t                              |             |
-| obuf   | std_logic_vector(WIDTH-1 downto 0) |             |
+| Name   | Type                               | Description  |
+| ------ | ---------------------------------- | ------------ |
+| memory | ram_t                              | RAM instance |
+| obuf   | std_logic_vector(WIDTH-1 downto 0) | Others       |
 ## Constants
 | Name        | Type    | Value      | Description |
 | ----------- | ------- | ---------- | ----------- |
 | WIDTH_BYTES | natural |  WIDTH / 8 |             |
 ## Types
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| ram_t |      |             |
+| Name  | Type | Description         |
+| ----- | ---- | ------------------- |
+| ram_t |      | RAM type definition |
 ## Functions
 ## Processes
 - memory_0: _( clk )_

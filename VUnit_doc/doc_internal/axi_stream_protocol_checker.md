@@ -1,6 +1,11 @@
 # Entity: axi_stream_protocol_checker
 ## Diagram
 ![Diagram](axi_stream_protocol_checker.svg "Diagram")
+## Description
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at http://mozilla.org/MPL/2.0/.
+Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
 | Generic name     | Type                          | Value | Description |
 | ---------------- | ----------------------------- | ----- | ----------- |
@@ -61,8 +66,24 @@
 | rule22_checker | checker_t |  new_checker(get_name(protocol_checker.p_logger) & ":rule 22") |             |
 ## Processes
 - unnamed: _(  )_
+AXI4STREAM_RECS_TREADY_MAX_WAIT Recommended that TREADY is asserted within
+MAXWAITS cycles of TVALID being asserted
+
+**Description**
+AXI4STREAM_RECS_TREADY_MAX_WAIT Recommended that TREADY is asserted within
+MAXWAITS cycles of TVALID being asserted
 
 - unnamed: _(  )_
+AXI4STREAM_AUXM_TID_TDTEST_WIDTH  The value of ID_WIDTH + DEST_WIDTH must not exceed 24
+eschmidscs: Must wait a short while to allow testing of the rule.
+
+**Description**
+AXI4STREAM_AUXM_TID_TDTEST_WIDTH  The value of ID_WIDTH + DEST_WIDTH must not exceed 24
+eschmidscs: Must wait a short while to allow testing of the rule.
 
 - unnamed: _( aclk )_
+AXI4STREAM_ERRM_TVALID_RESET TVALID is LOW for the first cycle after ARESETn goes HIGH
+
+**Description**
+AXI4STREAM_ERRM_TVALID_RESET TVALID is LOW for the first cycle after ARESETn goes HIGH
 

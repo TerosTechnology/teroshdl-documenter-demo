@@ -7,7 +7,7 @@
 | C_ADDR_TX_DATA       | integer |  2    |             |
 | C_ADDR_TX_READY      | integer |  3    |             |
 ## Types
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| t_p2c |      |             |
-| t_c2p |      |             |
+| Name  | Type | Description              |
+| ----- | ---- | ------------------------ |
+| t_p2c |      | Signals from pif to core |
+| t_c2p |      | Signals from core to PIF |

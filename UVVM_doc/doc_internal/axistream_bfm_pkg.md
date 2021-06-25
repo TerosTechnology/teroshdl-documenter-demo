@@ -1,24 +1,24 @@
 # Package: axistream_bfm_pkg
 ## Constants
-| Name                           | Type                   | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
-| ------------------------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| C_SCOPE                        | string                 |  "AXISTREAM_BFM"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
-| C_MAX_TUSER_BITS               | positive               |  8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |             |
-| C_MAX_TSTRB_BITS               | positive               |  32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |             |
-| C_MAX_TID_BITS                 | positive               |  8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |             |
-| C_MAX_TDEST_BITS               | positive               |  4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |             |
-| C_RANDOM                       | integer                |  -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |             |
-| C_MULTIPLE_RANDOM              | integer                |  -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |             |
-| C_AXISTREAM_BFM_CONFIG_DEFAULT | t_axistream_bfm_config |  (     max_wait_cycles                => 100,     max_wait_cycles_severity       => ERROR,     clock_period                   => -1 ns,     clock_period_margin            => 0 ns,     clock_margin_severity          => TB_ERROR,     setup_time                     => -1 ns,     hold_time                      => -1 ns,     bfm_sync                       => SYNC_ON_CLOCK_ONLY,     match_strictness               => MATCH_EXACT,     byte_endianness                => LOWER_BYTE_LEFT,     valid_low_at_word_num          => 0,     valid_low_multiple_random_prob => 0.5,     valid_low_duration             => 0,     valid_low_max_random_duration  => 5,     check_packet_length            => false,     protocol_error_severity        => ERROR,     ready_low_at_word_num          => 0,     ready_low_multiple_random_prob => 0.5,     ready_low_duration             => 0,     ready_low_max_random_duration  => 5,     ready_default_value            => '0',     id_for_bfm                     => ID_BFM     ) |             |
+| Name                           | Type                   | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description                                                                                                         |
+| ------------------------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| C_SCOPE                        | string                 |  "AXISTREAM_BFM"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                                     |
+| C_MAX_TUSER_BITS               | positive               |  8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | C_MAX_*_BITS : Maximum number of bits per data word supported by the BFM.These constant can be increased as needed. |
+| C_MAX_TSTRB_BITS               | positive               |  32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Must be large enough for number of data bytes per transfer, C_MAX_TSTRB_BITS >= tdata/8                             |
+| C_MAX_TID_BITS                 | positive               |  8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Recommended maximum in protocol specification (ARM IHI0051A)                                                        |
+| C_MAX_TDEST_BITS               | positive               |  4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Recommended maximum in protocol specification (ARM IHI0051A)                                                        |
+| C_RANDOM                       | integer                |  -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                     |
+| C_MULTIPLE_RANDOM              | integer                |  -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                     |
+| C_AXISTREAM_BFM_CONFIG_DEFAULT | t_axistream_bfm_config |  (     max_wait_cycles                => 100,     max_wait_cycles_severity       => ERROR,     clock_period                   => -1 ns,     clock_period_margin            => 0 ns,     clock_margin_severity          => TB_ERROR,     setup_time                     => -1 ns,     hold_time                      => -1 ns,     bfm_sync                       => SYNC_ON_CLOCK_ONLY,     match_strictness               => MATCH_EXACT,     byte_endianness                => LOWER_BYTE_LEFT,     valid_low_at_word_num          => 0,     valid_low_multiple_random_prob => 0.5,     valid_low_duration             => 0,     valid_low_max_random_duration  => 5,     check_packet_length            => false,     protocol_error_severity        => ERROR,     ready_low_at_word_num          => 0,     ready_low_multiple_random_prob => 0.5,     ready_low_duration             => 0,     ready_low_max_random_duration  => 5,     ready_default_value            => '0',     id_for_bfm                     => ID_BFM     ) | Define the default value for the BFM config                                                                         |
 ## Types
-| Name                   | Type | Description |
-| ---------------------- | ---- | ----------- |
-| t_user_array           |      |             |
-| t_strb_array           |      |             |
-| t_id_array             |      |             |
-| t_dest_array           |      |             |
-| t_axistream_if         |      |             |
-| t_axistream_bfm_config |      |             |
+| Name                   | Type | Description                                              |
+| ---------------------- | ---- | -------------------------------------------------------- |
+| t_user_array           |      |                                                          |
+| t_strb_array           |      |                                                          |
+| t_id_array             |      |                                                          |
+| t_dest_array           |      |                                                          |
+| t_axistream_if         |      | Interface record for BFM signals                         |
+| t_axistream_bfm_config |      | Configuration record to be assigned in the test harness. |
 ## Functions
 - init_axistream_if_signals <font id="function_arguments">(    is_master   : boolean;   When true, this BFM drives data signals
     data_width  : natural;
@@ -27,6 +27,8 @@
     dest_width  : natural;
     config      : t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return t_axistream_if</font>
+**Description**
+- This function returns an AXI Stream interface with initialized signals.- All input signals are initialized to 0- All output signals are initialized to Z
 - axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;   Byte in index 0 is transmitted first
     constant user_array   : in    t_user_array;
     constant strb_array   : in    t_strb_array;
@@ -39,6 +41,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;   Byte in index 0 is transmitted first
     constant user_array   : in    t_user_array;
     constant strb_array   : in    t_strb_array;
@@ -51,6 +55,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
     constant user_array   : in    t_user_array;
     constant strb_array   : in    t_strb_array;
@@ -63,6 +69,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_transmit_bytes <font id="function_arguments">(    constant data_array          : in    t_byte_array;
     constant user_array          : in    t_user_array;
     constant strb_array          : in    t_strb_array;
@@ -83,6 +91,8 @@
     constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version without recordsDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_transmit <font id="function_arguments">(    constant data_array          : in    t_slv_array;
     constant user_array          : in    t_user_array;
     constant strb_array          : in    t_strb_array;
@@ -103,6 +113,8 @@
     constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_transmit <font id="function_arguments">(    constant data_array          : in    std_logic_vector;
     constant user_array          : in    t_user_array;
     constant strb_array          : in    t_strb_array;
@@ -123,6 +135,8 @@
     constant msg_id_panel        : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config              : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;   Byte in index 0 is transmitted first
     constant user_array   : in    t_user_array;
     constant msg          : in    string                 := "";
@@ -132,6 +146,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overload for default strb_array, id_array, dest_arrayDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;   Byte in index 0 is transmitted first
     constant user_array   : in    t_user_array;
     constant msg          : in    string                 := "";
@@ -141,6 +157,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
     constant user_array   : in    t_user_array;
     constant msg          : in    string                 := "";
@@ -150,6 +168,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_transmit_bytes <font id="function_arguments">(    constant data_array   : in    t_byte_array;
     constant msg          : in    string                 := "";
     signal   clk          : in    std_logic;
@@ -158,6 +178,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overload for default user_array, strb_array, id_array, dest_arrayDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    t_slv_array;
     constant msg          : in    string                 := "";
     signal   clk          : in    std_logic;
@@ -166,6 +188,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_transmit <font id="function_arguments">(    constant data_array   : in    std_logic_vector;
     constant msg          : in    string                 := "";
     signal   clk          : in    std_logic;
@@ -174,6 +198,8 @@
     constant msg_id_panel : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_receive_bytes <font id="function_arguments">(    variable data_array   : inout t_byte_array;
     variable data_length  : inout natural;   Number of bytes received
     variable user_array   : inout t_user_array;
@@ -188,6 +214,8 @@
     constant config       : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT;
     constant ext_proc_call: in    string                 := ""  External proc_call. Overwrite if called from another BFM procedure
   )</font> <font id="function_return">return ()</font>
+**Description**
+DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_receive <font id="function_arguments">(    variable data_array   : inout t_slv_array;
     variable data_length  : inout natural;   Number of bytes received
     variable user_array   : inout t_user_array;
@@ -224,6 +252,8 @@
     constant config              : in    t_axistream_bfm_config   := C_AXISTREAM_BFM_CONFIG_DEFAULT;
     constant ext_proc_call       : in    string                   := ""  External proc_call. Overwrite if called from another BFM procedure
   )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version without recordsDEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_receive <font id="function_arguments">(    variable data_array          : inout t_slv_array;
     variable data_length         : inout natural;   Number of bytes received
     variable user_array          : inout t_user_array;
@@ -246,6 +276,8 @@
     constant config              : in    t_axistream_bfm_config   := C_AXISTREAM_BFM_CONFIG_DEFAULT;
     constant ext_proc_call       : in    string                   := ""  External proc_call. Overwrite if called from another BFM procedure
   )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version without records
 - axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;   Expected data
     constant exp_user_array : in    t_user_array;   Expected tuser
     constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -259,6 +291,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+DEPRECATE: procedure with data_array as t_byte_array will be removed in next major release
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;   Expected data
     constant exp_user_array : in    t_user_array;   Expected tuser
     constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -272,6 +306,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;   Expected data
     constant exp_user_array : in    t_user_array;   Expected tuser
     constant exp_strb_array : in    t_strb_array;   Expected tstrb
@@ -285,6 +321,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array      : in    t_byte_array;   Expected data
     constant exp_user_array      : in    t_user_array;   Expected tuser
     constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -306,6 +344,8 @@
     constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
     constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version without recordsDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release
 - axistream_expect <font id="function_arguments">(    constant exp_data_array      : in    t_slv_array;   Expected data
     constant exp_user_array      : in    t_user_array;   Expected tuser
     constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -327,6 +367,8 @@
     constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
     constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_expect <font id="function_arguments">(      constant exp_data_array      : in    std_logic_vector;   Expected data
       constant exp_user_array      : in    t_user_array;   Expected tuser
       constant exp_strb_array      : in    t_strb_array;   Expected tstrb
@@ -348,6 +390,8 @@
       constant msg_id_panel        : in    t_msg_id_panel          := shared_msg_id_panel;
       constant config              : in    t_axistream_bfm_config  := C_AXISTREAM_BFM_CONFIG_DEFAULT
       )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;
     constant exp_user_array : in    t_user_array;
     constant msg            : in    string;
@@ -358,6 +402,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overload for default strb_array, id_array, dest_arrayDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;
     constant exp_user_array : in    t_user_array;
     constant msg            : in    string;
@@ -368,6 +414,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;
     constant exp_user_array : in    t_user_array;
     constant msg            : in    string;
@@ -378,6 +426,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload
 - axistream_expect_bytes <font id="function_arguments">(    constant exp_data_array : in    t_byte_array;
     constant msg            : in    string;
     signal   clk            : in    std_logic;
@@ -387,6 +437,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overload for default user_array, strb_array, id_array, dest_arrayDEPRECATE: procedure with exp_data_array as t_byte_array will be removed in next major release
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    t_slv_array;
     constant msg            : in    string;
     signal   clk            : in    std_logic;
@@ -396,6 +448,8 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+t_slv_array overload
 - axistream_expect <font id="function_arguments">(    constant exp_data_array : in    std_logic_vector;
     constant msg            : in    string;
     signal   clk            : in    std_logic;
@@ -405,3 +459,5 @@
     constant msg_id_panel   : in    t_msg_id_panel         := shared_msg_id_panel;
     constant config         : in    t_axistream_bfm_config := C_AXISTREAM_BFM_CONFIG_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+std_logic_vector overload

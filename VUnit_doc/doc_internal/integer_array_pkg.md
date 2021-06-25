@@ -1,8 +1,8 @@
 # Package: integer_array_pkg
 ## Constants
-| Name               | Type            | Value                                                                                                                                                                                                       | Description |
-| ------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| null_integer_array | integer_array_t |  (     length => 0,     width => 0,     height => 0,     depth => 0,     bit_width => 0,     is_signed => false,     lower_limit => integer'low,     upper_limit => integer'low,     data => null_ptr     ) |             |
+| Name               | Type            | Value                                                                                                                                                                                                       | Description                                                       |
+| ------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| null_integer_array | integer_array_t |  (     length => 0,     width => 0,     height => 0,     depth => 0,     bit_width => 0,     is_signed => false,     lower_limit => integer'low,     upper_limit => integer'low,     data => null_ptr     ) | Ensure null_integer_array is the default VHDL value of the record |
 ## Types
 | Name                | Type | Description |
 | ------------------- | ---- | ----------- |

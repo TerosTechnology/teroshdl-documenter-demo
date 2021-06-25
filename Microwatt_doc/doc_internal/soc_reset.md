@@ -29,6 +29,24 @@
 | soc_rst_cnt | std_ulogic_vector(SOC_RESET_BITS downto 0) |             |
 ## Processes
 - pll_reset_0: _( ext_clk )_
+Wait for external clock to become stable before starting the PLL
+By the time the FPGA has been loaded the clock should be well and
+truly stable, but lets give it a few cycles to be sure.
+[BenH] Some designs seem to require a lot more..
+
+**Description**
+Wait for external clock to become stable before starting the PLL
+By the time the FPGA has been loaded the clock should be well and
+truly stable, but lets give it a few cycles to be sure.
+[BenH] Some designs seem to require a lot more..
 
 - soc_reset_0: _( pll_clk )_
+Once our clock is stable and the external reset button isn't being
+pressed, assert the SOC reset for long enough for the CPU pipeline
+to clear completely.
+
+**Description**
+Once our clock is stable and the external reset button isn't being
+pressed, assert the SOC reset for long enough for the CPU pipeline
+to clear completely.
 

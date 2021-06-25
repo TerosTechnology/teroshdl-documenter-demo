@@ -34,6 +34,8 @@
     constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;
     constant config         : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT
   )</font> <font id="function_return">return ()</font>
+**Description**
+This procedure writes adress on the write address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
 - write_data_channel_write <font id="function_arguments">(    constant wdata_value  : in    t_slv_array;
     constant wstrb_value  : in    t_slv_array;
     constant wuser_value  : in    t_slv_array;
@@ -50,6 +52,8 @@
     constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;
     constant config       : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT
   )</font> <font id="function_return">return ()</font>
+**Description**
+This procedure writes data on the write data channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
 - write_response_channel_receive <font id="function_arguments">(    variable bid_value      : out   std_logic_vector;
     variable bresp_value    : out   t_xresp;
     variable buser_value    : out   std_logic_vector;
@@ -66,6 +70,8 @@
     constant config         : in    t_axi_bfm_config      := C_AXI_BFM_CONFIG_DEFAULT;
     constant ext_proc_call  : in    string                := ""   External proc_call. Overwrite if called from another BFM procedure
   )</font> <font id="function_return">return ()</font>
+**Description**
+This procedure receives the write response on the write response channeland returns the response data- When completed, a log message with ID id_for_bfm is issued.
 - read_address_channel_write <font id="function_arguments">(    constant arid_value     : in    std_logic_vector;
     constant araddr_value   : in    unsigned;
     constant arlen_value    : in    unsigned(7 downto 0);
@@ -96,6 +102,8 @@
     constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;
     constant config         : in    t_axi_bfm_config      := C_AXI_BFM_CONFIG_DEFAULT
   )</font> <font id="function_return">return ()</font>
+**Description**
+This procedure writes adress on the read address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
 - read_data_channel_receive <font id="function_arguments">(    variable read_result      : out   t_vvc_result;
     variable read_data_queue  : inout t_axi_read_data_queue;
     constant msg              : in    string;
@@ -112,3 +120,5 @@
     constant config           : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT;
     constant ext_proc_call    : in    string                := ""   External proc_call. Overwrite if called from another BFM procedure
   )</font> <font id="function_return">return ()</font>
+**Description**
+This procedure receives read data on the read data channel,and returns the read data- When completed, a log message with ID id_for_bfm is issued.

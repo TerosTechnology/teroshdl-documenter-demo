@@ -4,6 +4,6 @@
 | ---------- | ------- | ----- | ----------- |
 | C_NO_MATCH | integer |  -1   |             |
 ## Types
-| Name            | Type | Description |
-| --------------- | ---- | ----------- |
-| t_generic_queue |      |             |
+| Name            | Type | Description                      |
+| --------------- | ---- | -------------------------------- |
+| t_generic_queue |      | A generic queue for verification |

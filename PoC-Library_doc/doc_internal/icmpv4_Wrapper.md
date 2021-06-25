@@ -1,48 +1,70 @@
 # Entity: icmpv4_Wrapper
 ## Diagram
 ![Diagram](icmpv4_Wrapper.svg "Diagram")
+## Description
+EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+vim: tabstop=2:shiftwidth=2:noexpandtab
+kate: tab-width 2; replace-tabs off; indent-width 2;
+=============================================================================
+Authors:				 	Patrick Lehmann
+Entity:				 	TODO
+Description:
+-------------------------------------
+.. TODO:: No documentation available.
+License:
+=============================================================================
+Copyright 2007-2015 Technische Universitaet Dresden - Germany
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+=============================================================================
 ## Generics
 | Generic name       | Type               | Value                    | Description |
 | ------------------ | ------------------ | ------------------------ | ----------- |
 | DEBUG              | boolean            | FALSE                    |             |
 | SOURCE_IPV4ADDRESS | T_NET_IPV4_ADDRESS | C_NET_IPV4_ADDRESS_EMPTY |             |
 ## Ports
-| Port name                       | Direction | Type                 | Description |
-| ------------------------------- | --------- | -------------------- | ----------- |
-| Clock                           | in        | std_logic            |             |
-| Reset                           | in        | std_logic            |             |
-| Command                         | in        | T_NET_ICMPV4_COMMAND |             |
-| Status                          | out       | T_NET_ICMPV4_STATUS  |             |
-| Error                           | out       | T_NET_ICMPV4_ERROR   |             |
-| IPv4Address_rst                 | out       | std_logic            |             |
-| IPv4Address_nxt                 | out       | std_logic            |             |
-| IPv4Address_Data                | in        | T_SLV_8              |             |
-| IP_TX_Valid                     | out       | std_logic            |             |
-| IP_TX_Data                      | out       | T_SLV_8              |             |
-| IP_TX_SOF                       | out       | std_logic            |             |
-| IP_TX_EOF                       | out       | std_logic            |             |
-| IP_TX_Ack                       | in        | std_logic            |             |
-| IP_TX_Meta_rst                  | in        | std_logic            |             |
-| IP_TX_Meta_SrcIPv4Address_nxt   | in        | std_logic            |             |
-| IP_TX_Meta_SrcIPv4Address_Data  | out       | T_SLV_8              |             |
-| IP_TX_Meta_DestIPv4Address_nxt  | in        | std_logic            |             |
-| IP_TX_Meta_DestIPv4Address_Data | out       | T_SLV_8              |             |
-| IP_TX_Meta_Length               | out       | T_SLV_16             |             |
-| IP_RX_Valid                     | in        | std_logic            |             |
-| IP_RX_Data                      | in        | T_SLV_8              |             |
-| IP_RX_SOF                       | in        | std_logic            |             |
-| IP_RX_EOF                       | in        | std_logic            |             |
-| IP_RX_Ack                       | out       | std_logic            |             |
-| IP_RX_Meta_rst                  | out       | std_logic            |             |
-| IP_RX_Meta_SrcMACAddress_nxt    | out       | std_logic            |             |
-| IP_RX_Meta_SrcMACAddress_Data   | in        | T_SLV_8              |             |
-| IP_RX_Meta_DestMACAddress_nxt   | out       | std_logic            |             |
-| IP_RX_Meta_DestMACAddress_Data  | in        | T_SLV_8              |             |
-| IP_RX_Meta_SrcIPv4Address_nxt   | out       | std_logic            |             |
-| IP_RX_Meta_SrcIPv4Address_Data  | in        | T_SLV_8              |             |
-| IP_RX_Meta_DestIPv4Address_nxt  | out       | std_logic            |             |
-| IP_RX_Meta_DestIPv4Address_Data | in        | T_SLV_8              |             |
-| IP_RX_Meta_Length               | in        | T_SLV_16             |             |
+| Port name                       | Direction | Type                 | Description                      |
+| ------------------------------- | --------- | -------------------- | -------------------------------- |
+| Clock                           | in        | std_logic            |                                  |
+| Reset                           | in        | std_logic            |                                  |
+| Command                         | in        | T_NET_ICMPV4_COMMAND | CSE interface                    |
+| Status                          | out       | T_NET_ICMPV4_STATUS  |                                  |
+| Error                           | out       | T_NET_ICMPV4_ERROR   |                                  |
+| IPv4Address_rst                 | out       | std_logic            | Echo-Request destination address |
+| IPv4Address_nxt                 | out       | std_logic            |                                  |
+| IPv4Address_Data                | in        | T_SLV_8              |                                  |
+| IP_TX_Valid                     | out       | std_logic            | to IPv4 layer                    |
+| IP_TX_Data                      | out       | T_SLV_8              |                                  |
+| IP_TX_SOF                       | out       | std_logic            |                                  |
+| IP_TX_EOF                       | out       | std_logic            |                                  |
+| IP_TX_Ack                       | in        | std_logic            |                                  |
+| IP_TX_Meta_rst                  | in        | std_logic            |                                  |
+| IP_TX_Meta_SrcIPv4Address_nxt   | in        | std_logic            |                                  |
+| IP_TX_Meta_SrcIPv4Address_Data  | out       | T_SLV_8              |                                  |
+| IP_TX_Meta_DestIPv4Address_nxt  | in        | std_logic            |                                  |
+| IP_TX_Meta_DestIPv4Address_Data | out       | T_SLV_8              |                                  |
+| IP_TX_Meta_Length               | out       | T_SLV_16             |                                  |
+| IP_RX_Valid                     | in        | std_logic            | from IPv4 layer                  |
+| IP_RX_Data                      | in        | T_SLV_8              |                                  |
+| IP_RX_SOF                       | in        | std_logic            |                                  |
+| IP_RX_EOF                       | in        | std_logic            |                                  |
+| IP_RX_Ack                       | out       | std_logic            |                                  |
+| IP_RX_Meta_rst                  | out       | std_logic            |                                  |
+| IP_RX_Meta_SrcMACAddress_nxt    | out       | std_logic            |                                  |
+| IP_RX_Meta_SrcMACAddress_Data   | in        | T_SLV_8              |                                  |
+| IP_RX_Meta_DestMACAddress_nxt   | out       | std_logic            |                                  |
+| IP_RX_Meta_DestMACAddress_Data  | in        | T_SLV_8              |                                  |
+| IP_RX_Meta_SrcIPv4Address_nxt   | out       | std_logic            |                                  |
+| IP_RX_Meta_SrcIPv4Address_Data  | in        | T_SLV_8              |                                  |
+| IP_RX_Meta_DestIPv4Address_nxt  | out       | std_logic            |                                  |
+| IP_RX_Meta_DestIPv4Address_Data | in        | T_SLV_8              |                                  |
+| IP_RX_Meta_Length               | in        | T_SLV_16             |                                  |
 ## Signals
 | Name                            | Type                    | Description |
 | ------------------------------- | ----------------------- | ----------- |
@@ -96,4 +118,14 @@
 
 ## Instantiations
 - TX: PoC.icmpv4_TX
+**Description**
+=============================================================================
+TX Path
+=============================================================================
+
 - RX: PoC.icmpv4_RX
+**Description**
+=============================================================================
+RX Path
+=============================================================================
+

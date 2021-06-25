@@ -1,6 +1,28 @@
 # Entity: arp_Cache
 ## Diagram
 ![Diagram](arp_Cache.svg "Diagram")
+## Description
+EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+vim: tabstop=2:shiftwidth=2:noexpandtab
+kate: tab-width 2; replace-tabs off; indent-width 2;
+=============================================================================
+Authors:				 	Patrick Lehmann
+Entity:				 	TODO
+Description:
+-------------------------------------
+.. TODO:: No documentation available.
+License:
+=============================================================================
+Copyright 2007-2015 Technische Universitaet Dresden - Germany
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+=============================================================================
 ## Generics
 | Generic name          | Type                      | Value      | Description |
 | --------------------- | ------------------------- | ---------- | ----------- |
@@ -65,21 +87,21 @@
 | CacheMemory              | T_SLVV_8((CACHE_LINES * T_NET_MAC_ADDRESS'length) - 1 downto 0)        |             |
 | Memory_ReadWrite         | std_logic                                                              |             |
 ## Constants
-| Name                   | Type     | Value                                        | Description |
-| ---------------------- | -------- | -------------------------------------------- | ----------- |
-| CACHE_LINES            | positive |  8                                           |             |
-| TAG_BITS               | positive |  32                                          |             |
-| DATA_BITS              | positive |  48                                          |             |
-| TAGCHUNK_BITS          | positive |  8                                           |             |
-| DATACHUNK_BITS         | positive |  8                                           |             |
-| DATACHUNKS             | positive |  div_ceil(DATA_BITS, DATACHUNK_BITS)         |             |
-| DATACHUNK_INDEX_BITS   | positive |  log2ceilnz(DATACHUNKS)                      |             |
-| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                     |             |
-| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_CACHE_CONTENT)           |             |
-| INITIAL_DATALINES      | T_SLVV_8 |  to_CacheMemory(INITIAL_CACHE_CONTENT)       |             |
-| TICKCOUNTER_RES        | time     |  10 ms                                       |             |
-| TICKCOUNTER_MAX        | positive |  TimingToCycles(TICKCOUNTER_RES, CLOCK_FREQ) |             |
-| TICKCOUNTER_BITS       | positive |  log2ceilnz(TICKCOUNTER_MAX)                 |             |
+| Name                   | Type     | Value                                        | Description  |
+| ---------------------- | -------- | -------------------------------------------- | ------------ |
+| CACHE_LINES            | positive |  8                                           |              |
+| TAG_BITS               | positive |  32                                          | IPv4 address |
+| DATA_BITS              | positive |  48                                          | MAC address  |
+| TAGCHUNK_BITS          | positive |  8                                           |              |
+| DATACHUNK_BITS         | positive |  8                                           |              |
+| DATACHUNKS             | positive |  div_ceil(DATA_BITS, DATACHUNK_BITS)         |              |
+| DATACHUNK_INDEX_BITS   | positive |  log2ceilnz(DATACHUNKS)                      |              |
+| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                     |              |
+| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_CACHE_CONTENT)           |              |
+| INITIAL_DATALINES      | T_SLVV_8 |  to_CacheMemory(INITIAL_CACHE_CONTENT)       |              |
+| TICKCOUNTER_RES        | time     |  10 ms                                       |              |
+| TICKCOUNTER_MAX        | positive |  TimingToCycles(TICKCOUNTER_RES, CLOCK_FREQ) |              |
+| TICKCOUNTER_BITS       | positive |  log2ceilnz(TICKCOUNTER_MAX)                 |              |
 ## Types
 | Name               | Type                  | Description |
 | ------------------ | --------------------- | ----------- |
@@ -94,13 +116,30 @@
 - unnamed: _( FSMReplace_State, Command, TU_Replaced, TU_NewTag_rst, TU_NewTag_nxt, NewDataChunkIndex_us, NewDataChunkIndex_max_us )_
 
 - unnamed: _( Clock )_
+expiration time tick generator
+
+**Description**
+expiration time tick generator
 
 - unnamed: _( Clock )_
+latch TU_Index on TagHit
+NewDataChunkIndex counter
+
+**Description**
+latch TU_Index on TagHit
+NewDataChunkIndex counter
 
 - unnamed: _( Clock, TU_Index )_
+DataChunkIndex counter
+
+**Description**
+DataChunkIndex counter
 
 - unnamed: _( Clock )_
 
 ## Instantiations
 - TU: PoC.cache_TagUnit_seq
+**Description**
+Cache TagUnit
+
 - Exp: PoC.list_expire

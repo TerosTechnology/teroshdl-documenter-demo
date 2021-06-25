@@ -1,20 +1,29 @@
 # Entity: ethernet_mac
 ## Diagram
 ![Diagram](ethernet_mac.svg "Diagram")
+## Description
+Copyright 2020 Bitvis
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
+Note : Any functionality not explicitly described in the documentation is subject to change at any time
+Description : See library quick reference (under 'doc') and README-file(s)
 ## Ports
-| Port name | Direction | Type                         | Description |
-| --------- | --------- | ---------------------------- | ----------- |
-| clk       | in        | std_logic                    |             |
-| sbi_cs    | in        | std_logic                    |             |
-| sbi_addr  | in        | unsigned(7 downto 0)         |             |
-| sbi_rena  | in        | std_logic                    |             |
-| sbi_wena  | in        | std_logic                    |             |
-| sbi_wdata | in        | std_logic_vector(7 downto 0) |             |
-| sbi_ready | out       | std_logic                    |             |
-| sbi_rdata | out       | std_logic_vector(7 downto 0) |             |
-| gtxclk    | out       | std_logic                    |             |
-| txd       | out       | std_logic_vector(7 downto 0) |             |
-| txen      | out       | std_logic                    |             |
+| Port name | Direction | Type                         | Description              |
+| --------- | --------- | ---------------------------- | ------------------------ |
+| clk       | in        | std_logic                    | SBI interface            |
+| sbi_cs    | in        | std_logic                    |                          |
+| sbi_addr  | in        | unsigned(7 downto 0)         |                          |
+| sbi_rena  | in        | std_logic                    |                          |
+| sbi_wena  | in        | std_logic                    |                          |
+| sbi_wdata | in        | std_logic_vector(7 downto 0) |                          |
+| sbi_ready | out       | std_logic                    |                          |
+| sbi_rdata | out       | std_logic_vector(7 downto 0) |                          |
+| gtxclk    | out       | std_logic                    | GMII interface (only TX) |
+| txd       | out       | std_logic_vector(7 downto 0) |                          |
+| txen      | out       | std_logic                    |                          |
 ## Signals
 | Name            | Type                                      | Description |
 | --------------- | ----------------------------------------- | ----------- |
@@ -36,8 +45,20 @@
 - p_sbi_write_regs: _( clk )_
 
 - p_sbi_read_regs: _( sbi_cs, sbi_rena, sbi_addr )_
+Read the Ethernet MAC dummy register
+
+**Description**
+Read the Ethernet MAC dummy register
 
 - p_gmii_send_frame: _( clk )_
+GMII interface
+Send Ethernet frames once they have been completely stored in the internal registers.
+
+**Description**
+GMII interface
+Send Ethernet frames once they have been completely stored in the internal registers.
 
 ## State machines
+- GMII interface
+Send Ethernet frames once they have been completely stored in the internal registers.
 ![Diagram_state_machine_0]( stm_ethernet_mac_00.svg "Diagram")

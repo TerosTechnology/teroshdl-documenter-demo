@@ -11,19 +11,27 @@
                            constant expected_bresp : axi_resp_t := axi_resp_okay;
                             default byte enable is all bytes
                            constant byte_enable : std_logic_vector := "")</font> <font id="function_return">return ()</font>
+**Description**
+Blocking: Write the bus
 - read_axi_lite <font id="function_arguments">(signal net : inout network_t;                          constant bus_handle : bus_master_t;
                           constant address : std_logic_vector;
                           constant expected_rresp : axi_resp_t := axi_resp_okay;
                           variable reference : inout bus_reference_t)</font> <font id="function_return">return ()</font>
+**Description**
+Non blocking: Read the bus returning a reference to the future reply
 - read_axi_lite <font id="function_arguments">(signal net : inout network_t;                          constant bus_handle : bus_master_t;
                           constant address : std_logic_vector;
                           constant expected_rresp : axi_resp_t := axi_resp_okay;
                           variable data : inout std_logic_vector)</font> <font id="function_return">return ()</font>
+**Description**
+Blocking: read bus with immediate reply
 - check_axi_lite <font id="function_arguments">(signal net : inout network_t;                           constant bus_handle : bus_master_t;
                            constant address : std_logic_vector;
                            constant expected_rresp : axi_resp_t := axi_resp_okay;
                            constant expected : std_logic_vector;
                            constant msg : string := "")</font> <font id="function_return">return ()</font>
+**Description**
+Blocking: Read bus and check result against expected data
 - is_read <font id="function_arguments">(msg_type : msg_type_t)</font> <font id="function_return">return boolean</font>
 - is_write <font id="function_arguments">(msg_type : msg_type_t)</font> <font id="function_return">return boolean</font>
 - is_axi_lite_msg <font id="function_arguments">(msg_type : msg_type_t)</font> <font id="function_return">return boolean</font>

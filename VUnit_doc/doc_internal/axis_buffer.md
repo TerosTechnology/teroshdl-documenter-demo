@@ -1,11 +1,16 @@
 # Entity: axis_buffer
 ## Diagram
 ![Diagram](axis_buffer.svg "Diagram")
+## Description
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at http://mozilla.org/MPL/2.0/.
+Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
-| Generic name | Type    | Value | Description |
-| ------------ | ------- | ----- | ----------- |
-| data_width   | integer | 32    |             |
-| fifo_depth   | integer | 0     |             |
+| Generic name | Type    | Value | Description                                          |
+| ------------ | ------- | ----- | ---------------------------------------------------- |
+| data_width   | integer | 32    |                                                      |
+| fifo_depth   | integer | 0     | ceiling of the log base 2 of the desired FIFO length |
 ## Ports
 | Port name    | Direction | Type                                        | Description |
 | ------------ | --------- | ------------------------------------------- | ----------- |

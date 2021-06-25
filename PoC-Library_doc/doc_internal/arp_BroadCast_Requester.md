@@ -1,6 +1,30 @@
 # Entity: arp_BroadCast_Requester
 ## Diagram
 ![Diagram](arp_BroadCast_Requester.svg "Diagram")
+## Description
+EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+vim: tabstop=2:shiftwidth=2:noexpandtab
+kate: tab-width 2; replace-tabs off; indent-width 2;
+=============================================================================
+Authors:           Patrick Lehmann
+Entity:           TODO
+Description:
+-------------------------------------
+.. TODO:: No documentation available.
+License:
+=============================================================================
+Copyright 2007-2015 Technische Universitaet Dresden - Germany
+                    Chair of VLSI-Design, Diagnostics and Architecture
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+=============================================================================
 ## Generics
 | Generic name          | Type    | Value | Description |
 | --------------------- | ------- | ----- | ----------- |
@@ -41,13 +65,13 @@
 | Reader_Counter_en  | std_logic                                  |             |
 | Reader_Counter_us  | unsigned(READER_COUNTER_BITS - 1 downto 0) |             |
 ## Constants
-| Name                         | Type     | Value                                                                                             | Description |
-| ---------------------------- | -------- | ------------------------------------------------------------------------------------------------- | ----------- |
-| HARDWARE_ADDRESS_LENGTH      | positive |  6                                                                                                |             |
-| PROTOCOL_IPV4_ADDRESS_LENGTH | positive |  4                                                                                                |             |
-| PROTOCOL_IPV6_ADDRESS_LENGTH | positive |  16                                                                                               |             |
-| PROTOCOL_ADDRESS_LENGTH      | positive |  ite((ALLOWED_PROTOCOL_IPV6 = FALSE), PROTOCOL_IPV4_ADDRESS_LENGTH, PROTOCOL_IPV6_ADDRESS_LENGTH) |             |
-| READER_COUNTER_BITS          | positive |  log2ceilnz(imax(HARDWARE_ADDRESS_LENGTH, PROTOCOL_ADDRESS_LENGTH))                               |             |
+| Name                         | Type     | Value                                                                                             | Description                       |
+| ---------------------------- | -------- | ------------------------------------------------------------------------------------------------- | --------------------------------- |
+| HARDWARE_ADDRESS_LENGTH      | positive |  6                                                                                                | MAC -> 6 bytes                    |
+| PROTOCOL_IPV4_ADDRESS_LENGTH | positive |  4                                                                                                | IPv4 -> 4 bytes                   |
+| PROTOCOL_IPV6_ADDRESS_LENGTH | positive |  16                                                                                               | IPv6 -> 16 bytes                  |
+| PROTOCOL_ADDRESS_LENGTH      | positive |  ite((ALLOWED_PROTOCOL_IPV6 = FALSE), PROTOCOL_IPV4_ADDRESS_LENGTH, PROTOCOL_IPV6_ADDRESS_LENGTH) | IPv4 -> 4 bytes; IPv6 -> 16 bytes |
+| READER_COUNTER_BITS          | positive |  log2ceilnz(imax(HARDWARE_ADDRESS_LENGTH, PROTOCOL_ADDRESS_LENGTH))                               |                                   |
 ## Types
 | Name    | Type                                                                                                                                                                                                                                                                                                                                                                                      | Description |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |

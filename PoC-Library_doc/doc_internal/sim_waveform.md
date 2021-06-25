@@ -1,21 +1,21 @@
 # Package: waveform
 ## Types
-| Name                        | Type | Description |
-| --------------------------- | ---- | ----------- |
-| T_SIM_WAVEFORM_TUPLE_SL     |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_8  |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_16 |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_24 |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_32 |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_48 |      |             |
-| T_SIM_WAVEFORM_TUPLE_SLV_64 |      |             |
-| T_SIM_WAVEFORM_SL           |      |             |
-| T_SIM_WAVEFORM_SLV_8        |      |             |
-| T_SIM_WAVEFORM_SLV_16       |      |             |
-| T_SIM_WAVEFORM_SLV_24       |      |             |
-| T_SIM_WAVEFORM_SLV_32       |      |             |
-| T_SIM_WAVEFORM_SLV_48       |      |             |
-| T_SIM_WAVEFORM_SLV_64       |      |             |
+| Name                        | Type | Description                                                                                     |
+| --------------------------- | ---- | ----------------------------------------------------------------------------------------------- |
+| T_SIM_WAVEFORM_TUPLE_SL     |      | waveform description=========================================================================== |
+| T_SIM_WAVEFORM_TUPLE_SLV_8  |      |                                                                                                 |
+| T_SIM_WAVEFORM_TUPLE_SLV_16 |      |                                                                                                 |
+| T_SIM_WAVEFORM_TUPLE_SLV_24 |      |                                                                                                 |
+| T_SIM_WAVEFORM_TUPLE_SLV_32 |      |                                                                                                 |
+| T_SIM_WAVEFORM_TUPLE_SLV_48 |      |                                                                                                 |
+| T_SIM_WAVEFORM_TUPLE_SLV_64 |      |                                                                                                 |
+| T_SIM_WAVEFORM_SL           |      | use predefined physical type TIME here                                                          |
+| T_SIM_WAVEFORM_SLV_8        |      |                                                                                                 |
+| T_SIM_WAVEFORM_SLV_16       |      |                                                                                                 |
+| T_SIM_WAVEFORM_SLV_24       |      |                                                                                                 |
+| T_SIM_WAVEFORM_SLV_32       |      |                                                                                                 |
+| T_SIM_WAVEFORM_SLV_48       |      |                                                                                                 |
+| T_SIM_WAVEFORM_SLV_64       |      |                                                                                                 |
 ## Functions
 - simGenerateClock <font id="function_arguments">(		signal	 Clock			: out	std_logic;
 		constant Frequency	: in	FREQ;
@@ -52,6 +52,8 @@
 		constant Waveform			: in	T_SIM_WAVEFORM;
 		constant InitialValue	: in	boolean					:= FALSE
 	)</font> <font id="function_return">return ()</font>
+**Description**
+waveform generation procedures===========================================================================TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others => 'U') ?
 - simGenerateWaveform <font id="function_arguments">(		constant TestID				: in	T_SIM_TEST_ID;
 		signal	 Wave					: out	boolean;
 		constant Waveform			: in	T_SIM_WAVEFORM;
@@ -130,6 +132,8 @@
 		constant InitialValue	: in	T_SLV_64				:= (others => '0')
 	)</font> <font id="function_return">return ()</font>
 - to_waveform <font id="function_arguments">(bv : bit_vector; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM</font>
+**Description**
+function "<" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;convert arrays to waveformsTODO: optimize waveform if input data doesn't changeTODO: write single bit variant
 - to_waveform <font id="function_arguments">(slv : std_logic_vector; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SL</font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_8; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_8</font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_16; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_16</font>
@@ -138,3 +142,5 @@
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_48; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_48</font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_64; Delay : time)</font> <font id="function_return">return T_SIM_WAVEFORM_SLV_64</font>
 - simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns; ResetPulse : time := 10 ns)</font> <font id="function_return">return T_SIM_WAVEFORM</font>
+**Description**
+predefined common waveforms

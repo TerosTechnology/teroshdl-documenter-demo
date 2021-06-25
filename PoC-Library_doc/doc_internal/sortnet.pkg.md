@@ -1,4 +1,9 @@
 # Package: sortnet
+## Description
+use			PoC.utils.all;
+use			PoC.vectors.all;
+use			PoC.strings.all;
+
 ## Types
 | Name           | Type                                                                                                           | Description |
 | -------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |

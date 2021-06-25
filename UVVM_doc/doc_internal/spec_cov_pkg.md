@@ -7,6 +7,8 @@
 - initialize_req_cov <font id="function_arguments">(    constant testcase         : string;
     constant partial_cov_file : string
   )</font> <font id="function_return">return ()</font>
+**Description**
+Overloading procedure
 - tick_off_req_cov <font id="function_arguments">(    constant requirement    : string;
     constant test_status    : t_test_status    := NA;
     constant msg            : string           := "";

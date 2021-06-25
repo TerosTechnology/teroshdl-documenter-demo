@@ -8,16 +8,22 @@
     constant file_name : in string;
     constant scope     : in string := C_SCOPE
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================File handling (that needs to use other utility methods)============================================================================
 - set_alert_file_name <font id="function_arguments">(    constant file_name : string := C_ALERT_FILE_NAME
     )</font> <font id="function_return">return ()</font>
 - set_alert_file_name <font id="function_arguments">(    constant file_name : string := C_ALERT_FILE_NAME;
     constant msg_id    : t_msg_id
     )</font> <font id="function_return">return ()</font>
+**Description**
+msg_id is unused. This is a deprecated overload
 - set_log_file_name <font id="function_arguments">(    constant file_name : string := C_LOG_FILE_NAME
     )</font> <font id="function_return">return ()</font>
 - set_log_file_name <font id="function_arguments">(    constant file_name : string := C_LOG_FILE_NAME;
     constant msg_id    : t_msg_id
     )</font> <font id="function_return">return ()</font>
+**Description**
+msg_id is unused. This is a deprecated overload
 - log <font id="function_arguments">(    msg_id          : t_msg_id;
     msg             : string;
     scope           : string            := C_TB_SCOPE_DEFAULT;
@@ -26,6 +32,8 @@
     log_file_name   : string            := C_LOG_FILE_NAME;
     open_mode       : file_open_kind    := append_mode
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Log-related============================================================================
 - log <font id="function_arguments">(    msg             : string;
     scope           : string            := C_TB_SCOPE_DEFAULT;
     msg_id_panel    : t_msg_id_panel    := shared_msg_id_panel;
@@ -90,9 +98,13 @@
     constant msg         : string;
     constant scope       : string := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Alert-related============================================================================
 - note <font id="function_arguments">(    constant msg   : string;
     constant scope : string := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+Dedicated alert-procedures all alert levels (less verbose - as 2 rather than 3 parameters...)
 - tb_note <font id="function_arguments">(    constant msg   : string;
     constant scope : string := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
@@ -153,9 +165,13 @@
 - deprecate <font id="function_arguments">(    caller_name  : string;
     constant msg : string := ""
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Deprecate message============================================================================
 - matching_widths <font id="function_arguments">(    value1 : std_logic_vector;
     value2 : std_logic_vector
     )</font> <font id="function_return">return boolean</font>
+**Description**
+============================================================================Non time consuming checks============================================================================Matching if same width or only zeros in "extended width"
 - matching_widths <font id="function_arguments">(    value1 : unsigned;
     value2 : unsigned
     )</font> <font id="function_return">return boolean</font>
@@ -170,6 +186,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant caller_name  : string         := "check_value()"
     )</font> <font id="function_return">return ()</font>
+**Description**
+overloads for procedure version of check_value (no return value)
 - check_value <font id="function_arguments">(    constant value        : boolean;
     constant exp          : boolean;
     constant alert_level  : t_alert_level;
@@ -391,6 +409,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant caller_name  : string         := "check_value()"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Procedure overloads for check_value without mandatory alert_level
 - check_value <font id="function_arguments">(    constant value        : boolean;
     constant exp          : boolean;
     constant msg          : string;
@@ -596,6 +616,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant caller_name  : string         := "check_value_in_range()"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Procedure overloads for check_value_in_range
 - check_value_in_range <font id="function_arguments">(    constant value        : unsigned;
     constant min_value    : unsigned;
     constant max_value    : unsigned;
@@ -645,6 +667,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant caller_name  : string         := "check_value_in_range()"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Procedure overloads for check_value_in_range without mandatory alert_level
 - check_value_in_range <font id="function_arguments">(    constant value        : unsigned;
     constant min_value    : unsigned;
     constant max_value    : unsigned;
@@ -691,6 +715,8 @@
     constant caller_name  : string         := "check_stable()";
     constant value_type   : string         := "boolean"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Check_stable
 - check_stable <font id="function_arguments">(    signal target         : in  std_logic_vector;
     constant stable_req   : in  time;
     constant alert_level  : in  t_alert_level;
@@ -771,6 +797,8 @@
     constant caller_name  : string         := "check_stable()";
     constant value_type   : string         := "boolean"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Procedure overloads for check_stable without mandatory alert_level
 - check_stable <font id="function_arguments">(    signal target         : std_logic_vector;
     constant stable_req   : time;
     constant msg          : string;
@@ -886,6 +914,8 @@
     constant value2           : in std_logic_vector;
     constant match_strictness : in t_match_strictness := MATCH_STD
     )</font> <font id="function_return">return boolean</font>
+**Description**
+Warning! This function should NOT be used outside the UVVM library.         Function is only included to support internal functionality.         The function can be removed without notification.
 - await_change <font id="function_arguments">(    signal target         : boolean;
     constant min_time     : time;
     constant max_time     : time;
@@ -896,6 +926,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant value_type   : string         := "boolean"
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Time consuming checks============================================================================
 - await_change <font id="function_arguments">(    signal target         : std_logic;
     constant min_time     : time;
     constant max_time     : time;
@@ -965,6 +997,8 @@
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel;
     constant value_type   : string         := "boolean"
     )</font> <font id="function_return">return ()</font>
+**Description**
+Procedure overloads for await_change without mandatory alert_level
 - await_change <font id="function_arguments">(    signal target         : std_logic;
     constant min_time     : time;
     constant max_time     : time;
@@ -1029,6 +1063,8 @@
     constant msg_id       : t_msg_id       := ID_POS_ACK;
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel
     )</font> <font id="function_return">return ()</font>
+**Description**
+Await Value procedures
 - await_value <font id="function_arguments">(    signal target             : std_logic;
     constant exp              : std_logic;
     constant match_strictness : t_match_strictness;
@@ -1143,6 +1179,8 @@
     constant msg_id       : t_msg_id       := ID_POS_ACK;
     constant msg_id_panel : t_msg_id_panel := shared_msg_id_panel
     )</font> <font id="function_return">return ()</font>
+**Description**
+Await Value Overloads without Mandatory Alert_Level
 - await_value <font id="function_arguments">(    signal target             : std_logic;
     constant exp              : std_logic;
     constant match_strictness : t_match_strictness;
@@ -1236,6 +1274,8 @@
     constant msg_id          : t_msg_id       := ID_POS_ACK;
     constant msg_id_panel    : t_msg_id_panel := shared_msg_id_panel
     )</font> <font id="function_return">return ()</font>
+**Description**
+Await Stable Procedures
 - await_stable <font id="function_arguments">(    signal target            : std_logic;
     constant stable_req      : time;     Minimum stable requirement
     constant stable_req_from : t_from_point_in_time;   Which point in time stable_req starts
@@ -1325,6 +1365,8 @@
     constant msg_id          : t_msg_id       := ID_POS_ACK;
     constant msg_id_panel    : t_msg_id_panel := shared_msg_id_panel
     )</font> <font id="function_return">return ()</font>
+**Description**
+Await Stable Procedures without Mandatory Alert_LevelAwait Stable Procedures
 - await_stable <font id="function_arguments">(    signal target            : std_logic;
     constant stable_req      : time;     Minimum stable requirement
     constant stable_req_from : t_from_point_in_time;   Which point in time stable_req starts
@@ -1540,28 +1582,38 @@
     constant clock_period    : in    time;
     constant clock_high_time : in    time
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with duty cycle in time
 - clock_generator <font id="function_arguments">(    signal clock_signal            : inout std_logic;
     signal clock_count             : inout natural;
     constant clock_period          : in    time;
     constant clock_high_percentage : in    natural range 1 to 99 := 50
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock count
 - clock_generator <font id="function_arguments">(    signal clock_signal      : inout std_logic;
     signal clock_count       : inout natural;
     constant clock_period    : in    time;
     constant clock_high_time : in    time
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock count and duty cycle in time
 - clock_generator <font id="function_arguments">(    signal clock_signal            : inout std_logic;
     signal clock_ena               : in    boolean;
     constant clock_period          : in    time;
     constant clock_name            : in    string;
     constant clock_high_percentage : in    natural range 1 to 99 := 50
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock enable and clock name
 - clock_generator <font id="function_arguments">(    signal clock_signal      : inout std_logic;
     signal clock_ena         : in    boolean;
     constant clock_period    : in    time;
     constant clock_name      : in    string;
     constant clock_high_time : in    time
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock enable, clock nameand duty cycle in time.
 - clock_generator <font id="function_arguments">(    signal clock_signal            : inout std_logic;
     signal clock_ena               : in    boolean;
     signal clock_count             : out   natural;
@@ -1569,6 +1621,8 @@
     constant clock_name            : in    string;
     constant clock_high_percentage : in    natural range 1 to 99 := 50
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock enable, clock nameand clock count
 - clock_generator <font id="function_arguments">(    signal clock_signal      : inout std_logic;
     signal clock_ena         : in    boolean;
     signal clock_count       : out   natural;
@@ -1576,6 +1630,8 @@
     constant clock_name      : in    string;
     constant clock_high_time : in    time
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock enable, clock name,clock count and duty cycle in time.
 - adjustable_clock_generator <font id="function_arguments">(    signal clock_signal          : inout std_logic;
     signal clock_ena             : in    boolean;
     constant clock_period        : in    time;
@@ -1594,6 +1650,8 @@
     constant clock_name          : in    string;
     signal clock_high_percentage : in    natural range 0 to 100
     )</font> <font id="function_return">return ()</font>
+**Description**
+Overloaded version with clock enable, clock nameand clock count
 - deallocate_line_if_exists <font id="function_arguments">(    variable line_to_be_deallocated : inout line
     )</font> <font id="function_return">return ()</font>
 - block_flag <font id="function_arguments">(    constant flag_name                : in string;
@@ -1601,11 +1659,15 @@
     constant already_blocked_severity : in t_alert_level := warning;
     constant scope                    : in string        := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Synchronization methods============================================================================method to block a global flag with the name flag_name
 - unblock_flag <font id="function_arguments">(    constant flag_name : in    string;
     constant msg       : in    string;
     signal trigger     : inout std_logic;   Parameter must be global_trigger as method await_unblock_flag() uses that global signal to detect unblocking.
     constant scope     : in    string := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+method to unblock a global flag with the name flag_name
 - await_unblock_flag <font id="function_arguments">(    constant flag_name        : in string;
     constant timeout          : in time;
     constant msg              : in string;
@@ -1613,6 +1675,8 @@
     constant timeout_severity : in t_alert_level    := error;
     constant scope            : in string           := C_TB_SCOPE_DEFAULT
     )</font> <font id="function_return">return ()</font>
+**Description**
+method to wait for the global flag with the name flag_name
 - await_barrier <font id="function_arguments">(    signal barrier_signal     : inout std_logic;
     constant timeout          : in    time;
     constant msg              : in    string;
@@ -1621,13 +1685,19 @@
     )</font> <font id="function_return">return ()</font>
 - await_semaphore_in_delta_cycles <font id="function_arguments">(    variable semaphore : inout t_protected_semaphore
     )</font> <font id="function_return">return ()</font>
+**Description**
+tries to lock the semaphore for C_NUM_SEMAPHORE_LOCK_TRIES in adaptations_pkg
 - release_semaphore <font id="function_arguments">(    variable semaphore : inout t_protected_semaphore
     )</font> <font id="function_return">return ()</font>
+**Description**
+releases the semaphore
 - watchdog_timer <font id="function_arguments">(    signal watchdog_ctrl : in t_watchdog_ctrl;
     constant timeout     :    time;
     constant alert_level :    t_alert_level := error;
     constant msg         :    string        := ""
     )</font> <font id="function_return">return ()</font>
+**Description**
+============================================================================Watchdog-related============================================================================
 - extend_watchdog <font id="function_arguments">(    signal watchdog_ctrl : inout t_watchdog_ctrl;
     constant time_extend :       time := 0 ns
     )</font> <font id="function_return">return ()</font>

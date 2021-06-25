@@ -11,6 +11,8 @@
 - IsNumber <font id="function_arguments">(Name : string )</font> <font id="function_return">return boolean</font>
 - isstd_logic <font id="function_arguments">(constant Char : character )</font> <font id="function_return">return boolean</font>
 - IfElse <font id="function_arguments">(Expr : boolean ; A, B : string)</font> <font id="function_return">return string</font>
+**Description**
+Crutch until VHDL-2019 conditional initialization
 - SkipWhiteSpace <font id="function_arguments">(  
     variable L     : InOut line ;
     variable Empty : out   boolean
