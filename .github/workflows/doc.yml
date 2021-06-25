@@ -21,15 +21,14 @@ jobs:
         cd colibri
         sudo npm install -g .
 
-    - name: 'Generate documentation'
+    - name: 'Generate documentation HTML'
       run: |
         ls 
-        teroshdl-hdl-documenter --help
+        python3 generate_doc html
 
-    # - name: '📤 Upload artifact: HTML and LaTeX'
-    #   uses: actions/upload-artifact@master
-    #   with:
-    #     name: doc
-    #     path: |
-    #       doc/_build/html
-    #       doc/_build/latex
+    - name: '📤 Upload artifact: HTML'
+      uses: actions/upload-artifact@master
+      with:
+        name: doc
+        path: |
+          teroshdl_doc
