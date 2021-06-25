@@ -19,7 +19,7 @@ jobs:
       run: |
         git clone https://github.com/TerosTechnology/colibri.git
         cd colibri
-        npm install -g .
+        sudo npm install -g .
 
     - name: 'Generate documentation'
       run: |
