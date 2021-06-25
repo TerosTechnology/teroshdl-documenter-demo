@@ -1,3 +1,22 @@
+# Copyright 2021 Teros Technology
+#
+# Ismael Perez Rojo ismaelprojo@gmail.com
+# Carlos Alberto Ruiz Naranjo carlosruiznaranjo@gmail.com
+# Alfredo Saez
+#
+# Colibri is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# Colibri is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Colibri.  If not, see <https://www.gnu.org/licenses/>.
+
 import yaml
 import subprocess
 import sys
@@ -39,7 +58,7 @@ CONFIG_PATH = './config.yml'
 # HTML
 ################################################################################
 if (OUTPUT_TYPE == 'html'):
-    html_index = '<ul>\n'
+    html_index = '<h1>Open source projects:</h1>\n\n<ul>\n'
     repositories = read_repositories(CONFIG_PATH)
     for rep in repositories:
         name = rep
@@ -47,7 +66,7 @@ if (OUTPUT_TYPE == 'html'):
         url = repository['url']
         folder = repository['folder']
 
-        html_index += f"    <li>Project: <a href=\"teroshdl_doc/{name}_doc/index.html\">{name}</a></li>\n"
+        html_index += f"    <li>Project: <a href=\"{name}_doc/index.html\">{name}</a></li>\n"
         git_clone(url)
         execute_teroshdl(name, folder, OUTPUT_TYPE)
     html_index += '</ul>\n'
@@ -67,7 +86,7 @@ if (OUTPUT_TYPE == 'markdown'):
         url = repository['url']
         folder = repository['folder']
 
-        html_index += f"Project: [${name} ](./teroshdl_doc/{name}_doc/README.md)\n"
+        html_index += f"Project: [${name} ](./{name}_doc/README.md)\n"
         git_clone(url)
         execute_teroshdl(name, folder, OUTPUT_TYPE)
 
