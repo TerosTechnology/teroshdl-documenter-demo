@@ -1,6 +1,6 @@
 CordicHDL:
     url: https://github.com/qarlosalberto/cordicHDL.git
-    folder: cordicHDL/hdl
+    folder: cordicHDL/src
     vhdl_symbol: "!"
     verilog_symbol: "!"
 
