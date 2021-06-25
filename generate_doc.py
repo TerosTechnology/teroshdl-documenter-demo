@@ -20,6 +20,7 @@
 import yaml
 import subprocess
 import sys
+from datetime import datetime
 
 
 def git_clone(repository):
@@ -32,8 +33,8 @@ def execute_teroshdl(name, folder, output_type, vhdl_symbol, verilog_symbol):
     signal_extract = 'all'
     constants_extract = 'all'
     processes_extract = 'all'
-    vhdl_symbol_cmd = f"--symbol_vhdl {vhdl_symbol}"
-    verilog_symbol_cmd = f"--symbol_verilog {verilog_symbol}"
+    vhdl_symbol_cmd = f"--symbol_vhdl \"{vhdl_symbol}\""
+    verilog_symbol_cmd = f"--symbol_verilog \"{verilog_symbol}\""
 
     output_path = f"./teroshdl_doc/{name}_doc"
     cmd = f"teroshdl-hdl-documenter -o {output_type} {vhdl_symbol_cmd} {verilog_symbol_cmd} --fsm -s {signal_extract} -c {constants_extract} -p {processes_extract} --dep --outpath {output_path} --input {folder}"
@@ -56,11 +57,14 @@ if (len(sys.argv) > 1):
     OUTPUT_TYPE = sys.argv[1]
 
 CONFIG_PATH = './config.yml'
+now = datetime.now()
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 ################################################################################
 # HTML
 ################################################################################
 if (OUTPUT_TYPE == 'html'):
     html_index = '<h1>Open source projects:</h1>\n\n<ul>\n'
+    html_index += f"Created: {dt_string}\n"
     repositories = read_repositories(CONFIG_PATH)
     for rep in repositories:
         name = rep
@@ -83,6 +87,7 @@ if (OUTPUT_TYPE == 'html'):
 ################################################################################
 if (OUTPUT_TYPE == 'markdown'):
     html_index = '# Open source projects:\n'
+    html_index += f"Created: {dt_string}\n"
     repositories = read_repositories(CONFIG_PATH)
     for rep in repositories:
         name = rep
@@ -92,7 +97,7 @@ if (OUTPUT_TYPE == 'markdown'):
         vhdl_symbol = repository['vhdl_symbol']
         verilog_symbol = repository['verilog_symbol']
 
-        html_index += f"Project: [{name} ](./{name}_doc/README.md) ([go to Github project]({url}))\n"
+        html_index += f"- Project: [{name} ](./{name}_doc/README.md) ([go to Github project]({url}))\n"
         git_clone(url)
         execute_teroshdl(name, folder, OUTPUT_TYPE, vhdl_symbol, verilog_symbol)
 

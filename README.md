@@ -13,7 +13,8 @@ Teros Technology: terostechnology@gmail.com
 
 # TerosHDL CLI examples
 
-**Check te example!:** https://terostechnology.github.io/teroshdl-documenter-demo/
+**Check the generated HTML documentation!:** https://terostechnology.github.io/teroshdl-documenter-demo/
+**Check the generated Markdown documentation!:** https://github.com/TerosTechnology/teroshdl-documenter-demo/tree/documentation-markdown
 
 This is an example of how TerosHDL can generate your documentation project from the command line. So you can integrate it
 in your CI workflow.
