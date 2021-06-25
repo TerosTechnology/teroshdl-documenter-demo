@@ -36,5 +36,5 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages 
+        branch: documentation-markdown
         folder: teroshdl_doc 
