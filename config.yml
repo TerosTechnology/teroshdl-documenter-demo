@@ -47,7 +47,7 @@ PULP:
     verilog_symbol: ""
 
 PoC-Library:
-    url: https://github.com/VLSI-EDA/PoC/tree/master/src
+    url: https://github.com/VLSI-EDA/PoC.git
     folder: PoC/src
     vhdl_symbol: ""
     verilog_symbol: ""
