@@ -7,6 +7,10 @@
   <img src="teroshdl_logo.png" alt="TerosHDL logo">
 </p>
 
+Ismael Pérez Rojo: ismaelprojo@gmail.com\
+Carlos Alberto Ruiz Naranjo carlosruiznaranjo@gmail.com\
+Teros Technology: terostechnology@gmail.com
+
 # TerosHDL CLI examples
 
 **Check te example!:** https://terostechnology.github.io/teroshdl-documenter-demo/
@@ -24,3 +28,4 @@ Check the documentation: https://terostechnology.github.io/terosHDLdoc/
 It uses the TerosHDL CLI version: https://github.com/TerosTechnology/colibri
 
 Also you can use TerosHDL IDE: https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl
+
