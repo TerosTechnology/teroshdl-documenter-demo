@@ -1,0 +1,594 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    height:40%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 98%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:blue;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:7px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=pp_soc_uart><h1 id="entity-pp_soc_uart">Entity: pp_soc_uart</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 955 210"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="335,0 350,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="30" fill="black" x="350" y="0"></rect><rect id="SvgjsRect1007" width="266" height="25" fill="#bdecb6" x="352" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="330" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="365" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   FIFO_DEPTH </tspan></text><line id="SvgjsLine1012" x1="335" y1="15" x2="350" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="270" height="170" fill="black" x="350" y="35"></rect><rect id="SvgjsRect1014" width="266" height="165" fill="#fdfd96" x="352" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="330" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="365" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1019" x1="335" y1="50" x2="350" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="330" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="365" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   reset </tspan></text><line id="SvgjsLine1024" x1="335" y1="70" x2="350" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="330" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="365" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   rxd </tspan></text><line id="SvgjsLine1029" x1="335" y1="90" x2="350" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="330" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(11 downto 0) </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="365" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   wb_adr_in </tspan></text><line id="SvgjsLine1034" x1="335" y1="110" x2="350" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="330" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector( 7 downto 0) </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="365" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   wb_dat_in </tspan></text><line id="SvgjsLine1039" x1="335" y1="130" x2="350" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="330" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="365" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   wb_we_in </tspan></text><line id="SvgjsLine1044" x1="335" y1="150" x2="350" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="330" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="365" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   wb_cyc_in </tspan></text><line id="SvgjsLine1049" x1="335" y1="170" x2="350" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="330" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="330" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="365" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="365" svgjs:data="{&quot;newLined&quot;:true}">   wb_stb_in </tspan></text><line id="SvgjsLine1054" x1="335" y1="190" x2="350" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="640" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="605" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   txd </tspan></text><line id="SvgjsLine1059" x1="620" y1="50" x2="635" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="640" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="605" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   irq </tspan></text><line id="SvgjsLine1064" x1="620" y1="70" x2="635" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="640" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector( 7 downto 0) </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="605" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   wb_dat_out </tspan></text><line id="SvgjsLine1069" x1="620" y1="90" x2="635" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="640" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="605" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   wb_ack_out </tspan></text><line id="SvgjsLine1074" x1="620" y1="110" x2="635" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>The Potato Processor - A simple processor for FPGAs (c) Kristian Klomsten Skordal 2014 - 2016 <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6b;&#x72;i&#115;&#x74;&#x69;&#x61;&#110;&#46;&#x73;&#107;&#x6f;r&#x64;&#x61;&#x6c;&#x40;&#119;&#97;&#102;f&#x6c;&#101;&#109;&#97;&#105;&#x6c;&#x2e;&#110;&#x65;t">&#107;&#114;i&#115;&#116;&#105;&#x61;&#x6e;&#x2e;&#x73;&#x6b;&#111;&#114;&#100;&#97;&#108;&#x40;&#119;&#97;&#102;&#x66;&#x6c;&#x65;&#109;&#97;&#x69;&#108;&#x2e;&#110;&#x65;&#116;</a></p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FIFO_DEPTH</td>
+<td>natural</td>
+<td>64</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reset</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txd</td>
+<td>out</td>
+<td>std_logic</td>
+<td>UART ports:</td>
+</tr>
+<tr>
+<td>rxd</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>irq</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Interrupt signal:</td>
+</tr>
+<tr>
+<td>wb_adr_in</td>
+<td>in</td>
+<td>std_logic_vector(11 downto 0)</td>
+<td>Wishbone ports:</td>
+</tr>
+<tr>
+<td>wb_dat_in</td>
+<td>in</td>
+<td>std_logic_vector( 7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>wb_dat_out</td>
+<td>out</td>
+<td>std_logic_vector( 7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>wb_we_in</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>wb_cyc_in</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>wb_stb_in</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>wb_ack_out</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sample_clk</td>
+<td>std_logic</td>
+<td>UART sample clock signals:</td>
+</tr>
+<tr>
+<td>sample_clk_divisor</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>sample_clk_counter</td>
+<td>std_logic_vector(sample_clk_divisor'range)</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_state</td>
+<td>rx_state_type</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_byte</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_current_bit</td>
+<td>bitnumber</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_sample_counter</td>
+<td>rx_sample_counter_type</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_sample_value</td>
+<td>rx_sample_counter_type</td>
+<td></td>
+</tr>
+<tr>
+<td>rx_sample_delay</td>
+<td>rx_sample_delay_type</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_state</td>
+<td>tx_state_type</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_byte</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_current_bit</td>
+<td>bitnumber</td>
+<td></td>
+</tr>
+<tr>
+<td>uart_tx_counter</td>
+<td>uart_tx_counter_type</td>
+<td></td>
+</tr>
+<tr>
+<td>uart_tx_clk</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_buffer_full</td>
+<td>std_logic</td>
+<td>Buffer signals:</td>
+</tr>
+<tr>
+<td>send_buffer_empty</td>
+<td>std_logic</td>
+<td>Buffer signals:</td>
+</tr>
+<tr>
+<td>recv_buffer_full</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>recv_buffer_empty</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_buffer_input</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>send_buffer_output</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>recv_buffer_input</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>recv_buffer_output</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>send_buffer_push</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>send_buffer_pop</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>recv_buffer_push</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>recv_buffer_pop</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>irq_recv_enable</td>
+<td>std_logic</td>
+<td>IRQ enable signals:</td>
+</tr>
+<tr>
+<td>irq_tx_ready_enable</td>
+<td>std_logic</td>
+<td>IRQ enable signals:</td>
+</tr>
+<tr>
+<td>wb_state</td>
+<td>wb_state_type</td>
+<td></td>
+</tr>
+<tr>
+<td>rxd2</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rxd3</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>txd2</td>
+<td>std_ulogic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rx_state_type</td>
+<td>(IDLE, RECEIVE, STARTBIT, STOPBIT)</td>
+<td>UART receive process signals:</td>
+</tr>
+<tr>
+<td>tx_state_type</td>
+<td>(IDLE, TRANSMIT, STOPBIT)</td>
+<td>UART transmit process signals:</td>
+</tr>
+<tr>
+<td>wb_state_type</td>
+<td>(IDLE, WRITE_ACK, READ_ACK)</td>
+<td>Wishbone signals:</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2>
+<ul>
+<li>unnamed: <em>( clk )</em><br />
+Add a few FFs on the RX input to avoid metastability issues</li>
+</ul>
+<p><strong>Description</strong><br />
+Add a few FFs on the RX input to avoid metastability issues</p>
+<ul>
+<li><p>uart_receive: <em>( clk )</em></p></li>
+<li><p>sample_counter: <em>( clk )</em></p></li>
+<li><p>uart_transmit: <em>( clk )</em></p></li>
+<li><p>uart_tx_clock_generator: <em>( clk )</em></p></li>
+<li><p>sample_clock_generator: <em>( clk )</em></p></li>
+<li><p>wishbone: <em>( clk )</em></p></li>
+</ul><h2 id="instantiations">Instantiations</h2>
+<ul>
+<li>send_buffer: work.pp_fifo</li>
+<li>recv_buffer: work.pp_fifo</li>
+</ul><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="571pt" height="376pt"
+ viewBox="0.00 0.00 570.93 376.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 372)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-372 566.93,-372 566.93,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_rx_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 453,-8 453,-8 459,-8 465,-14 465,-20 465,-20 465,-348 465,-348 465,-354 459,-360 453,-360 453,-360 20,-360 20,-360 14,-360 8,-354 8,-348 8,-348 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="215.1616" y="-341.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">rx_state</text>
+</g>
+<!-- rx_state -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="152,-322 96,-322 96,-286 152,-286 152,-322"/>
+<text text-anchor="start" x="110.6644" y="-300.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M108.3333,-287C108.3333,-287 139.6667,-287 139.6667,-287 145.3333,-287 151,-292.6667 151,-298.3333 151,-298.3333 151,-309.6667 151,-309.6667 151,-315.3333 145.3333,-321 139.6667,-321 139.6667,-321 108.3333,-321 108.3333,-321 102.6667,-321 97,-315.3333 97,-309.6667 97,-309.6667 97,-298.3333 97,-298.3333 97,-292.6667 102.6667,-287 108.3333,-287"/>
+</g>
+<!-- STARTBIT -->
+<g id="node3" class="node state regular">
+<title>STARTBIT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="94.5,-240 15.5,-240 15.5,-204 94.5,-204 94.5,-240"/>
+<text text-anchor="start" x="26.5008" y="-218.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">STARTBIT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M27.8333,-205C27.8333,-205 82.1667,-205 82.1667,-205 87.8333,-205 93.5,-210.6667 93.5,-216.3333 93.5,-216.3333 93.5,-227.6667 93.5,-227.6667 93.5,-233.3333 87.8333,-239 82.1667,-239 82.1667,-239 27.8333,-239 27.8333,-239 22.1667,-239 16.5,-233.3333 16.5,-227.6667 16.5,-227.6667 16.5,-216.3333 16.5,-216.3333 16.5,-210.6667 22.1667,-205 27.8333,-205"/>
+</g>
+<!-- IDLE&#45;&gt;STARTBIT -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;STARTBIT</title>
+<path fill="none" stroke="#000000" d="M95.662,-297.2057C80.886,-292.0718 64.0881,-283.3686 55.23,-269 51.8016,-263.4389 50.4952,-256.7592 50.3187,-250.2045"/>
+<polygon fill="#000000" stroke="#000000" points="53.8157,-250.3509 50.829,-240.1858 46.8248,-249.9948 53.8157,-250.3509"/>
+<text text-anchor="start" x="55" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">sample_clk = &#39;1&#39; and rxd3 = &#39;0&#39; &#160;&#160;</text>
+</g>
+<!-- RECEIVE -->
+<g id="node4" class="node state regular">
+<title>RECEIVE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="90,-146 16,-146 16,-110 90,-110 90,-146"/>
+<text text-anchor="start" x="26.6642" y="-124.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">RECEIVE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.3333,-111C28.3333,-111 77.6667,-111 77.6667,-111 83.3333,-111 89,-116.6667 89,-122.3333 89,-122.3333 89,-133.6667 89,-133.6667 89,-139.3333 83.3333,-145 77.6667,-145 77.6667,-145 28.3333,-145 28.3333,-145 22.6667,-145 17,-139.3333 17,-133.6667 17,-133.6667 17,-122.3333 17,-122.3333 17,-116.6667 22.6667,-111 28.3333,-111"/>
+</g>
+<!-- STARTBIT&#45;&gt;RECEIVE -->
+<g id="edge2" class="edge transition">
+<title>STARTBIT&#45;&gt;RECEIVE</title>
+<path fill="none" stroke="#000000" d="M54.6144,-203.8759C54.3266,-190.3516 53.9281,-171.6192 53.599,-156.1514"/>
+<polygon fill="#000000" stroke="#000000" points="57.0965,-155.9918 53.3844,-146.0685 50.098,-156.1407 57.0965,-155.9918"/>
+<text text-anchor="start" x="54" y="-178" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">rx_sample_delay = 7 &#160;&#160;</text>
+<text text-anchor="start" x="54" y="-166" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">sample_clk = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- STOPBIT -->
+<g id="node5" class="node state regular">
+<title>STOPBIT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="230.5,-52 157.5,-52 157.5,-16 230.5,-16 230.5,-52"/>
+<text text-anchor="start" x="168.8302" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">STOPBIT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M169.8333,-17C169.8333,-17 218.1667,-17 218.1667,-17 223.8333,-17 229.5,-22.6667 229.5,-28.3333 229.5,-28.3333 229.5,-39.6667 229.5,-39.6667 229.5,-45.3333 223.8333,-51 218.1667,-51 218.1667,-51 169.8333,-51 169.8333,-51 164.1667,-51 158.5,-45.3333 158.5,-39.6667 158.5,-39.6667 158.5,-28.3333 158.5,-28.3333 158.5,-22.6667 164.1667,-17 169.8333,-17"/>
+</g>
+<!-- RECEIVE&#45;&gt;STOPBIT -->
+<g id="edge3" class="edge transition">
+<title>RECEIVE&#45;&gt;STOPBIT</title>
+<path fill="none" stroke="#000000" d="M48.3798,-109.7841C46.2825,-96.9979 45.9881,-80.2414 55.07,-69 66.6649,-54.648 111.4787,-45.1761 147.1158,-39.7481"/>
+<polygon fill="#000000" stroke="#000000" points="147.9682,-43.161 157.3602,-38.258 146.9606,-36.2339 147.9682,-43.161"/>
+<text text-anchor="start" x="55" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">sample_clk = &#39;1&#39; and rx_sample_counter = rx_sample_value &#160;&#160;</text>
+<text text-anchor="start" x="55" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (rx_current_bit /= 7) &#160;&#160;</text>
+</g>
+<!-- STOPBIT&#45;&gt;IDLE -->
+<g id="edge4" class="edge transition">
+<title>STOPBIT&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M230.6495,-38.3784C266.6531,-43.5224 317.9006,-53.3925 330,-69 336.5353,-77.4301 333.3546,-82.8746 330,-93 314.6664,-139.2819 236.795,-238.1994 199,-269 187.9937,-277.9695 174.31,-285.2292 161.6557,-290.7628"/>
+<polygon fill="#000000" stroke="#000000" points="160.1434,-287.6007 152.2408,-294.6577 162.8193,-294.0691 160.1434,-287.6007"/>
+<text text-anchor="start" x="289" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">sample_clk = &#39;1&#39; and rx_sample_counter = rx_sample_value &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="376pt" height="270pt"
+ viewBox="0.00 0.00 376.05 270.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 266)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-266 372.053,-266 372.053,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_tx_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 265,-8 265,-8 271,-8 277,-14 277,-20 277,-20 277,-242 277,-242 277,-248 271,-254 265,-254 265,-254 20,-254 20,-254 14,-254 8,-248 8,-242 8,-242 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="121.4916" y="-235.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">tx_state</text>
+</g>
+<!-- tx_state -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="116,-216 60,-216 60,-180 116,-180 116,-216"/>
+<text text-anchor="start" x="74.6644" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M72.3333,-181C72.3333,-181 103.6667,-181 103.6667,-181 109.3333,-181 115,-186.6667 115,-192.3333 115,-192.3333 115,-203.6667 115,-203.6667 115,-209.3333 109.3333,-215 103.6667,-215 103.6667,-215 72.3333,-215 72.3333,-215 66.6667,-215 61,-209.3333 61,-203.6667 61,-203.6667 61,-192.3333 61,-192.3333 61,-186.6667 66.6667,-181 72.3333,-181"/>
+</g>
+<!-- TRANSMIT -->
+<g id="node3" class="node state regular">
+<title>TRANSMIT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="99.5,-134 16.5,-134 16.5,-98 99.5,-98 99.5,-134"/>
+<text text-anchor="start" x="27.8388" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">TRANSMIT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.8333,-99C28.8333,-99 87.1667,-99 87.1667,-99 92.8333,-99 98.5,-104.6667 98.5,-110.3333 98.5,-110.3333 98.5,-121.6667 98.5,-121.6667 98.5,-127.3333 92.8333,-133 87.1667,-133 87.1667,-133 28.8333,-133 28.8333,-133 23.1667,-133 17.5,-127.3333 17.5,-121.6667 17.5,-121.6667 17.5,-110.3333 17.5,-110.3333 17.5,-104.6667 23.1667,-99 28.8333,-99"/>
+</g>
+<!-- IDLE&#45;&gt;TRANSMIT -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;TRANSMIT</title>
+<path fill="none" stroke="#000000" d="M65.9892,-179.947C61.4181,-174.9798 57.239,-169.2268 54.753,-163 52.4604,-157.2578 51.8049,-150.8086 52.0196,-144.5707"/>
+<polygon fill="#000000" stroke="#000000" points="55.5205,-144.7411 53.0669,-134.4343 48.5576,-144.0216 55.5205,-144.7411"/>
+<text text-anchor="start" x="54" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">send_buffer_empty = &#39;0&#39; and uart_tx_clk = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- STOPBIT -->
+<g id="node4" class="node state regular">
+<title>STOPBIT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="179.5,-52 106.5,-52 106.5,-16 179.5,-16 179.5,-52"/>
+<text text-anchor="start" x="117.8302" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">STOPBIT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M118.8333,-17C118.8333,-17 167.1667,-17 167.1667,-17 172.8333,-17 178.5,-22.6667 178.5,-28.3333 178.5,-28.3333 178.5,-39.6667 178.5,-39.6667 178.5,-45.3333 172.8333,-51 167.1667,-51 167.1667,-51 118.8333,-51 118.8333,-51 113.1667,-51 107.5,-45.3333 107.5,-39.6667 107.5,-39.6667 107.5,-28.3333 107.5,-28.3333 107.5,-22.6667 113.1667,-17 118.8333,-17"/>
+</g>
+<!-- TRANSMIT&#45;&gt;STOPBIT -->
+<g id="edge2" class="edge transition">
+<title>TRANSMIT&#45;&gt;STOPBIT</title>
+<path fill="none" stroke="#000000" d="M51.8955,-97.6338C49.9683,-88.3158 49.592,-77.2546 55.188,-69 64.6446,-55.0508 80.6436,-46.6607 96.4148,-41.6145"/>
+<polygon fill="#000000" stroke="#000000" points="97.4618,-44.956 106.1447,-38.8849 95.5709,-38.2162 97.4618,-44.956"/>
+<text text-anchor="start" x="55" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">uart_tx_clk = &#39;1&#39; and tx_current_bit = 7 &#160;&#160;</text>
+</g>
+<!-- STOPBIT&#45;&gt;IDLE -->
+<g id="edge3" class="edge transition">
+<title>STOPBIT&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M179.859,-40.5647C198.2557,-45.5575 219.598,-54.2002 234,-69 337.4331,-175.2901 282.8505,-138.7863 263,-163 254.3578,-173.5418 174.8991,-186.1297 126.0709,-192.969"/>
+<polygon fill="#000000" stroke="#000000" points="125.5802,-189.5034 116.1529,-194.3384 126.5376,-196.4377 125.5802,-189.5034"/>
+<text text-anchor="start" x="290" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">uart_tx_clk = &#39;1&#39; &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="674pt" height="200pt"
+ viewBox="0.00 0.00 674.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 196)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-196 670,-196 670,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_wb_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 646,-8 646,-8 652,-8 658,-14 658,-20 658,-20 658,-172 658,-172 658,-178 652,-184 646,-184 646,-184 20,-184 20,-184 14,-184 8,-178 8,-172 8,-172 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="308.9922" y="-165.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">wb_state</text>
+</g>
+<!-- wb_state -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="290,-146 234,-146 234,-110 290,-110 290,-146"/>
+<text text-anchor="start" x="248.6644" y="-124.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M246.3333,-111C246.3333,-111 277.6667,-111 277.6667,-111 283.3333,-111 289,-116.6667 289,-122.3333 289,-122.3333 289,-133.6667 289,-133.6667 289,-139.3333 283.3333,-145 277.6667,-145 277.6667,-145 246.3333,-145 246.3333,-145 240.6667,-145 235,-139.3333 235,-133.6667 235,-133.6667 235,-122.3333 235,-122.3333 235,-116.6667 240.6667,-111 246.3333,-111"/>
+</g>
+<!-- WRITE_ACK -->
+<g id="node3" class="node state regular">
+<title>WRITE_ACK</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="155.5,-52 64.5,-52 64.5,-16 155.5,-16 155.5,-52"/>
+<text text-anchor="start" x="75.5014" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">WRITE_ACK</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M76.8333,-17C76.8333,-17 143.1667,-17 143.1667,-17 148.8333,-17 154.5,-22.6667 154.5,-28.3333 154.5,-28.3333 154.5,-39.6667 154.5,-39.6667 154.5,-45.3333 148.8333,-51 143.1667,-51 143.1667,-51 76.8333,-51 76.8333,-51 71.1667,-51 65.5,-45.3333 65.5,-39.6667 65.5,-39.6667 65.5,-28.3333 65.5,-28.3333 65.5,-22.6667 71.1667,-17 76.8333,-17"/>
+</g>
+<!-- IDLE&#45;&gt;WRITE_ACK -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;WRITE_ACK</title>
+<path fill="none" stroke="#000000" d="M233.7944,-119.725C215.8806,-113.7744 192.6423,-104.7349 173.994,-93 159.2008,-83.691 144.7117,-70.7499 133.2718,-59.359"/>
+<polygon fill="#000000" stroke="#000000" points="135.7163,-56.8528 126.2218,-52.1512 130.7121,-61.7475 135.7163,-56.8528"/>
+<text text-anchor="start" x="173" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">wb_we_in = &#39;1&#39;wb_we_in = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="173" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">wb_cyc_in = &#39;1&#39; and wb_stb_in = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- READ_ACK -->
+<g id="node4" class="node state regular">
+<title>READ_ACK</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="514,-52 428,-52 428,-16 514,-16 514,-52"/>
+<text text-anchor="start" x="438.6648" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">READ_ACK</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M440.3333,-17C440.3333,-17 501.6667,-17 501.6667,-17 507.3333,-17 513,-22.6667 513,-28.3333 513,-28.3333 513,-39.6667 513,-39.6667 513,-45.3333 507.3333,-51 501.6667,-51 501.6667,-51 440.3333,-51 440.3333,-51 434.6667,-51 429,-45.3333 429,-39.6667 429,-39.6667 429,-28.3333 429,-28.3333 429,-22.6667 434.6667,-17 440.3333,-17"/>
+</g>
+<!-- IDLE&#45;&gt;READ_ACK -->
+<g id="edge2" class="edge transition">
+<title>IDLE&#45;&gt;READ_ACK</title>
+<path fill="none" stroke="#000000" d="M290.0739,-116.1101C305.0423,-109.5938 323.6859,-101.194 340,-93 359.5559,-83.1777 363.2302,-78.397 382.994,-69 394.3598,-63.596 406.7962,-58.2947 418.6469,-53.5178"/>
+<polygon fill="#000000" stroke="#000000" points="419.9907,-56.7501 427.9937,-49.8073 417.4079,-50.244 419.9907,-56.7501"/>
+<text text-anchor="start" x="382" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">wb_cyc_in = &#39;1&#39; and wb_stb_in = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="382" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (wb_we_in = &#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- WRITE_ACK&#45;&gt;IDLE -->
+<g id="edge3" class="edge transition">
+<title>WRITE_ACK&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M77.3463,-52.1377C71.6668,-56.8504 66.5423,-62.474 63.277,-69 58.504,-78.5392 56.4198,-84.8295 63.277,-93 83.3452,-116.9116 171.7853,-124.4929 223.6728,-126.8925"/>
+<polygon fill="#000000" stroke="#000000" points="223.7045,-130.3968 233.8422,-127.3183 223.9974,-123.4029 223.7045,-130.3968"/>
+<text text-anchor="start" x="63" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">wb_stb_in = &#39;0&#39; &#160;&#160;</text>
+</g>
+<!-- READ_ACK&#45;&gt;IDLE -->
+<g id="edge4" class="edge transition">
+<title>READ_ACK&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M514.0173,-43.4273C527.5409,-48.6359 541.015,-56.6649 549,-69 554.7965,-77.9543 556.0712,-85.014 549,-93 547.9758,-94.1567 378.5987,-114.2564 300.5609,-123.462"/>
+<polygon fill="#000000" stroke="#000000" points="299.704,-120.0386 290.1826,-124.6855 300.5237,-126.9905 299.704,-120.0386"/>
+<text text-anchor="start" x="553" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">wb_stb_in = &#39;0&#39; &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div><br><br><br><br><br><br>
