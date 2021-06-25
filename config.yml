@@ -1,0 +1,29 @@
+vunit:
+    url: https://github.com/VUnit/vunit.git
+    folder: vunit/
+
+SERV:
+    url: https://github.com/olofk/serv
+    folder: serv/rtl/    
+
+NEORV32:
+    url: https://github.com/stnolting/neorv32.git
+    folder: neorv32/rtl   
+
+opentitan:
+    url: https://github.com/lowRISC/opentitan.git
+    folder: opentitan/hw/ip
+
+PULP:
+    url: https://github.com/pulp-platform/pulp.git
+    folder: pulp/rtl/pulp
+
+UVVM:
+    url: https://github.com/UVVM/UVVM.git
+    folder: UVVM/
+
+OSVVM:
+    url: https://github.com/OSVVM/OSVVM.git
+    folder: OSVVM/
+
+

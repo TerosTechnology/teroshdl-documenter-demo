@@ -1,0 +1,35 @@
+name: 'doc'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  BTD:
+    name: '📓 Docs'
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: '🧰 Checkout'
+      uses: actions/checkout@v2
+
+    - name: '📓 Install TerosHDL'
+      run: |
+        git clone https://github.com/TerosTechnology/colibri.git
+        cd colibri
+        npm install -g .
+
+    - name: 'Generate documentation'
+      run: |
+        ls 
+        teroshdl-hdl-documenter --help
+
+    # - name: '📤 Upload artifact: HTML and LaTeX'
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: doc
+    #     path: |
+    #       doc/_build/html
+    #       doc/_build/latex
