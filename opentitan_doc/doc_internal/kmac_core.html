@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -352,30 +356,20 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-State register</li>
-</ul>
-<p><strong>Description</strong><br />
-State register</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-Next state and output logic</li>
-</ul>
-<p><strong>Description</strong><br />
-Next state and output logic</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+State register</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Next state and output logic</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Block size based on the address.<br />
 This is used for bytepad() and also pad10*1()<br />
 assign block_addr_limit = KeccakRate[strength_i];<br />
-but below is easier to understand</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Block size based on the address.<br />
-This is used for bytepad() and also pad10*1()<br />
-assign block_addr_limit = KeccakRate[strength_i];<br />
-but below is easier to understand</p><br><br><br><br><br><br>
+but below is easier to understand</p></div><br><br><br><br><br><br>

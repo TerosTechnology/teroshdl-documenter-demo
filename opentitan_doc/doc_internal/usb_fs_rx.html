@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -532,30 +536,43 @@
 <td>single-ended 0 - end of packet or detached</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>proc_dpair_mute: <em>(  )</em></p></li>
-<li><p>proc_line_state_q: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_line_state_d: <em>(  )</em></p></li>
-<li><p>proc_diff_state_d: <em>(  )</em></p></li>
-<li><p>proc_bit_phase_q: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_packet_valid_d: <em>(  )</em></p></li>
-<li><p>proc_reg_pkt_line: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>proc_bitstuff_history_d: <em>(  )</em></p></li>
-<li><p>proc_bitstuff_history_q: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_bistuff_error_d: <em>(  )</em><br />
-remember the bitstuff errors</p></li>
-</ul>
-<p><strong>Description</strong><br />
-remember the bitstuff errors</p>
-<ul>
-<li><p>proc_bitstuff_error_q: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_full_pid_d: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>proc_gp_regs: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>proc_dpair_mute: (  )</li>
+</ul><ul>
+<li>proc_line_state_q: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_line_state_d: (  )</li>
+</ul><ul>
+<li>proc_diff_state_d: (  )</li>
+</ul><ul>
+<li>proc_bit_phase_q: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_packet_valid_d: (  )</li>
+</ul><ul>
+<li>proc_reg_pkt_line: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>proc_bitstuff_history_d: (  )</li>
+</ul><ul>
+<li>proc_bitstuff_history_q: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_bistuff_error_d: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+remember the bitstuff errors</p></div><ul>
+<li>proc_bitstuff_error_q: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_full_pid_d: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>proc_gp_regs: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><br><br><br><br><br><br>

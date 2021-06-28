@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -127,22 +131,14 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>push_avalon_stream <font id="function_arguments">(signal net : inout network_t;                               avalon_source : avalon_source_t;
-                           data : std_logic_vector;
-                           sop : std_logic := '0';
-                           eop : std_logic := '0')</font> <font id="function_return">return ()</font></li>
-<li>pop_avalon_stream <font id="function_arguments">(signal net : inout network_t;                              avalon_sink : avalon_sink_t;
-                          variable data : inout std_logic_vector;
-                          variable sop  : inout std_logic;
-                          variable eop  : inout std_logic)</font> <font id="function_return">return ()</font></li>
-<li>push_avalon_stream_transaction <font id="function_arguments">(msg : msg_t; avalon_stream_transaction : avalon_stream_transaction_t)</font> <font id="function_return">return ()</font></li>
-<li>pop_avalon_stream_transaction <font id="function_arguments">(    constant msg : in msg_t;
-variable avalon_stream_transaction : out avalon_stream_transaction_t
-)</font> <font id="function_return">return ()</font></li>
-<li>handle_avalon_stream_transaction <font id="function_arguments">(    variable msg_type : inout msg_type_t;
-variable msg : inout msg_t;
-variable avalon_transaction : out avalon_stream_transaction_t
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>push_avalon_stream <font id="function_arguments">(signal net : inout network_t; avalon_source : avalon_source_t; data : std_logic_vector; sop : std_logic := '0'; eop : std_logic := '0') </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>pop_avalon_stream <font id="function_arguments">(signal net : inout network_t; avalon_sink : avalon_sink_t; variable data : inout std_logic_vector; variable sop  : inout std_logic; variable eop  : inout std_logic) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>push_avalon_stream_transaction <font id="function_arguments">(msg : msg_t; avalon_stream_transaction : avalon_stream_transaction_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>pop_avalon_stream_transaction <font id="function_arguments">( constant msg : in msg_t; variable avalon_stream_transaction : out avalon_stream_transaction_t ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>handle_avalon_stream_transaction <font id="function_arguments">( variable msg_type : inout msg_type_t; variable msg : inout msg_t; variable avalon_transaction : out avalon_stream_transaction_t ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

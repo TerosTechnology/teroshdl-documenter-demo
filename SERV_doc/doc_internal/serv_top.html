@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -812,21 +816,25 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk) )</em></p></li>
-<li><p>unnamed: <em>( @(o_ibus_adr) )</em><br />
-verilator lint_off COMBDLY */</p></li>
-</ul>
-<p><strong>Description</strong><br />
-verilator lint_off COMBDLY */</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><ul>
+<li>unnamed: ( @(o_ibus_adr) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+verilator lint_off COMBDLY */</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>state: serv_state</li>
+</ul><ul>
 <li>decode: serv_decode</li>
+</ul><ul>
 <li>immdec: serv_immdec</li>
+</ul><ul>
 <li>bufreg: serv_bufreg</li>
+</ul><ul>
 <li>ctrl: serv_ctrl</li>
+</ul><ul>
 <li>alu: serv_alu</li>
+</ul><ul>
 <li>rf_if: serv_rf_if</li>
+</ul><ul>
 <li>mem_if: serv_mem_if</li>
 </ul><br><br><br><br><br><br>

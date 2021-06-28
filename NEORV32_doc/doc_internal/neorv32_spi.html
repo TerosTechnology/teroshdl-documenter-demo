@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -382,28 +386,16 @@
 <td>r/-: spi transceiver is busy</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>rw_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
-<ul>
-<li>spi_rtx_unit: <em>( clk_i )</em></li>
-</ul>
-<h2 id="spi-transceiver-------------------------------------------------------------------------">SPI Transceiver ------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="spi-transceiver--------------------------------------------------------------------------1">SPI Transceiver ------------------------------------------------------------------------</h2>
-<ul>
-<li>data_size: <em>( ctrl )</em></li>
-</ul>
-<h2 id="rtx-data-size-------------------------------------------------------------------------">RTX Data size ------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="rtx-data-size--------------------------------------------------------------------------1">RTX Data size ------------------------------------------------------------------------</h2>
-<ul>
-<li>rx_mapping: <em>( ctrl, spi_rtx_sreg )</em></li>
-</ul>
-<h2 id="rx-data-masking-------------------------------------------------------------------------">RX-Data Masking ------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="rx-data-masking--------------------------------------------------------------------------1">RX-Data Masking ------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>rw_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2></div><ul>
+<li>spi_rtx_unit: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="spi-transceiver-------------------------------------------------------------------------">SPI Transceiver ------------------------------------------------------------------------</h2></div><ul>
+<li>data_size: ( ctrl )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="rtx-data-size-------------------------------------------------------------------------">RTX Data size ------------------------------------------------------------------------</h2></div><ul>
+<li>rx_mapping: ( ctrl, spi_rtx_sreg )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="rx-data-masking-------------------------------------------------------------------------">RX-Data Masking ------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

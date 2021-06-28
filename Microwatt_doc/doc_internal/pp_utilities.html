@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,14 +68,14 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=pp_utilities><h1 id="package-pp_utilities">Package: pp_utilities</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>to_std_logic <font id="function_arguments">(input : in boolean)</font> <font id="function_return">return std_logic</font></li>
-<li>is_pow2 <font id="function_arguments">(input : in natural)</font> <font id="function_return">return boolean</font><br />
-<strong>Description</strong><br />
-Checks if a number is 2^n:</li>
-<li>log2 <font id="function_arguments">(input : in natural)</font> <font id="function_return">return natural</font></li>
-<li>wb_get_data_sel <font id="function_arguments">(size : in std_logic_vector(1 downto 0); address : in std_logic_vector)</font> <font id="function_return">return std_logic_vector</font><br />
-<strong>Description</strong><br />
-Gets the value of the sel signals to the wishbone interconnect for the specifiedoperand size and address.</li>
-</ul><br><br><br><br><br><br>
+<a id=pp_utilities><h1 id="package-pp_utilities">Package: pp_utilities</h1></a><h2 id="functions">Functions</h2><ul>
+<li>to_std_logic <font id="function_arguments">(input : in boolean) </font> <font id="function_return">return std_logic </font></li>
+</ul><ul>
+<li>is_pow2 <font id="function_arguments">(input : in natural) </font> <font id="function_return">return boolean </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Checks if a number is 2^n:</p></div><ul>
+<li>log2 <font id="function_arguments">(input : in natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>wb_get_data_sel <font id="function_arguments">(size : in std_logic_vector(1 downto 0); address : in std_logic_vector) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Gets the value of the sel signals to the wishbone interconnect for the specifiedoperand size and address.</p></div><br><br><br><br><br><br>

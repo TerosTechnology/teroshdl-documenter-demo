@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -80,10 +84,12 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array )</font> <font id="function_return">return ()</font></li>
-<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array ; variable Count : inout natural )</font> <font id="function_return">return ()</font></li>
-<li>AccumulateResults <font id="function_arguments">(IntVal : integer ; Num : integer ; variable Results : inout integer_array)</font> <font id="function_return">return ()</font></li>
-<li>PrintResults <font id="function_arguments">(Results : integer_array)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array ; variable Count : inout natural ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>AccumulateResults <font id="function_arguments">(IntVal : integer ; Num : integer ; variable Results : inout integer_array) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>PrintResults <font id="function_arguments">(Results : integer_array) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

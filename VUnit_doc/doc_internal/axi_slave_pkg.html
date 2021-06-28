@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -153,47 +157,38 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>get_logger <font id="function_arguments">(axi_slave : axi_slave_t)</font> <font id="function_return">return logger_t</font><br />
-<strong>Description</strong><br />
-Get the logger used by the axi_slave</li>
-<li>set_address_fifo_depth <font id="function_arguments">(signal net : inout network_t;                                   axi_slave : axi_slave_t;
-                               depth : positive)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the maximum number address channel tokens that can be queued</li>
-<li>set_write_response_fifo_depth <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t;
-                                      depth : positive)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the maximum number write responses that can be queued</li>
-<li>set_address_stall_probability <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t;
-                                      probability : probability_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the address channel stall probability</li>
-<li>set_data_stall_probability <font id="function_arguments">(signal net : inout network_t;                                       axi_slave : axi_slave_t;
-                                   probability : probability_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the data channel stall probability</li>
-<li>set_write_response_stall_probability <font id="function_arguments">(signal net : inout network_t;                                                 axi_slave : axi_slave_t;
-                                             probability : probability_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the write response stall probability</li>
-<li>set_response_latency <font id="function_arguments">(signal net : inout network_t;                                 axi_slave : axi_slave_t;
-                             min_latency, max_latency : delay_length)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-The response latency is randomly choosen in the uniform interval:[min_latency, max_latency]</li>
-<li>set_response_latency <font id="function_arguments">(signal net : inout network_t;                                 axi_slave : axi_slave_t;
-                             latency : delay_length)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Short hand for set_response_latency when min and max are the same</li>
-<li>enable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;                                         axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font></li>
-<li>disable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;                                          axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font></li>
-<li>get_statistics <font id="function_arguments">(signal net : inout network_t;                           axi_slave : axi_slave_t;
-                       variable stat  : inout axi_statistics_t;
-                       clear : boolean := false)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Get statistics object from axi slaveDynamically allocates new statistics object which must he deallocated whenusedThis procedure will automatically deallocate the input statistics objectif it is not null</li>
-<li>enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>get_logger <font id="function_arguments">(axi_slave : axi_slave_t) </font> <font id="function_return">return logger_t </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Get the logger used by the axi_slave</p></div><ul>
+<li>set_address_fifo_depth <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; depth : positive) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the maximum number address channel tokens that can be queued</p></div><ul>
+<li>set_write_response_fifo_depth <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; depth : positive) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the maximum number write responses that can be queued</p></div><ul>
+<li>set_address_stall_probability <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; probability : probability_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the address channel stall probability</p></div><ul>
+<li>set_data_stall_probability <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; probability : probability_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the data channel stall probability</p></div><ul>
+<li>set_write_response_stall_probability <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; probability : probability_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the write response stall probability</p></div><ul>
+<li>set_response_latency <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; min_latency, max_latency : delay_length) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+The response latency is randomly choosen in the uniform interval:[min_latency, max_latency]</p></div><ul>
+<li>set_response_latency <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; latency : delay_length) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Short hand for set_response_latency when min and max are the same</p></div><ul>
+<li>enable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>disable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>get_statistics <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t; variable stat  : inout axi_statistics_t; clear : boolean := false) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Get statistics object from axi slaveDynamically allocates new statistics object which must he deallocated whenusedThis procedure will automatically deallocate the input statistics objectif it is not null</p></div><ul>
+<li>enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t; axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</p></div><br><br><br><br><br><br>

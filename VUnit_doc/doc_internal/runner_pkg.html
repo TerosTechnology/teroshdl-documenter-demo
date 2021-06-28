@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -117,37 +121,63 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>runner_init <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_active_python_runner <font id="function_arguments">(runner : runner_t; value : boolean)</font> <font id="function_return">return ()</font></li>
-<li>lock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t)</font> <font id="function_return">return ()</font></li>
-<li>unlock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t)</font> <font id="function_return">return ()</font></li>
-<li>lock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t)</font> <font id="function_return">return ()</font></li>
-<li>unlock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t)</font> <font id="function_return">return ()</font></li>
-<li>set_phase <font id="function_arguments">(runner : runner_t; new_phase : runner_phase_t)</font> <font id="function_return">return ()</font></li>
-<li>set_test_case_name <font id="function_arguments">(runner : runner_t; index : positive; new_name : string)</font> <font id="function_return">return ()</font></li>
-<li>set_num_of_test_cases <font id="function_arguments">(runner : runner_t; new_value : integer)</font> <font id="function_return">return ()</font></li>
-<li>inc_num_of_test_cases <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>inc_active_test_case_index <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_test_suite_completed <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>inc_test_suite_iteration <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_run_test_case <font id="function_arguments">(runner : runner_t; index : positive; new_name : string)</font> <font id="function_return">return ()</font></li>
-<li>set_running_test_case <font id="function_arguments">(runner : runner_t; new_name  : string)</font> <font id="function_return">return ()</font></li>
-<li>inc_num_of_run_test_cases <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_has_run_since_last_loop_check <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>clear_has_run_since_last_loop_check <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_run_all <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_run_all <font id="function_arguments">(runner : runner_t; new_value : boolean)</font> <font id="function_return">return ()</font></li>
-<li>inc_test_case_iteration <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>init_test_case_iteration <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_test_case_exit_after_error <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>clear_test_case_exit_after_error <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_test_suite_exit_after_error <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>clear_test_suite_exit_after_error <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font></li>
-<li>set_cfg <font id="function_arguments">(runner : runner_t; new_value : string)</font> <font id="function_return">return ()</font></li>
-<li>set_timeout <font id="function_arguments">(runner : runner_t; timeout : time)</font> <font id="function_return">return ()</font></li>
-<li>p_disable_simulation_exit <font id="function_arguments">(runner : runner_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Private procedures only use for VUnit internal testing</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>runner_init <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_active_python_runner <font id="function_arguments">(runner : runner_t; value : boolean) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>lock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>unlock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>lock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>unlock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_phase <font id="function_arguments">(runner : runner_t; new_phase : runner_phase_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_test_case_name <font id="function_arguments">(runner : runner_t; index : positive; new_name : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_num_of_test_cases <font id="function_arguments">(runner : runner_t; new_value : integer) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>inc_num_of_test_cases <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>inc_active_test_case_index <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_test_suite_completed <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>inc_test_suite_iteration <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_run_test_case <font id="function_arguments">(runner : runner_t; index : positive; new_name : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_running_test_case <font id="function_arguments">(runner : runner_t; new_name  : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>inc_num_of_run_test_cases <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_has_run_since_last_loop_check <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>clear_has_run_since_last_loop_check <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_run_all <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_run_all <font id="function_arguments">(runner : runner_t; new_value : boolean) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>inc_test_case_iteration <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>init_test_case_iteration <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_test_case_exit_after_error <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>clear_test_case_exit_after_error <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_test_suite_exit_after_error <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>clear_test_suite_exit_after_error <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_cfg <font id="function_arguments">(runner : runner_t; new_value : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_timeout <font id="function_arguments">(runner : runner_t; timeout : time) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>p_disable_simulation_exit <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Private procedures only use for VUnit internal testing</p></div><br><br><br><br><br><br>

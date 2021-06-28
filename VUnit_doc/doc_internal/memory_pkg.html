@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -107,7 +111,7 @@
 <tbody>
 <tr>
 <td>endianness_arg_t</td>
-<td>(little_endian,                             big_endian,                             default_endian)</td>
+<td>(little_endian, big_endian, default_endian)</td>
 <td></td>
 </tr>
 <tr>
@@ -117,7 +121,7 @@
 </tr>
 <tr>
 <td>permissions_t</td>
-<td>(no_access,                          write_only,                          read_only,                          read_and_write)</td>
+<td>(no_access, write_only, read_only, read_and_write)</td>
 <td></td>
 </tr>
 <tr>
@@ -126,45 +130,36 @@
 <td>Reference to an allocated buffer with the memory</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>clear <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Empties the memory by removing all data and permissions</li>
-<li>write_byte <font id="function_arguments">(memory : memory_t;                       address : natural;
-                   byte : byte_t)</font> <font id="function_return">return ()</font></li>
-<li>write_word <font id="function_arguments">(memory : memory_t;                       address : natural;
-                   word : std_logic_vector;
-                   endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font></li>
-<li>write_integer <font id="function_arguments">(memory : memory_t;                          address : natural;
-                      word : integer;
-                      bytes_per_word : natural range 1 to 4 := 4;
-                      endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Write integer</li>
-<li>set_permissions <font id="function_arguments">(memory : memory_t;                            address : natural;
-                        permissions : permissions_t)</font> <font id="function_return">return ()</font></li>
-<li>clear_expected_byte <font id="function_arguments">(memory : memory_t;                                address : natural)</font> <font id="function_return">return ()</font></li>
-<li>set_expected_byte <font id="function_arguments">(memory : memory_t;                              address : natural;
-                          expected : byte_t)</font> <font id="function_return">return ()</font></li>
-<li>set_expected_word <font id="function_arguments">(memory : memory_t;                              address : natural;
-                          expected : std_logic_vector;
-                          endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font></li>
-<li>set_expected_integer <font id="function_arguments">(memory : memory_t;                                 address : natural;
-                             expected : integer;
-                             bytes_per_word : natural range 1 to 4 := 4;
-                             endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font></li>
-<li>check_expected_was_written <font id="function_arguments">(memory : memory_t;                                       address : natural;
-                                   num_bytes : natural)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Check that all expected bytes within address range was writtenwith correct value</li>
-<li>check_expected_was_written <font id="function_arguments">(memory : memory_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Check that all expected bytes within the entire memory was writtenwith correct value</li>
-<li>check_expected_was_written <font id="function_arguments">(buf : buffer_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Check that all expected bytes was written with correct value in buffer</li>
-<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform write of one byte without running any address or data checks</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>clear <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Empties the memory by removing all data and permissions</p></div><ul>
+<li>write_byte <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>write_word <font id="function_arguments">(memory : memory_t; address : natural; word : std_logic_vector; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>write_integer <font id="function_arguments">(memory : memory_t; address : natural; word : integer; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write integer</p></div><ul>
+<li>set_permissions <font id="function_arguments">(memory : memory_t; address : natural; permissions : permissions_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>clear_expected_byte <font id="function_arguments">(memory : memory_t; address : natural) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_expected_byte <font id="function_arguments">(memory : memory_t; address : natural; expected : byte_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_expected_word <font id="function_arguments">(memory : memory_t; address : natural; expected : std_logic_vector; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set_expected_integer <font id="function_arguments">(memory : memory_t; address : natural; expected : integer; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>check_expected_was_written <font id="function_arguments">(memory : memory_t; address : natural; num_bytes : natural) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Check that all expected bytes within address range was writtenwith correct value</p></div><ul>
+<li>check_expected_was_written <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Check that all expected bytes within the entire memory was writtenwith correct value</p></div><ul>
+<li>check_expected_was_written <font id="function_arguments">(buf : buffer_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Check that all expected bytes was written with correct value in buffer</p></div><ul>
+<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Perform write of one byte without running any address or data checks</p></div><br><br><br><br><br><br>

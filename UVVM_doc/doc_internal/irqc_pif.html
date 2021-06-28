@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -157,17 +161,12 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>p_read_reg: <em>( cs, addr, rd, c2p, p2c_i )</em></p></li>
-<li><p>p_write_reg: <em>( clk, arst )</em><br />
-Writing to registers that are not functionally manipulated</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Writing to registers that are not functionally manipulated</p>
-<ul>
-<li>p_aux: <em>( wr, addr, din )</em><br />
-Writing to registers that are functionally manipulated and/or located outside PIF (or dummy registers)</li>
-</ul>
-<p><strong>Description</strong><br />
-Writing to registers that are functionally manipulated and/or located outside PIF (or dummy registers)</p><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>p_read_reg: ( cs, addr, rd, c2p, p2c_i )</li>
+</ul><ul>
+<li>p_write_reg: ( clk, arst )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Writing to registers that are not functionally manipulated</p></div><ul>
+<li>p_aux: ( wr, addr, din )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Writing to registers that are functionally manipulated and/or located outside PIF (or dummy registers)</p></div><br><br><br><br><br><br>

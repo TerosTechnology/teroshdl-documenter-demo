@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -519,42 +523,23 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>rw_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
-<ul>
-<li>uart_tx_unit: <em>( clk_i )</em></li>
-</ul>
-<h2 id="uart-transmitter------------------------------------------------------------------------">UART Transmitter -----------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="uart-transmitter-------------------------------------------------------------------------1">UART Transmitter -----------------------------------------------------------------------</h2>
-<ul>
-<li>uart_rx_unit: <em>( clk_i )</em></li>
-</ul>
-<h2 id="uart-receiver---------------------------------------------------------------------------">UART Receiver --------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="uart-receiver----------------------------------------------------------------------------1">UART Receiver --------------------------------------------------------------------------</h2>
-<ul>
-<li>flow_control_buffer: <em>( clk_i )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>rw_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2></div><ul>
+<li>uart_tx_unit: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="uart-transmitter------------------------------------------------------------------------">UART Transmitter -----------------------------------------------------------------------</h2></div><ul>
+<li>uart_rx_unit: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="uart-receiver---------------------------------------------------------------------------">UART Receiver --------------------------------------------------------------------------</h2></div><ul>
+<li>flow_control_buffer: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 output is low-active<br />
-flow-control input/output synchronizer --</li>
-</ul>
-<p><strong>Description</strong><br />
-output is low-active<br />
-flow-control input/output synchronizer --</p>
-<ul>
-<li>sim_output: <em>( clk_i )</em></li>
-</ul>
+flow-control input/output synchronizer --</p></div><ul>
+<li>sim_output: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
 <h2 id="simulation-output-----------------------------------------------------------------------">SIMULATION Output ----------------------------------------------------------------------</h2>
 <p>pragma translate_off<br />
 synthesis translate_off<br />
-RTL_SYNTHESIS OFF</p>
-<p><strong>Description</strong></p>
-<h2 id="simulation-output------------------------------------------------------------------------1">SIMULATION Output ----------------------------------------------------------------------</h2>
-<p>pragma translate_off<br />
-synthesis translate_off<br />
-RTL_SYNTHESIS OFF</p><br><br><br><br><br><br>
+RTL_SYNTHESIS OFF</p></div><br><br><br><br><br><br>

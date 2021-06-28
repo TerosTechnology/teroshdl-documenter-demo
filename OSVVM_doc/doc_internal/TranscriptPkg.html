@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,21 +68,22 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=TranscriptPkg><h1 id="package-transcriptpkg">Package: TranscriptPkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS; ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Open and close TranscriptFile.  Function allows declarative opens </li>
-<li>TranscriptOpen <font id="function_arguments">(ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font></li>
+<a id=TranscriptPkg><h1 id="package-transcriptpkg">Package: TranscriptPkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS; ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Open and close TranscriptFile.  Function allows declarative opens </p></div><ul>
+<li>TranscriptOpen <font id="function_arguments">(ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>TranscriptClose <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
-<li>SetTranscriptMirror <font id="function_arguments">(A : boolean := TRUE)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Mirroring.  When using TranscriptPkw WriteLine and Print, uses both TranscriptFile and OUTPUT </li>
-<li>WriteLine <font id="function_arguments">(buf : inout line)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Write to TranscriptFile when open.  Write to OUTPUT when not open or IsTranscriptMirrored</li>
-<li>Print <font id="function_arguments">(s : string)</font> <font id="function_return">return ()</font></li>
-<li>BlankLine <font id="function_arguments">(count : integer := 1)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Create "count" number of blank lines</li>
-</ul><br><br><br><br><br><br>
+</ul><ul>
+<li>SetTranscriptMirror <font id="function_arguments">(A : boolean := TRUE) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Mirroring.  When using TranscriptPkw WriteLine and Print, uses both TranscriptFile and OUTPUT </p></div><ul>
+<li>WriteLine <font id="function_arguments">(buf : inout line) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write to TranscriptFile when open.  Write to OUTPUT when not open or IsTranscriptMirrored</p></div><ul>
+<li>Print <font id="function_arguments">(s : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>BlankLine <font id="function_arguments">(count : integer := 1) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Create "count" number of blank lines</p></div><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -164,12 +168,9 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>to_slm <font id="function_arguments">(usv : T_HISTOGRAM_MEMORY)</font> <font id="function_return">return T_SLM</font><br />
-<strong>Description</strong><br />
-create matrix from vector-vector</li>
-</ul><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( Clock )</em></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>to_slm <font id="function_arguments">(usv : T_HISTOGRAM_MEMORY) </font> <font id="function_return">return T_SLM </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+create matrix from vector-vector</p></div><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -159,49 +163,67 @@
 <td>will change to subtype -- assert but no init</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>resolved_max <font id="function_arguments">( s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font><br />
-<strong>Description</strong><br />
+</table><h2 id="functions">Functions</h2><ul>
+<li>resolved_max <font id="function_arguments">( s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 resolved_max<br />
-return maximum value.  <br />
-No initializations required on ports, default of type'left is ok</li>
-<li>resolved_max <font id="function_arguments">( s : bit_vector)</font> <font id="function_return">return bit</font></li>
-<li>resolved_max <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font></li>
-<li>resolved_max <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
-<li>resolved_max <font id="function_arguments">( s : real_vector )</font> <font id="function_return">return real</font></li>
-<li>resolved_max <font id="function_arguments">( s : string)</font> <font id="function_return">return character</font></li>
-<li>resolved_max <font id="function_arguments">( s : boolean_vector)</font> <font id="function_return">return boolean</font></li>
-<li>Extend <font id="function_arguments">(A: std_logic_vector; Size : natural)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>Reduce <font id="function_arguments">(A: std_logic_vector; Size : natural)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>ToTransaction <font id="function_arguments">(A : std_logic_vector)</font> <font id="function_return">return std_logic_vector_max_c</font></li>
-<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural)</font> <font id="function_return">return std_logic_vector_max_c</font></li>
-<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c)</font> <font id="function_return">return integer</font></li>
-<li>ToTransaction <font id="function_arguments">(A : std_logic_vector)</font> <font id="function_return">return std_logic_vector_max</font><br />
-<strong>Description</strong><br />
+  return maximum value.  <br />
+  No initializations required on ports, default of type'left is ok</p></div><ul>
+<li>resolved_max <font id="function_arguments">( s : bit_vector) </font> <font id="function_return">return bit </font></li>
+</ul><ul>
+<li>resolved_max <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>resolved_max <font id="function_arguments">( s : time_vector ) </font> <font id="function_return">return time </font></li>
+</ul><ul>
+<li>resolved_max <font id="function_arguments">( s : real_vector ) </font> <font id="function_return">return real </font></li>
+</ul><ul>
+<li>resolved_max <font id="function_arguments">( s : string) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>resolved_max <font id="function_arguments">( s : boolean_vector) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>Extend <font id="function_arguments">(A: std_logic_vector; Size : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>Reduce <font id="function_arguments">(A: std_logic_vector; Size : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : std_logic_vector) </font> <font id="function_return">return std_logic_vector_max_c </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural) </font> <font id="function_return">return std_logic_vector_max_c </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : std_logic_vector) </font> <font id="function_return">return std_logic_vector_max </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 ToTransaction and FromTransaction for _max provided to support a <br />
-common methodology, conversions are not needed</li>
-<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural)</font> <font id="function_return">return std_logic_vector_max</font></li>
-<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max)</font> <font id="function_return">return integer</font></li>
-<li>resolved_sum <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font><br />
-<strong>Description</strong><br />
+common methodology, conversions are not needed</p></div><ul>
+<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural) </font> <font id="function_return">return std_logic_vector_max </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>resolved_sum <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 return sum of values that /= type'left<br />
-No initializations required on ports, default of type'left is ok</li>
-<li>resolved_sum <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
-<li>resolved_sum <font id="function_arguments">( s : real_vector )</font> <font id="function_return">return real</font></li>
-<li>resolved_weak <font id="function_arguments">(s : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font><br />
-<strong>Description</strong><br />
-no init, type'left</li>
-<li>resolved <font id="function_arguments">( s : integer_vector )</font> <font id="function_return">return integer</font><br />
-<strong>Description</strong><br />
+No initializations required on ports, default of type'left is ok</p></div><ul>
+<li>resolved_sum <font id="function_arguments">( s : time_vector ) </font> <font id="function_return">return time </font></li>
+</ul><ul>
+<li>resolved_sum <font id="function_arguments">( s : real_vector ) </font> <font id="function_return">return real </font></li>
+</ul><ul>
+<li>resolved_weak <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+no init, type'left</p></div><ul>
+<li>resolved <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 legacy stuff<br />
-requires ports to be initialized to 0 in the appropriate type.  </li>
-<li>resolved <font id="function_arguments">( s : time_vector )</font> <font id="function_return">return time</font></li>
-<li>resolved <font id="function_arguments">( s : real_vector )</font> <font id="function_return">return real</font></li>
-<li>resolved <font id="function_arguments">(s : string)</font> <font id="function_return">return character</font><br />
-<strong>Description</strong><br />
-same as resolved_max</li>
-<li>resolved <font id="function_arguments">( s : boolean_vector)</font> <font id="function_return">return boolean</font></li>
+requires ports to be initialized to 0 in the appropriate type.  </p></div><ul>
+<li>resolved <font id="function_arguments">( s : time_vector ) </font> <font id="function_return">return time </font></li>
+</ul><ul>
+<li>resolved <font id="function_arguments">( s : real_vector ) </font> <font id="function_return">return real </font></li>
+</ul><ul>
+<li>resolved <font id="function_arguments">(s : string) </font> <font id="function_return">return character </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+same as resolved_max</p></div><ul>
+<li>resolved <font id="function_arguments">( s : boolean_vector) </font> <font id="function_return">return boolean </font></li>
 </ul><br><br><br><br><br><br>

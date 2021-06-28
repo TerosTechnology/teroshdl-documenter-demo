@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -389,20 +393,14 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>access_buffer: <em>( rstn_i, clk_i )</em></p></li>
-<li><p>arbiter_sync: <em>( rstn_i, clk_i )</em></p></li>
-</ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>access_buffer: ( rstn_i, clk_i )</li>
+</ul><ul>
+<li>arbiter_sync: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
 <h2 id="access-arbiter-sync---------------------------------------------------------------------">Access Arbiter Sync --------------------------------------------------------------------</h2>
-<p>for registers that require a specific reset state --</p>
-<p><strong>Description</strong></p>
-<h2 id="access-arbiter-sync----------------------------------------------------------------------1">Access Arbiter Sync --------------------------------------------------------------------</h2>
-<p>for registers that require a specific reset state --</p>
-<ul>
-<li>arbiter_comb: <em>( arbiter, ca_req_current, cb_req_current, ca_req_buffered, cb_req_buffered,
-                    ca_rd_req_buf, ca_wr_req_buf, cb_rd_req_buf, cb_wr_req_buf, p_bus_ack_i, p_bus_err_i )</em></li>
-</ul>
-<h2 id="peripheral-bus-arbiter------------------------------------------------------------------">Peripheral Bus Arbiter -----------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="peripheral-bus-arbiter-------------------------------------------------------------------1">Peripheral Bus Arbiter -----------------------------------------------------------------</h2><br><br><br><br><br><br>
+<p>for registers that require a specific reset state --</p></div><ul>
+<li>arbiter_comb: ( arbiter, ca_req_current, cb_req_current, ca_req_buffered, cb_req_buffered,<br />
+                    ca_rd_req_buf, ca_wr_req_buf, cb_rd_req_buf, cb_wr_req_buf, p_bus_ack_i, p_bus_err_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="peripheral-bus-arbiter------------------------------------------------------------------">Peripheral Bus Arbiter -----------------------------------------------------------------</h2></div><br><br><br><br><br><br>

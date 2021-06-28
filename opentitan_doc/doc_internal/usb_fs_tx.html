@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -418,25 +422,24 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>proc_pid: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-save packet parameters at pkt_start_i</li>
-</ul>
-<p><strong>Description</strong><br />
-save packet parameters at pkt_start_i</p>
-<ul>
-<li><p>proc_bitstuff: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_fsm: <em>(  )</em></p></li>
-<li><p>proc_byte_str: <em>(  )</em></p></li>
-<li><p>proc_crc16: <em>(  )</em></p></li>
-<li><p>proc_reg: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>proc_out_fsm: <em>(  )</em><br />
-Output FSM</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Output FSM</p>
-<ul>
-<li><p>proc_diff: <em>(  )</em></p></li>
-<li><p>proc_diff_reg: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>proc_pid: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+save packet parameters at pkt_start_i</p></div><ul>
+<li>proc_bitstuff: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_fsm: (  )</li>
+</ul><ul>
+<li>proc_byte_str: (  )</li>
+</ul><ul>
+<li>proc_crc16: (  )</li>
+</ul><ul>
+<li>proc_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>proc_out_fsm: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Output FSM</p></div><ul>
+<li>proc_diff: (  )</li>
+</ul><ul>
+<li>proc_diff_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><br><br><br><br><br><br>

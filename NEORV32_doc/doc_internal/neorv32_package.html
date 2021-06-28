@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -162,7 +166,7 @@
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
-<td>x"01050702"</td>
+<td>x"01050706"</td>
 <td>no touchy!</td>
 </tr>
 <tr>
@@ -264,7 +268,7 @@
 <tr>
 <td>cfs_size_c</td>
 <td>natural</td>
-<td>64*4</td>
+<td>32*4</td>
 <td>module's address space in bytes</td>
 </tr>
 <tr>
@@ -733,42 +737,6 @@
 <td>twi_rtx_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffb4"</td>
-<td></td>
-</tr>
-<tr>
-<td>nco_base_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffffc0"</td>
-<td>base address</td>
-</tr>
-<tr>
-<td>nco_size_c</td>
-<td>natural</td>
-<td>4*4</td>
-<td>module's address space size in bytes</td>
-</tr>
-<tr>
-<td>nco_ctrl_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffffc0"</td>
-<td></td>
-</tr>
-<tr>
-<td>nco_ch0_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffffc4"</td>
-<td></td>
-</tr>
-<tr>
-<td>nco_ch1_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffffc8"</td>
-<td></td>
-</tr>
-<tr>
-<td>nco_ch2_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffffcc"</td>
 <td></td>
 </tr>
 <tr>
@@ -3778,6 +3746,11 @@
 </thead>
 <tbody>
 <tr>
+<td>sdata_8x32_t</td>
+<td></td>
+<td>External Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
 <td>pmp_ctrl_if_t</td>
 <td></td>
 <td>Internal Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
@@ -3803,25 +3776,39 @@
 <td>memory with 8-bit entries</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>index_size_f <font id="function_arguments">(input : natural)</font> <font id="function_return">return natural</font><br />
-<strong>Description</strong><br />
-Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</li>
-<li>cond_sel_natural_f <font id="function_arguments">(cond : boolean; val_t : natural; val_f : natural)</font> <font id="function_return">return natural</font></li>
-<li>cond_sel_int_f <font id="function_arguments">(cond : boolean; val_t : integer; val_f : integer)</font> <font id="function_return">return integer</font></li>
-<li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic_vector; val_f : std_ulogic_vector)</font> <font id="function_return">return std_ulogic_vector</font></li>
-<li>cond_sel_stdulogic_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic; val_f : std_ulogic)</font> <font id="function_return">return std_ulogic</font></li>
-<li>cond_sel_string_f <font id="function_arguments">(cond : boolean; val_t : string; val_f : string)</font> <font id="function_return">return string</font></li>
-<li>bool_to_ulogic_f <font id="function_arguments">(cond : boolean)</font> <font id="function_return">return std_ulogic</font></li>
-<li>or_reduce_f <font id="function_arguments">(a : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font></li>
-<li>and_reduce_f <font id="function_arguments">(a : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font></li>
-<li>xor_reduce_f <font id="function_arguments">(a : std_ulogic_vector)</font> <font id="function_return">return std_ulogic</font></li>
-<li>to_hexchar_f <font id="function_arguments">(input : std_ulogic_vector(3 downto 0))</font> <font id="function_return">return character</font></li>
-<li>hexchar_to_stdulogicvector_f <font id="function_arguments">(input : character)</font> <font id="function_return">return std_ulogic_vector</font></li>
-<li>bit_rev_f <font id="function_arguments">(input : std_ulogic_vector)</font> <font id="function_return">return std_ulogic_vector</font></li>
-<li>is_power_of_two_f <font id="function_arguments">(input : natural)</font> <font id="function_return">return boolean</font></li>
-<li>bswap32_f <font id="function_arguments">(input : std_ulogic_vector)</font> <font id="function_return">return std_ulogic_vector</font></li>
-<li>char_tolower_f <font id="function_arguments">(ch : character)</font> <font id="function_return">return character</font></li>
-<li>str_equal_f <font id="function_arguments">(str0 : string; str1 : string)</font> <font id="function_return">return boolean</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>index_size_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return natural </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</p></div><ul>
+<li>cond_sel_natural_f <font id="function_arguments">(cond : boolean; val_t : natural; val_f : natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>cond_sel_int_f <font id="function_arguments">(cond : boolean; val_t : integer; val_f : integer) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic_vector; val_f : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>cond_sel_stdulogic_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic; val_f : std_ulogic) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>cond_sel_string_f <font id="function_arguments">(cond : boolean; val_t : string; val_f : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>bool_to_ulogic_f <font id="function_arguments">(cond : boolean) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>or_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>and_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>xor_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>to_hexchar_f <font id="function_arguments">(input : std_ulogic_vector(3 downto 0)) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>hexchar_to_stdulogicvector_f <font id="function_arguments">(input : character) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>bit_rev_f <font id="function_arguments">(input : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>is_power_of_two_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>bswap32_f <font id="function_arguments">(input : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>char_tolower_f <font id="function_arguments">(ch : character) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>str_equal_f <font id="function_arguments">(str0 : string; str1 : string) </font> <font id="function_return">return boolean </font></li>
 </ul><br><br><br><br><br><br>

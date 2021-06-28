@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -279,7 +283,7 @@
 <tbody>
 <tr>
 <td>tap_ctrl_state_t</td>
-<td>(LOGIC_RESET, DR_SCAN, DR_CAPTURE, DR_SHIFT, DR_EXIT1, DR_PAUSE, DR_EXIT2, DR_UPDATE,                                RUN_IDLE, IR_SCAN, IR_CAPTURE, IR_SHIFT, IR_EXIT1, IR_PAUSE, IR_EXIT2, IR_UPDATE)</td>
+<td>(LOGIC_RESET, DR_SCAN, DR_CAPTURE, DR_SHIFT, DR_EXIT1, DR_PAUSE, DR_EXIT2, DR_UPDATE, RUN_IDLE, IR_SCAN, IR_CAPTURE, IR_SHIFT, IR_EXIT1, IR_PAUSE, IR_EXIT2, IR_UPDATE)</td>
 <td>tap controller - fsm --</td>
 </tr>
 <tr>
@@ -294,7 +298,7 @@
 </tr>
 <tr>
 <td>dmi_ctrl_state_t</td>
-<td>(DMI_IDLE, DMI_READ_WAIT, DMI_READ, DMI_READ_BUSY,                             DMI_WRITE_WAIT, DMI_WRITE, DMI_WRITE_BUSY)</td>
+<td>(DMI_IDLE, DMI_READ_WAIT, DMI_READ, DMI_READ_BUSY, DMI_WRITE_WAIT, DMI_WRITE, DMI_WRITE_BUSY)</td>
 <td>debug module interface --</td>
 </tr>
 <tr>
@@ -303,19 +307,13 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>tap_control: <em>( rstn_i, clk_i )</em></p></li>
-<li><p>reg_access: <em>( clk_i )</em></p></li>
-</ul>
-<h2 id="tap-register-access---------------------------------------------------------------------">Tap Register Access --------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="tap-register-access----------------------------------------------------------------------1">Tap Register Access --------------------------------------------------------------------</h2>
-<ul>
-<li>dmi_controller: <em>( rstn_i, clk_i )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>tap_control: ( rstn_i, clk_i )</li>
+</ul><ul>
+<li>reg_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="tap-register-access---------------------------------------------------------------------">Tap Register Access --------------------------------------------------------------------</h2></div><ul>
+<li>dmi_controller: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 version<br />
-Debug Module Interface Access Register (dmi) --</li>
-</ul>
-<p><strong>Description</strong><br />
-version<br />
-Debug Module Interface Access Register (dmi) --</p><br><br><br><br><br><br>
+Debug Module Interface Access Register (dmi) --</p></div><br><br><br><br><br><br>

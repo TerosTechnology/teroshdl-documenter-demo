@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -241,22 +245,13 @@
 <td>low address boundary bit</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>wr_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="write-access-----------------------------------------------------------------------------1">Write Access ---------------------------------------------------------------------------</h2>
-<ul>
-<li>rd_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="read-access------------------------------------------------------------------------------1">Read Access ----------------------------------------------------------------------------</h2>
-<ul>
-<li>cmp_sync: <em>( clk_i )</em></li>
-</ul>
-<h2 id="comparator------------------------------------------------------------------------------">Comparator -----------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="comparator-------------------------------------------------------------------------------1">Comparator -----------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>wr_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2></div><ul>
+<li>rd_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2></div><ul>
+<li>cmp_sync: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="comparator------------------------------------------------------------------------------">Comparator -----------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

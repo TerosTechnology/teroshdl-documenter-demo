@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -695,37 +699,37 @@
 <tbody>
 <tr>
 <td>T_NET_ETH_PHY_DATA_INTERFACE</td>
-<td>(         NET_ETH_PHY_DATA_INTERFACE_MII,         NET_ETH_PHY_DATA_INTERFACE_GMII,        NET_ETH_PHY_DATA_INTERFACE_RGMII,       NET_ETH_PHY_DATA_INTERFACE_SGMII    )</td>
+<td>( NET_ETH_PHY_DATA_INTERFACE_MII, NET_ETH_PHY_DATA_INTERFACE_GMII, NET_ETH_PHY_DATA_INTERFACE_RGMII, NET_ETH_PHY_DATA_INTERFACE_SGMII )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_MANAGEMENT_INTERFACE</td>
-<td>(         NET_ETH_PHY_MANAGEMENT_INTERFACE_NONE,      NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO,      NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO_OVER_IIC  )</td>
+<td>( NET_ETH_PHY_MANAGEMENT_INTERFACE_NONE, NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO, NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO_OVER_IIC )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCSCORE</td>
-<td>(         NET_ETH_PCSCORE_GENERIC_GMII,       NET_ETH_PCSCORE_XILINX_HARDCORE,        NET_ETH_PCSCORE_XILINX_PCSCORE  )</td>
+<td>( NET_ETH_PCSCORE_GENERIC_GMII, NET_ETH_PCSCORE_XILINX_HARDCORE, NET_ETH_PCSCORE_XILINX_PCSCORE )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_DEVICE</td>
-<td>(         NET_ETH_PHY_DEVICE_MARVEL_88E1111   )</td>
+<td>( NET_ETH_PHY_DEVICE_MARVEL_88E1111 )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_COMMAND</td>
-<td>(         NET_ETH_PHYC_CMD_NONE,      NET_ETH_PHYC_CMD_HARD_RESET,        NET_ETH_PHYC_CMD_SOFT_RESET     )</td>
+<td>( NET_ETH_PHYC_CMD_NONE, NET_ETH_PHYC_CMD_HARD_RESET, NET_ETH_PHYC_CMD_SOFT_RESET )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_STATUS</td>
-<td>(         NET_ETH_PHYC_STATUS_POWER_DOWN,         NET_ETH_PHYC_STATUS_RESETING,       NET_ETH_PHYC_STATUS_CONNECTING,         NET_ETH_PHYC_STATUS_CONNECTED,      NET_ETH_PHYC_STATUS_DISCONNECTING,      NET_ETH_PHYC_STATUS_DISCONNECTED,       NET_ETH_PHYC_STATUS_ERROR   )</td>
+<td>( NET_ETH_PHYC_STATUS_POWER_DOWN, NET_ETH_PHYC_STATUS_RESETING, NET_ETH_PHYC_STATUS_CONNECTING, NET_ETH_PHYC_STATUS_CONNECTED, NET_ETH_PHYC_STATUS_DISCONNECTING, NET_ETH_PHYC_STATUS_DISCONNECTED, NET_ETH_PHYC_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_ERROR</td>
-<td>(         NET_ETH_PHYC_ERROR_NONE,        NET_ETH_PHYC_ERROR_NO_CABLE     )</td>
+<td>( NET_ETH_PHYC_ERROR_NONE, NET_ETH_PHYC_ERROR_NO_CABLE )</td>
 <td></td>
 </tr>
 <tr>
@@ -760,32 +764,32 @@
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_SYNC_STATUS</td>
-<td>(         NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL,        NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK   )</td>
+<td>( NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL, NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK )</td>
 <td>==========================================================================================================================================================Ethernet: physical coding sublayer (PCS)==========================================================================================================================================================1000BASE-X - synchronization</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS</td>
-<td>(         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE,         NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG,       NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA  )</td>
+<td>( NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE, NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG, NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA )</td>
 <td>1000BASE-X - autonegotiation</td>
 </tr>
 <tr>
 <td>T_NET_ETH_RS_DATA_INTERFACE</td>
-<td>(         NET_ETH_RS_DATA_INTERFACE_MII,      NET_ETH_RS_DATA_INTERFACE_GMII,         NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER   )</td>
+<td>( NET_ETH_RS_DATA_INTERFACE_MII, NET_ETH_RS_DATA_INTERFACE_GMII, NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER )</td>
 <td>==========================================================================================================================================================Ethernet: reconcilation sublayer (RS)==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_COMMAND</td>
-<td>(         NET_ETH_CMD_NONE,       NET_ETH_CMD_HARD_RESET,         NET_ETH_CMD_SOFT_RESET,         NET_ETH_CMD_POWER_DOWN,         NET_ETH_CMD_POWER_UP    )</td>
+<td>( NET_ETH_CMD_NONE, NET_ETH_CMD_HARD_RESET, NET_ETH_CMD_SOFT_RESET--, )</td>
 <td>==========================================================================================================================================================Ethernet: MAC Control-Layer==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_STATUS</td>
-<td>(         NET_ETH_STATUS_POWER_DOWN,      NET_ETH_STATUS_RESETING,        NET_ETH_STATUS_CONNECTING,      NET_ETH_STATUS_CONNECTED,       NET_ETH_STATUS_DISCONNECTING,       NET_ETH_STATUS_DISCONNECTED,        NET_ETH_STATUS_ERROR    )</td>
+<td>( NET_ETH_STATUS_POWER_DOWN, NET_ETH_STATUS_RESETING, NET_ETH_STATUS_CONNECTING, NET_ETH_STATUS_CONNECTED, NET_ETH_STATUS_DISCONNECTING, NET_ETH_STATUS_DISCONNECTED, NET_ETH_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_ERROR</td>
-<td>(         NET_ETH_ERROR_NONE,         NET_ETH_ERROR_MAC_ERROR,        NET_ETH_ERROR_PHY_ERROR,        NET_ETH_ERROR_PCS_ERROR,        NET_ETH_ERROR_NO_CABLE  )</td>
+<td>( NET_ETH_ERROR_NONE, NET_ETH_ERROR_MAC_ERROR, NET_ETH_ERROR_PHY_ERROR, NET_ETH_ERROR_PCS_ERROR, NET_ETH_ERROR_NO_CABLE )</td>
 <td></td>
 </tr>
 <tr>
@@ -885,17 +889,17 @@
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_COMMAND</td>
-<td>(         NET_ARP_ARPCACHE_CMD_NONE,      NET_ARP_ARPCACHE_CMD_CLEAR,         NET_ARP_ARPCACHE_CMD_ADD        NET_ARP_ARPCACHE_CMD_INVALIDATE     )</td>
+<td>( NET_ARP_ARPCACHE_CMD_NONE, NET_ARP_ARPCACHE_CMD_ADD )</td>
 <td>==========================================================================================================================================================internet layer: Address Resolution Protocol (ARP)==========================================================================================================================================================commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_STATUS</td>
-<td>(         NET_ARP_ARPCACHE_STATUS_IDLE,       NET_ARP_ARPCACHE_STATUS_UPDATING,       NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE     )</td>
+<td>( NET_ARP_ARPCACHE_STATUS_IDLE, NET_ARP_ARPCACHE_STATUS_UPDATING, NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ARP_IPPOOL_COMMAND</td>
-<td>(         NET_ARP_IPPOOL_CMD_NONE,        NET_ARP_IPPOOL_CMD_ADD,         NET_ARP_IPPOOL_CMD_EDIT,        NET_ARP_IPPOOL_CMD_REMOVE   )</td>
+<td>( NET_ARP_IPPOOL_CMD_NONE, NET_ARP_IPPOOL_CMD_ADD, NET_ARP_IPPOOL_CMD_EDIT, NET_ARP_IPPOOL_CMD_REMOVE )</td>
 <td></td>
 </tr>
 <tr>
@@ -910,57 +914,57 @@
 </tr>
 <tr>
 <td>T_NET_ARP_TESTER_COMMAND</td>
-<td>(         NET_ARP_TESTER_CMD_NONE,        NET_ARP_TESTER_CMD_LOOP     )</td>
+<td>( NET_ARP_TESTER_CMD_NONE, NET_ARP_TESTER_CMD_LOOP )</td>
 <td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_TESTER_STATUS</td>
-<td>(         NET_ARP_TESTER_STATUS_IDLE,         NET_ARP_TESTER_STATUS_TESTING,      NET_ARP_TESTER_STATUS_TEST_COMPLETE     )</td>
+<td>( NET_ARP_TESTER_STATUS_IDLE, NET_ARP_TESTER_STATUS_TESTING, NET_ARP_TESTER_STATUS_TEST_COMPLETE )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_COMMAND</td>
-<td>(         NET_ICMPV4_CMD_NONE,        NET_ICMPV4_CMD_ECHO_REQUEST     )</td>
+<td>( NET_ICMPV4_CMD_NONE, NET_ICMPV4_CMD_ECHO_REQUEST )</td>
 <td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_COMMAND</td>
-<td>(         NET_ICMPV4_TX_CMD_NONE,         NET_ICMPV4_TX_CMD_ECHO_REQUEST,         NET_ICMPV4_TX_CMD_ECHO_REPLY    )</td>
+<td>( NET_ICMPV4_TX_CMD_NONE, NET_ICMPV4_TX_CMD_ECHO_REQUEST, NET_ICMPV4_TX_CMD_ECHO_REPLY )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_COMMAND</td>
-<td>(         NET_ICMPV4_RX_CMD_NONE,         NET_ICMPV4_RX_CMD_CLEAR     )</td>
+<td>( NET_ICMPV4_RX_CMD_NONE, NET_ICMPV4_RX_CMD_CLEAR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_STATUS</td>
-<td>(         NET_ICMPV4_STATUS_IDLE,         NET_ICMPV4_STATUS_SENDING,      NET_ICMPV4_STATUS_SEND_COMPLETE,        NET_ICMPV4_STATUS_ERROR     )</td>
+<td>( NET_ICMPV4_STATUS_IDLE, NET_ICMPV4_STATUS_SENDING, NET_ICMPV4_STATUS_SEND_COMPLETE, NET_ICMPV4_STATUS_ERROR )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_STATUS</td>
-<td>(         NET_ICMPV4_TX_STATUS_IDLE,      NET_ICMPV4_TX_STATUS_SENDING,       NET_ICMPV4_TX_STATUS_SEND_COMPLETE,         NET_ICMPV4_TX_STATUS_ERROR  )</td>
+<td>( NET_ICMPV4_TX_STATUS_IDLE, NET_ICMPV4_TX_STATUS_SENDING, NET_ICMPV4_TX_STATUS_SEND_COMPLETE, NET_ICMPV4_TX_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_STATUS</td>
-<td>(         NET_ICMPV4_RX_STATUS_IDLE,      NET_ICMPV4_RX_STATUS_RECEIVING,         NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REQUEST,         NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REPLY,       NET_ICMPV4_RX_STATUS_ERROR  )</td>
+<td>( NET_ICMPV4_RX_STATUS_IDLE, NET_ICMPV4_RX_STATUS_RECEIVING, NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REQUEST, NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REPLY, NET_ICMPV4_RX_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_ERROR</td>
-<td>(         NET_ICMPV4_ERROR_NONE,      NET_ICMPV4_ERROR_TIMEOUT,       NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE,      NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED,         NET_ICMPV4_ERROR_FSM    )</td>
+<td>( NET_ICMPV4_ERROR_NONE, NET_ICMPV4_ERROR_TIMEOUT, NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE, NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED, NET_ICMPV4_ERROR_FSM )</td>
 <td>errors</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_ERROR</td>
-<td>(         NET_ICMPV4_TX_ERROR_NONE,       NET_ICMPV4_TX_ERROR_FSM     )</td>
+<td>( NET_ICMPV4_TX_ERROR_NONE, NET_ICMPV4_TX_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_ERROR</td>
-<td>(         NET_ICMPV4_RX_ERROR_NONE,       NET_ICMPV4_RX_ERROR_UNKNOWN_CODE,       NET_ICMPV4_RX_ERROR_UNKNOWN_TYPE,       NET_ICMPV4_RX_ERROR_CHECKSUM_ERROR,         NET_ICMPV4_RX_ERROR_FSM     )</td>
+<td>( NET_ICMPV4_RX_ERROR_NONE, NET_ICMPV4_RX_ERROR_UNKNOWN_CODE, NET_ICMPV4_RX_ERROR_UNKNOWN_TYPE, NET_ICMPV4_RX_ERROR_CHECKSUM_ERROR, NET_ICMPV4_RX_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
@@ -985,7 +989,7 @@
 </tr>
 <tr>
 <td>T_NET_NDP_REACHABILITY_STATE</td>
-<td>(         NET_NDP_REACHABILITY_STATE_UNKNOWN,         NET_NDP_REACHABILITY_STATE_INCOMPLETE,      NET_NDP_REACHABILITY_STATE_REACHABLE,       NET_NDP_REACHABILITY_STATE_STALE,       NET_NDP_REACHABILITY_STATE_DELAY,       NET_NDP_REACHABILITY_STATE_PROBE    )</td>
+<td>( NET_NDP_REACHABILITY_STATE_UNKNOWN, NET_NDP_REACHABILITY_STATE_INCOMPLETE, NET_NDP_REACHABILITY_STATE_REACHABLE, NET_NDP_REACHABILITY_STATE_STALE, NET_NDP_REACHABILITY_STATE_DELAY, NET_NDP_REACHABILITY_STATE_PROBE )</td>
 <td></td>
 </tr>
 <tr>
@@ -999,45 +1003,67 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE</font><br />
-<strong>Description</strong><br />
-==========================================================================================================================================================Ethernet: ????????????????????==========================================================================================================================================================</li>
-<li>to_net_eth_PHYDataInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DATA_INTERFACE</font></li>
-<li>to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE</font></li>
-<li>to_net_eth_PHYDevice <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_ETH_PHY_DEVICE</font></li>
-<li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font><br />
-<strong>Description</strong><br />
-type conversion functions</li>
-<li>to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
-<li>to_net_mac_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_MAC_ADDRESS</font></li>
-<li>to_net_mac_ethernettype <font id="function_arguments">(slv : T_SLV_16)</font> <font id="function_return">return T_NET_MAC_ETHERNETTYPE</font></li>
-<li>to_slv <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>to_slv <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>to_slvv_8 <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
-<li>to_slvv_8 <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return T_SLVV_8</font></li>
-<li>to_string <font id="function_arguments">(mac : T_NET_MAC_ADDRESS)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE)</font> <font id="function_return">return string</font></li>
-<li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return positive</font><br />
-<strong>Description</strong><br />
-functions</li>
-<li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font><br />
-<strong>Description</strong><br />
-type conversion functions</li>
-<li>to_net_ipv4_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV4_ADDRESS</font></li>
-<li>to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8)</font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE</font></li>
-<li>to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
-<li>to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS)</font> <font id="function_return">return string</font></li>
-<li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font><br />
-<strong>Description</strong><br />
-type conversion functions</li>
-<li>to_net_ipv6_address <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_ADDRESS</font></li>
-<li>to_net_ipv6_prefix <font id="function_arguments">(str : string)</font> <font id="function_return">return T_NET_IPV6_PREFIX</font></li>
-<li>to_slv <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return std_logic_vector</font></li>
-<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return T_SLVV_8</font></li>
-<li>to_string <font id="function_arguments">(IP : T_NET_IPV6_ADDRESS)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(Prefix : T_NET_IPV6_PREFIX)</font> <font id="function_return">return string</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+==========================================================================================================================================================Ethernet: ????????????????????==========================================================================================================================================================</p></div><ul>
+<li>to_net_eth_PHYDataInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_DATA_INTERFACE </font></li>
+</ul><ul>
+<li>to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE </font></li>
+</ul><ul>
+<li>to_net_eth_PHYDevice <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_DEVICE </font></li>
+</ul><ul>
+<li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+type conversion functions</p></div><ul>
+<li>to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
+</ul><ul>
+<li>to_net_mac_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
+</ul><ul>
+<li>to_net_mac_ethernettype <font id="function_arguments">(slv : T_SLV_16) </font> <font id="function_return">return T_NET_MAC_ETHERNETTYPE </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(mac : T_NET_MAC_ADDRESS) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>to_slvv_8 <font id="function_arguments">(mac : T_NET_MAC_ADDRESS) </font> <font id="function_return">return T_SLVV_8 </font></li>
+</ul><ul>
+<li>to_slvv_8 <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE) </font> <font id="function_return">return T_SLVV_8 </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(mac : T_NET_MAC_ADDRESS) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR) </font> <font id="function_return">return positive </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+functions</p></div><ul>
+<li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+type conversion functions</p></div><ul>
+<li>to_net_ipv4_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font></li>
+</ul><ul>
+<li>to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8) </font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return T_SLVV_8 </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+type conversion functions</p></div><ul>
+<li>to_net_ipv6_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font></li>
+</ul><ul>
+<li>to_net_ipv6_prefix <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV6_PREFIX </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV6_ADDRESS) </font> <font id="function_return">return T_SLVV_8 </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(IP : T_NET_IPV6_ADDRESS) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(Prefix : T_NET_IPV6_PREFIX) </font> <font id="function_return">return string </font></li>
 </ul><br><br><br><br><br><br>

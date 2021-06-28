@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -291,22 +295,24 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>(         ST_IDLE,            ST_SEQUENCE_SOF,    ST_SEQUENCE_DATA,   ST_SEQUENCE_EOF,            ST_RANDOM_SOF,      ST_RANDOM_DATA,     ST_RANDOM_EOF,      ST_ERROR    )</td>
+<td>( ST_IDLE, ST_SEQUENCE_SOF,    ST_SEQUENCE_DATA,   ST_SEQUENCE_EOF, ST_RANDOM_SOF,     ST_RANDOM_DATA,     ST_RANDOM_EOF, ST_ERROR )</td>
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( State, Command, Out_Ack,
-                Sequences, FrameLength,
-                FrameLengthCounter_us,
-                SequencesCounter_us, ContentCounter_us,
-                PRNG_Data )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( State, Command, Out_Ack,<br />
+                Sequences, FrameLength,<br />
+                FrameLengthCounter_us,<br />
+                SequencesCounter_us, ContentCounter_us,<br />
+                PRNG_Data )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>PRNG: PoC.arith_prng</li>
 </ul><br><br><br><br><br><br>

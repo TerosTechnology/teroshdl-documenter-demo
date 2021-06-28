@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -251,30 +255,20 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>p_init: <em>(  )</em></p></li>
-<li><p>p_fifo_ready: <em>( clk )</em></p></li>
-<li><p>p_read_reg_sbi_1: <em>( sbi_if_1.cs, sbi_if_1.rena, sbi_if_1.addr, fifo_ready_1 )</em><br />
-Read registers for SBI IF 1</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Read registers for SBI IF 1</p>
-<ul>
-<li>p_write_reg_sbi_1: <em>( clk )</em><br />
-Write registers for SBI IF 1</li>
-</ul>
-<p><strong>Description</strong><br />
-Write registers for SBI IF 1</p>
-<ul>
-<li>p_read_reg_sbi_2: <em>( sbi_if_2.cs, sbi_if_2.rena, sbi_if_2.addr, fifo_ready_2 )</em><br />
-Read registers for SBI IF 2</li>
-</ul>
-<p><strong>Description</strong><br />
-Read registers for SBI IF 2</p>
-<ul>
-<li>p_write_reg_sbi_2: <em>( clk )</em><br />
-Write registers for SBI IF 2</li>
-</ul>
-<p><strong>Description</strong><br />
-Write registers for SBI IF 2</p><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>p_init: (  )</li>
+</ul><ul>
+<li>p_fifo_ready: ( clk )</li>
+</ul><ul>
+<li>p_read_reg_sbi_1: ( sbi_if_1.cs, sbi_if_1.rena, sbi_if_1.addr, fifo_ready_1 )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Read registers for SBI IF 1</p></div><ul>
+<li>p_write_reg_sbi_1: ( clk )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write registers for SBI IF 1</p></div><ul>
+<li>p_read_reg_sbi_2: ( sbi_if_2.cs, sbi_if_2.rena, sbi_if_2.addr, fifo_ready_2 )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Read registers for SBI IF 2</p></div><ul>
+<li>p_write_reg_sbi_2: ( clk )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write registers for SBI IF 2</p></div><br><br><br><br><br><br>

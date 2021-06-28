@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -197,10 +201,7 @@
 <td>There are up to 2*<em>TL_AIW possible source-IDs. Below array "pend_req" has one entry for each source-ID. Each entry has the following fields: - pend   : is set to 1 to indicate up to 1 pending request for the source ID - opcode : "Get" requires "AccessAckData" response, "Put</em>" require "AccessAck" - size   : d_size of response must match a_size of request - mask   : is used to allow X for bytes whose mask bit is 0</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( @(negedge clk_i or negedge rst_ni) )</em><br />
-use negedge clk to avoid possible race conditions</li>
-</ul>
-<p><strong>Description</strong><br />
-use negedge clk to avoid possible race conditions</p><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(negedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+use negedge clk to avoid possible race conditions</p></div><br><br><br><br><br><br>

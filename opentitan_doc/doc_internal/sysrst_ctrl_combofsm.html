@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -252,12 +256,16 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>i_trigger_h_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></p></li>
-<li><p>i_trigger_l_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></p></li>
-<li><p>i_timer_state_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></p></li>
-<li><p>i_timer1_cnt_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></p></li>
-<li><p>i_timer2_cnt_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></p></li>
-<li><p>timer_fsm: <em>(  )</em></p></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>i_trigger_h_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>i_trigger_l_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>i_timer_state_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>i_timer1_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>i_timer2_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>timer_fsm: (  )</li>
 </ul><br><br><br><br><br><br>

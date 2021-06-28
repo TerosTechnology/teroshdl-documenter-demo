@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -104,20 +108,18 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>set_default_log_level <font id="function_arguments">(checker : checker_t; default_log_level : log_level_t)</font> <font id="function_return">return ()</font></li>
-<li>passing_check <font id="function_arguments">(checker : checker_t)</font> <font id="function_return">return ()</font></li>
-<li>passing_check <font id="function_arguments">(    checker   : checker_t;
-msg       : string;
-line_num  : natural := 0;
-file_name : string  := "")</font> <font id="function_return">return ()</font></li>
-<li>failing_check <font id="function_arguments">(    checker   : checker_t;
-msg       : string;
-level     : log_level_t := null_log_level;
-line_num  : natural                := 0;
-file_name : string                 := "")</font> <font id="function_return">return ()</font></li>
-<li>to_string <font id="function_arguments">(stat : checker_stat_t)</font> <font id="function_return">return string</font></li>
-<li>reset_checker_stat <font id="function_arguments">(checker     : checker_t)</font> <font id="function_return">return ()</font></li>
-<li>get_checker_stat <font id="function_arguments">(checker       :     checker_t;                             variable stat : out checker_stat_t)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>set_default_log_level <font id="function_arguments">(checker : checker_t; default_log_level : log_level_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>passing_check <font id="function_arguments">(checker : checker_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>passing_check <font id="function_arguments">( checker   : checker_t; msg       : string; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>failing_check <font id="function_arguments">( checker   : checker_t; msg       : string; level     : log_level_t := null_log_level; line_num  : natural                := 0; file_name : string                 := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(stat : checker_stat_t) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>reset_checker_stat <font id="function_arguments">(checker     : checker_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>get_checker_stat <font id="function_arguments">(checker       :     checker_t; variable stat : out checker_stat_t) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

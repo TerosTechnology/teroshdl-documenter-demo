@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -318,44 +322,31 @@
 <td>SHA control</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>fill_w: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-Fill up w</li>
-</ul>
-<p><strong>Description</strong><br />
-Fill up w</p>
-<ul>
-<li>compress_round: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-Update engine</li>
-</ul>
-<p><strong>Description</strong><br />
-Update engine</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-Digest</li>
-</ul>
-<p><strong>Description</strong><br />
-Digest</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-round</li>
-</ul>
-<p><strong>Description</strong><br />
-round</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-w_index</li>
-</ul>
-<p><strong>Description</strong><br />
-w_index</p>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>fill_w: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Fill up w</p></div><ul>
+<li>compress_round: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Update engine</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Digest</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+round</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+w_index</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_pad: sha2_pad</li>
 </ul><br><br><br><br><br><br>

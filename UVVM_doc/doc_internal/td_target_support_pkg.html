@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -132,55 +136,26 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>resolved <font id="function_arguments">( input_vector : t_vvc_target_record_drivers)</font> <font id="function_return">return t_vvc_target_record_unresolved</font></li>
-<li>to_string <font id="function_arguments">(    value         : t_vvc_target_record;
-vvc_instance  : integer   := -1;
-vvc_channel   : t_channel := NA
-)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-to_string method for VVC name, instance and channel- If channel is set to NA, it will not be included in the string</li>
-<li>send_command_to_vvc <font id="function_arguments">(                   VVC dedicated shared command used  shared_vvc_cmd    signal   vvc_target   : inout t_vvc_target_record;
-constant timeout      : in    time                 := std.env.resolution_limit;
-constant scope        : in    string               := C_VVC_CMD_SCOPE_DEFAULT;
-constant msg_id_panel : in    t_msg_id_panel       := shared_msg_id_panel
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Sends command to VVC and waits for ACK or timeout- Logs with ID_UVVM_SEND_CMD when sending to VVC- Logs with ID_UVVM_CMD_ACK when ACK or timeout occurs</li>
-<li>set_vvc_target_defaults <font id="function_arguments">(    constant  vvc_name  : in string;
-constant  scope     : in string := C_VVC_CMD_SCOPE_DEFAULT
-)</font> <font id="function_return">return t_vvc_target_record</font><br />
-<strong>Description</strong><br />
-Returns a vvc target record with vvc_name and values specified in C_VVC_TARGET_RECORD_DEFAULT</li>
-<li>set_general_target_and_command_fields <font id="function_arguments">(    VVC dedicated shared command used  shared_vvc_cmd    signal target               : inout t_vvc_target_record;
-constant vvc_instance_idx   : in integer;
-constant proc_call          : in string;
-constant msg                : in string;
-constant command_type       : in t_immediate_or_queued;
-constant operation          : in t_operation
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Sets target index and channel, and updates shared_vvc_cmd</li>
-<li>set_general_target_and_command_fields <font id="function_arguments">(   VVC dedicated shared command used  shared_vvc_cmd    signal target               : inout t_vvc_target_record;
-constant vvc_instance_idx   : in integer;
-constant vvc_channel        : in t_channel;
-constant proc_call          : in string;
-constant msg                : in string;
-constant command_type       : in t_immediate_or_queued;
-constant operation          : in t_operation
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Sets target index and channel, and updates shared_vvc_cmd</li>
-<li>acknowledge_cmd <font id="function_arguments">(    signal   vvc_ack      : inout std_logic;
-constant command_idx  : in natural
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Drives global_vvc_ack signal (to '1') for 1 delta cycle, then sets it back to 'Z'.</li>
-<li>get_vvc_index_in_activity_register <font id="function_arguments">(    signal   vvc_target                        : in t_vvc_target_record;
-constant vvc_instance_idx                  : in    integer;
-constant vvc_channel                       : in    t_channel;
-variable vvc_idx_in_activity_register   : inout t_integer_array(0 to C_MAX_TB_VVC_NUM);
-variable num_vvc_instances              : inout natural range 0 to C_MAX_TB_VVC_NUM
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>resolved <font id="function_arguments">( input_vector : t_vvc_target_record_drivers) </font> <font id="function_return">return t_vvc_target_record_unresolved </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">( value         : t_vvc_target_record; vvc_instance  : integer   := -1; vvc_channel   : t_channel := NA ) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_string method for VVC name, instance and channel- If channel is set to NA, it will not be included in the string</p></div><ul>
+<li>send_command_to_vvc <font id="function_arguments">(                  -- VVC dedicated shared command used  shared_vvc_cmd signal   vvc_target   : inout t_vvc_target_record; constant timeout      : in    time                 := std.env.resolution_limit; constant scope        : in    string               := C_VVC_CMD_SCOPE_DEFAULT; constant msg_id_panel : in    t_msg_id_panel       := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Sends command to VVC and waits for ACK or timeout- Logs with ID_UVVM_SEND_CMD when sending to VVC- Logs with ID_UVVM_CMD_ACK when ACK or timeout occurs</p></div><ul>
+<li>set_vvc_target_defaults <font id="function_arguments">( constant  vvc_name  : in string; constant  scope     : in string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return t_vvc_target_record </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Returns a vvc target record with vvc_name and values specified in C_VVC_TARGET_RECORD_DEFAULT</p></div><ul>
+<li>set_general_target_and_command_fields <font id="function_arguments">(   -- VVC dedicated shared command used  shared_vvc_cmd signal target               : inout t_vvc_target_record; constant vvc_instance_idx   : in integer; constant proc_call          : in string; constant msg                : in string; constant command_type       : in t_immediate_or_queued; constant operation          : in t_operation ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Sets target index and channel, and updates shared_vvc_cmd</p></div><ul>
+<li>set_general_target_and_command_fields <font id="function_arguments">(  -- VVC dedicated shared command used  shared_vvc_cmd signal target               : inout t_vvc_target_record; constant vvc_instance_idx   : in integer; constant vvc_channel        : in t_channel; constant proc_call          : in string; constant msg                : in string; constant command_type       : in t_immediate_or_queued; constant operation          : in t_operation ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Sets target index and channel, and updates shared_vvc_cmd</p></div><ul>
+<li>acknowledge_cmd <font id="function_arguments">( signal   vvc_ack      : inout std_logic; constant command_idx  : in natural ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Drives global_vvc_ack signal (to '1') for 1 delta cycle, then sets it back to 'Z'.</p></div><ul>
+<li>get_vvc_index_in_activity_register <font id="function_arguments">( signal   vvc_target                        : in t_vvc_target_record; constant vvc_instance_idx                 : in    integer; constant vvc_channel                       : in    t_channel; variable vvc_idx_in_activity_register   : inout t_integer_array(0 to C_MAX_TB_VVC_NUM); variable num_vvc_instances              : inout natural range 0 to C_MAX_TB_VVC_NUM ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

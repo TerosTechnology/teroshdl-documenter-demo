@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,10 +68,12 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=sim_VCDParser><h1 id="package-sim_vcdparser">Package: sim_VCDParser</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>VCD_ReadHeader <font id="function_arguments">(file VCDFile : TEXT; VCDLine : inout T_VCDLINE)</font> <font id="function_return">return ()</font></li>
-<li>VCD_ReadLine <font id="function_arguments">(file VCDFile : TEXT; VCDLine : out string)</font> <font id="function_return">return ()</font></li>
-<li>VCD_Read_StdLogic <font id="function_arguments">(VCDLine : string; signal sl : out std_logic; WaveName : string)</font> <font id="function_return">return ()</font></li>
-<li>VCD_Read_StdLogicVector <font id="function_arguments">(VCDLine : string; signal slv : out std_logic_vector; WaveName : string; def : std_logic := '0')</font> <font id="function_return">return ()</font></li>
+<a id=sim_VCDParser><h1 id="package-sim_vcdparser">Package: sim_VCDParser</h1></a><h2 id="functions">Functions</h2><ul>
+<li>VCD_ReadHeader <font id="function_arguments">(file VCDFile : TEXT; VCDLine : inout T_VCDLINE) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>VCD_ReadLine <font id="function_arguments">(file VCDFile : TEXT; VCDLine : out string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>VCD_Read_StdLogic <font id="function_arguments">(VCDLine : string; signal sl : out std_logic; WaveName : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>VCD_Read_StdLogicVector <font id="function_arguments">(VCDLine : string; signal slv : out std_logic_vector; WaveName : string; def : std_logic := '0') </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -282,15 +286,12 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>p_rx_s: <em>( clk, arst )</em><br />
-synchronize rx input (async)</li>
-</ul>
-<p><strong>Description</strong><br />
-synchronize rx input (async)</p>
-<ul>
-<li>uart_tx: <em>( clk, arst )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>p_rx_s: ( clk, arst )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+synchronize rx input (async)</p></div><ul>
+<li>uart_tx: ( clk, arst )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Transmit process; drives tx serial output.<br />
 Stores 4 pending bytes in the tx_data array, and the byte currently<br />
 being output in the tx_buffer register.<br />
@@ -300,25 +301,9 @@ being output (tx_active is inactive).<br />
 Data received via SBI is inserted in tx_data at the index pointed to<br />
 by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is<br />
 received via SBI, and decremented when a new byte is loaded into<br />
-tx_buffer.</li>
-</ul>
-<p><strong>Description</strong><br />
-Transmit process; drives tx serial output.<br />
-Stores 4 pending bytes in the tx_data array, and the byte currently<br />
-being output in the tx_buffer register.<br />
-Tx_buffer is filled with data from tx_data(0) if there is valid data<br />
-available (tx_data_valid is active), and no other byte is currently<br />
-being output (tx_active is inactive).<br />
-Data received via SBI is inserted in tx_data at the index pointed to<br />
-by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is<br />
-received via SBI, and decremented when a new byte is loaded into<br />
-tx_buffer.</p>
-<ul>
-<li>uart_rx: <em>( clk, arst )</em><br />
-Receive process</li>
-</ul>
-<p><strong>Description</strong><br />
-Receive process</p>
-<ul>
-<li>p_busy_assert: <em>( clk )</em></li>
+tx_buffer.</p></div><ul>
+<li>uart_rx: ( clk, arst )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Receive process</p></div><ul>
+<li>p_busy_assert: ( clk )</li>
 </ul><br><br><br><br><br><br>

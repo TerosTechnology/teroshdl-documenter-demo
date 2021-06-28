@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -130,14 +134,9 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>p_lc_state_decode: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>p_lc_state_decode: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 The decoder logic below decodes the life cycle state vector and counter<br />
 into a format that can be exposed in the CSRs. If the state is invalid,<br />
-this will be flagged as well.</li>
-</ul>
-<p><strong>Description</strong><br />
-The decoder logic below decodes the life cycle state vector and counter<br />
-into a format that can be exposed in the CSRs. If the state is invalid,<br />
-this will be flagged as well.</p><br><br><br><br><br><br>
+this will be flagged as well.</p></div><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -112,21 +116,14 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>write <font id="function_arguments">(    signal net       : inout network_t;
-constant address : in    unsigned(7 downto 0);
-constant data    : in    std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
-<li>blocking_write <font id="function_arguments">(    signal net       : inout network_t;
-constant address : in    unsigned(7 downto 0);
-constant data    : in    std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
-<li>read <font id="function_arguments">(    signal net       : inout network_t;
-constant address : in    unsigned(7 downto 0);
-variable future  : out   msg_t)</font> <font id="function_return">return ()</font></li>
-<li>get <font id="function_arguments">(    signal net      : inout network_t;
-variable future : inout msg_t;
-variable data   : out   std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
-<li>read <font id="function_arguments">(    signal net       : inout network_t;
-constant address : in    unsigned(7 downto 0);
-variable data    : out   std_logic_vector(7 downto 0))</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>write <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>blocking_write <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>read <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); variable future  : out   msg_t) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>get <font id="function_arguments">( signal net      : inout network_t; variable future : inout msg_t; variable data   : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>read <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); variable data    : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

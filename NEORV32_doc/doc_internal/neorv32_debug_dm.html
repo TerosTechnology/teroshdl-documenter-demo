@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -496,31 +500,19 @@
 <td>program buffer access --</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>dm_controller: <em>( clk_i )</em></p></li>
-<li><p>dmi_write_access: <em>( rstn_i, clk_i )</em></p></li>
-</ul>
-<h2 id="debug-module-interface---write-access---------------------------------------------------">Debug Module Interface - Write Access --------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="debug-module-interface---write-access----------------------------------------------------1">Debug Module Interface - Write Access --------------------------------------------------</h2>
-<ul>
-<li>dmi_read_access: <em>( clk_i )</em><br />
-always ready for new read/write accesses</li>
-</ul>
-<h2 id="debug-module-interface---read-access----------------------------------------------------">Debug Module Interface - Read Access ---------------------------------------------------</h2>
-<p><strong>Description</strong><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>dm_controller: ( clk_i )</li>
+</ul><ul>
+<li>dmi_write_access: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="debug-module-interface---write-access---------------------------------------------------">Debug Module Interface - Write Access --------------------------------------------------</h2></div><ul>
+<li>dmi_read_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 always ready for new read/write accesses</p>
-<h2 id="debug-module-interface---read-access-----------------------------------------------------1">Debug Module Interface - Read Access ---------------------------------------------------</h2>
-<ul>
-<li>write_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="write-access-----------------------------------------------------------------------------1">Write Access ---------------------------------------------------------------------------</h2>
-<ul>
-<li>read_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="read-access------------------------------------------------------------------------------1">Read Access ----------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+<h2 id="debug-module-interface---read-access----------------------------------------------------">Debug Module Interface - Read Access ---------------------------------------------------</h2></div><ul>
+<li>write_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2></div><ul>
+<li>read_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

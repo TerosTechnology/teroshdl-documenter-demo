@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -618,22 +622,20 @@
 <td>insert a fifo here to break the large fanout from inputs to memories on reads</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 prog_pend_q is necessary to emulate flash behavior that a bit written to 0 cannot be written<br />
-back to 1 without an erase</p></li>
-</ul>
-<p><strong>Description</strong><br />
-prog_pend_q is necessary to emulate flash behavior that a bit written to 0 cannot be written<br />
-back to 1 without an erase</p>
-<ul>
-<li>unnamed: <em>(  )</em></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+back to 1 without an erase</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_mem_meta: prim_ram_1p</li>
 </ul><br><br><br><br><br><br>

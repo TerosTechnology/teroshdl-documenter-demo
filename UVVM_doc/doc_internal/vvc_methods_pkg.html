@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -165,46 +169,16 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>wishbone_write <font id="function_arguments">(    signal   VVCT                : inout t_vvc_target_record;
-constant vvc_instance_idx    : in    integer;
-constant addr                : in    unsigned;
-constant data                : in    std_logic_vector;
-constant msg                 : in    string;
-constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;
-constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL  Only intended for usage by parent HVVCs
-)</font> <font id="function_return">return ()</font></li>
-<li>wishbone_read <font id="function_arguments">(    signal   VVCT                : inout t_vvc_target_record;
-constant vvc_instance_idx    : in    integer;
-constant addr                : in    unsigned;
-constant data_routing        : in    t_data_routing;
-constant msg                 : in    string;
-constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;
-constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL  Only intended for usage by parent HVVCs
-)</font> <font id="function_return">return ()</font></li>
-<li>wishbone_read <font id="function_arguments">(    signal   VVCT                : inout t_vvc_target_record;
-constant vvc_instance_idx    : in    integer;
-constant addr                : in    unsigned;
-constant msg                 : in    string;
-constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;
-constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL  Only intended for usage by parent HVVCs
-)</font> <font id="function_return">return ()</font></li>
-<li>wishbone_check <font id="function_arguments">(    signal   VVCT                : inout t_vvc_target_record;
-constant vvc_instance_idx    : in    integer;
-constant addr                : in    unsigned;
-constant data                : in    std_logic_vector;
-constant msg                 : in    string;
-constant alert_level         : in    t_alert_level  := ERROR;
-constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;
-constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL  Only intended for usage by parent HVVCs
-)</font> <font id="function_return">return ()</font></li>
-<li>update_vvc_activity_register <font id="function_arguments">( signal global_trigger_vvc_activity_register : inout std_logic;                                          variable vvc_status                         : inout t_vvc_status;
-                                      constant activity                           : in    t_activity;
-                                      constant entry_num_in_vvc_activity_register : in    integer;
-                                      constant last_cmd_idx_executed              : in    natural;
-                                      constant command_queue_is_empty             : in    boolean;
-                                      constant scope                              : in    string := C_VVC_NAME)</font> <font id="function_return">return ()</font></li>
-<li>pad_wishbone_sb <font id="function_arguments">(    constant data : in std_logic_vector
-)</font> <font id="function_return">return std_logic_vector</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>wishbone_write <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data                : in    std_logic_vector; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data_routing        : in    t_data_routing; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>wishbone_check <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data                : in    std_logic_vector; constant msg                 : in    string; constant alert_level         : in    t_alert_level  := ERROR; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>update_vvc_activity_register <font id="function_arguments">( signal global_trigger_vvc_activity_register : inout std_logic; variable vvc_status                         : inout t_vvc_status; constant activity                           : in    t_activity; constant entry_num_in_vvc_activity_register : in    integer; constant last_cmd_idx_executed              : in    natural; constant command_queue_is_empty             : in    boolean; constant scope                              : in    string := C_VVC_NAME) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>pad_wishbone_sb <font id="function_arguments">( constant data : in std_logic_vector ) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><br><br><br><br><br><br>

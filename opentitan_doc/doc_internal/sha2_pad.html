@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -245,19 +249,16 @@
 <td>fifo control add 8'h 80 , N 8'h00, 64'h message_length Steps 1. <code>hash_start</code> from CPU (or DMA?) 2. calculate <code>padded_length</code> from <code>message_length</code> 3. Check if tx_count == message_length, then go to 5 4. Receiving FIFO input (hand over to fifo output) 5. Padding bit 1 (8'h80) followed by 8'h00 if needed 6. Padding with length (high -&gt; low) State Machine</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
-Next state</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Next state</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-tx_count</li>
-</ul>
-<p><strong>Description</strong><br />
-tx_count</p><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Next state</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+tx_count</p></div><br><br><br><br><br><br>

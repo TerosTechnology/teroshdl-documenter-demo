@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,16 +68,12 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=data_fifo_pkg><h1 id="package-data_fifo_pkg">Package: data_fifo_pkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>uvvm_fifo_init <font id="function_arguments">(    buffer_idx            : natural;
-buffer_size_in_bits   : natural
-)</font> <font id="function_return">return ()</font></li>
-<li>uvvm_fifo_put <font id="function_arguments">(    buffer_idx        : natural;
-data              : std_logic_vector
-)</font> <font id="function_return">return ()</font></li>
-<li>uvvm_fifo_flush <font id="function_arguments">(    buffer_idx            : natural
-)</font> <font id="function_return">return ()</font></li>
-<li>uvvm_fifo_deallocate <font id="function_arguments">(    dummy : t_void
-)</font> <font id="function_return">return ()</font></li>
+<a id=data_fifo_pkg><h1 id="package-data_fifo_pkg">Package: data_fifo_pkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>uvvm_fifo_init <font id="function_arguments">( buffer_idx            : natural; buffer_size_in_bits   : natural ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>uvvm_fifo_put <font id="function_arguments">( buffer_idx        : natural; data              : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>uvvm_fifo_flush <font id="function_arguments">( buffer_idx            : natural ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>uvvm_fifo_deallocate <font id="function_arguments">( dummy : t_void ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

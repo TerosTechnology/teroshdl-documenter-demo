@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -104,38 +108,24 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>deallocate <font id="function_arguments">(    variable arr : inout integer_array_t
-)</font> <font id="function_return">return ()</font></li>
-<li>set <font id="function_arguments">(    arr   : integer_array_t;
-idx   : integer;
-value : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>set <font id="function_arguments">(    arr   : integer_array_t;
-x,y   : integer;
-value : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>set <font id="function_arguments">(    arr   : integer_array_t;
-x,y,z : integer;
-value : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>append <font id="function_arguments">(    variable arr : inout integer_array_t;
-value        : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>reshape <font id="function_arguments">(    variable arr : inout integer_array_t;
-length       : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>reshape <font id="function_arguments">(    variable arr  : inout integer_array_t;
-width, height : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>reshape <font id="function_arguments">(    variable arr         : inout integer_array_t;
-width, height, depth : integer
-)</font> <font id="function_return">return ()</font></li>
-<li>save_csv <font id="function_arguments">(    arr       : integer_array_t;
-file_name : string
-)</font> <font id="function_return">return ()</font></li>
-<li>save_raw <font id="function_arguments">(    arr       : integer_array_t;
-file_name : string
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>deallocate <font id="function_arguments">( variable arr : inout integer_array_t ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set <font id="function_arguments">( arr   : integer_array_t; idx   : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set <font id="function_arguments">( arr   : integer_array_t; x,y   : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>set <font id="function_arguments">( arr   : integer_array_t; x,y,z : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>append <font id="function_arguments">( variable arr : inout integer_array_t; value        : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>reshape <font id="function_arguments">( variable arr : inout integer_array_t; length       : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>reshape <font id="function_arguments">( variable arr  : inout integer_array_t; width, height : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>reshape <font id="function_arguments">( variable arr         : inout integer_array_t; width, height, depth : integer ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>save_csv <font id="function_arguments">( arr       : integer_array_t; file_name : string ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>save_raw <font id="function_arguments">( arr       : integer_array_t; file_name : string ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

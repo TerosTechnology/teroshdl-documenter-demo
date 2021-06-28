@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -532,16 +536,20 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>(         ST_IDLE,            ST_RECEIVE_TRAFFIC_CLASS,           ST_RECEIVE_FLOW_LABEL_1,    ST_RECEIVE_FLOW_LABEL_2,            ST_RECEIVE_LENGTH_0,            ST_RECEIVE_LENGTH_1,            ST_RECEIVE_NEXT_HEADER,     ST_RECEIVE_HOP_LIMIT,           ST_RECEIVE_SOURCE_ADDRESS,          ST_RECEIVE_DESTINATION_ADDRESS,             ST_RECEIVE_DATA_1, ST_RECEIVE_DATA_N,       ST_DISCARD_FRAME,       ST_ERROR    )</td>
+<td>( ST_IDLE, ST_RECEIVE_TRAFFIC_CLASS, ST_RECEIVE_FLOW_LABEL_1,    ST_RECEIVE_FLOW_LABEL_2, ST_RECEIVE_LENGTH_0,           ST_RECEIVE_LENGTH_1, ST_RECEIVE_NEXT_HEADER,        ST_RECEIVE_HOP_LIMIT, ST_RECEIVE_SOURCE_ADDRESS, ST_RECEIVE_DESTINATION_ADDRESS,  ST_RECEIVE_DATA_1, ST_RECEIVE_DATA_N, ST_DISCARD_FRAME, ST_ERROR )</td>
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack, IPv6SeqCounter_us )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack, IPv6SeqCounter_us )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
 </ul><br><br><br><br><br><br>

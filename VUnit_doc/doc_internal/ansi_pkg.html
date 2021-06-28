@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -95,12 +99,12 @@
 <tbody>
 <tr>
 <td>ansi_color_t</td>
-<td>(     no_color,      black,     red,     green,     yellow,     blue,     magenta,     cyan,     white,       Non standard foregrounds     lightblack,     lightred,     lightgreen,     lightyellow,     lightblue,     lightmagenta,     lightcyan,     lightwhite     )</td>
+<td>( no_color,  black, red, green, yellow, blue, magenta, cyan, white,  lightblack, lightred, lightgreen, lightyellow, lightblue, lightmagenta, lightcyan, lightwhite )</td>
 <td></td>
 </tr>
 <tr>
 <td>ansi_style_t</td>
-<td>(     dim,     normal,     bright     )</td>
+<td>( dim, normal, bright )</td>
 <td></td>
 </tr>
 <tr>
@@ -109,9 +113,10 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
+</table><h2 id="functions">Functions</h2><ul>
 <li>disable_colors <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>enable_colors <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>ansi_color_demo <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

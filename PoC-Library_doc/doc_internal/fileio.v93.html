@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,17 +68,23 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=FileIO><h1 id="package-fileio">Package: FileIO</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>LogFile_Open <font id="function_arguments">(FileName : string; OpenKind : T_LOGFILE_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font></li>
-<li>LogFile_Open <font id="function_arguments">(Status : out FILE_OPEN_STATUS; FileName : string; OpenKind : T_LOGFILE_OPEN_KIND := WRITE_MODE)</font> <font id="function_return">return ()</font></li>
-<li>LogFile_Print <font id="function_arguments">(str : string)</font> <font id="function_return">return ()</font></li>
-<li>LogFile_PrintLine <font id="function_arguments">(str : string := "")</font> <font id="function_return">return ()</font></li>
+<a id=FileIO><h1 id="package-fileio">Package: FileIO</h1></a><h2 id="functions">Functions</h2><ul>
+<li>LogFile_Open <font id="function_arguments">(FileName : string; OpenKind : T_LOGFILE_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>LogFile_Open <font id="function_arguments">(Status : out FILE_OPEN_STATUS; FileName : string; OpenKind : T_LOGFILE_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>LogFile_Print <font id="function_arguments">(str : string) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>LogFile_PrintLine <font id="function_arguments">(str : string := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>LogFile_Flush <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>LogFile_Close <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
-<li>StdOut_Print <font id="function_arguments">(str : string)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-StdOut===========================================================================</li>
-<li>StdOut_PrintLine <font id="function_arguments">(str : string := "")</font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>StdOut_Print <font id="function_arguments">(str : string) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+StdOut===========================================================================</p></div><ul>
+<li>StdOut_PrintLine <font id="function_arguments">(str : string := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>StdOut_Flush <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

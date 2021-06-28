@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -892,38 +896,30 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( RESET_n, CLK_n )</em></p></li>
-<li><p>unnamed: <em>( CLK_n )</em><br />
-BC('), DE('), HL('), IX and IY</p></li>
-</ul>
-<p><strong>Description</strong><br />
-BC('), DE('), HL('), IX and IY</p>
-<ul>
-<li><p>unnamed: <em>( Save_ALU_r, Auto_Wait_t1, ALU_OP_r, Read_To_Reg_r,
-        ExchangeDH, IncDec_16, MCycle, TState, Wait_n )</em></p></li>
-<li><p>unnamed: <em>( Save_Mux, RegBusB, RegBusA_r, ID16,
-        ExchangeDH, IncDec_16, MCycle, TState, Wait_n )</em></p></li>
-<li><p>unnamed: <em>( CLK_n )</em><br />
-Buses</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Buses</p>
-<ul>
-<li>unnamed: <em>( RESET_n,CLK_n )</em><br />
-Generate external control signals</li>
-</ul>
-<p><strong>Description</strong><br />
-Generate external control signals</p>
-<ul>
-<li>unnamed: <em>( RESET_n, CLK_n )</em><br />
-Main state machine</li>
-</ul>
-<p><strong>Description</strong><br />
-Main state machine</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( RESET_n, CLK_n )</li>
+</ul><ul>
+<li>unnamed: ( CLK_n )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+BC('), DE('), HL('), IX and IY</p></div><ul>
+<li>unnamed: ( Save_ALU_r, Auto_Wait_t1, ALU_OP_r, Read_To_Reg_r,<br />
+        ExchangeDH, IncDec_16, MCycle, TState, Wait_n )</li>
+</ul><ul>
+<li>unnamed: ( Save_Mux, RegBusB, RegBusA_r, ID16,<br />
+        ExchangeDH, IncDec_16, MCycle, TState, Wait_n )</li>
+</ul><ul>
+<li>unnamed: ( CLK_n )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Buses</p></div><ul>
+<li>unnamed: ( RESET_n,CLK_n )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Generate external control signals</p></div><ul>
+<li>unnamed: ( RESET_n, CLK_n )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Main state machine</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>mcode: T80_MCode</li>
+</ul><ul>
 <li>alu: T80_ALU</li>
+</ul><ul>
 <li>Regs: T80_Reg</li>
 </ul><br><br><br><br><br><br>

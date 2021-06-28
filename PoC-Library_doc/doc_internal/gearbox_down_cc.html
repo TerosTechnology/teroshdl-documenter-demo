@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -412,16 +416,14 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS</font></li>
-<li>to_chunkv <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_CHUNK_VECTOR</font><br />
-<strong>Description</strong><br />
-create vector-vector from vector (4 bit)</li>
-<li>to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR)</font> <font id="function_return">return std_logic_vector</font><br />
-<strong>Description</strong><br />
-convert vector-vector to flatten vector</li>
-</ul><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( Clock )</em></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS </font></li>
+</ul><ul>
+<li>to_chunkv <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return T_CHUNK_VECTOR </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+create vector-vector from vector (4 bit)</p></div><ul>
+<li>to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+convert vector-vector to flatten vector</p></div><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
 </ul><br><br><br><br><br><br>

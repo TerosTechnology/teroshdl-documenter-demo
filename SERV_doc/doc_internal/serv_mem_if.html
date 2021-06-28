@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -261,7 +265,6 @@
 <td>The dat register has three different use cases for store, load and     shift operations.     store : Data to be written is shifted to the correct position in dat during             init by dat_en and is presented on the data bus as o_wb_dat     load  : Data from the bus gets latched into dat during i_wb_ack and is then             shifted out at the appropriate time to end up in the correct             position in rd     shift : Data is shifted in during init. After that, the six LSB are used as             a downcounter (with bit 5 initially set to 0) that triggers             o_sh_done and o_sh_done_r when they wrap around to indicate that             the requested number of shifts have been performed     */</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( @(posedge i_clk) )</em></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge i_clk) )</li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -240,72 +244,38 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Enable selection<br />
 in Single mode, line 1 is for output.<br />
 in Dual mode, line 0:1 are for output<br />
-in Quad mode, all lines 0:3 are for output.</li>
-</ul>
-<p><strong>Description</strong><br />
-Enable selection<br />
-in Single mode, line 1 is for output.<br />
-in Dual mode, line 0:1 are for output<br />
-in Quad mode, all lines 0:3 are for output.</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
+in Quad mode, all lines 0:3 are for output.</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 So, the logic generating <code>sent</code> signal looks not straightforward. It tries<br />
 assert second last beat. So, in SingleIO (right after reset always), it<br />
-asserts at 7th beat. Then the mode could be changed to Dual/ Quad.</li>
-</ul>
-<p><strong>Description</strong><br />
-So, the logic generating <code>sent</code> signal looks not straightforward. It tries<br />
-assert second last beat. So, in SingleIO (right after reset always), it<br />
-asserts at 7th beat. Then the mode could be changed to Dual/ Quad.</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i) )</em><br />
-data shift</li>
-</ul>
-<p><strong>Description</strong><br />
-data shift</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-SPI out</li>
-</ul>
-<p><strong>Description</strong><br />
-SPI out</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+asserts at 7th beat. Then the mode could be changed to Dual/ Quad.</p></div><ul>
+<li>unnamed: ( @(posedge clk_i) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+data shift</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+SPI out</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Following logic has high chance to break the rule. As there's no<br />
 indication of the end of a byte. <code>data_sent_o</code> is not a valid indicator<br />
-as the signal asserted one cycle earlier than the last beat.</li>
-</ul>
-<p><strong>Description</strong><br />
-Following logic has high chance to break the rule. As there's no<br />
-indication of the end of a byte. <code>data_sent_o</code> is not a valid indicator<br />
-as the signal asserted one cycle earlier than the last beat.</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+as the signal asserted one cycle earlier than the last beat.</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 cnt<br />
 TODO: Consider dummy cycle that is not aligned to a byte<br />
-Is this valid scenario?</li>
-</ul>
-<p><strong>Description</strong><br />
-cnt<br />
-TODO: Consider dummy cycle that is not aligned to a byte<br />
-Is this valid scenario?</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-Last beat depends on the mode</li>
-</ul>
-<p><strong>Description</strong><br />
-Last beat depends on the mode</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+Is this valid scenario?</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Last beat depends on the mode</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 At reset, tx state sits in TxIdle. It moves to TxActive.<br />
-This is to delay the first posedge in Mode 3.</li>
-</ul>
-<p><strong>Description</strong><br />
-At reset, tx state sits in TxIdle. It moves to TxActive.<br />
-This is to delay the first posedge in Mode 3.</p><br><br><br><br><br><br>
+This is to delay the first posedge in Mode 3.</p></div><br><br><br><br><br><br>

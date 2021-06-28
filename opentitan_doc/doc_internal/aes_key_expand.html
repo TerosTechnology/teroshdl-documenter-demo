@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -367,32 +371,20 @@
 <td>derived parameter</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>get_rnd_type: <em>(  )</em><br />
-For AES-192, there are four different types of rounds.</li>
-</ul>
-<p><strong>Description</strong><br />
-For AES-192, there are four different types of rounds.</p>
-<ul>
-<li>rcon_usage: <em>(  )</em><br />
-Depending on operation, key length and round, Rcon may not be used thus must not be updated.</li>
-</ul>
-<p><strong>Description</strong><br />
-Depending on operation, key length and round, Rcon may not be used thus must not be updated.</p>
-<ul>
-<li>rcon_update: <em>(  )</em><br />
-Generate Rcon</li>
-</ul>
-<p><strong>Description</strong><br />
-Generate Rcon</p>
-<ul>
-<li>reg_rcon: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-Rcon register</li>
-</ul>
-<p><strong>Description</strong><br />
-Rcon register</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>get_rnd_type: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+For AES-192, there are four different types of rounds.</p></div><ul>
+<li>rcon_usage: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Depending on operation, key length and round, Rcon may not be used thus must not be updated.</p></div><ul>
+<li>rcon_update: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Generate Rcon</p></div><ul>
+<li>reg_rcon: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Rcon register</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_aes_key_expand_en_buf_chk: aes_sel_buf_chk</li>
+</ul><ul>
 <li>u_aes_key_expand_out_ack_buf_chk: aes_sel_buf_chk</li>
 </ul><br><br><br><br><br><br>

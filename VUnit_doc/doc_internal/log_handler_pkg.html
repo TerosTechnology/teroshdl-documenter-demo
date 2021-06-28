@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -107,7 +111,7 @@
 <tbody>
 <tr>
 <td>deprecated_log_format_t</td>
-<td>(      The raw log format contains just the message without any other information     raw,       The level log format contains the level and message     level,       The verbose log format contains all information     verbose,       The csv format contains all information in machine readable format     csv,       Deprecated value not supported by new interfaces but kept for backward      compatibility reasons. NOT for new designs     off)</td>
+<td>( raw,  level,  verbose,  csv,  off)</td>
 <td></td>
 </tr>
 <tr>
@@ -121,25 +125,16 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>set_format <font id="function_arguments">(log_handler : log_handler_t;                       format : log_format_t;
-                   use_color : boolean := false)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set the format to be used by the log handler</li>
-<li>get_format <font id="function_arguments">(constant log_handler : in log_handler_t;                       variable format : out log_format_t;
-                   variable use_color : out boolean)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Get the format used by the log handler</li>
-<li>update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t; value : natural)</font> <font id="function_return">return ()</font></li>
-<li>log_to_handler <font id="function_arguments">(log_handler : log_handler_t;                           logger_name : string;
-                       msg : string;
-                       log_level : log_level_t;
-                       log_time : time;
-                       sequence_number : natural;
-                       line_num : natural := 0;
-                       file_name : string := "")</font> <font id="function_return">return ()</font></li>
-<li>init_log_handler <font id="function_arguments">(log_handler : log_handler_t;                             format : log_format_t;
-                         file_name : string;
-                         use_color : boolean := false)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>set_format <font id="function_arguments">(log_handler : log_handler_t; format : log_format_t; use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set the format to be used by the log handler</p></div><ul>
+<li>get_format <font id="function_arguments">(constant log_handler : in log_handler_t; variable format : out log_format_t; variable use_color : out boolean) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Get the format used by the log handler</p></div><ul>
+<li>update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t; value : natural) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>log_to_handler <font id="function_arguments">(log_handler : log_handler_t; logger_name : string; msg : string; log_level : log_level_t; log_time : time; sequence_number : natural; line_num : natural := 0; file_name : string := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>init_log_handler <font id="function_arguments">(log_handler : log_handler_t; format : log_format_t; file_name : string; use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

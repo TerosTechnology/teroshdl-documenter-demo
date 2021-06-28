@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -226,23 +230,14 @@
 <td>The MAC operates on quarter-words, QWLEN gives the number of bits in a quarter-word.</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the<br />
-instruction (operand_[a|b]_qw_sel).</li>
-</ul>
-<p><strong>Description</strong><br />
-Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the<br />
-instruction (operand_[a|b]_qw_sel).</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
+instruction (operand_[a|b]_qw_sel).</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount<br />
-supplied in the instruction (pre_acc_shift_imm).</li>
-</ul>
-<p><strong>Description</strong><br />
-Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount<br />
-supplied in the instruction (pre_acc_shift_imm).</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></li>
+supplied in the instruction (pre_acc_shift_imm).</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><br><br><br><br><br><br>

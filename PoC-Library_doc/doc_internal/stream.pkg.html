@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -222,31 +226,51 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return natural</font></li>
-<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_32)</font> <font id="function_return">return natural</font></li>
-<li>dat <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
-<li>dat <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
-<li>dat <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
-<li>dat <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
-<li>sof <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
-<li>sof <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
-<li>sof <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
-<li>sof <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
-<li>eof <font id="function_arguments">(slv        : T_SLV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
-<li>eof <font id="function_arguments">(slvv        : T_SLVV_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
-<li>eof <font id="function_arguments">(slv        : T_SLV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
-<li>eof <font id="function_arguments">(slvv        : T_SLVV_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32</font></li>
-<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
-<li>eof <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
-<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
-<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_8</font></li>
-<li>eofg <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8</font></li>
-<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return T_SIM_STREAM_WORD_32</font></li>
-<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_8)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_32)</font> <font id="function_return">return string</font></li>
-<li>sim_CRC8 <font id="function_arguments">(words        : T_SIM_STREAM_WORD_VECTOR_8)</font> <font id="function_return">return std_logic_vector</font><br />
-<strong>Description</strong><br />
-checksum functions================================================================</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_8) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>CountPatterns <font id="function_arguments">(Data : T_SIM_STREAM_WORD_VECTOR_32) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>dat <font id="function_arguments">(slv        : T_SLV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_8 </font></li>
+</ul><ul>
+<li>dat <font id="function_arguments">(slvv        : T_SLVV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8 </font></li>
+</ul><ul>
+<li>dat <font id="function_arguments">(slv        : T_SLV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_32 </font></li>
+</ul><ul>
+<li>dat <font id="function_arguments">(slvv        : T_SLVV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32 </font></li>
+</ul><ul>
+<li>sof <font id="function_arguments">(slv        : T_SLV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_8 </font></li>
+</ul><ul>
+<li>sof <font id="function_arguments">(slvv        : T_SLVV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8 </font></li>
+</ul><ul>
+<li>sof <font id="function_arguments">(slv        : T_SLV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_32 </font></li>
+</ul><ul>
+<li>sof <font id="function_arguments">(slvv        : T_SLVV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(slv        : T_SLV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_8 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(slvv        : T_SLVV_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(slv        : T_SLV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_32 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(slvv        : T_SLVV_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_32 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_8 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8 </font></li>
+</ul><ul>
+<li>eof <font id="function_arguments">(stmw        : T_SIM_STREAM_WORD_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_32 </font></li>
+</ul><ul>
+<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_8 </font></li>
+</ul><ul>
+<li>eofg <font id="function_arguments">(stmwv    : T_SIM_STREAM_WORD_VECTOR_8) </font> <font id="function_return">return T_SIM_STREAM_WORD_VECTOR_8 </font></li>
+</ul><ul>
+<li>eofg <font id="function_arguments">(stmw    : T_SIM_STREAM_WORD_32) </font> <font id="function_return">return T_SIM_STREAM_WORD_32 </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_8) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_32) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>sim_CRC8 <font id="function_arguments">(words        : T_SIM_STREAM_WORD_VECTOR_8) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+checksum functions================================================================</p></div><br><br><br><br><br><br>

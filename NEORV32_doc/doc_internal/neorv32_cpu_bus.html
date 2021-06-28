@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -573,88 +577,46 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>mem_adr_reg: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="data-interface-access-address----------------------------------------------------------">Data Interface: Access Address ---------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="data-interface-access-address-----------------------------------------------------------1">Data Interface: Access Address ---------------------------------------------------------</h2>
-<ul>
-<li>misaligned_d_check: <em>( mar, ctrl_i )</em><br />
-alignment check --</li>
-</ul>
-<p><strong>Description</strong><br />
-alignment check --</p>
-<ul>
-<li>mem_do_reg: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="data-interface-write-data--------------------------------------------------------------">Data Interface: Write Data -------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="data-interface-write-data---------------------------------------------------------------1">Data Interface: Write Data -------------------------------------------------------------</h2>
-<ul>
-<li>byte_enable: <em>( mar, mdo, ctrl_i )</em><br />
-byte enable and output data alignment --</li>
-</ul>
-<p><strong>Description</strong><br />
-byte enable and output data alignment --</p>
-<ul>
-<li>mem_di_reg: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="data-interface-read-data---------------------------------------------------------------">Data Interface: Read Data --------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="data-interface-read-data----------------------------------------------------------------1">Data Interface: Read Data --------------------------------------------------------------</h2>
-<ul>
-<li>read_align: <em>( mdi, mar, ctrl_i )</em><br />
-input data alignment and sign extension --</li>
-</ul>
-<p><strong>Description</strong><br />
-input data alignment and sign extension --</p>
-<ul>
-<li>data_access_arbiter: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="data-access-arbiter---------------------------------------------------------------------">Data Access Arbiter --------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="data-access-arbiter----------------------------------------------------------------------1">Data Access Arbiter --------------------------------------------------------------------</h2>
-<ul>
-<li>pmp_dbus_buffer: <em>( rstn_i, clk_i )</em><br />
-additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</li>
-</ul>
-<p><strong>Description</strong><br />
-additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</p>
-<ul>
-<li>exclusive_access_controller: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="reservation-controller-lrsc-a-extension--------------------------------------------">Reservation Controller (LR/SC [A extension]) -------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="reservation-controller-lrsc-a-extension---------------------------------------------1">Reservation Controller (LR/SC [A extension]) -------------------------------------------</h2>
-<ul>
-<li>ifetch_arbiter: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="instruction-fetch-arbiter---------------------------------------------------------------">Instruction Fetch Arbiter --------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="instruction-fetch-arbiter----------------------------------------------------------------1">Instruction Fetch Arbiter --------------------------------------------------------------</h2>
-<ul>
-<li>pmp_ibus_buffer: <em>( rstn_i, clk_i )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>mem_adr_reg: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="data-interface-access-address----------------------------------------------------------">Data Interface: Access Address ---------------------------------------------------------</h2></div><ul>
+<li>misaligned_d_check: ( mar, ctrl_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+alignment check --</p></div><ul>
+<li>mem_do_reg: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="data-interface-write-data--------------------------------------------------------------">Data Interface: Write Data -------------------------------------------------------------</h2></div><ul>
+<li>byte_enable: ( mar, mdo, ctrl_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+byte enable and output data alignment --</p></div><ul>
+<li>mem_di_reg: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="data-interface-read-data---------------------------------------------------------------">Data Interface: Read Data --------------------------------------------------------------</h2></div><ul>
+<li>read_align: ( mdi, mar, ctrl_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+input data alignment and sign extension --</p></div><ul>
+<li>data_access_arbiter: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="data-access-arbiter---------------------------------------------------------------------">Data Access Arbiter --------------------------------------------------------------------</h2></div><ul>
+<li>pmp_dbus_buffer: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</p></div><ul>
+<li>exclusive_access_controller: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="reservation-controller-lrsc-a-extension--------------------------------------------">Reservation Controller (LR/SC [A extension]) -------------------------------------------</h2></div><ul>
+<li>ifetch_arbiter: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="instruction-fetch-arbiter---------------------------------------------------------------">Instruction Fetch Arbiter --------------------------------------------------------------</h2></div><ul>
+<li>pmp_ibus_buffer: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 32-bit accesses only<br />
-additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</li>
-</ul>
-<p><strong>Description</strong><br />
-32-bit accesses only<br />
-additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</p>
-<ul>
-<li>pmp_masks: <em>( rstn_i, clk_i )</em></li>
-</ul>
+additional register stage for control signals if using PMP_NUM_REGIONS &gt; pmp_num_regions_critical_c --</p></div><ul>
+<li>pmp_masks: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
 <h2 id="physical-memory-protection-pmp--------------------------------------------------------">Physical Memory Protection (PMP) -------------------------------------------------------</h2>
-<p>compute address masks (ITERATIVE!!!) --</p>
-<p><strong>Description</strong></p>
-<h2 id="physical-memory-protection-pmp---------------------------------------------------------1">Physical Memory Protection (PMP) -------------------------------------------------------</h2>
-<p>compute address masks (ITERATIVE!!!) --</p>
-<ul>
-<li>pmp_check_permission: <em>( pmp, pmp_ctrl_i, ctrl_i )</em><br />
+<p>compute address masks (ITERATIVE!!!) --</p></div><ul>
+<li>pmp_check_permission: ( pmp, pmp_ctrl_i, ctrl_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 r<br />
-check access type and region's permissions --</li>
-</ul>
-<p><strong>Description</strong><br />
-r<br />
-check access type and region's permissions --</p><br><br><br><br><br><br>
+check access type and region's permissions --</p></div><br><br><br><br><br><br>

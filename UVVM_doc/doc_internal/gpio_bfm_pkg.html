@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -105,65 +109,20 @@
 <td>Configuration record to be assigned in the test harness.</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>gpio_set <font id="function_arguments">(    constant data_value   : in    std_logic_vector;   '-' means don't change
-constant msg          : in    string;
-signal data_port      : inout std_logic_vector;
-constant scope        : in    string            := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;
-constant config       : in    t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>gpio_get <font id="function_arguments">(    variable data_value   : out std_logic_vector;
-constant msg          : in  string;
-signal data_port      : in  std_logic_vector;
-constant scope        : in  string            := C_SCOPE;
-constant msg_id_panel : in  t_msg_id_panel    := shared_msg_id_panel;
-constant config       : in  t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>gpio_check <font id="function_arguments">(    constant data_exp     : in std_logic_vector;   '-' means don't care
-constant msg          : in string;
-signal data_port      : in std_logic_vector;
-constant alert_level  : in t_alert_level     := error;
-constant scope        : in string            := C_SCOPE;
-constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
-constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.</li>
-<li>gpio_check_stable <font id="function_arguments">(    constant data_exp     : in std_logic_vector;   '-' means don't care
-constant stable_req   : in time;
-constant msg          : in string;
-signal data_port      : in std_logic_vector;
-constant alert_level  : in t_alert_level     := error;
-constant scope        : in string            := C_SCOPE;
-constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
-constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.Verify that the read value has been stable for a certain time.</li>
-<li>gpio_expect <font id="function_arguments">(    constant data_exp     : in std_logic_vector;
-constant msg          : in string;
-signal data_port      : in std_logic_vector;
-constant timeout      : in time              := -1 ns;   -1 = no timeout
-constant alert_level  : in t_alert_level     := error;
-constant scope        : in string            := C_SCOPE;
-constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel;
-constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.</li>
-<li>gpio_expect_stable <font id="function_arguments">(    constant data_exp        : in std_logic_vector;
-constant stable_req      : in time;
-constant stable_req_from : in t_from_point_in_time;   Which point in time stable_req starts
-constant msg             : in string;
-signal data_port         : in std_logic_vector;
-constant timeout         : in time              := -1 ns;   -1 = no timeout
-constant alert_level     : in t_alert_level     := error;
-constant scope           : in string            := C_SCOPE;
-constant msg_id_panel    : in t_msg_id_panel    := shared_msg_id_panel;
-constant config          : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Perform a read operation, then compare the read value to the expected value.Verify that the read value remains stable for a certain time after the datais same as expected or after the data last event.</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>gpio_set <font id="function_arguments">( constant data_value   : in    std_logic_vector;  -- '-' means don't change constant msg          : in    string; signal data_port      : inout std_logic_vector; constant scope        : in    string            := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel; constant config       : in    t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>gpio_get <font id="function_arguments">( variable data_value   : out std_logic_vector; constant msg          : in  string; signal data_port      : in  std_logic_vector; constant scope        : in  string            := C_SCOPE; constant msg_id_panel : in  t_msg_id_panel    := shared_msg_id_panel; constant config       : in  t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>gpio_check <font id="function_arguments">( constant data_exp     : in std_logic_vector;  -- '-' means don't care constant msg          : in string; signal data_port      : in std_logic_vector; constant alert_level  : in t_alert_level     := error; constant scope        : in string            := C_SCOPE; constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel; constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.</p></div><ul>
+<li>gpio_check_stable <font id="function_arguments">( constant data_exp     : in std_logic_vector;  -- '-' means don't care constant stable_req   : in time; constant msg          : in string; signal data_port      : in std_logic_vector; constant alert_level  : in t_alert_level     := error; constant scope        : in string            := C_SCOPE; constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel; constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.Verify that the read value has been stable for a certain time.</p></div><ul>
+<li>gpio_expect <font id="function_arguments">( constant data_exp     : in std_logic_vector; constant msg          : in string; signal data_port      : in std_logic_vector; constant timeout      : in time              := -1 ns;  -- -1 = no timeout constant alert_level  : in t_alert_level     := error; constant scope        : in string            := C_SCOPE; constant msg_id_panel : in t_msg_id_panel    := shared_msg_id_panel; constant config       : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.</p></div><ul>
+<li>gpio_expect_stable <font id="function_arguments">( constant data_exp        : in std_logic_vector; constant stable_req      : in time; constant stable_req_from : in t_from_point_in_time;  -- Which point in time stable_req starts constant msg             : in string; signal data_port         : in std_logic_vector; constant timeout         : in time              := -1 ns;  -- -1 = no timeout constant alert_level     : in t_alert_level     := error; constant scope           : in string            := C_SCOPE; constant msg_id_panel    : in t_msg_id_panel    := shared_msg_id_panel; constant config          : in t_gpio_bfm_config := C_GPIO_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Perform a read operation, then compare the read value to the expected value.Verify that the read value remains stable for a certain time after the datais same as expected or after the data last event.</p></div><br><br><br><br><br><br>

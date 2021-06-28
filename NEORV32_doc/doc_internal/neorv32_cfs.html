@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -280,11 +284,10 @@
 <td>just implement 4 registers for this example</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>host_access: <em>( clk_i )</em><br />
-not used for this minimal example</li>
-</ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>host_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+not used for this minimal example</p>
 <h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
 <p>Here we are reading/writing from/to the interface registers of the module. Please note that the peripheral/IO<br />
 modules of the NEORV32 can only be written in full word mode (32-bit). Any other write access (half-word or byte)<br />
@@ -297,29 +300,9 @@ if the module needs additional time; the maximumx latency until an unacknwoledge
 gloabl "bus_timeout_c" constant). If no ACK is generated, the bus access will time out and cause a store bus access fault exception.<br />
 Host access: Read and write access to the interface registers + bus transfer acknowledge.<br />
 This example only implements four physical r/w register (the four lowest CF register). The remaining addresses of the CFS are not<br />
-associated with any writable or readable register - an access to those is simply ignored but still acknowledged.</p>
-<p><strong>Description</strong><br />
-not used for this minimal example</p>
-<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
-<p>Here we are reading/writing from/to the interface registers of the module. Please note that the peripheral/IO<br />
-modules of the NEORV32 can only be written in full word mode (32-bit). Any other write access (half-word or byte)<br />
-will trigger a store bus access fault exception.<br />
-The CFS provides up to 32 memory-mapped 32-bit interface register. For instance, these could be used to provide<br />
-a <control register> for global control of the unit, a <data register> for reading/writing from/to a data FIFO, a <command register><br />
-for issueing commands and a <status register> for status information.<br />
-Following the interface protocol, each read or write access has to be acknowledged in the following cycle using the ack_o signal (or even later<br />
-if the module needs additional time; the maximumx latency until an unacknwoledged access will trigger a bus exception is defined via the package's<br />
-gloabl "bus_timeout_c" constant). If no ACK is generated, the bus access will time out and cause a store bus access fault exception.<br />
-Host access: Read and write access to the interface registers + bus transfer acknowledge.<br />
-This example only implements four physical r/w register (the four lowest CF register). The remaining addresses of the CFS are not<br />
-associated with any writable or readable register - an access to those is simply ignored but still acknowledged.</p>
-<ul>
-<li>cfs_core: <em>( cfs_reg_wr )</em></li>
-</ul>
+associated with any writable or readable register - an access to those is simply ignored but still acknowledged.</p></div><ul>
+<li>cfs_core: ( cfs_reg_wr )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
 <h2 id="cfs-function-core-----------------------------------------------------------------------">CFS Function Core ----------------------------------------------------------------------</h2>
 <p>This is where the actual functionality can be implemented.<br />
-In this example we are just implementing four r/w registers that invert any value written to them.</p>
-<p><strong>Description</strong></p>
-<h2 id="cfs-function-core------------------------------------------------------------------------1">CFS Function Core ----------------------------------------------------------------------</h2>
-<p>This is where the actual functionality can be implemented.<br />
-In this example we are just implementing four r/w registers that invert any value written to them.</p><br><br><br><br><br><br>
+In this example we are just implementing four r/w registers that invert any value written to them.</p></div><br><br><br><br><br><br>

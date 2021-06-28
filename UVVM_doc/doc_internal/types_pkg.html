@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -381,17 +385,17 @@
 </tr>
 <tr>
 <td>t_parity</td>
-<td>(     PARITY_NONE,     PARITY_ODD,     PARITY_EVEN   )</td>
+<td>( PARITY_NONE, PARITY_ODD, PARITY_EVEN )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_stop_bits</td>
-<td>(     STOP_BITS_ONE,     STOP_BITS_ONE_AND_HALF,     STOP_BITS_TWO   )</td>
+<td>( STOP_BITS_ONE, STOP_BITS_ONE_AND_HALF, STOP_BITS_TWO )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_check_type</td>
-<td>(CHECK_VALUE,                          CHECK_VALUE_IN_RANGE,                          CHECK_STABLE,                         CHECK_TIME_WINDOW)</td>
+<td>(CHECK_VALUE, CHECK_VALUE_IN_RANGE, CHECK_STABLE, CHECK_TIME_WINDOW)</td>
 <td></td>
 </tr>
 <tr>
@@ -431,12 +435,12 @@
 </tr>
 <tr>
 <td>t_data_routing</td>
-<td>(     NA,     TO_SB,     TO_BUFFER,     FROM_BUFFER,     TO_RECEIVE_BUFFER)</td>
+<td>( NA, TO_SB, TO_BUFFER, FROM_BUFFER, TO_RECEIVE_BUFFER)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_bfm_sync</td>
-<td>(     SYNC_ON_CLOCK_ONLY,     SYNC_WITH_SETUP_AND_HOLD   )</td>
+<td>( SYNC_ON_CLOCK_ONLY, SYNC_WITH_SETUP_AND_HOLD )</td>
 <td>TO_FILE and FROM_FILE may be added later on</td>
 </tr>
 <tr>

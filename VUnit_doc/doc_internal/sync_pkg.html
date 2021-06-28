@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -94,25 +98,19 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;                            handle     :       sync_handle_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Blocking: Wait until all operations requested from the VC have been finished</li>
-<li>wait_for_time <font id="function_arguments">(signal net : inout network_t;                          handle     :       sync_handle_t;
-                      delay      :       delay_length)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Non-blocking: Make VC wait for a delay before starting the next operation</li>
-<li>handle_wait_until_idle <font id="function_arguments">(signal net        : inout network_t;                                   variable msg_type : inout msg_type_t;
-                               variable msg      : inout msg_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Standard implementation of wait_until_idle VCI which may be used by VC</li>
-<li>handle_wait_for_time <font id="function_arguments">(signal net        : inout network_t;                                 variable msg_type : inout msg_type_t;
-                             variable msg      : inout msg_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Standard implementation of wait_for_time VCI which may be used by VC</li>
-<li>handle_sync_message <font id="function_arguments">(signal net        : inout network_t;                                variable msg_type : inout msg_type_t;
-                            variable msg      : inout msg_t)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Standard implementation of synchronization VCI which may be used by VC</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t; handle     :       sync_handle_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Blocking: Wait until all operations requested from the VC have been finished</p></div><ul>
+<li>wait_for_time <font id="function_arguments">(signal net : inout network_t; handle     :       sync_handle_t; delay      :       delay_length) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Non-blocking: Make VC wait for a delay before starting the next operation</p></div><ul>
+<li>handle_wait_until_idle <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Standard implementation of wait_until_idle VCI which may be used by VC</p></div><ul>
+<li>handle_wait_for_time <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Standard implementation of wait_for_time VCI which may be used by VC</p></div><ul>
+<li>handle_sync_message <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Standard implementation of synchronization VCI which may be used by VC</p></div><br><br><br><br><br><br>

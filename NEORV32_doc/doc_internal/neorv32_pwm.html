@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -287,22 +291,13 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>wr_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="write-access----------------------------------------------------------------------------">Write access ---------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="write-access-----------------------------------------------------------------------------1">Write access ---------------------------------------------------------------------------</h2>
-<ul>
-<li>pwm_dc_rd_gen: <em>( pwm_ch )</em><br />
-duty cycle read-back --</li>
-</ul>
-<p><strong>Description</strong><br />
-duty cycle read-back --</p>
-<ul>
-<li>pwm_core: <em>( clk_i )</em></li>
-</ul>
-<h2 id="pwm-core--------------------------------------------------------------------------------">PWM Core -------------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="pwm-core---------------------------------------------------------------------------------1">PWM Core -------------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>wr_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="write-access----------------------------------------------------------------------------">Write access ---------------------------------------------------------------------------</h2></div><ul>
+<li>pwm_dc_rd_gen: ( pwm_ch )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+duty cycle read-back --</p></div><ul>
+<li>pwm_core: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="pwm-core--------------------------------------------------------------------------------">PWM Core -------------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -931,71 +935,49 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
-Determine if there are any errors related to the Imem fetch address.</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Determine if there are any errors related to the Imem fetch address.</p>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Determine if there are any errors related to the Imem fetch address.</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Choose increment to write back to base register file, only one increment can be written as<br />
 there is only one write port. Note that where an instruction is incrementing the indirect<br />
 reference to its destination register (insn_dec_bignum_i.d_inc) that reference is read on the<br />
-B read port so the B increment is written back.</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Choose increment to write back to base register file, only one increment can be written as<br />
-there is only one write port. Note that where an instruction is incrementing the indirect<br />
-reference to its destination register (insn_dec_bignum_i.d_inc) that reference is read on the<br />
-B read port so the B increment is written back.</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
-Base ALU Operand A MUX</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Base ALU Operand A MUX</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-Base ALU Operand B MUX</li>
-</ul>
-<p><strong>Description</strong><br />
-Base ALU Operand B MUX</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
-Base ALU Operand B MUX</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Base ALU Operand B MUX</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-Bignum Register file write control</li>
-</ul>
-<p><strong>Description</strong><br />
-Bignum Register file write control</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
-Specialised read data handling for CSR reads where raw read data needs modification.</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Specialised read data handling for CSR reads where raw read data needs modification.</p>
-<ul>
-<li>unnamed: <em>(  )</em><br />
-Specialised write data handling for CSR writes where raw write data needs modification.</li>
-</ul>
-<p><strong>Description</strong><br />
-Specialised write data handling for CSR writes where raw write data needs modification.</p>
-<ul>
-<li>unnamed: <em>(  )</em></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+B read port so the B increment is written back.</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Base ALU Operand A MUX</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Base ALU Operand B MUX</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Base ALU Operand B MUX</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Bignum Register file write control</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Specialised read data handling for CSR reads where raw read data needs modification.</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Specialised write data handling for CSR writes where raw write data needs modification.</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_otbn_loop_controller: otbn_loop_controller</li>
 </ul><br><br><br><br><br><br>

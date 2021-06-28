@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,18 +68,19 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=math><h1 id="package-math">Package: math</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>squareNumber <font id="function_arguments">(N : natural)</font> <font id="function_return">return natural</font></li>
-<li>cubicNumber <font id="function_arguments">(N : natural)</font> <font id="function_return">return natural</font></li>
-<li>triangularNumber <font id="function_arguments">(N : natural)</font> <font id="function_return">return natural</font></li>
-<li>binomialCoefficient <font id="function_arguments">(N : positive; K : positive)</font> <font id="function_return">return positive</font><br />
-<strong>Description</strong><br />
-coefficientsbinomial coefficient (N choose K)</li>
-<li>greatestCommonDivisor <font id="function_arguments">(N1 : positive; N2 : positive)</font> <font id="function_return">return positive</font><br />
-<strong>Description</strong><br />
-greatest common divisor (gcd)</li>
-<li>leastCommonMultiple <font id="function_arguments">(N1 : positive; N2 : positive)</font> <font id="function_return">return positive</font><br />
-<strong>Description</strong><br />
-least common multiple (lcm)</li>
-</ul><br><br><br><br><br><br>
+<a id=math><h1 id="package-math">Package: math</h1></a><h2 id="functions">Functions</h2><ul>
+<li>squareNumber <font id="function_arguments">(N : natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>cubicNumber <font id="function_arguments">(N : natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>triangularNumber <font id="function_arguments">(N : natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>binomialCoefficient <font id="function_arguments">(N : positive; K : positive) </font> <font id="function_return">return positive </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+coefficientsbinomial coefficient (N choose K)</p></div><ul>
+<li>greatestCommonDivisor <font id="function_arguments">(N1 : positive; N2 : positive) </font> <font id="function_return">return positive </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+greatest common divisor (gcd)</p></div><ul>
+<li>leastCommonMultiple <font id="function_arguments">(N1 : positive; N2 : positive) </font> <font id="function_return">return positive </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+least common multiple (lcm)</p></div><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -344,30 +348,17 @@
 <td>r/-: Set if TWI unit is busy</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>rw_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
-<ul>
-<li>clock_phase_gen: <em>( clk_i )</em><br />
-generate four non-overlapping clock ticks at twi_clk/4 --</li>
-</ul>
-<p><strong>Description</strong><br />
-generate four non-overlapping clock ticks at twi_clk/4 --</p>
-<ul>
-<li>twi_rtx_unit: <em>( clk_i )</em><br />
-last step</li>
-</ul>
-<h2 id="twi-transceiver-------------------------------------------------------------------------">TWI Transceiver ------------------------------------------------------------------------</h2>
-<p><strong>Description</strong><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>rw_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2></div><ul>
+<li>clock_phase_gen: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+generate four non-overlapping clock ticks at twi_clk/4 --</p></div><ul>
+<li>twi_rtx_unit: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 last step</p>
-<h2 id="twi-transceiver--------------------------------------------------------------------------1">TWI Transceiver ------------------------------------------------------------------------</h2>
-<ul>
-<li>clock_stretching: <em>( ctrl, arbiter, twi_scl_o, twi_scl_i_ff1 )</em></li>
-</ul>
-<h2 id="clock-stretching-detector---------------------------------------------------------------">Clock Stretching Detector --------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="clock-stretching-detector----------------------------------------------------------------1">Clock Stretching Detector --------------------------------------------------------------</h2><br><br><br><br><br><br>
+<h2 id="twi-transceiver-------------------------------------------------------------------------">TWI Transceiver ------------------------------------------------------------------------</h2></div><ul>
+<li>clock_stretching: ( ctrl, arbiter, twi_scl_o, twi_scl_i_ff1 )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="clock-stretching-detector---------------------------------------------------------------">Clock Stretching Detector --------------------------------------------------------------</h2></div><br><br><br><br><br><br>

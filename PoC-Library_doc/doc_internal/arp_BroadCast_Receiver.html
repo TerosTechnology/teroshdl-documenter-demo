@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -445,20 +449,23 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>(         ST_IDLE,                                                                    ST_RECEIVE_HARDWARE_type_1,             ST_RECEIVE_PROTOCOL_type_0, ST_RECEIVE_PROTOCOL_type_1,             ST_RECEIVE_HARDWARE_ADDRESS_LENGTH, ST_RECEIVE_PROTOCOL_ADDRESS_LENGTH,             ST_RECEIVE_OPERATION_0,         ST_RECEIVE_OPERATION_1,             ST_RECEIVE_SENDER_MAC,          ST_RECEIVE_SENDER_IP,           ST_RECEIVE_TARGET_MAC,          ST_RECEIVE_TARGET_IP,       ST_DISCARD_ETHERNET_PADDING_BYTES,      ST_COMPLETE,        ST_DISCARD_FRAME, ST_ERROR  )</td>
+<td>( ST_IDLE, ST_RECEIVE_HARDWARE_type_1, ST_RECEIVE_PROTOCOL_type_0, ST_RECEIVE_PROTOCOL_type_1, ST_RECEIVE_HARDWARE_ADDRESS_LENGTH, ST_RECEIVE_PROTOCOL_ADDRESS_LENGTH, ST_RECEIVE_OPERATION_0,            ST_RECEIVE_OPERATION_1, ST_RECEIVE_SENDER_MAC,          ST_RECEIVE_SENDER_IP, ST_RECEIVE_TARGET_MAC,            ST_RECEIVE_TARGET_IP, ST_DISCARD_ETHERNET_PADDING_BYTES, ST_COMPLETE, ST_DISCARD_FRAME, ST_ERROR )</td>
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( State,
-                Clear,
-                RX_Valid, RX_Data, Is_SOF, Is_EOF,
-                IsIPv4_r, IsIPv6_r, Writer_Counter_us,
-                Address_rst,
-                SenderMACAddress_nxt, SenderIPAddress_nxt, TargetIPAddress_nxt )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( State,<br />
+                Clear,<br />
+                RX_Valid, RX_Data, Is_SOF, Is_EOF,<br />
+                IsIPv4_r, IsIPv6_r, Writer_Counter_us,<br />
+                Address_rst,<br />
+                SenderMACAddress_nxt, SenderIPAddress_nxt, TargetIPAddress_nxt )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
 </ul><br><br><br><br><br><br>

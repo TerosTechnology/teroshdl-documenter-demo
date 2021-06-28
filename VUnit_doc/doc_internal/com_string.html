@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,25 +68,42 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=com_string_pkg><h1 id="package-com_string_pkg">Package: com_string_pkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>to_detailed_string <font id="function_arguments">(    constant data : real)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : string)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : boolean_vector)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : bit_vector)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : integer_vector)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : real_vector)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : time_vector)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : std_ulogic_vector)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(    constant data : complex)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(    constant data : complex_polar)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(    constant data : integer_vector_ptr_t)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(    constant data : queue_t)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : ieee.numeric_bit.unsigned)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : ieee.numeric_bit.signed)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : ieee.numeric_std.unsigned)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : ieee.numeric_std.signed)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : ufixed)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : sfixed)</font> <font id="function_return">return string</font></li>
-<li>to_detailed_string <font id="function_arguments">(    constant data : float)</font> <font id="function_return">return string</font></li>
+<a id=com_string_pkg><h1 id="package-com_string_pkg">Package: com_string_pkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : real) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : boolean_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : bit_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : integer_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : real_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : time_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : std_ulogic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">( constant data : complex) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">( constant data : complex_polar) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">( constant data : integer_vector_ptr_t) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">( constant data : queue_t) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : ieee.numeric_bit.unsigned) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : ieee.numeric_bit.signed) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : ieee.numeric_std.unsigned) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : ieee.numeric_std.signed) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : ufixed) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : sfixed) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_detailed_string <font id="function_arguments">( constant data : float) </font> <font id="function_return">return string </font></li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,30 +68,16 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=memory_utils_pkg><h1 id="package-memory_utils_pkg">Package: memory_utils_pkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>write_integer_vector_ptr <font id="function_arguments">(memory : memory_t;                                     base_address : natural;
-                                 integer_vector_ptr : integer_vector_ptr_t;
-                                 bytes_per_word : natural range 1 to 4 := 4;
-                                 endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Write integer vector pointer to memory address</li>
-<li>set_expected_integer_vector_ptr <font id="function_arguments">(memory : memory_t;                                            base_address : natural;
-                                        integer_vector_ptr : integer_vector_ptr_t;
-                                        bytes_per_word : natural range 1 to 4 := 4;
-                                        endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set expected integer vector pointer data at memory address</li>
-<li>write_integer_array <font id="function_arguments">(memory : memory_t;                                base_address : natural;
-                            integer_array : integer_array_t;
-                            stride_in_bytes : natural := 0;  0 stride means use image width
-                            endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Write integer array to memory address</li>
-<li>set_expected_integer_array <font id="function_arguments">(memory : memory_t;                                       base_address : natural;
-                                   integer_array : integer_array_t;
-                                   stride_in_bytes : natural := 0;  0 stride means use image width
-                                   endian : endianness_arg_t := default_endian)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Set integer_array as expected data</li>
-</ul><br><br><br><br><br><br>
+<a id=memory_utils_pkg><h1 id="package-memory_utils_pkg">Package: memory_utils_pkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>write_integer_vector_ptr <font id="function_arguments">(memory : memory_t; base_address : natural; integer_vector_ptr : integer_vector_ptr_t; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write integer vector pointer to memory address</p></div><ul>
+<li>set_expected_integer_vector_ptr <font id="function_arguments">(memory : memory_t; base_address : natural; integer_vector_ptr : integer_vector_ptr_t; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set expected integer vector pointer data at memory address</p></div><ul>
+<li>write_integer_array <font id="function_arguments">(memory : memory_t; base_address : natural; integer_array : integer_array_t; stride_in_bytes : natural := 0; -- 0 stride means use image width endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Write integer array to memory address</p></div><ul>
+<li>set_expected_integer_array <font id="function_arguments">(memory : memory_t; base_address : natural; integer_array : integer_array_t; stride_in_bytes : natural := 0; -- 0 stride means use image width endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Set integer_array as expected data</p></div><br><br><br><br><br><br>

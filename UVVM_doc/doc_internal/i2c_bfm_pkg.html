@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -122,223 +126,65 @@
 <td>Configuration record to be assigned in the test harness.</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
+</table><h2 id="functions">Functions</h2><ul>
+<li>init_i2c_if_signals <font id="function_arguments">( constant VOID : in t_void ) </font> <font id="function_return">return t_i2c_if </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
 <ul>
-<li>init_i2c_if_signals <font id="function_arguments">(    constant VOID : in t_void
-)</font> <font id="function_return">return t_i2c_if</font><br />
-<strong>Description</strong></li>
 <li>This function returns an I2C interface with initialized signals.- All I2C signals are initialized to Z</li>
-<li>i2c_master_transmit <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data                         : in    t_byte_array;
-constant msg                          : in    string;
-signal scl                            : inout std_logic;
-signal sda                            : inout std_logic;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.</li>
-<li>i2c_master_transmit <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data                         : in    t_byte_array;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_transmit <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data                         : in    std_logic_vector;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_transmit <font id="function_arguments">(    constant data         : in    t_byte_array;
-constant msg          : in    string;
-signal scl            : inout std_logic;
-signal sda            : inout std_logic;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C master DUT.</li>
-<li>i2c_slave_transmit <font id="function_arguments">(    constant data         : in    t_byte_array;
-constant msg          : in    string;
-signal i2c_if         : inout t_i2c_if;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_transmit <font id="function_arguments">(    constant data         : in    std_logic_vector;
-constant msg          : in    string;
-signal i2c_if         : inout t_i2c_if;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure transmits data 'data' to an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_receive <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-variable data                         : out   t_byte_array;
-constant msg                          : in    string;
-signal scl                            : inout std_logic;
-signal sda                            : inout std_logic;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call                : in    string                         := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.</li>
-<li>i2c_master_receive <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-variable data                         : out   t_byte_array;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call                : in    string                         := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_receive <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-variable data                         : out   std_logic_vector;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call                : in    string                         := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_receive <font id="function_arguments">(    variable data          : out   t_byte_array;
-constant msg           : in    string;
-signal scl             : inout std_logic;
-signal sda             : inout std_logic;
-constant exp_rw_bit    : in    std_logic        := C_WRITE_BIT;
-constant scope         : in    string           := C_SCOPE;
-constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call : in    string           := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C master DUT.at address 'addr_value'.</li>
-<li>i2c_slave_receive <font id="function_arguments">(    variable data          : out   t_byte_array;
-constant msg           : in    string;
-signal i2c_if          : inout t_i2c_if;
-constant scope         : in    string           := C_SCOPE;
-constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call : in    string           := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_receive <font id="function_arguments">(    variable data          : out   std_logic_vector;
-constant msg           : in    string;
-signal i2c_if          : inout t_i2c_if;
-constant scope         : in    string           := C_SCOPE;
-constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT;
-constant ext_proc_call : in    string           := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives data 'data' from an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_check <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data_exp                     : in    t_byte_array;
-constant msg                          : in    string;
-signal scl                            : inout std_logic;
-signal sda                            : inout std_logic;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant alert_level                  : in    t_alert_level                  := error;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as individual signals</li>
-<li>i2c_master_check <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data_exp                     : in    t_byte_array;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant alert_level                  : in    t_alert_level                  := error;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_check <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant data_exp                     : in    std_logic_vector;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant alert_level                  : in    t_alert_level                  := error;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_check <font id="function_arguments">(    constant data_exp     : in    t_byte_array;
-constant msg          : in    string;
-signal scl            : inout std_logic;
-signal sda            : inout std_logic;
-constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT;
-constant alert_level  : in    t_alert_level    := error;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as individual signals</li>
-<li>i2c_slave_check <font id="function_arguments">(    constant data_exp     : in    t_byte_array;
-constant msg          : in    string;
-signal i2c_if         : inout t_i2c_if;
-constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT;
-constant alert_level  : in    t_alert_level    := error;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_slave_check <font id="function_arguments">(    constant data_exp     : in    std_logic_vector;
-constant msg          : in    string;
-signal i2c_if         : inout t_i2c_if;
-constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT;
-constant alert_level  : in    t_alert_level    := error;
-constant scope        : in    string           := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;
-constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</li>
-<li>i2c_master_quick_command <font id="function_arguments">(    constant addr_value                   : in    unsigned;
-constant msg                          : in    string;
-signal i2c_if                         : inout t_i2c_if;
-constant rw_bit                       : in    std_logic                      := C_WRITE_BIT;
-constant exp_ack                      : in    boolean                        := true;
-constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;
-constant alert_level                  : in    t_alert_level                  := error;
-constant scope                        : in    string                         := C_SCOPE;
-constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;
-constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+</ul></div><ul>
+<li>i2c_master_transmit <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data                         : in    t_byte_array; constant msg                          : in    string; signal scl                            : inout std_logic; signal sda                            : inout std_logic; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.</p></div><ul>
+<li>i2c_master_transmit <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data                         : in    t_byte_array; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_transmit <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data                         : in    std_logic_vector; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_transmit <font id="function_arguments">( constant data         : in    t_byte_array; constant msg          : in    string; signal scl            : inout std_logic; signal sda            : inout std_logic; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C master DUT.</p></div><ul>
+<li>i2c_slave_transmit <font id="function_arguments">( constant data         : in    t_byte_array; constant msg          : in    string; signal i2c_if         : inout t_i2c_if; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_transmit <font id="function_arguments">( constant data         : in    std_logic_vector; constant msg          : in    string; signal i2c_if         : inout t_i2c_if; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure transmits data 'data' to an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_receive <font id="function_arguments">( constant addr_value                   : in    unsigned; variable data                         : out   t_byte_array; constant msg                          : in    string; signal scl                            : inout std_logic; signal sda                            : inout std_logic; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.</p></div><ul>
+<li>i2c_master_receive <font id="function_arguments">( constant addr_value                   : in    unsigned; variable data                         : out   t_byte_array; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_receive <font id="function_arguments">( constant addr_value                   : in    unsigned; variable data                         : out   std_logic_vector; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C slave DUTat address 'addr_value'.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_receive <font id="function_arguments">( variable data          : out   t_byte_array; constant msg           : in    string; signal scl             : inout std_logic; signal sda             : inout std_logic; constant exp_rw_bit    : in    std_logic        := C_WRITE_BIT; constant scope         : in    string           := C_SCOPE; constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel; constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C master DUT.at address 'addr_value'.</p></div><ul>
+<li>i2c_slave_receive <font id="function_arguments">( variable data          : out   t_byte_array; constant msg           : in    string; signal i2c_if          : inout t_i2c_if; constant scope         : in    string           := C_SCOPE; constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel; constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_receive <font id="function_arguments">( variable data          : out   std_logic_vector; constant msg           : in    string; signal i2c_if          : inout t_i2c_if; constant scope         : in    string           := C_SCOPE; constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel; constant config        : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT; constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives data 'data' from an I2C master DUT.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_check <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data_exp                     : in    t_byte_array; constant msg                          : in    string; signal scl                            : inout std_logic; signal sda                            : inout std_logic; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant alert_level                  : in    t_alert_level                  := error; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as individual signals</p></div><ul>
+<li>i2c_master_check <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data_exp                     : in    t_byte_array; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant alert_level                  : in    t_alert_level                  := error; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_check <font id="function_arguments">( constant addr_value                   : in    unsigned; constant data_exp                     : in    std_logic_vector; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant alert_level                  : in    t_alert_level                  := error; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C slave DUT at address'addr_value', and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_check <font id="function_arguments">( constant data_exp     : in    t_byte_array; constant msg          : in    string; signal scl            : inout std_logic; signal sda            : inout std_logic; constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT; constant alert_level  : in    t_alert_level    := error; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as individual signals</p></div><ul>
+<li>i2c_slave_check <font id="function_arguments">( constant data_exp     : in    t_byte_array; constant msg          : in    string; signal i2c_if         : inout t_i2c_if; constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT; constant alert_level  : in    t_alert_level    := error; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_slave_check <font id="function_arguments">( constant data_exp     : in    std_logic_vector; constant msg          : in    string; signal i2c_if         : inout t_i2c_if; constant exp_rw_bit   : in    std_logic        := C_WRITE_BIT; constant alert_level  : in    t_alert_level    := error; constant scope        : in    string           := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel; constant config       : in    t_i2c_bfm_config := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
+<li>i2c_master_quick_command <font id="function_arguments">( constant addr_value                   : in    unsigned; constant msg                          : in    string; signal i2c_if                         : inout t_i2c_if; constant rw_bit                       : in    std_logic                      := C_WRITE_BIT; constant exp_ack                      : in    boolean                        := true; constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER; constant alert_level                  : in    t_alert_level                  := error; constant scope                        : in    string                         := C_SCOPE; constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel; constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

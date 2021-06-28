@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -473,21 +477,24 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Writer_State,
-                In_Valid, In_SOF, In_EOF, In_Data,
-                WordCounter_us, Checksum0_nxt_cy,
-                DataFIFO_Full, MetaFIFO_Misc_Full )</em></p></li>
-<li><p>unnamed: <em>( Reader_State,
-                Out_Ack,
-                DataFIFO_Valid, DataFIFO_DataOut,
-                MetaFIFO_Misc_Valid, MetaFIFO_Misc_DataOut )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Writer_State,<br />
+                In_Valid, In_SOF, In_EOF, In_Data,<br />
+                WordCounter_us, Checksum0_nxt_cy,<br />
+                DataFIFO_Full, MetaFIFO_Misc_Full )</li>
+</ul><ul>
+<li>unnamed: ( Reader_State,<br />
+                Out_Ack,<br />
+                DataFIFO_Valid, DataFIFO_DataOut,<br />
+                MetaFIFO_Misc_Valid, MetaFIFO_Misc_DataOut )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>DataFIFO: PoC.fifo_cc_got</li>
+</ul><ul>
 <li>MetaFIFO_Misc: PoC.fifo_cc_got</li>
 </ul><br><br><br><br><br><br>

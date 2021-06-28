@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -300,32 +304,18 @@
 <td>control register --</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>write_access: <em>( rstn_i, clk_i )</em></li>
-</ul>
-<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="write-access-----------------------------------------------------------------------------1">Write Access ---------------------------------------------------------------------------</h2>
-<ul>
-<li>wdt_counter: <em>( clk_i )</em><br />
-clock enable tick</li>
-</ul>
-<h2 id="watchdog-counter------------------------------------------------------------------------">Watchdog Counter -----------------------------------------------------------------------</h2>
-<p><strong>Description</strong><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>write_access: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="write-access----------------------------------------------------------------------------">Write Access ---------------------------------------------------------------------------</h2></div><ul>
+<li>wdt_counter: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 clock enable tick</p>
-<h2 id="watchdog-counter-------------------------------------------------------------------------1">Watchdog Counter -----------------------------------------------------------------------</h2>
-<ul>
-<li>reset_generator: <em>( rstn_i, clk_i )</em><br />
-mode 1: RESET</li>
-</ul>
-<h2 id="reset-generator--action-cause-indicator------------------------------------------------">Reset Generator &amp; Action Cause Indicator -----------------------------------------------</h2>
-<p><strong>Description</strong><br />
+<h2 id="watchdog-counter------------------------------------------------------------------------">Watchdog Counter -----------------------------------------------------------------------</h2></div><ul>
+<li>reset_generator: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 mode 1: RESET</p>
-<h2 id="reset-generator--action-cause-indicator-------------------------------------------------1">Reset Generator &amp; Action Cause Indicator -----------------------------------------------</h2>
-<ul>
-<li>read_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="read-access------------------------------------------------------------------------------1">Read Access ----------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+<h2 id="reset-generator--action-cause-indicator------------------------------------------------">Reset Generator &amp; Action Cause Indicator -----------------------------------------------</h2></div><ul>
+<li>read_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="read-access-----------------------------------------------------------------------------">Read Access ----------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

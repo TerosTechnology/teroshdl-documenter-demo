@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -482,52 +486,36 @@
 <td>This is a separate data path from the FSM used to control the data_en_o output</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
-Unlike the key state, the working state can be safely reset.</li>
-</ul>
-<p><strong>Description</strong><br />
-Unlike the key state, the working state can be safely reset.</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i) )</em><br />
-key state is intentionally not reset</li>
-</ul>
-<p><strong>Description</strong><br />
-key state is intentionally not reset</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Unlike the key state, the working state can be safely reset.</p></div><ul>
+<li>unnamed: ( @(posedge clk_i) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+key state is intentionally not reset</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 always_comb<br />
 Current working state provided for software read<br />
-Certain states are collapsed for simplicity</p></li>
-</ul>
-<p><strong>Description</strong><br />
-always_comb<br />
-Current working state provided for software read<br />
-Certain states are collapsed for simplicity</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em><br />
+Certain states are collapsed for simplicity</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 The below control path is used for modulating the datapath to sideload and sw keys.<br />
 This path is separate from the data_valid_o path, thus creating two separate attack points.<br />
 The data is only enabled when a non-advance operation is invoked.<br />
 When an advance operation is called, the data is disabled. It will stay disabled until an<br />
 entire completion sequence is seen (op_done_o assert -&gt; start_i de-assertion).<br />
 When a generate operation is called, the data is enabled.  However, any indication of this<br />
-supposedly being an advance call will force the path to disable again.</p></li>
-</ul>
-<p><strong>Description</strong><br />
-The below control path is used for modulating the datapath to sideload and sw keys.<br />
-This path is separate from the data_valid_o path, thus creating two separate attack points.<br />
-The data is only enabled when a non-advance operation is invoked.<br />
-When an advance operation is called, the data is disabled. It will stay disabled until an<br />
-entire completion sequence is seen (op_done_o assert -&gt; start_i de-assertion).<br />
-When a generate operation is called, the data is enabled.  However, any indication of this<br />
-supposedly being an advance call will force the path to disable again.</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+supposedly being an advance call will force the path to disable again.</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_key_valid_sync: prim_flop_2sync</li>
 </ul><br><br><br><br><br><br>

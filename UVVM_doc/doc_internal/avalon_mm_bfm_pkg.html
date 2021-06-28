@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -126,102 +130,28 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>init_avalon_mm_if_signals <font id="function_arguments">(    addr_width : natural;
-data_width : natural;
-lock_value : std_logic := '0'
-)</font> <font id="function_return">return t_avalon_mm_if</font></li>
-<li>avalon_mm_write <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_value       : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-This procedure could be called from an a simple testbench orfrom an executor where there are concurrent BFMs - whereall BFMs could have different configs and msg_id_panels.From a simplified testbench it is not necessary to use argumentswhere defaults are given, e.g.:avalon_mm_write(addr, data, msg, clk, avalon_mm_if);avalon_mm_write overload without byte_enable</li>
-<li>avalon_mm_write <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_value       : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant byte_enable      : in  std_logic_vector;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-avalon_mm_write with byte_enable</li>
-<li>avalon_mm_read <font id="function_arguments">(    constant addr_value       : in  unsigned;
-variable data_value       : out std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT;
-constant proc_name        : in  string                    := "avalon_mm_read"   Overwrite if called from another procedure
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_check <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_exp         : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant alert_level      : in  t_alert_level             := error;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_reset <font id="function_arguments">(    signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant num_rst_cycles   : in  integer;
-constant msg              : in  string;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_read_request <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : inout t_avalon_mm_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT;
-constant ext_proc_call    : in  string                    := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_read_response <font id="function_arguments">(    constant addr_value       : in  unsigned;
-variable data_value       : out std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : in t_avalon_mm_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT;
-constant proc_name        : in  string                    := "avalon_mm_read_response"   Overwrite if called from another procedure
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_check_response <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_exp         : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal avalon_mm_if       : in t_avalon_mm_if;
-constant alert_level      : in  t_alert_level             := error;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_lock <font id="function_arguments">(    signal avalon_mm_if       : inout t_avalon_mm_if;
-constant msg              : in  string;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>avalon_mm_unlock <font id="function_arguments">(    signal avalon_mm_if       : inout t_avalon_mm_if;
-constant msg              : in  string;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>init_avalon_mm_if_signals <font id="function_arguments">( addr_width : natural; data_width : natural; lock_value : std_logic := '0' ) </font> <font id="function_return">return t_avalon_mm_if </font></li>
+</ul><ul>
+<li>avalon_mm_write <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_value       : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This procedure could be called from an a simple testbench orfrom an executor where there are concurrent BFMs - whereall BFMs could have different configs and msg_id_panels.From a simplified testbench it is not necessary to use argumentswhere defaults are given, e.g.:avalon_mm_write(addr, data, msg, clk, avalon_mm_if);avalon_mm_write overload without byte_enable</p></div><ul>
+<li>avalon_mm_write <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_value       : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant byte_enable      : in  std_logic_vector; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+avalon_mm_write with byte_enable</p></div><ul>
+<li>avalon_mm_read <font id="function_arguments">( constant addr_value       : in  unsigned; variable data_value       : out std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT; constant proc_name        : in  string                    := "avalon_mm_read"  -- Overwrite if called from another procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_check <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_exp         : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant alert_level      : in  t_alert_level             := error; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_reset <font id="function_arguments">( signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant num_rst_cycles   : in  integer; constant msg              : in  string; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_read_request <font id="function_arguments">( constant addr_value       : in  unsigned; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : inout t_avalon_mm_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT; constant ext_proc_call    : in  string                    := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_read_response <font id="function_arguments">( constant addr_value       : in  unsigned; variable data_value       : out std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : in t_avalon_mm_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT; constant proc_name        : in  string                    := "avalon_mm_read_response"  -- Overwrite if called from another procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_check_response <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_exp         : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal avalon_mm_if       : in t_avalon_mm_if; constant alert_level      : in  t_alert_level             := error; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_lock <font id="function_arguments">( signal avalon_mm_if       : inout t_avalon_mm_if; constant msg              : in  string; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>avalon_mm_unlock <font id="function_arguments">( signal avalon_mm_if       : inout t_avalon_mm_if; constant msg              : in  string; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_avalon_mm_bfm_config    := C_AVALON_MM_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

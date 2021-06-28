@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,13 +68,18 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=simulation><h1 id="package-simulation">Package: simulation</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>simInitialize <font id="function_arguments">(MaxAssertFailures : natural := natural'high; MaxSimulationRuntime : TIME := TIME'high)</font> <font id="function_return">return ()</font></li>
+<a id=simulation><h1 id="package-simulation">Package: simulation</h1></a><h2 id="functions">Functions</h2><ul>
+<li>simInitialize <font id="function_arguments">(MaxAssertFailures : natural := natural'high; MaxSimulationRuntime : TIME := TIME'high) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
 <li>simFinalize <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
-<li>simFinalizeTest <font id="function_arguments">(constant TestID : T_SIM_TEST_ID)</font> <font id="function_return">return ()</font></li>
-<li>simDeactivateProcess <font id="function_arguments">(ProcID : T_SIM_PROCESS_ID)</font> <font id="function_return">return ()</font></li>
-<li>simAssertion <font id="function_arguments">(cond : in boolean; Message : in string := "")</font> <font id="function_return">return ()</font></li>
-<li>simFail <font id="function_arguments">(Message : in string := "")</font> <font id="function_return">return ()</font></li>
-<li>simWriteMessage <font id="function_arguments">(Message : in string := "")</font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>simFinalizeTest <font id="function_arguments">(constant TestID : T_SIM_TEST_ID) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>simDeactivateProcess <font id="function_arguments">(ProcID : T_SIM_PROCESS_ID) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>simAssertion <font id="function_arguments">(cond : in boolean; Message : in string := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>simFail <font id="function_arguments">(Message : in string := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>simWriteMessage <font id="function_arguments">(Message : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

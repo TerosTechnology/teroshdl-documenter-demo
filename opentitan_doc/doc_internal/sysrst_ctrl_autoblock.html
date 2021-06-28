@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -236,19 +240,26 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>i_cfg_auto_block_timer_reg: <em>( @(posedge clk_aon_i or negedge rst_aon_ni) )</em></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>i_cfg_auto_block_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>i_cfg_auto_block_en: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_auto_block_timer: prim_fifo_async</li>
+</ul><ul>
 <li>i_cfg_key0_o_sel: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_key1_o_sel: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_key2_o_sel: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_key0_o_q: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_key1_o_q: prim_flop_2sync</li>
+</ul><ul>
 <li>i_cfg_key2_o_q: prim_flop_2sync</li>
+</ul><ul>
 <li>i_pwrb_in_i: prim_flop_2sync</li>
+</ul><ul>
 <li>i_ab_fsm: sysrst_ctrl_timerfsm</li>
 </ul><br><br><br><br><br><br>

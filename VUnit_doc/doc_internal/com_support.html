@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,15 +68,8 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=com_support_pkg><h1 id="package-com_support_pkg">Package: com_support_pkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>check <font id="function_arguments">(    expr      : boolean;
-err       : com_status_t;
-msg       : string  := "";
-line_num  : natural := 0;
-file_name : string  := "")</font> <font id="function_return">return ()</font></li>
-<li>check_failed <font id="function_arguments">(    err       : com_error_t;
-msg       : string  := "";
-line_num  : natural := 0;
-file_name : string  := "")</font> <font id="function_return">return ()</font></li>
+<a id=com_support_pkg><h1 id="package-com_support_pkg">Package: com_support_pkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>check <font id="function_arguments">( expr      : boolean; err       : com_status_t; msg       : string  := ""; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>check_failed <font id="function_arguments">( err       : com_error_t; msg       : string  := ""; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

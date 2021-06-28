@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -99,101 +103,155 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>to_IPStyle <font id="function_arguments">(str : string)</font> <font id="function_return">return T_IPSTYLE</font><br />
-<strong>Description</strong><br />
-testing area:===========================================================================</li>
-<li>to_char <font id="function_arguments">(Value : std_logic)</font> <font id="function_return">return character</font><br />
-<strong>Description</strong><br />
-to_char</li>
-<li>to_char <font id="function_arguments">(rawchar : T_RAWCHAR)</font> <font id="function_return">return character</font></li>
-<li>to_HexChar <font id="function_arguments">(Value : natural)</font> <font id="function_return">return character</font></li>
-<li>to_HexChar <font id="function_arguments">(Value : unsigned)</font> <font id="function_return">return character</font></li>
-<li>chr_isDigit <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font><br />
-<strong>Description</strong><br />
-chr_is* function</li>
-<li>chr_isLowerHexDigit <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isUpperHexDigit <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isHexDigit <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isLower <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isLowerAlpha <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isUpper <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isUpperAlpha <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>chr_isAlpha <font id="function_arguments">(chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>raw_format_bool_bin <font id="function_arguments">(Value : boolean)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-raw_format_* functions</li>
-<li>raw_format_bool_chr <font id="function_arguments">(Value : boolean)</font> <font id="function_return">return string</font></li>
-<li>raw_format_bool_str <font id="function_arguments">(Value : boolean)</font> <font id="function_return">return string</font></li>
-<li>raw_format_slv_bin <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>raw_format_slv_oct <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>raw_format_slv_dec <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>raw_format_slv_hex <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>raw_format_nat_bin <font id="function_arguments">(Value : natural)</font> <font id="function_return">return string</font></li>
-<li>raw_format_nat_oct <font id="function_arguments">(Value : natural)</font> <font id="function_return">return string</font></li>
-<li>raw_format_nat_dec <font id="function_arguments">(Value : natural)</font> <font id="function_return">return string</font></li>
-<li>raw_format_nat_hex <font id="function_arguments">(Value : natural)</font> <font id="function_return">return string</font></li>
-<li>str_format <font id="function_arguments">(Value : REAL; precision : natural := 3)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-str_format_* functions</li>
-<li>to_string <font id="function_arguments">(Value : boolean)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-to_string</li>
-<li>to_string <font id="function_arguments">(Value : integer; base : positive := 10)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(slv : std_logic_vector; format : character; Length : natural := 0; fill : character := '0')</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(rawstring : T_RAWSTRING)</font> <font id="function_return">return string</font></li>
-<li>to_string <font id="function_arguments">(Value : T_BCD_VECTOR)</font> <font id="function_return">return string</font></li>
-<li>to_slv <font id="function_arguments">(rawstring : T_RAWSTRING)</font> <font id="function_return">return std_logic_vector</font><br />
-<strong>Description</strong><br />
-to_slv</li>
-<li>to_digit_bin <font id="function_arguments">(chr : character)</font> <font id="function_return">return T_DIGIT_BIN</font><br />
-<strong>Description</strong><br />
-to_digit*</li>
-<li>to_digit_oct <font id="function_arguments">(chr : character)</font> <font id="function_return">return T_DIGIT_OCT</font></li>
-<li>to_digit_dec <font id="function_arguments">(chr : character)</font> <font id="function_return">return T_DIGIT_DEC</font></li>
-<li>to_digit_hex <font id="function_arguments">(chr : character)</font> <font id="function_return">return T_DIGIT_HEX</font></li>
-<li>to_digit <font id="function_arguments">(chr : character; base : character := 'd')</font> <font id="function_return">return integer</font></li>
-<li>to_natural_bin <font id="function_arguments">(str : string)</font> <font id="function_return">return integer</font><br />
-<strong>Description</strong><br />
-to_natural*</li>
-<li>to_natural_oct <font id="function_arguments">(str : string)</font> <font id="function_return">return integer</font></li>
-<li>to_natural_dec <font id="function_arguments">(str : string)</font> <font id="function_return">return integer</font></li>
-<li>to_natural_hex <font id="function_arguments">(str : string)</font> <font id="function_return">return integer</font></li>
-<li>to_natural <font id="function_arguments">(str : string; base : character := 'd')</font> <font id="function_return">return integer</font></li>
-<li>to_RawChar <font id="function_arguments">(char : character)</font> <font id="function_return">return T_RAWCHAR</font><br />
-<strong>Description</strong><br />
-to_raw*</li>
-<li>to_RawString <font id="function_arguments">(str : string)</font> <font id="function_return">return T_RAWSTRING</font></li>
-<li>resize <font id="function_arguments">(str : string; size : positive; FillChar : character := C_POC_NUL)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-resize</li>
-<li>chr_toLower <font id="function_arguments">(chr : character)</font> <font id="function_return">return character</font><br />
-<strong>Description</strong><br />
-Character functions</li>
-<li>chr_toUpper <font id="function_arguments">(chr : character)</font> <font id="function_return">return character</font></li>
-<li>str_length <font id="function_arguments">(str : string)</font> <font id="function_return">return natural</font><br />
-<strong>Description</strong><br />
-String functions</li>
-<li>str_equal <font id="function_arguments">(str1 : string; str2 : string)</font> <font id="function_return">return boolean</font></li>
-<li>str_match <font id="function_arguments">(str1 : string; str2 : string)</font> <font id="function_return">return boolean</font></li>
-<li>str_imatch <font id="function_arguments">(str1 : string; str2 : string)</font> <font id="function_return">return boolean</font></li>
-<li>str_pos <font id="function_arguments">(str : string; chr : character; start : natural := 0)</font> <font id="function_return">return integer</font></li>
-<li>str_pos <font id="function_arguments">(str : string; pattern : string; start : natural := 0)</font> <font id="function_return">return integer</font></li>
-<li>str_ipos <font id="function_arguments">(str : string; chr : character; start : natural := 0)</font> <font id="function_return">return integer</font></li>
-<li>str_ipos <font id="function_arguments">(str : string; pattern : string; start : natural := 0)</font> <font id="function_return">return integer</font></li>
-<li>str_find <font id="function_arguments">(str : string; chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>str_find <font id="function_arguments">(str : string; pattern : string)</font> <font id="function_return">return boolean</font></li>
-<li>str_ifind <font id="function_arguments">(str : string; chr : character)</font> <font id="function_return">return boolean</font></li>
-<li>str_ifind <font id="function_arguments">(str : string; pattern : string)</font> <font id="function_return">return boolean</font></li>
-<li>str_replace <font id="function_arguments">(str : string; pattern : string; replace : string)</font> <font id="function_return">return string</font></li>
-<li>str_substr <font id="function_arguments">(str : string; start : integer := 0; Length : integer := 0)</font> <font id="function_return">return string</font></li>
-<li>str_ltrim <font id="function_arguments">(str : string; char : character := ' ')</font> <font id="function_return">return string</font></li>
-<li>str_rtrim <font id="function_arguments">(str : string; char : character := ' ')</font> <font id="function_return">return string</font></li>
-<li>str_trim <font id="function_arguments">(str : string)</font> <font id="function_return">return string</font></li>
-<li>str_calign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ')</font> <font id="function_return">return string</font></li>
-<li>str_lalign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ')</font> <font id="function_return">return string</font></li>
-<li>str_ralign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ')</font> <font id="function_return">return string</font></li>
-<li>str_toLower <font id="function_arguments">(str : string)</font> <font id="function_return">return string</font></li>
-<li>str_toUpper <font id="function_arguments">(str : string)</font> <font id="function_return">return string</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>to_IPStyle <font id="function_arguments">(str : string) </font> <font id="function_return">return T_IPSTYLE </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+testing area:===========================================================================</p></div><ul>
+<li>to_char <font id="function_arguments">(Value : std_logic) </font> <font id="function_return">return character </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_char</p></div><ul>
+<li>to_char <font id="function_arguments">(rawchar : T_RAWCHAR) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>to_HexChar <font id="function_arguments">(Value : natural) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>to_HexChar <font id="function_arguments">(Value : unsigned) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>chr_isDigit <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+chr_is* function</p></div><ul>
+<li>chr_isLowerHexDigit <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isUpperHexDigit <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isHexDigit <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isLower <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isLowerAlpha <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isUpper <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isUpperAlpha <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>chr_isAlpha <font id="function_arguments">(chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>raw_format_bool_bin <font id="function_arguments">(Value : boolean) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+raw_format_* functions</p></div><ul>
+<li>raw_format_bool_chr <font id="function_arguments">(Value : boolean) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_bool_str <font id="function_arguments">(Value : boolean) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_slv_bin <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_slv_oct <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_slv_dec <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_slv_hex <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_nat_bin <font id="function_arguments">(Value : natural) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_nat_oct <font id="function_arguments">(Value : natural) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_nat_dec <font id="function_arguments">(Value : natural) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>raw_format_nat_hex <font id="function_arguments">(Value : natural) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_format <font id="function_arguments">(Value : REAL; precision : natural := 3) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+str_format_* functions</p></div><ul>
+<li>to_string <font id="function_arguments">(Value : boolean) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_string</p></div><ul>
+<li>to_string <font id="function_arguments">(Value : integer; base : positive := 10) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(slv : std_logic_vector; format : character; Length : natural := 0; fill : character := '0') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(rawstring : T_RAWSTRING) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(Value : T_BCD_VECTOR) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_slv <font id="function_arguments">(rawstring : T_RAWSTRING) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_slv</p></div><ul>
+<li>to_digit_bin <font id="function_arguments">(chr : character) </font> <font id="function_return">return T_DIGIT_BIN </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_digit*</p></div><ul>
+<li>to_digit_oct <font id="function_arguments">(chr : character) </font> <font id="function_return">return T_DIGIT_OCT </font></li>
+</ul><ul>
+<li>to_digit_dec <font id="function_arguments">(chr : character) </font> <font id="function_return">return T_DIGIT_DEC </font></li>
+</ul><ul>
+<li>to_digit_hex <font id="function_arguments">(chr : character) </font> <font id="function_return">return T_DIGIT_HEX </font></li>
+</ul><ul>
+<li>to_digit <font id="function_arguments">(chr : character; base : character := 'd') </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>to_natural_bin <font id="function_arguments">(str : string) </font> <font id="function_return">return integer </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_natural*</p></div><ul>
+<li>to_natural_oct <font id="function_arguments">(str : string) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>to_natural_dec <font id="function_arguments">(str : string) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>to_natural_hex <font id="function_arguments">(str : string) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>to_natural <font id="function_arguments">(str : string; base : character := 'd') </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>to_RawChar <font id="function_arguments">(char : character) </font> <font id="function_return">return T_RAWCHAR </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+to_raw*</p></div><ul>
+<li>to_RawString <font id="function_arguments">(str : string) </font> <font id="function_return">return T_RAWSTRING </font></li>
+</ul><ul>
+<li>resize <font id="function_arguments">(str : string; size : positive; FillChar : character := C_POC_NUL) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+resize</p></div><ul>
+<li>chr_toLower <font id="function_arguments">(chr : character) </font> <font id="function_return">return character </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Character functions</p></div><ul>
+<li>chr_toUpper <font id="function_arguments">(chr : character) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>str_length <font id="function_arguments">(str : string) </font> <font id="function_return">return natural </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+String functions</p></div><ul>
+<li>str_equal <font id="function_arguments">(str1 : string; str2 : string) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_match <font id="function_arguments">(str1 : string; str2 : string) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_imatch <font id="function_arguments">(str1 : string; str2 : string) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_pos <font id="function_arguments">(str : string; chr : character; start : natural := 0) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>str_pos <font id="function_arguments">(str : string; pattern : string; start : natural := 0) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>str_ipos <font id="function_arguments">(str : string; chr : character; start : natural := 0) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>str_ipos <font id="function_arguments">(str : string; pattern : string; start : natural := 0) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>str_find <font id="function_arguments">(str : string; chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_find <font id="function_arguments">(str : string; pattern : string) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_ifind <font id="function_arguments">(str : string; chr : character) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_ifind <font id="function_arguments">(str : string; pattern : string) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>str_replace <font id="function_arguments">(str : string; pattern : string; replace : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_substr <font id="function_arguments">(str : string; start : integer := 0; Length : integer := 0) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_ltrim <font id="function_arguments">(str : string; char : character := ' ') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_rtrim <font id="function_arguments">(str : string; char : character := ' ') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_trim <font id="function_arguments">(str : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_calign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_lalign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_ralign <font id="function_arguments">(str : string; Length : natural; FillChar : character := ' ') </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_toLower <font id="function_arguments">(str : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>str_toUpper <font id="function_arguments">(str : string) </font> <font id="function_return">return string </font></li>
 </ul><br><br><br><br><br><br>

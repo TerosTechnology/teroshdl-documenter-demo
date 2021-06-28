@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -129,23 +133,15 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>trim <font id="function_arguments">(      constant source   : std_logic_vector;
-  constant num_bits : positive := C_NUM_SOURCES)</font> <font id="function_return">return t_irq_source</font><br />
-<strong>Description</strong><br />
-Trim (cut) a given vector to fit the number of irq sources (i.e. pot. reduce width)</li>
-<li>fit <font id="function_arguments">(      constant source   : std_logic_vector;
-  constant num_bits : positive := C_NUM_SOURCES)</font> <font id="function_return">return std_logic_vector</font><br />
-<strong>Description</strong><br />
-Fit a given vector to the number of irq sources by masking with zeros above irq width</li>
-</ul><h2 id="processes">Processes</h2>
-<ul>
-<li>p_main: <em>(  )</em><br />
-PROCESS: p_main</li>
-</ul>
-<p><strong>Description</strong><br />
-PROCESS: p_main</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="functions">Functions</h2><ul>
+<li>trim <font id="function_arguments">( constant source   : std_logic_vector; constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return t_irq_source </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Trim (cut) a given vector to fit the number of irq sources (i.e. pot. reduce width)</p></div><ul>
+<li>fit <font id="function_arguments">( constant source   : std_logic_vector; constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Fit a given vector to the number of irq sources by masking with zeros above irq width</p></div><h2 id="processes">Processes</h2><ul>
+<li>p_main: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+PROCESS: p_main</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>i_irqc: work.irqc</li>
 </ul><br><br><br><br><br><br>

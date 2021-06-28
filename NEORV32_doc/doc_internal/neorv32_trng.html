@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -270,34 +274,19 @@
 <td>(post-)processing core --</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li>rw_access: <em>( clk_i )</em></li>
-</ul>
-<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="readwrite-access------------------------------------------------------------------------1">Read/Write Access ----------------------------------------------------------------------</h2>
-<ul>
-<li>array_intercon: <em>( processing.enable, osc_array_en_out )</em><br />
-RO enable chain --</li>
-</ul>
-<p><strong>Description</strong><br />
-RO enable chain --</p>
-<ul>
-<li>neumann_debiasing_sync: <em>( clk_i )</em></li>
-</ul>
-<h2 id="john-von-neumann-de-biasing-------------------------------------------------------------">John von Neumann De-Biasing ------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="john-von-neumann-de-biasing--------------------------------------------------------------1">John von Neumann De-Biasing ------------------------------------------------------------</h2>
-<ul>
-<li>neumann_debiasing_comb: <em>( debiasing )</em><br />
-Edge detector --</li>
-</ul>
-<p><strong>Description</strong><br />
-Edge detector --</p>
-<ul>
-<li>processing_core: <em>( clk_i )</em></li>
-</ul>
-<h2 id="processing-core-------------------------------------------------------------------------">Processing Core ------------------------------------------------------------------------</h2>
-<p><strong>Description</strong></p>
-<h2 id="processing-core--------------------------------------------------------------------------1">Processing Core ------------------------------------------------------------------------</h2><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>rw_access: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="readwrite-access-----------------------------------------------------------------------">Read/Write Access ----------------------------------------------------------------------</h2></div><ul>
+<li>array_intercon: ( processing.enable, osc_array_en_out )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+RO enable chain --</p></div><ul>
+<li>neumann_debiasing_sync: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="john-von-neumann-de-biasing-------------------------------------------------------------">John von Neumann De-Biasing ------------------------------------------------------------</h2></div><ul>
+<li>neumann_debiasing_comb: ( debiasing )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Edge detector --</p></div><ul>
+<li>processing_core: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="processing-core-------------------------------------------------------------------------">Processing Core ------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>

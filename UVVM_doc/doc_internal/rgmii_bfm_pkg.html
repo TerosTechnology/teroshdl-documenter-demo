@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -115,34 +119,15 @@
 <td>Configuration record to be assigned in the test harness.</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>init_rgmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_rgmii_tx_if</font><br />
-<strong>Description</strong><br />
-This function returns an RGMII interface with initialized signals.All input signals are initialized to 0All output signals are initialized to Z</li>
-<li>init_rgmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_rgmii_rx_if</font></li>
-<li>rgmii_write <font id="function_arguments">(    constant data_array   : in    t_byte_array;
-constant msg          : in    string             := "";
-signal   rgmii_tx_if  : inout t_rgmii_tx_if;
-constant scope        : in    string             := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel     := shared_msg_id_panel;
-constant config       : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>rgmii_read <font id="function_arguments">(    variable data_array    : out   t_byte_array;
-variable data_len      : out   natural;
-constant msg           : in    string             := "";
-signal   rgmii_rx_if   : inout t_rgmii_rx_if;
-constant scope         : in    string             := C_SCOPE;
-constant msg_id_panel  : in    t_msg_id_panel     := shared_msg_id_panel;
-constant config        : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT;
-constant ext_proc_call : in    string := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font></li>
-<li>rgmii_expect <font id="function_arguments">(    constant data_exp     : in    t_byte_array;
-constant msg          : in    string             := "";
-signal   rgmii_rx_if  : inout t_rgmii_rx_if;
-constant alert_level  : in    t_alert_level      := ERROR;
-constant scope        : in    string             := C_SCOPE;
-constant msg_id_panel : in    t_msg_id_panel     := shared_msg_id_panel;
-constant config       : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>init_rgmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_rgmii_tx_if </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This function returns an RGMII interface with initialized signals.All input signals are initialized to 0All output signals are initialized to Z</p></div><ul>
+<li>init_rgmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_rgmii_rx_if </font></li>
+</ul><ul>
+<li>rgmii_write <font id="function_arguments">( constant data_array   : in    t_byte_array; constant msg          : in    string             := ""; signal   rgmii_tx_if  : inout t_rgmii_tx_if; constant scope        : in    string             := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel     := shared_msg_id_panel; constant config       : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>rgmii_read <font id="function_arguments">( variable data_array    : out   t_byte_array; variable data_len      : out   natural; constant msg           : in    string             := ""; signal   rgmii_rx_if   : inout t_rgmii_rx_if; constant scope         : in    string             := C_SCOPE; constant msg_id_panel  : in    t_msg_id_panel     := shared_msg_id_panel; constant config        : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT; constant ext_proc_call : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>rgmii_expect <font id="function_arguments">( constant data_exp     : in    t_byte_array; constant msg          : in    string             := ""; signal   rgmii_rx_if  : inout t_rgmii_rx_if; constant alert_level  : in    t_alert_level      := ERROR; constant scope        : in    string             := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel     := shared_msg_id_panel; constant config       : in    t_rgmii_bfm_config := C_RGMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

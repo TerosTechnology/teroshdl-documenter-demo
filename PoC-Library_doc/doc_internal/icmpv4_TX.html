@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -341,16 +345,16 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>(         ST_IDLE,            ST_SEND_ECHO_type,              ST_SEND_ECHO_CODE,              ST_SEND_ECHOREQUEST_CHECKSUM_0,                 ST_SEND_ECHOREQUEST_CHECKSUM_1,                 ST_SEND_ECHOREQUEST_IDENTIFIER_0,               ST_SEND_ECHOREQUEST_IDENTIFIER_1,               ST_SEND_ECHOREQUEST_SEQUENCENUMBER_0,               ST_SEND_ECHOREQUEST_SEQUENCENUMBER_1,               ST_SEND_ECHOREQUEST_DATA,               ST_SEND_ECHOREPLY_DATA,         ST_COMPLETE     )</td>
+<td>( ST_IDLE, ST_SEND_ECHO_type, ST_SEND_ECHO_CODE, ST_SEND_ECHOREQUEST_CHECKSUM_0, ST_SEND_ECHOREQUEST_CHECKSUM_1, ST_SEND_ECHOREQUEST_IDENTIFIER_0, ST_SEND_ECHOREQUEST_IDENTIFIER_1, ST_SEND_ECHOREQUEST_SEQUENCENUMBER_0, ST_SEND_ECHOREQUEST_SEQUENCENUMBER_1, ST_SEND_ECHOREQUEST_DATA, ST_SEND_ECHOREPLY_DATA, ST_COMPLETE )</td>
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-<li><p>unnamed: <em>( State, Command, Out_Ack, PayloadROM_Reader_ov, PayloadROM_Data )</em></p></li>
-<li><p>unnamed: <em>( Clock )</em></p></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( State, Command, Out_Ack, PayloadROM_Reader_ov, PayloadROM_Data )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>SourceIPv4Seq: PoC.misc_Sequencer</li>
 </ul><br><br><br><br><br><br>

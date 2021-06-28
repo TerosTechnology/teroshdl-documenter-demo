@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -717,32 +721,26 @@
 <td>derived parameter</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_48mhz_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_48mhz_i or negedge rst_ni) )</em><br />
-Pop the available fifo after the write that used the previous value</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Pop the available fifo after the write that used the previous value</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_48mhz_i or negedge rst_ni) )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Pop the available fifo after the write that used the previous value</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Need extra read at start of packet to get the first word of data<br />
-Delay by one cycle from the in_endpoint update</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Need extra read at start of packet to get the first word of data<br />
-Delay by one cycle from the in_endpoint update</p>
-<ul>
-<li><p>unnamed: <em>( @(posedge clk_48mhz_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_48mhz_i or negedge rst_ni) )</em><br />
-Capture frame number (host sends evert 1ms)</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Capture frame number (host sends evert 1ms)</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+Delay by one cycle from the in_endpoint update</p></div><ul>
+<li>unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Capture frame number (host sends evert 1ms)</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_usb_fs_nb_pe: usb_fs_nb_pe</li>
+</ul><ul>
 <li>u_usbdev_linkstate: usbdev_linkstate</li>
 </ul><br><br><br><br><br><br>

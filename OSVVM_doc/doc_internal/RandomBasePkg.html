@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -83,13 +87,15 @@ use ieee_proposed.standard_additions.all ;   -- remove with VHDL-2008<br />
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>Uniform <font id="function_arguments">(Result : out real ;  Seed : inout RandomSeedType)</font> <font id="function_return">return ()</font></li>
-<li>to_string <font id="function_arguments">(A : RandomSeedType)</font> <font id="function_return">return string</font><br />
-<strong>Description</strong><br />
-IO for RandomSeedType.  If use subtype, then create aliases herein a similar fashion VHDL-2008 std_logic_textio.Not required by RandomPkg</li>
-<li>write <font id="function_arguments">(variable L: inout line ; A : RandomSeedType )</font> <font id="function_return">return ()</font></li>
-<li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ; good : out boolean )</font> <font id="function_return">return ()</font></li>
-<li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType )</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>Uniform <font id="function_arguments">(Result : out real ;  Seed : inout RandomSeedType) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>to_string <font id="function_arguments">(A : RandomSeedType) </font> <font id="function_return">return string </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+IO for RandomSeedType.  If use subtype, then create aliases herein a similar fashion VHDL-2008 std_logic_textio.Not required by RandomPkg</p></div><ul>
+<li>write <font id="function_arguments">(variable L: inout line ; A : RandomSeedType ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ; good : out boolean ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

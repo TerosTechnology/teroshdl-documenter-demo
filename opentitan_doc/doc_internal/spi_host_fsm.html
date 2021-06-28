@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -620,42 +624,34 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 All register updates freeze when a stall is detected.<br />
 The definition of the stall signal looks ahead to determine whether a conflict is looming.<br />
 Thus stall depends on spi_host_st_d.  Making spi_host_st_d depend on stall<br />
 would create a circular logic loop, and lint errors.  Therefore stall is applied here, not<br />
-in the previous always_comb block;</p></li>
-</ul>
-<p><strong>Description</strong><br />
-All register updates freeze when a stall is detected.<br />
-The definition of the stall signal looks ahead to determine whether a conflict is looming.<br />
-Thus stall depends on spi_host_st_d.  Making spi_host_st_d depend on stall<br />
-would create a circular logic loop, and lint errors.  Therefore stall is applied here, not<br />
-in the previous always_comb block;</p>
-<ul>
-<li>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em><br />
+in the previous always_comb block;</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 We can calculate byte transitions for CHPA=1 by noting<br />
 that in this implmentation, the sck edges have a 1-1<br />
 correspondence with FSM transitions.<br />
 New bytes are loaded exactly one state transition behind the time<br />
-when they would be loaded if CPHA=0</li>
-</ul>
-<p><strong>Description</strong><br />
-We can calculate byte transitions for CHPA=1 by noting<br />
-that in this implmentation, the sck edges have a 1-1<br />
-correspondence with FSM transitions.<br />
-New bytes are loaded exactly one state transition behind the time<br />
-when they would be loaded if CPHA=0</p>
-<ul>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>( @(posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
-<li><p>unnamed: <em>(  )</em></p></li>
+when they would be loaded if CPHA=0</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
 </ul><br><br><br><br><br><br>

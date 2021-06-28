@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -85,55 +89,48 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>count <font id="function_arguments">(    constant s : string;
-constant substring : string;
-constant start : natural := 0;
-constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
-<li>count <font id="function_arguments">(    constant s : string;
-constant char : character := ' ';
-constant start : natural := 0;
-constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
-<li>find <font id="function_arguments">(    constant s : string;
-constant substring : string;
-constant start : natural := 0;
-constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
-<li>find <font id="function_arguments">(    constant s : string;
-constant char : character;
-constant start : natural := 0;
-constant stop : natural := 0)</font> <font id="function_return">return natural</font></li>
-<li>strip <font id="function_arguments">(    str : string;
-chars : string := " ")</font> <font id="function_return">return string</font></li>
-<li>rstrip <font id="function_arguments">(    str : string;
-chars : string := " ")</font> <font id="function_return">return string</font></li>
-<li>lstrip <font id="function_arguments">(    str : string;
-chars : string := " ")</font> <font id="function_return">return string</font></li>
-<li>image <font id="function_arguments">(    constant data : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>hex_image <font id="function_arguments">(    constant data : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>replace <font id="function_arguments">(    constant s      : string;
-constant old_segment : character;
-constant new_segment : character;
-constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
-<li>replace <font id="function_arguments">(    constant s      : string;
-constant old_segment : string;
-constant new_segment : character;
-constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
-<li>replace <font id="function_arguments">(    constant s      : string;
-constant old_segment : character;
-constant new_segment : string;
-constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
-<li>replace <font id="function_arguments">(    constant s      : string;
-constant old_segment : string;
-constant new_segment : string;
-constant cnt : in natural := natural'high)</font> <font id="function_return">return string</font></li>
-<li>title <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
-<li>upper <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
-<li>lower <font id="function_arguments">(    constant s : string)</font> <font id="function_return">return string</font></li>
-<li>to_integer_string <font id="function_arguments">(    constant value : unsigned)</font> <font id="function_return">return string</font></li>
-<li>to_integer_string <font id="function_arguments">(    constant value : signed)</font> <font id="function_return">return string</font></li>
-<li>to_integer_string <font id="function_arguments">(    constant value : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>to_nibble_string <font id="function_arguments">(    constant value : unsigned)</font> <font id="function_return">return string</font></li>
-<li>to_nibble_string <font id="function_arguments">(    constant value : std_logic_vector)</font> <font id="function_return">return string</font></li>
-<li>to_nibble_string <font id="function_arguments">(    constant value : signed)</font> <font id="function_return">return string</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>count <font id="function_arguments">( constant s : string; constant substring : string; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>count <font id="function_arguments">( constant s : string; constant char : character := ' '; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>find <font id="function_arguments">( constant s : string; constant substring : string; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>find <font id="function_arguments">( constant s : string; constant char : character; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>strip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>rstrip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>lstrip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>image <font id="function_arguments">( constant data : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>hex_image <font id="function_arguments">( constant data : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : character; constant new_segment : character; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : string; constant new_segment : character; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : character; constant new_segment : string; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : string; constant new_segment : string; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>title <font id="function_arguments">( constant s : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>upper <font id="function_arguments">( constant s : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>lower <font id="function_arguments">( constant s : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_integer_string <font id="function_arguments">( constant value : unsigned) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_integer_string <font id="function_arguments">( constant value : signed) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_integer_string <font id="function_arguments">( constant value : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_nibble_string <font id="function_arguments">( constant value : unsigned) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_nibble_string <font id="function_arguments">( constant value : std_logic_vector) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>to_nibble_string <font id="function_arguments">( constant value : signed) </font> <font id="function_return">return string </font></li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -64,13 +68,14 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=uart_pkg><h1 id="package-uart_pkg">Package: uart_pkg</h1></a><h2 id="functions">Functions</h2>
-<ul>
-<li>find_num_hits <font id="function_arguments">(    vector    : std_logic_vector;
-pattern   : std_logic)</font> <font id="function_return">return integer</font></li>
-<li>find_most_repeated_bit <font id="function_arguments">(    vector    : std_logic_vector)</font> <font id="function_return">return std_logic</font></li>
-<li>transient_error <font id="function_arguments">(    vector    : std_logic_vector;
-limit     : integer)</font> <font id="function_return">return boolean</font></li>
-<li>f_log2 <font id="function_arguments">(x : positive)</font> <font id="function_return">return natural</font></li>
-<li>odd_parity <font id="function_arguments">(    signal data : std_logic_vector(7 downto 0))</font> <font id="function_return">return std_logic</font></li>
+<a id=uart_pkg><h1 id="package-uart_pkg">Package: uart_pkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>find_num_hits <font id="function_arguments">( vector    : std_logic_vector; pattern   : std_logic) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>find_most_repeated_bit <font id="function_arguments">( vector    : std_logic_vector) </font> <font id="function_return">return std_logic </font></li>
+</ul><ul>
+<li>transient_error <font id="function_arguments">( vector    : std_logic_vector; limit     : integer) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>f_log2 <font id="function_arguments">(x : positive) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>odd_parity <font id="function_arguments">( signal data : std_logic_vector(7 downto 0)) </font> <font id="function_return">return std_logic </font></li>
 </ul><br><br><br><br><br><br>

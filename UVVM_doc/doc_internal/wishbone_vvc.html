@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -222,27 +226,18 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>get_msg_id_panel <font id="function_arguments">(    constant command    : in t_vvc_cmd_record;
-constant vvc_config : in t_vvc_config
-)</font> <font id="function_return">return t_msg_id_panel</font></li>
-</ul><h2 id="processes">Processes</h2>
-<ul>
-<li>cmd_interpreter: <em>(  )</em><br />
-Command interpreter</li>
-<li>Interpret, decode and acknowledge commands from the central sequencer</li>
-</ul>
-<p><strong>Description</strong><br />
+</table><h2 id="functions">Functions</h2><ul>
+<li>get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record; constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font></li>
+</ul><h2 id="processes">Processes</h2><ul>
+<li>cmd_interpreter: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Command interpreter</p>
 <ul>
-<li><p>Interpret, decode and acknowledge commands from the central sequencer</p></li>
-<li><p>cmd_executor: <em>(  )</em><br />
-Command executor</p></li>
-<li><p>Fetch and execute the commands</p></li>
-</ul>
-<p><strong>Description</strong><br />
+<li>Interpret, decode and acknowledge commands from the central sequencer</li>
+</ul></div><ul>
+<li>cmd_executor: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 Command executor</p>
 <ul>
 <li>Fetch and execute the commands</li>
-</ul><br><br><br><br><br><br>
+</ul></div><br><br><br><br><br><br>

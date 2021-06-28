@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -85,15 +89,13 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>VendorCovSetName <font id="function_arguments">( obj: VendorCovHandleType; name: string )</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Sets/Updates the name of the Coverage Model. Should not be called until the data structure is created by VendorCovPointCreate or VendorCovCrossCreate. Replaces name that was set by VendorCovPointCreate or VendorCovCrossCreate.</li>
-<li>VendorCovBinAdd <font id="function_arguments">( obj: VendorCovHandleType; bins: VendorCovRangeArrayType; Action: integer; atleast: integer; name: string )</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Add a bin or set of bins to either a Point/Item or Cross Functional Coverage Model Checking for sizing that is different from original sizing already done in OSVVM CoveragePkg It is important to maintain an index that corresponds to the order the bins were entered as that is used when coverage is recorded.</li>
-<li>VendorCovBinInc <font id="function_arguments">( obj: VendorCovHandleType; index: integer )</font> <font id="function_return">return ()</font><br />
-<strong>Description</strong><br />
-Increment the coverage of bin identified by index number. Index ranges from 1 to Number of Bins. Index corresponds to the order the bins were entered (starting from 1)</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>VendorCovSetName <font id="function_arguments">( obj: VendorCovHandleType; name: string ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ Sets/Updates the name of the Coverage Model. Should not be called until the data structure is created by VendorCovPointCreate or VendorCovCrossCreate. Replaces name that was set by VendorCovPointCreate or VendorCovCrossCreate.</p></div><ul>
+<li>VendorCovBinAdd <font id="function_arguments">( obj: VendorCovHandleType; bins: VendorCovRangeArrayType; Action: integer; atleast: integer; name: string ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ Add a bin or set of bins to either a Point/Item or Cross Functional Coverage Model Checking for sizing that is different from original sizing already done in OSVVM CoveragePkg It is important to maintain an index that corresponds to the order the bins were entered as that is used when coverage is recorded.</p></div><ul>
+<li>VendorCovBinInc <font id="function_arguments">( obj: VendorCovHandleType; index: integer ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ Increment the coverage of bin identified by index number. Index ranges from 1 to Number of Bins. Index corresponds to the order the bins were entered (starting from 1)</p></div><br><br><br><br><br><br>

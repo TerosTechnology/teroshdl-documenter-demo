@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -110,38 +114,12 @@
 <td>Configuration record to be assigned in the test harness.</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>init_wishbone_if_signals <font id="function_arguments">(    addr_width : natural;
-data_width : natural
-)</font> <font id="function_return">return t_wishbone_if</font></li>
-<li>wishbone_write <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_value       : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal wishbone_if        : inout t_wishbone_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
-<li>wishbone_read <font id="function_arguments">(    constant addr_value       : in  unsigned;
-variable data_value       : out std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal wishbone_if        : inout t_wishbone_if;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT;
-constant ext_proc_call    : in  string                    := ""   External proc_call. Overwrite if called from another BFM procedure
-)</font> <font id="function_return">return ()</font></li>
-<li>wishbone_check <font id="function_arguments">(    constant addr_value       : in  unsigned;
-constant data_exp         : in  std_logic_vector;
-constant msg              : in  string;
-signal clk                : in  std_logic;
-signal wishbone_if        : inout t_wishbone_if;
-constant alert_level      : in  t_alert_level             := error;
-constant scope            : in  string                    := C_SCOPE;
-constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel;
-constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT
-)</font> <font id="function_return">return ()</font></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>init_wishbone_if_signals <font id="function_arguments">( addr_width : natural; data_width : natural ) </font> <font id="function_return">return t_wishbone_if </font></li>
+</ul><ul>
+<li>wishbone_write <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_value       : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal wishbone_if        : inout t_wishbone_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>wishbone_read <font id="function_arguments">( constant addr_value       : in  unsigned; variable data_value       : out std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal wishbone_if        : inout t_wishbone_if; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT; constant ext_proc_call    : in  string                    := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+</ul><ul>
+<li>wishbone_check <font id="function_arguments">( constant addr_value       : in  unsigned; constant data_exp         : in  std_logic_vector; constant msg              : in  string; signal clk                : in  std_logic; signal wishbone_if        : inout t_wishbone_if; constant alert_level      : in  t_alert_level             := error; constant scope            : in  string                    := C_SCOPE; constant msg_id_panel     : in  t_msg_id_panel            := shared_msg_id_panel; constant config           : in  t_wishbone_bfm_config     := C_WISHBONE_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

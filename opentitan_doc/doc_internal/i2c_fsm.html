@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -692,116 +696,63 @@
 <td>State definitions</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>counter_functions: <em>(  )</em></p></li>
-<li><p>clk_counter: <em>( @ (posedge clk_i or negedge rst_ni) )</em></p></li>
-<li><p>clk_stretch: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Clock stretching detection</p></li>
-</ul>
-<p><strong>Description</strong><br />
-Clock stretching detection</p>
-<ul>
-<li>bit_counter: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Bit index implementation</li>
-</ul>
-<p><strong>Description</strong><br />
-Bit index implementation</p>
-<ul>
-<li>read_register: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Deserializer for a byte read from the bus</li>
-</ul>
-<p><strong>Description</strong><br />
-Deserializer for a byte read from the bus</p>
-<ul>
-<li>byte_number: <em>(  )</em><br />
-Number of bytes to read</li>
-</ul>
-<p><strong>Description</strong><br />
-Number of bytes to read</p>
-<ul>
-<li>byte_counter: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Byte index implementation</li>
-</ul>
-<p><strong>Description</strong><br />
-Byte index implementation</p>
-<ul>
-<li>bus_prev: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-SDA and SCL at the previous clock edge</li>
-</ul>
-<p><strong>Description</strong><br />
-SDA and SCL at the previous clock edge</p>
-<ul>
-<li>stop_state: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Stop issued before</li>
-</ul>
-<p><strong>Description</strong><br />
-Stop issued before</p>
-<ul>
-<li>s_detect: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-(Repeated) Start condition detection by target</li>
-</ul>
-<p><strong>Description</strong><br />
-(Repeated) Start condition detection by target</p>
-<ul>
-<li>p_detect: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Stop condition detection by target</li>
-</ul>
-<p><strong>Description</strong><br />
-Stop condition detection by target</p>
-<ul>
-<li>tgt_bit_counter: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
+</table><h2 id="processes">Processes</h2><ul>
+<li>counter_functions: (  )</li>
+</ul><ul>
+<li>clk_counter: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>clk_stretch: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Clock stretching detection</p></div><ul>
+<li>bit_counter: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Bit index implementation</p></div><ul>
+<li>read_register: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Deserializer for a byte read from the bus</p></div><ul>
+<li>byte_number: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Number of bytes to read</p></div><ul>
+<li>byte_counter: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Byte index implementation</p></div><ul>
+<li>bus_prev: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+SDA and SCL at the previous clock edge</p></div><ul>
+<li>stop_state: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Stop issued before</p></div><ul>
+<li>s_detect: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+(Repeated) Start condition detection by target</p></div><ul>
+<li>p_detect: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Stop condition detection by target</p></div><ul>
+<li>tgt_bit_counter: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
 ack<br />
-Increment counter on negative SCL edge</li>
-</ul>
-<p><strong>Description</strong><br />
-ack<br />
-Increment counter on negative SCL edge</p>
-<ul>
-<li>scl_high_counter: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Counter for continuously released SCL state</li>
-</ul>
-<p><strong>Description</strong><br />
-Counter for continuously released SCL state</p>
-<ul>
-<li>tgt_input_register: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Shift data in on positive SCL edge</li>
-</ul>
-<p><strong>Description</strong><br />
-Shift data in on positive SCL edge</p>
-<ul>
-<li>host_ack_register: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Detection by the target of ACK bit send by the host</li>
-</ul>
-<p><strong>Description</strong><br />
-Detection by the target of ACK bit send by the host</p>
-<ul>
-<li>stretch_addr_sp_tx: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Deasserting stretch_stop_tx bit after the first target address match for transmit</li>
-</ul>
-<p><strong>Description</strong><br />
-Deasserting stretch_stop_tx bit after the first target address match for transmit</p>
-<ul>
-<li>stretch_addr_sp_acq: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Deasserting stretch_stop_acq bit after the first target address match for acquire</li>
-</ul>
-<p><strong>Description</strong><br />
-Deasserting stretch_stop_acq bit after the first target address match for acquire</p>
-<ul>
-<li>state_outputs: <em>(  )</em><br />
-Outputs for each state</li>
-</ul>
-<p><strong>Description</strong><br />
-Outputs for each state</p>
-<ul>
-<li>state_functions: <em>(  )</em><br />
-Conditional state transition</li>
-</ul>
-<p><strong>Description</strong><br />
-Conditional state transition</p>
-<ul>
-<li>state_transition: <em>( @ (posedge clk_i or negedge rst_ni) )</em><br />
-Synchronous state transition</li>
-</ul>
-<p><strong>Description</strong><br />
-Synchronous state transition</p><br><br><br><br><br><br>
+Increment counter on negative SCL edge</p></div><ul>
+<li>scl_high_counter: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Counter for continuously released SCL state</p></div><ul>
+<li>tgt_input_register: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Shift data in on positive SCL edge</p></div><ul>
+<li>host_ack_register: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Detection by the target of ACK bit send by the host</p></div><ul>
+<li>stretch_addr_sp_tx: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Deasserting stretch_stop_tx bit after the first target address match for transmit</p></div><ul>
+<li>stretch_addr_sp_acq: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Deasserting stretch_stop_acq bit after the first target address match for acquire</p></div><ul>
+<li>state_outputs: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Outputs for each state</p></div><ul>
+<li>state_functions: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Conditional state transition</p></div><ul>
+<li>state_transition: ( @ (posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Synchronous state transition</p></div><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -456,15 +460,15 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font><br />
-<strong>Description</strong><br />
-Fixup various memory sizes based on generics</li>
-<li>get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural</font></li>
-</ul><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="functions">Functions</h2><ul>
+<li>get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Fixup various memory sizes based on generics</p></div><ul>
+<li>get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font></li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>soc0: work.soc</li>
+</ul><ul>
 <li>STARTUPE2_INST: STARTUPE2</li>
+</ul><ul>
 <li>clk200: IBUFDS</li>
 </ul><br><br><br><br><br><br>

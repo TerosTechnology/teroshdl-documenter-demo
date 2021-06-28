@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -312,28 +316,21 @@
 <td>ctrl signal for stackpointer operations</td>
 </tr>
 </tbody>
-</table><h2 id="processes">Processes</h2>
-<ul>
-<li><p>unnamed: <em>( combined, stackpointerA, stackpointerB, last_operation, ctrl )</em></p></li>
-<li><p>unnamed: <em>( clk )</em></p></li>
-<li><p>unnamed: <em>( clk )</em></p></li>
-<li><p>unnamed: <em>( clk )</em><br />
-stackpointerB operations</p></li>
-</ul>
-<p><strong>Description</strong><br />
-stackpointerB operations</p>
-<ul>
-<li>unnamed: <em>( clk )</em><br />
-delayed_valid register</li>
-</ul>
-<p><strong>Description</strong><br />
-delayed_valid register</p>
-<ul>
-<li>unnamed: <em>( sub, last_operation, delayed_valid )</em><br />
-sub of B and A</li>
-</ul>
-<p><strong>Description</strong><br />
-sub of B and A</p><h2 id="instantiations">Instantiations</h2>
-<ul>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( combined, stackpointerA, stackpointerB, last_operation, ctrl )</li>
+</ul><ul>
+<li>unnamed: ( clk )</li>
+</ul><ul>
+<li>unnamed: ( clk )</li>
+</ul><ul>
+<li>unnamed: ( clk )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+stackpointerB operations</p></div><ul>
+<li>unnamed: ( clk )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+delayed_valid register</p></div><ul>
+<li>unnamed: ( sub, last_operation, delayed_valid )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+sub of B and A</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>ram: poc.ocram_tdp_wf</li>
 </ul><br><br><br><br><br><br>

@@ -8,7 +8,6 @@
   svg {
     display:block;  
     width:60%;
-    height:40%;
     margin-left: auto;
     margin-right: auto
   }
@@ -38,19 +37,24 @@
     color:green;
   }
   #teroshdl_description, li {
-    width: 98%;
+    width: 95%;
     margin-left:2%;
     margin-right:2%;
   }
   #function_arguments{
-    color:blue;
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
   }
   div.templateTerosHDL {
     background-color: white;
     position:absolute;
   }
   td, th {
-    padding:7px; 
+    padding:2px; 
     border: 1px solid grey;
   }
   th {
@@ -261,20 +265,11 @@
 <td></td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2>
-<ul>
-<li>AddSub <font id="function_arguments">(A        : std_logic_vector;                     B        : std_logic_vector;
-                 Sub      : std_logic;
-                 Carry_In : std_logic;
-          signal Res      : out std_logic_vector;
-          signal Carry    : out std_logic)</font> <font id="function_return">return ()</font></li>
-</ul><h2 id="processes">Processes</h2>
-<ul>
-<li>unnamed: <em>( Carry_v, Carry7_v, Q_v )</em><br />
-bug fix - parity flag is just parity for 8080, also overflow for Z80</li>
-</ul>
-<p><strong>Description</strong><br />
-bug fix - parity flag is just parity for 8080, also overflow for Z80</p>
-<ul>
-<li>unnamed: <em>( Arith16, ALU_OP, F_In, BusA, BusB, IR, Q_v, Carry_v, HalfCarry_v, OverFlow_v, BitMask, ISet, Z16, WZ, XY_State )</em></li>
+</table><h2 id="functions">Functions</h2><ul>
+<li>AddSub <font id="function_arguments">(A        : std_logic_vector; B        : std_logic_vector; Sub      : std_logic; Carry_In : std_logic; signal Res      : out std_logic_vector; signal Carry    : out std_logic) </font> <font id="function_return">return ()</font></li>
+</ul><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Carry_v, Carry7_v, Q_v )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+bug fix - parity flag is just parity for 8080, also overflow for Z80</p></div><ul>
+<li>unnamed: ( Arith16, ALU_OP, F_In, BusA, BusB, IR, Q_v, Carry_v, HalfCarry_v, OverFlow_v, BitMask, ISet, Z16, WZ, XY_State )</li>
 </ul><br><br><br><br><br><br>

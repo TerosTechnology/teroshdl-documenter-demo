@@ -1,0 +1,218 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    display:block;  
+    width:60%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=neorv32_fifo><h1 id="entity-neorv32_fifo">Entity: neorv32_fifo</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1125 230"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="445,0 460,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="220" height="90" fill="black" x="460" y="0"></rect><rect id="SvgjsRect1007" width="216" height="85" fill="#bdecb6" x="462" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="440" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="475" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   FIFO_DEPTH </tspan></text><line id="SvgjsLine1012" x1="445" y1="15" x2="460" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="440" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="475" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   FIFO_WIDTH </tspan></text><line id="SvgjsLine1017" x1="445" y1="35" x2="460" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="440" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   boolean </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="475" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   FIFO_RSYNC </tspan></text><line id="SvgjsLine1022" x1="445" y1="55" x2="460" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="440" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   boolean </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="475" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   FIFO_SAFE </tspan></text><line id="SvgjsLine1027" x1="445" y1="75" x2="460" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1028" width="220" height="130" fill="black" x="460" y="95"></rect><rect id="SvgjsRect1029" width="216" height="125" fill="#fdfd96" x="462" y="97"></rect><text id="SvgjsText1030" font-family="Helvetica" x="440" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="475" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1034" x1="445" y1="110" x2="460" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="440" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="475" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   rstn_i </tspan></text><line id="SvgjsLine1039" x1="445" y1="130" x2="460" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="440" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="475" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   clear_i </tspan></text><line id="SvgjsLine1044" x1="445" y1="150" x2="460" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="440" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic_vector(FIFO_WIDTH-1 downto 0) </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="475" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   wdata_i </tspan></text><line id="SvgjsLine1049" x1="445" y1="170" x2="460" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="440" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="475" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   we_i </tspan></text><line id="SvgjsLine1054" x1="445" y1="190" x2="460" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="440" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="440" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="475" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="475" svgjs:data="{&quot;newLined&quot;:true}">   re_i </tspan></text><line id="SvgjsLine1059" x1="445" y1="210" x2="460" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="700" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="700" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="665" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="665" svgjs:data="{&quot;newLined&quot;:true}">   free_o </tspan></text><line id="SvgjsLine1064" x1="680" y1="110" x2="695" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="700" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="700" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic_vector(FIFO_WIDTH-1 downto 0) </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="665" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="665" svgjs:data="{&quot;newLined&quot;:true}">   rdata_o </tspan></text><line id="SvgjsLine1069" x1="680" y1="130" x2="695" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="700" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="700" svgjs:data="{&quot;newLined&quot;:true}">   std_ulogic </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="665" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="665" svgjs:data="{&quot;newLined&quot;:true}">   avail_o </tspan></text><line id="SvgjsLine1074" x1="680" y1="150" x2="695" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>################################################################################################# # << NEORV32 - General Purpose FIFO Component >&gt;                                                # # <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>* # # BSD 3-Clause License                                                                          # #                                                                                               # # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     # #                                                                                               # # Redistribution and use in source and binary forms, with or without modification, are          # # permitted provided that the following conditions are met:                                     # #                                                                                               # # 1. Redistributions of source code must retain the above copyright notice, this list of        # #    conditions and the following disclaimer.                                                   # #                                                                                               # # 2. Redistributions in binary form must reproduce the above copyright notice, this list of     # #    conditions and the following disclaimer in the documentation and/or other materials        # #    provided with the distribution.                                                            # #                                                                                               # # 3. Neither the name of the copyright holder nor the names of its contributors may be used to  # #    endorse or promote products derived from this software without specific prior written      # #    permission.                                                                                # #                                                                                               # # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS   # # OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF               # # MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE    # # COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,     # # EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE # # GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED    # # AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING     # # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED  # # OF THE POSSIBILITY OF SUCH DAMAGE.                                                            # # <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>* # # The NEORV32 Processor - <a href="https://github.com/stnolting/neorv32">https://github.com/stnolting/neorv32</a>              (c) Stephan Nolting # #################################################################################################</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FIFO_DEPTH</td>
+<td>natural</td>
+<td>4</td>
+<td>number of fifo entries; has to be a power of two; min 1</td>
+</tr>
+<tr>
+<td>FIFO_WIDTH</td>
+<td>natural</td>
+<td>32</td>
+<td>size of data elements in fifo</td>
+</tr>
+<tr>
+<td>FIFO_RSYNC</td>
+<td>boolean</td>
+<td>false</td>
+<td>false = async read; true = sync read</td>
+</tr>
+<tr>
+<td>FIFO_SAFE</td>
+<td>boolean</td>
+<td>false</td>
+<td>true = allow read/write only if data available</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>clock, rising edge</td>
+</tr>
+<tr>
+<td>rstn_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>async reset, low-active</td>
+</tr>
+<tr>
+<td>clear_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>sync reset, high-active</td>
+</tr>
+<tr>
+<td>wdata_i</td>
+<td>in</td>
+<td>std_ulogic_vector(FIFO_WIDTH-1 downto 0)</td>
+<td>write data</td>
+</tr>
+<tr>
+<td>we_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>write enable</td>
+</tr>
+<tr>
+<td>free_o</td>
+<td>out</td>
+<td>std_ulogic</td>
+<td>at least one entry is free when set</td>
+</tr>
+<tr>
+<td>re_i</td>
+<td>in</td>
+<td>std_ulogic</td>
+<td>read enable</td>
+</tr>
+<tr>
+<td>rdata_o</td>
+<td>out</td>
+<td>std_ulogic_vector(FIFO_WIDTH-1 downto 0)</td>
+<td>read data</td>
+</tr>
+<tr>
+<td>avail_o</td>
+<td>out</td>
+<td>std_ulogic</td>
+<td>data available when set</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fifo</td>
+<td>fifo_t</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fifo_data_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_t</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>fifo_control: ( rstn_i, clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="fifo-control----------------------------------------------------------------------------">FIFO Control ---------------------------------------------------------------------------</h2></div><ul>
+<li>fifo_memory_write: ( clk_i )</li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="fifo-memory-----------------------------------------------------------------------------">FIFO Memory ----------------------------------------------------------------------------</h2></div><br><br><br><br><br><br>
