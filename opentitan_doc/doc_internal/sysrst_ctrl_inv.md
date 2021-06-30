@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_inv
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_inv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: sysrst_ctrl pin inversion Module
  
 ## Ports
+
 | Port name         | Direction | Type                                    | Description |
 | ----------------- | --------- | --------------------------------------- | ----------- |
 | clk_aon_i         | input     |                                         |             |
@@ -38,6 +42,7 @@ Copyright lowRISC contributors.
 | cio_key2_out_o    | output    |                                         |             |
 | cio_z3_wakeup_o   | output    |                                         |             |
 ## Signals
+
 | Name                  | Type  | Description |
 | --------------------- | ----- | ----------- |
 | cfg_pwrb_i_inv        | logic |             |
@@ -53,6 +58,7 @@ Copyright lowRISC contributors.
 | cfg_bat_disable_o_inv | logic |             |
 | cfg_z3_wakeup_o_inv   | logic |             |
 ## Instantiations
+
 - i_cfg_pwrb_i_inv: prim_flop_2sync
 - i_cfg_key0_i_inv: prim_flop_2sync
 - i_cfg_key1_i_inv: prim_flop_2sync

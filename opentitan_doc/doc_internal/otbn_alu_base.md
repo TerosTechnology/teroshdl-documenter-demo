@@ -1,12 +1,16 @@
 # Entity: otbn_alu_base
+
 ## Diagram
+
 ![Diagram](otbn_alu_base.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name           | Direction | Type                  | Description                                              |
 | ------------------- | --------- | --------------------- | -------------------------------------------------------- |
 | clk_i               | input     |                       | Block is combinatorial; clk/rst are for assertions only. |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | operation_result_o  | output    | [31:0]                |                                                          |
 | comparison_result_o | output    |                       |                                                          |
 ## Signals
+
 | Name                        | Type                | Description                                                                                                                                       |
 | --------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | adder_op_a                  | logic [32:0]        |                                                                                                                                                   |
@@ -38,5 +43,4 @@ Copyright lowRISC contributors.
 | unused_clk                  | logic               | clk_i, rst_ni are only used by assertions                                                                                                         |
 | unused_rst_n                | logic               |                                                                                                                                                   |
 ## Processes
-- unnamed: _(  )_
-
+- unnamed: (  )

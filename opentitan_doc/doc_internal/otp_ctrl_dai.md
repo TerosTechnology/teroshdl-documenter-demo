@@ -1,17 +1,22 @@
 # Entity: otp_ctrl_dai
+
 ## Diagram
+
 ![Diagram](otp_ctrl_dai.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Direct access interface for OTP controller.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | StateWidth   | int  | 12    |             |
 ## Ports
+
 | Port name        | Direction | Type                    | Description                                                                                                                                                     |
 | ---------------- | --------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i            | input     |                         |                                                                                                                                                                 |
@@ -51,6 +56,7 @@ Copyright lowRISC contributors.
 | scrmbl_valid_i   | input     |                         |                                                                                                                                                                 |
 | scrmbl_data_i    | input     | [ScrmblBlockWidth-1:0]  |                                                                                                                                                                 |
 ## Signals
+
 | Name            | Type                                  | Description                                                                                                                                                                                                                                                           |
 | --------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | state_d         | state_e                               |                                                                                                                                                                                                                                                                       |
@@ -74,22 +80,22 @@ Copyright lowRISC contributors.
 | addr_calc       | logic [OtpByteAddrWidth-1:0]          | Note that OTP works on halfword (16bit) addresses, hence need to shift the addresses appropriately.                                                                                                                                                                   |
 | state_raw_q     | logic [StateWidth-1:0]                | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.                                                                                                                                             |
 ## Constants
+
 | Name     | Type | Value                                         | Description |
 | -------- | ---- | --------------------------------------------- | ----------- |
 | CntWidth | int  | OtpByteAddrWidth - $clog2(ScrmblBlockWidth/8) |             |
 ## Types
+
 | Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | state_e    | enum logic [StateWidth-1:0] {     ResetSt       = 12'b001000011011,     InitOtpSt     = 12'b101111001001,     InitPartSt    = 12'b101010100111,     IdleSt        = 12'b110100110101,     ErrorSt       = 12'b100011010000,     ReadSt        = 12'b111001010110,     ReadWaitSt    = 12'b000101100111,     DescrSt       = 12'b110001001101,     DescrWaitSt   = 12'b010000110010,     WriteSt       = 12'b101101111100,     WriteWaitSt   = 12'b100100101010,     ScrSt         = 12'b111110010011,     ScrWaitSt     = 12'b010110011000,     DigClrSt      = 12'b011100001110,     DigReadSt     = 12'b011001101000,     DigReadWaitSt = 12'b000011111110,     DigSt         = 12'b000010101001,     DigPadSt      = 12'b000000000100,     DigFinSt      = 12'b010011000011,     DigWaitSt     = 12'b011011110101   } |             |
 | data_sel_e | enum logic [1:0] {     OtpData = 2'b00,     DaiData = 2'b01,     ScrmblData = 2'b10   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |             |
 | addr_sel_e | enum logic {     PartOffset = 1'b0,     DaiOffset = 1'b1   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |             |
 ## Processes
-- p_fsm: _(  )_
-
-- p_size_sel: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_fsm: (  )
+- p_size_sel: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_part_sel_idx: prim_arbiter_fixed
 - u_state_regs: prim_flop

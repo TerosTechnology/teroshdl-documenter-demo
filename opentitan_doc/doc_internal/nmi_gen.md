@@ -1,7 +1,10 @@
 # Entity: nmi_gen
+
 ## Diagram
+
 ![Diagram](nmi_gen.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,10 +13,12 @@ Copyright lowRISC contributors.
  See also alert handler documentation for more context.
  
 ## Generics
+
 | Generic name | Type         | Value | Description     |
 | ------------ | ------------ | ----- | --------------- |
 | N_ESC_SEV    | int unsigned | 3     | leave constant  |
 ## Ports
+
 | Port name     | Direction | Type            | Description            |
 | ------------- | --------- | --------------- | ---------------------- |
 | clk_i         | input     |                 |                        |
@@ -27,16 +32,19 @@ Copyright lowRISC contributors.
 | esc_tx_i      | input     | [N_ESC_SEV-1:0] | Escalation outputs     |
 | esc_rx_o      | output    | [N_ESC_SEV-1:0] |                        |
 ## Signals
+
 | Name   | Type                              | Description |
 | ------ | --------------------------------- | ----------- |
 | esc_en | logic [N_ESC_SEV-1:0]             |             |
 | reg2hw | nmi_gen_reg_pkg::nmi_gen_reg2hw_t |             |
 | hw2reg | nmi_gen_reg_pkg::nmi_gen_hw2reg_t |             |
 ## Constants
+
 | Name      | Type         | Value | Description     |
 | --------- | ------------ | ----- | --------------- |
 | N_ESC_SEV | int unsigned | 3     | leave constant  |
 ## Instantiations
+
 - u_reg: nmi_gen_reg_top
 - i_intr_esc0: prim_intr_hw
 - i_intr_esc1: prim_intr_hw

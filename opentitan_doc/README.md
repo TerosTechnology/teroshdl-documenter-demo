@@ -1,5 +1,4 @@
 # Project documentation: 
-## Project dependency graph
 ![system](./doc_internal/dependency_graph.svg "System")
 ## Designs
 
@@ -322,7 +321,10 @@
 - Module: [rstmgr_ctrl ](./doc_internal/rstmgr_ctrl.md)
 - Module: [rstmgr_por ](./doc_internal/rstmgr_por.md)
 - Module: [rstmgr_reg_top ](./doc_internal/rstmgr_reg_top.md)
+- Module: [rv_core_addr_trans ](./doc_internal/rv_core_addr_trans.md)
 - Module: [rv_core_ibex ](./doc_internal/rv_core_ibex.md)
+- Module: [rv_core_ibex_peri ](./doc_internal/rv_core_ibex_peri.md)
+- Module: [rv_core_ibex_peri_reg_top ](./doc_internal/rv_core_ibex_peri_reg_top.md)
 - Module: [rv_dm ](./doc_internal/rv_dm.md)
 - Module: [rv_plic_generic_fpv ](./doc_internal/rv_plic_generic_fpv.md)
 - Module: [rv_plic_assert_fpv ](./doc_internal/rv_plic_assert_fpv.md)
@@ -386,6 +388,7 @@
 - Module: [tlul_rsp_intg_gen ](./doc_internal/tlul_rsp_intg_gen.md)
 - Module: [tlul_socket_1n ](./doc_internal/tlul_socket_1n.md)
 - Module: [tlul_socket_m1 ](./doc_internal/tlul_socket_m1.md)
+- Module: [tlul_sram_byte ](./doc_internal/tlul_sram_byte.md)
 - Module: [trial1_test ](./doc_internal/trial1_test.md)
 - Module: [trial1_reg_top ](./doc_internal/trial1_reg_top.md)
 - Module: [uart ](./doc_internal/uart.md)

@@ -1,7 +1,10 @@
 # Entity: uart_ft245
+
 ## Diagram
+
 ![Diagram](uart_ft245.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -26,10 +29,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | CLK_FREQ     | positive |       |             |
 ## Ports
+
 | Port name    | Direction | Type                         | Description         |
 | ------------ | --------- | ---------------------------- | ------------------- |
 | clk          | in        | std_logic                    | common signals      |
@@ -46,6 +51,7 @@ limitations under the License.
 | ft245_txen   | in        | std_logic                    |                     |
 | ft245_pwrenn | in        | std_logic                    |                     |
 ## Signals
+
 | Name          | Type                             | Description     |
 | ------------- | -------------------------------- | --------------- |
 | reg_delay     | unsigned(DELAY_WIDTH-1 downto 0) | delay register  |
@@ -67,6 +73,7 @@ limitations under the License.
 | ctrl_dto      | std_logic                        |                 |
 | data_in       | std_logic_vector(7 downto 0)     |                 |
 ## Constants
+
 | Name         | Type                             | Value                                         | Description                                                         |
 | ------------ | -------------------------------- | --------------------------------------------- | ------------------------------------------------------------------- |
 | CLK_FREQ_MHZ | integer                          |  CLK_FREQ / 1000000                           |                                                                     |
@@ -74,17 +81,14 @@ limitations under the License.
 | DELAY_WIDTH  | integer                          |  log2ceilnz(DELAY_CYCLES + 1)                 | delay register width                                                |
 | DELAY_LOAD   | unsigned(DELAY_WIDTH-1 downto 0) |        to_unsigned(DELAY_CYCLES, DELAY_WIDTH) | delay register load value                                           |
 ## Types
-| Name   | Type                                             | Description |
-| ------ | ------------------------------------------------ | ----------- |
-| tState | ( IDLE, RD1, RD2, RD3, RD4, WR1, WR2, WR3, WR4 ) | FSM         |
+
+| Name   | Type                                              | Description |
+| ------ | ------------------------------------------------- | ----------- |
+| tState | ( IDLE, RD1, RD2, RD3, RD4, WR1, WR2, WR3, WR4 )  | FSM         |
 ## Processes
-- unnamed: _( clk )_
-
-- unnamed: _( fsm_state, snd_strobe, reg_delay, ff_susp, ff_rxf, ff_txe )_
-
-- unnamed: _( clk )_
-registers
-
+- unnamed: ( clk )
+- unnamed: ( fsm_state, snd_strobe, reg_delay, ff_susp, ff_rxf, ff_txe )
+- unnamed: ( clk )
 **Description**
 registers
 

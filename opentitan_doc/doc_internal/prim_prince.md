@@ -1,7 +1,10 @@
 # Entity: prim_prince
+
 ## Diagram
+
 ![Diagram](prim_prince.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -24,6 +27,7 @@ Copyright lowRISC contributors.
              - https://eprint.iacr.org/2014/656.pdf
  
 ## Generics
+
 | Generic name   | Type | Value | Description                                                                                                                                                     |
 | -------------- | ---- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | DataWidth      | int  | 64    |                                                                                                                                                                 |
@@ -33,6 +37,7 @@ Copyright lowRISC contributors.
 | HalfwayDataReg | bit  | 1'b0  | This instantiates a data register halfway in the primitive.                                                                                                     |
 | HalfwayKeyReg  | bit  | 1'b0  | This instantiates a key register halfway in the primitive.                                                                                                      |
 ## Ports
+
 | Port name | Direction | Type            | Description             |
 | --------- | --------- | --------------- | ----------------------- |
 | clk_i     | input     |                 |                         |
@@ -44,6 +49,7 @@ Copyright lowRISC contributors.
 | valid_o   | output    |                 |                         |
 | data_o    | output    | [DataWidth-1:0] |                         |
 ## Signals
+
 | Name                | Type                                       | Description            |
 | ------------------- | ------------------------------------------ | ---------------------- |
 | k0                  | logic [DataWidth-1:0]                      |                        |
@@ -63,11 +69,8 @@ Copyright lowRISC contributors.
 | data_o              | end                                        |                        |
 | k0_prime_q          | data_o                                     |                        |
 ## Processes
-- p_key_expansion: _(  )_
-
-- p_pre_round_xor: _(  )_
-pre-round XOR
-
+- p_key_expansion: (  )
+- p_pre_round_xor: (  )
 **Description**
 pre-round XOR
 

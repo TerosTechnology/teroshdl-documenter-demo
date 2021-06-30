@@ -1,7 +1,10 @@
 # Entity: T80pa
+
 ## Diagram
+
 ![Diagram](T80pa.svg "Diagram")
 ## Description
+
 Z80 compatible microprocessor core, preudo-asynchronous top level (by Sorgelig)
 Copyright (c) 2001-2002 Daniel Wallner (jesus@opencores.org)
 All rights reserved
@@ -40,10 +43,12 @@ v2.2: Interrupt acknowledge cycle has been corrected
       WAIT_n is broken in T80.vhd. Simulate correct WAIT_n locally.
 v2.3: Output last used Address during non-bus MCycle seems more correct.
 ## Generics
+
 | Generic name | Type    | Value | Description                                 |
 | ------------ | ------- | ----- | ------------------------------------------- |
 | Mode         | integer | 0     | 0 => Z80, 1 => Fast Z80, 2 => 8080, 3 => GB |
 ## Ports
+
 | Port name | Direction | Type                           | Description                                                                   |
 | --------- | --------- | ------------------------------ | ----------------------------------------------------------------------------- |
 | RESET_n   | in        | std_logic                      |                                                                               |
@@ -70,6 +75,7 @@ v2.3: Output last used Address during non-bus MCycle seems more correct.
 | DIRSet    | in        | std_logic                      |                                                                               |
 | DIR       | in        | std_logic_vector(211 downto 0) | IFF2, IFF1, IM, IY, HL', DE', BC', IX, HL, DE, BC, PC, SP, R, I, F', A', F, A |
 ## Signals
+
 | Name        | Type                          | Description        |
 | ----------- | ----------------------------- | ------------------ |
 | IntCycle_n  | std_logic                     |                    |
@@ -84,7 +90,7 @@ v2.3: Output last used Address during non-bus MCycle seems more correct.
 | CEN_pol     | std_logic                     |                    |
 | CEN         | std_logic                     |                    |
 ## Processes
-- unnamed: _( CLK )_
-
+- unnamed: ( CLK )
 ## Instantiations
+
 - u0: T80

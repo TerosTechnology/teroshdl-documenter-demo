@@ -1,13 +1,17 @@
 # Entity: pinmux_fpv
+
 ## Diagram
+
 ![Diagram](pinmux_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Testbench module for pinmux. Intended to use with a formal tool.
  
 ## Ports
+
 | Port name          | Direction | Type                                       | Description             |
 | ------------------ | --------- | ------------------------------------------ | ----------------------- |
 | clk_i              | input     |                                            |                         |
@@ -23,4 +27,5 @@ Copyright lowRISC contributors.
 | periph_sel_i       | input     | [$clog2(pinmux_reg_pkg::NMioPeriphIn)-1:0] | symbolic inputs for FPV |
 | mio_sel_i          | input     | [$clog2(pinmux_reg_pkg::NMioPads)-1:0]     |                         |
 ## Instantiations
+
 - dut: pinmux

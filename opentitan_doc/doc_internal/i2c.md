@@ -1,17 +1,22 @@
 # Entity: i2c
+
 ## Diagram
+
 ![Diagram](i2c.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: I2C top level wrapper file
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name               | Direction | Type            | Description   |
 | ----------------------- | --------- | --------------- | ------------- |
 | clk_i                   | input     |                 |               |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | intr_ack_stop_o         | output    |                 |               |
 | intr_host_timeout_o     | output    |                 |               |
 ## Signals
+
 | Name       | Type                  | Description |
 | ---------- | --------------------- | ----------- |
 | reg2hw     | i2c_reg2hw_t          |             |
@@ -52,5 +58,6 @@ Copyright lowRISC contributors.
 | scl_int    | logic                 |             |
 | sda_int    | logic                 |             |
 ## Instantiations
+
 - u_reg: i2c_reg_top
 - i2c_core: i2c_core

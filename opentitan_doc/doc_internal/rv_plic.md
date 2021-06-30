@@ -1,7 +1,10 @@
 # Entity: rv_plic
+
 ## Diagram
+
 ![Diagram](rv_plic.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -15,10 +18,13 @@ Copyright lowRISC contributors.
    MAX_PRIO: Maximum value of interrupt priority
  
 ## Generics
-| Generic name | Type | Value          | Description        |
-| ------------ | ---- | -------------- | ------------------ |
-| SRCW         | int  | $clog2(NumSrc) | derived parameter  |
+
+| Generic name | Type                  | Value          | Description        |
+| ------------ | --------------------- | -------------- | ------------------ |
+| NumAlerts    | logic [NumAlerts-1:0] | undefined      |                    |
+| SRCW         | int                   | $clog2(NumSrc) | derived parameter  |
 ## Ports
+
 | Port name  | Direction | Type            | Description                       |
 | ---------- | --------- | --------------- | --------------------------------- |
 | clk_i      | input     |                 |                                   |
@@ -26,10 +32,13 @@ Copyright lowRISC contributors.
 | tl_i       | input     |                 | Bus Interface (device)            |
 | tl_o       | output    |                 |                                   |
 | intr_src_i | input     | [NumSrc-1:0]    | Interrupt Sources                 |
+| alert_rx_i | input     | [NumAlerts-1:0] | Alerts                            |
+| alert_tx_o | output    | [NumAlerts-1:0] |                                   |
 | irq_o      | output    | [NumTarget-1:0] | Interrupt notification to targets |
 | irq_id_o   | output    | [SRCW-1:0]      |                                   |
 | msip_o     | output    | [NumTarget-1:0] |                                   |
 ## Signals
+
 | Name        | Type                  | Description                            |
 | ----------- | --------------------- | -------------------------------------- |
 | reg2hw      | rv_plic_reg2hw_t      |                                        |
@@ -46,18 +55,20 @@ Copyright lowRISC contributors.
 | cc_id       | logic [SRCW-1:0]      | Write ID                               |
 | prio        | logic [PRIOW-1:0]     |                                        |
 | threshold   | logic [PRIOW-1:0]     |                                        |
+| alert_test  | logic [NumAlerts-1:0] |                                        |
+| alerts      | logic [NumAlerts-1:0] |                                        |
 ## Constants
+
 | Name     | Type | Value              | Description        |
 | -------- | ---- | ------------------ | ------------------ |
 | SRCW     | int  | $clog2(NumSrc)     | derived parameter  |
 | MAX_PRIO | int  | 7                  |                    |
 | PRIOW    | int  | $clog2(MAX_PRIO+1) |                    |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - u_gateway: rv_plic_gateway
 - u_reg: rv_plic_reg_top
 **Description**

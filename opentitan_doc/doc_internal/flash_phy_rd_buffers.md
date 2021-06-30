@@ -1,7 +1,10 @@
 # Entity: flash_phy_rd_buffers
+
 ## Diagram
+
 ![Diagram](flash_phy_rd_buffers.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -17,6 +20,7 @@ Copyright lowRISC contributors.
  Basically...this is a tag ram + data ram combined into one
  
 ## Ports
+
 | Port name  | Direction | Type                 | Description |
 | ---------- | --------- | -------------------- | ----------- |
 | clk_i      | input     |                      |             |
@@ -31,5 +35,4 @@ Copyright lowRISC contributors.
 | data_i     | input     | [DataWidth-1:0]      |             |
 | out_o      | output    | rd_buf_t             |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

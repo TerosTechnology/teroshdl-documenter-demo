@@ -1,7 +1,10 @@
 # Entity: sbi_fifo
+
 ## Diagram
+
 ![Diagram](sbi_fifo.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name    | Type                   | Value | Description |
 | --------------- | ---------------------- | ----- | ----------- |
 | GC_DATA_WIDTH_1 | integer range 1 to 128 | 8     |             |
@@ -18,12 +22,14 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | GC_DATA_WIDTH_2 | integer range 1 to 128 | 8     |             |
 | GC_ADDR_WIDTH_2 | integer range 1 to 128 | 8     |             |
 ## Ports
+
 | Port name | Direction | Type                                                                                                             | Description |
 | --------- | --------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
 | clk       | in        | std_logic                                                                                                        |             |
 | sbi_if_1  | inout     | t_sbi_if(addr(GC_ADDR_WIDTH_1-1 downto 0), wdata(GC_DATA_WIDTH_1-1 downto 0), rdata(GC_DATA_WIDTH_1-1 downto 0)) |             |
 | sbi_if_2  | inout     | t_sbi_if(addr(GC_ADDR_WIDTH_2-1 downto 0), wdata(GC_DATA_WIDTH_2-1 downto 0), rdata(GC_DATA_WIDTH_2-1 downto 0)) |             |
 ## Signals
+
 | Name          | Type      | Description |
 | ------------- | --------- | ----------- |
 | fifo_ready_1  | std_logic |             |
@@ -33,6 +39,7 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | read_ready_1  | std_logic |             |
 | read_ready_2  | std_logic |             |
 ## Constants
+
 | Name                  | Type    | Value       | Description    |
 | --------------------- | ------- | ----------- | -------------- |
 | C_SCOPE               | string  |  "SBI_FIFO" |                |
@@ -47,31 +54,21 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | C_ADDR_FIFO_FLUSH     | integer |  4          |                |
 | C_ADDR_FIFO_MAX_COUNT | integer |  5          |                |
 ## Processes
-- p_init: _(  )_
-
-- p_fifo_ready: _( clk )_
-
-- p_read_reg_sbi_1: _( sbi_if_1.cs, sbi_if_1.rena, sbi_if_1.addr, fifo_ready_1 )_
-Read registers for SBI IF 1
-
+- p_init: (  )
+- p_fifo_ready: ( clk )
+- p_read_reg_sbi_1: ( sbi_if_1.cs, sbi_if_1.rena, sbi_if_1.addr, fifo_ready_1 )
 **Description**
 Read registers for SBI IF 1
 
-- p_write_reg_sbi_1: _( clk )_
-Write registers for SBI IF 1
-
+- p_write_reg_sbi_1: ( clk )
 **Description**
 Write registers for SBI IF 1
 
-- p_read_reg_sbi_2: _( sbi_if_2.cs, sbi_if_2.rena, sbi_if_2.addr, fifo_ready_2 )_
-Read registers for SBI IF 2
-
+- p_read_reg_sbi_2: ( sbi_if_2.cs, sbi_if_2.rena, sbi_if_2.addr, fifo_ready_2 )
 **Description**
 Read registers for SBI IF 2
 
-- p_write_reg_sbi_2: _( clk )_
-Write registers for SBI IF 2
-
+- p_write_reg_sbi_2: ( clk )
 **Description**
 Write registers for SBI IF 2
 

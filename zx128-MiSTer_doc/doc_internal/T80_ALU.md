@@ -1,7 +1,10 @@
 # Entity: T80_ALU
+
 ## Diagram
+
 ![Diagram](T80_ALU.svg "Diagram")
 ## Description
+
 ****
 T80(c) core. Attempt to finish all undocumented features and provide
              accurate timings.
@@ -55,6 +58,7 @@ File history :
      0242 : Cleanup
      0247 : Cleanup
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | Mode         | integer | 0     |             |
@@ -67,6 +71,7 @@ File history :
 | Flag_Z       | integer | 6     |             |
 | Flag_S       | integer | 7     |             |
 ## Ports
+
 | Port name | Direction | Type                          | Description |
 | --------- | --------- | ----------------------------- | ----------- |
 | Arith16   | in        | std_logic                     |             |
@@ -82,6 +87,7 @@ File history :
 | Q         | out       | std_logic_vector(7 downto 0)  |             |
 | F_Out     | out       | std_logic_vector(7 downto 0)  |             |
 ## Signals
+
 | Name        | Type                         | Description                          |
 | ----------- | ---------------------------- | ------------------------------------ |
 | UseCarry    | std_logic                    | AddSub variables (temporary signals) |
@@ -92,17 +98,10 @@ File history :
 | Q_v         | std_logic_vector(7 downto 0) |                                      |
 | BitMask     | std_logic_vector(7 downto 0) |                                      |
 ## Functions
-- AddSub <font id="function_arguments">(A        : std_logic_vector;					 B        : std_logic_vector;
-					 Sub      : std_logic;
-					 Carry_In : std_logic;
-			  signal Res      : out std_logic_vector;
-			  signal Carry    : out std_logic)</font> <font id="function_return">return ()</font>
+- AddSub <font id="function_arguments">(A        : std_logic_vector; B        : std_logic_vector; Sub      : std_logic; Carry_In : std_logic; signal Res      : out std_logic_vector; signal Carry    : out std_logic) </font> <font id="function_return">return ()</font>
 ## Processes
-- unnamed: _( Carry_v, Carry7_v, Q_v )_
-bug fix - parity flag is just parity for 8080, also overflow for Z80
-
+- unnamed: ( Carry_v, Carry7_v, Q_v )
 **Description**
 bug fix - parity flag is just parity for 8080, also overflow for Z80
 
-- unnamed: _( Arith16, ALU_OP, F_In, BusA, BusB, IR, Q_v, Carry_v, HalfCarry_v, OverFlow_v, BitMask, ISet, Z16, WZ, XY_State )_
-
+- unnamed: ( Arith16, ALU_OP, F_In, BusA, BusB, IR, Q_v, Carry_v, HalfCarry_v, OverFlow_v, BitMask, ISet, Z16, WZ, XY_State )

@@ -1,12 +1,16 @@
 # Entity: adder
+
 ## Diagram
+
 ![Diagram](adder.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Ports
+
 | Port name | Direction | Type                 | Description |
 | --------- | --------- | -------------------- | ----------- |
 | clk       | in        | std_logic            |             |
@@ -16,5 +20,4 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | sum       | out       | unsigned(8 downto 0) |             |
 | dv_out    | out       | std_logic            |             |
 ## Processes
-- main: _(  )_
-
+- main: (  )

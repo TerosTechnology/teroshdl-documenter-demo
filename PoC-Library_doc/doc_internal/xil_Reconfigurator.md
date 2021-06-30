@@ -1,7 +1,10 @@
 # Entity: xil_Reconfigurator
+
 ## Diagram
+
 ![Diagram](xil_Reconfigurator.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -31,12 +34,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                 | Value                                      | Description |
 | ------------ | -------------------- | ------------------------------------------ | ----------- |
 | DEBUG        | boolean              | FALSE                                      |             |
 | CLOCK_FREQ   | FREQ                 | 100 MHz                                    |             |
 | CONFIG_ROM   | T_XIL_DRP_CONFIG_ROM | (0 downto 0 => C_XIL_DRP_CONFIG_SET_EMPTY) |             |
 ## Ports
+
 | Port name    | Direction | Type                                                         | Description |
 | ------------ | --------- | ------------------------------------------------------------ | ----------- |
 | Clock        | in        | std_logic                                                    |             |
@@ -51,6 +56,7 @@ limitations under the License.
 | DRP_DataOut  | out       | T_XIL_DRP_DATA                                               |             |
 | DRP_Ack      | in        | std_logic                                                    |             |
 ## Signals
+
 | Name               | Type                                    | Description                      |
 | ------------------ | --------------------------------------- | -------------------------------- |
 | State              | T_STATE                                 | DualConfiguration - Statemachine |
@@ -64,31 +70,26 @@ limitations under the License.
 | ConfigIndex_en     | std_logic                               |                                  |
 | ConfigIndex_us     | unsigned(CONFIGINDEX_BITS - 1 downto 0) |                                  |
 ## Constants
+
 | Name             | Type     | Value                          | Description |
 | ---------------- | -------- | ------------------------------ | ----------- |
 | CONFIGINDEX_BITS | positive |  log2ceilnz(CONFIG_ROM'length) |             |
 ## Types
-| Name    | Type                                                                                      | Description |
-| ------- | ----------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 		ST_READ_BEGIN,	ST_READ_WAIT, 		ST_WRITE_BEGIN,	ST_WRITE_WAIT, 		ST_DONE 	) |             |
+
+| Name    | Type                                                                              | Description |
+| ------- | --------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_READ_BEGIN,	ST_READ_WAIT, ST_WRITE_BEGIN,	ST_WRITE_WAIT, ST_DONE )  |             |
 ## Processes
-- unnamed: _( Clock )_
-configuration index counter
-
+- unnamed: ( Clock )
 **Description**
 configuration index counter
 
-- unnamed: _( Clock )_
-data buffer for DRP configuration words
-
+- unnamed: ( Clock )
 **Description**
 data buffer for DRP configuration words
 
-- unnamed: _( Clock )_
-DRP read-modify-write statemachine
-
+- unnamed: ( Clock )
 **Description**
 DRP read-modify-write statemachine
 
-- unnamed: _( State, Reconfig, ROM_LastConfigWord, DRP_Ack )_
-
+- unnamed: ( State, Reconfig, ROM_LastConfigWord, DRP_Ack )

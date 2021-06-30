@@ -1,7 +1,10 @@
 # Entity: video
+
 ## Diagram
+
 ![Diagram](video.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clock     | input     | wire       |             |
@@ -16,6 +19,7 @@
 | d         | input     | wire[ 7:0] |             |
 | a         | output    | wire[12:0] |             |
 ## Signals
+
 | Name            | Type     | Description |
 | --------------- | -------- | ----------- |
 | hCount          | reg[8:0] |             |
@@ -40,19 +44,11 @@
 | b               | wire     |             |
 | i               | wire     |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )

@@ -1,7 +1,10 @@
 # Entity: stat_Average
+
 ## Diagram
+
 ![Diagram](stat_Average.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DATA_BITS    | positive | 8     |             |
 | COUNTER_BITS | positive | 16    |             |
 ## Ports
+
 | Port name | Direction | Type                                        | Description |
 | --------- | --------- | ------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                   |             |
@@ -40,6 +45,7 @@ limitations under the License.
 | Average   | out       | std_logic_vector(COUNTER_BITS - 1 downto 0) |             |
 | Valid     | out       | std_logic                                   |             |
 ## Signals
+
 | Name       | Type                                        | Description |
 | ---------- | ------------------------------------------- | ----------- |
 | DataIn_us  | unsigned(DataIn'range)                      |             |
@@ -52,16 +58,18 @@ limitations under the License.
 | Count_d    | T_COUNT_VECTOR(DELAY downto 0)              |             |
 | Sum_d      | T_SUM_VECTOR(DELAY downto 0)                |             |
 ## Constants
+
 | Name  | Type     | Value             | Description |
 | ----- | -------- | ----------------- | ----------- |
 | DELAY | positive |  COUNTER_BITS - 1 |             |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | T_SUM_VECTOR   |      |             |
 | T_COUNT_VECTOR |      |             |
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
 ## Instantiations
+
 - div: PoC.arith_div

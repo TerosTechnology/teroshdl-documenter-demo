@@ -1,17 +1,22 @@
 # Entity: pwm_cdc
+
 ## Diagram
+
 ![Diagram](pwm_cdc.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: CDC for PWM
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NOutputs     | int  | 6     |             |
 ## Ports
+
 | Port name      | Direction | Type           | Description |
 | -------------- | --------- | -------------- | ----------- |
 | clk_core_i     | input     |                |             |
@@ -21,6 +26,7 @@ Copyright lowRISC contributors.
 | clr_phase_cntr | output    |                |             |
 | clr_blink_cntr | output    | [NOutputs-1:0] |             |
 ## Signals
+
 | Name            | Type        | Description                                                                                                           |
 | --------------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
 | common_sync_in  | wire [31:0] |                                                                                                                       |
@@ -28,7 +34,7 @@ Copyright lowRISC contributors.
 | common_sync_q   | reg [31:0]  |                                                                                                                       |
 | unused_regen    | logic       | All fields in reg2hw are synced across the CDC except REGEN (the register write enable). Explicitly waive that here.  |
 ## Processes
-- unnamed: _( @(posedge clk_core_i or negedge rst_core_ni) )_
-
+- unnamed: ( @(posedge clk_core_i or negedge rst_core_ni) )
 ## Instantiations
+
 - u_common_sync1: prim_flop_2sync

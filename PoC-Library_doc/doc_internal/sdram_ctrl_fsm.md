@@ -1,7 +1,10 @@
 # Entity: sdram_ctrl_fsm
+
 ## Diagram
+
 ![Diagram](sdram_ctrl_fsm.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -74,6 +77,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                 |
 | ------------ | -------- | ----- | --------------------------- |
 | SDRAM_TYPE   | natural  |       | SDRAM type                  |
@@ -94,6 +98,7 @@ limitations under the License.
 | T_REFI       | integer  |       | in clock cycles             |
 | INIT_WAIT    | integer  |       |                             |
 ## Ports
+
 | Port name        | Direction | Type                                               | Description |
 | ---------------- | --------- | -------------------------------------------------- | ----------- |
 | clk              | in        | std_logic                                          |             |
@@ -114,6 +119,7 @@ limitations under the License.
 | rden_nxt         | out       | std_logic                                          |             |
 | wren_nxt         | out       | std_logic                                          |             |
 ## Signals
+
 | Name               | Type                                   | Description                                                                                                                                                                                         |
 | ------------------ | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fsm_cs             | FSM_TYPE                               |                                                                                                                                                                                                     |
@@ -150,6 +156,7 @@ limitations under the License.
 | save_cmd_addr      | std_logic                              |                                                                                                                                                                                                     |
 | same_bank_row      | std_logic                              |                                                                                                                                                                                                     |
 ## Constants
+
 | Name                   | Type                                | Value                                                                                                | Description                                                                    |
 | ---------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | BCC                    | natural                             |  burst_clock_cycles                                                                                  |                                                                                |
@@ -167,30 +174,25 @@ limitations under the License.
 | TIMER_TREFI_INIT       | signed(log2ceil(T_REFI-2) downto 0) |  to_signed(T_REFI-2, timer_tREFI'length)                                                             |                                                                                |
 | TIMER_TRAS_INIT        | signed(log2ceil(T_RAS-2) downto 0)  |  to_signed(T_RAS-1 -2, timer_tRAS'length)                                                            |                                                                                |
 ## Types
-| Name           | Type                                                                                                                                                                                                                                                                                                    | Description |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| FSM_TYPE       | (INIT1, INIT2, INIT3, INIT4, INIT5, INIT6, INIT7, INIT8,                     INIT9, INIT10, INIT11,                     DO_ACTIVATE,                     DO_READ1, DO_READ2,                     DO_WRITE1, DO_WRITE2,                     CHECKNXT,                     DO_PRECHARGE, DO_AUTO_REFRESH) | FSM         |
-| SD_A_SEL_TYPE  | (SD_A_SEL_EXT_MODE_REG,                          SD_A_SEL_MODE_REG,                          SD_A_SEL_ROW_ADDR,                          SD_A_SEL_COL_ADDR)                                                                                                                                             |             |
-| SD_BA_SEL_TYPE | (SD_BA_SEL_EXT_MODE_REG,                          SD_BA_SEL_MODE_REG,                          SD_BA_SEL_ADDR)                                                                                                                                                                                          |             |
+
+| Name           | Type                                                                                                                                                                             | Description |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| FSM_TYPE       | (INIT1, INIT2, INIT3, INIT4, INIT5, INIT6, INIT7, INIT8, INIT9, INIT10, INIT11, DO_ACTIVATE, DO_READ1, DO_READ2, DO_WRITE1, DO_WRITE2, CHECKNXT, DO_PRECHARGE, DO_AUTO_REFRESH)  | FSM         |
+| SD_A_SEL_TYPE  | (SD_A_SEL_EXT_MODE_REG, SD_A_SEL_MODE_REG, SD_A_SEL_ROW_ADDR, SD_A_SEL_COL_ADDR)                                                                                                 |             |
+| SD_BA_SEL_TYPE | (SD_BA_SEL_EXT_MODE_REG, SD_BA_SEL_MODE_REG, SD_BA_SEL_ADDR)                                                                                                                     |             |
 ## Functions
-- burst_clock_cycles <font id="function_arguments">()</font> <font id="function_return">return positive</font>
+- burst_clock_cycles <font id="function_arguments">()</font> <font id="function_return">return positive </font>
 ## Processes
-- unnamed: _( fsm_cs,
+- unnamed: ( fsm_cs,
            timer_tREFI_done, timer_cmd_done, timer_tRAS_done,
            downcnt_done,
            same_bank_row, last_write_r,
-           user_cmd_valid, user_write, user_wdata_valid )_
-FSM
-
+           user_cmd_valid, user_write, user_wdata_valid )
 **Description**
 FSM
 
-- unnamed: _( sd_a_sel, reset_dll, row_addr, col_addr, precharge_all )_
-
-- unnamed: _( clk )_
-SD_BA_SEL_ADDR
-Registers
-
+- unnamed: ( sd_a_sel, reset_dll, row_addr, col_addr, precharge_all )
+- unnamed: ( clk )
 **Description**
 SD_BA_SEL_ADDR
 Registers

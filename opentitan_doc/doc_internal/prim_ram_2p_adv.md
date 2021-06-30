@@ -1,7 +1,10 @@
 # Entity: prim_ram_2p_adv
+
 ## Diagram
+
 ![Diagram](prim_ram_2p_adv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -15,6 +18,7 @@ Copyright lowRISC contributors.
  mask cannot be used and has to be tied to {Width{1'b1}}.
  
 ## Generics
+
 | Generic name         | Type | Value                       | Description                                                                                                                                                                                                               |
 | -------------------- | ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Depth                | int  | 512                         |                                                                                                                                                                                                                           |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | HammingECC           | bit  | 0                           | This switch allows to switch to standard Hamming ECC instead of the HSIAO ECC. It is recommended to leave this parameter at its default setting (HSIAO), since this results in a more compact and faster implementation.  |
 | Aw                   | int  | prim_util_pkg::vbits(Depth) |                                                                                                                                                                                                                           |
 ## Ports
+
 | Port name  | Direction | Type         | Description                                    |
 | ---------- | --------- | ------------ | ---------------------------------------------- |
 | clk_i      | input     |              |                                                |
@@ -50,8 +55,10 @@ Copyright lowRISC contributors.
 | b_rerror_o | output    | [1:0]        | Bit1: Uncorrectable, Bit0: Correctable         |
 | cfg_i      | input     | ram_2p_cfg_t |                                                |
 ## Constants
+
 | Name | Type | Value                       | Description |
 | ---- | ---- | --------------------------- | ----------- |
 | Aw   | int  | prim_util_pkg::vbits(Depth) |             |
 ## Instantiations
+
 - i_prim_ram_2p_async_adv: prim_ram_2p_async_adv

@@ -1,7 +1,10 @@
 # Entity: neorv32_neoled
+
 ## Diagram
+
 ![Diagram](neorv32_neoled.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Smart LED (WS2811/WS2812) Interface (NEOLED) >>                                  #
 # ********************************************************************************************* #
@@ -53,6 +56,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name   | Direction | Type                           | Description            |
 | ----------- | --------- | ------------------------------ | ---------------------- |
 | clk_i       | in        | std_ulogic                     | global clock line      |
@@ -67,16 +71,20 @@
 | irq_o       | out       | std_ulogic                     | interrupt request      |
 | neoled_o    | out       | std_ulogic                     | serial async data line |
 ## Signals
-| Name      | Type                           | Description          |
-| --------- | ------------------------------ | -------------------- |
-| acc_en    | std_ulogic                     | module access enable |
-| addr      | std_ulogic_vector(31 downto 0) | access address       |
-| wren      | std_ulogic                     | word write enable    |
-| rden      | std_ulogic                     | read enable          |
-| ctrl      | ctrl_t                         |                      |
-| tx_buffer | tx_buffer_t                    |                      |
-| serial    | serial_t                       |                      |
+
+| Name       | Type                             | Description          |
+| ---------- | -------------------------------- | -------------------- |
+| acc_en     | std_ulogic                       | module access enable |
+| addr       | std_ulogic_vector(31 downto 0)   | access address       |
+| wren       | std_ulogic                       | word write enable    |
+| rden       | std_ulogic                       | read enable          |
+| ctrl       | ctrl_t                           |                      |
+| tx_buffer  | tx_buffer_t                      |                      |
+| fifo_clear | std_ulogic                       |                      |
+| fifo_wdata | std_ulogic_vector(31+1 downto 0) |                      |
+| serial     | serial_t                         |                      |
 ## Constants
+
 | Name                | Type    | Value                        | Description                                                     |
 | ------------------- | ------- | ---------------------------- | --------------------------------------------------------------- |
 | tx_buffer_entries_c | natural |  4                           | number of entries in TX buffer, has to be a power of two, min=0 |
@@ -110,47 +118,36 @@
 | ctrl_tx_status_c    | natural |  30                          | r/-: serial TX engine busy when set                             |
 | ctrl_busy_c         | natural |  31                          | r/-: busy / buffer status flag (configured via ctrl_bscon_c)    |
 ## Types
-| Name           | Type                                | Description                   |
-| -------------- | ----------------------------------- | ----------------------------- |
-| ctrl_t         |                                     | control register --           |
-| tx_fifo_t      |                                     | transmission buffer --        |
-| tx_buffer_t    |                                     |                               |
-| serial_state_t | (S_IDLE, S_INIT, S_GETBIT, S_PULSE) | serial transmission engine -- |
-| serial_t       |                                     |                               |
+
+| Name           | Type                                 | Description                   |
+| -------------- | ------------------------------------ | ----------------------------- |
+| ctrl_t         |                                      | control register --           |
+| tx_fifo_t      |                                      | transmission buffer --        |
+| tx_buffer_t    |                                      |                               |
+| serial_state_t | (S_IDLE, S_INIT, S_GETBIT, S_PULSE)  | serial transmission engine -- |
+| serial_t       |                                      |                               |
 ## Processes
-- rw_access: _( clk_i )_
-Read/Write Access ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rw_access: ( clk_i )
 **Description**
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- instr_prefetch_buffer: _( clk_i )_
-TX Buffer (FIFO) -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
-**Description**
-TX Buffer (FIFO) -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
-- irq_generator: _( clk_i )_
-Buffer Status Flag and IRQ Generator ---------------------------------------------------
--------------------------------------------------------------------------------------------
-ctrl.bscon = 0: clear buffer/busy status flag and send IRQ if -> there is at least one free entry in buffer
-ctrl.bscon = 1: clear buffer/busy status flag and send IRQ if -> the complete buffer is empty
-
+- irq_generator: ( clk_i )
 **Description**
 Buffer Status Flag and IRQ Generator ---------------------------------------------------
 -------------------------------------------------------------------------------------------
 ctrl.bscon = 0: clear buffer/busy status flag and send IRQ if -> there is at least one free entry in buffer
 ctrl.bscon = 1: clear buffer/busy status flag and send IRQ if -> the complete buffer is empty
 
-- serial_engine: _( clk_i )_
+- serial_engine: ( clk_i )
+**Description**
 Serial TX Engine -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
+## Instantiations
+
+- tx_data_fifo: neorv32_fifo
 **Description**
-Serial TX Engine -----------------------------------------------------------------------
+TX Buffer (FIFO) -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 

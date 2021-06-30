@@ -1,13 +1,17 @@
 # Entity: uart_tx
+
 ## Diagram
+
 ![Diagram](uart_tx.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: UART Transmit Module
  
 ## Ports
+
 | Port name     | Direction | Type  | Description |
 | ------------- | --------- | ----- | ----------- |
 | clk_i         | input     |       |             |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | idle          | output    |       |             |
 | tx            | output    |       |             |
 ## Signals
+
 | Name        | Type           | Description |
 | ----------- | -------------- | ----------- |
 | baud_div_q  | logic    [3:0] |             |
@@ -32,9 +37,6 @@ Copyright lowRISC contributors.
 | tx_q        | logic          |             |
 | tx_d        | logic          |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )

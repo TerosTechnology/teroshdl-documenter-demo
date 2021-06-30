@@ -1,7 +1,10 @@
 # Entity: io_TimingCounter
+
 ## Diagram
+
 ![Diagram](io_TimingCounter.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,10 +30,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description  |
 | ------------ | -------- | ----- | ------------ |
 | TIMING_TABLE | T_NATVEC |       | timing table |
 ## Ports
+
 | Port name | Direction | Type                                         | Description                                          |
 | --------- | --------- | -------------------------------------------- | ---------------------------------------------------- |
 | Clock     | in        | std_logic                                    | clock                                                |
@@ -39,17 +44,18 @@ limitations under the License.
 | Slot      | in        | natural range 0 to (TIMING_TABLE'length - 1) |                                                      |
 | Timeout   | out       | std_logic                                    | timing reached                                       |
 ## Signals
+
 | Name      | Type                          | Description |
 | --------- | ----------------------------- | ----------- |
 | Counter_s | signed(COUNTER_BITS downto 0) |             |
 ## Constants
+
 | Name          | Type     | Value                       | Description |
 | ------------- | -------- | --------------------------- | ----------- |
 | TIMING_TABLE2 | T_INTVEC |  transform(TIMING_TABLE)    |             |
 | TIMING_MAX    | natural  |  imax(TIMING_TABLE2)        |             |
 | COUNTER_BITS  | natural  |  log2ceilnz(TIMING_MAX + 1) |             |
 ## Functions
-- transform <font id="function_arguments">(vec : T_NATVEC)</font> <font id="function_return">return T_INTVEC</font>
+- transform <font id="function_arguments">(vec : T_NATVEC) </font> <font id="function_return">return T_INTVEC </font>
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )

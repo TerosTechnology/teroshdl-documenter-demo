@@ -1,7 +1,10 @@
 # Entity: neorv32_pwm
+
 ## Diagram
+
 ![Diagram](neorv32_pwm.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Pulse Width Modulation Controller (PWM) >>                                       #
 # ********************************************************************************************* #
@@ -39,10 +42,12 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name | Type    | Value | Description                    |
 | ------------ | ------- | ----- | ------------------------------ |
 | NUM_CHANNELS | natural | 4     | number of PWM channels (0..60) |
 ## Ports
+
 | Port name   | Direction | Type                                       | Description            |
 | ----------- | --------- | ------------------------------------------ | ---------------------- |
 | clk_i       | in        | std_ulogic                                 | global clock line      |
@@ -56,6 +61,7 @@
 | clkgen_i    | in        | std_ulogic_vector(07 downto 0)             |                        |
 | pwm_o       | out       | std_ulogic_vector(NUM_CHANNELS-1 downto 0) | pwm output channels -- |
 ## Signals
+
 | Name      | Type                           | Description                  |
 | --------- | ------------------------------ | ---------------------------- |
 | acc_en    | std_ulogic                     | module access enable         |
@@ -69,6 +75,7 @@
 | prsc_tick | std_ulogic                     | prescaler clock generator -- |
 | pwm_cnt   | std_ulogic_vector(7 downto 0)  | pwm core counter --          |
 ## Constants
+
 | Name             | Type    | Value                      | Description                 |
 | ---------------- | ------- | -------------------------- | --------------------------- |
 | hi_abb_c         | natural |  index_size_f(io_size_c)-1 | high address boundary bit   |
@@ -78,29 +85,22 @@
 | ctrl_prsc1_bit_c | natural |  2                         | r/w: prescaler select bit 1 |
 | ctrl_prsc2_bit_c | natural |  3                         | r/w: prescaler select bit 2 |
 ## Types
+
 | Name        | Type | Description        |
 | ----------- | ---- | ------------------ |
 | pwm_ch_t    |      | accessible regs -- |
 | pwm_ch_rd_t |      |                    |
 ## Processes
-- wr_access: _( clk_i )_
-Write access ---------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- wr_access: ( clk_i )
 **Description**
 Write access ---------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- pwm_dc_rd_gen: _( pwm_ch )_
-duty cycle read-back --
-
+- pwm_dc_rd_gen: ( pwm_ch )
 **Description**
 duty cycle read-back --
 
-- pwm_core: _( clk_i )_
-PWM Core -------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- pwm_core: ( clk_i )
 **Description**
 PWM Core -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

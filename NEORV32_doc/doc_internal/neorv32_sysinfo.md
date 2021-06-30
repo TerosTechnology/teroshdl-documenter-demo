@@ -1,7 +1,10 @@
 # Entity: neorv32_sysinfo
+
 ## Diagram
+
 ![Diagram](neorv32_sysinfo.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - System/Processor Configuration Information Memory (SYSINFO) >>                   #
 # ********************************************************************************************* #
@@ -39,6 +42,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name         | Type                           | Value       | Description                                                                           |
 | -------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY      | natural                        | 0           | clock frequency of clk_i in Hz                                                        |
@@ -64,9 +68,10 @@
 | IO_WDT_EN            | boolean                        | true        | implement watch dog timer (WDT)?                                                      |
 | IO_TRNG_EN           | boolean                        | true        | implement true random number generator (TRNG)?                                        |
 | IO_CFS_EN            | boolean                        | true        | implement custom functions subsystem (CFS)?                                           |
-| IO_NCO_EN            | boolean                        | true        | implement numerically-controlled oscillator (NCO)?                                    |
+| IO_SLINK_EN          | boolean                        | true        | implement stream link interface?                                                      |
 | IO_NEOLED_EN         | boolean                        | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
+
 | Port name | Direction | Type                           | Description          |
 | --------- | --------- | ------------------------------ | -------------------- |
 | clk_i     | in        | std_ulogic                     | global clock line    |
@@ -75,6 +80,7 @@
 | data_o    | out       | std_ulogic_vector(31 downto 0) | data out             |
 | ack_o     | out       | std_ulogic                     | transfer acknowledge |
 ## Signals
+
 | Name        | Type                           | Description          |
 | ----------- | ------------------------------ | -------------------- |
 | acc_en      | std_ulogic                     | module access enable |
@@ -83,19 +89,18 @@
 | info_addr   | std_ulogic_vector(02 downto 0) |                      |
 | sysinfo_mem | info_mem_t                     |                      |
 ## Constants
+
 | Name     | Type    | Value                         | Description               |
 | -------- | ------- | ----------------------------- | ------------------------- |
 | hi_abb_c | natural |  index_size_f(io_size_c)-1    | high address boundary bit |
 | lo_abb_c | natural |  index_size_f(sysinfo_size_c) | low address boundary bit  |
 ## Types
+
 | Name       | Type | Description               |
 | ---------- | ---- | ------------------------- |
 | info_mem_t |      | system information ROM -- |
 ## Processes
-- read_access: _( clk_i )_
-Read Access ----------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- read_access: ( clk_i )
 **Description**
 Read Access ----------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

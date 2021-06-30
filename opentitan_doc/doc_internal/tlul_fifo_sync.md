@@ -1,7 +1,10 @@
 # Entity: tlul_fifo_sync
+
 ## Diagram
+
 ![Diagram](tlul_fifo_sync.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  and one for the response side.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | ReqPass      | bit          | 1'b1  |             |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | SpareReqW    | int unsigned | 1     |             |
 | SpareRspW    | int unsigned | 1     |             |
 ## Ports
+
 | Port name   | Direction | Type            | Description |
 | ----------- | --------- | --------------- | ----------- |
 | clk_i       | input     |                 |             |
@@ -32,10 +37,12 @@ Copyright lowRISC contributors.
 | spare_rsp_i | input     | [SpareRspW-1:0] |             |
 | spare_rsp_o | output    | [SpareRspW-1:0] |             |
 ## Constants
+
 | Name          | Type         | Value                                    | Description                                              |
 | ------------- | ------------ | ---------------------------------------- | -------------------------------------------------------- |
 | REQFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_h2d_t) -2 + SpareReqW | Put everything on the request side into one FIFO         |
 | RSPFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_d2h_t) -2 + SpareRspW | Put everything on the response side into the other FIFO  |
 ## Instantiations
+
 - reqfifo: prim_fifo_sync
 - rspfifo: prim_fifo_sync

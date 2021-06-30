@@ -1,7 +1,10 @@
 # Entity: aes_sel_buf_chk
+
 ## Diagram
+
 ![Diagram](aes_sel_buf_chk.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -12,11 +15,13 @@ Copyright lowRISC contributors.
  Whenever the selector signal takes on an invalid value, an error is signaled.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Num          | int  | 2     |             |
 | Width        | int  | 1     |             |
 ## Ports
+
 | Port name | Direction | Type        | Description               |
 | --------- | --------- | ----------- | ------------------------- |
 | clk_i     | input     |             | Used for assertions only. |
@@ -25,6 +30,7 @@ Copyright lowRISC contributors.
 | sel_o     | output    | [Width-1:0] |                           |
 | err_o     | output    |             |                           |
 ## Signals
+
 | Name       | Type  | Description             |
 | ---------- | ----- | ----------------------- |
 | unused_clk | logic | Tie off unused inputs.  |

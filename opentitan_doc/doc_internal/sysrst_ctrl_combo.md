@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_combo
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_combo.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: sysrst_ctrl combo Module
  
 ## Ports
+
 | Port name               | Direction | Type                                           | Description |
 | ----------------------- | --------- | ---------------------------------------------- | ----------- |
 | clk_aon_i               | input     |                                                |             |
@@ -31,6 +35,7 @@ Copyright lowRISC contributors.
 | gsc_rst_o               | output    |                                                |             |
 | ec_rst_l_hw             | output    |                                                |             |
 ## Signals
+
 | Name                   | Type                 | Description |
 | ---------------------- | -------------------- | ----------- |
 | cfg_key0_in_sel_com    | logic [NumCombo-1:0] |             |
@@ -67,9 +72,9 @@ Copyright lowRISC contributors.
 | combo2_h2l_intr        | logic                |             |
 | combo3_h2l_intr        | logic                |             |
 ## Processes
-- i_cfg_debounce_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- i_cfg_debounce_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_ec_rst_l_int_i: prim_flop_2sync
 - i_cfg_debounce_timer: prim_fifo_async
 - i_pwrb_int_i: prim_flop_2sync

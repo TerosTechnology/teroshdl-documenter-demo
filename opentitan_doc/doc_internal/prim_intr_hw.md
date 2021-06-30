@@ -1,7 +1,10 @@
 # Entity: prim_intr_hw
+
 ## Diagram
+
 ![Diagram](prim_intr_hw.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,11 +14,13 @@ Copyright lowRISC contributors.
  "bussified" with all fields of the interrupt vector.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | Width        | int unsigned | 1     |             |
 | FlopOutput   | bit          | 1     |             |
 ## Ports
+
 | Port name              | Direction | Type        | Description        |
 | ---------------------- | --------- | ----------- | ------------------ |
 | clk_i                  | input     |             | event              |
@@ -29,6 +34,7 @@ Copyright lowRISC contributors.
 | hw2reg_intr_state_d_o  | output    | [Width-1:0] |                    |
 | intr_o                 | output    | [Width-1:0] | outgoing interrupt |
 ## Signals
+
 | Name      | Type               | Description |
 | --------- | ------------------ | ----------- |
 | new_event | logic  [Width-1:0] |             |

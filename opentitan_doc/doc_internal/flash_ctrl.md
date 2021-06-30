@@ -1,13 +1,17 @@
 # Entity: flash_ctrl
+
 ## Diagram
+
 ![Diagram](flash_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Flash Controller Module
  
 ## Generics
+
 | Generic name    | Type                  | Value                  | Description |
 | --------------- | --------------------- | ---------------------- | ----------- |
 | NumAlerts       | logic [NumAlerts-1:0] | undefined              |             |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | RndCnstLfsrSeed | lfsr_seed_t           | RndCnstLfsrSeedDefault |             |
 | RndCnstLfsrPerm | lfsr_perm_t           | RndCnstLfsrPermDefault |             |
 ## Ports
+
 | Port name                  | Direction | Type                                | Description                               |
 | -------------------------- | --------- | ----------------------------------- | ----------------------------------------- |
 | clk_i                      | input     |                                     |                                           |
@@ -55,6 +60,7 @@ Copyright lowRISC contributors.
 | alert_rx_i                 | input     | [flash_ctrl_reg_pkg::NumAlerts-1:0] | Alerts                                    |
 | alert_tx_o                 | output    | [flash_ctrl_reg_pkg::NumAlerts-1:0] |                                           |
 ## Signals
+
 | Name                     | Type                                                            | Description                                                                             |
 | ------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | reg2hw                   | flash_ctrl_core_reg2hw_t                                        |                                                                                         |
@@ -186,24 +192,21 @@ Copyright lowRISC contributors.
 | unused_higher_addr_bits  | logic [top_pkg::TL_AW-1-BusAddrW:0]                             |                                                                                         |
 | unused_scratch           | logic [top_pkg::TL_AW-1:0]                                      |                                                                                         |
 ## Constants
+
 | Name     | Type                  | Value                                 | Description |
 | -------- | --------------------- | ------------------------------------- | ----------- |
 | InfoBits | int                   | $bits(info_page_cfg_t) * InfosPerBank |             |
 | IsFatal  | logic [NumAlerts-1:0] | {1'b1, 1'b0, 1'b0, 1'b0}              |             |
 ## Processes
-- unnamed: _(  )_
-Final muxing to flash macro module
-
+- unnamed: (  )
 **Description**
 Final muxing to flash macro module
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg_core: flash_ctrl_core_reg_top
 - u_lc_creator_seed_sw_rw_en_sync: prim_lc_sync
 **Description**

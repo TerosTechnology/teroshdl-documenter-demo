@@ -1,7 +1,10 @@
 # Entity: neorv32_ProcessorTop_Test
+
 ## Diagram
+
 ![Diagram](neorv32_ProcessorTop_Test.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Simple Test Setup >>                                                             #
 # ********************************************************************************************* #
@@ -41,6 +44,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name   | Direction | Type                          | Description                     |
 | ----------- | --------- | ----------------------------- | ------------------------------- |
 | clk_i       | in        | std_ulogic                    | global clock, rising edge       |
@@ -49,8 +53,10 @@
 | uart0_txd_o | out       | std_ulogic                    | UART0 send data                 |
 | uart0_rxd_i | in        | std_ulogic                    | UART0 receive data              |
 ## Signals
+
 | Name     | Type                           | Description |
 | -------- | ------------------------------ | ----------- |
 | gpio_out | std_ulogic_vector(31 downto 0) |             |
 ## Instantiations
+
 - neorv32_top_inst: neorv32_top

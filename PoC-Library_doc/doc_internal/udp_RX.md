@@ -1,7 +1,10 @@
 # Entity: udp_RX
+
 ## Diagram
+
 ![Diagram](udp_RX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DEBUG        | boolean  | FALSE |             |
 | IP_VERSION   | positive | 6     |             |
 ## Ports
+
 | Port name                    | Direction | Type      | Description |
 | ---------------------------- | --------- | --------- | ----------- |
 | Clock                        | in        | std_logic |             |
@@ -71,6 +76,7 @@ limitations under the License.
 | Out_Meta_SrcPort             | out       | T_SLV_16  |             |
 | Out_Meta_DestPort            | out       | T_SLV_16  |             |
 ## Signals
+
 | Name                | Type      | Description       |
 | ------------------- | --------- | ----------------- |
 | State               | T_STATE   |                   |
@@ -93,13 +99,11 @@ limitations under the License.
 | DestinationPort_d   | T_SLV_16  |                   |
 | Length_d            | T_SLV_16  |                   |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                         | Description |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_RECEIVE_SOURCE_PORT_1, 			ST_RECEIVE_DEST_PORT_0,		ST_RECEIVE_DEST_PORT_1, 			ST_RECEIVE_LENGTH_0,			ST_RECEIVE_LENGTH_1, 			ST_RECEIVE_CHECKSUM_0,		ST_RECEIVE_CHECKSUM_1, 			ST_RECEIVE_DATA_1,				ST_RECEIVE_DATA_N, 		ST_DISCARD_FRAME, 		ST_ERROR 	) |             |
+
+| Name    | Type                                                                                                                                                                                                                                                    | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_RECEIVE_SOURCE_PORT_1, ST_RECEIVE_DEST_PORT_0,		ST_RECEIVE_DEST_PORT_1, ST_RECEIVE_LENGTH_0,			ST_RECEIVE_LENGTH_1, ST_RECEIVE_CHECKSUM_0,		ST_RECEIVE_CHECKSUM_1, ST_RECEIVE_DATA_1,				ST_RECEIVE_DATA_N, ST_DISCARD_FRAME, ST_ERROR )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack )
+- unnamed: ( Clock )

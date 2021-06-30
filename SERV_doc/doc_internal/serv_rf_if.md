@@ -1,11 +1,15 @@
 # Entity: serv_rf_if
+
 ## Diagram
+
 ![Diagram](serv_rf_if.svg "Diagram")
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | WITH_CSR     |      | 1     |             |
 ## Ports
+
 | Port name   | Direction | Type                | Description |
 | ----------- | --------- | ------------------- | ----------- |
 | i_cnt_en    | input     | wire                |             |
@@ -43,6 +47,7 @@
 | i_rs2_raddr | input     | wire [4:0]          |             |
 | o_rs2       | output    | wire                |             |
 ## Signals
+
 | Name   | Type | Description |
 | ------ | ---- | ----------- |
 | rd_wen | wire |             |

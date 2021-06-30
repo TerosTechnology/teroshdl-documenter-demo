@@ -1,13 +1,17 @@
 # Entity: spi_host_shift_register
+
 ## Diagram
+
 ![Diagram](spi_host_shift_register.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Shift Register for Serial Peripheral Interface (SPI) Host IP.
  
 ## Ports
+
 | Port name   | Direction | Type  | Description |
 | ----------- | --------- | ----- | ----------- |
 | clk_i       | input     |       |             |
@@ -33,6 +37,7 @@ Copyright lowRISC contributors.
 | sd_o        | output    | [3:0] |             |
 | sw_rst_i    | input     |       |             |
 ## Signals
+
 | Name           | Type               | Description                                                                                                   |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
 | sr_q           | logic        [7:0] |                                                                                                               |
@@ -46,5 +51,4 @@ Copyright lowRISC contributors.
 | rx_buf_valid_q | logic              |                                                                                                               |
 | rx_buf_valid_d | logic              |                                                                                                               |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

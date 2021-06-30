@@ -1,7 +1,10 @@
 # Entity: ddrio_inout
+
 ## Diagram
+
 ![Diagram](ddrio_inout.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -25,7 +28,7 @@ the falling edge directly before this rising edge. Thus sampling starts with
 the falling edge of the clock as depicted in the following waveform.
 .. wavedrom::
    
-![alt text](wavedrom_S9sY0.svg "title") 
+![alt text](wavedrom_WZ5n0.svg "title") 
 
 ``Pad`` must be connected to a PAD because FPGAs only have these registers in
 IOBs.
@@ -42,10 +45,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | BITS         | positive |       |             |
 ## Ports
+
 | Port name      | Direction | Type                                | Description |
 | -------------- | --------- | ----------------------------------- | ----------- |
 | ClockOut       | in        | std_logic                           |             |

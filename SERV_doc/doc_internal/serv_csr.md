@@ -1,7 +1,10 @@
 # Entity: serv_csr
+
 ## Diagram
+
 ![Diagram](serv_csr.svg "Diagram")
 ## Ports
+
 | Port name    | Direction | Type       | Description |
 | ------------ | --------- | ---------- | ----------- |
 | i_clk        | input     | wire       |             |
@@ -30,6 +33,7 @@
 | i_rs1        | input     | wire       |             |
 | o_q          | output    | wire       |             |
 ## Signals
+
 | Name         | Type      | Description |
 | ------------ | --------- | ----------- |
 | mstatus_mie  | reg       |             |
@@ -44,6 +48,7 @@
 | d            | wire      |             |
 | timer_irq    | wire      |             |
 ## Constants
+
 | Name           | Type  | Value | Description |
 | -------------- | ----- | ----- | ----------- |
 | CSR_SOURCE_CSR | [1:0] | 2'b00 |             |
@@ -51,5 +56,4 @@
 | CSR_SOURCE_SET | [1:0] | 2'b10 |             |
 | CSR_SOURCE_CLR | [1:0] | 2'b11 |             |
 ## Processes
-- unnamed: _( @(posedge i_clk) )_
-
+- unnamed: ( @(posedge i_clk) )

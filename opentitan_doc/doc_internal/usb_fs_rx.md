@@ -1,7 +1,10 @@
 # Entity: usb_fs_rx
+
 ## Diagram
+
 ![Diagram](usb_fs_rx.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright ETH Zurich.
  Copyright Luke Valenty (TinyFPGA project, https://github.com/tinyfpga/TinyFPGA-Bootloader).
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name             | Direction | Type   | Description                                                                |
 | --------------------- | --------- | ------ | -------------------------------------------------------------------------- |
 | clk_i                 | input     |        | A 48MHz clock is required to recover the clock from the incoming data.     |
@@ -35,6 +39,7 @@ Copyright lowRISC contributors.
 | pid_error_o           | output    |        |                                                                            |
 | bitstuff_error_o      | output    |        |                                                                            |
 ## Signals
+
 | Name                | Type         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | bitstuff_history_q  | logic [6:0]  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -92,6 +97,7 @@ Copyright lowRISC contributors.
 | rx_data_buffer_d    | logic [8:0]  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | rx_data_buffer_full | logic        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 ## Constants
+
 | Name | Type        | Value  | Description                                |
 | ---- | ----------- | ------ | ------------------------------------------ |
 | DT   | logic [2:0] | 3'b100 | transition state                           |
@@ -99,45 +105,25 @@ Copyright lowRISC contributors.
 | DK   | logic [2:0] | 3'b001 | K - inverse of J                           |
 | SE0  | logic [2:0] | 3'b000 | single-ended 0 - end of packet or detached |
 ## Processes
-- proc_dpair_mute: _(  )_
-
-- proc_line_state_q: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_line_state_d: _(  )_
-
-- proc_diff_state_d: _(  )_
-
-- proc_bit_phase_q: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_packet_valid_d: _(  )_
-
-- proc_reg_pkt_line: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- proc_bitstuff_history_d: _(  )_
-
-- proc_bitstuff_history_q: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_bistuff_error_d: _(  )_
-remember the bitstuff errors
-
+- proc_dpair_mute: (  )
+- proc_line_state_q: ( @(posedge clk_i or negedge rst_ni) )
+- proc_line_state_d: (  )
+- proc_diff_state_d: (  )
+- proc_bit_phase_q: ( @(posedge clk_i or negedge rst_ni) )
+- proc_packet_valid_d: (  )
+- proc_reg_pkt_line: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- proc_bitstuff_history_d: (  )
+- proc_bitstuff_history_q: ( @(posedge clk_i or negedge rst_ni) )
+- proc_bistuff_error_d: (  )
 **Description**
 remember the bitstuff errors
 
-- proc_bitstuff_error_q: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_full_pid_d: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- proc_gp_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- proc_bitstuff_error_q: ( @(posedge clk_i or negedge rst_ni) )
+- proc_full_pid_d: (  )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
+- proc_gp_regs: ( @(posedge clk_i or negedge rst_ni) )

@@ -1,16 +1,21 @@
 # Entity: pinmux_wkup
+
 ## Diagram
+
 ![Diagram](pinmux_wkup.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Cycles       | int  | 4     |             |
 ## Ports
+
 | Port name          | Direction | Type               | Description                                                                                                                  |
 | ------------------ | --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | clk_i              | input     |                    |                                                                                                                              |
@@ -27,6 +32,7 @@ Copyright lowRISC contributors.
 | wkup_cause_data_o  | output    |                    |                                                                                                                              |
 | aon_wkup_req_o     | output    |                    | This signal is running on the AON clockand is held high as long as the cause register has not been cleared.                  |
 ## Signals
+
 | Name                 | Type                     | Description                                                                                                                                                            |
 | -------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aon_wkup_mode_q      | wkup_mode_e              |                                                                                                                                                                        |
@@ -49,15 +55,12 @@ Copyright lowRISC contributors.
 | aon_wkup_cause_d     | logic                    |                                                                                                                                                                        |
 | aon_wkup_cause_q     | logic                    |                                                                                                                                                                        |
 ## Processes
-- p_sync: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- p_mode: _(  )_
-
-- p_aon_pattern: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- p_aon_cause: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- p_sync: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- p_mode: (  )
+- p_aon_pattern: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- p_aon_cause: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_prim_flop_2sync_config: prim_flop_2sync
 - i_prim_filter: prim_filter
 - i_prim_flop_2sync_filter: prim_flop_2sync

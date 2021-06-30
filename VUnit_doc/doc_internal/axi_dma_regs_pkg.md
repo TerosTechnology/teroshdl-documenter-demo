@@ -1,5 +1,7 @@
 # Package: axi_dma_regs_pkg
+
 ## Constants
+
 | Name                       | Type                          | Value                                                        | Description |
 | -------------------------- | ----------------------------- | ------------------------------------------------------------ | ----------- |
 | command_reg_addr           | natural                       |  0                                                           |             |

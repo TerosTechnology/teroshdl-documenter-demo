@@ -1,7 +1,10 @@
 # Entity: ipv4_TX
+
 ## Diagram
+
 ![Diagram](ipv4_TX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEBUG        | boolean | FALSE |             |
 ## Ports
+
 | Port name                    | Direction | Type      | Description |
 | ---------------------------- | --------- | --------- | ----------- |
 | Clock                        | in        | std_logic |             |
@@ -61,6 +66,7 @@ limitations under the License.
 | Out_Meta_DestMACAddress_nxt  | in        | std_logic |             |
 | Out_Meta_DestMACAddress_Data | out       | T_SLV_8   |             |
 ## Signals
+
 | Name                   | Type                                | Description |
 | ---------------------- | ----------------------------------- | ----------- |
 | State                  | T_STATE                             |             |
@@ -100,24 +106,20 @@ limitations under the License.
 | Checksum_mux_set       | std_logic                           |             |
 | Checksum_mux_r         | std_logic                           |             |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_ARP_QUERY,									ST_ARP_QUERY_WAIT, 			ST_CHECKSUM_IPV4_ADDRESSES, 				ST_CHECKSUM_IPVERSION_LENGTH_0,							ST_CHECKSUM_TYPE_OF_SERVICE_LENGTH_1, 				ST_CHECKSUM_IDENTIFICAION_FRAGMENTOFFSET_0,	ST_CHECKSUM_IDENTIFICAION_FRAGMENTOFFSET_1, 				ST_CHECKSUM_TIME_TO_LIVE,				ST_CHECKSUM_PROTOCOL, 			ST_CARRY_0, ST_CARRY_1, 			ST_SEND_VERSION,							ST_SEND_TYPE_OF_SERVICE,	ST_SEND_TOTAL_LENGTH_0,			ST_SEND_TOTAL_LENGTH_1, 			ST_SEND_IDENTIFICATION_0,			ST_SEND_IDENTIFICATION_1,	ST_SEND_FLAGS,							ST_SEND_FRAGMENT_OFFSET, 			ST_SEND_TIME_TO_LIVE,					ST_SEND_PROTOCOL,					ST_SEND_HEADER_CHECKSUM_0,	ST_SEND_HEADER_CHECKSUM_1, 			ST_SEND_SOURCE_ADDRESS, 			ST_SEND_DESTINATION_ADDRESS, 			ST_SEND_OPTIONS_0,						ST_SEND_OPTIONS_1,				ST_SEND_OPTIONS_2,					ST_SEND_PADDING, 			ST_SEND_DATA, 		ST_DISCARD_FRAME, 		ST_ERROR 	) |             |
-## Processes
-- unnamed: _( Clock )_
 
-- unnamed: _( State, In_Valid, In_SOF, In_EOF, In_Data,
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_ARP_QUERY,									ST_ARP_QUERY_WAIT, ST_CHECKSUM_IPV4_ADDRESSES, ST_CHECKSUM_IPVERSION_LENGTH_0,							ST_CHECKSUM_TYPE_OF_SERVICE_LENGTH_1, ST_CHECKSUM_IDENTIFICAION_FRAGMENTOFFSET_0,	ST_CHECKSUM_IDENTIFICAION_FRAGMENTOFFSET_1, ST_CHECKSUM_TIME_TO_LIVE,				ST_CHECKSUM_PROTOCOL, ST_CARRY_0, ST_CARRY_1, ST_SEND_VERSION,							ST_SEND_TYPE_OF_SERVICE,	ST_SEND_TOTAL_LENGTH_0,			ST_SEND_TOTAL_LENGTH_1, ST_SEND_IDENTIFICATION_0,			ST_SEND_IDENTIFICATION_1,	ST_SEND_FLAGS,							ST_SEND_FRAGMENT_OFFSET, ST_SEND_TIME_TO_LIVE,					ST_SEND_PROTOCOL,					ST_SEND_HEADER_CHECKSUM_0,	ST_SEND_HEADER_CHECKSUM_1, ST_SEND_SOURCE_ADDRESS, ST_SEND_DESTINATION_ADDRESS, ST_SEND_DATA, ST_DISCARD_FRAME, ST_ERROR )  |             |
+## Processes
+- unnamed: ( Clock )
+- unnamed: ( State, In_Valid, In_SOF, In_EOF, In_Data,
 					In_Meta_Length,
 					Out_Ack, Out_Meta_rst, Out_Meta_DestMACAddress_nxt,
 					ARP_IPCache_Valid, ARP_IPCache_IPv4Address_rst, ARP_IPCache_IPv4Address_nxt, ARP_IPCache_MACAddress_Data,
 					In_Meta_DestIPv4Address_Data, In_Meta_SrcIPv4Address_Data, In_Meta_Protocol,
 					InternetHeaderLength, UpperLayerPacketLength, TypeOfService, Flag_DontFragment, Flag_MoreFragments,
 					Identification, FragmentOffset, TimeToLive, Protocol,
-					IPv4SeqCounter_us, Checksum0_cy, Checksum )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+					IPv4SeqCounter_us, Checksum0_cy, Checksum )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )

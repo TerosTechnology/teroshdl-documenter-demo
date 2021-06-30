@@ -1,7 +1,10 @@
 # Entity: tlul_err_resp
+
 ## Diagram
+
 ![Diagram](tlul_err_resp.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  after request with no stalling unless response is stuck on the way out.
  
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_i     | input     |      |             |
@@ -17,6 +21,7 @@ Copyright lowRISC contributors.
 | tl_h_i    | input     |      |             |
 | tl_h_o    | output    |      |             |
 ## Signals
+
 | Name            | Type                               | Description                  |
 | --------------- | ---------------------------------- | ---------------------------- |
 | err_opcode      | tl_a_op_e                          |                              |
@@ -26,7 +31,5 @@ Copyright lowRISC contributors.
 | err_rsp_pending | logic                              |                              |
 | unused_tl_h     | logic                              | Waive unused bits of tl_h_i  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

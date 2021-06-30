@@ -1,7 +1,10 @@
 # Entity: usd
+
 ## Diagram
+
 ![Diagram](usd.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clock     | input     | wire      |             |
@@ -18,6 +21,7 @@
 | miso      | input     | wire      |             |
 | mosi      | output    | wire      |             |
 ## Signals
+
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | iotx | wire |             |
@@ -27,9 +31,8 @@
 | rx   | reg  |             |
 | drx  | reg  |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
 ## Instantiations
+
 - Spi: spi

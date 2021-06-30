@@ -1,7 +1,10 @@
 # Entity: serv_alu
+
 ## Diagram
+
 ![Diagram](serv_alu.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clk       | input     | wire       |             |
@@ -18,6 +21,7 @@
 | i_buf     | input     | wire       |             |
 | o_rd      | output    | wire       |             |
 ## Signals
+
 | Name        | Type | Description |
 | ----------- | ---- | ----------- |
 | result_add  | wire |             |
@@ -31,5 +35,4 @@
 | result_eq   | wire |             |
 | result_bool | wire |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
+- unnamed: ( @(posedge clk) )

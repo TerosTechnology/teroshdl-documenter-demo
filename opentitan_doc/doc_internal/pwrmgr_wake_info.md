@@ -1,13 +1,17 @@
 # Entity: pwrmgr_wake_info
+
 ## Diagram
+
 ![Diagram](pwrmgr_wake_info.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Power Manager Wake Information
  
 ## Ports
+
 | Port name       | Direction | Type                          | Description |
 | --------------- | --------- | ----------------------------- | ----------- |
 | clk_i           | input     |                               |             |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | abort_i         | input     |                               |             |
 | info_o          | output    | pwrmgr_hw2reg_wake_info_reg_t |             |
 ## Signals
+
 | Name             | Type                       | Description                            |
 | ---------------- | -------------------------- | -------------------------------------- |
 | record_en        | logic                      |                                        |
@@ -28,17 +33,11 @@ Copyright lowRISC contributors.
 | start_capture    | logic                      | detect rising edge of start_capture_i  |
 | info             | logic [TotalWakeWidth-1:0] |                                        |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-generate the record enbale signal
-HW enables the recording
-Software can suppress the recording or disable it
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 generate the record enbale signal
 HW enables the recording
 Software can suppress the recording or disable it
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

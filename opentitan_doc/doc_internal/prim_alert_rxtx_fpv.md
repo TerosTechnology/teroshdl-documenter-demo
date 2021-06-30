@@ -1,7 +1,10 @@
 # Entity: prim_alert_rxtx_fpv
+
 ## Diagram
+
 ![Diagram](prim_alert_rxtx_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  a formal tool.
  
 ## Ports
+
 | Port name     | Direction | Type | Description                     |
 | ------------- | --------- | ---- | ------------------------------- |
 | clk_i         | input     |      |                                 |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | integ_fail_o  | output    |      |                                 |
 | alert_o       | output    |      |                                 |
 ## Signals
+
 | Name         | Type       | Description |
 | ------------ | ---------- | ----------- |
 | alert_rx_out | alert_rx_t |             |
@@ -35,9 +40,11 @@ Copyright lowRISC contributors.
 | alert_tx_out | alert_tx_t |             |
 | alert_tx_in  | alert_tx_t |             |
 ## Constants
+
 | Name    | Type | Value | Description       |
 | ------- | ---- | ----- | ----------------- |
 | AsyncOn | bit  | 1'b0  | synchronous case  |
 ## Instantiations
+
 - i_prim_alert_sender: prim_alert_sender
 - i_prim_alert_receiver: prim_alert_receiver

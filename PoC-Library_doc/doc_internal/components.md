@@ -1,56 +1,57 @@
 # Package: components
+
 ## Functions
-- registered <font id="function_arguments">(signal Clock : std_logic; constant IsRegistered : boolean)</font> <font id="function_return">return boolean</font>
-- ffrs <font id="function_arguments">(q : std_logic;	rst : std_logic := '0'; set : std_logic := '0')</font> <font id="function_return">return std_logic</font>
+- registered <font id="function_arguments">(signal Clock : std_logic; constant IsRegistered : boolean) </font> <font id="function_return">return boolean </font>
+- ffrs <font id="function_arguments">(q : std_logic;	rst : std_logic := '0'; set : std_logic := '0') </font> <font id="function_return">return std_logic </font>
 **Description**
 RS-FlipFlop with dominant rst
-- ffsr <font id="function_arguments">(q : std_logic;	rst : std_logic := '0'; set : std_logic := '0')</font> <font id="function_return">return std_logic</font>
+- ffsr <font id="function_arguments">(q : std_logic;	rst : std_logic := '0'; set : std_logic := '0') </font> <font id="function_return">return std_logic </font>
 **Description**
 RS-FlipFlop with dominant set
-- ffdre <font id="function_arguments">(q : std_logic;					d : std_logic;				rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0')</font> <font id="function_return">return std_logic</font>
+- ffdre <font id="function_arguments">(q : std_logic;					d : std_logic;				rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0') </font> <font id="function_return">return std_logic </font>
 **Description**
 D-FlipFlop with reset and enable
-- ffdre <font id="function_arguments">(q : std_logic_vector;	d : std_logic_vector;	rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic_vector := (0 to 0 => '0'))</font> <font id="function_return">return std_logic_vector</font>
+- ffdre <font id="function_arguments">(q : std_logic_vector;	d : std_logic_vector;	rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic_vector := (0 to 0 => '0')) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 D-FlipFlop with reset and enable
-- ffdse <font id="function_arguments">(q : std_logic;					d : std_logic;				set : std_logic := '0'; en : std_logic := '1')</font> <font id="function_return">return std_logic</font>
+- ffdse <font id="function_arguments">(q : std_logic;					d : std_logic;				set : std_logic := '0'; en : std_logic := '1') </font> <font id="function_return">return std_logic </font>
 **Description**
 D-FlipFlop with set and enable
-- fftre <font id="function_arguments">(q : std_logic;					t : std_logic;				rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0')</font> <font id="function_return">return std_logic</font>
+- fftre <font id="function_arguments">(q : std_logic;					t : std_logic;				rst : std_logic := '0'; en : std_logic := '1'; constant INIT : std_logic := '0') </font> <font id="function_return">return std_logic </font>
 **Description**
 T-FlipFlop with reset and enable
-- fftse <font id="function_arguments">(q : std_logic;					t : std_logic;				set : std_logic := '0'; en : std_logic := '1')</font> <font id="function_return">return std_logic</font>
+- fftse <font id="function_arguments">(q : std_logic;					t : std_logic;				set : std_logic := '0'; en : std_logic := '1') </font> <font id="function_return">return std_logic </font>
 **Description**
 T-FlipFlop with set and enable
-- upcounter_next <font id="function_arguments">(cnt : unsigned; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : natural := 0)</font> <font id="function_return">return unsigned</font>
+- upcounter_next <font id="function_arguments">(cnt : unsigned; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : natural := 0) </font> <font id="function_return">return unsigned </font>
 **Description**
 counter
-- upcounter_equal <font id="function_arguments">(cnt : unsigned; value : natural)</font> <font id="function_return">return std_logic</font>
-- downcounter_next <font id="function_arguments">(cnt : signed; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : integer := 0)</font> <font id="function_return">return signed</font>
-- downcounter_equal <font id="function_arguments">(cnt : signed; value : integer)</font> <font id="function_return">return std_logic</font>
-- downcounter_neg <font id="function_arguments">(cnt : signed)</font> <font id="function_return">return std_logic</font>
-- shreg_left <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font>
+- upcounter_equal <font id="function_arguments">(cnt : unsigned; value : natural) </font> <font id="function_return">return std_logic </font>
+- downcounter_next <font id="function_arguments">(cnt : signed; rst : std_logic := '0'; en : std_logic := '1'; constant INIT : integer := 0) </font> <font id="function_return">return signed </font>
+- downcounter_equal <font id="function_arguments">(cnt : signed; value : integer) </font> <font id="function_return">return std_logic </font>
+- downcounter_neg <font id="function_arguments">(cnt : signed) </font> <font id="function_return">return std_logic </font>
+- shreg_left <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 shiftregisters
-- shreg_right <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font>
-- rreg_left <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font>
+- shreg_right <font id="function_arguments">(q : std_logic_vector; i : std_logic; en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font>
+- rreg_left <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 rotate registers
-- rreg_right <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1')</font> <font id="function_return">return std_logic_vector</font>
-- comp <font id="function_arguments">(value1 : std_logic_vector; value2 : std_logic_vector)</font> <font id="function_return">return std_logic_vector</font>
+- rreg_right <font id="function_arguments">(q : std_logic_vector; en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font>
+- comp <font id="function_arguments">(value1 : std_logic_vector; value2 : std_logic_vector) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 compare
-- comp <font id="function_arguments">(value1 : unsigned; value2 : unsigned)</font> <font id="function_return">return unsigned</font>
-- comp <font id="function_arguments">(value1 : signed; value2 : signed)</font> <font id="function_return">return signed</font>
-- comp_allzero <font id="function_arguments">(value	: std_logic_vector)</font> <font id="function_return">return std_logic</font>
-- comp_allzero <font id="function_arguments">(value	: unsigned)</font> <font id="function_return">return std_logic</font>
-- comp_allzero <font id="function_arguments">(value	: signed)</font> <font id="function_return">return std_logic</font>
-- comp_allone <font id="function_arguments">(value	: std_logic_vector)</font> <font id="function_return">return std_logic</font>
-- comp_allone <font id="function_arguments">(value	: unsigned)</font> <font id="function_return">return std_logic</font>
-- comp_allone <font id="function_arguments">(value	: signed)</font> <font id="function_return">return std_logic</font>
-- mux <font id="function_arguments">(sel : std_logic; sl0		: std_logic;				sl1		: std_logic)</font> <font id="function_return">return std_logic</font>
+- comp <font id="function_arguments">(value1 : unsigned; value2 : unsigned) </font> <font id="function_return">return unsigned </font>
+- comp <font id="function_arguments">(value1 : signed; value2 : signed) </font> <font id="function_return">return signed </font>
+- comp_allzero <font id="function_arguments">(value	: std_logic_vector) </font> <font id="function_return">return std_logic </font>
+- comp_allzero <font id="function_arguments">(value	: unsigned) </font> <font id="function_return">return std_logic </font>
+- comp_allzero <font id="function_arguments">(value	: signed) </font> <font id="function_return">return std_logic </font>
+- comp_allone <font id="function_arguments">(value	: std_logic_vector) </font> <font id="function_return">return std_logic </font>
+- comp_allone <font id="function_arguments">(value	: unsigned) </font> <font id="function_return">return std_logic </font>
+- comp_allone <font id="function_arguments">(value	: signed) </font> <font id="function_return">return std_logic </font>
+- mux <font id="function_arguments">(sel : std_logic; sl0		: std_logic;				sl1		: std_logic) </font> <font id="function_return">return std_logic </font>
 **Description**
 multiplexing
-- mux <font id="function_arguments">(sel : std_logic; slv0	: std_logic_vector;	slv1	: std_logic_vector)</font> <font id="function_return">return std_logic_vector</font>
-- mux <font id="function_arguments">(sel : std_logic; us0		: unsigned;					us1		: unsigned)</font> <font id="function_return">return unsigned</font>
-- mux <font id="function_arguments">(sel : std_logic; s0		: signed;						s1		: signed)</font> <font id="function_return">return signed</font>
+- mux <font id="function_arguments">(sel : std_logic; slv0	: std_logic_vector;	slv1	: std_logic_vector) </font> <font id="function_return">return std_logic_vector </font>
+- mux <font id="function_arguments">(sel : std_logic; us0		: unsigned;					us1		: unsigned) </font> <font id="function_return">return unsigned </font>
+- mux <font id="function_arguments">(sel : std_logic; s0		: signed;						s1		: signed) </font> <font id="function_return">return signed </font>

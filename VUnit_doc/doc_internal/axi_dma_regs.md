@@ -1,12 +1,16 @@
 # Entity: axi_dma_regs
+
 ## Diagram
+
 ![Diagram](axi_dma_regs.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Ports
+
 | Port name      | Direction | Type                          | Description |
 | -------------- | --------- | ----------------------------- | ----------- |
 | clk            | in        | std_logic                     |             |
@@ -18,20 +22,22 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | dst_address    | out       | std_logic_vector(31 downto 0) |             |
 | num_bytes      | out       | std_logic_vector(31 downto 0) |             |
 ## Signals
+
 | Name  | Type                                      | Description |
 | ----- | ----------------------------------------- | ----------- |
 | state | state_t                                   |             |
 | addr  | std_logic_vector(axils_m2s.ar.addr'range) |             |
 ## Types
-| Name    | Type                                                                                              | Description |
-| ------- | ------------------------------------------------------------------------------------------------- | ----------- |
-| state_t | (idle,                    writing,                    write_response,                    reading) |             |
+
+| Name    | Type                                      | Description |
+| ------- | ----------------------------------------- | ----------- |
+| state_t | (idle, writing, write_response, reading)  |             |
 ## Functions
-- cmp_word_address <font id="function_arguments">(byte_addr : std_logic_vector;                            word_addr : natural)</font> <font id="function_return">return boolean</font>
+- cmp_word_address <font id="function_arguments">(byte_addr : std_logic_vector; word_addr : natural) </font> <font id="function_return">return boolean </font>
 **Description**
 Compare addresses of 32-bit words discarding byte address
 ## Processes
-- main: _(  )_
-
+- main: (  )
 ## State machines
+
 ![Diagram_state_machine_0]( stm_axi_dma_regs_00.svg "Diagram")

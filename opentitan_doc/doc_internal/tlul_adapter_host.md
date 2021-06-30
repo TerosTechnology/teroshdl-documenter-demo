@@ -1,7 +1,10 @@
 # Entity: tlul_adapter_host
+
 ## Diagram
+
 ![Diagram](tlul_adapter_host.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -20,10 +23,12 @@ Copyright lowRISC contributors.
  way to determine this).
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | MAX_REQS     | int unsigned | 2     |             |
 ## Ports
+
 | Port name  | Direction | Type                  | Description |
 | ---------- | --------- | --------------------- | ----------- |
 | clk_i      | input     |                       |             |
@@ -42,6 +47,7 @@ Copyright lowRISC contributors.
 | tl_o       | output    | tl_h2d_t              |             |
 | tl_i       | input     | tl_d2h_t              |             |
 ## Signals
+
 | Name                    | Type                           | Description                                                                |
 | ----------------------- | ------------------------------ | -------------------------------------------------------------------------- |
 | tl_source               | logic [top_pkg::TL_AIW-1:0]    |                                                                            |
@@ -54,17 +60,16 @@ Copyright lowRISC contributors.
 | outstanding_reqs_q      | logic [OutstandingReqCntW-1:0] |                                                                            |
 | outstanding_reqs_d      | logic [OutstandingReqCntW-1:0] |                                                                            |
 ## Constants
+
 | Name               | Type | Value                   | Description |
 | ------------------ | ---- | ----------------------- | ----------- |
 | WordSize           | int  | $clog2(top_pkg::TL_DBW) |             |
 | OutstandingReqCntW | int  | $clog2(MAX_REQS) + 1    |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_cmd_intg_gen: tlul_cmd_intg_gen
 - u_rsp_chk: tlul_rsp_intg_chk

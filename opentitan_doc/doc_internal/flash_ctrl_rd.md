@@ -1,13 +1,17 @@
 # Entity: flash_ctrl_rd
+
 ## Diagram
+
 ![Diagram](flash_ctrl_rd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Faux Flash Read Control
  
 ## Ports
+
 | Port name      | Direction | Type           | Description           |
 | -------------- | --------- | -------------- | --------------------- |
 | clk_i          | input     |                |                       |
@@ -27,6 +31,7 @@ Copyright lowRISC contributors.
 | flash_done_i   | input     |                |                       |
 | flash_error_i  | input     |                |                       |
 ## Signals
+
 | Name     | Type               | Description |
 | -------- | ------------------ | ----------- |
 | st       | state_e            |             |
@@ -38,18 +43,13 @@ Copyright lowRISC contributors.
 | txn_done | logic              |             |
 | err_sel  | logic              |             |
 ## Types
+
 | Name    | Type                                                  | Description |
 | ------- | ----------------------------------------------------- | ----------- |
 | state_e | enum logic {     StNorm  = 'h0,     StErr   = 'h1   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-when error'd, continue to complete existing read transaction but fill in with all 1's
-if this is not done, software may continue to attempt to read out of the fifo
-and eventually cause a bus deadlock as the fifo would be empty
-This scheme is similar to burst completion up an error
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 when error'd, continue to complete existing read transaction but fill in with all 1's
 if this is not done, software may continue to attempt to read out of the fifo

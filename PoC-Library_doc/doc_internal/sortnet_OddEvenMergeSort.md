@@ -1,7 +1,10 @@
 # Entity: sortnet_OddEvenMergeSort
+
 ## Diagram
+
 ![Diagram](sortnet_OddEvenMergeSort.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name         | Type     | Value | Description                                                       |
 | -------------------- | -------- | ----- | ----------------------------------------------------------------- |
 | INPUTS               | positive | 128   | input count                                                       |
@@ -34,6 +38,7 @@ limitations under the License.
 | ADD_INPUT_REGISTERS  | boolean  | FALSE |                                                                   |
 | ADD_OUTPUT_REGISTERS | boolean  | TRUE  |                                                                   |
 ## Ports
+
 | Port name | Direction | Type                                               | Description |
 | --------- | --------- | -------------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                          |             |
@@ -48,6 +53,7 @@ limitations under the License.
 | Out_Data  | out       | T_SLM(INPUTS - 1 downto 0, DATA_BITS - 1 downto 0) |             |
 | Out_Meta  | out       | std_logic_vector(META_BITS - 1 downto 0)           |             |
 ## Signals
+
 | Name          | Type                                               | Description |
 | ------------- | -------------------------------------------------- | ----------- |
 | In_Valid_d    | std_logic                                          |             |
@@ -59,6 +65,7 @@ limitations under the License.
 | MetaOutputs_d | T_META                                             |             |
 | DataOutputs_d | T_SLM(INPUTS - 1 downto 0, DATA_BITS - 1 downto 0) |             |
 ## Constants
+
 | Name             | Type     | Value                     | Description |
 | ---------------- | -------- | ------------------------- | ----------- |
 | C_VERBOSE        | boolean  |  POC_VERBOSE              |             |
@@ -68,11 +75,12 @@ limitations under the License.
 | META_ISKEY_BIT   | natural  |  1                        |             |
 | META_VECTOR_BITS | positive |  META_BITS + 2            |             |
 ## Types
+
 | Name          | Type | Description |
 | ------------- | ---- | ----------- |
 | T_META_VECTOR |      |             |
 | T_DATA_VECTOR |      |             |
 | T_DATA_MATRIX |      |             |
 ## Functions
-- to_dv <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_DATA_VECTOR</font>
-- to_slm <font id="function_arguments">(dv : T_DATA_VECTOR)</font> <font id="function_return">return T_SLM</font>
+- to_dv <font id="function_arguments">(slm : T_SLM) </font> <font id="function_return">return T_DATA_VECTOR </font>
+- to_slm <font id="function_arguments">(dv : T_DATA_VECTOR) </font> <font id="function_return">return T_SLM </font>

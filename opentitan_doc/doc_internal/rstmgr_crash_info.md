@@ -1,13 +1,17 @@
 # Entity: rstmgr_crash_info
+
 ## Diagram
+
 ![Diagram](rstmgr_crash_info.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  This module implements the crash dump functionality
  
 ## Generics
+
 | Generic name   | Type | Value                                     | Description |
 | -------------- | ---- | ----------------------------------------- | ----------- |
 | CrashDumpWidth | int  | 32                                        |             |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | CrashStoreSlot | int  | CrashDumpWidth / RdWidth + CrashRemainder |             |
 | SlotCntWidth   | int  | $clog2(CrashStoreSlot)                    |             |
 ## Ports
+
 | Port name      | Direction | Type                 | Description |
 | -------------- | --------- | -------------------- | ----------- |
 | clk_i          | input     |                      |             |
@@ -25,11 +30,13 @@ Copyright lowRISC contributors.
 | slots_cnt_o    | output    | [IdxWidth-1:0]       |             |
 | slot_o         | output    | [RdWidth-1:0]        |             |
 ## Signals
+
 | Name    | Type                                     | Description |
 | ------- | ---------------------------------------- | ----------- |
 | slots   | logic [2**SlotCntWidth-1:0][RdWidth-1:0] |             |
 | slots_q | logic [ CrashStoreSlot-1:0][RdWidth-1:0] |             |
 ## Constants
+
 | Name           | Type | Value                                     | Description |
 | -------------- | ---- | ----------------------------------------- | ----------- |
 | CrashRemainder | int  | CrashDumpWidth % RdWidth > 0 ? 1 : 0      |             |
@@ -37,7 +44,5 @@ Copyright lowRISC contributors.
 | SlotCntWidth   | int  | $clog2(CrashStoreSlot)                    |             |
 | TotalWidth     | int  | CrashStoreSlot * RdWidth                  |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )

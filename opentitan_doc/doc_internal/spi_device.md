@@ -1,17 +1,22 @@
 # Entity: spi_device
+
 ## Diagram
+
 ![Diagram](spi_device.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Serial Peripheral Interface (SPI) Device module.
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name          | Direction | Type            | Description             |
 | ------------------ | --------- | --------------- | ----------------------- |
 | clk_i              | input     |                 |                         |
@@ -39,6 +44,7 @@ Copyright lowRISC contributors.
 | scan_rst_ni        | input     |                 |                         |
 | scanmode_i         | input     |                 |                         |
 ## Signals
+
 | Name                            | Type                                            | Description                                                                                                                                                                                             |
 | ------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_spi_in                      | logic                                           | clock for latch SDI                                                                                                                                                                                     |
@@ -165,6 +171,7 @@ Copyright lowRISC contributors.
 | alert_test                      | logic [NumAlerts-1:0]                           | Register module                                                                                                                                                                                         |
 | alerts                          | logic [NumAlerts-1:0]                           | Register module                                                                                                                                                                                         |
 ## Constants
+
 | Name         | Type | Value                    | Description |
 | ------------ | ---- | ------------------------ | ----------- |
 | FifoWidth    | int  | $bits(spi_byte_t)        |             |
@@ -173,27 +180,15 @@ Copyright lowRISC contributors.
 | PtrW         | int  | SramAw + 1 + SDW         |             |
 | AsFifoDepthW | int  | $clog2(FifoDepth+1)      |             |
 ## Processes
-- unnamed: _( @(posedge clk_spi_in_buf or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_spi_out_buf or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-Connect command info
-
+- unnamed: ( @(posedge clk_spi_in_buf or negedge rst_ni) )
+- unnamed: ( @(posedge clk_spi_out_buf or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 Connect command info
 
-- unnamed: _( @(posedge clk_spi_out_buf or negedge rst_spi_n) )_
-example: cmdparse triggers sel_dp at 8th beat of CMD bit.
--> readcmd activates, it also changes IoMode if opcode is DualIO
-or QuadIO commands
--> changed io_mode affects spi_s2p module, which again affects
-cmdparse module.
-
+- unnamed: ( @(posedge clk_spi_out_buf or negedge rst_spi_n) )
 **Description**
 example: cmdparse triggers sel_dp at 8th beat of CMD bit.
 -> readcmd activates, it also changes IoMode if opcode is DualIO
@@ -201,13 +196,11 @@ or QuadIO commands
 -> changed io_mode affects spi_s2p module, which again affects
 cmdparse module.
 
-- unnamed: _( @(posedge clk_spi_out_buf or negedge rst_spi_n) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_spi_out_buf or negedge rst_spi_n) )
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - u_sync_csb: prim_flop_2sync
 - u_sync_rxf: prim_flop_2sync
 - u_sync_txe: prim_flop_2sync

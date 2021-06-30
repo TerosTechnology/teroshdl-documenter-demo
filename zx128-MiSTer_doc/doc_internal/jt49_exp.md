@@ -1,7 +1,10 @@
 # Entity: jt49_exp
+
 ## Diagram
+
 ![Diagram](jt49_exp.svg "Diagram")
 ## Description
+
  Th
  Compression vs dynamic range
  0 -> 43.6dB
@@ -10,6 +13,7 @@
  3 -> 13.4
  
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clk       | input     | wire      |             |
@@ -17,10 +21,10 @@
 | din       | input     | wire[4:0] |             |
 | dout      | output    | [7:0]     |             |
 ## Signals
+
 | Name | Type       | Description |
 | ---- | ---------- | ----------- |
 | lut  | reg [7:0]  |             |
 | addr | wire [6:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
+- unnamed: ( @(posedge clk) )

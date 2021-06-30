@@ -1,7 +1,10 @@
 # Entity: prim_multibit_sync
+
 ## Diagram
+
 ![Diagram](prim_multibit_sync.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -30,12 +33,14 @@ Copyright lowRISC contributors.
  Note: CDC tools will likely flag this module due to re-convergent logic.
  
 ## Generics
+
 | Generic name | Type              | Value | Description                                                                                                                                                              |
 | ------------ | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Width        | int               | 8     | Width of the multibit signal.                                                                                                                                            |
 | NumChecks    | int               | 1     | Number of cycles the synchronized multi-bit signal needs to be stable until it is relased to the output. Each check adds a comparator and an additional delay register.  |
 | Width        | logic [Width-1:0] | '0    | Reset value of the multibit signal.                                                                                                                                      |
 ## Ports
+
 | Port name | Direction | Type        | Description |
 | --------- | --------- | ----------- | ----------- |
 | clk_i     | input     |             |             |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | data_i    | input     | [Width-1:0] |             |
 | data_o    | output    | [Width-1:0] |             |
 ## Signals
+
 | Name          | Type                             | Description                                                            |
 | ------------- | -------------------------------- | ---------------------------------------------------------------------- |
 | data_check_d  | logic [NumChecks:0][Width-1:0]   | First, synchronize the input data to this clock domain.                |
@@ -51,7 +57,7 @@ Copyright lowRISC contributors.
 | data_synced_d | logic [Width-1:0]                | Only propagate to output register if all checks have passed.           |
 | data_synced_q | logic [Width-1:0]                | Only propagate to output register if all checks have passed.           |
 ## Processes
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - i_prim_flop_2sync: prim_flop_2sync

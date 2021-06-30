@@ -1,13 +1,17 @@
 # Entity: usbuart_usbif
+
 ## Diagram
+
 ![Diagram](usbuart_usbif.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: USB uart interface in USB clock domain
  
 ## Ports
+
 | Port name               | Direction | Type   | Description                                                                                                                    |
 | ----------------------- | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | clk_48mhz_i             | input     |        |                                                                                                                                |
@@ -31,6 +35,7 @@ Copyright lowRISC contributors.
 | parity_o                | output    | [1:0]  |                                                                                                                                |
 | baud_o                  | output    | [15:0] |                                                                                                                                |
 ## Signals
+
 | Name                   | Type               | Description                           |
 | ---------------------- | ------------------ | ------------------------------------- |
 | ns_cnt                 | logic [5:0]        | us_tick ticks for one cycle every us  |
@@ -77,6 +82,7 @@ Copyright lowRISC contributors.
 | in_fifo_acked          | logic              |                                       |
 | in_fifo_rollback       | logic              |                                       |
 ## Constants
+
 | Name           | Type         | Value                  | Description |
 | -------------- | ------------ | ---------------------- | ----------- |
 | MaxPktSizeByte | int unsigned | 32                     |             |
@@ -84,11 +90,10 @@ Copyright lowRISC contributors.
 | CtrlEp         | int unsigned | 0                      |             |
 | FifoEp         | int unsigned | 1                      |             |
 ## Processes
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 ## Instantiations
+
 - u_usb_serial_ctrl_ep: usb_serial_ctrl_ep
 - u_usb_serial_fifo_ep: usb_serial_fifo_ep
 - u_usb_fs_nb_pe: usb_fs_nb_pe

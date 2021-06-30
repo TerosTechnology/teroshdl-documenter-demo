@@ -1,7 +1,10 @@
 # Entity: AlertLog_Demo_Global
+
 ## Diagram
+
 ![Diagram](AlertLog_Demo_Global.svg "Diagram")
 ## Description
+
  File Name:         AlertLog_Demo_Global.vhd
  Design Unit Name:  AlertLog_Demo_Global
  Revision:          STANDARD VERSION,  2015.01
@@ -33,6 +36,7 @@
  limitations under the License.
  
 ## Signals
+
 | Name | Type      | Description |
 | ---- | --------- | ----------- |
 | Clk  | std_logic |             |

@@ -1,12 +1,16 @@
 # Entity: flash_ctrl_wrapper
+
 ## Diagram
+
 ![Diagram](flash_ctrl_wrapper.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name                  | Direction | Type                                | Description                               |
 | -------------------------- | --------- | ----------------------------------- | ----------------------------------------- |
 | clk_i                      | input     |                                     | Clock and Reset                           |
@@ -42,6 +46,7 @@ Copyright lowRISC contributors.
 | alert_rx_i                 | input     | [flash_ctrl_reg_pkg::NumAlerts-1:0] |                                           |
 | alert_tx_o                 | output    | [flash_ctrl_reg_pkg::NumAlerts-1:0] |                                           |
 ## Signals
+
 | Name                 | Type                                 | Description                  |
 | -------------------- | ------------------------------------ | ---------------------------- |
 | flash_ctrl_flash_req | flash_ctrl_pkg::flash_req_t          | define inter-module signals  |
@@ -54,6 +59,7 @@ Copyright lowRISC contributors.
 | flash_host_rdata     | logic [flash_ctrl_pkg::BusWidth-1:0] |                              |
 | flash_host_addr      | logic [flash_ctrl_pkg::BusAddrW-1:0] |                              |
 ## Instantiations
+
 - u_flash_ctrl: flash_ctrl
 - u_tl_adapter_eflash: tlul_adapter_sram
 - u_flash_eflash: flash_phy

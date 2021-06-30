@@ -1,7 +1,10 @@
 # Entity: ddrio_out
+
 ## Diagram
+
 ![Diagram](ddrio_out.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -22,7 +25,7 @@ If ``NO_OUTPUT_ENABLE = false`` then output is disabled after power-up.
 If ``NO_OUTPUT_ENABLE = true`` then output after power-up equals ``INIT_VALUE``.
 .. wavedrom::
    
-![alt text](wavedrom_KXRs0.svg "title") 
+![alt text](wavedrom_j7Wm0.svg "title") 
 
 ``Pad`` must be connected to a PAD because FPGAs only have these registers in
 IOBs.
@@ -39,12 +42,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name     | Type       | Value       | Description |
 | ---------------- | ---------- | ----------- | ----------- |
 | NO_OUTPUT_ENABLE | boolean    | false       |             |
 | BITS             | positive   |             |             |
 | INIT_VALUE       | bit_vector | x"FFFFFFFF" |             |
 ## Ports
+
 | Port name    | Direction | Type                                | Description |
 | ------------ | --------- | ----------------------------------- | ----------- |
 | Clock        | in        | std_logic                           |             |

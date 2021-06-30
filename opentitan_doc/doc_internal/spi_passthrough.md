@@ -1,17 +1,22 @@
 # Entity: spi_passthrough
+
 ## Diagram
+
 ![Diagram](spi_passthrough.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Serial Peripheral Interface (SPI) Device Passthrough module.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | NumCmdInfo   | int unsigned | 16    |             |
 ## Ports
+
 | Port name            | Direction | Type              | Description                                                                                                                                                                                                                                                                                                         |
 | -------------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i                | input     |                   | SPI input clk                                                                                                                                                                                                                                                                                                       |
@@ -33,6 +38,7 @@ Copyright lowRISC contributors.
 | mailbox_hit_i        | input     |                   | If a read command falls into the mailbox address and the mailbox feature isenabled, the `Read Command` process module sends a signal to passthrough to take the control of the SPI line. If this signal asserts during Address phase, passthrough drops CSb to SPI Flash device and waits host's CSb de-assertion.  |
 | event_cmd_filtered_o | output    |                   | event`cmd_filtered`: indicator of the incoming command filtered out                                                                                                                                                                                                                                                 |
 ## Signals
+
 | Name                   | Type                    | Description                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | st                     | passthrough_st_e        |                                                                                                                                                                                                                                                                                                                                                                               |
@@ -77,66 +83,44 @@ Copyright lowRISC contributors.
 | st_d                   | end                     |                                                                                                                                                                                                                                                                                                                                                                               |
 | endcase                | end                     |                                                                                                                                                                                                                                                                                                                                                                               |
 ## Constants
+
 | Name        | Type         | Value               | Description        |
 | ----------- | ------------ | ------------------- | ------------------ |
 | MetaMaxBeat | int unsigned | 8+32+8              | Cmd + Addr + Dummy |
 | MetaBitCntW | int unsigned | $clog2(MetaMaxBeat) |                    |
 ## Types
+
 | Name             | Type                                                                                                                                                                                                                                                                                 | Description |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | passthrough_st_e | enum logic [2:0] {               StIdle,                     StFilter,                          StWait,           //                         //                    //                    StDriving,     StHighZ,           //                         //               StAddress   } | State       |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Command Filter: CSb control
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Command Filter: CSb control
 
-- unnamed: _( @(posedge clk_out_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-Search opcode @ 7th opcode
-
+- unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 Search opcode @ 7th opcode
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_out_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_out_i or negedge rst_ni) )_
-Address swap should happen in outclk domain.
-The state machine operates in inclk domain.
-The state generates mux selection signal.
-The signal latched in outclk domain then activates the mux.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
 **Description**
 Address swap should happen in outclk domain.
 The state machine operates in inclk domain.
 The state generates mux selection signal.
 The signal latched in outclk domain then activates the mux.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_out_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_out_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )

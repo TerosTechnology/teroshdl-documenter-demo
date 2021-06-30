@@ -1,18 +1,23 @@
 # Entity: tb_wishbone_master
+
 ## Diagram
+
 ![Diagram](tb_wishbone_master.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 Author Slawomir Siluk slaweksiluk@gazeta.pl
 ## Generics
+
 | Generic name   | Type   | Value | Description |
 | -------------- | ------ | ----- | ----------- |
 | runner_cfg     | string |       |             |
 | encoded_tb_cfg | string |       |             |
 ## Signals
+
 | Name  | Type                                             | Description |
 | ----- | ------------------------------------------------ | ----------- |
 | clk   | std_logic                                        |             |
@@ -26,6 +31,7 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | stall | std_logic                                        |             |
 | ack   | std_logic                                        |             |
 ## Constants
+
 | Name           | Type             | Value                                                                                                                                       | Description |
 | -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | tb_cfg         | tb_cfg_t         |  decode(encoded_tb_cfg)                                                                                                                     |             |
@@ -36,12 +42,13 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | buf            | buffer_t         |  allocate(memory, tb_cfg.num_cycles * sel'length)                                                                                           |             |
 | wishbone_slave | wishbone_slave_t |  new_wishbone_slave(     memory => memory,     ack_high_probability => tb_cfg.ack_prob,     stall_high_probability => tb_cfg.stall_prob   ) |             |
 ## Types
+
 | Name     | Type | Description |
 | -------- | ---- | ----------- |
 | tb_cfg_t |      |             |
 ## Functions
 ## Processes
-- main_stim: _(  )_
-
+- main_stim: (  )
 ## Instantiations
+
 - dut: work.wishbone_master

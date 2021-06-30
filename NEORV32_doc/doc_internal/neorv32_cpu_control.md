@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_control
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_control.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU Control >>                                                                   #
 # ********************************************************************************************* #
@@ -42,6 +45,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                              |
 | ---------------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------ |
 | HW_THREAD_ID                 | natural                        | 0           | hardware thread id (32-bit)                                              |
@@ -63,6 +67,7 @@
 | HPM_NUM_CNTS                 | natural                        | 0           | number of implemented HPM counters (0..29)                               |
 | HPM_CNT_WIDTH                | natural                        | 40          | total size of HPM counters (0..64)                                       |
 ## Ports
+
 | Port name     | Direction | Type                                       | Description                                       |
 | ------------- | --------- | ------------------------------------------ | ------------------------------------------------- |
 | clk_i         | in        | std_ulogic                                 | global clock, rising edge                         |
@@ -99,6 +104,7 @@
 | be_load_i     | in        | std_ulogic                                 | bus error on load data access                     |
 | be_store_i    | in        | std_ulogic                                 | bus error on store data access                    |
 ## Signals
+
 | Name                | Type                                              | Description                      |
 | ------------------- | ------------------------------------------------- | -------------------------------- |
 | fetch_engine        | fetch_engine_t                                    |                                  |
@@ -125,6 +131,7 @@
 | illegal_compressed  | std_ulogic                                        | only fir C-extension             |
 | csr_acc_valid       | std_ulogic                                        | access (privilege) check --      |
 ## Constants
+
 | Name               | Type    | Value                                                                      | Description                           |
 | ------------------ | ------- | -------------------------------------------------------------------------- | ------------------------------------- |
 | cpu_cnt_lo_width_c | natural |  natural(cond_sel_int_f(boolean(CPU_CNT_WIDTH < 32), CPU_CNT_WIDTH, 32))   |                                       |
@@ -132,66 +139,39 @@
 | hpm_cnt_lo_width_c | natural |  natural(cond_sel_int_f(boolean(HPM_CNT_WIDTH < 32), HPM_CNT_WIDTH, 32))   | HPM counter width - high/low parts -- |
 | hpm_cnt_hi_width_c | natural |  natural(cond_sel_int_f(boolean(HPM_CNT_WIDTH > 32), HPM_CNT_WIDTH-32, 0)) |                                       |
 ## Types
-| Name                   | Type                                                                                                                                                                                        | Description                                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| fetch_engine_state_t   | (IFETCH_REQUEST, IFETCH_ISSUE)                                                                                                                                                              | instruction fetch engine --                     |
-| fetch_engine_t         |                                                                                                                                                                                             |                                                 |
-| ipb_data_fifo_t        |                                                                                                                                                                                             | instruction prefetch buffer (IPB, real FIFO) -- |
-| ipb_t                  |                                                                                                                                                                                             |                                                 |
-| issue_engine_state_t   | (ISSUE_ACTIVE, ISSUE_REALIGN)                                                                                                                                                               | instruction issue engine --                     |
-| issue_engine_t         |                                                                                                                                                                                             |                                                 |
-| cmd_issue_t            |                                                                                                                                                                                             | instruction issue interface --                  |
-| decode_aux_t           |                                                                                                                                                                                             | instruction decoding helper logic --            |
-| execute_engine_state_t | (SYS_WAIT, DISPATCH, TRAP_ENTER, TRAP_EXIT, TRAP_EXECUTE, EXECUTE, ALU_WAIT, BRANCH,                                   FENCE_OP,LOADSTORE_0, LOADSTORE_1, LOADSTORE_2, SYS_ENV, CSR_ACCESS) | instruction execution engine --                 |
-| execute_engine_t       |                                                                                                                                                                                             |                                                 |
-| trap_ctrl_t            |                                                                                                                                                                                             | trap controller --                              |
-| pmp_ctrl_t             |                                                                                                                                                                                             | RISC-V control and status registers (CSRs) --   |
-| pmp_addr_t             |                                                                                                                                                                                             |                                                 |
-| pmp_ctrl_rd_t          |                                                                                                                                                                                             |                                                 |
-| mhpmevent_t            |                                                                                                                                                                                             |                                                 |
-| mhpmcnt_t              |                                                                                                                                                                                             |                                                 |
-| mhpmcnt_nxt_t          |                                                                                                                                                                                             |                                                 |
-| mhpmcnt_ovfl_t         |                                                                                                                                                                                             |                                                 |
-| mhpmcnt_rd_t           |                                                                                                                                                                                             |                                                 |
-| csr_t                  |                                                                                                                                                                                             |                                                 |
-| debug_ctrl_state_t     | (DEBUG_OFFLINE, DEBUG_PENDING, DEBUG_ONLINE, DEBUG_EXIT)                                                                                                                                    | debug mode controller --                        |
-| debug_ctrl_t           |                                                                                                                                                                                             |                                                 |
+
+| Name                   | Type                                                                                                                                                       | Description                                     |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| fetch_engine_state_t   | (IFETCH_REQUEST, IFETCH_ISSUE)                                                                                                                             | instruction fetch engine --                     |
+| fetch_engine_t         |                                                                                                                                                            |                                                 |
+| ipb_t                  |                                                                                                                                                            | instruction prefetch buffer (FIFO) interface -- |
+| issue_engine_state_t   | (ISSUE_ACTIVE, ISSUE_REALIGN)                                                                                                                              | instruction issue engine --                     |
+| issue_engine_t         |                                                                                                                                                            |                                                 |
+| cmd_issue_t            |                                                                                                                                                            | instruction issue interface --                  |
+| decode_aux_t           |                                                                                                                                                            | instruction decoding helper logic --            |
+| execute_engine_state_t | (SYS_WAIT, DISPATCH, TRAP_ENTER, TRAP_EXIT, TRAP_EXECUTE, EXECUTE, ALU_WAIT, BRANCH, FENCE_OP,LOADSTORE_0, LOADSTORE_1, LOADSTORE_2, SYS_ENV, CSR_ACCESS)  | instruction execution engine --                 |
+| execute_engine_t       |                                                                                                                                                            |                                                 |
+| trap_ctrl_t            |                                                                                                                                                            | trap controller --                              |
+| pmp_ctrl_t             |                                                                                                                                                            | RISC-V control and status registers (CSRs) --   |
+| pmp_addr_t             |                                                                                                                                                            |                                                 |
+| pmp_ctrl_rd_t          |                                                                                                                                                            |                                                 |
+| mhpmevent_t            |                                                                                                                                                            |                                                 |
+| mhpmcnt_t              |                                                                                                                                                            |                                                 |
+| mhpmcnt_nxt_t          |                                                                                                                                                            |                                                 |
+| mhpmcnt_ovfl_t         |                                                                                                                                                            |                                                 |
+| mhpmcnt_rd_t           |                                                                                                                                                            |                                                 |
+| csr_t                  |                                                                                                                                                            |                                                 |
+| debug_ctrl_state_t     | (DEBUG_OFFLINE, DEBUG_PENDING, DEBUG_ONLINE, DEBUG_EXIT)                                                                                                   | debug mode controller --                        |
+| debug_ctrl_t           |                                                                                                                                                            |                                                 |
 ## Processes
-- fetch_engine_fsm_sync: _( rstn_i, clk_i )_
-
-- fetch_engine_fsm_comb: _( fetch_engine, execute_engine, ipb, instr_i, bus_i_wait_i, be_instr_i, ma_instr_i )_
-half-word aligned
-Fetch Engine FSM Comb ------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- fetch_engine_fsm_sync: ( rstn_i, clk_i )
+- fetch_engine_fsm_comb: ( fetch_engine, execute_engine, ipb, instr_i, bus_i_wait_i, be_instr_i, ma_instr_i )
 **Description**
 half-word aligned
 Fetch Engine FSM Comb ------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- instr_prefetch_buffer_ctrl: _( rstn_i, clk_i )_
-****************************************************************************************************************************
-Instruction Prefetch Buffer
-****************************************************************************************************************************
-Instruction Prefetch Buffer (FIFO) -----------------------------------------------------
--------------------------------------------------------------------------------------------
-
-**Description**
-****************************************************************************************************************************
-Instruction Prefetch Buffer
-****************************************************************************************************************************
-Instruction Prefetch Buffer (FIFO) -----------------------------------------------------
--------------------------------------------------------------------------------------------
-
-- instr_prefetch_buffer_data: _( clk_i )_
-
-- issue_engine_fsm_sync: _( rstn_i, clk_i )_
-****************************************************************************************************************************
-Instruction Issue (recoding of compressed instructions and 32-bit instruction word construction)
-****************************************************************************************************************************
-Issue Engine FSM Sync ------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- issue_engine_fsm_sync: ( rstn_i, clk_i )
 **Description**
 ****************************************************************************************************************************
 Instruction Issue (recoding of compressed instructions and 32-bit instruction word construction)
@@ -199,21 +179,12 @@ Instruction Issue (recoding of compressed instructions and 32-bit instruction wo
 Issue Engine FSM Sync ------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- issue_engine_fsm_comb: _( issue_engine, ipb, execute_engine, ci_illegal, ci_instr32 )_
-Issue Engine FSM Comb ------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- issue_engine_fsm_comb: ( issue_engine, ipb, execute_engine, ci_illegal, ci_instr32 )
 **Description**
 Issue Engine FSM Comb ------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- imm_gen: _( execute_engine.i_reg, rstn_i, clk_i )_
-****************************************************************************************************************************
-Instruction Execution
-****************************************************************************************************************************
-Immediate Generator --------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- imm_gen: ( execute_engine.i_reg, rstn_i, clk_i )
 **Description**
 ****************************************************************************************************************************
 Instruction Execution
@@ -221,54 +192,33 @@ Instruction Execution
 Immediate Generator --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- branch_check: _( execute_engine.i_reg, cmp_i )_
-Branch Condition Check -----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- branch_check: ( execute_engine.i_reg, cmp_i )
 **Description**
 Branch Condition Check -----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- execute_engine_fsm_sync: _( rstn_i, clk_i )_
-Execute Engine FSM Sync ----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- execute_engine_fsm_sync: ( rstn_i, clk_i )
 **Description**
 Execute Engine FSM Sync ----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- ctrl_output: _( ctrl, fetch_engine, trap_ctrl, bus_fast_ir, execute_engine, csr, debug_ctrl )_
-CPU Control Bus Output -----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- ctrl_output: ( ctrl, fetch_engine, trap_ctrl, bus_fast_ir, execute_engine, csr, debug_ctrl )
 **Description**
 CPU Control Bus Output -----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- decode_helper: _( execute_engine )_
-Decoding Helper Logic ------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- decode_helper: ( execute_engine )
 **Description**
 Decoding Helper Logic ------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- execute_engine_fsm_comb: _( execute_engine, debug_ctrl, trap_ctrl, decode_aux, fetch_engine, cmd_issue,
-                                   csr, ctrl, csr_acc_valid, alu_idone_i, bus_d_wait_i, excl_state_i )_
-Execute Engine FSM Comb ----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- execute_engine_fsm_comb: ( execute_engine, debug_ctrl, trap_ctrl, decode_aux, fetch_engine, cmd_issue,
+                                   csr, ctrl, csr_acc_valid, alu_idone_i, bus_d_wait_i, excl_state_i )
 **Description**
 Execute Engine FSM Comb ----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- csr_access_check: _( execute_engine.i_reg, csr, debug_ctrl )_
-****************************************************************************************************************************
-Invalid Instruction / CSR access check
-****************************************************************************************************************************
-CSR Access Check -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- csr_access_check: ( execute_engine.i_reg, csr, debug_ctrl )
 **Description**
 ****************************************************************************************************************************
 Invalid Instruction / CSR access check
@@ -276,21 +226,12 @@ Invalid Instruction / CSR access check
 CSR Access Check -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- illegal_instruction_check: _( execute_engine, decode_aux, csr_acc_valid, debug_ctrl )_
-Illegal Instruction Check --------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- illegal_instruction_check: ( execute_engine, decode_aux, csr_acc_valid, debug_ctrl )
 **Description**
 Illegal Instruction Check --------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- trap_controller: _( rstn_i, clk_i )_
-****************************************************************************************************************************
-Exception and Interrupt (= Trap) Control
-****************************************************************************************************************************
-Trap Controller ------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- trap_controller: ( rstn_i, clk_i )
 **Description**
 ****************************************************************************************************************************
 Exception and Interrupt (= Trap) Control
@@ -298,21 +239,12 @@ Exception and Interrupt (= Trap) Control
 Trap Controller ------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- trap_priority: _( trap_ctrl )_
-Trap Priority Encoder ------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- trap_priority: ( trap_ctrl )
 **Description**
 Trap Priority Encoder ------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- csr_write_data: _( execute_engine.i_reg, csr.rdata, rs1_i )_
-****************************************************************************************************************************
-Control and Status Registers (CSRs)
-****************************************************************************************************************************
-Control and Status Registers Write Data ------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- csr_write_data: ( execute_engine.i_reg, csr.rdata, rs1_i )
 **Description**
 ****************************************************************************************************************************
 Control and Status Registers (CSRs)
@@ -320,63 +252,51 @@ Control and Status Registers (CSRs)
 Control and Status Registers Write Data ------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- csr_write_access: _( rstn_i, clk_i )_
-Control and Status Registers - Write Access --------------------------------------------
--------------------------------------------------------------------------------------------
-
+- csr_write_access: ( rstn_i, clk_i )
 **Description**
 Control and Status Registers - Write Access --------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- pmp_output: _( csr )_
-PMP configuration output to bus unit --
-
+- pmp_output: ( csr )
 **Description**
 PMP configuration output to bus unit --
 
-- pmp_rd_dummy: _( csr )_
-PMP config read dummy --
-
+- pmp_rd_dummy: ( csr )
 **Description**
 PMP config read dummy --
 
-- csr_counters: _( rstn_i, clk_i )_
-Control and Status Registers - Counters ------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- csr_counters: ( rstn_i, clk_i )
 **Description**
 Control and Status Registers - Counters ------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- hpm_rd_dummy: _( csr )_
-hpm counter read --
-
+- hpm_rd_dummy: ( csr )
 **Description**
 hpm counter read --
 
-- hpmcnt_ctrl: _( rstn_i, clk_i )_
-Hardware Performance Monitor - Counter Event Control -----------------------------------
--------------------------------------------------------------------------------------------
-
+- hpmcnt_ctrl: ( rstn_i, clk_i )
 **Description**
 Hardware Performance Monitor - Counter Event Control -----------------------------------
 -------------------------------------------------------------------------------------------
 
-- csr_read_access: _( rstn_i, clk_i )_
-illegal operation
-Control and Status Registers - Read Access ---------------------------------------------
--------------------------------------------------------------------------------------------
-
+- csr_read_access: ( rstn_i, clk_i )
 **Description**
 illegal operation
 Control and Status Registers - Read Access ---------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- debug_control: _( rstn_i, clk_i )_
+- debug_control: ( rstn_i, clk_i )
+**Description**
 Debug Control --------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
+## Instantiations
+
+- instr_prefetch_buffer: neorv32_fifo
 **Description**
-Debug Control --------------------------------------------------------------------------
+****************************************************************************************************************************
+Instruction Prefetch Buffer
+****************************************************************************************************************************
+Instruction Prefetch Buffer (FIFO) -----------------------------------------------------
 -------------------------------------------------------------------------------------------
 

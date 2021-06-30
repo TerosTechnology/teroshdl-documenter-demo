@@ -1,7 +1,10 @@
 # Entity: cache_tagunit_par
+
 ## Diagram
+
 ![Diagram](cache_tagunit_par.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -82,6 +85,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type     | Value | Description |
 | ------------------ | -------- | ----- | ----------- |
 | REPLACEMENT_POLICY | string   | "LRU" |             |
@@ -89,6 +93,7 @@ limitations under the License.
 | ASSOCIATIVITY      | positive | 32    |             |
 | ADDRESS_BITS       | positive | 8     |             |
 ## Ports
+
 | Port name        | Direction | Type                                                   | Description |
 | ---------------- | --------- | ------------------------------------------------------ | ----------- |
 | Clock            | in        | std_logic                                              |             |
@@ -104,10 +109,11 @@ limitations under the License.
 | TagHit           | out       | std_logic                                              |             |
 | TagMiss          | out       | std_logic                                              |             |
 ## Constants
+
 | Name | Type     | Value                        | Description |
 | ---- | -------- | ---------------------------- | ----------- |
 | SETS | positive |  CACHE_LINES / ASSOCIATIVITY |             |
 ## Functions
-- contains_x <font id="function_arguments">(value : unsigned)</font> <font id="function_return">return boolean</font>
+- contains_x <font id="function_arguments">(value : unsigned) </font> <font id="function_return">return boolean </font>
 **Description**
 Returns true if unsigned value contains metalogical values.Similar function is_x(unsigned) is only shipped with VHDL'08.

@@ -1,7 +1,10 @@
 # Entity: ipv4_RX
+
 ## Diagram
+
 ![Diagram](ipv4_RX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEBUG        | boolean | FALSE |             |
 ## Ports
+
 | Port name                     | Direction | Type      | Description |
 | ----------------------------- | --------- | --------- | ----------- |
 | Clock                         | in        | std_logic |             |
@@ -62,6 +67,7 @@ limitations under the License.
 | Out_Meta_Length               | out       | T_SLV_16  |             |
 | Out_Meta_Protocol             | out       | T_SLV_8   |             |
 ## Signals
+
 | Name                       | Type                                            | Description       |
 | -------------------------- | ----------------------------------------------- | ----------------- |
 | State                      | T_STATE                                         |                   |
@@ -106,24 +112,20 @@ limitations under the License.
 | DestIPv4Address_Reader_en  | std_logic                                       |                   |
 | DestIPv4Address_Reader_us  | unsigned(IPV4_ADDRESS_READER_BITS - 1 downto 0) |                   |
 ## Constants
+
 | Name                     | Type     | Value                            | Description     |
 | ------------------------ | -------- | -------------------------------- | --------------- |
 | IPV4_ADDRESS_LENGTH      | positive |  4                               | IPv4 -> 4 bytes |
 | IPV4_ADDRESS_READER_BITS | positive |  log2ceilnz(IPV4_ADDRESS_LENGTH) |                 |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 																		ST_RECEIVE_TYPE_OF_SERVICE,		ST_RECEIVE_TOTAL_LENGTH_0,		ST_RECEIVE_TOTAL_LENGTH_1, 			ST_RECEIVE_IDENTIFICATION_0,	ST_RECEIVE_IDENTIFICATION_1,	ST_RECEIVE_FLAGS,							ST_RECEIVE_FRAGMENT_OFFSET_1, 			ST_RECEIVE_TIME_TO_LIVE,			ST_RECEIVE_PROTOCOL,					ST_RECEIVE_HEADER_CHECKSUM_0,	ST_RECEIVE_HEADER_CHECKSUM_1, 			ST_RECEIVE_SOURCE_ADDRESS, 			ST_RECEIVE_DESTINATION_ADDRESS, 			ST_RECEIVE_OPTIONS, 			ST_RECEIVE_DATA_1,						ST_RECEIVE_DATA_N, 		ST_DISCARD_FRAME, 		ST_ERROR 	) |             |
+
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| T_STATE | ( ST_IDLE, ST_RECEIVE_TYPE_OF_SERVICE,		ST_RECEIVE_TOTAL_LENGTH_0,		ST_RECEIVE_TOTAL_LENGTH_1, ST_RECEIVE_IDENTIFICATION_0,	ST_RECEIVE_IDENTIFICATION_1,	ST_RECEIVE_FLAGS,							ST_RECEIVE_FRAGMENT_OFFSET_1, ST_RECEIVE_TIME_TO_LIVE,			ST_RECEIVE_PROTOCOL,					ST_RECEIVE_HEADER_CHECKSUM_0,	ST_RECEIVE_HEADER_CHECKSUM_1, ST_RECEIVE_SOURCE_ADDRESS, ST_RECEIVE_DESTINATION_ADDRESS, ST_RECEIVE_DATA_1,						ST_RECEIVE_DATA_N, ST_DISCARD_FRAME, ST_ERROR )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, IPv4SeqCounter_us, Out_Ack )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, IPv4SeqCounter_us, Out_Ack )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )

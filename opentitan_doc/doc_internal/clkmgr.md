@@ -1,13 +1,17 @@
 # Entity: clkmgr
+
 ## Diagram
+
 ![Diagram](clkmgr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  The overall clock manager
  
 ## Ports
+
 | Port name        | Direction | Type              | Description            |
 | ---------------- | --------- | ----------------- | ---------------------- |
 | clk_i            | input     |                   | Primary module clocks  |
@@ -26,6 +30,7 @@ Copyright lowRISC contributors.
 | status_i         | input     | clk_hint_status_t | idle hints             |
 | clocks_o         | output    | clkmgr_out_t      | clock output interface |
 ## Signals
+
 | Name                     | Type                            | Description                                                                                                                                                                                                   |
 | ------------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reg2hw                   | clkmgr_reg_pkg::clkmgr_reg2hw_t |                                                                                                                                                                                                               |
@@ -47,9 +52,9 @@ Copyright lowRISC contributors.
 | clk_main_hmac_hint       | logic                           |                                                                                                                                                                                                               |
 | clk_main_hmac_en         | logic                           |                                                                                                                                                                                                               |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: clkmgr_reg_top
 - i_main_cg: prim_clock_gating_sync
 - i_fixed_cg: prim_clock_gating_sync

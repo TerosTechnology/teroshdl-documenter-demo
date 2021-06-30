@@ -1,13 +1,17 @@
 # Entity: otp_ctrl
+
 ## Diagram
+
 ![Diagram](otp_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  OTP Controller top.
  
 ## Generics
+
 | Generic name    | Type                  | Value                  | Description                                                                                |
 | --------------- | --------------------- | ---------------------- | ------------------------------------------------------------------------------------------ |
 | NumAlerts       | logic [NumAlerts-1:0] | undefined              | Enable asynchronous transitions on alerts.                                                 |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | RndCnstLfsrPerm | lfsr_perm_t           | RndCnstLfsrPermDefault |                                                                                            |
 | MemInitFile     |                       | ""                     | Hexfile file to initialize the OTP macro. Note that the hexdump needs to account for ECC.  |
 ## Ports
+
 | Port name                  | Direction | Type                     | Description                                                     |
 | -------------------------- | --------- | ------------------------ | --------------------------------------------------------------- |
 | clk_i                      | input     |                          | OTP clock                                                       |
@@ -55,8 +60,10 @@ Copyright lowRISC contributors.
 | scan_rst_ni                | input     |                          |                                                                 |
 | scanmode_i                 | input     |                          |                                                                 |
 ## Signals
+
 | Name                     | Type                                         | Description                                                                                                                                                                                                                                                                               |
 | ------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| intg_error               | logic [1:0]                                  | We have one CSR node and one functional TL-UL window.                                                                                                                                                                                                                                     |
 | tl_win_h2d               | tlul_pkg::tl_h2d_t                           |                                                                                                                                                                                                                                                                                           |
 | tl_win_d2h               | tlul_pkg::tl_d2h_t                           |                                                                                                                                                                                                                                                                                           |
 | reg2hw                   | otp_ctrl_reg_pkg::otp_ctrl_reg2hw_t          |                                                                                                                                                                                                                                                                                           |
@@ -104,6 +111,8 @@ Copyright lowRISC contributors.
 | fatal_macro_error_q      | logic                                        |                                                                                                                                                                                                                                                                                           |
 | fatal_check_error_d      | logic                                        |                                                                                                                                                                                                                                                                                           |
 | fatal_check_error_q      | logic                                        |                                                                                                                                                                                                                                                                                           |
+| fatal_bus_integ_error_d  | logic                                        |                                                                                                                                                                                                                                                                                           |
+| fatal_bus_integ_error_q  | logic                                        |                                                                                                                                                                                                                                                                                           |
 | chk_pending              | logic                                        |                                                                                                                                                                                                                                                                                           |
 | chk_timeout              | logic                                        |                                                                                                                                                                                                                                                                                           |
 | lfsr_fsm_err             | logic                                        |                                                                                                                                                                                                                                                                                           |
@@ -168,50 +177,36 @@ Copyright lowRISC contributors.
 | part_buf_data            | logic [2**OtpByteAddrWidth-1:0][7:0]         |                                                                                                                                                                                                                                                                                           |
 | unused_buf_data          | logic                                        | Not all bits of part_buf_data are used here.                                                                                                                                                                                                                                              |
 ## Types
+
 | Name            | Type                                                                                                                                                                                                                  | Description                                                                                   |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | otp_bundle_t    | struct packed {     prim_otp_pkg::cmd_e          cmd;     logic [OtpSizeWidth-1:0]     size;      logic [OtpIfWidth-1:0]       wdata;     logic [OtpAddrWidth-1:0]     addr;    }                                     |                                                                                               |
 | scrmbl_bundle_t | struct packed {     otp_scrmbl_cmd_e             cmd;     digest_mode_e                mode;     logic [ConstSelWidth-1:0]    sel;     logic [ScrmblBlockWidth-1:0] data;     logic                        valid;   } | See also https://docs.opentitan.org/hw/ip/otp_ctrl/doc/index.html#block-diagram for details.  |
 ## Processes
-- p_tlul_assign: _(  )_
-
-- p_tlul_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_access_control: _(  )_
-
-- p_idle_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_errors_alerts: _(  )_
-
-- p_alert_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_rvalid: _(  )_
-Steer response back to the partition where this request originated.
-
+- p_tlul_assign: (  )
+- p_tlul_reg: ( @(posedge clk_i or negedge rst_ni) )
+- p_access_control: (  )
+- p_idle_reg: ( @(posedge clk_i or negedge rst_ni) )
+- p_errors_alerts: (  )
+- p_alert_regs: ( @(posedge clk_i or negedge rst_ni) )
+- p_rvalid: (  )
 **Description**
 Steer response back to the partition where this request originated.
 
-- p_mutex: _(  )_
-Since the ready_i signal of the arbiter is statically set to 1'b0 above, we are always in a
-"backpressure" situation, where the RR arbiter will automatically advance the internal RR state
-to give the current winner max priority in subsequent cycles in order to keep the decision
-stable. Rearbitration occurs once the winning agent deasserts its request.
-
+- p_mutex: (  )
 **Description**
 Since the ready_i signal of the arbiter is statically set to 1'b0 above, we are always in a
 "backpressure" situation, where the RR arbiter will automatically advance the internal RR state
 to give the current winner max priority in subsequent cycles in order to keep the decision
 stable. Rearbitration occurs once the winning agent deasserts its request.
 
-- p_scmrbl_resp: _(  )_
-steer back responses
-
+- p_scmrbl_resp: (  )
 **Description**
 steer back responses
 
-- p_init_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_init_reg: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: otp_ctrl_reg_top
 - u_prim_lc_sync_escalate_en: prim_lc_sync
 - u_prim_lc_sync_creator_seed_sw_rw_en: prim_lc_sync

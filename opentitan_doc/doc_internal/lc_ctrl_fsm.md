@@ -1,19 +1,24 @@
 # Entity: lc_ctrl_fsm
+
 ## Diagram
+
 ![Diagram](lc_ctrl_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Main Life Cycle Controller FSM.
  
 ## Generics
+
 | Generic name                 | Type            | Value                | Description               |
 | ---------------------------- | --------------- | -------------------- | ------------------------- |
 | RndCnstLcKeymgrDivInvalid    | lc_keymgr_div_t | LcKeymgrDivWidth'(0) | Random netlist constants  |
 | RndCnstLcKeymgrDivTestDevRma | lc_keymgr_div_t | LcKeymgrDivWidth'(1) |                           |
 | RndCnstLcKeymgrDivProduction | lc_keymgr_div_t | LcKeymgrDivWidth'(2) |                           |
 ## Ports
+
 | Port name                  | Direction | Type              | Description                                                                       |
 | -------------------------- | --------- | ----------------- | --------------------------------------------------------------------------------- |
 | clk_i                      | input     |                   | This module is combinational, but weneed the clock and reset for the assertions.  |
@@ -71,6 +76,7 @@ Copyright lowRISC contributors.
 | lc_flash_rma_ack_i         | input     | lc_tx_t           |                                                                                   |
 | lc_keymgr_div_o            | output    | lc_keymgr_div_t   | State group diversification value for keymgr                                      |
 ## Signals
+
 | Name              | Type                              | Description                                                                                                                                                                                                                                                  |
 | ----------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | lc_clk_byp_ack    | lc_tx_t [2:0]                     | We use multiple copies of these signals in the FSM checks below.                                                                                                                                                                                             |
@@ -98,13 +104,11 @@ Copyright lowRISC contributors.
 | hashed_tokens     | lc_token_t [2**TokenIdxWidth-1:0] | This indexes the correct token, based on the transition arc. Note that we always perform a token comparison, even in case of unconditional transitions. In the case of unconditional tokens we just pass an all-zero constant through the hashing function.  |
 | token_idx         | logic [TokenIdxWidth-1:0]         |                                                                                                                                                                                                                                                              |
 ## Processes
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_token_assign: _(  )_
-
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
+- p_token_assign: (  )
 ## Instantiations
+
 - u_prim_lc_sync_clk_byp_ack: prim_lc_sync
 - u_prim_lc_sync_flash_rma_ack: prim_lc_sync
 - u_fsm_state_regs: prim_flop

@@ -1,16 +1,21 @@
 # Entity: otbn_rf_base
+
 ## Diagram
+
 ![Diagram](otbn_rf_base.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type      | Value     | Description                                               |
 | ------------ | --------- | --------- | --------------------------------------------------------- |
 | RegFile      | regfile_e | RegFileFF | Register file implementation selection, see otbn_pkg.sv.  |
 ## Ports
+
 | Port name          | Direction | Type                | Description |
 | ------------------ | --------- | ------------------- | ----------- |
 | clk_i              | input     |                     |             |
@@ -31,6 +36,7 @@ Copyright lowRISC contributors.
 | call_stack_err_o   | output    |                     |             |
 | rd_data_err_o      | output    |                     |             |
 ## Signals
+
 | Name                 | Type                      | Description                                                                                                                                                                                                                                                               |
 | -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wr_data_intg_mux_out | logic [BaseIntgWidth-1:0] |                                                                                                                                                                                                                                                                           |
@@ -50,11 +56,13 @@ Copyright lowRISC contributors.
 | stack_data_intg      | logic [BaseIntgWidth-1:0] |                                                                                                                                                                                                                                                                           |
 | stack_data_valid     | logic                     |                                                                                                                                                                                                                                                                           |
 ## Constants
+
 | Name              | Type         | Value | Description |
 | ----------------- | ------------ | ----- | ----------- |
 | CallStackRegIndex | int unsigned | 1     |             |
 | CallStackDepth    | int unsigned | 8     |             |
 ## Instantiations
+
 - u_wr_data_intg_enc: prim_secded_39_32_enc
 - u_call_stack: otbn_stack
 - u_rd_data_a_intg_dec: prim_secded_39_32_dec

@@ -1,5 +1,7 @@
 # Package: ethernet_mac_pkg
+
 ## Constants
+
 | Name                | Type                 | Value  | Description |
 | ------------------- | -------------------- | ------ | ----------- |
 | C_ETH_ADDR_INVALID  | unsigned(7 downto 0) |  x"00" |             |

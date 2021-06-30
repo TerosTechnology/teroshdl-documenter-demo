@@ -1,18 +1,23 @@
 # Entity: tb_avalon_slave
+
 ## Diagram
+
 ![Diagram](tb_avalon_slave.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 Author Slawomir Siluk slaweksiluk@gazeta.pl
 ## Generics
+
 | Generic name   | Type   | Value | Description |
 | -------------- | ------ | ----- | ----------- |
 | runner_cfg     | string |       |             |
 | encoded_tb_cfg | string |       |             |
 ## Signals
+
 | Name          | Type                                                  | Description |
 | ------------- | ----------------------------------------------------- | ----------- |
 | clk           | std_logic                                             |             |
@@ -28,6 +33,7 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | wr_ack_cnt    | natural range 0 to tb_cfg.num_cycles                  |             |
 | rd_ack_cnt    | natural range 0 to tb_cfg.num_cycles                  |             |
 ## Constants
+
 | Name         | Type           | Value                                                                                                                                                                                                             | Description |
 | ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | tb_cfg       | tb_cfg_t       |  decode(encoded_tb_cfg)                                                                                                                                                                                           |             |
@@ -36,14 +42,14 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | buf          | buffer_t       |  allocate(memory, tb_cfg.num_cycles * byteenable'length)                                                                                                                                                          |             |
 | avalon_slave | avalon_slave_t |        new_avalon_slave(memory => memory,         name => "avmm_vc",         readdatavalid_high_probability => tb_cfg.readdatavalid_prob,         waitrequest_high_probability => tb_cfg.waitrequest_prob       ) |             |
 ## Types
+
 | Name     | Type | Description |
 | -------- | ---- | ----------- |
 | tb_cfg_t |      |             |
 ## Functions
 ## Processes
-- main_stim: _(  )_
-
-- rd_ack: _(  )_
-
+- main_stim: (  )
+- rd_ack: (  )
 ## Instantiations
+
 - dut_slave: work.avalon_slave

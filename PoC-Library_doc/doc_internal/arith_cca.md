@@ -1,7 +1,10 @@
 # Entity: arith_cca
+
 ## Diagram
+
 ![Diagram](arith_cca.svg "Diagram")
 ## Description
+
 ===================================================================================
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
@@ -40,12 +43,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ===================================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                                        |
 | ------------ | -------- | ----- | -------------------------------------------------- |
 | N            | positive |       | bit width                                          |
 | L            | natural  |       | CC length equivalent per LUT stage                 |
 | X            | natural  | 0     | max expansion depth; default: zero (0) - unlimited |
 ## Ports
+
 | Port name | Direction | Type                           | Description |
 | --------- | --------- | ------------------------------ | ----------- |
 | a         | in        | std_logic_vector(N-1 downto 0) |             |
@@ -53,14 +58,16 @@ limitations under the License.
 | c         | in        | std_logic                      |             |
 | s         | out       | std_logic_vector(N-1 downto 0) |             |
 ## Constants
+
 | Name   | Type    | Value              | Description |
 | ------ | ------- | ------------------ | ----------- |
 | LEVELS | tLevels |  compact           |             |
 | CCA    | boolean |  LEVELS'length > 1 |             |
 ## Types
+
 | Name    | Type | Description |
 | ------- | ---- | ----------- |
 | tLevel  |      |             |
 | tLevels |      |             |
 ## Functions
-- compact <font id="function_arguments">()</font> <font id="function_return">return tLevels</font>
+- compact <font id="function_arguments">()</font> <font id="function_return">return tLevels </font>

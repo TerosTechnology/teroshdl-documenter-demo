@@ -1,7 +1,10 @@
 # Entity: cache_cpu
+
 ## Diagram
+
 ![Diagram](cache_cpu.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -126,6 +129,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type     | Value | Description |
 | ------------------ | -------- | ----- | ----------- |
 | REPLACEMENT_POLICY | string   | "LRU" |             |
@@ -135,6 +139,7 @@ limitations under the License.
 | MEM_ADDR_BITS      | positive |       |             |
 | MEM_DATA_BITS      | positive |       |             |
 ## Ports
+
 | Port name | Direction | Type                                                                     | Description |
 | --------- | --------- | ------------------------------------------------------------------------ | ----------- |
 | clk       | in        | std_logic                                                                | clock       |
@@ -155,6 +160,7 @@ limitations under the License.
 | mem_rstb  | in        | std_logic                                                                |             |
 | mem_rdata | in        | std_logic_vector(MEM_DATA_BITS-1 downto 0)                               |             |
 ## Signals
+
 | Name             | Type                                         | Description                  |
 | ---------------- | -------------------------------------------- | ---------------------------- |
 | cpu_wdata_wide   | std_logic_vector(MEM_DATA_BITS-1 downto 0)   | Widened CPU data path        |
@@ -172,24 +178,23 @@ limitations under the License.
 | fsm_cs           | T_FSM                                        |                              |
 | fsm_ns           | T_FSM                                        |                              |
 ## Constants
+
 | Name            | Type     | Value                        | Description                                                                            |
 | --------------- | -------- | ---------------------------- | -------------------------------------------------------------------------------------- |
 | RATIO           | positive |  MEM_DATA_BITS/CPU_DATA_BITS |                                                                                        |
 | LOWER_ADDR_BITS | natural  |  log2ceil(RATIO)             | Number of address bits identifying the CPU data word within a cache line (memory word) |
 ## Types
-| Name  | Type                                      | Description                   |
-| ----- | ----------------------------------------- | ----------------------------- |
-| T_FSM | (READY, ACCESS_MEM, READING_MEM, UNKNOWN) | FSM and other state registers |
-## Processes
-- unnamed: _( fsm_cs, cpu_req, cpu_write, cache_Hit, cache_Miss, mem_rdy, mem_rstb )_
-FSM
-===========================================================================
 
+| Name  | Type                                       | Description                   |
+| ----- | ------------------------------------------ | ----------------------------- |
+| T_FSM | (READY, ACCESS_MEM, READING_MEM, UNKNOWN)  | FSM and other state registers |
+## Processes
+- unnamed: ( fsm_cs, cpu_req, cpu_write, cache_Hit, cache_Miss, mem_rdy, mem_rstb )
 **Description**
 FSM
 ===========================================================================
 
-- unnamed: _( clk )_
-
+- unnamed: ( clk )
 ## Instantiations
+
 - cache_inst: work.cache_par2

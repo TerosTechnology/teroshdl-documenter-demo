@@ -1,7 +1,10 @@
 # Entity: audio
+
 ## Diagram
+
 ![Diagram](audio.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | speaker   | input     | wire       |             |
@@ -19,9 +22,9 @@
 | left      | output    | wire[11:0] |             |
 | right     | output    | wire[11:0] |             |
 ## Signals
+
 | Name | Type     | Description |
 | ---- | -------- | ----------- |
 | ula  | reg[7:0] |             |
 ## Processes
-- unnamed: _( @(*) )_
-
+- unnamed: ( @(*) )

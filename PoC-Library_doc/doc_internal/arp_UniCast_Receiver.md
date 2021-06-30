@@ -1,7 +1,10 @@
 # Entity: arp_UniCast_Receiver
+
 ## Diagram
+
 ![Diagram](arp_UniCast_Receiver.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name          | Type    | Value | Description |
 | --------------------- | ------- | ----- | ----------- |
 | ALLOWED_PROTOCOL_IPV4 | boolean | TRUE  |             |
 | ALLOWED_PROTOCOL_IPV6 | boolean | FALSE |             |
 ## Ports
+
 | Port name                   | Direction | Type      | Description |
 | --------------------------- | --------- | --------- | ----------- |
 | Clock                       | in        | std_logic |             |
@@ -56,6 +61,7 @@ limitations under the License.
 | TargetMACAddress_nxt        | in        | std_logic |             |
 | TargetMACAddress_Data       | out       | T_SLV_8   |             |
 ## Signals
+
 | Name                         | Type                                                       | Description |
 | ---------------------------- | ---------------------------------------------------------- | ----------- |
 | State                        | T_STATE                                                    |             |
@@ -94,6 +100,7 @@ limitations under the License.
 | TargetProtocolAddress_us     | unsigned(log2ceilnz(PROTOCOL_ADDRESS_LENGTH) - 1 downto 0) |             |
 | TargetProtocolAddress_d      | T_SLVV_8(PROTOCOL_ADDRESS_LENGTH - 1 downto 0)             |             |
 ## Constants
+
 | Name                         | Type     | Value                                                                                             | Description                       |
 | ---------------------------- | -------- | ------------------------------------------------------------------------------------------------- | --------------------------------- |
 | HARDWARE_ADDRESS_LENGTH      | positive |  6                                                                                                | MAC -> 6 bytes                    |
@@ -102,21 +109,17 @@ limitations under the License.
 | PROTOCOL_ADDRESS_LENGTH      | positive |  ite((ALLOWED_PROTOCOL_IPV6 = FALSE), PROTOCOL_IPV4_ADDRESS_LENGTH, PROTOCOL_IPV6_ADDRESS_LENGTH) | IPv4 -> 4 bytes; IPv6 -> 16 bytes |
 | WRITER_COUNTER_BITS          | positive |  log2ceilnz(imax(HARDWARE_ADDRESS_LENGTH, PROTOCOL_ADDRESS_LENGTH))                               |                                   |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                         | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 																	ST_RECEIVE_HARDWARE_TYPE_1, 			ST_RECEIVE_PROTOCOL_TYPE_0, ST_RECEIVE_PROTOCOL_TYPE_1, 			ST_RECEIVE_HARDWARE_ADDRESS_LENGTH, ST_RECEIVE_PROTOCOL_ADDRESS_LENGTH, 			ST_RECEIVE_OPERATION_0,			ST_RECEIVE_OPERATION_1, 			ST_RECEIVE_SENDER_MAC,			ST_RECEIVE_SENDER_IP, 			ST_RECEIVE_TARGET_MAC,			ST_RECEIVE_TARGET_IP, 		ST_DISCARD_ETHERNET_PADDING_BYTES, 		ST_COMPLETE, 		ST_DISCARD_FRAME, ST_ERROR 	) |             |
-## Processes
-- unnamed: _( Clock )_
 
-- unnamed: _( State,
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_RECEIVE_HARDWARE_TYPE_1, ST_RECEIVE_PROTOCOL_TYPE_0, ST_RECEIVE_PROTOCOL_TYPE_1, ST_RECEIVE_HARDWARE_ADDRESS_LENGTH, ST_RECEIVE_PROTOCOL_ADDRESS_LENGTH, ST_RECEIVE_OPERATION_0,			ST_RECEIVE_OPERATION_1, ST_RECEIVE_SENDER_MAC,			ST_RECEIVE_SENDER_IP, ST_RECEIVE_TARGET_MAC,			ST_RECEIVE_TARGET_IP, ST_DISCARD_ETHERNET_PADDING_BYTES, ST_COMPLETE, ST_DISCARD_FRAME, ST_ERROR )  |             |
+## Processes
+- unnamed: ( Clock )
+- unnamed: ( State,
 					Clear,
 					RX_Valid, RX_Data, Is_SOF, Is_EOF,
 					IsIPv4_r, IsIPv6_r, Writer_Counter_us,
-					Address_rst, SenderMACAddress_nxt, SenderIPAddress_nxt, TargetMACAddress_nxt, TargetIPAddress_nxt )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+					Address_rst, SenderMACAddress_nxt, SenderIPAddress_nxt, TargetMACAddress_nxt, TargetIPAddress_nxt )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )

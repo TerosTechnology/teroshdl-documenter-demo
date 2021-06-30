@@ -1,17 +1,22 @@
 # Entity: pwrmgr
+
 ## Diagram
+
 ![Diagram](pwrmgr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Power Manager
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name     | Direction | Type             | Description                           |
 | ------------- | --------- | ---------------- | ------------------------------------- |
 | clk_slow_i    | input     |                  | Clocks and resets                     |
@@ -44,6 +49,7 @@ Copyright lowRISC contributors.
 | esc_rst_rx_o  | output    |                  |                                       |
 | intr_wakeup_o | output    |                  |                                       |
 ## Signals
+
 | Name                    | Type                       | Description                                                                             |
 | ----------------------- | -------------------------- | --------------------------------------------------------------------------------------- |
 | esc_rst_req             | logic                      |                                                                                         |
@@ -88,9 +94,9 @@ Copyright lowRISC contributors.
 | wake_info_wen           | logic                      |                                                                                         |
 | wake_info_data          | logic [TotalWakeWidth-1:0] |                                                                                         |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_esc_rx: prim_esc_receiver
 - u_reg: pwrmgr_reg_top
 - i_cdc: pwrmgr_cdc

@@ -1,7 +1,10 @@
 # Entity: csrng_state_db
+
 ## Diagram
+
 ![Diagram](csrng_state_db.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
     working state for a given drbg instance.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NApps        | int  | 4     |             |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | CtrLen       | int  | 32    |             |
 | Cmd          | int  | 3     |             |
 ## Ports
+
 | Port name                  | Direction | Type          | Description      |
 | -------------------------- | --------- | ------------- | ---------------- |
 | clk_i                      | input     |               |                  |
@@ -47,6 +52,7 @@ Copyright lowRISC contributors.
 | state_db_sts_sts_o         | output    |               |                  |
 | state_db_sts_id_o          | output    | [StateId-1:0] |                  |
 ## Signals
+
 | Name                | Type                              | Description       |
 | ------------------- | --------------------------------- | ----------------- |
 | state_db_id         | logic [StateId-1:0]               |                   |
@@ -75,6 +81,7 @@ Copyright lowRISC contributors.
 | internal_state_pl_q | logic [InternalStateWidth-1:0]    |                   |
 | internal_state_pl_d | logic [InternalStateWidth-1:0]    |                   |
 ## Constants
+
 | Name                  | Type | Value                              | Description |
 | --------------------- | ---- | ---------------------------------- | ----------- |
 | InternalStateWidth    | int  | 2+KeyLen+BlkLen+CtrLen             |             |
@@ -82,18 +89,12 @@ Copyright lowRISC contributors.
 | RegW                  | int  | 32                                 |             |
 | StateWidth            | int  | 1+1+KeyLen+BlkLen+CtrLen+StateId+1 |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-no reset on state
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )
 **Description**
 no reset on state
 
-- unnamed: _(  )_
-since only one of the internal states is active at a time, a
-logical "or" is made of all of the buses into one
-
+- unnamed: (  )
 **Description**
 since only one of the internal states is active at a time, a
 logical "or" is made of all of the buses into one

@@ -1,7 +1,10 @@
 # Entity: neorv32_gpio
+
 ## Diagram
+
 ![Diagram](neorv32_gpio.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - General Purpose Parallel Input/Output Port (GPIO) >>                             #
 # ********************************************************************************************* #
@@ -39,6 +42,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name | Direction | Type                           | Description          |
 | --------- | --------- | ------------------------------ | -------------------- |
 | clk_i     | in        | std_ulogic                     | global clock line    |
@@ -52,6 +56,7 @@
 | gpio_i    | in        | std_ulogic_vector(31 downto 0) |                      |
 | irq_o     | out       | std_ulogic                     | interrupt --         |
 ## Signals
+
 | Name   | Type                           | Description                           |
 | ------ | ------------------------------ | ------------------------------------- |
 | acc_en | std_ulogic                     | module access enable                  |
@@ -61,25 +66,19 @@
 | irq_en | std_ulogic_vector(31 downto 0) | -/w, uses the same address as data_in |
 | in_buf | std_ulogic_vector(31 downto 0) | misc --                               |
 ## Constants
+
 | Name     | Type    | Value                      | Description               |
 | -------- | ------- | -------------------------- | ------------------------- |
 | hi_abb_c | natural |  index_size_f(io_size_c)-1 | high address boundary bit |
 | lo_abb_c | natural |  index_size_f(gpio_size_c) | low address boundary bit  |
 ## Processes
-- rw_access: _( clk_i )_
-word aligned
-Read/Write Access ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rw_access: ( clk_i )
 **Description**
 word aligned
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- irq_detector: _( clk_i )_
-IRQ Detector ------------------------------------------------------------
------------------------------------------------------------------------------
-
+- irq_detector: ( clk_i )
 **Description**
 IRQ Detector ------------------------------------------------------------
 -----------------------------------------------------------------------------

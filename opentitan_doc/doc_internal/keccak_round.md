@@ -1,7 +1,10 @@
 # Entity: keccak_round
+
 ## Diagram
+
 ![Diagram](keccak_round.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  e.g. Width 800 requires 22 rounds
  
 ## Generics
+
 | Generic name | Type | Value              | Description                           |
 | ------------ | ---- | ------------------ | ------------------------------------- |
 | Width        | int  | 1600               | b= {25, 50, 100, 200, 400, 800, 1600} |
@@ -23,6 +27,7 @@ Copyright lowRISC contributors.
 | Share        | int  | EnMasking ? 2 : 1  |                                       |
 | ReuseShare   | bit  | 1'b0               | Re-use adjacent share for entropy     |
 ## Ports
+
 | Port name       | Direction | Type           | Description                                 |
 | --------------- | --------- | -------------- | ------------------------------------------- |
 | clk_i           | input     |                |                                             |
@@ -39,6 +44,7 @@ Copyright lowRISC contributors.
 | state_o         | output    | [Width-1:0]    | State out. This can be used as Digest       |
 | clear_i         | input     |                | Clear internal state to '0                  |
 ## Signals
+
 | Name                 | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | update_storage       | logic             | Update storage register                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -59,6 +65,7 @@ Copyright lowRISC contributors.
 | storage_d            | begin             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | end                  | end               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 ## Constants
+
 | Name     | Type | Value              | Description                   |
 | -------- | ---- | ------------------ | ----------------------------- |
 | W        | int  | Width/25           | Derived                       |
@@ -69,41 +76,31 @@ Copyright lowRISC contributors.
 | DInAddr  | int  | $clog2(DInEntry)   |                               |
 | Share    | int  | EnMasking ? 2 : 1  |                               |
 ## Types
+
 | Name        | Type                                                                                                                                                                                                                                    | Description |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | keccak_st_e | enum logic [2:0] {       StIdle,                      StActive,                                    StPhase1,                      StPhase2,                                           StPhase3,                             StError   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-Next state logic and output logic
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 Next state logic and output logic
 
-- unnamed: _(  )_
-Storage register input
-The incoming message is XORed with the existing storage registers.
-The logic can accept not a block size incoming message chunk but
-the size defined in `DInWidth` parameter with its position.
-
+- unnamed: (  )
 **Description**
 Storage register input
 The incoming message is XORed with the existing storage registers.
 The logic can accept not a block size incoming message chunk but
 the size defined in `DInWidth` parameter with its position.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Round number
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Round number
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-completion signal
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 completion signal
 
 ## Instantiations
+
 - u_keccak_p: keccak_2share

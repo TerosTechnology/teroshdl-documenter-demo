@@ -1,7 +1,10 @@
 # Entity: prim_diff_decode
+
 ## Diagram
+
 ![Diagram](prim_diff_decode.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -17,10 +20,12 @@ Copyright lowRISC contributors.
  See also: prim_alert_sender, prim_alert_receiver, alert_handler
  
 ## Generics
+
 | Generic name | Type | Value | Description                               |
 | ------------ | ---- | ----- | ----------------------------------------- |
 | AsyncOn      | bit  | 1'b0  | enables additional synchronization logic  |
 ## Ports
+
 | Port name | Direction | Type | Description                      |
 | --------- | --------- | ---- | -------------------------------- |
 | clk_i     | input     |      |                                  |
@@ -33,6 +38,7 @@ Copyright lowRISC contributors.
 | event_o   | output    |      | either rise or fall              |
 | sigint_o  | output    |      |                                  |
 ## Signals
+
 | Name    | Type  | Description |
 | ------- | ----- | ----------- |
 | level_d | logic |             |

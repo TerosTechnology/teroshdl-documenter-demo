@@ -1,12 +1,16 @@
 # Entity: otbn_controller
+
 ## Diagram
+
 ![Diagram](otbn_controller.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value                              | Description                               |
 | ------------- | ---- | ---------------------------------- | ----------------------------------------- |
 | ImemSizeByte  | int  | 4096                               | Size of the instruction memory, in bytes  |
@@ -14,6 +18,7 @@ Copyright lowRISC contributors.
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |                                           |
 | DmemAddrWidth | int  | prim_util_pkg::vbits(DmemSizeByte) |                                           |
 ## Ports
+
 | Port name                     | Direction | Type                   | Description                                           |
 | ----------------------------- | --------- | ---------------------- | ----------------------------------------------------- |
 | clk_i                         | input     |                        |                                                       |
@@ -89,6 +94,7 @@ Copyright lowRISC contributors.
 | insn_cnt_reset_i              | input     |                        |                                                       |
 | insn_cnt_o                    | output    | [31:0]                 |                                                       |
 ## Signals
+
 | Name                            | Type                                 | Description                                                                                                                                                                    |
 | ------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | state_q                         | otbn_state_e                         |                                                                                                                                                                                |
@@ -162,80 +168,55 @@ Copyright lowRISC contributors.
 | unused_rf_base_rd_b_intg_bits   | logic                                |                                                                                                                                                                                |
 |                                 | [$clog2(BaseWordsPerWLEN)-1:0]       |                                                                                                                                                                                |
 ## Constants
+
 | Name          | Type | Value                              | Description |
 | ------------- | ---- | ---------------------------------- | ----------- |
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |             |
 | DmemAddrWidth | int  | prim_util_pkg::vbits(DmemSizeByte) |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-Determine if there are any errors related to the Imem fetch address.
-
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 Determine if there are any errors related to the Imem fetch address.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-Choose increment to write back to base register file, only one increment can be written as
-there is only one write port. Note that where an instruction is incrementing the indirect
-reference to its destination register (insn_dec_bignum_i.d_inc) that reference is read on the
-B read port so the B increment is written back.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 Choose increment to write back to base register file, only one increment can be written as
 there is only one write port. Note that where an instruction is incrementing the indirect
 reference to its destination register (insn_dec_bignum_i.d_inc) that reference is read on the
 B read port so the B increment is written back.
 
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-Base ALU Operand A MUX
-
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 Base ALU Operand A MUX
 
-- unnamed: _(  )_
-Base ALU Operand B MUX
-
+- unnamed: (  )
 **Description**
 Base ALU Operand B MUX
 
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-Base ALU Operand B MUX
-
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 Base ALU Operand B MUX
 
-- unnamed: _(  )_
-Bignum Register file write control
-
+- unnamed: (  )
 **Description**
 Bignum Register file write control
 
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-Specialised read data handling for CSR reads where raw read data needs modification.
-
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 Specialised read data handling for CSR reads where raw read data needs modification.
 
-- unnamed: _(  )_
-Specialised write data handling for CSR writes where raw write data needs modification.
-
+- unnamed: (  )
 **Description**
 Specialised write data handling for CSR writes where raw write data needs modification.
 
-- unnamed: _(  )_
-
+- unnamed: (  )
 ## Instantiations
+
 - u_otbn_loop_controller: otbn_loop_controller

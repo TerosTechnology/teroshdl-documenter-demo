@@ -1,7 +1,10 @@
 # Entity: ipv4_Wrapper
+
 ## Diagram
+
 ![Diagram](ipv4_Wrapper.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                       | Value        | Description |
 | ------------ | -------------------------- | ------------ | ----------- |
 | DEBUG        | boolean                    | FALSE        |             |
 | PACKET_TYPES | T_NET_IPV4_PROTOCOL_VECTOR | (0 => x"00") |             |
 ## Ports
+
 | Port name                       | Direction | Type                                               | Description      |
 | ------------------------------- | --------- | -------------------------------------------------- | ---------------- |
 | Clock                           | in        | std_logic                                          |                  |
@@ -89,6 +94,7 @@ limitations under the License.
 | RX_Meta_Length                  | out       | T_SLVV_16(PACKET_TYPES'length - 1 downto 0)        |                  |
 | RX_Meta_Protocol                | out       | T_SLVV_8(PACKET_TYPES'length - 1 downto 0)         |                  |
 ## Signals
+
 | Name                                 | Type                                                                         | Description                                                                                   |
 | ------------------------------------ | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | StmMux_In_Valid                      | std_logic_vector(IPV4_SWITCH_PORTS - 1 downto 0)                             |                                                                                               |
@@ -136,6 +142,7 @@ limitations under the License.
 | RX_StmDeMux_MetaOut_rev              | T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, STMDEMUX_META_REV_BITS - 1 downto 0)   | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
 | StmDeMux_Control                     | std_logic_vector(IPV4_SWITCH_PORTS - 1 downto 0)                             |                                                                                               |
 ## Constants
+
 | Name                            | Type     | Value                                                                                                                                                                                                                                                                                     | Description                                         |
 | ------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | IPV4_SWITCH_PORTS               | positive |  PACKET_TYPES'length                                                                                                                                                                                                                                                                      |                                                     |
@@ -164,6 +171,7 @@ limitations under the License.
 | STMDEMUX_META_BITS              | T_POSVEC |  ( 		STMDEMUX_META_STREAMID_SRCMAC		=> 8, 		STMDEMUX_META_STREAMID_DESTMAC 	=> 8, 		STMDEMUX_META_STREAMID_ETHTYPE 	=> 16, 		STMDEMUX_META_STREAMID_SRCIP			=> 8, 		STMDEMUX_META_STREAMID_DESTIP		=> 8, 		STMDEMUX_META_STREAMID_LENGTH		=> 16, 		STMDEMUX_META_STREAMID_PROTO			=> 8 	) |                                                     |
 | STMDEMUX_META_REV_BITS          | natural  |  5                                                                                                                                                                                                                                                                                        | sum over all control bits (rst, nxt, nxt, nxt, nxt) |
 ## Instantiations
+
 - TX_StmMux: PoC.stream_Mux
 - IPv4_TX: PoC.ipv4_TX
 - IPv4_RX: PoC.ipv4_RX

@@ -1,7 +1,10 @@
 # Entity: specdrum
+
 ## Diagram
+
 ![Diagram](specdrum.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clock     | input     | wire      |             |
@@ -12,5 +15,4 @@
 | q         | output    | [7:0]     |             |
 | a         | input     | wire[7:4] |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )

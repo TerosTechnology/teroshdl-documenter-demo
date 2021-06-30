@@ -1,7 +1,10 @@
 # Entity: fifo_shift
+
 ## Diagram
+
 ![Diagram](fifo_shift.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -29,11 +32,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                |
 | ------------ | -------- | ----- | -------------------------- |
 | D_BITS       | positive |       | Data Width                 |
 | MIN_DEPTH    | positive |       | Minimum FIFO Size in Words |
 ## Ports
+
 | Port name | Direction | Type                                | Description        |
 | --------- | --------- | ----------------------------------- | ------------------ |
 | clk       | in        | std_logic                           | Global Control     |
@@ -45,16 +50,16 @@ limitations under the License.
 | dout      | out       | std_logic_vector(D_BITS-1 downto 0) | Output Data        |
 | vld       | out       | std_logic                           | Data Valid         |
 ## Signals
+
 | Name | Type                                     | Description |
 | ---- | ---------------------------------------- | ----------- |
 | Dat  | tData(0 to MIN_DEPTH-1)                  |             |
 | Ptr  | unsigned(log2ceilnz(MIN_DEPTH) downto 0) |             |
 ## Types
+
 | Name  | Type | Description |
 | ----- | ---- | ----------- |
 | tData |      |             |
 ## Processes
-- unnamed: _( clk )_
-
-- unnamed: _( clk )_
-
+- unnamed: ( clk )
+- unnamed: ( clk )

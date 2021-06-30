@@ -1,18 +1,23 @@
 # Entity: usb_serial_fifo_ep
+
 ## Diagram
+
 ![Diagram](usb_serial_fifo_ep.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright Luke Valenty (TinyFPGA project)
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name   | Type         | Value                  | Description         |
 | -------------- | ------------ | ---------------------- | ------------------- |
 | MaxPktSizeByte | int unsigned | 32                     |                     |
 | PktW           | int unsigned | $clog2(MaxPktSizeByte) | Derived parameters  |
 ## Ports
+
 | Port name         | Direction | Type         | Description            |
 | ----------------- | --------- | ------------ | ---------------------- |
 | clk_i             | input     |              |                        |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | baud_o            | output    | [15:0]       | information            |
 | parity_o          | output    | [1:0]        |                        |
 ## Signals
+
 | Name                      | Type               | Description                                                                                                                                                                                                                                  |
 | ------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | do_setup                  | logic              |                                                                                                                                                                                                                                              |
@@ -85,35 +91,28 @@ Copyright lowRISC contributors.
 | unused_wIndex             | logic [15:0]       |                                                                                                                                                                                                                                              |
 | return_data               | logic [15:0]       | Send setup data (which will be empty in case of a SET operation) Tried to optimize by reusing the raw_setup_data storage but it seems hard to do that and meet style of only assign in one always_ff and only use if/else so 16 extra flops  |
 ## Constants
+
 | Name | Type         | Value                  | Description         |
 | ---- | ------------ | ---------------------- | ------------------- |
 | PktW | int unsigned | $clog2(MaxPktSizeByte) | Derived parameters  |
 ## Types
+
 | Name             | Type                                                                                                                                                                  | Description                          |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | state_ctrl_xfr_e | enum logic [2:0] {     StIdle      = 3'h0,     StSetup     = 3'h1,     StDataIn    = 3'h2,     StDataOut   = 3'h3,     StStatusIn  = 3'h4,     StStatusOut = 3'h5   } | State machine for control transfers  |
 ## Processes
-- unnamed: _( @(posedge clk_i) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-Check of upper put_addr bits needed because CRC will be sent (10 bytes total)
-
+- unnamed: ( @(posedge clk_i) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )
 **Description**
 Check of upper put_addr bits needed because CRC will be sent (10 bytes total)
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - detect_in_data_transfer_done: rising_edge_detector

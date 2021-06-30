@@ -1,7 +1,10 @@
 # Entity: prim_alert_rxtx_async_fatal_fpv
+
 ## Diagram
+
 ![Diagram](prim_alert_rxtx_async_fatal_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  a formal tool.
  
 ## Ports
+
 | Port name     | Direction | Type  | Description                              |
 | ------------- | --------- | ----- | ---------------------------------------- |
 | clk_i         | input     |       |                                          |
@@ -31,6 +35,7 @@ Copyright lowRISC contributors.
 | integ_fail_o  | output    |       |                                          |
 | alert_o       | output    |       |                                          |
 ## Signals
+
 | Name         | Type        | Description                                                                                                                                            |
 | ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ping_pd      | logic       |                                                                                                                                                        |
@@ -50,13 +55,14 @@ Copyright lowRISC contributors.
 | alert_pq     | logic [1:0] |                                                                                                                                                        |
 | alert_nq     | logic [1:0] |                                                                                                                                                        |
 ## Constants
+
 | Name    | Type | Value | Description        |
 | ------- | ---- | ----- | ------------------ |
 | AsyncOn | bit  | 1'b1  | asynchronous case  |
 | IsFatal | bit  | 1'b1  |                    |
 ## Processes
-- p_skew_delay: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_skew_delay: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - i_prim_alert_sender: prim_alert_sender
 - i_prim_alert_receiver: prim_alert_receiver

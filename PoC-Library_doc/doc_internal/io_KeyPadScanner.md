@@ -1,7 +1,10 @@
 # Entity: io_KeyPadScanner
+
 ## Diagram
+
 ![Diagram](io_KeyPadScanner.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,6 +31,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name            | Type     | Value   | Description |
 | ----------------------- | -------- | ------- | ----------- |
 | CLOCK_FREQ              | FREQ     | 100 MHz |             |
@@ -36,6 +40,7 @@ limitations under the License.
 | COLUMNS                 | positive | 4       |             |
 | ADD_INPUT_SYNCHRONIZERS | boolean  | TRUE    |             |
 ## Ports
+
 | Port name    | Direction | Type                                           | Description      |
 | ------------ | --------- | ---------------------------------------------- | ---------------- |
 | Clock        | in        | std_logic                                      |                  |
@@ -44,6 +49,7 @@ limitations under the License.
 | ColumnVector | out       | std_logic_vector(COLUMNS - 1 downto 0)         | KeyPad interface |
 | RowVector    | in        | std_logic_vector(ROWS - 1 downto 0)            |                  |
 ## Signals
+
 | Name            | Type                                           | Description |
 | --------------- | ---------------------------------------------- | ----------- |
 | ColumnTimer_rst | std_logic                                      |             |
@@ -53,6 +59,7 @@ limitations under the License.
 | Rows_sync       | std_logic_vector(ROWS - 1 downto 0)            |             |
 | KeyPadMatrix_r  | T_SLM(COLUMNS - 1 downto 0, ROWS - 1 downto 0) |             |
 ## Constants
+
 | Name             | Type     | Value                                                | Description |
 | ---------------- | -------- | ---------------------------------------------------- | ----------- |
 | SHIFT_FREQ       | FREQ     |  SCAN_FREQ * COLUMNS                                 |             |

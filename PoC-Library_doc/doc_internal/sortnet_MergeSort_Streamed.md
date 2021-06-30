@@ -1,7 +1,10 @@
 # Entity: sortnet_MergeSort_Streamed
+
 ## Diagram
+
 ![Diagram](sortnet_MergeSort_Streamed.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | FIFO_DEPTH   | positive | 32    |             |
 | KEY_BITS     | positive | 32    |             |
 | DATA_BITS    | positive | 32    |             |
 ## Ports
+
 | Port name | Direction | Type                                     | Description |
 | --------- | --------- | ---------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                |             |
@@ -49,6 +54,7 @@ limitations under the License.
 | Out_EOF   | out       | std_logic                                |             |
 | Out_Ack   | in        | std_logic                                |             |
 ## Signals
+
 | Name           | Type        | Description |
 | -------------- | ----------- | ----------- |
 | FIFO_sel_r     | std_logic   |             |
@@ -72,6 +78,7 @@ limitations under the License.
 | State          | T_STATE     |             |
 | NextState      | T_STATE     |             |
 ## Constants
+
 | Name           | Type     | Value          | Description |
 | -------------- | -------- | -------------- | ----------- |
 | DATA_SOF_BIT   | natural  |  DATA_BITS + 0 |             |
@@ -79,14 +86,14 @@ limitations under the License.
 | DATA_EOF_BIT   | natural  |  DATA_BITS + 2 |             |
 | FIFO_BITS      | positive |  DATA_BITS + 3 |             |
 ## Types
-| Name    | Type                                                  | Description |
-| ------- | ----------------------------------------------------- | ----------- |
-| T_STATE | (ST_IDLE, ST_MERGE, ST_EMPTY_FIFO_0, ST_EMPTY_FIFO_1) |             |
+
+| Name    | Type                                                   | Description |
+| ------- | ------------------------------------------------------ | ----------- |
+| T_STATE | (ST_IDLE, ST_MERGE, ST_EMPTY_FIFO_0, ST_EMPTY_FIFO_1)  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, FIFO_0_Valid, FIFO_0_DataOut, FIFO_1_Valid, FIFO_1_DataOut, Switch, Out_Ack )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, FIFO_0_Valid, FIFO_0_DataOut, FIFO_1_Valid, FIFO_1_DataOut, Switch, Out_Ack )
 ## Instantiations
+
 - FIFO_0: PoC.fifo_cc_got
 - FIFO_1: PoC.fifo_cc_got

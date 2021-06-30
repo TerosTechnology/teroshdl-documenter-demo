@@ -1,7 +1,10 @@
 # Entity: tb_check_not_unknown
+
 ## Diagram
+
 ![Diagram](tb_check_not_unknown.svg "Diagram")
 ## Description
+
 This test suite verifies the check_not_unknown checker.
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -9,10 +12,12 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 vunit: run_all_in_same_sim
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name                    | Type                         | Description |
 | ----------------------- | ---------------------------- | ----------- |
 | clk                     | std_logic                    |             |
@@ -23,6 +28,7 @@ vunit: run_all_in_same_sim
 |  check_not_unknown_in_5 | std_logic_vector(1 downto 0) |             |
 |  check_not_unknown_in_6 | std_logic_vector(1 downto 0) |             |
 ## Constants
+
 | Name        | Type      | Value                                                  | Description |
 | ----------- | --------- | ------------------------------------------------------ | ----------- |
 | my_checker  | checker_t |  new_checker("my_checker1")                            |             |
@@ -32,7 +38,5 @@ vunit: run_all_in_same_sim
 | my_checker5 | checker_t |  new_checker("my_checker5")                            |             |
 | my_checker6 | checker_t |  new_checker("my_checker6", default_log_level => info) |             |
 ## Processes
-- clock: _(  )_
-
-- check_not_unknown_runner: _(  )_
-
+- clock: (  )
+- check_not_unknown_runner: (  )

@@ -1,17 +1,22 @@
 # Entity: spi_host_fsm
+
 ## Diagram
+
 ![Diagram](spi_host_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Core Implemenation module for Serial Peripheral Interface (SPI) Host IP.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NumCS        | int  | 1     |             |
 ## Ports
+
 | Port name       | Direction | Type        | Description |
 | --------------- | --------- | ----------- | ----------- |
 | clk_i           | input     |             |             |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | active_o        | output    |             |             |
 | sw_rst_i        | input     |             |             |
 ## Signals
+
 | Name                | Type              | Description                                                                                                                                                   |
 | ------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | isIdle              | logic             |                                                                                                                                                               |
@@ -113,23 +119,15 @@ Copyright lowRISC contributors.
 | shift_size          | logic [2:0]       |                                                                                                                                                               |
 | start_bit           | logic [2:0]       |                                                                                                                                                               |
 ## Types
+
 | Name          | Type                                                                                                                                                  | Description |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | spi_host_st_e | enum logic [2:0] {     Idle,     WaitLead,     InternalClkLow,     InternalClkHigh,     WaitTrail,     WaitIdle,     CSBSwitch,     IdleCSBActive   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-All register updates freeze when a stall is detected.
-The definition of the stall signal looks ahead to determine whether a conflict is looming.
-Thus stall depends on spi_host_st_d.  Making spi_host_st_d depend on stall
-would create a circular logic loop, and lint errors.  Therefore stall is applied here, not
-in the previous always_comb block;
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 All register updates freeze when a stall is detected.
 The definition of the stall signal looks ahead to determine whether a conflict is looming.
@@ -137,13 +135,7 @@ Thus stall depends on spi_host_st_d.  Making spi_host_st_d depend on stall
 would create a circular logic loop, and lint errors.  Therefore stall is applied here, not
 in the previous always_comb block;
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-We can calculate byte transitions for CHPA=1 by noting
-that in this implmentation, the sck edges have a 1-1
-correspondence with FSM transitions.
-New bytes are loaded exactly one state transition behind the time
-when they would be loaded if CPHA=0
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 We can calculate byte transitions for CHPA=1 by noting
 that in this implmentation, the sck edges have a 1-1
@@ -151,13 +143,8 @@ correspondence with FSM transitions.
 New bytes are loaded exactly one state transition behind the time
 when they would be loaded if CPHA=0
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )

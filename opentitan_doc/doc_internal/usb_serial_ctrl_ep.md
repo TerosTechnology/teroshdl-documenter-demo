@@ -1,7 +1,10 @@
 # Entity: usb_serial_ctrl_ep
+
 ## Diagram
+
 ![Diagram](usb_serial_ctrl_ep.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright Luke Valenty (TinyFPGA project)
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
@@ -11,11 +14,13 @@ Copyright lowRISC contributors.
  -- conform to lowRISC coding style
  
 ## Generics
+
 | Generic name   | Type         | Value                  | Description         |
 | -------------- | ------------ | ---------------------- | ------------------- |
 | MaxPktSizeByte | int unsigned | 32                     |                     |
 | PktW           | int unsigned | $clog2(MaxPktSizeByte) | Derived parameters  |
 ## Ports
+
 | Port name         | Direction | Type         | Description |
 | ----------------- | --------- | ------------ | ----------- |
 | clk_i             | input     |              |             |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | in_ep_data_o      | output    | [7:0]        |             |
 | in_ep_data_done_o | output    |              |             |
 ## Signals
+
 | Name                      | Type                | Description                                                                                                  |
 | ------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------ |
 | unused_1                  | logic               | suppress errors                                                                                              |
@@ -73,27 +79,24 @@ Copyright lowRISC contributors.
 | unused_wIndex             | logic [15:0]        |                                                                                                              |
 | dscr_type                 | usb_dscr_type_e     | Send setup data (which will be empty in case of a SET operation and come from the ROM in the case of a GET)  |
 ## Constants
+
 | Name | Type         | Value                  | Description         |
 | ---- | ------------ | ---------------------- | ------------------- |
 | PktW | int unsigned | $clog2(MaxPktSizeByte) | Derived parameters  |
 ## Types
+
 | Name             | Type                                                                                                                                                                  | Description                          |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | state_ctrl_xfr_e | enum logic [2:0] {     StIdle      = 3'h0,     StSetup     = 3'h1,     StDataIn    = 3'h2,     StDataOut   = 3'h3,     StStatusIn  = 3'h4,     StStatusOut = 3'h5   } | State machine for control transfers  |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-Check of upper put_addr bits needed because CRC will be sent (10 bytes total)
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )
 **Description**
 Check of upper put_addr bits needed because CRC will be sent (10 bytes total)
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - detect_in_data_transfer_done: rising_edge_detector

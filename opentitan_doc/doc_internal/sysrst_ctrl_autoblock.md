@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_autoblock
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_autoblock.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description sysrst_ctrl PWRB autoblock module
  
 ## Ports
+
 | Port name                 | Direction | Type                                             | Description |
 | ------------------------- | --------- | ------------------------------------------------ | ----------- |
 | clk_aon_i                 | input     |                                                  |             |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | key1_out_hw               | output    |                                                  |             |
 | key2_out_hw               | output    |                                                  |             |
 ## Signals
+
 | Name                     | Type         | Description |
 | ------------------------ | ------------ | ----------- |
 | cfg_auto_block_en        | logic        |             |
@@ -41,9 +46,9 @@ Copyright lowRISC contributors.
 | pwrb_int_i               | logic        |             |
 | unused_auto_block_enable | logic        |             |
 ## Processes
-- i_cfg_auto_block_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- i_cfg_auto_block_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_cfg_auto_block_en: prim_flop_2sync
 - i_cfg_auto_block_timer: prim_fifo_async
 - i_cfg_key0_o_sel: prim_flop_2sync

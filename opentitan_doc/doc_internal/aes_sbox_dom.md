@@ -1,7 +1,10 @@
 # Entity: aes_dom_indep_mul_gf2pn
+
 ## Diagram
+
 ![Diagram](aes_sbox_dom.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -42,11 +45,13 @@ Copyright lowRISC contributors.
  See Fig. 2 in [1].
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | NPower       | int unsigned | 4     |             |
 | Pipeline     | bit          | 1'b0  |             |
 ## Ports
+
 | Port name | Direction | Type         | Description              |
 | --------- | --------- | ------------ | ------------------------ |
 | clk_i     | input     |              |                          |
@@ -60,6 +65,7 @@ Copyright lowRISC contributors.
 | a_q       | output    | [NPower-1:0] | Share a of q             |
 | b_q       | output    | [NPower-1:0] | Share b of q             |
 ## Signals
+
 | Name        | Type               | Description                      |
 | ----------- | ------------------ | -------------------------------- |
 | mul_ax_ay_d | logic [NPower-1:0] | Inner-domain terms               |
@@ -73,6 +79,7 @@ Copyright lowRISC contributors.
 | mul_ax_ay   | logic [NPower-1:0] |                                  |
 | mul_bx_by   | logic [NPower-1:0] |                                  |
 ## Instantiations
+
 - u_prim_flop_abq_z0: prim_flop_en
 **Description**
 Registers

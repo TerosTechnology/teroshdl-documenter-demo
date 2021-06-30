@@ -1,7 +1,10 @@
 # Entity: uart_fifo
+
 ## Diagram
+
 ![Diagram](uart_fifo.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -30,6 +33,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name            | Type                         | Value                 | Description               |
 | ----------------------- | ---------------------------- | --------------------- | ------------------------- |
 | CLOCK_FREQ              | FREQ                         |                       | Communication Parameters  |
@@ -45,6 +49,7 @@ limitations under the License.
 | SWFC_XOFF_CHAR          | std_logic_vector(7 downto 0) | x"13"                 | ^S                        |
 | SWFC_XOFF_TRIGGER       | real                         | 0.75                  |                           |
 ## Ports
+
 | Port name     | Direction | Type                                                 | Description    |
 | ------------- | --------- | ---------------------------------------------------- | -------------- |
 | Clock         | in        | std_logic                                            |                |
@@ -63,6 +68,7 @@ limitations under the License.
 | UART_RTS      | out       | std_logic                                            |                |
 | UART_CTS      | in        | std_logic                                            |                |
 ## Signals
+
 | Name          | Type      | Description |
 | ------------- | --------- | ----------- |
 | FC_TX_Strobe  | std_logic |             |
@@ -80,6 +86,7 @@ limitations under the License.
 | BitClock_x8   | std_logic |             |
 | UART_RX_sync  | std_logic |             |
 ## Instantiations
+
 - TXFIFO: PoC.fifo_cc_got
 **Description**
 ===========================================================================

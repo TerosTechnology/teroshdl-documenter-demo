@@ -1,7 +1,10 @@
 # Entity: prim_generic_ram_2p
+
 ## Diagram
+
 ![Diagram](prim_generic_ram_2p.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
    Implementing ECC should be done inside wrapper not this model.
  
 ## Generics
+
 | Generic name    | Type | Value         | Description                               |
 | --------------- | ---- | ------------- | ----------------------------------------- |
 | Width           | int  | 32            | bit                                       |
@@ -18,6 +22,7 @@ Copyright lowRISC contributors.
 | MemInitFile     |      | ""            | VMEM file to initialize the memory with   |
 | Aw              | int  | $clog2(Depth) | derived parameter                         |
 ## Ports
+
 | Port name | Direction | Type         | Description |
 | --------- | --------- | ------------ | ----------- |
 | clk_a_i   | input     |              |             |
@@ -36,6 +41,7 @@ Copyright lowRISC contributors.
 | b_rdata_o | output    | [Width-1:0]  |             |
 | cfg_i     | input     | ram_2p_cfg_t |             |
 ## Signals
+
 | Name       | Type                  | Description |
 | ---------- | --------------------- | ----------- |
 | unused_cfg | logic                 |             |
@@ -49,6 +55,7 @@ Copyright lowRISC contributors.
 | else       | end                   |             |
 | b_rdata_o  | begin                 |             |
 ## Constants
+
 | Name      | Type | Value                   | Description                                                                                                    |
 | --------- | ---- | ----------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Aw        | int  | $clog2(Depth)           | derived parameter                                                                                              |

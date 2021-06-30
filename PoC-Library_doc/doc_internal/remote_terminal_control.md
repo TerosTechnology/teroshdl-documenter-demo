@@ -1,7 +1,10 @@
 # Entity: remote_terminal_control
+
 ## Diagram
+
 ![Diagram](remote_terminal_control.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width:2  -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -65,6 +68,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ## Generics
+
 | Generic name  | Type    | Value | Description |
 | ------------- | ------- | ----- | ----------- |
 | RESET_COUNT   | natural |       |             |
@@ -74,6 +78,7 @@ limitations under the License.
 | DIGIT_COUNT   | natural |       |             |
 | COUNT_DECIMAL | boolean | true  |             |
 ## Ports
+
 | Port name | Direction | Type                                                | Description       |
 | --------- | --------- | --------------------------------------------------- | ----------------- |
 | clk       | in        | std_logic                                           | Global Control    |
@@ -89,6 +94,7 @@ limitations under the License.
 | lights    | in        | std_logic_vector(imax(  LIGHT_COUNT-1, 0) downto 0) | Monitor Inputs    |
 | digits    | in        | std_logic_vector(imax(4*DIGIT_COUNT-1, 0) downto 0) |                   |
 ## Signals
+
 | Name   | Type                              | Description |
 | ------ | --------------------------------- | ----------- |
 | BufVld | std_logic                         |             |
@@ -97,6 +103,7 @@ limitations under the License.
 | BufEco | std_logic_vector(0 to ECO_BITS-1) |             |
 | BufAck | std_logic                         |             |
 ## Constants
+
 | Name       | Type                     | Value                                                                                                                                        | Description |
 | ---------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | COUNTS     | tCounts                  |  (0,                                  RESET_COUNT,   PULSE_COUNT, SWITCH_COUNT,                                  LIGHT_COUNT, 4*DIGIT_COUNT) |             |
@@ -108,15 +115,16 @@ limitations under the License.
 | CODES      | tCodes(tActual)          |  ("10010", "10000", "10011", "01100", "00100")                                                                                               |             |
 | STROBES    | tStrobes(tInput)         |  (true, true, false)                                                                                                                         |             |
 ## Types
-| Name       | Type                                                                                                             | Description |
-| ---------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
-| tKind      | (KIND_NONE,                     KIND_RESET, KIND_PULSE, KIND_SWITCH,                     KIND_LIGHT, KIND_DIGIT) |             |
-| tCounts    |                                                                                                                  | Counts      |
-| tOutCounts |                                                                                                                  |             |
-| tCodes     |                                                                                                                  |             |
-| tStrobes   |                                                                                                                  |             |
+
+| Name       | Type                                                                      | Description |
+| ---------- | ------------------------------------------------------------------------- | ----------- |
+| tKind      | (KIND_NONE, KIND_RESET, KIND_PULSE, KIND_SWITCH, KIND_LIGHT, KIND_DIGIT)  |             |
+| tCounts    |                                                                           | Counts      |
+| tOutCounts |                                                                           |             |
+| tCodes     |                                                                           |             |
+| tStrobes   |                                                                           |             |
 ## Functions
-- max_count <font id="function_arguments">(arr : tCounts)</font> <font id="function_return">return natural</font>
-- log10ceil <font id="function_arguments">(x : natural)</font> <font id="function_return">return positive</font>
-- makeCntBits <font id="function_arguments">()</font> <font id="function_return">return positive</font>
-- makeOutCounts <font id="function_arguments">()</font> <font id="function_return">return tOutCounts</font>
+- max_count <font id="function_arguments">(arr : tCounts) </font> <font id="function_return">return natural </font>
+- log10ceil <font id="function_arguments">(x : natural) </font> <font id="function_return">return positive </font>
+- makeCntBits <font id="function_arguments">()</font> <font id="function_return">return positive </font>
+- makeOutCounts <font id="function_arguments">()</font> <font id="function_return">return tOutCounts </font>

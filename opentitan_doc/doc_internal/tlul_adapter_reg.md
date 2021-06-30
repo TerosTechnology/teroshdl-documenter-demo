@@ -1,12 +1,16 @@
 # Entity: tlul_adapter_reg
+
 ## Diagram
+
 ![Diagram](tlul_adapter_reg.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name      | Type | Value   | Description                 |
 | ----------------- | ---- | ------- | --------------------------- |
 | EnableDataIntgGen | bit  | 1'b0    |                             |
@@ -14,6 +18,7 @@ Copyright lowRISC contributors.
 | RegDw             | int  | 32      | Shall be matched with TL_DW |
 | RegBw             | int  | RegDw/8 |                             |
 ## Ports
+
 | Port name | Direction | Type        | Description        |
 | --------- | --------- | ----------- | ------------------ |
 | clk_i     | input     |             |                    |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | rdata_i   | input     | [RegDw-1:0] |                    |
 | error_i   | input     |             |                    |
 ## Signals
+
 | Name               | Type                      | Description                             |
 | ------------------ | ------------------------- | --------------------------------------- |
 | outstanding        | logic                     | Indicates current request is pending    |
@@ -46,24 +52,17 @@ Copyright lowRISC contributors.
 | wr_req             | logic                     |                                         |
 | data_intg          | logic [DataIntgWidth-1:0] |                                         |
 ## Constants
+
 | Name  | Type | Value                | Description |
 | ----- | ---- | -------------------- | ----------- |
 | RegBw | int  | RegDw/8              |             |
 | IW    | int  | $bits(tl_i.a_source) |             |
 | SZW   | int  | $bits(tl_i.a_size)   |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-addr_align_err
-Raised if addr isn't aligned with the size
-Read size error is checked in tlul_assert.sv
-Here is it added due to the limitation of register interface.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 addr_align_err
 Raised if addr isn't aligned with the size
@@ -71,6 +70,7 @@ Read size error is checked in tlul_assert.sv
 Here is it added due to the limitation of register interface.
 
 ## Instantiations
+
 - u_err: tlul_err
 **Description**
 tl_err : separate checker

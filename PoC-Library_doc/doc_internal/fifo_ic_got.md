@@ -1,7 +1,10 @@
 # Entity: fifo_ic_got
+
 ## Diagram
+
 ![Diagram](fifo_ic_got.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -52,6 +55,7 @@ limitations under the License.
 =============================================================================
 "all" required by Quartus RTL simulation
 ## Generics
+
 | Generic name   | Type     | Value | Description                     |
 | -------------- | -------- | ----- | ------------------------------- |
 | D_BITS         | positive |       | Data Width                      |
@@ -61,6 +65,7 @@ limitations under the License.
 | ESTATE_WR_BITS | natural  | 0     | Empty State Bits                |
 | FSTATE_RD_BITS | natural  | 0     | Full State Bits                 |
 ## Ports
+
 | Port name | Direction | Type                                                 | Description     |
 | --------- | --------- | ---------------------------------------------------- | --------------- |
 | clk_wr    | in        | std_logic                                            | Write Interface |
@@ -76,6 +81,7 @@ limitations under the License.
 | dout      | out       | std_logic_vector(D_BITS-1 downto 0)                  |                 |
 | fstate_rd | out       | std_logic_vector(imax(FSTATE_RD_BITS-1, 0) downto 0) |                 |
 ## Signals
+
 | Name | Type                                | Description             |
 | ---- | ----------------------------------- | ----------------------- |
 | IP1  | std_logic_vector(AN-1 downto 0)     | IP + 1                  |
@@ -98,16 +104,14 @@ limitations under the License.
 | geti | std_logic                           |                         |
 | goti | std_logic                           |                         |
 ## Constants
+
 | Name   | Type     | Value                  | Description |
 | ------ | -------- | ---------------------- | ----------- |
 | A_BITS | positive |  log2ceilnz(MIN_DEPTH) |             |
 | AN     | positive |  A_BITS + 1            |             |
 ## Processes
-- unnamed: _( clk_wr )_
-Update Write Pointer upon puti
-
+- unnamed: ( clk_wr )
 **Description**
 Update Write Pointer upon puti
 
-- unnamed: _( clk_rd )_
-
+- unnamed: ( clk_rd )

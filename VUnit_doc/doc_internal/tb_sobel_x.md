@@ -1,17 +1,22 @@
 # Entity: tb_sobel_x
+
 ## Diagram
+
 ![Diagram](tb_sobel_x.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 | tb_path      | string |       |             |
 ## Signals
+
 | Name             | Type                                | Description |
 | ---------------- | ----------------------------------- | ----------- |
 | clk              | std_logic                           |             |
@@ -25,11 +30,9 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 |  data_check_done | boolean                             |             |
 |  stimuli_done    | boolean                             |             |
 ## Processes
-- main: _(  )_
-
-- stimuli_process: _(  )_
-
-- data_check_process: _(  )_
-
+- main: (  )
+- stimuli_process: (  )
+- data_check_process: (  )
 ## Instantiations
+
 - dut: work.sobel_x

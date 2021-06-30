@@ -1,17 +1,22 @@
 # Entity: otbn_start_stop_control
+
 ## Diagram
+
 ![Diagram](otbn_start_stop_control.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value                              | Description                               |
 | ------------- | ---- | ---------------------------------- | ----------------------------------------- |
 | ImemSizeByte  | int  | 4096                               | Size of the instruction memory, in bytes  |
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |                                           |
 ## Ports
+
 | Port name               | Direction | Type                | Description |
 | ----------------------- | --------- | ------------------- | ----------- |
 | clk_i                   | input     |                     |             |
@@ -27,6 +32,7 @@ Copyright lowRISC contributors.
 | ispr_init_o             | output    |                     |             |
 | insn_cnt_reset_o        | output    |                     |             |
 ## Signals
+
 | Name          | Type                      | Description |
 | ------------- | ------------------------- | ----------- |
 | state_q       | otbn_start_stop_state_e   |             |
@@ -34,13 +40,11 @@ Copyright lowRISC contributors.
 | start_addr_q  | logic [ImemAddrWidth-1:0] |             |
 | start_addr_en | logic                     |             |
 ## Constants
+
 | Name          | Type | Value                              | Description |
 | ------------- | ---- | ---------------------------------- | ----------- |
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )
+- unnamed: (  )

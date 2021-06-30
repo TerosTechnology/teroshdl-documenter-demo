@@ -1,13 +1,17 @@
 # Entity: adc_ctrl_intr
+
 ## Diagram
+
 ![Diagram](adc_ctrl_intr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: adc_ctrl interrupt Module
  
 ## Ports
+
 | Port name            | Direction | Type                                    | Description |
 | -------------------- | --------- | --------------------------------------- | ----------- |
 | clk_i                | input     |                                         |             |
@@ -28,11 +32,13 @@ Copyright lowRISC contributors.
 | debug_cable_wakeup_o | output    |                                         |             |
 | intr_debug_cable_o   | output    |                                         |             |
 ## Signals
+
 | Name                    | Type                     | Description |
 | ----------------------- | ------------------------ | ----------- |
 | cfg_adc_ctrl_match_done | logic [NumAdcFilter-1:0] |             |
 | adc_ctrl_event          | logic                    |             |
 ## Instantiations
+
 - i_cc_sink_det: prim_pulse_sync
 - i_cc_1a5_sink_det: prim_pulse_sync
 - i_cc_3a0_sink_det: prim_pulse_sync

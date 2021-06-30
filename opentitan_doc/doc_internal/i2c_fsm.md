@@ -1,13 +1,17 @@
 # Entity: i2c_fsm
+
 ## Diagram
+
 ![Diagram](i2c_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: I2C finite state machine
  
 ## Ports
+
 | Port name                | Direction | Type   | Description                                                 |
 | ------------------------ | --------- | ------ | ----------------------------------------------------------- |
 | clk_i                    | input     |        | clock                                                       |
@@ -74,6 +78,7 @@ Copyright lowRISC contributors.
 | event_ack_stop_o         | output    |        | target received stop after ack                              |
 | event_host_timeout_o     | output    |        | host ceased sending SCL pulses during ongoing transactn     |
 ## Signals
+
 | Name                 | Type         | Description                                                      |
 | -------------------- | ------------ | ---------------------------------------------------------------- |
 | tcount_q             | logic [19:0] | current counter for setting delays                               |
@@ -118,122 +123,84 @@ Copyright lowRISC contributors.
 | state_q              | state_e      |                                                                  |
 | state_d              | state_e      |                                                                  |
 ## Types
+
 | Name         | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Description                   |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | tcount_sel_e | enum logic [3:0] {     tSetupStart, tHoldStart, tClockLow, tSetupBit, tClockPulse, tHoldBit,         tClockStart, tClockStop, tSetupStop, tHoldStop, tNoDelay   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Clock counter implementation  |
 | state_e      | enum logic [5:0] {     Idle, PopFmtFifo, SetupStart, HoldStart, SetupStop, HoldStop,         ClockLow, SetupBit, ClockPulse, HoldBit,         ClockLowAck, SetupDevAck, ClockPulseAck, HoldDevAck,         ReadClockLow, ReadSetupBit, ReadClockPulse, ReadHoldBit,         HostClockLowAck, HostSetupBitAck, HostClockPulseAck, HostHoldBitAck,         Active, ClockStart, ClockStop,         AcquireStart, AddrRead, AddrAckWait, AddrAckSetup, AddrAckPulse, AddrAckHold,         TransmitWait, TransmitSetup, TransmitPulse, TransmitHold, TransmitAck,         AcquireByte, AcquireAckWait, AcquireAckSetup, AcquireAckPulse, AcquireAckHold,         PopTxFifo, AcquireSrP, StretchTxEmpty, StretchAcqFull, StretchAddrTransmit,         StretchAddrAcquire   } | State definitions             |
 ## Processes
-- counter_functions: _(  )_
-
-- clk_counter: _( @ (posedge clk_i or negedge rst_ni) )_
-
-- clk_stretch: _( @ (posedge clk_i or negedge rst_ni) )_
-Clock stretching detection
-
+- counter_functions: (  )
+- clk_counter: ( @ (posedge clk_i or negedge rst_ni) )
+- clk_stretch: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Clock stretching detection
 
-- bit_counter: _( @ (posedge clk_i or negedge rst_ni) )_
-Bit index implementation
-
+- bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Bit index implementation
 
-- read_register: _( @ (posedge clk_i or negedge rst_ni) )_
-Deserializer for a byte read from the bus
-
+- read_register: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Deserializer for a byte read from the bus
 
-- byte_number: _(  )_
-Number of bytes to read
-
+- byte_number: (  )
 **Description**
 Number of bytes to read
 
-- byte_counter: _( @ (posedge clk_i or negedge rst_ni) )_
-Byte index implementation
-
+- byte_counter: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Byte index implementation
 
-- bus_prev: _( @ (posedge clk_i or negedge rst_ni) )_
-SDA and SCL at the previous clock edge
-
+- bus_prev: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 SDA and SCL at the previous clock edge
 
-- stop_state: _( @ (posedge clk_i or negedge rst_ni) )_
-Stop issued before
-
+- stop_state: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Stop issued before
 
-- s_detect: _( @ (posedge clk_i or negedge rst_ni) )_
-(Repeated) Start condition detection by target
-
+- s_detect: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 (Repeated) Start condition detection by target
 
-- p_detect: _( @ (posedge clk_i or negedge rst_ni) )_
-Stop condition detection by target
-
+- p_detect: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Stop condition detection by target
 
-- tgt_bit_counter: _( @ (posedge clk_i or negedge rst_ni) )_
-ack
-Increment counter on negative SCL edge
-
+- tgt_bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 ack
 Increment counter on negative SCL edge
 
-- scl_high_counter: _( @ (posedge clk_i or negedge rst_ni) )_
-Counter for continuously released SCL state
-
+- scl_high_counter: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Counter for continuously released SCL state
 
-- tgt_input_register: _( @ (posedge clk_i or negedge rst_ni) )_
-Shift data in on positive SCL edge
-
+- tgt_input_register: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Shift data in on positive SCL edge
 
-- host_ack_register: _( @ (posedge clk_i or negedge rst_ni) )_
-Detection by the target of ACK bit send by the host
-
+- host_ack_register: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Detection by the target of ACK bit send by the host
 
-- stretch_addr_sp_tx: _( @ (posedge clk_i or negedge rst_ni) )_
-Deasserting stretch_stop_tx bit after the first target address match for transmit
-
+- stretch_addr_sp_tx: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Deasserting stretch_stop_tx bit after the first target address match for transmit
 
-- stretch_addr_sp_acq: _( @ (posedge clk_i or negedge rst_ni) )_
-Deasserting stretch_stop_acq bit after the first target address match for acquire
-
+- stretch_addr_sp_acq: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Deasserting stretch_stop_acq bit after the first target address match for acquire
 
-- state_outputs: _(  )_
-Outputs for each state
-
+- state_outputs: (  )
 **Description**
 Outputs for each state
 
-- state_functions: _(  )_
-Conditional state transition
-
+- state_functions: (  )
 **Description**
 Conditional state transition
 
-- state_transition: _( @ (posedge clk_i or negedge rst_ni) )_
-Synchronous state transition
-
+- state_transition: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Synchronous state transition
 

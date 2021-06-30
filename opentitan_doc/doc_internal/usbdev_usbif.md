@@ -1,7 +1,10 @@
 # Entity: usbdev_usbif
+
 ## Diagram
+
 ![Diagram](usbdev_usbif.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  This module runs on the 48MHz USB clock
  
 ## Generics
+
 | Generic name   | Type | Value                  | Description       |
 | -------------- | ---- | ---------------------- | ----------------- |
 | NEndpoints     | int  | 12                     |                   |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | NBufWidth      | int  | $clog2(NBuf)           | derived parameter |
 | PktW           | int  | $clog2(MaxPktSizeByte) | derived parameter |
 ## Ports
+
 | Port name             | Direction | Type                 | Description                              |
 | --------------------- | --------- | -------------------- | ---------------------------------------- |
 | clk_48mhz_i           | input     |                      | 48MHz USB clock                          |
@@ -82,6 +87,7 @@ Copyright lowRISC contributors.
 | rx_pid_err_o          | output    |                      |                                          |
 | rx_bitstuff_err_o     | output    |                      |                                          |
 ## Signals
+
 | Name            | Type                   | Description                                                                                    |
 | --------------- | ---------------------- | ---------------------------------------------------------------------------------------------- |
 | out_max_used_d  | logic [PktW:0]         | OUT or SETUP direction                                                                         |
@@ -123,39 +129,30 @@ Copyright lowRISC contributors.
 | ns_cnt          | logic [5:0]            | us_tick ticks for one cycle every us                                                           |
 | us_tick         | logic                  |                                                                                                |
 ## Constants
+
 | Name      | Type | Value                  | Description       |
 | --------- | ---- | ---------------------- | ----------------- |
 | NBufWidth | int  | $clog2(NBuf)           | derived parameter |
 | PktW      | int  | $clog2(MaxPktSizeByte) | derived parameter |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-Pop the available fifo after the write that used the previous value
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 **Description**
 Pop the available fifo after the write that used the previous value
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-Need extra read at start of packet to get the first word of data
-Delay by one cycle from the in_endpoint update
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 **Description**
 Need extra read at start of packet to get the first word of data
 Delay by one cycle from the in_endpoint update
 
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-Capture frame number (host sends evert 1ms)
-
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 **Description**
 Capture frame number (host sends evert 1ms)
 
 ## Instantiations
+
 - u_usb_fs_nb_pe: usb_fs_nb_pe
 - u_usbdev_linkstate: usbdev_linkstate

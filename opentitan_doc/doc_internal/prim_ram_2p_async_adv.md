@@ -1,7 +1,10 @@
 # Entity: prim_ram_2p_async_adv
+
 ## Diagram
+
 ![Diagram](prim_ram_2p_async_adv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -15,6 +18,7 @@ Copyright lowRISC contributors.
  mask cannot be used and has to be tied to {Width{1'b1}}.
  
 ## Generics
+
 | Generic name         | Type | Value                       | Description                                                                                                                                                                                                               |
 | -------------------- | ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Depth                | int  | 512                         |                                                                                                                                                                                                                           |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | HammingECC           | bit  | 0                           | This switch allows to switch to standard Hamming ECC instead of the HSIAO ECC. It is recommended to leave this parameter at its default setting (HSIAO), since this results in a more compact and faster implementation.  |
 | Aw                   | int  | prim_util_pkg::vbits(Depth) |                                                                                                                                                                                                                           |
 ## Ports
+
 | Port name  | Direction | Type         | Description                                    |
 | ---------- | --------- | ------------ | ---------------------------------------------- |
 | clk_a_i    | input     |              |                                                |
@@ -52,6 +57,7 @@ Copyright lowRISC contributors.
 | b_rerror_o | output    | [1:0]        | Bit1: Uncorrectable, Bit0: Correctable         |
 | cfg_i      | input     | ram_2p_cfg_t | config                                         |
 ## Signals
+
 | Name            | Type                   | Description |
 | --------------- | ---------------------- | ----------- |
 | a_req_q         | logic                  |             |
@@ -91,6 +97,7 @@ Copyright lowRISC contributors.
 | b_rerror_q      | logic [1:0]            |             |
 | b_rerror_d      | logic [1:0]            |             |
 ## Constants
+
 | Name                 | Type | Value                       | Description                                                                                                                                                                                         |
 | -------------------- | ---- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Aw                   | int  | prim_util_pkg::vbits(Depth) |                                                                                                                                                                                                     |
@@ -98,9 +105,8 @@ Copyright lowRISC contributors.
 | TotalWidth           | int  | Width + ParWidth            |                                                                                                                                                                                                     |
 | LocalDataBitsPerMask | int  | 9          :                | If byte parity is enabled, the write enable bits are used to write memory colums with 8 + 1 = 9 bit width (data plus corresponding parity bit). If ECC is enabled, the DataBitsPerMask is ignored.  |
 ## Processes
-- unnamed: _( @(posedge clk_a_i or negedge rst_a_ni) )_
-
-- unnamed: _( @(posedge clk_b_i or negedge rst_b_ni) )_
-
+- unnamed: ( @(posedge clk_a_i or negedge rst_a_ni) )
+- unnamed: ( @(posedge clk_b_i or negedge rst_b_ni) )
 ## Instantiations
+
 - u_mem: prim_ram_2p

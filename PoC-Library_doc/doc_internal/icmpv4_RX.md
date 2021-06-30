@@ -1,7 +1,10 @@
 # Entity: icmpv4_RX
+
 ## Diagram
+
 ![Diagram](icmpv4_RX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEBUG        | boolean | FALSE |             |
 ## Ports
+
 | Port name                     | Direction | Type                    | Description   |
 | ----------------------------- | --------- | ----------------------- | ------------- |
 | Clock                         | in        | std_logic               |               |
@@ -68,6 +73,7 @@ limitations under the License.
 | Out_Meta_Payload_last         | out       | std_logic               |               |
 | Out_Meta_Payload_Data         | out       | T_SLV_8                 |               |
 ## Signals
+
 | Name               | Type                         | Description       |
 | ------------------ | ---------------------------- | ----------------- |
 | State              | T_STATE                      |                   |
@@ -94,17 +100,16 @@ limitations under the License.
 | MetaFIFO_DataOut   | std_logic_vector(8 downto 0) |                   |
 | MetaFIFO_got       | std_logic                    |                   |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                    | Description |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_RECEIVE_ECHO_CODE, 				ST_RECEIVE_ECHO_CHECKSUM_0, 				ST_RECEIVE_ECHO_CHECKSUM_1, 				ST_RECEIVE_ECHO_IDENTIFIER_0, 				ST_RECEIVE_ECHO_IDENTIFIER_1, 				ST_RECEIVE_ECHO_SEQ_NUMBER_0, 				ST_RECEIVE_ECHO_SEQ_NUMBER_1, 				ST_RECEIVE_ECHO_DATA, 				ST_RECEIVE_ECHO_COMPLETE, 		ST_DISCARD_FRAME, 		ST_ERROR 	) |             |
+
+| Name    | Type                                                                                                                                                                                                                                                                                           | Description |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_RECEIVE_ECHO_CODE, ST_RECEIVE_ECHO_CHECKSUM_0, ST_RECEIVE_ECHO_CHECKSUM_1, ST_RECEIVE_ECHO_IDENTIFIER_0, ST_RECEIVE_ECHO_IDENTIFIER_1, ST_RECEIVE_ECHO_SEQ_NUMBER_0, ST_RECEIVE_ECHO_SEQ_NUMBER_1, ST_RECEIVE_ECHO_DATA, ST_RECEIVE_ECHO_COMPLETE, ST_DISCARD_FRAME, ST_ERROR )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Command, In_Valid, In_Data, In_SOF, In_EOF, Out_Meta_rst, Out_Meta_Payload_nxt )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Command, In_Valid, In_Data, In_SOF, In_EOF, Out_Meta_rst, Out_Meta_Payload_nxt )
+- unnamed: ( Clock )
 ## Instantiations
+
 - PayloadFIFO: PoC.fifo_cc_got_tempgot
 **Description**
 FIXME: monitor MetaFIFO_Full signal

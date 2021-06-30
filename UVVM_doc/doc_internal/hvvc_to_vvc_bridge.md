@@ -1,7 +1,10 @@
 # Entity: hvvc_to_vvc_bridge
+
 ## Diagram
+
 ![Diagram](hvvc_to_vvc_bridge.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description : See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name           | Type                                  | Value           | Description                                                    |
 | ---------------------- | ------------------------------------- | --------------- | -------------------------------------------------------------- |
 | GC_INSTANCE_IDX        | integer                               |                 | Instance index of the VVC                                      |
@@ -20,6 +24,7 @@ Description : See library quick reference (under 'doc') and README-file(s)
 | GC_SCOPE               | string                                |                 | Scope of the HVVC-to-VVC Bridge                                |
 | GC_WORD_ENDIANNESS     | t_word_endianness                     | LOWER_WORD_LEFT | Word endianness                                                |
 ## Ports
+
 | Port name      | Direction | Type             | Description |
 | -------------- | --------- | ---------------- | ----------- |
 | hvvc_to_bridge | in        | t_hvvc_to_bridge |             |

@@ -1,7 +1,10 @@
 # Entity: sync_Pulse_Xilinx
+
 ## Diagram
+
 ![Diagram](sync_Pulse_Xilinx.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -51,24 +54,29 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type              | Value | Description                                 |
 | ------------ | ----------------- | ----- | ------------------------------------------- |
 | BITS         | positive          | 1     | number of bit to be synchronized            |
 | SYNC_DEPTH   | T_MISC_SYNC_DEPTH | 2     | generate SYNC_DEPTH many stages, at least 2 |
 ## Ports
+
 | Port name | Direction | Type                                | Description                 |
 | --------- | --------- | ----------------------------------- | --------------------------- |
 | Clock     | in        | std_logic                           | Clock to be synchronized to |
 | Input     | in        | std_logic_vector(BITS - 1 downto 0) | Data to be synchronized     |
 | Output    | out       | std_logic_vector(BITS - 1 downto 0) | synchronised data           |
 ## Signals
+
 | Name           | Type                                | Description |
 | -------------- | ----------------------------------- | ----------- |
 | Captured_async | std_logic_vector(BITS - 1 downto 0) |             |
 | Input_sync     | std_logic_vector(BITS - 1 downto 0) |             |
 ## Constants
+
 | Name   | Type       | Value                   | Description |
 | ------ | ---------- | ----------------------- | ----------- |
 | INIT_I | bit_vector |  (0 to BITS - 1 => '0') |             |
 ## Instantiations
+
 - Sync: PoC.sync_Bits_Xilinx

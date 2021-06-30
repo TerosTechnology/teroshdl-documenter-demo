@@ -1,7 +1,10 @@
 # Entity: pmod_KYPD
+
 ## Diagram
+
 ![Diagram](pmod_KYPD.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -29,12 +32,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type | Value   | Description |
 | ------------ | ---- | ------- | ----------- |
 | CLOCK_FREQ   | FREQ | 100 MHz |             |
 | SCAN_FREQ    | FREQ | 1 kHz   |             |
 | BOUNCE_TIME  | time | 10 ms   |             |
 ## Ports
+
 | Port name | Direction | Type                         | Description      |
 | --------- | --------- | ---------------------------- | ---------------- |
 | Clock     | in        | std_logic                    |                  |
@@ -43,6 +48,7 @@ limitations under the License.
 | Columns_n | out       | std_logic_vector(3 downto 0) | KeyPad interface |
 | Rows_n    | in        | std_logic_vector(3 downto 0) |                  |
 ## Signals
+
 | Name             | Type                          | Description |
 | ---------------- | ----------------------------- | ----------- |
 | ColumnVector     | std_logic_vector(3 downto 0)  |             |
@@ -52,6 +58,7 @@ limitations under the License.
 | KeyPadVector     | std_logic_vector(15 downto 0) |             |
 | KeyPad           | T_SLM(3 downto 0, 3 downto 0) |             |
 ## Instantiations
+
 - scanner: PoC.io_KeyPadScanner
 **Description**
 initialize a 4x4 matrix scanner

@@ -1,7 +1,10 @@
 # Entity: prim_esc_sender
+
 ## Diagram
+
 ![Diagram](prim_esc_sender.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -19,6 +22,7 @@ Copyright lowRISC contributors.
  See also: prim_esc_receiver, prim_diff_decode, alert_handler
  
 ## Ports
+
 | Port name    | Direction | Type     | Description                                                              |
 | ------------ | --------- | -------- | ------------------------------------------------------------------------ |
 | clk_i        | input     |          |                                                                          |
@@ -30,6 +34,7 @@ Copyright lowRISC contributors.
 | esc_rx_i     | input     | esc_rx_t | escalation / ping response                                               |
 | esc_tx_o     | output    | esc_tx_t | escalation output diff pair                                              |
 ## Signals
+
 | Name            | Type    | Description                                                                   |
 | --------------- | ------- | ----------------------------------------------------------------------------- |
 | resp            | logic   |                                                                               |
@@ -48,15 +53,15 @@ Copyright lowRISC contributors.
 | clk_i           | state_q |                                                                               |
 | !rs             | state_q |                                                                               |
 ## Types
+
 | Name  | Type                                                                                                                        | Description |
 | ----- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | fsm_e | enum logic [2:0] {Idle, CheckEscRespLo, CheckEscRespHi,     CheckPingResp0, CheckPingResp1, CheckPingResp2, CheckPingResp3} |             |
 ## Processes
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_buf_resp: prim_buf
 **Description**
 This prevents further tool optimizations of the differential signal.

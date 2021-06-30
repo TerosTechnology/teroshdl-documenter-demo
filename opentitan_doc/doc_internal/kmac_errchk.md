@@ -1,7 +1,10 @@
 # Entity: kmac_errchk
+
 ## Diagram
+
 ![Diagram](kmac_errchk.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -35,6 +38,7 @@ Copyright lowRISC contributors.
  * sideload & key_valid -> Checker in kmac_core
  
 ## Ports
+
 | Port name       | Direction | Type              | Description           |
 | --------------- | --------- | ----------------- | --------------------- |
 | clk_i           | input     |                   |                       |
@@ -49,6 +53,7 @@ Copyright lowRISC contributors.
 | keccak_done_i   | input     |                   |                       |
 | error_o         | output    | err_t             |                       |
 ## Signals
+
 | Name               | Type  | Description                                                                                                                                          |
 | ------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | st                 | st_e  |                                                                                                                                                      |
@@ -59,25 +64,19 @@ Copyright lowRISC contributors.
 | check_modestrength | end   |                                                                                                                                                      |
 | err                | err_t | Return error code                                                                                                                                    |
 ## Types
+
 | Name | Type                                                                                                | Description |
 | ---- | --------------------------------------------------------------------------------------------------- | ----------- |
 | st_e | enum logic [2:0] {     StIdle,     StMsgFeed,     StProcessing,     StAbsorbed,     StSqueezing   } |             |
 ## Processes
-- unnamed: _(  )_
-SW sequence Error
-info field: Current state, Received command
-
+- unnamed: (  )
 **Description**
 SW sequence Error
 info field: Current state, Received command
 
-- check_modestrength: _(  )_
-Mode & Strength
-
+- check_modestrength: (  )
 **Description**
 Mode & Strength
 
-- check_prefix: _(  )_
-
-- err_return: _(  )_
-
+- check_prefix: (  )
+- err_return: (  )

@@ -1,7 +1,10 @@
 # Entity: aes_ctr
+
 ## Diagram
+
 ![Diagram](aes_ctr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  counter value.
  
 ## Ports
+
 | Port name | Direction | Type               | Description |
 | --------- | --------- | ------------------ | ----------- |
 | clk_i     | input     |                    |             |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | ctr_o     | output    | [NumSlicesCtr-1:0] |             |
 | ctr_we_o  | output    | [NumSlicesCtr-1:0] |             |
 ## Signals
+
 | Name            | Type                                        | Description                                                                                                                |
 | --------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | aes_ctr_ns      | aes_ctr_e                                   |                                                                                                                            |
@@ -43,47 +48,39 @@ Copyright lowRISC contributors.
 | incr_raw        | logic [Sp2VWidth-1:0]                       | Check sparsely encoded incr signal.                                                                                        |
 | aes_ctr_cs_raw  | logic [StateWidth-1:0]                      | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name          | Type         | Value                              | Description       |
 | ------------- | ------------ | ---------------------------------- | ----------------- |
 | SliceIdxWidth | int unsigned | prim_util_pkg::vbits(NumSlicesCtr) | Local parameters  |
 | StateWidth    | int          | 5                                  |                   |
 ## Types
+
 | Name      | Type                                                                                               | Description |
 | --------- | -------------------------------------------------------------------------------------------------- | ----------- |
 | aes_ctr_e | enum logic [StateWidth-1:0] {     IDLE  = 5'b01110,     INCR  = 5'b11000,     ERROR = 5'b00001   } |             |
 ## Processes
-- reg_out_ack_err: _( @(posedge clk_i or negedge rst_ni) )_
-Need to register errors in incr to avoid circular loops in the main
-controller related to start.
-
+- reg_out_ack_err: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Need to register errors in incr to avoid circular loops in the main
 controller related to start.
 
-- aes_ctr_fsm: _(  )_
-FSM
-
+- aes_ctr_fsm: (  )
 **Description**
 FSM
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Registers
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Registers
 
-- unnamed: _(  )_
-Combine input and counter output.
-
+- unnamed: (  )
 **Description**
 Combine input and counter output.
 
-- unnamed: _(  )_
-Generate the sliced write enable.
-
+- unnamed: (  )
 **Description**
 Generate the sliced write enable.
 
 ## Instantiations
+
 - u_aes_sb_en_buf_chk: aes_sel_buf_chk
 - u_state_regs: prim_flop

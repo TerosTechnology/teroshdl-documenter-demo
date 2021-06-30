@@ -1,7 +1,10 @@
 # Entity: stream_Buffer
+
 ## Diagram
+
 ![Diagram](stream_Buffer.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,6 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name    | Type     | Value     | Description |
 | --------------- | -------- | --------- | ----------- |
 | FRAMES          | positive | 2         |             |
@@ -35,6 +39,7 @@ limitations under the License.
 | META_BITS       | T_POSVEC | (0 => 8)  |             |
 | META_FIFO_DEPTH | T_POSVEC | (0 => 16) |             |
 ## Ports
+
 | Port name     | Direction | Type                                            | Description |
 | ------------- | --------- | ----------------------------------------------- | ----------- |
 | Clock         | in        | std_logic                                       |             |
@@ -56,6 +61,7 @@ limitations under the License.
 | Out_Meta_nxt  | in        | std_logic_vector(META_BITS'length - 1 downto 0) |             |
 | Out_Meta_Data | out       | std_logic_vector(isum(META_BITS) - 1 downto 0)  |             |
 ## Signals
+
 | Name             | Type                                            | Description |
 | ---------------- | ----------------------------------------------- | ----------- |
 | Writer_State     | T_WRITER_STATE                                  |             |
@@ -71,25 +77,25 @@ limitations under the License.
 | FrameCommit      | std_logic                                       |             |
 | Meta_rst         | std_logic_vector(META_BITS'length - 1 downto 0) |             |
 ## Constants
+
 | Name         | Type     | Value             | Description |
 | ------------ | -------- | ----------------- | ----------- |
 | META_STREAMS | positive |  META_BITS'length |             |
 | EOF_BIT      | natural  |  DATA_BITS        |             |
 ## Types
-| Name           | Type                | Description |
-| -------------- | ------------------- | ----------- |
-| T_WRITER_STATE | (ST_IDLE, ST_FRAME) |             |
-| T_READER_STATE | (ST_IDLE, ST_FRAME) |             |
+
+| Name           | Type                 | Description |
+| -------------- | -------------------- | ----------- |
+| T_WRITER_STATE | (ST_IDLE, ST_FRAME)  |             |
+| T_READER_STATE | (ST_IDLE, ST_FRAME)  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( Writer_State,
+- unnamed: ( Clock )
+- unnamed: ( Writer_State,
 					In_Valid, In_Data, In_SOF, In_EOF,
-					DataFIFO_Full )_
-
-- unnamed: _( Reader_State,
+					DataFIFO_Full )
+- unnamed: ( Reader_State,
 					Out_Ack,
-					DataFIFO_Valid, DataFIFO_DataOut )_
-
+					DataFIFO_Valid, DataFIFO_DataOut )
 ## Instantiations
+
 - DataFIFO: PoC.fifo_cc_got

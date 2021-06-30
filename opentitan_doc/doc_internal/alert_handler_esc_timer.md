@@ -1,7 +1,10 @@
 # Entity: alert_handler_esc_timer
+
 ## Diagram
+
 ![Diagram](alert_handler_esc_timer.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -16,6 +19,7 @@ Copyright lowRISC contributors.
  Note that escalation always takes precedence over the interrupt timeout.
  
 ## Ports
+
 | Port name     | Direction | Type            | Description                                                                                                  |
 | ------------- | --------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
 | clk_i         | input     |                 |                                                                                                              |
@@ -34,6 +38,7 @@ Copyright lowRISC contributors.
 | esc_sig_req_o | output    | [N_ESC_SEV-1:0] | escalation signal outputs                                                                                    |
 | esc_state_o   | output    | cstate_e        | current state output000: idle, 001: irq timeout counting 100: phase0, 101: phase1, 110: phase2, 111: phase3  |
 ## Signals
+
 | Name           | Type                                | Description                                                                                                                |
 | -------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | cnt_en         | logic                               |                                                                                                                            |
@@ -49,15 +54,17 @@ Copyright lowRISC contributors.
 | esc_map_oh     | logic [N_ESC_SEV-1:0][N_PHASES-1:0] |                                                                                                                            |
 | state_raw_q    | logic [StateWidth-1:0]              | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name       | Type | Value | Description |
 | ---------- | ---- | ----- | ----------- |
 | StateWidth | int  | 10    |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                                                                                                                     | Description |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     IdleSt     = 10'b1101000111,     TimeoutSt  = 10'b0010011110,     Phase0St   = 10'b1111011001,     Phase1St   = 10'b0001110100,     Phase2St   = 10'b1110110010,     Phase3St   = 10'b0010000001,     TerminalSt = 10'b0101101010,     FsmErrorSt = 10'b1000101101   } |             |
 ## Processes
-- p_fsm: _(  )_
-
+- p_fsm: (  )
 ## Instantiations
+
 - u_state_regs: prim_flop

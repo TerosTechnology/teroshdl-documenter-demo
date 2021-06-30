@@ -1,7 +1,10 @@
 # Entity: arith_firstone
+
 ## Diagram
+
 ![Diagram](arith_firstone.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -36,10 +39,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description           |
 | ------------ | -------- | ----- | --------------------- |
 | N            | positive |       | Length of Token Chain |
 ## Ports
+
 | Port name | Direction | Type                                     | Description              |
 | --------- | --------- | ---------------------------------------- | ------------------------ |
 | tin       | in        | std_logic                                | Enable:   Fed Token      |

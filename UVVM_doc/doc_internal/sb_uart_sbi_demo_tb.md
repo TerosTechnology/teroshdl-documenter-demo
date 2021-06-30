@@ -1,7 +1,10 @@
 # Entity: sb_uart_sbi_demo_tb
+
 ## Diagram
+
 ![Diagram](sb_uart_sbi_demo_tb.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,6 +15,7 @@ Note : Any functionality not explicitly described in the documentation is subjec
 Description   : See library quick reference (under 'doc') and README-file(s)
 Test harness entity
 ## Signals
+
 | Name           | Type                                                                                                                                                          | Description                               |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | clk            | std_logic                                                                                                                                                     | DSP interface and general control signals |
@@ -22,6 +26,7 @@ Test harness entity
 | uart_rx        | std_logic                                                                                                                                                     | UART signals                              |
 | uart_tx        | std_logic                                                                                                                                                     |                                           |
 ## Constants
+
 | Name         | Type    | Value  | Description |
 | ------------ | ------- | ------ | ----------- |
 | C_SCOPE      | string  |  "TB"  |             |
@@ -29,11 +34,10 @@ Test harness entity
 | C_DATA_WIDTH | integer |  8     |             |
 | C_CLK_PERIOD | time    |  10 ns | 100 MHz     |
 ## Processes
-- p_sequencer: _(  )_
-Sequencer
-
+- p_sequencer: (  )
 **Description**
 Sequencer
 
 ## Instantiations
+
 - i_uart: bitvis_uart.uart

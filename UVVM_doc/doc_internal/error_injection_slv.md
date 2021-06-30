@@ -1,7 +1,10 @@
 # Entity: error_injection_slv
+
 ## Diagram
+
 ![Diagram](error_injection_slv.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,15 +15,16 @@ Note : Any functionality not explicitly described in the documentation is subjec
 VHDL unit     : Bitvis VIP Error Injection Library : error_injection_pkg
 Description   : See library quick reference (under 'doc') and README-file(s).
 ## Generics
+
 | Generic name    | Type    | Value | Description |
 | --------------- | ------- | ----- | ----------- |
 | GC_START_TIME   | time    | 0 ns  |             |
 | GC_INSTANCE_IDX | natural | 1     |             |
 ## Ports
+
 | Port name | Direction | Type             | Description |
 | --------- | --------- | ---------------- | ----------- |
 | ei_in     | in        | std_logic_vector |             |
 | ei_out    | out       | std_logic_vector |             |
 ## Processes
-- p_error_injection: _(  )_
-
+- p_error_injection: (  )

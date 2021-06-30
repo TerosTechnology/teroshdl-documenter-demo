@@ -1,7 +1,10 @@
 # Entity: aes_prng_masking
+
 ## Diagram
+
 ![Diagram](aes_prng_masking.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -17,6 +20,7 @@ Copyright lowRISC contributors.
  for masking purposes.                                                                         //
  
 ## Generics
+
 | Generic name         | Type                   | Value                           | Description                           |
 | -------------------- | ---------------------- | ------------------------------- | ------------------------------------- |
 | Width                | int unsigned           | WidthPRDMasking                 | Must be divisble by ChunkSize and 8   |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | RndCnstLfsrSeed      | masking_lfsr_seed_t    | RndCnstMaskingLfsrSeedDefault   |                                       |
 | RndCnstChunkLfsrPerm | mskg_chunk_lfsr_perm_t | RndCnstMskgChunkLfsrPermDefault |                                       |
 ## Ports
+
 | Port name          | Direction | Type               | Description                                  |
 | ------------------ | --------- | ------------------ | -------------------------------------------- |
 | clk_i              | input     |                    |                                              |
@@ -41,6 +46,7 @@ Copyright lowRISC contributors.
 | entropy_ack_i      | input     |                    |                                              |
 | entropy_i          | input     | [EntropyWidth-1:0] |                                              |
 ## Signals
+
 | Name       | Type                                 | Description |
 | ---------- | ------------------------------------ | ----------- |
 | seed_en    | logic                                |             |
@@ -54,14 +60,15 @@ Copyright lowRISC contributors.
 | sub_b      | logic            [NumBytes-1:0][7:0] |             |
 | phase_q    | logic                                |             |
 ## Constants
+
 | Name      | Type         | Value           | Description       |
 | --------- | ------------ | --------------- | ----------------- |
 | NumChunks | int unsigned | Width/ChunkSize | derived parameter |
 | NumBytes  | int unsigned | Width/8         |                   |
 ## Processes
-- reg_phase: _( @(posedge clk_i or negedge rst_ni) )_
-
+- reg_phase: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_packer_fifo: prim_packer_fifo
 **Description**
 Upsizing of entropy input to correct width for PRNG reseeding.

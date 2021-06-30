@@ -1,7 +1,10 @@
 # Entity: prim_gf_mult
+
 ## Diagram
+
 ![Diagram](prim_gf_mult.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -23,12 +26,14 @@ Copyright lowRISC contributors.
  https://ieeexplore.ieee.org/document/542803
  
 ## Generics
+
 | Generic name   | Type             | Value     | Description                                                                                                                                                                                                                                                        |
 | -------------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Width          | int              | 32        |                                                                                                                                                                                                                                                                    |
 | StagesPerCycle | int              | Width     |                                                                                                                                                                                                                                                                    |
 | Width          | logic[Width-1:0] | 1'b1 << 1 | The field-generating, irreducible polynomial of degree Width. Can for example be a Conway polynomial, see http://www.math.rwth-aachen.de/~Frank.Luebeck/data/ConwayPol/CP2.html For Width = 33, the Conway polynomial hast bits 32, 15, 9, 7, 4, 3, 0 set to one.  |
 ## Ports
+
 | Port name   | Direction | Type        | Description |
 | ----------- | --------- | ----------- | ----------- |
 | clk_i       | input     |             |             |
@@ -39,6 +44,7 @@ Copyright lowRISC contributors.
 | ack_o       | output    |             |             |
 | prod_o      | output    | [Width-1:0] |             |
 ## Signals
+
 | Name          | Type                                  | Description                                                                                 |
 | ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------- |
 | reformat_data | logic [Loops-1:0][StagesPerCycle-1:0] | reformat operand_b_i                                                                        |
@@ -50,6 +56,7 @@ Copyright lowRISC contributors.
 | prod_q        | logic [Width-1:0]                     | intermediate prod held between loops                                                        |
 | prod_d        | logic [Width-1:0]                     | intermediate prod held between loops                                                        |
 ## Constants
+
 | Name     | Type | Value                  | Description |
 | -------- | ---- | ---------------------- | ----------- |
 | Loops    | int  | Width / StagesPerCycle |             |

@@ -1,7 +1,10 @@
 # Entity: comm_crc
+
 ## Diagram
+
 ![Diagram](comm_crc.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -29,6 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type             | Value | Description                                |
 | ------------ | ---------------- | ----- | ------------------------------------------ |
 | GEN          | bit_vector       |       | Generator Polynomial                       |
@@ -36,6 +40,7 @@ limitations under the License.
 | STARTUP_RMD  | std_logic_vector | "0"   |                                            |
 | OUTPUT_REGS  | boolean          | true  |                                            |
 ## Ports
+
 | Port name | Direction | Type                                                      | Description                    |
 | --------- | --------- | --------------------------------------------------------- | ------------------------------ |
 | clk       | in        | std_logic                                                 | Clock                          |
@@ -46,23 +51,22 @@ limitations under the License.
 | rmd       | out       | std_logic_vector(abs(mssb_idx(GEN)-GEN'right)-1 downto 0) | Remainder                      |
 | zero      | out       | std_logic                                                 | Remainder is Zero              |
 ## Signals
+
 | Name | Type                       | Description |
 | ---- | -------------------------- | ----------- |
 | lfsr | std_logic_vector(GN'range) | LFSR Value  |
 | lfsn | std_logic_vector(GN'range) | Next Value  |
 | lfso | std_logic_vector(GN'range) |             |
 ## Constants
+
 | Name | Type             | Value                              | Description          |
 | ---- | ---------------- | ---------------------------------- | -------------------- |
 | GN   | std_logic_vector |  to_stdlogicvector(normalize(GEN)) | Normalized Generator |
 ## Functions
-- normalize <font id="function_arguments">(G : bit_vector)</font> <font id="function_return">return bit_vector</font>
+- normalize <font id="function_arguments">(G : bit_vector) </font> <font id="function_return">return bit_vector </font>
 ## Processes
-- unnamed: _( lfsr, din )_
-
-- unnamed: _( clk )_
-Remainder Register
-
+- unnamed: ( lfsr, din )
+- unnamed: ( clk )
 **Description**
 Remainder Register
 

@@ -1,12 +1,16 @@
 # Entity: tb_axi_stream
+
 ## Diagram
+
 ![Diagram](tb_axi_stream.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name              | Type                   | Value | Description |
 | ------------------------- | ---------------------- | ----- | ----------- |
 | runner_cfg                | string                 |       |             |
@@ -16,6 +20,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | g_stall_percentage_master | natural range 0 to 100 | 0     |             |
 | g_stall_percentage_slave  | natural range 0 to 100 | 0     |             |
 ## Signals
+
 | Name             | Type                                                         | Description |
 | ---------------- | ------------------------------------------------------------ | ----------- |
 | aclk             | std_logic                                                    |             |
@@ -38,6 +43,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | not_valid_user   | std_logic                                                    |             |
 | axis_stall_stats | axis_stall_stats_t                                           |             |
 ## Constants
+
 | Name                | Type                          | Value                                                                                                                                                                                                                                                                                                                                             | Description |
 | ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | min_stall_cycles    | natural                       |  5                                                                                                                                                                                                                                                                                                                                                |             |
@@ -54,16 +60,16 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | protocol_checker    | axi_stream_protocol_checker_t |  new_axi_stream_protocol_checker(     data_length => 8, id_length => g_id_length, dest_length => g_dest_length, user_length => g_user_length,     logger      => get_logger("protocol_checker"),     max_waits   => 8   )                                                                                                                         |             |
 | n_monitors          | natural                       |  3                                                                                                                                                                                                                                                                                                                                                |             |
 ## Types
+
 | Name                      | Type | Description                                          |
 | ------------------------- | ---- | ---------------------------------------------------- |
 | axis_stall_stats_fields_t |      | signals used for the statistics for stall evaluation |
 | axis_stall_stats_t        |      |                                                      |
 ## Processes
-- main: _(  )_
-
-- statistics: _( aclk )_
-
+- main: (  )
+- statistics: ( aclk )
 ## Instantiations
+
 - axi_stream_master_inst: work.axi_stream_master
 - axi_stream_slave_inst: work.axi_stream_slave
 - axi_stream_monitor_inst: work.axi_stream_monitor

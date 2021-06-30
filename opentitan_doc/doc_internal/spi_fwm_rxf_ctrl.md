@@ -1,13 +1,17 @@
 # Entity: spi_fwm_rxf_ctrl
+
 ## Diagram
+
 ![Diagram](spi_fwm_rxf_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Serial Peripheral Interface (SPI) Device module.
  
 ## Generics
+
 | Generic name | Type         | Value            | Description       |
 | ------------ | ------------ | ---------------- | ----------------- |
 | FifoDw       | int unsigned | 8                |                   |
@@ -17,6 +21,7 @@ Copyright lowRISC contributors.
 | SDW          | int unsigned | $clog2(NumBytes) | derived parameter |
 | PtrW         | int unsigned | SramAw + SDW + 1 | derived parameter |
 ## Ports
+
 | Port name     | Direction | Type         | Description   |
 | ------------- | --------- | ------------ | ------------- |
 | clk_i         | input     |              |               |
@@ -40,6 +45,7 @@ Copyright lowRISC contributors.
 | sram_rdata    | input     | [SramDw-1:0] |               |
 | sram_error    | input     | [1:0]        |               |
 ## Signals
+
 | Name            | Type                 | Description                 |
 | --------------- | -------------------- | --------------------------- |
 | byte_enable     | logic [NumBytes-1:0] | Internal variable           |
@@ -60,45 +66,35 @@ Copyright lowRISC contributors.
 | st              | state_e              |                             |
 | ptr_cmp         | logic [PtrW-1:0]     |                             |
 ## Constants
+
 | Name     | Type         | Value            | Description       |
 | -------- | ------------ | ---------------- | ----------------- |
 | NumBytes | int unsigned | SramDw/FifoDw    | derived parameter |
 | SDW      | int unsigned | $clog2(NumBytes) | derived parameter |
 | PtrW     | int unsigned | SramAw + SDW + 1 | derived parameter |
 ## Types
+
 | Name    | Type                                                                                                                                                              | Description |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [2:0] {     StIdle   = 'h0,     StPop    = 'h1,     StWait   = 'h2,     StRead   = 'h3,     StModify = 'h4,     StWrite  = 'h5,     StUpdate = 'h6   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Write pointer update
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Write pointer update
 
-- unnamed: _(  )_
-Depth
-
+- unnamed: (  )
 **Description**
 Depth
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Byte Enable control
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Byte Enable control
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-Next State & output logic
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 Next State & output logic
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

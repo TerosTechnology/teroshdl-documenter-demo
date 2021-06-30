@@ -1,7 +1,10 @@
 # Entity: kmac_msgfifo
+
 ## Diagram
+
 ![Diagram](kmac_msgfifo.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,12 +12,14 @@ Copyright lowRISC contributors.
  This module converts TL-UL interface into MSG_FIFO interface used in KMAC.
  
 ## Generics
+
 | Generic name | Type | Value              | Description                                                                                   |
 | ------------ | ---- | ------------------ | --------------------------------------------------------------------------------------------- |
 | OutWidth     | int  | 64                 | OutWidth is MsgFIFO data width. prim_packer converts InW to OutW prior to pushing to MsgFIFO  |
 | MsgDepth     | int  | 9                  | Internal MsgFIFO Entry count                                                                  |
 | MsgDepthW    | int  | $clog2(MsgDepth+1) | derived parameter                                                                             |
 ## Ports
+
 | Port name    | Direction | Type             | Description                                                                                             |
 | ------------ | --------- | ---------------- | ------------------------------------------------------------------------------------------------------- |
 | clk_i        | input     |                  |                                                                                                         |
@@ -34,6 +39,7 @@ Copyright lowRISC contributors.
 | process_i    | input     |                  | process_i --> process_oprocess_o asserted after all internal messages are flushed out to MSG interface  |
 | process_o    | output    |                  |                                                                                                         |
 ## Signals
+
 | Name               | Type                 | Description                                                                                     |
 | ------------------ | -------------------- | ----------------------------------------------------------------------------------------------- |
 | packer_wvalid      | logic                | Packer write path                                                                               |
@@ -51,20 +57,20 @@ Copyright lowRISC contributors.
 | flush_st           | flush_st_e           |                                                                                                 |
 | flush_st_d         | flush_st_e           |                                                                                                 |
 ## Constants
+
 | Name      | Type | Value              | Description       |
 | --------- | ---- | ------------------ | ----------------- |
 | MsgDepthW | int  | $clog2(MsgDepth+1) | derived parameter |
 ## Types
+
 | Name       | Type                                                                                                                            | Description |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | fifo_t     | struct packed {     logic [OutWidth-1:0]   data;     logic [OutWidth/8-1:0] strb;    }                                          |             |
 | flush_st_e | enum logic [1:0] {               FlushIdle,                     FlushPacker,           FlushFifo,                FlushClear   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_packer: prim_packer

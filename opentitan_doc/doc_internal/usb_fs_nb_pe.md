@@ -1,7 +1,10 @@
 # Entity: usb_fs_nb_pe
+
 ## Diagram
+
 ![Diagram](usb_fs_nb_pe.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright Luke Valenty (TinyFPGA project)
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
@@ -16,6 +19,7 @@ Copyright lowRISC contributors.
  this version contains no packet buffers
  
 ## Generics
+
 | Generic name   | Type         | Value                  | Description       |
 | -------------- | ------------ | ---------------------- | ----------------- |
 | NumOutEps      | int unsigned | 2                      |                   |
@@ -23,6 +27,7 @@ Copyright lowRISC contributors.
 | MaxPktSizeByte | int unsigned | 32                     |                   |
 | PktW           | int unsigned | $clog2(MaxPktSizeByte) | derived parameter |
 ## Ports
+
 | Port name             | Direction | Type            | Description                                     |
 | --------------------- | --------- | --------------- | ----------------------------------------------- |
 | clk_48mhz_i           | input     |                 |                                                 |
@@ -68,6 +73,7 @@ Copyright lowRISC contributors.
 | usb_se0_o             | output    |                 |                                                 |
 | usb_oe_o              | output    |                 |                                                 |
 ## Signals
+
 | Name             | Type         | Description   |
 | ---------------- | ------------ | ------------- |
 | bit_strobe       | logic        | rx interface  |
@@ -92,10 +98,12 @@ Copyright lowRISC contributors.
 | tx_data          | logic [7:0]  |               |
 | usb_oe           | logic        |               |
 ## Constants
+
 | Name | Type         | Value                  | Description       |
 | ---- | ------------ | ---------------------- | ----------------- |
 | PktW | int unsigned | $clog2(MaxPktSizeByte) | derived parameter |
 ## Instantiations
+
 - u_usb_fs_nb_in_pe: usb_fs_nb_in_pe
 - u_usb_fs_nb_out_pe: usb_fs_nb_out_pe
 - u_usb_fs_rx: usb_fs_rx

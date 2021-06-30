@@ -1,12 +1,16 @@
 # Entity: rv_timer
+
 ## Diagram
+
 ![Diagram](rv_timer.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name                | Direction | Type | Description |
 | ------------------------ | --------- | ---- | ----------- |
 | clk_i                    | input     |      |             |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | tl_o                     | output    |      |             |
 | intr_timer_expired_0_0_o | output    |      |             |
 ## Signals
+
 | Name                | Type                         | Description                                   |
 | ------------------- | ---------------------------- | --------------------------------------------- |
 | reg2hw              | rv_timer_reg2hw_t            |                                               |
@@ -36,11 +41,13 @@ Copyright lowRISC contributors.
 | intr_timer_state_d  | logic [N_HARTS*N_TIMERS-1:0] |                                               |
 | intr_out            | logic [N_HARTS*N_TIMERS-1:0] |                                               |
 ## Constants
+
 | Name     | Type | Value | Description |
 | -------- | ---- | ----- | ----------- |
 | N_HARTS  | int  | 1     |             |
 | N_TIMERS | int  | 1     |             |
 ## Instantiations
+
 - u_reg: rv_timer_reg_top
 **Description**
 Register module

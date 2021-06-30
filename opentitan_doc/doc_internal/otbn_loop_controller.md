@@ -1,16 +1,21 @@
 # Entity: otbn_loop_controller
+
 ## Diagram
+
 ![Diagram](otbn_loop_controller.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value | Description |
 | ------------- | ---- | ----- | ----------- |
 | ImemAddrWidth | int  | 12    |             |
 ## Ports
+
 | Port name           | Direction | Type                | Description |
 | ------------------- | --------- | ------------------- | ----------- |
 | clk_i               | input     |                     |             |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | branch_taken_i      | input     |                     |             |
 | otbn_stall_i        | input     |                     |             |
 ## Signals
+
 | Name                     | Type                       | Description |
 | ------------------------ | -------------------------- | ----------- |
 | loop_active_q            | logic                      |             |
@@ -50,18 +56,17 @@ Copyright lowRISC contributors.
 | loop_stack_overflow_err  | logic                      |             |
 | loop_at_end_err          | logic                      |             |
 ## Constants
+
 | Name             | Type         | Value                                   | Description                                                                                                                                                                            |
 | ---------------- | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | LoopStackDepth   | int unsigned | 7                                       | The loop controller has a current loop and then a stack of outer loops, this sets the size of the stack so maximum loop nesting depth is LoopStackDepth + 1.                           |
 | LoopEndAddrWidth | int unsigned | ImemAddrWidth < 14 ? 14 : ImemAddrWidth | ISA has a fixed 12 bits for loop_bodysize. When IMEM size is less than 16 kB (ImemAddrWidth < 14) some of these bits are ignored as a loop body cannot be greater than the IMEM size.  |
 ## Types
+
 | Name        | Type                                                                                                                                                 | Description |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | loop_info_t | struct packed {     logic [ImemAddrWidth-1:0] loop_start;     logic [ImemAddrWidth:0]   loop_end;     logic [31:0]              loop_iterations;   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )

@@ -1,19 +1,24 @@
 # Entity: kmac
+
 ## Diagram
+
 ![Diagram](kmac.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  KMAC/SHA3
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description                                                                                                                                                                                                                                              |
 | ------------ | --------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EnMasking    | bit                   | 1         | EnMasking: Enable masking security hardening inside keccak_round If it is enabled, the result digest will be two set of 1600bit.                                                                                                                         |
 | ReuseShare   | bit                   | 0         | ReuseShare: If set, keccak_round logic only consumes small portion of entropy, not 1600bit of entropy at every round. It uses adjacent shares as entropy inside Domain-Oriented Masking AND logic. This parameter only affects when `EnMasking` is set.  |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |                                                                                                                                                                                                                                                          |
 ## Ports
+
 | Port name         | Direction | Type             | Description                            |
 | ----------------- | --------- | ---------------- | -------------------------------------- |
 | clk_i             | input     |                  |                                        |
@@ -34,6 +39,7 @@ Copyright lowRISC contributors.
 | intr_kmac_err_o   | output    |                  |                                        |
 | idle_o            | output    |                  | Idle signal                            |
 ## Signals
+
 | Name                         | Type                                   | Description                                                                                                                                                                                                                                                |
 | ---------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | kmac_st                      | kmac_st_e                              |                                                                                                                                                                                                                                                            |
@@ -132,34 +138,27 @@ Copyright lowRISC contributors.
 | alert_test                   | logic [NumAlerts-1:0]                  | Register top                                                                                                                                                                                                                                               |
 | alerts                       | logic [NumAlerts-1:0]                  | Register top                                                                                                                                                                                                                                               |
 ## Types
+
 | Name        | Type                                                                                                                                 | Description                                                                               |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | kmac_st_e   | enum logic [2:0] {          KmacIdle,           KmacPrefix,           KmacKeyBlock,           KmacMsgFeed,           KmacDigest    } | This state machine is to track the current process based on SW input and KMAC operation.  |
 | tl_window_e | enum int {     WinState   = 0,     WinMsgFifo = 1   }                                                                                | Window                                                                                    |
 ## Processes
-- unnamed: _(  )_
-Function-name N and Customization input string S
-
+- unnamed: (  )
 **Description**
 Function-name N and Customization input string S
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Secret Key
-Secret key is defined as external register. So the logic latches when SW
-writes to KEY_SHARE0 , KEY_SHARE1 registers.
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Secret Key
 Secret key is defined as external register. So the logic latches when SW
 writes to KEY_SHARE0 , KEY_SHARE1 registers.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - intr_kmac_done: prim_intr_hw
 **Description**
 Hash process absorbed interrupt

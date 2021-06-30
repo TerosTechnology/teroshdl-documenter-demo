@@ -1,7 +1,10 @@
 # Entity: neorv32_wishbone
+
 ## Diagram
+
 ![Diagram](neorv32_wishbone.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - External Bus Interface (WISHBONE) >>                                             #
 # ********************************************************************************************* #
@@ -50,6 +53,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name      | Type    | Value  | Description                                                              |
 | ----------------- | ------- | ------ | ------------------------------------------------------------------------ |
 | MEM_INT_IMEM_EN   | boolean | true   | implement processor-internal instruction memory                          |
@@ -58,6 +62,7 @@
 | MEM_INT_DMEM_SIZE | natural | 4*1024 | size of processor-internal data memory in bytes                          |
 | BUS_TIMEOUT       | natural | 63     | cycles after an UNACKNOWLEDGED bus access triggers a bus fault exception |
 ## Ports
+
 | Port name | Direction | Type                           | Description                          |
 | --------- | --------- | ------------------------------ | ------------------------------------ |
 | clk_i     | in        | std_ulogic                     | global clock line                    |
@@ -85,6 +90,7 @@
 | wb_ack_i  | in        | std_ulogic                     | transfer acknowledge                 |
 | wb_err_i  | in        | std_ulogic                     | transfer error                       |
 ## Signals
+
 | Name         | Type                           | Description       |
 | ------------ | ------------------------------ | ----------------- |
 | int_imem_acc | std_ulogic                     | access control -- |
@@ -98,19 +104,18 @@
 | ack_gated    | std_ulogic                     | async RX mode --  |
 | rdata_gated  | std_ulogic_vector(31 downto 0) |                   |
 ## Constants
+
 | Name         | Type    | Value                      | Description                        |
 | ------------ | ------- | -------------------------- | ---------------------------------- |
 | timeout_en_c | boolean |  boolean(BUS_TIMEOUT /= 0) | timeout enabled if BUS_TIMEOUT > 0 |
 ## Types
-| Name         | Type         | Description |
-| ------------ | ------------ | ----------- |
-| ctrl_state_t | (IDLE, BUSY) | bus arbiter |
-| ctrl_t       |              |             |
-## Processes
-- bus_arbiter: _( rstn_i, clk_i )_
-Bus Arbiter -----------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
 
+| Name         | Type          | Description |
+| ------------ | ------------- | ----------- |
+| ctrl_state_t | (IDLE, BUSY)  | bus arbiter |
+| ctrl_t       |               |             |
+## Processes
+- bus_arbiter: ( rstn_i, clk_i )
 **Description**
 Bus Arbiter -----------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

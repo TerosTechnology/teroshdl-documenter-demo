@@ -1,7 +1,10 @@
 # Entity: keccak_2share
+
 ## Diagram
+
 ![Diagram](keccak_2share.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  Only when EnMasking is enabled, rand_i and sel_i are used
  
 ## Generics
+
 | Generic name | Type | Value              | Description                           |
 | ------------ | ---- | ------------------ | ------------------------------------- |
 | Width        | int  | 1600               | b= {25, 50, 100, 200, 400, 800, 1600} |
@@ -24,6 +28,7 @@ Copyright lowRISC contributors.
 | ChiIndexX1   | int  | undefined          | (x+1)%5                               |
 | ChiIndexX2   | int  | undefined          | (x+2)%5                               |
 ## Ports
+
 | Port name    | Direction | Type        | Description                                       |
 | ------------ | --------- | ----------- | ------------------------------------------------- |
 | clk_i        | input     |             |                                                   |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | s_i          | input     | [Width-1:0] |                                                   |
 | s_o          | output    | [Width-1:0] |                                                   |
 ## Signals
+
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
 | state_in   | box_t       |             |
@@ -52,6 +58,7 @@ Copyright lowRISC contributors.
 | result     | return      |             |
 | iota       | endfunction |             |
 ## Constants
+
 | Name      | Type         | Value              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------- | ------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | W         | int          | Width/25           | Derived                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -63,6 +70,7 @@ Copyright lowRISC contributors.
 | PiRotate  | int          | undefined          | pi rearrange the position of lanes pi[x,y,z] = state[(x+3y),x,z]                                                                                                                                                                                                                                                                                                                                                                                               |
 | RC        | logic [63:0] | undefined          | iota XOR (x,y) = (0,0) with Round Constant (RC) RC parameter: Precomputed by util/keccak_rc.py. Only up-to 0..L-1 is used RC = '0 RC[2**j-1] = rc(j+7*rnd) rc(t) = 1. t%255 == 0 -> 1 2. R[0:7] = 'b10000000 3. for i = [1..t%255] a. R = 0 || R b. R[0] = R[0] ^ R[8] c. R[4] = R[4] ^ R[8] d. R[5] = R[5] ^ R[8] e. R[6] = R[6] ^ R[8] f. R = R[0:7] 4. return R[0] RC has L = [0..6] for lower L case, only chopping lower part of 64bit RC is sufficient.  |
 ## Types
+
 | Name    | Type                    | Description                |
 | ------- | ----------------------- | -------------------------- |
 | box_t   | logic [4:0][4:0][W-1:0] | (x,y,z) state              |

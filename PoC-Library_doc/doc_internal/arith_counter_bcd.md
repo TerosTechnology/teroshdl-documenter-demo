@@ -1,7 +1,10 @@
 # Entity: arith_counter_bcd
+
 ## Diagram
+
 ![Diagram](arith_counter_bcd.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -32,10 +35,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description          |
 | ------------ | -------- | ----- | -------------------- |
 | DIGITS       | positive |       | Number of BCD digits |
 ## Ports
+
 | Port name | Direction | Type                            | Description  |
 | --------- | --------- | ------------------------------- | ------------ |
 | clk       | in        | std_logic                       |              |
@@ -43,6 +48,7 @@ limitations under the License.
 | inc       | in        | std_logic                       | Increment    |
 | val       | out       | T_BCD_VECTOR(DIGITS-1 downto 0) | Value output |
 ## Signals
+
 | Name | Type                        | Description                |
 | ---- | --------------------------- | -------------------------- |
 | p    | unsigned(DIGITS-1 downto 0) | Stage Overflows=Propagates |

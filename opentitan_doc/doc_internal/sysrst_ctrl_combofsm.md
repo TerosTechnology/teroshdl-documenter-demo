@@ -1,18 +1,23 @@
 # Entity: sysrst_ctrl_combofsm
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_combofsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description sysrst_ctrl combo detection FSM module
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | TIMER1BIT    | int unsigned | 16    |             |
 | TIMER2BIT    | int unsigned | 32    |             |
 ## Ports
+
 | Port name          | Direction | Type            | Description |
 | ------------------ | --------- | --------------- | ----------- |
 | clk_aon_i          | input     |                 |             |
@@ -24,6 +29,7 @@ Copyright lowRISC contributors.
 | cfg_h2l_en_i       | input     |                 |             |
 | timer_h2l_cond_met | output    |                 |             |
 ## Signals
+
 | Name           | Type                  | Description |
 | -------------- | --------------------- | ----------- |
 | trigger_h_q    | logic                 |             |
@@ -42,19 +48,14 @@ Copyright lowRISC contributors.
 | timer_state_q  | timer_state_e         |             |
 | timer_state_d  | timer_state_e         |             |
 ## Types
+
 | Name          | Type                                                                                                                                                                                                                  | Description |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | timer_state_e | enum logic [1:0] {                             IDLE = 2'h0,                             WAIT1 = 2'h1,                             WAIT2 = 2'h2,                             DONE = 2'h3                             } |             |
 ## Processes
-- i_trigger_h_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_trigger_l_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_timer_state_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_timer1_cnt_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_timer2_cnt_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- timer_fsm: _(  )_
-
+- i_trigger_h_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_trigger_l_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_timer_state_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_timer1_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_timer2_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- timer_fsm: (  )

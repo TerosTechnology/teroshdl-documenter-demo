@@ -1,7 +1,10 @@
 # Entity: pmod_USBUART
+
 ## Diagram
+
 ![Diagram](pmod_USBUART.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,11 +30,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type | Value     | Description |
 | ------------ | ---- | --------- | ----------- |
 | CLOCK_FREQ   | FREQ | 100 MHz   |             |
 | BAUDRATE     | BAUD | 115200 Bd |             |
 ## Ports
+
 | Port name | Direction | Type                         | Description |
 | --------- | --------- | ---------------------------- | ----------- |
 | Clock     | in        | std_logic                    |             |
@@ -47,4 +52,5 @@ limitations under the License.
 | UART_RTS  | out       | std_logic                    |             |
 | UART_CTS  | in        | std_logic                    |             |
 ## Instantiations
+
 - UART: PoC.uart_fifo

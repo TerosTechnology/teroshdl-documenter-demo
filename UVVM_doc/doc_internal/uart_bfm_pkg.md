@@ -1,5 +1,7 @@
 # Package: uart_bfm_pkg
+
 ## Constants
+
 | Name                                    | Type                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description |
 | --------------------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | C_SCOPE                                 | string                |  "UART BFM"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |             |
@@ -8,45 +10,22 @@
 | C_BFM_ERROR_INJECTION_INACTIVE          | t_bfm_error_injection |  (     parity_bit_error  => false,     stop_bit_error    => false   )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |             |
 | C_UART_BFM_CONFIG_DEFAULT               | t_uart_bfm_config     |  (     bit_time                                  => -1 ns,     num_data_bits                             => 8,     idle_state                                => '1',     num_stop_bits                             => STOP_BITS_ONE,     parity                                    => PARITY_ODD,     timeout                                   => 0 ns,                -- will default never time out     timeout_severity                          => error,     num_bytes_to_log_before_expected_data     => 10,     match_strictness                          => MATCH_EXACT,     id_for_bfm                                => ID_BFM,     id_for_bfm_wait                           => ID_BFM_WAIT,     id_for_bfm_poll                           => ID_BFM_POLL,     id_for_bfm_poll_summary                   => ID_BFM_POLL_SUMMARY,     error_injection                           => C_BFM_ERROR_INJECTION_INACTIVE     ) |             |
 ## Types
+
 | Name                            | Type | Description |
 | ------------------------------- | ---- | ----------- |
 | uart_expect_received_data_array |      |             |
 | t_bfm_error_injection           |      |             |
 | t_uart_bfm_config               |      |             |
 ## Functions
-- uart_transmit <font id="function_arguments">(    constant data_value         : in  std_logic_vector;
-    constant msg                : in  string;
-    signal tx                   : inout std_logic;
-    constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT;
-    constant scope              : in  string             := C_SCOPE;
-    constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel
-    )</font> <font id="function_return">return ()</font>
+- uart_transmit <font id="function_arguments">( constant data_value         : in  std_logic_vector; constant msg                : in  string; signal tx                   : inout std_logic; constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in  string             := C_SCOPE; constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel ) </font> <font id="function_return">return ()</font>
 **Description**
 - This procedure transmits data 'data_value' to the UART DUT- The TX configuration can be set in the config parameter
-- uart_receive <font id="function_arguments">(    variable data_value         : out std_logic_vector;
-    constant msg                : in  string;
-    signal rx                   : in  std_logic;
-    signal terminate_loop       : in  std_logic;
-    constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;
-    constant scope              : in  string            := C_SCOPE;
-    constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel;
-    constant ext_proc_call      : in  string            := ""  External proc_call. Overwrite if called from another BFM procedure
-    )</font> <font id="function_return">return ()</font>
+- uart_receive <font id="function_arguments">( variable data_value         : out std_logic_vector; constant msg                : in  string; signal rx                   : in  std_logic; signal terminate_loop       : in  std_logic; constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in  string            := C_SCOPE; constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel; constant ext_proc_call      : in  string            := "" -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
 **Description**
 - This procedure reads data from the UART DUT and returns it in 'data_value'- The RX configuration can be set in the config parameter
-- uart_expect <font id="function_arguments">(    constant data_exp           : in std_logic_vector;
-    constant msg                : in string;
-    signal rx                   : in std_logic;
-    signal terminate_loop       : in std_logic;
-    constant max_receptions     : in natural           := 1;
-    constant timeout            : in time              := -1 ns;
-    constant alert_level        : in t_alert_level     := ERROR;
-    constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;
-    constant scope              : in string            := C_SCOPE;
-    constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel
-    )</font> <font id="function_return">return ()</font>
+- uart_expect <font id="function_arguments">( constant data_exp           : in std_logic_vector; constant msg                : in string; signal rx                   : in std_logic; signal terminate_loop       : in std_logic; constant max_receptions     : in natural           := 1; constant timeout            : in time              := -1 ns; constant alert_level        : in t_alert_level     := ERROR; constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in string            := C_SCOPE; constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel ) </font> <font id="function_return">return ()</font>
 **Description**
 - This procedure reads data from the UART DUT and compares it to the data in  'data_exp'.- If the read data is inconsistent with the 'data_exp' data, a new read will  be performed, and the new read data will be compared with 'data_exp'.  This process will continue untill one of the following conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_receptions'    c) The time spent reading is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_receptions' is set to 0, it will be interpreted as no limitation on number of reads- The RX configuration can be set in the config parameter
-- odd_parity <font id="function_arguments">(    constant data : std_logic_vector(7 downto 0))</font> <font id="function_return">return std_logic</font>
+- odd_parity <font id="function_arguments">( constant data : std_logic_vector(7 downto 0)) </font> <font id="function_return">return std_logic </font>
 **Description**
 - This function checks if the data parity is odd or even- If the number of '1' in the 'data' input is odd, '1' will be returned- If the number of '1' in the 'data' input is even, '0' will be returned

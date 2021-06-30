@@ -1,7 +1,10 @@
 # Entity: neorv32_trng
+
 ## Diagram
+
 ![Diagram](neorv32_trng.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - True Random Number Generator (TRNG) >>                                           #
 # ********************************************************************************************* #
@@ -41,6 +44,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name | Direction | Type                           | Description          |
 | --------- | --------- | ------------------------------ | -------------------- |
 | clk_i     | in        | std_ulogic                     | global clock line    |
@@ -51,6 +55,7 @@
 | data_o    | out       | std_ulogic_vector(31 downto 0) | data out             |
 | ack_o     | out       | std_ulogic                     | transfer acknowledge |
 ## Signals
+
 | Name             | Type                                      | Description              |
 | ---------------- | ----------------------------------------- | ------------------------ |
 | acc_en           | std_ulogic                                | module access enable     |
@@ -62,6 +67,7 @@
 | debiasing        | debiasing_t                               |                          |
 | processing       | processing_t                              |                          |
 ## Constants
+
 | Name            | Type                          | Value                      | Description                                                                  |
 | --------------- | ----------------------------- | -------------------------- | ---------------------------------------------------------------------------- |
 | num_roscs_c     | natural                       |  4                         | total number of ring oscillators                                             |
@@ -76,43 +82,31 @@
 | hi_abb_c        | natural                       |  index_size_f(io_size_c)-1 | high address boundary bit                                                    |
 | lo_abb_c        | natural                       |  index_size_f(trng_size_c) | low address boundary bit                                                     |
 ## Types
+
 | Name         | Type | Description               |
 | ------------ | ---- | ------------------------- |
 | debiasing_t  |      | von-Neumann de-biasing -- |
 | processing_t |      | (post-)processing core -- |
 ## Processes
-- rw_access: _( clk_i )_
-Read/Write Access ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rw_access: ( clk_i )
 **Description**
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- array_intercon: _( processing.enable, osc_array_en_out )_
-RO enable chain --
-
+- array_intercon: ( processing.enable, osc_array_en_out )
 **Description**
 RO enable chain --
 
-- neumann_debiasing_sync: _( clk_i )_
-John von Neumann De-Biasing ------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- neumann_debiasing_sync: ( clk_i )
 **Description**
 John von Neumann De-Biasing ------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- neumann_debiasing_comb: _( debiasing )_
-Edge detector --
-
+- neumann_debiasing_comb: ( debiasing )
 **Description**
 Edge detector --
 
-- processing_core: _( clk_i )_
-Processing Core ------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- processing_core: ( clk_i )
 **Description**
 Processing Core ------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

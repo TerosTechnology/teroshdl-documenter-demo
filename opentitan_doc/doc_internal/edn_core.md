@@ -1,7 +1,10 @@
 # Entity: edn_core
+
 ## Diagram
+
 ![Diagram](edn_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,12 +14,14 @@ Copyright lowRISC contributors.
     end points.
  
 ## Generics
+
 | Generic name | Type | Value         | Description |
 | ------------ | ---- | ------------- | ----------- |
 | NumEndPoints | int  | 4             |             |
 | BootInsCmd   | int  | 32'h0000_0001 |             |
 | BootGenCmd   | int  | 32'h0000_1003 |             |
 ## Ports
+
 | Port name               | Direction | Type               | Description                 |
 | ----------------------- | --------- | ------------------ | --------------------------- |
 | clk_i                   | input     |                    |                             |
@@ -32,6 +37,7 @@ Copyright lowRISC contributors.
 | intr_edn_cmd_req_done_o | output    |                    | Interrupts                  |
 | intr_edn_fatal_err_o    | output    |                    |                             |
 ## Signals
+
 | Name                         | Type                                | Description  |
 | ---------------------------- | ----------------------------------- | ------------ |
 | event_edn_cmd_req_done       | logic                               | signals      |
@@ -137,6 +143,7 @@ Copyright lowRISC contributors.
 | boot_auto_req_dly_q          | logic                               |              |
 | boot_auto_req_dly_d          | logic                               |              |
 ## Constants
+
 | Name               | Type | Value                   | Description                            |
 | ------------------ | ---- | ----------------------- | -------------------------------------- |
 | RescmdFifoWidth    | int  | 32                      | localparam int EndPointBusWidth = 32;  |
@@ -147,9 +154,9 @@ Copyright lowRISC contributors.
 | EndPointBusWidth   | int  | 32                      |                                        |
 | RescmdFifoIdxWidth | int  | $clog2(RescmdFifoDepth) |                                        |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_intr_hw_edn_cmd_req_done: prim_intr_hw
 - u_intr_hw_edn_fatal_err: prim_intr_hw
 - u_prim_fifo_sync_rescmd: prim_fifo_sync

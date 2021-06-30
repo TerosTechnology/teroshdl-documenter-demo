@@ -1,7 +1,10 @@
 # Entity: lut_Sine
+
 ## Diagram
+
 ![Diagram](lut_Sine.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name  | Type     | Value | Description |
 | ------------- | -------- | ----- | ----------- |
 | REG_OUTPUT    | boolean  | TRUE  |             |
@@ -32,12 +36,14 @@ limitations under the License.
 | OFFSET_DEG    | REAL     | 0.0   |             |
 | QUARTERS      | positive | 4     |             |
 ## Ports
+
 | Port name | Direction | Type                                                                        | Description |
 | --------- | --------- | --------------------------------------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                                                   |             |
 | Input     | in        | std_logic_vector(log2ceilnz(POINTS) - 1 downto 0)                           |             |
 | Output    | out       | std_logic_vector(log2ceilnz(MAX_AMPLITUDE + ((QUARTERS - 1) / 2)) downto 0) |             |
 ## Signals
+
 | Name       | Type                           | Description |
 | ---------- | ------------------------------ | ----------- |
 | Output_nxt | std_logic_vector(Output'range) |             |

@@ -1,7 +1,10 @@
 # Entity: ethernet_sbi_gmii_demo_tb
+
 ## Diagram
+
 ![Diagram](ethernet_sbi_gmii_demo_tb.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,6 +15,7 @@ Note : Any functionality not explicitly described in the documentation is subjec
 Description : See library quick reference (under 'doc') and README-file(s)
 Test case entity
 ## Constants
+
 | Name                | Type                  | Value                 | Description |
 | ------------------- | --------------------- | --------------------- | ----------- |
 | C_CLK_PERIOD        | time                  |  8 ns                 |             |
@@ -23,13 +27,12 @@ Test case entity
 | C_ETH_SBI_MAC_ADDR  | unsigned(47 downto 0) |  x"00_00_00_00_00_01" |             |
 | C_ETH_GMII_MAC_ADDR | unsigned(47 downto 0) |  x"00_00_00_00_00_02" |             |
 ## Processes
-- p_main: _(  )_
-PROCESS: p_main
-
+- p_main: (  )
 **Description**
 PROCESS: p_main
 
 ## Instantiations
+
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - i_test_harness: bitvis_vip_ethernet.ethernet_sbi_gmii_demo_th
 **Description**

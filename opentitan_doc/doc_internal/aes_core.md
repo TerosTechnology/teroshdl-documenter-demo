@@ -1,13 +1,17 @@
 # Entity: aes_core
+
 ## Diagram
+
 ![Diagram](aes_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  AES core implementation
  
 ## Generics
+
 | Generic name             | Type                   | Value                           | Description       |
 | ------------------------ | ---------------------- | ------------------------------- | ----------------- |
 | AES192Enable             | bit                    | 1                               |                   |
@@ -24,6 +28,7 @@ Copyright lowRISC contributors.
 | RndCnstMaskingLfsrSeed   | masking_lfsr_seed_t    | RndCnstMaskingLfsrSeedDefault   |                   |
 | RndCnstMskgChunkLfsrPerm | mskg_chunk_lfsr_perm_t | RndCnstMskgChunkLfsrPermDefault |                   |
 ## Ports
+
 | Port name              | Direction | Type               | Description                                               |
 | ---------------------- | --------- | ------------------ | --------------------------------------------------------- |
 | clk_i                  | input     |                    |                                                           |
@@ -41,6 +46,7 @@ Copyright lowRISC contributors.
 | reg2hw                 | input     | aes_reg2hw_t       | Bus Interface                                             |
 | hw2reg                 | output    | aes_hw2reg_t       |                                                           |
 ## Signals
+
 | Name                       | Type                                        | Description                               |
 | -------------------------- | ------------------------------------------- | ----------------------------------------- |
 | ctrl_re                    | logic                                       | Signals                                   |
@@ -154,96 +160,65 @@ Copyright lowRISC contributors.
 | sp2v_sig_err               | logic  [NumSp2VSig-1:0]                     |                                           |
 | unused_alert_signals       | logic                                       | Unused alert signals                      |
 ## Constants
+
 | Name       | Type         | Value                                        | Description                                                                                                                                                                                                                                  |
 | ---------- | ------------ | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NumShares  | int          | Masking ? 2 : 1                              | derived parameter                                                                                                                                                                                                                            |
 | NumSp2VSig | int unsigned | NumSharesKey * NumRegsKey + NumSlicesCtr + 2 | If any sparsely encoded signal becomes invalid, the core controller further immediately de-asserts the data_out_we_o signal to prevent any data from being released. We use vectors of sparsely encoded signals to reduce code duplication.  |
 ## Processes
-- key_init_get: _(  )_
-
-- iv_get: _(  )_
-
-- data_in_get: _(  )_
-
-- data_out_get: _(  )_
-
-- key_init_mux: _(  )_
-Initial Key registers
-
+- key_init_get: (  )
+- iv_get: (  )
+- data_in_get: (  )
+- data_out_get: (  )
+- key_init_mux: (  )
 **Description**
 Initial Key registers
 
-- key_init_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- iv_mux: _(  )_
-IV registers
-
+- key_init_reg: ( @(posedge clk_i or negedge rst_ni) )
+- iv_mux: (  )
 **Description**
 IV registers
 
-- iv_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- data_in_prev_mux: _(  )_
-Previous input data register
-
+- iv_reg: ( @(posedge clk_i or negedge rst_ni) )
+- data_in_prev_mux: (  )
 **Description**
 Previous input data register
 
-- data_in_prev_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- state_in_mux: _(  )_
-Convert input data/IV to state format (every word corresponds to one state column).
-Mux for state input
-
+- data_in_prev_reg: ( @(posedge clk_i or negedge rst_ni) )
+- state_in_mux: (  )
 **Description**
 Convert input data/IV to state format (every word corresponds to one state column).
 Mux for state input
 
-- add_state_in_mux: _(  )_
-Mux for addition to state input
-
+- add_state_in_mux: (  )
 **Description**
 Mux for addition to state input
 
-- add_state_out_mux: _(  )_
-Mux for addition to state output
-
+- add_state_out_mux: (  )
 **Description**
 Mux for addition to state output
 
-- mode_get: _(  )_
-
-- key_len_get: _(  )_
-
-- data_in_reg_clear: _(  )_
-Input data register clear
-
+- mode_get: (  )
+- key_len_get: (  )
+- data_in_reg_clear: (  )
 **Description**
 Input data register clear
 
-- reg_sp_enc_err: _( @(posedge clk_i or negedge rst_ni) )_
-We need to register the collected error signal to avoid circular loops in the core controller
-related to iv_we and data_out_we.
-
+- reg_sp_enc_err: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 We need to register the collected error signal to avoid circular loops in the core controller
 related to iv_we and data_out_we.
 
-- data_out_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- key_reg_put: _(  )_
-
-- iv_reg_put: _(  )_
-
-- data_out_put: _(  )_
-
-- ctrl_err_storage_reg: _( @(posedge clk_i or negedge rst_ni) )_
-Fatal alert conditions need to remain asserted until reset.
-
+- data_out_reg: ( @(posedge clk_i or negedge rst_ni) )
+- key_reg_put: (  )
+- iv_reg_put: (  )
+- data_out_put: (  )
+- ctrl_err_storage_reg: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Fatal alert conditions need to remain asserted until reset.
 
 ## Instantiations
+
 - u_aes_prng_clearing: aes_prng_clearing
 **Description**
 The clearing PRNG provides pseudo-random data for register clearing purposes.

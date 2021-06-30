@@ -1,7 +1,10 @@
 # Entity: stream_DeMux
+
 ## Diagram
+
 ![Diagram](stream_DeMux.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name  | Type     | Value | Description |
 | ------------- | -------- | ----- | ----------- |
 | PORTS         | positive | 2     |             |
@@ -31,6 +35,7 @@ limitations under the License.
 | META_BITS     | natural  | 8     |             |
 | META_REV_BITS | natural  | 2     |             |
 ## Ports
+
 | Port name    | Direction | Type                                                  | Description       |
 | ------------ | --------- | ----------------------------------------------------- | ----------------- |
 | Clock        | in        | std_logic                                             |                   |
@@ -51,6 +56,7 @@ limitations under the License.
 | Out_EOF      | out       | std_logic_vector(PORTS - 1 downto 0)                  |                   |
 | Out_Ack      | in        | std_logic_vector(PORTS - 1 downto 0)                  |                   |
 ## Signals
+
 | Name               | Type                                              | Description                                                                                   |
 | ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | State              | T_STATE                                           |                                                                                               |
@@ -69,13 +75,11 @@ limitations under the License.
 | Out_Data_i         | T_SLM(PORTS - 1 downto 0, DATA_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
 | Out_Meta_i         | T_SLM(PORTS - 1 downto 0, META_BITS - 1 downto 0) |                                                                                               |
 ## Types
-| Name    | Type                                     | Description |
-| ------- | ---------------------------------------- | ----------- |
-| T_STATE | (ST_IDLE, ST_DATAFLOW, ST_DISCARD_FRAME) |             |
+
+| Name    | Type                                      | Description |
+| ------- | ----------------------------------------- | ----------- |
+| T_STATE | (ST_IDLE, ST_DATAFLOW, ST_DISCARD_FRAME)  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, In_Ack_i, In_Valid, Is_SOF, Is_EOF, DiscardFrame, DeMuxControl, ChannelPointer_d )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, In_Ack_i, In_Valid, Is_SOF, Is_EOF, DiscardFrame, DeMuxControl, ChannelPointer_d )
+- unnamed: ( Clock )

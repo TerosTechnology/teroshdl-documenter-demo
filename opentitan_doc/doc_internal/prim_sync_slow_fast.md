@@ -1,7 +1,10 @@
 # Entity: prim_sync_slow_fast
+
 ## Diagram
+
 ![Diagram](prim_sync_slow_fast.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -14,10 +17,12 @@ Copyright lowRISC contributors.
  A ratio of at-least 10:1 in clock speeds is recommended.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | Width        | int unsigned | 32    |             |
 ## Ports
+
 | Port name   | Direction | Type        | Description |
 | ----------- | --------- | ----------- | ----------- |
 | clk_slow_i  | input     |             |             |
@@ -26,6 +31,7 @@ Copyright lowRISC contributors.
 | wdata_i     | input     | [Width-1:0] | Slow domain |
 | rdata_o     | output    | [Width-1:0] | Fast domain |
 ## Signals
+
 | Name            | Type              | Description |
 | --------------- | ----------------- | ----------- |
 | sync_clk_slow   | logic             |             |
@@ -33,19 +39,16 @@ Copyright lowRISC contributors.
 | wdata_en        | logic             |             |
 | wdata_q         | logic [Width-1:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk_fast_i or negedge rst_fast_ni) )_
-Register the synchronized clk
-
+- unnamed: ( @(posedge clk_fast_i or negedge rst_fast_ni) )
 **Description**
 Register the synchronized clk
 
-- unnamed: _( @(posedge clk_fast_i or negedge rst_fast_ni) )_
-Sample the slow data on the negative edge
-
+- unnamed: ( @(posedge clk_fast_i or negedge rst_fast_ni) )
 **Description**
 Sample the slow data on the negative edge
 
 ## Instantiations
+
 - sync_slow_clk: prim_flop_2sync
 **Description**
 Synchronize the slow clock to the fast domain

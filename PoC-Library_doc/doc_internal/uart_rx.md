@@ -1,7 +1,10 @@
 # Entity: uart_rx
+
 ## Diagram
+
 ![Diagram](uart_rx.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,10 +30,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description                               |
 | ------------ | ------- | ----- | ----------------------------------------- |
 | SYNC_DEPTH   | natural | 2     | use zero for already clock-synchronous rx |
 ## Ports
+
 | Port name | Direction | Type                         | Description                             |
 | --------- | --------- | ---------------------------- | --------------------------------------- |
 | clk       | in        | std_logic                    | Global Control                          |
@@ -40,6 +45,7 @@ limitations under the License.
 | do        | out       | std_logic_vector(7 downto 0) | Byte Stream Output                      |
 | stb       | out       | std_logic                    |                                         |
 ## Signals
+
 | Name | Type                         | Description                                                                                                                                                                                                                                                                               |
 | ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | rxs  | std_logic                    |                                                                                                                                                                                                                                                                                           |
@@ -47,11 +53,10 @@ limitations under the License.
 | Cnt  | unsigned(4 downto 0)         | Bit clock counter: 8 ticks per bit                                                                                                                                                                                                                                                        |
 | Vld  | std_logic                    | Output strobe                                                                                                                                                                                                                                                                             |
 ## Processes
-- unnamed: _( clk )_
-Reception state
-
+- unnamed: ( clk )
 **Description**
 Reception state
 
 ## Instantiations
+
 - sync: PoC.sync_Bits

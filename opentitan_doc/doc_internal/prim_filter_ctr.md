@@ -1,7 +1,10 @@
 # Entity: prim_filter_ctr
+
 ## Diagram
+
 ![Diagram](prim_filter_ctr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -15,10 +18,12 @@ Copyright lowRISC contributors.
    #Cycles before switching to new value.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | Cycles       | int unsigned | 4     |             |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_i     | input     |      |             |
@@ -27,20 +32,19 @@ Copyright lowRISC contributors.
 | filter_i  | input     |      |             |
 | filter_o  | output    |      |             |
 ## Signals
+
 | Name                | Type  | Description |
 | ------------------- | ----- | ----------- |
 | filter_q            | logic |             |
 | stored_value_q      | logic |             |
 | update_stored_value | logic |             |
 ## Constants
+
 | Name      | Type                  | Value                 | Description |
 | --------- | --------------------- | --------------------- | ----------- |
 | CTR_WIDTH | int unsigned          | $clog2(Cycles)        |             |
 | CYCLESM1  | logic [CTR_WIDTH-1:0] | logic [CTR_WIDTH-1:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

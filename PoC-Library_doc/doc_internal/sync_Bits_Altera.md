@@ -1,7 +1,10 @@
 # Entity: sync_Bits_Altera
+
 ## Diagram
+
 ![Diagram](sync_Bits_Altera.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -33,12 +36,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type              | Value                 | Description                                 |
 | ------------ | ----------------- | --------------------- | ------------------------------------------- |
 | BITS         | positive          | 1                     | number of bit to be synchronized            |
 | INIT         | std_logic_vector  | x"00000000"           | initialization bits                         |
 | SYNC_DEPTH   | T_MISC_SYNC_DEPTH | T_MISC_SYNC_DEPTH'low | generate SYNC_DEPTH many stages, at least 2 |
 ## Ports
+
 | Port name | Direction | Type                                | Description                  |
 | --------- | --------- | ----------------------------------- | ---------------------------- |
 | Clock     | in        | std_logic                           | <Clock>  output clock domain |

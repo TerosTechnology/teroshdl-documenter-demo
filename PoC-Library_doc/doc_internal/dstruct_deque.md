@@ -1,7 +1,10 @@
 # Entity: dstruct_deque
+
 ## Diagram
+
 ![Diagram](dstruct_deque.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,11 +31,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description         |
 | ------------ | -------- | ----- | ------------------- |
 | D_BITS       | positive |       | Data Width          |
 | MIN_DEPTH    | positive |       | Minimum Deque Depth |
 ## Ports
+
 | Port name | Direction | Type                                | Description  |
 | --------- | --------- | ----------------------------------- | ------------ |
 | clk       | in        | std_logic                           | Shared Ports |
@@ -50,6 +55,7 @@ limitations under the License.
 | validB    | out       | std_logic                           |              |
 | fullB     | out       | std_logic                           |              |
 ## Signals
+
 | Name           | Type                         | Description                                                                                                                                                           |
 | -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | combined       | std_logic_vector(3 downto 0) | MEMORY variabletype memory_t is array ((2**A_BITS)-1 downto 0) of std_logic_vector(D_BITS-1 downto 0);signal memory : memory_t := (others => (others => '0'));Signals |
@@ -68,38 +74,32 @@ limitations under the License.
 | adrA           | unsigned(A_BITS-1 downto 0)  | RAM Signals                                                                                                                                                           |
 | adrB           | unsigned(A_BITS-1 downto 0)  |                                                                                                                                                                       |
 ## Constants
+
 | Name   | Type    | Value                | Description |
 | ------ | ------- | -------------------- | ----------- |
 | A_BITS | natural |  log2ceil(MIN_DEPTH) |             |
 ## Types
-| Name           | Type               | Description                             |
-| -------------- | ------------------ | --------------------------------------- |
-| last_op_ctrl_t | (IDLE, SET, UNSET) |                                         |
-| ctrl_t         | (PUSH, POP, IDLE)  | ctrl signal for stackpointer operations |
+
+| Name           | Type                | Description                             |
+| -------------- | ------------------- | --------------------------------------- |
+| last_op_ctrl_t | (IDLE, SET, UNSET)  |                                         |
+| ctrl_t         | (PUSH, POP, IDLE)   | ctrl signal for stackpointer operations |
 ## Processes
-- unnamed: _( combined, stackpointerA, stackpointerB, last_operation, ctrl )_
-
-- unnamed: _( clk )_
-
-- unnamed: _( clk )_
-
-- unnamed: _( clk )_
-stackpointerB operations
-
+- unnamed: ( combined, stackpointerA, stackpointerB, last_operation, ctrl )
+- unnamed: ( clk )
+- unnamed: ( clk )
+- unnamed: ( clk )
 **Description**
 stackpointerB operations
 
-- unnamed: _( clk )_
-delayed_valid register
-
+- unnamed: ( clk )
 **Description**
 delayed_valid register
 
-- unnamed: _( sub, last_operation, delayed_valid )_
-sub of B and A
-
+- unnamed: ( sub, last_operation, delayed_valid )
 **Description**
 sub of B and A
 
 ## Instantiations
+
 - ram: poc.ocram_tdp_wf

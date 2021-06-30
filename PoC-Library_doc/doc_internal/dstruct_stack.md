@@ -1,7 +1,10 @@
 # Entity: dstruct_stack
+
 ## Diagram
+
 ![Diagram](dstruct_stack.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -26,11 +29,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description         |
 | ------------ | -------- | ----- | ------------------- |
 | D_BITS       | positive |       | Data Width          |
 | MIN_DEPTH    | positive |       | Minimum Stack Depth |
 ## Ports
+
 | Port name | Direction | Type                                | Description         |
 | --------- | --------- | ----------------------------------- | ------------------- |
 | clk       | in        | std_logic                           | INPUTS              |
@@ -42,6 +47,7 @@ limitations under the License.
 | dout      | out       | std_logic_vector(D_BITS-1 downto 0) |                     |
 | valid     | out       | std_logic                           |                     |
 ## Signals
+
 | Name          | Type                                | Description |
 | ------------- | ----------------------------------- | ----------- |
 | stackpointer  | unsigned(A_BITS-1 downto 0)         | Signals     |
@@ -55,20 +61,20 @@ limitations under the License.
 | current_state | state                               |             |
 |  next_state   | state                               |             |
 ## Constants
+
 | Name   | Type    | Value                | Description |
 | ------ | ------- | -------------------- | ----------- |
 | A_BITS | natural |  log2ceil(MIN_DEPTH) |             |
 ## Types
-| Name   | Type                              | Description                             |
-| ------ | --------------------------------- | --------------------------------------- |
-| ctrl_t | (PUSH, POP, IDLE)                 | ctrl signal for stackpointer operations |
-| state  | (SEMPTY, NOTFULL, WAITING, SFULL) |                                         |
+
+| Name   | Type                               | Description                             |
+| ------ | ---------------------------------- | --------------------------------------- |
+| ctrl_t | (PUSH, POP, IDLE)                  | ctrl signal for stackpointer operations |
+| state  | (SEMPTY, NOTFULL, WAITING, SFULL)  |                                         |
 ## Processes
-- unnamed: _( clk )_
-
-- unnamed: _( current_state, put, stackpointer, got )_
-
-- unnamed: _( clk )_
-
+- unnamed: ( clk )
+- unnamed: ( current_state, put, stackpointer, got )
+- unnamed: ( clk )
 ## Instantiations
+
 - ram: poc.ocram_sp

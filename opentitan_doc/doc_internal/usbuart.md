@@ -1,13 +1,17 @@
 # Entity: usbuart
+
 ## Diagram
+
 ![Diagram](usbuart.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: USB UART top level wrapper file
  
 ## Ports
+
 | Port name            | Direction | Type | Description                           |
 | -------------------- | --------- | ---- | ------------------------------------- |
 | clk_i                | input     |      |                                       |
@@ -34,10 +38,12 @@ Copyright lowRISC contributors.
 | intr_rx_timeout_o    | output    |      |                                       |
 | intr_rx_parity_err_o | output    |      |                                       |
 ## Signals
+
 | Name   | Type             | Description |
 | ------ | ---------------- | ----------- |
 | reg2hw | usbuart_reg2hw_t |             |
 | hw2reg | usbuart_hw2reg_t |             |
 ## Instantiations
+
 - u_reg: usbuart_reg_top
 - usbuart_core: usbuart_core

@@ -1,5 +1,4 @@
 # Project documentation: 
-## Project dependency graph
 ![system](./doc_internal/dependency_graph.svg "System")
 ## Designs
 
@@ -21,14 +20,15 @@
 - Module: [neorv32_debug_dm ](./doc_internal/neorv32_debug_dm.md)
 - Module: [neorv32_debug_dtm ](./doc_internal/neorv32_debug_dtm.md)
 - Module: [neorv32_dmem ](./doc_internal/neorv32_dmem.md)
+- Module: [neorv32_fifo ](./doc_internal/neorv32_fifo.md)
 - Module: [neorv32_gpio ](./doc_internal/neorv32_gpio.md)
 - Module: [neorv32_icache ](./doc_internal/neorv32_icache.md)
 - Module: [neorv32_imem ](./doc_internal/neorv32_imem.md)
 - Module: [neorv32_mtime ](./doc_internal/neorv32_mtime.md)
-- Module: [neorv32_nco ](./doc_internal/neorv32_nco.md)
 - Module: [neorv32_neoled ](./doc_internal/neorv32_neoled.md)
 - Package: [neorv32_package ](./doc_internal/neorv32_package.md)
 - Module: [neorv32_pwm ](./doc_internal/neorv32_pwm.md)
+- Module: [neorv32_slink ](./doc_internal/neorv32_slink.md)
 - Module: [neorv32_spi ](./doc_internal/neorv32_spi.md)
 - Module: [neorv32_sysinfo ](./doc_internal/neorv32_sysinfo.md)
 - Module: [neorv32_top ](./doc_internal/neorv32_top.md)

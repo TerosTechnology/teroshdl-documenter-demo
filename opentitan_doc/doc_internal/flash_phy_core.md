@@ -1,7 +1,10 @@
 # Entity: flash_phy_core
+
 ## Diagram
+
 ![Diagram](flash_phy_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,10 +14,12 @@ Copyright lowRISC contributors.
  Most of the items are TODO, at the moment only arbitration logic exists.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | ArbCnt       | int unsigned | 4     |             |
 ## Ports
+
 | Port name           | Direction | Type                       | Description              |
 | ------------------- | --------- | -------------------------- | ------------------------ |
 | clk_i               | input     |                            |                          |
@@ -60,6 +65,7 @@ Copyright lowRISC contributors.
 | ecc_multi_err_o     | output    |                            |                          |
 | ecc_addr_o          | output    | [BusBankAddrW-1:0]         |                          |
 ## Signals
+
 | Name                | Type                         | Description                                                                              |
 | ------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
 | state_q             | arb_state_e                  |                                                                                          |
@@ -105,21 +111,21 @@ Copyright lowRISC contributors.
 | flash_bk_erase_req  | logic                        |                                                                                          |
 | scramble_muxed_addr | logic [BankAddrW-1:0]        |                                                                                          |
 ## Constants
+
 | Name     | Type | Value              | Description |
 | -------- | ---- | ------------------ | ----------- |
 | CntWidth | int  | $clog2(ArbCnt + 1) |             |
 ## Types
+
 | Name        | Type                                                                                                         | Description |
 | ----------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
 | arb_state_e | enum logic [2:0] {     StIdle,     StHostRead,     StCtrlRead,     StCtrlProg,     StCtrl,     StDisable   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_rd: flash_phy_rd
 - u_erase: flash_phy_erase
 - u_scramble: flash_phy_scramble

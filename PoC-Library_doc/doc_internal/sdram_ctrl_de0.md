@@ -1,7 +1,10 @@
 # Entity: sdram_ctrl_de0
+
 ## Diagram
+
 ![Diagram](sdram_ctrl_de0.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -46,12 +49,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | CLK_PERIOD   | real     |       |             |
 | CL           | positive |       |             |
 | BL           | positive |       |             |
 ## Ports
+
 | Port name        | Direction | Type                          | Description |
 | ---------------- | --------- | ----------------------------- | ----------- |
 | clk              | in        | std_logic                     |             |
@@ -76,6 +81,7 @@ limitations under the License.
 | sd_a             | out       | std_logic_vector(11 downto 0) |             |
 | sd_dq            | inout     | std_logic_vector(15 downto 0) |             |
 ## Signals
+
 | Name       | Type                          | Description |
 | ---------- | ----------------------------- | ----------- |
 | sd_cke_nxt | std_logic                     |             |
@@ -88,6 +94,7 @@ limitations under the License.
 | rden_nxt   | std_logic                     |             |
 | wren_nxt   | std_logic                     |             |
 ## Constants
+
 | Name      | Type     | Value                                                                                                         | Description |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
 | A_BITS    | positive |  22                                                                                                           | 4M          |
@@ -105,5 +112,6 @@ limitations under the License.
 | T_REFI    | integer  |  integer(ceil(15625.0/  -- 64 ms / 4096 rows                                                CLK_PERIOD))-50   |             |
 | INIT_WAIT | integer  |  integer(ceil(100000.0/  -- 100 us                                                (real(T_REFI)*CLK_PERIOD))) |             |
 ## Instantiations
+
 - fsm: poc.sdram_ctrl_fsm
 - phy: poc.sdram_ctrl_phy_de0

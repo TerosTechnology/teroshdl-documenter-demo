@@ -1,7 +1,10 @@
 # Entity: neorv32_wdt
+
 ## Diagram
+
 ![Diagram](neorv32_wdt.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Watch Dog Timer (WDT) >>                                                         #
 # ********************************************************************************************* #
@@ -44,6 +47,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name   | Direction | Type                           | Description                             |
 | ----------- | --------- | ------------------------------ | --------------------------------------- |
 | clk_i       | in        | std_ulogic                     | global clock line                       |
@@ -59,6 +63,7 @@
 | irq_o       | out       | std_ulogic                     | timeout IRQ                             |
 | rstn_o      | out       | std_ulogic                     | timeout reset, low_active, use as async |
 ## Signals
+
 | Name      | Type                           | Description                          |
 | --------- | ------------------------------ | ------------------------------------ |
 | acc_en    | std_ulogic                     | module access enable                 |
@@ -71,6 +76,7 @@
 | rst_gen   | std_ulogic_vector(03 downto 0) |                                      |
 | rstn_sync | std_ulogic                     | internal reset (sync, low-active) -- |
 ## Constants
+
 | Name           | Type    | Value                      | Description                                                                  |
 | -------------- | ------- | -------------------------- | ---------------------------------------------------------------------------- |
 | hi_abb_c       | natural |  index_size_f(io_size_c)-1 | high address boundary bit                                                    |
@@ -85,42 +91,29 @@
 | ctrl_force_c   | natural |  7                         | -/w: force WDT action                                                        |
 | ctrl_lock_c    | natural |  8                         | r/w: lock access to control register when set                                |
 ## Types
+
 | Name       | Type | Description         |
 | ---------- | ---- | ------------------- |
 | ctrl_reg_t |      | control register -- |
 ## Processes
-- write_access: _( rstn_i, clk_i )_
-Write Access ---------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- write_access: ( rstn_i, clk_i )
 **Description**
 Write Access ---------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- wdt_counter: _( clk_i )_
-clock enable tick
-Watchdog Counter -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- wdt_counter: ( clk_i )
 **Description**
 clock enable tick
 Watchdog Counter -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- reset_generator: _( rstn_i, clk_i )_
-mode 1: RESET
-Reset Generator & Action Cause Indicator -----------------------------------------------
--------------------------------------------------------------------------------------------
-
+- reset_generator: ( rstn_i, clk_i )
 **Description**
 mode 1: RESET
 Reset Generator & Action Cause Indicator -----------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- read_access: _( clk_i )_
-Read Access ----------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- read_access: ( clk_i )
 **Description**
 Read Access ----------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

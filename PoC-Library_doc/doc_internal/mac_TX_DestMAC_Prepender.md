@@ -1,7 +1,10 @@
 # Entity: mac_TX_DestMAC_Prepender
+
 ## Diagram
+
 ![Diagram](mac_TX_DestMAC_Prepender.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEBUG        | boolean | FALSE |             |
 ## Ports
+
 | Port name                   | Direction | Type      | Description |
 | --------------------------- | --------- | --------- | ----------- |
 | Clock                       | in        | std_logic |             |
@@ -46,6 +51,7 @@ limitations under the License.
 | Out_EOF                     | out       | std_logic |             |
 | Out_Ack                     | in        | std_logic |             |
 ## Signals
+
 | Name        | Type      | Description |
 | ----------- | --------- | ----------- |
 | State       | T_STATE   |             |
@@ -54,11 +60,10 @@ limitations under the License.
 | Is_SOF      | std_logic |             |
 | Is_EOF      | std_logic |             |
 ## Types
-| Name    | Type                                                                                                                                                            | Description |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_PREPEND_DEST_MAC_1, 			ST_PREPEND_DEST_MAC_2, 			ST_PREPEND_DEST_MAC_3, 			ST_PREPEND_DEST_MAC_4, 			ST_PREPEND_DEST_MAC_5, 			ST_PAYLOAD 	) |             |
+
+| Name    | Type                                                                                                                                        | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_PREPEND_DEST_MAC_1, ST_PREPEND_DEST_MAC_2, ST_PREPEND_DEST_MAC_3, ST_PREPEND_DEST_MAC_4, ST_PREPEND_DEST_MAC_5, ST_PAYLOAD )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, In_Valid, In_Data, In_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack, In_Meta_DestMACAddress_Data )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, In_Valid, In_Data, In_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack, In_Meta_DestMACAddress_Data )

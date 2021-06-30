@@ -1,7 +1,10 @@
 # Entity: prim_arbiter_fixed
+
 ## Diagram
+
 ![Diagram](prim_arbiter_fixed.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,6 +16,7 @@ Copyright lowRISC contributors.
  See also: prim_arbiter_ppc, prim_arbiter_tree
  
 ## Generics
+
 | Generic name | Type | Value     | Description                                                          |
 | ------------ | ---- | --------- | -------------------------------------------------------------------- |
 | N            | int  | 8         |                                                                      |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | EnDataPort   | bit  | 1         | Configurations EnDataPort: {0, 1}, if 0, input data will be ignored  |
 | IdxW         | int  | $clog2(N) | Derived parameters                                                   |
 ## Ports
+
 | Port name | Direction | Type       | Description              |
 | --------- | --------- | ---------- | ------------------------ |
 | clk_i     | input     |            | used for assertions only |
@@ -32,6 +37,7 @@ Copyright lowRISC contributors.
 | data_o    | output    | [DW-1:0]   |                          |
 | ready_i   | input     |            |                          |
 ## Constants
+
 | Name | Type | Value     | Description         |
 | ---- | ---- | --------- | ------------------- |
 | IdxW | int  | $clog2(N) | Derived parameters  |

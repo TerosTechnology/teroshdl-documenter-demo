@@ -1,12 +1,16 @@
 # Entity: prim_generic_rom
+
 ## Diagram
+
 ![Diagram](prim_generic_rom.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type | Value         | Description                             |
 | ------------ | ---- | ------------- | --------------------------------------- |
 | Width        | int  | 32            |                                         |
@@ -14,6 +18,7 @@ Copyright lowRISC contributors.
 | MemInitFile  |      | ""            | VMEM file to initialize the memory with |
 | Aw           | int  | $clog2(Depth) |                                         |
 ## Ports
+
 | Port name | Direction | Type        | Description |
 | --------- | --------- | ----------- | ----------- |
 | clk_i     | input     |             |             |
@@ -22,14 +27,15 @@ Copyright lowRISC contributors.
 | rdata_o   | output    | [Width-1:0] |             |
 | cfg_i     | input     | rom_cfg_t   |             |
 ## Signals
+
 | Name       | Type              | Description |
 | ---------- | ----------------- | ----------- |
 | unused_cfg | logic             |             |
 | mem        | logic [Width-1:0] |             |
 ## Constants
+
 | Name | Type | Value         | Description |
 | ---- | ---- | ------------- | ----------- |
 | Aw   | int  | $clog2(Depth) |             |
 ## Processes
-- unnamed: _( @(posedge clk_i) )_
-
+- unnamed: ( @(posedge clk_i) )

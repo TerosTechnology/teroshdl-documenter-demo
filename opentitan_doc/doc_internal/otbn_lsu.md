@@ -1,17 +1,22 @@
 # Entity: otbn_lsu
+
 ## Diagram
+
 ![Diagram](otbn_lsu.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value                              | Description |
 | ------------- | ---- | ---------------------------------- | ----------- |
 | DmemSizeByte  | int  | 4096                               |             |
 | DmemAddrWidth | int  | prim_util_pkg::vbits(DmemSizeByte) |             |
 ## Ports
+
 | Port name          | Direction | Type                   | Description                  |
 | ------------------ | --------- | ---------------------- | ---------------------------- |
 | clk_i              | input     |                        |                              |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | lsu_bignum_rdata_o | output    | [ExtWLEN-1:0]          |                              |
 | lsu_rdata_err_o    | output    |                        |                              |
 ## Signals
+
 | Name               | Type                      | Description                                |
 | ------------------ | ------------------------- | ------------------------------------------ |
 | lsu_word_select    | logic [BaseWordAddrW-1:2] |                                            |
@@ -42,11 +48,11 @@ Copyright lowRISC contributors.
 | unused_clk         | logic                     | clk_i, rst_ni are only used by assertions  |
 | unused_rst_n       | logic                     |                                            |
 ## Constants
+
 | Name             | Type | Value                              | Description |
 | ---------------- | ---- | ---------------------------------- | ----------- |
 | DmemAddrWidth    | int  | prim_util_pkg::vbits(DmemSizeByte) |             |
 | BaseWordsPerWLen | int  | WLEN / 32                          |             |
 | BaseWordAddrW    | int  | prim_util_pkg::vbits(WLEN/8        |             |
 ## Processes
-- unnamed: _( @(posedge clk_i) )_
-
+- unnamed: ( @(posedge clk_i) )

@@ -1,13 +1,17 @@
 # Entity: prim_generic_flash
+
 ## Diagram
+
 ![Diagram](prim_generic_flash.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Overall flash wrapper
  
 ## Generics
+
 | Generic name   | Type | Value | Description          |
 | -------------- | ---- | ----- | -------------------- |
 | NumBanks       | int  | 2     | number of banks      |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | MetaDataWidth  | int  | 12    | metadata such as ECC |
 | TestModeWidth  | int  | 2     |                      |
 ## Ports
+
 | Port name               | Direction | Type                           | Description |
 | ----------------------- | --------- | ------------------------------ | ----------- |
 | clk_i                   | input     |                                |             |
@@ -46,6 +51,7 @@ Copyright lowRISC contributors.
 | tl_o                    | output    |                                |             |
 | devmode_i               | input     |                                |             |
 ## Signals
+
 | Name                      | Type                      | Description                                |
 | ------------------------- | ------------------------- | ------------------------------------------ |
 | unused_devmode            | logic                     |                                            |
@@ -67,13 +73,14 @@ Copyright lowRISC contributors.
 | cfg_rdata                 | logic [31:0]              |                                            |
 | unused_bist_enable        | lc_ctrl_pkg::lc_tx_t      |                                            |
 ## Constants
+
 | Name         | Type | Value           | Description |
 | ------------ | ---- | --------------- | ----------- |
 | CfgRegs      | int  | 21              |             |
 | CfgAddrWidth | int  | $clog2(CfgRegs) |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_cfg: tlul_adapter_sram
 - u_cfg_ram: prim_ram_1p

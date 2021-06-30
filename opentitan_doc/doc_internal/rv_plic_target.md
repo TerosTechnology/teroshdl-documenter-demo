@@ -1,7 +1,10 @@
 # Entity: rv_plic_target
+
 ## Diagram
+
 ![Diagram](rv_plic_target.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,6 +16,7 @@ Copyright lowRISC contributors.
  many input sources.
  
 ## Generics
+
 | Generic name | Type | Value              | Description       |
 | ------------ | ---- | ------------------ | ----------------- |
 | N_SOURCE     | int  | 32                 |                   |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | SrcWidth     | int  | $clog2(N_SOURCE)   | derived parameter |
 | PrioWidth    | int  | $clog2(MAX_PRIO+1) | derived parameter |
 ## Ports
+
 | Port name   | Direction | Type            | Description |
 | ----------- | --------- | --------------- | ----------- |
 | clk_i       | input     |                 |             |
@@ -31,6 +36,7 @@ Copyright lowRISC contributors.
 | irq_o       | output    |                 |             |
 | irq_id_o    | output    | [SrcWidth-1:0]  |             |
 ## Signals
+
 | Name     | Type                                        | Description |
 | -------- | ------------------------------------------- | ----------- |
 | is_tree  | logic [2**(NumLevels+1)-2:0]                |             |
@@ -41,11 +47,11 @@ Copyright lowRISC contributors.
 | irq_id_d | logic [SrcWidth-1:0]                        |             |
 | irq_id_q | logic [SrcWidth-1:0]                        |             |
 ## Constants
+
 | Name      | Type | Value              | Description                                                                                   |
 | --------- | ---- | ------------------ | --------------------------------------------------------------------------------------------- |
 | SrcWidth  | int  | $clog2(N_SOURCE)   | derived parameter                                                                             |
 | PrioWidth | int  | $clog2(MAX_PRIO+1) | derived parameter                                                                             |
 | NumLevels | int  | $clog2(N_SOURCE)   | align to powers of 2 for simplicity a full binary tree with N levels has 2**N + 2**N-1 nodes  |
 ## Processes
-- gen_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- gen_regs: ( @(posedge clk_i or negedge rst_ni) )

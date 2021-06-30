@@ -1,14 +1,19 @@
 # Entity: pp_soc_uart
+
 ## Diagram
+
 ![Diagram](pp_soc_uart.svg "Diagram")
 ## Description
+
 The Potato Processor - A simple processor for FPGAs
 (c) Kristian Klomsten Skordal 2014 - 2016 <kristian.skordal@wafflemail.net>
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | FIFO_DEPTH   | natural | 64    |             |
 ## Ports
+
 | Port name  | Direction | Type                          | Description       |
 | ---------- | --------- | ----------------------------- | ----------------- |
 | clk        | in        | std_logic                     |                   |
@@ -24,6 +29,7 @@ The Potato Processor - A simple processor for FPGAs
 | wb_stb_in  | in        | std_logic                     |                   |
 | wb_ack_out | out       | std_logic                     |                   |
 ## Signals
+
 | Name                 | Type                                       | Description                |
 | -------------------- | ------------------------------------------ | -------------------------- |
 | sample_clk           | std_logic                                  | UART sample clock signals: |
@@ -59,32 +65,27 @@ The Potato Processor - A simple processor for FPGAs
 | rxd3                 | std_logic                                  |                            |
 | txd2                 | std_ulogic                                 |                            |
 ## Types
-| Name          | Type                               | Description                    |
-| ------------- | ---------------------------------- | ------------------------------ |
-| rx_state_type | (IDLE, RECEIVE, STARTBIT, STOPBIT) | UART receive process signals:  |
-| tx_state_type | (IDLE, TRANSMIT, STOPBIT)          | UART transmit process signals: |
-| wb_state_type | (IDLE, WRITE_ACK, READ_ACK)        | Wishbone signals:              |
-## Processes
-- unnamed: _( clk )_
-Add a few FFs on the RX input to avoid metastability issues
 
+| Name          | Type                                | Description                    |
+| ------------- | ----------------------------------- | ------------------------------ |
+| rx_state_type | (IDLE, RECEIVE, STARTBIT, STOPBIT)  | UART receive process signals:  |
+| tx_state_type | (IDLE, TRANSMIT, STOPBIT)           | UART transmit process signals: |
+| wb_state_type | (IDLE, WRITE_ACK, READ_ACK)         | Wishbone signals:              |
+## Processes
+- unnamed: ( clk )
 **Description**
 Add a few FFs on the RX input to avoid metastability issues
 
-- uart_receive: _( clk )_
-
-- sample_counter: _( clk )_
-
-- uart_transmit: _( clk )_
-
-- uart_tx_clock_generator: _( clk )_
-
-- sample_clock_generator: _( clk )_
-
-- wishbone: _( clk )_
-
+- uart_receive: ( clk )
+- sample_counter: ( clk )
+- uart_transmit: ( clk )
+- uart_tx_clock_generator: ( clk )
+- sample_clock_generator: ( clk )
+- wishbone: ( clk )
 ## Instantiations
+
 - send_buffer: work.pp_fifo
 - recv_buffer: work.pp_fifo
 ## State machines
+
 ![Diagram_state_machine_0]( stm_pp_soc_uart_00.svg "Diagram")![Diagram_state_machine_1]( stm_pp_soc_uart_11.svg "Diagram")![Diagram_state_machine_2]( stm_pp_soc_uart_22.svg "Diagram")

@@ -1,7 +1,10 @@
 # Entity: udp_FrameLoopback
+
 ## Diagram
+
 ![Diagram](udp_FrameLoopback.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | IP_VERSION   | positive | 6     |             |
 | MAX_FRAMES   | positive | 4     |             |
 ## Ports
+
 | Port name                   | Direction | Type           | Description |
 | --------------------------- | --------- | -------------- | ----------- |
 | Clock                       | in        | std_logic      |             |
@@ -58,6 +63,7 @@ limitations under the License.
 | Out_Meta_DestPort           | out       | T_NET_UDP_PORT |             |
 | Out_Meta_SrcPort            | out       | T_NET_UDP_PORT |             |
 ## Signals
+
 | Name                | Type                                            | Description |
 | ------------------- | ----------------------------------------------- | ----------- |
 | StmBuf_MetaIn_nxt   | std_logic_vector(META_BITS'length - 1 downto 0) |             |
@@ -65,6 +71,7 @@ limitations under the License.
 | StmBuf_MetaOut_nxt  | std_logic_vector(META_BITS'length - 1 downto 0) |             |
 | StmBuf_MetaOut_Data | std_logic_vector(isum(META_BITS) - 1 downto 0)  |             |
 ## Constants
+
 | Name                   | Type     | Value                                                                                                                                                              | Description |
 | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | IPADDRESS_LENGTH       | positive |  ite((IP_VERSION = 4), 4, 16)                                                                                                                                      |             |
@@ -75,4 +82,5 @@ limitations under the License.
 | META_BITS              | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 8, 		META_STREAMID_DESTADDR		=> 8, 		META_STREAMID_SRCPORT			=> 16, 		META_STREAMID_DESTPORT		=> 16 	)                             |             |
 | META_FIFO_DEPTHS       | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> IPADDRESS_LENGTH, 		META_STREAMID_DESTADDR		=> IPADDRESS_LENGTH, 		META_STREAMID_SRCPORT			=> 1, 		META_STREAMID_DESTPORT		=> 1 	) |             |
 ## Instantiations
+
 - StmBuf: PoC.stream_Buffer

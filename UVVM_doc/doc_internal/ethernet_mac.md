@@ -1,7 +1,10 @@
 # Entity: ethernet_mac
+
 ## Diagram
+
 ![Diagram](ethernet_mac.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description : See library quick reference (under 'doc') and README-file(s)
 ## Ports
+
 | Port name | Direction | Type                         | Description              |
 | --------- | --------- | ---------------------------- | ------------------------ |
 | clk       | in        | std_logic                    | SBI interface            |
@@ -25,6 +29,7 @@ Description : See library quick reference (under 'doc') and README-file(s)
 | txd       | out       | std_logic_vector(7 downto 0) |                          |
 | txen      | out       | std_logic                    |                          |
 ## Signals
+
 | Name            | Type                                      | Description |
 | --------------- | ----------------------------------------- | ----------- |
 | mac_dest_addr   | std_logic_vector(47 downto 0)             |             |
@@ -38,27 +43,21 @@ Description : See library quick reference (under 'doc') and README-file(s)
 | read_ready      | std_logic                                 |             |
 | fsm_tx          | t_state                                   |             |
 ## Types
-| Name    | Type                 | Description |
-| ------- | -------------------- | ----------- |
-| t_state | (s_idle, s_send_pkt) |             |
+
+| Name    | Type                  | Description |
+| ------- | --------------------- | ----------- |
+| t_state | (s_idle, s_send_pkt)  |             |
 ## Processes
-- p_sbi_write_regs: _( clk )_
-
-- p_sbi_read_regs: _( sbi_cs, sbi_rena, sbi_addr )_
-Read the Ethernet MAC dummy register
-
+- p_sbi_write_regs: ( clk )
+- p_sbi_read_regs: ( sbi_cs, sbi_rena, sbi_addr )
 **Description**
 Read the Ethernet MAC dummy register
 
-- p_gmii_send_frame: _( clk )_
-GMII interface
-Send Ethernet frames once they have been completely stored in the internal registers.
-
+- p_gmii_send_frame: ( clk )
 **Description**
 GMII interface
 Send Ethernet frames once they have been completely stored in the internal registers.
 
 ## State machines
-- GMII interface
-Send Ethernet frames once they have been completely stored in the internal registers.
+
 ![Diagram_state_machine_0]( stm_ethernet_mac_00.svg "Diagram")

@@ -1,13 +1,17 @@
 # Entity: usbdev_linkstate
+
 ## Diagram
+
 ![Diagram](usbdev_linkstate.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Link state detection
  
 ## Ports
+
 | Port name         | Direction | Type  | Description |
 | ----------------- | --------- | ----- | ----------- |
 | clk_48mhz_i       | input     |       |             |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | host_lost_o       | output    |       | level       |
 | link_state_o      | output    | [2:0] |             |
 ## Signals
+
 | Name                | Type              | Description                                                                                                                                                                                               |
 | ------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | link_state_d        | link_state_e      |                                                                                                                                                                                                           |
@@ -50,44 +55,36 @@ Copyright lowRISC contributors.
 | line_se0_raw        | logic             | If the PHY reflects the line state on rx pins when the device is driving then the usb_oe_i check isn't needed here. But it seems best to do the check to be robust in the face of different PHY designs.  |
 | host_presence_timer | logic [12:0]      | host_lost if no sof in 4.096ms (supposed to be every 1ms) and the link is active                                                                                                                          |
 ## Constants
+
 | Name            | Type         | Value    | Description                      |
 | --------------- | ------------ | -------- | -------------------------------- |
 | SUSPEND_TIMEOUT | logic [11:0] | 12'd3000 | 3ms by spec                      |
 | RESET_TIMEOUT   | logic [2:0]  | 3'd3     | 3us. Can be 2.5us - 10ms by spec |
 ## Types
+
 | Name              | Type                                                                                                                                                                            | Description |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | link_state_e      | enum logic [2:0] {          LinkDisconnect = 0,          LinkPowered = 1,     LinkPoweredSuspend = 2,          LinkActive = 3,     LinkActiveNoSOF = 5,     LinkSuspend = 4   } |             |
 | link_rst_state_e  | enum logic [1:0] {     NoRst,     RstCnt,     RstPend   }                                                                                                                       |             |
 | link_inac_state_e | enum logic [1:0] {     Active,     InactCnt,     InactPend   }                                                                                                                  |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- proc_rst_fsm: _(  )_
-Here we clean up the SE0 signal and generate a signle ev_reset at
-the end of a valid reset
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- proc_rst_fsm: (  )
 **Description**
 Here we clean up the SE0 signal and generate a signle ev_reset at
 the end of a valid reset
 
-- proc_reg_rst: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- proc_idle_det: _(  )_
-Here we clean up the idle signal and generate a signle ev_bus_inactive
-after the timer expires
-
+- proc_reg_rst: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- proc_idle_det: (  )
 **Description**
 Here we clean up the idle signal and generate a signle ev_bus_inactive
 after the timer expires
 
-- proc_reg_idle_det: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
+- proc_reg_idle_det: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 ## Instantiations
+
 - filter_se0: prim_filter
 **Description**
 four ticks is a bit time

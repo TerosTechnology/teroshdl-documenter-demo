@@ -1,7 +1,10 @@
 # Entity: prim_sync_reqack
+
 ## Diagram
+
 ![Diagram](prim_sync_reqack.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -22,10 +25,12 @@ Copyright lowRISC contributors.
  Architecture to Gate-Level Circuits and FPGAs", 2015.
  
 ## Generics
+
 | Generic name | Type | Value | Description                                                            |
 | ------------ | ---- | ----- | ---------------------------------------------------------------------- |
 | EnReqStabA   | bit  | 1     | Non-functional parameter to switch on the request stability assertion  |
 ## Ports
+
 | Port name  | Direction | Type | Description          |
 | ---------- | --------- | ---- | -------------------- |
 | clk_src_i  | input     |      | REQ side, SRC domain |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | dst_req_o  | output    |      | ACK side, DST domain |
 | dst_ack_i  | input     |      | ACK side, DST domain |
 ## Signals
+
 | Name          | Type              | Description |
 | ------------- | ----------------- | ----------- |
 | src_fsm_ns    | sync_reqack_fsm_e |             |
@@ -52,31 +58,26 @@ Copyright lowRISC contributors.
 | src_handshake | logic             |             |
 | dst_handshake | logic             |             |
 ## Types
+
 | Name              | Type                           | Description |
 | ----------------- | ------------------------------ | ----------- |
 | sync_reqack_fsm_e | enum logic {     EVEN, ODD   } | Types       |
 ## Processes
-- src_fsm: _(  )_
-REQ-side FSM (SRC domain)
-
+- src_fsm: (  )
 **Description**
 REQ-side FSM (SRC domain)
 
-- dst_fsm: _(  )_
-ACK-side FSM (DST domain)
-
+- dst_fsm: (  )
 **Description**
 ACK-side FSM (DST domain)
 
-- unnamed: _( @(posedge clk_src_i or negedge rst_src_ni) )_
-Registers
-
+- unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )
 **Description**
 Registers
 
-- unnamed: _( @(posedge clk_dst_i or negedge rst_dst_ni) )_
-
+- unnamed: ( @(posedge clk_dst_i or negedge rst_dst_ni) )
 ## Instantiations
+
 - req_sync: prim_flop_2sync
 **Description**
 Move REQ over to DST domain.

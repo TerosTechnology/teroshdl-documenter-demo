@@ -1,7 +1,10 @@
 # Entity: aes_prng_clearing
+
 ## Diagram
+
 ![Diagram](aes_prng_clearing.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,6 +14,7 @@ Copyright lowRISC contributors.
  using an external interface.
  
 ## Generics
+
 | Generic name         | Type                 | Value                           | Description                                                                                                                                                  |
 | -------------------- | -------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Width                | int unsigned         | 64                              | At the moment we just support a width of 64.                                                                                                                 |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | RndCnstLfsrPerm      | clearing_lfsr_perm_t | RndCnstClearingLfsrPermDefault  |                                                                                                                                                              |
 | RndCnstSharePerm     | clearing_lfsr_perm_t | RndCnstClearingSharePermDefault |                                                                                                                                                              |
 ## Ports
+
 | Port name     | Direction | Type               | Description                                  |
 | ------------- | --------- | ------------------ | -------------------------------------------- |
 | clk_i         | input     |                    |                                              |
@@ -33,6 +38,7 @@ Copyright lowRISC contributors.
 | entropy_ack_i | input     |                    |                                              |
 | entropy_i     | input     | [EntropyWidth-1:0] |                                              |
 ## Signals
+
 | Name                   | Type              | Description                                    |
 | ---------------------- | ----------------- | ---------------------------------------------- |
 | seed_valid             | logic             |                                                |
@@ -44,6 +50,7 @@ Copyright lowRISC contributors.
 | share_perm_test        | logic [Width-1:0] | Check that the supplied permutation is valid.  |
 | unused_share_perm_test | logic [Width-1:0] | Check that the supplied permutation is valid.  |
 ## Instantiations
+
 - u_prim_packer_fifo: prim_packer_fifo
 **Description**
 Upsizing of entropy input to correct width for LFSR reseeding.

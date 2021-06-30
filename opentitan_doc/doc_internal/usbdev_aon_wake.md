@@ -1,13 +1,17 @@
 # Entity: usbdev_aon_wake
+
 ## Diagram
+
 ![Diagram](usbdev_aon_wake.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Always On USB wake detect
  
 ## Ports
+
 | Port name              | Direction | Type        | Description                                                                  |
 | ---------------------- | --------- | ----------- | ---------------------------------------------------------------------------- |
 | clk_aon_i              | input     |             |                                                                              |
@@ -24,6 +28,7 @@ Copyright lowRISC contributors.
 | wake_req_alw_o         | output    |             | wake/powerup request                                                         |
 | state_debug_o          | output    | awk_state_e | state debug information                                                      |
 ## Signals
+
 | Name              | Type        | Description                                                                                                                                                                                                                           |
 | ----------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | astate_d          | awk_state_e |                                                                                                                                                                                                                                       |
@@ -39,11 +44,10 @@ Copyright lowRISC contributors.
 | notidle_async     | logic       |                                                                                                                                                                                                                                       |
 | wake_req          | logic       |                                                                                                                                                                                                                                       |
 ## Processes
-- proc_awk_fsm: _(  )_
-
-- proc_reg_awk: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- proc_awk_fsm: (  )
+- proc_reg_awk: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - u_cdc_suspend_req: prim_flop_2sync
 - filter_activity: prim_filter
 **Description**

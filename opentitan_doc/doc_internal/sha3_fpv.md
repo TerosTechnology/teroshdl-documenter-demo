@@ -1,17 +1,22 @@
 # Entity: sha3_fpv
+
 ## Diagram
+
 ![Diagram](sha3_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type | Value     | Description                |
 | ------------ | ---- | --------- | -------------------------- |
 | EnMasking    | bit  | 0         | Enable Masked Keccak if 1  |
 | Share        | int  | undefined |                            |
 ## Ports
+
 | Port name       | Direction | Type                   | Description                                                                      |
 | --------------- | --------- | ---------------------- | -------------------------------------------------------------------------------- |
 | clk_i           | input     |                        |                                                                                  |
@@ -36,8 +41,10 @@ Copyright lowRISC contributors.
 | state_o         | output    | [StateW-1:0]           |                                                                                  |
 | error_o         | output    | err_t                  |                                                                                  |
 ## Constants
+
 | Name  | Type | Value     | Description |
 | ----- | ---- | --------- | ----------- |
 | Share | int  | undefined |             |
 ## Instantiations
+
 - u_sha3: sha3

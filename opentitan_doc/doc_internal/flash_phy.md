@@ -1,7 +1,10 @@
 # Entity: flash_phy
+
 ## Diagram
+
 ![Diagram](flash_phy.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -12,6 +15,7 @@ Copyright lowRISC contributors.
  correctly collecting the responses in order.
  
 ## Ports
+
 | Port name               | Direction | Type           | Description |
 | ----------------------- | --------- | -------------- | ----------- |
 | clk_i                   | input     |                |             |
@@ -37,6 +41,7 @@ Copyright lowRISC contributors.
 | lc_nvm_debug_en_i       | input     |                |             |
 | flash_alert_o           | output    |                |             |
 ## Signals
+
 | Name             | Type                                                     | Description                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | host_bank_sel    | logic [BankW-1:0]                                        | The sequence fifo below holds the correct response order, while each flash_phy_core is paired with a small passthrough response FIFO to hold the data if necessary. If one bank finishes "ahead" of schedule, the response FIFO will hold the response, and no new transactions will be issued to that bank until the response is consumed by the host. host to flash_phy interface  |
@@ -75,12 +80,14 @@ Copyright lowRISC contributors.
 | unused_alert     | logic                                                    |                                                                                                                                                                                                                                                                                                                                                                                      |
 | unused_trst_n    | logic                                                    |                                                                                                                                                                                                                                                                                                                                                                                      |
 ## Constants
+
 | Name                 | Type | Value                           | Description                                                                                                                                                                                                                   |
 | -------------------- | ---- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | FlashMacroOustanding | int  | 1                               | Flash macro outstanding refers to how many reads we allow a macro to move ahead of an in order blocking read. Since the data cannot be returned out of order, this simply does the reads in advance and store them in a FIFO  |
 | SeqFifoDepth         | int  | FlashMacroOustanding * NumBanks |                                                                                                                                                                                                                               |
 | TotalRegions         | int  | MpRegions + 1                   | Generate host scramble_en indication, broadcasted to all banks                                                                                                                                                                |
 ## Instantiations
+
 - u_bank_sequence_fifo: prim_fifo_sync
 **Description**
 This fifo holds the expected return order

@@ -1,7 +1,10 @@
 # Entity: prim_gate_gen
+
 ## Diagram
+
 ![Diagram](prim_gate_gen.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -30,11 +33,13 @@ Copyright lowRISC contributors.
  the configurations listed in the table above.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | DataWidth    | int  | 32    |             |
 | NumGates     | int  | 1000  |             |
 ## Ports
+
 | Port name | Direction | Type            | Description |
 | --------- | --------- | --------------- | ----------- |
 | clk_i     | input     |                 |             |
@@ -44,6 +49,7 @@ Copyright lowRISC contributors.
 | data_o    | output    | [DataWidth-1:0] |             |
 | valid_o   | output    |                 |             |
 ## Signals
+
 | Name    | Type                                      | Description |
 | ------- | ----------------------------------------- | ----------- |
 | regs_d  | logic [NumOuterRounds-1:0][DataWidth-1:0] |             |
@@ -51,11 +57,11 @@ Copyright lowRISC contributors.
 | valid_d | logic [NumOuterRounds-1:0]                |             |
 | valid_q | logic [NumOuterRounds-1:0]                |             |
 ## Constants
+
 | Name           | Type | Value          | Description                                                                                                                |
 | -------------- | ---- | -------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | NumInnerRounds | int  | 2              | technology specific tuning, do not modify. an inner round is comprised of a 2bit rotation, followed by a 4bit SBox Layer.  |
 | GatesPerRound  | int  | DataWidth * 14 |                                                                                                                            |
 | NumOuterRounds | int  | GatesPerRound  | an outer round consists of NumInnerRounds, followed by a register.                                                         |
 ## Processes
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )

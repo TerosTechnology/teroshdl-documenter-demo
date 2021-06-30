@@ -1,7 +1,10 @@
 # Entity: xil_BSCAN
+
 ## Diagram
+
 ![Diagram](xil_BSCAN.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -29,11 +32,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | JTAG_CHAIN   | natural |       |             |
 | DISABLE_JTAG | boolean | FALSE |             |
 ## Ports
+
 | Port name       | Direction | Type      | Description |
 | --------------- | --------- | --------- | ----------- |
 | Reset           | out       | std_logic |             |
@@ -48,6 +53,7 @@ limitations under the License.
 | Test_ModeSelect | out       | std_logic |             |
 | Update          | out       | std_logic |             |
 ## Constants
+
 | Name     | Type          | Value        | Description |
 | -------- | ------------- | ------------ | ----------- |
 | DEV_INFO | T_DEVICE_INFO |  DEVICE_INFO |             |

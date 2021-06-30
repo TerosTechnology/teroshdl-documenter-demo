@@ -1,7 +1,10 @@
 # Entity: sync_Reset_Altera
+
 ## Diagram
+
 ![Diagram](sync_Reset_Altera.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,21 +30,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type              | Value                 | Description                                 |
 | ------------ | ----------------- | --------------------- | ------------------------------------------- |
 | SYNC_DEPTH   | T_MISC_SYNC_DEPTH | T_MISC_SYNC_DEPTH'low | generate SYNC_DEPTH many stages, at least 2 |
 ## Ports
+
 | Port name | Direction | Type      | Description                  |
 | --------- | --------- | --------- | ---------------------------- |
 | Clock     | in        | std_logic | <Clock>  output clock domain |
 | Input     | in        | std_logic | @async:  reset input         |
 | Output    | out       | std_logic | @Clock:  reset output        |
 ## Signals
+
 | Name       | Type                                      | Description |
 | ---------- | ----------------------------------------- | ----------- |
 | Data_async | std_logic                                 |             |
 | Data_meta  | std_logic                                 |             |
 | Data_sync  | std_logic_vector(SYNC_DEPTH - 1 downto 0) |             |
 ## Processes
-- unnamed: _( Clock, Input )_
-
+- unnamed: ( Clock, Input )

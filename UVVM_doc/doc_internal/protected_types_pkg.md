@@ -1,5 +1,7 @@
 # Package: protected_types_pkg
+
 ## Types
+
 | Name                                 | Type | Description |
 | ------------------------------------ | ---- | ----------- |
 | t_protected_alert_attention_counters |      |             |

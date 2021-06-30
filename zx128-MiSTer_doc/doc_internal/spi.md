@@ -1,7 +1,10 @@
 # Entity: spi
+
 ## Diagram
+
 ![Diagram](spi.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clock     | input     | wire      |             |
@@ -14,11 +17,11 @@
 | miso      | input     | wire      |             |
 | mosi      | output    | wire      |             |
 ## Signals
+
 | Name  | Type     | Description |
 | ----- | -------- | ----------- |
 | md    | reg[7:0] |             |
 | sd    | reg[7:0] |             |
 | count | reg[4:0] |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )

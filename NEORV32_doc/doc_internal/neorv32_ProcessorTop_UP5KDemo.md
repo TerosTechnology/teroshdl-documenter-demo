@@ -1,7 +1,10 @@
 # Entity: neorv32_ProcessorTop_UP5KDemo
+
 ## Diagram
+
 ![Diagram](neorv32_ProcessorTop_UP5KDemo.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Example setup for boards with UP5K devices >>                                    #
 # ********************************************************************************************* #
@@ -36,6 +39,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                                       |
 | ---------------------------- | ------------------------------ | ----------- | --------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY              | natural                        | 0           | clock frequency of clk_i in Hz                                                    |
@@ -73,6 +77,7 @@
 | IO_PWM_NUM_CH                | natural                        | 3           | number of PWM channels to implement (0..60); 0 = disabled                         |
 | IO_WDT_EN                    | boolean                        | true        | implement watch dog timer (WDT)?                                                  |
 ## Ports
+
 | Port name   | Direction | Type                                        | Description                                                              |
 | ----------- | --------- | ------------------------------------------- | ------------------------------------------------------------------------ |
 | clk_i       | in        | std_logic                                   |                                                                          |
@@ -95,6 +100,7 @@
 | twi_scl_io  | inout     | std_logic                                   |                                                                          |
 | pwm_o       | out       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0) | PWM (available if IO_PWM_NUM_CH > 0) --                                  |
 ## Signals
+
 | Name        | Type                           | Description |
 | ----------- | ------------------------------ | ----------- |
 | con_gpio_o  | std_ulogic_vector(31 downto 0) |             |
@@ -104,6 +110,7 @@
 | con_spi_sdo | std_ulogic                     |             |
 | con_spi_csn | std_ulogic_vector(07 downto 0) |             |
 ## Instantiations
+
 - neorv32_inst: neorv32.neorv32_top
 **Description**
 The core of the problem ----------------------------------------------------------------

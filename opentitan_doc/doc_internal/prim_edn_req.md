@@ -1,7 +1,10 @@
 # Entity: prim_edn_req
+
 ## Diagram
+
 ![Diagram](prim_edn_req.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,11 +16,13 @@ Copyright lowRISC contributors.
  requests.
  
 ## Generics
+
 | Generic name | Type | Value | Description                                                                                                   |
 | ------------ | ---- | ----- | ------------------------------------------------------------------------------------------------------------- |
 | OutWidth     | int  | 32    |                                                                                                               |
 | EnReqStabA   | bit  | 1     | Non-functional parameter to switch on the request stability assertion. Used in submodule `prim_sync_reqack`.  |
 ## Ports
+
 | Port name  | Direction | Type           | Description |
 | ---------- | --------- | -------------- | ----------- |
 | clk_i      | input     |                | Design side |
@@ -31,6 +36,7 @@ Copyright lowRISC contributors.
 | edn_o      | output    |                |             |
 | edn_i      | input     |                |             |
 ## Signals
+
 | Name      | Type                                    | Description                                                                                                |
 | --------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | word_req  | logic                                   | Stop requesting words from EDN once desired amount of data is available.                                   |
@@ -40,16 +46,16 @@ Copyright lowRISC contributors.
 | fips_d    | logic                                   | Need to track if any of the packed words has been generated with a pre-FIPS seed, i.e., has fips == 1'b0.  |
 | fips_q    | logic                                   | Need to track if any of the packed words has been generated with a pre-FIPS seed, i.e., has fips == 1'b0.  |
 ## Constants
+
 | Name      | Type | Value                                  | Description |
 | --------- | ---- | -------------------------------------- | ----------- |
 | SyncWidth | int  | $bits({edn_i.edn_fips, edn_i.edn_bus}) |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-keep
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 keep
 
 ## Instantiations
+
 - u_prim_sync_reqack_data: prim_sync_reqack_data
 - u_prim_packer_fifo: prim_packer_fifo

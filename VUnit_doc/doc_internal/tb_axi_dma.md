@@ -1,16 +1,21 @@
 # Entity: tb_axi_dma
+
 ## Diagram
+
 ![Diagram](tb_axi_dma.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name       | Type         | Description |
 | ---------- | ------------ | ----------- |
 | clk        | std_logic    |             |
@@ -21,6 +26,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | axi_wr_m2s | axi_wr_m2s_t |             |
 | axi_wr_s2m | axi_wr_s2m_t |             |
 ## Constants
+
 | Name             | Type         | Value                                                                                                                                                                           | Description |
 | ---------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | clk_period       | time         |  1 ns                                                                                                                                                                           |             |
@@ -32,9 +38,9 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | bytes_per_beat   | natural      |  axi_rd_s2m.r.data'length / 8                                                                                                                                                   |             |
 ## Functions
 ## Processes
-- main: _(  )_
-
+- main: (  )
 ## Instantiations
+
 - dut: work.axi_dma
 - axi_lite_master_inst: vunit_lib.axi_lite_master
 - axi_read_slave_inst: vunit_lib.axi_read_slave

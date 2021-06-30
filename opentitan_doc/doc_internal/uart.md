@@ -1,17 +1,22 @@
 # Entity: uart
+
 ## Diagram
+
 ![Diagram](uart.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: UART top level wrapper file
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name            | Direction | Type            | Description   |
 | -------------------- | --------- | --------------- | ------------- |
 | clk_i                | input     |                 |               |
@@ -32,6 +37,7 @@ Copyright lowRISC contributors.
 | intr_rx_timeout_o    | output    |                 |               |
 | intr_rx_parity_err_o | output    |                 |               |
 ## Signals
+
 | Name       | Type                  | Description |
 | ---------- | --------------------- | ----------- |
 | alert_test | logic [NumAlerts-1:0] |             |
@@ -39,5 +45,6 @@ Copyright lowRISC contributors.
 | reg2hw     | uart_reg2hw_t         |             |
 | hw2reg     | uart_hw2reg_t         |             |
 ## Instantiations
+
 - u_reg: uart_reg_top
 - uart_core: uart_core

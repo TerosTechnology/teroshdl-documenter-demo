@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_cp_fpu
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_cp_fpu.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU Co-Processor: Single-Prec. Floating Point Unit (RISC-V "Zfinx" Extension) >> #
 # ********************************************************************************************* #
@@ -52,6 +55,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name | Direction | Type                                       | Description                     |
 | --------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i     | in        | std_ulogic                                 | global clock, rising edge       |
@@ -65,6 +69,7 @@
 | fflags_o  | out       | std_ulogic_vector(4 downto 0)              | exception flags                 |
 | valid_o   | out       | std_ulogic                                 | data output valid               |
 ## Signals
+
 | Name           | Type                           | Description                  |
 | -------------- | ------------------------------ | ---------------------------- |
 | cmd            | cmd_t                          |                              |
@@ -89,6 +94,7 @@
 | addsub         | addsub_t                       |                              |
 | normalizer     | normalizer_t                   |                              |
 ## Constants
+
 | Name        | Type                          | Value  | Description |
 | ----------- | ----------------------------- | ------ | ----------- |
 | op_class_c  | std_ulogic_vector(2 downto 0) |  "000" |             |
@@ -100,117 +106,78 @@
 | op_addsub_c | std_ulogic_vector(2 downto 0) |  "110" |             |
 | op_mul_c    | std_ulogic_vector(2 downto 0) |  "111" |             |
 ## Types
-| Name               | Type             | Description                                                         |
-| ------------------ | ---------------- | ------------------------------------------------------------------- |
-| cmd_t              |                  | commands (one-hot) --                                               |
-| ctrl_state_t       | (S_IDLE, S_BUSY) | co-processor control engine --                                      |
-| ctrl_engine_t      |                  |                                                                     |
-| op_data_t          |                  | floating-point operands --                                          |
-| op_class_t         |                  |                                                                     |
-| fpu_operands_t     |                  |                                                                     |
-| fu_interface_t     |                  | functional units interface --                                       |
-| fu_i2f_interface_t |                  | integer-to-float --                                                 |
-| multiplier_t       |                  | multiplier unit --                                                  |
-| addsub_t           |                  | adder/subtractor unit --                                            |
-| normalizer_t       |                  | normalizer interface (normalization & rounding and int-to-float) -- |
+
+| Name               | Type              | Description                                                         |
+| ------------------ | ----------------- | ------------------------------------------------------------------- |
+| cmd_t              |                   | commands (one-hot) --                                               |
+| ctrl_state_t       | (S_IDLE, S_BUSY)  | co-processor control engine --                                      |
+| ctrl_engine_t      |                   |                                                                     |
+| op_data_t          |                   | floating-point operands --                                          |
+| op_class_t         |                   |                                                                     |
+| fpu_operands_t     |                   |                                                                     |
+| fu_interface_t     |                   | functional units interface --                                       |
+| fu_i2f_interface_t |                   | integer-to-float --                                                 |
+| multiplier_t       |                   | multiplier unit --                                                  |
+| addsub_t           |                   | adder/subtractor unit --                                            |
+| normalizer_t       |                   | normalizer interface (normalization & rounding and int-to-float) -- |
 ## Processes
-- number_classifier: _( op_data )_
-flush mantissa to zero if subnormal
-Number Classifier ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- number_classifier: ( op_data )
 **Description**
 flush mantissa to zero if subnormal
 Number Classifier ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- control_engine_fsm: _( rstn_i, clk_i )_
-Co-Processor Control Engine ------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- control_engine_fsm: ( rstn_i, clk_i )
 **Description**
 Co-Processor Control Engine ------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- float_comparator: _( rstn_i, clk_i )_
-Floating-Point Comparator --------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- float_comparator: ( rstn_i, clk_i )
 **Description**
 Floating-Point Comparator --------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- float_comparison: _( fpu_operands, ctrl_i, comp_equal_ff, comp_less_ff )_
-Comparison (FEQ/FLT/FLE) ---------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- float_comparison: ( fpu_operands, ctrl_i, comp_equal_ff, comp_less_ff )
 **Description**
 Comparison (FEQ/FLT/FLE) ---------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- min_max_select: _( fpu_operands, comp_less_ff, fu_compare, ctrl_i )_
-does not generate exceptions here, but normalizer can generate exceptions
-Min/Max Select (FMIN/FMAX) -------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- min_max_select: ( fpu_operands, comp_less_ff, fu_compare, ctrl_i )
 **Description**
 does not generate exceptions here, but normalizer can generate exceptions
 Min/Max Select (FMIN/FMAX) -------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- sign_injector: _( ctrl_i, fpu_operands )_
-Sign-Injection (FSGNJ) -----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- sign_injector: ( ctrl_i, fpu_operands )
 **Description**
 Sign-Injection (FSGNJ) -----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- convert_i2f: _( rstn_i, clk_i )_
-Convert: [unsigned] Integer to Float (FCVT.W.S) ----------------------------------------
--------------------------------------------------------------------------------------------
-
+- convert_i2f: ( rstn_i, clk_i )
 **Description**
 Convert: [unsigned] Integer to Float (FCVT.W.S) ----------------------------------------
 -------------------------------------------------------------------------------------------
 
-- multiplier_core: _( rstn_i, clk_i )_
-Multiplier Core (FMUL) -----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- multiplier_core: ( rstn_i, clk_i )
 **Description**
 Multiplier Core (FMUL) -----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- multiplier_class_core: _( rstn_i, clk_i )_
-inexcat: not possible here
-result class -- 
-
+- multiplier_class_core: ( rstn_i, clk_i )
 **Description**
 inexcat: not possible here
 result class -- 
 
-- adder_subtractor_core: _( rstn_i, clk_i )_
-Adder/Subtractor Core (FADD, FSUB) -----------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- adder_subtractor_core: ( rstn_i, clk_i )
 **Description**
 Adder/Subtractor Core (FADD, FSUB) -----------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- adder_subtractor_class_core: _( rstn_i, clk_i )_
-result class -- 
-
+- adder_subtractor_class_core: ( rstn_i, clk_i )
 **Description**
 result class -- 
 
-- normalizer_input_select: _( funct_ff, addsub, multiplier, fu_conv_i2f )_
-****************************************************************************************************************************
-FPU Core - Normalize & Round
-****************************************************************************************************************************
-Normalizer Input -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- normalizer_input_select: ( funct_ff, addsub, multiplier, fu_conv_i2f )
 **Description**
 ****************************************************************************************************************************
 FPU Core - Normalize & Round
@@ -218,13 +185,7 @@ FPU Core - Normalize & Round
 Normalizer Input -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- output_gate: _( rstn_i, clk_i )_
-****************************************************************************************************************************
-FPU Core - Result
-****************************************************************************************************************************
-Result Output to CPU Pipeline ----------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- output_gate: ( rstn_i, clk_i )
 **Description**
 ****************************************************************************************************************************
 FPU Core - Result
@@ -233,6 +194,7 @@ Result Output to CPU Pipeline --------------------------------------------------
 -------------------------------------------------------------------------------------------
 
 ## Instantiations
+
 - neorv32_cpu_cp_fpu_f2i_inst: neorv32_cpu_cp_fpu_f2i
 **Description**
 does not generate exceptions here, but normalizer can generate exceptions

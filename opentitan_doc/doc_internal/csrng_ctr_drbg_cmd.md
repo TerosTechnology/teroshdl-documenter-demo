@@ -1,7 +1,10 @@
 # Entity: csrng_ctr_drbg_cmd
+
 ## Diagram
+
 ![Diagram](csrng_ctr_drbg_cmd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  Accepts all csrng commands
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Cmd          | int  | 3     |             |
@@ -18,6 +22,7 @@ Copyright lowRISC contributors.
 | SeedLen      | int  | 384   |             |
 | CtrLen       | int  | 32    |             |
 ## Ports
+
 | Port name                        | Direction | Type          | Description                                      |
 | -------------------------------- | --------- | ------------- | ------------------------------------------------ |
 | clk_i                            | input     |               |                                                  |
@@ -63,6 +68,7 @@ Copyright lowRISC contributors.
 | ctr_drbg_cmd_sfifo_rcstage_err_o | output    | [2:0]         |                                                  |
 | ctr_drbg_cmd_sfifo_keyvrc_err_o  | output    | [2:0]         |                                                  |
 ## Signals
+
 | Name                    | Type                         | Description   |
 | ----------------------- | ---------------------------- | ------------- |
 | cmdreq_ccmd             | logic [Cmd-1:0]              | signals       |
@@ -109,6 +115,7 @@ Copyright lowRISC contributors.
 | gen_adata_null_q        | logic                        | flops         |
 | gen_adata_null_d        | logic                        | flops         |
 ## Constants
+
 | Name             | Type | Value                                          | Description |
 | ---------------- | ---- | ---------------------------------------------- | ----------- |
 | CmdreqFifoDepth  | int  | 1                                              |             |
@@ -118,9 +125,9 @@ Copyright lowRISC contributors.
 | KeyVRCFifoDepth  | int  | 1                                              |             |
 | KeyVRCFifoWidth  | int  | KeyLen+BlkLen+CtrLen+1+SeedLen+1+StateId+Cmd   |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_fifo_sync_cmdreq: prim_fifo_sync
 - u_prim_fifo_sync_rcstage: prim_fifo_sync
 - u_prim_fifo_sync_keyvrc: prim_fifo_sync

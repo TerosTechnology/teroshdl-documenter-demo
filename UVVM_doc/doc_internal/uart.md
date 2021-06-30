@@ -1,7 +1,10 @@
 # Entity: uart
+
 ## Diagram
+
 ![Diagram](uart.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name                 | Type      | Value | Description |
 | ---------------------------- | --------- | ----- | ----------- |
 | GC_START_BIT                 | std_logic | '0'   |             |
@@ -18,6 +22,7 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | GC_CLOCKS_PER_BIT            | integer   | 16    |             |
 | GC_MIN_EQUAL_SAMPLES_PER_BIT | integer   | 15    |             |
 ## Ports
+
 | Port name | Direction | Type                         | Description                               |
 | --------- | --------- | ---------------------------- | ----------------------------------------- |
 | clk       | in        | std_logic                    | DSP interface and general control signals |
@@ -31,10 +36,12 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | rx_a      | in        | std_logic                    | UART related signals                      |
 | tx        | out       | std_logic                    |                                           |
 ## Signals
+
 | Name | Type  | Description |
 | ---- | ----- | ----------- |
 | p2c  | t_p2c |             |
 | c2p  | t_c2p |             |
 ## Instantiations
+
 - i_uart_pif: work.uart_pif
 - i_uart_core: work.uart_core

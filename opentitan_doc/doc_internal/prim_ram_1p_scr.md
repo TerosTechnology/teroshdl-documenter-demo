@@ -1,7 +1,10 @@
 # Entity: prim_ram_1p_scr
+
 ## Diagram
+
 ![Diagram](prim_ram_1p_scr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -21,6 +24,7 @@ Copyright lowRISC contributors.
  See also: prim_cipher_pkg, prim_prince
  
 ## Generics
+
 | Generic name        | Type                                         | Value                       | Description                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | -------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Depth               | int                                          | 16*1024                     | Needs to be a power of 2 if NumAddrScrRounds > 0.                                                                                                                                                                                                                                                                                   |
@@ -40,6 +44,7 @@ Copyright lowRISC contributors.
 | DataKeyWidth        | int                                          | 128                         | This is given by the PRINCE cipher primitive. All parallel cipher modules use the same key, but they use a different IV                                                                                                                                                                                                             |
 | NonceWidth          | int                                          | 64 * NumParScr              | Each 64 bit scrambling primitive requires a 64bit IV                                                                                                                                                                                                                                                                                |
 ## Ports
+
 | Port name    | Direction | Type               | Description                                                                                                                                                                                                                            |
 | ------------ | --------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i        | input     |                    |                                                                                                                                                                                                                                        |
@@ -64,6 +69,7 @@ Copyright lowRISC contributors.
 | intg_error_o | output    |                    |                                                                                                                                                                                                                                        |
 | cfg_i        | input     | ram_1p_cfg_t       | config                                                                                                                                                                                                                                 |
 ## Signals
+
 | Name                | Type                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | intg_err_q          | logic                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -104,6 +110,7 @@ Copyright lowRISC contributors.
 | rvalid_q            | logic                                     | Output read valid strobe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | wmask_q             | logic [Width-1:0]                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 ## Constants
+
 | Name           | Type | Value                       | Description                                                                                                                                                                                                                                                 |
 | -------------- | ---- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AddrWidth      | int  | prim_util_pkg::vbits(Depth) | Derived parameters                                                                                                                                                                                                                                          |
@@ -115,17 +122,13 @@ Copyright lowRISC contributors.
 | FullRandWidth  | int  | LfsrMult * LfsrWidth        |                                                                                                                                                                                                                                                             |
 | DataNonceWidth | int  | 64 - AddrWidth              | This encrypts the IV consisting of the nonce and address using the key provided in order to generate the keystream for the data. Note that we instantiate a register halfway within this primitive to balance the delay between request and response side.  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_forward_mux: _(  )_
-
-- p_wdata_buf: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- p_forward_mux: (  )
+- p_wdata_buf: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_intg_err_out: prim_buf
 - u_lfsr: prim_lfsr
 - u_intg_err_macro_req: prim_buf

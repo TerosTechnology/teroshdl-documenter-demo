@@ -1,16 +1,21 @@
 # Entity: tb_top
+
 ## Diagram
+
 ![Diagram](tb_top.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name      | Type                         | Description |
 | --------- | ---------------------------- | ----------- |
 | clk       | std_logic                    |             |
@@ -24,15 +29,14 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | start     | boolean                      |             |
 |  done     | boolean                      |             |
 ## Constants
+
 | Name     | Type    | Value | Description |
 | -------- | ------- | ----- | ----------- |
 | num_data | integer |  128  |             |
 ## Processes
-- main: _(  )_
-
-- stimuli: _(  )_
-
-- data_check: _(  )_
-
+- main: (  )
+- stimuli: (  )
+- data_check: (  )
 ## Instantiations
+
 - dut: lib.top

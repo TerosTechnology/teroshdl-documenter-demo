@@ -1,13 +1,17 @@
 # Entity: usbuart_core
+
 ## Diagram
+
 ![Diagram](usbuart_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: USB UART core module
  
 ## Ports
+
 | Port name            | Direction | Type | Description |
 | -------------------- | --------- | ---- | ----------- |
 | clk_i                | input     |      |             |
@@ -33,6 +37,7 @@ Copyright lowRISC contributors.
 | intr_rx_timeout_o    | output    |      |             |
 | intr_rx_parity_err_o | output    |      |             |
 ## Signals
+
 | Name                  | Type                                           | Description                |
 | --------------------- | ---------------------------------------------- | -------------------------- |
 | uart_rdata            | logic [7:0]                                    |                            |
@@ -97,25 +102,18 @@ Copyright lowRISC contributors.
 | cio_oe                | logic                                          |                            |
 | usb_phy_config        | usbdev_reg_pkg::usbdev_reg2hw_phy_config_reg_t | Static configuration       |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_usb_48mhz_i) )_
-Sys loopback is done at the bottom of the fifos
-TODO could do line loopback in a similar way at top of fifos?
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_usb_48mhz_i) )
 **Description**
 Sys loopback is done at the bottom of the fifos
 TODO could do line loopback in a similar way at top of fifos?
 
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - usbuart_txfifo: prim_fifo_async
 - usbuart_rxfifo: prim_fifo_async
 - usbuart_usbif: usbuart_usbif

@@ -1,7 +1,10 @@
 # Entity: usb_fs_nb_out_pe
+
 ## Diagram
+
 ![Diagram](usb_fs_nb_out_pe.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright Luke Valenty (TinyFPGA project)
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
@@ -13,6 +16,7 @@ Copyright lowRISC contributors.
  this version contains no packet buffers
  
 ## Generics
+
 | Generic name      | Type         | Value                     | Description       |
 | ----------------- | ------------ | ------------------------- | ----------------- |
 | NumOutEps         | logic [4:0]  | 2                         |                   |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | OutEpW            | int unsigned | $clog2(NumOutEps)         | derived parameter |
 | PktW              | int unsigned | $clog2(MaxOutPktSizeByte) | derived parameter |
 ## Ports
+
 | Port name           | Direction | Type            | Description                                 |
 | ------------------- | --------- | --------------- | ------------------------------------------- |
 | clk_48mhz_i         | input     |                 |                                             |
@@ -50,6 +55,7 @@ Copyright lowRISC contributors.
 | tx_pkt_end_i        | input     |                 |                                             |
 | tx_pid_o            | output    | [3:0]           |                                             |
 ## Signals
+
 | Name                     | Type                    | Description                                                                                                                                                                                                                                          |
 | ------------------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | unused_1                 | logic                   | suppress warnings                                                                                                                                                                                                                                    |
@@ -78,46 +84,33 @@ Copyright lowRISC contributors.
 | out_ep_index_d           | logic [OutEpW-1:0]      |                                                                                                                                                                                                                                                      |
 | increment_addr           | logic                   | address increment whenever there is a data put unless -- already going to NAK transaction and replay things -- the address is at max packet size NOTE if more than max packet size received then data is lost                                        |
 ## Constants
+
 | Name   | Type         | Value                     | Description       |
 | ------ | ------------ | ------------------------- | ----------------- |
 | OutEpW | int unsigned | $clog2(NumOutEps)         | derived parameter |
 | PktW   | int unsigned | $clog2(MaxOutPktSizeByte) | derived parameter |
 ## Types
+
 | Name        | Type                                                                                                           | Description |
 | ----------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_out_e | enum logic [2:0] {     StIdle,     StRcvdOut,     StRcvdDataStart,     StRcvdDataEnd,     StRcvdIsoDataEnd   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- proc_data_toggle_d: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-put data strobe follows the rx strobe (which will latch the data)
-
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- proc_data_toggle_d: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 **Description**
 put data strobe follows the rx strobe (which will latch the data)
 
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-nack an OUT if any data comes in with the endpoint full
-Note that if there is a full size packet buffer this will only be all or nothing
-but in the case there was a FIFO with less than a max packet size free you
-could get lucky and the packet received be small and fit with no need to NAK
-
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
 **Description**
 nack an OUT if any data comes in with the endpoint full
 Note that if there is a full size packet buffer this will only be all or nothing
 but in the case there was a FIFO with less than a max packet size free you
 could get lucky and the packet received be small and fit with no need to NAK
 
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )

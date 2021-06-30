@@ -1,7 +1,10 @@
 # Entity: neorv32_debug_dtm
+
 ## Diagram
+
 ![Diagram](neorv32_debug_dtm.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - RISC-V Debug Transport Module (DTM) >>                                           #
 # ********************************************************************************************* #
@@ -39,12 +42,14 @@
 # https://github.com/stnolting/riscv-debug-dtm                              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name   | Type                           | Value         | Description     |
 | -------------- | ------------------------------ | ------------- | --------------- |
 | IDCODE_VERSION | std_ulogic_vector(03 downto 0) | x"0"          | version         |
 | IDCODE_PARTID  | std_ulogic_vector(15 downto 0) | x"cafe"       | part number     |
 | IDCODE_MANID   | std_ulogic_vector(10 downto 0) | "00000000000" | manufacturer id |
 ## Ports
+
 | Port name        | Direction | Type                           | Description                                  |
 | ---------------- | --------- | ------------------------------ | -------------------------------------------- |
 | clk_i            | in        | std_ulogic                     | global clock line                            |
@@ -65,40 +70,36 @@
 | dmi_resp_data_i  | in        | std_ulogic_vector(31 downto 0) |                                              |
 | dmi_resp_err_i   | in        | std_ulogic                     | 0=ok, 1=error                                |
 ## Signals
+
 | Name     | Type       | Description |
 | -------- | ---------- | ----------- |
 | tap_ctrl | tap_ctrl_t |             |
 | tap_reg  | tap_reg_t  |             |
 | dmi_ctrl | dmi_ctrl_t |             |
 ## Constants
+
 | Name          | Type                           | Value     | Description                    |
 | ------------- | ------------------------------ | --------- | ------------------------------ |
 | dmi_idle_c    | std_ulogic_vector(02 downto 0) |  "010"    | minimum number if idle cycles  |
 | dmi_version_c | std_ulogic_vector(03 downto 0) |  "0001"   | version (0.13)                 |
 | dmi_abits_c   | std_ulogic_vector(05 downto 0) |  "000111" | number of DMI address bits (7) |
 ## Types
-| Name             | Type                                                                                                                                                                                                   | Description               |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| tap_ctrl_state_t | (LOGIC_RESET, DR_SCAN, DR_CAPTURE, DR_SHIFT, DR_EXIT1, DR_PAUSE, DR_EXIT2, DR_UPDATE,                                RUN_IDLE, IR_SCAN, IR_CAPTURE, IR_SHIFT, IR_EXIT1, IR_PAUSE, IR_EXIT2, IR_UPDATE) | tap controller - fsm --   |
-| tap_ctrl_t       |                                                                                                                                                                                                        |                           |
-| tap_reg_t        |                                                                                                                                                                                                        | tap registers --          |
-| dmi_ctrl_state_t | (DMI_IDLE, DMI_READ_WAIT, DMI_READ, DMI_READ_BUSY,                             DMI_WRITE_WAIT, DMI_WRITE, DMI_WRITE_BUSY)                                                                              | debug module interface -- |
-| dmi_ctrl_t       |                                                                                                                                                                                                        |                           |
+
+| Name             | Type                                                                                                                                                                     | Description               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| tap_ctrl_state_t | (LOGIC_RESET, DR_SCAN, DR_CAPTURE, DR_SHIFT, DR_EXIT1, DR_PAUSE, DR_EXIT2, DR_UPDATE, RUN_IDLE, IR_SCAN, IR_CAPTURE, IR_SHIFT, IR_EXIT1, IR_PAUSE, IR_EXIT2, IR_UPDATE)  | tap controller - fsm --   |
+| tap_ctrl_t       |                                                                                                                                                                          |                           |
+| tap_reg_t        |                                                                                                                                                                          | tap registers --          |
+| dmi_ctrl_state_t | (DMI_IDLE, DMI_READ_WAIT, DMI_READ, DMI_READ_BUSY, DMI_WRITE_WAIT, DMI_WRITE, DMI_WRITE_BUSY)                                                                            | debug module interface -- |
+| dmi_ctrl_t       |                                                                                                                                                                          |                           |
 ## Processes
-- tap_control: _( rstn_i, clk_i )_
-
-- reg_access: _( clk_i )_
-Tap Register Access --------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- tap_control: ( rstn_i, clk_i )
+- reg_access: ( clk_i )
 **Description**
 Tap Register Access --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- dmi_controller: _( rstn_i, clk_i )_
-version
-Debug Module Interface Access Register (dmi) --
-
+- dmi_controller: ( rstn_i, clk_i )
 **Description**
 version
 Debug Module Interface Access Register (dmi) --

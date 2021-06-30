@@ -1,9 +1,12 @@
 # Package: ProtectedTypes
+
 ## Description
+
 use			PoC.my_project.all;
 use			PoC.utils.all;
 
 ## Types
+
 | Name       | Type | Description                                                                                                                                |
 | ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | P_BOOLEAN  |      |                                                                                                                                            |

@@ -1,7 +1,10 @@
 # Entity: udp_Wrapper
+
 ## Diagram
+
 ![Diagram](udp_Wrapper.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                      | Value                     | Description |
 | ------------ | ------------------------- | ------------------------- | ----------- |
 | DEBUG        | boolean                   | FALSE                     |             |
 | IP_VERSION   | positive                  | 6                         |             |
 | PORTPAIRS    | T_NET_UDP_PORTPAIR_VECTOR | (0 => (x"0000", x"0000")) |             |
 ## Ports
+
 | Port name                      | Direction | Type                                            | Description      |
 | ------------------------------ | --------- | ----------------------------------------------- | ---------------- |
 | Clock                          | in        | std_logic                                       |                  |
@@ -95,6 +100,7 @@ limitations under the License.
 | RX_Meta_SrcPort                | out       | T_SLVV_16(PORTPAIRS'length - 1 downto 0)        |                  |
 | RX_Meta_DestPort               | out       | T_SLVV_16(PORTPAIRS'length - 1 downto 0)        |                  |
 ## Signals
+
 | Name                                 | Type                                                                        | Description                                                                                   |
 | ------------------------------------ | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | StmMux_In_Valid                      | std_logic_vector(UDP_SWITCH_PORTS - 1 downto 0)                             |                                                                                               |
@@ -161,6 +167,7 @@ limitations under the License.
 | StmDeMux_Out_MetaOut_rev             | T_SLM(UDP_SWITCH_PORTS - 1 downto 0, STMDEMUX_META_REV_BITS - 1 downto 0)   | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
 | StmDeMux_Control                     | std_logic_vector(UDP_SWITCH_PORTS - 1 downto 0)                             |                                                                                               |
 ## Constants
+
 | Name                            | Type     | Value                                                                                                                                                                                                                                                                                                                                                                             | Description                                         |
 | ------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | UDP_SWITCH_PORTS                | positive |  PORTPAIRS'length                                                                                                                                                                                                                                                                                                                                                                 |                                                     |
@@ -199,6 +206,7 @@ limitations under the License.
 | STMDEMUX_META_BITS              | T_POSVEC |  ( 		STMDEMUX_META_STREAMID_SRCMAC			=> 8, 		STMDEMUX_META_STREAMID_DESTMAC 		=> 8, 		STMDEMUX_META_STREAMID_ETHTYPE 		=> 16, 		STMDEMUX_META_STREAMID_SRCIP			=> 8, 		STMDEMUX_META_STREAMID_DESTIP			=> 8, 		STMDEMUX_META_STREAMID_LENGTH			=> 16, 		STMDEMUX_META_STREAMID_PROTO			=> 8, 		STMDEMUX_META_STREAMID_SRCPORT		=> 16, 		STMDEMUX_META_STREAMID_DESTPORT		=> 16 	) |                                                     |
 | STMDEMUX_META_REV_BITS          | natural  |  5                                                                                                                                                                                                                                                                                                                                                                                | sum over all control bits (rst, nxt, nxt, nxt, nxt) |
 ## Instantiations
+
 - TX_StmMux: PoC.stream_Mux
 - TX_FCS: PoC.net_FrameChecksum
 - TX_UDP: PoC.udp_TX

@@ -1,7 +1,10 @@
 # Entity: uart_tx
+
 ## Diagram
+
 ![Diagram](uart_tx.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,6 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Ports
+
 | Port name | Direction | Type                         | Description                           |
 | --------- | --------- | ---------------------------- | ------------------------------------- |
 | clk       | in        | std_logic                    | Global Control                        |
@@ -37,10 +41,10 @@ limitations under the License.
 | put       | in        | std_logic                    |                                       |
 | ful       | out       | std_logic                    |                                       |
 ## Signals
+
 | Name | Type                         | Description |
 | ---- | ---------------------------- | ----------- |
 | Buf  | std_logic_vector(9 downto 0) |             |
 | Cnt  | signed(4 downto 0)           |             |
 ## Processes
-- unnamed: _( clk )_
-
+- unnamed: ( clk )

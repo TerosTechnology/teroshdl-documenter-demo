@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_alu
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_alu.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Arithmetical/Logical Unit >>                                                     #
 # ********************************************************************************************* #
@@ -38,6 +41,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name              | Type    | Value | Description                                                |
 | ------------------------- | ------- | ----- | ---------------------------------------------------------- |
 | CPU_EXTENSION_RISCV_M     | boolean | false | implement mul/div extension?                               |
@@ -46,6 +50,7 @@
 | FAST_MUL_EN               | boolean | false | use DSPs for M extension's multiplier                      |
 | FAST_SHIFT_EN             | boolean | false | use barrel shifter for shift operations                    |
 ## Ports
+
 | Port name   | Direction | Type                                       | Description                      |
 | ----------- | --------- | ------------------------------------------ | -------------------------------- |
 | clk_i       | in        | std_ulogic                                 | global clock, rising edge        |
@@ -62,6 +67,7 @@
 | fpu_flags_o | out       | std_ulogic_vector(4 downto 0)              | FPU exception flags              |
 | idone_o     | out       | std_ulogic                                 | iterative processing units done? |
 ## Signals
+
 | Name       | Type                                       | Description            |
 | ---------- | ------------------------------------------ | ---------------------- |
 | opa        | std_ulogic_vector(data_width_c-1 downto 0) |                        |
@@ -75,33 +81,22 @@
 | cp_valid   | std_ulogic_vector(3 downto 0)              | co-processor i done    |
 | cp_result  | cp_data_if_t                               |                        |
 ## Types
+
 | Name      | Type | Description                           |
 | --------- | ---- | ------------------------------------- |
 | cp_ctrl_t |      | co-processor arbiter and interface -- |
 ## Processes
-- binary_arithmetic_core: _( ctrl_i, opa, opb )_
-operand b (second ALU input operand)
-Binary Adder/Subtracter ----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- binary_arithmetic_core: ( ctrl_i, opa, opb )
 **Description**
 operand b (second ALU input operand)
 Binary Adder/Subtracter ----------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- arithmetic_core: _( ctrl_i, addsub_res )_
-ALU arithmetic logic core --
-
+- arithmetic_core: ( ctrl_i, addsub_res )
 **Description**
 ALU arithmetic logic core --
 
-- cp_arbiter: _( rstn_i, clk_i )_
-Co-Processor Arbiter -------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-Interface:
-Co-processor "valid" signal has to be asserted (for one cycle) one cycle before asserting output data
-Co-processor "output data" has to be always zero unless co-processor was explicitly triggered
-
+- cp_arbiter: ( rstn_i, clk_i )
 **Description**
 Co-Processor Arbiter -------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
@@ -109,23 +104,18 @@ Interface:
 Co-processor "valid" signal has to be asserted (for one cycle) one cycle before asserting output data
 Co-processor "output data" has to be always zero unless co-processor was explicitly triggered
 
-- alu_logic_core: _( ctrl_i, rs1_i, opb )_
-ALU Logic Core -------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- alu_logic_core: ( ctrl_i, rs1_i, opb )
 **Description**
 ALU Logic Core -------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- alu_function_mux: _( ctrl_i, arith_res, logic_res, csr_i, cp_res )_
-ALU Function Select --------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- alu_function_mux: ( ctrl_i, arith_res, logic_res, csr_i, cp_res )
 **Description**
 ALU Function Select --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
 ## Instantiations
+
 - neorv32_cpu_cp_shifter_inst: neorv32_cpu_cp_shifter
 **Description**
 **************************************************************************************************************************

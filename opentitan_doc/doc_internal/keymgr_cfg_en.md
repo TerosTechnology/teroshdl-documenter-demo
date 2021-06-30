@@ -1,7 +1,10 @@
 # Entity: keymgr_cfg_en
+
 ## Diagram
+
 ![Diagram](keymgr_cfg_en.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,10 +12,12 @@ Copyright lowRISC contributors.
  TBD This should be enhanced in the future to contain a shadow copy
  
 ## Generics
+
 | Generic name | Type | Value | Description                                                           |
 | ------------ | ---- | ----- | --------------------------------------------------------------------- |
 | NonInitClr   | bit  | 1'b1  | controls whether clear has an effect on output value during non-init  |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_i     | input     |      |             |
@@ -23,6 +28,7 @@ Copyright lowRISC contributors.
 | clr_i     | input     |      |             |
 | out_o     | output    |      |             |
 ## Signals
+
 | Name    | Type  | Description                                                                       |
 | ------- | ----- | --------------------------------------------------------------------------------- |
 | out_q   | logic |                                                                                   |
@@ -32,11 +38,8 @@ Copyright lowRISC contributors.
 | vld_dis | logic |                                                                                   |
 | out_clr | logic | the same cycle where clear is asserted should already block future configuration  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-clearing the configure enable always has higher priority than setting
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 clearing the configure enable always has higher priority than setting
 

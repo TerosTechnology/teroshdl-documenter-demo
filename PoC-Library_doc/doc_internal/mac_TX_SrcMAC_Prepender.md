@@ -1,7 +1,10 @@
 # Entity: mac_TX_SrcMAC_Prepender
+
 ## Diagram
+
 ![Diagram](mac_TX_SrcMAC_Prepender.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name  | Type                     | Value                          | Description |
 | ------------- | ------------------------ | ------------------------------ | ----------- |
 | DEBUG         | boolean                  | FALSE                          |             |
 | MAC_ADDRESSES | T_NET_MAC_ADDRESS_VECTOR | (0 => C_NET_MAC_ADDRESS_EMPTY) |             |
 ## Ports
+
 | Port name                    | Direction | Type                                                | Description |
 | ---------------------------- | --------- | --------------------------------------------------- | ----------- |
 | Clock                        | in        | std_logic                                           |             |
@@ -50,6 +55,7 @@ limitations under the License.
 | Out_Meta_DestMACAddress_nxt  | in        | std_logic                                           |             |
 | Out_Meta_DestMACAddress_Data | out       | T_SLV_8                                             |             |
 ## Signals
+
 | Name               | Type                                                  | Description                                                                                   |
 | ------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | State              | T_STATE                                               |                                                                                               |
@@ -72,6 +78,7 @@ limitations under the License.
 | Is_SOF             | std_logic                                             |                                                                                               |
 | Is_EOF             | std_logic                                             |                                                                                               |
 ## Constants
+
 | Name              | Type     | Value                 | Description |
 | ----------------- | -------- | --------------------- | ----------- |
 | PORTS             | positive |  MAC_ADDRESSES'length |             |
@@ -80,13 +87,13 @@ limitations under the License.
 | META_BITS         | positive |  56                   |             |
 | META_REV_BITS     | positive |  2                    |             |
 ## Types
-| Name    | Type                                                                                                                                                       | Description |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_PREPEND_SRC_MAC_1, 			ST_PREPEND_SRC_MAC_2, 			ST_PREPEND_SRC_MAC_3, 			ST_PREPEND_SRC_MAC_4, 			ST_PREPEND_SRC_MAC_5, 			ST_PAYLOAD 	) |             |
+
+| Name    | Type                                                                                                                                   | Description |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_PREPEND_SRC_MAC_1, ST_PREPEND_SRC_MAC_2, ST_PREPEND_SRC_MAC_3, ST_PREPEND_SRC_MAC_4, ST_PREPEND_SRC_MAC_5, ST_PAYLOAD )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, LLMux_Out_Valid, LLMux_Out_Data, LLMux_Out_Meta, LLMux_Out_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, LLMux_Out_Valid, LLMux_Out_Data, LLMux_Out_Meta, LLMux_Out_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack )
 ## Instantiations
+
 - LLMux: PoC.stream_Mux

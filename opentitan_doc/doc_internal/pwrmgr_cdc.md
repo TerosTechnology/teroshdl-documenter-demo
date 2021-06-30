@@ -1,13 +1,17 @@
 # Entity: pwrmgr_cdc
+
 ## Diagram
+
 ![Diagram](pwrmgr_cdc.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Power Manager CDC handling
  
 ## Ports
+
 | Port name                 | Direction | Type             | Description                      |
 | ------------------------- | --------- | ---------------- | -------------------------------- |
 | clk_slow_i                | input     |                  | Clocks and resets                |
@@ -54,6 +58,7 @@ Copyright lowRISC contributors.
 | rom_ctrl_done_i           | input     |                  | rom_ctrl signals                 |
 | rom_ctrl_done_o           | output    |                  |                                  |
 ## Signals
+
 | Name                  | Type          | Description |
 | --------------------- | ------------- | ----------- |
 | slow_cdc_sync         | logic         |             |
@@ -63,27 +68,20 @@ Copyright lowRISC contributors.
 | pwrup_cause_toggle_q2 | logic         |             |
 | pwrup_cause_chg       | logic         |             |
 ## Processes
-- unnamed: _( @(posedge clk_slow_i or negedge rst_slow_ni) )_
-
-- unnamed: _( @(posedge clk_slow_i or negedge rst_slow_ni) )_
-if possible, we should simulate below with random delays through
-flop_2sync
-
+- unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
+- unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
 **Description**
 if possible, we should simulate below with random delays through
 flop_2sync
 
-- unnamed: _( @(posedge clk_slow_i or negedge rst_slow_ni) )_
-only register configurations can be sync'd using slow_cdc_sync
-
+- unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
 **Description**
 only register configurations can be sync'd using slow_cdc_sync
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - i_req_pwrdn_sync: prim_flop_2sync
 - i_ack_pwrup_sync: prim_flop_2sync
 - i_slow_cdc_sync: prim_pulse_sync

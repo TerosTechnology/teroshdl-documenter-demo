@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_pin
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_pin.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: sysrst_ctrl pin visibility and override Module
  
 ## Ports
+
 | Port name          | Direction | Type                                     | Description |
 | ------------------ | --------- | ---------------------------------------- | ----------- |
 | clk_aon_i          | input     |                                          |             |
@@ -40,6 +44,7 @@ Copyright lowRISC contributors.
 | z3_wakeup_int      | output    |                                          |             |
 | cio_ec_rst_out_l_o | output    |                                          |             |
 ## Signals
+
 | Name                    | Type  | Description |
 | ----------------------- | ----- | ----------- |
 | cfg_ac_present_i_pin    | logic |             |
@@ -78,6 +83,7 @@ Copyright lowRISC contributors.
 | cfg_key2_out_q          | logic |             |
 | cfg_z3_wakeup_q         | logic |             |
 ## Instantiations
+
 - i_cfg_ac_present_i_pin: prim_flop_2sync
 - i_cfg_ec_rst_l_i_pin: prim_flop_2sync
 - i_cfg_pwrb_in_i_pin: prim_flop_2sync

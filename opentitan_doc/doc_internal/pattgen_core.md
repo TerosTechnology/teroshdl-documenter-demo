@@ -1,13 +1,17 @@
 # Entity: pattgen_core
+
 ## Diagram
+
 ![Diagram](pattgen_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: Pattgen Core Module
  
 ## Ports
+
 | Port name       | Direction | Type             | Description |
 | --------------- | --------- | ---------------- | ----------- |
 | clk_i           | input     |                  |             |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | intr_done_ch0_o | output    |                  |             |
 | intr_done_ch1_o | output    |                  |             |
 ## Signals
+
 | Name           | Type                | Description |
 | -------------- | ------------------- | ----------- |
 | event_done_ch0 | logic               |             |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | ch0_ctrl       | pattgen_chan_ctrl_t |             |
 | ch1_ctrl       | pattgen_chan_ctrl_t |             |
 ## Instantiations
+
 - chan0: pattgen_chan
 - chan1: pattgen_chan
 - intr_hw_done_ch0: prim_intr_hw

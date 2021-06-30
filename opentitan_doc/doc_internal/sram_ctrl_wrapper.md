@@ -1,7 +1,10 @@
 # Entity: sram_ctrl_wrapper
+
 ## Diagram
+
 ![Diagram](sram_ctrl_wrapper.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,11 +14,13 @@ Copyright lowRISC contributors.
  - prim_ram_1p_scr
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | AddrWidth    | int unsigned | 14    |             |
 | DataWidth    | int unsigned | 32    |             |
 ## Ports
+
 | Port name            | Direction | Type            | Description                        |
 | -------------------- | --------- | --------------- | ---------------------------------- |
 | clk_i                | input     |                 | clock/reset for sram_ctrl          |
@@ -34,6 +39,7 @@ Copyright lowRISC contributors.
 | lc_hw_debug_en_i     | input     |                 | Executable SRAM inputs             |
 | otp_en_sram_ifetch_i | input     |                 |                                    |
 ## Signals
+
 | Name         | Type                    | Description                                             |
 | ------------ | ----------------------- | ------------------------------------------------------- |
 | scr_req      | sram_scr_req_t          |                                                         |
@@ -51,6 +57,7 @@ Copyright lowRISC contributors.
 | intg_error   | wire                    |                                                         |
 | en_ifetch    | tlul_pkg::tl_instr_en_e |                                                         |
 ## Instantiations
+
 - u_sram_ctrl: sram_ctrl
 **Description**
 SRAM Controller

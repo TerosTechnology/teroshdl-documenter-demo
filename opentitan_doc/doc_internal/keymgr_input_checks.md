@@ -1,7 +1,10 @@
 # Entity: keymgr_input_checks
+
 ## Diagram
+
 ![Diagram](keymgr_input_checks.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  We should also check for input validity
  
 ## Ports
+
 | Port name          | Direction | Type                      | Description |
 | ------------------ | --------- | ------------------------- | ----------- |
 | max_key_versions_i | input     | [2**StageWidth-1:0][31:0] |             |
@@ -27,6 +31,7 @@ Copyright lowRISC contributors.
 | key_version_vld_o  | output    |                           |             |
 | key_vld_o          | output    |                           |             |
 ## Signals
+
 | Name                | Type                 | Description         |
 | ------------------- | -------------------- | ------------------- |
 | cur_max_key_version | logic [31:0]         |                     |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | key_share0_padded   | logic [MaxWidth-1:0] |                     |
 | key_share1_padded   | logic [MaxWidth-1:0] |                     |
 ## Instantiations
+
 - u_creator_seed: prim_msb_extend
 - u_owner_seed: prim_msb_extend
 - u_devid: prim_msb_extend

@@ -1,7 +1,10 @@
 # Entity: ocram_tdp_wf
+
 ## Diagram
+
 ![Diagram](ocram_tdp_wf.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -52,12 +55,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                      |
 | ------------ | -------- | ----- | -------------------------------- |
 | A_BITS       | positive |       | number of address bits           |
 | D_BITS       | positive |       | number of data bits              |
 | FILENAME     | string   | ""    | file-name for RAM initialization |
 ## Ports
+
 | Port name | Direction | Type                                | Description               |
 | --------- | --------- | ----------------------------------- | ------------------------- |
 | clk       | in        | std_logic                           | clock                     |
@@ -71,6 +76,7 @@ limitations under the License.
 | q1        | out       | std_logic_vector(D_BITS-1 downto 0) | read-data from 1st port   |
 | q2        | out       | std_logic_vector(D_BITS-1 downto 0) | read-data from 2nd port   |
 ## Signals
+
 | Name   | Type                       | Description                              |
 | ------ | -------------------------- | ---------------------------------------- |
 | wd1_r  | std_logic_vector(d1'range) | write data from port 1                   |
@@ -80,11 +86,11 @@ limitations under the License.
 | ram_q1 | std_logic_vector(q1'range) | RAM output, port 1                       |
 | ram_q2 | std_logic_vector(q2'range) | RAM output, port 2                       |
 ## Functions
-- addr_equal <font id="function_arguments">(a1 : unsigned; a2 : unsigned)</font> <font id="function_return">return X01</font>
+- addr_equal <font id="function_arguments">(a1 : unsigned; a2 : unsigned) </font> <font id="function_return">return X01 </font>
 **Description**
 Compares two addresses, returns 'X' if either ``a1`` or ``a2`` containsmeta-values, otherwise returns '1' if ``a1 == a2`` is true else'0'. Returns 'X' even when the addresses contain '-' values, to signal anundefined outcome.
 ## Processes
-- unnamed: _( clk )_
-
+- unnamed: ( clk )
 ## Instantiations
+
 - ram_tdp: work.ocram_tdp

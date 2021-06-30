@@ -1,13 +1,17 @@
 # Entity: keymgr
+
 ## Diagram
+
 ![Diagram](keymgr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Key manager top level
  
 ## Generics
+
 | Generic name                | Type                  | Value                              | Description |
 | --------------------------- | --------------------- | ---------------------------------- | ----------- |
 | NumAlerts                   | logic [NumAlerts-1:0] | undefined                          |             |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | RndCnstHmacSeed             | seed_t                | RndCnstHmacSeedDefault             |             |
 | RndCnstKmacSeed             | seed_t                | RndCnstKmacSeedDefault             |             |
 ## Ports
+
 | Port name       | Direction | Type                            | Description                                                                        |
 | --------------- | --------- | ------------------------------- | ---------------------------------------------------------------------------------- |
 | clk_i           | input     |                                 |                                                                                    |
@@ -50,6 +55,7 @@ Copyright lowRISC contributors.
 | alert_rx_i      | input     | [keymgr_reg_pkg::NumAlerts-1:0] |                                                                                    |
 | alert_tx_o      | output    | [keymgr_reg_pkg::NumAlerts-1:0] |                                                                                    |
 ## Signals
+
 | Name               | Type                                        | Description                                                                                                                                                                                                                                                    |
 | ------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reg2hw             | keymgr_reg2hw_t                             | Register module                                                                                                                                                                                                                                                |
@@ -118,15 +124,16 @@ Copyright lowRISC contributors.
 | fault_alert_test   | logic                                       |                                                                                                                                                                                                                                                                |
 | op_err_alert_test  | logic                                       |                                                                                                                                                                                                                                                                |
 ## Constants
+
 | Name          | Type | Value             | Description                                           |
 | ------------- | ---- | ----------------- | ----------------------------------------------------- |
 | AdvLfsrCopies | int  | AdvDataWidth / 32 | Number of times the lfsr output fits into the inputs  |
 | IdLfsrCopies  | int  | IdDataWidth / 32  |                                                       |
 | GenLfsrCopies | int  | GenDataWidth / 32 |                                                       |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: keymgr_reg_top
 - u_lc_keymgr_en_sync: prim_lc_sync
 - u_reseed_ctrl: keymgr_reseed_ctrl

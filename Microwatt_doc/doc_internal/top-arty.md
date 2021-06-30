@@ -1,7 +1,10 @@
 # Entity: toplevel
+
 ## Diagram
+
 ![Diagram](top-arty.svg "Diagram")
 ## Generics
+
 | Generic name         | Type     | Value          | Description |
 | -------------------- | -------- | -------------- | ----------- |
 | MEMORY_SIZE          | integer  | 16384          |             |
@@ -24,6 +27,7 @@
 | USE_LITESDCARD       | boolean  | false          |             |
 | NGPIO                | natural  | 32             |             |
 ## Ports
+
 | Port name        | Direction | Type                           | Description    |
 | ---------------- | --------- | ------------------------------ | -------------- |
 | ext_clk          | in        | std_ulogic                     |                |
@@ -77,6 +81,7 @@
 | ddram_odt        | out       | std_ulogic                     |                |
 | ddram_reset_n    | out       | std_ulogic                     |                |
 ## Signals
+
 | Name                | Type                                  | Description                                                    |
 | ------------------- | ------------------------------------- | -------------------------------------------------------------- |
 | soc_rst             | std_ulogic                            |                                                                |
@@ -116,17 +121,18 @@
 | gpio_out            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                |
 | gpio_dir            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                |
 ## Constants
+
 | Name         | Type    | Value             | Description |
 | ------------ | ------- | ----------------- | ----------- |
 | BRAM_SIZE    | natural |  get_bram_size    |             |
 | PAYLOAD_SIZE | natural |  get_payload_size |             |
 ## Functions
-- get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font>
+- get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 **Description**
 Fixup various memory sizes based on generics
-- get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural</font>
+- get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 ## Processes
-- leds_pwm: _( system_clk )_
-
+- leds_pwm: ( system_clk )
 ## Instantiations
+
 - soc0: work.soc

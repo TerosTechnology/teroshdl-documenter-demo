@@ -1,7 +1,10 @@
 # Entity: AlertLog_Demo_Hierarchy
+
 ## Diagram
+
 ![Diagram](AlertLog_Demo_Hierarchy.svg "Diagram")
 ## Description
+
  File Name:         AlertLog_Demo_Hierarchy.vhd
  Design Unit Name:  AlertLog_Demo_Hierarchy
  Revision:          STANDARD VERSION,  2015.01
@@ -36,6 +39,7 @@
  limitations under the License.
  
 ## Signals
+
 | Name | Type      | Description |
 | ---- | --------- | ----------- |
 | Clk  | std_logic |             |

@@ -1,7 +1,10 @@
 # Entity: keyboard
+
 ## Diagram
+
 ![Diagram](keyboard.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clock     | input     | wire      |             |
@@ -13,9 +16,9 @@
 | q         | output    | wire[4:0] |             |
 | a         | input     | wire[7:0] |             |
 ## Signals
+
 | Name | Type     | Description |
 | ---- | -------- | ----------- |
 | key  | reg[4:0] |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )

@@ -1,7 +1,10 @@
 # Entity: pad_frame
+
 ## Diagram
+
 ![Diagram](pad_frame.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Ports
+
 | Port name          | Direction | Type        | Description                  |
 | ------------------ | --------- | ----------- | ---------------------------- |
 | pad_cfg_i          | input     | [72:0]      |                              |
@@ -210,6 +214,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | pad_jtag_trst      | inout     | wire        |                              |
 | pad_xtal_in        | inout     | wire        |                              |
 ## Instantiations
+
 - padinst_sdio_data0: pad_functional_pd
 - padinst_sdio_data1: pad_functional_pd
 - padinst_sdio_data2: pad_functional_pd

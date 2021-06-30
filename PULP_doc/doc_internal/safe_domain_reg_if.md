@@ -1,7 +1,10 @@
 # Entity: safe_domain_reg_if
+
 ## Diagram
+
 ![Diagram](safe_domain_reg_if.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -19,6 +22,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  PAD MUXING
  
 ## Ports
+
 | Port name           | Direction | Type   | Description |
 | ------------------- | --------- | ------ | ----------- |
 | clk_i               | input     |        |             |
@@ -44,6 +48,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | reg_if_rdata_o      | output    | [31:0] |             |
 | pmu_sleep_control_o | output    | [31:0] |             |
 ## Signals
+
 | Name                | Type         | Description |
 | ------------------- | ------------ | ----------- |
 | r_rar_nv_volt       | logic  [4:0] |             |
@@ -75,15 +80,12 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_rtc_date          | logic [31:0] |             |
 | s_rtc_timer         | logic [16:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk_i, negedge rstn_i) )_
-
-- unnamed: _( @(posedge clk_i, negedge rstn_i) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i, negedge rstn_i) )
+- unnamed: ( @(posedge clk_i, negedge rstn_i) )
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - i_sync: pulp_sync_wedge
 - i_rtc_clock: rtc_clock
 - i_rtc_date: rtc_date

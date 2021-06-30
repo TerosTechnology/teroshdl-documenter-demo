@@ -1,7 +1,10 @@
 # Entity: arith_convert_bin2bcd
+
 ## Diagram
+
 ![Diagram](arith_convert_bin2bcd.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | BITS         | positive | 8     |             |
 | DIGITS       | positive | 3     |             |
 | RADIX        | positive | 2     |             |
 ## Ports
+
 | Port name | Direction | Type                                | Description |
 | --------- | --------- | ----------------------------------- | ----------- |
 | Clock     | in        | std_logic                           |             |
@@ -41,6 +46,7 @@ limitations under the License.
 | BCDDigits | out       | T_BCD_VECTOR(DIGITS - 1 downto 0)   |             |
 | Sign      | out       | std_logic                           |             |
 ## Signals
+
 | Name            | Type                                       | Description |
 | --------------- | ------------------------------------------ | ----------- |
 | Digit_Shift_rst | std_logic                                  |             |
@@ -52,17 +58,18 @@ limitations under the License.
 | Sign_d          | std_logic                                  |             |
 | DelayShifter    | std_logic_vector(BINARY_SHIFTS downto 0)   |             |
 ## Constants
+
 | Name          | Type     | Value                       | Description |
 | ------------- | -------- | --------------------------- | ----------- |
 | RADIX_BITS    | positive |  log2ceil(RADIX)            |             |
 | BINARY_SHIFTS | positive |  div_ceil(BITS, RADIX_BITS) |             |
 | BINARY_BITS   | positive |  BINARY_SHIFTS * RADIX_BITS |             |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | T_CARRY_VECTOR |      |             |
 ## Functions
-- nextBCD <font id="function_arguments">(Value : unsigned(4 downto 0))</font> <font id="function_return">return unsigned</font>
+- nextBCD <font id="function_arguments">(Value : unsigned(4 downto 0)) </font> <font id="function_return">return unsigned </font>
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )

@@ -1,7 +1,10 @@
 # Entity: xil_ICAP
+
 ## Diagram
+
 ![Diagram](xil_ICAP.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 4; indent-tabs-mode: t -*-
 vim: tabstop=4:shiftwidth=4:noexpandtab
 kate: tab-width 4; replace-tabs off; indent-width 4;
@@ -29,12 +32,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name      | Type       | Value      | Description                                                   |
 | ----------------- | ---------- | ---------- | ------------------------------------------------------------- |
 | ICAP_WIDTH        | string     | "X32"      | Specifies the input and output data width to be used          |
 | DEVICE_ID         | bit_vector | X"1234567" | pre-programmed Device ID value for simulation                 |
 | SIM_CFG_FILE_NAME | string     | "NONE"     | Raw Bitstream (RBT) file to be parsed by the simulation model |
 ## Ports
+
 | Port name | Direction | Type                          | Description                                    |
 | --------- | --------- | ----------------------------- | ---------------------------------------------- |
 | clk       | in        | std_logic                     | up to 100 MHz (Virtex-6 and above, Virtex-5??) |
@@ -44,6 +49,7 @@ limitations under the License.
 | data_in   | in        | std_logic_vector(31 downto 0) | on Spartan-6 only 15 downto 0                  |
 | data_out  | out       | std_logic_vector(31 downto 0) | on Spartan-6 only 15 downto 0                  |
 ## Constants
+
 | Name     | Type          | Value        | Description |
 | -------- | ------------- | ------------ | ----------- |
 | DEV_INFO | T_DEVICE_INFO |  DEVICE_INFO |             |

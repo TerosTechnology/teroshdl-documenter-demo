@@ -1,7 +1,10 @@
 # Entity: gearbox_up_dc
+
 ## Diagram
+
 ![Diagram](gearbox_up_dc.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -33,6 +36,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name        | Type        | Value     | Description                                                |
 | ------------------- | ----------- | --------- | ---------------------------------------------------------- |
 | INPUT_BITS          | positive    | 8         | input bit width                                            |
@@ -40,6 +44,7 @@ limitations under the License.
 | OUTPUT_BITS         | positive    | 32        | output bit width                                           |
 | ADD_INPUT_REGISTERS | boolean     | FALSE     | add input register @Clock1                                 |
 ## Ports
+
 | Port name | Direction | Type                                       | Description                         |
 | --------- | --------- | ------------------------------------------ | ----------------------------------- |
 | Clock1    | in        | std_logic                                  | input clock domain                  |
@@ -49,6 +54,7 @@ limitations under the License.
 | Out_Data  | out       | std_logic_vector(OUTPUT_BITS - 1 downto 0) | output word                         |
 | Out_Valid | out       | std_logic                                  | output is valid                     |
 ## Signals
+
 | Name              | Type                                       | Description |
 | ----------------- | ------------------------------------------ | ----------- |
 | Counter_us        | unsigned(COUNTER_BITS - 1 downto 0)        |             |
@@ -64,6 +70,7 @@ limitations under the License.
 | Valid_r           | std_logic                                  |             |
 | Valid_d           | std_logic                                  |             |
 ## Constants
+
 | Name           | Type     | Value                                 | Description |
 | -------------- | -------- | ------------------------------------- | ----------- |
 | BIT_RATIO      | REAL     |  real(OUTPUT_BITS) / real(INPUT_BITS) |             |
@@ -72,23 +79,20 @@ limitations under the License.
 | COUNTER_MAX    | positive |  INPUT_CHUNKS - 1                     |             |
 | COUNTER_BITS   | positive |  log2ceil(COUNTER_MAX + 1)            |             |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | T_CHUNK_VECTOR |      |             |
 ## Functions
-- to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR)</font> <font id="function_return">return std_logic_vector</font>
+- to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 convert chunk-vector to flatten vector
 ## Processes
-- unnamed: _( Clock1 )_
-byte alignment counter @Clock1
-
+- unnamed: ( Clock1 )
 **Description**
 byte alignment counter @Clock1
 
-- unnamed: _( Clock1 )_
-delay registers @Clock1
-
+- unnamed: ( Clock1 )
 **Description**
 delay registers @Clock1
 

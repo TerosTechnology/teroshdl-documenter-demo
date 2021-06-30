@@ -1,7 +1,10 @@
 # Entity: prim_fifo_sync_fpv
+
 ## Diagram
+
 ![Diagram](prim_fifo_sync_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -15,6 +18,7 @@ Copyright lowRISC contributors.
  runtime.
  
 ## Generics
+
 | Generic name | Type         | Value              | Description                                        |
 | ------------ | ------------ | ------------------ | -------------------------------------------------- |
 | NumDuts      | int unsigned | 11                 | number of DUTs instantiated in this FPV testbench  |
@@ -22,6 +26,7 @@ Copyright lowRISC contributors.
 | MaxDepth     | int unsigned | 16                 | max depth used in this destbench                   |
 | DepthW       | int unsigned | $clog2(MaxDepth+1) |                                                    |
 ## Ports
+
 | Port name | Direction | Type         | Description |
 | --------- | --------- | ------------ | ----------- |
 | clk_i     | input     |              |             |
@@ -35,10 +40,12 @@ Copyright lowRISC contributors.
 | rdata_o   | output    | [Width-1:0]  |             |
 | depth_o   | output    | [DepthW-1:0] |             |
 ## Constants
+
 | Name   | Type         | Value              | Description |
 | ------ | ------------ | ------------------ | ----------- |
 | DepthW | int unsigned | $clog2(MaxDepth+1) |             |
 ## Instantiations
+
 - i_nopass1: prim_fifo_sync
 - i_nopass7: prim_fifo_sync
 - i_nopass8: prim_fifo_sync

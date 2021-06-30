@@ -1,17 +1,22 @@
 # Entity: spi_host_core
+
 ## Diagram
+
 ![Diagram](spi_host_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Core Implemenation module for Serial Peripheral Interface (SPI) Host IP.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NumCS        | int  | 1     |             |
 ## Ports
+
 | Port name       | Direction | Type        | Description   |
 | --------------- | --------- | ----------- | ------------- |
 | clk_i           | input     |             |               |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | tx_stall_o      | output    |             |               |
 | active_o        | output    |             |               |
 ## Signals
+
 | Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
 | rx_valid_sr | logic       |             |
@@ -57,6 +63,7 @@ Copyright lowRISC contributors.
 | full_cyc    | logic       |             |
 | cmd_end     | logic       |             |
 ## Instantiations
+
 - u_merge: spi_host_byte_merge
 - u_select: spi_host_byte_select
 - u_shift_reg: spi_host_shift_register

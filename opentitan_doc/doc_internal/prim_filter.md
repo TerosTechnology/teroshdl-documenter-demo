@@ -1,7 +1,10 @@
 # Entity: prim_filter
+
 ## Diagram
+
 ![Diagram](prim_filter.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,10 +16,12 @@ Copyright lowRISC contributors.
    #Cycles before switching to new value.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Cycles       | int  | 4     |             |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_i     | input     |      |             |
@@ -25,6 +30,7 @@ Copyright lowRISC contributors.
 | filter_i  | input     |      |             |
 | filter_o  | output    |      |             |
 ## Signals
+
 | Name                       | Type               | Description |
 | -------------------------- | ------------------ | ----------- |
 | stored_vector_q            | logic [Cycles-1:0] |             |
@@ -33,7 +39,5 @@ Copyright lowRISC contributors.
 | update_stored_value        | logic              |             |
 | unused_stored_vector_q_msb | logic              |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

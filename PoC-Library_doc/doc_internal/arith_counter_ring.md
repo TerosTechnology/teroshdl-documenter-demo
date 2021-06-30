@@ -1,7 +1,10 @@
 # Entity: arith_counter_ring
+
 ## Diagram
+
 ![Diagram](arith_counter_ring.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,11 +30,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name    | Type     | Value | Description                                     |
 | --------------- | -------- | ----- | ----------------------------------------------- |
 | BITS            | positive |       |                                                 |
 | INVERT_FEEDBACK | boolean  | FALSE | FALSE -> ring counter;		TRUE -> johnson counter |
 ## Ports
+
 | Port name | Direction | Type                                | Description                         |
 | --------- | --------- | ----------------------------------- | ----------------------------------- |
 | Clock     | in        | std_logic                           | Clock                               |
@@ -41,13 +46,14 @@ limitations under the License.
 | dec       | in        | std_logic                           | decrement counter                   |
 | value     | out       | std_logic_vector(BITS - 1 downto 0) | counter value                       |
 ## Signals
+
 | Name    | Type                                | Description |
 | ------- | ----------------------------------- | ----------- |
 | Counter | std_logic_vector(BITS - 1 downto 0) |             |
 ## Constants
+
 | Name   | Type      | Value                   | Description |
 | ------ | --------- | ----------------------- | ----------- |
 | invert | std_logic |  to_sl(INVERT_FEEDBACK) |             |
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )

@@ -1,5 +1,7 @@
 # Package: run_types_pkg
+
 ## Constants
+
 | Name                       | Type      | Value                                                                         | Description                            |
 | -------------------------- | --------- | ----------------------------------------------------------------------------- | -------------------------------------- |
 | max_locked_time            | time      |  1 ms                                                                         |                                        |
@@ -16,8 +18,9 @@
 | runner_exit_with_errors    | std_logic |  'Z'                                                                          |                                        |
 | runner_exit_without_errors | std_logic |  '1'                                                                          |                                        |
 ## Types
-| Name            | Type                                                                                                                                                                                                                   | Description |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| runner_phase_t  | (test_runner_entry, test_runner_setup, test_suite_setup, test_case_setup,                           test_case, test_case_cleanup, test_suite_cleanup, test_runner_cleanup,                           test_runner_exit) |             |
-| phase_locks_t   |                                                                                                                                                                                                                        |             |
-| boolean_array_t |                                                                                                                                                                                                                        |             |
+
+| Name            | Type                                                                                                                                                                | Description |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| runner_phase_t  | (test_runner_entry, test_runner_setup, test_suite_setup, test_case_setup, test_case, test_case_cleanup, test_suite_cleanup, test_runner_cleanup, test_runner_exit)  |             |
+| phase_locks_t   |                                                                                                                                                                     |             |
+| boolean_array_t |                                                                                                                                                                     |             |

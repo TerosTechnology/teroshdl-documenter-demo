@@ -1,13 +1,17 @@
 # Entity: keymgr_sideload_key_ctrl
+
 ## Diagram
+
 ![Diagram](keymgr_sideload_key_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Manage all sideload keys
  
 ## Ports
+
 | Port name    | Direction | Type                        | Description                                                 |
 | ------------ | --------- | --------------------------- | ----------------------------------------------------------- |
 | clk_i        | input     |                             |                                                             |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | hmac_key_o   | output    | hw_key_req_t                |                                                             |
 | kmac_key_o   | output    | hw_key_req_t                |                                                             |
 ## Signals
+
 | Name              | Type              | Description |
 | ----------------- | ----------------- | ----------- |
 | state_q           | keymgr_sideload_e |             |
@@ -42,15 +47,15 @@ Copyright lowRISC contributors.
 | kmac_sel          | logic             |             |
 | kmac_sideload_key | hw_key_req_t      |             |
 ## Types
+
 | Name              | Type                                                                                                                        | Description                    |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | keymgr_sideload_e | enum logic [2:0] {     StSideloadReset,     StSideloadIdle,     StSideloadClear,     StSideloadWipe,     StSideloadStop   } | Enumeration for working state  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_aes_key: keymgr_sideload_key
 - u_hmac_key: keymgr_sideload_key
 - u_kmac_key: keymgr_sideload_key

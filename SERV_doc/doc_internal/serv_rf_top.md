@@ -1,7 +1,10 @@
 # Entity: serv_rf_top
+
 ## Diagram
+
 ![Diagram](serv_rf_top.svg "Diagram")
 ## Generics
+
 | Generic name   | Type | Value                                 | Description                                                                                                                                                                                                                                                                                                                                 |
 | -------------- | ---- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RESET_PC       |      | 32'd0                                 |                                                                                                                                                                                                                                                                                                                                             |
@@ -11,6 +14,7 @@
 | RF_WIDTH       |      | 2                                     |                                                                                                                                                                                                                                                                                                                                             |
 | RF_L2D         |      | $clog2((32+(WITH_CSR*4))*32/RF_WIDTH) |                                                                                                                                                                                                                                                                                                                                             |
 ## Ports
+
 | Port name      | Direction | Type        | Description |
 | -------------- | --------- | ----------- | ----------- |
 | clk            | input     | wire        |             |
@@ -49,6 +53,7 @@
 | i_dbus_rdt     | input     | wire [31:0] |             |
 | i_dbus_ack     | input     | wire        |             |
 ## Signals
+
 | Name     | Type                | Description |
 | -------- | ------------------- | ----------- |
 | rf_wreq  | wire                |             |
@@ -70,9 +75,11 @@
 | raddr    | wire [RF_L2D-1:0]   |             |
 | rdata    | wire [RF_WIDTH-1:0] |             |
 ## Constants
+
 | Name     | Type | Value      | Description |
 | -------- | ---- | ---------- | ----------- |
 | CSR_REGS |      | WITH_CSR*4 |             |
 ## Instantiations
+
 - rf_ram_if: serv_rf_ram_if
 - rf_ram: serv_rf_ram

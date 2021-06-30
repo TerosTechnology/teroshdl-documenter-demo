@@ -1,7 +1,10 @@
 # Entity: arith_counter_free
+
 ## Diagram
+
 ![Diagram](arith_counter_free.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -30,10 +33,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DIVIDER      | positive |       |             |
 ## Ports
+
 | Port name | Direction | Type      | Description          |
 | --------- | --------- | --------- | -------------------- |
 | clk       | in        | std_logic | Global Control       |

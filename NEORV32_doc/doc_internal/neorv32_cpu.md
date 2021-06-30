@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu
+
 ## Diagram
+
 ![Diagram](neorv32_cpu.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU Top Entity >>                                                                #
 # ********************************************************************************************* #
@@ -50,6 +53,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                              |
 | ---------------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------ |
 | HW_THREAD_ID                 | natural                        | 0           | hardware thread id (32-bit)                                              |
@@ -73,6 +77,7 @@
 | HPM_NUM_CNTS                 | natural                        | 0           | number of implemented HPM counters (0..29)                               |
 | HPM_CNT_WIDTH                | natural                        | 40          | total size of HPM counters (0..64)                                       |
 ## Ports
+
 | Port name     | Direction | Type                                       | Description                     |
 | ------------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i         | in        | std_ulogic                                 | global clock, rising edge       |
@@ -109,6 +114,7 @@
 | firq_ack_o    | out       | std_ulogic_vector(15 downto 0)             |                                 |
 | db_halt_req_i | in        | std_ulogic                                 | debug mode (halt) request --    |
 ## Signals
+
 | Name       | Type                                       | Description                                   |
 | ---------- | ------------------------------------------ | --------------------------------------------- |
 | ctrl       | std_ulogic_vector(ctrl_width_c-1 downto 0) | main control bus                              |
@@ -138,6 +144,7 @@
 | pmp_addr   | pmp_addr_if_t                              | pmp interface --                              |
 | pmp_ctrl   | pmp_ctrl_if_t                              |                                               |
 ## Instantiations
+
 - neorv32_cpu_control_inst: neorv32_cpu_control
 **Description**
 Control Unit ---------------------------------------------------------------------------

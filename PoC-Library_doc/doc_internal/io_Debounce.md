@@ -1,7 +1,10 @@
 # Entity: io_Debounce
+
 ## Diagram
+
 ![Diagram](io_Debounce.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -33,6 +36,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name            | Type             | Value       | Description             |
 | ----------------------- | ---------------- | ----------- | ----------------------- |
 | CLOCK_FREQ              | FREQ             |             |                         |
@@ -42,6 +46,7 @@ limitations under the License.
 | ADD_INPUT_SYNCHRONIZERS | boolean          | true        |                         |
 | COMMON_LOCK             | boolean          | false       |                         |
 ## Ports
+
 | Port name | Direction | Type                              | Description |
 | --------- | --------- | --------------------------------- | ----------- |
 | Clock     | in        | std_logic                         |             |
@@ -49,19 +54,19 @@ limitations under the License.
 | Input     | in        | std_logic_vector(BITS-1 downto 0) |             |
 | Output    | out       | std_logic_vector(BITS-1 downto 0) |             |
 ## Signals
+
 | Name   | Type                          | Description  |
 | ------ | ----------------------------- | ------------ |
 | sync   | std_logic_vector(Input'range) | Synchronized |
 | prev   | std_logic_vector(Input'range) | Delayed      |
 | active | std_logic_vector(Input'range) |              |
 ## Constants
+
 | Name         | Type    | Value                                        | Description |
 | ------------ | ------- | -------------------------------------------- | ----------- |
 | LOCK_COUNT_X | integer |  TimingToCycles(BOUNCE_TIME, CLOCK_FREQ) - 1 |             |
 ## Processes
-- unnamed: _( Clock )_
-Bounce Filter
-
+- unnamed: ( Clock )
 **Description**
 Bounce Filter
 

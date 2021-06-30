@@ -1,12 +1,16 @@
 # Entity: aon_timer_core
+
 ## Diagram
+
 ![Diagram](aon_timer_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name            | Direction | Type               | Description        |
 | -------------------- | --------- | ------------------ | ------------------ |
 | clk_aon_i            | input     |                    |                    |
@@ -22,6 +26,7 @@ Copyright lowRISC contributors.
 | wdog_intr_o          | output    |                    |                    |
 | wdog_reset_req_o     | output    |                    |                    |
 ## Signals
+
 | Name             | Type         | Description       |
 | ---------------- | ------------ | ----------------- |
 | unused_reg2hw    | logic        |                   |
@@ -31,5 +36,4 @@ Copyright lowRISC contributors.
 | wkup_incr        | logic        |                   |
 | wdog_incr        | logic        | Watchdog signals  |
 ## Processes
-- unnamed: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- unnamed: ( @(posedge clk_aon_i or negedge rst_aon_ni) )

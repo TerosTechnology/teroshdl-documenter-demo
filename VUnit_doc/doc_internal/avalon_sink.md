@@ -1,7 +1,10 @@
 # Entity: avalon_sink
+
 ## Diagram
+
 ![Diagram](avalon_sink.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11,10 +14,12 @@ Avalon-St Sink Verification Component
 TODO:
 - timeout error
 ## Generics
+
 | Generic name | Type          | Value | Description |
 | ------------ | ------------- | ----- | ----------- |
 | sink         | avalon_sink_t |       |             |
 ## Ports
+
 | Port name | Direction | Type                                           | Description |
 | --------- | --------- | ---------------------------------------------- | ----------- |
 | clk       | in        | std_logic                                      |             |
@@ -24,5 +29,4 @@ TODO:
 | eop       | in        | std_logic                                      |             |
 | data      | in        | std_logic_vector(data_length(sink)-1 downto 0) |             |
 ## Processes
-- main: _(  )_
-
+- main: (  )

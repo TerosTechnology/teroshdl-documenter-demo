@@ -1,7 +1,10 @@
 # Entity: alert_handler_accu
+
 ## Diagram
+
 ![Diagram](alert_handler_accu.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -12,6 +15,7 @@ Copyright lowRISC contributors.
  does not wrap around.
  
 ## Ports
+
 | Port name    | Direction | Type            | Description                                        |
 | ------------ | --------- | --------------- | -------------------------------------------------- |
 | clk_i        | input     |                 |                                                    |
@@ -24,6 +28,7 @@ Copyright lowRISC contributors.
 | accu_trig_o  | output    |                 | escalation trigger output                          |
 | accu_fail_o  | output    |                 | asserted if the tandem accu counters are not equal |
 ## Signals
+
 | Name             | Type                       | Description                                                                                                                                                                                                                                                                                                       |
 | ---------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | trig_gated_unbuf | logic                      |                                                                                                                                                                                                                                                                                                                   |

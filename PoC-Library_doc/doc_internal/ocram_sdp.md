@@ -1,7 +1,10 @@
 # Entity: ocram_sdp
+
 ## Diagram
+
 ![Diagram](ocram_sdp.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -39,12 +42,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                      |
 | ------------ | -------- | ----- | -------------------------------- |
 | A_BITS       | positive |       | number of address bits           |
 | D_BITS       | positive |       | number of data bits              |
 | FILENAME     | string   | ""    | file-name for RAM initialization |
 ## Ports
+
 | Port name | Direction | Type                                | Description        |
 | --------- | --------- | ----------------------------------- | ------------------ |
 | rclk      | in        | std_logic                           | read clock         |
@@ -57,6 +62,7 @@ limitations under the License.
 | d         | in        | std_logic_vector(D_BITS-1 downto 0) | data in            |
 | q         | out       | std_logic_vector(D_BITS-1 downto 0) | data out           |
 ## Constants
+
 | Name  | Type     | Value      | Description |
 | ----- | -------- | ---------- | ----------- |
 | DEPTH | positive |  2**A_BITS |             |

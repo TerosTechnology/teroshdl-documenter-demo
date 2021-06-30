@@ -1,13 +1,17 @@
 # Entity: flash_ctrl_prog
+
 ## Diagram
+
 ![Diagram](flash_ctrl_prog.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Faux Flash Prog Control
  
 ## Ports
+
 | Port name      | Direction | Type            | Description            |
 | -------------- | --------- | --------------- | ---------------------- |
 | clk_i          | input     |                 |                        |
@@ -31,6 +35,7 @@ Copyright lowRISC contributors.
 | flash_done_i   | input     |                 |                        |
 | flash_error_i  | input     |                 |                        |
 ## Signals
+
 | Name            | Type                       | Description                              |
 | --------------- | -------------------------- | ---------------------------------------- |
 | st              | state_e                    |                                          |
@@ -47,21 +52,18 @@ Copyright lowRISC contributors.
 | win_err         | logic                      |                                          |
 | unused_end_addr | logic [BusPgmResWidth-1:0] | unused signals                           |
 ## Constants
+
 | Name        | Type | Value                     | Description                                                                                                                                   |
 | ----------- | ---- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | WindowWidth | int  | BusAddrW - BusPgmResWidth | program resolution check if the incoming beat is larger than the maximum program resolution, error immediately and do not allow it to start.  |
 ## Types
+
 | Name    | Type                                                  | Description |
 | ------- | ----------------------------------------------------- | ----------- |
 | state_e | enum logic {     StNorm  = 'h0,     StErr   = 'h1   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-when error'd, continue to drain all program fifo contents like normal operation
-if this is not done, software may fill up the fifo without anyone
-draining the contents, leading to a lockup
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 when error'd, continue to drain all program fifo contents like normal operation
 if this is not done, software may fill up the fifo without anyone

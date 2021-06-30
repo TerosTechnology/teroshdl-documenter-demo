@@ -1,19 +1,24 @@
 # Entity: spi_host_data_cdc
+
 ## Diagram
+
 ![Diagram](spi_host_data_cdc.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  CDC module for SPI_HOST RX and TX data
  
 ## Generics
+
 | Generic name | Type  | Value | Description |
 | ------------ | ----- | ----- | ----------- |
 | TxDepth      | int   | 72    |             |
 | RxDepth      | int   | 64    |             |
 | SwapBytes    | logic | 0     |             |
 ## Ports
+
 | Port name       | Direction | Type   | Description |
 | --------------- | --------- | ------ | ----------- |
 | clk_i           | input     |        |             |
@@ -47,6 +52,7 @@ Copyright lowRISC contributors.
 | rx_qd_o         | output    | [7:0]  |             |
 | rx_wm_o         | output    |        |             |
 ## Signals
+
 | Name                  | Type                      | Description                     |
 | --------------------- | ------------------------- | ------------------------------- |
 | tx_data_ordered       | logic [31:0]              |                                 |
@@ -65,6 +71,7 @@ Copyright lowRISC contributors.
 | tx_depth_total        | logic [7:0]               |                                 |
 | rx_depth_total        | logic [7:0]               |                                 |
 ## Constants
+
 | Name            | Type  | Value                               | Description |
 | --------------- | ----- | ----------------------------------- | ----------- |
 | TxDepthW        | int   | $clog2(TxDepth)                     |             |
@@ -80,6 +87,7 @@ Copyright lowRISC contributors.
 | TxSyncDepthW    | int   | prim_util_pkg::vbits(TxSyncDepth+1  |             |
 | RxSyncDepthW    | int   | prim_util_pkg::vbits(RxSyncDepth+1  |             |
 ## Instantiations
+
 - u_tx_async_fifo: prim_fifo_async
 **Description**
 TODO: Establish better sw_rst technique

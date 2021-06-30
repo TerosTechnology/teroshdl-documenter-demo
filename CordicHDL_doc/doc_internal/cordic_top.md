@@ -1,14 +1,19 @@
 # Entity: cordic_top
+
 ## Diagram
+
 ![Diagram](cordic_top.svg "Diagram")
 ## Description
+
  Standard library.
  Implementation of cordic.
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | g_MODE       | integer | 1     |             |
 ## Ports
+
 | Port name  | Direction | Type                           | Description      |
 | ---------- | --------- | ------------------------------ | ---------------- |
 | clk        | in        | std_logic                      |  Clock.          |

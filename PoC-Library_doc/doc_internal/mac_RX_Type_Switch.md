@@ -1,7 +1,10 @@
 # Entity: mac_RX_Type_Switch
+
 ## Diagram
+
 ![Diagram](mac_RX_Type_Switch.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name   | Type                          | Value                               | Description |
 | -------------- | ----------------------------- | ----------------------------------- | ----------- |
 | DEBUG          | boolean                       | FALSE                               |             |
 | ETHERNET_TYPES | T_NET_MAC_ETHERNETTYPE_VECTOR | (0 => C_NET_MAC_ETHERNETTYPE_EMPTY) |             |
 ## Ports
+
 | Port name                    | Direction | Type                                                              | Description |
 | ---------------------------- | --------- | ----------------------------------------------------------------- | ----------- |
 | Clock                        | in        | std_logic                                                         |             |
@@ -55,6 +60,7 @@ limitations under the License.
 | Out_Meta_DestMACAddress_Data | out       | T_SLVV_8(ETHERNET_TYPES'length - 1 downto 0)                      |             |
 | Out_Meta_EthType             | out       | T_NET_MAC_ETHERNETTYPE_VECTOR(ETHERNET_TYPES'length - 1 downto 0) |             |
 ## Signals
+
 | Name                      | Type                                 | Description |
 | ------------------------- | ------------------------------------ | ----------- |
 | State                     | T_STATE                              |             |
@@ -78,16 +84,16 @@ limitations under the License.
 | EthernetType_sel          | T_ETHERNETTYPE_BYTEINDEX             |             |
 | EthernetType_d            | T_NET_MAC_ETHERNETTYPE               |             |
 ## Constants
+
 | Name             | Type                                          | Value                  | Description |
 | ---------------- | --------------------------------------------- | ---------------------- | ----------- |
 | PORTS            | positive                                      |  ETHERNET_TYPES'length |             |
 | ETHERNET_TYPES_I | T_NET_MAC_ETHERNETTYPE_VECTOR(0 to PORTS - 1) |  ETHERNET_TYPES        |             |
 ## Types
-| Name    | Type                                                                               | Description |
-| ------- | ---------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_TYPE_1, 			ST_PAYLOAD_1, 			ST_PAYLOAD_N, 		ST_DISCARD_FRAME 	) |             |
+
+| Name    | Type                                                                  | Description |
+| ------- | --------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_TYPE_1, ST_PAYLOAD_1, ST_PAYLOAD_N, ST_DISCARD_FRAME )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )

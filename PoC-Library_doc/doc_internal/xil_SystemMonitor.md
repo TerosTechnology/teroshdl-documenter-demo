@@ -1,7 +1,10 @@
 # Entity: xil_SystemMonitor
+
 ## Diagram
+
 ![Diagram](xil_SystemMonitor.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -38,6 +41,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Ports
+
 | Port name      | Direction | Type      | Description                                       |
 | -------------- | --------- | --------- | ------------------------------------------------- |
 | Reset          | in        | std_logic | Reset signal for the System Monitor control logic |
@@ -47,6 +51,7 @@ limitations under the License.
 | VP             | in        | std_logic | Dedicated Analog Input Pair                       |
 | VN             | in        | std_logic |                                                   |
 ## Signals
+
 | Name          | Type                          | Description |
 | ------------- | ----------------------------- | ----------- |
 | aux_channel_p | std_logic_vector(15 downto 0) |             |

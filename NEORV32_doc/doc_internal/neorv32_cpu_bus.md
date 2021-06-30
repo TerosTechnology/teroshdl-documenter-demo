@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_bus
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_bus.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Bus Interface Unit >>                                                            #
 # ********************************************************************************************* #
@@ -38,6 +41,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name          | Type    | Value   | Description                                                              |
 | --------------------- | ------- | ------- | ------------------------------------------------------------------------ |
 | CPU_EXTENSION_RISCV_A | boolean | false   | implement atomic extension?                                              |
@@ -45,6 +49,7 @@
 | PMP_NUM_REGIONS       | natural | 0       | number of regions (0..64)                                                |
 | PMP_MIN_GRANULARITY   | natural | 64*1024 | minimal region granularity in bytes, has to be a power of 2, min 8 bytes |
 ## Ports
+
 | Port name     | Direction | Type                                       | Description                     |
 | ------------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i         | in        | std_ulogic                                 | global clock, rising edge       |
@@ -88,6 +93,7 @@
 | d_bus_err_i   | in        | std_ulogic                                 | bus transfer error              |
 | d_bus_fence_o | out       | std_ulogic                                 | fence operation                 |
 ## Signals
+
 | Name                  | Type                                       | Description                                         |
 | --------------------- | ------------------------------------------ | --------------------------------------------------- |
 | mar                   | std_ulogic_vector(data_width_c-1 downto 0) | data interface registers --                         |
@@ -114,6 +120,7 @@
 | ld_pmp_fault          | std_ulogic                                 | pmp load access fault                               |
 | st_pmp_fault          | std_ulogic                                 |                                                     |
 ## Constants
+
 | Name             | Type                          | Value                              | Description                                        |
 | ---------------- | ----------------------------- | ---------------------------------- | -------------------------------------------------- |
 | pmp_off_mode_c   | std_ulogic_vector(1 downto 0) |  "00"                              | null region (disabled)                             |
@@ -126,106 +133,71 @@
 | pmp_cfg_ah_c     | natural                       |  4                                 | mode bit high                                      |
 | pmp_cfg_l_c      | natural                       |  7                                 | locked entry                                       |
 ## Types
+
 | Name          | Type | Description                   |
 | ------------- | ---- | ----------------------------- |
 | bus_arbiter_t |      | bus arbiter --                |
 | pmp_addr_t    |      | physical memory protection -- |
 | pmp_t         |      |                               |
 ## Processes
-- mem_adr_reg: _( rstn_i, clk_i )_
-Data Interface: Access Address ---------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- mem_adr_reg: ( rstn_i, clk_i )
 **Description**
 Data Interface: Access Address ---------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- misaligned_d_check: _( mar, ctrl_i )_
-alignment check --
-
+- misaligned_d_check: ( mar, ctrl_i )
 **Description**
 alignment check --
 
-- mem_do_reg: _( rstn_i, clk_i )_
-Data Interface: Write Data -------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- mem_do_reg: ( rstn_i, clk_i )
 **Description**
 Data Interface: Write Data -------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- byte_enable: _( mar, mdo, ctrl_i )_
-byte enable and output data alignment --
-
+- byte_enable: ( mar, mdo, ctrl_i )
 **Description**
 byte enable and output data alignment --
 
-- mem_di_reg: _( rstn_i, clk_i )_
-Data Interface: Read Data --------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- mem_di_reg: ( rstn_i, clk_i )
 **Description**
 Data Interface: Read Data --------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- read_align: _( mdi, mar, ctrl_i )_
-input data alignment and sign extension --
-
+- read_align: ( mdi, mar, ctrl_i )
 **Description**
 input data alignment and sign extension --
 
-- data_access_arbiter: _( rstn_i, clk_i )_
-Data Access Arbiter --------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- data_access_arbiter: ( rstn_i, clk_i )
 **Description**
 Data Access Arbiter --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- pmp_dbus_buffer: _( rstn_i, clk_i )_
-additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c --
-
+- pmp_dbus_buffer: ( rstn_i, clk_i )
 **Description**
 additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c --
 
-- exclusive_access_controller: _( rstn_i, clk_i )_
-Reservation Controller (LR/SC [A extension]) -------------------------------------------
--------------------------------------------------------------------------------------------
-
+- exclusive_access_controller: ( rstn_i, clk_i )
 **Description**
 Reservation Controller (LR/SC [A extension]) -------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- ifetch_arbiter: _( rstn_i, clk_i )_
-Instruction Fetch Arbiter --------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- ifetch_arbiter: ( rstn_i, clk_i )
 **Description**
 Instruction Fetch Arbiter --------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- pmp_ibus_buffer: _( rstn_i, clk_i )_
-32-bit accesses only
-additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c --
-
+- pmp_ibus_buffer: ( rstn_i, clk_i )
 **Description**
 32-bit accesses only
 additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c --
 
-- pmp_masks: _( rstn_i, clk_i )_
-Physical Memory Protection (PMP) -------------------------------------------------------
--------------------------------------------------------------------------------------------
-compute address masks (ITERATIVE!!!) --
-
+- pmp_masks: ( rstn_i, clk_i )
 **Description**
 Physical Memory Protection (PMP) -------------------------------------------------------
 -------------------------------------------------------------------------------------------
 compute address masks (ITERATIVE!!!) --
 
-- pmp_check_permission: _( pmp, pmp_ctrl_i, ctrl_i )_
-r
-check access type and region's permissions --
-
+- pmp_check_permission: ( pmp, pmp_ctrl_i, ctrl_i )
 **Description**
 r
 check access type and region's permissions --

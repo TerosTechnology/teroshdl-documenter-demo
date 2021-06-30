@@ -1,13 +1,17 @@
 # Entity: lc_ctrl
+
 ## Diagram
+
 ![Diagram](lc_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Life cycle controller top.
  
 ## Generics
+
 | Generic name                 | Type                  | Value                | Description                                 |
 | ---------------------------- | --------------------- | -------------------- | ------------------------------------------- |
 | NumAlerts                    | logic [NumAlerts-1:0] | undefined            | Enable asynchronous transitions on alerts.  |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | RndCnstLcKeymgrDivTestDevRma | lc_keymgr_div_t       | LcKeymgrDivWidth'(1) |                                             |
 | RndCnstLcKeymgrDivProduction | lc_keymgr_div_t       | LcKeymgrDivWidth'(2) |                                             |
 ## Ports
+
 | Port name                  | Direction | Type                | Description                                                                                                                                    |
 | -------------------------- | --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i                      | input     |                     | Life cycle controller clock                                                                                                                    |
@@ -61,6 +66,7 @@ Copyright lowRISC contributors.
 | lc_keymgr_div_o            | output    | lc_keymgr_div_t     | State group diversification value for keymgr.                                                                                                  |
 | otp_device_id_i            | input     |                     | Hardware config input, needed for the DEVICE_ID field.                                                                                         |
 ## Signals
+
 | Name                      | Type                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reg2hw                    | lc_ctrl_reg_pkg::lc_ctrl_reg2hw_t |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -130,15 +136,12 @@ Copyright lowRISC contributors.
 | token_hash_err            | logic                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | hashed_token              | lc_token_t                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 ## Processes
-- p_csr_assign_outputs: _(  )_
-
-- p_csr_assign_inputs: _(  )_
-
-- p_csrs: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_sync_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_csr_assign_outputs: (  )
+- p_csr_assign_inputs: (  )
+- p_csrs: ( @(posedge clk_i or negedge rst_ni) )
+- p_sync_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: lc_ctrl_reg_top
 - u_reg_tap: lc_ctrl_reg_top
 - u_prim_clock_mux2: prim_clock_mux2

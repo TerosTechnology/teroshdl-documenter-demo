@@ -1,13 +1,17 @@
 # Entity: aes
+
 ## Diagram
+
 ![Diagram](aes.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  AES top-level wrapper
  
 ## Generics
+
 | Generic name             | Type                   | Value                           | Description                                                                                                                                                                        |
 | ------------------------ | ---------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AES192Enable             | bit                    | 1                               | Can be 0 (disable), or 1 (enable).                                                                                                                                                 |
@@ -23,6 +27,7 @@ Copyright lowRISC contributors.
 | RndCnstMaskingLfsrSeed   | masking_lfsr_seed_t    | RndCnstMaskingLfsrSeedDefault   |                                                                                                                                                                                    |
 | RndCnstMskgChunkLfsrPerm | mskg_chunk_lfsr_perm_t | RndCnstMskgChunkLfsrPermDefault |                                                                                                                                                                                    |
 ## Ports
+
 | Port name        | Direction | Type            | Description                                  |
 | ---------------- | --------- | --------------- | -------------------------------------------- |
 | clk_i            | input     |                 |                                              |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | alert_rx_i       | input     | [NumAlerts-1:0] | Alerts                                       |
 | alert_tx_o       | output    | [NumAlerts-1:0] |                                              |
 ## Signals
+
 | Name                 | Type                       | Description         |
 | -------------------- | -------------------------- | ------------------- |
 | reg2hw               | aes_reg2hw_t               | Signals             |
@@ -55,10 +61,12 @@ Copyright lowRISC contributors.
 | intg_err_alert       | logic                      | Register interface  |
 | alert_test           | logic [NumAlerts-1:0]      |                     |
 ## Constants
+
 | Name         | Type         | Value                       | Description |
 | ------------ | ------------ | --------------------------- | ----------- |
 | EntropyWidth | int unsigned | edn_pkg::ENDPOINT_BUS_WIDTH |             |
 ## Instantiations
+
 - u_reg: aes_reg_top
 - u_prim_lc_sync: prim_lc_sync
 **Description**

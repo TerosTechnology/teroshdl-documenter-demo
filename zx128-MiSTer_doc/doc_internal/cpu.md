@@ -1,7 +1,10 @@
 # Entity: cpu
+
 ## Diagram
+
 ![Diagram](cpu.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clock     | input     | wire       |             |
@@ -20,4 +23,5 @@
 | q         | output    | wire[ 7:0] |             |
 | a         | output    | wire[15:0] |             |
 ## Instantiations
+
 - Cpu: T80pa

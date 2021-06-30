@@ -1,13 +1,17 @@
 # Entity: prim_generic_flash_bank
+
 ## Diagram
+
 ![Diagram](prim_generic_flash_bank.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Emulate a single generic flash bank
  
 ## Generics
+
 | Generic name   | Type | Value                | Description                                             |
 | -------------- | ---- | -------------------- | ------------------------------------------------------- |
 | InfosPerBank   | int  | 1                    | info pages per bank                                     |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | WordW          | int  | $clog2(WordsPerPage) |                                                         |
 | AddrW          | int  | PageW + WordW        |                                                         |
 ## Ports
+
 | Port name             | Direction | Type                 | Description                                          |
 | --------------------- | --------- | -------------------- | ---------------------------------------------------- |
 | clk_i                 | input     |                      |                                                      |
@@ -45,6 +50,7 @@ Copyright lowRISC contributors.
 | flash_power_ready_h_i | input     |                      |                                                      |
 | flash_power_down_h_i  | input     |                      |                                                      |
 ## Signals
+
 | Name              | Type                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | st_q              | state_e                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -93,6 +99,7 @@ Copyright lowRISC contributors.
 | unused_prog_type  | flash_ctrl_pkg::flash_prog_e             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | unused_he         | logic                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 ## Constants
+
 | Name             | Type | Value                       | Description                  |
 | ---------------- | ---- | --------------------------- | ---------------------------- |
 | PageW            | int  | $clog2(PagesPerBank)        | Derived parameters           |
@@ -108,28 +115,22 @@ Copyright lowRISC contributors.
 | InfoAddrW        | int  | $clog2(WordsPerInfoBank)    |                              |
 | MemWidth         | int  | DataWidth - MetaDataWidth   | always_comb                  |
 ## Types
+
 | Name          | Type                                                                                                                                                                                                                                                                                                                                                                                                                                               | Description                                                                    |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | state_e       | enum logic [2:0] {     StReset    = 'h0,     StInit     = 'h1,     StIdle     = 'h2,     StRead     = 'h3,     StProg     = 'h4,     StErase    = 'h5   }                                                                                                                                                                                                                                                                                          |                                                                                |
 | cmd_payload_t | struct packed {     logic                        rd;     logic                        prog;     logic                        prog_last;     flash_ctrl_pkg::flash_prog_e prog_type;     logic                        pg_erase;     logic                        bk_erase;     logic [AddrW-1:0]            addr;     flash_ctrl_pkg::flash_part_e part;     logic [InfoTypesWidth-1:0]   info_sel;     logic [DataWidth-1:0]        prog_data;   } | insert a fifo here to break the large fanout from inputs to memories on reads  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-prog_pend_q is necessary to emulate flash behavior that a bit written to 0 cannot be written
-back to 1 without an erase
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 prog_pend_q is necessary to emulate flash behavior that a bit written to 0 cannot be written
 back to 1 without an erase
 
-- unnamed: _(  )_
-
+- unnamed: (  )
 ## Instantiations
+
 - u_mem_meta: prim_ram_1p

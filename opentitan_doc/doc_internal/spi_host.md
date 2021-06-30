@@ -1,17 +1,22 @@
 # Entity: spi_host
+
 ## Diagram
+
 ![Diagram](spi_host.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Serial Peripheral Interface (SPI) Host module.
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name        | Direction | Type            | Description           |
 | ---------------- | --------- | --------------- | --------------------- |
 | clk_i            | input     |                 |                       |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | intr_error_o     | output    |                 |                       |
 | intr_spi_event_o | output    |                 |                       |
 ## Signals
+
 | Name                  | Type                  | Description                                                            |
 | --------------------- | --------------------- | ---------------------------------------------------------------------- |
 | reg2hw                | spi_host_reg2hw_t     |                                                                        |
@@ -129,13 +135,11 @@ Copyright lowRISC contributors.
 | rx_full_d             | logic                 |                                                                        |
 | rx_full_q             | logic                 |                                                                        |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: spi_host_reg_top
 - u_cmd_cdc: spi_host_command_cdc
 - u_window: spi_host_window

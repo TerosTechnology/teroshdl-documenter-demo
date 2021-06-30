@@ -1,7 +1,10 @@
 # Entity: usb_fs_tx_mux
+
 ## Diagram
+
 ![Diagram](usb_fs_tx_mux.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright ETH Zurich.
  Copyright Luke Valenty (TinyFPGA project, https://github.com/tinyfpga/TinyFPGA-Bootloader).
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name          | Direction | Type  | Description                      |
 | ------------------ | --------- | ----- | -------------------------------- |
 | in_tx_pkt_start_i  | input     |       | interface to IN Protocol Engine  |

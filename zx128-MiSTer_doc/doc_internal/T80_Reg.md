@@ -1,7 +1,10 @@
 # Entity: T80_Reg
+
 ## Diagram
+
 ![Diagram](T80_Reg.svg "Diagram")
 ## Description
+
 ****
 T80(c) core. Attempt to finish all undocumented features and provide
              accurate timings.
@@ -48,6 +51,7 @@ The latest version of this file can be found at:
 Limitations :
 File history :
 ## Ports
+
 | Port name | Direction | Type                           | Description |
 | --------- | --------- | ------------------------------ | ----------- |
 | Clk       | in        | std_logic                      |             |
@@ -69,14 +73,15 @@ File history :
 | DIRSet    | in        | std_logic                      |             |
 | DIR       | in        | std_logic_vector(127 downto 0) |             |
 ## Signals
+
 | Name  | Type                   | Description |
 | ----- | ---------------------- | ----------- |
 | RegsH | Register_Image(0 to 7) |             |
 | RegsL | Register_Image(0 to 7) |             |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | Register_Image |      |             |
 ## Processes
-- unnamed: _( Clk )_
-
+- unnamed: ( Clk )

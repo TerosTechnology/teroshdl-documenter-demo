@@ -1,19 +1,24 @@
 # Entity: csrng_cmd_stage
+
 ## Diagram
+
 ![Diagram](csrng_cmd_stage.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: csrng command staging module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | CmdFifoWidth | int  | 32    |             |
 | CmdFifoDepth | int  | 16    |             |
 | StateId      | int  | 4     |             |
 ## Ports
+
 | Port name                     | Direction | Type               | Description        |
 | ----------------------------- | --------- | ------------------ | ------------------ |
 | clk_i                         | input     |                    |                    |
@@ -44,6 +49,7 @@ Copyright lowRISC contributors.
 | cmd_stage_sfifo_genbits_err_o | output    | [2:0]              |                    |
 | cmd_stage_sm_err_o            | output    |                    |                    |
 ## Signals
+
 | Name                    | Type                           | Description                          |
 | ----------------------- | ------------------------------ | ------------------------------------ |
 | sfifo_cmd_rdata         | logic [CmdFifoWidth-1:0]       | signals command fifo                 |
@@ -86,6 +92,7 @@ Copyright lowRISC contributors.
 | state_q                 | state_e                        |                                      |
 | state_raw_q             | logic [StateWidth-1:0]         |                                      |
 ## Constants
+
 | Name             | Type | Value | Description |
 | ---------------- | ---- | ----- | ----------- |
 | GenBitsFifoWidth | int  | 1+128 |             |
@@ -93,15 +100,15 @@ Copyright lowRISC contributors.
 | GenBitsCntrWidth | int  | 19    |             |
 | StateWidth       | int  | 6     |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                                                  | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     Idle      = 6'b001010,      SendSOP   = 6'b000111,      SendMOP   = 6'b010000,      GenCmdChk = 6'b011101,      CmdAck    = 6'b111011,      GenReq    = 6'b110110,      Error     = 6'b101100     } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_prim_fifo_cmd: prim_fifo_sync
 - u_state_regs: prim_flop
 **Description**

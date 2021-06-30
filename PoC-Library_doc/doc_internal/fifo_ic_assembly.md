@@ -1,7 +1,10 @@
 # Entity: fifo_ic_assembly
+
 ## Diagram
+
 ![Diagram](fifo_ic_assembly.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -35,12 +38,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description           |
 | ------------ | -------- | ----- | --------------------- |
 | D_BITS       | positive |       | Data Width            |
 | A_BITS       | positive |       | Address Bits          |
 | G_BITS       | positive |       | Generation Guard Bits |
 ## Ports
+
 | Port name | Direction | Type                                | Description                                                                                                                                                                                                                                                                                                                                                                          |
 | --------- | --------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | clk_wr    | in        | std_logic                           | Write Interface                                                                                                                                                                                                                                                                                                                                                                      |
@@ -56,6 +61,7 @@ limitations under the License.
 | vld       | out       | std_logic                           |                                                                                                                                                                                                                                                                                                                                                                                      |
 | got       | in        | std_logic                           |                                                                                                                                                                                                                                                                                                                                                                                      |
 ## Signals
+
 | Name   | Type                                | Description         |
 | ------ | ----------------------------------- | ------------------- |
 | wa     | unsigned(AN-1 downto 0)             | Memory Connectivity |
@@ -65,11 +71,13 @@ limitations under the License.
 | do     | std_logic_vector(DN-1 downto 0)     |                     |
 | OPgray | std_logic_vector(A_BITS-1 downto 0) | Cross-clock         |
 ## Constants
+
 | Name | Type     | Value            | Description |
 | ---- | -------- | ---------------- | ----------- |
 | AN   | positive |  A_BITS - G_BITS |             |
 | DN   | positive |  G_BITS + D_BITS |             |
 ## Instantiations
+
 - ram: ocram_sdp
 **Description**
 Backing internal assembly memory

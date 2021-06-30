@@ -1,17 +1,22 @@
 # Entity: hmac
+
 ## Diagram
+
 ![Diagram](hmac.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  HMAC-SHA256
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name         | Direction | Type            | Description |
 | ----------------- | --------- | --------------- | ----------- |
 | clk_i             | input     |                 |             |
@@ -25,6 +30,7 @@ Copyright lowRISC contributors.
 | intr_hmac_err_o   | output    |                 |             |
 | idle_o            | output    |                 |             |
 ## Signals
+
 | Name                    | Type                     | Description                                                                                                                                                                                                                                                                                                |
 | ----------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reg2hw                  | hmac_reg2hw_t            |                                                                                                                                                                                                                                                                                                            |
@@ -103,43 +109,29 @@ Copyright lowRISC contributors.
 | initiated               | logic                    |                                                                                                                                                                                                                                                                                                            |
 | initiated               | in_process               |                                                                                                                                                                                                                                                                                                            |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Hold the configuration during the process
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Hold the configuration during the process
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Open up the MSG_FIFO from the TL-UL port when it is ready
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Open up the MSG_FIFO from the TL-UL port when it is ready
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Calculate written message
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Calculate written message
 
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - intr_hw_hmac_done: prim_intr_hw
 **Description**
 instantiate interrupt hardware primitive

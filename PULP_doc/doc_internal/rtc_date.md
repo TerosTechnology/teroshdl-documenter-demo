@@ -1,7 +1,10 @@
 # Entity: rtc_date
+
 ## Diagram
+
 ![Diagram](rtc_date.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Ports
+
 | Port name     | Direction | Type   | Description |
 | ------------- | --------- | ------ | ----------- |
 | clk_i         | input     |        |             |
@@ -22,6 +26,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | date_o        | output    | [31:0] |             |
 | new_day_i     | input     |        |             |
 ## Signals
+
 | Name           | Type           | Description |
 | -------------- | -------------- | ----------- |
 | s_day          | logic	[5:0]    |             |
@@ -37,19 +42,13 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_year_leap    | logic          |             |
 | s_year_div_4   | logic          |             |
 ## Processes
-- unnamed: _(  )_
-
-- proc_r_day: _( @(posedge clk_i or negedge rstn_i) )_
-Adjust the day of month
-
+- unnamed: (  )
+- proc_r_day: ( @(posedge clk_i or negedge rstn_i) )
 **Description**
 Adjust the day of month
 
-- proc_r_month: _( @(posedge clk_i or negedge rstn_i) )_
-
-- proc_r_year: _( @(posedge clk_i or negedge rstn_i) )_
-proc_r_month
-
+- proc_r_month: ( @(posedge clk_i or negedge rstn_i) )
+- proc_r_year: ( @(posedge clk_i or negedge rstn_i) )
 **Description**
 proc_r_month
 

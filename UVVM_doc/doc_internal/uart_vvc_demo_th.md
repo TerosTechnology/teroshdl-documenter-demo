@@ -1,7 +1,10 @@
 # Entity: uart_vvc_demo_th
+
 ## Diagram
+
 ![Diagram](uart_vvc_demo_th.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,6 +15,7 @@ Note : Any functionality not explicitly described in the documentation is subjec
 Description   : See library quick reference (under 'doc') and README-file(s)
 Test harness entity
 ## Signals
+
 | Name        | Type                         | Description      |
 | ----------- | ---------------------------- | ---------------- |
 | clk         | std_logic                    |                  |
@@ -26,11 +30,13 @@ Test harness entity
 | uart_vvc_rx | std_logic                    | UART VVC signals |
 | uart_vvc_tx | std_logic                    |                  |
 ## Constants
+
 | Name         | Type    | Value  | Description |
 | ------------ | ------- | ------ | ----------- |
 | C_CLK_PERIOD | time    |  10 ns | 100 MHz     |
 | C_CLOCK_GEN  | natural |  1     |             |
 ## Instantiations
+
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - i_uart: work.uart
 **Description**

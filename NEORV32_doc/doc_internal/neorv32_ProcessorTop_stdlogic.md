@@ -1,7 +1,10 @@
 # Entity: neorv32_ProcessorTop_stdlogic
+
 ## Diagram
+
 ![Diagram](neorv32_ProcessorTop_stdlogic.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Processor Top Entity with Resolved Port Signals (std_logic/std_logic_vector) >>  #
 # ********************************************************************************************* #
@@ -36,6 +39,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                                           |
 | ---------------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY              | natural                        | 0           | clock frequency of clk_i in Hz                                                        |
@@ -81,9 +85,9 @@
 | IO_CFS_CONFIG                | std_ulogic_vector(31 downto 0) |             | custom CFS configuration generic                                                      |
 | IO_CFS_IN_SIZE               | positive                       | 32          | size of CFS input conduit in bits                                                     |
 | IO_CFS_OUT_SIZE              | positive                       | 32          | size of CFS output conduit in bits                                                    |
-| IO_NCO_EN                    | boolean                        | true        | implement numerically-controlled oscillator (NCO)?                                    |
 | IO_NEOLED_EN                 | boolean                        | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
+
 | Port name   | Direction | Type                                         | Description                                                              |
 | ----------- | --------- | -------------------------------------------- | ------------------------------------------------------------------------ |
 | clk_i       | in        | std_logic                                    | global clock, rising edge                                                |
@@ -125,16 +129,15 @@
 | pwm_o       | out       | std_logic_vector(IO_PWM_NUM_CH-1 downto 0)   | pwm channels                                                             |
 | cfs_in_i    | in        | std_logic_vector(IO_CFS_IN_SIZE-1  downto 0) | custom inputs                                                            |
 | cfs_out_o   | out       | std_logic_vector(IO_CFS_OUT_SIZE-1 downto 0) | custom outputs                                                           |
-| nco_o       | out       | std_logic_vector(02 downto 0)                | numerically-controlled oscillator channels                               |
 | neoled_o    | out       | std_logic                                    | async serial data line                                                   |
 | mtime_i     | in        | std_logic_vector(63 downto 0)                | current system time from ext. MTIME (if IO_MTIME_EN = false)             |
 | mtime_o     | out       | std_logic_vector(63 downto 0)                | current system time from int. MTIME (if IO_MTIME_EN = true)              |
 | nm_irq_i    | in        | std_logic                                    | non-maskable interrupt                                                   |
-| soc_firq_i  | in        | std_logic_vector(5 downto 0)                 | fast interrupt channels                                                  |
 | mtime_irq_i | in        | std_logic                                    | machine timer interrupt, available if IO_MTIME_EN = false                |
 | msw_irq_i   | in        | std_logic                                    | machine software interrupt                                               |
 | mext_irq_i  | in        | std_logic                                    | machine external interrupt                                               |
 ## Signals
+
 | Name            | Type                                          | Description |
 | --------------- | --------------------------------------------- | ----------- |
 | clk_i_int       | std_ulogic                                    |             |
@@ -174,19 +177,19 @@
 | pwm_o_int       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0)   |             |
 | cfs_in_i_int    | std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) |             |
 | cfs_out_o_int   | std_ulogic_vector(IO_CFS_OUT_SIZE-1 downto 0) |             |
-| nco_o_int       | std_ulogic_vector(02 downto 0)                |             |
 | neoled_o_int    | std_ulogic                                    |             |
 | mtime_i_int     | std_ulogic_vector(63 downto 0)                |             |
 | mtime_o_int     | std_ulogic_vector(63 downto 0)                |             |
 | nm_irq_i_int    | std_ulogic                                    |             |
-| soc_firq_i_int  | std_ulogic_vector(05 downto 0)                |             |
 | mtime_irq_i_int | std_ulogic                                    |             |
 | msw_irq_i_int   | std_ulogic                                    |             |
 | mext_irq_i_int  | std_ulogic                                    |             |
 ## Constants
+
 | Name              | Type                           | Value                             | Description |
 | ----------------- | ------------------------------ | --------------------------------- | ----------- |
 | USER_CODE_INT     | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(USER_CODE)     |             |
 | IO_CFS_CONFIG_INT | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(IO_CFS_CONFIG) |             |
 ## Instantiations
+
 - neorv32_top_inst: neorv32_top

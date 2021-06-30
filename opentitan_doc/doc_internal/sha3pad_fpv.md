@@ -1,17 +1,22 @@
 # Entity: sha3pad_fpv
+
 ## Diagram
+
 ![Diagram](sha3pad_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type | Value     | Description |
 | ------------ | ---- | --------- | ----------- |
 | EnMasking    | bit  | 0         |             |
 | Share        | int  | undefined |             |
 ## Ports
+
 | Port name   | Direction | Type                   | Description                                                                                                    |
 | ----------- | --------- | ---------------------- | -------------------------------------------------------------------------------------------------------------- |
 | clk_i       | input     |                        |                                                                                                                |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | done_i      | input     |                        |                                                                                                                |
 | absorbed_o  | output    |                        | Indicator: Status                                                                                              |
 ## Signals
+
 | Name            | Type                       | Description |
 | --------------- | -------------------------- | ----------- |
 | keccak_valid    | logic                      |             |
@@ -41,9 +47,11 @@ Copyright lowRISC contributors.
 | rand_consumed   | logic                      |             |
 | rand_data       | logic [1599:0]             |             |
 ## Constants
+
 | Name  | Type | Value     | Description |
 | ----- | ---- | --------- | ----------- |
 | Share | int  | undefined |             |
 ## Instantiations
+
 - u_pad: sha3pad
 - u_keccak: keccak_round

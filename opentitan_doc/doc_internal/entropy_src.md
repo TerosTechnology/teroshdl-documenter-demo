@@ -1,19 +1,24 @@
 # Entity: entropy_src
+
 ## Diagram
+
 ![Diagram](entropy_src.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: entropy_src top level wrapper file
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | Stub         | bit                   | 1'b0      |             |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 | EsFifoDepth  | int                   | 4         |             |
 ## Ports
+
 | Port name                    | Direction | Type                    | Description                    |
 | ---------------------------- | --------- | ----------------------- | ------------------------------ |
 | clk_i                        | input     |                         |                                |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | intr_es_observe_fifo_ready_o | output    |                         |                                |
 | intr_es_fatal_err_o          | output    |                         |                                |
 ## Signals
+
 | Name                            | Type                      | Description     |
 | ------------------------------- | ------------------------- | --------------- |
 | hw2reg                          | entropy_src_hw2reg_t      | common signals  |
@@ -66,10 +72,12 @@ Copyright lowRISC contributors.
 | efuse_es_sw_reg_en              | logic                     |                 |
 | efuse_es_sw_ov_en               | logic                     |                 |
 ## Constants
+
 | Name          | Type | Value                           | Description |
 | ------------- | ---- | ------------------------------- | ----------- |
 | StubLfsrWidth | int  | 64                              |             |
 | Copies        | int  | CSRNG_BUS_WIDTH / StubLfsrWidth |             |
 ## Instantiations
+
 - u_reg: entropy_src_reg_top
 - u_entropy_src_core: entropy_src_core

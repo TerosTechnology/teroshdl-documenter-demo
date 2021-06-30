@@ -1,7 +1,10 @@
 # Entity: usb_fs_tx
+
 ## Diagram
+
 ![Diagram](usb_fs_tx.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright ETH Zurich.
  Copyright Luke Valenty (TinyFPGA project, https://github.com/tinyfpga/TinyFPGA-Bootloader).
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name          | Direction | Type  | Description                                                                                      |
 | ------------------ | --------- | ----- | ------------------------------------------------------------------------------------------------ |
 | clk_i              | input     |       | A 48MHz clock is required to receive USB data at 12MHzit's simpler to juse use 48MHz everywhere  |
@@ -26,6 +30,7 @@ Copyright lowRISC contributors.
 | tx_data_get_o      | output    |       |                                                                                                  |
 | tx_data_i          | input     | [7:0] |                                                                                                  |
 ## Signals
+
 | Name             | Type         | Description |
 | ---------------- | ------------ | ----------- |
 | pid_q            | logic [3:0]  |             |
@@ -74,34 +79,24 @@ Copyright lowRISC contributors.
 | pkt_end          | logic        |             |
 | out_nrzi_en      | logic        |             |
 ## Types
+
 | Name        | Type                                                                   | Description |
 | ----------- | ---------------------------------------------------------------------- | ----------- |
 | state_e     | enum logic [2:0] {Idle, Sync, Pid, DataOrCrc160, Crc161, Eop, OscTest} |             |
 | out_state_e | enum logic [1:0] {OsIdle, OsWaitByte, OsTransmit}                      |             |
 ## Processes
-- proc_pid: _( @(posedge clk_i or negedge rst_ni) )_
-save packet parameters at pkt_start_i
-
+- proc_pid: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 save packet parameters at pkt_start_i
 
-- proc_bitstuff: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_fsm: _(  )_
-
-- proc_byte_str: _(  )_
-
-- proc_crc16: _(  )_
-
-- proc_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- proc_out_fsm: _(  )_
-Output FSM
-
+- proc_bitstuff: ( @(posedge clk_i or negedge rst_ni) )
+- proc_fsm: (  )
+- proc_byte_str: (  )
+- proc_crc16: (  )
+- proc_reg: ( @(posedge clk_i or negedge rst_ni) )
+- proc_out_fsm: (  )
 **Description**
 Output FSM
 
-- proc_diff: _(  )_
-
-- proc_diff_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
+- proc_diff: (  )
+- proc_diff_reg: ( @(posedge clk_i or negedge rst_ni) )

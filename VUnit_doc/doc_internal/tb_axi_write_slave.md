@@ -1,16 +1,21 @@
 # Entity: tb_axi_write_slave
+
 ## Diagram
+
 ![Diagram](tb_axi_write_slave.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name    | Type                                     | Description |
 | ------- | ---------------------------------------- | ----------- |
 | clk     | std_logic                                |             |
@@ -31,6 +36,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | bid     | std_logic_vector(awid'range)             |             |
 | bresp   | axi_resp_t                               |             |
 ## Constants
+
 | Name          | Type        | Value                            | Description |
 | ------------- | ----------- | -------------------------------- | ----------- |
 | log_data_size | integer     |  4                               |             |
@@ -38,7 +44,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | memory        | memory_t    |  new_memory                      |             |
 | axi_slave     | axi_slave_t |  new_axi_slave(memory => memory) |             |
 ## Processes
-- main: _(  )_
-
+- main: (  )
 ## Instantiations
+
 - dut: work.axi_write_slave

@@ -1,12 +1,16 @@
 # Entity: tlul_adapter_sram
+
 ## Diagram
+
 ![Diagram](tlul_adapter_sram.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name      | Type | Value                               | Description                                    |
 | ----------------- | ---- | ----------------------------------- | ---------------------------------------------- |
 | SramAw            | int  | 12                                  |                                                |
@@ -23,6 +27,7 @@ Copyright lowRISC contributors.
 | IntgWidth         | int  | tlul_pkg::DataIntgWidth * WidthMult |                                                |
 | DataOutW          | int  | SramDw + IntgWidth                  |                                                |
 ## Ports
+
 | Port name    | Direction | Type           | Description                                      |
 | ------------ | --------- | -------------- | ------------------------------------------------ |
 | clk_i        | input     |                |                                                  |
@@ -42,8 +47,13 @@ Copyright lowRISC contributors.
 | rvalid_i     | input     |                |                                                  |
 | rerror_i     | input     | [1:0]          | 2 bit error [1]: Uncorrectable, [0]: Correctable |
 ## Signals
+
 | Name               | Type                                      | Description                                                                                                                                                                                                                                               |
 | ------------------ | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| intg_error         | logic                                     | integrity check                                                                                                                                                                                                                                           |
+| intg_error_q       | logic                                     | permanently latch integrity error until reset                                                                                                                                                                                                             |
+| tl_i_int           | tl_h2d_t                                  | byte handling for integrity                                                                                                                                                                                                                               |
+| tl_o_int           | tl_d2h_t                                  |                                                                                                                                                                                                                                                           |
 | reqfifo_wvalid     | logic                                     | FIFO signal in case OutStand is greater than 1 If request is latched, {write, source} is pushed to req fifo. Req fifo is popped when D channel is acknowledged (v & r) D channel valid is asserted if it is write request or rsp fifo not empty if read.  |
 | reqfifo_wready     | logic                                     | FIFO signal in case OutStand is greater than 1 If request is latched, {write, source} is pushed to req fifo. Req fifo is popped when D channel is acknowledged (v & r) D channel valid is asserted if it is write request or rsp fifo not empty if read.  |
 | reqfifo_rvalid     | logic                                     |                                                                                                                                                                                                                                                           |
@@ -62,7 +72,6 @@ Copyright lowRISC contributors.
 | rspfifo_wdata      | rsp_t                                     |                                                                                                                                                                                                                                                           |
 | rspfifo_rdata      | rsp_t                                     |                                                                                                                                                                                                                                                           |
 | error_internal     | logic                                     | Internal protocol error checker                                                                                                                                                                                                                           |
-| intg_error         | logic                                     |                                                                                                                                                                                                                                                           |
 | wr_attr_error      | logic                                     |                                                                                                                                                                                                                                                           |
 | instr_error        | logic                                     |                                                                                                                                                                                                                                                           |
 | wr_vld_error       | logic                                     |                                                                                                                                                                                                                                                           |
@@ -81,12 +90,12 @@ Copyright lowRISC contributors.
 | wdata_int          | logic [WidthMult-1:0][top_pkg::TL_DW-1:0] |                                                                                                                                                                                                                                                           |
 | wmask_intg         | logic [WidthMult-1:0][DataIntgWidth-1:0]  | Integrity portion                                                                                                                                                                                                                                         |
 | wdata_intg         | logic [WidthMult-1:0][DataIntgWidth-1:0]  |                                                                                                                                                                                                                                                           |
-| intg_error_q       | logic                                     | permanently latch integrity error until reset                                                                                                                                                                                                             |
 | rdata              | logic [WidthMult-1:0][DataWidth-1:0]      | Make sure only requested bytes are forwarded                                                                                                                                                                                                              |
 | rmask              | logic [WidthMult-1:0][DataWidth-1:0]      |                                                                                                                                                                                                                                                           |
 | rdata_tlword       | logic [DataWidth-1:0]                     |                                                                                                                                                                                                                                                           |
 | unused_rerror      | logic                                     | This module only cares about uncorrectable errors.                                                                                                                                                                                                        |
 ## Constants
+
 | Name             | Type | Value                               | Description                                                                                                                                                                                                                      |
 | ---------------- | ---- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | WidthMult        | int  | SramDw / top_pkg::TL_DW             |                                                                                                                                                                                                                                  |
@@ -100,6 +109,7 @@ Copyright lowRISC contributors.
 | RspFifoWidth     | int  | $bits(rsp_t)                        |                                                                                                                                                                                                                                  |
 | DataWidth        | int  | top_pkg::TL_DW + DataIntgWidth      | The size of the data/wmask depends on whether passthrough integrity is enabled. If passthrough integrity is enabled, the data is concatenated with the integrity passed through the user bits.  Otherwise, it is the data only.  |
 ## Types
+
 | Name       | Type                                                                                                                                                                             | Description |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | sram_req_t | struct packed {     logic [top_pkg::TL_DBW-1:0] mask ;      logic [WoffsetWidth-1:0]    woffset ;    }                                                                           |             |
@@ -107,19 +117,11 @@ Copyright lowRISC contributors.
 | req_t      | struct packed {     req_op_e                    op ;     logic                       error ;     logic [top_pkg::TL_SZW-1:0] size ;     logic [top_pkg::TL_AIW-1:0] source ;   } |             |
 | rsp_t      | struct packed {     logic [top_pkg::TL_DW-1:0] data ;     logic [DataIntgWidth-1:0]  data_intg ;     logic                      error ;   }                                      |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-TODO: The logic below is incomplete.  If the adapter detects a write is NOT
-the full word, it must read back the other parts of the data from memory and
-re-generate the integrity.
-Since that will cause back-pressure to the upstream agent and likely substantial
-change into this module, it is left to a different PR.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 TODO: The logic below is incomplete.  If the adapter detects a write is NOT
 the full word, it must read back the other parts of the data from memory and
@@ -127,9 +129,9 @@ re-generate the integrity.
 Since that will cause back-pressure to the upstream agent and likely substantial
 change into this module, it is left to a different PR.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
 ## Instantiations
+
+- u_sram_byte: tlul_sram_byte
 - u_rsp_gen: tlul_rsp_intg_gen
 - u_err: tlul_err
 - u_reqfifo: prim_fifo_sync

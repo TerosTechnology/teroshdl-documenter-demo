@@ -1,7 +1,10 @@
 # Entity: alert_handler_class
+
 ## Diagram
+
 ![Diagram](alert_handler_class.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  produces the alert cause and class trigger signals.
  
 ## Ports
+
 | Port name         | Direction | Type                            | Description      |
 | ----------------- | --------- | ------------------------------- | ---------------- |
 | alert_trig_i      | input     | [NAlerts-1:0]                   | alert trigger    |
@@ -22,14 +26,13 @@ Copyright lowRISC contributors.
 | loc_alert_cause_o | output    | [N_LOC_ALERT-1:0]               | alert cause      |
 | class_trig_o      | output    | [N_CLASSES-1:0]                 | class triggered  |
 ## Signals
+
 | Name            | Type                                   | Description             |
 | --------------- | -------------------------------------- | ----------------------- |
 | class_masks     | logic [N_CLASSES-1:0][NAlerts-1:0]     | classification mapping  |
 | loc_class_masks | logic [N_CLASSES-1:0][N_LOC_ALERT-1:0] |                         |
 ## Processes
-- p_class_mask: _(  )_
-this is basically an address to onehot0 decoder
-
+- p_class_mask: (  )
 **Description**
 this is basically an address to onehot0 decoder
 

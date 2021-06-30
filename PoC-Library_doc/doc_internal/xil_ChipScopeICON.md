@@ -1,7 +1,10 @@
 # Entity: xil_ChipScopeICON
+
 ## Diagram
+
 ![Diagram](xil_ChipScopeICON.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -36,10 +39,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | PORTS        | positive |       |             |
 ## Ports
+
 | Port name  | Direction | Type                                               | Description |
 | ---------- | --------- | -------------------------------------------------- | ----------- |
 | ControlBus | inout     | T_XIL_CHIPSCOPE_CONTROL_VECTOR(PORTS - 1 downto 0) |             |

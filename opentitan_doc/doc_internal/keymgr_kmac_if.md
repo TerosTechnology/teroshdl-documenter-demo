@@ -1,13 +1,17 @@
 # Entity: keymgr_kmac_if
+
 ## Diagram
+
 ![Diagram](keymgr_kmac_if.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Key manager interface to kmac
  
 ## Ports
+
 | Port name        | Direction | Type                        | Description                                 |
 | ---------------- | --------- | --------------------------- | ------------------------------------------- |
 | clk_i            | input     |                             |                                             |
@@ -30,6 +34,7 @@ Copyright lowRISC contributors.
 | kmac_error_o     | output    |                             |                                             |
 | cmd_error_o      | output    |                             |                                             |
 ## Signals
+
 | Name             | Type                                       | Description                                           |
 | ---------------- | ------------------------------------------ | ----------------------------------------------------- |
 | id_data          | logic [MaxRounds-1:0][KmacDataIfWidth-1:0] |                                                       |
@@ -57,6 +62,7 @@ Copyright lowRISC contributors.
 | one_hot_err_q    | logic                                      | if a one hot error occurs, latch onto it permanently  |
 | one_hot_err_d    | logic                                      | if a one hot error occurs, latch onto it permanently  |
 ## Constants
+
 | Name              | Type                | Value                                      | Description                                                     |
 | ----------------- | ------------------- | ------------------------------------------ | --------------------------------------------------------------- |
 | AdvRem            | int                 | AdvDataWidth % KmacDataIfWidth             |                                                                 |
@@ -80,29 +86,21 @@ Copyright lowRISC contributors.
 | IdByteMask        | logic [IfBytes-1:0] | undefined                                  |                                                                 |
 | GenByteMask       | logic [IfBytes-1:0] | logic [MaxRounds-1:0][KmacDataIfWidth-1:0] |                                                                 |
 ## Types
+
 | Name         | Type                                                                                                            | Description                    |
 | ------------ | --------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | data_state_e | enum logic [2:0] {     StIdle   = 0,     StTx     = 1,     StTxLast = 2,     StOpWait = 3,     StClean  = 4   } | Enumeration for working state  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-downcount
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 downcount
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-The input invalid check is done whenever transactions are ongoing with kmac
-once set, it cannot be unset until transactions are fully complete
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 The input invalid check is done whenever transactions are ongoing with kmac
 once set, it cannot be unset until transactions are fully complete
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

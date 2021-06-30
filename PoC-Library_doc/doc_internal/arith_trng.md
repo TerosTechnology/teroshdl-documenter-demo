@@ -1,7 +1,10 @@
 # Entity: arith_trng
+
 ## Diagram
+
 ![Diagram](arith_trng.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -36,17 +39,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                  |
 | ------------ | -------- | ----- | ---------------------------- |
 | BITS         | positive |       | Width: Number of Oscillators |
 ## Ports
+
 | Port name | Direction | Type                              | Description               |
 | --------- | --------- | --------------------------------- | ------------------------- |
 | clk       | in        | std_logic                         | Clock                     |
 | rnd       | out       | std_logic_vector(BITS-1 downto 0) | Random Oscillator Samples |
 ## Signals
+
 | Name | Type                              | Description |
 | ---- | --------------------------------- | ----------- |
 | osc  | std_logic_vector(BITS-1 downto 0) | Oscillators |
 ## Instantiations
+
 - sync_i: sync_Bits

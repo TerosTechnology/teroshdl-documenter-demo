@@ -1,7 +1,10 @@
 # Entity: cluster_domain
+
 ## Diagram
+
 ![Diagram](cluster_domain.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Generics
+
 | Generic name            | Type | Value                                      | Description                                                                                                        |
 | ----------------------- | ---- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | NB_CORES                |      | `NB_CORES                                  |                                                                                                                    |
@@ -72,6 +76,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | EVNT_WIDTH              |      | 8                                          |                                                                                                                    |
 | CLUSTER_ALIAS_BASE      |      | 12'h000                                    |                                                                                                                    |
 ## Ports
+
 | Port name                   | Direction | Type               | Description            |
 | --------------------------- | --------- | ------------------ | ---------------------- |
 | clk_i                       | input     |                    |                        |

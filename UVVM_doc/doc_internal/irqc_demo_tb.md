@@ -1,7 +1,10 @@
 # Entity: irqc_demo_tb
+
 ## Diagram
+
 ![Diagram](irqc_demo_tb.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -13,6 +16,7 @@ VHDL unit     : Bitvis IRQC Library : irqc_demo_tb
 Description   : See dedicated powerpoint presentation and README-file(s)
 Test case entity
 ## Signals
+
 | Name        | Type                                                             | Description               |
 | ----------- | ---------------------------------------------------------------- | ------------------------- |
 | clk         | std_logic                                                        |                           |
@@ -23,24 +27,22 @@ Test case entity
 | irq2cpu_ack | std_logic                                                        |                           |
 | clock_ena   | boolean                                                          |                           |
 ## Constants
+
 | Name         | Type | Value  | Description |
 | ------------ | ---- | ------ | ----------- |
 | C_CLK_PERIOD | time |  10 ns |             |
 ## Functions
-- trim <font id="function_arguments">(      constant source   : std_logic_vector;
-      constant num_bits : positive := C_NUM_SOURCES)</font> <font id="function_return">return t_irq_source</font>
+- trim <font id="function_arguments">( constant source   : std_logic_vector; constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return t_irq_source </font>
 **Description**
 Trim (cut) a given vector to fit the number of irq sources (i.e. pot. reduce width)
-- fit <font id="function_arguments">(      constant source   : std_logic_vector;
-      constant num_bits : positive := C_NUM_SOURCES)</font> <font id="function_return">return std_logic_vector</font>
+- fit <font id="function_arguments">( constant source   : std_logic_vector; constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 Fit a given vector to the number of irq sources by masking with zeros above irq width
 ## Processes
-- p_main: _(  )_
-PROCESS: p_main
-
+- p_main: (  )
 **Description**
 PROCESS: p_main
 
 ## Instantiations
+
 - i_irqc: work.irqc

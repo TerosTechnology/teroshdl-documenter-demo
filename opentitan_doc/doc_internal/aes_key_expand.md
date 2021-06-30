@@ -1,13 +1,17 @@
 # Entity: aes_key_expand
+
 ## Diagram
+
 ![Diagram](aes_key_expand.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  AES KeyExpand
  
 ## Generics
+
 | Generic name | Type        | Value           | Description       |
 | ------------ | ----------- | --------------- | ----------------- |
 | AES192Enable | bit         | 1               |                   |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | SBoxImpl     | sbox_impl_e | SBoxImplLut     |                   |
 | NumShares    | int         | Masking ? 2 : 1 | derived parameter |
 ## Ports
+
 | Port name   | Direction | Type              | Description |
 | ----------- | --------- | ----------------- | ----------- |
 | clk_i       | input     |                   |             |
@@ -32,6 +37,7 @@ Copyright lowRISC contributors.
 | prd_i       | input     | [WidthPRDKey-1:0] |             |
 | err_o       | output    |                   |             |
 ## Signals
+
 | Name             | Type                  | Description                                      |
 | ---------------- | --------------------- | ------------------------------------------------ |
 | en               | sp2v_e                |                                                  |
@@ -63,34 +69,28 @@ Copyright lowRISC contributors.
 | en_raw           | logic [Sp2VWidth-1:0] |                                                  |
 | out_ack_raw      | logic [Sp2VWidth-1:0] |                                                  |
 ## Constants
+
 | Name      | Type | Value           | Description       |
 | --------- | ---- | --------------- | ----------------- |
 | NumShares | int  | Masking ? 2 : 1 | derived parameter |
 ## Processes
-- get_rnd_type: _(  )_
-For AES-192, there are four different types of rounds.
-
+- get_rnd_type: (  )
 **Description**
 For AES-192, there are four different types of rounds.
 
-- rcon_usage: _(  )_
-Depending on operation, key length and round, Rcon may not be used thus must not be updated.
-
+- rcon_usage: (  )
 **Description**
 Depending on operation, key length and round, Rcon may not be used thus must not be updated.
 
-- rcon_update: _(  )_
-Generate Rcon
-
+- rcon_update: (  )
 **Description**
 Generate Rcon
 
-- reg_rcon: _( @(posedge clk_i or negedge rst_ni) )_
-Rcon register
-
+- reg_rcon: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Rcon register
 
 ## Instantiations
+
 - u_aes_key_expand_en_buf_chk: aes_sel_buf_chk
 - u_aes_key_expand_out_ack_buf_chk: aes_sel_buf_chk

@@ -1,7 +1,10 @@
 # Entity: ddr2_mem2mig_adapter_Spartan6
+
 ## Diagram
+
 ![Diagram](ddr2_mem2mig_adapter_Spartan6.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -40,12 +43,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | D_BITS       | positive |       |             |
 | MEM_A_BITS   | positive |       |             |
 | APP_A_BITS   | positive |       |             |
 ## Ports
+
 | Port name         | Direction | Type                                    | Description                  |
 | ----------------- | --------- | --------------------------------------- | ---------------------------- |
 | mem_req           | in        | std_logic                               | PoC.Mem interface            |
@@ -70,18 +75,17 @@ limitations under the License.
 | mig_wr_en         | out       | std_logic                               |                              |
 | mig_rd_en         | out       | std_logic                               |                              |
 ## Signals
+
 | Name      | Type      | Description |
 | --------- | --------- | ----------- |
 | mem_rdy_i | std_logic |             |
 ## Constants
+
 | Name           | Type     | Value               | Description |
 | -------------- | -------- | ------------------- | ----------- |
 | BYTE_ADDR_BITS | positive |  log2ceil(D_BITS/8) |             |
 ## Processes
-- unnamed: _( mem_addr )_
-1 word of D_BITS
-address
-
+- unnamed: ( mem_addr )
 **Description**
 1 word of D_BITS
 address

@@ -1,7 +1,10 @@
 # Entity: aes_cipher_control
+
 ## Diagram
+
 ![Diagram](aes_cipher_control.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,11 +12,13 @@ Copyright lowRISC contributors.
  This module controls the AES cipher core including the key expand module.
  
 ## Generics
+
 | Generic name | Type        | Value       | Description |
 | ------------ | ----------- | ----------- | ----------- |
 | Masking      | bit         | 0           |             |
 | SBoxImpl     | sbox_impl_e | SBoxImplLut |             |
 ## Ports
+
 | Port name            | Direction | Type            | Description                                       |
 | -------------------- | --------- | --------------- | ------------------------------------------------- |
 | clk_i                | input     |                 |                                                   |
@@ -58,6 +63,7 @@ Copyright lowRISC contributors.
 | key_words_sel_o      | output    | key_words_sel_e |                                                   |
 | round_key_sel_o      | output    | round_key_sel_e |                                                   |
 ## Signals
+
 | Name                   | Type                                   | Description                                                                                                                                                                                                                                                                                               |
 | ---------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aes_cipher_ctrl_ns     | aes_cipher_ctrl_e                      |                                                                                                                                                                                                                                                                                                           |
@@ -104,24 +110,24 @@ Copyright lowRISC contributors.
 | sp2v_sig_chk_raw       | logic  [NumSp2VSig-1:0][Sp2VWidth-1:0] |                                                                                                                                                                                                                                                                                                           |
 | sp2v_sig_err           | logic  [NumSp2VSig-1:0]                |                                                                                                                                                                                                                                                                                                           |
 ## Constants
+
 | Name       | Type         | Value | Description                                                             |
 | ---------- | ------------ | ----- | ----------------------------------------------------------------------- |
 | StateWidth | int          | 6     |                                                                         |
 | NumSp2VSig | int unsigned | 9     | We use vectors of sparsely encoded signals to reduce code duplication.  |
 ## Types
+
 | Name              | Type                                                                                                                                                                                                                   | Description |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | aes_cipher_ctrl_e | enum logic [StateWidth-1:0] {     IDLE     = 6'b111100,     INIT     = 6'b101001,     ROUND    = 6'b010000,     FINISH   = 6'b100010,     CLEAR_S  = 6'b011011,     CLEAR_KD = 6'b110111,     ERROR    = 6'b001110   } |             |
 ## Processes
-- aes_cipher_ctrl_fsm: _(  )_
-FSM
-
+- aes_cipher_ctrl_fsm: (  )
 **Description**
 FSM
 
-- reg_fsm: _( @(posedge clk_i or negedge rst_ni) )_
-
+- reg_fsm: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_state_regs: prim_flop
 - u_rnd_ctr_regs: prim_flop
 **Description**

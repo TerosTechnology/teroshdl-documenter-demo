@@ -1,7 +1,10 @@
 # Entity: ei_demo_tb
+
 ## Diagram
+
 ![Diagram](ei_demo_tb.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,10 +14,12 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | GC_TESTCASE  | natural | 0     |             |
 ## Signals
+
 | Name       | Type                                      | Description                                        |
 | ---------- | ----------------------------------------- | -------------------------------------------------- |
 | output_sl  | std_logic                                 | Error Injection VIPs input/output signalsstd_logic |
@@ -22,6 +27,7 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | input_slv  | std_logic_vector(C_DATA_WIDTH-1 downto 0) | vector                                             |
 | output_slv | std_logic_vector(C_DATA_WIDTH-1 downto 0) |                                                    |
 ## Constants
+
 | Name                 | Type                                      | Value            | Description |
 | -------------------- | ----------------------------------------- | ---------------- | ----------- |
 | C_SCOPE              | string                                    |  "EI_DEMO_TB"    |             |
@@ -32,13 +38,12 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | C_SLV_SIGNAL_DEFAULT | std_logic_vector(C_DATA_WIDTH-1 downto 0) |  (others => '0') |             |
 | C_PULSE_WIDTH        | time                                      |  20 ns           |             |
 ## Processes
-- p_sequencer: _(  )_
-Testbench sequencer
-
+- p_sequencer: (  )
 **Description**
 Testbench sequencer
 
 ## Instantiations
+
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - error_injector_sl: work.error_injection_sl
 **Description**

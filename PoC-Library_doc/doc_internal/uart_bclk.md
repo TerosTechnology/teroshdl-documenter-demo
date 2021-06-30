@@ -1,7 +1,10 @@
 # Entity: uart_bclk
+
 ## Diagram
+
 ![Diagram](uart_bclk.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,11 +31,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type | Value     | Description |
 | ------------ | ---- | --------- | ----------- |
 | CLOCK_FREQ   | FREQ | 100 MHz   |             |
 | BAUDRATE     | BAUD | 115200 Bd |             |
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clk       | in        | std_logic |             |
@@ -40,6 +45,7 @@ limitations under the License.
 | bclk      | out       | std_logic |             |
 | bclk_x8   | out       | std_logic |             |
 ## Signals
+
 | Name        | Type                                         | Description     |
 | ----------- | -------------------------------------------- | --------------- |
 | x8_cnt      | unsigned(BAUDRATE_COUNTER_BITS - 1 downto 0) | registers       |
@@ -49,6 +55,7 @@ limitations under the License.
 | bclk_r      | std_logic                                    |                 |
 | bclk_x8_r   | std_logic                                    |                 |
 ## Constants
+
 | Name                   | Type     | Value                                                             | Description |
 | ---------------------- | -------- | ----------------------------------------------------------------- | ----------- |
 | UART_OVERSAMPLING_RATE | positive |  8                                                                |             |

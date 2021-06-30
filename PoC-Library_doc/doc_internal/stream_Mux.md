@@ -1,7 +1,10 @@
 # Entity: stream_Mux
+
 ## Diagram
+
 ![Diagram](stream_Mux.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name  | Type     | Value | Description |
 | ------------- | -------- | ----- | ----------- |
 | PORTS         | positive | 2     |             |
@@ -31,6 +35,7 @@ limitations under the License.
 | META_BITS     | natural  | 8     |             |
 | META_REV_BITS | natural  | 2     |             |
 ## Ports
+
 | Port name    | Direction | Type                                                  | Description |
 | ------------ | --------- | ----------------------------------------------------- | ----------- |
 | Clock        | in        | std_logic                                             |             |
@@ -50,6 +55,7 @@ limitations under the License.
 | Out_EOF      | out       | std_logic                                             |             |
 | Out_Ack      | in        | std_logic                                             |             |
 ## Signals
+
 | Name               | Type                                     | Description |
 | ------------------ | ---------------------------------------- | ----------- |
 | State              | T_STATE                                  |             |
@@ -69,13 +75,11 @@ limitations under the License.
 | idx                | T_CHANNEL_INDEX                          |             |
 | Out_EOF_i          | std_logic                                |             |
 ## Types
-| Name    | Type                   | Description |
-| ------- | ---------------------- | ----------- |
-| T_STATE | (ST_IDLE, ST_DATAFLOW) |             |
+
+| Name    | Type                    | Description |
+| ------- | ----------------------- | ----------- |
+| T_STATE | (ST_IDLE, ST_DATAFLOW)  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, RequestWithSelf, RequestWithoutSelf, Out_Ack, Out_EOF_i, ChannelPointer_d, ChannelPointer_nxt )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, RequestWithSelf, RequestWithoutSelf, Out_Ack, Out_EOF_i, ChannelPointer_d, ChannelPointer_nxt )
+- unnamed: ( Clock )

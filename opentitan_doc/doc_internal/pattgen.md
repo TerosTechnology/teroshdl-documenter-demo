@@ -1,16 +1,21 @@
 # Entity: pattgen
+
 ## Diagram
+
 ![Diagram](pattgen.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name        | Direction | Type            | Description |
 | ---------------- | --------- | --------------- | ----------- |
 | clk_i            | input     |                 |             |
@@ -30,6 +35,7 @@ Copyright lowRISC contributors.
 | intr_done_ch0_o  | output    |                 |             |
 | intr_done_ch1_o  | output    |                 |             |
 ## Signals
+
 | Name       | Type                  | Description |
 | ---------- | --------------------- | ----------- |
 | alert_test | logic [NumAlerts-1:0] |             |
@@ -37,5 +43,6 @@ Copyright lowRISC contributors.
 | reg2hw     | pattgen_reg2hw_t      |             |
 | hw2reg     | pattgen_hw2reg_t      |             |
 ## Instantiations
+
 - u_reg: pattgen_reg_top
 - u_pattgen_core: pattgen_core

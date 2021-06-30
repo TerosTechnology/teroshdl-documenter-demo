@@ -1,7 +1,10 @@
 # Entity: cache_par
+
 ## Diagram
+
 ![Diagram](cache_par.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -65,6 +68,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type     | Value | Description |
 | ------------------ | -------- | ----- | ----------- |
 | REPLACEMENT_POLICY | string   | "LRU" |             |
@@ -73,6 +77,7 @@ limitations under the License.
 | ADDRESS_BITS       | positive | 8     |             |
 | DATA_BITS          | positive | 8     |             |
 ## Ports
+
 | Port name    | Direction | Type                                        | Description |
 | ------------ | --------- | ------------------------------------------- | ----------- |
 | Clock        | in        | std_logic                                   |             |
@@ -88,6 +93,7 @@ limitations under the License.
 | CacheMiss    | out       | std_logic                                   |             |
 | OldAddress   | out       | std_logic_vector(ADDRESS_BITS - 1 downto 0) |             |
 ## Signals
+
 | Name                | Type                                           | Description       |
 | ------------------- | ---------------------------------------------- | ----------------- |
 | TU_LineIndex        | std_logic_vector(LINE_INDEX_BITS - 1 downto 0) | look-up (request) |
@@ -98,15 +104,17 @@ limitations under the License.
 | MemoryIndex_us      | unsigned(LINE_INDEX_BITS - 1 downto 0)         |                   |
 | CacheMemory         | T_CACHE_LINE_VECTOR(CACHE_LINES - 1 downto 0)  |                   |
 ## Constants
+
 | Name            | Type     | Value                    | Description |
 | --------------- | -------- | ------------------------ | ----------- |
 | LINE_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES) |             |
 ## Types
+
 | Name                | Type | Description |
 | ------------------- | ---- | ----------- |
 | T_CACHE_LINE_VECTOR |      |             |
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
 ## Instantiations
+
 - TU: PoC.cache_tagunit_par

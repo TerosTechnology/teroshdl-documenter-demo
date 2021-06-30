@@ -1,13 +1,17 @@
 # Entity: spi_p2s
+
 ## Diagram
+
 ![Diagram](spi_p2s.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  SPI byte to SPI (Single/ Dual/ Quad)
  
 ## Ports
+
 | Port name    | Direction | Type       | Description                                                                                                                            |
 | ------------ | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i        | input     |            |                                                                                                                                        |
@@ -22,6 +26,7 @@ Copyright lowRISC contributors.
 | order_i      | input     |            | Controltxorder: controls which bit goes out first.                                                                                     |
 | io_mode_i    | input     | io_mode_e  | IO mode                                                                                                                                |
 ## Signals
+
 | Name        | Type        | Description                                                                                                                                                                            |
 | ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tx_state    | tx_state_e  | Only for handling CPHA                                                                                                                                                                 |
@@ -33,80 +38,56 @@ Copyright lowRISC contributors.
 | out_shift   | spi_byte_t  |                                                                                                                                                                                        |
 | out_shift_d | spi_byte_t  |                                                                                                                                                                                        |
 ## Constants
+
 | Name     | Type         | Value             | Description |
 | -------- | ------------ | ----------------- | ----------- |
 | Bits     | int unsigned | $bits(spi_byte_t) |             |
 | BitWidth | int unsigned | $clog2(Bits)      |             |
 ## Types
+
 | Name       | Type                                      | Description |
 | ---------- | ----------------------------------------- | ----------- |
 | count_t    | logic [BitWidth-1:0]                      |             |
 | tx_state_e | enum logic {     TxIdle,     TxActive   } |             |
 ## Processes
-- unnamed: _(  )_
-Enable selection
-in Single mode, line 1 is for output.
-in Dual mode, line 0:1 are for output
-in Quad mode, all lines 0:3 are for output.
-
+- unnamed: (  )
 **Description**
 Enable selection
 in Single mode, line 1 is for output.
 in Dual mode, line 0:1 are for output
 in Quad mode, all lines 0:3 are for output.
 
-- unnamed: _(  )_
-So, the logic generating `sent` signal looks not straightforward. It tries
-assert second last beat. So, in SingleIO (right after reset always), it
-asserts at 7th beat. Then the mode could be changed to Dual/ Quad.
-
+- unnamed: (  )
 **Description**
 So, the logic generating `sent` signal looks not straightforward. It tries
 assert second last beat. So, in SingleIO (right after reset always), it
 asserts at 7th beat. Then the mode could be changed to Dual/ Quad.
 
-- unnamed: _( @(posedge clk_i) )_
-data shift
-
+- unnamed: ( @(posedge clk_i) )
 **Description**
 data shift
 
-- unnamed: _(  )_
-SPI out
-
+- unnamed: (  )
 **Description**
 SPI out
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Following logic has high chance to break the rule. As there's no
-indication of the end of a byte. `data_sent_o` is not a valid indicator
-as the signal asserted one cycle earlier than the last beat.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Following logic has high chance to break the rule. As there's no
 indication of the end of a byte. `data_sent_o` is not a valid indicator
 as the signal asserted one cycle earlier than the last beat.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-cnt
-TODO: Consider dummy cycle that is not aligned to a byte
-Is this valid scenario?
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 cnt
 TODO: Consider dummy cycle that is not aligned to a byte
 Is this valid scenario?
 
-- unnamed: _(  )_
-Last beat depends on the mode
-
+- unnamed: (  )
 **Description**
 Last beat depends on the mode
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-At reset, tx state sits in TxIdle. It moves to TxActive.
-This is to delay the first posedge in Mode 3.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 At reset, tx state sits in TxIdle. It moves to TxActive.
 This is to delay the first posedge in Mode 3.

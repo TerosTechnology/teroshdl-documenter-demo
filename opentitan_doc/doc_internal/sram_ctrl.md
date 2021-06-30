@@ -1,13 +1,17 @@
 # Entity: sram_ctrl
+
 ## Diagram
+
 ![Diagram](sram_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  SRAM controller.
  
 ## Generics
+
 | Generic name        | Type                       | Value                      | Description                                 |
 | ------------------- | -------------------------- | -------------------------- | ------------------------------------------- |
 | NumAlerts           | logic [NumAlerts-1:0]      | undefined                  | Enable asynchronous transitions on alerts.  |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | RndCnstSramNonce    | otp_ctrl_pkg::sram_nonce_t | RndCnstSramNonceDefault    |                                             |
 | RndCnstSramLfsrPerm | lfsr_perm_t                | RndCnstSramLfsrPermDefault |                                             |
 ## Ports
+
 | Port name            | Direction | Type                | Description                                              |
 | -------------------- | --------- | ------------------- | -------------------------------------------------------- |
 | clk_i                | input     |                     | SRAM Clock                                               |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | sram_scr_init_i      | input     | sram_scr_init_rsp_t |                                                          |
 | en_ifetch_o          | output    |                     | Interface with corresponding tlul adapters               |
 ## Signals
+
 | Name              | Type                                     | Description                                                                                                                                                                                                                                                                                                                                   |
 | ----------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reg2hw            | sram_ctrl_reg_pkg::sram_ctrl_reg2hw_t    |                                                                                                                                                                                                                                                                                                                                               |
@@ -78,10 +84,9 @@ Copyright lowRISC contributors.
 | nonce_d           | prim_sync_reqack_data                    |                                                                                                                                                                                                                                                                                                                                               |
 | key_seed_valid_d  | prim_sync_reqack_data                    |                                                                                                                                                                                                                                                                                                                                               |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_reg: sram_ctrl_reg_top
 - u_prim_lc_sync: prim_lc_sync

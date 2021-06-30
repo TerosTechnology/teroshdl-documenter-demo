@@ -1,7 +1,10 @@
 # Entity: serv_top
+
 ## Diagram
+
 ![Diagram](serv_top.svg "Diagram")
 ## Generics
+
 | Generic name   | Type | Value  | Description |
 | -------------- | ---- | ------ | ----------- |
 | WITH_CSR       |      | 1      |             |
@@ -9,6 +12,7 @@
 | RESET_STRATEGY |      | "MINI" |             |
 | RESET_PC       |      | 32'd0  |             |
 ## Ports
+
 | Port name      | Direction | Type                | Description |
 | -------------- | --------- | ------------------- | ----------- |
 | clk            | input     | wire                |             |
@@ -60,6 +64,7 @@
 | i_dbus_rdt     | input     | wire [31:0]         |             |
 | i_dbus_ack     | input     | wire                |             |
 ## Signals
+
 | Name             | Type       | Description |
 | ---------------- | ---------- | ----------- |
 | rd_addr          | wire [4:0] |             |
@@ -143,15 +148,13 @@
 | pc               | reg [31:0] |             |
 | rs_en            | wire       |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
-- unnamed: _( @(o_ibus_adr) )_
-verilator lint_off COMBDLY */
-
+- unnamed: ( @(posedge clk) )
+- unnamed: ( @(o_ibus_adr) )
 **Description**
 verilator lint_off COMBDLY */
 
 ## Instantiations
+
 - state: serv_state
 - decode: serv_decode
 - immdec: serv_immdec

@@ -1,13 +1,17 @@
 # Entity: usbdev
+
 ## Diagram
+
 ![Diagram](usbdev.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  USB Full-Speed Device Interface (usbdev).
  
 ## Ports
+
 | Port name              | Direction | Type        | Description                                                  |
 | ---------------------- | --------- | ----------- | ------------------------------------------------------------ |
 | clk_i                  | input     |             |                                                              |
@@ -66,6 +70,7 @@ Copyright lowRISC contributors.
 | intr_rx_bitstuff_err_o | output    |             |                                                              |
 | intr_frame_o           | output    |             |                                                              |
 ## Signals
+
 | Name                      | Type                      | Description                                                     |
 | ------------------------- | ------------------------- | --------------------------------------------------------------- |
 | reg2hw                    | usbdev_reg2hw_t           |                                                                 |
@@ -175,6 +180,7 @@ Copyright lowRISC contributors.
 | tgl_sync_d1               | logic                     |                                                                 |
 | tgl_en                    | logic                     |                                                                 |
 ## Constants
+
 | Name           | Type | Value                                       | Description                                                               |
 | -------------- | ---- | ------------------------------------------- | ------------------------------------------------------------------------- |
 | SramDw         | int  | 32                                          | Places packing bytes to SRAM assume this                                  |
@@ -189,77 +195,50 @@ Copyright lowRISC contributors.
 | RXFifoWidth    | int  | NBufWidth + (1+SizeWidth)         +  4  + 1 | RX fifo stores              buf# +  size(0-MaxPktSizeByte)  + EP# + Type  |
 | RXFifoDepth    | int  | 4                                           |                                                                           |
 ## Processes
-- proc_map_rxenable: _(  )_
-RX enables
-
+- proc_map_rxenable: (  )
 **Description**
 RX enables
 
-- proc_map_stall: _(  )_
-STALL for both directions
-
+- proc_map_stall: (  )
 **Description**
 STALL for both directions
 
-- proc_map_iso: _(  )_
-CDC: ok, quasi-static
-
+- proc_map_iso: (  )
 **Description**
 CDC: ok, quasi-static
 
-- proc_map_buf_size: _(  )_
-CDC: flop_2sync for ready bit covers others so assigns are ok
-
+- proc_map_buf_size: (  )
 **Description**
 CDC: flop_2sync for ready bit covers others so assigns are ok
 
-- proc_map_rdy_reg2hw: _(  )_
-
-- proc_data_toggle_clear_qe: _(  )_
-CDC: We synchronize the qe (write pulse) and assume that the
-rest of the register remains stable
-
+- proc_map_rdy_reg2hw: (  )
+- proc_data_toggle_clear_qe: (  )
 **Description**
 CDC: We synchronize the qe (write pulse) and assume that the
 rest of the register remains stable
 
-- proc_usb_data_toggle_clear: _(  )_
-
-- unnamed: _(  )_
-
-- proc_map_sent: _(  )_
-
-- unnamed: _( @(posedge clk_usb_48mhz_i or negedge rst_usb_48mhz_ni) )_
-
-- unnamed: _(  )_
-
-- proc_map_rdy_hw2reg: _(  )_
-
-- proc_map_pend: _(  )_
-Update the pending bit by copying the ready bit that is about to clear
-
+- proc_usb_data_toggle_clear: (  )
+- unnamed: (  )
+- proc_map_sent: (  )
+- unnamed: ( @(posedge clk_usb_48mhz_i or negedge rst_usb_48mhz_ni) )
+- unnamed: (  )
+- proc_map_rdy_hw2reg: (  )
+- proc_map_pend: (  )
 **Description**
 Update the pending bit by copying the ready bit that is about to clear
 
-- proc_stall_tieoff: _(  )_
-Clear the stall flag when a SETUP is received
-CDC: usb_out_endpoint is synchronized implicitly by
-setup_received, as it is stable
-
+- proc_stall_tieoff: (  )
 **Description**
 Clear the stall flag when a SETUP is received
 CDC: usb_out_endpoint is synchronized implicitly by
 setup_received, as it is stable
 
-- unnamed: _( @(posedge clk_usb_48mhz_i or negedge rst_usb_48mhz_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_usb_48mhz_i or negedge rst_usb_48mhz_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - usbdev_avfifo: prim_fifo_async
 - usbdev_rxfifo: prim_fifo_async
 - usbdev_sync_ep_cfg: prim_flop_2sync

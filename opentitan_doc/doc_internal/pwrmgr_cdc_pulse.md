@@ -1,7 +1,10 @@
 # Entity: pwrmgr_cdc_pulse
+
 ## Diagram
+
 ![Diagram](pwrmgr_cdc_pulse.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  pulse is used.
  
 ## Ports
+
 | Port name   | Direction | Type | Description |
 | ----------- | --------- | ---- | ----------- |
 | clk_slow_i  | input     |      |             |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | stop_i      | input     |      |             |
 | pulse_o     | output    |      |             |
 ## Signals
+
 | Name           | Type  | Description |
 | -------------- | ----- | ----------- |
 | slow_toggle_pq | logic |             |
@@ -31,22 +36,17 @@ Copyright lowRISC contributors.
 | toggle         | logic |             |
 | valid          | logic |             |
 ## Processes
-- unnamed: _( @(posedge clk_slow_i or negedge rst_slow_ni) )_
-toggle pulse generated on positive edge
-
+- unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
 **Description**
 toggle pulse generated on positive edge
 
-- unnamed: _( @(negedge clk_slow_i or negedge rst_slow_ni) )_
-toggle pulse generated on negative edge
-
+- unnamed: ( @(negedge clk_slow_i or negedge rst_slow_ni) )
 **Description**
 toggle pulse generated on negative edge
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - i_pos_sync: prim_flop_2sync
 - i_neg_sync: prim_flop_2sync

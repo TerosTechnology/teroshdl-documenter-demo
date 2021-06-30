@@ -1,17 +1,22 @@
 # Entity: entropy_src_core
+
 ## Diagram
+
 ![Diagram](entropy_src_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: entropy_src core module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | EsFifoDepth  | int  | 4     |             |
 ## Ports
+
 | Port name                    | Direction | Type                    | Description                    |
 | ---------------------------- | --------- | ----------------------- | ------------------------------ |
 | clk_i                        | input     |                         |                                |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | intr_es_observe_fifo_ready_o | output    |                         |                                |
 | intr_es_fatal_err_o          | output    |                         |                                |
 ## Signals
+
 | Name                              | Type                            | Description |
 | --------------------------------- | ------------------------------- | ----------- |
 | seed_value                        | logic [RngBusWidth-1:0]         |             |
@@ -342,6 +348,7 @@ Copyright lowRISC contributors.
 | rng_rdy_q                         | logic                           |             |
 | rng_rdy_d                         | logic                           |             |
 ## Constants
+
 | Name                  | Type | Value                    | Description                            |
 | --------------------- | ---- | ------------------------ | -------------------------------------- |
 | Clog2EsFifoDepth      | int  | $clog2(EsFifoDepth)      |                                        |
@@ -359,9 +366,9 @@ Copyright lowRISC contributors.
 | Sha3ReuseShare        | bit  | 0                        | Needs EnMasking active to take effect  |
 | Sha3Share             | int  | logic [RngBusWidth-1:0]  | derived parameter                      |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_intr_hw_es_entropy_valid: prim_intr_hw
 - u_intr_hw_es_health_test_failed: prim_intr_hw
 - u_intr_hw_es_observe_fifo_ready: prim_intr_hw

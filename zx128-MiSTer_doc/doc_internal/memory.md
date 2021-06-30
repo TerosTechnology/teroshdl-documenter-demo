@@ -1,7 +1,10 @@
 # Entity: memory
+
 ## Diagram
+
 ![Diagram](memory.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clock     | input     | wire       |             |
@@ -31,6 +34,7 @@
 | ramBa     | output    | wire[ 1:0] |             |
 | ramA      | output    | wire[12:0] |             |
 ## Signals
+
 | Name     | Type        | Description |
 | -------- | ----------- | ----------- |
 | vduPage  | reg         |             |
@@ -61,11 +65,10 @@
 | dprA1    | wire [13:0] |             |
 | dprA2    | wire [13:0] |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )
+- unnamed: ( @(posedge clock) )
 ## Instantiations
+
 - Rom: rom
 - RomESXDOS: rom
 - SDram: sdram

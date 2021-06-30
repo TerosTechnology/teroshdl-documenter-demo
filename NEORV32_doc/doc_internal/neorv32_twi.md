@@ -1,7 +1,10 @@
 # Entity: neorv32_twi
+
 ## Diagram
+
 ![Diagram](neorv32_twi.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Two-Wire Interface Controller (TWI) >>                                           #
 # ********************************************************************************************* #
@@ -40,6 +43,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Ports
+
 | Port name   | Direction | Type                           | Description            |
 | ----------- | --------- | ------------------------------ | ---------------------- |
 | clk_i       | in        | std_ulogic                     | global clock line      |
@@ -55,6 +59,7 @@
 | twi_scl_io  | inout     | std_logic                      | serial clock line      |
 | irq_o       | out       | std_ulogic                     | transfer done IRQ      |
 ## Signals
+
 | Name           | Type                           | Description             |
 | -------------- | ------------------------------ | ----------------------- |
 | acc_en         | std_ulogic                     | module access enable    |
@@ -78,6 +83,7 @@
 | twi_scl_i      | std_ulogic                     |                         |
 |      twi_scl_o | std_ulogic                     |                         |
 ## Constants
+
 | Name              | Type    | Value                      | Description                                      |
 | ----------------- | ------- | -------------------------- | ------------------------------------------------ |
 | hi_abb_c          | natural |  index_size_f(io_size_c)-1 | high address boundary bit                        |
@@ -93,34 +99,22 @@
 | ctrl_twi_ack_c    | natural |  30                        | r/-: Set if ACK received                         |
 | ctrl_twi_busy_c   | natural |  31                        | r/-: Set if TWI unit is busy                     |
 ## Processes
-- rw_access: _( clk_i )_
-Read/Write Access ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rw_access: ( clk_i )
 **Description**
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- clock_phase_gen: _( clk_i )_
-generate four non-overlapping clock ticks at twi_clk/4 --
-
+- clock_phase_gen: ( clk_i )
 **Description**
 generate four non-overlapping clock ticks at twi_clk/4 --
 
-- twi_rtx_unit: _( clk_i )_
-last step
-TWI Transceiver ------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- twi_rtx_unit: ( clk_i )
 **Description**
 last step
 TWI Transceiver ------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- clock_stretching: _( ctrl, arbiter, twi_scl_o, twi_scl_i_ff1 )_
-Clock Stretching Detector --------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- clock_stretching: ( ctrl, arbiter, twi_scl_o, twi_scl_i_ff1 )
 **Description**
 Clock Stretching Detector --------------------------------------------------------------
 -------------------------------------------------------------------------------------------

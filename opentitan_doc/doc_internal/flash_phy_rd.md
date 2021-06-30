@@ -1,7 +1,10 @@
 # Entity: flash_phy_rd
+
 ## Diagram
+
 ![Diagram](flash_phy_rd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -25,6 +28,7 @@ Copyright lowRISC contributors.
  de-scramble is then kicked off.
  
 ## Ports
+
 | Port name          | Direction | Type                 | Description                                   |
 | ------------------ | --------- | -------------------- | --------------------------------------------- |
 | clk_i              | input     |                      |                                               |
@@ -62,6 +66,7 @@ Copyright lowRISC contributors.
 | ecc_multi_err_o    | output    |                      |                                               |
 | ecc_addr_o         | output    | [BusBankAddrW-1:0]   |                                               |
 ## Signals
+
 | Name                 | Type                  | Description                                                                                                                                                                                                                                                                  |
 | -------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | buf_en_q             | logic                 | internal buffer enable                                                                                                                                                                                                                                                       |
@@ -123,29 +128,22 @@ Copyright lowRISC contributors.
 | buf_rsp_match        | logic [NumBuf-1:0]    |                                                                                                                                                                                                                                                                              |
 | buf_rsp_data         | logic [DataWidth-1:0] |                                                                                                                                                                                                                                                                              |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-buffer enable cannot be changed unless the entire read pipeline is idle
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 buffer enable cannot be changed unless the entire read pipeline is idle
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-generate the mask calculation request
-mask calculation is done in parallel to the read stage
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 generate the mask calculation request
 mask calculation is done in parallel to the read stage
 
-- unnamed: _(  )_
-select among the buffers
-
+- unnamed: (  )
 **Description**
 select among the buffers
 
 ## Instantiations
+
 - i_valid_random: prim_arbiter_tree
 - i_rsp_order_fifo: prim_fifo_sync
 **Description**

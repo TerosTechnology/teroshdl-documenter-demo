@@ -1,7 +1,10 @@
 # Entity: prim_dom_and_2share
+
 ## Diagram
+
 ![Diagram](prim_dom_and_2share.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -24,11 +27,13 @@ Copyright lowRISC contributors.
     = a1&b1  + (0              + a1&b0 + z0)
  
 ## Generics
+
 | Generic name | Type | Value | Description                        |
 | ------------ | ---- | ----- | ---------------------------------- |
 | DW           | int  | 64    | Input width                        |
 | EnNegedge    | int  | 0     | Enable negedge of clk for register |
 ## Ports
+
 | Port name | Direction | Type     | Description                  |
 | --------- | --------- | -------- | ---------------------------- |
 | clk_i     | input     |          |                              |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | q0_o      | output    | [DW-1:0] | share0 of q                  |
 | q1_o      | output    | [DW-1:0] | share1 of q                  |
 ## Signals
+
 | Name   | Type           | Description |
 | ------ | -------------- | ----------- |
 | t0_d   | logic [DW-1:0] |             |

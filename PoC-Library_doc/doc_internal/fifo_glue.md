@@ -1,7 +1,10 @@
 # Entity: fifo_glue
+
 ## Diagram
+
 ![Diagram](fifo_glue.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,10 +30,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | D_BITS       | positive |       | Data Width  |
 ## Ports
+
 | Port name | Direction | Type                                | Description       |
 | --------- | --------- | ----------------------------------- | ----------------- |
 | clk       | in        | std_logic                           | Clock             |
@@ -42,6 +47,7 @@ limitations under the License.
 | do        | out       | std_logic_vector(D_BITS-1 downto 0) | Data Output       |
 | got       | in        | std_logic                           | Data Consumed     |
 ## Signals
+
 | Name   | Type                                | Description     |
 | ------ | ----------------------------------- | --------------- |
 | A      | std_logic_vector(D_BITS-1 downto 0) |                 |
@@ -49,5 +55,4 @@ limitations under the License.
 | Full   | std_logic                           | State Registers |
 |  Avail | std_logic                           | State Registers |
 ## Processes
-- unnamed: _( clk )_
-
+- unnamed: ( clk )

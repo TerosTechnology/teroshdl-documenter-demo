@@ -1,19 +1,24 @@
 # Entity: lc_ctrl_signal_decode
+
 ## Diagram
+
 ![Diagram](lc_ctrl_signal_decode.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Life cycle signal decoder and sender module.
  
 ## Generics
+
 | Generic name                 | Type            | Value                | Description                                                 |
 | ---------------------------- | --------------- | -------------------- | ----------------------------------------------------------- |
 | RndCnstLcKeymgrDivInvalid    | lc_keymgr_div_t | LcKeymgrDivWidth'(0) | Random netlist constants SCRAP, RAW, TEST_LOCKED*, INVALID  |
 | RndCnstLcKeymgrDivTestDevRma | lc_keymgr_div_t | LcKeymgrDivWidth'(1) | TEST_UNLOCKED*, DEV, RMA                                    |
 | RndCnstLcKeymgrDivProduction | lc_keymgr_div_t | LcKeymgrDivWidth'(2) | PROD, PROD_END                                              |
 ## Ports
+
 | Port name                  | Direction | Type            | Description                                  |
 | -------------------------- | --------- | --------------- | -------------------------------------------- |
 | clk_i                      | input     |                 |                                              |
@@ -36,6 +41,7 @@ Copyright lowRISC contributors.
 | lc_escalate_en_o           | output    | lc_tx_t         |                                              |
 | lc_keymgr_div_o            | output    | lc_keymgr_div_t | State group diversification value for keymgr |
 ## Signals
+
 | Name                     | Type            | Description |
 | ------------------------ | --------------- | ----------- |
 | lc_test_or_rma           | lc_tx_t         |             |
@@ -53,9 +59,9 @@ Copyright lowRISC contributors.
 | lc_keymgr_div_d          | lc_keymgr_div_t |             |
 | lc_keymgr_div_q          | lc_keymgr_div_t |             |
 ## Processes
-- p_lc_signal_decode: _(  )_
-
+- p_lc_signal_decode: (  )
 ## Instantiations
+
 - u_prim_lc_sender_test_or_rma: prim_lc_sender
 - u_prim_lc_sender_dft_en: prim_lc_sender
 - u_prim_lc_sender_nvm_debug_en: prim_lc_sender

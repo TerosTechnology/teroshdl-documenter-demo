@@ -1,7 +1,10 @@
 # Entity: cache_replacement_policy
+
 ## Diagram
+
 ![Diagram](cache_replacement_policy.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -60,11 +63,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type     | Value | Description |
 | ------------------ | -------- | ----- | ----------- |
 | REPLACEMENT_POLICY | string   | "LRU" |             |
 | CACHE_WAYS         | positive | 32    |             |
 ## Ports
+
 | Port name  | Direction | Type                                                  | Description                      |
 | ---------- | --------- | ----------------------------------------------------- | -------------------------------- |
 | Clock      | in        | std_logic                                             |                                  |
@@ -76,6 +81,7 @@ limitations under the License.
 | Invalidate | in        | std_logic                                             |                                  |
 | HitWay     | in        | std_logic_vector(log2ceilnz(CACHE_WAYS) - 1 downto 0) |                                  |
 ## Constants
+
 | Name     | Type     | Value                   | Description |
 | -------- | -------- | ----------------------- | ----------- |
 | KEY_BITS | positive |  log2ceilnz(CACHE_WAYS) |             |

@@ -1,12 +1,16 @@
 # Entity: tlul_err
+
 ## Diagram
+
 ![Diagram](tlul_err.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name | Direction | Type     | Description |
 | --------- | --------- | -------- | ----------- |
 | clk_i     | input     |          |             |
@@ -14,6 +18,7 @@ Copyright lowRISC contributors.
 | tl_i      | input     | tl_h2d_t |             |
 | err_o     | output    |          |             |
 ## Signals
+
 | Name             | Type           | Description                                      |
 | ---------------- | -------------- | ------------------------------------------------ |
 | opcode_allowed   | logic          |                                                  |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | addr_sz_chk      | begin          |                                                  |
 | end              | end            |                                                  |
 ## Constants
+
 | Name  | Type | Value                | Description |
 | ----- | ---- | -------------------- | ----------- |
 | IW    | int  | $bits(tl_i.a_source) |             |

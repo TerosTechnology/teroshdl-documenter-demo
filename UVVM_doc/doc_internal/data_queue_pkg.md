@@ -1,5 +1,7 @@
 # Package: data_queue_pkg
+
 ## Types
+
 | Name                   | Type | Description |
 | ---------------------- | ---- | ----------- |
 | t_buffer_natural_array |      |             |

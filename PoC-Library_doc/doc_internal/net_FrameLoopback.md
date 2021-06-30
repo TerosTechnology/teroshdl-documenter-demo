@@ -1,7 +1,10 @@
 # Entity: FrameLoopback
+
 ## Diagram
+
 ![Diagram](net_FrameLoopback.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DATA_BW      | positive | 8     |             |
 | META_BW      | natural  | 0     |             |
 ## Ports
+
 | Port name | Direction | Type                                   | Description |
 | --------- | --------- | -------------------------------------- | ----------- |
 | Clock     | in        | std_logic                              |             |
@@ -46,6 +51,7 @@ limitations under the License.
 | Out_EOF   | out       | std_logic                              |             |
 | Out_Ack   | in        | std_logic                              |             |
 ## Signals
+
 | Name                          | Type                                                   | Description |
 | ----------------------------- | ------------------------------------------------------ | ----------- |
 | Meta_rst                      | std_logic                                              |             |
@@ -59,6 +65,7 @@ limitations under the License.
 | Pipe_Meta_DestMACAddress_Data | std_logic_vector(TX_Funnel_DestIPv6Address_Data'range) |             |
 | Pipe_Meta_EthType             | std_logic_vector(TX_Funnel_Payload_Type'range)         |             |
 ## Constants
+
 | Name               | Type     | Value | Description               |
 | ------------------ | -------- | ----- | ------------------------- |
 | META_STREAMID_SRC  | natural  |  0    |                           |
@@ -66,4 +73,5 @@ limitations under the License.
 | META_STREAMID_type | natural  |  2    |                           |
 | META_STREAMS       | positive |  3    | Source, Destination, Type |
 ## Instantiations
+
 - Pipe: PoC.stream_Buffer

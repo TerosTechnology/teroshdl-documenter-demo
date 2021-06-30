@@ -1,7 +1,10 @@
 # Entity: prim_packer_fpv
+
 ## Diagram
+
 ![Diagram](prim_packer_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,11 +12,13 @@ Copyright lowRISC contributors.
  To reduce the runtime for prim_packer, we limited the width parameter.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | MaxInW       | int unsigned | 64    |             |
 | MaxOutW      | int unsigned | 64    |             |
 ## Ports
+
 | Port name    | Direction | Type          | Description |
 | ------------ | --------- | ------------- | ----------- |
 | clk_i        | input     |               |             |
@@ -29,4 +34,5 @@ Copyright lowRISC contributors.
 | flush_i      | input     |               |             |
 | flush_done_o | output    |               |             |
 ## Instantiations
+
 - i_prim_packer_max: prim_packer

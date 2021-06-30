@@ -1,7 +1,10 @@
 # Entity: alert_handler_esc_timer_assert_fpv
+
 ## Diagram
+
 ![Diagram](alert_handler_esc_timer_assert_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,10 +12,12 @@ Copyright lowRISC contributors.
  Intended to be used with a formal tool.
  
 ## Generics
+
 | Generic name    | Type                                           | Value | Description                         |
 | --------------- | ---------------------------------------------- | ----- | ----------------------------------- |
 | state_encodings | logic [alert_handler_esc_timer.StateWidth-1:0] |       | check escalation cnt and state out  |
 ## Ports
+
 | Port name     | Direction | Type                          | Description |
 | ------------- | --------- | ----------------------------- | ----------- |
 | clk_i         | input     |                               |             |
@@ -31,6 +36,7 @@ Copyright lowRISC contributors.
 | esc_sig_req_o | input     | [N_ESC_SEV-1:0]               |             |
 | esc_state_o   | input     | cstate_e                      |             |
 ## Signals
+
 | Name                | Type          | Description                        |
 | ------------------- | ------------- | ---------------------------------- |
 | esc_sel             | logic [1:0]   | symbolic vars for phase map check  |
@@ -42,15 +48,14 @@ Copyright lowRISC contributors.
 | accu_fail_i         | timeout_cyc_i |                                    |
 |                     | inside        |                                    |
 ## Constants
+
 | Name               | Type         | Value     | Description                 |
 | ------------------ | ------------ | --------- | --------------------------- |
 | MAX_TIMEOUT_CYCLES | int unsigned | 10        | constrain the state-spaces  |
 | MAX_PHASE_CYCLES   | int unsigned | 10        |                             |
 | phases             | cstate_e     | undefined |                             |
 ## Processes
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-set registers
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 set registers
 

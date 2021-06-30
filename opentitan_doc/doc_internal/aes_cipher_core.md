@@ -1,7 +1,10 @@
 # Entity: aes_cipher_core
+
 ## Diagram
+
 ![Diagram](aes_cipher_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -71,6 +74,7 @@ Copyright lowRISC contributors.
  - KEY_SHARE0_7 32h'{ b31, b30, b29, b28 } .
  
 ## Generics
+
 | Generic name             | Type                   | Value                           | Description       |
 | ------------------------ | ---------------------- | ------------------------------- | ----------------- |
 | AES192Enable             | bit                    | 1                               |                   |
@@ -83,6 +87,7 @@ Copyright lowRISC contributors.
 | RndCnstMaskingLfsrSeed   | masking_lfsr_seed_t    | RndCnstMaskingLfsrSeedDefault   |                   |
 | RndCnstMskgChunkLfsrPerm | mskg_chunk_lfsr_perm_t | RndCnstMskgChunkLfsrPermDefault |                   |
 ## Ports
+
 | Port name          | Direction | Type                   | Description                              |
 | ------------------ | --------- | ---------------------- | ---------------------------------------- |
 | clk_i              | input     |                        |                                          |
@@ -113,6 +118,7 @@ Copyright lowRISC contributors.
 | key_init_i         | input     | [7:0]                  |                                          |
 | state_o            | output    | [3:0]                  |                                          |
 ## Signals
+
 | Name                | Type                                   | Description                                           |
 | ------------------- | -------------------------------------- | ----------------------------------------------------- |
 | state_d             | logic               [3:0][3:0][7:0]    | Signals                                               |
@@ -191,49 +197,37 @@ Copyright lowRISC contributors.
 | sp2v_sig_chk_raw    | logic  [NumSp2VSig-1:0][Sp2VWidth-1:0] |                                                       |
 | sp2v_sig_err        | logic  [NumSp2VSig-1:0]                |                                                       |
 ## Constants
+
 | Name        | Type         | Value           | Description                                                                                                                                                                                                                                                                                        |
 | ----------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NumShares   | int          | Masking ? 2 : 1 | derived parameter                                                                                                                                                                                                                                                                                  |
 | WidthPRDRow | int unsigned | 4*WidthPRDSBox  | When using a masked S-Box implementation other than Canright, we still select the 8 LSBs of the per-S-Box PRD to form the input data mask of the corresponding byte. We do this to distribute the input data masks over all LFSR chunks of the masking PRNG. We do the extraction on a row basis.  |
 | NumSp2VSig  | int unsigned | 3               | If any sparsely encoded signal becomes invalid, the cipher core further immediately de-asserts the out_valid_o signal to prevent any data from being released. We use vectors of sparsely encoded signals to reduce code duplication.                                                              |
 ## Processes
-- state_mux: _(  )_
-State registers
-
+- state_mux: (  )
 **Description**
 State registers
 
-- state_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- add_round_key_in_mux: _(  )_
-
-- key_full_mux: _(  )_
-Full Key registers
-
+- state_reg: ( @(posedge clk_i or negedge rst_ni) )
+- add_round_key_in_mux: (  )
+- key_full_mux: (  )
 **Description**
 Full Key registers
 
-- key_full_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- key_dec_mux: _(  )_
-Decryption Key registers
-
+- key_full_reg: ( @(posedge clk_i or negedge rst_ni) )
+- key_dec_mux: (  )
 **Description**
 Decryption Key registers
 
-- key_dec_reg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- round_key_mux: _(  )_
-
-- reg_sp_enc_err: _( @(posedge clk_i or negedge rst_ni) )_
-We need to register the collected error signal to avoid circular loops in the cipher core
-controller related to out_valid_o and detecting errors in state_we_o and sub_bytes_out_ack.
-
+- key_dec_reg: ( @(posedge clk_i or negedge rst_ni) )
+- round_key_mux: (  )
+- reg_sp_enc_err: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 We need to register the collected error signal to avoid circular loops in the cipher core
 controller related to out_valid_o and detecting errors in state_we_o and sub_bytes_out_ack.
 
 ## Instantiations
+
 - u_aes_sub_bytes: aes_sub_bytes
 **Description**
 Cipher data path

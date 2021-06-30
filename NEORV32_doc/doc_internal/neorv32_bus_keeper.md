@@ -1,7 +1,10 @@
 # Entity: neorv32_bus_keeper
+
 ## Diagram
+
 ![Diagram](neorv32_bus_keeper.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Bus Keeper (BUSKEEPER) >>                                                        #
 # ********************************************************************************************* #
@@ -46,6 +49,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name      | Type    | Value  | Description                                            |
 | ----------------- | ------- | ------ | ------------------------------------------------------ |
 | MEM_EXT_EN        | boolean | false  | implement external memory bus interface?               |
@@ -54,6 +58,7 @@
 | MEM_INT_DMEM_EN   | boolean | true   | implement processor-internal data memory               |
 | MEM_INT_DMEM_SIZE | natural | 8*1024 | size of processor-internal data memory in bytes        |
 ## Ports
+
 | Port name | Direction | Type                           | Description                          |
 | --------- | --------- | ------------------------------ | ------------------------------------ |
 | clk_i     | in        | std_ulogic                     | global clock line                    |
@@ -65,20 +70,19 @@
 | err_i     | in        | std_ulogic                     | transfer error from bus system       |
 | err_o     | out       | std_ulogic                     | bus error                            |
 ## Signals
+
 | Name         | Type           | Description |
 | ------------ | -------------- | ----------- |
 | access_check | access_check_t |             |
 | control      | control_t      |             |
 ## Types
+
 | Name           | Type | Description   |
 | -------------- | ---- | ------------- |
 | access_check_t |      |               |
 | control_t      |      | controller -- |
 ## Processes
-- keeper_control: _( rstn_i, clk_i )_
-Keeper ---------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- keeper_control: ( rstn_i, clk_i )
 **Description**
 Keeper ---------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

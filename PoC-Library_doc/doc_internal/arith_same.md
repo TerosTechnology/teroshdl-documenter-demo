@@ -1,7 +1,10 @@
 # Entity: arith_same
+
 ## Diagram
+
 ![Diagram](arith_same.svg "Diagram")
 ## Description
+
 EMACS settings: -*-	tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -30,20 +33,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | N            | positive |       | Input width |
 ## Ports
+
 | Port name | Direction | Type                           | Description            |
 | --------- | --------- | ------------------------------ | ---------------------- |
 | g         | in        | std_logic                      | Guard Input (!g => !y) |
 | x         | in        | std_logic_vector(N-1 downto 0) | Input Vector           |
 | y         | out       | std_logic                      | All-same Output        |
 ## Signals
+
 | Name | Type                           | Description |
 | ---- | ------------------------------ | ----------- |
 | p    | std_logic_vector(M-1 downto 0) |             |
 ## Constants
+
 | Name     | Type          | Value                | Description          |
 | -------- | ------------- | -------------------- | -------------------- |
 | DEV_INFO | T_DEVICE_INFO |  DEVICE_INFO         |                      |

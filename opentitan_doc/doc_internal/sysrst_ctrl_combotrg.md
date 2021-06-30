@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_combotrg
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_combotrg.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description sysrst_ctrl combo trigger  module
  
 ## Ports
+
 | Port name   | Direction | Type | Description |
 | ----------- | --------- | ---- | ----------- |
 | cfg_in0_sel | input     |      |             |
@@ -23,9 +27,9 @@ Copyright lowRISC contributors.
 | trigger_h_o | output    |      |             |
 | trigger_l_o | output    |      |             |
 ## Signals
+
 | Name          | Type        | Description |
 | ------------- | ----------- | ----------- |
 | cfg_input_sel | logic [4:0] |             |
 ## Processes
-- trigger_combo: _(  )_
-
+- trigger_combo: (  )

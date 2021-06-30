@@ -1,13 +1,17 @@
 # Entity: hmac_core
+
 ## Diagram
+
 ![Diagram](hmac_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  HMAC Core implementation
  
 ## Ports
+
 | Port name          | Direction | Type       | Description                  |
 | ------------------ | --------- | ---------- | ---------------------------- |
 | clk_i              | input     |            |                              |
@@ -36,6 +40,7 @@ Copyright lowRISC contributors.
 | sha_message_length | output    | [63:0]     |                              |
 | idle               | output    |            |                              |
 ## Signals
+
 | Name                  | Type                                   | Description                                           |
 | --------------------- | -------------------------------------- | ----------------------------------------------------- |
 | hash_start            | logic                                  | generated from internal state machine                 |
@@ -59,6 +64,7 @@ Copyright lowRISC contributors.
 | txcnt_eq_blksz        | logic                                  |                                                       |
 | reg_hash_process_flag | logic                                  |                                                       |
 ## Constants
+
 | Name          | Type                  | Value                      | Description |
 | ------------- | --------------------- | -------------------------- | ----------- |
 | BlockSize     | int unsigned          | 512                        |             |
@@ -67,6 +73,7 @@ Copyright lowRISC contributors.
 | BlockSize64   | bit [63:0]            | undefined                  |             |
 | BlockSizeBSB  | bit [BlockSizeBits:0] | BlockSize[BlockSizeBits:0] |             |
 ## Types
+
 | Name         | Type                                                                                                                                                           | Description |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | sel_rdata_t  | enum logic [1:0] {     SelIPad,     SelOPad,     SelFifo   }                                                                                                   |             |
@@ -74,13 +81,7 @@ Copyright lowRISC contributors.
 | round_t      | enum logic {     Inner,       Outer      }                                                                                                                     |             |
 | st_e         | enum logic [2:0] {     StIdle,     StIPad,     StMsg,                   StPushToMsgFifo,         StWaitResp,              StOPad,     StDone                 } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-txcount
-Looks like txcount can be removed entirely here in hmac_core
-In the first round (InnerPaddedKey), it can just watch process and hash_done
-In the second round, it only needs count 256 bits for hash digest to trigger
-hash_process to SHA2
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 txcount
 Looks like txcount can be removed entirely here in hmac_core
@@ -88,17 +89,11 @@ In the first round (InnerPaddedKey), it can just watch process and hash_done
 In the second round, it only needs count 256 bits for hash digest to trigger
 hash_process to SHA2
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-reg_hash_process trigger logic
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 reg_hash_process trigger logic
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- state_ff: _( @(posedge clk_i or negedge rst_ni) )_
-
-- next_state: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- state_ff: ( @(posedge clk_i or negedge rst_ni) )
+- next_state: (  )

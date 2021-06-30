@@ -1,15 +1,20 @@
 # Entity: jt49_bus
+
 ## Diagram
+
 ![Diagram](jt49_bus.svg "Diagram")
 ## Description
+
  Th
  This is a wrapper with the BDIR/BC1 pins    
  
 ## Generics
+
 | Generic name | Type  | Value | Description |
 | ------------ | ----- | ----- | ----------- |
 | COMP         | [1:0] | 2'b00 |             |
 ## Ports
+
 | Port name | Direction | Type  | Description                               |
 | --------- | --------- | ----- | ----------------------------------------- |
 | rst_n     | input     |       | note that input ports are not multiplexed |
@@ -24,6 +29,7 @@
 | B         | output    | [7:0] |                                           |
 | C         | output    | [7:0] |                                           |
 ## Signals
+
 | Name      | Type      | Description |
 | --------- | --------- | ----------- |
 | wr_n      | reg       |             |
@@ -32,9 +38,9 @@
 | addr_ok   | reg       |             |
 | din_latch | reg [7:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
+- unnamed: ( @(posedge clk) )
 ## Instantiations
+
 - u_jt49: jt49
 **Description**
 note that input ports are not multiplexed

@@ -1,7 +1,10 @@
 # Entity: sync_Strobe
+
 ## Diagram
+
 ![Diagram](sync_Strobe.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -39,12 +42,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name        | Type              | Value                 | Description                                 |
 | ------------------- | ----------------- | --------------------- | ------------------------------------------- |
 | BITS                | positive          | 1                     | number of bit to be synchronized            |
 | GATED_INPUT_BY_BUSY | boolean           | TRUE                  | use gated input (by busy signal)            |
 | SYNC_DEPTH          | T_MISC_SYNC_DEPTH | T_MISC_SYNC_DEPTH'low | generate SYNC_DEPTH many stages, at least 2 |
 ## Ports
+
 | Port name | Direction | Type                                | Description                  |
 | --------- | --------- | ----------------------------------- | ---------------------------- |
 | Clock1    | in        | std_logic                           | <Clock>  input clock domain  |
@@ -53,6 +58,7 @@ limitations under the License.
 | Output    | out       | std_logic_vector(BITS - 1 downto 0) | @Clock2:  output bits        |
 | Busy      | out       | std_logic_vector(BITS - 1 downto 0) | @Clock1:  busy bits          |
 ## Signals
+
 | Name         | Type                                | Description |
 | ------------ | ----------------------------------- | ----------- |
 | syncClk1_In  | std_logic_vector(BITS - 1 downto 0) |             |
@@ -60,5 +66,6 @@ limitations under the License.
 | syncClk2_In  | std_logic_vector(BITS - 1 downto 0) |             |
 | syncClk2_Out | std_logic_vector(BITS - 1 downto 0) |             |
 ## Instantiations
+
 - syncClk2: PoC.sync_Bits
 - syncClk1: PoC.sync_Bits

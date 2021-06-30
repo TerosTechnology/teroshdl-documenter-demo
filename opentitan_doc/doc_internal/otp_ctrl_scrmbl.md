@@ -1,7 +1,10 @@
 # Entity: otp_ctrl_scrmbl
+
 ## Diagram
+
 ![Diagram](otp_ctrl_scrmbl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -58,6 +61,7 @@ Copyright lowRISC contributors.
              - http://www.lightweightcrypto.org/present/present_ches2007.pdf
  
 ## Ports
+
 | Port name     | Direction | Type                   | Description                               |
 | ------------- | --------- | ---------------------- | ----------------------------------------- |
 | clk_i         | input     |                        |                                           |
@@ -73,6 +77,7 @@ Copyright lowRISC contributors.
 | escalate_en_i | input     |                        | escalation input and FSM error indication |
 | fsm_err_o     | output    |                        |                                           |
 ## Signals
+
 | Name                 | Type                                                       | Description                                                                                                                |
 | -------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | otp_enc_key_lut      | logic [2**$clog2(NumScrmblKeys)-1:0][ScrmblKeyWidth-1:0]   | Align these arrays to power of 2's to prevent X's in the muxing operations further below.                                  |
@@ -119,6 +124,7 @@ Copyright lowRISC contributors.
 | valid_q              | logic                                                      |                                                                                                                            |
 | state_raw_q          | logic [StateWidth-1:0]                                     | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name                | Type               | Value                      | Description |
 | ------------------- | ------------------ | -------------------------- | ----------- |
 | StateWidth          | int                | 9                          |             |
@@ -126,19 +132,18 @@ Copyright lowRISC contributors.
 | LastPresentRoundInt | int unsigned       | NumPresentRounds - 1       |             |
 | LastPresentRound    | bit [CntWidth-1:0] | undefined                  |             |
 ## Types
+
 | Name             | Type                                                                                                                                                                                                                                                                                                  | Description |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | data_state_sel_e | enum logic [2:0] {SelEncDataOut,                             SelDecDataOut,                             SelDigestState,                             SelEncDataOutXor,                             SelDataInput}                                                                                       |             |
 | key_state_sel_e  | enum logic [2:0] {SelDecKeyOut,                             SelEncKeyOut,                             SelDecKeyInit,                             SelEncKeyInit,                             SelDigestConst,                             SelDigestInput,                             SelDigestChained} |             |
 | state_e          | enum logic [StateWidth-1:0] {     IdleSt    = 9'b100010111,     DecryptSt = 9'b001010000,     EncryptSt = 9'b011001011,     DigestSt  = 9'b100101000,     ErrorSt   = 9'b010111101   }                                                                                                                |             |
 ## Processes
-- p_luts: _(  )_
-
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_luts: (  )
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_present_enc: prim_present
 - u_prim_present_dec: prim_present
 - u_state_regs: prim_flop

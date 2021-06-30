@@ -1,7 +1,10 @@
 # Entity: uvvm_demo_th
+
 ## Diagram
+
 ![Diagram](uvvm_demo_th.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,6 +15,7 @@ Note : Any functionality not explicitly described in the documentation is subjec
 Description   : See library quick reference (under 'doc') and README-file(s)
 Test harness entity
 ## Generics
+
 | Generic name                 | Type                 | Value              | Description                    |
 | ---------------------------- | -------------------- | ------------------ | ------------------------------ |
 | GC_CLK_PERIOD                | time                 | 10 ns              | Clock and bit period settings  |
@@ -22,6 +26,7 @@ Test harness entity
 | GC_ADDR_TX_READY             | unsigned(2 downto 0) | "011"              |                                |
 | GC_ACTIVITY_WATCHDOG_TIMEOUT | time                 | 50 * GC_BIT_PERIOD | Activity watchdog setting      |
 ## Signals
+
 | Name        | Type                         | Description             |
 | ----------- | ---------------------------- | ----------------------- |
 | clk         | std_logic                    | Clock and reset signals |
@@ -36,6 +41,7 @@ Test harness entity
 | uart_vvc_rx | std_logic                    | UART VVC signals        |
 | uart_vvc_tx | std_logic                    |                         |
 ## Constants
+
 | Name                            | Type                    | Value                                                                                                                                                                                                                                                           | Description  |
 | ------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | C_SBI_VVC                       | natural                 |  1                                                                                                                                                                                                                                                              |              |
@@ -47,17 +53,14 @@ Test harness entity
 | C_UART_MONITOR_INTERFACE_CONFIG | t_uart_interface_config |  (     bit_time         => GC_BIT_PERIOD,     num_data_bits    => 8,     parity           => PARITY_ODD,     num_stop_bits    => STOP_BITS_ONE     )                                                                                                            | UART Monitor |
 | C_UART_MONITOR_CONFIG           | t_uart_monitor_config   |  (     scope_name               => (1 to 12 => "UART Monitor", others => NUL),     msg_id_panel             => C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,     interface_config         => C_UART_MONITOR_INTERFACE_CONFIG,     transaction_display_time => 0 ns     ) |              |
 ## Processes
-- p_model: _(  )_
-Model
-  Subscribe to SBI and UART transaction infos, and send to Scoreboard or
-  send VVC commands based on transaction info content.
-
+- p_model: (  )
 **Description**
 Model
   Subscribe to SBI and UART transaction infos, and send to Scoreboard or
   send VVC commands based on transaction info content.
 
 ## Instantiations
+
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - i_uart: bitvis_uart.uart
 **Description**

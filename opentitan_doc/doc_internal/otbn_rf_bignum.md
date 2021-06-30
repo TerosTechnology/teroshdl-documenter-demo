@@ -1,16 +1,21 @@
 # Entity: otbn_rf_bignum
+
 ## Diagram
+
 ![Diagram](otbn_rf_bignum.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type      | Value     | Description                                               |
 | ------------ | --------- | --------- | --------------------------------------------------------- |
 | RegFile      | regfile_e | RegFileFF | Register file implementation selection, see otbn_pkg.sv.  |
 ## Ports
+
 | Port name          | Direction | Type          | Description |
 | ------------------ | --------- | ------------- | ----------- |
 | clk_i              | input     |               |             |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | rd_data_b_intg_o   | output    | [ExtWLEN-1:0] |             |
 | rd_data_err_o      | output    |               |             |
 ## Signals
+
 | Name                 | Type                           | Description |
 | -------------------- | ------------------------------ | ----------- |
 | wr_data_intg_mux_out | logic [ExtWLEN-1:0]            |             |

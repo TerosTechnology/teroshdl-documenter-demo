@@ -1,7 +1,10 @@
 # Entity: io_PulseWidthModulation
+
 ## Diagram
+
 ![Diagram](io_PulseWidthModulation.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -25,12 +28,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name   | Type     | Value   | Description |
 | -------------- | -------- | ------- | ----------- |
 | CLOCK_FREQ     | FREQ     | 100 MHz |             |
 | PWM_FREQ       | FREQ     | 1 kHz   |             |
 | PWM_RESOLUTION | positive | 8       |             |
 ## Ports
+
 | Port name | Direction | Type                                          | Description |
 | --------- | --------- | --------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                     |             |
@@ -38,6 +43,7 @@ limitations under the License.
 | PWMIn     | in        | std_logic_vector(PWM_RESOLUTION - 1 downto 0) |             |
 | PWMOut    | out       | std_logic                                     |             |
 ## Signals
+
 | Name                    | Type                                         | Description |
 | ----------------------- | -------------------------------------------- | ----------- |
 | PWM_FrequencyCounter_us | unsigned(PWM_FREQUENCYCOUNTER_BITS downto 0) |             |
@@ -45,6 +51,7 @@ limitations under the License.
 | PWM_PulseCounter_us     | unsigned(PWM_RESOLUTION - 1 downto 0)        |             |
 | PWM_PulseCounter_ov     | std_logic                                    |             |
 ## Constants
+
 | Name                      | Type     | Value                                            | Description            |
 | ------------------------- | -------- | ------------------------------------------------ | ---------------------- |
 | PWM_STEPS                 | positive |  2**PWM_RESOLUTION                               |                        |
@@ -52,7 +59,5 @@ limitations under the License.
 | PWM_FREQUENCYCOUNTER_MAX  | positive |  (CLOCK_FREQ+PWM_STEP_FREQ-1 Hz) / PWM_STEP_FREQ | division with round-up |
 | PWM_FREQUENCYCOUNTER_BITS | positive |  log2ceilnz(PWM_FREQUENCYCOUNTER_MAX)            |                        |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( Clock )

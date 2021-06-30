@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_cp_shifter
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_cp_shifter.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU Co-Processor: Shifter (CPU Core ISA) >>                                      #
 # ********************************************************************************************* #
@@ -40,10 +43,12 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name  | Type    | Value | Description                             |
 | ------------- | ------- | ----- | --------------------------------------- |
 | FAST_SHIFT_EN | boolean | false | use barrel shifter for shift operations |
 ## Ports
+
 | Port name | Direction | Type                                       | Description                     |
 | --------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i     | in        | std_ulogic                                 | global clock, rising edge       |
@@ -56,6 +61,7 @@
 | res_o     | out       | std_ulogic_vector(data_width_c-1 downto 0) | operation result                |
 | valid_o   | out       | std_ulogic                                 | data output valid               |
 ## Signals
+
 | Name         | Type                                                     | Description |
 | ------------ | -------------------------------------------------------- | ----------- |
 | shift_amount | std_ulogic_vector(index_size_f(data_width_c)-1 downto 0) |             |
@@ -63,6 +69,7 @@
 | bs_level     | bs_level_t                                               |             |
 | bs_result    | std_ulogic_vector(data_width_c-1 downto 0)               |             |
 ## Types
+
 | Name       | Type | Description       |
 | ---------- | ---- | ----------------- |
 | shifter_t  |      | serial shifter -- |

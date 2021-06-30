@@ -1,7 +1,10 @@
 # Entity: sync_Vector
+
 ## Diagram
+
 ![Diagram](sync_Vector.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -35,6 +38,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type              | Value                 | Description                                 |
 | ------------ | ----------------- | --------------------- | ------------------------------------------- |
 | MASTER_BITS  | positive          | 8                     | number of bit to be synchronized            |
@@ -42,6 +46,7 @@ limitations under the License.
 | INIT         | std_logic_vector  | x"00000000"           |                                             |
 | SYNC_DEPTH   | T_MISC_SYNC_DEPTH | T_MISC_SYNC_DEPTH'low | generate SYNC_DEPTH many stages, at least 2 |
 ## Ports
+
 | Port name | Direction | Type                                                      | Description             |
 | --------- | --------- | --------------------------------------------------------- | ----------------------- |
 | Clock1    | in        | std_logic                                                 | <Clock>  input clock    |
@@ -51,6 +56,7 @@ limitations under the License.
 | Busy      | out       | std_logic                                                 | @Clock1:  busy bit      |
 | Changed   | out       | std_logic                                                 | @Clock2:  changed bit   |
 ## Signals
+
 | Name         | Type                                                      | Description |
 | ------------ | --------------------------------------------------------- | ----------- |
 | D0           | std_logic_vector((MASTER_BITS + SLAVE_BITS) - 1 downto 0) |             |
@@ -66,18 +72,17 @@ limitations under the License.
 | syncClk2_In  | std_logic                                                 |             |
 | syncClk2_Out | std_logic                                                 |             |
 ## Constants
+
 | Name   | Type             | Value                                                   | Description |
 | ------ | ---------------- | ------------------------------------------------------- | ----------- |
 | INIT_I | std_logic_vector |  descend(INIT)((MASTER_BITS + SLAVE_BITS) - 1 downto 0) |             |
 ## Processes
-- unnamed: _( Clock1 )_
-
-- unnamed: _( Clock2 )_
-D-FF for level change detection (both edges)
-
+- unnamed: ( Clock1 )
+- unnamed: ( Clock2 )
 **Description**
 D-FF for level change detection (both edges)
 
 ## Instantiations
+
 - syncClk2: PoC.sync_Bits
 - syncClk1: PoC.sync_Bits

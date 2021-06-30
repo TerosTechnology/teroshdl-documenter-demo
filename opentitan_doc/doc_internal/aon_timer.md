@@ -1,16 +1,21 @@
 # Entity: aon_timer
+
 ## Diagram
+
 ![Diagram](aon_timer.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name                 | Direction | Type            | Description                    |
 | ------------------------- | --------- | --------------- | ------------------------------ |
 | clk_i                     | input     |                 |                                |
@@ -28,6 +33,7 @@ Copyright lowRISC contributors.
 | aon_timer_rst_req_o       | output    |                 |                                |
 | sleep_mode_i              | input     |                 | async domain                   |
 ## Signals
+
 | Name               | Type                       | Description             |
 | ------------------ | -------------------------- | ----------------------- |
 | tl_aon_h2d         | tlul_pkg::tl_h2d_t         | TLUL structs            |
@@ -54,14 +60,15 @@ Copyright lowRISC contributors.
 | aon_alerts         | logic [NumAlerts-1:0]      | Alert signals           |
 | sleep_mode         | logic                      |                         |
 ## Constants
+
 | Name     | Type | Value | Description |
 | -------- | ---- | ----- | ----------- |
 | AON_WKUP | int  | 0     |             |
 | AON_WDOG | int  | 1     |             |
 ## Processes
-- unnamed: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- unnamed: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - u_reg: aon_timer_reg_top
 **Description**
 registers instantiation

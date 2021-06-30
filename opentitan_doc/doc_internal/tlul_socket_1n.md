@@ -1,7 +1,10 @@
 # Entity: tlul_socket_1n
+
 ## Diagram
+
 ![Diagram](tlul_socket_1n.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -33,6 +36,7 @@ Copyright lowRISC contributors.
  The maximum value of N is 15
  
 ## Generics
+
 | Generic name | Type          | Value       | Description       |
 | ------------ | ------------- | ----------- | ----------------- |
 | N            | int unsigned  | 4           |                   |
@@ -46,6 +50,7 @@ Copyright lowRISC contributors.
 | N            | bit [N*4-1:0] | undefined   |                   |
 | NWD          | int unsigned  | $clog2(N+1) | derived parameter |
 ## Ports
+
 | Port name    | Direction | Type      | Description |
 | ------------ | --------- | --------- | ----------- |
 | clk_i        | input     |           |             |
@@ -56,6 +61,7 @@ Copyright lowRISC contributors.
 | tl_d_i       | input     |           |             |
 | dev_select_i | input     | [NWD-1:0] |             |
 ## Signals
+
 | Name                   | Type                     | Description                                                                                                                                                                                                    |
 | ---------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dev_select_t           | logic [NWD-1:0]          | Since our steering is done after potential FIFOing, we need to shove our device select bits into spare bits of reqfifo instantiate the host fifo, create intermediate bus 't' FIFO'd version of device select  |
@@ -71,18 +77,17 @@ Copyright lowRISC contributors.
 | tl_t_p                 | tlul_pkg::tl_d2h_t       |                                                                                                                                                                                                                |
 | hfifo_reqready         | logic                    | for the returning reqready, only look at the device we're addressing                                                                                                                                           |
 ## Constants
+
 | Name           | Type         | Value                    | Description           |
 | -------------- | ------------ | ------------------------ | --------------------- |
 | NWD            | int unsigned | $clog2(N+1)              | derived parameter     |
 | MaxOutstanding | int          | 2**top_pkg::TL_AIW       | Up to 256 ounstanding |
 | OutstandingW   | int          | $clog2(MaxOutstanding+1) |                       |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - fifo_h: tlul_fifo_sync
 - err_resp: tlul_err_resp

@@ -1,7 +1,10 @@
 # Entity: fifo_cc_got
+
 ## Diagram
+
 ![Diagram](fifo_cc_got.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -69,6 +72,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name   | Type     | Value | Description                      |
 | -------------- | -------- | ----- | -------------------------------- |
 | D_BITS         | positive |       | Data Width                       |
@@ -79,6 +83,7 @@ limitations under the License.
 | ESTATE_WR_BITS | natural  | 0     | Empty State Bits                 |
 | FSTATE_RD_BITS | natural  | 0     | Full State Bits                  |
 ## Ports
+
 | Port name | Direction | Type                                                 | Description            |
 | --------- | --------- | ---------------------------------------------------- | ---------------------- |
 | rst       | in        | std_logic                                            | Global Reset and Clock |
@@ -92,6 +97,7 @@ limitations under the License.
 | valid     | out       | std_logic                                            |                        |
 | fstate_rd | out       | std_logic_vector(imax(0, FSTATE_RD_BITS-1) downto 0) |                        |
 ## Signals
+
 | Name  | Type                        | Description                                     |
 | ----- | --------------------------- | ----------------------------------------------- |
 | IP0   | unsigned(A_BITS-1 downto 0) | Memory PointersActual Input and Output Pointers |
@@ -105,15 +111,13 @@ limitations under the License.
 | fulli | std_logic                   | Internal full and empty indicators              |
 | empti | std_logic                   |                                                 |
 ## Constants
+
 | Name   | Type    | Value                | Description |
 | ------ | ------- | -------------------- | ----------- |
 | A_BITS | natural |  log2ceil(MIN_DEPTH) |             |
 ## Processes
-- unnamed: _( clk )_
-
-- unnamed: _( IP0, OP0, fulli )_
-Fill State Computation (soft indicators)
-
+- unnamed: ( clk )
+- unnamed: ( IP0, OP0, fulli )
 **Description**
 Fill State Computation (soft indicators)
 

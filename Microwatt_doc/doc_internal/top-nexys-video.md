@@ -1,7 +1,10 @@
 # Entity: toplevel
+
 ## Diagram
+
 ![Diagram](top-nexys-video.svg "Diagram")
 ## Generics
+
 | Generic name         | Type     | Value          | Description |
 | -------------------- | -------- | -------------- | ----------- |
 | MEMORY_SIZE          | integer  | 16384          |             |
@@ -19,6 +22,7 @@
 | LOG_LENGTH           | natural  | 2048           |             |
 | UART_IS_16550        | boolean  | true           |             |
 ## Ports
+
 | Port name        | Direction | Type                          | Description    |
 | ---------------- | --------- | ----------------------------- | -------------- |
 | ext_clk          | in        | std_ulogic                    |                |
@@ -47,6 +51,7 @@
 | ddram_odt        | out       | std_logic                     |                |
 | ddram_reset_n    | out       | std_logic                     |                |
 ## Signals
+
 | Name                | Type                          | Description                        |
 | ------------------- | ----------------------------- | ---------------------------------- |
 | soc_rst             | std_ulogic                    |                                    |
@@ -66,15 +71,17 @@
 | spi_sdat_oe         | std_ulogic_vector(3 downto 0) |                                    |
 | spi_sdat_i          | std_ulogic_vector(3 downto 0) |                                    |
 ## Constants
+
 | Name         | Type    | Value             | Description |
 | ------------ | ------- | ----------------- | ----------- |
 | BRAM_SIZE    | natural |  get_bram_size    |             |
 | PAYLOAD_SIZE | natural |  get_payload_size |             |
 ## Functions
-- get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural</font>
+- get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 **Description**
 Fixup various memory sizes based on generics
-- get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural</font>
+- get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 ## Instantiations
+
 - soc0: work.soc
 - STARTUPE2_INST: STARTUPE2

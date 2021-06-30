@@ -1,7 +1,10 @@
 # Entity: prim_sync_reqack_data
+
 ## Diagram
+
 ![Diagram](prim_sync_reqack_data.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -16,6 +19,7 @@ Copyright lowRISC contributors.
  REQ/ACK handshake. See prim_sync_reqack.sv for more details.
  
 ## Generics
+
 | Generic name | Type         | Value | Description                                |
 | ------------ | ------------ | ----- | ------------------------------------------ |
 | Width        | int unsigned | 1     |                                            |
@@ -23,6 +27,7 @@ Copyright lowRISC contributors.
 | DataReg      | bit          | 1'b0  | Enable optional register stage for data,   |
 | EnReqStabA   | bit          | 1     | Used in submodule `prim_sync_reqack`.      |
 ## Ports
+
 | Port name  | Direction | Type        | Description          |
 | ---------- | --------- | ----------- | -------------------- |
 | clk_src_i  | input     |             | REQ side, SRC domain |
@@ -36,4 +41,5 @@ Copyright lowRISC contributors.
 | data_i     | input     | [Width-1:0] |                      |
 | data_o     | output    | [Width-1:0] |                      |
 ## Instantiations
+
 - u_prim_sync_reqack: prim_sync_reqack

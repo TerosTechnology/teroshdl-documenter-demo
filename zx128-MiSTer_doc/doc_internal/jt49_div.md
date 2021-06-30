@@ -1,14 +1,19 @@
 # Entity: jt49_div
+
 ## Diagram
+
 ![Diagram](jt49_div.svg "Diagram")
 ## Description
+
  Th
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | W            |      | 12    |             |
 ## Ports
+
 | Port name | Direction | Type        | Description                                  |
 | --------- | --------- | ----------- | -------------------------------------------- |
 | clk       | input     | wire        | this is the divided down clock from the core |
@@ -17,10 +22,10 @@
 | period    | input     | wire[W-1:0] |                                              |
 | div       | output    |             |                                              |
 ## Signals
+
 | Name  | Type         | Description |
 | ----- | ------------ | ----------- |
 | count | reg [W-1:0]  |             |
 | one   | wire [W-1:0] |             |
 ## Processes
-- unnamed: _( @(posedge clk, negedge rst_n ) )_
-
+- unnamed: ( @(posedge clk, negedge rst_n ) )

@@ -1,7 +1,10 @@
 # Entity: prim_packer_fifo
+
 ## Diagram
+
 ![Diagram](prim_packer_fifo.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -37,6 +40,7 @@ Copyright lowRISC contributors.
  depth_o    0000000000|1111111111|00000000000000000000000000000000000000000
  
 ## Generics
+
 | Generic name | Type | Value             | Description         |
 | ------------ | ---- | ----------------- | ------------------- |
 | InW          | int  | 32                |                     |
@@ -45,6 +49,7 @@ Copyright lowRISC contributors.
 | MinW         | int  | InW               |                     |
 | DepthW       | int  | $clog2(MaxW/MinW) |                     |
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clk_i     | input     |            |             |
@@ -58,6 +63,7 @@ Copyright lowRISC contributors.
 | rready_i  | input     |            |             |
 | depth_o   | output    | [DepthW:0] |             |
 ## Signals
+
 | Name       | Type             | Description |
 | ---------- | ---------------- | ----------- |
 | load_data  | logic            | signals     |
@@ -69,6 +75,7 @@ Copyright lowRISC contributors.
 | clr_q      | logic            |             |
 | clr_d      | logic            |             |
 ## Constants
+
 | Name       | Type           | Value                | Description         |
 | ---------- | -------------- | -------------------- | ------------------- |
 | MaxW       | int            | InW                  | derived parameters  |
@@ -77,5 +84,4 @@ Copyright lowRISC contributors.
 | WidthRatio | int unsigned   | MaxW / MinW          |                     |
 | FullDepth  | bit [DepthW:0] | WidthRatio[DepthW:0] |                     |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

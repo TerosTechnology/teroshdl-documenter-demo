@@ -1,13 +1,17 @@
 # Entity: edn
+
 ## Diagram
+
 ![Diagram](edn.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: edn top level wrapper file
  
 ## Generics
+
 | Generic name | Type                  | Value         | Description |
 | ------------ | --------------------- | ------------- | ----------- |
 | NumEndPoints | int                   | 7             |             |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | BootInsCmd   | int                   | 32'h0000_0001 |             |
 | BootGenCmd   | int                   | 32'h00ff_f003 |             |
 ## Ports
+
 | Port name               | Direction | Type               | Description                 |
 | ----------------------- | --------- | ------------------ | --------------------------- |
 | clk_i                   | input     |                    |                             |
@@ -30,6 +35,7 @@ Copyright lowRISC contributors.
 | intr_edn_cmd_req_done_o | output    |                    | Interrupts                  |
 | intr_edn_fatal_err_o    | output    |                    |                             |
 ## Signals
+
 | Name           | Type         | Description |
 | -------------- | ------------ | ----------- |
 | reg2hw         | edn_reg2hw_t |             |
@@ -38,6 +44,7 @@ Copyright lowRISC contributors.
 | alert_test     | logic        |             |
 | intg_err_alert | logic        |             |
 ## Instantiations
+
 - u_reg: edn_reg_top
 - u_edn_core: edn_core
 - u_prim_alert_sender: prim_alert_sender

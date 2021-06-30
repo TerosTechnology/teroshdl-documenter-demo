@@ -1,7 +1,10 @@
 # Entity: reconfig_icap_fsm
+
 ## Diagram
+
 ![Diagram](reconfig_icap_fsm.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 4; indent-tabs-mode: t -*-
 vim: tabstop=4:shiftwidth=4:noexpandtab
 kate: tab-width 4; replace-tabs off; indent-width 4;
@@ -27,6 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Ports
+
 | Port name      | Direction | Type                          | Description                         |
 | -------------- | --------- | ----------------------------- | ----------------------------------- |
 | clk            | in        | std_logic                     |                                     |
@@ -43,6 +47,7 @@ limitations under the License.
 | out_data_full  | in        | std_logic                     | receiving buffer is full, halt icap |
 | status         | out       | std_logic_vector(31 downto 0) | status vector                       |
 ## Signals
+
 | Name              | Type                          | Description                                                   |
 | ----------------- | ----------------------------- | ------------------------------------------------------------- |
 | cur_state         | t_state                       |                                                               |
@@ -66,6 +71,7 @@ limitations under the License.
 | pr_reset          | boolean                       | status word signals                                           |
 | status_error      | boolean                       |                                                               |
 ## Constants
+
 | Name           | Type                          | Value        | Description                   |
 | -------------- | ----------------------------- | ------------ | ----------------------------- |
 | sync_s_dummy   | std_logic_vector(31 downto 0) |  x"FFFFFFFF" |                               |
@@ -78,26 +84,22 @@ limitations under the License.
 | cmd_reg_wcfg   | std_logic_vector(4 downto 0)  |  "00001"     | write cfg data prior to write |
 | reg_fdro       | std_logic_vector(4 downto 0)  |  "00011"     | read cfg data register        |
 ## Types
-| Name         | Type                                                                                                                              | Description                              |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| t_state      | (ready, abort0, abort1, abort2, abort3, write, writing, pre_reg_read0, pre_reg_read1, pre_stream_read0, read, reading, post_read) |                                          |
-| t_sync_state | (none, dummy0, bus_width0, bus_width1, dummy1, synced, cmdWrite, dsynced)                                                         | detect the status of the synchronization |
+
+| Name         | Type                                                                                                                               | Description                              |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| t_state      | (ready, abort0, abort1, abort2, abort3, write, writing, pre_reg_read0, pre_reg_read1, pre_stream_read0, read, reading, post_read)  |                                          |
+| t_sync_state | (none, dummy0, bus_width0, bus_width1, dummy1, synced, cmdWrite, dsynced)                                                          | detect the status of the synchronization |
 ## Processes
-- combi: _( reset, nxt_state, cur_state, in_data, in_data_valid, in_data_valid_re,
-						sync_state, sync_state_flag, out_data_full, readback_cnt, pr_reset )_
-
-- readback_cnt_p: _( clk )_
-readback counter process
-
+- combi: ( reset, nxt_state, cur_state, in_data, in_data_valid, in_data_valid_re,
+						sync_state, sync_state_flag, out_data_full, readback_cnt, pr_reset )
+- readback_cnt_p: ( clk )
 **Description**
 readback counter process
 
-- sync_p: _( clk )_
-update sync status
-
+- sync_p: ( clk )
 **Description**
 update sync status
 
 ## State machines
-- update sync status
+
 ![Diagram_state_machine_0]( stm_reconfig_icap_fsm_00.svg "Diagram")

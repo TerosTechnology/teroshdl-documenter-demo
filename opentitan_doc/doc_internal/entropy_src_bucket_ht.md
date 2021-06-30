@@ -1,18 +1,23 @@
 # Entity: entropy_src_bucket_ht
+
 ## Diagram
+
 ![Diagram](entropy_src_bucket_ht.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: entropy_src bucket health test module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | RegWidth     | int  | 16    |             |
 | RngBusWidth  | int  | 4     |             |
 ## Ports
+
 | Port name           | Direction | Type              | Description       |
 | ------------------- | --------- | ----------------- | ----------------- |
 | clk_i               | input     |                   |                   |
@@ -26,6 +31,7 @@ Copyright lowRISC contributors.
 | test_cnt_o          | output    | [RegWidth-1:0]    |                   |
 | test_fail_pulse_o   | output    |                   |                   |
 ## Signals
+
 | Name                   | Type                 | Description |
 | ---------------------- | -------------------- | ----------- |
 | bin_incr               | logic [NUM_BINS-1:0] | signals     |
@@ -35,9 +41,9 @@ Copyright lowRISC contributors.
 | bin_cntr_q             | logic [RegWidth-1:0] |             |
 | bin_cntr_d             | logic [RegWidth-1:0] |             |
 ## Constants
+
 | Name     | Type | Value          | Description |
 | -------- | ---- | -------------- | ----------- |
 | NUM_BINS | int  | 2**RngBusWidth |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

@@ -1,7 +1,10 @@
 # Entity: safe_domain
+
 ## Diagram
+
 ![Diagram](safe_domain.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Generics
+
 | Generic name   | Type         | Value | Description |
 | -------------- | ------------ | ----- | ----------- |
 | FLL_DATA_WIDTH |              | 32    |             |
@@ -21,6 +25,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | N_SPI          | int unsigned | 1     |             |
 | N_I2C          | int unsigned | 2     |             |
 ## Ports
+
 | Port name          | Direction | Type        | Description          |
 | ------------------ | --------- | ----------- | -------------------- |
 | ref_clk_i          | input     |             |                      |
@@ -217,6 +222,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | oe_hyper_dq1_o     | output    |             |                      |
 | oe_hyper_resetn_o  | output    |             |                      |
 ## Signals
+
 | Name        | Type              | Description |
 | ----------- | ----------------- | ----------- |
 | s_test_clk  | logic             |             |
@@ -226,6 +232,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_rstn      | logic             |             |
 | s_gpio_cfg  | logic [31:0][5:0] |             |
 ## Instantiations
+
 - pad_control_i: pad_control
 - i_rstgen: rstgen
 - i_slow_clk_gen: fpga_slow_clk_gen

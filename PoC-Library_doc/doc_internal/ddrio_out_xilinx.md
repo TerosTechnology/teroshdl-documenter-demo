@@ -1,7 +1,10 @@
 # Entity: ddrio_out_xilinx
+
 ## Diagram
+
 ![Diagram](ddrio_out_xilinx.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -23,12 +26,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name     | Type       | Value       | Description |
 | ---------------- | ---------- | ----------- | ----------- |
 | NO_OUTPUT_ENABLE | boolean    | false       |             |
 | BITS             | positive   |             |             |
 | INIT_VALUE       | bit_vector | x"FFFFFFFF" |             |
 ## Ports
+
 | Port name    | Direction | Type                                | Description |
 | ------------ | --------- | ----------------------------------- | ----------- |
 | Clock        | in        | std_logic                           |             |

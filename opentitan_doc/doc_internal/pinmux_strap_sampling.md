@@ -1,16 +1,21 @@
 # Entity: pinmux_strap_sampling
+
 ## Diagram
+
 ![Diagram](pinmux_strap_sampling.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type         | Value            | Description                                                                          |
 | ------------ | ------------ | ---------------- | ------------------------------------------------------------------------------------ |
 | TargetCfg    | target_cfg_t | DefaultTargetCfg | Taget-specific pinmux configuration passed down from the target-specific top-level.  |
 ## Ports
+
 | Port name          | Direction | Type                 | Description                     |
 | ------------------ | --------- | -------------------- | ------------------------------- |
 | clk_i              | input     |                      |                                 |
@@ -36,6 +41,7 @@ Copyright lowRISC contributors.
 | dft_jtag_o         | output    |                      |                                 |
 | dft_jtag_i         | input     |                      |                                 |
 ## Signals
+
 | Name                | Type                       | Description                                                                                                 |
 | ------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | lc_hw_debug_en      | lc_ctrl_pkg::lc_tx_t [1:0] |                                                                                                             |
@@ -63,13 +69,11 @@ Copyright lowRISC contributors.
 | rv_jtag_rsp         | jtag_pkg::jtag_rsp_t       |                                                                                                             |
 | dft_jtag_rsp        | jtag_pkg::jtag_rsp_t       |                                                                                                             |
 ## Processes
-- p_strap_sampling: _(  )_
-
-- p_strap_sample: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_tap_mux: _(  )_
-
+- p_strap_sampling: (  )
+- p_strap_sample: ( @(posedge clk_i or negedge rst_ni) )
+- p_tap_mux: (  )
 ## Instantiations
+
 - u_por_scanmode_sync: prim_lc_sync
 - u_prim_lc_sync_rv: prim_lc_sync
 - u_prim_lc_sync_dft: prim_lc_sync

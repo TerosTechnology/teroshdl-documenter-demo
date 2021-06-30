@@ -1,7 +1,10 @@
 # Entity: io_FrequencyCounter
+
 ## Diagram
+
 ![Diagram](io_FrequencyCounter.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value   | Description |
 | ------------ | -------- | ------- | ----------- |
 | CLOCK_FREQ   | FREQ     | 100 MHz |             |
 | TIMEBASE     | time     | 1 sec   |             |
 | RESOLUTION   | positive | 8       |             |
 ## Ports
+
 | Port name | Direction | Type                                      | Description |
 | --------- | --------- | ----------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                 |             |
@@ -37,6 +42,7 @@ limitations under the License.
 | FreqIn    | in        | std_logic                                 |             |
 | FreqOut   | out       | std_logic_vector(RESOLUTION - 1 downto 0) |             |
 ## Signals
+
 | Name                | Type                                        | Description |
 | ------------------- | ------------------------------------------- | ----------- |
 | TimeBaseCounter_us  | unsigned(TIMEBASECOUNTER_BITS - 1 downto 0) |             |
@@ -47,6 +53,7 @@ limitations under the License.
 | FreqIn_re           | std_logic                                   |             |
 | FreqOut_d           | std_logic_vector(RESOLUTION - 1 downto 0)   |             |
 ## Constants
+
 | Name                  | Type     | Value                                 | Description |
 | --------------------- | -------- | ------------------------------------- | ----------- |
 | TIMEBASECOUNTER_MAX   | positive |  TimingToCycles(TIMEBASE, CLOCK_FREQ) |             |
@@ -54,21 +61,15 @@ limitations under the License.
 | REQUENCYCOUNTER_MAX   | positive |  2**RESOLUTION                        |             |
 | FREQUENCYCOUNTER_BITS | positive |  RESOLUTION                           |             |
 ## Processes
-- unnamed: _( Clock )_
-timebase counter
-
+- unnamed: ( Clock )
 **Description**
 timebase counter
 
-- unnamed: _( Clock )_
-frequency counter
-
+- unnamed: ( Clock )
 **Description**
 frequency counter
 
-- unnamed: _( Clock )_
-hold counter value until next TimeBaseCounter event
-
+- unnamed: ( Clock )
 **Description**
 hold counter value until next TimeBaseCounter event
 

@@ -1,13 +1,17 @@
 # Entity: pinmux_assert_fpv
+
 ## Diagram
+
 ![Diagram](pinmux_assert_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Assertions for pinmux. Intended to use with a formal tool.
  
 ## Ports
+
 | Port name          | Direction | Type                                | Description |
 | ------------------ | --------- | ----------------------------------- | ----------- |
 | clk_i              | input     |                                     |             |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | mio_oe_o           | input     | [pinmux_reg_pkg::NMioPads-1:0]      |             |
 | mio_in_i           | input     | [pinmux_reg_pkg::NMioPads-1:0]      |             |
 ## Signals
+
 | Name         | Type                                              | Description              |
 | ------------ | ------------------------------------------------- | ------------------------ |
 | periph_sel_i | logic [$clog2(pinmux_reg_pkg::NMioPeriphIn)-1:0]  | symbolic inputs for FPV  |

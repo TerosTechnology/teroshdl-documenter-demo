@@ -1,7 +1,10 @@
 # Entity: sdram_ctrl_phy_s3esk
+
 ## Diagram
+
 ![Diagram](sdram_ctrl_phy_s3esk.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -79,6 +82,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Ports
+
 | Port name  | Direction | Type                          | Description |
 | ---------- | --------- | ----------------------------- | ----------- |
 | clk        | in        | std_logic                     |             |
@@ -118,6 +122,7 @@ limitations under the License.
 | sd_udqs    | out       | std_logic                     |             |
 | sd_dq      | inout     | std_logic_vector(15 downto 0) |             |
 ## Signals
+
 | Name          | Type                          | Description                      |
 | ------------- | ----------------------------- | -------------------------------- |
 | sd_cke_r      | std_logic                     |                                  |
@@ -146,59 +151,39 @@ limitations under the License.
 | rdata_ris_r   | std_logic_vector(15 downto 0) |                                  |
 | rdata_r       | std_logic_vector(31 downto 0) |                                  |
 ## Processes
-- unnamed: _( clk )_
-SDRAM command & address
-
+- unnamed: ( clk )
 **Description**
 SDRAM command & address
 
-- unnamed: _( clk )_
-
-- unnamed: _( clk )_
-Write Data
-
+- unnamed: ( clk )
+- unnamed: ( clk )
 **Description**
 Write Data
 
-- unnamed: _( clk_n )_
-
-- unnamed: _( clk )_
-Read data capture
-Register read enable
-rden1_r is a separate signal for simple identification in constraints.
-This signal must be kept.
-
+- unnamed: ( clk_n )
+- unnamed: ( clk )
 **Description**
 Read data capture
 Register read enable
 rden1_r is a separate signal for simple identification in constraints.
 This signal must be kept.
 
-- unnamed: _( clk_fb90_n )_
-Register read enable with clk_fb90_n which equals sd_ck_p + 270 degrees
-delayed by external feedback.
-NOTE: Timing constraints must ensure, that read enable is captured with
-the rising edge of clk_fb90_n directly following rising edge of clk.
-
+- unnamed: ( clk_fb90_n )
 **Description**
 Register read enable with clk_fb90_n which equals sd_ck_p + 270 degrees
 delayed by external feedback.
 NOTE: Timing constraints must ensure, that read enable is captured with
 the rising edge of clk_fb90_n directly following rising edge of clk.
 
-- unnamed: _( clk_fb90_n )_
-Delay once more
-If timing is critical, then rden3_r should be duplicated before it used as
-clock enable for input FFs.
-
+- unnamed: ( clk_fb90_n )
 **Description**
 Delay once more
 If timing is critical, then rden3_r should be duplicated before it used as
 clock enable for input FFs.
 
-- unnamed: _( clk_fb90_n )_
-
+- unnamed: ( clk_fb90_n )
 ## Instantiations
+
 - sd_ck_p_off: ODDR2
 - sd_ck_n_off: ODDR2
 - ldqs_obuf: OBUFT

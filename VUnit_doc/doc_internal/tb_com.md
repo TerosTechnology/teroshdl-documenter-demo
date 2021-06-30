@@ -1,17 +1,22 @@
 # Entity: tb_com
+
 ## Diagram
+
 ![Diagram](tb_com.svg "Diagram")
 ## Description
+
 Test suite for com package
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name                           | Type                     | Description |
 | ------------------------------ | ------------------------ | ----------- |
 | hello_world_received           | boolean                  |             |
@@ -29,27 +34,18 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 |  limited_inbox_actor_done      | boolean                  |             |
 | start_limited_inbox_subscriber | boolean                  |             |
 ## Constants
+
 | Name       | Type     | Value                        | Description |
 | ---------- | -------- | ---------------------------- | ----------- |
 | com_logger | logger_t |  get_logger("vunit_lib:com") |             |
 ## Processes
-- test_runner: _(  )_
-
-- my_receiver: _(  )_
-
-- server: _(  )_
-
-- server2: _(  )_
-
-- server3: _(  )_
-
-- server4: _(  )_
-
-- server5: _(  )_
-
-- server6: _(  )_
-
-- limited_inbox_actor: _(  )_
-
-- limited_inbox_subscriber: _(  )_
-
+- test_runner: (  )
+- my_receiver: (  )
+- server: (  )
+- server2: (  )
+- server3: (  )
+- server4: (  )
+- server5: (  )
+- server6: (  )
+- limited_inbox_actor: (  )
+- limited_inbox_subscriber: (  )

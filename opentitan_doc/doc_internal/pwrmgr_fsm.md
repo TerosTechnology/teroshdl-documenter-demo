@@ -1,13 +1,17 @@
 # Entity: pwrmgr_fsm
+
 ## Diagram
+
 ![Diagram](pwrmgr_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Power Manager Fast FSM
  
 ## Ports
+
 | Port name         | Direction | Type           | Description             |
 | ----------------- | --------- | -------------- | ----------------------- |
 | clk_i             | input     |                |                         |
@@ -44,6 +48,7 @@ Copyright lowRISC contributors.
 | low_power_o       | output    |                |                         |
 | fetch_en_o        | output    |                | processing elements     |
 ## Signals
+
 | Name               | Type                               | Description                                                                                                                                        |
 | ------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | pd_n_rsts_asserted | logic                              | all powered down domains have resets asserted                                                                                                      |
@@ -77,17 +82,16 @@ Copyright lowRISC contributors.
 | slow_lc_done       | logic                              | Life cycle broadcast may take time to propagate through the system. The sync below simulates that behavior using the slowest clock in the system.  |
 | lc_done            | logic                              |                                                                                                                                                    |
 ## Constants
+
 | Name              | Type | Value                | Description                                                                       |
 | ----------------- | ---- | -------------------- | --------------------------------------------------------------------------------- |
 | OffDomainSelStart | int  | ALWAYS_ON_DOMAIN + 1 | when there are multiple on domains, the latter 1 should become another parameter  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_fetch_en: prim_lc_sender
 - u_slow_sync_lc_done: prim_flop_2sync
 - u_sync_lc_done: prim_flop_2sync

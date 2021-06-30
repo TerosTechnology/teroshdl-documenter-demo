@@ -1,7 +1,10 @@
 # Entity: uart_core
+
 ## Diagram
+
 ![Diagram](uart_core.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -14,6 +17,7 @@ Description   : This is NOT an example of how to implement a UART core. This is 
                 of the UVVM VVC Framework.
                 See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name                 | Type      | Value | Description |
 | ---------------------------- | --------- | ----- | ----------- |
 | GC_START_BIT                 | std_logic | '0'   |             |
@@ -21,6 +25,7 @@ Description   : This is NOT an example of how to implement a UART core. This is 
 | GC_CLOCKS_PER_BIT            | integer   | 16    |             |
 | GC_MIN_EQUAL_SAMPLES_PER_BIT | integer   | 15    |             |
 ## Ports
+
 | Port name | Direction | Type      | Description                               |
 | --------- | --------- | --------- | ----------------------------------------- |
 | clk       | in        | std_logic | DSP interface and general control signals |
@@ -30,6 +35,7 @@ Description   : This is NOT an example of how to implement a UART core. This is 
 | rx_a      | in        | std_logic | Interrupt related signals                 |
 | tx        | out       | std_logic |                                           |
 ## Signals
+
 | Name           | Type                                           | Description                            |
 | -------------- | ---------------------------------------------- | -------------------------------------- |
 | tx_data        | t_slv_array                                    | tx signals                             |
@@ -54,28 +60,16 @@ Description   : This is NOT an example of how to implement a UART core. This is 
 | transient_err  | std_logic                                      | data value is transient                |
 | c2p_i          | t_c2p                                          |                                        |
 ## Types
+
 | Name        | Type | Description |
 | ----------- | ---- | ----------- |
 | t_slv_array |      |             |
 ## Processes
-- p_rx_s: _( clk, arst )_
-synchronize rx input (async)
-
+- p_rx_s: ( clk, arst )
 **Description**
 synchronize rx input (async)
 
-- uart_tx: _( clk, arst )_
-Transmit process; drives tx serial output.
-Stores 4 pending bytes in the tx_data array, and the byte currently
-being output in the tx_buffer register.
-Tx_buffer is filled with data from tx_data(0) if there is valid data
-available (tx_data_valid is active), and no other byte is currently
-being output (tx_active is inactive).
-Data received via SBI is inserted in tx_data at the index pointed to
-by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is
-received via SBI, and decremented when a new byte is loaded into
-tx_buffer.
-
+- uart_tx: ( clk, arst )
 **Description**
 Transmit process; drives tx serial output.
 Stores 4 pending bytes in the tx_data array, and the byte currently
@@ -88,11 +82,8 @@ by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is
 received via SBI, and decremented when a new byte is loaded into
 tx_buffer.
 
-- uart_rx: _( clk, arst )_
-Receive process
-
+- uart_rx: ( clk, arst )
 **Description**
 Receive process
 
-- p_busy_assert: _( clk )_
-
+- p_busy_assert: ( clk )

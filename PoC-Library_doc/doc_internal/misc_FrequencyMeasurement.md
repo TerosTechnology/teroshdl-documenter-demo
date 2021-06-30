@@ -1,7 +1,10 @@
 # Entity: misc_FrequencyMeasurement
+
 ## Diagram
+
 ![Diagram](misc_FrequencyMeasurement.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -26,10 +29,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name         | Type | Value   | Description |
 | -------------------- | ---- | ------- | ----------- |
 | REFERENCE_CLOCK_FREQ | FREQ | 100 MHz |             |
 ## Ports
+
 | Port name       | Direction | Type      | Description |
 | --------------- | --------- | --------- | ----------- |
 | Reference_Clock | in        | std_logic |             |
@@ -38,6 +43,7 @@ limitations under the License.
 | Done            | out       | std_logic |             |
 | Result          | out       | T_SLV_32  |             |
 ## Signals
+
 | Name                   | Type                                   | Description |
 | ---------------------- | -------------------------------------- | ----------- |
 | TimeBase_Counter_rst   | std_logic                              |             |
@@ -56,22 +62,19 @@ limitations under the License.
 | Result_d               | T_SLV_32                               |             |
 | Done_r                 | std_logic                              |             |
 ## Constants
+
 | Name                  | Type     | Value                                                                | Description |
 | --------------------- | -------- | -------------------------------------------------------------------- | ----------- |
 | TIMEBASE_COUNTER_MAX  | positive |  TimingToCycles(ite(SIMULATION, 10 us, 1 sec), REFERENCE_CLOCK_FREQ) |             |
 | TIMEBASE_COUNTER_BITS | positive |  log2ceilnz(TIMEBASE_COUNTER_MAX)                                    |             |
 ## Processes
-- unnamed: _( Reference_Clock )_
-
-- unnamed: _( Input_Clock )_
-
-- unnamed: _( Reference_Clock )_
-Result_d can becaptured from Frequency_Counter_us, because it's stable
-for more than one clock cycle and will not change until the next Start
-
+- unnamed: ( Reference_Clock )
+- unnamed: ( Input_Clock )
+- unnamed: ( Reference_Clock )
 **Description**
 Result_d can becaptured from Frequency_Counter_us, because it's stable
 for more than one clock cycle and will not change until the next Start
 
 ## Instantiations
+
 - sync1: poc.sync_Strobe

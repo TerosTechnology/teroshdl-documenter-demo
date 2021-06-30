@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_cp_muldiv
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_cp_muldiv.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU Co-Processor: Integer Multiplier/Divider Unit (RISC-V "M" Extension) >>      #
 # ********************************************************************************************* #
@@ -43,11 +46,13 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name | Type    | Value | Description                        |
 | ------------ | ------- | ----- | ---------------------------------- |
 | FAST_MUL_EN  | boolean | false | use DSPs for faster multiplication |
 | DIVISION_EN  | boolean | true  | implement divider hardware         |
 ## Ports
+
 | Port name | Direction | Type                                       | Description                     |
 | --------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i     | in        | std_ulogic                                 | global clock, rising edge       |
@@ -59,6 +64,7 @@
 | res_o     | out       | std_ulogic_vector(data_width_c-1 downto 0) | operation result                |
 | valid_o   | out       | std_ulogic                                 | data output valid               |
 ## Signals
+
 | Name             | Type                                       | Description                 |
 | ---------------- | ------------------------------------------ | --------------------------- |
 | state            | state_t                                    |                             |
@@ -89,6 +95,7 @@
 | mul_op_y         | signed(32 downto 0)                        | for using DSPs              |
 | mul_buf_ff       | signed(65 downto 0)                        |                             |
 ## Constants
+
 | Name           | Type                          | Value  | Description |
 | -------------- | ----------------------------- | ------ | ----------- |
 | cp_op_mul_c    | std_ulogic_vector(2 downto 0) |  "000" | mul         |
@@ -100,25 +107,21 @@
 | cp_op_rem_c    | std_ulogic_vector(2 downto 0) |  "110" | rem         |
 | cp_op_remu_c   | std_ulogic_vector(2 downto 0) |  "111" | remu        |
 ## Types
-| Name    | Type                                                    | Description   |
-| ------- | ------------------------------------------------------- | ------------- |
-| state_t | (IDLE, DIV_PREPROCESS, PROCESSING, FINALIZE, COMPLETED) | controller -- |
+
+| Name    | Type                                                     | Description   |
+| ------- | -------------------------------------------------------- | ------------- |
+| state_t | (IDLE, DIV_PREPROCESS, PROCESSING, FINALIZE, COMPLETED)  | controller -- |
 ## Processes
-- coprocessor_ctrl: _( rstn_i, clk_i )_
-
-- mul_update: _( mul_product, mul_sign_cycle, mul_p_sext, rs1_is_signed, rs1_i )_
-do another addition (bit-serial) --
-
+- coprocessor_ctrl: ( rstn_i, clk_i )
+- mul_update: ( mul_product, mul_sign_cycle, mul_p_sext, rs1_is_signed, rs1_i )
 **Description**
 do another addition (bit-serial) --
 
-- operation_result: _( rstn_i, clk_i )_
-Data Output ----------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- operation_result: ( rstn_i, clk_i )
 **Description**
 Data Output ----------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
 ## State machines
+
 ![Diagram_state_machine_0]( stm_neorv32_cpu_cp_muldiv_00.svg "Diagram")

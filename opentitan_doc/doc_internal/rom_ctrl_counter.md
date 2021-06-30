@@ -1,7 +1,10 @@
 # Entity: rom_ctrl_counter
+
 ## Diagram
+
 ![Diagram](rom_ctrl_counter.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -25,11 +28,13 @@ Copyright lowRISC contributors.
  on the last word before the top RomTopCount words.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | RomDepth     | int  | 16    |             |
 | RomTopCount  | int  | 2     |             |
 ## Ports
+
 | Port name          | Direction | Type                  | Description |
 | ------------------ | --------- | --------------------- | ----------- |
 | clk_i              | input     |                       |             |
@@ -42,6 +47,7 @@ Copyright lowRISC contributors.
 | data_vld_o         | output    |                       |             |
 | data_last_nontop_o | output    |                       |             |
 ## Signals
+
 | Name          | Type           | Description |
 | ------------- | -------------- | ----------- |
 | go            | logic          |             |
@@ -54,6 +60,7 @@ Copyright lowRISC contributors.
 | last_nontop_q | logic          |             |
 | last_nontop_d | logic          |             |
 ## Constants
+
 | Name           | Type         | Value                  | Description                                                                                                                              |
 | -------------- | ------------ | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | RomNonTopCount | int          | RomDepth - RomTopCount | The number of ROM entries that should be hashed. We assume there are at least 2, so that we can register the data_last_nontop_o signal.  |
@@ -63,7 +70,5 @@ Copyright lowRISC contributors.
 | TopAddr        | bit [AW-1:0] | undefined              |                                                                                                                                          |
 | TNTAddr        | bit [AW-1:0] | undefined              |                                                                                                                                          |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

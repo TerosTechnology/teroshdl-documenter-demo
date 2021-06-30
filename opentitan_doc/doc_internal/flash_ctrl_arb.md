@@ -1,7 +1,10 @@
 # Entity: flash_ctrl_arb
+
 ## Diagram
+
 ![Diagram](flash_ctrl_arb.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,6 +14,7 @@ Copyright lowRISC contributors.
  This module arbitrates and muxes the controls between the two interfaces.
  
 ## Ports
+
 | Port name          | Direction | Type                | Description                                |
 | ------------------ | --------- | ------------------- | ------------------------------------------ |
 | clk_i              | input     |                     |                                            |
@@ -53,6 +57,7 @@ Copyright lowRISC contributors.
 | phase_o            | output    | flash_lcmgr_phase_e | output to memory protection                |
 | sel_o              | output    | flash_sel_e         | indication that sw has been selected       |
 ## Signals
+
 | Name     | Type        | Description  |
 | -------- | ----------- | ------------ |
 | func_sel | flash_sel_e |              |
@@ -62,19 +67,15 @@ Copyright lowRISC contributors.
 | ctrl_ack | logic       | always_comb  |
 | ctrl_err | logic       | always_comb  |
 ## Types
+
 | Name    | Type                                                                         | Description      |
 | ------- | ---------------------------------------------------------------------------- | ---------------- |
 | state_e | enum logic [1:0] {     StReset,       StHw,     StSwActive,     StSwIdle   } | arbitration FSM  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-pick appropriate feedback
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 pick appropriate feedback
 

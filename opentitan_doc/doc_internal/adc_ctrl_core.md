@@ -1,13 +1,17 @@
 # Entity: adc_ctrl_core
+
 ## Diagram
+
 ![Diagram](adc_ctrl_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  adc_ctrl core module
  
 ## Ports
+
 | Port name             | Direction | Type                                    | Description |
 | --------------------- | --------- | --------------------------------------- | ----------- |
 | clk_aon_i             | input     |                                         |             |
@@ -35,6 +39,7 @@ Copyright lowRISC contributors.
 | adc_i                 | input     |                                         |             |
 | adc_o                 | output    |                                         |             |
 ## Signals
+
 | Name                 | Type                     | Description                           |
 | -------------------- | ------------------------ | ------------------------------------- |
 | cfg_adc_enable       | logic                    |                                       |
@@ -80,13 +85,11 @@ Copyright lowRISC contributors.
 | unused_lp_mode_qe    | logic                    |                                       |
 | adc_pd_ctl_qe        | logic                    | all qe's for a register are the same  |
 ## Processes
-- unnamed: _( @(posedge clk_aon_i or negedge rst_slow_ni) )_
-
-- i_cfg_lp_sample_cnt_reg: _( @(posedge clk_aon_i or negedge rst_slow_ni) )_
-
-- i_cfg_np_sample_cnt_reg: _( @(posedge clk_aon_i or negedge rst_slow_ni) )_
-
+- unnamed: ( @(posedge clk_aon_i or negedge rst_slow_ni) )
+- i_cfg_lp_sample_cnt_reg: ( @(posedge clk_aon_i or negedge rst_slow_ni) )
+- i_cfg_np_sample_cnt_reg: ( @(posedge clk_aon_i or negedge rst_slow_ni) )
 ## Instantiations
+
 - i_cfg_adc_enable: prim_flop_2sync
 - i_cfg_oneshot_mode: prim_flop_2sync
 - i_cfg_lp_mode: prim_flop_2sync

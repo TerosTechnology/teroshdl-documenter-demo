@@ -1,12 +1,16 @@
 # Entity: serv_state
+
 ## Diagram
+
 ![Diagram](serv_state.svg "Diagram")
 ## Generics
+
 | Generic name   | Type  | Value  | Description |
 | -------------- | ----- | ------ | ----------- |
 | RESET_STRATEGY |       | "MINI" |             |
 | WITH_CSR       | [0:0] | 1      |             |
 ## Ports
+
 | Port name       | Direction | Type       | Description |
 | --------------- | --------- | ---------- | ----------- |
 | i_clk           | input     | wire       |             |
@@ -50,6 +54,7 @@
 | o_cnt_done      | output    |            |             |
 | o_bufreg_en     | output    | wire       |             |
 ## Signals
+
 | Name               | Type      | Description |
 | ------------------ | --------- | ----------- |
 | stage_two_req      | reg       |             |
@@ -61,5 +66,4 @@
 | take_branch        | wire      |             |
 | two_stage_op       | wire      |             |
 ## Processes
-- unnamed: _( @(posedge i_clk) )_
-
+- unnamed: ( @(posedge i_clk) )

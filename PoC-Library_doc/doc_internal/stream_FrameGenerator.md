@@ -1,7 +1,10 @@
 # Entity: stream_FrameGenerator
+
 ## Diagram
+
 ![Diagram](stream_FrameGenerator.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                           | Value                              | Description |
 | ------------ | ------------------------------ | ---------------------------------- | ----------- |
 | DATA_BITS    | positive                       | 8                                  |             |
@@ -31,6 +35,7 @@ limitations under the License.
 | APPEND       | T_FRAMEGEN_APPEND              | FRAMEGEN_APP_NONE                  |             |
 | FRAMEGROUPS  | T_FRAMEGEN_FRAMEGROUP_VECTOR_8 | (0 => C_FRAMEGEN_FRAMEGROUP_EMPTY) |             |
 ## Ports
+
 | Port name       | Direction | Type                                     | Description       |
 | --------------- | --------- | ---------------------------------------- | ----------------- |
 | Clock           | in        | std_logic                                |                   |
@@ -48,6 +53,7 @@ limitations under the License.
 | Out_EOF         | out       | std_logic                                |                   |
 | Out_Ack         | in        | std_logic                                |                   |
 ## Signals
+
 | Name                   | Type                                     | Description |
 | ---------------------- | ---------------------------------------- | ----------- |
 | State                  | T_STATE                                  |             |
@@ -65,23 +71,20 @@ limitations under the License.
 | PRNG_got               | std_logic                                |             |
 | PRNG_Data              | std_logic_vector(DATA_BITS - 1 downto 0) |             |
 ## Types
-| Name    | Type                                                                                                                                 | Description |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_SEQUENCE_SOF,	ST_SEQUENCE_DATA,	ST_SEQUENCE_EOF, 			ST_RANDOM_SOF,		ST_RANDOM_DATA,		ST_RANDOM_EOF, 		ST_ERROR 	) |             |
-## Processes
-- unnamed: _( Clock )_
 
-- unnamed: _( State, Command, Out_Ack,
+| Name    | Type                                                                                                                       | Description |
+| ------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_SEQUENCE_SOF,	ST_SEQUENCE_DATA,	ST_SEQUENCE_EOF, ST_RANDOM_SOF,		ST_RANDOM_DATA,		ST_RANDOM_EOF, ST_ERROR )  |             |
+## Processes
+- unnamed: ( Clock )
+- unnamed: ( State, Command, Out_Ack,
 					Sequences, FrameLength,
 					FrameLengthCounter_us,
 					SequencesCounter_us, ContentCounter_us,
-					PRNG_Data )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+					PRNG_Data )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
 ## Instantiations
+
 - PRNG: PoC.arith_prng

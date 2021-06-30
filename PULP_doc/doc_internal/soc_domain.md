@@ -1,7 +1,10 @@
 # Entity: soc_domain
+
 ## Diagram
+
 ![Diagram](soc_domain.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Generics
+
 | Generic name       | Type         | Value                | Description |
 | ------------------ | ------------ | -------------------- | ----------- |
 | CORE_TYPE          |              | 0                    |             |
@@ -45,6 +49,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | N_SPI              | int unsigned | 1                    |             |
 | N_I2C              | int unsigned | 2                    |             |
 ## Ports
+
 | Port name                   | Direction | Type               | Description            |
 | --------------------------- | --------- | ------------------ | ---------------------- |
 | ref_clk_i                   | input     |                    |                        |
@@ -165,4 +170,5 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | async_data_master_b_data_i  | input     | [2**LOG_DEPTH-1:0] |                        |
 | async_data_master_b_rptr_o  | output    | [LOG_DEPTH:0]      |                        |
 ## Instantiations
+
 - pulp_soc_i: pulp_soc

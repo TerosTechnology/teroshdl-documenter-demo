@@ -1,12 +1,16 @@
 # Entity: otbn_core
+
 ## Diagram
+
 ![Diagram](otbn_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name             | Type                   | Value                              | Description                                               |
 | ------------------------ | ---------------------- | ---------------------------------- | --------------------------------------------------------- |
 | RegFile                  | regfile_e              | RegFileFF                          | Register file implementation selection, see otbn_pkg.sv.  |
@@ -17,6 +21,7 @@ Copyright lowRISC contributors.
 | ImemAddrWidth            | int                    | prim_util_pkg::vbits(ImemSizeByte) |                                                           |
 | DmemAddrWidth            | int                    | prim_util_pkg::vbits(DmemSizeByte) |                                                           |
 ## Ports
+
 | Port name       | Direction | Type                   | Description                                                                    |
 | --------------- | --------- | ---------------------- | ------------------------------------------------------------------------------ |
 | clk_i           | input     |                        |                                                                                |
@@ -48,6 +53,7 @@ Copyright lowRISC contributors.
 | edn_urnd_data_i | input     | [EdnDataWidth-1:0]     |                                                                                |
 | insn_cnt_o      | output    | [31:0]                 |                                                                                |
 ## Signals
+
 | Name                          | Type                         | Description                                                    |
 | ----------------------------- | ---------------------------- | -------------------------------------------------------------- |
 | insn_fetch_req_addr           | logic [ImemAddrWidth-1:0]    | Fetch request (the next instruction)                           |
@@ -133,11 +139,13 @@ Copyright lowRISC contributors.
 | insn_cnt_reset                | logic                        |                                                                |
 | insn_cnt                      | logic [31:0]                 |                                                                |
 ## Constants
+
 | Name          | Type | Value                              | Description |
 | ------------- | ---- | ---------------------------------- | ----------- |
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |             |
 | DmemAddrWidth | int  | prim_util_pkg::vbits(DmemSizeByte) |             |
 ## Instantiations
+
 - u_otbn_start_stop_control: otbn_start_stop_control
 **Description**
 Start stop control start OTBN execution when requested and deals with any pre start or post

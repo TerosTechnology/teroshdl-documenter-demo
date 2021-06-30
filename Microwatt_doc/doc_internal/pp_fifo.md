@@ -1,15 +1,20 @@
 # Entity: pp_fifo
+
 ## Diagram
+
 ![Diagram](pp_fifo.svg "Diagram")
 ## Description
+
 The Potato Processor - A simple processor for FPGAs
 (c) Kristian Klomsten Skordal 2014 - 2015 <kristian.skordal@wafflemail.net>
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEPTH        | natural | 64    |             |
 | WIDTH        | natural | 32    |             |
 ## Ports
+
 | Port name | Direction | Type                                 | Description    |
 | --------- | --------- | ------------------------------------ | -------------- |
 | clk       | in        | std_logic                            | Control lines: |
@@ -21,6 +26,7 @@ The Potato Processor - A simple processor for FPGAs
 | push      | in        | std_logic                            |                |
 | pop       | in        | std_logic                            |                |
 ## Signals
+
 | Name    | Type         | Description |
 | ------- | ------------ | ----------- |
 | memory  | memory_array |             |
@@ -28,14 +34,12 @@ The Potato Processor - A simple processor for FPGAs
 |  bottom | index_type   |             |
 | prev_op | fifo_op      |             |
 ## Types
-| Name         | Type                  | Description |
-| ------------ | --------------------- | ----------- |
-| memory_array |                       |             |
-| fifo_op      | (FIFO_POP, FIFO_PUSH) |             |
+
+| Name         | Type                   | Description |
+| ------------ | ---------------------- | ----------- |
+| memory_array |                        |             |
+| fifo_op      | (FIFO_POP, FIFO_PUSH)  |             |
 ## Processes
-- read: _( clk )_
-
-- write: _( clk )_
-
-- set_prev_op: _( clk )_
-
+- read: ( clk )
+- write: ( clk )
+- set_prev_op: ( clk )

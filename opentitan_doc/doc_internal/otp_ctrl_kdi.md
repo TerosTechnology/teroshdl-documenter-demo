@@ -1,13 +1,17 @@
 # Entity: otp_ctrl_kdi
+
 ## Diagram
+
 ![Diagram](otp_ctrl_kdi.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Scrambling key derivation module for OTP.
  
 ## Ports
+
 | Port name               | Direction | Type                     | Description                                                             |
 | ----------------------- | --------- | ------------------------ | ----------------------------------------------------------------------- |
 | clk_i                   | input     |                          |                                                                         |
@@ -39,6 +43,7 @@ Copyright lowRISC contributors.
 | scrmbl_valid_i          | input     |                          |                                                                         |
 | scrmbl_data_i           | input     | [ScrmblBlockWidth-1:0]   |                                                                         |
 ## Signals
+
 | Name              | Type                                                              | Description                                                                                                                |
 | ----------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | req               | logic [NumReq-1:0]                                                |                                                                                                                            |
@@ -62,8 +67,8 @@ Copyright lowRISC contributors.
 | seed_valid_q      | logic                                                             |                                                                                                                            |
 | key_out_d         | logic [ScrmblKeyWidth/ScrmblBlockWidth-1:0][ScrmblBlockWidth-1:0] |                                                                                                                            |
 | key_out_q         | logic [ScrmblKeyWidth/ScrmblBlockWidth-1:0][ScrmblBlockWidth-1:0] |                                                                                                                            |
-| nonce_out_d       | logic [3:0][ScrmblBlockWidth-1:0]                                 |                                                                                                                            |
-| nonce_out_q       | logic [3:0][ScrmblBlockWidth-1:0]                                 |                                                                                                                            |
+| nonce_out_d       | logic [NumNonceChunks-1:0][ScrmblBlockWidth-1:0]                  |                                                                                                                            |
+| nonce_out_q       | logic [NumNonceChunks-1:0][ScrmblBlockWidth-1:0]                  |                                                                                                                            |
 | data_sel          | data_sel_e                                                        | Select correct 64bit block.                                                                                                |
 | state_d           | state_e                                                           |                                                                                                                            |
 | state_q           | state_e                                                           |                                                                                                                            |
@@ -71,24 +76,25 @@ Copyright lowRISC contributors.
 | edn_req_q         | logic                                                             |                                                                                                                            |
 | state_raw_q       | logic [StateWidth-1:0]                                            | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name          | Type | Value                             | Description                 |
 | ------------- | ---- | --------------------------------- | --------------------------- |
 | NumReq        | int  | 3 + NumSramKeyReqSlots            | 2xFlash, OTBN + SRAM slots  |
+| OtbnNonceSel  | int  | OtbnNonceWidth / ScrmblBlockWidth |                             |
 | FlashNonceSel | int  | FlashKeyWidth / ScrmblBlockWidth  |                             |
-| NonceIdx      | int  | SramNonceWidth / ScrmblBlockWidth |                             |
+| SramNonceSel  | int  | SramNonceWidth / ScrmblBlockWidth |                             |
 | StateWidth    | int  | 10                                |                             |
 ## Types
+
 | Name         | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Description                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | req_bundle_t | struct packed {     logic                             ingest_entropy;      logic                             chained_digest;      digest_sel_e                      digest_sel;          logic                             fetch_nonce;         logic [1:0]                       nonce_size;          logic                             seed_valid;          logic [3:0][ScrmblBlockWidth-1:0] seed;              }                                    | The configuration options are set further below, depending on the request type.  |
 | data_sel_e   | enum logic {     SeedData,     EntropyData   }                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                  |
 | state_e      | enum logic [StateWidth-1:0] {     ResetSt        = 10'b0111100000,     IdleSt         = 10'b0001111101,     DigClrSt       = 10'b1101101011,     DigLoadSt      = 10'b0100011010,     FetchEntropySt = 10'b0010001001,     DigEntropySt   = 10'b0110110111,     DigFinSt       = 10'b0001000110,     DigWaitSt      = 10'b1100000101,     FetchNonceSt   = 10'b1010101110,     FinishSt       = 10'b1111011100,     ErrorSt        = 10'b1011010011   } |                                                                                  |
 ## Processes
-- p_outregs: _(  )_
-
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_outregs: (  )
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_state_regs: prim_flop

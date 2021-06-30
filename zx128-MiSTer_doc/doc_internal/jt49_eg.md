@@ -1,10 +1,14 @@
 # Entity: jt49_eg
+
 ## Diagram
+
 ![Diagram](jt49_eg.svg "Diagram")
 ## Description
+
  Th
  
 ## Ports
+
 | Port name   | Direction | Type      | Description                                  |
 | ----------- | --------- | --------- | -------------------------------------------- |
 | cen         | input     | wire      |                                              |
@@ -16,6 +20,7 @@
 | ctrl        | input     | wire[3:0] |                                              |
 | env         | output    | [4:0]     |                                              |
 ## Signals
+
 | Name        | Type      | Description |
 | ----------- | --------- | ----------- |
 | inv         | reg       |             |
@@ -32,9 +37,6 @@
 | rst_latch   | reg       |             |
 | rst_clr     | reg       |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
-- unnamed: _( @(posedge clk) )_
-
-- unnamed: _( @( posedge clk, negedge rst_n ) )_
-
+- unnamed: ( @(posedge clk) )
+- unnamed: ( @(posedge clk) )
+- unnamed: ( @( posedge clk, negedge rst_n ) )

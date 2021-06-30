@@ -1,7 +1,10 @@
 # Entity: edn_main_sm
+
 ## Diagram
+
 ![Diagram](edn_main_sm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
    does hardware-based csrng app interface command requests
  
 ## Ports
+
 | Port name              | Direction | Type | Description |
 | ---------------------- | --------- | ---- | ----------- |
 | clk_i                  | input     |      |             |
@@ -25,23 +29,26 @@ Copyright lowRISC contributors.
 | cmd_sent_i             | input     |      |             |
 | main_sm_err_o          | output    |      |             |
 ## Signals
+
 | Name        | Type                   | Description |
 | ----------- | ---------------------- | ----------- |
 | state_d     | state_e                |             |
 | state_q     | state_e                |             |
 | state_raw_q | logic [StateWidth-1:0] |             |
 ## Constants
+
 | Name       | Type | Value | Description |
 | ---------- | ---- | ----- | ----------- |
 | StateWidth | int  | 6     |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                                                                                                              | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     Idle          = 6'b111011,      AckWait       = 6'b010111,      Dispatch      = 6'b011100,      CaptGenCnt    = 6'b110000,      SendGenCmd    = 6'b001001,      CaptReseedCnt = 6'b101110,      SendReseedCmd = 6'b000010,      Error         = 6'b100101     } |             |
 ## Processes
-- unnamed: _(  )_
-
+- unnamed: (  )
 ## Instantiations
+
 - u_state_regs: prim_flop
 **Description**
 This primitive is used to place a size-only constraint on the

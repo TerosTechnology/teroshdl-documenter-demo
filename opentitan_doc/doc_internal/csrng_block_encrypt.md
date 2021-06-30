@@ -1,13 +1,17 @@
 # Entity: csrng_block_encrypt
+
 ## Diagram
+
 ![Diagram](csrng_block_encrypt.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: csrng block encrypt module
  
 ## Generics
+
 | Generic name | Type                 | Value                | Description |
 | ------------ | -------------------- | -------------------- | ----------- |
 | aes_pkg      | aes_pkg::sbox_impl_e | aes_pkg::SBoxImplLut |             |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | BlkLen       | int                  | 128                  |             |
 | KeyLen       | int                  | 256                  |             |
 ## Ports
+
 | Port name                          | Direction | Type          | Description      |
 | ---------------------------------- | --------- | ------------- | ---------------- |
 | clk_i                              | input     |               |                  |
@@ -38,6 +43,7 @@ Copyright lowRISC contributors.
 | block_encrypt_aes_cipher_sm_err_o  | output    |               |                  |
 | block_encrypt_sfifo_blkenc_err_o   | output    | [2:0]         |                  |
 ## Signals
+
 | Name                   | Type                                  | Description                  |
 | ---------------------- | ------------------------------------- | ---------------------------- |
 | sfifo_blkenc_rdata     | logic [BlkEncFifoWidth-1:0]           | signals blk_encrypt_in fifo  |
@@ -62,12 +68,14 @@ Copyright lowRISC contributors.
 | state_done             | logic [3:0][3:0][7:0]                 |                              |
 | state_out              | logic [3:0][3:0][7:0]                 |                              |
 ## Constants
+
 | Name            | Type | Value              | Description |
 | --------------- | ---- | ------------------ | ----------- |
 | BlkEncFifoDepth | int  | 1                  |             |
 | BlkEncFifoWidth | int  | BlkLen+StateId+Cmd |             |
 | NumShares       | int  | 1                  |             |
 ## Instantiations
+
 - u_aes_cipher_core: aes_cipher_core
 **Description**
 Cipher core

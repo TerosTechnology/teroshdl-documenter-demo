@@ -1,7 +1,10 @@
 # Entity: arith_shifter_barrel
+
 ## Diagram
+
 ![Diagram](arith_shifter_barrel.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,10 +31,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | BITS         | positive | 32    |             |
 ## Ports
+
 | Port name       | Direction | Type                                            | Description |
 | --------------- | --------- | ----------------------------------------------- | ----------- |
 | Input           | in        | std_logic_vector(BITS - 1 downto 0)             |             |
@@ -41,14 +46,17 @@ limitations under the License.
 | ArithmeticLogic | in        | std_logic                                       |             |
 | Output          | out       | std_logic_vector(BITS - 1 downto 0)             |             |
 ## Signals
+
 | Name                | Type                                   | Description |
 | ------------------- | -------------------------------------- | ----------- |
 | IntermediateResults | T_INTERMEDIATE_VECTOR(STAGES downto 0) |             |
 ## Constants
+
 | Name   | Type     | Value             | Description |
 | ------ | -------- | ----------------- | ----------- |
 | STAGES | positive |  log2ceilnz(BITS) |             |
 ## Types
+
 | Name                  | Type | Description |
 | --------------------- | ---- | ----------- |
 | T_INTERMEDIATE_VECTOR |      |             |

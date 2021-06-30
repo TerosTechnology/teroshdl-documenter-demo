@@ -1,7 +1,10 @@
 # Entity: comm_scramble
+
 ## Diagram
+
 ![Diagram](comm_scramble.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -26,11 +29,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type       | Value | Description                                                |
 | ------------ | ---------- | ----- | ---------------------------------------------------------- |
 | GEN          | bit_vector |       | Generator Polynomial (little endian)                       |
 | BITS         | positive   |       | Width of Mask Bits to be computed in parallel in each step |
 ## Ports
+
 | Port name | Direction | Type                                    | Description                       |
 | --------- | --------- | --------------------------------------- | --------------------------------- |
 | clk       | in        | std_logic                               | Clock                             |
@@ -39,15 +44,16 @@ limitations under the License.
 | step      | in        | std_logic                               | Compute a Mask Output             |
 | mask      | out       | std_logic_vector(BITS-1 downto 0)       |                                   |
 ## Signals
+
 | Name | Type                       | Description |
 | ---- | -------------------------- | ----------- |
 | lfsr | std_logic_vector(GN'range) | LFSR Value  |
 ## Constants
+
 | Name | Type       | Value           | Description          |
 | ---- | ---------- | --------------- | -------------------- |
 | GN   | bit_vector |  normalize(GEN) | Normalized Generator |
 ## Functions
-- normalize <font id="function_arguments">(G : bit_vector)</font> <font id="function_return">return bit_vector</font>
+- normalize <font id="function_arguments">(G : bit_vector) </font> <font id="function_return">return bit_vector </font>
 ## Processes
-- unnamed: _( clk )_
-
+- unnamed: ( clk )

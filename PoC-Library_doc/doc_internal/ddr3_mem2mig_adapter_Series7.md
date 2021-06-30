@@ -1,7 +1,10 @@
 # Entity: ddr3_mem2mig_adapter_Series7
+
 ## Diagram
+
 ![Diagram](ddr3_mem2mig_adapter_Series7.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -38,6 +41,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | D_BITS       | positive |       |             |
@@ -45,6 +49,7 @@ limitations under the License.
 | MEM_A_BITS   | positive |       |             |
 | APP_A_BITS   | positive |       |             |
 ## Ports
+
 | Port name           | Direction | Type                                    | Description                  |
 | ------------------- | --------- | --------------------------------------- | ---------------------------- |
 | mem_req             | in        | std_logic                               | PoC.Mem interface            |
@@ -69,18 +74,18 @@ limitations under the License.
 | app_wdf_mask        | out       | std_logic_vector((D_BITS)/8-1 downto 0) |                              |
 | app_wdf_wren        | out       | std_logic                               |                              |
 ## Signals
+
 | Name      | Type      | Description |
 | --------- | --------- | ----------- |
 | mem_rdy_i | std_logic |             |
 ## Constants
+
 | Name    | Type     | Value             | Description |
 | ------- | -------- | ----------------- | ----------- |
 | BL      | positive |  D_BITS / DQ_BITS |             |
 | BL_BITS | natural  |  log2ceil(BL)     |             |
 ## Processes
-- unnamed: _( mem_addr )_
-address
-
+- unnamed: ( mem_addr )
 **Description**
 address
 

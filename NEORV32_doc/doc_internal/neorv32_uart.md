@@ -1,7 +1,10 @@
 # Entity: neorv32_uart
+
 ## Diagram
+
 ![Diagram](neorv32_uart.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Universal Asynchronous Receiver and Transmitter (UART0/1) >>                     #
 # ********************************************************************************************* #
@@ -61,10 +64,12 @@
 #################################################################################################
 obviously only for simulation
 ## Generics
+
 | Generic name | Type    | Value | Description                                                 |
 | ------------ | ------- | ----- | ----------------------------------------------------------- |
 | UART_PRIMARY | boolean | true  | true = primary UART (UART0), false = secondary UART (UART1) |
 ## Ports
+
 | Port name   | Direction | Type                           | Description                                            |
 | ----------- | --------- | ------------------------------ | ------------------------------------------------------ |
 | clk_i       | in        | std_ulogic                     | global clock line                                      |
@@ -83,6 +88,7 @@ obviously only for simulation
 | irq_rxd_o   | out       | std_ulogic                     | uart data received interrupt                           |
 | irq_txd_o   | out       | std_ulogic                     | uart transmission done interrupt                       |
 ## Signals
+
 | Name        | Type                           | Description                              |
 | ----------- | ------------------------------ | ---------------------------------------- |
 | ctrl        | std_ulogic_vector(31 downto 0) | control register --                      |
@@ -97,6 +103,7 @@ obviously only for simulation
 | uart_tx     | uart_tx_t                      |                                          |
 | uart_rx     | uart_rx_t                      |                                          |
 ## Constants
+
 | Name                   | Type                                       | Value                                                                                                  | Description                                                         |
 | ---------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
 | uart_id_base_c         | std_ulogic_vector(data_width_c-1 downto 0) |  cond_sel_stdulogicvector_f(UART_PRIMARY, uart0_base_c,      uart1_base_c)                             |                                                                     |
@@ -138,51 +145,34 @@ obviously only for simulation
 | data_rx_overr_c        | natural                                    |  30                                                                                                    | r/-: Rx data overrun                                                |
 | data_rx_avail_c        | natural                                    |  31                                                                                                    | r/-: Rx data available                                              |
 ## Types
+
 | Name          | Type | Description     |
 | ------------- | ---- | --------------- |
 | uart_tx_t     |      | uart tx unit -- |
 | ry_data_buf_t |      | uart rx unit -- |
 | uart_rx_t     |      |                 |
 ## Processes
-- rw_access: _( clk_i )_
-Read/Write Access ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rw_access: ( clk_i )
 **Description**
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- uart_tx_unit: _( clk_i )_
-UART Transmitter -----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- uart_tx_unit: ( clk_i )
 **Description**
 UART Transmitter -----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- uart_rx_unit: _( clk_i )_
-UART Receiver --------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- uart_rx_unit: ( clk_i )
 **Description**
 UART Receiver --------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- flow_control_buffer: _( clk_i )_
-output is low-active
-flow-control input/output synchronizer --
-
+- flow_control_buffer: ( clk_i )
 **Description**
 output is low-active
 flow-control input/output synchronizer --
 
-- sim_output: _( clk_i )_
-SIMULATION Output ----------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-pragma translate_off
-synthesis translate_off
-RTL_SYNTHESIS OFF
-
+- sim_output: ( clk_i )
 **Description**
 SIMULATION Output ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

@@ -1,13 +1,17 @@
 # Entity: pwrmgr_slow_fsm
+
 ## Diagram
+
 ![Diagram](pwrmgr_slow_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Power Manager Slow FSM
  
 ## Ports
+
 | Port name            | Direction | Type          | Description                       |
 | -------------------- | --------- | ------------- | --------------------------------- |
 | clk_i                | input     |               |                                   |
@@ -28,6 +32,7 @@ Copyright lowRISC contributors.
 | ast_i                | input     | pwr_ast_rsp_t | AST interface                     |
 | ast_o                | output    | pwr_ast_req_t |                                   |
 ## Signals
+
 | Name                | Type             | Description                                                                                     |
 | ------------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
 | state_q             | slow_pwr_state_e |                                                                                                 |
@@ -56,7 +61,5 @@ Copyright lowRISC contributors.
 | all_clks_invalid    | logic            |                                                                                                 |
 | unused_slow_clk_val | logic            |                                                                                                 |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )

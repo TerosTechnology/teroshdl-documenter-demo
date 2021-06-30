@@ -1,7 +1,10 @@
 # Entity: neorv32_busswitch
+
 ## Diagram
+
 ![Diagram](neorv32_busswitch.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Bus Switch >>                                                                    #
 # ********************************************************************************************* #
@@ -39,11 +42,13 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name      | Type    | Value | Description                           |
 | ----------------- | ------- | ----- | ------------------------------------- |
 | PORT_CA_READ_ONLY | boolean | false | set if controller port A is read-only |
 | PORT_CB_READ_ONLY | boolean | false | set if controller port B is read-only |
 ## Ports
+
 | Port name      | Direction | Type                                       | Description                     |
 | -------------- | --------- | ------------------------------------------ | ------------------------------- |
 | clk_i          | in        | std_ulogic                                 | global clock, rising edge       |
@@ -77,6 +82,7 @@
 | p_bus_ack_i    | in        | std_ulogic                                 | bus transfer acknowledge        |
 | p_bus_err_i    | in        | std_ulogic                                 | bus transfer error              |
 ## Signals
+
 | Name             | Type       | Description           |
 | ---------------- | ---------- | --------------------- |
 | ca_rd_req_buf    | std_ulogic |                       |
@@ -95,28 +101,21 @@
 |    p_bus_re      | std_ulogic |                       |
 | arbiter          | arbiter_t  |                       |
 ## Types
-| Name            | Type                                                 | Description       |
-| --------------- | ---------------------------------------------------- | ----------------- |
-| arbiter_state_t | (IDLE, BUSY, RETIRE, BUSY_SWITCHED, RETIRE_SWITCHED) | access arbiter -- |
-| arbiter_t       |                                                      |                   |
+
+| Name            | Type                                                  | Description       |
+| --------------- | ----------------------------------------------------- | ----------------- |
+| arbiter_state_t | (IDLE, BUSY, RETIRE, BUSY_SWITCHED, RETIRE_SWITCHED)  | access arbiter -- |
+| arbiter_t       |                                                       |                   |
 ## Processes
-- access_buffer: _( rstn_i, clk_i )_
-
-- arbiter_sync: _( rstn_i, clk_i )_
-Access Arbiter Sync --------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-for registers that require a specific reset state --
-
+- access_buffer: ( rstn_i, clk_i )
+- arbiter_sync: ( rstn_i, clk_i )
 **Description**
 Access Arbiter Sync --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 for registers that require a specific reset state --
 
-- arbiter_comb: _( arbiter, ca_req_current, cb_req_current, ca_req_buffered, cb_req_buffered,
-                        ca_rd_req_buf, ca_wr_req_buf, cb_rd_req_buf, cb_wr_req_buf, p_bus_ack_i, p_bus_err_i )_
-Peripheral Bus Arbiter -----------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- arbiter_comb: ( arbiter, ca_req_current, cb_req_current, ca_req_buffered, cb_req_buffered,
+                        ca_rd_req_buf, ca_wr_req_buf, cb_rd_req_buf, cb_wr_req_buf, p_bus_ack_i, p_bus_err_i )
 **Description**
 Peripheral Bus Arbiter -----------------------------------------------------------------
 -------------------------------------------------------------------------------------------

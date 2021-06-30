@@ -1,7 +1,10 @@
 # Entity: neorv32_SystemTop_axi4lite
+
 ## Diagram
+
 ![Diagram](neorv32_SystemTop_axi4lite.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Processor Top Entity with AXI4-Lite Compatible Master Interface >>               #
 # ********************************************************************************************* #
@@ -39,6 +42,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                          | Value       | Description                                                                           |
 | ---------------------------- | ----------------------------- | ----------- | ------------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY              | natural                       | 0           | clock frequency of clk_i in Hz                                                        |
@@ -82,9 +86,9 @@
 | IO_CFS_CONFIG                | std_logic_vector(31 downto 0) |             | custom CFS configuration generic                                                      |
 | IO_CFS_IN_SIZE               | positive                      | 32          | size of CFS input conduit in bits                                                     |
 | IO_CFS_OUT_SIZE              | positive                      | 32          | size of CFS output conduit in bits                                                    |
-| IO_NCO_EN                    | boolean                       | true        | implement numerically-controlled oscillator (NCO)?                                    |
 | IO_NEOLED_EN                 | boolean                       | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
+
 | Port name     | Direction | Type                                         | Description                                                                                                                                                                           |
 | ------------- | --------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | m_axi_aclk    | in        | std_logic                                    | ------------------------------------------------------------AXI4-Lite-Compatible Master Interface -- ------------------------------------------------------------ Clock and Reset --  |
@@ -132,13 +136,12 @@
 | pwm_o         | out       | std_logic_vector(IO_PWM_NUM_CH-1 downto 0)   | pwm channels                                                                                                                                                                          |
 | cfs_in_i      | in        | std_logic_vector(IO_CFS_IN_SIZE-1  downto 0) | custom inputs                                                                                                                                                                         |
 | cfs_out_o     | out       | std_logic_vector(IO_CFS_OUT_SIZE-1 downto 0) | custom outputs                                                                                                                                                                        |
-| nco_o         | out       | std_logic_vector(02 downto 0)                | numerically-controlled oscillator channels                                                                                                                                            |
 | neoled_o      | out       | std_logic                                    | async serial data line                                                                                                                                                                |
 | nm_irq_i      | in        | std_logic                                    | non-maskable interrupt                                                                                                                                                                |
-| soc_firq_i    | in        | std_logic_vector(5 downto 0)                 | fast interrupt channels                                                                                                                                                               |
 | msw_irq_i     | in        | std_logic                                    | machine software interrupt                                                                                                                                                            |
 | mext_irq_i    | in        | std_logic                                    | machine external interrupt                                                                                                                                                            |
 ## Signals
+
 | Name            | Type                                          | Description                 |
 | --------------- | --------------------------------------------- | --------------------------- |
 | clk_i_int       | std_ulogic                                    |                             |
@@ -165,10 +168,8 @@
 | pwm_o_int       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0)   |                             |
 | cfs_in_i_int    | std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) |                             |
 | cfs_out_o_int   | std_ulogic_vector(IO_CFS_OUT_SIZE-1 downto 0) |                             |
-| nco_o_int       | std_ulogic_vector(02 downto 0)                |                             |
 | neoled_o_int    | std_ulogic                                    |                             |
 | nm_irq_i_int    | std_ulogic                                    |                             |
-| soc_firq_i_int  | std_ulogic_vector(05 downto 0)                |                             |
 | msw_irq_i_int   | std_ulogic                                    |                             |
 | mext_irq_i_int  | std_ulogic                                    |                             |
 | wb_core         | wb_bus_t                                      |                             |
@@ -178,27 +179,26 @@
 | err_read        | std_ulogic                                    |                             |
 |  err_write      | std_ulogic                                    |                             |
 ## Constants
+
 | Name              | Type                           | Value                             | Description |
 | ----------------- | ------------------------------ | --------------------------------- | ----------- |
 | USER_CODE_INT     | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(USER_CODE)     |             |
 | IO_CFS_CONFIG_INT | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(IO_CFS_CONFIG) |             |
 ## Types
+
 | Name     | Type | Description              |
 | -------- | ---- | ------------------------ |
 | wb_bus_t |      | internal wishbone bus -- |
 | ctrl_t   |      | AXI bridge control --    |
 ## Processes
-- axi_access_arbiter: _( rstn_i_int, clk_i_int )_
-Wishbone to AXI4-Lite Bridge -----------------------------------------------------------
--------------------------------------------------------------------------------------------
-access arbiter --
-
+- axi_access_arbiter: ( rstn_i_int, clk_i_int )
 **Description**
 Wishbone to AXI4-Lite Bridge -----------------------------------------------------------
 -------------------------------------------------------------------------------------------
 access arbiter --
 
 ## Instantiations
+
 - neorv32_top_inst: neorv32_top
 **Description**
 The Core Of The Problem ----------------------------------------------------------------

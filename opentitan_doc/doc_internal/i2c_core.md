@@ -1,17 +1,22 @@
 # Entity: i2c_core
+
 ## Diagram
+
 ![Diagram](i2c_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: I2C core module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | FifoDepth    | int  | 64    |             |
 ## Ports
+
 | Port name               | Direction | Type | Description |
 | ----------------------- | --------- | ---- | ----------- |
 | clk_i                   | input     |      |             |
@@ -39,6 +44,7 @@ Copyright lowRISC contributors.
 | intr_ack_stop_o         | output    |      |             |
 | intr_host_timeout_o     | output    |      |             |
 ## Signals
+
 | Name                        | Type         | Description                   |
 | --------------------------- | ------------ | ----------------------------- |
 | thigh                       | logic [15:0] |                               |
@@ -144,19 +150,15 @@ Copyright lowRISC contributors.
 | unused_alert_test_qe        | logic        |                               |
 | unused_alert_test_q         | logic        |                               |
 ## Processes
-- rx_oversampling: _( @ (posedge clk_i or negedge rst_ni) )_
-Sample scl_i and sda_i at system clock
-
+- rx_oversampling: ( @ (posedge clk_i or negedge rst_ni) )
 **Description**
 Sample scl_i and sda_i at system clock
 
-- watermark_transition: _( @ (posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- watermark_transition: ( @ (posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - u_i2c_fmtfifo: prim_fifo_sync
 - u_i2c_rxfifo: prim_fifo_sync
 - u_i2c_txfifo: prim_fifo_sync

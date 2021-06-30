@@ -1,7 +1,10 @@
 # Entity: rom_ctrl_compare
+
 ## Diagram
+
 ![Diagram](rom_ctrl_compare.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -14,10 +17,12 @@ Copyright lowRISC contributors.
        that we communicate with.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NumWords     | int  | 2     |             |
 ## Ports
+
 | Port name    | Direction | Type              | Description                                                       |
 | ------------ | --------- | ----------------- | ----------------------------------------------------------------- |
 | clk_i        | input     |                   |                                                                   |
@@ -29,6 +34,7 @@ Copyright lowRISC contributors.
 | exp_digest_i | input     | [NumWords*32-1:0] |                                                                   |
 | alert_o      | output    |                   | To alert system                                                   |
 ## Signals
+
 | Name            | Type             | Description                                                       |
 | --------------- | ---------------- | ----------------------------------------------------------------- |
 | addr_q          | logic [AW-1:0]   |                                                                   |
@@ -44,6 +50,7 @@ Copyright lowRISC contributors.
 | digest_word     | logic [31:0]     |                                                                   |
 | exp_digest_word | logic [31:0]     |                                                                   |
 ## Constants
+
 | Name        | Type         | Value           | Description                                                                                                                                                                                                              |
 | ----------- | ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | AW          | int          | vbits(NumWords) |                                                                                                                                                                                                                          |
@@ -52,17 +59,16 @@ Copyright lowRISC contributors.
 | EndAddr     | bit [AW-1:0] | undefined       | Note that if NumWords is a power of 2 then EndAddr will be zero. That's ok: we're just using a comparison with EndAddr to check that the address counter hasn't started wandering around when we're in the wrong state.  |
 | LastAddr    | bit [AW-1:0] | undefined       |                                                                                                                                                                                                                          |
 ## Types
+
 | Name    | Type                                                                                             | Description |
 | ------- | ------------------------------------------------------------------------------------------------ | ----------- |
 | state_e | enum logic [4:0] {     Waiting  = 5'b00100,     Checking = 5'b10010,     Done     = 5'b11001   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Increment addr_q on each cycle when in Checking
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Increment addr_q on each cycle when in Checking
 
 ## Instantiations
+
 - u_state_regs: prim_flop

@@ -1,7 +1,10 @@
 # Entity: uart_pif
+
 ## Diagram
+
 ![Diagram](uart_pif.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 ## Ports
+
 | Port name | Direction | Type                         | Description   |
 | --------- | --------- | ---------------------------- | ------------- |
 | arst      | in        | std_logic                    |               |
@@ -24,20 +28,16 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | p2c       | out       | t_p2c                        |               |
 | c2p       | in        | t_c2p                        |               |
 ## Signals
+
 | Name    | Type                         | Description                |
 | ------- | ---------------------------- | -------------------------- |
 | p2c_i   | t_p2c                        | internal version of output |
 | rdata_i | std_logic_vector(7 downto 0) |                            |
 ## Processes
-- p_aux: _( wdata, addr, cs, wr, rd )_
-Auxiliary Register Control.
-  Provides read/write/trigger strobes and write data to auxiliary
-  registers and fields, i.e., registers and fields implemented in core.
-
+- p_aux: ( wdata, addr, cs, wr, rd )
 **Description**
 Auxiliary Register Control.
   Provides read/write/trigger strobes and write data to auxiliary
   registers and fields, i.e., registers and fields implemented in core.
 
-- p_read_reg: _( cs, addr, rd, c2p, p2c_i )_
-
+- p_read_reg: ( cs, addr, rd, c2p, p2c_i )

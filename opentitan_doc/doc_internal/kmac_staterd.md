@@ -1,19 +1,24 @@
 # Entity: kmac_staterd
+
 ## Diagram
+
 ![Diagram](kmac_staterd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Keccak state read
  
 ## Generics
+
 | Generic name | Type | Value     | Description                                                                                                                       |
 | ------------ | ---- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | AddrW        | int  | 9         | TL-UL Address Width. Should be bigger than $clog2(kmac_pkg::StateW) * Share                                                       |
 | EnMasking    | bit  | 1'b0      | EnMasking: Enable masking security hardening inside keccak_round If it is enabled, the result digest will be two set of 1600bit.  |
 | Share        | int  | undefined | derived parameter                                                                                                                 |
 ## Ports
+
 | Port name     | Direction | Type                   | Description |
 | ------------- | --------- | ---------------------- | ----------- |
 | clk_i         | input     |                        |             |
@@ -23,6 +28,7 @@ Copyright lowRISC contributors.
 | state_i       | input     | [sha3_pkg::StateW-1:0] | State in    |
 | endian_swap_i | input     |                        | Config      |
 ## Signals
+
 | Name               | Type                 | Description            |
 | ------------------ | -------------------- | ---------------------- |
 | tlram_req          | logic                | TL-UL Adapter signals  |
@@ -38,17 +44,17 @@ Copyright lowRISC contributors.
 | muxed_state        | logic [31:0]         |                        |
 | addr_sel           | logic [SelAddrW-1:0] |                        |
 ## Constants
+
 | Name       | Type | Value                       | Description       |
 | ---------- | ---- | --------------------------- | ----------------- |
 | Share      | int  | undefined                   | derived parameter |
 | StateAddrW | int  | $clog2(sha3_pkg::StateW/32) |                   |
 | SelAddrW   | int  | AddrW-2-StateAddrW          |                   |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_tlul_adapter: tlul_adapter_sram
 **Description**
 TL Adapter

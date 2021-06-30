@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_ulp
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_ulp.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description sysrst_ctrl ULP module
  
 ## Ports
+
 | Port name               | Direction | Type                                           | Description |
 | ----------------------- | --------- | ---------------------------------------------- | ----------- |
 | clk_aon_i               | input     |                                                |             |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | ulp_wakeup_o            | output    |                                                |             |
 | z3_wakeup_hw            | output    |                                                |             |
 ## Signals
+
 | Name                     | Type         | Description |
 | ------------------------ | ------------ | ----------- |
 | cfg_ulp_en               | logic        |             |
@@ -53,15 +58,12 @@ Copyright lowRISC contributors.
 | cfg_lid_open_det_pulse   | logic        |             |
 | cfg_ac_present_det_pulse | logic        |             |
 ## Processes
-- i_cfg_ulp_ac_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_cfg_ulp_lid_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_cfg_ulp_pwrb_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ulp_cond_met: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- i_cfg_ulp_ac_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_cfg_ulp_lid_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_cfg_ulp_pwrb_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ulp_cond_met: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_cfg_ulp_en: prim_flop_2sync
 - i_cfg_ulp_ac_timer: prim_fifo_async
 - i_cfg_ulp_lid_timer: prim_fifo_async

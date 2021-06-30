@@ -1,12 +1,16 @@
 # Entity: prim_generic_otp
+
 ## Diagram
+
 ![Diagram](prim_generic_otp.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value                       | Description                                                                                                     |
 | ------------- | ---- | --------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Width         | int  | 16                          | Native OTP word size. This determines the size_i granule.                                                       |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | IfWidth       | int  | 2**SizeWidth*Width          |                                                                                                                 |
 | MemInitFile   |      | ""                          | VMEM file to initialize the memory with                                                                         |
 ## Ports
+
 | Port name       | Direction | Type                | Description                                           |
 | --------------- | --------- | ------------------- | ----------------------------------------------------- |
 | clk_i           | input     |                     |                                                       |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | rdata_o         | output    | [IfWidth-1:0]       |                                                       |
 | err_o           | output    | err_e               |                                                       |
 ## Signals
+
 | Name               | Type                                         | Description                                                                                                                |
 | ------------------ | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | unused_pwr_seq_h   | logic [PwrSeqWidth-1:0]                      | Not supported in open-source emulation model.                                                                              |
@@ -85,6 +91,7 @@ Copyright lowRISC contributors.
 | rdata_q            | logic [2**SizeWidth-1:0][Width+EccWidth-1:0] |                                                                                                                            |
 | state_raw_q        | logic [StateWidth-1:0]                       | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name        | Type | Value                         | Description                                                                                                                                              |
 | ----------- | ---- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AddrWidth   | int  | prim_util_pkg::vbits(Depth)   | Derived parameters                                                                                                                                       |
@@ -93,23 +100,20 @@ Copyright lowRISC contributors.
 | TlAddrWidth | int  | prim_util_pkg::vbits(TlDepth) | Put down a register that can be used to test the TL interface. TODO: this emulation may need to be adjusted, once closed source wrapper is implemented.  |
 | StateWidth  | int  | 10                            |                                                                                                                                                          |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                                                                                                                                     | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     ResetSt      = 10'b1100000011,     InitSt       = 10'b1100110100,     IdleSt       = 10'b1010111010,     ReadSt       = 10'b0011100000,     ReadWaitSt   = 10'b1001011111,     WriteCheckSt = 10'b0111010101,     WriteWaitSt  = 10'b0000001100,     WriteSt      = 10'b0110101111   } |             |
 ## Processes
-- p_tlul_testreg: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_fsm: _(  )_
-
-- p_output_map: _(  )_
-Output data without ECC bits.
-
+- p_tlul_testreg: ( @(posedge clk_i or negedge rst_ni) )
+- p_fsm: (  )
+- p_output_map: (  )
 **Description**
 Output data without ECC bits.
 
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_tlul_adapter_sram: tlul_adapter_sram
 - u_enc: prim_secded_hamming_22_16_enc
 **Description**

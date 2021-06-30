@@ -1,17 +1,22 @@
 # Entity: pwm_core
+
 ## Diagram
+
 ![Diagram](pwm_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: PWM Core Module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | NOutputs     | int  | 6     |             |
 ## Ports
+
 | Port name   | Direction | Type           | Description |
 | ----------- | --------- | -------------- | ----------- |
 | clk_core_i  | input     |                |             |
@@ -19,6 +24,7 @@ Copyright lowRISC contributors.
 | reg2hw      | input     |                |             |
 | pwm_o       | output    | [NOutputs-1:0] |             |
 ## Signals
+
 | Name               | Type                      | Description |
 | ------------------ | ------------------------- | ----------- |
 | reg2hw_sync        | pwm_reg_pkg::pwm_reg2hw_t |             |
@@ -40,9 +46,8 @@ Copyright lowRISC contributors.
 | cycle_end          | logic                     |             |
 | unused_regen       | logic                     |             |
 ## Processes
-- unnamed: _( @(posedge clk_core_i or negedge rst_core_ni) )_
-
-- unnamed: _( @(posedge clk_core_i or negedge rst_core_ni) )_
-
+- unnamed: ( @(posedge clk_core_i or negedge rst_core_ni) )
+- unnamed: ( @(posedge clk_core_i or negedge rst_core_ni) )
 ## Instantiations
+
 - u_pwm_cdc: pwm_cdc

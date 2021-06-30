@@ -1,7 +1,10 @@
 # Entity: prim_subst_perm
+
 ## Diagram
+
 ![Diagram](prim_subst_perm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -12,18 +15,21 @@ Copyright lowRISC contributors.
  See also: prim_prince, prim_present, prim_cipher_pkg
  
 ## Generics
+
 | Generic name | Type | Value | Description            |
 | ------------ | ---- | ----- | ---------------------- |
 | DataWidth    | int  | 64    |                        |
 | NumRounds    | int  | 31    |                        |
 | Decrypt      | bit  | 0     | 0: encrypt, 1: decrypt |
 ## Ports
+
 | Port name | Direction | Type            | Description |
 | --------- | --------- | --------------- | ----------- |
 | data_i    | input     | [DataWidth-1:0] |             |
 | key_i     | input     | [DataWidth-1:0] |             |
 | data_o    | output    | [DataWidth-1:0] |             |
 ## Signals
+
 | Name       | Type                               | Description            |
 | ---------- | ---------------------------------- | ---------------------- |
 | data_state | logic [NumRounds:0][DataWidth-1:0] | verilator split_var */ |

@@ -1,7 +1,10 @@
 # Entity: flash_phy_prog
+
 ## Diagram
+
 ![Diagram](flash_phy_prog.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -22,6 +25,7 @@ Copyright lowRISC contributors.
    as it does in the point above and rely on software to correctly compact the data.
  
 ## Ports
+
 | Port name        | Direction | Type                | Description                                        |
 | ---------------- | --------- | ------------------- | -------------------------------------------------- |
 | clk_i            | input     |                     |                                                    |
@@ -46,6 +50,7 @@ Copyright lowRISC contributors.
 | block_data_o     | output    | [DataWidth-1:0]     | block data does not contain ecc / metadata portion |
 | data_o           | output    | [FullDataWidth-1:0] |                                                    |
 ## Signals
+
 | Name        | Type                                    | Description                       |
 | ----------- | --------------------------------------- | --------------------------------- |
 | state_d     | prog_state_e                            |                                   |
@@ -62,24 +67,22 @@ Copyright lowRISC contributors.
 | txn_done    | logic                                   |                                   |
 | done_cnt    | logic [15:0]                            |                                   |
 ## Constants
+
 | Name   | Type               | Value     | Description |
 | ------ | ------------------ | --------- | ----------- |
 | MaxIdx | bit [WordSelW-1:0] | undefined |             |
 ## Types
+
 | Name         | Type                                                                                                                                                                 | Description |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | prog_state_e | enum logic [3:0] {     StIdle,     StPrePack,     StPackData,     StPostPack,     StReqFlash,     StWaitFlash,     StCalcMask,     StScrambleData,     StCalcEcc   } |             |
 | data_sel_e   | enum logic [1:0] {     Filler,     Actual   }                                                                                                                        |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_enc: prim_secded_hamming_72_64_enc

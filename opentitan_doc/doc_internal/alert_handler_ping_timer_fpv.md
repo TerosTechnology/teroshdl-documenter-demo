@@ -1,7 +1,10 @@
 # Entity: alert_handler_ping_timer_fpv
+
 ## Diagram
+
 ![Diagram](alert_handler_ping_timer_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  a formal tool.
  
 ## Ports
+
 | Port name          | Direction | Type              | Description |
 | ------------------ | --------- | ----------------- | ----------- |
 | clk_i              | input     |                   |             |
@@ -27,4 +31,5 @@ Copyright lowRISC contributors.
 | alert_ping_fail_o  | output    |                   |             |
 | esc_ping_fail_o    | output    |                   |             |
 ## Instantiations
+
 - i_alert_handler_ping_timer: alert_handler_ping_timer

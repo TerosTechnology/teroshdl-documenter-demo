@@ -1,13 +1,17 @@
 # Entity: prim_lfsr_fpv
+
 ## Diagram
+
 ![Diagram](prim_lfsr_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Testbench module for prim_lfsr. Intended to be used with a formal tool.
  
 ## Generics
+
 | Generic name     | Type         | Value                                 | Description                                                                           |
 | ---------------- | ------------ | ------------------------------------- | ------------------------------------------------------------------------------------- |
 | EntropyDw        | int unsigned | 1                                     | LFSR entropy and output bitwidths (set to 1 here as they are unused)                  |
@@ -21,6 +25,7 @@ Copyright lowRISC contributors.
 | MaxLfsrDw        | int unsigned | GalXorMaxLfsrDw * GalMaxGtFibMax +    |                                                                                       |
 | NumDuts          | int unsigned | FibXnorMaxLfsrDw - FibXnorMinLfsrDw + |                                                                                       |
 ## Ports
+
 | Port name     | Direction | Type                         | Description |
 | ------------- | --------- | ---------------------------- | ----------- |
 | clk_i         | input     |                              |             |
@@ -31,6 +36,7 @@ Copyright lowRISC contributors.
 | entropy_i     | input     | [NumDuts-1:0][EntropyDw-1:0] |             |
 | state_o       | output    | [NumDuts-1:0]                |             |
 ## Constants
+
 | Name           | Type         | Value                                 | Description     |
 | -------------- | ------------ | ------------------------------------- | --------------- |
 | GalMaxGtFibMax | int unsigned | GalXorMaxLfsrDw > FibXnorMaxLfsrDw    | derived params  |

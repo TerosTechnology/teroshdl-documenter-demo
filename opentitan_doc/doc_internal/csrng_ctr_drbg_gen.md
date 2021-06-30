@@ -1,7 +1,10 @@
 # Entity: csrng_ctr_drbg_gen
+
 ## Diagram
+
 ![Diagram](csrng_ctr_drbg_gen.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,6 +14,7 @@ Copyright lowRISC contributors.
  ctr_drbg cmd module.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Cmd          | int  | 3     |             |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | SeedLen      | int  | 384   |             |
 | CtrLen       | int  | 32    |             |
 ## Ports
+
 | Port name                         | Direction | Type          | Description                                      |
 | --------------------------------- | --------- | ------------- | ------------------------------------------------ |
 | clk_i                             | input     |               |                                                  |
@@ -78,6 +83,7 @@ Copyright lowRISC contributors.
 | ctr_drbg_gen_sfifo_ggenbits_err_o | output    | [2:0]         |                                                  |
 | ctr_drbg_gen_sm_err_o             | output    |               |                                                  |
 ## Signals
+
 | Name                    | Type                           | Description                                                        |
 | ----------------------- | ------------------------------ | ------------------------------------------------------------------ |
 | genreq_ccmd             | logic [Cmd-1:0]                | signals                                                            |
@@ -153,6 +159,7 @@ Copyright lowRISC contributors.
 | state_q                 | state_e                        |                                                                    |
 | state_raw_q             | logic [StateWidth-1:0]         |                                                                    |
 ## Constants
+
 | Name               | Type | Value                                        | Description |
 | ------------------ | ---- | -------------------------------------------- | ----------- |
 | GenreqFifoDepth    | int  | 1                                            |             |
@@ -167,15 +174,15 @@ Copyright lowRISC contributors.
 | GenbitsFifoWidth   | int  | 1+BlkLen+KeyLen+BlkLen+CtrLen+StateId+Cmd    |             |
 | StateWidth         | int  | 5                                            |             |
 ## Types
+
 | Name    | Type                                                                                                                               | Description |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     ReqIdle  = 5'b01101,     ReqSend  = 5'b00011,     ESHalt   = 5'b11000,     ReqError = 5'b10110 } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_state_regs: prim_flop
 **Description**
 This primitive is used to place a size-only constraint on the

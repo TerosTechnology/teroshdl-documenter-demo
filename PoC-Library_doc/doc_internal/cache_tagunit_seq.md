@@ -1,7 +1,10 @@
 # Entity: cache_tagunit_seq
+
 ## Diagram
+
 ![Diagram](cache_tagunit_seq.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type         | Value                                 | Description |
 | ------------------ | ------------ | ------------------------------------- | ----------- |
 | REPLACEMENT_POLICY | string       | "LRU"                                 |             |
@@ -35,6 +39,7 @@ limitations under the License.
 | USE_INITIAL_TAGS   | boolean      | false                                 |             |
 | INITIAL_TAGS       | T_SLM        | (0 downto 0 => (127 downto 0 => '0')) |             |
 ## Ports
+
 | Port name           | Direction | Type                                                   | Description |
 | ------------------- | --------- | ------------------------------------------------------ | ----------- |
 | Clock               | in        | std_logic                                              |             |
@@ -57,6 +62,7 @@ limitations under the License.
 | Request_TagHit      | out       | std_logic                                              |             |
 | Request_TagMiss     | out       | std_logic                                              |             |
 ## Constants
+
 | Name | Type     | Value                        | Description |
 | ---- | -------- | ---------------------------- | ----------- |
 | SETS | positive |  CACHE_LINES / ASSOCIATIVITY |             |

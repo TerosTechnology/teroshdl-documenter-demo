@@ -1,7 +1,10 @@
 # Entity: usb_fs_nb_in_pe
+
 ## Diagram
+
 ![Diagram](usb_fs_nb_in_pe.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright Luke Valenty (TinyFPGA project)
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
@@ -12,6 +15,7 @@ Copyright lowRISC contributors.
  this version contains no packet buffers
  
 ## Generics
+
 | Generic name     | Type         | Value                    | Description       |
 | ---------------- | ------------ | ------------------------ | ----------------- |
 | NumInEps         | logic [4:0]  | 12                       |                   |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | InEpW            | int unsigned | $clog2(NumInEps)         | derived parameter |
 | PktW             | int unsigned | $clog2(MaxInPktSizeByte) | derived parameter |
 ## Ports
+
 | Port name           | Direction | Type           | Description                                      |
 | ------------------- | --------- | -------------- | ------------------------------------------------ |
 | clk_48mhz_i         | input     |                |                                                  |
@@ -50,6 +55,7 @@ Copyright lowRISC contributors.
 | tx_data_get_i       | input     |                |                                                  |
 | tx_data_o           | output    | [7:0]          |                                                  |
 ## Signals
+
 | Name                 | Type                 | Description                                                                                                                                                                                                                                       |
 | -------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | unused_1             | logic                | suppress warnings                                                                                                                                                                                                                                 |
@@ -73,28 +79,22 @@ Copyright lowRISC contributors.
 | in_ep_index_d        | logic [InEpW-1:0]    |                                                                                                                                                                                                                                                   |
 | rollback_in_xfr      | logic                |                                                                                                                                                                                                                                                   |
 ## Constants
+
 | Name  | Type         | Value                    | Description       |
 | ----- | ------------ | ------------------------ | ----------------- |
 | InEpW | int unsigned | $clog2(NumInEps)         | derived parameter |
 | PktW  | int unsigned | $clog2(MaxInPktSizeByte) | derived parameter |
 ## Types
+
 | Name       | Type                                                                           | Description |
 | ---------- | ------------------------------------------------------------------------------ | ----------- |
 | state_in_e | enum logic [1:0] {     StIdle,     StRcvdIn,     StSendData,     StWaitAck   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- proc_data_toggle_d: _(  )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_48mhz_i or negedge rst_ni) )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- proc_data_toggle_d: (  )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )

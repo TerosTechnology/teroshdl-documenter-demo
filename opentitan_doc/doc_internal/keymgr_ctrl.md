@@ -1,13 +1,17 @@
 # Entity: keymgr_ctrl
+
 ## Diagram
+
 ![Diagram](keymgr_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Key manager top level
  
 ## Ports
+
 | Port name            | Direction | Type                        | Description                                       |
 | -------------------- | --------- | --------------------------- | ------------------------------------------------- |
 | clk_i                | input     |                             |                                                   |
@@ -43,6 +47,7 @@ Copyright lowRISC contributors.
 | prng_reseed_req_o    | output    |                             |                                                   |
 | prng_en_o            | output    |                             |                                                   |
 ## Signals
+
 | Name             | Type                                                    | Description                               |
 | ---------------- | ------------------------------------------------------- | ----------------------------------------- |
 | state_q          | keymgr_ctrl_state_e                                     |                                           |
@@ -76,58 +81,39 @@ Copyright lowRISC contributors.
 | data_st_d        | keymgr_ctrl_data_state_e                                |                                           |
 | data_st_q        | keymgr_ctrl_data_state_e                                |                                           |
 ## Constants
+
 | Name          | Type | Value                   | Description |
 | ------------- | ---- | ----------------------- | ----------- |
 | EntropyWidth  | int  | LfsrWidth / 2           |             |
 | EntropyRounds | int  | KeyWidth / EntropyWidth |             |
 | CntWidth      | int  | $clog2(EntropyRounds)   |             |
 ## Types
+
 | Name                     | Type                                                                                                                                                                                                                                             | Description                                                                     |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
 | keymgr_ctrl_state_e      | enum logic [3:0] {     StCtrlReset,     StCtrlEntropyReseed,     StCtrlRandom,     StCtrlRootKey,     StCtrlInit,     StCtrlCreatorRootKey,     StCtrlOwnerIntKey,     StCtrlOwnerKey,     StCtrlDisabled,     StCtrlWipe,     StCtrlInvalid   } | Enumeration for working state                                                   |
 | keymgr_ctrl_data_state_e | enum logic [1:0] {     StCtrlDataIdle,     StCtrlDataEn,     StCtrlDataDis,     StCtrlDataWait   }                                                                                                                                               | This is a separate data path from the FSM used to control the data_en_o output  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Unlike the key state, the working state can be safely reset.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Unlike the key state, the working state can be safely reset.
 
-- unnamed: _( @(posedge clk_i) )_
-key state is intentionally not reset
-
+- unnamed: ( @(posedge clk_i) )
 **Description**
 key state is intentionally not reset
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-always_comb
-Current working state provided for software read
-Certain states are collapsed for simplicity
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 always_comb
 Current working state provided for software read
 Certain states are collapsed for simplicity
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-The below control path is used for modulating the datapath to sideload and sw keys.
-This path is separate from the data_valid_o path, thus creating two separate attack points.
-The data is only enabled when a non-advance operation is invoked.
-When an advance operation is called, the data is disabled. It will stay disabled until an
-entire completion sequence is seen (op_done_o assert -> start_i de-assertion).
-When a generate operation is called, the data is enabled.  However, any indication of this
-supposedly being an advance call will force the path to disable again.
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 The below control path is used for modulating the datapath to sideload and sw keys.
 This path is separate from the data_valid_o path, thus creating two separate attack points.
@@ -138,4 +124,5 @@ When a generate operation is called, the data is enabled.  However, any indicati
 supposedly being an advance call will force the path to disable again.
 
 ## Instantiations
+
 - u_key_valid_sync: prim_flop_2sync

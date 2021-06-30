@@ -1,7 +1,10 @@
 # Entity: pad_control
+
 ## Diagram
+
 ![Diagram](pad_control.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,12 +16,14 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | N_UART       | int unsigned | 1     |             |
 | N_SPI        | int unsigned | 1     |             |
 | N_I2C        | int unsigned | 2     |             |
 ## Ports
+
 | Port name          | Direction | Type        | Description                                                      |
 | ------------------ | --------- | ----------- | ---------------------------------------------------------------- |
 | pad_cfg_i          | input     | [63:0]      | PAD CONTROL REGISTERinput  logic [63:0][1:0] pad_mux_i        ,  |
@@ -206,6 +211,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | oe_hyper_dq1_o     | output    |             |                                                                  |
 | oe_hyper_resetn_o  | output    |             |                                                                  |
 ## Signals
+
 | Name   | Type  | Description |
 | ------ | ----- | ----------- |
 | s_alt0 | logic |             |

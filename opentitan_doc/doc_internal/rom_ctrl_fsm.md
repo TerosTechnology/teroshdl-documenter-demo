@@ -1,18 +1,23 @@
 # Entity: rom_ctrl_fsm
+
 ## Diagram
+
 ![Diagram](rom_ctrl_fsm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  The ROM checker FSM module
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | RomDepth     | int  | 16    |             |
 | TopCount     | int  | 8     |             |
 ## Ports
+
 | Port name        | Direction | Type                  | Description                                                                                                                                                                                             |
 | ---------------- | --------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i            | input     |                       |                                                                                                                                                                                                         |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | rom_data_i       | input     | [31:0]                | Raw bits from ROM                                                                                                                                                                                       |
 | alert_o          | output    |                       | To alert system                                                                                                                                                                                         |
 ## Signals
+
 | Name                     | Type            | Description                                                                                  |
 | ------------------------ | --------------- | -------------------------------------------------------------------------------------------- |
 | counter_done             | logic           | The counter / address generator                                                              |
@@ -58,6 +64,7 @@ Copyright lowRISC contributors.
 | rel_addr                 | logic [TAW-1:0] |                                                                                              |
 | unused_top_rel_addr_wide | logic           |                                                                                              |
 ## Constants
+
 | Name            | Type         | Value               | Description |
 | --------------- | ------------ | ------------------- | ----------- |
 | AW              | int          | vbits(RomDepth)     |             |
@@ -65,19 +72,18 @@ Copyright lowRISC contributors.
 | TopStartAddrInt | int unsigned | RomDepth - TopCount |             |
 | TopStartAddr    | bit [AW-1:0] | undefined           |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                | Description |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [5:0] {     ReadingLow  = 6'b111101,     ReadingHigh = 6'b110110,     RomAhead    = 6'b000011,     KmacAhead   = 6'b101010,     Checking    = 6'b010000,     Done        = 6'b001100   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Start the checker when transitioning into the "Checking" state
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Start the checker when transitioning into the "Checking" state
 
 ## Instantiations
+
 - u_counter: rom_ctrl_counter
 - u_compare: rom_ctrl_compare
 - u_state_regs: prim_flop

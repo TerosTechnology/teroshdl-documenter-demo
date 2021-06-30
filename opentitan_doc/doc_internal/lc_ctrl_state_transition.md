@@ -1,7 +1,10 @@
 # Entity: lc_ctrl_state_transition
+
 ## Diagram
+
 ![Diagram](lc_ctrl_state_transition.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  and computes the target state. This module is purely combinational.
  
 ## Ports
+
 | Port name              | Direction | Type           | Description                            |
 | ---------------------- | --------- | -------------- | -------------------------------------- |
 | lc_state_i             | input     | lc_state_e     | Life cycle state vector.               |
@@ -21,10 +25,7 @@ Copyright lowRISC contributors.
 | trans_cnt_oflw_error_o | output    |                | If the transition counter is maxed out |
 | trans_invalid_error_o  | output    |                |                                        |
 ## Processes
-- p_lc_state_transition: _(  )_
-The decoder logic below checks whether a given transition edge
-is valid and computes the next lc counter ans state vectors.
-
+- p_lc_state_transition: (  )
 **Description**
 The decoder logic below checks whether a given transition edge
 is valid and computes the next lc counter ans state vectors.

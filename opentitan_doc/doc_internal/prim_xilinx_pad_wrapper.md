@@ -1,7 +1,10 @@
 # Entity: prim_xilinx_pad_wrapper
+
 ## Diagram
+
 ![Diagram](prim_xilinx_pad_wrapper.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,11 +12,13 @@ Copyright lowRISC contributors.
  virtual open drain feature.
  
 ## Generics
+
 | Generic name | Type        | Value    | Description                                           |
 | ------------ | ----------- | -------- | ----------------------------------------------------- |
 | PadType      | pad_type_e  | BidirStd | These parameters are ignored in this Xilinx variant.  |
 | ScanRole     | scan_role_e | NoScan   |                                                       |
 ## Ports
+
 | Port name  | Direction | Type       | Description                                                      |
 | ---------- | --------- | ---------- | ---------------------------------------------------------------- |
 | clk_scan_i | input     |            | This is only used for scanmode (not used in this Xilinx variant) |
@@ -27,6 +32,7 @@ Copyright lowRISC contributors.
 | oe_i       | input     |            | output enable                                                    |
 | attr_i     | input     | pad_attr_t | additional pad attributes                                        |
 ## Signals
+
 | Name        | Type  | Description                     |
 | ----------- | ----- | ------------------------------- |
 | unused_sigs | logic | not all signals are used here.  |

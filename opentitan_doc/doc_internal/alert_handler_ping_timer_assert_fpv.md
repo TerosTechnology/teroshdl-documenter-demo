@@ -1,7 +1,10 @@
 # Entity: alert_handler_ping_timer_assert_fpv
+
 ## Diagram
+
 ![Diagram](alert_handler_ping_timer_assert_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  a formal tool.
  
 ## Ports
+
 | Port name          | Direction | Type              | Description |
 | ------------------ | --------- | ----------------- | ----------- |
 | clk_i              | input     |                   |             |
@@ -27,6 +31,7 @@ Copyright lowRISC contributors.
 | alert_ping_fail_o  | input     |                   |             |
 | esc_ping_fail_o    | input     |                   |             |
 ## Signals
+
 | Name              | Type                          | Description                                              |
 | ----------------- | ----------------------------- | -------------------------------------------------------- |
 | ping_en_vector    | logic [PingEnDw-1:0]          |                                                          |
@@ -36,6 +41,7 @@ Copyright lowRISC contributors.
 | esc_idx           | logic [$clog2(N_ESC_SEV)-1:0] |                                                          |
 | alert_ping_fail_o | esc_ping_fail_o               |                                                          |
 ## Constants
+
 | Name             | Type         | Value                          | Description     |
 | ---------------- | ------------ | ------------------------------ | --------------- |
 | PingEnDw         | int unsigned | N_ESC_SEV + NAlerts            |                 |

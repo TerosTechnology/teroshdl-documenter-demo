@@ -1,7 +1,10 @@
 # Entity: arith_addw
+
 ## Diagram
+
 ![Diagram](arith_addw.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -36,6 +39,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type      | Value | Description                       |
 | ------------ | --------- | ----- | --------------------------------- |
 | N            | positive  |       | Operand Width                     |
@@ -45,6 +49,7 @@ limitations under the License.
 | SKIPPING     | tSkipping | CCC   | Carry Skip Scheme                 |
 | P_INCLUSIVE  | boolean   | false | Use Inclusive Propagate, i.e. c^1 |
 ## Ports
+
 | Port name | Direction | Type                           | Description |
 | --------- | --------- | ------------------------------ | ----------- |
 | a         | in        | std_logic_vector(N-1 downto 0) |             |
@@ -53,17 +58,20 @@ limitations under the License.
 | s         | out       | std_logic_vector(N-1 downto 0) |             |
 | cout      | out       | std_logic                      |             |
 ## Signals
+
 | Name | Type                           | Description     |
 | ---- | ------------------------------ | --------------- |
 | g    | std_logic_vector(K-1 downto 1) | Block Generate  |
 | p    | std_logic_vector(K-1 downto 1) | Block Propagate |
 | c    | std_logic_vector(K-1 downto 1) |                 |
 ## Constants
+
 | Name             | Type                         | Value                                                | Description |
 | ---------------- | ---------------------------- | ---------------------------------------------------- | ----------- |
 | DEFAULT_BLOCKING | tBlocking_vector             |  (AAM => ASC, CAI => DESC, PAI => DESC, CCA => DESC) |             |
 | BLOCKS           | integer_vector(K-1 downto 0) |  compute_blocks                                      |             |
 ## Types
+
 | Name             | Type | Description |
 | ---------------- | ---- | ----------- |
 | tBlocking_vector |      |             |

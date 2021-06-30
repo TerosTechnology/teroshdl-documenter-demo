@@ -1,7 +1,10 @@
 # Entity: tb_check_false
+
 ## Diagram
+
 ![Diagram](tb_check_false.svg "Diagram")
 ## Description
+
 This test suite verifies the check_false checker.
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -9,10 +12,12 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 vunit: run_all_in_same_sim
 ## Generics
+
 | Generic name | Type   | Value | Description |
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Signals
+
 | Name              | Type      | Description |
 | ----------------- | --------- | ----------- |
 | clk               | std_logic |             |
@@ -25,6 +30,7 @@ vunit: run_all_in_same_sim
 |  check_false_en_3 | std_logic |             |
 |  check_false_en_4 | std_logic |             |
 ## Constants
+
 | Name                 | Type        | Value                                               | Description |
 | -------------------- | ----------- | --------------------------------------------------- | ----------- |
 | check_false_checker  | checker_t   |  new_checker("checker1")                            |             |
@@ -33,7 +39,5 @@ vunit: run_all_in_same_sim
 | check_false_checker4 | checker_t   |  new_checker("checker4")                            |             |
 | default_level        | log_level_t |  error                                              |             |
 ## Processes
-- clock: _(  )_
-
-- check_false_runner: _(  )_
-
+- clock: (  )
+- check_false_runner: (  )

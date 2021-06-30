@@ -1,13 +1,17 @@
 # Entity: spi_fwmode
+
 ## Diagram
+
 ![Diagram](spi_fwmode.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  SPI FW Mode: Intention of this mode is to download FW image. Doesn't parse Commands
  
 ## Generics
+
 | Generic name | Type | Value                    | Description |
 | ------------ | ---- | ------------------------ | ----------- |
 | FifoWidth    | int  | $bits(spi_byte_t)        |             |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | PtrW         | int  | SramAw + 1 + SDW         |             |
 | AsFifoDepthW | int  | $clog2(FifoDepth+1)      |             |
 ## Ports
+
 | Port name         | Direction | Type               | Description                                                                     |
 | ----------------- | --------- | ------------------ | ------------------------------------------------------------------------------- |
 | clk_i             | input     |                    | main peripheral clock                                                           |
@@ -59,6 +64,7 @@ Copyright lowRISC contributors.
 | txf_empty_o       | output    |                    |                                                                                 |
 | txf_full_o        | output    |                    |                                                                                 |
 ## Signals
+
 | Name            | Type               | Description                                     |
 | --------------- | ------------------ | ----------------------------------------------- |
 | rxf_wvalid      | logic              | RX Async FIFO Signals Write: SCK positive edge  |
@@ -82,16 +88,19 @@ Copyright lowRISC contributors.
 | fwm_sram_rdata  | logic [SramDw-1:0] | RXF doesn't use                                 |
 | fwm_sram_error  | logic        [1:0] |                                                 |
 ## Constants
+
 | Name         | Type | Value                    | Description |
 | ------------ | ---- | ------------------------ | ----------- |
 | SDW          | int  | $clog2(SramDw/FifoWidth) |             |
 | PtrW         | int  | SramAw + 1 + SDW         |             |
 | AsFifoDepthW | int  | $clog2(FifoDepth+1)      |             |
 ## Types
+
 | Name       | Type                                                              | Description        |
 | ---------- | ----------------------------------------------------------------- | ------------------ |
 | fwm_fifo_e | enum logic {     FwModeRxFifo = 1'b0,     FwModeTxFifo = 1'b1   } | SRAM FIFO control  |
 ## Instantiations
+
 - u_rx_fifo: prim_fifo_async
 **Description**
 FIFO: Connecting FwMode to SRAM CTRLs

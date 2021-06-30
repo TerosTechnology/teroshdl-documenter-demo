@@ -1,13 +1,17 @@
 # Entity: csrng
+
 ## Diagram
+
 ![Diagram](csrng.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: csrng top level wrapper file
  
 ## Generics
+
 | Generic name                    | Type                  | Value                     | Description |
 | ------------------------------- | --------------------- | ------------------------- | ----------- |
 | aes_pkg                         | aes_pkg::sbox_impl_e  | aes_pkg::SBoxImplCanright |             |
@@ -16,6 +20,7 @@ Copyright lowRISC contributors.
 | RndCnstCsKeymgrDivNonProduction | cs_keymgr_div_t       | CsKeymgrDivWidth'(0)      |             |
 | RndCnstCsKeymgrDivProduction    | cs_keymgr_div_t       | CsKeymgrDivWidth'(0)      |             |
 ## Ports
+
 | Port name                  | Direction | Type            | Description                |
 | -------------------------- | --------- | --------------- | -------------------------- |
 | clk_i                      | input     |                 |                            |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | intr_cs_hw_inst_exc_o      | output    |                 |                            |
 | intr_cs_fatal_err_o        | output    |                 |                            |
 ## Signals
+
 | Name                | Type           | Description |
 | ------------------- | -------------- | ----------- |
 | efuse_sw_app_enable | logic          |             |
@@ -46,6 +52,7 @@ Copyright lowRISC contributors.
 | alert_test          | logic          |             |
 | intg_err_alert      | logic          |             |
 ## Instantiations
+
 - u_reg: csrng_reg_top
 - u_csrng_core: csrng_core
 - u_prim_alert_sender: prim_alert_sender

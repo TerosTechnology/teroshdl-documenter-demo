@@ -1,7 +1,10 @@
 # Entity: reconfig_icap_wrapper
+
 ## Diagram
+
 ![Diagram](reconfig_icap_wrapper.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 4; indent-tabs-mode: t -*-
 vim: tabstop=4:shiftwidth=4:noexpandtab
 kate: tab-width 4; replace-tabs off; indent-width 4;
@@ -26,11 +29,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name  | Type     | Value | Description |
 | ------------- | -------- | ----- | ----------- |
 | MIN_DEPTH_OUT | positive | 256   |             |
 | MIN_DEPTH_IN  | positive | 256   |             |
 ## Ports
+
 | Port name        | Direction | Type                          | Description                                                   |
 | ---------------- | --------- | ----------------------------- | ------------------------------------------------------------- |
 | clk              | in        | std_logic                     |                                                               |
@@ -47,6 +52,7 @@ limitations under the License.
 | read_valid       | out       | std_logic                     |                                                               |
 | read_data        | out       | std_logic_vector(31 downto 0) |                                                               |
 ## Signals
+
 | Name                 | Type                                     | Description                                                |
 | -------------------- | ---------------------------------------- | ---------------------------------------------------------- |
 | reset_icap           | std_logic                                |                                                            |
@@ -75,24 +81,22 @@ limitations under the License.
 | fsm_ready            | std_logic                                |                                                            |
 | fsm_ready_d          | std_logic                                |                                                            |
 ## Constants
+
 | Name              | Type                                     | Value                      | Description |
 | ----------------- | ---------------------------------------- | -------------------------- | ----------- |
 | STATE_BITS        | positive                                 |  2                         |             |
 | state_almost_full | std_logic_vector(STATE_BITS -1 downto 0) |  (0 => '0', others => '1') |             |
 ## Processes
-- in_data_buffer_p: _( clk_icap )_
-buffer some data before starting the icap, icap needs to be sync'ed before it can be paused
-
+- in_data_buffer_p: ( clk_icap )
 **Description**
 buffer some data before starting the icap, icap needs to be sync'ed before it can be paused
 
-- icap_reg_p: _( clk_icap )_
-icap
-
+- icap_reg_p: ( clk_icap )
 **Description**
 icap
 
 ## Instantiations
+
 - fifo_in: poc.fifo_ic_got
 **Description**
 sync the written pci data into the user clk

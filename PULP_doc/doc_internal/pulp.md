@@ -1,7 +1,10 @@
 # Entity: pulp
+
 ## Diagram
+
 ![Diagram](pulp.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,12 +16,14 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Generics
+
 | Generic name | Type | Value | Description                                                                                   |
 | ------------ | ---- | ----- | --------------------------------------------------------------------------------------------- |
 | CORE_TYPE    |      | 0     | 0 for RISCY, 1 for IBEX RV32IMC (formerly ZERORISCY), 2 for IBEX RV32EC (formerly MICRORISCY) |
 | USE_FPU      |      | 1     |                                                                                               |
 | USE_HWPE     |      | 1     |                                                                                               |
 ## Ports
+
 | Port name       | Direction | Type        | Description |
 | --------------- | --------- | ----------- | ----------- |
 | pad_spim_sdio0  | inout     | wire        |             |
@@ -75,6 +80,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | pad_jtag_trst   | inout     | wire        |             |
 | pad_xtal_in     | inout     | wire        |             |
 ## Signals
+
 | Name                      | Type                                                   | Description             |
 | ------------------------- | ------------------------------------------------------ | ----------------------- |
 | s_pad_cfg                 | logic [72:0][5:0]                                      |                         |
@@ -391,6 +397,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_soc_cluster_bus_b_data  | logic [2**LOG_DEPTH-1:0][AXI_SOC_CLUSTER_B_WIDTH-1:0]  |                         |
 | s_bootsel                 | logic[1:0]                                             |                         |
 ## Constants
+
 | Name                       | Type         | Value                                                                                                                                                                                                                                              | Description                                                                                               |
 | -------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | AXI_ADDR_WIDTH             |              | 32                                                                                                                                                                                                                                                 |                                                                                                           |
@@ -420,6 +427,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | N_SPI                      | int unsigned | 1                                                                                                                                                                                                                                                  |                                                                                                           |
 | N_I2C                      | int unsigned | 2                                                                                                                                                                                                                                                  |                                                                                                           |
 ## Instantiations
+
 - pad_frame_i: pad_frame
 - safe_domain_i: safe_domain
 - soc_domain_i: soc_domain

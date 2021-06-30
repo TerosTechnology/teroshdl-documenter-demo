@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_comboact
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_comboact.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: sysrst_ctrl combo action Module
  
 ## Ports
+
 | Port name          | Direction | Type                                | Description |
 | ------------------ | --------- | ----------------------------------- | ----------- |
 | clk_aon_i          | input     |                                     |             |
@@ -26,6 +30,7 @@ Copyright lowRISC contributors.
 | gsc_rst_o          | output    |                                     |             |
 | ec_rst_l_o         | output    |                                     |             |
 ## Signals
+
 | Name                    | Type         | Description |
 | ----------------------- | ------------ | ----------- |
 | cfg_ec_rst_timer        | logic [15:0] |             |
@@ -48,19 +53,13 @@ Copyright lowRISC contributors.
 | ec_rst_l_int            | logic        |             |
 | ec_rst_l_det            | logic        |             |
 ## Processes
-- i_combo_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_combo_bat_disable: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_cfg_ec_rst_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ec_rst_l_int: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_combo_ec_rst_l: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- timer_cnt_regs: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_combo_gsc_rst: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- i_combo_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_combo_bat_disable: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_cfg_ec_rst_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ec_rst_l_int: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_combo_ec_rst_l: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- timer_cnt_regs: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_combo_gsc_rst: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_cfg_ec_rst_pulse: prim_fifo_async

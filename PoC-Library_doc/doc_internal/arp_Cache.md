@@ -1,7 +1,10 @@
 # Entity: arp_Cache
+
 ## Diagram
+
 ![Diagram](arp_Cache.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name          | Type                      | Value      | Description |
 | --------------------- | ------------------------- | ---------- | ----------- |
 | CLOCK_FREQ            | FREQ                      | 125 MHz    |             |
@@ -32,6 +36,7 @@ limitations under the License.
 | DATA_BYTE_ORDER       | T_BYTE_ORDER              | BIG_ENDIAN |             |
 | INITIAL_CACHE_CONTENT | T_NET_ARP_ARPCACHE_VECTOR |            |             |
 ## Ports
+
 | Port name           | Direction | Type                       | Description |
 | ------------------- | --------- | -------------------------- | ----------- |
 | Clock               | in        | std_logic                  |             |
@@ -53,6 +58,7 @@ limitations under the License.
 | MACAddress_nxt      | in        | std_logic                  |             |
 | MACAddress_Data     | out       | T_SLV_8                    |             |
 ## Signals
+
 | Name                     | Type                                                                   | Description |
 | ------------------------ | ---------------------------------------------------------------------- | ----------- |
 | ReadWrite                | std_logic                                                              |             |
@@ -87,6 +93,7 @@ limitations under the License.
 | CacheMemory              | T_SLVV_8((CACHE_LINES * T_NET_MAC_ADDRESS'length) - 1 downto 0)        |             |
 | Memory_ReadWrite         | std_logic                                                              |             |
 ## Constants
+
 | Name                   | Type     | Value                                        | Description  |
 | ---------------------- | -------- | -------------------------------------------- | ------------ |
 | CACHE_LINES            | positive |  8                                           |              |
@@ -103,41 +110,33 @@ limitations under the License.
 | TICKCOUNTER_MAX        | positive |  TimingToCycles(TICKCOUNTER_RES, CLOCK_FREQ) |              |
 | TICKCOUNTER_BITS       | positive |  log2ceilnz(TICKCOUNTER_MAX)                 |              |
 ## Types
-| Name               | Type                  | Description |
-| ------------------ | --------------------- | ----------- |
-| T_FSMREPLACE_STATE | (ST_IDLE, ST_REPLACE) |             |
+
+| Name               | Type                   | Description |
+| ------------------ | ---------------------- | ----------- |
+| T_FSMREPLACE_STATE | (ST_IDLE, ST_REPLACE)  |             |
 ## Functions
-- to_TagData <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR)</font> <font id="function_return">return T_SLM</font>
-- to_CacheData_slvv_48 <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR)</font> <font id="function_return">return T_SLVV_48</font>
-- to_CacheMemory <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR)</font> <font id="function_return">return T_SLVV_8</font>
+- to_TagData <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR) </font> <font id="function_return">return T_SLM </font>
+- to_CacheData_slvv_48 <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR) </font> <font id="function_return">return T_SLVV_48 </font>
+- to_CacheMemory <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR) </font> <font id="function_return">return T_SLVV_8 </font>
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( FSMReplace_State, Command, TU_Replaced, TU_NewTag_rst, TU_NewTag_nxt, NewDataChunkIndex_us, NewDataChunkIndex_max_us )_
-
-- unnamed: _( Clock )_
-expiration time tick generator
-
+- unnamed: ( Clock )
+- unnamed: ( FSMReplace_State, Command, TU_Replaced, TU_NewTag_rst, TU_NewTag_nxt, NewDataChunkIndex_us, NewDataChunkIndex_max_us )
+- unnamed: ( Clock )
 **Description**
 expiration time tick generator
 
-- unnamed: _( Clock )_
-latch TU_Index on TagHit
-NewDataChunkIndex counter
-
+- unnamed: ( Clock )
 **Description**
 latch TU_Index on TagHit
 NewDataChunkIndex counter
 
-- unnamed: _( Clock, TU_Index )_
-DataChunkIndex counter
-
+- unnamed: ( Clock, TU_Index )
 **Description**
 DataChunkIndex counter
 
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
 ## Instantiations
+
 - TU: PoC.cache_TagUnit_seq
 **Description**
 Cache TagUnit

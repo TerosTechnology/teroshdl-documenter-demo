@@ -1,7 +1,10 @@
 # Entity: io_7SegmentMux_BCD
+
 ## Diagram
+
 ![Diagram](io_7SegmentMux_BCD.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -27,12 +30,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value   | Description |
 | ------------ | -------- | ------- | ----------- |
 | CLOCK_FREQ   | FREQ     | 100 MHz |             |
 | REFRESH_RATE | FREQ     | 1 kHz   |             |
 | DIGITS       | positive | 4       |             |
 ## Ports
+
 | Port name      | Direction | Type                                  | Description |
 | -------------- | --------- | ------------------------------------- | ----------- |
 | Clock          | in        | std_logic                             |             |
@@ -41,13 +46,14 @@ limitations under the License.
 | SegmentControl | out       | std_logic_vector(7 downto 0)          |             |
 | DigitControl   | out       | std_logic_vector(DIGITS - 1 downto 0) |             |
 ## Signals
+
 | Name             | Type                                      | Description |
 | ---------------- | ----------------------------------------- | ----------- |
 | DigitCounter_rst | std_logic                                 |             |
 | DigitCounter_en  | std_logic                                 |             |
 | DigitCounter_us  | unsigned(log2ceilnz(DIGITS) - 1 downto 0) |             |
 ## Processes
-- unnamed: _( BCDDigits, BCDDots, DigitCounter_us )_
-
+- unnamed: ( BCDDigits, BCDDots, DigitCounter_us )
 ## Instantiations
+
 - Strobe: PoC.misc_StrobeGenerator

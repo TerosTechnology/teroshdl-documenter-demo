@@ -1,7 +1,10 @@
 # Entity: jtag_tap_top
+
 ## Diagram
+
 ![Diagram](jtag_tap_top.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Ports
+
 | Port name          | Direction | Type  | Description |
 | ------------------ | --------- | ----- | ----------- |
 | tck_i              | input     |       |             |
@@ -32,6 +36,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | dbg_axi_scan_in_o  | output    |       |             |
 | dbg_axi_scan_out_i | input     |       |             |
 ## Signals
+
 | Name                | Type        | Description |
 | ------------------- | ----------- | ----------- |
 | s_scan_i            | logic       |             |
@@ -43,9 +48,9 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | r_soc_reg1          | logic [7:0] |             |
 | s_soc_jtag_reg_sync | logic [7:0] |             |
 ## Processes
-- unnamed: _( @(posedge tck_i or negedge trst_ni) )_
-
+- unnamed: ( @(posedge tck_i or negedge trst_ni) )
 ## Instantiations
+
 - tap_top_i: tap_top
 **Description**
 jtag tap controller

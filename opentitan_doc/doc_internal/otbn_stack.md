@@ -1,17 +1,22 @@
 # Entity: otbn_stack
+
 ## Diagram
+
 ![Diagram](otbn_stack.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | StackWidth   | int unsigned | 32    |             |
 | StackDepth   | int unsigned | 4     |             |
 ## Ports
+
 | Port name   | Direction | Type             | Description                                |
 | ----------- | --------- | ---------------- | ------------------------------------------ |
 | clk_i       | input     |                  |                                            |
@@ -23,6 +28,7 @@ Copyright lowRISC contributors.
 | top_data_o  | output    | [StackWidth-1:0] | Data on top of the stack                   |
 | top_valid_o | output    |                  | Stack is non empty (`top_data_o` is valid) |
 ## Signals
+
 | Name           | Type                    | Description |
 | -------------- | ----------------------- | ----------- |
 | stack_storage  | logic [StackWidth-1:0]  |             |
@@ -36,13 +42,11 @@ Copyright lowRISC contributors.
 | stack_write    | logic                   |             |
 | stack_read     | logic                   |             |
 ## Constants
+
 | Name        | Type         | Value                            | Description |
 | ----------- | ------------ | -------------------------------- | ----------- |
 | StackDepthW | int unsigned | prim_util_pkg::vbits(StackDepth) |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i) )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i) )

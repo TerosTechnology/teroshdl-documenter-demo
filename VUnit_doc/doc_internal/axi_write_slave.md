@@ -1,16 +1,21 @@
 # Entity: axi_write_slave
+
 ## Diagram
+
 ![Diagram](axi_write_slave.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
+
 | Generic name | Type        | Value | Description |
 | ------------ | ----------- | ----- | ----------- |
 | axi_slave    | axi_slave_t |       |             |
 ## Ports
+
 | Port name | Direction | Type             | Description |
 | --------- | --------- | ---------------- | ----------- |
 | aclk      | in        | std_logic        |             |
@@ -31,25 +36,25 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | bid       | out       | std_logic_vector |             |
 | bresp     | out       | axi_resp_t       |             |
 ## Signals
+
 | Name        | Type    | Description |
 | ----------- | ------- | ----------- |
 | initialized | boolean |             |
 ## Constants
+
 | Name               | Type                      | Value                                 | Description |
 | ------------------ | ------------------------- | ------------------------------------- | ----------- |
 | data_vector_length | natural                   |  max_axi4_burst_length * wdata'length |             |
 | data_pool          | integer_vector_ptr_pool_t |  new_integer_vector_ptr_pool          |             |
 ## Types
+
 | Name         | Type | Description |
 | ------------ | ---- | ----------- |
 | burst_data_t |      |             |
 ## Functions
-- push_burst_data <font id="function_arguments">(queue : queue_t; variable burst_data : inout burst_data_t)</font> <font id="function_return">return ()</font>
-- recycle <font id="function_arguments">(variable burst_data : inout burst_data_t)</font> <font id="function_return">return ()</font>
+- push_burst_data <font id="function_arguments">(queue : queue_t; variable burst_data : inout burst_data_t) </font> <font id="function_return">return ()</font>
+- recycle <font id="function_arguments">(variable burst_data : inout burst_data_t) </font> <font id="function_return">return ()</font>
 ## Processes
-- control_process: _(  )_
-
-- axi_process: _(  )_
-
-- well_behaved_check: _(  )_
-
+- control_process: (  )
+- axi_process: (  )
+- well_behaved_check: (  )

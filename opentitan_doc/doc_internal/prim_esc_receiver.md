@@ -1,7 +1,10 @@
 # Entity: prim_esc_receiver
+
 ## Diagram
+
 ![Diagram](prim_esc_receiver.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -17,6 +20,7 @@ Copyright lowRISC contributors.
  See also: prim_esc_sender, prim_diff_decode, alert_handler
  
 ## Generics
+
 | Generic name     | Type | Value       | Description                                                                                                                                |
 | ---------------- | ---- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | N_ESC_SEV        | int  | 4           | The number of escalation severities. Should be set to the Alert Handler's N_ESC_SEV when this primitive is instantiated.                   |
@@ -26,6 +30,7 @@ Copyright lowRISC contributors.
 | NumTimeoutCounts | int  | 2           |                                                                                                                                            |
 | TimeoutCntDw     | int  | $clog2(Marg |                                                                                                                                            |
 ## Ports
+
 | Port name | Direction | Type     | Description                 |
 | --------- | --------- | -------- | --------------------------- |
 | clk_i     | input     |          |                             |
@@ -34,6 +39,7 @@ Copyright lowRISC contributors.
 | esc_rx_o  | output    | esc_rx_t | escalation / ping response  |
 | esc_tx_i  | input     | esc_tx_t | escalation output diff pair |
 ## Signals
+
 | Name            | Type                          | Description |
 | --------------- | ----------------------------- | ----------- |
 | esc_level       | logic                         |             |
@@ -51,21 +57,22 @@ Copyright lowRISC contributors.
 | resp_nq         | logic                         |             |
 | resp_p          | esc_tx_i                      |             |
 ## Constants
+
 | Name             | Type | Value | Description                                                                                                                                |
 | ---------------- | ---- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | MarginFactor     | int  | 4     | Do NOT modify this counter value, when instantiating it in the design. It is only exposed to reduce the state space in the FPV testbench.  |
 | NumWaitCounts    | int  | 2     |                                                                                                                                            |
 | NumTimeoutCounts | int  | 2     |                                                                                                                                            |
 ## Types
+
 | Name    | Type                                                      | Description |
 | ------- | --------------------------------------------------------- | ----------- |
 | state_e | enum logic [2:0] {Idle, Check, PingResp, EscResp, SigInt} |             |
 ## Processes
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_buf_esc: prim_buf
 **Description**
 This prevents further tool optimizations of the differential signal.

@@ -1,7 +1,10 @@
 # Entity: T80_MCode
+
 ## Diagram
+
 ![Diagram](T80_MCode.svg "Diagram")
 ## Description
+
 ****
 T80(c) core. Attempt to finish all undocumented features and provide
              accurate timings.
@@ -59,6 +62,7 @@ File history :
      0240mj1 fix for HL inc/dec for INI, IND, INIR, INDR, OUTI, OUTD, OTIR, OTDR
      0242 : Fixed I/O instruction timing, cleanup
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | Mode         | integer | 0     |             |
@@ -71,6 +75,7 @@ File history :
 | Flag_Z       | integer | 6     |             |
 | Flag_S       | integer | 7     |             |
 ## Ports
+
 | Port name   | Direction | Type                         | Description                                                                   |
 | ----------- | --------- | ---------------------------- | ----------------------------------------------------------------------------- |
 | IR          | in        | std_logic_vector(7 downto 0) |                                                                               |
@@ -129,9 +134,6 @@ File history :
 | Write       | out       | std_logic                    |                                                                               |
 | XYbit_undoc | out       | std_logic                    |                                                                               |
 ## Functions
-- is_cc_true <font id="function_arguments">(		F : std_logic_vector(7 downto 0);
-		cc : bit_vector(2 downto 0)
-		)</font> <font id="function_return">return boolean</font>
+- is_cc_true <font id="function_arguments">( F : std_logic_vector(7 downto 0); cc : bit_vector(2 downto 0) ) </font> <font id="function_return">return boolean </font>
 ## Processes
-- unnamed: _( IR, ISet, MCycle, F, NMICycle, IntCycle, XY_State )_
-
+- unnamed: ( IR, ISet, MCycle, F, NMICycle, IntCycle, XY_State )

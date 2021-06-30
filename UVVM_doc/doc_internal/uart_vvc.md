@@ -1,7 +1,10 @@
 # Entity: uart_vvc
+
 ## Diagram
+
 ![Diagram](uart_vvc.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -11,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 ## Generics
+
 | Generic name                          | Type              | Value                     | Description |
 | ------------------------------------- | ----------------- | ------------------------- | ----------- |
 | GC_DATA_WIDTH                         | natural           | 8                         |             |
@@ -20,11 +24,13 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | GC_CMD_QUEUE_COUNT_THRESHOLD          | natural           | 950                       |             |
 | GC_CMD_QUEUE_COUNT_THRESHOLD_SEVERITY | t_alert_level     | WARNING                   |             |
 ## Ports
+
 | Port name   | Direction | Type      | Description |
 | ----------- | --------- | --------- | ----------- |
 | uart_vvc_rx | in        | std_logic |             |
 | uart_vvc_tx | inout     | std_logic |             |
 ## Instantiations
+
 - i1_uart_rx: work.uart_rx_vvc
 - i1_uart_tx: work.uart_tx_vvc
 **Description**

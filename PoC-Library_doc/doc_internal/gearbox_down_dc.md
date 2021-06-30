@@ -1,7 +1,10 @@
 # Entity: gearbox_down_dc
+
 ## Diagram
+
 ![Diagram](gearbox_down_dc.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -32,6 +35,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name         | Type        | Value     | Description                                                |
 | -------------------- | ----------- | --------- | ---------------------------------------------------------- |
 | INPUT_BITS           | positive    | 32        | input bits ('words')                                       |
@@ -40,6 +44,7 @@ limitations under the License.
 | ADD_INPUT_REGISTERS  | boolean     | FALSE     | add input register @Clock1                                 |
 | ADD_OUTPUT_REGISTERS | boolean     | FALSE     | add output register @Clock2                                |
 ## Ports
+
 | Port name | Direction | Type                                       | Description         |
 | --------- | --------- | ------------------------------------------ | ------------------- |
 | Clock1    | in        | std_logic                                  | input clock domain  |
@@ -47,6 +52,7 @@ limitations under the License.
 | In_Data   | in        | std_logic_vector(INPUT_BITS - 1 downto 0)  | input word          |
 | Out_Data  | out       | std_logic_vector(OUTPUT_BITS - 1 downto 0) | output word         |
 ## Signals
+
 | Name           | Type                                       | Description |
 | -------------- | ------------------------------------------ | ----------- |
 | WordBoundary   | std_logic                                  |             |
@@ -60,11 +66,13 @@ limitations under the License.
 | MuxCounter_us  | unsigned(COUNTER_BITS - 1 downto 0)        |             |
 | MuxSelect_us   | unsigned(COUNTER_BITS - 1 downto 0)        |             |
 ## Constants
+
 | Name         | Type     | Value                                 | Description |
 | ------------ | -------- | ------------------------------------- | ----------- |
 | BIT_RATIO    | REAL     |  real(INPUT_BITS) / real(OUTPUT_BITS) |             |
 | COUNTER_BITS | positive |  log2ceil(integer(BIT_RATIO))         |             |
 ## Types
+
 | Name        | Type | Description |
 | ----------- | ---- | ----------- |
 | T_MUX_INPUT |      |             |

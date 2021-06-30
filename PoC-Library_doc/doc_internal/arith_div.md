@@ -1,7 +1,10 @@
 # Entity: arith_div
+
 ## Diagram
+
 ![Diagram](arith_div.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,6 +31,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                       |
 | ------------ | -------- | ----- | --------------------------------- |
 | A_BITS       | positive |       | Dividend Width                    |
@@ -35,6 +39,7 @@ limitations under the License.
 | RAPOW        | positive | 1     | Power of Compute Radix (2**RAPOW) |
 | PIPELINED    | boolean  | false | Computation Pipeline              |
 ## Ports
+
 | Port name | Direction | Type                                | Description        |
 | --------- | --------- | ----------------------------------- | ------------------ |
 | clk       | in        | std_logic                           | Global Reset/Clock |
@@ -47,6 +52,7 @@ limitations under the License.
 | R         | out       | std_logic_vector(D_BITS-1 downto 0) | Remainder          |
 | Z         | out       | std_logic                           | Division by Zero   |
 ## Signals
+
 | Name | Type                       | Description                                |
 | ---- | -------------------------- | ------------------------------------------ |
 | AR   | residue_vector(0 to DEPTH) | Data Registers                             |
@@ -54,6 +60,7 @@ limitations under the License.
 | ZR   | std_logic                  | Zero Detection only in last pipeline stage |
 | exec | std_logic                  |                                            |
 ## Constants
+
 | Name        | Type     | Value                     | Description               |
 | ----------- | -------- | ------------------------- | ------------------------- |
 | STEPS       | positive |  (A_BITS+RAPOW-1)/RAPOW   | Number of Iteration Steps |
@@ -61,16 +68,15 @@ limitations under the License.
 | TRUNK_BITS  | natural  |  (STEPS-1)*RAPOW          |                           |
 | ACTIVE_BITS | positive |  D_BITS + RAPOW           |                           |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | residue_vector |      |             |
 | divisor_vector |      |             |
 ## Functions
-- div_step <font id="function_arguments">(av : residue; dv : divisor)</font> <font id="function_return">return residue</font>
+- div_step <font id="function_arguments">(av : residue; dv : divisor) </font> <font id="function_return">return residue </font>
 ## Processes
-- unnamed: _( clk )_
-Registers
-
+- unnamed: ( clk )
 **Description**
 Registers
 

@@ -1,7 +1,10 @@
 # Entity: tlul_socket_m1
+
 ## Diagram
+
 ![Diagram](tlul_socket_m1.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -23,6 +26,7 @@ Copyright lowRISC contributors.
    DRspDepth:     Same as HReqDepth but for device response FIFO.
  
 ## Generics
+
 | Generic name | Type          | Value     | Description |
 | ------------ | ------------- | --------- | ----------- |
 | M            | int unsigned  | 4         |             |
@@ -35,6 +39,7 @@ Copyright lowRISC contributors.
 | DReqDepth    | bit [3:0]     | 4'h2      |             |
 | DRspDepth    | bit [3:0]     | 4'h2      |             |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_i     | input     |      |             |
@@ -44,6 +49,7 @@ Copyright lowRISC contributors.
 | tl_d_o    | output    |      |             |
 | tl_d_i    | input     |      |             |
 ## Signals
+
 | Name                  | Type               | Description |
 | --------------------- | ------------------ | ----------- |
 | hreq_fifo_o           | tlul_pkg::tl_h2d_t |             |
@@ -60,11 +66,13 @@ Copyright lowRISC contributors.
 | hfifo_rspid           | logic [IDW-1:0]    |             |
 | dfifo_rspready_merged | logic              |             |
 ## Constants
+
 | Name  | Type         | Value           | Description                                                                    |
 | ----- | ------------ | --------------- | ------------------------------------------------------------------------------ |
 | IDW   | int unsigned | top_pkg::TL_AIW | Required ID width to distinguish between host ports Used in response steering  |
 | STIDW | int unsigned | $clog2(M)       |                                                                                |
 ## Instantiations
+
 - u_devicefifo: tlul_fifo_sync
 **Description**
 Device Req/Rsp FIFO

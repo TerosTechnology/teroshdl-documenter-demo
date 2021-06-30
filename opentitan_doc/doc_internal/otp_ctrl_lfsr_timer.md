@@ -1,7 +1,10 @@
 # Entity: otp_ctrl_lfsr_timer
+
 ## Diagram
+
 ![Diagram](otp_ctrl_lfsr_timer.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -24,12 +27,14 @@ Copyright lowRISC contributors.
  This can be useful if SW chooses to leave the periodic checks disabled.
  
 ## Generics
+
 | Generic name    | Type        | Value                  | Description                                                      |
 | --------------- | ----------- | ---------------------- | ---------------------------------------------------------------- |
 | ReseedLfsrWidth | int         | 16                     | Entropy reseeding is triggered every time this counter expires.  |
 | RndCnstLfsrSeed | lfsr_seed_t | RndCnstLfsrSeedDefault | Compile time random constants, to be overriden by topgen.        |
 | RndCnstLfsrPerm | lfsr_perm_t | RndCnstLfsrPermDefault |                                                                  |
 ## Ports
+
 | Port name          | Direction | Type               | Description                                |
 | ------------------ | --------- | ------------------ | ------------------------------------------ |
 | clk_i              | input     |                    |                                            |
@@ -53,6 +58,7 @@ Copyright lowRISC contributors.
 | chk_timeout_o      | output    |                    | a check has timed out                      |
 | fsm_err_o          | output    |                    | the FSM has reached an invalid state       |
 ## Signals
+
 | Name               | Type                        | Description                                                                                                                |
 | ------------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | reseed_en          | logic                       |                                                                                                                            |
@@ -95,17 +101,18 @@ Copyright lowRISC contributors.
 | chk_timeout_q      | logic                       |                                                                                                                            |
 | state_raw_q        | logic [StateWidth-1:0]      | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name       | Type | Value | Description |
 | ---------- | ---- | ----- | ----------- |
 | StateWidth | int  | 9     |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                             | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     ResetSt     = 9'b011111011,     IdleSt      = 9'b000100000,     IntegWaitSt = 9'b110010101,     CnstyWaitSt = 9'b001010110,     ErrorSt     = 9'b100101111   } |             |
 ## Processes
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_state_regs: prim_flop

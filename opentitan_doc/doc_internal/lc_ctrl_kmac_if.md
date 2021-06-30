@@ -1,13 +1,17 @@
 # Entity: lc_ctrl_kmac_if
+
 ## Diagram
+
 ![Diagram](lc_ctrl_kmac_if.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Synchronization interface between LC FSM and KMAC.
  
 ## Ports
+
 | Port name          | Direction | Type       | Description                                                                            |
 | ------------------ | --------- | ---------- | -------------------------------------------------------------------------------------- |
 | clk_i              | input     |            | Life cycle controller clock                                                            |
@@ -22,6 +26,7 @@ Copyright lowRISC contributors.
 | token_hash_err_o   | output    |            |                                                                                        |
 | hashed_token_o     | output    | lc_token_t |                                                                                        |
 ## Signals
+
 | Name                  | Type                   | Description                                                                                                                |
 | --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | kmac_req              | logic                  |                                                                                                                            |
@@ -38,21 +43,22 @@ Copyright lowRISC contributors.
 | state_q               | state_e                |                                                                                                                            |
 | state_raw_q           | logic [StateWidth-1:0] | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name       | Type | Value | Description |
 | ---------- | ---- | ----- | ----------- |
 | StateWidth | int  | 8     |             |
 ## Types
+
 | Name    | Type                                                                                                                                             | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     FirstSt  = 8'b00000001,     SecondSt = 8'b11110011,     WaitSt   = 8'b10111100,     DoneSt   = 8'b01001110   } |             |
 ## Processes
-- p_kmac: _(  )_
-Serialize the 128bit token into two 64bit beats.
-
+- p_kmac: (  )
 **Description**
 Serialize the 128bit token into two 64bit beats.
 
 ## Instantiations
+
 - u_prim_sync_reqack_data_out: prim_sync_reqack_data
 **Description**
 The transition_token_i register is guaranteed to remain stable once a life cycle

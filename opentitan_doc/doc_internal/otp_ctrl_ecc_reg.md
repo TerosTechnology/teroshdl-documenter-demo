@@ -1,7 +1,10 @@
 # Entity: otp_ctrl_ecc_reg
+
 ## Diagram
+
 ![Diagram](otp_ctrl_ecc_reg.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,12 +13,14 @@ Copyright lowRISC contributors.
  TODO: discuss whether reset is allowed here. We may also need a secure wiping feature.
  
 ## Generics
+
 | Generic name | Type | Value                       | Description       |
 | ------------ | ---- | --------------------------- | ----------------- |
 | Width        | int  | 64                          | bit               |
 | Depth        | int  | 128                         |                   |
 | Aw           | int  | prim_util_pkg::vbits(Depth) | derived parameter |
 ## Ports
+
 | Port name | Direction | Type        | Description                                            |
 | --------- | --------- | ----------- | ------------------------------------------------------ |
 | clk_i     | input     |             |                                                        |
@@ -26,6 +31,7 @@ Copyright lowRISC contributors.
 | data_o    | output    | [Depth-1:0] | Concurrent output of the register state.               |
 | ecc_err_o | output    |             | Concurrent ECC check error is flagged via this signal. |
 ## Signals
+
 | Name    | Type                            | Description             |
 | ------- | ------------------------------- | ----------------------- |
 | data_d  | logic [Depth-1:0][Width-1:0]    |                         |
@@ -35,14 +41,15 @@ Copyright lowRISC contributors.
 | ecc_enc | logic [Width+EccWidth-1:0]      |                         |
 | err     | logic [Depth-1:0][1:0]          | Concurrent ECC checks.  |
 ## Constants
+
 | Name     | Type | Value                       | Description       |
 | -------- | ---- | --------------------------- | ----------------- |
 | Aw       | int  | prim_util_pkg::vbits(Depth) | derived parameter |
 | EccWidth | int  | 8                           |                   |
 ## Processes
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_prim_secded_72_64_enc: prim_secded_72_64_enc
 **Description**
 Only one encoder is needed.

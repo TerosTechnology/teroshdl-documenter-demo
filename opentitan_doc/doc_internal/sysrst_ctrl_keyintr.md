@@ -1,13 +1,17 @@
 # Entity: sysrst_ctrl_keyintr
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl_keyintr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: sysrst_ctrl key-triggered interrupt Module
  
 ## Ports
+
 | Port name               | Direction | Type                                           | Description |
 | ----------------------- | --------- | ---------------------------------------------- | ----------- |
 | clk_aon_i               | input     |                                                |             |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | key_intr_status_o       | output    | sysrst_ctrl_hw2reg_key_intr_status_reg_t       |             |
 | sysrst_ctrl_key_intr    | output    |                                                |             |
 ## Signals
+
 | Name                      | Type         | Description |
 | ------------------------- | ------------ | ----------- |
 | cfg_pwrb_in_h2l           | logic        |             |
@@ -97,33 +102,21 @@ Copyright lowRISC contributors.
 | ec_rst_l_h2l_intr         | logic        |             |
 | ec_rst_l_l2h_intr         | logic        |             |
 ## Processes
-- i_cfg_key_intr_timer_reg: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_pwrb_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_pwrb_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key0_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key0_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key1_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key1_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key2_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_key2_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ac_present_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ac_present_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ec_rst_l_intr_h2l_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
-- i_ec_rst_l_intr_l2h_det: _( @(posedge clk_aon_i or negedge rst_aon_ni) )_
-
+- i_cfg_key_intr_timer_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_pwrb_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_pwrb_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key0_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key0_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key1_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key1_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key2_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_key2_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ac_present_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ac_present_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ec_rst_l_intr_h2l_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
+- i_ec_rst_l_intr_l2h_det: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
 ## Instantiations
+
 - i_cfg_pwrb_in_h2l: prim_flop_2sync
 - i_cfg_key0_in_h2l: prim_flop_2sync
 - i_cfg_key1_in_h2l: prim_flop_2sync

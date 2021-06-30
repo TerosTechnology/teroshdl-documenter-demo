@@ -1,7 +1,10 @@
 # Entity: prim_arbiter_ppc
+
 ## Diagram
+
 ![Diagram](prim_arbiter_ppc.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -22,6 +25,7 @@ Copyright lowRISC contributors.
  See also: prim_arbiter_tree
  
 ## Generics
+
 | Generic name | Type         | Value     | Description                                                            |
 | ------------ | ------------ | --------- | ---------------------------------------------------------------------- |
 | N            | int unsigned | 8         |                                                                        |
@@ -30,6 +34,7 @@ Copyright lowRISC contributors.
 | EnReqStabA   | bit          | 1         | Non-functional parameter to switch on the request stability assertion  |
 | IdxW         | int          | $clog2(N) | Derived parameters                                                     |
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clk_i     | input     |            |             |
@@ -42,12 +47,14 @@ Copyright lowRISC contributors.
 | data_o    | output    | [DW-1:0]   |             |
 | ready_i   | input     |            |             |
 ## Signals
+
 | Name          | Type         | Description         |
 | ------------- | ------------ | ------------------- |
 | k             | int unsigned | symbolic variables  |
 | ReadyIsStable | bit          |                     |
 | ReqsAreStable | bit          |                     |
 ## Constants
+
 | Name | Type | Value     | Description         |
 | ---- | ---- | --------- | ------------------- |
 | IdxW | int  | $clog2(N) | Derived parameters  |

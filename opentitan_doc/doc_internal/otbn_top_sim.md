@@ -1,23 +1,29 @@
 # Entity: otbn_top_sim
+
 ## Diagram
+
 ![Diagram](otbn_top_sim.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type | Value                        | Description                                 |
 | ------------- | ---- | ---------------------------- | ------------------------------------------- |
 | ImemSizeByte  | int  | otbn_reg_pkg::OTBN_IMEM_SIZE | Size of the instruction memory, in bytes    |
 | DmemSizeByte  | int  | otbn_reg_pkg::OTBN_DMEM_SIZE | Size of the data memory, in bytes           |
 | ImemStartAddr | int  | 32'h0                        | Start address of first instruction in IMem  |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | IO_CLK    | input     |      |             |
 | IO_RST_N  | input     |      |             |
 ## Signals
+
 | Name                      | Type                                     | Description                                                                                                                                                                                      |
 | ------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | otbn_done_d               | logic                                    |                                                                                                                                                                                                  |
@@ -63,26 +69,25 @@ Copyright lowRISC contributors.
 | cnt_mismatch_latched      | bit                                      |                                                                                                                                                                                                  |
 | model_err_latched         | bit                                      |                                                                                                                                                                                                  |
 ## Constants
-| Name              | Type             | Value                                                                 | Description                                                                               |
-| ----------------- | ---------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ImemAddrWidth     | int              | prim_util_pkg::vbits(ImemSizeByte)                                    |                                                                                           |
-| DmemAddrWidth     | int              | prim_util_pkg::vbits(DmemSizeByte)                                    |                                                                                           |
-| TestScrambleKey   | logic [127:0]    | 128'h48ecf6c738f0f108a5b08620695ffd4d                                 | Fixed key and nonce for scrambling in verilator environment                               |
-| TestScrambleNonce | logic [319:0]    | 320'h19286173144131c12c2607f5e72aca1fb72adea0a4ff82b9f88c2578fa4cd123 | 320-bit nonce has 0s in top bits as nonce from OTP is only 256-bit for now                |
-| FixedEdnVal       | logic [WLEN-1:0] | undefined                                                             |                                                                                           |
-| DmemSizeWords     | int              | DmemSizeByte                                                          |                                                                                           |
-| DmemIndexWidth    | int              | prim_util_pkg::vbits(DmemSizeWords)                                   |                                                                                           |
-| ImemSizeWords     | int              | ImemSizeByte / 4                                                      |                                                                                           |
-| ImemIndexWidth    | int              | prim_util_pkg::vbits(ImemSizeWords)                                   |                                                                                           |
-| DesignScope       | string           | "..u_otbn_core"                                                       | This runs in parallel with the real core above, with consistency checks between the two.  |
+
+| Name              | Type             | Value                                 | Description                                                                               |
+| ----------------- | ---------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ImemAddrWidth     | int              | prim_util_pkg::vbits(ImemSizeByte)    |                                                                                           |
+| DmemAddrWidth     | int              | prim_util_pkg::vbits(DmemSizeByte)    |                                                                                           |
+| TestScrambleKey   | logic [127:0]    | 128'h48ecf6c738f0f108a5b08620695ffd4d | Fixed key and nonce for scrambling in verilator environment                               |
+| TestScrambleNonce | logic [63:0]     | 64'hf88c2578fa4cd123                  |                                                                                           |
+| FixedEdnVal       | logic [WLEN-1:0] | undefined                             |                                                                                           |
+| DmemSizeWords     | int              | DmemSizeByte                          |                                                                                           |
+| DmemIndexWidth    | int              | prim_util_pkg::vbits(DmemSizeWords)   |                                                                                           |
+| ImemSizeWords     | int              | ImemSizeByte / 4                      |                                                                                           |
+| ImemIndexWidth    | int              | prim_util_pkg::vbits(ImemSizeWords)   |                                                                                           |
+| DesignScope       | string           | "..u_otbn_core"                       | This runs in parallel with the real core above, with consistency checks between the two.  |
 ## Processes
-- unnamed: _( @(posedge IO_CLK or negedge IO_RST_N) )_
-
-- unnamed: _( @(posedge IO_CLK or negedge IO_RST_N) )_
-
-- unnamed: _( @(posedge IO_CLK or negedge IO_RST_N) )_
-
+- unnamed: ( @(posedge IO_CLK or negedge IO_RST_N) )
+- unnamed: ( @(posedge IO_CLK or negedge IO_RST_N) )
+- unnamed: ( @(posedge IO_CLK or negedge IO_RST_N) )
 ## Instantiations
+
 - u_otbn_core: otbn_core
 - u_mock_rnd_edn: otbn_mock_edn
 - u_mock_urnd_edn: otbn_mock_edn

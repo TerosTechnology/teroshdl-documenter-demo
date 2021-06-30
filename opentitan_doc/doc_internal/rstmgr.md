@@ -1,7 +1,10 @@
 # Entity: rstmgr
+
 ## Diagram
+
 ![Diagram](rstmgr.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,6 +14,7 @@ Copyright lowRISC contributors.
  This top level controller is fairly hardcoded right now, but will be switched to a template
  
 ## Ports
+
 | Port name     | Direction | Type             | Description                                                                    |
 | ------------- | --------- | ---------------- | ------------------------------------------------------------------------------ |
 | clk_i         | input     |                  | Primary module clocks                                                          |
@@ -33,6 +37,7 @@ Copyright lowRISC contributors.
 | resets_ast_o  | output    | rstmgr_ast_out_t | reset outputs                                                                  |
 | resets_o      | output    | rstmgr_out_t     |                                                                                |
 ## Signals
+
 | Name              | Type                                     | Description                                                                                                                                                                                               |
 | ----------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | rst_por_aon_n     | logic [PowerDomains-1:0]                 | receive POR and stretch The por is at first stretched and synced on clk_aon The rst_ni and pok_i input will be changed once AST is integrated                                                             |
@@ -68,6 +73,7 @@ Copyright lowRISC contributors.
 | unused_idx        | logic [IdxWidth-SlotCntWidth-1:0]        |                                                                                                                                                                                                           |
 |                   | [IdxWidth-1:SlotCntWidth]                |                                                                                                                                                                                                           |
 ## Constants
+
 | Name           | Type | Value                                                     | Description |
 | -------------- | ---- | --------------------------------------------------------- | ----------- |
 | CrashRemainder | int  | $bits(alert_pkg::alert_crashdump_t) % RdWidth > 0 ? 1 : 0 |             |
@@ -75,17 +81,14 @@ Copyright lowRISC contributors.
 | TotalWidth     | int  | CrashStoreSlot * RdWidth                                  |             |
 | SlotCntWidth   | int  | $clog2(CrashStoreSlot)                                    |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge local_rst_n) )_
-first reset is a flag that blocks reset recording until first de-assertion
-
+- unnamed: ( @(posedge clk_i or negedge local_rst_n) )
 **Description**
 first reset is a flag that blocks reset recording until first de-assertion
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_reg: rstmgr_reg_top
 - u_sync: prim_flop_2sync
 - u_lc_src: rstmgr_ctrl

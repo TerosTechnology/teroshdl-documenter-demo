@@ -1,7 +1,10 @@
 # Entity: sdram
+
 ## Diagram
+
 ![Diagram](sdram.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type       | Description |
 | --------- | --------- | ---------- | ----------- |
 | clock     | input     | wire       |             |
@@ -22,6 +25,7 @@
 | ramBa     | output    | [ 1:0]     |             |
 | ramA      | output    | [12:0]     |             |
 ## Signals
+
 | Name     | Type      | Description |
 | -------- | --------- | ----------- |
 | ramQ     | reg[15:0] |             |
@@ -37,6 +41,7 @@
 | count    | reg[5:0]  |             |
 | state    | reg[2:0]  |             |
 ## Constants
+
 | Name     | Type | Value | Description |
 | -------- | ---- | ----- | ----------- |
 | sINIT    |      | 0     |             |
@@ -45,9 +50,8 @@
 | sWRITE   |      | 3     |             |
 | sREFRESH |      | 4     |             |
 ## Processes
-- unnamed: _( @(negedge clock) )_
-
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(negedge clock) )
+- unnamed: ( @(posedge clock) )
 ## State machines
+
 ![Diagram_state_machine_0]( stm_sdram_00.svg "Diagram")

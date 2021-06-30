@@ -1,13 +1,17 @@
 # Entity: csrng_core
+
 ## Diagram
+
 ![Diagram](csrng_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: csrng core module
  
 ## Generics
+
 | Generic name                    | Type                 | Value                | Description |
 | ------------------------------- | -------------------- | -------------------- | ----------- |
 | aes_pkg                         | aes_pkg::sbox_impl_e | aes_pkg::SBoxImplLut |             |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | RndCnstCsKeymgrDivNonProduction | cs_keymgr_div_t      | CsKeymgrDivWidth'(0) |             |
 | RndCnstCsKeymgrDivProduction    | cs_keymgr_div_t      | CsKeymgrDivWidth'(0) |             |
 ## Ports
+
 | Port name              | Direction | Type          | Description                |
 | ---------------------- | --------- | ------------- | -------------------------- |
 | clk_i                  | input     |               |                            |
@@ -36,6 +41,7 @@ Copyright lowRISC contributors.
 | intr_cs_hw_inst_exc_o  | output    |               |                            |
 | intr_cs_fatal_err_o    | output    |               |                            |
 ## Signals
+
 | Name                                | Type                       | Description                                                                                                      |
 | ----------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | event_cs_cmd_req_done               | logic                      | signals interrupt signals                                                                                        |
@@ -298,6 +304,7 @@ Copyright lowRISC contributors.
 | entropy_src_fips_d                  | logic                      |                                                                                                                  |
 | lc_hw_debug_en_out                  | lc_ctrl_pkg::lc_tx_t [1:0] | The chip level life cycle control provide control logic to determine how certain debug features are controlled.  |
 ## Constants
+
 | Name            | Type | Value                             | Description |
 | --------------- | ---- | --------------------------------- | ----------- |
 | NApps           | int  | NHwApps + 1                       |             |
@@ -315,9 +322,9 @@ Copyright lowRISC contributors.
 | NUpdateArbReqs  | int  | 2                                 |             |
 | UpdateArbWidth  | int  | KeyLen+BlkLen+SeedLen+StateId+Cmd |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_intr_hw_cs_cmd_req_done: prim_intr_hw
 **Description**
 All TLUL interrupts are collect in the section.

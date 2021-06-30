@@ -1,11 +1,15 @@
 # Entity: serv_decode
+
 ## Diagram
+
 ![Diagram](serv_decode.svg "Diagram")
 ## Generics
+
 | Generic name | Type  | Value | Description |
 | ------------ | ----- | ----- | ----------- |
 | PRE_REGISTER | [0:0] | 1     |             |
 ## Ports
+
 | Port name          | Direction | Type        | Description |
 | ------------------ | --------- | ----------- | ----------- |
 | clk                | input     | wire        |             |
@@ -52,6 +56,7 @@
 | o_rd_csr_en        | output    |             |             |
 | o_rd_alu_en        | output    |             |             |
 ## Signals
+
 | Name                | Type       | Description |
 | ------------------- | ---------- | ----------- |
 | opcode              | reg [4:0]  |             |

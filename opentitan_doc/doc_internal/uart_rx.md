@@ -1,13 +1,17 @@
 # Entity: uart_rx
+
 ## Diagram
+
 ![Diagram](uart_rx.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: UART Receive Module
  
 ## Ports
+
 | Port name     | Direction | Type  | Description |
 | ------------- | --------- | ----- | ----------- |
 | clk_i         | input     |       |             |
@@ -24,6 +28,7 @@ Copyright lowRISC contributors.
 | rx_parity_err | output    |       |             |
 | rx            | input     |       |             |
 ## Signals
+
 | Name        | Type           | Description |
 | ----------- | -------------- | ----------- |
 | rx_valid_q  | logic          |             |
@@ -38,9 +43,6 @@ Copyright lowRISC contributors.
 | idle_d      | logic          |             |
 | idle_q      | logic          |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

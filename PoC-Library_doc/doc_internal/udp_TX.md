@@ -1,7 +1,10 @@
 # Entity: udp_TX
+
 ## Diagram
+
 ![Diagram](udp_TX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DEBUG        | boolean  | FALSE |             |
 | IP_VERSION   | positive | 6     |             |
 ## Ports
+
 | Port name                   | Direction | Type      | Description |
 | --------------------------- | --------- | --------- | ----------- |
 | Clock                       | in        | std_logic |             |
@@ -59,6 +64,7 @@ limitations under the License.
 | Out_Meta_DestIPAddress_Data | out       | T_SLV_8   |             |
 | Out_Meta_Length             | out       | T_SLV_16  |             |
 ## Signals
+
 | Name                   | Type                                | Description |
 | ---------------------- | ----------------------------------- | ----------- |
 | State                  | T_STATE                             |             |
@@ -88,28 +94,23 @@ limitations under the License.
 | Checksum_mux_set       | std_logic                           |             |
 | Checksum_mux_r         | std_logic                           |             |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Description |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_CHECKSUMV4_IPV4_ADDRESSES, 				ST_CHECKSUMV4_LENGTH_UDP_TYPE_0,	ST_CHECKSUMV4_LENGTH_UDP_TYPE_1, 				ST_CHECKSUMV4_PORT_NUMBER_0,			ST_CHECKSUMV4_PORT_NUMBER_1, 				ST_CHECKSUMV4_CHECKSUM_LENGTH_0,	ST_CHECKSUMV4_CHECKSUM_LENGTH_1, 			ST_CHECKSUMV6_IPV6_ADDRESSES, 				ST_CHECKSUMV6_LENGTH_UDP_TYPE_0,	ST_CHECKSUMV6_LENGTH_UDP_TYPE_1, 				ST_CHECKSUMV6_PORT_NUMBER_0,			ST_CHECKSUMV6_PORT_NUMBER_1, 				ST_CHECKSUMV6_CHECKSUM_LENGTH_0,	ST_CHECKSUMV6_CHECKSUM_LENGTH_1, 			ST_CARRY_0,  ST_CARRY_1, 			ST_SEND_SOURCE_PORT_0, 			ST_SEND_SOURCE_PORT_1, 			ST_SEND_DEST_PORT_0,	ST_SEND_DEST_PORT_1, 			ST_SEND_LENGTH_0,			ST_SEND_LENGTH_1, 			ST_SEND_CHECKSUM_0,		ST_SEND_CHECKSUM_1, 			ST_SEND_DATA, 		ST_ERROR 	) |             |
-## Processes
-- unnamed: _( Clock )_
 
-- unnamed: _( State,
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| T_STATE | ( ST_IDLE, ST_CHECKSUMV4_IPV4_ADDRESSES, ST_CHECKSUMV4_LENGTH_UDP_TYPE_0,	ST_CHECKSUMV4_LENGTH_UDP_TYPE_1, ST_CHECKSUMV4_PORT_NUMBER_0,			ST_CHECKSUMV4_PORT_NUMBER_1, ST_CHECKSUMV4_CHECKSUM_LENGTH_0,	ST_CHECKSUMV4_CHECKSUM_LENGTH_1, ST_CHECKSUMV6_IPV6_ADDRESSES, ST_CHECKSUMV6_LENGTH_UDP_TYPE_0,	ST_CHECKSUMV6_LENGTH_UDP_TYPE_1, ST_CHECKSUMV6_PORT_NUMBER_0,			ST_CHECKSUMV6_PORT_NUMBER_1, ST_CHECKSUMV6_CHECKSUM_LENGTH_0,	ST_CHECKSUMV6_CHECKSUM_LENGTH_1, ST_CARRY_0,  ST_CARRY_1, ST_SEND_SOURCE_PORT_0, ST_SEND_SOURCE_PORT_1, ST_SEND_DEST_PORT_0,	ST_SEND_DEST_PORT_1, ST_SEND_LENGTH_0,			ST_SEND_LENGTH_1, ST_SEND_CHECKSUM_0,		ST_SEND_CHECKSUM_1, ST_SEND_DATA, ST_ERROR )  |             |
+## Processes
+- unnamed: ( Clock )
+- unnamed: ( State,
 					In_Valid, In_SOF, In_EOF, In_Data,
 					Out_Ack, Out_Meta_rst,
 					Out_Meta_SrcIPAddress_nxt,	In_Meta_SrcIPAddress_Data,
 					Out_Meta_DestIPAddress_nxt, In_Meta_DestIPAddress_Data,
 					In_Meta_SrcPort, In_Meta_DestPort, In_Meta_Checksum,
 					IPSeqCounter_us, Checksum0_cy, Checksum,
-					UpperLayerPacketLength )_
-
-- unnamed: _( Clock )_
-IPSeqCounter
-
+					UpperLayerPacketLength )
+- unnamed: ( Clock )
 **Description**
 IPSeqCounter
 
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( Clock )

@@ -1,18 +1,23 @@
 # Entity: kmac_core
+
 ## Diagram
+
 ![Diagram](kmac_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  KMAC control and padding logic
  
 ## Generics
+
 | Generic name | Type | Value     | Description                                                                                                                       |
 | ------------ | ---- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | EnMasking    | bit  | 0         | EnMasking: Enable masking security hardening inside keccak_round If it is enabled, the result digest will be two set of 1600bit.  |
 | Share        | int  | undefined | derived parameter                                                                                                                 |
 ## Ports
+
 | Port name    | Direction | Type            | Description                                                                                                |
 | ------------ | --------- | --------------- | ---------------------------------------------------------------------------------------------------------- |
 | clk_i        | input     |                 |                                                                                                            |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | done_i       | input     |                 |                                                                                                            |
 | process_o    | output    |                 | Control to SHA3 core                                                                                       |
 ## Signals
+
 | Name              | Type                                 | Description                                                                                                                                                                                                                                                                                           |
 | ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | encoded_key       | logic [MaxEncodedKeyW-1:0]           | represents encode_string(K)                                                                                                                                                                                                                                                                           |
@@ -56,36 +62,27 @@ Copyright lowRISC contributors.
 | st_d              | kmac_st_e                            |                                                                                                                                                                                                                                                                                                       |
 | encoded_key_block | logic [MaxEncodedKeyW + 16 -1 :0]    | Combine the bytepad `left_encode(w)` and the `encode_string(secret_key)`                                                                                                                                                                                                                              |
 ## Constants
+
 | Name  | Type | Value     | Description       |
 | ----- | ---- | --------- | ----------------- |
 | Share | int  | undefined | derived parameter |
 ## Types
+
 | Name      | Type                                                                                                                        | Description |
 | --------- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | kmac_st_e | enum logic [1:0] {     StKmacIdle,                          StKey,                     StKmacMsg,           StKmacFlush   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-State register
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 State register
 
-- unnamed: _(  )_
-Next state and output logic
-
+- unnamed: (  )
 **Description**
 Next state and output logic
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-Block size based on the address.
-This is used for bytepad() and also pad10*1()
-assign block_addr_limit = KeccakRate[strength_i];
-but below is easier to understand
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 Block size based on the address.
 This is used for bytepad() and also pad10*1()

@@ -1,7 +1,10 @@
 # Entity: sdram_ctrl_phy_de0
+
 ## Diagram
+
 ![Diagram](sdram_ctrl_phy_de0.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -63,10 +66,12 @@ clock enable signals: "*_ce"
 internal version of output port: "*_i"
 tristate internal signal "*_z"
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | CL           | positive |       |             |
 ## Ports
+
 | Port name  | Direction | Type                          | Description |
 | ---------- | --------- | ----------------------------- | ----------- |
 | clk        | in        | std_logic                     |             |
@@ -94,6 +99,7 @@ tristate internal signal "*_z"
 | sd_a       | out       | std_logic_vector(11 downto 0) |             |
 | sd_dq      | inout     | std_logic_vector(15 downto 0) |             |
 ## Signals
+
 | Name     | Type                          | Description                                                               |
 | -------- | ----------------------------- | ------------------------------------------------------------------------- |
 | sd_cke_r | std_logic                     |                                                                           |
@@ -110,19 +116,7 @@ tristate internal signal "*_z"
 | rstb_r   | std_logic                     |                                                                           |
 | rdata_r  | std_logic_vector(15 downto 0) |                                                                           |
 ## Processes
-- unnamed: _( clk )_
-Output clock 180 deg phase-shifted with respect to control/data signals
- generic map (
-   WIDTH => 1)
- port map (
-   datain_h   => "0",
-   datain_l   => "1",
-   dataout(0) => sd_ck,
-   outclock   => clk);
-SDRAM command & address
-These registers should be placed in the I/O blocks.
-Use appriopate timing constraints.
-
+- unnamed: ( clk )
 **Description**
 Output clock 180 deg phase-shifted with respect to control/data signals
  generic map (
@@ -136,23 +130,18 @@ SDRAM command & address
 These registers should be placed in the I/O blocks.
 Use appriopate timing constraints.
 
-- unnamed: _( clk )_
-Write data
-These registers should be placed in the I/O blocks.
-Use appriopate timing constraints.
-
+- unnamed: ( clk )
 **Description**
 Write data
 These registers should be placed in the I/O blocks.
 Use appriopate timing constraints.
 
-- unnamed: _( clk )_
-Read data capture
-
+- unnamed: ( clk )
 **Description**
 Read data capture
 
 ## Instantiations
+
 - sd_ck_obuf: altiobuf_out
 - dq_obuf: altiobuf_out
 **Description**

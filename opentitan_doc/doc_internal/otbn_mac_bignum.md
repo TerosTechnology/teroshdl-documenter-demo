@@ -1,12 +1,16 @@
 # Entity: otbn_mac_bignum
+
 ## Diagram
+
 ![Diagram](otbn_mac_bignum.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name            | Direction | Type                   | Description |
 | -------------------- | --------- | ---------------------- | ----------- |
 | clk_i                | input     |                        |             |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | ispr_acc_wr_data_i   | input     | [WLEN-1:0]             |             |
 | ispr_acc_wr_en_i     | input     |                        |             |
 ## Signals
+
 | Name                    | Type               | Description |
 | ----------------------- | ------------------ | ----------- |
 | adder_op_a              | logic [WLEN-1:0]   |             |
@@ -35,25 +40,19 @@ Copyright lowRISC contributors.
 | acc_q                   | logic [WLEN-1:0]   |             |
 | acc_en                  | logic              |             |
 ## Constants
+
 | Name  | Type         | Value    | Description                                                                           |
 | ----- | ------------ | -------- | ------------------------------------------------------------------------------------- |
 | QWLEN | int unsigned | WLEN / 4 | The MAC operates on quarter-words, QWLEN gives the number of bits in a quarter-word.  |
 ## Processes
-- unnamed: _(  )_
-Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the
-instruction (operand_[a|b]_qw_sel).
-
+- unnamed: (  )
 **Description**
 Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the
 instruction (operand_[a|b]_qw_sel).
 
-- unnamed: _(  )_
-Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount
-supplied in the instruction (pre_acc_shift_imm).
-
+- unnamed: (  )
 **Description**
 Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount
 supplied in the instruction (pre_acc_shift_imm).
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

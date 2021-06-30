@@ -1,7 +1,10 @@
 # Entity: neorv32_cpu_regfile
+
 ## Diagram
+
 ![Diagram](neorv32_cpu_regfile.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - CPU General Purpose Data Register File >>                                        #
 # ********************************************************************************************* #
@@ -46,10 +49,12 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name          | Type    | Value | Description                      |
 | --------------------- | ------- | ----- | -------------------------------- |
 | CPU_EXTENSION_RISCV_E | boolean | false | implement embedded RF extension? |
 ## Ports
+
 | Port name | Direction | Type                                       | Description               |
 | --------- | --------- | ------------------------------------------ | ------------------------- |
 | clk_i     | in        | std_ulogic                                 | global clock, rising edge |
@@ -60,6 +65,7 @@
 | rs2_o     | out       | std_ulogic_vector(data_width_c-1 downto 0) | operand 2                 |
 | cmp_o     | out       | std_ulogic_vector(1 downto 0)              | comparator status         |
 ## Signals
+
 | Name         | Type                                       | Description            |
 | ------------ | ------------------------------------------ | ---------------------- |
 | reg_file     | reg_file_t                                 |                        |
@@ -75,15 +81,13 @@
 | cmp_opx      | std_ulogic_vector(data_width_c downto 0)   | comparator --          |
 | cmp_opy      | std_ulogic_vector(data_width_c downto 0)   |                        |
 ## Types
+
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | reg_file_t     |      |             |
 | reg_file_emb_t |      |             |
 ## Processes
-- rf_access: _( clk_i )_
-Register File Access -------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- rf_access: ( clk_i )
 **Description**
 Register File Access -------------------------------------------------------------------
 -------------------------------------------------------------------------------------------

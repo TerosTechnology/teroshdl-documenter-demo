@@ -1,7 +1,10 @@
 # Entity: arp_Wrapper
+
 ## Diagram
+
 ![Diagram](arp_Wrapper.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name             | Type                      | Value                                                                    | Description |
 | ------------------------ | ------------------------- | ------------------------------------------------------------------------ | ----------- |
 | CLOCK_FREQ               | FREQ                      | 125 MHz                                                                  |             |
@@ -32,6 +36,7 @@ limitations under the License.
 | INITIAL_ARPCACHE_CONTENT | T_NET_ARP_ARPCACHE_VECTOR | (0 => (Tag => C_NET_IPV4_ADDRESS_EMPTY, MAC => C_NET_MAC_ADDRESS_EMPTY)) |             |
 | APR_REQUEST_TIMEOUT      | time                      | 100 ms                                                                   |             |
 ## Ports
+
 | Port name                          | Direction | Type      | Description |
 | ---------------------------------- | --------- | --------- | ----------- |
 | Clock                              | in        | std_logic |             |
@@ -75,6 +80,7 @@ limitations under the License.
 | Eth_BC_RX_Meta_DestMACAddress_nxt  | out       | std_logic |             |
 | Eth_BC_RX_Meta_DestMACAddress_Data | in        | T_SLV_8   |             |
 ## Signals
+
 | Name                                  | Type                                        | Description                 |
 | ------------------------------------- | ------------------------------------------- | --------------------------- |
 | ARPCache_Command                      | T_NET_ARP_ARPCACHE_COMMAND                  |                             |
@@ -182,45 +188,41 @@ limitations under the License.
 | BCReq_TX_Meta_DestMACAddress_nxt      | std_logic                                   |                             |
 | BCReq_TX_Meta_DestMACAddress_Data     | T_SLV_8                                     |                             |
 ## Constants
+
 | Name                       | Type     | Value                                            | Description                 |
 | -------------------------- | -------- | ------------------------------------------------ | --------------------------- |
 | ARPREQ_TIMEOUTCOUNTER_MAX  | positive |  TimingToCycles(APR_REQUEST_TIMEOUT, CLOCK_FREQ) | ARP request timeout counter |
 | ARPREQ_TIMEOUTCOUNTER_BITS | positive |  log2ceilnz(ARPREQ_TIMEOUTCOUNTER_MAX)           |                             |
 ## Types
-| Name             | Type                                                                                                                                                                                  | Description |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_FSMPOOL_STATE  | ( 		ST_IDLE, 		ST_IPPOOL_WAIT, 		ST_SEND_RESPONSE, 		ST_SEND_ANNOUNCE, 		ST_ERROR 	)                                                                                                  |             |
-| T_FSMCACHE_STATE | ( 		ST_IDLE, 			ST_CACHE, ST_CACHE_WAIT, ST_READ_CACHE, 			ST_SEND_BROADCAST_REQUEST, ST_SEND_BROADCAST_REQUEST_WAIT, ST_WAIT_FOR_UNICAST_RESPONSE, 			ST_UPDATE_CACHE, 		ST_ERROR 	) |             |
-## Processes
-- unnamed: _( Clock )_
 
-- unnamed: _( FSMPool_State,
+| Name             | Type                                                                                                                                                                     | Description |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| T_FSMPOOL_STATE  | ( ST_IDLE, ST_IPPOOL_WAIT, ST_SEND_RESPONSE, ST_SEND_ANNOUNCE, ST_ERROR )                                                                                                |             |
+| T_FSMCACHE_STATE | ( ST_IDLE, ST_CACHE, ST_CACHE_WAIT, ST_READ_CACHE, ST_SEND_BROADCAST_REQUEST, ST_SEND_BROADCAST_REQUEST_WAIT, ST_WAIT_FOR_UNICAST_RESPONSE, ST_UPDATE_CACHE, ST_ERROR )  |             |
+## Processes
+- unnamed: ( Clock )
+- unnamed: ( FSMPool_State,
 					IPPool_Announce_l,
 					MACSeq1_SenderMACAddress_Data,
 					BCRcv_RequestReceived, BCRcv_Error, BCRcv_SenderMACAddress_Data, BCRcv_SenderIPv4Address_Data, BCRcv_TargetIPv4Address_Data,
 					IPPool_PoolResult, IPPool_IPv4Address_nxt,
-					UCRsp_Address_rst, UCRsp_SenderMACAddress_nxt, UCRsp_SenderIPv4Address_nxt, UCRsp_TargetMACAddress_nxt, UCRsp_TargetIPv4Address_nxt, UCRsp_Complete )_
-sequencer
-
+					UCRsp_Address_rst, UCRsp_SenderMACAddress_nxt, UCRsp_SenderIPv4Address_nxt, UCRsp_TargetMACAddress_nxt, UCRsp_TargetIPv4Address_nxt, UCRsp_Complete )
 **Description**
 sequencer
 
-- unnamed: _( Clock )_
-
-- unnamed: _( FSMCache_State,
+- unnamed: ( Clock )
+- unnamed: ( FSMCache_State,
 					IPCache_Lookup, IPCache_IPv4Address_Data,	IPCache_MACAddress_rst, IPCache_MACAddress_nxt,
 					MACSeq2_SenderMACAddress_Data, IPSeq2_SenderIPv4Address_Data, ARPReq_Timeout,
 					UCRcv_Error, UCRcv_ResponseReceived, UCRcv_SenderIPv4Address_Data, UCRcv_SenderMACAddress_Data, UCRcv_TargetIPv4Address_Data, UCRcv_TargetMACAddress_Data,
 					ARPCache_Status, ARPCache_CacheResult, ARPCache_IPv4Address_rst, ARPCache_IPv4Address_nxt, ARPCache_MACAddress_Data, ARPCache_NewMACAddress_nxt, ARPCache_NewIPv4Address_nxt,
-					BCReq_Address_rst, BCReq_SenderMACAddress_nxt, BCReq_SenderIPv4Address_nxt, BCReq_TargetMACAddress_nxt, BCReq_TargetIPv4Address_nxt, BCReq_Complete )_
-
-- unnamed: _( Clock )_
-ARP request expiration timer
-
+					BCReq_Address_rst, BCReq_SenderMACAddress_nxt, BCReq_SenderIPv4Address_nxt, BCReq_TargetMACAddress_nxt, BCReq_TargetIPv4Address_nxt, BCReq_Complete )
+- unnamed: ( Clock )
 **Description**
 ARP request expiration timer
 
 ## Instantiations
+
 - MACSeq1: PoC.misc_Sequencer
 **Description**
 =============================================================================

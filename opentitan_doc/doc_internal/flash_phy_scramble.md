@@ -1,7 +1,10 @@
 # Entity: flash_phy_scramble
+
 ## Diagram
+
 ![Diagram](flash_phy_scramble.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -11,6 +14,7 @@ Copyright lowRISC contributors.
  in two and separately manipulated by the program and read pipelines.
  
 ## Ports
+
 | Port name        | Direction | Type            | Description                      |
 | ---------------- | --------- | --------------- | -------------------------------- |
 | clk_i            | input     |                 |                                  |
@@ -32,6 +36,7 @@ Copyright lowRISC contributors.
 | plain_data_o     | output    | [DataWidth-1:0] |                                  |
 | scrambled_data_o | output    | [DataWidth-1:0] |                                  |
 ## Signals
+
 | Name           | Type                    | Description                                                                                                                                          |
 | -------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | muxed_addr_key | logic [KeySize-1:0]     | unused portion of addr_key                                                                                                                           |
@@ -41,14 +46,14 @@ Copyright lowRISC contributors.
 | data           | logic [DataWidth-1:0]   |                                                                                                                                                      |
 | data_key_sel   | logic                   | Do not allow the key to change during a transaction. While this may be desirable for security reasons, it creates timing issues for physical design  |
 ## Constants
+
 | Name         | Type | Value                  | Description |
 | ------------ | ---- | ---------------------- | ----------- |
 | AddrPadWidth | int  | DataWidth - BankAddrW  |             |
 | UnusedWidth  | int  | KeySize - AddrPadWidth |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_cipher: prim_prince

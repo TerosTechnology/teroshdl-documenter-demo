@@ -1,12 +1,16 @@
 # Entity: otbn_core_model
+
 ## Diagram
+
 ![Diagram](otbn_core_model.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Generics
+
 | Generic name  | Type   | Value                              | Description                                                                                                                                                                                                                                                                   |
 | ------------- | ------ | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ImemSizeByte  | int    | 4096                               | Size of the instruction memory, in bytes                                                                                                                                                                                                                                      |
@@ -15,6 +19,7 @@ Copyright lowRISC contributors.
 | DesignScope   | string | ""                                 | Scope of an RTL OTBN implementation (for DPI). If empty, this is a "standalone" model, which should update DMEM on completion. If not empty, we assume it's the scope for the top-level of a real implementation running alongside and we check DMEM contents on completion.  |
 | ImemAddrWidth | int    | prim_util_pkg::vbits(ImemSizeByte) |                                                                                                                                                                                                                                                                               |
 ## Ports
+
 | Port name             | Direction | Type                | Description                   |
 | --------------------- | --------- | ------------------- | ----------------------------- |
 | clk_i                 | input     |                     |                               |
@@ -29,6 +34,7 @@ Copyright lowRISC contributors.
 | insn_cnt_o            | output    | [31:0]              | INSN_CNT register             |
 | err_o                 | output    |                     | something went wrong          |
 ## Signals
+
 | Name                | Type         | Description                                                                                                                                                                                                                                                                                  |
 | ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mem_scope           | string       |                                                                                                                                                                                                                                                                                              |
@@ -65,13 +71,12 @@ Copyright lowRISC contributors.
 | insn_cnt_q          | bit [31:0]   |                                                                                                                                                                                                                                                                                              |
 | running_r           | bit          | Track negedges of running_q and expose that as a "done" output.                                                                                                                                                                                                                              |
 ## Constants
+
 | Name          | Type | Value                              | Description |
 | ------------- | ---- | ---------------------------------- | ----------- |
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |             |
 | ImemSizeWords | int  | ImemSizeByte / 4                   |             |
 | DmemSizeWords | int  | DmemSizeByte                       |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

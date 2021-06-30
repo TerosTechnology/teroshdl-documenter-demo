@@ -1,7 +1,10 @@
 # Entity: sort_lru_list
+
 ## Diagram
+
 ![Diagram](sort_lru_list.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -35,6 +38,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name     | Type             | Value                        | Description |
 | ---------------- | ---------------- | ---------------------------- | ----------- |
 | ELEMENTS         | positive         | 16                           |             |
@@ -43,6 +47,7 @@ limitations under the License.
 | INITIAL_ELEMENTS | T_SLM            | (0 to 15 => (0 to 7 => '0')) |             |
 | INITIAL_VALIDS   | std_logic_vector | (0 to 15 => '0')             |             |
 ## Ports
+
 | Port name | Direction | Type                                     | Description |
 | --------- | --------- | ---------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                |             |
@@ -53,6 +58,7 @@ limitations under the License.
 | Valid     | out       | std_logic                                |             |
 | DataOut   | out       | std_logic_vector(DATA_BITS - 1 downto 0) |             |
 ## Signals
+
 | Name             | Type                                  | Description |
 | ---------------- | ------------------------------------- | ----------- |
 | NewElementsUp    | T_ELEMENT_VECTOR(ELEMENTS downto 0)   |             |
@@ -69,9 +75,11 @@ limitations under the License.
 | MovesDownCondRev | std_logic_vector(ELEMENTS downto 0)   |             |
 | MovesDownRev     | std_logic_vector(ELEMENTS downto 0)   |             |
 ## Types
+
 | Name             | Type | Description |
 | ---------------- | ---- | ----------- |
 | T_ELEMENT_VECTOR |      |             |
 ## Instantiations
+
 - MovesUpProp: poc.arith_prefix_and
 - MovesDownProp: poc.arith_prefix_and

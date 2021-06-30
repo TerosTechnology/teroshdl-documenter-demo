@@ -1,17 +1,22 @@
 # Entity: aes_sub_bytes
+
 ## Diagram
+
 ![Diagram](aes_sub_bytes.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  AES SubBytes
  
 ## Generics
+
 | Generic name | Type        | Value       | Description |
 | ------------ | ----------- | ----------- | ----------- |
 | SBoxImpl     | sbox_impl_e | SBoxImplLut |             |
 ## Ports
+
 | Port name | Direction | Type      | Description |
 | --------- | --------- | --------- | ----------- |
 | clk_i     | input     |           |             |
@@ -27,6 +32,7 @@ Copyright lowRISC contributors.
 | mask_o    | output    | [3:0]     |             |
 | err_o     | output    |           |             |
 ## Signals
+
 | Name        | Type                  | Description                      |
 | ----------- | --------------------- | -------------------------------- |
 | en          | sp2v_e                |                                  |
@@ -37,5 +43,6 @@ Copyright lowRISC contributors.
 | en_raw      | logic [Sp2VWidth-1:0] | Check sparsely encoded signals.  |
 | out_ack_raw | logic [Sp2VWidth-1:0] |                                  |
 ## Instantiations
+
 - u_aes_sb_en_buf_chk: aes_sel_buf_chk
 - u_aes_sb_out_ack_buf_chk: aes_sel_buf_chk

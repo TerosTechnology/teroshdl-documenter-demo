@@ -1,7 +1,10 @@
 # Entity: bus_Arbiter
+
 ## Diagram
+
 ![Diagram](bus_Arbiter.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -26,6 +29,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value    | Description |
 | ------------ | -------- | -------- | ----------- |
 | STRATEGY     | string   | "RR"     | RR, LOT     |
@@ -33,6 +37,7 @@ limitations under the License.
 | WEIGHTS      | T_INTVEC | (0 => 1) |             |
 | OUTPUT_REG   | boolean  | TRUE     |             |
 ## Ports
+
 | Port name      | Direction | Type                                             | Description |
 | -------------- | --------- | ------------------------------------------------ | ----------- |
 | Clock          | in        | std_logic                                        |             |

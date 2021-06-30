@@ -1,13 +1,17 @@
 # Entity: serv_ctrl
+
 ## Diagram
+
 ![Diagram](serv_ctrl.svg "Diagram")
 ## Generics
+
 | Generic name   | Type | Value  | Description |
 | -------------- | ---- | ------ | ----------- |
 | RESET_STRATEGY |      | "MINI" |             |
 | RESET_PC       |      | 32'd0  |             |
 | WITH_CSR       |      | 1      |             |
 ## Ports
+
 | Port name     | Direction | Type   | Description |
 | ------------- | --------- | ------ | ----------- |
 | clk           | input     | wire   |             |
@@ -28,6 +32,7 @@
 | o_bad_pc      | output    | wire   |             |
 | o_ibus_adr    | output    | [31:0] |             |
 ## Signals
+
 | Name                   | Type | Description |
 | ---------------------- | ---- | ----------- |
 | pc_plus_4              | wire |             |
@@ -43,5 +48,4 @@
 | offset_a               | wire |             |
 | offset_b               | wire |             |
 ## Processes
-- unnamed: _( @(posedge clk) )_
-
+- unnamed: ( @(posedge clk) )

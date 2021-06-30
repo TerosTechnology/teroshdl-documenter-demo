@@ -1,7 +1,10 @@
 # Entity: neorv32_ProcessorTop_Minimal
+
 ## Diagram
+
 ![Diagram](neorv32_ProcessorTop_Minimal.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Minimal setup without a bootloader >>                                            #
 # ********************************************************************************************* #
@@ -36,6 +39,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                                       |
 | ---------------------------- | ------------------------------ | ----------- | --------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY              | natural                        | 0           | clock frequency of clk_i in Hz                                                    |
@@ -68,10 +72,12 @@
 | IO_PWM_NUM_CH                | natural                        | 3           | number of PWM channels to implement (0..60); 0 = disabled                         |
 | IO_WDT_EN                    | boolean                        | false       | implement watch dog timer (WDT)?                                                  |
 ## Ports
+
 | Port name | Direction | Type                                        | Description                             |
 | --------- | --------- | ------------------------------------------- | --------------------------------------- |
 | clk_i     | in        | std_logic                                   |                                         |
 | rstn_i    | in        | std_logic                                   |                                         |
 | pwm_o     | out       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0) | PWM (available if IO_PWM_NUM_CH > 0) -- |
 ## Instantiations
+
 - neorv32_inst: neorv32.neorv32_top

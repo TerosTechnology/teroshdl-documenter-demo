@@ -1,11 +1,15 @@
 # Entity: serv_immdec
+
 ## Diagram
+
 ![Diagram](serv_immdec.svg "Diagram")
 ## Generics
+
 | Generic name           | Type | Value | Description |
 | ---------------------- | ---- | ----- | ----------- |
 | SHARED_RFADDR_IMM_REGS |      | 1     |             |
 ## Ports
+
 | Port name    | Direction | Type        | Description |
 | ------------ | --------- | ----------- | ----------- |
 | i_clk        | input     | wire        |             |
@@ -22,6 +26,7 @@
 | i_wb_en      | input     | wire        |             |
 | i_wb_rdt     | input     | wire [31:7] |             |
 ## Signals
+
 | Name        | Type      | Description |
 | ----------- | --------- | ----------- |
 | signbit     | reg       |             |

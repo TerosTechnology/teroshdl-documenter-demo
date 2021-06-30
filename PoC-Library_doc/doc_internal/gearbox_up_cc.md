@@ -1,7 +1,10 @@
 # Entity: gearbox_up_cc
+
 ## Diagram
+
 ![Diagram](gearbox_up_cc.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -28,6 +31,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name         | Type     | Value | Description |
 | -------------------- | -------- | ----- | ----------- |
 | INPUT_BITS           | positive | 24    |             |
@@ -36,6 +40,7 @@ limitations under the License.
 | ADD_INPUT_REGISTERS  | boolean  | FALSE |             |
 | ADD_OUTPUT_REGISTERS | boolean  | FALSE |             |
 ## Ports
+
 | Port name | Direction | Type                                       | Description |
 | --------- | --------- | ------------------------------------------ | ----------- |
 | Clock     | in        | std_logic                                  |             |
@@ -50,6 +55,7 @@ limitations under the License.
 | Out_First | out       | std_logic                                  |             |
 | Out_Last  | out       | std_logic                                  |             |
 ## Signals
+
 | Name             | Type                                             | Description |
 | ---------------- | ------------------------------------------------ | ----------- |
 | In_Sync_d        | std_logic                                        |             |
@@ -82,6 +88,7 @@ limitations under the License.
 | Out_First_d      | std_logic                                        |             |
 | Out_Last_d       | std_logic                                        |             |
 ## Constants
+
 | Name                  | Type                   | Value                                           | Description |
 | --------------------- | ---------------------- | ----------------------------------------------- | ----------- |
 | C_VERBOSE             | boolean                |  FALSE                                          |             |
@@ -92,6 +99,7 @@ limitations under the License.
 | COUNTER_TRANSLATION   | T_COUNTER_DESCRIPTIONS |  genCounterDescription                          |             |
 | MUX_INPUT_TRANSLATION | T_MUX_DESCRIPTIONS     |  genMuxDescription                              |             |
 ## Types
+
 | Name                   | Type | Description |
 | ---------------------- | ---- | ----------- |
 | T_CHUNK_VECTOR         |      |             |
@@ -102,14 +110,13 @@ limitations under the License.
 | T_COUNTER_STRUCT       |      |             |
 | T_COUNTER_DESCRIPTIONS |      |             |
 ## Functions
-- genCounterDescription <font id="function_arguments">()</font> <font id="function_return">return T_COUNTER_DESCRIPTIONS</font>
-- genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS</font>
-- to_chunkv <font id="function_arguments">(slv : std_logic_vector)</font> <font id="function_return">return T_CHUNK_VECTOR</font>
+- genCounterDescription <font id="function_arguments">()</font> <font id="function_return">return T_COUNTER_DESCRIPTIONS </font>
+- genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS </font>
+- to_chunkv <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return T_CHUNK_VECTOR </font>
 **Description**
 create vector-vector from vector (4 bit)
-- to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR)</font> <font id="function_return">return std_logic_vector</font>
+- to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
 convert vector-vector to flatten vector
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )

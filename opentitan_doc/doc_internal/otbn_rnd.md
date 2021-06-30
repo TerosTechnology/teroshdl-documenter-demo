@@ -1,7 +1,10 @@
 # Entity: otbn_rnd
+
 ## Diagram
+
 ![Diagram](otbn_rnd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,11 +16,13 @@ Copyright lowRISC contributors.
  necessary guarantees required for the various uses of random numbers in OTBN software.         //
  
 ## Generics
+
 | Generic name             | Type                   | Value                           | Description |
 | ------------------------ | ---------------------- | ------------------------------- | ----------- |
 | RndCnstUrndLfsrSeed      | urnd_lfsr_seed_t       | RndCnstUrndLfsrSeedDefault      |             |
 | RndCnstUrndChunkLfsrPerm | urnd_chunk_lfsr_perm_t | RndCnstUrndChunkLfsrPermDefault |             |
 ## Ports
+
 | Port name          | Direction | Type               | Description                                                                                      |
 | ------------------ | --------- | ------------------ | ------------------------------------------------------------------------------------------------ |
 | clk_i              | input     |                    |                                                                                                  |
@@ -37,6 +42,7 @@ Copyright lowRISC contributors.
 | edn_urnd_ack_i     | input     |                    |                                                                                                  |
 | edn_urnd_data_i    | input     | [EdnDataWidth-1:0] |                                                                                                  |
 ## Signals
+
 | Name                  | Type                           | Description |
 | --------------------- | ------------------------------ | ----------- |
 | rnd_valid_q           | logic                          |             |
@@ -56,14 +62,12 @@ Copyright lowRISC contributors.
 | lfsr_seed             | logic [UrndChunkLfsrWidth-1:0] |             |
 | lfsr_state            | logic [UrndChunkLfsrWidth-1:0] |             |
 ## Constants
+
 | Name              | Type | Value                     | Description                                                               |
 | ----------------- | ---- | ------------------------- | ------------------------------------------------------------------------- |
 | LfsrChunksPerWLEN | int  | WLEN / UrndChunkLfsrWidth | Determine how many LFSR chunks are required to fill a full WLEN register  |
 | BytesPerLfsrChunk | int  | UrndChunkLfsrWidth / 8    |                                                                           |
 ## Processes
-- unnamed: _( @(posedge clk_i) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

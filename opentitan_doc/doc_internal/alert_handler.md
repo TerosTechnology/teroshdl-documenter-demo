@@ -1,7 +1,10 @@
 # Entity: alert_handler
+
 ## Diagram
+
 ![Diagram](alert_handler.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,11 +13,13 @@ Copyright lowRISC contributors.
  have to be generated using the reg_alert_handler.py script.
  
 ## Generics
+
 | Generic name    | Type        | Value                  | Description                                                |
 | --------------- | ----------- | ---------------------- | ---------------------------------------------------------- |
 | RndCnstLfsrSeed | lfsr_seed_t | RndCnstLfsrSeedDefault | Compile time random constants, to be overriden by topgen.  |
 | RndCnstLfsrPerm | lfsr_perm_t | RndCnstLfsrPermDefault |                                                            |
 ## Ports
+
 | Port name     | Direction | Type              | Description                        |
 | ------------- | --------- | ----------------- | ---------------------------------- |
 | clk_i         | input     |                   |                                    |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | esc_rx_i      | input     | [N_ESC_SEV-1:0]   | Escalation outputs                 |
 | esc_tx_o      | output    | [N_ESC_SEV-1:0]   |                                    |
 ## Signals
+
 | Name              | Type                                 | Description |
 | ----------------- | ------------------------------------ | ----------- |
 | loc_alert_trig    | logic [N_LOC_ALERT-1:0]              |             |
@@ -55,6 +61,7 @@ Copyright lowRISC contributors.
 | esc_integfail     | logic [N_ESC_SEV-1:0]                |             |
 | esc_sig_req_trsp  | logic [N_ESC_SEV-1:0][N_CLASSES-1:0] |             |
 ## Instantiations
+
 - u_reg_wrap: alert_handler_reg_wrap
 - u_edn_req: prim_edn_req
 - u_ping_timer: alert_handler_ping_timer

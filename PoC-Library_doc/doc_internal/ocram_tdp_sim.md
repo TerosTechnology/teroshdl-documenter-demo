@@ -1,7 +1,10 @@
 # Entity: ocram_tdp_sim
+
 ## Diagram
+
 ![Diagram](ocram_tdp_sim.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -30,12 +33,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                      |
 | ------------ | -------- | ----- | -------------------------------- |
 | A_BITS       | positive |       | number of address bits           |
 | D_BITS       | positive |       | number of data bits              |
 | FILENAME     | string   | ""    | file-name for RAM initialization |
 ## Ports
+
 | Port name | Direction | Type                                | Description               |
 | --------- | --------- | ----------------------------------- | ------------------------- |
 | clk1      | in        | std_logic                           | clock for 1st port        |
@@ -51,6 +56,7 @@ limitations under the License.
 | q1        | out       | std_logic_vector(D_BITS-1 downto 0) | read-data from 1st port   |
 | q2        | out       | std_logic_vector(D_BITS-1 downto 0) | read-data from 2nd port   |
 ## Signals
+
 | Name   | Type  | Description                                 |
 | ------ | ----- | ------------------------------------------- |
 | ram    | ram_t |                                             |
@@ -59,14 +65,15 @@ limitations under the License.
 | read1  | X01   | read only from memory, 'X' means maybe read |
 | read2  | X01   |                                             |
 ## Constants
+
 | Name  | Type     | Value      | Description |
 | ----- | -------- | ---------- | ----------- |
 | DEPTH | positive |  2**A_BITS |             |
 ## Types
+
 | Name  | Type | Description |
 | ----- | ---- | ----------- |
 | ram_t |      |             |
 ## Functions
 ## Processes
-- unnamed: _( clk1, clk2 )_
-
+- unnamed: ( clk1, clk2 )

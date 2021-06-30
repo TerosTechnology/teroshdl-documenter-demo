@@ -1,7 +1,10 @@
 # Entity: arith_scaler
+
 ## Diagram
+
 ![Diagram](arith_scaler.svg "Diagram")
 ## Description
+
 EMACS settings: -*-	tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -36,11 +39,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value    | Description                                                  |
 | ------------ | -------- | -------- | ------------------------------------------------------------ |
 | MULS         | T_POSVEC | (0 => 1) | The set of multipliers to choose from in scaling operations. |
 | DIVS         | T_POSVEC | (0 => 1) | The set of divisors to choose from in scaling operations.    |
 ## Ports
+
 | Port name | Direction | Type                                               | Description                    |
 | --------- | --------- | -------------------------------------------------- | ------------------------------ |
 | clk       | in        | std_logic                                          |                                |
@@ -52,6 +57,7 @@ limitations under the License.
 | done      | out       | std_logic                                          | Completion                     |
 | res       | out       | std_logic_vector                                   | Result                         |
 ## Signals
+
 | Name       | Type                                         | Description                  |
 | ---------- | -------------------------------------------- | ---------------------------- |
 | muloffset  | unsigned(X-1 downto 0)                       | Offset for correct rounding. |
@@ -60,6 +66,7 @@ limitations under the License.
 | divcini    | unsigned(log2ceil(MAX_ANY_STEPS)-1 downto 0) | Count for division steps.    |
 | divmask    | tResMask                                     |                              |
 ## Constants
+
 | Name          | Type                  | Value                                       | Description |
 | ------------- | --------------------- | ------------------------------------------- | ----------- |
 | N             | positive              |  arg'length                                 |             |
@@ -71,10 +78,11 @@ limitations under the License.
 | MAX_ANY_STEPS | positive              |  imax(MAX_MUL_STEPS, MAX_DIV_STEPS)         |             |
 | RES_MASKS     | tResMasks(DIVS'range) |  computeMasks                               |             |
 ## Types
+
 | Name      | Type | Description         |
 | --------- | ---- | ------------------- |
 | tDivProps |      | Division Properties |
 | tResMasks |      |                     |
 ## Functions
-- computeProps <font id="function_arguments">()</font> <font id="function_return">return tDivProps</font>
-- computeMasks <font id="function_arguments">()</font> <font id="function_return">return tResMasks</font>
+- computeProps <font id="function_arguments">()</font> <font id="function_return">return tDivProps </font>
+- computeMasks <font id="function_arguments">()</font> <font id="function_return">return tResMasks </font>

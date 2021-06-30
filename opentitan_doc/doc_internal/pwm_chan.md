@@ -1,12 +1,16 @@
 # Entity: pwm_chan
+
 ## Diagram
+
 ![Diagram](pwm_chan.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name        | Direction | Type   | Description |
 | ---------------- | --------- | ------ | ----------- |
 | clk_i            | input     |        |             |
@@ -26,6 +30,7 @@ Copyright lowRISC contributors.
 | dc_resn_i        | input     | [3:0]  |             |
 | pwm_o            | output    |        |             |
 ## Signals
+
 | Name               | Type         | Description          |
 | ------------------ | ------------ | -------------------- |
 | duty_cycle_actual  | logic [15:0] |                      |
@@ -52,11 +57,7 @@ Copyright lowRISC contributors.
 | on_phase_exceeded  | logic        |                      |
 | off_phase_exceeded | logic        |                      |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

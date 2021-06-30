@@ -1,7 +1,10 @@
 # Entity: uart_vvc_tb
+
 ## Diagram
+
 ![Diagram](uart_vvc_tb.svg "Diagram")
 ## Description
+
 Copyright 2020 Bitvis
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and in the provided LICENSE.TXT.
@@ -12,6 +15,7 @@ Note : Any functionality not explicitly described in the documentation is subjec
 Description   : See library quick reference (under 'doc') and README-file(s)
 Test bench entity
 ## Constants
+
 | Name                  | Type                 | Value                                          | Description                   |
 | --------------------- | -------------------- | ---------------------------------------------- | ----------------------------- |
 | C_REQ_LIST_FILE       | string               |  "../demo/basic_usage/req_list_basic_demo.csv" |                               |
@@ -25,11 +29,10 @@ Test bench entity
 | C_ADDR_TX_DATA        | unsigned(2 downto 0) |  "010"                                         |                               |
 | C_ADDR_TX_READY       | unsigned(2 downto 0) |  "011"                                         |                               |
 ## Processes
-- p_main: _(  )_
-PROCESS: p_main
-
+- p_main: (  )
 **Description**
 PROCESS: p_main
 
 ## Instantiations
+
 - i_test_harness: work.uart_vvc_th

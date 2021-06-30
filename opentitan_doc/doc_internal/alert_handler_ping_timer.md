@@ -1,7 +1,10 @@
 # Entity: alert_handler_ping_timer
+
 ## Diagram
+
 ![Diagram](alert_handler_ping_timer.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -18,6 +21,7 @@ Copyright lowRISC contributors.
  requested), the ping timer will also raise an internal alert.
  
 ## Generics
+
 | Generic name    | Type        | Value                  | Description                                                                                                                            |
 | --------------- | ----------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | RndCnstLfsrSeed | lfsr_seed_t | RndCnstLfsrSeedDefault | Compile time random constants, to be overriden by topgen.                                                                              |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | MaxLenSVA       | bit         | 1'b1                   | Enable this for DV, disable this for long LFSRs in FPV                                                                                 |
 | LockupSVA       | bit         | 1'b1                   | Can be disabled in cases where entropy inputs are unused in order to not distort coverage (the SVA will be unreachable in such cases)  |
 ## Ports
+
 | Port name          | Direction | Type              | Description                              |
 | ------------------ | --------- | ----------------- | ---------------------------------------- |
 | clk_i              | input     |                   |                                          |
@@ -43,6 +48,7 @@ Copyright lowRISC contributors.
 | alert_ping_fail_o  | output    |                   | any of the alert receivers failed        |
 | esc_ping_fail_o    | output    |                   | any of the esc senders failed            |
 ## Signals
+
 | Name                | Type                         | Description                                                                                                                                                                                                                                                             |
 | ------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | reseed_en           | logic                        |                                                                                                                                                                                                                                                                         |
@@ -69,6 +75,7 @@ Copyright lowRISC contributors.
 | state_q             | state_e                      |                                                                                                                                                                                                                                                                         |
 | state_raw_q         | logic [StateWidth-1:0]       | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.                                                                                                                                               |
 ## Constants
+
 | Name                | Type         | Value                             | Description                                                                                                                                                                                                                                                                       |
 | ------------------- | ------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IdDw                | int unsigned | $clog2(NAlerts)                   |                                                                                                                                                                                                                                                                                   |
@@ -76,15 +83,15 @@ Copyright lowRISC contributors.
 | ReseedLfsrWidth     | int unsigned | PING_CNT_DW + ReseedLfsrExtraBits |                                                                                                                                                                                                                                                                                   |
 | StateWidth          | int          | 9                                 |                                                                                                                                                                                                                                                                                   |
 ## Types
+
 | Name    | Type                                                                                                                                                                                                                             | Description |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     InitSt      = 9'b000101100,     AlertWaitSt = 9'b011001011,     AlertPingSt = 9'b110000000,     EscWaitSt   = 9'b101110001,     EscPingSt   = 9'b011110110,     FsmErrorSt  = 9'b100011111   } |             |
 ## Processes
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
-- p_fsm: _(  )_
-
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
+- p_fsm: (  )
 ## Instantiations
+
 - u_prim_buf_spurious_alert_ping: prim_buf
 **Description**
 under normal operation, these signals should never be asserted.

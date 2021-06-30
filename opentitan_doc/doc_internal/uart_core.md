@@ -1,13 +1,17 @@
 # Entity: uart_core
+
 ## Diagram
+
 ![Diagram](uart_core.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Description: UART core module
  
 ## Ports
+
 | Port name            | Direction | Type | Description |
 | -------------------- | --------- | ---- | ----------- |
 | clk_i                | input     |      |             |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | intr_rx_timeout_o    | output    |      |             |
 | intr_rx_parity_err_o | output    |      |             |
 ## Signals
+
 | Name                  | Type                 | Description                                                                                                                 |
 | --------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | rx_val_q              | logic   [15:0]       |                                                                                                                             |
@@ -90,43 +95,33 @@ Copyright lowRISC contributors.
 | rx_in_mx              | logic                | Based on: en.wikipedia.org/wiki/Repetition_code mentions the use of a majority filter in UART to ignore brief noise spikes  |
 | rx_in_maj             | logic                | Based on: en.wikipedia.org/wiki/Repetition_code mentions the use of a majority filter in UART to ignore brief noise spikes  |
 ## Constants
+
 | Name     | Type | Value                    | Description |
 | -------- | ---- | ------------------------ | ----------- |
 | NcoWidth | int  | $bits(reg2hw.ctrl.nco.q) |             |
 ## Types
+
 | Name       | Type                                       | Description |
 | ---------- | ------------------------------------------ | ----------- |
 | break_st_e | enum logic {     BRK_CHK,     BRK_WAIT   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-break_err edges in same cycle as event_rx_frame_err edges ; that way the
-reset-on-read works the same way for break and frame error interrupts.
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 break_err edges in same cycle as event_rx_frame_err edges ; that way the
 reset-on-read works the same way for break and frame error interrupts.
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_uart_txfifo: prim_fifo_sync
 - uart_tx: uart_tx
 - sync_rx: prim_flop_2sync
@@ -147,4 +142,5 @@ instantiate interrupt hardware primitives
 - intr_hw_rx_timeout: prim_intr_hw
 - intr_hw_rx_parity_err: prim_intr_hw
 ## State machines
+
 ![Diagram_state_machine_0]( stm_uart_core_00.svg "Diagram")

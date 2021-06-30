@@ -1,7 +1,10 @@
 # Entity: ipv6_RX
+
 ## Diagram
+
 ![Diagram](ipv6_RX.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type    | Value | Description |
 | ------------ | ------- | ----- | ----------- |
 | DEBUG        | boolean | FALSE |             |
 ## Ports
+
 | Port name                     | Direction | Type      | Description |
 | ----------------------------- | --------- | --------- | ----------- |
 | Clock                         | in        | std_logic |             |
@@ -64,6 +69,7 @@ limitations under the License.
 | Out_Meta_Length               | out       | T_SLV_16  |             |
 | Out_Meta_NextHeader           | out       | T_SLV_8   |             |
 ## Signals
+
 | Name                       | Type                                            | Description              |
 | -------------------------- | ----------------------------------------------- | ------------------------ |
 | State                      | T_STATE                                         |                          |
@@ -105,24 +111,20 @@ limitations under the License.
 | DestIPv6Address_Reader_en  | std_logic                                       |                          |
 | DestIPv6Address_Reader_us  | unsigned(IPV6_ADDRESS_READER_BITS - 1 downto 0) |                          |
 ## Constants
+
 | Name                     | Type     | Value                            | Description      |
 | ------------------------ | -------- | -------------------------------- | ---------------- |
 | IPV6_ADDRESS_LENGTH      | positive |  16                              | IPv6 -> 16 bytes |
 | IPV6_ADDRESS_READER_BITS | positive |  log2ceilnz(IPV6_ADDRESS_LENGTH) |                  |
 ## Types
-| Name    | Type                                                                                                                                                                                                                                                                                                                                         | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_RECEIVE_TRAFFIC_CLASS, 			ST_RECEIVE_FLOW_LABEL_1,	ST_RECEIVE_FLOW_LABEL_2, 			ST_RECEIVE_LENGTH_0,			ST_RECEIVE_LENGTH_1, 			ST_RECEIVE_NEXT_HEADER,		ST_RECEIVE_HOP_LIMIT, 			ST_RECEIVE_SOURCE_ADDRESS, 			ST_RECEIVE_DESTINATION_ADDRESS,  			ST_RECEIVE_DATA_1, ST_RECEIVE_DATA_N, 		ST_DISCARD_FRAME, 		ST_ERROR 	) |             |
+
+| Name    | Type                                                                                                                                                                                                                                                                                                              | Description |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_RECEIVE_TRAFFIC_CLASS, ST_RECEIVE_FLOW_LABEL_1,	ST_RECEIVE_FLOW_LABEL_2, ST_RECEIVE_LENGTH_0,			ST_RECEIVE_LENGTH_1, ST_RECEIVE_NEXT_HEADER,		ST_RECEIVE_HOP_LIMIT, ST_RECEIVE_SOURCE_ADDRESS, ST_RECEIVE_DESTINATION_ADDRESS,  ST_RECEIVE_DATA_1, ST_RECEIVE_DATA_N, ST_DISCARD_FRAME, ST_ERROR )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack, IPv6SeqCounter_us )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, In_Data, In_EOF, Out_Ack, IPv6SeqCounter_us )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )
+- unnamed: ( Clock )

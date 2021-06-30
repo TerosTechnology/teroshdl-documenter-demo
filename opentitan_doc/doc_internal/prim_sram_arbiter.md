@@ -1,7 +1,10 @@
 # Entity: prim_sram_arbiter
+
 ## Diagram
+
 ![Diagram](prim_sram_arbiter.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -13,6 +16,7 @@ Copyright lowRISC contributors.
   ArbiterImpl: can be either PPC or BINTREE.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | N            | int  | 4     |             |
@@ -20,6 +24,7 @@ Copyright lowRISC contributors.
 | SramAw       | int  | 12    |             |
 | ArbiterImpl  |      | "PPC" |             |
 ## Ports
+
 | Port name     | Direction | Type         | Description    |
 | ------------- | --------- | ------------ | -------------- |
 | clk_i         | input     |              |                |
@@ -40,6 +45,7 @@ Copyright lowRISC contributors.
 | sram_rdata_i  | input     | [SramDw-1:0] |                |
 | sram_rerror_i | input     | [1:0]        |                |
 ## Signals
+
 | Name        | Type          | Description                    |
 | ----------- | ------------- | ------------------------------ |
 | req_packed  | req_t         |                                |
@@ -47,14 +53,17 @@ Copyright lowRISC contributors.
 | steer       | logic [N-1:0] | Steering sram_rvalid_i         |
 | sram_ack    | logic         | Ack for rvalid. |sram_rvalid_i |
 ## Constants
+
 | Name   | Type | Value        | Description |
 | ------ | ---- | ------------ | ----------- |
 | ARB_DW | int  | $bits(req_t) |             |
 ## Types
+
 | Name  | Type                                                                                            | Description |
 | ----- | ----------------------------------------------------------------------------------------------- | ----------- |
 | req_t | struct packed {     logic write;     logic [SramAw-1:0] addr;     logic [SramDw-1:0] wdata;   } |             |
 ## Instantiations
+
 - u_req_fifo: prim_fifo_sync
 **Description**
 Request FIFO

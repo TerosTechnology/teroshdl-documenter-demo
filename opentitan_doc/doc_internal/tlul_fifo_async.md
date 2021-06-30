@@ -1,7 +1,10 @@
 # Entity: tlul_fifo_async
+
 ## Diagram
+
 ![Diagram](tlul_fifo_async.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,11 +13,13 @@ Copyright lowRISC contributors.
  and one for the response side.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | ReqDepth     | int unsigned | 3     |             |
 | RspDepth     | int unsigned | 3     |             |
 ## Ports
+
 | Port name | Direction | Type | Description |
 | --------- | --------- | ---- | ----------- |
 | clk_h_i   | input     |      |             |
@@ -26,10 +31,12 @@ Copyright lowRISC contributors.
 | tl_d_o    | output    |      |             |
 | tl_d_i    | input     |      |             |
 ## Constants
+
 | Name          | Type         | Value                        | Description                                              |
 | ------------- | ------------ | ---------------------------- | -------------------------------------------------------- |
 | REQFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_h2d_t)-2  | Put everything on the request side into one FIFO         |
 | RSPFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_d2h_t) -2 | Put everything on the response side into the other FIFO  |
 ## Instantiations
+
 - reqfifo: prim_fifo_async
 - rspfifo: prim_fifo_async

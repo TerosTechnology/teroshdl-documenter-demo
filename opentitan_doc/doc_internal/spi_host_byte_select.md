@@ -1,13 +1,17 @@
 # Entity: spi_host_byte_select
+
 ## Diagram
+
 ![Diagram](spi_host_byte_select.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Byte-select module for dispensing words in SPI Host IP
  
 ## Ports
+
 | Port name    | Direction | Type   | Description |
 | ------------ | --------- | ------ | ----------- |
 | clk_i        | input     |        |             |
@@ -22,6 +26,7 @@ Copyright lowRISC contributors.
 | flush_i      | input     |        |             |
 | sw_rst_i     | input     |        |             |
 ## Signals
+
 | Name       | Type               | Description |
 | ---------- | ------------------ | ----------- |
 | wdata_be   | logic       [35:0] |             |
@@ -31,4 +36,5 @@ Copyright lowRISC contributors.
 | byte_ready | logic              |             |
 | clr        | logic              |             |
 ## Instantiations
+
 - u_packer: prim_packer_fifo

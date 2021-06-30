@@ -1,5 +1,4 @@
 # Project documentation: 
-## Project dependency graph
 ![system](./doc_internal/dependency_graph.svg "System")
 ## Designs
 

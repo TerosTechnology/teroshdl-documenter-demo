@@ -1,18 +1,23 @@
 # Entity: tb_avalon_master
+
 ## Diagram
+
 ![Diagram](tb_avalon_master.svg "Diagram")
 ## Description
+
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 Author Slawomir Siluk slaweksiluk@gazeta.pl
 ## Generics
+
 | Generic name   | Type   | Value | Description |
 | -------------- | ------ | ----- | ----------- |
 | runner_cfg     | string |       |             |
 | encoded_tb_cfg | string |       |             |
 ## Signals
+
 | Name          | Type                                              | Description |
 | ------------- | ------------------------------------------------- | ----------- |
 | clk           | std_logic                                         |             |
@@ -26,6 +31,7 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | readdatavalid | std_logic                                         |             |
 | waitrequest   | std_logic                                         |             |
 ## Constants
+
 | Name          | Type           | Value                                                                                                                                                                                                    | Description |
 | ------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | tb_cfg        | tb_cfg_t       |  decode(encoded_tb_cfg)                                                                                                                                                                                  |             |
@@ -37,17 +43,15 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | buf           | buffer_t       |  allocate(memory, tb_cfg.transfers * byteenable'length)                                                                                                                                                  |             |
 | avalon_slave  | avalon_slave_t |  new_avalon_slave(     memory => memory,     readdatavalid_high_probability => tb_cfg.readdatavalid_prob,     waitrequest_high_probability => tb_cfg.waitrequest_prob,     name => "Avalon-MM Slave"   ) |             |
 ## Types
+
 | Name     | Type | Description |
 | -------- | ---- | ----------- |
 | tb_cfg_t |      |             |
 ## Functions
-- gen_rndburst <font id="function_arguments">(    variable rnd : inout RandomPType;
-    variable rndburst : inout positive;
-    variable transfers : inout natural
-  )</font> <font id="function_return">return ()</font>
+- gen_rndburst <font id="function_arguments">( variable rnd : inout RandomPType; variable rndburst : inout positive; variable transfers : inout natural ) </font> <font id="function_return">return ()</font>
 ## Processes
-- main_stim: _(  )_
-
+- main_stim: (  )
 ## Instantiations
+
 - dut: work.avalon_master
 - slave: work.avalon_slave

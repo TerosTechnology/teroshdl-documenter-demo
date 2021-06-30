@@ -1,7 +1,10 @@
 # Entity: csrng_ctr_drbg_upd
+
 ## Diagram
+
 ![Diagram](csrng_ctr_drbg_upd.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,6 +12,7 @@ Copyright lowRISC contributors.
  implementation using security_strength = 256
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Cmd          | int  | 3     |             |
@@ -18,6 +22,7 @@ Copyright lowRISC contributors.
 | SeedLen      | int  | 384   |             |
 | CtrLen       | int  | 32    |             |
 ## Ports
+
 | Port name                        | Direction | Type          | Description                                      |
 | -------------------------------- | --------- | ------------- | ------------------------------------------------ |
 | clk_i                            | input     |               |                                                  |
@@ -57,6 +62,7 @@ Copyright lowRISC contributors.
 | ctr_drbg_updbe_sm_err_o          | output    |               |                                                  |
 | ctr_drbg_updob_sm_err_o          | output    |               |                                                  |
 ## Signals
+
 | Name                               | Type                           | Description                                                  |
 | ---------------------------------- | ------------------------------ | ------------------------------------------------------------ |
 | updated_key_and_v                  | logic [SeedLen-1:0]            | signals                                                      |
@@ -138,6 +144,7 @@ Copyright lowRISC contributors.
 | outblk_state_raw_q                 | logic [OutBlkStateWidth-1:0]   |                                                              |
 | unused_concat_outblk_shifted_value | logic [BlkLen-1:0]             | The following signal is used to avoid possible lint errors.  |
 ## Constants
+
 | Name               | Type | Value                             | Description |
 | ------------------ | ---- | --------------------------------- | ----------- |
 | UpdReqFifoDepth    | int  | 1                                 |             |
@@ -153,18 +160,17 @@ Copyright lowRISC contributors.
 | BlkEncStateWidth   | int  | 5                                 |             |
 | OutBlkStateWidth   | int  | 6                                 |             |
 ## Types
+
 | Name            | Type                                                                                                                                       | Description |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | blk_enc_state_e | enum logic [BlkEncStateWidth-1:0] {     ReqIdle = 5'b11000,     ReqSend = 5'b10011,     ESHalt  = 5'b01110,     BEError = 5'b00101   }     |             |
 | outblk_state_e  | enum logic [OutBlkStateWidth-1:0] {     AckIdle = 6'b110110,     Load    = 6'b110001,     Shift   = 6'b001001,     OBError = 6'b011100   } |             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 ## Instantiations
+
 - u_blk_enc_state_regs: prim_flop
 **Description**
 This primitive is used to place a size-only constraint on the

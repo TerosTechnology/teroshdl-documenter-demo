@@ -1,13 +1,17 @@
 # Entity: kmac_entropy
+
 ## Diagram
+
 ![Diagram](kmac_entropy.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  KMAC Entropy Generation module
  
 ## Ports
+
 | Port name             | Direction | Type                   | Description         |
 | --------------------- | --------- | ---------------------- | ------------------- |
 | clk_i                 | input     |                        |                     |
@@ -30,6 +34,7 @@ Copyright lowRISC contributors.
 | err_o                 | output    | err_t                  | Error output        |
 | err_processed_i       | input     |                        |                     |
 ## Signals
+
 | Name                   | Type                        | Description                                                                                                                                                                                                                                                                                                   |
 | ---------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timer_sel              | timer_sel_e                 |                                                                                                                                                                                                                                                                                                               |
@@ -64,6 +69,7 @@ Copyright lowRISC contributors.
 | StRandErr              | end                         |                                                                                                                                                                                                                                                                                                               |
 | st_d                   | end                         |                                                                                                                                                                                                                                                                                                               |
 ## Constants
+
 | Name            | Type         | Value                              | Description                                         |
 | --------------- | ------------ | ---------------------------------- | --------------------------------------------------- |
 | EntropyLfsrW    | int unsigned | 64                                 | Timer Widths are defined in kmac_pkg storage width  |
@@ -74,54 +80,40 @@ Copyright lowRISC contributors.
 | StateWidth      | int          | 10                                 |                                                     |
 | TimerW          | int unsigned | EntropyTimerW                      |                                                     |
 ## Types
+
 | Name        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                                                                                                                                                                                |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | rand_st_e   | enum logic [StateWidth-1:0] {               StRandReset = 10'b 1101110011,                     StRandReady = 10'b 1001111000,                //                         //                                             StRandEdn = 10'b 0110000100,                     StSwSeedWait = 10'b 1100100111,                          StRandExpand = 10'b 1011110110,                     StRandErrWaitExpired = 10'b 0000001100,                     StRandErrIncorrectMode = 10'b 0001100011,                     //                         StRandErr = 10'b 1110010000   } | States                                                                                                                                                                                                     |
 | timer_sel_e | enum logic [1:0] {     NoTimer      = 2'h 0,     EntropyTimer = 2'h 1,     EdnWaitTimer = 2'h 2   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | "Wait Timer": This timer is in active when FSM sends entropy request to EDN If EDN does not return the entropy data until the timer expired, FSM moves to error state and report the error to the system.  |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Timers ===================================================================
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Timers ===================================================================
 
-- unnamed: _(  )_
-select timer
-
+- unnamed: (  )
 **Description**
 select timer
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-entropy valid
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 entropy valid
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Storage expands to StateW ------------------------------------------------
-In Process Logic =========================================================
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Storage expands to StateW ------------------------------------------------
 In Process Logic =========================================================
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-State: Next State and Output Logic
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 **Description**
 State: Next State and Output Logic
 
 ## Instantiations
+
 - u_lfsr: prim_lfsr
 - u_state_regs: prim_flop
 **Description**

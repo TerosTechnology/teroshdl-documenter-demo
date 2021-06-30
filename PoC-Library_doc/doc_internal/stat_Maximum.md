@@ -1,7 +1,10 @@
 # Entity: stat_Maximum
+
 ## Diagram
+
 ![Diagram](stat_Maximum.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | DEPTH        | positive | 8     |             |
 | DATA_BITS    | positive | 16    |             |
 | COUNTER_BITS | positive | 16    |             |
 ## Ports
+
 | Port name | Direction | Type                                                 | Description |
 | --------- | --------- | ---------------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                            |             |
@@ -40,6 +45,7 @@ limitations under the License.
 | Maximums  | out       | T_SLM(DEPTH - 1 downto 0, DATA_BITS - 1 downto 0)    |             |
 | Counts    | out       | T_SLM(DEPTH - 1 downto 0, COUNTER_BITS - 1 downto 0) |             |
 ## Signals
+
 | Name          | Type                                 | Description |
 | ------------- | ------------------------------------ | ----------- |
 | DataIn_us     | unsigned(DataIn'range)               |             |
@@ -50,15 +56,15 @@ limitations under the License.
 | MaximumIndex  | std_logic_vector(DEPTH - 1 downto 0) |             |
 | ValidMemory   | std_logic_vector(DEPTH - 1 downto 0) |             |
 ## Types
+
 | Name             | Type | Description |
 | ---------------- | ---- | ----------- |
 | T_TAG_MEMORY     |      |             |
 | T_COUNTER_MEMORY |      |             |
 ## Functions
-- to_slm <font id="function_arguments">(usv : T_TAG_MEMORY)</font> <font id="function_return">return T_SLM</font>
+- to_slm <font id="function_arguments">(usv : T_TAG_MEMORY) </font> <font id="function_return">return T_SLM </font>
 **Description**
 create matrix from vector-vector
-- to_slm <font id="function_arguments">(usv : T_COUNTER_MEMORY)</font> <font id="function_return">return T_SLM</font>
+- to_slm <font id="function_arguments">(usv : T_COUNTER_MEMORY) </font> <font id="function_return">return T_SLM </font>
 ## Processes
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )

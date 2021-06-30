@@ -1,7 +1,10 @@
 # Entity: turbosound
+
 ## Diagram
+
 ![Diagram](turbosound.svg "Diagram")
 ## Ports
+
 | Port name | Direction | Type        | Description |
 | --------- | --------- | ----------- | ----------- |
 | clock     | input     | wire        |             |
@@ -21,6 +24,7 @@
 | b2        | output    | wire[ 7: 0] |             |
 | c2        | output    | wire[ 7: 0] |             |
 ## Signals
+
 | Name  | Type       | Description |
 | ----- | ---------- | ----------- |
 | bdir  | wire       |             |
@@ -34,8 +38,8 @@
 | bc12  | wire       |             |
 | q2    | wire [7:0] |             |
 ## Processes
-- unnamed: _( @(posedge clock) )_
-
+- unnamed: ( @(posedge clock) )
 ## Instantiations
+
 - Psg1: jt49_bus
 - Psg2: jt49_bus

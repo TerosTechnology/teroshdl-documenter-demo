@@ -1,7 +1,10 @@
 # Entity: arith_sqrt
+
 ## Diagram
+
 ![Diagram](arith_sqrt.svg "Diagram")
 ## Description
+
 EMACS settings: -*-	tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -25,10 +28,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description                            |
 | ------------ | -------- | ----- | -------------------------------------- |
 | N            | positive |       | := 8									 -- Bit Width of Argument |
 ## Ports
+
 | Port name | Direction | Type                               | Description         |
 | --------- | --------- | ---------------------------------- | ------------------- |
 | rst       | in        | std_logic                          | Reset (synchronous) |
@@ -38,6 +43,7 @@ limitations under the License.
 | sqrt      | out       | std_logic_vector((N-1)/2 downto 0) | Result              |
 | rdy       | out       | std_logic                          | Ready / Done        |
 ## Signals
+
 | Name | Type                         | Description          |
 | ---- | ---------------------------- | -------------------- |
 | Rmd  | unsigned(N+STEPS-1 downto 0) | Remainder / Result   |
@@ -45,9 +51,9 @@ limitations under the License.
 | Res  | unsigned(STEPS-1 downto 0)   | Extracted Result     |
 | diff | unsigned(STEPS+1 downto 0)   | Tentative Difference |
 ## Constants
+
 | Name  | Type     | Value    | Description |
 | ----- | -------- | -------- | ----------- |
 | STEPS | positive |  (N+1)/2 |             |
 ## Processes
-- unnamed: _( clk )_
-
+- unnamed: ( clk )

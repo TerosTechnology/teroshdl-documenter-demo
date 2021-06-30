@@ -1,7 +1,10 @@
 # Entity: rtc_clock
+
 ## Diagram
+
 ![Diagram](rtc_clock.svg "Diagram")
 ## Description
+
 Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
@@ -13,6 +16,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  specific language governing permissions and limitations under the License.
  
 ## Ports
+
 | Port name      | Direction | Type   | Description |
 | -------------- | --------- | ------ | ----------- |
 | clk_i          | input     |        |             |
@@ -33,6 +37,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | event_o        | output    |        |             |
 | update_day_o   | output    |        |             |
 ## Signals
+
 | Name             | Type         | Description |
 | ---------------- | ------------ | ----------- |
 | r_seconds        | logic [7:0]  |             |
@@ -61,13 +66,8 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | r_timer_en       | logic        |             |
 | r_timer_retrig   | logic        |             |
 ## Processes
-- unnamed: _( @ (posedge clk_i or negedge rstn_i) )_
-
-- unnamed: _( @ (posedge clk_i or negedge rstn_i) )_
-
-- unnamed: _( @ (posedge clk_i or negedge rstn_i) )_
-
-- unnamed: _( @ (posedge clk_i or negedge rstn_i) )_
-
-- unnamed: _( @(posedge clk_i or negedge rstn_i) )_
-
+- unnamed: ( @ (posedge clk_i or negedge rstn_i) )
+- unnamed: ( @ (posedge clk_i or negedge rstn_i) )
+- unnamed: ( @ (posedge clk_i or negedge rstn_i) )
+- unnamed: ( @ (posedge clk_i or negedge rstn_i) )
+- unnamed: ( @(posedge clk_i or negedge rstn_i) )

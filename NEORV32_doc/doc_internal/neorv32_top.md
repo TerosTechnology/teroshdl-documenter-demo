@@ -1,7 +1,10 @@
 # Entity: neorv32_top
+
 ## Diagram
+
 ![Diagram](neorv32_top.svg "Diagram")
 ## Description
+
 #################################################################################################
 # << NEORV32 - Processor Top Entity >>                                                          #
 # ********************************************************************************************* #
@@ -42,6 +45,7 @@
 # The NEORV32 Processor - https://github.com/stnolting/neorv32              (c) Stephan Nolting #
 #################################################################################################
 ## Generics
+
 | Generic name                 | Type                           | Value       | Description                                                                           |
 | ---------------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------------------- |
 | CLOCK_FREQUENCY              | natural                        | 0           | clock frequency of clk_i in Hz                                                        |
@@ -75,6 +79,10 @@
 | ICACHE_ASSOCIATIVITY         | natural                        | 1           | i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2     |
 | MEM_EXT_EN                   | boolean                        | false       | implement external memory bus interface?                                              |
 | MEM_EXT_TIMEOUT              | natural                        | 255         | cycles after a pending bus access auto-terminates (0 = disabled)                      |
+| SLINK_NUM_TX                 | natural                        | 0           | number of TX links (0..8)                                                             |
+| SLINK_NUM_RX                 | natural                        | 0           | number of TX links (0..8)                                                             |
+| SLINK_TX_FIFO                | natural                        | 1           | TX fifo depth, has to be a power of two                                               |
+| SLINK_RX_FIFO                | natural                        | 1           | RX fifo depth, has to be a power of two                                               |
 | IO_GPIO_EN                   | boolean                        | true        | implement general purpose input/output port unit (GPIO)?                              |
 | IO_MTIME_EN                  | boolean                        | true        | implement machine system timer (MTIME)?                                               |
 | IO_UART0_EN                  | boolean                        | true        | implement primary universal asynchronous receiver/transmitter (UART0)?                |
@@ -88,60 +96,65 @@
 | IO_CFS_CONFIG                | std_ulogic_vector(31 downto 0) | x"00000000" | custom CFS configuration generic                                                      |
 | IO_CFS_IN_SIZE               | positive                       | 32          | size of CFS input conduit in bits                                                     |
 | IO_CFS_OUT_SIZE              | positive                       | 32          | size of CFS output conduit in bits                                                    |
-| IO_NCO_EN                    | boolean                        | true        | implement numerically-controlled oscillator (NCO)?                                    |
 | IO_NEOLED_EN                 | boolean                        | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
-| Port name   | Direction | Type                                          | Description                                                              |
-| ----------- | --------- | --------------------------------------------- | ------------------------------------------------------------------------ |
-| clk_i       | in        | std_ulogic                                    | global clock, rising edge                                                |
-| rstn_i      | in        | std_ulogic                                    | global reset, low-active, async                                          |
-| jtag_trst_i | in        | std_ulogic                                    | low-active TAP reset (optional)                                          |
-| jtag_tck_i  | in        | std_ulogic                                    | serial clock                                                             |
-| jtag_tdi_i  | in        | std_ulogic                                    | serial data input                                                        |
-| jtag_tdo_o  | out       | std_ulogic                                    | serial data output                                                       |
-| jtag_tms_i  | in        | std_ulogic                                    | mode select                                                              |
-| wb_tag_o    | out       | std_ulogic_vector(02 downto 0)                | request tag                                                              |
-| wb_adr_o    | out       | std_ulogic_vector(31 downto 0)                | address                                                                  |
-| wb_dat_i    | in        | std_ulogic_vector(31 downto 0)                | read data                                                                |
-| wb_dat_o    | out       | std_ulogic_vector(31 downto 0)                | write data                                                               |
-| wb_we_o     | out       | std_ulogic                                    | read/write                                                               |
-| wb_sel_o    | out       | std_ulogic_vector(03 downto 0)                | byte enable                                                              |
-| wb_stb_o    | out       | std_ulogic                                    | strobe                                                                   |
-| wb_cyc_o    | out       | std_ulogic                                    | valid cycle                                                              |
-| wb_lock_o   | out       | std_ulogic                                    | exclusive access request                                                 |
-| wb_ack_i    | in        | std_ulogic                                    | transfer acknowledge                                                     |
-| wb_err_i    | in        | std_ulogic                                    | transfer error                                                           |
-| fence_o     | out       | std_ulogic                                    | indicates an executed FENCE operation                                    |
-| fencei_o    | out       | std_ulogic                                    | indicates an executed FENCEI operation                                   |
-| gpio_o      | out       | std_ulogic_vector(31 downto 0)                | parallel output                                                          |
-| gpio_i      | in        | std_ulogic_vector(31 downto 0)                | parallel input                                                           |
-| uart0_txd_o | out       | std_ulogic                                    | UART0 send data                                                          |
-| uart0_rxd_i | in        | std_ulogic                                    | UART0 receive data                                                       |
-| uart0_rts_o | out       | std_ulogic                                    | hw flow control: UART0.RX ready to receive ("RTR"), low-active, optional |
-| uart0_cts_i | in        | std_ulogic                                    | hw flow control: UART0.TX allowed to transmit, low-active, optional      |
-| uart1_txd_o | out       | std_ulogic                                    | UART1 send data                                                          |
-| uart1_rxd_i | in        | std_ulogic                                    | UART1 receive data                                                       |
-| uart1_rts_o | out       | std_ulogic                                    | hw flow control: UART1.RX ready to receive ("RTR"), low-active, optional |
-| uart1_cts_i | in        | std_ulogic                                    | hw flow control: UART1.TX allowed to transmit, low-active, optional      |
-| spi_sck_o   | out       | std_ulogic                                    | SPI serial clock                                                         |
-| spi_sdo_o   | out       | std_ulogic                                    | controller data out, peripheral data in                                  |
-| spi_sdi_i   | in        | std_ulogic                                    | controller data in, peripheral data out                                  |
-| spi_csn_o   | out       | std_ulogic_vector(07 downto 0)                | chip-select                                                              |
-| twi_sda_io  | inout     | std_logic                                     | twi serial data line                                                     |
-| twi_scl_io  | inout     | std_logic                                     | twi serial clock line                                                    |
-| pwm_o       | out       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0)   | pwm channels                                                             |
-| cfs_in_i    | in        | std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) | custom CFS inputs conduit                                                |
-| cfs_out_o   | out       | std_ulogic_vector(IO_CFS_OUT_SIZE-1 downto 0) | custom CFS outputs conduit                                               |
-| nco_o       | out       | std_ulogic_vector(02 downto 0)                | numerically-controlled oscillator channels                               |
-| neoled_o    | out       | std_ulogic                                    | async serial data line                                                   |
-| mtime_i     | in        | std_ulogic_vector(63 downto 0)                | current system time from ext. MTIME (if IO_MTIME_EN = false)             |
-| mtime_o     | out       | std_ulogic_vector(63 downto 0)                | current system time from int. MTIME (if IO_MTIME_EN = true)              |
-| nm_irq_i    | in        | std_ulogic                                    | non-maskable interrupt                                                   |
-| soc_firq_i  | in        | std_ulogic_vector(5 downto 0)                 | fast interrupt channels                                                  |
-| mtime_irq_i | in        | std_ulogic                                    | machine timer interrupt, available if IO_MTIME_EN = false                |
-| msw_irq_i   | in        | std_ulogic                                    | machine software interrupt                                               |
-| mext_irq_i  | in        | std_ulogic                                    | machine external interrupt                                               |
+
+| Port name      | Direction | Type                                          | Description                                                              |
+| -------------- | --------- | --------------------------------------------- | ------------------------------------------------------------------------ |
+| clk_i          | in        | std_ulogic                                    | global clock, rising edge                                                |
+| rstn_i         | in        | std_ulogic                                    | global reset, low-active, async                                          |
+| jtag_trst_i    | in        | std_ulogic                                    | low-active TAP reset (optional)                                          |
+| jtag_tck_i     | in        | std_ulogic                                    | serial clock                                                             |
+| jtag_tdi_i     | in        | std_ulogic                                    | serial data input                                                        |
+| jtag_tdo_o     | out       | std_ulogic                                    | serial data output                                                       |
+| jtag_tms_i     | in        | std_ulogic                                    | mode select                                                              |
+| wb_tag_o       | out       | std_ulogic_vector(02 downto 0)                | request tag                                                              |
+| wb_adr_o       | out       | std_ulogic_vector(31 downto 0)                | address                                                                  |
+| wb_dat_i       | in        | std_ulogic_vector(31 downto 0)                | read data                                                                |
+| wb_dat_o       | out       | std_ulogic_vector(31 downto 0)                | write data                                                               |
+| wb_we_o        | out       | std_ulogic                                    | read/write                                                               |
+| wb_sel_o       | out       | std_ulogic_vector(03 downto 0)                | byte enable                                                              |
+| wb_stb_o       | out       | std_ulogic                                    | strobe                                                                   |
+| wb_cyc_o       | out       | std_ulogic                                    | valid cycle                                                              |
+| wb_lock_o      | out       | std_ulogic                                    | exclusive access request                                                 |
+| wb_ack_i       | in        | std_ulogic                                    | transfer acknowledge                                                     |
+| wb_err_i       | in        | std_ulogic                                    | transfer error                                                           |
+| fence_o        | out       | std_ulogic                                    | indicates an executed FENCE operation                                    |
+| fencei_o       | out       | std_ulogic                                    | indicates an executed FENCEI operation                                   |
+| slink_tx_dat_o | out       | sdata_8x32_t                                  | output data                                                              |
+| slink_tx_val_o | out       | std_ulogic_vector(7 downto 0)                 | valid output                                                             |
+| slink_tx_rdy_i | in        | std_ulogic_vector(7 downto 0)                 | ready to send                                                            |
+| slink_rx_dat_i | in        | sdata_8x32_t                                  | input data                                                               |
+| slink_rx_val_i | in        | std_ulogic_vector(7 downto 0)                 | valid input                                                              |
+| slink_rx_rdy_o | out       | std_ulogic_vector(7 downto 0)                 | ready to receive                                                         |
+| gpio_o         | out       | std_ulogic_vector(31 downto 0)                | parallel output                                                          |
+| gpio_i         | in        | std_ulogic_vector(31 downto 0)                | parallel input                                                           |
+| uart0_txd_o    | out       | std_ulogic                                    | UART0 send data                                                          |
+| uart0_rxd_i    | in        | std_ulogic                                    | UART0 receive data                                                       |
+| uart0_rts_o    | out       | std_ulogic                                    | hw flow control: UART0.RX ready to receive ("RTR"), low-active, optional |
+| uart0_cts_i    | in        | std_ulogic                                    | hw flow control: UART0.TX allowed to transmit, low-active, optional      |
+| uart1_txd_o    | out       | std_ulogic                                    | UART1 send data                                                          |
+| uart1_rxd_i    | in        | std_ulogic                                    | UART1 receive data                                                       |
+| uart1_rts_o    | out       | std_ulogic                                    | hw flow control: UART1.RX ready to receive ("RTR"), low-active, optional |
+| uart1_cts_i    | in        | std_ulogic                                    | hw flow control: UART1.TX allowed to transmit, low-active, optional      |
+| spi_sck_o      | out       | std_ulogic                                    | SPI serial clock                                                         |
+| spi_sdo_o      | out       | std_ulogic                                    | controller data out, peripheral data in                                  |
+| spi_sdi_i      | in        | std_ulogic                                    | controller data in, peripheral data out                                  |
+| spi_csn_o      | out       | std_ulogic_vector(07 downto 0)                | chip-select                                                              |
+| twi_sda_io     | inout     | std_logic                                     | twi serial data line                                                     |
+| twi_scl_io     | inout     | std_logic                                     | twi serial clock line                                                    |
+| pwm_o          | out       | std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0)   | pwm channels                                                             |
+| cfs_in_i       | in        | std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) | custom CFS inputs conduit                                                |
+| cfs_out_o      | out       | std_ulogic_vector(IO_CFS_OUT_SIZE-1 downto 0) | custom CFS outputs conduit                                               |
+| neoled_o       | out       | std_ulogic                                    | async serial data line                                                   |
+| mtime_i        | in        | std_ulogic_vector(63 downto 0)                | current system time from ext. MTIME (if IO_MTIME_EN = false)             |
+| mtime_o        | out       | std_ulogic_vector(63 downto 0)                | current system time from int. MTIME (if IO_MTIME_EN = true)              |
+| nm_irq_i       | in        | std_ulogic                                    | non-maskable interrupt                                                   |
+| mtime_irq_i    | in        | std_ulogic                                    | machine timer interrupt, available if IO_MTIME_EN = false                |
+| msw_irq_i      | in        | std_ulogic                                    | machine software interrupt                                               |
+| mext_irq_i     | in        | std_ulogic                                    | machine external interrupt                                               |
 ## Signals
+
 | Name           | Type                           | Description                    |
 | -------------- | ------------------------------ | ------------------------------ |
 | rstn_gen       | std_ulogic_vector(7 downto 0)  | reset generator --             |
@@ -151,7 +164,7 @@
 | clk_div        | std_ulogic_vector(11 downto 0) | clock generator --             |
 | clk_div_ff     | std_ulogic_vector(11 downto 0) |                                |
 | clk_gen        | std_ulogic_vector(07 downto 0) |                                |
-| clk_gen_en     | std_ulogic_vector(08 downto 0) |                                |
+| clk_gen_en     | std_ulogic_vector(07 downto 0) |                                |
 | wdt_cg_en      | std_ulogic                     |                                |
 | uart0_cg_en    | std_ulogic                     |                                |
 | uart1_cg_en    | std_ulogic                     |                                |
@@ -159,7 +172,6 @@
 | twi_cg_en      | std_ulogic                     |                                |
 | pwm_cg_en      | std_ulogic                     |                                |
 | cfs_cg_en      | std_ulogic                     |                                |
-| nco_cg_en      | std_ulogic                     |                                |
 | neoled_cg_en   | std_ulogic                     |                                |
 | cpu_i          | bus_interface_t                |                                |
 |  i_cache       | bus_interface_t                |                                |
@@ -186,62 +198,50 @@
 | cfs_irq        | std_ulogic                     |                                |
 | cfs_irq_ack    | std_ulogic                     |                                |
 | neoled_irq     | std_ulogic                     |                                |
+| slink_tx_irq   | std_ulogic                     |                                |
+| slink_rx_irq   | std_ulogic                     |                                |
 | mtime_time     | std_ulogic_vector(63 downto 0) | current system time from MTIME |
 | cpu_sleep      | std_ulogic                     | CPU is in sleep mode when set  |
 | bus_keeper_err | std_ulogic                     |                                |
 ## Constants
+
 | Name                       | Type                                                          | Value                                                                          | Description                              |
 | -------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
 | cpu_boot_addr_c            | std_ulogic_vector(31 downto 0)                                |  cond_sel_stdulogicvector_f(INT_BOOTLOADER_EN, boot_rom_base_c, ispace_base_c) |                                          |
 | imem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_IMEM_SIZE)-1 downto 0) |  (others => '0')                                                               | alignment check for internal memories -- |
 | dmem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_DMEM_SIZE)-1 downto 0) |  (others => '0')                                                               |                                          |
+| io_slink_en_c              | boolean                                                       |  boolean(SLINK_NUM_RX > 0) or boolean(SLINK_NUM_TX > 0)                        | implement slink at all?                  |
 | resp_bus_entry_terminate_c | resp_bus_entry_t                                              |  (rdata => (others => '0'), ack => '0', err => '0')                            |                                          |
 ## Types
-| Name             | Type                                                                                                                                                                                                                                    | Description                         |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| bus_interface_t  |                                                                                                                                                                                                                                         | bus interface --                    |
-| dmi_t            |                                                                                                                                                                                                                                         | debug module interface (DMI) --     |
-| resp_bus_entry_t |                                                                                                                                                                                                                                         | module response bus - entry type -- |
-| resp_bus_id_t    | (RESP_IMEM, RESP_DMEM, RESP_BOOTROM, RESP_WISHBONE, RESP_GPIO, RESP_MTIME, RESP_UART0, RESP_UART1, RESP_SPI,                          RESP_TWI, RESP_PWM, RESP_WDT, RESP_TRNG, RESP_CFS, RESP_NCO, RESP_NEOLED, RESP_SYSINFO, RESP_OCD) | module response bus - device ID --  |
-| resp_bus_t       |                                                                                                                                                                                                                                         | module response bus --              |
+
+| Name             | Type                                                                                                                                                                                                              | Description                         |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| bus_interface_t  |                                                                                                                                                                                                                   | bus interface --                    |
+| dmi_t            |                                                                                                                                                                                                                   | debug module interface (DMI) --     |
+| resp_bus_entry_t |                                                                                                                                                                                                                   | module response bus - entry type -- |
+| resp_bus_id_t    | (RESP_IMEM, RESP_DMEM, RESP_BOOTROM, RESP_WISHBONE, RESP_GPIO, RESP_MTIME, RESP_UART0, RESP_UART1, RESP_SPI, RESP_TWI, RESP_PWM, RESP_WDT, RESP_TRNG, RESP_CFS, RESP_NEOLED, RESP_SYSINFO, RESP_OCD, RESP_SLINK)  | module response bus - device ID --  |
+| resp_bus_t       |                                                                                                                                                                                                                   | module response bus --              |
 ## Processes
-- reset_generator: _( rstn_i, clk_i )_
-Reset Generator ------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- reset_generator: ( rstn_i, clk_i )
 **Description**
 Reset Generator ------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- clock_generator: _( sys_rstn, clk_i )_
-Clock Generator ------------------------------------------------------------------------
--------------------------------------------------------------------------------------------
-
+- clock_generator: ( sys_rstn, clk_i )
 **Description**
 Clock Generator ------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- soc_firq_sync: _( clk_i )_
-NEOLED buffer free
-fast interrupts - platform level (for custom use) --
-
-**Description**
-NEOLED buffer free
-fast interrupts - platform level (for custom use) --
-
-- bus_response: _( resp_bus, bus_keeper_err )_
-bus response --
-
+- bus_response: ( resp_bus, bus_keeper_err )
 **Description**
 bus response --
 
-- mtime_sync: _( clk_i )_
-system time output LO --
-
+- mtime_sync: ( clk_i )
 **Description**
 system time output LO --
 
 ## Instantiations
+
 - neorv32_cpu_inst: neorv32_cpu
 **Description**
 CPU Core -------------------------------------------------------------------------------

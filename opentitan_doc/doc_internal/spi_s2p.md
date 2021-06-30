@@ -1,13 +1,17 @@
 # Entity: spi_s2p
+
 ## Diagram
+
 ![Diagram](spi_s2p.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  SPI Serial-to-Parallel interface
  
 ## Ports
+
 | Port name    | Direction | Type          | Description        |
 | ------------ | --------- | ------------- | ------------------ |
 | clk_i        | input     |               |                    |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | order_i      | input     |               | Configuration      |
 | io_mode_i    | input     |               |                    |
 ## Signals
+
 | Name   | Type       | Description |
 | ------ | ---------- | ----------- |
 | cnt    | count_t    |             |
@@ -26,35 +31,29 @@ Copyright lowRISC contributors.
 | data_d | spi_byte_t |             |
 | data_q | spi_byte_t |             |
 ## Constants
+
 | Name     | Type         | Value             | Description                                                                                                                                  |
 | -------- | ------------ | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bits     | int unsigned | $bits(spi_byte_t) | Maximum Length of a transaction is: 8 bit opcode + 24 or 32 bit address + max 8 bit dummy cycle + 256B payload Or in FwMode, half of DPSRAM  |
 | BitWidth | int unsigned | $clog2(Bits)      |                                                                                                                                              |
 ## Types
+
 | Name       | Type                 | Description |
 | ---------- | -------------------- | ----------- |
 | count_t    | logic [BitWidth-1:0] |             |
 | bitcount_t | logic [BitCntW-1:0]  |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-total bit count
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 total bit count
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Bitcount in a byte
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Bitcount in a byte
 
-- unnamed: _(  )_
-data valid
-
+- unnamed: (  )
 **Description**
 data valid
 

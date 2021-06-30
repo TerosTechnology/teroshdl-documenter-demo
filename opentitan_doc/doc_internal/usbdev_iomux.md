@@ -1,7 +1,10 @@
 # Entity: usbdev_iomux
+
 ## Diagram
+
 ![Diagram](usbdev_iomux.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Copyright ETH Zurich.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
@@ -12,6 +15,7 @@ Copyright lowRISC contributors.
  corresponding clock domain.
  
 ## Ports
+
 | Port name              | Direction | Type                               | Description                             |
 | ---------------------- | --------- | ---------------------------------- | --------------------------------------- |
 | clk_i                  | input     |                                    |                                         |
@@ -45,6 +49,7 @@ Copyright lowRISC contributors.
 | usb_pullup_en_i        | input     |                                    |                                         |
 | usb_suspend_i          | input     |                                    |                                         |
 ## Signals
+
 | Name                        | Type  | Description |
 | --------------------------- | ----- | ----------- |
 | cio_usb_d_flipped           | logic |             |
@@ -61,15 +66,13 @@ Copyright lowRISC contributors.
 | unused_usb_ref_disable      | logic |             |
 | unused_tx_osc_test_mode     | logic |             |
 ## Processes
-- proc_drive_out: _(  )_
-
-- proc_mux_pwr_sense: _(  )_
-Power sense mux
-
+- proc_drive_out: (  )
+- proc_mux_pwr_sense: (  )
 **Description**
 Power sense mux
 
 ## Instantiations
+
 - cdc_io_to_sys: prim_flop_2sync
 **Description**
 USB pins sense (to sysclk)

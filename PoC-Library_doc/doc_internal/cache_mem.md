@@ -1,7 +1,10 @@
 # Entity: cache_mem
+
 ## Diagram
+
 ![Diagram](cache_mem.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -97,6 +100,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type     | Value | Description |
 | ------------------ | -------- | ----- | ----------- |
 | REPLACEMENT_POLICY | string   | "LRU" |             |
@@ -107,6 +111,7 @@ limitations under the License.
 | MEM_DATA_BITS      | positive |       |             |
 | OUTSTANDING_REQ    | positive | 2     |             |
 ## Ports
+
 | Port name | Direction | Type                                                                     | Description |
 | --------- | --------- | ------------------------------------------------------------------------ | ----------- |
 | clk       | in        | std_logic                                                                | clock       |
@@ -128,6 +133,7 @@ limitations under the License.
 | mem_rstb  | in        | std_logic                                                                |             |
 | mem_rdata | in        | std_logic_vector(MEM_DATA_BITS-1 downto 0)                               |             |
 ## Signals
+
 | Name      | Type                                         | Description                   |
 | --------- | -------------------------------------------- | ----------------------------- |
 | int_req   | std_logic                                    | signals to internal cache_cpu |
@@ -138,8 +144,10 @@ limitations under the License.
 | int_got   | std_logic                                    |                               |
 | int_rdata | std_logic_vector(CPU_DATA_BITS-1 downto 0)   |                               |
 ## Constants
+
 | Name          | Type     | Value                                                | Description |
 | ------------- | -------- | ---------------------------------------------------- | ----------- |
 | CPU_ADDR_BITS | positive |  log2ceil(MEM_DATA_BITS/CPU_DATA_BITS)+MEM_ADDR_BITS |             |
 ## Instantiations
+
 - cache_cpu_inst: work.cache_cpu

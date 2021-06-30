@@ -1,17 +1,22 @@
 # Entity: sysrst_ctrl
+
 ## Diagram
+
 ![Diagram](sysrst_ctrl.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  sysrst_ctrl module
  
 ## Generics
+
 | Generic name | Type                  | Value     | Description |
 | ------------ | --------------------- | --------- | ----------- |
 | NumAlerts    | logic [NumAlerts-1:0] | undefined |             |
 ## Ports
+
 | Port name             | Direction | Type            | Description |
 | --------------------- | --------- | --------------- | ----------- |
 | clk_i                 | input     |                 |             |
@@ -47,6 +52,7 @@ Copyright lowRISC contributors.
 | cio_pwrb_out_en_o     | output    |                 |             |
 | cio_z3_wakeup_en_o    | output    |                 |             |
 ## Signals
+
 | Name                   | Type                  | Description |
 | ---------------------- | --------------------- | ----------- |
 | reg2hw                 | sysrst_ctrl_reg2hw_t  |             |
@@ -76,6 +82,7 @@ Copyright lowRISC contributors.
 | alert_test             | logic [NumAlerts-1:0] | Alerts      |
 | alerts                 | logic [NumAlerts-1:0] | Alerts      |
 ## Instantiations
+
 - u_reg: sysrst_ctrl_reg_top
 **Description**
 Register module

@@ -1,7 +1,10 @@
 # Entity: pmod_SSD
+
 ## Diagram
+
 ![Diagram](pmod_SSD.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -35,11 +38,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type | Value   | Description |
 | ------------ | ---- | ------- | ----------- |
 | CLOCK_FREQ   | FREQ | 100 MHz |             |
 | REFRESH_RATE | FREQ | 1 kHz   |             |
 ## Ports
+
 | Port name | Direction | Type                         | Description |
 | --------- | --------- | ---------------------------- | ----------- |
 | Clock     | in        | std_logic                    |             |
@@ -47,6 +52,7 @@ limitations under the License.
 | Digit1    | in        | std_logic_vector(3 downto 0) |             |
 | SSD       | out       | T_PMOD_SSD_PINS              |             |
 ## Signals
+
 | Name             | Type                                   | Description |
 | ---------------- | -------------------------------------- | ----------- |
 | RefreshTimer_rst | std_logic                              |             |
@@ -56,6 +62,7 @@ limitations under the License.
 | Digit            | std_logic_vector(3 downto 0)           |             |
 | Segments         | std_logic_vector(6 downto 0)           |             |
 ## Constants
+
 | Name              | Type     | Value                                                  | Description |
 | ----------------- | -------- | ------------------------------------------------------ | ----------- |
 | REFRESHTIMER_MAX  | positive |  TimingToCycles(to_time(REFRESH_RATE), CLOCK_FREQ) - 1 |             |

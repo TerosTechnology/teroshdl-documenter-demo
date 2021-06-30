@@ -1,17 +1,22 @@
 # Entity: keccak_round_fpv
+
 ## Diagram
+
 ![Diagram](keccak_round_fpv.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Testbench module for keccak_f. Intended to be used with a formal tool.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Width        | int  | 1600  |             |
 ## Ports
+
 | Port name    | Direction | Type        | Description |
 | ------------ | --------- | ----------- | ----------- |
 | clk_i        | input     |             |             |
@@ -21,6 +26,7 @@ Copyright lowRISC contributors.
 | rand_i       | input     | [Width-1:0] |             |
 | done_o       | output    |             |             |
 ## Signals
+
 | Name               | Type                 | Description        |
 | ------------------ | -------------------- | ------------------ |
 | masked_state       | logic [Width-1:0]    |                    |
@@ -43,6 +49,7 @@ Copyright lowRISC contributors.
 | st_d               | st_e                 |                    |
 | digest_0           | logic [255:0]        |                    |
 ## Constants
+
 | Name     | Type | Value              | Description                    |
 | -------- | ---- | ------------------ | ------------------------------ |
 | W        | int  | Width/25           |                                |
@@ -53,25 +60,21 @@ Copyright lowRISC contributors.
 | DInEntry | int  | Width / DInWidth   |                                |
 | DInAddr  | int  | $clog2(DInEntry)   |                                |
 ## Types
+
 | Name | Type                                                                    | Description |
 | ---- | ----------------------------------------------------------------------- | ----------- |
 | st_e | enum logic [2:0] {     StIdle,     StMsg,     StRun,     StComplete   } |             |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Data input : SHA3-256
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Data input : SHA3-256
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
 ## Instantiations
+
 - u_masked: keccak_round
 **Description**
 Masked Keccak round

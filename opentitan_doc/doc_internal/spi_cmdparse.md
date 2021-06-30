@@ -1,7 +1,10 @@
 # Entity: spi_cmdparse
+
 ## Diagram
+
 ![Diagram](spi_cmdparse.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -10,6 +13,7 @@ Copyright lowRISC contributors.
  downstream module.
  
 ## Ports
+
 | Port name        | Direction | Type                                 | Description                                                                                                                                                                                                                                                                              |
 | ---------------- | --------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i            | input     |                                      |                                                                                                                                                                                                                                                                                          |
@@ -25,6 +29,7 @@ Copyright lowRISC contributors.
 | cmd_config_req_o | output    |                                      | Command Config is not implemented yet.Indicator of command config. The pulse is generated at 3rd bit position of Opcode. The upper 5 bits are used as address to fetch command configs from DPSRAM.                                                                                      |
 | cmd_config_idx_o | output    | [4:0]                                |                                                                                                                                                                                                                                                                                          |
 ## Signals
+
 | Name                   | Type           | Description                                                                                                                                                               |
 | ---------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | unused_cmdinfo         | logic          | among the command slots, Passthrough related slots are not used. So tie them down here.                                                                                   |
@@ -41,24 +46,18 @@ Copyright lowRISC contributors.
 | opcode_readsfdp        | logic          | below signals are used in the FSM to determine to activate a certain datapath based on the received input (opcode). The opcode is the SW configurable CSRs `cmd_info_i`.  |
 | opcode_readcmd         | logic          | below signals are used in the FSM to determine to activate a certain datapath based on the received input (opcode). The opcode is the SW configurable CSRs `cmd_info_i`.  |
 ## Types
+
 | Name            | Type                                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                                            |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | st_e            | enum logic [2:0] {                         StIdle,                StStatus,     StSfdp,     StJedec,           StReadCmd,      StUpload   }                                                                                                                                                                                         |                                                                                                                                                                                        |
 | spi_flash_cmd_e | enum logic [7:0] {     OpReadStatus1 = 'h 05,     OpReadStatus2 = 'h 35,     OpReadStatus3 = 'h 15,     OpReadJEDEC   = 'h 9F,     OpReadSfdp    = 'h 5A,     OpReadNormal  = 'h 03,     OpReadFast    = 'h 0B,     OpReadDual    = 'h 3B,     OpReadQuad    = 'h 6B,          OpReadDualIO  = 'h BB,     OpReadQuadIO  = 'h EB   } | spi_flash_cmd_e defines HW supported (TBD for IO) commands. If received SPI Flash command falls into one of these commands, the module processes the command without SW intervention.  |
 ## Processes
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-Opcode out
-
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 **Description**
 Opcode out
 
-- unnamed: _(  )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
+- unnamed: (  )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )

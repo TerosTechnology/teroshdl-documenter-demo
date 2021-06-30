@@ -1,7 +1,10 @@
 # Entity: sortnet_Stream_Adapter
+
 ## Diagram
+
 ![Diagram](sortnet_Stream_Adapter.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,6 +27,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name      | Type           | Value                               | Description |
 | ----------------- | -------------- | ----------------------------------- | ----------- |
 | STREAM_DATA_BITS  | positive       | 32                                  |             |
@@ -34,6 +38,7 @@ limitations under the License.
 | SORTNET_DATA_BITS | natural        | 32                                  |             |
 | INVERSE           | boolean        | FALSE                               |             |
 ## Ports
+
 | Port name | Direction | Type                                            | Description |
 | --------- | --------- | ----------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                       |             |
@@ -49,6 +54,7 @@ limitations under the License.
 | Out_Meta  | out       | std_logic_vector(STREAM_META_BITS - 1 downto 0) |             |
 | Out_Ack   | in        | std_logic                                       |             |
 ## Signals
+
 | Name         | Type                                            | Description |
 | ------------ | ----------------------------------------------- | ----------- |
 | MetaIn       | std_logic_vector(META_BITS - 1 downto 0)        |             |
@@ -61,6 +67,7 @@ limitations under the License.
 | sort_Meta    | std_logic_vector(STREAM_META_BITS - 1 downto 0) |             |
 | geardown_nxt | std_logic                                       |             |
 ## Constants
+
 | Name                 | Type     | Value                             | Description |
 | -------------------- | -------- | --------------------------------- | ----------- |
 | C_VERBOSE            | boolean  |  FALSE                            |             |
@@ -69,5 +76,6 @@ limitations under the License.
 | META_ISKEY_BIT       | natural  |  0                                |             |
 | META_BITS            | positive |  STREAM_META_BITS + 1             |             |
 ## Instantiations
+
 - gearup: PoC.gearbox_up_cc
 - geardown: PoC.gearbox_down_cc

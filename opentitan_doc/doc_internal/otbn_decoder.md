@@ -1,12 +1,16 @@
 # Entity: otbn_decoder
+
 ## Diagram
+
 ![Diagram](otbn_decoder.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  
 ## Ports
+
 | Port name               | Direction | Type              | Description                    |
 | ----------------------- | --------- | ----------------- | ------------------------------ |
 | clk_i                   | input     |                   | For assertions only.           |
@@ -19,6 +23,7 @@ Copyright lowRISC contributors.
 | insn_dec_bignum_o       | output    | insn_dec_bignum_t |                                |
 | insn_dec_shared_o       | output    | insn_dec_shared_t |                                |
 ## Signals
+
 | Name                       | Type                     | Description                                                |
 | -------------------------- | ------------------------ | ---------------------------------------------------------- |
 | illegal_insn               | logic                    |                                                            |
@@ -93,11 +98,7 @@ Copyright lowRISC contributors.
 | unused_clk                 | logic                    | clk_i and rst_ni are only used by assertions               |
 | unused_rst_n               | logic                    |                                                            |
 ## Processes
-- immediate_b_mux: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-
+- immediate_b_mux: (  )
+- unnamed: (  )
+- unnamed: (  )
+- unnamed: (  )

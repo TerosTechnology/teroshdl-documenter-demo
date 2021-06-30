@@ -1,7 +1,10 @@
 # Entity: mac_Wrapper
+
 ## Diagram
+
 ![Diagram](mac_Wrapper.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,11 +27,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                           | Value | Description |
 | ------------ | ------------------------------ | ----- | ----------- |
 | DEBUG        | boolean                        | FALSE |             |
 | MAC_CONFIG   | T_NET_MAC_CONFIGURATION_VECTOR |       |             |
 ## Ports
+
 | Port name                   | Direction | Type                                                                 | Description |
 | --------------------------- | --------- | -------------------------------------------------------------------- | ----------- |
 | Clock                       | in        | std_logic                                                            |             |
@@ -63,6 +68,7 @@ limitations under the License.
 | RX_Meta_DestMACAddress_Data | out       | T_SLVV_8(getPortCount(MAC_CONFIG) - 1 downto 0)                      |             |
 | RX_Meta_EthType             | out       | T_NET_MAC_ETHERNETTYPE_VECTOR(getPortCount(MAC_CONFIG) - 1 downto 0) |             |
 ## Signals
+
 | Name                                | Type                                           | Description |
 | ----------------------------------- | ---------------------------------------------- | ----------- |
 | DestEth_RX_Valid                    | std_logic_vector(INTERFACE_COUNT - 1 downto 0) |             |
@@ -90,6 +96,7 @@ limitations under the License.
 | DestEth_TX_Meta_rst                 | std_logic                                      |             |
 | DestEth_TX_Meta_DestMACAddress_nxt  | std_logic                                      |             |
 ## Constants
+
 | Name                | Type                     | Value                              | Description |
 | ------------------- | ------------------------ | ---------------------------------- | ----------- |
 | PORTS               | positive                 |  getPortCount(MAC_CONFIG)          |             |
@@ -97,14 +104,15 @@ limitations under the License.
 | INTERFACE_ADDRESSES | T_NET_MAC_ADDRESS_VECTOR |  getInterfaceAddresses(MAC_CONFIG) |             |
 | INTERFACE_MASKS     | T_NET_MAC_ADDRESS_VECTOR |  getInterfaceMasks(MAC_CONFIG)     |             |
 ## Functions
-- getInterfaceAddresses <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR</font>
-- getInterfaceMasks <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR)</font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR</font>
-- getSourceFilterCount <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR)</font> <font id="function_return">return natural</font>
-- getSourceFilterAddresses <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR)</font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR</font>
-- getSourceFilterMasks <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR)</font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR</font>
-- getTypeSwitchCount <font id="function_arguments">(Types : T_NET_MAC_ETHERNETTYPE_VECTOR)</font> <font id="function_return">return natural</font>
-- calcPortIndex <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR; CurrentInterfaceID : natural)</font> <font id="function_return">return natural</font>
+- getInterfaceAddresses <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
+- getInterfaceMasks <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
+- getSourceFilterCount <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR) </font> <font id="function_return">return natural </font>
+- getSourceFilterAddresses <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
+- getSourceFilterMasks <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
+- getTypeSwitchCount <font id="function_arguments">(Types : T_NET_MAC_ETHERNETTYPE_VECTOR) </font> <font id="function_return">return natural </font>
+- calcPortIndex <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR; CurrentInterfaceID : natural) </font> <font id="function_return">return natural </font>
 ## Instantiations
+
 - RX_DestMAC: PoC.mac_RX_DestMAC_Switch
 - TX_SrcMAC: PoC.mac_TX_SrcMAC_Prepender
 **Description**

@@ -1,7 +1,10 @@
 # Entity: serv_bufreg
+
 ## Diagram
+
 ![Diagram](serv_bufreg.svg "Diagram")
 ## Ports
+
 | Port name   | Direction | Type        | Description |
 | ----------- | --------- | ----------- | ----------- |
 | i_clk       | input     | wire        |             |
@@ -19,6 +22,7 @@
 | o_q         | output    | wire        |             |
 | o_dbus_adr  | output    | wire [31:0] |             |
 ## Signals
+
 | Name    | Type       | Description |
 | ------- | ---------- | ----------- |
 | c       | wire       |             |
@@ -27,5 +31,4 @@
 | data    | reg [31:2] |             |
 | clr_lsb | wire       |             |
 ## Processes
-- unnamed: _( @(posedge i_clk) )_
-
+- unnamed: ( @(posedge i_clk) )

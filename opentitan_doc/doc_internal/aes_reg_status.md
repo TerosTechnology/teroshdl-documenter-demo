@@ -1,7 +1,10 @@
 # Entity: aes_reg_status
+
 ## Diagram
+
 ![Diagram](aes_reg_status.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -9,10 +12,12 @@ Copyright lowRISC contributors.
  This module tracks the collective status of multiple registers.
  
 ## Generics
+
 | Generic name | Type | Value | Description |
 | ------------ | ---- | ----- | ----------- |
 | Width        | int  | 1     |             |
 ## Ports
+
 | Port name | Direction | Type        | Description |
 | --------- | --------- | ----------- | ----------- |
 | clk_i     | input     |             |             |
@@ -24,6 +29,7 @@ Copyright lowRISC contributors.
 | new_o     | output    | sp2v_e      |             |
 | clean_o   | output    | sp2v_e      |             |
 ## Signals
+
 | Name         | Type                  | Description                                                                                                                                |
 | ------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | we_d         | logic [Width-1:0]     |                                                                                                                                            |
@@ -39,8 +45,8 @@ Copyright lowRISC contributors.
 | new_q_raw    | logic [Sp2VWidth-1:0] | The following primitives are used to place a size-only constraint on the flops in order to prevent optimizations on these status signals.  |
 | clean_q_raw  | logic [Sp2VWidth-1:0] |                                                                                                                                            |
 ## Processes
-- reg_ops: _( @(posedge clk_i or negedge rst_ni) )_
-
+- reg_ops: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_new_status_regs: prim_flop
 - u_clean_status_regs: prim_flop

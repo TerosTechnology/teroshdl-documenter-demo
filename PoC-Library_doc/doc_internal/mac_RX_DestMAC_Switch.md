@@ -1,7 +1,10 @@
 # Entity: mac_RX_DestMAC_Switch
+
 ## Diagram
+
 ![Diagram](mac_RX_DestMAC_Switch.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name       | Type                     | Value                          | Description |
 | ------------------ | ------------------------ | ------------------------------ | ----------- |
 | DEBUG              | boolean                  | FALSE                          |             |
 | MAC_ADDRESSES      | T_NET_MAC_ADDRESS_VECTOR | (0 => C_NET_MAC_ADDRESS_EMPTY) |             |
 | MAC_ADDRESSE_MASKS | T_NET_MAC_ADDRESS_VECTOR | (0 => C_NET_MAC_MASK_DEFAULT)  |             |
 ## Ports
+
 | Port name                    | Direction | Type                                                | Description |
 | ---------------------------- | --------- | --------------------------------------------------- | ----------- |
 | Clock                        | in        | std_logic                                           |             |
@@ -48,6 +53,7 @@ limitations under the License.
 | Out_Meta_DestMACAddress_nxt  | in        | std_logic_vector(MAC_ADDRESSES'length - 1 downto 0) |             |
 | Out_Meta_DestMACAddress_Data | out       | T_SLVV_8(MAC_ADDRESSES'length - 1 downto 0)         |             |
 ## Signals
+
 | Name                          | Type                                       | Description |
 | ----------------------------- | ------------------------------------------ | ----------- |
 | State                         | T_STATE                                    |             |
@@ -76,6 +82,7 @@ limitations under the License.
 | Out_Meta_DestMACAddress_rst_i | std_logic                                  |             |
 | Out_Meta_DestMACAddress_nxt_i | std_logic                                  |             |
 ## Constants
+
 | Name                 | Type                                     | Value                           | Description    |
 | -------------------- | ---------------------------------------- | ------------------------------- | -------------- |
 | PORTS                | positive                                 |  MAC_ADDRESSES'length           |                |
@@ -84,15 +91,12 @@ limitations under the License.
 | MAC_ADDRESS_LENGTH   | positive                                 |  6                              | MAC -> 6 bytes |
 | READER_COUNTER_BITS  | positive                                 |  log2ceilnz(MAC_ADDRESS_LENGTH) |                |
 ## Types
-| Name    | Type                                                                                                                                                           | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( 		ST_IDLE, 			ST_DEST_MAC_1, 			ST_DEST_MAC_2, 			ST_DEST_MAC_3, 			ST_DEST_MAC_4, 			ST_DEST_MAC_5, 			ST_PAYLOAD_1, 			ST_PAYLOAD_N, 		ST_DISCARD_FRAME 	) |             |
+
+| Name    | Type                                                                                                                                  | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE, ST_DEST_MAC_1, ST_DEST_MAC_2, ST_DEST_MAC_3, ST_DEST_MAC_4, ST_DEST_MAC_5, ST_PAYLOAD_1, ST_PAYLOAD_N, ST_DISCARD_FRAME )  |             |
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )_
-
-- unnamed: _( Clock )_
-
-- unnamed: _( Clock )_
-
+- unnamed: ( Clock )
+- unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )
+- unnamed: ( Clock )
+- unnamed: ( Clock )

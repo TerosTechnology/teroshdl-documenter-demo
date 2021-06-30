@@ -1,7 +1,10 @@
 # Entity: stream_Source
+
 ## Diagram
+
 ![Diagram](stream_Source.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,10 +27,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type                             | Value | Description |
 | ------------ | -------------------------------- | ----- | ----------- |
 | TESTCASES    | T_SIM_STREAM_FRAMEGROUP_VECTOR_8 |       |             |
 ## Ports
+
 | Port name | Direction | Type      | Description       |
 | --------- | --------- | --------- | ----------------- |
 | Clock     | in        | std_logic |                   |
@@ -39,14 +44,15 @@ limitations under the License.
 | Out_EOF   | out       | std_logic |                   |
 | Out_Ack   | in        | std_logic |                   |
 ## Signals
+
 | Name                | Type                                                | Description            |
 | ------------------- | --------------------------------------------------- | ---------------------- |
 | FrameGroupNumber_us | unsigned(log2ceilnz(TESTCASES'length) - 1 downto 0) | dummy signals for iSIM |
 ## Constants
+
 | Name       | Type    | Value      | Description |
 | ---------- | ------- | ---------- | ----------- |
 | MAX_CYCLES | natural |  10 * 1000 |             |
 | MAX_ERRORS | natural | 				50     |             |
 ## Processes
-- unnamed: _(  )_
-
+- unnamed: (  )

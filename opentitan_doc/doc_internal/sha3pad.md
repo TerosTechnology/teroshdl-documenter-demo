@@ -1,18 +1,23 @@
 # Entity: sha3pad
+
 ## Diagram
+
 ![Diagram](sha3pad.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  SHA3 padding logic
  
 ## Generics
+
 | Generic name | Type | Value     | Description |
 | ------------ | ---- | --------- | ----------- |
 | EnMasking    | bit  | 0         |             |
 | Share        | int  | undefined |             |
 ## Ports
+
 | Port name         | Direction | Type                   | Description                                                                                                                                                                                                           |
 | ----------------- | --------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i             | input     |                        |                                                                                                                                                                                                                       |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | done_i            | input     |                        | done_i is a pulse signal to make the pad logic to clear internal variablesand to move back to the Idle state for next hashing process. done_i may not needed if sw controls the keccak_round directly.                |
 | absorbed_o        | output    |                        | Indication of the Keccak Sponge Absorbing is complete, it is time for SW tocontrol the Keccak-round if it needs more digest, or complete by asserting `done_i`                                                        |
 ## Signals
+
 | Name             | Type                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | block_addr_limit | logic [KeccakCountW-1:0]      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -60,42 +66,31 @@ Copyright lowRISC contributors.
 | done_valid       | logic                         | Process only asserts after start and all message are fed. These valid signals are qualifier of FPV to trigger the control signal It is a little bit hard to specify these criteria in SVA property so creating qualifiers in RTL form is easier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | keccak_valid_o   | end_of_block && !sent_blocksi |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 ## Constants
+
 | Name  | Type | Value     | Description |
 | ----- | ---- | --------- | ----------- |
 | Share | int  | undefined |             |
 ## Types
+
 | Name      | Type                                                                                                                                                                                                                                                            | Description                                                                                |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | pad_st_e  | enum logic [3:0] {     StPadIdle,                     //               StPrefix,     StPrefixWait,                     //               StMessage,     StMessageWait,                     StPad,     StPadRun,                StPad01,           StPadFlush   } | Padding States TODO: Make it has Hamming Distance >= 3 to be resistent to glitch attacks.  |
 | mux_sel_e | enum logic [2:0] {     MuxNone    = 3'b 000,     MuxFifo    = 3'b 001,     MuxPrefix  = 3'b 010,     MuxFuncPad = 3'b 011,     MuxZeroEnd = 3'b 100   }                                                                                                         |                                                                                            |
 ## Processes
-- unnamed: _(  )_
-Block size based on the address.
-This is used for bytepad() and also pad10*1()
-assign block_addr_limit = KeccakRate[strength_i];
-but below is easier to understand
-
+- unnamed: (  )
 **Description**
 Block size based on the address.
 This is used for bytepad() and also pad10*1()
 assign block_addr_limit = KeccakRate[strength_i];
 but below is easier to understand
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _(  )_
-
-- unnamed: _(  )_
-TODO: msg_ready_o mux
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: (  )
+- unnamed: (  )
 **Description**
 TODO: msg_ready_o mux
 
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )

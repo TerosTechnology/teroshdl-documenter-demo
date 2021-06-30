@@ -1,7 +1,10 @@
 # Entity: aes_masked_inverse_gf2p4
+
 ## Diagram
+
 ![Diagram](aes_sbox_canright_masked.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -29,6 +32,7 @@ Copyright lowRISC contributors.
  (see Formulas 6, 13, 14, 15, 21, 22, 23, 24 in the paper)
  
 ## Ports
+
 | Port name | Direction | Type  | Description |
 | --------- | --------- | ----- | ----------- |
 | b         | input     | [3:0] |             |
@@ -37,6 +41,7 @@ Copyright lowRISC contributors.
 | m1        | input     | [3:0] |             |
 | b_inv     | output    | [3:0] |             |
 ## Signals
+
 | Name               | Type        | Description                                                                                                                                                                                                                                                                                  |
 | ------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | b1                 | logic [1:0] |                                                                                                                                                                                                                                                                                              |
@@ -78,6 +83,7 @@ Copyright lowRISC contributors.
 | b0_inv             | logic [1:0] |                                                                                                                                                                                                                                                                                              |
 | b0_inv_buf         | logic [1:0] |                                                                                                                                                                                                                                                                                              |
 ## Instantiations
+
 - u_prim_buf_mul_bq01: prim_buf
 - u_prim_buf_scale_omega2_bq: prim_buf
 - u_prim_buf_mul_b1_b0: prim_buf

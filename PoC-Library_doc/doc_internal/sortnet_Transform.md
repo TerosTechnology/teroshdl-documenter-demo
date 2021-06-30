@@ -1,7 +1,10 @@
 # Entity: sortnet_Transform
+
 ## Diagram
+
 ![Diagram](sortnet_Transform.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,12 +27,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name | Type     | Value | Description |
 | ------------ | -------- | ----- | ----------- |
 | ROWS         | positive | 16    |             |
 | COLUMNS      | positive | 4     |             |
 | DATA_BITS    | positive | 8     |             |
 ## Ports
+
 | Port name | Direction | Type                                                | Description |
 | --------- | --------- | --------------------------------------------------- | ----------- |
 | Clock     | in        | std_logic                                           |             |
@@ -43,6 +48,7 @@ limitations under the License.
 | Out_SOF   | out       | std_logic                                           |             |
 | Out_EOF   | out       | std_logic                                           |             |
 ## Signals
+
 | Name             | Type                                       | Description |
 | ---------------- | ------------------------------------------ | ----------- |
 | DataIn           | T_DATA_VECTOR(ROWS - 1 downto 0)           |             |
@@ -56,14 +62,13 @@ limitations under the License.
 | RowReader_us     | unsigned(log2ceilnz(ROWS) - 1 downto 0)    |             |
 | RowReader_ov     | std_logic                                  |             |
 ## Types
+
 | Name          | Type | Description |
 | ------------- | ---- | ----------- |
 | T_DATA_VECTOR |      |             |
 | T_DATA_MATRIX |      |             |
 ## Functions
-- to_dv <font id="function_arguments">(slm : T_SLM)</font> <font id="function_return">return T_DATA_VECTOR</font>
+- to_dv <font id="function_arguments">(slm : T_SLM) </font> <font id="function_return">return T_DATA_VECTOR </font>
 ## Processes
-- unnamed: _( Clock )_
-
-- unnamed: _( InputBuffer, RowReader_us )_
-
+- unnamed: ( Clock )
+- unnamed: ( InputBuffer, RowReader_us )

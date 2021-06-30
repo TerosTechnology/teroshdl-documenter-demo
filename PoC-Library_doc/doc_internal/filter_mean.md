@@ -1,7 +1,10 @@
 # Entity: filter_mean
+
 ## Diagram
+
 ![Diagram](filter_mean.svg "Diagram")
 ## Description
+
 EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
 vim: tabstop=2:shiftwidth=2:noexpandtab
 kate: tab-width 2; replace-tabs off; indent-width 2;
@@ -24,22 +27,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 =============================================================================
 ## Generics
+
 | Generic name   | Type      | Value | Description |
 | -------------- | --------- | ----- | ----------- |
 | TAPS           | positive  | 4     |             |
 | INIT           | std_logic | '1'   |             |
 | ADD_OUTPUT_REG | boolean   | FALSE |             |
 ## Ports
+
 | Port name | Direction | Type      | Description     |
 | --------- | --------- | --------- | --------------- |
 | Clock     | in        | std_logic | clock           |
 | DataIn    | in        | std_logic | data to filter  |
 | DataOut   | out       | std_logic | filtered signal |
 ## Signals
+
 | Name      | Type                                | Description |
 | --------- | ----------------------------------- | ----------- |
 | Delays    | std_logic_vector(TAPS - 1 downto 0) |             |
 | FilterOut | std_logic                           |             |
 ## Processes
-- unnamed: _( Delays )_
-
+- unnamed: ( Delays )

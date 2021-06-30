@@ -1,7 +1,10 @@
 # Entity: rv_dm
+
 ## Diagram
+
 ![Diagram](rv_dm.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
@@ -12,11 +15,13 @@ Copyright lowRISC contributors.
  the TL-UL-based lowRISC chip design.
  
 ## Generics
+
 | Generic name | Type         | Value | Description |
 | ------------ | ------------ | ----- | ----------- |
 | NrHarts      | int          | 1     |             |
 | IdcodeValue  | logic [31:0] | _0001 |             |
 ## Ports
+
 | Port name     | Direction | Type          | Description                                                                       |
 | ------------- | --------- | ------------- | --------------------------------------------------------------------------------- |
 | clk_i         | input     |               | clock                                                                             |
@@ -35,6 +40,7 @@ Copyright lowRISC contributors.
 | jtag_req_i    | input     |               |                                                                                   |
 | jtag_rsp_o    | output    |               |                                                                                   |
 ## Signals
+
 | Name                  | Type                              | Description                                 |
 | --------------------- | --------------------------------- | ------------------------------------------- |
 | hartinfo              | dm::hartinfo_t [NrHarts-1:0]      | Debug CSRs                                  |
@@ -99,6 +105,7 @@ Copyright lowRISC contributors.
 | en_ifetch             | tlul_pkg::tl_instr_en_e           |                                             |
 | hw_debug_en           | lc_ctrl_pkg::lc_tx_t [0:0]        |                                             |
 ## Constants
+
 | Name              | Type                | Value                         | Description                                                 |
 | ----------------- | ------------------- | ----------------------------- | ----------------------------------------------------------- |
 | BusWidth          | int                 | 32                            | Currently only 32 bit busses are supported by our TL-UL IP  |
@@ -106,9 +113,9 @@ Copyright lowRISC contributors.
 | DebugHartInfo     | dm::hartinfo_t      | undefined                     | static debug hartinfo                                       |
 | AddressWidthWords | int unsigned        | BusWidth - $clog2(BusWidth/8) |                                                             |
 ## Processes
-- unnamed: _( @(posedge clk_i or negedge rst_ni) )_
-
+- unnamed: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - i_dm_csrs: dm_csrs
 - i_dm_sba: dm_sba
 - tl_adapter_host_sba: tlul_adapter_host

@@ -1,17 +1,22 @@
 # Entity: otp_ctrl_lci
+
 ## Diagram
+
 ![Diagram](otp_ctrl_lci.svg "Diagram")
 ## Description
+
 Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Life cycle interface for performing life cycle transitions in OTP.
  
 ## Generics
+
 | Generic name | Type        | Value           | Description                      |
 | ------------ | ----------- | --------------- | -------------------------------- |
 | Info         | part_info_t | PartInfoDefault | Lifecycle partition information  |
 ## Ports
+
 | Port name       | Direction | Type                   | Description                                                                                                                                                                                                                                                                                                           |
 | --------------- | --------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | clk_i           | input     |                        |                                                                                                                                                                                                                                                                                                                       |
@@ -34,6 +39,7 @@ Copyright lowRISC contributors.
 | otp_rdata_i     | input     | [ScrmblBlockWidth-1:0] |                                                                                                                                                                                                                                                                                                                       |
 | otp_err_i       | input     |                        |                                                                                                                                                                                                                                                                                                                       |
 ## Signals
+
 | Name         | Type                                    | Description                                                                                                                |
 | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | cnt_clr      | logic                                   |                                                                                                                            |
@@ -49,6 +55,7 @@ Copyright lowRISC contributors.
 | unused_rdata | logic                                   |                                                                                                                            |
 | state_raw_q  | logic [StateWidth-1:0]                  | This primitive is used to place a size-only constraint on the flops in order to prevent FSM state encoding optimizations.  |
 ## Constants
+
 | Name             | Type               | Value                           | Description |
 | ---------------- | ------------------ | ------------------------------- | ----------- |
 | NumLcOtpWords    | int                | int'(Info.size) >> OtpAddrShift |             |
@@ -57,13 +64,13 @@ Copyright lowRISC contributors.
 | LastLcOtpWord    | bit [CntWidth-1:0] | undefined                       |             |
 | StateWidth       | int                | 9                               |             |
 ## Types
+
 | Name    | Type                                                                                                                                                                                             | Description |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | state_e | enum logic [StateWidth-1:0] {     ResetSt     = 9'b010110111,     IdleSt      = 9'b101010010,     WriteSt     = 9'b111101110,     WriteWaitSt = 9'b100011101,     ErrorSt     = 9'b010000000   } |             |
 ## Processes
-- p_fsm: _(  )_
-
-- p_regs: _( @(posedge clk_i or negedge rst_ni) )_
-
+- p_fsm: (  )
+- p_regs: ( @(posedge clk_i or negedge rst_ni) )
 ## Instantiations
+
 - u_state_regs: prim_flop
