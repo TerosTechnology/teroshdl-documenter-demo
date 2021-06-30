@@ -6,12 +6,13 @@
     margin-right: auto
   }
   svg {
+    width:68%;
+    height:30%;
     display:block;  
-    width:60%;
     margin-left: auto;
     margin-right: auto
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     margin-left:1.5%;
     width:98%;
     font-weight:bold
@@ -294,10 +295,10 @@ modules of the NEORV32 can only be written in full word mode (32-bit). Any other
 will trigger a store bus access fault exception.<br />
 The CFS provides up to 32 memory-mapped 32-bit interface register. For instance, these could be used to provide<br />
 a <control register> for global control of the unit, a <data register> for reading/writing from/to a data FIFO, a <command register><br />
-for issueing commands and a <status register> for status information.<br />
+for issuing commands and a <status register> for status information.<br />
 Following the interface protocol, each read or write access has to be acknowledged in the following cycle using the ack_o signal (or even later<br />
-if the module needs additional time; the maximumx latency until an unacknwoledged access will trigger a bus exception is defined via the package's<br />
-gloabl "bus_timeout_c" constant). If no ACK is generated, the bus access will time out and cause a store bus access fault exception.<br />
+if the module needs additional time; the maximum latency until an unacknowledged access will trigger a bus exception is defined via the package's<br />
+global "bus_timeout_c" constant). If no ACK is generated, the bus access will time out and cause a store bus access fault exception.<br />
 Host access: Read and write access to the interface registers + bus transfer acknowledge.<br />
 This example only implements four physical r/w register (the four lowest CF register). The remaining addresses of the CFS are not<br />
 associated with any writable or readable register - an access to those is simply ignored but still acknowledged.</p></div><ul>

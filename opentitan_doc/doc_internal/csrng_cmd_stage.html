@@ -1,0 +1,549 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=csrng_cmd_stage><h1 id="entity-csrng_cmd_stage">Entity: csrng_cmd_stage</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 995 370"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="225,0 240,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="530" height="70" fill="black" x="240" y="0"></rect><rect id="SvgjsRect1007" width="526" height="65" fill="#bdecb6" x="242" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="220" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="255" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   CmdFifoWidth </tspan></text><line id="SvgjsLine1012" x1="225" y1="15" x2="240" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="220" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="255" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   CmdFifoDepth </tspan></text><line id="SvgjsLine1017" x1="225" y1="35" x2="240" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="220" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="255" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   StateId </tspan></text><line id="SvgjsLine1022" x1="225" y1="55" x2="240" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="530" height="290" fill="black" x="240" y="75"></rect><rect id="SvgjsRect1024" width="526" height="285" fill="#fdfd96" x="242" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="220" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="255" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1029" x1="225" y1="90" x2="240" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="220" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="255" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1034" x1="225" y1="110" x2="240" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="220" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="255" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cs_enable_i </tspan></text><line id="SvgjsLine1039" x1="225" y1="130" x2="240" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="220" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="255" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_vld_i </tspan></text><line id="SvgjsLine1044" x1="225" y1="150" x2="240" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="220" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [StateId-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="255" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_shid_i </tspan></text><line id="SvgjsLine1049" x1="225" y1="170" x2="240" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="220" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [CmdFifoWidth-1:0] </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="255" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_bus_i </tspan></text><line id="SvgjsLine1054" x1="225" y1="190" x2="240" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="220" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="255" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_gnt_i </tspan></text><line id="SvgjsLine1059" x1="225" y1="210" x2="240" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="220" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="255" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_ack_i </tspan></text><line id="SvgjsLine1064" x1="225" y1="230" x2="240" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="220" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="255" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   cmd_ack_sts_i </tspan></text><line id="SvgjsLine1069" x1="225" y1="250" x2="240" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="220" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="255" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   genbits_vld_i </tspan></text><line id="SvgjsLine1074" x1="225" y1="270" x2="240" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="220" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [127:0] </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="255" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   genbits_bus_i </tspan></text><line id="SvgjsLine1079" x1="225" y1="290" x2="240" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="220" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="255" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   genbits_fips_i </tspan></text><line id="SvgjsLine1084" x1="225" y1="310" x2="240" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="220" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="255" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   genbits_rdy_i </tspan></text><line id="SvgjsLine1089" x1="225" y1="330" x2="240" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="790" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="755" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_rdy_o </tspan></text><line id="SvgjsLine1094" x1="770" y1="90" x2="785" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="790" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="755" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_req_o </tspan></text><line id="SvgjsLine1099" x1="770" y1="110" x2="785" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="790" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="755" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_sop_o </tspan></text><line id="SvgjsLine1104" x1="770" y1="130" x2="785" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="790" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="755" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_mop_o </tspan></text><line id="SvgjsLine1109" x1="770" y1="150" x2="785" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="790" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="755" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_eop_o </tspan></text><line id="SvgjsLine1114" x1="770" y1="170" x2="785" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="790" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">   [CmdFifoWidth-1:0] </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="755" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_arb_bus_o </tspan></text><line id="SvgjsLine1119" x1="770" y1="190" x2="785" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="790" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="755" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_ack_o </tspan></text><line id="SvgjsLine1124" x1="770" y1="210" x2="785" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="790" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="755" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_ack_sts_o </tspan></text><line id="SvgjsLine1129" x1="770" y1="230" x2="785" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="790" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="755" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   genbits_vld_o </tspan></text><line id="SvgjsLine1134" x1="770" y1="250" x2="785" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="790" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">   [127:0] </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="755" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   genbits_bus_o </tspan></text><line id="SvgjsLine1139" x1="770" y1="270" x2="785" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="790" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="755" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   genbits_fips_o </tspan></text><line id="SvgjsLine1144" x1="770" y1="290" x2="785" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1145" font-family="Helvetica" x="790" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1147" font-family="Helvetica" x="755" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1148" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_sfifo_cmd_err_o </tspan></text><line id="SvgjsLine1149" x1="770" y1="310" x2="785" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1150" font-family="Helvetica" x="790" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1151" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1152" font-family="Helvetica" x="755" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1153" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_sfifo_genbits_err_o </tspan></text><line id="SvgjsLine1154" x1="770" y1="330" x2="785" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1155" font-family="Helvetica" x="790" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1156" dy="26" x="790" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1157" font-family="Helvetica" x="755" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1158" dy="26" x="755" svgjs:data="{&quot;newLined&quot;:true}">   cmd_stage_sm_err_o </tspan></text><line id="SvgjsLine1159" x1="770" y1="350" x2="785" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Description: csrng command staging module</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CmdFifoWidth</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>CmdFifoDepth</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>StateId</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cs_enable_i</td>
+<td>input</td>
+<td></td>
+<td>command in</td>
+</tr>
+<tr>
+<td>cmd_stage_vld_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_shid_i</td>
+<td>input</td>
+<td>[StateId-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_bus_i</td>
+<td>input</td>
+<td>[CmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_rdy_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_arb_req_o</td>
+<td>output</td>
+<td></td>
+<td>command to arbiter</td>
+</tr>
+<tr>
+<td>cmd_arb_sop_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_arb_mop_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_arb_eop_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_arb_gnt_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_arb_bus_o</td>
+<td>output</td>
+<td>[CmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_ack_i</td>
+<td>input</td>
+<td></td>
+<td>ack from core</td>
+</tr>
+<tr>
+<td>cmd_ack_sts_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_ack_o</td>
+<td>output</td>
+<td></td>
+<td>ack to app i/f</td>
+</tr>
+<tr>
+<td>cmd_stage_ack_sts_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>genbits_vld_i</td>
+<td>input</td>
+<td></td>
+<td>genbits from core</td>
+</tr>
+<tr>
+<td>genbits_bus_i</td>
+<td>input</td>
+<td>[127:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>genbits_fips_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>genbits_vld_o</td>
+<td>output</td>
+<td></td>
+<td>genbits to app i/f</td>
+</tr>
+<tr>
+<td>genbits_rdy_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>genbits_bus_o</td>
+<td>output</td>
+<td>[127:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>genbits_fips_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_sfifo_cmd_err_o</td>
+<td>output</td>
+<td>[2:0]</td>
+<td>error indication</td>
+</tr>
+<tr>
+<td>cmd_stage_sfifo_genbits_err_o</td>
+<td>output</td>
+<td>[2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_stage_sm_err_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sfifo_cmd_rdata</td>
+<td>logic [CmdFifoWidth-1:0]</td>
+<td>signals command fifo</td>
+</tr>
+<tr>
+<td>sfifo_cmd_depth</td>
+<td>logic [$clog2(CmdFifoDepth):0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_push</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_wdata</td>
+<td>logic [CmdFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_pop</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_err</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_cmd_not_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_rdata</td>
+<td>logic [GenBitsFifoWidth-1:0]</td>
+<td>genbits fifo</td>
+</tr>
+<tr>
+<td>sfifo_genbits_push</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_wdata</td>
+<td>logic [GenBitsFifoWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_pop</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_err</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_full</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sfifo_genbits_not_empty</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_len</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_fifo_zero</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_fifo_pop</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_len_dec</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_cnt_dec</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_1st_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_inc_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_cnt_last</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_final_ack</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_ack_q</td>
+<td>logic</td>
+<td>flops</td>
+</tr>
+<tr>
+<td>cmd_ack_d</td>
+<td>logic</td>
+<td>flops</td>
+</tr>
+<tr>
+<td>cmd_ack_sts_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_ack_sts_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_len_q</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_len_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_flag_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_flag_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_cnt_q</td>
+<td>logic [GenBitsCntrWidth-1:0]</td>
+<td>max_nuber_of_bits_per_request = 2^19</td>
+</tr>
+<tr>
+<td>cmd_gen_cnt_d</td>
+<td>logic [GenBitsCntrWidth-1:0]</td>
+<td>max_nuber_of_bits_per_request = 2^19</td>
+</tr>
+<tr>
+<td>cmd_gen_cmd_q</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_gen_cmd_d</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>state_d</td>
+<td>state_e</td>
+<td></td>
+</tr>
+<tr>
+<td>state_q</td>
+<td>state_e</td>
+<td></td>
+</tr>
+<tr>
+<td>state_raw_q</td>
+<td>logic [StateWidth-1:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GenBitsFifoWidth</td>
+<td>int</td>
+<td>1+128</td>
+<td></td>
+</tr>
+<tr>
+<td>GenBitsFifoDepth</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>GenBitsCntrWidth</td>
+<td>int</td>
+<td>19</td>
+<td></td>
+</tr>
+<tr>
+<td>StateWidth</td>
+<td>int</td>
+<td>6</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state_e</td>
+<td>enum logic [StateWidth-1:0] {     Idle      = 6'b001010,      SendSOP   = 6'b000111,      SendMOP   = 6'b010000,      GenCmdChk = 6'b011101,      CmdAck    = 6'b111011,      GenReq    = 6'b110110,      Error     = 6'b101100     }</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
+<li>u_prim_fifo_cmd: prim_fifo_sync</li>
+</ul><ul>
+<li>u_state_regs: prim_flop</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+This primitive is used to place a size-only constraint on the<br />
+flops in order to prevent FSM state encoding optimizations.</p></div><ul>
+<li>u_prim_fifo_genbits: prim_fifo_sync</li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,157 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=sysrst_ctrl_intr><h1 id="entity-sysrst_ctrl_intr">Entity: sysrst_ctrl_intr</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1295 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="405,0 420,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="480" height="150" fill="black" x="420" y="15"></rect><rect id="SvgjsRect1007" width="476" height="145" fill="#fdfd96" x="422" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="400" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="435" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="405" y1="30" x2="420" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="400" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="435" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="405" y1="50" x2="420" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="400" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="435" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_combo_intr </tspan></text><line id="SvgjsLine1022" x1="405" y1="70" x2="420" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="400" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="435" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_key_intr </tspan></text><line id="SvgjsLine1027" x1="405" y1="90" x2="420" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="400" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_reg2hw_intr_state_reg_t </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="435" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   intr_state_i </tspan></text><line id="SvgjsLine1032" x1="405" y1="110" x2="420" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="400" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_reg2hw_intr_enable_reg_t </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="435" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   intr_enable_i </tspan></text><line id="SvgjsLine1037" x1="405" y1="130" x2="420" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="400" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="400" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_reg2hw_intr_test_reg_t </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="435" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="435" svgjs:data="{&quot;newLined&quot;:true}">   intr_test_i </tspan></text><line id="SvgjsLine1042" x1="405" y1="150" x2="420" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="920" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="920" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_hw2reg_intr_state_reg_t </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="885" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="885" svgjs:data="{&quot;newLined&quot;:true}">   intr_state_o </tspan></text><line id="SvgjsLine1047" x1="900" y1="30" x2="915" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="920" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="920" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="885" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="885" svgjs:data="{&quot;newLined&quot;:true}">   sysrst_ctrl_intr_o </tspan></text><line id="SvgjsLine1052" x1="900" y1="50" x2="915" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Description: sysrst_ctrl interrupt Module</p></div><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sysrst_ctrl_combo_intr</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sysrst_ctrl_key_intr</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_i</td>
+<td>input</td>
+<td>sysrst_ctrl_reg2hw_intr_state_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_enable_i</td>
+<td>input</td>
+<td>sysrst_ctrl_reg2hw_intr_enable_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_test_i</td>
+<td>input</td>
+<td>sysrst_ctrl_reg2hw_intr_test_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>intr_state_o</td>
+<td>output</td>
+<td>sysrst_ctrl_hw2reg_intr_state_reg_t</td>
+<td></td>
+</tr>
+<tr>
+<td>sysrst_ctrl_intr_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sysrst_ctrl_event</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="instantiations">Instantiations</h2><ul>
+<li>i_sysrst_ctrl_intr_o: prim_intr_hw</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+instantiate interrupt hardware primitive</p></div><br><br><br><br><br><br>

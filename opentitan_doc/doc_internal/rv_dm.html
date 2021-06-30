@@ -1,0 +1,573 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=rv_dm><h1 id="entity-rv_dm">Entity: rv_dm</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 685 250"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="175,0 190,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="320" height="50" fill="black" x="190" y="0"></rect><rect id="SvgjsRect1007" width="316" height="45" fill="#bdecb6" x="192" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="170" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="205" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   NrHarts </tspan></text><line id="SvgjsLine1012" x1="175" y1="15" x2="190" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="170" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">   logic [31:0] </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="205" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   IdcodeValue </tspan></text><line id="SvgjsLine1017" x1="175" y1="35" x2="190" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="320" height="190" fill="black" x="190" y="55"></rect><rect id="SvgjsRect1019" width="316" height="185" fill="#fdfd96" x="192" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="170" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="205" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1024" x1="175" y1="70" x2="190" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="170" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="205" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1029" x1="175" y1="90" x2="190" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="170" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="205" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   hw_debug_en_i </tspan></text><line id="SvgjsLine1034" x1="175" y1="110" x2="190" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="170" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="205" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   scanmode_i </tspan></text><line id="SvgjsLine1039" x1="175" y1="130" x2="190" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="170" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="205" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   scan_rst_ni </tspan></text><line id="SvgjsLine1044" x1="175" y1="150" x2="190" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="170" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">   [NrHarts-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="205" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   unavailable_i </tspan></text><line id="SvgjsLine1049" x1="175" y1="170" x2="190" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="170" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="205" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   tl_d_i </tspan></text><line id="SvgjsLine1054" x1="175" y1="190" x2="190" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="170" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="205" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   tl_h_i </tspan></text><line id="SvgjsLine1059" x1="175" y1="210" x2="190" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="170" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="170" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="205" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="205" svgjs:data="{&quot;newLined&quot;:true}">   jtag_req_i </tspan></text><line id="SvgjsLine1064" x1="175" y1="230" x2="190" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="530" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="495" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   ndmreset_o </tspan></text><line id="SvgjsLine1069" x1="510" y1="70" x2="525" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="530" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="495" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   dmactive_o </tspan></text><line id="SvgjsLine1074" x1="510" y1="90" x2="525" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="530" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">   [NrHarts-1:0] </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="495" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   debug_req_o </tspan></text><line id="SvgjsLine1079" x1="510" y1="110" x2="525" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="530" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="495" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   tl_d_o </tspan></text><line id="SvgjsLine1084" x1="510" y1="130" x2="525" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="530" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="495" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   tl_h_o </tspan></text><line id="SvgjsLine1089" x1="510" y1="150" x2="525" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="530" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="530" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="495" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="495" svgjs:data="{&quot;newLined&quot;:true}">   jtag_rsp_o </tspan></text><line id="SvgjsLine1094" x1="510" y1="170" x2="525" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 Top-level debug module (DM) This module implements the RISC-V debug specification version 0.13, This toplevel wraps the PULP debug module available from <a href="https://github.com/pulp-platform/riscv-dbg">https://github.com/pulp-platform/riscv-dbg</a> to match the needs of the TL-UL-based lowRISC chip design.</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NrHarts</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>IdcodeValue</td>
+<td>logic [31:0]</td>
+<td>_0001</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td>clock</td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td>asynchronous reset active low, connect PoR</td>
+</tr>
+<tr>
+<td>hw_debug_en_i</td>
+<td>input</td>
+<td></td>
+<td>here, not the system reset</td>
+</tr>
+<tr>
+<td>scanmode_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>scan_rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ndmreset_o</td>
+<td>output</td>
+<td></td>
+<td>non-debug module reset</td>
+</tr>
+<tr>
+<td>dmactive_o</td>
+<td>output</td>
+<td></td>
+<td>debug module is active</td>
+</tr>
+<tr>
+<td>debug_req_o</td>
+<td>output</td>
+<td>[NrHarts-1:0]</td>
+<td>async debug request</td>
+</tr>
+<tr>
+<td>unavailable_i</td>
+<td>input</td>
+<td>[NrHarts-1:0]</td>
+<td>communicate whether the hart is unavailable</td>
+</tr>
+<tr>
+<td>tl_d_i</td>
+<td>input</td>
+<td></td>
+<td>(e.g.: power down)bus device with debug memory, for an execution based technique</td>
+</tr>
+<tr>
+<td>tl_d_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tl_h_o</td>
+<td>output</td>
+<td></td>
+<td>bus host, for system bus accesses</td>
+</tr>
+<tr>
+<td>tl_h_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>jtag_req_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>jtag_rsp_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hartinfo</td>
+<td>dm::hartinfo_t [NrHarts-1:0]</td>
+<td>Debug CSRs</td>
+</tr>
+<tr>
+<td>halted</td>
+<td>logic [NrHarts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>resumeack</td>
+<td>logic [NrHarts-1:0]</td>
+<td>logic [NrHarts-1:0]               running;</td>
+</tr>
+<tr>
+<td>haltreq</td>
+<td>logic [NrHarts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>resumereq</td>
+<td>logic [NrHarts-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>clear_resumeack</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd</td>
+<td>dm::command_t</td>
+<td></td>
+</tr>
+<tr>
+<td>cmderror_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cmderror</td>
+<td>dm::cmderr_e</td>
+<td></td>
+</tr>
+<tr>
+<td>cmdbusy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>progbuf</td>
+<td>logic [dm::ProgBufSize-1:0][31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>data_csrs_mem</td>
+<td>logic [dm::DataCount-1:0][31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>data_mem_csrs</td>
+<td>logic [dm::DataCount-1:0][31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>data_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>hartsel</td>
+<td>logic [19:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sbaddress_csrs_sba</td>
+<td>logic [BusWidth-1:0]</td>
+<td>System Bus Access Module</td>
+</tr>
+<tr>
+<td>sbaddress_sba_csrs</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sbaddress_write_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbreadonaddr</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbautoincrement</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbaccess</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sbreadondata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbdata_write</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sbdata_read_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbdata_write_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbdata_read</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>sbdata_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sbbusy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sberror_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>sberror</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_req</td>
+<td>dm::dmi_req_t</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_rsp</td>
+<td>dm::dmi_resp_t</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_req_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_req_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_rsp_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_rsp_ready</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dmi_rst_n</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>testmode</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>host_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>host_add</td>
+<td>logic   [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>host_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>host_wdata</td>
+<td>logic   [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>host_be</td>
+<td>logic [BusWidth/8-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>host_gnt</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>host_r_valid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>host_r_rdata</td>
+<td>logic   [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>host_r_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_host_r_err</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>be</td>
+<td>logic [BusWidth/8-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>wdata</td>
+<td>logic   [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rdata</td>
+<td>logic   [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>rvalid</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>addr_b</td>
+<td>logic [BusWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>addr_w</td>
+<td>logic [AddressWidthWords-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>tck_muxed</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>trst_n_muxed</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>en_ifetch</td>
+<td>tlul_pkg::tl_instr_en_e</td>
+<td></td>
+</tr>
+<tr>
+<td>hw_debug_en</td>
+<td>lc_ctrl_pkg::lc_tx_t [0:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BusWidth</td>
+<td>int</td>
+<td>32</td>
+<td>Currently only 32 bit busses are supported by our TL-UL IP</td>
+</tr>
+<tr>
+<td>SelectableHarts</td>
+<td>logic [NrHarts-1:0]</td>
+<td>undefined</td>
+<td>all harts have contiguous IDs</td>
+</tr>
+<tr>
+<td>DebugHartInfo</td>
+<td>dm::hartinfo_t</td>
+<td>undefined</td>
+<td>static debug hartinfo</td>
+</tr>
+<tr>
+<td>AddressWidthWords</td>
+<td>int unsigned</td>
+<td>BusWidth - $clog2(BusWidth/8)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
+<li>i_dm_csrs: dm_csrs</li>
+</ul><ul>
+<li>i_dm_sba: dm_sba</li>
+</ul><ul>
+<li>tl_adapter_host_sba: tlul_adapter_host</li>
+</ul><ul>
+<li>i_dm_mem: dm_mem</li>
+</ul><ul>
+<li>u_prim_clock_mux2: prim_clock_mux2</li>
+</ul><ul>
+<li>u_prim_rst_n_mux2: prim_clock_mux2</li>
+</ul><ul>
+<li>dap: dmi_jtag</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+JTAG TAP</p></div><ul>
+<li>u_lc_en_sync: prim_lc_sync</li>
+</ul><ul>
+<li>tl_adapter_device_mem: tlul_adapter_sram</li>
+</ul><br><br><br><br><br><br>

@@ -1,0 +1,987 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=arp_Wrapper><h1 id="entity-arp_wrapper">Entity: arp_Wrapper</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1108.3333333333333 570"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="198.33333333333331,0 213.33333333333331,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="760" height="110" fill="black" x="213.33333333333331" y="0"></rect><rect id="SvgjsRect1007" width="756" height="105" fill="#bdecb6" x="215.33333333333331" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="193.33333333333331" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   FREQ </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="228.33333333333331" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   CLOCK_FREQ </tspan></text><line id="SvgjsLine1012" x1="198.33333333333331" y1="15" x2="213.33333333333331" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="193.33333333333331" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_NET_MAC_ADDRESS </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="228.33333333333331" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   INTERFACE_MACADDRESS </tspan></text><line id="SvgjsLine1017" x1="198.33333333333331" y1="35" x2="213.33333333333331" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="193.33333333333331" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_NET_IPV4_ADDRESS_VECTOR </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="228.33333333333331" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   INITIAL_IPV4ADDRESSES </tspan></text><line id="SvgjsLine1022" x1="198.33333333333331" y1="55" x2="213.33333333333331" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="193.33333333333331" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_NET_ARP_ARPCACHE_VECTOR </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="228.33333333333331" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   INITIAL_ARPCACHE_CONTENT </tspan></text><line id="SvgjsLine1027" x1="198.33333333333331" y1="75" x2="213.33333333333331" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="193.33333333333331" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   time </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="228.33333333333331" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   APR_REQUEST_TIMEOUT </tspan></text><line id="SvgjsLine1032" x1="198.33333333333331" y1="95" x2="213.33333333333331" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1033" width="760" height="450" fill="black" x="213.33333333333331" y="115"></rect><rect id="SvgjsRect1034" width="756" height="445" fill="#fdfd96" x="215.33333333333331" y="117"></rect><text id="SvgjsText1035" font-family="Helvetica" x="193.33333333333331" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="228.33333333333331" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Clock </tspan></text><line id="SvgjsLine1039" x1="198.33333333333331" y1="130" x2="213.33333333333331" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="193.33333333333331" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="228.33333333333331" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Reset </tspan></text><line id="SvgjsLine1044" x1="198.33333333333331" y1="150" x2="213.33333333333331" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="193.33333333333331" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="228.33333333333331" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   IPPool_Announce </tspan></text><line id="SvgjsLine1049" x1="198.33333333333331" y1="170" x2="213.33333333333331" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="193.33333333333331" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="228.33333333333331" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_Lookup </tspan></text><line id="SvgjsLine1054" x1="198.33333333333331" y1="190" x2="213.33333333333331" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="193.33333333333331" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="228.33333333333331" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_IPv4Address_Data </tspan></text><line id="SvgjsLine1059" x1="198.33333333333331" y1="210" x2="213.33333333333331" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="193.33333333333331" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="228.33333333333331" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_MACAddress_rst </tspan></text><line id="SvgjsLine1064" x1="198.33333333333331" y1="230" x2="213.33333333333331" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="193.33333333333331" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="228.33333333333331" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_MACAddress_nxt </tspan></text><line id="SvgjsLine1069" x1="198.33333333333331" y1="250" x2="213.33333333333331" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="193.33333333333331" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="228.33333333333331" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Ack </tspan></text><line id="SvgjsLine1074" x1="198.33333333333331" y1="270" x2="213.33333333333331" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="193.33333333333331" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="228.33333333333331" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Meta_rst </tspan></text><line id="SvgjsLine1079" x1="198.33333333333331" y1="290" x2="213.33333333333331" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="193.33333333333331" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="228.33333333333331" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1084" x1="198.33333333333331" y1="310" x2="213.33333333333331" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="193.33333333333331" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="228.33333333333331" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Valid </tspan></text><line id="SvgjsLine1089" x1="198.33333333333331" y1="330" x2="213.33333333333331" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="193.33333333333331" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="228.33333333333331" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Data </tspan></text><line id="SvgjsLine1094" x1="198.33333333333331" y1="350" x2="213.33333333333331" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="193.33333333333331" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="228.33333333333331" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_SOF </tspan></text><line id="SvgjsLine1099" x1="198.33333333333331" y1="370" x2="213.33333333333331" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="193.33333333333331" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="228.33333333333331" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_EOF </tspan></text><line id="SvgjsLine1104" x1="198.33333333333331" y1="390" x2="213.33333333333331" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="193.33333333333331" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="228.33333333333331" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Meta_SrcMACAddress_Data </tspan></text><line id="SvgjsLine1109" x1="198.33333333333331" y1="410" x2="213.33333333333331" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="193.33333333333331" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="228.33333333333331" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1114" x1="198.33333333333331" y1="430" x2="213.33333333333331" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="193.33333333333331" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="228.33333333333331" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Valid </tspan></text><line id="SvgjsLine1119" x1="198.33333333333331" y1="450" x2="213.33333333333331" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="193.33333333333331" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="228.33333333333331" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Data </tspan></text><line id="SvgjsLine1124" x1="198.33333333333331" y1="470" x2="213.33333333333331" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="193.33333333333331" y="469.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="228.33333333333331" y="469.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_SOF </tspan></text><line id="SvgjsLine1129" x1="198.33333333333331" y1="490" x2="213.33333333333331" y2="490" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="193.33333333333331" y="489.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="228.33333333333331" y="489.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_EOF </tspan></text><line id="SvgjsLine1134" x1="198.33333333333331" y1="510" x2="213.33333333333331" y2="510" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="193.33333333333331" y="509.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="228.33333333333331" y="509.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Meta_SrcMACAddress_Data </tspan></text><line id="SvgjsLine1139" x1="198.33333333333331" y1="530" x2="213.33333333333331" y2="530" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="193.33333333333331" y="529.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="193.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="228.33333333333331" y="529.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="228.33333333333331" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1144" x1="198.33333333333331" y1="550" x2="213.33333333333331" y2="550" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1145" font-family="Helvetica" x="993.3333333333333" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1147" font-family="Helvetica" x="958.3333333333333" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1148" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   IPPool_Announced </tspan></text><line id="SvgjsLine1149" x1="973.3333333333333" y1="130" x2="988.3333333333333" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1150" font-family="Helvetica" x="993.3333333333333" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1151" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1152" font-family="Helvetica" x="958.3333333333333" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1153" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_IPv4Address_rst </tspan></text><line id="SvgjsLine1154" x1="973.3333333333333" y1="150" x2="988.3333333333333" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1155" font-family="Helvetica" x="993.3333333333333" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1156" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1157" font-family="Helvetica" x="958.3333333333333" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1158" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_IPv4Address_nxt </tspan></text><line id="SvgjsLine1159" x1="973.3333333333333" y1="170" x2="988.3333333333333" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1160" font-family="Helvetica" x="993.3333333333333" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1161" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1162" font-family="Helvetica" x="958.3333333333333" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1163" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_Valid </tspan></text><line id="SvgjsLine1164" x1="973.3333333333333" y1="190" x2="988.3333333333333" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1165" font-family="Helvetica" x="993.3333333333333" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1166" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1167" font-family="Helvetica" x="958.3333333333333" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1168" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   IPCache_MACAddress_Data </tspan></text><line id="SvgjsLine1169" x1="973.3333333333333" y1="210" x2="988.3333333333333" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1170" font-family="Helvetica" x="993.3333333333333" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1171" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1172" font-family="Helvetica" x="958.3333333333333" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1173" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Valid </tspan></text><line id="SvgjsLine1174" x1="973.3333333333333" y1="230" x2="988.3333333333333" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1175" font-family="Helvetica" x="993.3333333333333" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1176" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1177" font-family="Helvetica" x="958.3333333333333" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1178" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Data </tspan></text><line id="SvgjsLine1179" x1="973.3333333333333" y1="250" x2="988.3333333333333" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1180" font-family="Helvetica" x="993.3333333333333" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1181" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1182" font-family="Helvetica" x="958.3333333333333" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1183" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_SOF </tspan></text><line id="SvgjsLine1184" x1="973.3333333333333" y1="270" x2="988.3333333333333" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1185" font-family="Helvetica" x="993.3333333333333" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1186" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1187" font-family="Helvetica" x="958.3333333333333" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1188" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_EOF </tspan></text><line id="SvgjsLine1189" x1="973.3333333333333" y1="290" x2="988.3333333333333" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1190" font-family="Helvetica" x="993.3333333333333" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1191" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   T_SLV_8 </tspan></text><text id="SvgjsText1192" font-family="Helvetica" x="958.3333333333333" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1193" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_TX_Meta_DestMACAddress_Data </tspan></text><line id="SvgjsLine1194" x1="973.3333333333333" y1="310" x2="988.3333333333333" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1195" font-family="Helvetica" x="993.3333333333333" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1196" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1197" font-family="Helvetica" x="958.3333333333333" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1198" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Ack </tspan></text><line id="SvgjsLine1199" x1="973.3333333333333" y1="330" x2="988.3333333333333" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1200" font-family="Helvetica" x="993.3333333333333" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1201" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1202" font-family="Helvetica" x="958.3333333333333" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1203" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Meta_rst </tspan></text><line id="SvgjsLine1204" x1="973.3333333333333" y1="350" x2="988.3333333333333" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1205" font-family="Helvetica" x="993.3333333333333" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1206" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1207" font-family="Helvetica" x="958.3333333333333" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1208" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Meta_SrcMACAddress_nxt </tspan></text><line id="SvgjsLine1209" x1="973.3333333333333" y1="370" x2="988.3333333333333" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1210" font-family="Helvetica" x="993.3333333333333" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1211" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1212" font-family="Helvetica" x="958.3333333333333" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1213" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_UC_RX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1214" x1="973.3333333333333" y1="390" x2="988.3333333333333" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1215" font-family="Helvetica" x="993.3333333333333" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1216" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1217" font-family="Helvetica" x="958.3333333333333" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1218" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Ack </tspan></text><line id="SvgjsLine1219" x1="973.3333333333333" y1="410" x2="988.3333333333333" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1220" font-family="Helvetica" x="993.3333333333333" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1221" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1222" font-family="Helvetica" x="958.3333333333333" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1223" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Meta_rst </tspan></text><line id="SvgjsLine1224" x1="973.3333333333333" y1="430" x2="988.3333333333333" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1225" font-family="Helvetica" x="993.3333333333333" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1226" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1227" font-family="Helvetica" x="958.3333333333333" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1228" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Meta_SrcMACAddress_nxt </tspan></text><line id="SvgjsLine1229" x1="973.3333333333333" y1="450" x2="988.3333333333333" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1230" font-family="Helvetica" x="993.3333333333333" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1231" dy="26" x="993.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1232" font-family="Helvetica" x="958.3333333333333" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1233" dy="26" x="958.3333333333333" svgjs:data="{&quot;newLined&quot;:true}">   Eth_BC_RX_Meta_DestMACAddress_nxt </tspan></text><line id="SvgjsLine1234" x1="973.3333333333333" y1="470" x2="988.3333333333333" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>EMACS settings: -<em>-  tab-width: 2; indent-tabs-mode: t -</em>- vim: tabstop=2:shiftwidth=2:noexpandtab kate: tab-width 2; replace-tabs off; indent-width 2; ============================================================================= Authors:                    Patrick Lehmann Entity:                    TODO Description:</p><hr /><p>.. TODO:: No documentation available. License: ============================================================================= Copyright 2007-2015 Technische Universitaet Dresden - Germany Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. =============================================================================</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLOCK_FREQ</td>
+<td>FREQ</td>
+<td>125 MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>INTERFACE_MACADDRESS</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td>C_NET_MAC_ADDRESS_EMPTY</td>
+<td></td>
+</tr>
+<tr>
+<td>INITIAL_IPV4ADDRESSES</td>
+<td>T_NET_IPV4_ADDRESS_VECTOR</td>
+<td>(0 =&gt; C_NET_IPV4_ADDRESS_EMPTY)</td>
+<td></td>
+</tr>
+<tr>
+<td>INITIAL_ARPCACHE_CONTENT</td>
+<td>T_NET_ARP_ARPCACHE_VECTOR</td>
+<td>(0 =&gt; (Tag =&gt; C_NET_IPV4_ADDRESS_EMPTY, MAC =&gt; C_NET_MAC_ADDRESS_EMPTY))</td>
+<td></td>
+</tr>
+<tr>
+<td>APR_REQUEST_TIMEOUT</td>
+<td>time</td>
+<td>100 ms</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Announce</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Announced</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_Lookup</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_IPv4Address_rst</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_IPv4Address_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_IPv4Address_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_Valid</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_MACAddress_rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_MACAddress_nxt</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPCache_MACAddress_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Valid</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_SOF</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_EOF</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Ack</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Meta_rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Meta_DestMACAddress_nxt</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_TX_Meta_DestMACAddress_Data</td>
+<td>out</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Valid</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_SOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_EOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Ack</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Meta_rst</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Meta_SrcMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Meta_SrcMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Meta_DestMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_UC_RX_Meta_DestMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Valid</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_SOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_EOF</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Ack</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Meta_rst</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Meta_SrcMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Meta_SrcMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Meta_DestMACAddress_nxt</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>Eth_BC_RX_Meta_DestMACAddress_Data</td>
+<td>in</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARPCache_Command</td>
+<td>T_NET_ARP_ARPCACHE_COMMAND</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Command</td>
+<td>T_NET_ARP_IPPOOL_COMMAND</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Announce_l</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Announced_i</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_State</td>
+<td>T_FSMPOOL_STATE</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_NextState</td>
+<td>T_FSMPOOL_STATE</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_MACSeq1_SenderMACAddress_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_MACSeq1_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_BCRcv_Clear</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_BCRcv_Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_BCRcv_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_BCRcv_SenderIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_BCRcv_TargetIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_Command</td>
+<td>T_NET_ARP_IPPOOL_COMMAND</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_NewIPv4Address_Data</td>
+<td>T_NET_IPV4_ADDRESS</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_NewMACAddress_Data</td>
+<td>T_NET_MAC_ADDRESS</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_IPPool_Lookup</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_IPPool_IPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_UCRsp_SendResponse</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_UCRsp_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_UCRsp_SenderIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_UCRsp_TargetMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMPool_UCRsp_TargetIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MACSeq1_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td>Sender MACAddress sequencer</td>
+</tr>
+<tr>
+<td>BCRcv_Error</td>
+<td>std_logic</td>
+<td>broadcast receiver</td>
+</tr>
+<tr>
+<td>BCRcv_RequestReceived</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCRcv_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>BCRcv_SenderIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>BCRcv_TargetIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_Insert</td>
+<td>std_logic</td>
+<td>ippool</td>
+</tr>
+<tr>
+<td>IPPool_UCRsp_SendResponse</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_IPv4Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_IPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>IPPool_PoolResult</td>
+<td>T_CACHE_RESULT</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_Complete</td>
+<td>std_logic</td>
+<td>unicast responder</td>
+</tr>
+<tr>
+<td>UCRsp_Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_SenderIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TargetMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TargetIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_SOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_EOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Meta_DestMACAddress_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Meta_DestMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRsp_TX_Meta_DestMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_State</td>
+<td>T_FSMCACHE_STATE</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_NextState</td>
+<td>T_FSMCACHE_STATE</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_Command</td>
+<td>T_NET_ARP_ARPCACHE_COMMAND</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_NewIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_NewMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_MACSeq2_SenderMACAddress_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_MACSeq2_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_IPSeq2_SenderIPv4Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_IPSeq2_SenderIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_Clear</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_SenderIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_TargetMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_UCRcv_TargetIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_Lookup</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_IPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_MACAddress_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPCache_MACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_BCReq_SendRequest</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_BCReq_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_BCReq_SenderIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_BCReq_TargetMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_BCReq_TargetIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>MACSeq2_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td>Sender ***Address sequencer</td>
+</tr>
+<tr>
+<td>IPSeq2_SenderIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>FSMCache_ARPReq_TimeoutCounter_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPReq_TimeoutCounter_s</td>
+<td>signed(ARPREQ_TIMEOUTCOUNTER_BITS downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPReq_Timeout</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRcv_Error</td>
+<td>std_logic</td>
+<td>unicast receiver</td>
+</tr>
+<tr>
+<td>UCRcv_ResponseReceived</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRcv_SenderMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRcv_SenderIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRcv_TargetMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>UCRcv_TargetIPv4Address_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_Status</td>
+<td>T_NET_ARP_ARPCACHE_STATUS</td>
+<td>arp cache</td>
+</tr>
+<tr>
+<td>ARPCache_NewMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_NewIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_CacheResult</td>
+<td>T_CACHE_RESULT</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_IPv4Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_IPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ARPCache_MACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_Complete</td>
+<td>std_logic</td>
+<td>broadcast requester</td>
+</tr>
+<tr>
+<td>BCReq_Address_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_SenderMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_SenderIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TargetMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TargetIPv4Address_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_SOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_EOF</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Meta_DestMACAddress_rst</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Meta_DestMACAddress_nxt</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>BCReq_TX_Meta_DestMACAddress_Data</td>
+<td>T_SLV_8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARPREQ_TIMEOUTCOUNTER_MAX</td>
+<td>positive</td>
+<td>TimingToCycles(APR_REQUEST_TIMEOUT, CLOCK_FREQ)</td>
+<td>ARP request timeout counter</td>
+</tr>
+<tr>
+<td>ARPREQ_TIMEOUTCOUNTER_BITS</td>
+<td>positive</td>
+<td>log2ceilnz(ARPREQ_TIMEOUTCOUNTER_MAX)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T_FSMPOOL_STATE</td>
+<td>( ST_IDLE, ST_IPPOOL_WAIT, ST_SEND_RESPONSE, ST_SEND_ANNOUNCE, ST_ERROR )</td>
+<td></td>
+</tr>
+<tr>
+<td>T_FSMCACHE_STATE</td>
+<td>( ST_IDLE, ST_CACHE, ST_CACHE_WAIT, ST_READ_CACHE, ST_SEND_BROADCAST_REQUEST, ST_SEND_BROADCAST_REQUEST_WAIT, ST_WAIT_FOR_UNICAST_RESPONSE, ST_UPDATE_CACHE, ST_ERROR )</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( FSMPool_State,<br />
+                IPPool_Announce_l,<br />
+                MACSeq1_SenderMACAddress_Data,<br />
+                BCRcv_RequestReceived, BCRcv_Error, BCRcv_SenderMACAddress_Data, BCRcv_SenderIPv4Address_Data, BCRcv_TargetIPv4Address_Data,<br />
+                IPPool_PoolResult, IPPool_IPv4Address_nxt,<br />
+                UCRsp_Address_rst, UCRsp_SenderMACAddress_nxt, UCRsp_SenderIPv4Address_nxt, UCRsp_TargetMACAddress_nxt, UCRsp_TargetIPv4Address_nxt, UCRsp_Complete )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+sequencer</p></div><ul>
+<li>unnamed: ( Clock )</li>
+</ul><ul>
+<li>unnamed: ( FSMCache_State,<br />
+                IPCache_Lookup, IPCache_IPv4Address_Data,   IPCache_MACAddress_rst, IPCache_MACAddress_nxt,<br />
+                MACSeq2_SenderMACAddress_Data, IPSeq2_SenderIPv4Address_Data, ARPReq_Timeout,<br />
+                UCRcv_Error, UCRcv_ResponseReceived, UCRcv_SenderIPv4Address_Data, UCRcv_SenderMACAddress_Data, UCRcv_TargetIPv4Address_Data, UCRcv_TargetMACAddress_Data,<br />
+                ARPCache_Status, ARPCache_CacheResult, ARPCache_IPv4Address_rst, ARPCache_IPv4Address_nxt, ARPCache_MACAddress_Data, ARPCache_NewMACAddress_nxt, ARPCache_NewIPv4Address_nxt,<br />
+                BCReq_Address_rst, BCReq_SenderMACAddress_nxt, BCReq_SenderIPv4Address_nxt, BCReq_TargetMACAddress_nxt, BCReq_TargetIPv4Address_nxt, BCReq_Complete )</li>
+</ul><ul>
+<li>unnamed: ( Clock )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ARP request expiration timer</p></div><h2 id="instantiations">Instantiations</h2><ul>
+<li>MACSeq1: PoC.misc_Sequencer</li>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="responder-path">Responder Path</h1></div><ul>
+<li>BCRcv: PoC.arp_BroadCast_Receiver</li>
+</ul><ul>
+<li>IPPool: PoC.arp_IPPool</li>
+</ul><ul>
+<li>UCRsp: PoC.arp_UniCast_Responder</li>
+</ul><ul>
+<li>MACSeq2: PoC.misc_Sequencer</li>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="arpcache-path">ARPCache Path</h1></div><ul>
+<li>IPSeq2: PoC.misc_Sequencer</li>
+</ul><ul>
+<li>UCRcv: PoC.arp_UniCast_Receiver</li>
+</ul><ul>
+<li>ARPCache: PoC.arp_Cache</li>
+</ul><ul>
+<li>BCReq: PoC.arp_BroadCast_Requester</li>
+</ul><br><br><br><br><br><br>

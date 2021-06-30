@@ -6,12 +6,13 @@
     margin-right: auto
   }
   svg {
+    width:68%;
+    height:30%;
     display:block;  
-    width:60%;
     margin-left: auto;
     margin-right: auto
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     margin-left:1.5%;
     width:98%;
     font-weight:bold
@@ -166,7 +167,7 @@
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
-<td>x"01050706"</td>
+<td>x"01050707"</td>
 <td>no touchy!</td>
 </tr>
 <tr>
@@ -570,6 +571,18 @@
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffffebc"</td>
 <td></td>
+</tr>
+<tr>
+<td>slink_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffec0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>slink_size_c</td>
+<td>natural</td>
+<td>16*4</td>
+<td>module's address space size in bytes</td>
 </tr>
 <tr>
 <td>gpio_base_c</td>

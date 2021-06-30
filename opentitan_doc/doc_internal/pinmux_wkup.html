@@ -1,0 +1,310 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=pinmux_wkup><h1 id="entity-pinmux_wkup">Entity: pinmux_wkup</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 715 270"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="225,0 240,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="430" height="30" fill="black" x="240" y="0"></rect><rect id="SvgjsRect1007" width="426" height="25" fill="#bdecb6" x="242" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="220" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="255" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   Cycles </tspan></text><line id="SvgjsLine1012" x1="225" y1="15" x2="240" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="430" height="230" fill="black" x="240" y="35"></rect><rect id="SvgjsRect1014" width="426" height="225" fill="#fdfd96" x="242" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="220" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="255" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1019" x1="225" y1="50" x2="240" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="220" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="255" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1024" x1="225" y1="70" x2="240" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="220" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="255" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_aon_i </tspan></text><line id="SvgjsLine1029" x1="225" y1="90" x2="240" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="220" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="255" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_aon_ni </tspan></text><line id="SvgjsLine1034" x1="225" y1="110" x2="240" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="220" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="255" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   wkup_en_i </tspan></text><line id="SvgjsLine1039" x1="225" y1="130" x2="240" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="220" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="255" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   filter_en_i </tspan></text><line id="SvgjsLine1044" x1="225" y1="150" x2="240" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="220" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   wkup_mode_e </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="255" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   wkup_mode_i </tspan></text><line id="SvgjsLine1049" x1="225" y1="170" x2="240" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="220" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [WkupCntWidth-1:0] </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="255" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   wkup_cnt_th_i </tspan></text><line id="SvgjsLine1054" x1="225" y1="190" x2="240" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="220" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="255" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   pin_value_i </tspan></text><line id="SvgjsLine1059" x1="225" y1="210" x2="240" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="220" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="255" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   wkup_cause_valid_i </tspan></text><line id="SvgjsLine1064" x1="225" y1="230" x2="240" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="220" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="255" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   wkup_cause_data_i </tspan></text><line id="SvgjsLine1069" x1="225" y1="250" x2="240" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="690" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="655" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   wkup_cause_data_o </tspan></text><line id="SvgjsLine1074" x1="670" y1="50" x2="685" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="690" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="655" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   aon_wkup_req_o </tspan></text><line id="SvgjsLine1079" x1="670" y1="70" x2="685" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cycles</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_aon_i</td>
+<td>input</td>
+<td></td>
+<td>Always on clock / reset</td>
+</tr>
+<tr>
+<td>rst_aon_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_en_i</td>
+<td>input</td>
+<td></td>
+<td>These signals get synchronized to theslow AON clock within this module. Note that wkup_en_i is assumed to be level encoded.</td>
+</tr>
+<tr>
+<td>filter_en_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_mode_i</td>
+<td>input</td>
+<td>wkup_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_cnt_th_i</td>
+<td>input</td>
+<td>[WkupCntWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pin_value_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_cause_valid_i</td>
+<td>input</td>
+<td></td>
+<td>Signals to/from cause register.They are synched to/from the AON clock internally</td>
+</tr>
+<tr>
+<td>wkup_cause_data_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_cause_data_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_req_o</td>
+<td>output</td>
+<td></td>
+<td>This signal is running on the AON clockand is held high as long as the cause register has not been cleared.</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aon_wkup_mode_q</td>
+<td>wkup_mode_e</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_filter_en_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_en_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_en_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cnt_th_q</td>
+<td>logic [WkupCntWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_filter_out</td>
+<td>logic</td>
+<td>This uses a lower value for filtering than GPIO since the always-on clock is slower. This can be disabled, in which case the signal is just combinationally bypassed.</td>
+</tr>
+<tr>
+<td>aon_filter_out_d</td>
+<td>logic</td>
+<td>This uses a lower value for filtering than GPIO since the always-on clock is slower. This can be disabled, in which case the signal is just combinationally bypassed.</td>
+</tr>
+<tr>
+<td>aon_filter_out_q</td>
+<td>logic</td>
+<td>This uses a lower value for filtering than GPIO since the always-on clock is slower. This can be disabled, in which case the signal is just combinationally bypassed.</td>
+</tr>
+<tr>
+<td>aon_rising</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_falling</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_cnt_en</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_cnt_eq_th</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_cnt_d</td>
+<td>logic [WkupCntWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_cnt_q</td>
+<td>logic [WkupCntWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_pulse</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_valid</td>
+<td>logic</td>
+<td>to AON domain</td>
+</tr>
+<tr>
+<td>aon_wkup_cause_data</td>
+<td>logic</td>
+<td>to AON domain</td>
+</tr>
+<tr>
+<td>aon_wkup_cause_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>p_sync: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>p_mode: (  )</li>
+</ul><ul>
+<li>p_aon_pattern: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><ul>
+<li>p_aon_cause: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
+<li>i_prim_flop_2sync_config: prim_flop_2sync</li>
+</ul><ul>
+<li>i_prim_filter: prim_filter</li>
+</ul><ul>
+<li>i_prim_flop_2sync_filter: prim_flop_2sync</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Run this through a 2 stage synchronizer to<br />
+prevent metastability.</p></div><ul>
+<li>i_prim_flop_2sync_cause_in: prim_flop_2sync</li>
+</ul><ul>
+<li>i_prim_pulse_sync_cause: prim_pulse_sync</li>
+</ul><ul>
+<li>i_prim_flop_2sync_cause_out: prim_flop_2sync</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+output to CSR</p></div><br><br><br><br><br><br>

@@ -1,0 +1,256 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=prim_sync_reqack><h1 id="entity-prim_sync_reqack">Entity: prim_sync_reqack</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 381.6666666666667 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="51.66666666666667,0 66.66666666666667,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="30" fill="black" x="66.66666666666667" y="0"></rect><rect id="SvgjsRect1007" width="266" height="25" fill="#bdecb6" x="68.66666666666667" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="46.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="81.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   EnReqStabA </tspan></text><line id="SvgjsLine1012" x1="51.66666666666667" y1="15" x2="66.66666666666667" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="270" height="130" fill="black" x="66.66666666666667" y="35"></rect><rect id="SvgjsRect1014" width="266" height="125" fill="#fdfd96" x="68.66666666666667" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="46.66666666666667" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="81.66666666666667" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   clk_src_i </tspan></text><line id="SvgjsLine1019" x1="51.66666666666667" y1="50" x2="66.66666666666667" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="46.66666666666667" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="81.66666666666667" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   rst_src_ni </tspan></text><line id="SvgjsLine1024" x1="51.66666666666667" y1="70" x2="66.66666666666667" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="46.66666666666667" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="81.66666666666667" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   clk_dst_i </tspan></text><line id="SvgjsLine1029" x1="51.66666666666667" y1="90" x2="66.66666666666667" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="46.66666666666667" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="81.66666666666667" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   rst_dst_ni </tspan></text><line id="SvgjsLine1034" x1="51.66666666666667" y1="110" x2="66.66666666666667" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="46.66666666666667" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="81.66666666666667" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   src_req_i </tspan></text><line id="SvgjsLine1039" x1="51.66666666666667" y1="130" x2="66.66666666666667" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="46.66666666666667" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="81.66666666666667" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   dst_ack_i </tspan></text><line id="SvgjsLine1044" x1="51.66666666666667" y1="150" x2="66.66666666666667" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="356.6666666666667" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="356.6666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="321.6666666666667" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="321.6666666666667" svgjs:data="{&quot;newLined&quot;:true}">   src_ack_o </tspan></text><line id="SvgjsLine1049" x1="336.6666666666667" y1="50" x2="351.6666666666667" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="356.6666666666667" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="356.6666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="321.6666666666667" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="321.6666666666667" svgjs:data="{&quot;newLined&quot;:true}">   dst_req_o </tspan></text><line id="SvgjsLine1054" x1="336.6666666666667" y1="70" x2="351.6666666666667" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors. Licensed under the Apache License, Version 2.0, see LICENSE for details. SPDX-License-Identifier: Apache-2.0 REQ/ACK synchronizer This module synchronizes a REQ/ACK handshake across a clock domain crossing. Both domains will see a handshake with the duration of one clock cycle. Notes:</p><ul><li>Once asserted, the source (SRC) domain is not allowed to de-assert REQ without ACK.</li><li>The destination (DST) domain is not allowed to send an ACK without a REQ.</li><li>This module works both when syncing from a faster to a slower clock domain and vice versa.</li><li>Internally, this module uses a non-return-to-zero, two-phase handshake protocol. Assuming theDST domain responds with an ACK immediately, the latency from asserting the REQ in theSRC domain is:</li><li>1 source + 2 destination clock cycles until the handshake is performed in the DST domain,</li><li>1 source + 2 destination + 1 destination + 2 source clock cycles until the handshake isperformed in the SRC domain.For further information, see Section 8.2.4 in H. Kaeslin, "Top-Down Digital VLSI Design: FromArchitecture to Gate-Level Circuits and FPGAs", 2015.</li></ul></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EnReqStabA</td>
+<td>bit</td>
+<td>1</td>
+<td>Non-functional parameter to switch on the request stability assertion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk_src_i</td>
+<td>input</td>
+<td></td>
+<td>REQ side, SRC domain</td>
+</tr>
+<tr>
+<td>rst_src_ni</td>
+<td>input</td>
+<td></td>
+<td>REQ side, SRC domain</td>
+</tr>
+<tr>
+<td>clk_dst_i</td>
+<td>input</td>
+<td></td>
+<td>ACK side, DST domain</td>
+</tr>
+<tr>
+<td>rst_dst_ni</td>
+<td>input</td>
+<td></td>
+<td>ACK side, DST domain</td>
+</tr>
+<tr>
+<td>src_req_i</td>
+<td>input</td>
+<td></td>
+<td>REQ side, SRC domain</td>
+</tr>
+<tr>
+<td>src_ack_o</td>
+<td>output</td>
+<td></td>
+<td>REQ side, SRC domain</td>
+</tr>
+<tr>
+<td>dst_req_o</td>
+<td>output</td>
+<td></td>
+<td>ACK side, DST domain</td>
+</tr>
+<tr>
+<td>dst_ack_i</td>
+<td>input</td>
+<td></td>
+<td>ACK side, DST domain</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src_fsm_ns</td>
+<td>sync_reqack_fsm_e</td>
+<td></td>
+</tr>
+<tr>
+<td>src_fsm_cs</td>
+<td>sync_reqack_fsm_e</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_fsm_ns</td>
+<td>sync_reqack_fsm_e</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_fsm_cs</td>
+<td>sync_reqack_fsm_e</td>
+<td></td>
+</tr>
+<tr>
+<td>src_req_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>src_req_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>src_ack</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_ack_d</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_ack_q</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_req</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>src_handshake</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_handshake</td>
+<td>logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sync_reqack_fsm_e</td>
+<td>enum logic {     EVEN, ODD   }</td>
+<td>Types</td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>src_fsm: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+REQ-side FSM (SRC domain)</p></div><ul>
+<li>dst_fsm: (  )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ACK-side FSM (DST domain)</p></div><ul>
+<li>unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Registers</p></div><ul>
+<li>unnamed: ( @(posedge clk_dst_i or negedge rst_dst_ni) )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
+<li>req_sync: prim_flop_2sync</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Move REQ over to DST domain.</p></div><ul>
+<li>ack_sync: prim_flop_2sync</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Move ACK over to SRC domain.</p></div><br><br><br><br><br><br>
