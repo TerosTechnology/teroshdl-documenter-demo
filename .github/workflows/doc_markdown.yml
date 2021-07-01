@@ -22,8 +22,7 @@ jobs:
         sudo npm install -g .
 
     - name: 'Generate documentation Markdown'
-      run: |
-        python3 generate_doc.py markdown
+      run: ./generate_doc.py markdown
 
     - name: '📤 Upload artifact: Markdown'
       uses: actions/upload-artifact@master

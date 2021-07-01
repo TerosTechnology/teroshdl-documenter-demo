@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Copyright 2021 Teros Technology
 #
 # Ismael Perez Rojo ismaelprojo@gmail.com
