@@ -1,8 +1,7 @@
 name: 'Documentation Markdown'
 on:
   push:
-    branches:
-      - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -34,7 +33,8 @@ jobs:
           teroshdl_doc
 
     - name: Deploy 🚀
+      if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/'))
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         branch: documentation-markdown
-        folder: teroshdl_doc 
+        folder: teroshdl_doc

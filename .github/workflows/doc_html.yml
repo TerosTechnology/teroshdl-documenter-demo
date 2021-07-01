@@ -1,8 +1,7 @@
 name: 'Documentation HTML'
 on:
   push:
-    branches:
-      - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -34,7 +33,8 @@ jobs:
           teroshdl_doc
 
     - name: Deploy 🚀
+      if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/'))
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages 
-        folder: teroshdl_doc 
+        branch: gh-pages
+        folder: teroshdl_doc
