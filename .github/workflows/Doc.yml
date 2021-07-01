@@ -1,4 +1,4 @@
-name: 'Documentation Markdown'
+name: 'Documentation'
 on:
   push:
   pull_request:
@@ -7,8 +7,15 @@ on:
 jobs:
 
   BTD:
-    name: '📓 Docs'
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - { format: html,     branch: gh-pages }
+        - { format: markdown, branch: documentation-markdown }
+    name: '📓 Docs | ${{ matrix.format }}'
+
     steps:
 
     - name: '🧰 Checkout'
@@ -21,18 +28,18 @@ jobs:
         cd colibri
         sudo npm install -g .
 
-    - name: '📓 Generate documentation Markdown'
-      run: ./generate_doc.py markdown
+    - name: '📓 Generate documentation ${{ matrix.format }}'
+      run: ./generate_doc.py ${{ matrix.format }}
 
-    - name: '📤 Upload artifact: Markdown'
+    - name: '📤 Upload artifact: ${{ matrix.format }}'
       uses: actions/upload-artifact@master
       with:
-        name: documentation-markdown
+        name: documentation-${{ matrix.format }}
         path: teroshdl_doc
 
     - name: '🚀 Deploy'
       if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/'))
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: documentation-markdown
+        branch: ${{ matrix.branch }}
         folder: teroshdl_doc
