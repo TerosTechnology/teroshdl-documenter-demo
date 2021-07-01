@@ -1,0 +1,93 @@
+
+<style>
+  table {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto
+  }
+  svg {
+    width:68%;
+    height:30%;
+    display:block;  
+    margin-left: auto;
+    margin-right: auto
+  }
+  h1, h2, h3, h4 {
+    margin-left:1.5%;
+    width:98%;
+    font-weight:bold
+  }
+  code {
+    color:#545253;
+  }
+  p {
+    width: 98%;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px 
+  }
+  * {
+    color:black;
+    line-height: 1.6;
+  }
+  li{
+    margin: 20px 0;
+  }
+  #function_return{
+    font-weight: bold;
+    color:green;
+  }
+  #teroshdl_description, li {
+    width: 95%;
+    margin-left:2%;
+    margin-right:2%;
+  }
+  #function_arguments{
+    color:black;
+  }
+  #descriptions{
+    width: 90%;
+    margin-left:5.5%;
+    margin-right:3%;
+  }
+  div.templateTerosHDL {
+    background-color: white;
+    position:absolute;
+  }
+  td, th {
+    padding:2px; 
+    border: 1px solid grey;
+  }
+  th {
+    background-color: #ffd78c;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+</style>
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=ResizePkg><h1 id="package-resizepkg">Package: ResizePkg</h1></a><h2 id="functions">Functions</h2><ul>
+<li>Extend <font id="function_arguments">(A: std_logic_vector; Size : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>Reduce <font id="function_arguments">(A: std_logic_vector; Size : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : std_logic_vector) </font> <font id="function_return">return std_logic_vector_max_c </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural) </font> <font id="function_return">return std_logic_vector_max_c </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>ToTransaction <font id="function_arguments">(A : std_logic_vector) </font> <font id="function_return">return std_logic_vector_max </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ToTransaction and FromTransaction for _max provided to support a common methodology, conversions are not needed</p></div><ul>
+<li>ToTransaction <font id="function_arguments">(A : integer; Size : natural) </font> <font id="function_return">return std_logic_vector_max </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max) </font> <font id="function_return">return std_logic_vector </font></li>
+</ul><ul>
+<li>FromTransaction <font id="function_arguments">(A: std_logic_vector_max) </font> <font id="function_return">return integer </font></li>
+</ul><br><br><br><br><br><br>

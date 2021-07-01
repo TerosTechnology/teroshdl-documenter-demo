@@ -167,7 +167,7 @@
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
-<td>x"01050707"</td>
+<td>x"01050708"</td>
 <td>no touchy!</td>
 </tr>
 <tr>
@@ -585,30 +585,6 @@
 <td>module's address space size in bytes</td>
 </tr>
 <tr>
-<td>gpio_base_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff80"</td>
-<td>base address</td>
-</tr>
-<tr>
-<td>gpio_size_c</td>
-<td>natural</td>
-<td>2*4</td>
-<td>module's address space size in bytes</td>
-</tr>
-<tr>
-<td>gpio_in_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff80"</td>
-<td></td>
-</tr>
-<tr>
-<td>gpio_out_addr_c</td>
-<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff84"</td>
-<td></td>
-</tr>
-<tr>
 <td>trng_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffff88"</td>
@@ -750,6 +726,42 @@
 <td>twi_rtx_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffb4"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>gpio_size_c</td>
+<td>natural</td>
+<td>4*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>gpio_in_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc0"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_in_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc4"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_out_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc8"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_out_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffcc"</td>
 <td></td>
 </tr>
 <tr>

@@ -69,11 +69,26 @@
   }
 </style>
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=RandomPkg><h1 id="package-randompkg">Package: RandomPkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>comment out following 3 lines with VHDL-2008.  Leave in for VHDL-2002<br />
-library ieee_proposed ;                                       -- remove with VHDL-2008<br />
-use ieee_proposed.standard_additions.all ;        -- remove with VHDL-2008<br />
-use ieee_proposed.standard_textio_additions.all ; -- remove with VHDL-2008<br />
-</div></p><h2 id="types">Types</h2>
+<a id=NameStorePkg><h1 id="package-namestorepkg">Package: NameStorePkg</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID_NOT_FOUND</td>
+<td>NameIDType</td>
+<td>(ID =&gt; -1)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
 <table>
 <thead>
 <tr>
@@ -84,34 +99,28 @@ use ieee_proposed.standard_textio_additions.all ; -- remove with VHDL-2008<br />
 </thead>
 <tbody>
 <tr>
-<td>DistRecType</td>
-<td></td>
-<td>Supports DistValInt functionality</td>
-</tr>
-<tr>
-<td>DistType</td>
+<td>NameIDType</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>NaturalVBoolType</td>
-<td></td>
-<td>Weight vectors not indexed by integers</td>
-</tr>
-<tr>
-<td>NaturalVSlType</td>
+<td>NameIDArrayType</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>NaturalVBitType</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>RandomPType</td>
+<td>NameStorePType</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
-</table><br><br><br><br><br><br>
+</table><h2 id="functions">Functions</h2><ul>
+<li>Set <font id="function_arguments">(ID : NameIDType ; NameIn : String) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ impure function NewID     (NameIn : String ; Size : positive ) return NameStoreIDArrayType ;</p></div><ul>
+<li>Clear <font id="function_arguments">(ID : NameIDType) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+clear name</p></div><ul>
+<li>Deallocate <font id="function_arguments">(ID : NameIDType) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+effectively alias to clear name</p></div><br><br><br><br><br><br>
