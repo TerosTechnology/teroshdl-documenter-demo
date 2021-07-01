@@ -8,8 +8,7 @@
 #################################################################################################
 # << NEORV32 - General Purpose Parallel Input/Output Port (GPIO) >>                             #
 # ********************************************************************************************* #
-# 32-bit parallel input & output unit. Any pin change (HI->LO or LO->HI) of an enabled input    #
-# pin (via irq_en register) triggers an IRQ.                                                    #
+# 64-bit general purpose parallel input & output port unit.                                     #
 # ********************************************************************************************* #
 # BSD 3-Clause License                                                                          #
 #                                                                                               #
@@ -52,19 +51,18 @@
 | data_i    | in        | std_ulogic_vector(31 downto 0) | data in              |
 | data_o    | out       | std_ulogic_vector(31 downto 0) | data out             |
 | ack_o     | out       | std_ulogic                     | transfer acknowledge |
-| gpio_o    | out       | std_ulogic_vector(31 downto 0) | parallel io --       |
-| gpio_i    | in        | std_ulogic_vector(31 downto 0) |                      |
-| irq_o     | out       | std_ulogic                     | interrupt --         |
+| gpio_o    | out       | std_ulogic_vector(63 downto 0) | parallel io --       |
+| gpio_i    | in        | std_ulogic_vector(63 downto 0) |                      |
 ## Signals
 
-| Name   | Type                           | Description                           |
-| ------ | ------------------------------ | ------------------------------------- |
-| acc_en | std_ulogic                     | module access enable                  |
-| addr   | std_ulogic_vector(31 downto 0) | access address                        |
-| din    | std_ulogic_vector(31 downto 0) | r/-                                   |
-| dout   | std_ulogic_vector(31 downto 0) | r/w                                   |
-| irq_en | std_ulogic_vector(31 downto 0) | -/w, uses the same address as data_in |
-| in_buf | std_ulogic_vector(31 downto 0) | misc --                               |
+| Name     | Type                           | Description          |
+| -------- | ------------------------------ | -------------------- |
+| acc_en   | std_ulogic                     | module access enable |
+| addr     | std_ulogic_vector(31 downto 0) | access address       |
+| din_lo   | std_ulogic_vector(31 downto 0) | r/-                  |
+|   din_hi | std_ulogic_vector(31 downto 0) | r/-                  |
+| dout_lo  | std_ulogic_vector(31 downto 0) |                      |
+|  dout_hi | std_ulogic_vector(31 downto 0) |                      |
 ## Constants
 
 | Name     | Type    | Value                      | Description               |
@@ -77,9 +75,4 @@
 word aligned
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
-
-- irq_detector: ( clk_i )
-**Description**
-IRQ Detector ------------------------------------------------------------
------------------------------------------------------------------------------
 

@@ -90,7 +90,7 @@
 
 | Name       | Type                           | Description |
 | ---------- | ------------------------------ | ----------- |
-| con_gpio_o | std_ulogic_vector(31 downto 0) |             |
+| con_gpio_o | std_ulogic_vector(63 downto 0) |             |
 ## Instantiations
 
 - neorv32_inst: neorv32.neorv32_top

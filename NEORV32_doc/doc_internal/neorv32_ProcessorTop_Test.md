@@ -56,7 +56,7 @@
 
 | Name     | Type                           | Description |
 | -------- | ------------------------------ | ----------- |
-| gpio_out | std_ulogic_vector(31 downto 0) |             |
+| gpio_out | std_ulogic_vector(63 downto 0) |             |
 ## Instantiations
 
 - neorv32_top_inst: neorv32_top

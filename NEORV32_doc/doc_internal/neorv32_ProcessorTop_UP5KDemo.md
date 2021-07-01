@@ -103,8 +103,8 @@
 
 | Name        | Type                           | Description |
 | ----------- | ------------------------------ | ----------- |
-| con_gpio_o  | std_ulogic_vector(31 downto 0) |             |
-| con_gpio_i  | std_ulogic_vector(31 downto 0) |             |
+| con_gpio_o  | std_ulogic_vector(63 downto 0) |             |
+| con_gpio_i  | std_ulogic_vector(63 downto 0) |             |
 | con_spi_sck | std_ulogic                     |             |
 | con_spi_sdi | std_ulogic                     |             |
 | con_spi_sdo | std_ulogic                     |             |

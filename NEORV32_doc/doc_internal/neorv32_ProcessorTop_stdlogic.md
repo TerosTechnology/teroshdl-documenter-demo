@@ -110,8 +110,8 @@
 | wb_err_i    | in        | std_logic                                    | transfer error                                                           |
 | fence_o     | out       | std_logic                                    | indicates an executed FENCE operation                                    |
 | fencei_o    | out       | std_logic                                    | indicates an executed FENCEI operation                                   |
-| gpio_o      | out       | std_logic_vector(31 downto 0)                | parallel output                                                          |
-| gpio_i      | in        | std_logic_vector(31 downto 0)                | parallel input                                                           |
+| gpio_o      | out       | std_logic_vector(63 downto 0)                | parallel output                                                          |
+| gpio_i      | in        | std_logic_vector(63 downto 0)                | parallel input                                                           |
 | uart0_txd_o | out       | std_logic                                    | UART0 send data                                                          |
 | uart0_rxd_i | in        | std_logic                                    | UART0 receive data                                                       |
 | uart0_rts_o | out       | std_logic                                    | hw flow control: UART0.RX ready to receive ("RTR"), low-active, optional |
@@ -160,8 +160,8 @@
 | wb_err_i_int    | std_ulogic                                    |             |
 | fence_o_int     | std_ulogic                                    |             |
 | fencei_o_int    | std_ulogic                                    |             |
-| gpio_o_int      | std_ulogic_vector(31 downto 0)                |             |
-| gpio_i_int      | std_ulogic_vector(31 downto 0)                |             |
+| gpio_o_int      | std_ulogic_vector(63 downto 0)                |             |
+| gpio_i_int      | std_ulogic_vector(63 downto 0)                |             |
 | uart0_txd_o_int | std_ulogic                                    |             |
 | uart0_rxd_i_int | std_ulogic                                    |             |
 | uart0_rts_o_int | std_ulogic                                    |             |

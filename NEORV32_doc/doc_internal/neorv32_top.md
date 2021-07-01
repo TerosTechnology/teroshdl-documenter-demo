@@ -127,8 +127,8 @@
 | slink_rx_dat_i | in        | sdata_8x32_t                                  | input data                                                               |
 | slink_rx_val_i | in        | std_ulogic_vector(7 downto 0)                 | valid input                                                              |
 | slink_rx_rdy_o | out       | std_ulogic_vector(7 downto 0)                 | ready to receive                                                         |
-| gpio_o         | out       | std_ulogic_vector(31 downto 0)                | parallel output                                                          |
-| gpio_i         | in        | std_ulogic_vector(31 downto 0)                | parallel input                                                           |
+| gpio_o         | out       | std_ulogic_vector(63 downto 0)                | parallel output                                                          |
+| gpio_i         | in        | std_ulogic_vector(63 downto 0)                | parallel input                                                           |
 | uart0_txd_o    | out       | std_ulogic                                    | UART0 send data                                                          |
 | uart0_rxd_i    | in        | std_ulogic                                    | UART0 receive data                                                       |
 | uart0_rts_o    | out       | std_ulogic                                    | hw flow control: UART0.RX ready to receive ("RTR"), low-active, optional |
@@ -187,7 +187,6 @@
 | fast_irq       | std_ulogic_vector(15 downto 0) | IRQs --                        |
 | fast_irq_ack   | std_ulogic_vector(15 downto 0) |                                |
 | mtime_irq      | std_ulogic                     |                                |
-| gpio_irq       | std_ulogic                     |                                |
 | wdt_irq        | std_ulogic                     |                                |
 | uart0_rxd_irq  | std_ulogic                     |                                |
 | uart0_txd_irq  | std_ulogic                     |                                |
