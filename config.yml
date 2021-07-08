@@ -6,7 +6,7 @@ CordicHDL:
 
 SURF:
     url: https://github.com/slaclab/surf
-    folder: surf
+    folder: SURF
     vhdl_symbol: ""
     verilog_symbol: ""
 
