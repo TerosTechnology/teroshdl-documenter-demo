@@ -23,8 +23,20 @@ zx128-MiSTer:
     verilog_symbol: "" 
 
 NEORV32:
-    url: https://github.com/stnolting/neorv32.git
+    url: https://github.com/Xilinx/XilinxUnisimLibrary.git
     folder: neorv32/rtl  
+    vhdl_symbol: ""
+    verilog_symbol: ""
+
+XilinxUnisimLibrary:
+    url: https://github.com/stnolting/neorv32.git
+    folder: XilinxUnisimLibrary/
+    vhdl_symbol: ""
+    verilog_symbol: ""
+    
+Verilog-ethernet:
+    url: https://github.com/alexforencich/verilog-ethernet.git
+    folder: verilog-ethernet/
     vhdl_symbol: ""
     verilog_symbol: ""
 
