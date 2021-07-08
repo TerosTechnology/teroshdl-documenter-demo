@@ -136,19 +136,19 @@
 <text text-anchor="middle" x="232.7959" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top&#45;acorn&#45;cle&#45;215.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd -->
-<g id="edge6" class="edge">
+<g id="edge9" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd</title>
 <path fill="none" stroke="#000000" d="M211.9381,-215.6461C202.6419,-206.0709 192.6981,-193.54 187.7959,-180 182.3491,-164.9557 183.3594,-159.3726 187.7959,-144 190.5481,-134.4635 195.5383,-124.9881 200.8629,-116.6989"/>
 <polygon fill="#000000" stroke="#000000" points="203.9073,-118.4483 206.6819,-108.2232 198.1364,-114.4863 203.9073,-118.4483"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd -->
-<g id="edge9" class="edge">
+<g id="edge7" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd</title>
 <path fill="none" stroke="#000000" d="M210.6461,-215.9517C174.4567,-184.3274 110.3496,-117.9039 148.7959,-72 177.4201,-37.8234 297.4606,-25.2579 377.5841,-20.6509"/>
 <polygon fill="#000000" stroke="#000000" points="377.841,-24.1422 387.6354,-20.1024 377.4595,-17.1526 377.841,-24.1422"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl -->
-<g id="edge8" class="edge">
+<g id="edge6" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl</title>
 <path fill="none" stroke="#000000" d="M310.0752,-215.9451C334.8949,-207.6937 361.4597,-196.0667 382.7959,-180 404.9931,-163.2849 422.8038,-136.8532 434.1287,-116.9499"/>
 <polygon fill="#000000" stroke="#000000" points="437.2705,-118.4999 439.013,-108.0494 431.1338,-115.1323 437.2705,-118.4999"/>
@@ -162,7 +162,7 @@
 <text text-anchor="middle" x="301.7959" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top&#45;nexys&#45;video.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;acorn&#45;cle&#45;215.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl</title>
 <path fill="none" stroke="#000000" d="M250.2075,-215.8314C258.3169,-207.3694 268.1115,-197.1489 276.9779,-187.8971"/>
 <polygon fill="#000000" stroke="#000000" points="279.7577,-190.0549 284.1499,-180.4133 274.7038,-185.2115 279.7577,-190.0549"/>
@@ -176,25 +176,25 @@
 <text text-anchor="middle" x="513.7959" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top&#45;arty.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd -->
-<g id="edge10" class="edge">
+<g id="edge13" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd</title>
 <path fill="none" stroke="#000000" d="M491.3486,-215.6734C466.1794,-195.8384 423.5356,-164.3261 382.7959,-144 355.4219,-130.3424 323.7875,-118.8846 295.8439,-110.0872"/>
 <polygon fill="#000000" stroke="#000000" points="296.7144,-106.693 286.1269,-107.0872 294.6494,-113.3815 296.7144,-106.693"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd -->
-<g id="edge13" class="edge">
+<g id="edge11" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd</title>
 <path fill="none" stroke="#000000" d="M560.4799,-218.7529C563.6261,-217.7999 566.7531,-216.8738 569.7959,-216 632.3744,-198.0294 670.0559,-229.9678 711.7959,-180 742.6013,-143.1223 747.1925,-109.2153 716.7959,-72 693.087,-42.9726 595.8879,-29.1485 526.0801,-22.8545"/>
 <polygon fill="#000000" stroke="#000000" points="526.2564,-19.3567 515.9913,-21.9796 525.6515,-26.3306 526.2564,-19.3567"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl -->
-<g id="edge12" class="edge">
+<g id="edge10" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl</title>
 <path fill="none" stroke="#000000" d="M505.437,-215.7623C494.0309,-190.8764 473.5003,-146.0822 460.2701,-117.2165"/>
 <polygon fill="#000000" stroke="#000000" points="463.4353,-115.722 456.087,-108.0896 457.0718,-118.6386 463.4353,-115.722"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl -->
-<g id="edge11" class="edge">
+<g id="edge12" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;arty.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl</title>
 <path fill="none" stroke="#000000" d="M467.2716,-218.1993C437.0972,-207.9514 397.4157,-194.4747 364.4755,-183.2874"/>
 <polygon fill="#000000" stroke="#000000" points="365.5278,-179.9485 354.9334,-180.0467 363.2766,-186.5767 365.5278,-179.9485"/>
@@ -208,25 +208,25 @@
 <text text-anchor="middle" x="389.7959" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top&#45;generic.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd -->
-<g id="edge14" class="edge">
+<g id="edge17" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd</title>
 <path fill="none" stroke="#000000" d="M332.2008,-219.1848C285.9836,-206.7172 227.6988,-189.4524 220.7959,-180 207.9067,-162.3504 209.3998,-137.1222 213.4072,-117.8647"/>
 <polygon fill="#000000" stroke="#000000" points="216.8109,-118.6796 215.7426,-108.1388 210.0044,-117.0452 216.8109,-118.6796"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd -->
-<g id="edge17" class="edge">
+<g id="edge15" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd</title>
 <path fill="none" stroke="#000000" d="M447.5754,-218.2961C451.0256,-217.4858 454.4517,-216.7132 457.7959,-216 506.4599,-205.6213 646.5637,-217.9076 678.7959,-180 746.8652,-99.9453 619.2961,-141.9643 556.7959,-108 540.0678,-98.9095 503.7682,-66.5413 478.5666,-43.2256"/>
 <polygon fill="#000000" stroke="#000000" points="480.8423,-40.5624 471.1356,-36.3161 476.0757,-45.6887 480.8423,-40.5624"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl -->
-<g id="edge16" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl</title>
 <path fill="none" stroke="#000000" d="M421.252,-215.9802C433.8271,-206.9479 446.9348,-194.7662 453.7959,-180 462.7738,-160.6782 460.5141,-136.4733 456.4258,-118.0331"/>
 <polygon fill="#000000" stroke="#000000" points="459.7832,-117.0325 453.9526,-108.1864 452.9941,-118.7378 459.7832,-117.0325"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl -->
-<g id="edge15" class="edge">
+<g id="edge16" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;generic.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl</title>
 <path fill="none" stroke="#000000" d="M367.5898,-215.8314C356.7509,-206.9632 343.5515,-196.1637 331.8281,-186.5718"/>
 <polygon fill="#000000" stroke="#000000" points="333.9509,-183.7864 323.9949,-180.1628 329.5182,-189.2041 333.9509,-183.7864"/>
@@ -240,43 +240,43 @@
 <text text-anchor="middle" x="64.7959" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top&#45;genesys2.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd -->
-<g id="edge18" class="edge">
+<g id="edge21" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd</title>
 <path fill="none" stroke="#000000" d="M84.6801,-215.7623C112.5204,-190.2272 163.2135,-143.7316 194.5492,-114.9906"/>
 <polygon fill="#000000" stroke="#000000" points="197.0694,-117.4284 202.0732,-108.0896 192.3378,-112.2697 197.0694,-117.4284"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd -->
-<g id="edge21" class="edge">
+<g id="edge19" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd</title>
 <path fill="none" stroke="#000000" d="M66.7804,-215.7773C71.5241,-181.7011 86.7919,-108.4869 132.7959,-72 169.7615,-42.6817 295.5824,-28.5881 377.7223,-22.363"/>
 <polygon fill="#000000" stroke="#000000" points="378.0463,-25.8487 387.7626,-21.6246 377.5328,-18.8675 378.0463,-25.8487"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl -->
-<g id="edge20" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl</title>
 <path fill="none" stroke="#000000" d="M93.8078,-215.9059C131.4453,-192.6726 195.2999,-154.1365 220.7959,-144 274.278,-122.737 338.3139,-108.4429 384.7166,-99.9316"/>
 <polygon fill="#000000" stroke="#000000" points="385.4109,-103.363 394.6351,-98.151 384.174,-96.4731 385.4109,-103.363"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;genesys2.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl</title>
 <path fill="none" stroke="#000000" d="M124.2951,-215.9243C157.117,-205.9531 198.0465,-193.5188 232.3285,-183.104"/>
 <polygon fill="#000000" stroke="#000000" points="233.7214,-186.3389 242.2722,-180.0831 231.6866,-179.6411 233.7214,-186.3389"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd -->
-<g id="edge22" class="edge">
+<g id="edge24" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_ecp5.vhd</title>
 <path fill="none" stroke="#000000" d="M281.6085,-143.8314C271.9445,-135.1337 260.2163,-124.5783 249.7143,-115.1265"/>
 <polygon fill="#000000" stroke="#000000" points="251.7512,-112.251 241.9768,-108.1628 247.0684,-117.454 251.7512,-112.251"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd -->
-<g id="edge24" class="edge">
+<g id="edge23" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/clk_gen_plle2.vhd</title>
 <path fill="none" stroke="#000000" d="M317.5389,-143.7362C333.9339,-125.0579 360.6836,-95.5262 385.7959,-72 396.6635,-61.8188 409.1802,-51.3017 420.3723,-42.2845"/>
 <polygon fill="#000000" stroke="#000000" points="422.6065,-44.9795 428.2453,-36.0098 418.2437,-39.5053 422.6065,-44.9795"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl -->
-<g id="edge23" class="edge">
+<g id="edge22" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/top&#45;nexys&#45;video.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/microwatt/fpga/soc_reset.vhdl</title>
 <path fill="none" stroke="#000000" d="M338.6379,-143.8314C357.9041,-134.3302 381.6658,-122.6121 402.0951,-112.5374"/>
 <polygon fill="#000000" stroke="#000000" points="403.7982,-115.6 411.2189,-108.038 400.7021,-109.3219 403.7982,-115.6"/>

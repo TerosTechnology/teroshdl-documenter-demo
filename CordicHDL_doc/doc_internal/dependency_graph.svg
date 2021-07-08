@@ -42,7 +42,7 @@
 <text text-anchor="middle" x="304.7489" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">cordic_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_arctg_mag_engine.vhd -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_arctg_mag_engine.vhd</title>
 <path fill="none" stroke="#000000" d="M253.7855,-71.9243C226.0342,-62.0815 191.5161,-49.8386 162.3875,-39.5073"/>
 <polygon fill="#000000" stroke="#000000" points="163.3281,-36.1273 152.7333,-36.0831 160.9881,-42.7246 163.3281,-36.1273"/>
@@ -54,7 +54,7 @@
 <polygon fill="#000000" stroke="#000000" points="308.249,-46.4132 304.7489,-36.4133 301.249,-46.4133 308.249,-46.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_sincos_engine.vhd -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/cordicHDL/src/cordic_sincos_engine.vhd</title>
 <path fill="none" stroke="#000000" d="M352.6939,-71.8314C378.5571,-62.0306 410.6451,-49.8709 437.7769,-39.5894"/>
 <polygon fill="#000000" stroke="#000000" points="439.0378,-42.8545 447.1486,-36.038 436.5573,-36.3087 439.0378,-42.8545"/>

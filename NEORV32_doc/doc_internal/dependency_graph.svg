@@ -74,7 +74,7 @@
 <text text-anchor="middle" x="556.9684" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_alu.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd</title>
 <path fill="none" stroke="#000000" d="M699.771,-143.8314C673.7718,-134.0306 641.5148,-121.8709 614.2403,-111.5894"/>
 <polygon fill="#000000" stroke="#000000" points="615.411,-108.2904 604.8192,-108.038 612.9418,-114.8404 615.411,-108.2904"/>
@@ -88,7 +88,7 @@
 <text text-anchor="middle" x="747.9684" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_bus.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_bus.vhd -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_bus.vhd</title>
 <path fill="none" stroke="#000000" d="M747.9684,-143.8314C747.9684,-136.131 747.9684,-126.9743 747.9684,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="751.4685,-118.4132 747.9684,-108.4133 744.4685,-118.4133 751.4685,-118.4132"/>
@@ -102,7 +102,7 @@
 <text text-anchor="middle" x="939.9684" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_control.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd</title>
 <path fill="none" stroke="#000000" d="M796.4181,-143.8314C822.5535,-134.0306 854.9793,-121.8709 882.3967,-111.5894"/>
 <polygon fill="#000000" stroke="#000000" points="883.7327,-114.8264 891.8671,-108.038 881.2748,-108.2721 883.7327,-114.8264"/>
@@ -116,7 +116,7 @@
 <text text-anchor="middle" x="1128.9684" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_regfile.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_regfile.vhd -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_regfile.vhd</title>
 <path fill="none" stroke="#000000" d="M809.8533,-145.9856C812.9301,-145.2915 815.9812,-144.6253 818.9684,-144 911.4799,-124.635 938.0029,-125.2259 1033.7284,-108.3707"/>
 <polygon fill="#000000" stroke="#000000" points="1034.6094,-111.769 1043.8414,-106.5708 1033.3828,-104.8773 1034.6094,-111.769"/>
@@ -130,7 +130,7 @@
 <text text-anchor="middle" x="312.9684" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_cp_fpu.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_cp_fpu.vhd -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_cp_fpu.vhd</title>
 <path fill="none" stroke="#000000" d="M495.7118,-71.9243C461.7755,-61.9103 419.4203,-49.412 384.0335,-38.97"/>
 <polygon fill="#000000" stroke="#000000" points="384.8319,-35.5565 374.2502,-36.0831 382.8507,-42.2703 384.8319,-35.5565"/>
@@ -158,7 +158,7 @@
 <text text-anchor="middle" x="725.9684" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_cp_shifter.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_cp_shifter.vhd -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_alu.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_cp_shifter.vhd</title>
 <path fill="none" stroke="#000000" d="M599.6142,-71.8314C622.3174,-62.159 650.4135,-50.1891 674.3426,-39.9944"/>
 <polygon fill="#000000" stroke="#000000" points="675.8012,-43.1775 683.6292,-36.038 673.0575,-36.7376 675.8012,-43.1775"/>
@@ -172,7 +172,7 @@
 <text text-anchor="middle" x="949.9684" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_cpu_decompressor.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_decompressor.vhd -->
-<g id="edge9" class="edge">
+<g id="edge8" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_decompressor.vhd</title>
 <path fill="none" stroke="#000000" d="M942.4918,-71.8314C943.5613,-64.131 944.8331,-54.9743 946.0216,-46.4166"/>
 <polygon fill="#000000" stroke="#000000" points="949.502,-46.7997 947.411,-36.4133 942.5685,-45.8367 949.502,-46.7997"/>
@@ -186,7 +186,7 @@
 <text text-anchor="middle" x="1981.9684" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_fifo.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_fifo.vhd -->
-<g id="edge8" class="edge">
+<g id="edge9" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu_control.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_fifo.vhd</title>
 <path fill="none" stroke="#000000" d="M1026.6168,-73.1005C1029.4298,-72.706 1032.2193,-72.3374 1034.9684,-72 1361.4439,-31.9357 1754.9641,-21.5171 1912.162,-18.8728"/>
 <polygon fill="#000000" stroke="#000000" points="1912.2298,-22.3723 1922.1714,-18.7097 1912.1156,-15.3732 1912.2298,-22.3723"/>
@@ -316,103 +316,103 @@
 <text text-anchor="middle" x="1884.9684" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_boot_rom.vhd -->
-<g id="edge30" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_boot_rom.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.5739,-233.4618C1562.331,-230.9175 520.2796,-218.6105 170.0781,-179.9803"/>
 <polygon fill="#000000" stroke="#000000" points="170.2509,-176.4776 159.9204,-178.8297 169.4629,-183.4331 170.2509,-176.4776"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_bus_keeper.vhd -->
-<g id="edge31" class="edge">
+<g id="edge25" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_bus_keeper.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.4398,-233.0686C1581.0994,-229.1385 672.784,-212.6397 362.3486,-180.0255"/>
 <polygon fill="#000000" stroke="#000000" points="362.3221,-176.5024 352.004,-178.908 361.5702,-183.4619 362.3221,-176.5024"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_busswitch.vhd -->
-<g id="edge13" class="edge">
+<g id="edge15" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_busswitch.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.77,-232.8409C1600.8176,-228.3353 815.1704,-210.7547 542.5704,-180.055"/>
 <polygon fill="#000000" stroke="#000000" points="542.6483,-176.5407 532.3114,-178.8643 541.8412,-183.494 542.6483,-176.5407"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cfs.vhd -->
-<g id="edge26" class="edge">
+<g id="edge34" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cfs.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.7134,-233.0125C1615.7275,-229.3252 922.026,-214.825 678.7228,-180.0464"/>
 <polygon fill="#000000" stroke="#000000" points="678.9252,-176.5383 668.5203,-178.5352 677.8995,-183.4628 678.9252,-176.5383"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd -->
-<g id="edge19" class="edge">
+<g id="edge12" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_cpu.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.8216,-232.5182C1632.6978,-227.5427 1034.3626,-210.1137 819.7062,-179.8846"/>
 <polygon fill="#000000" stroke="#000000" points="820.1783,-176.4165 809.7776,-178.4354 819.1672,-183.3431 820.1783,-176.4165"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_debug_dm.vhd -->
-<g id="edge20" class="edge">
+<g id="edge27" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_debug_dm.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.6313,-233.0007C1683.1231,-230.0761 1318.7969,-219.1744 1004.7498,-179.9925"/>
 <polygon fill="#000000" stroke="#000000" points="1004.8964,-176.4834 994.5374,-178.706 1004.0215,-183.4285 1004.8964,-176.4834"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_debug_dtm.vhd -->
-<g id="edge12" class="edge">
+<g id="edge28" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_debug_dtm.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.4771,-231.5563C1705.4787,-226.256 1432.4721,-211.6588 1193.7255,-180.1573"/>
 <polygon fill="#000000" stroke="#000000" points="1193.8343,-176.641 1183.4596,-178.7894 1192.9096,-183.5796 1193.8343,-176.641"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_dmem.vhd -->
-<g id="edge29" class="edge">
+<g id="edge13" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_dmem.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.7553,-230.4248C1727.078,-224.079 1527.9401,-208.8735 1351.0522,-180.2493"/>
 <polygon fill="#000000" stroke="#000000" points="1351.4785,-176.7726 1341.0445,-178.6114 1350.3479,-183.6807 1351.4785,-176.7726"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_gpio.vhd -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_gpio.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.6871,-227.7161C1749.6381,-219.4383 1617.3968,-203.3623 1495.7381,-180.2504"/>
 <polygon fill="#000000" stroke="#000000" points="1496.3593,-176.8058 1485.8787,-178.3572 1495.0393,-183.6802 1496.3593,-176.8058"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_icache.vhd -->
-<g id="edge27" class="edge">
+<g id="edge24" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_icache.vhd</title>
 <path fill="none" stroke="#000000" d="M1824.6357,-220.0323C1776.2623,-208.8333 1707.9244,-193.0123 1654.8173,-180.7174"/>
 <polygon fill="#000000" stroke="#000000" points="1655.2802,-177.2321 1644.7484,-178.3864 1653.7013,-184.0517 1655.2802,-177.2321"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_imem.vhd -->
-<g id="edge24" class="edge">
+<g id="edge20" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_imem.vhd</title>
 <path fill="none" stroke="#000000" d="M1845.8554,-215.8314C1825.2172,-206.2446 1799.72,-194.4008 1777.9011,-184.2655"/>
 <polygon fill="#000000" stroke="#000000" points="1779.344,-181.0766 1768.8002,-180.038 1776.395,-187.4251 1779.344,-181.0766"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_mtime.vhd -->
-<g id="edge18" class="edge">
+<g id="edge21" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_mtime.vhd</title>
 <path fill="none" stroke="#000000" d="M1884.9684,-215.8314C1884.9684,-208.131 1884.9684,-198.9743 1884.9684,-190.4166"/>
 <polygon fill="#000000" stroke="#000000" points="1888.4685,-190.4132 1884.9684,-180.4133 1881.4685,-190.4133 1888.4685,-190.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_neoled.vhd -->
-<g id="edge32" class="edge">
+<g id="edge16" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_neoled.vhd</title>
 <path fill="none" stroke="#000000" d="M1922.7576,-215.8215C1937.4145,-206.9597 1953.0303,-194.9508 1962.9684,-180 1975.1445,-161.6823 1979.7185,-137.023 1981.3459,-118.1484"/>
 <polygon fill="#000000" stroke="#000000" points="1984.8453,-118.2678 1981.9878,-108.0656 1977.8595,-117.823 1984.8453,-118.2678"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_pwm.vhd -->
-<g id="edge14" class="edge">
+<g id="edge33" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_pwm.vhd</title>
 <path fill="none" stroke="#000000" d="M1932.9134,-215.8314C1958.7766,-206.0306 1990.8646,-193.8709 2017.9964,-183.5894"/>
 <polygon fill="#000000" stroke="#000000" points="2019.2573,-186.8545 2027.3681,-180.038 2016.7768,-180.3087 2019.2573,-186.8545"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_slink.vhd -->
-<g id="edge15" class="edge">
+<g id="edge22" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_slink.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.339,-230.1248C2014.9964,-224.2676 2123.2776,-210.4284 2148.9684,-180 2163.1599,-163.1915 2162.657,-137.6701 2159.3258,-118.092"/>
 <polygon fill="#000000" stroke="#000000" points="2162.7375,-117.3048 2157.3245,-108.1971 2155.8764,-118.6925 2162.7375,-117.3048"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_spi.vhd -->
-<g id="edge34" class="edge">
+<g id="edge31" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_spi.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.1964,-224.1742C2005.3507,-214.0964 2100.3564,-197.4635 2181.9684,-180 2183.2249,-179.7311 2184.4927,-179.4563 2185.769,-179.1764"/>
 <polygon fill="#000000" stroke="#000000" points="2186.6903,-182.5567 2195.6771,-176.9453 2185.1525,-175.7277 2186.6903,-182.5567"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_sysinfo.vhd -->
-<g id="edge33" class="edge">
+<g id="edge30" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_sysinfo.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.4507,-228.348C2028.2048,-220.2148 2181.5189,-203.7211 2322.4768,-179.9903"/>
 <polygon fill="#000000" stroke="#000000" points="2323.3312,-183.3954 2332.6033,-178.2692 2322.1582,-176.4944 2323.3312,-183.3954"/>
@@ -426,7 +426,7 @@
 <text text-anchor="middle" x="2557.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_trng.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_trng.vhd -->
-<g id="edge17" class="edge">
+<g id="edge19" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_trng.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.505,-231.6728C2052.5798,-226.8778 2282.3999,-213.5395 2485.3137,-179.9529"/>
 <polygon fill="#000000" stroke="#000000" points="2485.9767,-183.3907 2495.2609,-178.2864 2484.82,-176.4869 2485.9767,-183.3907"/>
@@ -440,7 +440,7 @@
 <text text-anchor="middle" x="2696.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_twi.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_twi.vhd -->
-<g id="edge25" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_twi.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.3584,-231.072C2094.6697,-223.6046 2479.2077,-202.924 2627.5089,-180.0175"/>
 <polygon fill="#000000" stroke="#000000" points="2628.4557,-183.4102 2637.7719,-178.3646 2627.3426,-176.4993 2628.4557,-183.4102"/>
@@ -454,7 +454,7 @@
 <text text-anchor="middle" x="2835.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_uart.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_uart.vhd -->
-<g id="edge16" class="edge">
+<g id="edge32" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_uart.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.2277,-231.7726C2113.5518,-225.3217 2587.3624,-205.5419 2763.2292,-180.0718"/>
 <polygon fill="#000000" stroke="#000000" points="2764.0126,-183.4934 2773.3798,-178.543 2762.97,-176.5714 2764.0126,-183.4934"/>
@@ -468,7 +468,7 @@
 <text text-anchor="middle" x="2977.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_wdt.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_wdt.vhd -->
-<g id="edge23" class="edge">
+<g id="edge29" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_wdt.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.2796,-232.3623C2132.0894,-227.0495 2700.366,-209.0242 2906.4226,-179.8415"/>
 <polygon fill="#000000" stroke="#000000" points="2907.1603,-183.2707 2916.5451,-178.3539 2906.1425,-176.3451 2907.1603,-183.2707"/>
@@ -482,7 +482,7 @@
 <text text-anchor="middle" x="3136.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_wishbone.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_wishbone.vhd -->
-<g id="edge28" class="edge">
+<g id="edge17" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_wishbone.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.4082,-232.4182C2149.2788,-226.8936 2811.528,-207.3617 3046.8026,-179.9981"/>
 <polygon fill="#000000" stroke="#000000" points="3047.4981,-183.4398 3057.0095,-178.7726 3046.6636,-176.4898 3047.4981,-183.4398"/>
@@ -496,7 +496,7 @@
 <text text-anchor="middle" x="3296.9684" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">neorv32_xirq.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_xirq.vhd -->
-<g id="edge21" class="edge">
+<g id="edge26" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/neorv32/rtl/core/neorv32_xirq.vhd</title>
 <path fill="none" stroke="#000000" d="M1945.4743,-233.2353C2169.6373,-230.146 2953.3787,-216.9994 3224.9453,-179.9164"/>
 <polygon fill="#000000" stroke="#000000" points="3225.7522,-183.3373 3235.1649,-178.474 3224.7738,-176.406 3225.7522,-183.3373"/>
