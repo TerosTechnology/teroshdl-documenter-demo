@@ -28,14 +28,14 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | num_bytes      | std_logic_vector(31 downto 0) |             |
 ## Constants
 
-| Name                   | Type             | Value                                                                    | Description |
-| ---------------------- | ---------------- | ------------------------------------------------------------------------ | ----------- |
-| axil_bus               | bus_master_t     |  new_bus(data_length => 32, address_length => 32)                        |             |
-| clk_period             | time             |  1 ns                                                                    |             |
-| src_address_checker    | signal_checker_t |  new_signal_checker(     logger => get_logger("src_address_checker"))    |             |
-| dst_address_checker    | signal_checker_t |  new_signal_checker(     logger => get_logger("dst_address_checker"))    |             |
-| num_bytes_checker      | signal_checker_t |  new_signal_checker(     logger => get_logger("num_bytes_checker"))      |             |
-| start_transfer_checker | signal_checker_t |  new_signal_checker(     logger => get_logger("start_transfer_checker")) |             |
+| Name                   | Type             | Value                                                                                 | Description |
+| ---------------------- | ---------------- | ------------------------------------------------------------------------------------- | ----------- |
+| axil_bus               | bus_master_t     |  new_bus(data_length => 32,<br><span style="padding-left:20px"> address_length => 32) |             |
+| clk_period             | time             |  1 ns                                                                                 |             |
+| src_address_checker    | signal_checker_t |  new_signal_checker(     logger => get_logger("src_address_checker"))                 |             |
+| dst_address_checker    | signal_checker_t |  new_signal_checker(     logger => get_logger("dst_address_checker"))                 |             |
+| num_bytes_checker      | signal_checker_t |  new_signal_checker(     logger => get_logger("num_bytes_checker"))                   |             |
+| start_transfer_checker | signal_checker_t |  new_signal_checker(     logger => get_logger("start_transfer_checker"))              |             |
 ## Processes
 - main: (  )
 ## Instantiations

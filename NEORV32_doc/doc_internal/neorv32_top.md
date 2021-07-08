@@ -46,57 +46,60 @@
 #################################################################################################
 ## Generics
 
-| Generic name                 | Type                           | Value       | Description                                                                           |
-| ---------------------------- | ------------------------------ | ----------- | ------------------------------------------------------------------------------------- |
-| CLOCK_FREQUENCY              | natural                        | 0           | clock frequency of clk_i in Hz                                                        |
-| USER_CODE                    | std_ulogic_vector(31 downto 0) | x"00000000" | custom user code                                                                      |
-| HW_THREAD_ID                 | natural                        | 0           | hardware thread id (32-bit)                                                           |
-| INT_BOOTLOADER_EN            | boolean                        | true        | boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM |
-| ON_CHIP_DEBUGGER_EN          | boolean                        | false       | implement on-chip debugger                                                            |
-| CPU_EXTENSION_RISCV_A        | boolean                        | false       | implement atomic extension?                                                           |
-| CPU_EXTENSION_RISCV_C        | boolean                        | false       | implement compressed extension?                                                       |
-| CPU_EXTENSION_RISCV_E        | boolean                        | false       | implement embedded RF extension?                                                      |
-| CPU_EXTENSION_RISCV_M        | boolean                        | false       | implement mul/div extension?                                                          |
-| CPU_EXTENSION_RISCV_U        | boolean                        | false       | implement user mode extension?                                                        |
-| CPU_EXTENSION_RISCV_Zfinx    | boolean                        | false       | implement 32-bit floating-point extension (using INT regs!)                           |
-| CPU_EXTENSION_RISCV_Zicsr    | boolean                        | true        | implement CSR system?                                                                 |
-| CPU_EXTENSION_RISCV_Zifencei | boolean                        | false       | implement instruction stream sync.?                                                   |
-| CPU_EXTENSION_RISCV_Zmmul    | boolean                        | false       | implement multiply-only M sub-extension?                                              |
-| FAST_MUL_EN                  | boolean                        | false       | use DSPs for M extension's multiplier                                                 |
-| FAST_SHIFT_EN                | boolean                        | false       | use barrel shifter for shift operations                                               |
-| CPU_CNT_WIDTH                | natural                        | 64          | total width of CPU cycle and instret counters (0..64)                                 |
-| PMP_NUM_REGIONS              | natural                        | 0           | number of regions (0..64)                                                             |
-| PMP_MIN_GRANULARITY          | natural                        | 64*1024     | minimal region granularity in bytes, has to be a power of 2, min 8 bytes              |
-| HPM_NUM_CNTS                 | natural                        | 0           | number of implemented HPM counters (0..29)                                            |
-| HPM_CNT_WIDTH                | natural                        | 40          | total size of HPM counters (0..64)                                                    |
-| MEM_INT_IMEM_EN              | boolean                        | true        | implement processor-internal instruction memory                                       |
-| MEM_INT_IMEM_SIZE            | natural                        | 16*1024     | size of processor-internal instruction memory in bytes                                |
-| MEM_INT_DMEM_EN              | boolean                        | true        | implement processor-internal data memory                                              |
-| MEM_INT_DMEM_SIZE            | natural                        | 8*1024      | size of processor-internal data memory in bytes                                       |
-| ICACHE_EN                    | boolean                        | false       | implement instruction cache                                                           |
-| ICACHE_NUM_BLOCKS            | natural                        | 4           | i-cache: number of blocks (min 1), has to be a power of 2                             |
-| ICACHE_BLOCK_SIZE            | natural                        | 64          | i-cache: block size in bytes (min 4), has to be a power of 2                          |
-| ICACHE_ASSOCIATIVITY         | natural                        | 1           | i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2     |
-| MEM_EXT_EN                   | boolean                        | false       | implement external memory bus interface?                                              |
-| MEM_EXT_TIMEOUT              | natural                        | 255         | cycles after a pending bus access auto-terminates (0 = disabled)                      |
-| SLINK_NUM_TX                 | natural                        | 0           | number of TX links (0..8)                                                             |
-| SLINK_NUM_RX                 | natural                        | 0           | number of TX links (0..8)                                                             |
-| SLINK_TX_FIFO                | natural                        | 1           | TX fifo depth, has to be a power of two                                               |
-| SLINK_RX_FIFO                | natural                        | 1           | RX fifo depth, has to be a power of two                                               |
-| IO_GPIO_EN                   | boolean                        | true        | implement general purpose input/output port unit (GPIO)?                              |
-| IO_MTIME_EN                  | boolean                        | true        | implement machine system timer (MTIME)?                                               |
-| IO_UART0_EN                  | boolean                        | true        | implement primary universal asynchronous receiver/transmitter (UART0)?                |
-| IO_UART1_EN                  | boolean                        | true        | implement secondary universal asynchronous receiver/transmitter (UART1)?              |
-| IO_SPI_EN                    | boolean                        | true        | implement serial peripheral interface (SPI)?                                          |
-| IO_TWI_EN                    | boolean                        | true        | implement two-wire interface (TWI)?                                                   |
-| IO_PWM_NUM_CH                | natural                        | 4           | number of PWM channels to implement (0..60); 0 = disabled                             |
-| IO_WDT_EN                    | boolean                        | true        | implement watch dog timer (WDT)?                                                      |
-| IO_TRNG_EN                   | boolean                        | false       | implement true random number generator (TRNG)?                                        |
-| IO_CFS_EN                    | boolean                        | false       | implement custom functions subsystem (CFS)?                                           |
-| IO_CFS_CONFIG                | std_ulogic_vector(31 downto 0) | x"00000000" | custom CFS configuration generic                                                      |
-| IO_CFS_IN_SIZE               | positive                       | 32          | size of CFS input conduit in bits                                                     |
-| IO_CFS_OUT_SIZE              | positive                       | 32          | size of CFS output conduit in bits                                                    |
-| IO_NEOLED_EN                 | boolean                        | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
+| Generic name                 | Type                           | Value           | Description                                                                           |
+| ---------------------------- | ------------------------------ | --------------- | ------------------------------------------------------------------------------------- |
+| CLOCK_FREQUENCY              | natural                        | 0               | clock frequency of clk_i in Hz                                                        |
+| USER_CODE                    | std_ulogic_vector(31 downto 0) | x"00000000"     | custom user code                                                                      |
+| HW_THREAD_ID                 | natural                        | 0               | hardware thread id (32-bit)                                                           |
+| INT_BOOTLOADER_EN            | boolean                        | true            | boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM |
+| ON_CHIP_DEBUGGER_EN          | boolean                        | false           | implement on-chip debugger                                                            |
+| CPU_EXTENSION_RISCV_A        | boolean                        | false           | implement atomic extension?                                                           |
+| CPU_EXTENSION_RISCV_C        | boolean                        | false           | implement compressed extension?                                                       |
+| CPU_EXTENSION_RISCV_E        | boolean                        | false           | implement embedded RF extension?                                                      |
+| CPU_EXTENSION_RISCV_M        | boolean                        | false           | implement mul/div extension?                                                          |
+| CPU_EXTENSION_RISCV_U        | boolean                        | false           | implement user mode extension?                                                        |
+| CPU_EXTENSION_RISCV_Zfinx    | boolean                        | false           | implement 32-bit floating-point extension (using INT regs!)                           |
+| CPU_EXTENSION_RISCV_Zicsr    | boolean                        | true            | implement CSR system?                                                                 |
+| CPU_EXTENSION_RISCV_Zifencei | boolean                        | false           | implement instruction stream sync.?                                                   |
+| CPU_EXTENSION_RISCV_Zmmul    | boolean                        | false           | implement multiply-only M sub-extension?                                              |
+| FAST_MUL_EN                  | boolean                        | false           | use DSPs for M extension's multiplier                                                 |
+| FAST_SHIFT_EN                | boolean                        | false           | use barrel shifter for shift operations                                               |
+| CPU_CNT_WIDTH                | natural                        | 64              | total width of CPU cycle and instret counters (0..64)                                 |
+| PMP_NUM_REGIONS              | natural                        | 0               | number of regions (0..64)                                                             |
+| PMP_MIN_GRANULARITY          | natural                        | 64*1024         | minimal region granularity in bytes, has to be a power of 2, min 8 bytes              |
+| HPM_NUM_CNTS                 | natural                        | 0               | number of implemented HPM counters (0..29)                                            |
+| HPM_CNT_WIDTH                | natural                        | 40              | total size of HPM counters (0..64)                                                    |
+| MEM_INT_IMEM_EN              | boolean                        | true            | implement processor-internal instruction memory                                       |
+| MEM_INT_IMEM_SIZE            | natural                        | 16*1024         | size of processor-internal instruction memory in bytes                                |
+| MEM_INT_DMEM_EN              | boolean                        | true            | implement processor-internal data memory                                              |
+| MEM_INT_DMEM_SIZE            | natural                        | 8*1024          | size of processor-internal data memory in bytes                                       |
+| ICACHE_EN                    | boolean                        | false           | implement instruction cache                                                           |
+| ICACHE_NUM_BLOCKS            | natural                        | 4               | i-cache: number of blocks (min 1), has to be a power of 2                             |
+| ICACHE_BLOCK_SIZE            | natural                        | 64              | i-cache: block size in bytes (min 4), has to be a power of 2                          |
+| ICACHE_ASSOCIATIVITY         | natural                        | 1               | i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2     |
+| MEM_EXT_EN                   | boolean                        | false           | implement external memory bus interface?                                              |
+| MEM_EXT_TIMEOUT              | natural                        | 255             | cycles after a pending bus access auto-terminates (0 = disabled)                      |
+| SLINK_NUM_TX                 | natural                        | 0               | number of TX links (0..8)                                                             |
+| SLINK_NUM_RX                 | natural                        | 0               | number of TX links (0..8)                                                             |
+| SLINK_TX_FIFO                | natural                        | 1               | TX fifo depth, has to be a power of two                                               |
+| SLINK_RX_FIFO                | natural                        | 1               | RX fifo depth, has to be a power of two                                               |
+| XIRQ_NUM_CH                  | natural                        | 0               | number of external IRQ channels (0..32)                                               |
+| XIRQ_TRIGGER_TYPE            | std_ulogic_vector(31 downto 0) | (others => '1') | trigger type: 0=level, 1=edge                                                         |
+| XIRQ_TRIGGER_POLARITY        | std_ulogic_vector(31 downto 0) | (others => '1') | trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge                  |
+| IO_GPIO_EN                   | boolean                        | true            | implement general purpose input/output port unit (GPIO)?                              |
+| IO_MTIME_EN                  | boolean                        | true            | implement machine system timer (MTIME)?                                               |
+| IO_UART0_EN                  | boolean                        | true            | implement primary universal asynchronous receiver/transmitter (UART0)?                |
+| IO_UART1_EN                  | boolean                        | true            | implement secondary universal asynchronous receiver/transmitter (UART1)?              |
+| IO_SPI_EN                    | boolean                        | true            | implement serial peripheral interface (SPI)?                                          |
+| IO_TWI_EN                    | boolean                        | true            | implement two-wire interface (TWI)?                                                   |
+| IO_PWM_NUM_CH                | natural                        | 4               | number of PWM channels to implement (0..60); 0 = disabled                             |
+| IO_WDT_EN                    | boolean                        | true            | implement watch dog timer (WDT)?                                                      |
+| IO_TRNG_EN                   | boolean                        | false           | implement true random number generator (TRNG)?                                        |
+| IO_CFS_EN                    | boolean                        | false           | implement custom functions subsystem (CFS)?                                           |
+| IO_CFS_CONFIG                | std_ulogic_vector(31 downto 0) | x"00000000"     | custom CFS configuration generic                                                      |
+| IO_CFS_IN_SIZE               | positive                       | 32              | size of CFS input conduit in bits                                                     |
+| IO_CFS_OUT_SIZE              | positive                       | 32              | size of CFS output conduit in bits                                                    |
+| IO_NEOLED_EN                 | boolean                        | true            | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
 
 | Port name      | Direction | Type                                          | Description                                                              |
@@ -149,6 +152,7 @@
 | neoled_o       | out       | std_ulogic                                    | async serial data line                                                   |
 | mtime_i        | in        | std_ulogic_vector(63 downto 0)                | current system time from ext. MTIME (if IO_MTIME_EN = false)             |
 | mtime_o        | out       | std_ulogic_vector(63 downto 0)                | current system time from int. MTIME (if IO_MTIME_EN = true)              |
+| xirq_i         | in        | std_ulogic_vector(XIRQ_NUM_CH-1 downto 0)     | IRQ channels                                                             |
 | nm_irq_i       | in        | std_ulogic                                    | non-maskable interrupt                                                   |
 | mtime_irq_i    | in        | std_ulogic                                    | machine timer interrupt, available if IO_MTIME_EN = false                |
 | msw_irq_i      | in        | std_ulogic                                    | machine software interrupt                                               |
@@ -185,7 +189,6 @@
 | io_wren        | std_ulogic                     |                                |
 | resp_bus       | resp_bus_t                     |                                |
 | fast_irq       | std_ulogic_vector(15 downto 0) | IRQs --                        |
-| fast_irq_ack   | std_ulogic_vector(15 downto 0) |                                |
 | mtime_irq      | std_ulogic                     |                                |
 | wdt_irq        | std_ulogic                     |                                |
 | uart0_rxd_irq  | std_ulogic                     |                                |
@@ -195,31 +198,31 @@
 | spi_irq        | std_ulogic                     |                                |
 | twi_irq        | std_ulogic                     |                                |
 | cfs_irq        | std_ulogic                     |                                |
-| cfs_irq_ack    | std_ulogic                     |                                |
 | neoled_irq     | std_ulogic                     |                                |
 | slink_tx_irq   | std_ulogic                     |                                |
 | slink_rx_irq   | std_ulogic                     |                                |
+| xirq_irq       | std_ulogic                     |                                |
 | mtime_time     | std_ulogic_vector(63 downto 0) | current system time from MTIME |
 | cpu_sleep      | std_ulogic                     | CPU is in sleep mode when set  |
 | bus_keeper_err | std_ulogic                     |                                |
 ## Constants
 
-| Name                       | Type                                                          | Value                                                                          | Description                              |
-| -------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
-| cpu_boot_addr_c            | std_ulogic_vector(31 downto 0)                                |  cond_sel_stdulogicvector_f(INT_BOOTLOADER_EN, boot_rom_base_c, ispace_base_c) |                                          |
-| imem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_IMEM_SIZE)-1 downto 0) |  (others => '0')                                                               | alignment check for internal memories -- |
-| dmem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_DMEM_SIZE)-1 downto 0) |  (others => '0')                                                               |                                          |
-| io_slink_en_c              | boolean                                                       |  boolean(SLINK_NUM_RX > 0) or boolean(SLINK_NUM_TX > 0)                        | implement slink at all?                  |
-| resp_bus_entry_terminate_c | resp_bus_entry_t                                              |  (rdata => (others => '0'), ack => '0', err => '0')                            |                                          |
+| Name                       | Type                                                          | Value                                                                                                                                                  | Description                              |
+| -------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| cpu_boot_addr_c            | std_ulogic_vector(31 downto 0)                                |  cond_sel_stdulogicvector_f(INT_BOOTLOADER_EN,<br><span style="padding-left:20px"> boot_rom_base_c,<br><span style="padding-left:20px"> ispace_base_c) |                                          |
+| imem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_IMEM_SIZE)-1 downto 0) |  (others => '0')                                                                                                                                       | alignment check for internal memories -- |
+| dmem_align_check_c         | std_ulogic_vector(index_size_f(MEM_INT_DMEM_SIZE)-1 downto 0) |  (others => '0')                                                                                                                                       |                                          |
+| io_slink_en_c              | boolean                                                       |  boolean(SLINK_NUM_RX > 0) or boolean(SLINK_NUM_TX > 0)                                                                                                | implement slink at all?                  |
+| resp_bus_entry_terminate_c | resp_bus_entry_t                                              |  (rdata => (others => '0'),<br><span style="padding-left:20px"> ack => '0',<br><span style="padding-left:20px"> err => '0')                            |                                          |
 ## Types
 
-| Name             | Type                                                                                                                                                                                                              | Description                         |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| bus_interface_t  |                                                                                                                                                                                                                   | bus interface --                    |
-| dmi_t            |                                                                                                                                                                                                                   | debug module interface (DMI) --     |
-| resp_bus_entry_t |                                                                                                                                                                                                                   | module response bus - entry type -- |
-| resp_bus_id_t    | (RESP_IMEM, RESP_DMEM, RESP_BOOTROM, RESP_WISHBONE, RESP_GPIO, RESP_MTIME, RESP_UART0, RESP_UART1, RESP_SPI, RESP_TWI, RESP_PWM, RESP_WDT, RESP_TRNG, RESP_CFS, RESP_NEOLED, RESP_SYSINFO, RESP_OCD, RESP_SLINK)  | module response bus - device ID --  |
-| resp_bus_t       |                                                                                                                                                                                                                   | module response bus --              |
+| Name             | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description                         |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| bus_interface_t  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | bus interface --                    |
+| dmi_t            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | debug module interface (DMI) --     |
+| resp_bus_entry_t |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | module response bus - entry type -- |
+| resp_bus_id_t    | (RESP_IMEM,<br><span style="padding-left:20px"> RESP_DMEM,<br><span style="padding-left:20px"> RESP_BOOTROM,<br><span style="padding-left:20px"> RESP_WISHBONE,<br><span style="padding-left:20px"> RESP_GPIO,<br><span style="padding-left:20px"> RESP_MTIME,<br><span style="padding-left:20px"> RESP_UART0,<br><span style="padding-left:20px"> RESP_UART1,<br><span style="padding-left:20px"> RESP_SPI,<br><span style="padding-left:20px"> RESP_TWI,<br><span style="padding-left:20px"> RESP_PWM,<br><span style="padding-left:20px"> RESP_WDT,<br><span style="padding-left:20px"> RESP_TRNG,<br><span style="padding-left:20px"> RESP_CFS,<br><span style="padding-left:20px"> RESP_NEOLED,<br><span style="padding-left:20px"> RESP_SYSINFO,<br><span style="padding-left:20px"> RESP_OCD,<br><span style="padding-left:20px"> RESP_SLINK,<br><span style="padding-left:20px"> RESP_XIRQ)  | module response bus - device ID --  |
+| resp_bus_t       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | module response bus --              |
 ## Processes
 - reset_generator: ( rstn_i, clk_i )
 **Description**

@@ -51,11 +51,11 @@ limitations under the License.
 | en           | std_logic                 |             |
 ## Constants
 
-| Name      | Type                      | Value                    | Description      |
-| --------- | ------------------------- | ------------------------ | ---------------- |
-| INIT_GRAY | unsigned(BITS-1 downto 0) |  gray_encode(INIT, BITS) | Counter Register |
+| Name      | Type                      | Value                                                        | Description      |
+| --------- | ------------------------- | ------------------------------------------------------------ | ---------------- |
+| INIT_GRAY | unsigned(BITS-1 downto 0) |  gray_encode(INIT,<br><span style="padding-left:20px"> BITS) | Counter Register |
 ## Functions
-- gray_encode <font id="function_arguments">(val : natural; len : positive) </font> <font id="function_return">return unsigned </font>
+- gray_encode <font id="function_arguments">(val : natural;<br><span style="padding-left:20px"> len : positive) </font> <font id="function_return">return unsigned </font>
 - parity <font id="function_arguments">(val : unsigned) </font> <font id="function_return">return std_logic </font>
 **Description**
 purpose: parity generation

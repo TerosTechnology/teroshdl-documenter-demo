@@ -40,10 +40,10 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 |  done   | boolean                       |             |
 ## Constants
 
-| Name             | Type         | Value                                                                                                                  | Description |
-| ---------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------- | ----------- |
-| num_random_tests | integer      |  128                                                                                                                   |             |
-| bus_handle       | bus_master_t |  new_bus(data_length => wdata'length,                                                 address_length => awaddr'length) |             |
+| Name             | Type         | Value                                                                                                                                                      | Description |
+| ---------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| num_random_tests | integer      |  128                                                                                                                                                       |             |
+| bus_handle       | bus_master_t |  new_bus(data_length => wdata'length,<br><span style="padding-left:20px">                                                 address_length => awaddr'length) |             |
 ## Processes
 - main: (  )
 - support: (  )

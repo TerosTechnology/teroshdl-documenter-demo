@@ -134,6 +134,6 @@ File history :
 | Write       | out       | std_logic                    |                                                                               |
 | XYbit_undoc | out       | std_logic                    |                                                                               |
 ## Functions
-- is_cc_true <font id="function_arguments">( F : std_logic_vector(7 downto 0); cc : bit_vector(2 downto 0) ) </font> <font id="function_return">return boolean </font>
+- is_cc_true <font id="function_arguments">( F : std_logic_vector(7 downto 0);<br><span style="padding-left:20px"> cc : bit_vector(2 downto 0) ) </font> <font id="function_return">return boolean </font>
 ## Processes
 - unnamed: ( IR, ISet, MCycle, F, NMICycle, IntCycle, XY_State )

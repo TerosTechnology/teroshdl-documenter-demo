@@ -53,11 +53,11 @@ use			PoC.io.all;
 | TC_Timeout | std_logic |             |
 ## Constants
 
-| Name            | Type     | Value                                                                                                          | Description  |
-| --------------- | -------- | -------------------------------------------------------------------------------------------------------------- | ------------ |
-| TTID_HIGH_SPIKE | natural  |  0                                                                                                             |              |
-| TTID_LOW_SPIKE  | natural  |  1                                                                                                             |              |
-| TIMING_TABLE    | T_NATVEC |  ( 		TTID_HIGH_SPIKE			=> HIGH_SPIKE_SUPPRESSION_CYCLES, 		TTID_LOW_SPIKE			=> LOW_SPIKE_SUPPRESSION_CYCLES 	) | Timing table |
+| Name            | Type     | Value                                                                                                                                              | Description  |
+| --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| TTID_HIGH_SPIKE | natural  |  0                                                                                                                                                 |              |
+| TTID_LOW_SPIKE  | natural  |  1                                                                                                                                                 |              |
+| TIMING_TABLE    | T_NATVEC |  ( 		TTID_HIGH_SPIKE			=> HIGH_SPIKE_SUPPRESSION_CYCLES,<br><span style="padding-left:20px"> 		TTID_LOW_SPIKE			=> LOW_SPIKE_SUPPRESSION_CYCLES 	) | Timing table |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, Input, TC_Timeout )

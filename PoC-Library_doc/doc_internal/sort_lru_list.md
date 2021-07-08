@@ -76,9 +76,9 @@ limitations under the License.
 | MovesDownRev     | std_logic_vector(ELEMENTS downto 0)   |             |
 ## Types
 
-| Name             | Type | Description |
-| ---------------- | ---- | ----------- |
-| T_ELEMENT_VECTOR |      |             |
+| Name             | Type                                   | Description |
+| ---------------- | -------------------------------------- | ----------- |
+| T_ELEMENT_VECTOR | array (natural range <>) of T_ELEMENT  |             |
 ## Instantiations
 
 - MovesUpProp: poc.arith_prefix_and

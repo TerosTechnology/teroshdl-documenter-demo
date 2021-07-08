@@ -185,9 +185,9 @@ limitations under the License.
 | LOWER_ADDR_BITS | natural  |  log2ceil(RATIO)             | Number of address bits identifying the CPU data word within a cache line (memory word) |
 ## Types
 
-| Name  | Type                                       | Description                   |
-| ----- | ------------------------------------------ | ----------------------------- |
-| T_FSM | (READY, ACCESS_MEM, READING_MEM, UNKNOWN)  | FSM and other state registers |
+| Name  | Type                                                                                                                                                   | Description                   |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| T_FSM | (READY,<br><span style="padding-left:20px"> ACCESS_MEM,<br><span style="padding-left:20px"> READING_MEM,<br><span style="padding-left:20px"> UNKNOWN)  | FSM and other state registers |
 ## Processes
 - unnamed: ( fsm_cs, cpu_req, cpu_write, cache_Hit, cache_Miss, mem_rdy, mem_rstb )
 **Description**

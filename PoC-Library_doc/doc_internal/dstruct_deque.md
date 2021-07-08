@@ -80,10 +80,10 @@ limitations under the License.
 | A_BITS | natural |  log2ceil(MIN_DEPTH) |             |
 ## Types
 
-| Name           | Type                | Description                             |
-| -------------- | ------------------- | --------------------------------------- |
-| last_op_ctrl_t | (IDLE, SET, UNSET)  |                                         |
-| ctrl_t         | (PUSH, POP, IDLE)   | ctrl signal for stackpointer operations |
+| Name           | Type                                                                                        | Description                             |
+| -------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
+| last_op_ctrl_t | (IDLE,<br><span style="padding-left:20px"> SET,<br><span style="padding-left:20px"> UNSET)  |                                         |
+| ctrl_t         | (PUSH,<br><span style="padding-left:20px"> POP,<br><span style="padding-left:20px"> IDLE)   | ctrl signal for stackpointer operations |
 ## Processes
 - unnamed: ( combined, stackpointerA, stackpointerB, last_operation, ctrl )
 - unnamed: ( clk )

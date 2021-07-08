@@ -74,9 +74,9 @@ limitations under the License.
 | KEY_BITS | positive |  log2ceilnz(ELEMENTS) |             |
 ## Types
 
-| Name             | Type | Description |
-| ---------------- | ---- | ----------- |
-| T_ELEMENT_VECTOR |      |             |
+| Name             | Type                                   | Description |
+| ---------------- | -------------------------------------- | ----------- |
+| T_ELEMENT_VECTOR | array (natural range <>) of T_ELEMENT  |             |
 ## Instantiations
 
 - MovesUpProp: poc.arith_prefix_and

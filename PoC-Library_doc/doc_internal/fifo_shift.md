@@ -57,9 +57,9 @@ limitations under the License.
 | Ptr  | unsigned(log2ceilnz(MIN_DEPTH) downto 0) |             |
 ## Types
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| tData |      |             |
+| Name  | Type                                                           | Description |
+| ----- | -------------------------------------------------------------- | ----------- |
+| tData | array(natural range<>) of std_logic_vector(D_BITS-1 downto 0)  |             |
 ## Processes
 - unnamed: ( clk )
 - unnamed: ( clk )

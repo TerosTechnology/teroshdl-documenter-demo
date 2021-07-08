@@ -63,7 +63,7 @@ limitations under the License.
 | Segments         | std_logic_vector(6 downto 0)           |             |
 ## Constants
 
-| Name              | Type     | Value                                                  | Description |
-| ----------------- | -------- | ------------------------------------------------------ | ----------- |
-| REFRESHTIMER_MAX  | positive |  TimingToCycles(to_time(REFRESH_RATE), CLOCK_FREQ) - 1 |             |
-| REFRESHTIMER_BITS | positive |  log2ceilnz(REFRESHTIMER_MAX) + 1                      |             |
+| Name              | Type     | Value                                                                                      | Description |
+| ----------------- | -------- | ------------------------------------------------------------------------------------------ | ----------- |
+| REFRESHTIMER_MAX  | positive |  TimingToCycles(to_time(REFRESH_RATE),<br><span style="padding-left:20px"> CLOCK_FREQ) - 1 |             |
+| REFRESHTIMER_BITS | positive |  log2ceilnz(REFRESHTIMER_MAX) + 1                                                          |             |

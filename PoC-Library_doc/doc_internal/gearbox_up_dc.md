@@ -80,9 +80,9 @@ limitations under the License.
 | COUNTER_BITS   | positive |  log2ceil(COUNTER_MAX + 1)            |             |
 ## Types
 
-| Name           | Type | Description |
-| -------------- | ---- | ----------- |
-| T_CHUNK_VECTOR |      |             |
+| Name           | Type                                | Description |
+| -------------- | ----------------------------------- | ----------- |
+| T_CHUNK_VECTOR | array(natural range <>) of T_CHUNK  |             |
 ## Functions
 - to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
 **Description**

@@ -110,10 +110,10 @@
 | timeout_en_c | boolean |  boolean(BUS_TIMEOUT /= 0) | timeout enabled if BUS_TIMEOUT > 0 |
 ## Types
 
-| Name         | Type          | Description |
-| ------------ | ------------- | ----------- |
-| ctrl_state_t | (IDLE, BUSY)  | bus arbiter |
-| ctrl_t       |               |             |
+| Name         | Type                                              | Description |
+| ------------ | ------------------------------------------------- | ----------- |
+| ctrl_state_t | (IDLE,<br><span style="padding-left:20px"> BUSY)  | bus arbiter |
+| ctrl_t       |                                                   |             |
 ## Processes
 - bus_arbiter: ( rstn_i, clk_i )
 **Description**

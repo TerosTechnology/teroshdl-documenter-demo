@@ -52,7 +52,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | ------------ | ---- | ----------- |
 | burst_data_t |      |             |
 ## Functions
-- push_burst_data <font id="function_arguments">(queue : queue_t; variable burst_data : inout burst_data_t) </font> <font id="function_return">return ()</font>
+- push_burst_data <font id="function_arguments">(queue : queue_t;<br><span style="padding-left:20px"> variable burst_data : inout burst_data_t) </font> <font id="function_return">return ()</font>
 - recycle <font id="function_arguments">(variable burst_data : inout burst_data_t) </font> <font id="function_return">return ()</font>
 ## Processes
 - control_process: (  )

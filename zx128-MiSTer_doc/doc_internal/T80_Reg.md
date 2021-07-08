@@ -80,8 +80,8 @@ File history :
 | RegsL | Register_Image(0 to 7) |             |
 ## Types
 
-| Name           | Type | Description |
-| -------------- | ---- | ----------- |
-| Register_Image |      |             |
+| Name           | Type                                                      | Description |
+| -------------- | --------------------------------------------------------- | ----------- |
+| Register_Image | array (natural range <>) of std_logic_vector(7 downto 0)  |             |
 ## Processes
 - unnamed: ( Clk )

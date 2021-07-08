@@ -84,10 +84,10 @@ limitations under the License.
 | EOF_BIT      | natural  |  DATA_BITS        |             |
 ## Types
 
-| Name           | Type                 | Description |
-| -------------- | -------------------- | ----------- |
-| T_WRITER_STATE | (ST_IDLE, ST_FRAME)  |             |
-| T_READER_STATE | (ST_IDLE, ST_FRAME)  |             |
+| Name           | Type                                                     | Description |
+| -------------- | -------------------------------------------------------- | ----------- |
+| T_WRITER_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_FRAME)  |             |
+| T_READER_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_FRAME)  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( Writer_State,

@@ -11,6 +11,6 @@
 | --------------- | ---- | ----------- |
 | stream_master_t |      |             |
 ## Functions
-- push_stream <font id="function_arguments">(signal net : inout network_t; stream : stream_master_t; data : std_logic_vector; last : boolean := false) </font> <font id="function_return">return ()</font>
+- push_stream <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> stream : stream_master_t;<br><span style="padding-left:20px"> data : std_logic_vector;<br><span style="padding-left:20px"> last : boolean := false) </font> <font id="function_return">return ()</font>
 **Description**
 Push a data value to the stream

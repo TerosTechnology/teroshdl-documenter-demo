@@ -16,6 +16,6 @@ vunit: run_all_in_same_sim
 | ------------ | ------ | ----- | ----------- |
 | runner_cfg   | string |       |             |
 ## Functions
-- check <font id="function_arguments">( constant expr : in boolean; constant msg  : in string) </font> <font id="function_return">return ()</font>
+- check <font id="function_arguments">( constant expr : in boolean;<br><span style="padding-left:20px"> constant msg  : in string) </font> <font id="function_return">return ()</font>
 ## Processes
 - test_runner: (  )

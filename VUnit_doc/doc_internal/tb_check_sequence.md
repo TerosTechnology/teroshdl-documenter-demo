@@ -36,9 +36,9 @@ vunit: run_all_in_same_sim
 | my_checker_5 | checker_t |  new_checker("my_checker5") |             |
 ## Types
 
-| Name       | Type | Description |
-| ---------- | ---- | ----------- |
-| slv_vector |      |             |
+| Name       | Type                                                  | Description |
+| ---------- | ----------------------------------------------------- | ----------- |
+| slv_vector | array (natural range <>) of std_logic_vector(1 to 5)  |             |
 ## Processes
 - clock: (  )
 - check_sequence_4: (  )

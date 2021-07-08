@@ -107,19 +107,19 @@
 | op_mul_c    | std_ulogic_vector(2 downto 0) |  "111" |             |
 ## Types
 
-| Name               | Type              | Description                                                         |
-| ------------------ | ----------------- | ------------------------------------------------------------------- |
-| cmd_t              |                   | commands (one-hot) --                                               |
-| ctrl_state_t       | (S_IDLE, S_BUSY)  | co-processor control engine --                                      |
-| ctrl_engine_t      |                   |                                                                     |
-| op_data_t          |                   | floating-point operands --                                          |
-| op_class_t         |                   |                                                                     |
-| fpu_operands_t     |                   |                                                                     |
-| fu_interface_t     |                   | functional units interface --                                       |
-| fu_i2f_interface_t |                   | integer-to-float --                                                 |
-| multiplier_t       |                   | multiplier unit --                                                  |
-| addsub_t           |                   | adder/subtractor unit --                                            |
-| normalizer_t       |                   | normalizer interface (normalization & rounding and int-to-float) -- |
+| Name               | Type                                                  | Description                                                         |
+| ------------------ | ----------------------------------------------------- | ------------------------------------------------------------------- |
+| cmd_t              |                                                       | commands (one-hot) --                                               |
+| ctrl_state_t       | (S_IDLE,<br><span style="padding-left:20px"> S_BUSY)  | co-processor control engine --                                      |
+| ctrl_engine_t      |                                                       |                                                                     |
+| op_data_t          |                                                       | floating-point operands --                                          |
+| op_class_t         |                                                       |                                                                     |
+| fpu_operands_t     |                                                       |                                                                     |
+| fu_interface_t     |                                                       | functional units interface --                                       |
+| fu_i2f_interface_t |                                                       | integer-to-float --                                                 |
+| multiplier_t       |                                                       | multiplier unit --                                                  |
+| addsub_t           |                                                       | adder/subtractor unit --                                            |
+| normalizer_t       |                                                       | normalizer interface (normalization & rounding and int-to-float) -- |
 ## Processes
 - number_classifier: ( op_data )
 **Description**

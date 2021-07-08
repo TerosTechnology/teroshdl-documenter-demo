@@ -37,6 +37,7 @@
 - Module: [neorv32_uart ](./doc_internal/neorv32_uart.md)
 - Module: [neorv32_wdt ](./doc_internal/neorv32_wdt.md)
 - Module: [neorv32_wishbone ](./doc_internal/neorv32_wishbone.md)
+- Module: [neorv32_xirq ](./doc_internal/neorv32_xirq.md)
 - Module: [neorv32_ProcessorTop_Minimal ](./doc_internal/neorv32_ProcessorTop_Minimal.md)
 - Module: [neorv32_ProcessorTop_MinimalBoot ](./doc_internal/neorv32_ProcessorTop_MinimalBoot.md)
 - Module: [neorv32_ProcessorTop_Test ](./doc_internal/neorv32_ProcessorTop_Test.md)

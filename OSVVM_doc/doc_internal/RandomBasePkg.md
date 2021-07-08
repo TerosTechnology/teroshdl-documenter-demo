@@ -14,35 +14,35 @@ use ieee_proposed.standard_additions.all ;   -- remove with VHDL-2008
 | NULL_INTV                | integer_vector (NULL_RANGE_TYPE) |  (others => 0)     |             |
 ## Types
 
-| Name           | Type                                                      | Description                                          |
-| -------------- | --------------------------------------------------------- | ---------------------------------------------------- |
-| RandomSeedType |                                                           | RandomSeedType - Abstract the type for randomization |
-| RandomDistType | (NONE, UNIFORM, FAVOR_SMALL, FAVOR_BIG, NORMAL, POISSON)  |                                                      |
-| RandomParmType |                                                           |                                                      |
+| Name           | Type                                                                                                                                                                                                                                          | Description                                          |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| RandomSeedType |                                                                                                                                                                                                                                               | RandomSeedType - Abstract the type for randomization |
+| RandomDistType | (NONE,<br><span style="padding-left:20px"> UNIFORM,<br><span style="padding-left:20px"> FAVOR_SMALL,<br><span style="padding-left:20px"> FAVOR_BIG,<br><span style="padding-left:20px"> NORMAL,<br><span style="padding-left:20px"> POISSON)  |                                                      |
+| RandomParmType |                                                                                                                                                                                                                                               |                                                      |
 ## Functions
-- Uniform <font id="function_arguments">(Result : out real ;  Seed : inout RandomSeedType) </font> <font id="function_return">return ()</font>
+- Uniform <font id="function_arguments">(Result : out real ;<br><span style="padding-left:20px">  Seed : inout RandomSeedType) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">(A : RandomSeedType) </font> <font id="function_return">return string </font>
-- write <font id="function_arguments">(variable L: inout line ; A : RandomSeedType ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ; good : out boolean ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L: inout line ; A : out RandomSeedType ) </font> <font id="function_return">return ()</font>
+- write <font id="function_arguments">(variable L: inout line ;<br><span style="padding-left:20px"> A : RandomSeedType ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L: inout line ;<br><span style="padding-left:20px"> A : out RandomSeedType ;<br><span style="padding-left:20px"> good : out boolean ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L: inout line ;<br><span style="padding-left:20px"> A : out RandomSeedType ) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">(A : RandomDistType) </font> <font id="function_return">return string </font>
 **Description**
 RandomParm IO
-- write <font id="function_arguments">(variable L : inout line ; A : RandomDistType ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L : inout line ; A : out RandomDistType ; good : out boolean ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L : inout line ; A : out RandomDistType ) </font> <font id="function_return">return ()</font>
+- write <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : RandomDistType ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomDistType ;<br><span style="padding-left:20px"> good : out boolean ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomDistType ) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">(A : RandomParmType) </font> <font id="function_return">return string </font>
-- write <font id="function_arguments">(variable L : inout line ; A : RandomParmType ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L : inout line ; A : out RandomParmType ; good : out boolean ) </font> <font id="function_return">return ()</font>
-- read <font id="function_arguments">(variable L : inout line ; A : out RandomParmType ) </font> <font id="function_return">return ()</font>
-- Scale <font id="function_arguments">(A, Min, Max : real) </font> <font id="function_return">return real </font>
-- Scale <font id="function_arguments">(A : real ; Min, Max : integer) </font> <font id="function_return">return integer </font>
+- write <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : RandomParmType ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomParmType ;<br><span style="padding-left:20px"> good : out boolean ) </font> <font id="function_return">return ()</font>
+- read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomParmType ) </font> <font id="function_return">return ()</font>
+- Scale <font id="function_arguments">(A,<br><span style="padding-left:20px"> Min,<br><span style="padding-left:20px"> Max : real) </font> <font id="function_return">return real </font>
+- Scale <font id="function_arguments">(A : real ;<br><span style="padding-left:20px"> Min,<br><span style="padding-left:20px"> Max : integer) </font> <font id="function_return">return integer </font>
 - FavorSmall <font id="function_arguments">(A : real) </font> <font id="function_return">return real </font>
 - FavorBig <font id="function_arguments">(A : real) </font> <font id="function_return">return real </font>
-- to_time_vector <font id="function_arguments">(A : integer_vector ; Unit : time) </font> <font id="function_return">return time_vector </font>
-- to_integer_vector <font id="function_arguments">(A : time_vector ; Unit : time) </font> <font id="function_return">return integer_vector </font>
-- RemoveExclude <font id="function_arguments">(A, Exclude : integer_vector ; variable NewA : out integer_vector ; variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>
-- inside <font id="function_arguments">(A : real ; Exclude : real_vector) </font> <font id="function_return">return boolean </font>
-- RemoveExclude <font id="function_arguments">(A, Exclude : real_vector ; variable NewA : out real_vector ; variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>
-- inside <font id="function_arguments">(A : time ; Exclude : time_vector) </font> <font id="function_return">return boolean </font>
-- RemoveExclude <font id="function_arguments">(A, Exclude : time_vector ; variable NewA : out time_vector ; variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>
+- to_time_vector <font id="function_arguments">(A : integer_vector ;<br><span style="padding-left:20px"> Unit : time) </font> <font id="function_return">return time_vector </font>
+- to_integer_vector <font id="function_arguments">(A : time_vector ;<br><span style="padding-left:20px"> Unit : time) </font> <font id="function_return">return integer_vector </font>
+- RemoveExclude <font id="function_arguments">(A,<br><span style="padding-left:20px"> Exclude : integer_vector ;<br><span style="padding-left:20px"> variable NewA : out integer_vector ;<br><span style="padding-left:20px"> variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>
+- inside <font id="function_arguments">(A : real ;<br><span style="padding-left:20px"> Exclude : real_vector) </font> <font id="function_return">return boolean </font>
+- RemoveExclude <font id="function_arguments">(A,<br><span style="padding-left:20px"> Exclude : real_vector ;<br><span style="padding-left:20px"> variable NewA : out real_vector ;<br><span style="padding-left:20px"> variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>
+- inside <font id="function_arguments">(A : time ;<br><span style="padding-left:20px"> Exclude : time_vector) </font> <font id="function_return">return boolean </font>
+- RemoveExclude <font id="function_arguments">(A,<br><span style="padding-left:20px"> Exclude : time_vector ;<br><span style="padding-left:20px"> variable NewA : out time_vector ;<br><span style="padding-left:20px"> variable NewALength : inout natural ) </font> <font id="function_return">return ()</font>

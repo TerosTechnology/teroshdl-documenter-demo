@@ -89,26 +89,26 @@ limitations under the License.
 | Out_Last_d       | std_logic                                        |             |
 ## Constants
 
-| Name                  | Type                   | Value                                           | Description |
-| --------------------- | ---------------------- | ----------------------------------------------- | ----------- |
-| C_VERBOSE             | boolean                |  FALSE                                          |             |
-| BITS_PER_CHUNK        | positive               |  greatestCommonDivisor(INPUT_BITS, OUTPUT_BITS) |             |
-| INPUT_CHUNKS          | positive               |  INPUT_BITS / BITS_PER_CHUNK                    |             |
-| OUTPUT_CHUNKS         | positive               |  OUTPUT_BITS / BITS_PER_CHUNK                   |             |
-| STAGES                | positive               |  div_ceil(OUTPUT_CHUNKS, INPUT_CHUNKS)          |             |
-| COUNTER_TRANSLATION   | T_COUNTER_DESCRIPTIONS |  genCounterDescription                          |             |
-| MUX_INPUT_TRANSLATION | T_MUX_DESCRIPTIONS     |  genMuxDescription                              |             |
+| Name                  | Type                   | Value                                                                               | Description |
+| --------------------- | ---------------------- | ----------------------------------------------------------------------------------- | ----------- |
+| C_VERBOSE             | boolean                |  FALSE                                                                              |             |
+| BITS_PER_CHUNK        | positive               |  greatestCommonDivisor(INPUT_BITS,<br><span style="padding-left:20px"> OUTPUT_BITS) |             |
+| INPUT_CHUNKS          | positive               |  INPUT_BITS / BITS_PER_CHUNK                                                        |             |
+| OUTPUT_CHUNKS         | positive               |  OUTPUT_BITS / BITS_PER_CHUNK                                                       |             |
+| STAGES                | positive               |  div_ceil(OUTPUT_CHUNKS,<br><span style="padding-left:20px"> INPUT_CHUNKS)          |             |
+| COUNTER_TRANSLATION   | T_COUNTER_DESCRIPTIONS |  genCounterDescription                                                              |             |
+| MUX_INPUT_TRANSLATION | T_MUX_DESCRIPTIONS     |  genMuxDescription                                                                  |             |
 ## Types
 
-| Name                   | Type | Description |
-| ---------------------- | ---- | ----------- |
-| T_CHUNK_VECTOR         |      |             |
-| T_BUFFER_MATRIX        |      |             |
-| T_MUX_INPUT            |      |             |
-| T_MUX_INPUT_LIST       |      |             |
-| T_MUX_DESCRIPTIONS     |      |             |
-| T_COUNTER_STRUCT       |      |             |
-| T_COUNTER_DESCRIPTIONS |      |             |
+| Name                   | Type                                                                  | Description |
+| ---------------------- | --------------------------------------------------------------------- | ----------- |
+| T_CHUNK_VECTOR         | array(natural range <>) of T_CHUNK                                    |             |
+| T_BUFFER_MATRIX        | array(natural range <>) of T_CHUNK_VECTOR(INPUT_CHUNKS - 1 downto 0)  |             |
+| T_MUX_INPUT            |                                                                       |             |
+| T_MUX_INPUT_LIST       | array(natural range <>) of T_MUX_INPUT                                |             |
+| T_MUX_DESCRIPTIONS     | array(natural range <>) of T_MUX_INPUT_LIST(0 to OUTPUT_CHUNKS - 1)   |             |
+| T_COUNTER_STRUCT       |                                                                       |             |
+| T_COUNTER_DESCRIPTIONS | array(natural range <>) of T_COUNTER_STRUCT                           |             |
 ## Functions
 - genCounterDescription <font id="function_arguments">()</font> <font id="function_return">return T_COUNTER_DESCRIPTIONS </font>
 - genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS </font>

@@ -26,18 +26,18 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 |  dv_out | std_logic            |             |
 ## Constants
 
-| Name           | Type                | Value                                             | Description |
-| -------------- | ------------------- | ------------------------------------------------- | ----------- |
-| driver         | actor_t             |  new_actor("driver")                              |             |
-| monitor        | actor_t             |  new_actor("monitor")                             |             |
-| master_channel | actor_t             |  new_actor("driver channel")                      |             |
-| slave_channel  | actor_t             |  new_actor("monitor channel")                     |             |
-| add_msg        | msg_type_t          |  new_msg_type("add")                              |             |
-| sum_msg        | msg_type_t          |  new_msg_type("sum")                              |             |
-| my_receiver    | actor_t             |  new_actor("my receiver")                         |             |
-| test_sequencer | actor_t             |  new_actor("test sequencer")                      |             |
-| channels       | actor_vec_t(1 to 2) |  (new_actor("channel 1"), new_actor("channel 2")) |             |
-| clk_period     | time                |  10 ns                                            |             |
+| Name           | Type                | Value                                                                                 | Description |
+| -------------- | ------------------- | ------------------------------------------------------------------------------------- | ----------- |
+| driver         | actor_t             |  new_actor("driver")                                                                  |             |
+| monitor        | actor_t             |  new_actor("monitor")                                                                 |             |
+| master_channel | actor_t             |  new_actor("driver channel")                                                          |             |
+| slave_channel  | actor_t             |  new_actor("monitor channel")                                                         |             |
+| add_msg        | msg_type_t          |  new_msg_type("add")                                                                  |             |
+| sum_msg        | msg_type_t          |  new_msg_type("sum")                                                                  |             |
+| my_receiver    | actor_t             |  new_actor("my receiver")                                                             |             |
+| test_sequencer | actor_t             |  new_actor("test sequencer")                                                          |             |
+| channels       | actor_vec_t(1 to 2) |  (new_actor("channel 1"),<br><span style="padding-left:20px"> new_actor("channel 2")) |             |
+| clk_period     | time                |  10 ns                                                                                |             |
 ## Processes
 - test_runner: (  )
 - my_receiver_process: (  )

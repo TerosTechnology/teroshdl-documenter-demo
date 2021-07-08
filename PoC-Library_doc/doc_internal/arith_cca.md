@@ -65,9 +65,9 @@ limitations under the License.
 | CCA    | boolean |  LEVELS'length > 1 |             |
 ## Types
 
-| Name    | Type | Description |
-| ------- | ---- | ----------- |
-| tLevel  |      |             |
-| tLevels |      |             |
+| Name    | Type                              | Description |
+| ------- | --------------------------------- | ----------- |
+| tLevel  |                                   |             |
+| tLevels | array(natural range<>) of tLevel  |             |
 ## Functions
 - compact <font id="function_arguments">()</font> <font id="function_return">return tLevels </font>

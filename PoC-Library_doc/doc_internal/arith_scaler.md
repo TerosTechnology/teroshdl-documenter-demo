@@ -67,22 +67,22 @@ limitations under the License.
 | divmask    | tResMask                                     |                              |
 ## Constants
 
-| Name          | Type                  | Value                                       | Description |
-| ------------- | --------------------- | ------------------------------------------- | ----------- |
-| N             | positive              |  arg'length                                 |             |
-| X             | positive              |  log2ceil(imax(imax(MULS), imax(DIVS)/2+1)) |             |
-| R             | positive              |  log2ceil(imax(DIVS)+1)                     |             |
-| DIV_PROPS     | tDivProps             |  computeProps                               |             |
-| MAX_MUL_STEPS | positive              |  N                                          |             |
-| MAX_DIV_STEPS | positive              |  imax(DIV_PROPS.steps)                      |             |
-| MAX_ANY_STEPS | positive              |  imax(MAX_MUL_STEPS, MAX_DIV_STEPS)         |             |
-| RES_MASKS     | tResMasks(DIVS'range) |  computeMasks                               |             |
+| Name          | Type                  | Value                                                                           | Description |
+| ------------- | --------------------- | ------------------------------------------------------------------------------- | ----------- |
+| N             | positive              |  arg'length                                                                     |             |
+| X             | positive              |  log2ceil(imax(imax(MULS),<br><span style="padding-left:20px"> imax(DIVS)/2+1)) |             |
+| R             | positive              |  log2ceil(imax(DIVS)+1)                                                         |             |
+| DIV_PROPS     | tDivProps             |  computeProps                                                                   |             |
+| MAX_MUL_STEPS | positive              |  N                                                                              |             |
+| MAX_DIV_STEPS | positive              |  imax(DIV_PROPS.steps)                                                          |             |
+| MAX_ANY_STEPS | positive              |  imax(MAX_MUL_STEPS,<br><span style="padding-left:20px"> MAX_DIV_STEPS)         |             |
+| RES_MASKS     | tResMasks(DIVS'range) |  computeMasks                                                                   |             |
 ## Types
 
-| Name      | Type | Description         |
-| --------- | ---- | ------------------- |
-| tDivProps |      | Division Properties |
-| tResMasks |      |                     |
+| Name      | Type                                | Description         |
+| --------- | ----------------------------------- | ------------------- |
+| tDivProps |                                     | Division Properties |
+| tResMasks | array(natural range<>) of tResMask  |                     |
 ## Functions
 - computeProps <font id="function_arguments">()</font> <font id="function_return">return tDivProps </font>
 - computeMasks <font id="function_arguments">()</font> <font id="function_return">return tResMasks </font>

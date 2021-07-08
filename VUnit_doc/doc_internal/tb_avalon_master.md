@@ -32,23 +32,23 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | waitrequest   | std_logic                                         |             |
 ## Constants
 
-| Name          | Type           | Value                                                                                                                                                                                                    | Description |
-| ------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| tb_cfg        | tb_cfg_t       |  decode(encoded_tb_cfg)                                                                                                                                                                                  |             |
-| master_logger | logger_t       |  get_logger("master")                                                                                                                                                                                    |             |
-| tb_logger     | logger_t       |  get_logger("tb")                                                                                                                                                                                        |             |
-| master_actor  | actor_t        |  new_actor("Avalon-MM Master")                                                                                                                                                                           |             |
-| bus_handle    | bus_master_t   |  new_bus(data_length => tb_cfg.data_width,       address_length => tb_cfg.addr_width, logger => master_logger,       actor => master_actor)                                                              |             |
-| memory        | memory_t       |  new_memory                                                                                                                                                                                              |             |
-| buf           | buffer_t       |  allocate(memory, tb_cfg.transfers * byteenable'length)                                                                                                                                                  |             |
-| avalon_slave  | avalon_slave_t |  new_avalon_slave(     memory => memory,     readdatavalid_high_probability => tb_cfg.readdatavalid_prob,     waitrequest_high_probability => tb_cfg.waitrequest_prob,     name => "Avalon-MM Slave"   ) |             |
+| Name          | Type           | Value                                                                                                                                                                                                                                                                                                                | Description |
+| ------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| tb_cfg        | tb_cfg_t       |  decode(encoded_tb_cfg)                                                                                                                                                                                                                                                                                              |             |
+| master_logger | logger_t       |  get_logger("master")                                                                                                                                                                                                                                                                                                |             |
+| tb_logger     | logger_t       |  get_logger("tb")                                                                                                                                                                                                                                                                                                    |             |
+| master_actor  | actor_t        |  new_actor("Avalon-MM Master")                                                                                                                                                                                                                                                                                       |             |
+| bus_handle    | bus_master_t   |  new_bus(data_length => tb_cfg.data_width,<br><span style="padding-left:20px">       address_length => tb_cfg.addr_width,<br><span style="padding-left:20px"> logger => master_logger,<br><span style="padding-left:20px">       actor => master_actor)                                                              |             |
+| memory        | memory_t       |  new_memory                                                                                                                                                                                                                                                                                                          |             |
+| buf           | buffer_t       |  allocate(memory,<br><span style="padding-left:20px"> tb_cfg.transfers * byteenable'length)                                                                                                                                                                                                                          |             |
+| avalon_slave  | avalon_slave_t |  new_avalon_slave(     memory => memory,<br><span style="padding-left:20px">     readdatavalid_high_probability => tb_cfg.readdatavalid_prob,<br><span style="padding-left:20px">     waitrequest_high_probability => tb_cfg.waitrequest_prob,<br><span style="padding-left:20px">     name => "Avalon-MM Slave"   ) |             |
 ## Types
 
 | Name     | Type | Description |
 | -------- | ---- | ----------- |
 | tb_cfg_t |      |             |
 ## Functions
-- gen_rndburst <font id="function_arguments">( variable rnd : inout RandomPType; variable rndburst : inout positive; variable transfers : inout natural ) </font> <font id="function_return">return ()</font>
+- gen_rndburst <font id="function_arguments">( variable rnd : inout RandomPType;<br><span style="padding-left:20px"> variable rndburst : inout positive;<br><span style="padding-left:20px"> variable transfers : inout natural ) </font> <font id="function_return">return ()</font>
 ## Processes
 - main_stim: (  )
 ## Instantiations

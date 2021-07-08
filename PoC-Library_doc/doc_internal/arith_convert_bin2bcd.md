@@ -59,16 +59,16 @@ limitations under the License.
 | DelayShifter    | std_logic_vector(BINARY_SHIFTS downto 0)   |             |
 ## Constants
 
-| Name          | Type     | Value                       | Description |
-| ------------- | -------- | --------------------------- | ----------- |
-| RADIX_BITS    | positive |  log2ceil(RADIX)            |             |
-| BINARY_SHIFTS | positive |  div_ceil(BITS, RADIX_BITS) |             |
-| BINARY_BITS   | positive |  BINARY_SHIFTS * RADIX_BITS |             |
+| Name          | Type     | Value                                                           | Description |
+| ------------- | -------- | --------------------------------------------------------------- | ----------- |
+| RADIX_BITS    | positive |  log2ceil(RADIX)                                                |             |
+| BINARY_SHIFTS | positive |  div_ceil(BITS,<br><span style="padding-left:20px"> RADIX_BITS) |             |
+| BINARY_BITS   | positive |  BINARY_SHIFTS * RADIX_BITS                                     |             |
 ## Types
 
-| Name           | Type | Description |
-| -------------- | ---- | ----------- |
-| T_CARRY_VECTOR |      |             |
+| Name           | Type                                | Description |
+| -------------- | ----------------------------------- | ----------- |
+| T_CARRY_VECTOR | array(natural range <>) of T_CARRY  |             |
 ## Functions
 - nextBCD <font id="function_arguments">(Value : unsigned(4 downto 0)) </font> <font id="function_return">return unsigned </font>
 ## Processes

@@ -29,10 +29,10 @@ This test bench is to reproduce issue with pop form empty queue in modelsim.
 | clk           | std_logic                     |             |
 ## Constants
 
-| Name       | Type         | Value                                                            | Description |
-| ---------- | ------------ | ---------------------------------------------------------------- | ----------- |
-| avalon_bus | bus_master_t |  new_bus(data_length => 32, address_length => av_address'length) |             |
-| CLK_period | time         |  20 ns                                                           |             |
+| Name       | Type         | Value                                                                                                | Description |
+| ---------- | ------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
+| avalon_bus | bus_master_t |  new_bus(data_length => 32,<br><span style="padding-left:20px"> address_length => av_address'length) |             |
+| CLK_period | time         |  20 ns                                                                                               |             |
 ## Processes
 - tests: (  )
 ## Instantiations

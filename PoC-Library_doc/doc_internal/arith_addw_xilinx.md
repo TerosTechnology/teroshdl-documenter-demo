@@ -52,15 +52,15 @@ limitations under the License.
 | c    | std_logic_vector(K-1 downto 1) |                 |
 ## Constants
 
-| Name             | Type                         | Value                                               | Description |
-| ---------------- | ---------------------------- | --------------------------------------------------- | ----------- |
-| DEFAULT_BLOCKING | tBlocking_vector             |  (AAM => ASC, CAI => ASC, PAI => DESC, CCA => DESC) |             |
-| BLOCKS           | integer_vector(K-1 downto 0) |  compute_blocks                                     |             |
+| Name             | Type                         | Value                                                                                                                                                           | Description |
+| ---------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| DEFAULT_BLOCKING | tBlocking_vector             |  (AAM => ASC,<br><span style="padding-left:20px"> CAI => ASC,<br><span style="padding-left:20px"> PAI => DESC,<br><span style="padding-left:20px"> CCA => DESC) |             |
+| BLOCKS           | integer_vector(K-1 downto 0) |  compute_blocks                                                                                                                                                 |             |
 ## Types
 
-| Name             | Type | Description |
-| ---------------- | ---- | ----------- |
-| tBlocking_vector |      |             |
-| integer_vector   |      |             |
+| Name             | Type                               | Description |
+| ---------------- | ---------------------------------- | ----------- |
+| tBlocking_vector |                                    |             |
+| integer_vector   | array(natural range<>) of integer  |             |
 ## Functions
 - compute_blocks <font id="function_arguments">()</font> <font id="function_return">return integer_vector </font>

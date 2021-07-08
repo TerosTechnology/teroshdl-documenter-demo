@@ -34,12 +34,12 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | rlast   | std_logic                                |             |
 ## Constants
 
-| Name          | Type        | Value                                                                                                         | Description |
-| ------------- | ----------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
-| log_data_size | integer     |  4                                                                                                            |             |
-| data_size     | integer     |  2**log_data_size                                                                                             |             |
-| memory        | memory_t    |  new_memory                                                                                                   |             |
-| axi_slave     | axi_slave_t |  new_axi_slave(address_fifo_depth => 1,                                                     memory => memory) |             |
+| Name          | Type        | Value                                                                                                                                             | Description |
+| ------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| log_data_size | integer     |  4                                                                                                                                                |             |
+| data_size     | integer     |  2**log_data_size                                                                                                                                 |             |
+| memory        | memory_t    |  new_memory                                                                                                                                       |             |
+| axi_slave     | axi_slave_t |  new_axi_slave(address_fifo_depth => 1,<br><span style="padding-left:20px">                                                     memory => memory) |             |
 ## Processes
 - main: (  )
 ## Instantiations

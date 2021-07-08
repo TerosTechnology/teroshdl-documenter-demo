@@ -29,10 +29,10 @@ vunit: run_all_in_same_sim
 |  check_zero_one_hot_en_3 | std_logic                    |             |
 ## Constants
 
-| Name        | Type      | Value                                                  | Description |
-| ----------- | --------- | ------------------------------------------------------ | ----------- |
-| my_checker2 | checker_t |  new_checker("my_checker2")                            |             |
-| my_checker3 | checker_t |  new_checker("my_checker3", default_log_level => info) |             |
+| Name        | Type      | Value                                                                                      | Description |
+| ----------- | --------- | ------------------------------------------------------------------------------------------ | ----------- |
+| my_checker2 | checker_t |  new_checker("my_checker2")                                                                |             |
+| my_checker3 | checker_t |  new_checker("my_checker3",<br><span style="padding-left:20px"> default_log_level => info) |             |
 ## Processes
 - clock: (  )
 - check_zero_one_hot_runner: (  )

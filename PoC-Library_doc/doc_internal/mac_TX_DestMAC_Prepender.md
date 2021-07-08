@@ -61,9 +61,9 @@ limitations under the License.
 | Is_EOF      | std_logic |             |
 ## Types
 
-| Name    | Type                                                                                                                                        | Description |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_PREPEND_DEST_MAC_1, ST_PREPEND_DEST_MAC_2, ST_PREPEND_DEST_MAC_3, ST_PREPEND_DEST_MAC_4, ST_PREPEND_DEST_MAC_5, ST_PAYLOAD )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_PREPEND_DEST_MAC_1,<br><span style="padding-left:20px"> ST_PREPEND_DEST_MAC_2,<br><span style="padding-left:20px"> ST_PREPEND_DEST_MAC_3,<br><span style="padding-left:20px"> ST_PREPEND_DEST_MAC_4,<br><span style="padding-left:20px"> ST_PREPEND_DEST_MAC_5,<br><span style="padding-left:20px"> ST_PAYLOAD )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, In_Valid, In_Data, In_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack, In_Meta_DestMACAddress_Data )

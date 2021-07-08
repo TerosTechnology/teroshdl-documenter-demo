@@ -60,10 +60,10 @@ limitations under the License.
 | a2_sl | std_logic_vector(A_BITS-1 downto 0) |             |
 ## Constants
 
-| Name      | Type     | Value                                                | Description |
-| --------- | -------- | ---------------------------------------------------- | ----------- |
-| DEPTH     | positive |  2**A_BITS                                           |             |
-| INIT_FILE | string   |  ite((str_length(FILENAME) = 0), "UNUSED", FILENAME) |             |
+| Name      | Type     | Value                                                                                                                        | Description |
+| --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| DEPTH     | positive |  2**A_BITS                                                                                                                   |             |
+| INIT_FILE | string   |  ite((str_length(FILENAME) = 0),<br><span style="padding-left:20px"> "UNUSED",<br><span style="padding-left:20px"> FILENAME) |             |
 ## Instantiations
 
 - mem: altsyncram

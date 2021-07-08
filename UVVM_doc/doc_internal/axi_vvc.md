@@ -59,13 +59,13 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | entry_num_in_vvc_activity_register         | integer       | VVC Activity |
 ## Constants
 
-| Name         | Type         | Value                                                        | Description |
-| ------------ | ------------ | ------------------------------------------------------------ | ----------- |
-| C_SCOPE      | string       |  C_VVC_NAME & "," & to_string(GC_INSTANCE_IDX)               |             |
-| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE, C_VVC_NAME, GC_INSTANCE_IDX, NA) |             |
+| Name         | Type         | Value                                                                                                                                                                    | Description |
+| ------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| C_SCOPE      | string       |  C_VVC_NAME & ",<br><span style="padding-left:20px">" & to_string(GC_INSTANCE_IDX)                                                                                       |             |
+| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> NA) |             |
 ## Functions
-- get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record; constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font>
-- peek_command_and_prepare_executor <font id="function_arguments">( variable command              : inout t_vvc_cmd_record; variable command_queue        : inout work.td_cmd_queue_pkg.t_generic_queue; constant vvc_config           : in    t_vvc_config; variable vvc_status           : inout t_vvc_status; signal   queue_is_increasing  : in    boolean; signal   executor_is_busy     : inout boolean; constant vvc_labels           : in    t_vvc_labels; constant msg_id_panel         : in    t_msg_id_panel := shared_msg_id_panel; --UVVM: unused, remove in v3.0 constant executor_id          : in    t_msg_id := ID_CMD_EXECUTOR; constant executor_wait_id     : in    t_msg_id := ID_CMD_EXECUTOR_WAIT ) </font> <font id="function_return">return ()</font>
+- get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record;<br><span style="padding-left:20px"> constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font>
+- peek_command_and_prepare_executor <font id="function_arguments">( variable command              : inout t_vvc_cmd_record;<br><span style="padding-left:20px"> variable command_queue        : inout work.td_cmd_queue_pkg.t_generic_queue;<br><span style="padding-left:20px"> constant vvc_config           : in    t_vvc_config;<br><span style="padding-left:20px"> variable vvc_status           : inout t_vvc_status;<br><span style="padding-left:20px"> signal   queue_is_increasing  : in    boolean;<br><span style="padding-left:20px"> signal   executor_is_busy     : inout boolean;<br><span style="padding-left:20px"> constant vvc_labels           : in    t_vvc_labels;<br><span style="padding-left:20px"> constant msg_id_panel         : in    t_msg_id_panel := shared_msg_id_panel;<br><span style="padding-left:20px"> --UVVM: unused,<br><span style="padding-left:20px"> remove in v3.0 constant executor_id          : in    t_msg_id := ID_CMD_EXECUTOR;<br><span style="padding-left:20px"> constant executor_wait_id     : in    t_msg_id := ID_CMD_EXECUTOR_WAIT ) </font> <font id="function_return">return ()</font>
 ## Processes
 - cmd_interpreter: (  )
 **Description**

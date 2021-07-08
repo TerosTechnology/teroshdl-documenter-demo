@@ -94,26 +94,26 @@ limitations under the License.
 | Memory_ReadWrite         | std_logic                                                              |             |
 ## Constants
 
-| Name                   | Type     | Value                                        | Description  |
-| ---------------------- | -------- | -------------------------------------------- | ------------ |
-| CACHE_LINES            | positive |  8                                           |              |
-| TAG_BITS               | positive |  32                                          | IPv4 address |
-| DATA_BITS              | positive |  48                                          | MAC address  |
-| TAGCHUNK_BITS          | positive |  8                                           |              |
-| DATACHUNK_BITS         | positive |  8                                           |              |
-| DATACHUNKS             | positive |  div_ceil(DATA_BITS, DATACHUNK_BITS)         |              |
-| DATACHUNK_INDEX_BITS   | positive |  log2ceilnz(DATACHUNKS)                      |              |
-| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                     |              |
-| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_CACHE_CONTENT)           |              |
-| INITIAL_DATALINES      | T_SLVV_8 |  to_CacheMemory(INITIAL_CACHE_CONTENT)       |              |
-| TICKCOUNTER_RES        | time     |  10 ms                                       |              |
-| TICKCOUNTER_MAX        | positive |  TimingToCycles(TICKCOUNTER_RES, CLOCK_FREQ) |              |
-| TICKCOUNTER_BITS       | positive |  log2ceilnz(TICKCOUNTER_MAX)                 |              |
+| Name                   | Type     | Value                                                                            | Description  |
+| ---------------------- | -------- | -------------------------------------------------------------------------------- | ------------ |
+| CACHE_LINES            | positive |  8                                                                               |              |
+| TAG_BITS               | positive |  32                                                                              | IPv4 address |
+| DATA_BITS              | positive |  48                                                                              | MAC address  |
+| TAGCHUNK_BITS          | positive |  8                                                                               |              |
+| DATACHUNK_BITS         | positive |  8                                                                               |              |
+| DATACHUNKS             | positive |  div_ceil(DATA_BITS,<br><span style="padding-left:20px"> DATACHUNK_BITS)         |              |
+| DATACHUNK_INDEX_BITS   | positive |  log2ceilnz(DATACHUNKS)                                                          |              |
+| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                                                         |              |
+| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_CACHE_CONTENT)                                               |              |
+| INITIAL_DATALINES      | T_SLVV_8 |  to_CacheMemory(INITIAL_CACHE_CONTENT)                                           |              |
+| TICKCOUNTER_RES        | time     |  10 ms                                                                           |              |
+| TICKCOUNTER_MAX        | positive |  TimingToCycles(TICKCOUNTER_RES,<br><span style="padding-left:20px"> CLOCK_FREQ) |              |
+| TICKCOUNTER_BITS       | positive |  log2ceilnz(TICKCOUNTER_MAX)                                                     |              |
 ## Types
 
-| Name               | Type                   | Description |
-| ------------------ | ---------------------- | ----------- |
-| T_FSMREPLACE_STATE | (ST_IDLE, ST_REPLACE)  |             |
+| Name               | Type                                                       | Description |
+| ------------------ | ---------------------------------------------------------- | ----------- |
+| T_FSMREPLACE_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_REPLACE)  |             |
 ## Functions
 - to_TagData <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR) </font> <font id="function_return">return T_SLM </font>
 - to_CacheData_slvv_48 <font id="function_arguments">(CacheContent : T_NET_ARP_ARPCACHE_VECTOR) </font> <font id="function_return">return T_SLVV_48 </font>

@@ -87,9 +87,9 @@ limitations under the License.
 | FIFO_BITS      | positive |  DATA_BITS + 3 |             |
 ## Types
 
-| Name    | Type                                                   | Description |
-| ------- | ------------------------------------------------------ | ----------- |
-| T_STATE | (ST_IDLE, ST_MERGE, ST_EMPTY_FIFO_0, ST_EMPTY_FIFO_1)  |             |
+| Name    | Type                                                                                                                                                               | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| T_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_MERGE,<br><span style="padding-left:20px"> ST_EMPTY_FIFO_0,<br><span style="padding-left:20px"> ST_EMPTY_FIFO_1)  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, FIFO_0_Valid, FIFO_0_DataOut, FIFO_1_Valid, FIFO_1_DataOut, Switch, Out_Ack )

@@ -108,9 +108,9 @@
 | cp_op_remu_c   | std_ulogic_vector(2 downto 0) |  "111" | remu        |
 ## Types
 
-| Name    | Type                                                     | Description   |
-| ------- | -------------------------------------------------------- | ------------- |
-| state_t | (IDLE, DIV_PREPROCESS, PROCESSING, FINALIZE, COMPLETED)  | controller -- |
+| Name    | Type                                                                                                                                                                                                     | Description   |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| state_t | (IDLE,<br><span style="padding-left:20px"> DIV_PREPROCESS,<br><span style="padding-left:20px"> PROCESSING,<br><span style="padding-left:20px"> FINALIZE,<br><span style="padding-left:20px"> COMPLETED)  | controller -- |
 ## Processes
 - coprocessor_ctrl: ( rstn_i, clk_i )
 - mul_update: ( mul_product, mul_sign_cycle, mul_p_sext, rs1_is_signed, rs1_i )

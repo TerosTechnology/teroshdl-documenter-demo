@@ -63,10 +63,10 @@ limitations under the License.
 | RowReader_ov     | std_logic                                  |             |
 ## Types
 
-| Name          | Type | Description |
-| ------------- | ---- | ----------- |
-| T_DATA_VECTOR |      |             |
-| T_DATA_MATRIX |      |             |
+| Name          | Type                                                         | Description |
+| ------------- | ------------------------------------------------------------ | ----------- |
+| T_DATA_VECTOR | array(natural range <>) of T_DATA                            |             |
+| T_DATA_MATRIX | array(natural range <>) of T_DATA_VECTOR(ROWS - 1 downto 0)  |             |
 ## Functions
 - to_dv <font id="function_arguments">(slm : T_SLM) </font> <font id="function_return">return T_DATA_VECTOR </font>
 ## Processes

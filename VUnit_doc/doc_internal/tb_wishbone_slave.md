@@ -34,13 +34,13 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | rd_ack_cnt | natural range 0 to tb_cfg.num_cycles             |             |
 ## Constants
 
-| Name           | Type             | Value                                                                                                                                                    | Description |
-| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| tb_cfg         | tb_cfg_t         |  decode(encoded_tb_cfg)                                                                                                                                  |             |
-| tb_logger      | logger_t         |  get_logger("tb")                                                                                                                                        |             |
-| memory         | memory_t         |  new_memory                                                                                                                                              |             |
-| buf            | buffer_t         |  allocate(memory, tb_cfg.num_cycles * sel'length)                                                                                                        |             |
-| wishbone_slave | wishbone_slave_t |        new_wishbone_slave(memory => memory,         ack_high_probability => tb_cfg.ack_prob,         stall_high_probability => tb_cfg.stall_prob       ) |             |
+| Name           | Type             | Value                                                                                                                                                                                                                            | Description |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| tb_cfg         | tb_cfg_t         |  decode(encoded_tb_cfg)                                                                                                                                                                                                          |             |
+| tb_logger      | logger_t         |  get_logger("tb")                                                                                                                                                                                                                |             |
+| memory         | memory_t         |  new_memory                                                                                                                                                                                                                      |             |
+| buf            | buffer_t         |  allocate(memory,<br><span style="padding-left:20px"> tb_cfg.num_cycles * sel'length)                                                                                                                                            |             |
+| wishbone_slave | wishbone_slave_t |        new_wishbone_slave(memory => memory,<br><span style="padding-left:20px">         ack_high_probability => tb_cfg.ack_prob,<br><span style="padding-left:20px">         stall_high_probability => tb_cfg.stall_prob       ) |             |
 ## Types
 
 | Name     | Type | Description |

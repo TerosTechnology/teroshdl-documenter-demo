@@ -64,10 +64,10 @@ limitations under the License.
 | DELAY | positive |  COUNTER_BITS - 1 |             |
 ## Types
 
-| Name           | Type | Description |
-| -------------- | ---- | ----------- |
-| T_SUM_VECTOR   |      |             |
-| T_COUNT_VECTOR |      |             |
+| Name           | Type                                                                    | Description |
+| -------------- | ----------------------------------------------------------------------- | ----------- |
+| T_SUM_VECTOR   | array(natural range <>) of std_logic_vector(COUNTER_BITS - 1 downto 0)  |             |
+| T_COUNT_VECTOR | array(natural range <>) of std_logic_vector(COUNTER_BITS - 1 downto 0)  |             |
 ## Processes
 - unnamed: ( Clock )
 ## Instantiations

@@ -189,16 +189,16 @@ limitations under the License.
 | BCReq_TX_Meta_DestMACAddress_Data     | T_SLV_8                                     |                             |
 ## Constants
 
-| Name                       | Type     | Value                                            | Description                 |
-| -------------------------- | -------- | ------------------------------------------------ | --------------------------- |
-| ARPREQ_TIMEOUTCOUNTER_MAX  | positive |  TimingToCycles(APR_REQUEST_TIMEOUT, CLOCK_FREQ) | ARP request timeout counter |
-| ARPREQ_TIMEOUTCOUNTER_BITS | positive |  log2ceilnz(ARPREQ_TIMEOUTCOUNTER_MAX)           |                             |
+| Name                       | Type     | Value                                                                                | Description                 |
+| -------------------------- | -------- | ------------------------------------------------------------------------------------ | --------------------------- |
+| ARPREQ_TIMEOUTCOUNTER_MAX  | positive |  TimingToCycles(APR_REQUEST_TIMEOUT,<br><span style="padding-left:20px"> CLOCK_FREQ) | ARP request timeout counter |
+| ARPREQ_TIMEOUTCOUNTER_BITS | positive |  log2ceilnz(ARPREQ_TIMEOUTCOUNTER_MAX)                                               |                             |
 ## Types
 
-| Name             | Type                                                                                                                                                                     | Description |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| T_FSMPOOL_STATE  | ( ST_IDLE, ST_IPPOOL_WAIT, ST_SEND_RESPONSE, ST_SEND_ANNOUNCE, ST_ERROR )                                                                                                |             |
-| T_FSMCACHE_STATE | ( ST_IDLE, ST_CACHE, ST_CACHE_WAIT, ST_READ_CACHE, ST_SEND_BROADCAST_REQUEST, ST_SEND_BROADCAST_REQUEST_WAIT, ST_WAIT_FOR_UNICAST_RESPONSE, ST_UPDATE_CACHE, ST_ERROR )  |             |
+| Name             | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| T_FSMPOOL_STATE  | ( ST_IDLE,<br><span style="padding-left:20px"> ST_IPPOOL_WAIT,<br><span style="padding-left:20px"> ST_SEND_RESPONSE,<br><span style="padding-left:20px"> ST_SEND_ANNOUNCE,<br><span style="padding-left:20px"> ST_ERROR )                                                                                                                                                                                                                                                |             |
+| T_FSMCACHE_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_CACHE,<br><span style="padding-left:20px"> ST_CACHE_WAIT,<br><span style="padding-left:20px"> ST_READ_CACHE,<br><span style="padding-left:20px"> ST_SEND_BROADCAST_REQUEST,<br><span style="padding-left:20px"> ST_SEND_BROADCAST_REQUEST_WAIT,<br><span style="padding-left:20px"> ST_WAIT_FOR_UNICAST_RESPONSE,<br><span style="padding-left:20px"> ST_UPDATE_CACHE,<br><span style="padding-left:20px"> ST_ERROR )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( FSMPool_State,

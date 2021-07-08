@@ -66,13 +66,13 @@ limitations under the License.
 | TU_TagMiss    | std_logic                                             |             |
 ## Constants
 
-| Name                   | Type     | Value                                            | Description |
-| ---------------------- | -------- | ------------------------------------------------ | ----------- |
-| CACHE_LINES            | positive |  imax(IPPOOL_SIZE, INITIAL_IPV4ADDRESSES'length) |             |
-| TAG_BITS               | positive |  32                                              |             |
-| TAGCHUNK_BITS          | positive |  8                                               |             |
-| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                         |             |
-| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_IPV4ADDRESSES)               |             |
+| Name                   | Type     | Value                                                                                | Description |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------ | ----------- |
+| CACHE_LINES            | positive |  imax(IPPOOL_SIZE,<br><span style="padding-left:20px"> INITIAL_IPV4ADDRESSES'length) |             |
+| TAG_BITS               | positive |  32                                                                                  |             |
+| TAGCHUNK_BITS          | positive |  8                                                                                   |             |
+| CACHEMEMORY_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES)                                                             |             |
+| INITIAL_TAGS           | T_SLM    |  to_TagData(INITIAL_IPV4ADDRESSES)                                                   |             |
 ## Functions
 - to_TagData <font id="function_arguments">(CacheContent : T_NET_IPV4_ADDRESS_VECTOR) </font> <font id="function_return">return T_SLM </font>
 ## Instantiations

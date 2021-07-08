@@ -57,28 +57,28 @@ limitations under the License.
 | Out_Ack      | in        | std_logic_vector(PORTS - 1 downto 0)                  |                   |
 ## Signals
 
-| Name               | Type                                              | Description                                                                                   |
-| ------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| State              | T_STATE                                           |                                                                                               |
-| NextState          | T_STATE                                           |                                                                                               |
-| Is_SOF             | std_logic                                         |                                                                                               |
-| Is_EOF             | std_logic                                         |                                                                                               |
-| In_Ack_i           | std_logic                                         |                                                                                               |
-| Out_Valid_i        | std_logic                                         |                                                                                               |
-| DiscardFrame       | std_logic                                         |                                                                                               |
-| ChannelPointer_rst | std_logic                                         |                                                                                               |
-| ChannelPointer_en  | std_logic                                         |                                                                                               |
-| ChannelPointer     | std_logic_vector(PORTS - 1 downto 0)              |                                                                                               |
-| ChannelPointer_d   | std_logic_vector(PORTS - 1 downto 0)              |                                                                                               |
-| ChannelPointer_bin | unsigned(log2ceilnz(PORTS) - 1 downto 0)          |                                                                                               |
-| idx                | T_CHANNEL_INDEX                                   |                                                                                               |
-| Out_Data_i         | T_SLM(PORTS - 1 downto 0, DATA_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| Out_Meta_i         | T_SLM(PORTS - 1 downto 0, META_BITS - 1 downto 0) |                                                                                               |
+| Name               | Type                                                                                  | Description                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| State              | T_STATE                                                                               |                                                                                               |
+| NextState          | T_STATE                                                                               |                                                                                               |
+| Is_SOF             | std_logic                                                                             |                                                                                               |
+| Is_EOF             | std_logic                                                                             |                                                                                               |
+| In_Ack_i           | std_logic                                                                             |                                                                                               |
+| Out_Valid_i        | std_logic                                                                             |                                                                                               |
+| DiscardFrame       | std_logic                                                                             |                                                                                               |
+| ChannelPointer_rst | std_logic                                                                             |                                                                                               |
+| ChannelPointer_en  | std_logic                                                                             |                                                                                               |
+| ChannelPointer     | std_logic_vector(PORTS - 1 downto 0)                                                  |                                                                                               |
+| ChannelPointer_d   | std_logic_vector(PORTS - 1 downto 0)                                                  |                                                                                               |
+| ChannelPointer_bin | unsigned(log2ceilnz(PORTS) - 1 downto 0)                                              |                                                                                               |
+| idx                | T_CHANNEL_INDEX                                                                       |                                                                                               |
+| Out_Data_i         | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> DATA_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| Out_Meta_i         | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_BITS - 1 downto 0) |                                                                                               |
 ## Types
 
-| Name    | Type                                      | Description |
-| ------- | ----------------------------------------- | ----------- |
-| T_STATE | (ST_IDLE, ST_DATAFLOW, ST_DISCARD_FRAME)  |             |
+| Name    | Type                                                                                                              | Description |
+| ------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_DATAFLOW,<br><span style="padding-left:20px"> ST_DISCARD_FRAME)  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, In_Ack_i, In_Valid, Is_SOF, Is_EOF, DiscardFrame, DeMuxControl, ChannelPointer_d )

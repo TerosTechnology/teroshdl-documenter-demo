@@ -1,10 +1,10 @@
 # Package: TranscriptPkg
 
 ## Functions
-- TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS; ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font>
+- TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS;<br><span style="padding-left:20px"> ExternalName: STRING;<br><span style="padding-left:20px"> OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font>
 **Description**
 Open and close TranscriptFile.  Function allows declarative opens 
-- TranscriptOpen <font id="function_arguments">(ExternalName: STRING; OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font>
+- TranscriptOpen <font id="function_arguments">(ExternalName: STRING;<br><span style="padding-left:20px"> OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font>
 - TranscriptClose <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - SetTranscriptMirror <font id="function_arguments">(A : boolean := TRUE) </font> <font id="function_return">return ()</font>
 **Description**

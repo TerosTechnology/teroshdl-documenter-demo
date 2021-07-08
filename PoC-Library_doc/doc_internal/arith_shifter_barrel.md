@@ -57,6 +57,6 @@ limitations under the License.
 | STAGES | positive |  log2ceilnz(BITS) |             |
 ## Types
 
-| Name                  | Type | Description |
-| --------------------- | ---- | ----------- |
-| T_INTERMEDIATE_VECTOR |      |             |
+| Name                  | Type                                               | Description |
+| --------------------- | -------------------------------------------------- | ----------- |
+| T_INTERMEDIATE_VECTOR | array (natural range <>) of T_INTERMEDIATE_RESULT  |             |

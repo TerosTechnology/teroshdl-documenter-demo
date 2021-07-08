@@ -112,9 +112,9 @@ limitations under the License.
 | RX_Meta_Payload_Data            | T_SLV_8                 |             |
 ## Types
 
-| Name    | Type                                                                                                                                                                                          | Description |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_SEND_ECHO_REQUEST, ST_SEND_ECHO_REQUEST_WAIT, ST_WAIT_FOR_ECHO_REPLY, ST_EVAL_ECHO_REPLY, ST_SEND_ECHO_REPLY, ST_SEND_ECHO_REPLY_WAIT, ST_SEND_ECHO_REPLY_FINISHED, ST_ERROR )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Description |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_SEND_ECHO_REQUEST,<br><span style="padding-left:20px"> ST_SEND_ECHO_REQUEST_WAIT,<br><span style="padding-left:20px"> ST_WAIT_FOR_ECHO_REPLY,<br><span style="padding-left:20px"> ST_EVAL_ECHO_REPLY,<br><span style="padding-left:20px"> ST_SEND_ECHO_REPLY,<br><span style="padding-left:20px"> ST_SEND_ECHO_REPLY_WAIT,<br><span style="padding-left:20px"> ST_SEND_ECHO_REPLY_FINISHED,<br><span style="padding-left:20px"> ST_ERROR )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( FSM_State,

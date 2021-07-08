@@ -12,7 +12,6 @@
 - Module: [pp_soc_uart ](./doc_internal/pp_soc_uart.md)
 - Package: [pp_utilities ](./doc_internal/pp_utilities.md)
 - Module: [soc_reset ](./doc_internal/soc_reset.md)
-- Module: [soc_reset_tb ](./doc_internal/soc_reset_tb.md)
 - Module: [toplevel ](./doc_internal/top-acorn-cle-215.md)
 - Module: [toplevel ](./doc_internal/top-arty.md)
 - Module: [toplevel ](./doc_internal/top-generic.md)

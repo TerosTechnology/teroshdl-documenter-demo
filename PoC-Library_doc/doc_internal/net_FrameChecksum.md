@@ -105,11 +105,11 @@ limitations under the License.
 | META_MISC_BITS   | positive |  Checksum'length + WordCount'length |             |
 ## Types
 
-| Name               | Type                                         | Description |
-| ------------------ | -------------------------------------------- | ----------- |
-| T_WRITER_STATE     | (ST_IDLE, ST_FRAME, ST_CARRY_1, ST_CARRY_2)  |             |
-| T_METAWRITER_STATE | (ST_IDLE, ST_METADATA)                       |             |
-| T_READER_STATE     | (ST_IDLE, ST_FRAME)                          |             |
+| Name               | Type                                                                                                                                                     | Description |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_WRITER_STATE     | (ST_IDLE,<br><span style="padding-left:20px"> ST_FRAME,<br><span style="padding-left:20px"> ST_CARRY_1,<br><span style="padding-left:20px"> ST_CARRY_2)  |             |
+| T_METAWRITER_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_METADATA)                                                                                               |             |
+| T_READER_STATE     | (ST_IDLE,<br><span style="padding-left:20px"> ST_FRAME)                                                                                                  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( Writer_State,

@@ -70,6 +70,7 @@
 | IO_CFS_EN            | boolean                        | true        | implement custom functions subsystem (CFS)?                                           |
 | IO_SLINK_EN          | boolean                        | true        | implement stream link interface?                                                      |
 | IO_NEOLED_EN         | boolean                        | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
+| IO_XIRQ_NUM_CH       | natural                        | 32          | number of external interrupt (XIRQ) channels to implement                             |
 ## Ports
 
 | Port name | Direction | Type                           | Description          |

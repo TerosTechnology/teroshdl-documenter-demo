@@ -110,7 +110,7 @@ limitations under the License.
 - getSourceFilterAddresses <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
 - getSourceFilterMasks <font id="function_arguments">(Interfaces : T_NET_MAC_INTERFACE_VECTOR) </font> <font id="function_return">return T_NET_MAC_ADDRESS_VECTOR </font>
 - getTypeSwitchCount <font id="function_arguments">(Types : T_NET_MAC_ETHERNETTYPE_VECTOR) </font> <font id="function_return">return natural </font>
-- calcPortIndex <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR; CurrentInterfaceID : natural) </font> <font id="function_return">return natural </font>
+- calcPortIndex <font id="function_arguments">(MAC_CONFIG : T_NET_MAC_CONFIGURATION_VECTOR;<br><span style="padding-left:20px"> CurrentInterfaceID : natural) </font> <font id="function_return">return natural </font>
 ## Instantiations
 
 - RX_DestMAC: PoC.mac_RX_DestMAC_Switch

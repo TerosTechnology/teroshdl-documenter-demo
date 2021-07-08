@@ -91,9 +91,9 @@ limitations under the License.
 | ETHERNET_TYPES_I | T_NET_MAC_ETHERNETTYPE_VECTOR(0 to PORTS - 1) |  ETHERNET_TYPES        |             |
 ## Types
 
-| Name    | Type                                                                  | Description |
-| ------- | --------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_TYPE_1, ST_PAYLOAD_1, ST_PAYLOAD_N, ST_DISCARD_FRAME )  |             |
+| Name    | Type                                                                                                                                                                                                                  | Description |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_TYPE_1,<br><span style="padding-left:20px"> ST_PAYLOAD_1,<br><span style="padding-left:20px"> ST_PAYLOAD_N,<br><span style="padding-left:20px"> ST_DISCARD_FRAME )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )

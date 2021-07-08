@@ -43,10 +43,10 @@ Description : See library quick reference (under 'doc') and README-file(s)
 | entry_num_in_vvc_activity_register | integer                                                              | VVC Activity  |
 ## Constants
 
-| Name         | Type         | Value                                                                | Description |
-| ------------ | ------------ | -------------------------------------------------------------------- | ----------- |
-| C_SCOPE      | string       |  C_VVC_NAME & "," & to_string(GC_INSTANCE_IDX)                       |             |
-| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE, C_VVC_NAME, GC_INSTANCE_IDX, GC_CHANNEL) |             |
+| Name         | Type         | Value                                                                                                                                                                            | Description |
+| ------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| C_SCOPE      | string       |  C_VVC_NAME & ",<br><span style="padding-left:20px">" & to_string(GC_INSTANCE_IDX)                                                                                               |             |
+| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> GC_CHANNEL) |             |
 ## Processes
 - cmd_interpreter: (  )
 **Description**

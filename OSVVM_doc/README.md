@@ -21,7 +21,5 @@
 - Package: [TranscriptPkg ](./doc_internal/TranscriptPkg.md)
 - Package: [VendorCovApiPkg ](./doc_internal/VendorCovApiPkg.md)
 - Package: [VendorCovApiPkg ](./doc_internal/VendorCovApiPkg_Aldec.md)
-- Module: [AlertLog_Demo_Global ](./doc_internal/AlertLog_Demo_Global.md)
-- Module: [AlertLog_Demo_Hierarchy ](./doc_internal/AlertLog_Demo_Hierarchy.md)
 - Package: [TestSupportPkg ](./doc_internal/Demo_Rand.md)
 

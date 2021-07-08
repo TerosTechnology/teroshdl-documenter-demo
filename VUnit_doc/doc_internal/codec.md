@@ -2,9 +2,9 @@
 
 ## Types
 
-| Name    | Type | Description |
-| ------- | ---- | ----------- |
-| range_t |      |             |
+| Name    | Type                             | Description |
+| ------- | -------------------------------- | ----------- |
+| range_t | array (integer range <>) of bit  |             |
 ## Functions
 - encode <font id="function_arguments">( constant data : integer) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return integer </font>

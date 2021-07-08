@@ -42,9 +42,9 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | c4kbyte | natural |  4096 |             |
 ## Types
 
-| Name    | Type                                                                                 | Description |
-| ------- | ------------------------------------------------------------------------------------ | ----------- |
-| state_t | (idle, compute_burst_length0, compute_burst_length1, compute_is_last, await_accept)  |             |
+| Name    | Type                                                                                                                                                                                                                                 | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| state_t | (idle,<br><span style="padding-left:20px"> compute_burst_length0,<br><span style="padding-left:20px"> compute_burst_length1,<br><span style="padding-left:20px"> compute_is_last,<br><span style="padding-left:20px"> await_accept)  |             |
 ## Processes
 - main: (  )
 ## State machines

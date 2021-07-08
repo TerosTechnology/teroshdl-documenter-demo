@@ -102,10 +102,10 @@
 | arbiter          | arbiter_t  |                       |
 ## Types
 
-| Name            | Type                                                  | Description       |
-| --------------- | ----------------------------------------------------- | ----------------- |
-| arbiter_state_t | (IDLE, BUSY, RETIRE, BUSY_SWITCHED, RETIRE_SWITCHED)  | access arbiter -- |
-| arbiter_t       |                                                       |                   |
+| Name            | Type                                                                                                                                                                                                  | Description       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| arbiter_state_t | (IDLE,<br><span style="padding-left:20px"> BUSY,<br><span style="padding-left:20px"> RETIRE,<br><span style="padding-left:20px"> BUSY_SWITCHED,<br><span style="padding-left:20px"> RETIRE_SWITCHED)  | access arbiter -- |
+| arbiter_t       |                                                                                                                                                                                                       |                   |
 ## Processes
 - access_buffer: ( rstn_i, clk_i )
 - arbiter_sync: ( rstn_i, clk_i )

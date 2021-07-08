@@ -37,14 +37,14 @@ a 5% of probability to stall for a duration of 1 to 10 cycles is defined.
 |  saved | boolean   |                          |
 ## Constants
 
-| Name              | Type                | Value                                                                                                        | Description                        |
-| ----------------- | ------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| clk_period        | time                |  20 ns                                                                                                       |                                    |
-| data_width        | natural             |  32                                                                                                          |                                    |
-| master_axi_stream | axi_stream_master_t |  new_axi_stream_master(     data_length => data_width,     stall_config => new_stall_config(0.05, 1, 10)   ) | AXI4Stream Verification Components |
-| slave_axi_stream  | axi_stream_slave_t  |  new_axi_stream_slave(     data_length => data_width,     stall_config => new_stall_config(0.05, 1, 10)   )  |                                    |
-| m_I               | integer_array_t     |  load_csv(tb_path & csv_i)                                                                                   |                                    |
-| m_O               | integer_array_t     |  new_2d(width(m_I), height(m_I), data_width, true)                                                           |                                    |
+| Name              | Type                | Value                                                                                                                                                                                                                    | Description                        |
+| ----------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| clk_period        | time                |  20 ns                                                                                                                                                                                                                   |                                    |
+| data_width        | natural             |  32                                                                                                                                                                                                                      |                                    |
+| master_axi_stream | axi_stream_master_t |  new_axi_stream_master(     data_length => data_width,<br><span style="padding-left:20px">     stall_config => new_stall_config(0.05,<br><span style="padding-left:20px"> 1,<br><span style="padding-left:20px"> 10)   ) | AXI4Stream Verification Components |
+| slave_axi_stream  | axi_stream_slave_t  |  new_axi_stream_slave(     data_length => data_width,<br><span style="padding-left:20px">     stall_config => new_stall_config(0.05,<br><span style="padding-left:20px"> 1,<br><span style="padding-left:20px"> 10)   )  |                                    |
+| m_I               | integer_array_t     |  load_csv(tb_path & csv_i)                                                                                                                                                                                               |                                    |
+| m_O               | integer_array_t     |  new_2d(width(m_I),<br><span style="padding-left:20px"> height(m_I),<br><span style="padding-left:20px"> data_width,<br><span style="padding-left:20px"> true)                                                           |                                    |
 ## Processes
 - main: (  )
 - stimuli: (  )

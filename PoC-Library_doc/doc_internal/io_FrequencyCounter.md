@@ -54,12 +54,12 @@ limitations under the License.
 | FreqOut_d           | std_logic_vector(RESOLUTION - 1 downto 0)   |             |
 ## Constants
 
-| Name                  | Type     | Value                                 | Description |
-| --------------------- | -------- | ------------------------------------- | ----------- |
-| TIMEBASECOUNTER_MAX   | positive |  TimingToCycles(TIMEBASE, CLOCK_FREQ) |             |
-| TIMEBASECOUNTER_BITS  | positive |  log2ceilnz(TIMEBASECOUNTER_MAX)      |             |
-| REQUENCYCOUNTER_MAX   | positive |  2**RESOLUTION                        |             |
-| FREQUENCYCOUNTER_BITS | positive |  RESOLUTION                           |             |
+| Name                  | Type     | Value                                                                     | Description |
+| --------------------- | -------- | ------------------------------------------------------------------------- | ----------- |
+| TIMEBASECOUNTER_MAX   | positive |  TimingToCycles(TIMEBASE,<br><span style="padding-left:20px"> CLOCK_FREQ) |             |
+| TIMEBASECOUNTER_BITS  | positive |  log2ceilnz(TIMEBASECOUNTER_MAX)                                          |             |
+| REQUENCYCOUNTER_MAX   | positive |  2**RESOLUTION                                                            |             |
+| FREQUENCYCOUNTER_BITS | positive |  RESOLUTION                                                               |             |
 ## Processes
 - unnamed: ( Clock )
 **Description**

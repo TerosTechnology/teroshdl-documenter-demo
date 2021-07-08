@@ -92,9 +92,9 @@ limitations under the License.
 | READER_COUNTER_BITS  | positive                                 |  log2ceilnz(MAC_ADDRESS_LENGTH) |                |
 ## Types
 
-| Name    | Type                                                                                                                                  | Description |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_DEST_MAC_1, ST_DEST_MAC_2, ST_DEST_MAC_3, ST_DEST_MAC_4, ST_DEST_MAC_5, ST_PAYLOAD_1, ST_PAYLOAD_N, ST_DISCARD_FRAME )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                  | Description |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_DEST_MAC_1,<br><span style="padding-left:20px"> ST_DEST_MAC_2,<br><span style="padding-left:20px"> ST_DEST_MAC_3,<br><span style="padding-left:20px"> ST_DEST_MAC_4,<br><span style="padding-left:20px"> ST_DEST_MAC_5,<br><span style="padding-left:20px"> ST_PAYLOAD_1,<br><span style="padding-left:20px"> ST_PAYLOAD_N,<br><span style="padding-left:20px"> ST_DISCARD_FRAME )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, Is_DataFlow, Is_SOF, Is_EOF, In_Valid, NoHits, Out_Ack_i )

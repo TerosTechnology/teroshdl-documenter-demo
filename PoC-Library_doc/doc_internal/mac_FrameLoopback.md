@@ -67,12 +67,12 @@ limitations under the License.
 | LLBuf_MetaOut_Data | std_logic_vector(isum(META_BITS) - 1 downto 0)  |             |
 ## Constants
 
-| Name                   | Type     | Value                                                                | Description |
-| ---------------------- | -------- | -------------------------------------------------------------------- | ----------- |
-| META_STREAMID_SRCADDR  | natural  |  0                                                                   |             |
-| META_STREAMID_DESTADDR | natural  |  1                                                                   |             |
-| META_BITS              | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 8, 		META_STREAMID_DESTADDR		=> 8 	) |             |
-| META_FIFO_DEPTHS       | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 6, 		META_STREAMID_DESTADDR		=> 6 	) |             |
+| Name                   | Type     | Value                                                                                                    | Description |
+| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------- | ----------- |
+| META_STREAMID_SRCADDR  | natural  |  0                                                                                                       |             |
+| META_STREAMID_DESTADDR | natural  |  1                                                                                                       |             |
+| META_BITS              | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 8,<br><span style="padding-left:20px"> 		META_STREAMID_DESTADDR		=> 8 	) |             |
+| META_FIFO_DEPTHS       | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 6,<br><span style="padding-left:20px"> 		META_STREAMID_DESTADDR		=> 6 	) |             |
 ## Instantiations
 
 - LLBuf: PoC.stream_Buffer

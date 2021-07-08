@@ -31,13 +31,13 @@ vunit: run_all_in_same_sim
 |  check_false_en_4 | std_logic |             |
 ## Constants
 
-| Name                 | Type        | Value                                               | Description |
-| -------------------- | ----------- | --------------------------------------------------- | ----------- |
-| check_false_checker  | checker_t   |  new_checker("checker1")                            |             |
-| check_false_checker2 | checker_t   |  new_checker("checker2")                            |             |
-| check_false_checker3 | checker_t   |  new_checker("checker3", default_log_level => info) |             |
-| check_false_checker4 | checker_t   |  new_checker("checker4")                            |             |
-| default_level        | log_level_t |  error                                              |             |
+| Name                 | Type        | Value                                                                                   | Description |
+| -------------------- | ----------- | --------------------------------------------------------------------------------------- | ----------- |
+| check_false_checker  | checker_t   |  new_checker("checker1")                                                                |             |
+| check_false_checker2 | checker_t   |  new_checker("checker2")                                                                |             |
+| check_false_checker3 | checker_t   |  new_checker("checker3",<br><span style="padding-left:20px"> default_log_level => info) |             |
+| check_false_checker4 | checker_t   |  new_checker("checker4")                                                                |             |
+| default_level        | log_level_t |  error                                                                                  |             |
 ## Processes
 - clock: (  )
 - check_false_runner: (  )

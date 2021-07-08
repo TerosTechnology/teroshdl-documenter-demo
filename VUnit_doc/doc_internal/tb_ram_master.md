@@ -28,11 +28,11 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 |  done | boolean                       |             |
 ## Constants
 
-| Name                   | Type         | Value                                                                | Description |
-| ---------------------- | ------------ | -------------------------------------------------------------------- | ----------- |
-| latency                | integer      |  2                                                                   |             |
-| num_back_to_back_reads | integer      |  64                                                                  |             |
-| bus_handle             | bus_master_t |  new_bus(data_length => wdata'length, address_length => addr'length) |             |
+| Name                   | Type         | Value                                                                                                    | Description |
+| ---------------------- | ------------ | -------------------------------------------------------------------------------------------------------- | ----------- |
+| latency                | integer      |  2                                                                                                       |             |
+| num_back_to_back_reads | integer      |  64                                                                                                      |             |
+| bus_handle             | bus_master_t |  new_bus(data_length => wdata'length,<br><span style="padding-left:20px"> address_length => addr'length) |             |
 ## Processes
 - main: (  )
 - support: (  )

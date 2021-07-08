@@ -53,14 +53,14 @@ vunit: run_all_in_same_sim
 |  expr                      | std_logic                |             |
 ## Constants
 
-| Name         | Type      | Value                                                  | Description |
-| ------------ | --------- | ------------------------------------------------------ | ----------- |
-| my_checker2  | checker_t |  new_checker("my_checker2")                            |             |
-| my_checker3  | checker_t |  new_checker("my_checker3", default_log_level => info) |             |
-| my_checker6  | checker_t |  new_checker("my_checker6")                            |             |
-| my_checker7  | checker_t |  new_checker("my_checker7", default_log_level => info) |             |
-| my_checker10 | checker_t |  new_checker("my_checker10")                           |             |
-| my_checker11 | checker_t |  new_checker("my_checker11")                           |             |
+| Name         | Type      | Value                                                                                      | Description |
+| ------------ | --------- | ------------------------------------------------------------------------------------------ | ----------- |
+| my_checker2  | checker_t |  new_checker("my_checker2")                                                                |             |
+| my_checker3  | checker_t |  new_checker("my_checker3",<br><span style="padding-left:20px"> default_log_level => info) |             |
+| my_checker6  | checker_t |  new_checker("my_checker6")                                                                |             |
+| my_checker7  | checker_t |  new_checker("my_checker7",<br><span style="padding-left:20px"> default_log_level => info) |             |
+| my_checker10 | checker_t |  new_checker("my_checker10")                                                               |             |
+| my_checker11 | checker_t |  new_checker("my_checker11")                                                               |             |
 ## Processes
 - clock: (  )
 - check_stable_runner: (  )

@@ -32,15 +32,15 @@ Author Slawomir Siluk slaweksiluk@gazeta.pl
 | ack   | std_logic                                        |             |
 ## Constants
 
-| Name           | Type             | Value                                                                                                                                       | Description |
-| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| tb_cfg         | tb_cfg_t         |  decode(encoded_tb_cfg)                                                                                                                     |             |
-| master_logger  | logger_t         |  get_logger("master")                                                                                                                       |             |
-| tb_logger      | logger_t         |  get_logger("tb")                                                                                                                           |             |
-| bus_handle     | bus_master_t     |  new_bus(data_length => tb_cfg.dat_width,       address_length => tb_cfg.adr_width, logger => master_logger)                                |             |
-| memory         | memory_t         |  new_memory                                                                                                                                 |             |
-| buf            | buffer_t         |  allocate(memory, tb_cfg.num_cycles * sel'length)                                                                                           |             |
-| wishbone_slave | wishbone_slave_t |  new_wishbone_slave(     memory => memory,     ack_high_probability => tb_cfg.ack_prob,     stall_high_probability => tb_cfg.stall_prob   ) |             |
+| Name           | Type             | Value                                                                                                                                                                                                               | Description |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| tb_cfg         | tb_cfg_t         |  decode(encoded_tb_cfg)                                                                                                                                                                                             |             |
+| master_logger  | logger_t         |  get_logger("master")                                                                                                                                                                                               |             |
+| tb_logger      | logger_t         |  get_logger("tb")                                                                                                                                                                                                   |             |
+| bus_handle     | bus_master_t     |  new_bus(data_length => tb_cfg.dat_width,<br><span style="padding-left:20px">       address_length => tb_cfg.adr_width,<br><span style="padding-left:20px"> logger => master_logger)                                |             |
+| memory         | memory_t         |  new_memory                                                                                                                                                                                                         |             |
+| buf            | buffer_t         |  allocate(memory,<br><span style="padding-left:20px"> tb_cfg.num_cycles * sel'length)                                                                                                                               |             |
+| wishbone_slave | wishbone_slave_t |  new_wishbone_slave(     memory => memory,<br><span style="padding-left:20px">     ack_high_probability => tb_cfg.ack_prob,<br><span style="padding-left:20px">     stall_high_probability => tb_cfg.stall_prob   ) |             |
 ## Types
 
 | Name     | Type | Description |

@@ -66,11 +66,11 @@ The Potato Processor - A simple processor for FPGAs
 | txd2                 | std_ulogic                                 |                            |
 ## Types
 
-| Name          | Type                                | Description                    |
-| ------------- | ----------------------------------- | ------------------------------ |
-| rx_state_type | (IDLE, RECEIVE, STARTBIT, STOPBIT)  | UART receive process signals:  |
-| tx_state_type | (IDLE, TRANSMIT, STOPBIT)           | UART transmit process signals: |
-| wb_state_type | (IDLE, WRITE_ACK, READ_ACK)         | Wishbone signals:              |
+| Name          | Type                                                                                                                                            | Description                    |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| rx_state_type | (IDLE,<br><span style="padding-left:20px"> RECEIVE,<br><span style="padding-left:20px"> STARTBIT,<br><span style="padding-left:20px"> STOPBIT)  | UART receive process signals:  |
+| tx_state_type | (IDLE,<br><span style="padding-left:20px"> TRANSMIT,<br><span style="padding-left:20px"> STOPBIT)                                               | UART transmit process signals: |
+| wb_state_type | (IDLE,<br><span style="padding-left:20px"> WRITE_ACK,<br><span style="padding-left:20px"> READ_ACK)                                             | Wishbone signals:              |
 ## Processes
 - unnamed: ( clk )
 **Description**

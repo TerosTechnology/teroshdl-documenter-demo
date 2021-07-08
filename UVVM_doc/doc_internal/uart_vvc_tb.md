@@ -14,20 +14,24 @@ See the License for the specific language governing permissions and limitations 
 Note : Any functionality not explicitly described in the documentation is subject to change at any time
 Description   : See library quick reference (under 'doc') and README-file(s)
 Test bench entity
+## Generics
+
+| Generic name | Type    | Value | Description |
+| ------------ | ------- | ----- | ----------- |
+| GC_TESTCASE  | natural | 0     |             |
 ## Constants
 
-| Name                  | Type                 | Value                                          | Description                   |
-| --------------------- | -------------------- | ---------------------------------------------- | ----------------------------- |
-| C_REQ_LIST_FILE       | string               |  "../demo/basic_usage/req_list_basic_demo.csv" |                               |
-| C_PARTIAL_COV_FILE    | string               |  "../sim/partial_cov_basic_demo.csv"           |                               |
-| C_SCOPE               | string               |  C_TB_SCOPE_DEFAULT                            |                               |
-| C_CLK_PERIOD          | time                 |  10 ns                                         | Clock and bit period settings |
-| C_BIT_PERIOD          | time                 |  16 * C_CLK_PERIOD                             |                               |
-| C_TIME_OF_ONE_UART_TX | time                 |  11*C_BIT_PERIOD                               | =1760 ns;                     |
-| C_ADDR_RX_DATA        | unsigned(2 downto 0) |  "000"                                         | Predefined SBI addresses      |
-| C_ADDR_RX_DATA_VALID  | unsigned(2 downto 0) |  "001"                                         |                               |
-| C_ADDR_TX_DATA        | unsigned(2 downto 0) |  "010"                                         |                               |
-| C_ADDR_TX_READY       | unsigned(2 downto 0) |  "011"                                         |                               |
+| Name                 | Type                 | Value                                                                   | Description                   |
+| -------------------- | -------------------- | ----------------------------------------------------------------------- | ----------------------------- |
+| C_REQ_LIST_FILE      | string               |  "../demo/advanced_usage/req_list_advanced_demo.csv"                    |                               |
+| C_PARTIAL_COV_FILE   | string               |  "../sim/partial_cov_advanced_demo_T" & to_string(GC_TESTCASE) & ".csv" |                               |
+| C_SCOPE              | string               |  C_TB_SCOPE_DEFAULT                                                     |                               |
+| C_CLK_PERIOD         | time                 |  10 ns                                                                  | Clock and bit period settings |
+| C_BIT_PERIOD         | time                 |  16 * C_CLK_PERIOD                                                      |                               |
+| C_ADDR_RX_DATA       | unsigned(2 downto 0) |  "000"                                                                  | Predefined SBI addresses      |
+| C_ADDR_RX_DATA_VALID | unsigned(2 downto 0) |  "001"                                                                  |                               |
+| C_ADDR_TX_DATA       | unsigned(2 downto 0) |  "010"                                                                  |                               |
+| C_ADDR_TX_READY      | unsigned(2 downto 0) |  "011"                                                                  |                               |
 ## Processes
 - p_main: (  )
 **Description**

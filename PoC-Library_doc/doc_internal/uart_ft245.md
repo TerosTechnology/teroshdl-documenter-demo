@@ -74,17 +74,17 @@ limitations under the License.
 | data_in       | std_logic_vector(7 downto 0)     |                 |
 ## Constants
 
-| Name         | Type                             | Value                                         | Description                                                         |
-| ------------ | -------------------------------- | --------------------------------------------- | ------------------------------------------------------------------- |
-| CLK_FREQ_MHZ | integer                          |  CLK_FREQ / 1000000                           |                                                                     |
-| DELAY_CYCLES | integer                          |  CLK_FREQ_MHZ / 20                            | FT245 communication delay cycles (minimum delay is 50 ns = 1/20 us) |
-| DELAY_WIDTH  | integer                          |  log2ceilnz(DELAY_CYCLES + 1)                 | delay register width                                                |
-| DELAY_LOAD   | unsigned(DELAY_WIDTH-1 downto 0) |        to_unsigned(DELAY_CYCLES, DELAY_WIDTH) | delay register load value                                           |
+| Name         | Type                             | Value                                                                             | Description                                                         |
+| ------------ | -------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| CLK_FREQ_MHZ | integer                          |  CLK_FREQ / 1000000                                                               |                                                                     |
+| DELAY_CYCLES | integer                          |  CLK_FREQ_MHZ / 20                                                                | FT245 communication delay cycles (minimum delay is 50 ns = 1/20 us) |
+| DELAY_WIDTH  | integer                          |  log2ceilnz(DELAY_CYCLES + 1)                                                     | delay register width                                                |
+| DELAY_LOAD   | unsigned(DELAY_WIDTH-1 downto 0) |        to_unsigned(DELAY_CYCLES,<br><span style="padding-left:20px"> DELAY_WIDTH) | delay register load value                                           |
 ## Types
 
-| Name   | Type                                              | Description |
-| ------ | ------------------------------------------------- | ----------- |
-| tState | ( IDLE, RD1, RD2, RD3, RD4, WR1, WR2, WR3, WR4 )  | FSM         |
+| Name   | Type                                                                                                                                                                                                                                                                                                                                              | Description |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| tState | ( IDLE,<br><span style="padding-left:20px"> RD1,<br><span style="padding-left:20px"> RD2,<br><span style="padding-left:20px"> RD3,<br><span style="padding-left:20px"> RD4,<br><span style="padding-left:20px"> WR1,<br><span style="padding-left:20px"> WR2,<br><span style="padding-left:20px"> WR3,<br><span style="padding-left:20px"> WR4 )  | FSM         |
 ## Processes
 - unnamed: ( clk )
 - unnamed: ( fsm_state, snd_strobe, reg_delay, ff_susp, ff_rxf, ff_txe )

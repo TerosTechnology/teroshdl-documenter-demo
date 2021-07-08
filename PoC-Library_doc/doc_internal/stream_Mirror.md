@@ -58,19 +58,19 @@ limitations under the License.
 | Out_Meta_Data | out       | T_SLM(PORTS - 1 downto 0, isum(META_BITS) - 1 downto 0)  |             |
 ## Signals
 
-| Name             | Type                                                    | Description |
-| ---------------- | ------------------------------------------------------- | ----------- |
-| FIFOGlue_put     | std_logic                                               |             |
-| FIFOGlue_DataIn  | std_logic_vector(DATA_BITS + 1 downto 0)                |             |
-| FIFOGlue_Full    | std_logic                                               |             |
-| FIFOGlue_Valid   | std_logic                                               |             |
-| FIFOGlue_DataOut | std_logic_vector(DATA_BITS + 1 downto 0)                |             |
-| FIFOGlue_got     | std_logic                                               |             |
-| Ack_i            | std_logic                                               |             |
-| Mask_r           | std_logic_vector(PORTS - 1 downto 0)                    |             |
-| MetaOut_rst      | std_logic_vector(PORTS - 1 downto 0)                    |             |
-| Out_Data_i       | T_SLM(PORTS - 1 downto 0, DATA_BITS - 1 downto 0)       |             |
-| Out_Meta_Data_i  | T_SLM(PORTS - 1 downto 0, isum(META_BITS) - 1 downto 0) |             |
+| Name             | Type                                                                                        | Description |
+| ---------------- | ------------------------------------------------------------------------------------------- | ----------- |
+| FIFOGlue_put     | std_logic                                                                                   |             |
+| FIFOGlue_DataIn  | std_logic_vector(DATA_BITS + 1 downto 0)                                                    |             |
+| FIFOGlue_Full    | std_logic                                                                                   |             |
+| FIFOGlue_Valid   | std_logic                                                                                   |             |
+| FIFOGlue_DataOut | std_logic_vector(DATA_BITS + 1 downto 0)                                                    |             |
+| FIFOGlue_got     | std_logic                                                                                   |             |
+| Ack_i            | std_logic                                                                                   |             |
+| Mask_r           | std_logic_vector(PORTS - 1 downto 0)                                                        |             |
+| MetaOut_rst      | std_logic_vector(PORTS - 1 downto 0)                                                        |             |
+| Out_Data_i       | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> DATA_BITS - 1 downto 0)       |             |
+| Out_Meta_Data_i  | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> isum(META_BITS) - 1 downto 0) |             |
 ## Processes
 - unnamed: ( Clock )
 ## Instantiations

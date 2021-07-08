@@ -32,12 +32,12 @@ vunit: run_all_in_same_sim
 |  check_en_4 | std_logic |             |
 ## Constants
 
-| Name           | Type      | Value                                               | Description |
-| -------------- | --------- | --------------------------------------------------- | ----------- |
-| check_checker  | checker_t |  new_checker("checker")                             |             |
-| check_checker2 | checker_t |  new_checker("checker2")                            |             |
-| check_checker3 | checker_t |  new_checker("checker3", default_log_level => info) |             |
-| check_checker4 | checker_t |  new_checker("checker4")                            |             |
+| Name           | Type      | Value                                                                                   | Description |
+| -------------- | --------- | --------------------------------------------------------------------------------------- | ----------- |
+| check_checker  | checker_t |  new_checker("checker")                                                                 |             |
+| check_checker2 | checker_t |  new_checker("checker2")                                                                |             |
+| check_checker3 | checker_t |  new_checker("checker3",<br><span style="padding-left:20px"> default_log_level => info) |             |
+| check_checker4 | checker_t |  new_checker("checker4")                                                                |             |
 ## Processes
 - clock: (  )
 - check_runner: (  )

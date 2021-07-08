@@ -138,9 +138,9 @@ limitations under the License.
 | LINE_INDEX_BITS | positive |  log2ceilnz(CACHE_LINES) |             |
 ## Types
 
-| Name                | Type | Description |
-| ------------------- | ---- | ----------- |
-| T_CACHE_LINE_VECTOR |      |             |
+| Name                | Type                                      | Description |
+| ------------------- | ----------------------------------------- | ----------- |
+| T_CACHE_LINE_VECTOR | array (natural range <>) of T_CACHE_LINE  |             |
 ## Instantiations
 
 - TU: PoC.cache_tagunit_par

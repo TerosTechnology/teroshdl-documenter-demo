@@ -35,10 +35,10 @@ The Potato Processor - A simple processor for FPGAs
 | prev_op | fifo_op      |             |
 ## Types
 
-| Name         | Type                   | Description |
-| ------------ | ---------------------- | ----------- |
-| memory_array |                        |             |
-| fifo_op      | (FIFO_POP, FIFO_PUSH)  |             |
+| Name         | Type                                                       | Description |
+| ------------ | ---------------------------------------------------------- | ----------- |
+| memory_array |                                                            |             |
+| fifo_op      | (FIFO_POP,<br><span style="padding-left:20px"> FIFO_PUSH)  |             |
 ## Processes
 - read: ( clk )
 - write: ( clk )

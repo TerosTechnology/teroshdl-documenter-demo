@@ -62,9 +62,9 @@ limitations under the License.
 | active | std_logic_vector(Input'range) |              |
 ## Constants
 
-| Name         | Type    | Value                                        | Description |
-| ------------ | ------- | -------------------------------------------- | ----------- |
-| LOCK_COUNT_X | integer |  TimingToCycles(BOUNCE_TIME, CLOCK_FREQ) - 1 |             |
+| Name         | Type    | Value                                                                            | Description |
+| ------------ | ------- | -------------------------------------------------------------------------------- | ----------- |
+| LOCK_COUNT_X | integer |  TimingToCycles(BOUNCE_TIME,<br><span style="padding-left:20px"> CLOCK_FREQ) - 1 |             |
 ## Processes
 - unnamed: ( Clock )
 **Description**

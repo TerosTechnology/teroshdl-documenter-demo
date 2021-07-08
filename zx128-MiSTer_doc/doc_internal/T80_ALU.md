@@ -98,7 +98,7 @@ File history :
 | Q_v         | std_logic_vector(7 downto 0) |                                      |
 | BitMask     | std_logic_vector(7 downto 0) |                                      |
 ## Functions
-- AddSub <font id="function_arguments">(A        : std_logic_vector; B        : std_logic_vector; Sub      : std_logic; Carry_In : std_logic; signal Res      : out std_logic_vector; signal Carry    : out std_logic) </font> <font id="function_return">return ()</font>
+- AddSub <font id="function_arguments">(A        : std_logic_vector;<br><span style="padding-left:20px"> B        : std_logic_vector;<br><span style="padding-left:20px"> Sub      : std_logic;<br><span style="padding-left:20px"> Carry_In : std_logic;<br><span style="padding-left:20px"> signal Res      : out std_logic_vector;<br><span style="padding-left:20px"> signal Carry    : out std_logic) </font> <font id="function_return">return ()</font>
 ## Processes
 - unnamed: ( Carry_v, Carry7_v, Q_v )
 **Description**

@@ -1,5 +1,5 @@
 # Package: com_support_pkg
 
 ## Functions
-- check <font id="function_arguments">( expr      : boolean; err       : com_status_t; msg       : string  := ""; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font>
-- check_failed <font id="function_arguments">( err       : com_error_t; msg       : string  := ""; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font>
+- check <font id="function_arguments">( expr      : boolean;<br><span style="padding-left:20px"> err       : com_status_t;<br><span style="padding-left:20px"> msg       : string  := "";<br><span style="padding-left:20px"> line_num  : natural := 0;<br><span style="padding-left:20px"> file_name : string  := "") </font> <font id="function_return">return ()</font>
+- check_failed <font id="function_arguments">( err       : com_error_t;<br><span style="padding-left:20px"> msg       : string  := "";<br><span style="padding-left:20px"> line_num  : natural := 0;<br><span style="padding-left:20px"> file_name : string  := "") </font> <font id="function_return">return ()</font>

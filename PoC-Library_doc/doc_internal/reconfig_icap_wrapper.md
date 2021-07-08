@@ -82,10 +82,10 @@ limitations under the License.
 | fsm_ready_d          | std_logic                                |                                                            |
 ## Constants
 
-| Name              | Type                                     | Value                      | Description |
-| ----------------- | ---------------------------------------- | -------------------------- | ----------- |
-| STATE_BITS        | positive                                 |  2                         |             |
-| state_almost_full | std_logic_vector(STATE_BITS -1 downto 0) |  (0 => '0', others => '1') |             |
+| Name              | Type                                     | Value                                                          | Description |
+| ----------------- | ---------------------------------------- | -------------------------------------------------------------- | ----------- |
+| STATE_BITS        | positive                                 |  2                                                             |             |
+| state_almost_full | std_logic_vector(STATE_BITS -1 downto 0) |  (0 => '0',<br><span style="padding-left:20px"> others => '1') |             |
 ## Processes
 - in_data_buffer_p: ( clk_icap )
 **Description**

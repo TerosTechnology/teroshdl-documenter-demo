@@ -44,9 +44,9 @@ Description : See library quick reference (under 'doc') and README-file(s)
 | fsm_tx          | t_state                                   |             |
 ## Types
 
-| Name    | Type                  | Description |
-| ------- | --------------------- | ----------- |
-| t_state | (s_idle, s_send_pkt)  |             |
+| Name    | Type                                                      | Description |
+| ------- | --------------------------------------------------------- | ----------- |
+| t_state | (s_idle,<br><span style="padding-left:20px"> s_send_pkt)  |             |
 ## Processes
 - p_sbi_write_regs: ( clk )
 - p_sbi_read_regs: ( sbi_cs, sbi_rena, sbi_addr )

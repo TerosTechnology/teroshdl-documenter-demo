@@ -86,7 +86,7 @@ limitations under the License.
 | ram_q1 | std_logic_vector(q1'range) | RAM output, port 1                       |
 | ram_q2 | std_logic_vector(q2'range) | RAM output, port 2                       |
 ## Functions
-- addr_equal <font id="function_arguments">(a1 : unsigned; a2 : unsigned) </font> <font id="function_return">return X01 </font>
+- addr_equal <font id="function_arguments">(a1 : unsigned;<br><span style="padding-left:20px"> a2 : unsigned) </font> <font id="function_return">return X01 </font>
 **Description**
 Compares two addresses, returns 'X' if either ``a1`` or ``a2`` containsmeta-values, otherwise returns '1' if ``a1 == a2`` is true else'0'. Returns 'X' even when the addresses contain '-' values, to signal anundefined outcome.
 ## Processes

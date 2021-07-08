@@ -50,18 +50,18 @@ limitations under the License.
 | RowVector    | in        | std_logic_vector(ROWS - 1 downto 0)            |                  |
 ## Signals
 
-| Name            | Type                                           | Description |
-| --------------- | ---------------------------------------------- | ----------- |
-| ColumnTimer_rst | std_logic                                      |             |
-| ColumnTimer_s   | signed(COLUMNTIMER_BITS - 1 downto 0)          |             |
-| ColumnSelect_en | std_logic                                      |             |
-| ColumnSelect_d  | std_logic_vector(COLUMNS - 1 downto 0)         |             |
-| Rows_sync       | std_logic_vector(ROWS - 1 downto 0)            |             |
-| KeyPadMatrix_r  | T_SLM(COLUMNS - 1 downto 0, ROWS - 1 downto 0) |             |
+| Name            | Type                                                                               | Description |
+| --------------- | ---------------------------------------------------------------------------------- | ----------- |
+| ColumnTimer_rst | std_logic                                                                          |             |
+| ColumnTimer_s   | signed(COLUMNTIMER_BITS - 1 downto 0)                                              |             |
+| ColumnSelect_en | std_logic                                                                          |             |
+| ColumnSelect_d  | std_logic_vector(COLUMNS - 1 downto 0)                                             |             |
+| Rows_sync       | std_logic_vector(ROWS - 1 downto 0)                                                |             |
+| KeyPadMatrix_r  | T_SLM(COLUMNS - 1 downto 0,<br><span style="padding-left:20px"> ROWS - 1 downto 0) |             |
 ## Constants
 
-| Name             | Type     | Value                                                | Description |
-| ---------------- | -------- | ---------------------------------------------------- | ----------- |
-| SHIFT_FREQ       | FREQ     |  SCAN_FREQ * COLUMNS                                 |             |
-| COLUMNTIMER_MAX  | positive |  TimingToCycles(to_time(SHIFT_FREQ), CLOCK_FREQ) - 1 |             |
-| COLUMNTIMER_BITS | positive |  log2ceilnz(COLUMNTIMER_MAX) + 1                     |             |
+| Name             | Type     | Value                                                                                    | Description |
+| ---------------- | -------- | ---------------------------------------------------------------------------------------- | ----------- |
+| SHIFT_FREQ       | FREQ     |  SCAN_FREQ * COLUMNS                                                                     |             |
+| COLUMNTIMER_MAX  | positive |  TimingToCycles(to_time(SHIFT_FREQ),<br><span style="padding-left:20px"> CLOCK_FREQ) - 1 |             |
+| COLUMNTIMER_BITS | positive |  log2ceilnz(COLUMNTIMER_MAX) + 1                                                         |             |

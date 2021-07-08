@@ -44,7 +44,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | notify_request_msg | msg_type_t |  new_msg_type("notify request") |             |
 | message_queue      | queue_t    |  new_queue                      |             |
 ## Functions
-- drive_invalid_output <font id="function_arguments">(signal l_tdata : out std_logic_vector(data_length(master)-1 downto 0); signal l_tkeep : out std_logic_vector(data_length(master)/8-1 downto 0); signal l_tstrb : out std_logic_vector(data_length(master)/8-1 downto 0); signal l_tid   : out std_logic_vector(id_length(master)-1 downto 0); signal l_tdest : out std_logic_vector(dest_length(master)-1 downto 0); signal l_tuser : out std_logic_vector(user_length(master)-1 downto 0)) </font> <font id="function_return">return ()</font>
+- drive_invalid_output <font id="function_arguments">(signal l_tdata : out std_logic_vector(data_length(master)-1 downto 0);<br><span style="padding-left:20px"> signal l_tkeep : out std_logic_vector(data_length(master)/8-1 downto 0);<br><span style="padding-left:20px"> signal l_tstrb : out std_logic_vector(data_length(master)/8-1 downto 0);<br><span style="padding-left:20px"> signal l_tid   : out std_logic_vector(id_length(master)-1 downto 0);<br><span style="padding-left:20px"> signal l_tdest : out std_logic_vector(dest_length(master)-1 downto 0);<br><span style="padding-left:20px"> signal l_tuser : out std_logic_vector(user_length(master)-1 downto 0)) </font> <font id="function_return">return ()</font>
 ## Processes
 - main: (  )
 - bus_process: (  )

@@ -43,13 +43,13 @@ Description   : See library quick reference (under 'doc') and README-file(s)
 | entry_num_in_vvc_activity_register | integer       | Activity Watchdog |
 ## Constants
 
-| Name         | Type         | Value                                                                | Description |
-| ------------ | ------------ | -------------------------------------------------------------------- | ----------- |
-| C_SCOPE      | string       |  get_scope_for_log(C_VVC_NAME, GC_INSTANCE_IDX, GC_CHANNEL)          |             |
-| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE, C_VVC_NAME, GC_INSTANCE_IDX, GC_CHANNEL) |             |
-| C_DATA_WIDTH | natural      |  8                                                                   |             |
+| Name         | Type         | Value                                                                                                                                                                            | Description |
+| ------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| C_SCOPE      | string       |  get_scope_for_log(C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> GC_CHANNEL)                                              |             |
+| C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> GC_CHANNEL) |             |
+| C_DATA_WIDTH | natural      |  8                                                                                                                                                                               |             |
 ## Functions
-- get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record; constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font>
+- get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record;<br><span style="padding-left:20px"> constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font>
 ## Processes
 - cmd_interpreter: (  )
 **Description**

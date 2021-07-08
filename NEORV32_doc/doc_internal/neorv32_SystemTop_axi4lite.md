@@ -43,50 +43,53 @@
 #################################################################################################
 ## Generics
 
-| Generic name                 | Type                          | Value       | Description                                                                           |
-| ---------------------------- | ----------------------------- | ----------- | ------------------------------------------------------------------------------------- |
-| CLOCK_FREQUENCY              | natural                       | 0           | clock frequency of clk_i in Hz                                                        |
-| INT_BOOTLOADER_EN            | boolean                       | true        | boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM |
-| USER_CODE                    | std_logic_vector(31 downto 0) | x"00000000" | custom user code                                                                      |
-| HW_THREAD_ID                 | natural                       | 0           | hardware thread id (32-bit)                                                           |
-| ON_CHIP_DEBUGGER_EN          | boolean                       | false       | implement on-chip debugger                                                            |
-| CPU_EXTENSION_RISCV_A        | boolean                       | false       | implement atomic extension?                                                           |
-| CPU_EXTENSION_RISCV_C        | boolean                       | false       | implement compressed extension?                                                       |
-| CPU_EXTENSION_RISCV_E        | boolean                       | false       | implement embedded RF extension?                                                      |
-| CPU_EXTENSION_RISCV_M        | boolean                       | false       | implement muld/div extension?                                                         |
-| CPU_EXTENSION_RISCV_U        | boolean                       | false       | implement user mode extension?                                                        |
-| CPU_EXTENSION_RISCV_Zfinx    | boolean                       | false       | implement 32-bit floating-point extension (using INT reg!)                            |
-| CPU_EXTENSION_RISCV_Zicsr    | boolean                       | true        | implement CSR system?                                                                 |
-| CPU_EXTENSION_RISCV_Zifencei | boolean                       | false       | implement instruction stream sync.?                                                   |
-| FAST_MUL_EN                  | boolean                       | false       | use DSPs for M extension's multiplier                                                 |
-| FAST_SHIFT_EN                | boolean                       | false       | use barrel shifter for shift operations                                               |
-| CPU_CNT_WIDTH                | natural                       | 64          | total width of CPU cycle and instret counters (0..64)                                 |
-| PMP_NUM_REGIONS              | natural                       | 0           | number of regions (0..64)                                                             |
-| PMP_MIN_GRANULARITY          | natural                       | 64*1024     | minimal region granularity in bytes, has to be a power of 2, min 8 bytes              |
-| HPM_NUM_CNTS                 | natural                       | 0           | number of implemented HPM counters (0..29)                                            |
-| HPM_CNT_WIDTH                | natural                       | 40          | total size of HPM counters (0..64)                                                    |
-| MEM_INT_IMEM_EN              | boolean                       | true        | implement processor-internal instruction memory                                       |
-| MEM_INT_IMEM_SIZE            | natural                       | 16*1024     | size of processor-internal instruction memory in bytes                                |
-| MEM_INT_DMEM_EN              | boolean                       | true        | implement processor-internal data memory                                              |
-| MEM_INT_DMEM_SIZE            | natural                       | 8*1024      | size of processor-internal data memory in bytes                                       |
-| ICACHE_EN                    | boolean                       | false       | implement instruction cache                                                           |
-| ICACHE_NUM_BLOCKS            | natural                       | 4           | i-cache: number of blocks (min 1), has to be a power of 2                             |
-| ICACHE_BLOCK_SIZE            | natural                       | 64          | i-cache: block size in bytes (min 4), has to be a power of 2                          |
-| ICACHE_ASSOCIATIVITY         | natural                       | 1           | i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2     |
-| IO_GPIO_EN                   | boolean                       | true        | implement general purpose input/output port unit (GPIO)?                              |
-| IO_MTIME_EN                  | boolean                       | true        | implement machine system timer (MTIME)?                                               |
-| IO_UART0_EN                  | boolean                       | true        | implement primary universal asynchronous receiver/transmitter (UART0)?                |
-| IO_UART1_EN                  | boolean                       | true        | implement secondary universal asynchronous receiver/transmitter (UART1)?              |
-| IO_SPI_EN                    | boolean                       | true        | implement serial peripheral interface (SPI)?                                          |
-| IO_TWI_EN                    | boolean                       | true        | implement two-wire interface (TWI)?                                                   |
-| IO_PWM_NUM_CH                | natural                       | 4           | number of PWM channels to implement (0..60); 0 = disabled                             |
-| IO_WDT_EN                    | boolean                       | true        | implement watch dog timer (WDT)?                                                      |
-| IO_TRNG_EN                   | boolean                       | false       | implement true random number generator (TRNG)?                                        |
-| IO_CFS_EN                    | boolean                       | false       | implement custom functions subsystem (CFS)?                                           |
-| IO_CFS_CONFIG                | std_logic_vector(31 downto 0) |             | custom CFS configuration generic                                                      |
-| IO_CFS_IN_SIZE               | positive                      | 32          | size of CFS input conduit in bits                                                     |
-| IO_CFS_OUT_SIZE              | positive                      | 32          | size of CFS output conduit in bits                                                    |
-| IO_NEOLED_EN                 | boolean                       | true        | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
+| Generic name                 | Type                          | Value           | Description                                                                           |
+| ---------------------------- | ----------------------------- | --------------- | ------------------------------------------------------------------------------------- |
+| CLOCK_FREQUENCY              | natural                       | 0               | clock frequency of clk_i in Hz                                                        |
+| INT_BOOTLOADER_EN            | boolean                       | true            | boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM |
+| USER_CODE                    | std_logic_vector(31 downto 0) | x"00000000"     | custom user code                                                                      |
+| HW_THREAD_ID                 | natural                       | 0               | hardware thread id (32-bit)                                                           |
+| ON_CHIP_DEBUGGER_EN          | boolean                       | false           | implement on-chip debugger                                                            |
+| CPU_EXTENSION_RISCV_A        | boolean                       | false           | implement atomic extension?                                                           |
+| CPU_EXTENSION_RISCV_C        | boolean                       | false           | implement compressed extension?                                                       |
+| CPU_EXTENSION_RISCV_E        | boolean                       | false           | implement embedded RF extension?                                                      |
+| CPU_EXTENSION_RISCV_M        | boolean                       | false           | implement muld/div extension?                                                         |
+| CPU_EXTENSION_RISCV_U        | boolean                       | false           | implement user mode extension?                                                        |
+| CPU_EXTENSION_RISCV_Zfinx    | boolean                       | false           | implement 32-bit floating-point extension (using INT reg!)                            |
+| CPU_EXTENSION_RISCV_Zicsr    | boolean                       | true            | implement CSR system?                                                                 |
+| CPU_EXTENSION_RISCV_Zifencei | boolean                       | false           | implement instruction stream sync.?                                                   |
+| FAST_MUL_EN                  | boolean                       | false           | use DSPs for M extension's multiplier                                                 |
+| FAST_SHIFT_EN                | boolean                       | false           | use barrel shifter for shift operations                                               |
+| CPU_CNT_WIDTH                | natural                       | 64              | total width of CPU cycle and instret counters (0..64)                                 |
+| PMP_NUM_REGIONS              | natural                       | 0               | number of regions (0..64)                                                             |
+| PMP_MIN_GRANULARITY          | natural                       | 64*1024         | minimal region granularity in bytes, has to be a power of 2, min 8 bytes              |
+| HPM_NUM_CNTS                 | natural                       | 0               | number of implemented HPM counters (0..29)                                            |
+| HPM_CNT_WIDTH                | natural                       | 40              | total size of HPM counters (0..64)                                                    |
+| MEM_INT_IMEM_EN              | boolean                       | true            | implement processor-internal instruction memory                                       |
+| MEM_INT_IMEM_SIZE            | natural                       | 16*1024         | size of processor-internal instruction memory in bytes                                |
+| MEM_INT_DMEM_EN              | boolean                       | true            | implement processor-internal data memory                                              |
+| MEM_INT_DMEM_SIZE            | natural                       | 8*1024          | size of processor-internal data memory in bytes                                       |
+| ICACHE_EN                    | boolean                       | false           | implement instruction cache                                                           |
+| ICACHE_NUM_BLOCKS            | natural                       | 4               | i-cache: number of blocks (min 1), has to be a power of 2                             |
+| ICACHE_BLOCK_SIZE            | natural                       | 64              | i-cache: block size in bytes (min 4), has to be a power of 2                          |
+| ICACHE_ASSOCIATIVITY         | natural                       | 1               | i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2     |
+| XIRQ_NUM_CH                  | natural                       | 0               | number of external IRQ channels (0..32)                                               |
+| XIRQ_TRIGGER_TYPE            | std_logic_vector(31 downto 0) | (others => '1') | trigger type: 0=level, 1=edge                                                         |
+| XIRQ_TRIGGER_POLARITY        | std_logic_vector(31 downto 0) | (others => '1') | trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge                  |
+| IO_GPIO_EN                   | boolean                       | true            | implement general purpose input/output port unit (GPIO)?                              |
+| IO_MTIME_EN                  | boolean                       | true            | implement machine system timer (MTIME)?                                               |
+| IO_UART0_EN                  | boolean                       | true            | implement primary universal asynchronous receiver/transmitter (UART0)?                |
+| IO_UART1_EN                  | boolean                       | true            | implement secondary universal asynchronous receiver/transmitter (UART1)?              |
+| IO_SPI_EN                    | boolean                       | true            | implement serial peripheral interface (SPI)?                                          |
+| IO_TWI_EN                    | boolean                       | true            | implement two-wire interface (TWI)?                                                   |
+| IO_PWM_NUM_CH                | natural                       | 4               | number of PWM channels to implement (0..60); 0 = disabled                             |
+| IO_WDT_EN                    | boolean                       | true            | implement watch dog timer (WDT)?                                                      |
+| IO_TRNG_EN                   | boolean                       | false           | implement true random number generator (TRNG)?                                        |
+| IO_CFS_EN                    | boolean                       | false           | implement custom functions subsystem (CFS)?                                           |
+| IO_CFS_CONFIG                | std_logic_vector(31 downto 0) |                 | custom CFS configuration generic                                                      |
+| IO_CFS_IN_SIZE               | positive                      | 32              | size of CFS input conduit in bits                                                     |
+| IO_CFS_OUT_SIZE              | positive                      | 32              | size of CFS output conduit in bits                                                    |
+| IO_NEOLED_EN                 | boolean                       | true            | implement NeoPixel-compatible smart LED interface (NEOLED)?                           |
 ## Ports
 
 | Port name     | Direction | Type                                         | Description                                                                                                                                                                           |
@@ -137,6 +140,7 @@
 | cfs_in_i      | in        | std_logic_vector(IO_CFS_IN_SIZE-1  downto 0) | custom inputs                                                                                                                                                                         |
 | cfs_out_o     | out       | std_logic_vector(IO_CFS_OUT_SIZE-1 downto 0) | custom outputs                                                                                                                                                                        |
 | neoled_o      | out       | std_logic                                    | async serial data line                                                                                                                                                                |
+| xirq_i        | in        | std_logic_vector(XIRQ_NUM_CH-1 downto 0)     | IRQ channels                                                                                                                                                                          |
 | nm_irq_i      | in        | std_logic                                    | non-maskable interrupt                                                                                                                                                                |
 | msw_irq_i     | in        | std_logic                                    | machine software interrupt                                                                                                                                                            |
 | mext_irq_i    | in        | std_logic                                    | machine external interrupt                                                                                                                                                            |
@@ -169,6 +173,7 @@
 | cfs_in_i_int    | std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) |                             |
 | cfs_out_o_int   | std_ulogic_vector(IO_CFS_OUT_SIZE-1 downto 0) |                             |
 | neoled_o_int    | std_ulogic                                    |                             |
+| xirq_i_int      | std_ulogic_vector(XIRQ_NUM_CH-1 downto 0)     |                             |
 | nm_irq_i_int    | std_ulogic                                    |                             |
 | msw_irq_i_int   | std_ulogic                                    |                             |
 | mext_irq_i_int  | std_ulogic                                    |                             |
@@ -180,10 +185,12 @@
 |  err_write      | std_ulogic                                    |                             |
 ## Constants
 
-| Name              | Type                           | Value                             | Description |
-| ----------------- | ------------------------------ | --------------------------------- | ----------- |
-| USER_CODE_INT     | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(USER_CODE)     |             |
-| IO_CFS_CONFIG_INT | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(IO_CFS_CONFIG) |             |
+| Name                      | Type                           | Value                                     | Description |
+| ------------------------- | ------------------------------ | ----------------------------------------- | ----------- |
+| USER_CODE_INT             | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(USER_CODE)             |             |
+| IO_CFS_CONFIG_INT         | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(IO_CFS_CONFIG)         |             |
+| XIRQ_TRIGGER_TYPE_INT     | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(XIRQ_TRIGGER_TYPE)     |             |
+| XIRQ_TRIGGER_POLARITY_INT | std_ulogic_vector(31 downto 0) |  std_ulogic_vector(XIRQ_TRIGGER_POLARITY) |             |
 ## Types
 
 | Name     | Type | Description              |

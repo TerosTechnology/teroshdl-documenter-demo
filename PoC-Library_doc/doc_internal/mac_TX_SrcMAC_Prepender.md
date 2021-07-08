@@ -56,27 +56,27 @@ limitations under the License.
 | Out_Meta_DestMACAddress_Data | out       | T_SLV_8                                             |             |
 ## Signals
 
-| Name               | Type                                                  | Description                                                                                   |
-| ------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| State              | T_STATE                                               |                                                                                               |
-| NextState          | T_STATE                                               |                                                                                               |
-| LLMux_In_Valid     | std_logic_vector(PORTS - 1 downto 0)                  |                                                                                               |
-| LLMux_In_Data      | T_SLM(PORTS - 1 downto 0, T_SLV_8'range)              | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_Meta      | T_SLM(PORTS - 1 downto 0, META_BITS - 1 downto 0)     | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_Meta_rev  | T_SLM(PORTS - 1 downto 0, META_REV_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_SOF       | std_logic_vector(PORTS - 1 downto 0)                  |                                                                                               |
-| LLMux_In_EOF       | std_logic_vector(PORTS - 1 downto 0)                  |                                                                                               |
-| LLMux_In_Ack       | std_logic_vector(PORTS - 1 downto 0)                  |                                                                                               |
-| LLMux_Out_Valid    | std_logic                                             |                                                                                               |
-| LLMux_Out_Data     | T_SLV_8                                               |                                                                                               |
-| LLMux_Out_Meta     | std_logic_vector(META_BITS - 1 downto 0)              |                                                                                               |
-| LLMux_Out_Meta_rev | std_logic_vector(META_REV_BITS - 1 downto 0)          |                                                                                               |
-| LLMux_Out_SOF      | std_logic                                             |                                                                                               |
-| LLMux_Out_EOF      | std_logic                                             |                                                                                               |
-| LLMux_Out_Ack      | std_logic                                             |                                                                                               |
-| Is_DataFlow        | std_logic                                             |                                                                                               |
-| Is_SOF             | std_logic                                             |                                                                                               |
-| Is_EOF             | std_logic                                             |                                                                                               |
+| Name               | Type                                                                                      | Description                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| State              | T_STATE                                                                                   |                                                                                               |
+| NextState          | T_STATE                                                                                   |                                                                                               |
+| LLMux_In_Valid     | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
+| LLMux_In_Data      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> T_SLV_8'range)              | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_Meta      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_BITS - 1 downto 0)     | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_Meta_rev  | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_REV_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_SOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
+| LLMux_In_EOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
+| LLMux_In_Ack       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
+| LLMux_Out_Valid    | std_logic                                                                                 |                                                                                               |
+| LLMux_Out_Data     | T_SLV_8                                                                                   |                                                                                               |
+| LLMux_Out_Meta     | std_logic_vector(META_BITS - 1 downto 0)                                                  |                                                                                               |
+| LLMux_Out_Meta_rev | std_logic_vector(META_REV_BITS - 1 downto 0)                                              |                                                                                               |
+| LLMux_Out_SOF      | std_logic                                                                                 |                                                                                               |
+| LLMux_Out_EOF      | std_logic                                                                                 |                                                                                               |
+| LLMux_Out_Ack      | std_logic                                                                                 |                                                                                               |
+| Is_DataFlow        | std_logic                                                                                 |                                                                                               |
+| Is_SOF             | std_logic                                                                                 |                                                                                               |
+| Is_EOF             | std_logic                                                                                 |                                                                                               |
 ## Constants
 
 | Name              | Type     | Value                 | Description |
@@ -88,9 +88,9 @@ limitations under the License.
 | META_REV_BITS     | positive |  2                    |             |
 ## Types
 
-| Name    | Type                                                                                                                                   | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_PREPEND_SRC_MAC_1, ST_PREPEND_SRC_MAC_2, ST_PREPEND_SRC_MAC_3, ST_PREPEND_SRC_MAC_4, ST_PREPEND_SRC_MAC_5, ST_PAYLOAD )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                           | Description |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_PREPEND_SRC_MAC_1,<br><span style="padding-left:20px"> ST_PREPEND_SRC_MAC_2,<br><span style="padding-left:20px"> ST_PREPEND_SRC_MAC_3,<br><span style="padding-left:20px"> ST_PREPEND_SRC_MAC_4,<br><span style="padding-left:20px"> ST_PREPEND_SRC_MAC_5,<br><span style="padding-left:20px"> ST_PAYLOAD )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, LLMux_Out_Valid, LLMux_Out_Data, LLMux_Out_Meta, LLMux_Out_EOF, Is_DataFlow, Is_SOF, Is_EOF, Out_Ack )

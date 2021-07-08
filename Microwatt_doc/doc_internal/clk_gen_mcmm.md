@@ -24,16 +24,16 @@
 | clkfb | std_ulogic |             |
 ## Constants
 
-| Name         | Type           | Value                                                        | Description |
-| ------------ | -------------- | ------------------------------------------------------------ | ----------- |
-| pll_settings | pll_settings_t |  gen_pll_settings(clk_input_hz, 							       clk_output_hz) |             |
+| Name         | Type           | Value                                                                                            | Description |
+| ------------ | -------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| pll_settings | pll_settings_t |  gen_pll_settings(clk_input_hz,<br><span style="padding-left:20px"> 							       clk_output_hz) |             |
 ## Types
 
 | Name           | Type | Description |
 | -------------- | ---- | ----------- |
 | pll_settings_t |      |             |
 ## Functions
-- gen_pll_settings <font id="function_arguments">( constant input_hz : positive; constant output_hz : positive) </font> <font id="function_return">return pll_settings_t </font>
+- gen_pll_settings <font id="function_arguments">( constant input_hz : positive;<br><span style="padding-left:20px"> constant output_hz : positive) </font> <font id="function_return">return pll_settings_t </font>
 ## Instantiations
 
 - pll: MMCME2_BASE

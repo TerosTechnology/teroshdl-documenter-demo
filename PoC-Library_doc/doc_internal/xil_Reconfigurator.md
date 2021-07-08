@@ -76,9 +76,9 @@ limitations under the License.
 | CONFIGINDEX_BITS | positive |  log2ceilnz(CONFIG_ROM'length) |             |
 ## Types
 
-| Name    | Type                                                                              | Description |
-| ------- | --------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_READ_BEGIN,	ST_READ_WAIT, ST_WRITE_BEGIN,	ST_WRITE_WAIT, ST_DONE )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                  | Description |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_READ_BEGIN,<br><span style="padding-left:20px">	ST_READ_WAIT,<br><span style="padding-left:20px"> ST_WRITE_BEGIN,<br><span style="padding-left:20px">	ST_WRITE_WAIT,<br><span style="padding-left:20px"> ST_DONE )  |             |
 ## Processes
 - unnamed: ( Clock )
 **Description**

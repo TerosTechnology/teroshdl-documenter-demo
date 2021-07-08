@@ -22,7 +22,6 @@
 - Package: [util_pkg ](./doc_internal/util_pkg.md)
 - Module: [tb_example ](./doc_internal/tb_example.md)
 - Module: [adder ](./doc_internal/adder.md)
-- Module: [memory_bfm ](./doc_internal/memory_bfm.md)
 - Package: [memory_bfm_pkg ](./doc_internal/memory_bfm_pkg.md)
 - Module: [tb_user_guide ](./doc_internal/tb_user_guide.md)
 - Module: [tb_composite_generics ](./doc_internal/tb_composite_generics.md)

@@ -73,6 +73,6 @@ limitations under the License.
 | COUNTER_BITS | positive |  log2ceil(integer(BIT_RATIO))         |             |
 ## Types
 
-| Name        | Type | Description |
-| ----------- | ---- | ----------- |
-| T_MUX_INPUT |      |             |
+| Name        | Type                                                                    | Description |
+| ----------- | ----------------------------------------------------------------------- | ----------- |
+| T_MUX_INPUT | array (natural range <>) of std_logic_vector(OUTPUT_BITS - 1 downto 0)  |             |

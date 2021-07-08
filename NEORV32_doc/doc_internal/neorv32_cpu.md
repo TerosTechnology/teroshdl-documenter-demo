@@ -111,7 +111,6 @@
 | mext_irq_i    | in        | std_ulogic                                 | machine external interrupt      |
 | mtime_irq_i   | in        | std_ulogic                                 | machine timer interrupt         |
 | firq_i        | in        | std_ulogic_vector(15 downto 0)             | fast interrupts (custom) --     |
-| firq_ack_o    | out       | std_ulogic_vector(15 downto 0)             |                                 |
 | db_halt_req_i | in        | std_ulogic                                 | debug mode (halt) request --    |
 ## Signals
 

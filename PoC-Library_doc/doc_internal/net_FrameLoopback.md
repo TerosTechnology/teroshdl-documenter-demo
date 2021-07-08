@@ -52,18 +52,18 @@ limitations under the License.
 | Out_Ack   | in        | std_logic                              |             |
 ## Signals
 
-| Name                          | Type                                                   | Description |
-| ----------------------------- | ------------------------------------------------------ | ----------- |
-| Meta_rst                      | std_logic                                              |             |
-| Meta_nxt                      | std_logic_vector(META_STREAMS - 1 downto 0)            |             |
-| Pipe_DataOut                  | T_SLV_8                                                |             |
-| Pipe_MetaIn                   | T_SLM(META_STREAMS - 1 downto 0, 31 downto 0)          |             |
-| Pipe_MetaOut                  | T_SLM(META_STREAMS - 1 downto 0, 31 downto 0)          |             |
-| Pipe_Meta_rst                 | std_logic                                              |             |
-| Pipe_Meta_nxt                 | std_logic_vector(META_STREAMS - 1 downto 0)            |             |
-| Pipe_Meta_SrcMACAddress_Data  | std_logic_vector(TX_Funnel_SrcIPv6Address_Data'range)  |             |
-| Pipe_Meta_DestMACAddress_Data | std_logic_vector(TX_Funnel_DestIPv6Address_Data'range) |             |
-| Pipe_Meta_EthType             | std_logic_vector(TX_Funnel_Payload_Type'range)         |             |
+| Name                          | Type                                                                              | Description |
+| ----------------------------- | --------------------------------------------------------------------------------- | ----------- |
+| Meta_rst                      | std_logic                                                                         |             |
+| Meta_nxt                      | std_logic_vector(META_STREAMS - 1 downto 0)                                       |             |
+| Pipe_DataOut                  | T_SLV_8                                                                           |             |
+| Pipe_MetaIn                   | T_SLM(META_STREAMS - 1 downto 0,<br><span style="padding-left:20px"> 31 downto 0) |             |
+| Pipe_MetaOut                  | T_SLM(META_STREAMS - 1 downto 0,<br><span style="padding-left:20px"> 31 downto 0) |             |
+| Pipe_Meta_rst                 | std_logic                                                                         |             |
+| Pipe_Meta_nxt                 | std_logic_vector(META_STREAMS - 1 downto 0)                                       |             |
+| Pipe_Meta_SrcMACAddress_Data  | std_logic_vector(TX_Funnel_SrcIPv6Address_Data'range)                             |             |
+| Pipe_Meta_DestMACAddress_Data | std_logic_vector(TX_Funnel_DestIPv6Address_Data'range)                            |             |
+| Pipe_Meta_EthType             | std_logic_vector(TX_Funnel_Payload_Type'range)                                    |             |
 ## Constants
 
 | Name               | Type     | Value | Description               |

@@ -69,13 +69,13 @@ limitations under the License.
 | StmBuf_MetaOut_Data | std_logic_vector(isum(META_BITS) - 1 downto 0)  |             |
 ## Constants
 
-| Name                   | Type     | Value                                                                                                 | Description |
-| ---------------------- | -------- | ----------------------------------------------------------------------------------------------------- | ----------- |
-| META_STREAMID_SRCADDR  | natural  |  0                                                                                                    |             |
-| META_STREAMID_DESTADDR | natural  |  1                                                                                                    |             |
-| META_STREAMID_LENGTH   | natural  |  2                                                                                                    |             |
-| META_BITS              | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 8, 		META_STREAMID_DESTADDR		=> 8, 		META_STREAMID_LENGTH			=> 16 	)  |             |
-| META_FIFO_DEPTHS       | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 16, 		META_STREAMID_DESTADDR		=> 16, 		META_STREAMID_LENGTH			=> 1 	) |             |
+| Name                   | Type     | Value                                                                                                                                                                         | Description |
+| ---------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| META_STREAMID_SRCADDR  | natural  |  0                                                                                                                                                                            |             |
+| META_STREAMID_DESTADDR | natural  |  1                                                                                                                                                                            |             |
+| META_STREAMID_LENGTH   | natural  |  2                                                                                                                                                                            |             |
+| META_BITS              | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 8,<br><span style="padding-left:20px"> 		META_STREAMID_DESTADDR		=> 8,<br><span style="padding-left:20px"> 		META_STREAMID_LENGTH			=> 16 	)  |             |
+| META_FIFO_DEPTHS       | T_POSVEC |  ( 		META_STREAMID_SRCADDR			=> 16,<br><span style="padding-left:20px"> 		META_STREAMID_DESTADDR		=> 16,<br><span style="padding-left:20px"> 		META_STREAMID_LENGTH			=> 1 	) |             |
 ## Instantiations
 
 - StmBuf: PoC.stream_Buffer

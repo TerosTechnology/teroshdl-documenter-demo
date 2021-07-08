@@ -67,10 +67,10 @@ limitations under the License.
 | A_BITS | natural |  log2ceil(MIN_DEPTH) |             |
 ## Types
 
-| Name   | Type                               | Description                             |
-| ------ | ---------------------------------- | --------------------------------------- |
-| ctrl_t | (PUSH, POP, IDLE)                  | ctrl signal for stackpointer operations |
-| state  | (SEMPTY, NOTFULL, WAITING, SFULL)  |                                         |
+| Name   | Type                                                                                                                                           | Description                             |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| ctrl_t | (PUSH,<br><span style="padding-left:20px"> POP,<br><span style="padding-left:20px"> IDLE)                                                      | ctrl signal for stackpointer operations |
+| state  | (SEMPTY,<br><span style="padding-left:20px"> NOTFULL,<br><span style="padding-left:20px"> WAITING,<br><span style="padding-left:20px"> SFULL)  |                                         |
 ## Processes
 - unnamed: ( clk )
 - unnamed: ( current_state, put, stackpointer, got )

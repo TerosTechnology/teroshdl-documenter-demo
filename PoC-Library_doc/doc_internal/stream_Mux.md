@@ -76,9 +76,9 @@ limitations under the License.
 | Out_EOF_i          | std_logic                                |             |
 ## Types
 
-| Name    | Type                    | Description |
-| ------- | ----------------------- | ----------- |
-| T_STATE | (ST_IDLE, ST_DATAFLOW)  |             |
+| Name    | Type                                                        | Description |
+| ------- | ----------------------------------------------------------- | ----------- |
+| T_STATE | (ST_IDLE,<br><span style="padding-left:20px"> ST_DATAFLOW)  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, RequestWithSelf, RequestWithoutSelf, Out_Ack, Out_EOF_i, ChannelPointer_d, ChannelPointer_nxt )

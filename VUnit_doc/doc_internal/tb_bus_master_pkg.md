@@ -16,13 +16,13 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | runner_cfg   | string |       |             |
 ## Constants
 
-| Name                               | Type         | Value                                                                                   | Description |
-| ---------------------------------- | ------------ | --------------------------------------------------------------------------------------- | ----------- |
-| memory                             | memory_t     |  new_memory                                                                             |             |
-| bus_handle                         | bus_master_t |  new_bus(data_length => 32, address_length => 32)                                       |             |
-| logger                             | logger_t     |  get_logger("logger")                                                                   |             |
-| actor                              | actor_t      |  new_actor("actor")                                                                     |             |
-| custom_logger_and_actor_bus_handle | bus_master_t |      new_bus(data_length => 32, address_length => 32, logger => logger, actor => actor) |             |
+| Name                               | Type         | Value                                                                                                                                                                                               | Description |
+| ---------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| memory                             | memory_t     |  new_memory                                                                                                                                                                                         |             |
+| bus_handle                         | bus_master_t |  new_bus(data_length => 32,<br><span style="padding-left:20px"> address_length => 32)                                                                                                               |             |
+| logger                             | logger_t     |  get_logger("logger")                                                                                                                                                                               |             |
+| actor                              | actor_t      |  new_actor("actor")                                                                                                                                                                                 |             |
+| custom_logger_and_actor_bus_handle | bus_master_t |      new_bus(data_length => 32,<br><span style="padding-left:20px"> address_length => 32,<br><span style="padding-left:20px"> logger => logger,<br><span style="padding-left:20px"> actor => actor) |             |
 ## Processes
 - main: (  )
 ## Instantiations

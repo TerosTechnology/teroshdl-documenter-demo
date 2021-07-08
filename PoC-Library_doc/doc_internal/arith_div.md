@@ -61,20 +61,20 @@ limitations under the License.
 | exec | std_logic                  |                                            |
 ## Constants
 
-| Name        | Type     | Value                     | Description               |
-| ----------- | -------- | ------------------------- | ------------------------- |
-| STEPS       | positive |  (A_BITS+RAPOW-1)/RAPOW   | Number of Iteration Steps |
-| DEPTH       | natural  |  ite(PIPELINED, STEPS, 0) | Physical Depth            |
-| TRUNK_BITS  | natural  |  (STEPS-1)*RAPOW          |                           |
-| ACTIVE_BITS | positive |  D_BITS + RAPOW           |                           |
+| Name        | Type     | Value                                                                                             | Description               |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------- | ------------------------- |
+| STEPS       | positive |  (A_BITS+RAPOW-1)/RAPOW                                                                           | Number of Iteration Steps |
+| DEPTH       | natural  |  ite(PIPELINED,<br><span style="padding-left:20px"> STEPS,<br><span style="padding-left:20px"> 0) | Physical Depth            |
+| TRUNK_BITS  | natural  |  (STEPS-1)*RAPOW                                                                                  |                           |
+| ACTIVE_BITS | positive |  D_BITS + RAPOW                                                                                   |                           |
 ## Types
 
-| Name           | Type | Description |
-| -------------- | ---- | ----------- |
-| residue_vector |      |             |
-| divisor_vector |      |             |
+| Name           | Type                               | Description |
+| -------------- | ---------------------------------- | ----------- |
+| residue_vector | array(natural range<>) of residue  |             |
+| divisor_vector | array(natural range<>) of divisor  |             |
 ## Functions
-- div_step <font id="function_arguments">(av : residue; dv : divisor) </font> <font id="function_return">return residue </font>
+- div_step <font id="function_arguments">(av : residue;<br><span style="padding-left:20px"> dv : divisor) </font> <font id="function_return">return residue </font>
 ## Processes
 - unnamed: ( clk )
 **Description**

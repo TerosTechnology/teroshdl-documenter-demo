@@ -7,21 +7,21 @@
 | MULTIPLE_DRIVER_SEVERITY | severity_level |  ERROR |             |
 ## Types
 
-| Name                   | Type | Description                                   |
-| ---------------------- | ---- | --------------------------------------------- |
-| std_logic_vector_max_c |      | for non VHDL-2008                             |
-| unsigned_max_c         |      | for non VHDL-2008                             |
-| signed_max_c           |      | for non VHDL-2008                             |
-| bit_vector_max_c       |      | for non VHDL-2008                             |
-| integer_vector_max_c   |      | for non VHDL-2008                             |
-| time_vector_max_c      |      | for non VHDL-2008                             |
-| real_vector_max_c      |      | for non VHDL-2008                             |
-| string_max_c           |      | for non VHDL-2008                             |
-| boolean_vector_max_c   |      | for non VHDL-2008                             |
-| integer_vector_sum_c   |      | for non VHDL-2008                             |
-| time_vector_sum_c      |      | for non VHDL-2008                             |
-| real_vector_sum_c      |      | for non VHDL-2008                             |
-| resolved_string        |      | will change to subtype -- assert but no init  |
+| Name                   | Type                                             | Description                                   |
+| ---------------------- | ------------------------------------------------ | --------------------------------------------- |
+| std_logic_vector_max_c | array (natural range <>) of std_logic_max        | for non VHDL-2008                             |
+| unsigned_max_c         | array (natural range <>) of std_logic_max        | for non VHDL-2008                             |
+| signed_max_c           | array (natural range <>) of std_logic_max        | for non VHDL-2008                             |
+| bit_vector_max_c       | array (natural range <>) of bit_max              | for non VHDL-2008                             |
+| integer_vector_max_c   | array (natural range <>) of integer_max          | for non VHDL-2008                             |
+| time_vector_max_c      | array (natural range <>) of time_max             | for non VHDL-2008                             |
+| real_vector_max_c      | array (natural range <>) of real_max             | for non VHDL-2008                             |
+| string_max_c           | array (positive range <>) of character_max       | for non VHDL-2008                             |
+| boolean_vector_max_c   | array (natural range <>) of boolean_max          | for non VHDL-2008                             |
+| integer_vector_sum_c   | array (natural range <>) of integer_sum          | for non VHDL-2008                             |
+| time_vector_sum_c      | array (natural range <>) of time_sum             | for non VHDL-2008                             |
+| real_vector_sum_c      | array (natural range <>) of real_sum             | for non VHDL-2008                             |
+| resolved_string        | array (positive range <>) of resolved_character  | will change to subtype -- assert but no init  |
 ## Functions
 - resolved_max <font id="function_arguments">( s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font>
 **Description**

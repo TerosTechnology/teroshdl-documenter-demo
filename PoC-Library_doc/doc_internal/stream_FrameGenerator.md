@@ -72,9 +72,9 @@ limitations under the License.
 | PRNG_Data              | std_logic_vector(DATA_BITS - 1 downto 0) |             |
 ## Types
 
-| Name    | Type                                                                                                                       | Description |
-| ------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| T_STATE | ( ST_IDLE, ST_SEQUENCE_SOF,	ST_SEQUENCE_DATA,	ST_SEQUENCE_EOF, ST_RANDOM_SOF,		ST_RANDOM_DATA,		ST_RANDOM_EOF, ST_ERROR )  |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                   | Description |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_SEQUENCE_SOF,<br><span style="padding-left:20px">	ST_SEQUENCE_DATA,<br><span style="padding-left:20px">	ST_SEQUENCE_EOF,<br><span style="padding-left:20px"> ST_RANDOM_SOF,<br><span style="padding-left:20px">		ST_RANDOM_DATA,<br><span style="padding-left:20px">		ST_RANDOM_EOF,<br><span style="padding-left:20px"> ST_ERROR )  |             |
 ## Processes
 - unnamed: ( Clock )
 - unnamed: ( State, Command, Out_Ack,

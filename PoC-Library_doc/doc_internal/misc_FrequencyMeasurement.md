@@ -63,10 +63,10 @@ limitations under the License.
 | Done_r                 | std_logic                              |             |
 ## Constants
 
-| Name                  | Type     | Value                                                                | Description |
-| --------------------- | -------- | -------------------------------------------------------------------- | ----------- |
-| TIMEBASE_COUNTER_MAX  | positive |  TimingToCycles(ite(SIMULATION, 10 us, 1 sec), REFERENCE_CLOCK_FREQ) |             |
-| TIMEBASE_COUNTER_BITS | positive |  log2ceilnz(TIMEBASE_COUNTER_MAX)                                    |             |
+| Name                  | Type     | Value                                                                                                                                                                            | Description |
+| --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| TIMEBASE_COUNTER_MAX  | positive |  TimingToCycles(ite(SIMULATION,<br><span style="padding-left:20px"> 10 us,<br><span style="padding-left:20px"> 1 sec),<br><span style="padding-left:20px"> REFERENCE_CLOCK_FREQ) |             |
+| TIMEBASE_COUNTER_BITS | positive |  log2ceilnz(TIMEBASE_COUNTER_MAX)                                                                                                                                                |             |
 ## Processes
 - unnamed: ( Reference_Clock )
 - unnamed: ( Input_Clock )

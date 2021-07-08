@@ -67,7 +67,7 @@ limitations under the License.
 | Output    | out       | std_logic_vector(BITS - 1 downto 0) | @Clock:  output bits         |
 ## Constants
 
-| Name     | Type             | Value                        | Description |
-| -------- | ---------------- | ---------------------------- | ----------- |
-| INIT_I   | std_logic_vector |  resize(descend(INIT), BITS) |             |
-| DEV_INFO | T_DEVICE_INFO    |  DEVICE_INFO                 |             |
+| Name     | Type             | Value                                                            | Description |
+| -------- | ---------------- | ---------------------------------------------------------------- | ----------- |
+| INIT_I   | std_logic_vector |  resize(descend(INIT),<br><span style="padding-left:20px"> BITS) |             |
+| DEV_INFO | T_DEVICE_INFO    |  DEVICE_INFO                                                     |             |

@@ -48,9 +48,9 @@ limitations under the License.
 | HistogramMemory | T_HISTOGRAM_MEMORY(2**DATA_BITS - 1 downto 0) |             |
 ## Types
 
-| Name               | Type | Description |
-| ------------------ | ---- | ----------- |
-| T_HISTOGRAM_MEMORY |      |             |
+| Name               | Type                                                        | Description |
+| ------------------ | ----------------------------------------------------------- | ----------- |
+| T_HISTOGRAM_MEMORY | array(natural range <>) of unsigned(COUNTER_BITS downto 0)  |             |
 ## Functions
 - to_slm <font id="function_arguments">(usv : T_HISTOGRAM_MEMORY) </font> <font id="function_return">return T_SLM </font>
 **Description**

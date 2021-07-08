@@ -119,13 +119,13 @@
 | ctrl_busy_c         | natural |  31                          | r/-: busy / buffer status flag (configured via ctrl_bscon_c)    |
 ## Types
 
-| Name           | Type                                 | Description                   |
-| -------------- | ------------------------------------ | ----------------------------- |
-| ctrl_t         |                                      | control register --           |
-| tx_fifo_t      |                                      | transmission buffer --        |
-| tx_buffer_t    |                                      |                               |
-| serial_state_t | (S_IDLE, S_INIT, S_GETBIT, S_PULSE)  | serial transmission engine -- |
-| serial_t       |                                      |                               |
+| Name           | Type                                                                                                                                             | Description                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| ctrl_t         |                                                                                                                                                  | control register --           |
+| tx_fifo_t      |                                                                                                                                                  | transmission buffer --        |
+| tx_buffer_t    |                                                                                                                                                  |                               |
+| serial_state_t | (S_IDLE,<br><span style="padding-left:20px"> S_INIT,<br><span style="padding-left:20px"> S_GETBIT,<br><span style="padding-left:20px"> S_PULSE)  | serial transmission engine -- |
+| serial_t       |                                                                                                                                                  |                               |
 ## Processes
 - rw_access: ( clk_i )
 **Description**

@@ -56,9 +56,9 @@ limitations under the License.
 | bclk_x8_r   | std_logic                                    |                 |
 ## Constants
 
-| Name                   | Type     | Value                                                             | Description |
-| ---------------------- | -------- | ----------------------------------------------------------------- | ----------- |
-| UART_OVERSAMPLING_RATE | positive |  8                                                                |             |
-| TIME_UNIT_INTERVAL     | time     |  1 sec / (to_real(BAUDRATE, 1 Bd) * real(UART_OVERSAMPLING_RATE)) |             |
-| BAUDRATE_COUNTER_MAX   | positive |  TimingToCycles(TIME_UNIT_INTERVAL, CLOCK_FREQ)                   |             |
-| BAUDRATE_COUNTER_BITS  | positive |  log2ceilnz(BAUDRATE_COUNTER_MAX + 1)                             |             |
+| Name                   | Type     | Value                                                                                                 | Description |
+| ---------------------- | -------- | ----------------------------------------------------------------------------------------------------- | ----------- |
+| UART_OVERSAMPLING_RATE | positive |  8                                                                                                    |             |
+| TIME_UNIT_INTERVAL     | time     |  1 sec / (to_real(BAUDRATE,<br><span style="padding-left:20px"> 1 Bd) * real(UART_OVERSAMPLING_RATE)) |             |
+| BAUDRATE_COUNTER_MAX   | positive |  TimingToCycles(TIME_UNIT_INTERVAL,<br><span style="padding-left:20px"> CLOCK_FREQ)                   |             |
+| BAUDRATE_COUNTER_BITS  | positive |  log2ceilnz(BAUDRATE_COUNTER_MAX + 1)                                                                 |             |
