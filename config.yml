@@ -4,6 +4,12 @@ CordicHDL:
     vhdl_symbol: "!"
     verilog_symbol: "!"
 
+SURF:
+    url: https://github.com/slaclab/surf
+    folder: surf
+    vhdl_symbol: ""
+    verilog_symbol: ""
+
 SERV:
     url: https://github.com/olofk/serv
     folder: serv/rtl/
