@@ -1,0 +1,3603 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=GTHE4_COMMON><h1 id="entity-gthe4_common">Entity: GTHE4_COMMON</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 625 2910"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="105,0 120,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="400" height="1670" fill="black" x="120" y="0"></rect><rect id="SvgjsRect1007" width="396" height="1665" fill="#bdecb6" x="122" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="100" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="135" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   XIL_TIMING </tspan></text><line id="SvgjsLine1012" x1="105" y1="15" x2="120" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="100" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="135" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   AEN_QPLL0_FBDIV </tspan></text><line id="SvgjsLine1017" x1="105" y1="35" x2="120" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="100" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="135" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   AEN_QPLL1_FBDIV </tspan></text><line id="SvgjsLine1022" x1="105" y1="55" x2="120" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="100" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="135" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   AEN_SDM0TOGGLE </tspan></text><line id="SvgjsLine1027" x1="105" y1="75" x2="120" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="100" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="135" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   AEN_SDM1TOGGLE </tspan></text><line id="SvgjsLine1032" x1="105" y1="95" x2="120" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="100" y="94.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="135" y="94.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   A_SDM0TOGGLE </tspan></text><line id="SvgjsLine1037" x1="105" y1="115" x2="120" y2="115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="100" y="114.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [8:0] </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="135" y="114.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   A_SDM1DATA_HIGH </tspan></text><line id="SvgjsLine1042" x1="105" y1="135" x2="120" y2="135" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="100" y="134.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="135" y="134.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   A_SDM1DATA_LOW </tspan></text><line id="SvgjsLine1047" x1="105" y1="155" x2="120" y2="155" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="100" y="154.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="135" y="154.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   A_SDM1TOGGLE </tspan></text><line id="SvgjsLine1052" x1="105" y1="175" x2="120" y2="175" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="100" y="174.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="135" y="174.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG0 </tspan></text><line id="SvgjsLine1057" x1="105" y1="195" x2="120" y2="195" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="100" y="194.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="135" y="194.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG1 </tspan></text><line id="SvgjsLine1062" x1="105" y1="215" x2="120" y2="215" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="100" y="214.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="135" y="214.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG2 </tspan></text><line id="SvgjsLine1067" x1="105" y1="235" x2="120" y2="235" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="100" y="234.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="135" y="234.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG3 </tspan></text><line id="SvgjsLine1072" x1="105" y1="255" x2="120" y2="255" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1073" font-family="Helvetica" x="100" y="254.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1074" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1075" font-family="Helvetica" x="135" y="254.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG4 </tspan></text><line id="SvgjsLine1077" x1="105" y1="275" x2="120" y2="275" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1078" font-family="Helvetica" x="100" y="274.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1079" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1080" font-family="Helvetica" x="135" y="274.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BIAS_CFG_RSVD </tspan></text><line id="SvgjsLine1082" x1="105" y1="295" x2="120" y2="295" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1083" font-family="Helvetica" x="100" y="294.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1084" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1085" font-family="Helvetica" x="135" y="294.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   COMMON_CFG0 </tspan></text><line id="SvgjsLine1087" x1="105" y1="315" x2="120" y2="315" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1088" font-family="Helvetica" x="100" y="314.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1089" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1090" font-family="Helvetica" x="135" y="314.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   COMMON_CFG1 </tspan></text><line id="SvgjsLine1092" x1="105" y1="335" x2="120" y2="335" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1093" font-family="Helvetica" x="100" y="334.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1094" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1095" font-family="Helvetica" x="135" y="334.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   POR_CFG </tspan></text><line id="SvgjsLine1097" x1="105" y1="355" x2="120" y2="355" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1098" font-family="Helvetica" x="100" y="354.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1099" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1100" font-family="Helvetica" x="135" y="354.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PPF0_CFG </tspan></text><line id="SvgjsLine1102" x1="105" y1="375" x2="120" y2="375" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1103" font-family="Helvetica" x="100" y="374.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1104" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1105" font-family="Helvetica" x="135" y="374.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PPF1_CFG </tspan></text><line id="SvgjsLine1107" x1="105" y1="395" x2="120" y2="395" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1108" font-family="Helvetica" x="100" y="394.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1109" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1110" font-family="Helvetica" x="135" y="394.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0CLKOUT_RATE </tspan></text><line id="SvgjsLine1112" x1="105" y1="415" x2="120" y2="415" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1113" font-family="Helvetica" x="100" y="414.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1114" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1115" font-family="Helvetica" x="135" y="414.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG0 </tspan></text><line id="SvgjsLine1117" x1="105" y1="435" x2="120" y2="435" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1118" font-family="Helvetica" x="100" y="434.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1119" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1120" font-family="Helvetica" x="135" y="434.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG1 </tspan></text><line id="SvgjsLine1122" x1="105" y1="455" x2="120" y2="455" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1123" font-family="Helvetica" x="100" y="454.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1124" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1125" font-family="Helvetica" x="135" y="454.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG1_G3 </tspan></text><line id="SvgjsLine1127" x1="105" y1="475" x2="120" y2="475" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1128" font-family="Helvetica" x="100" y="474.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1129" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1130" font-family="Helvetica" x="135" y="474.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG2 </tspan></text><line id="SvgjsLine1132" x1="105" y1="495" x2="120" y2="495" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1133" font-family="Helvetica" x="100" y="494.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1134" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1135" font-family="Helvetica" x="135" y="494.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG2_G3 </tspan></text><line id="SvgjsLine1137" x1="105" y1="515" x2="120" y2="515" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1138" font-family="Helvetica" x="100" y="514.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1139" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1140" font-family="Helvetica" x="135" y="514.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG3 </tspan></text><line id="SvgjsLine1142" x1="105" y1="535" x2="120" y2="535" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1143" font-family="Helvetica" x="100" y="534.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1144" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1145" font-family="Helvetica" x="135" y="534.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CFG4 </tspan></text><line id="SvgjsLine1147" x1="105" y1="555" x2="120" y2="555" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1148" font-family="Helvetica" x="100" y="554.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1149" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1150" font-family="Helvetica" x="135" y="554.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1151" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CP </tspan></text><line id="SvgjsLine1152" x1="105" y1="575" x2="120" y2="575" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1153" font-family="Helvetica" x="100" y="574.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1154" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1155" font-family="Helvetica" x="135" y="574.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1156" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_CP_G3 </tspan></text><line id="SvgjsLine1157" x1="105" y1="595" x2="120" y2="595" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1158" font-family="Helvetica" x="100" y="594.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1159" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1160" font-family="Helvetica" x="135" y="594.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1161" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_FBDIV </tspan></text><line id="SvgjsLine1162" x1="105" y1="615" x2="120" y2="615" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1163" font-family="Helvetica" x="100" y="614.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1164" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1165" font-family="Helvetica" x="135" y="614.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1166" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_FBDIV_G3 </tspan></text><line id="SvgjsLine1167" x1="105" y1="635" x2="120" y2="635" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1168" font-family="Helvetica" x="100" y="634.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1169" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1170" font-family="Helvetica" x="135" y="634.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1171" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_INIT_CFG0 </tspan></text><line id="SvgjsLine1172" x1="105" y1="655" x2="120" y2="655" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1173" font-family="Helvetica" x="100" y="654.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1174" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1175" font-family="Helvetica" x="135" y="654.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1176" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_INIT_CFG1 </tspan></text><line id="SvgjsLine1177" x1="105" y1="675" x2="120" y2="675" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1178" font-family="Helvetica" x="100" y="674.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1179" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1180" font-family="Helvetica" x="135" y="674.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1181" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_LOCK_CFG </tspan></text><line id="SvgjsLine1182" x1="105" y1="695" x2="120" y2="695" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1183" font-family="Helvetica" x="100" y="694.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1184" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1185" font-family="Helvetica" x="135" y="694.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1186" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_LOCK_CFG_G3 </tspan></text><line id="SvgjsLine1187" x1="105" y1="715" x2="120" y2="715" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1188" font-family="Helvetica" x="100" y="714.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1189" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1190" font-family="Helvetica" x="135" y="714.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1191" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_LPF </tspan></text><line id="SvgjsLine1192" x1="105" y1="735" x2="120" y2="735" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1193" font-family="Helvetica" x="100" y="734.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1194" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1195" font-family="Helvetica" x="135" y="734.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1196" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_LPF_G3 </tspan></text><line id="SvgjsLine1197" x1="105" y1="755" x2="120" y2="755" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1198" font-family="Helvetica" x="100" y="754.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1199" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1200" font-family="Helvetica" x="135" y="754.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1201" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_PCI_EN </tspan></text><line id="SvgjsLine1202" x1="105" y1="775" x2="120" y2="775" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1203" font-family="Helvetica" x="100" y="774.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1204" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1205" font-family="Helvetica" x="135" y="774.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1206" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_RATE_SW_USE_DRP </tspan></text><line id="SvgjsLine1207" x1="105" y1="795" x2="120" y2="795" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1208" font-family="Helvetica" x="100" y="794.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1209" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1210" font-family="Helvetica" x="135" y="794.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1211" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_REFCLK_DIV </tspan></text><line id="SvgjsLine1212" x1="105" y1="815" x2="120" y2="815" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1213" font-family="Helvetica" x="100" y="814.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1214" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1215" font-family="Helvetica" x="135" y="814.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1216" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_SDM_CFG0 </tspan></text><line id="SvgjsLine1217" x1="105" y1="835" x2="120" y2="835" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1218" font-family="Helvetica" x="100" y="834.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1219" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1220" font-family="Helvetica" x="135" y="834.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1221" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_SDM_CFG1 </tspan></text><line id="SvgjsLine1222" x1="105" y1="855" x2="120" y2="855" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1223" font-family="Helvetica" x="100" y="854.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1224" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1225" font-family="Helvetica" x="135" y="854.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1226" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0_SDM_CFG2 </tspan></text><line id="SvgjsLine1227" x1="105" y1="875" x2="120" y2="875" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1228" font-family="Helvetica" x="100" y="874.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1229" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1230" font-family="Helvetica" x="135" y="874.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1231" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1CLKOUT_RATE </tspan></text><line id="SvgjsLine1232" x1="105" y1="895" x2="120" y2="895" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1233" font-family="Helvetica" x="100" y="894.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1234" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1235" font-family="Helvetica" x="135" y="894.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1236" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG0 </tspan></text><line id="SvgjsLine1237" x1="105" y1="915" x2="120" y2="915" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1238" font-family="Helvetica" x="100" y="914.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1239" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1240" font-family="Helvetica" x="135" y="914.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1241" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG1 </tspan></text><line id="SvgjsLine1242" x1="105" y1="935" x2="120" y2="935" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1243" font-family="Helvetica" x="100" y="934.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1244" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1245" font-family="Helvetica" x="135" y="934.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1246" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG1_G3 </tspan></text><line id="SvgjsLine1247" x1="105" y1="955" x2="120" y2="955" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1248" font-family="Helvetica" x="100" y="954.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1249" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1250" font-family="Helvetica" x="135" y="954.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1251" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG2 </tspan></text><line id="SvgjsLine1252" x1="105" y1="975" x2="120" y2="975" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1253" font-family="Helvetica" x="100" y="974.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1254" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1255" font-family="Helvetica" x="135" y="974.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1256" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG2_G3 </tspan></text><line id="SvgjsLine1257" x1="105" y1="995" x2="120" y2="995" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1258" font-family="Helvetica" x="100" y="994.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1259" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1260" font-family="Helvetica" x="135" y="994.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1261" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG3 </tspan></text><line id="SvgjsLine1262" x1="105" y1="1015" x2="120" y2="1015" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1263" font-family="Helvetica" x="100" y="1014.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1264" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1265" font-family="Helvetica" x="135" y="1014.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1266" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CFG4 </tspan></text><line id="SvgjsLine1267" x1="105" y1="1035" x2="120" y2="1035" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1268" font-family="Helvetica" x="100" y="1034.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1269" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1270" font-family="Helvetica" x="135" y="1034.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1271" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CP </tspan></text><line id="SvgjsLine1272" x1="105" y1="1055" x2="120" y2="1055" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1273" font-family="Helvetica" x="100" y="1054.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1274" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1275" font-family="Helvetica" x="135" y="1054.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1276" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_CP_G3 </tspan></text><line id="SvgjsLine1277" x1="105" y1="1075" x2="120" y2="1075" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1278" font-family="Helvetica" x="100" y="1074.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1279" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1280" font-family="Helvetica" x="135" y="1074.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1281" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_FBDIV </tspan></text><line id="SvgjsLine1282" x1="105" y1="1095" x2="120" y2="1095" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1283" font-family="Helvetica" x="100" y="1094.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1284" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1285" font-family="Helvetica" x="135" y="1094.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1286" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_FBDIV_G3 </tspan></text><line id="SvgjsLine1287" x1="105" y1="1115" x2="120" y2="1115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1288" font-family="Helvetica" x="100" y="1114.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1289" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1290" font-family="Helvetica" x="135" y="1114.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1291" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_INIT_CFG0 </tspan></text><line id="SvgjsLine1292" x1="105" y1="1135" x2="120" y2="1135" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1293" font-family="Helvetica" x="100" y="1134.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1294" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1295" font-family="Helvetica" x="135" y="1134.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1296" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_INIT_CFG1 </tspan></text><line id="SvgjsLine1297" x1="105" y1="1155" x2="120" y2="1155" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1298" font-family="Helvetica" x="100" y="1154.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1299" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1300" font-family="Helvetica" x="135" y="1154.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1301" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_LOCK_CFG </tspan></text><line id="SvgjsLine1302" x1="105" y1="1175" x2="120" y2="1175" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1303" font-family="Helvetica" x="100" y="1174.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1304" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1305" font-family="Helvetica" x="135" y="1174.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1306" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_LOCK_CFG_G3 </tspan></text><line id="SvgjsLine1307" x1="105" y1="1195" x2="120" y2="1195" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1308" font-family="Helvetica" x="100" y="1194.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1309" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1310" font-family="Helvetica" x="135" y="1194.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1311" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_LPF </tspan></text><line id="SvgjsLine1312" x1="105" y1="1215" x2="120" y2="1215" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1313" font-family="Helvetica" x="100" y="1214.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1314" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1315" font-family="Helvetica" x="135" y="1214.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1316" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_LPF_G3 </tspan></text><line id="SvgjsLine1317" x1="105" y1="1235" x2="120" y2="1235" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1318" font-family="Helvetica" x="100" y="1234.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1319" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1320" font-family="Helvetica" x="135" y="1234.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1321" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_PCI_EN </tspan></text><line id="SvgjsLine1322" x1="105" y1="1255" x2="120" y2="1255" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1323" font-family="Helvetica" x="100" y="1254.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1324" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1325" font-family="Helvetica" x="135" y="1254.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1326" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_RATE_SW_USE_DRP </tspan></text><line id="SvgjsLine1327" x1="105" y1="1275" x2="120" y2="1275" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1328" font-family="Helvetica" x="100" y="1274.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1329" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1330" font-family="Helvetica" x="135" y="1274.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1331" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_REFCLK_DIV </tspan></text><line id="SvgjsLine1332" x1="105" y1="1295" x2="120" y2="1295" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1333" font-family="Helvetica" x="100" y="1294.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1334" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1335" font-family="Helvetica" x="135" y="1294.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1336" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_SDM_CFG0 </tspan></text><line id="SvgjsLine1337" x1="105" y1="1315" x2="120" y2="1315" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1338" font-family="Helvetica" x="100" y="1314.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1339" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1340" font-family="Helvetica" x="135" y="1314.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1341" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_SDM_CFG1 </tspan></text><line id="SvgjsLine1342" x1="105" y1="1335" x2="120" y2="1335" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1343" font-family="Helvetica" x="100" y="1334.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1344" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1345" font-family="Helvetica" x="135" y="1334.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1346" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1_SDM_CFG2 </tspan></text><line id="SvgjsLine1347" x1="105" y1="1355" x2="120" y2="1355" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1348" font-family="Helvetica" x="100" y="1354.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1349" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1350" font-family="Helvetica" x="135" y="1354.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1351" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RSVD_ATTR0 </tspan></text><line id="SvgjsLine1352" x1="105" y1="1375" x2="120" y2="1375" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1353" font-family="Helvetica" x="100" y="1374.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1354" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1355" font-family="Helvetica" x="135" y="1374.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1356" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RSVD_ATTR1 </tspan></text><line id="SvgjsLine1357" x1="105" y1="1395" x2="120" y2="1395" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1358" font-family="Helvetica" x="100" y="1394.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1359" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1360" font-family="Helvetica" x="135" y="1394.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1361" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RSVD_ATTR2 </tspan></text><line id="SvgjsLine1362" x1="105" y1="1415" x2="120" y2="1415" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1363" font-family="Helvetica" x="100" y="1414.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1364" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1365" font-family="Helvetica" x="135" y="1414.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1366" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RSVD_ATTR3 </tspan></text><line id="SvgjsLine1367" x1="105" y1="1435" x2="120" y2="1435" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1368" font-family="Helvetica" x="100" y="1434.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1369" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1370" font-family="Helvetica" x="135" y="1434.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1371" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RXRECCLKOUT0_SEL </tspan></text><line id="SvgjsLine1372" x1="105" y1="1455" x2="120" y2="1455" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1373" font-family="Helvetica" x="100" y="1454.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1374" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1375" font-family="Helvetica" x="135" y="1454.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1376" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RXRECCLKOUT1_SEL </tspan></text><line id="SvgjsLine1377" x1="105" y1="1475" x2="120" y2="1475" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1378" font-family="Helvetica" x="100" y="1474.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1379" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1380" font-family="Helvetica" x="135" y="1474.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1381" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SARC_ENB </tspan></text><line id="SvgjsLine1382" x1="105" y1="1495" x2="120" y2="1495" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1383" font-family="Helvetica" x="100" y="1494.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1384" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [0:0] </tspan></text><text id="SvgjsText1385" font-family="Helvetica" x="135" y="1494.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1386" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SARC_SEL </tspan></text><line id="SvgjsLine1387" x1="105" y1="1515" x2="120" y2="1515" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1388" font-family="Helvetica" x="100" y="1514.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1389" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1390" font-family="Helvetica" x="135" y="1514.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1391" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0INITSEED0_0 </tspan></text><line id="SvgjsLine1392" x1="105" y1="1535" x2="120" y2="1535" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1393" font-family="Helvetica" x="100" y="1534.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1394" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [8:0] </tspan></text><text id="SvgjsText1395" font-family="Helvetica" x="135" y="1534.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1396" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0INITSEED0_1 </tspan></text><line id="SvgjsLine1397" x1="105" y1="1555" x2="120" y2="1555" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1398" font-family="Helvetica" x="100" y="1554.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1399" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1400" font-family="Helvetica" x="135" y="1554.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1401" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1INITSEED0_0 </tspan></text><line id="SvgjsLine1402" x1="105" y1="1575" x2="120" y2="1575" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1403" font-family="Helvetica" x="100" y="1574.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1404" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [8:0] </tspan></text><text id="SvgjsText1405" font-family="Helvetica" x="135" y="1574.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1406" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1INITSEED0_1 </tspan></text><line id="SvgjsLine1407" x1="105" y1="1595" x2="120" y2="1595" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1408" font-family="Helvetica" x="100" y="1594.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1409" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1410" font-family="Helvetica" x="135" y="1594.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1411" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SIM_DEVICE </tspan></text><line id="SvgjsLine1412" x1="105" y1="1615" x2="120" y2="1615" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1413" font-family="Helvetica" x="100" y="1614.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1414" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1415" font-family="Helvetica" x="135" y="1614.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1416" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SIM_MODE </tspan></text><line id="SvgjsLine1417" x1="105" y1="1635" x2="120" y2="1635" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1418" font-family="Helvetica" x="100" y="1634.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1419" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1420" font-family="Helvetica" x="135" y="1634.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1421" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SIM_RESET_SPEEDUP </tspan></text><line id="SvgjsLine1422" x1="105" y1="1655" x2="120" y2="1655" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1423" width="400" height="1230" fill="black" x="120" y="1675"></rect><rect id="SvgjsRect1424" width="396" height="1225" fill="#fdfd96" x="122" y="1677"></rect><text id="SvgjsText1425" font-family="Helvetica" x="100" y="1669.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1426" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1427" font-family="Helvetica" x="135" y="1669.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1428" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BGBYPASSB </tspan></text><line id="SvgjsLine1429" x1="105" y1="1690" x2="120" y2="1690" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1430" font-family="Helvetica" x="100" y="1689.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1431" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1432" font-family="Helvetica" x="135" y="1689.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1433" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BGMONITORENB </tspan></text><line id="SvgjsLine1434" x1="105" y1="1710" x2="120" y2="1710" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1435" font-family="Helvetica" x="100" y="1709.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1436" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1437" font-family="Helvetica" x="135" y="1709.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1438" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BGPDB </tspan></text><line id="SvgjsLine1439" x1="105" y1="1730" x2="120" y2="1730" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1440" font-family="Helvetica" x="100" y="1729.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1441" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [4:0] </tspan></text><text id="SvgjsText1442" font-family="Helvetica" x="135" y="1729.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1443" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BGRCALOVRD </tspan></text><line id="SvgjsLine1444" x1="105" y1="1750" x2="120" y2="1750" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1445" font-family="Helvetica" x="100" y="1749.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1446" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1447" font-family="Helvetica" x="135" y="1749.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1448" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   BGRCALOVRDENB </tspan></text><line id="SvgjsLine1449" x1="105" y1="1770" x2="120" y2="1770" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1450" font-family="Helvetica" x="100" y="1769.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1451" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1452" font-family="Helvetica" x="135" y="1769.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1453" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   DRPADDR </tspan></text><line id="SvgjsLine1454" x1="105" y1="1790" x2="120" y2="1790" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1455" font-family="Helvetica" x="100" y="1789.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1456" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1457" font-family="Helvetica" x="135" y="1789.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1458" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   DRPCLK </tspan></text><line id="SvgjsLine1459" x1="105" y1="1810" x2="120" y2="1810" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1460" font-family="Helvetica" x="100" y="1809.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1461" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1462" font-family="Helvetica" x="135" y="1809.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1463" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   DRPDI </tspan></text><line id="SvgjsLine1464" x1="105" y1="1830" x2="120" y2="1830" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1465" font-family="Helvetica" x="100" y="1829.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1466" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1467" font-family="Helvetica" x="135" y="1829.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1468" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   DRPEN </tspan></text><line id="SvgjsLine1469" x1="105" y1="1850" x2="120" y2="1850" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1470" font-family="Helvetica" x="100" y="1849.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1471" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1472" font-family="Helvetica" x="135" y="1849.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1473" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   DRPWE </tspan></text><line id="SvgjsLine1474" x1="105" y1="1870" x2="120" y2="1870" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1475" font-family="Helvetica" x="100" y="1869.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1476" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1477" font-family="Helvetica" x="135" y="1869.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1478" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTGREFCLK0 </tspan></text><line id="SvgjsLine1479" x1="105" y1="1890" x2="120" y2="1890" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1480" font-family="Helvetica" x="100" y="1889.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1481" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1482" font-family="Helvetica" x="135" y="1889.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1483" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTGREFCLK1 </tspan></text><line id="SvgjsLine1484" x1="105" y1="1910" x2="120" y2="1910" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1485" font-family="Helvetica" x="100" y="1909.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1486" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1487" font-family="Helvetica" x="135" y="1909.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1488" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTNORTHREFCLK00 </tspan></text><line id="SvgjsLine1489" x1="105" y1="1930" x2="120" y2="1930" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1490" font-family="Helvetica" x="100" y="1929.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1491" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1492" font-family="Helvetica" x="135" y="1929.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1493" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTNORTHREFCLK01 </tspan></text><line id="SvgjsLine1494" x1="105" y1="1950" x2="120" y2="1950" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1495" font-family="Helvetica" x="100" y="1949.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1496" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1497" font-family="Helvetica" x="135" y="1949.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1498" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTNORTHREFCLK10 </tspan></text><line id="SvgjsLine1499" x1="105" y1="1970" x2="120" y2="1970" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1500" font-family="Helvetica" x="100" y="1969.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1501" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1502" font-family="Helvetica" x="135" y="1969.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1503" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTNORTHREFCLK11 </tspan></text><line id="SvgjsLine1504" x1="105" y1="1990" x2="120" y2="1990" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1505" font-family="Helvetica" x="100" y="1989.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1506" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1507" font-family="Helvetica" x="135" y="1989.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1508" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTREFCLK00 </tspan></text><line id="SvgjsLine1509" x1="105" y1="2010" x2="120" y2="2010" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1510" font-family="Helvetica" x="100" y="2009.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1511" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1512" font-family="Helvetica" x="135" y="2009.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1513" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTREFCLK01 </tspan></text><line id="SvgjsLine1514" x1="105" y1="2030" x2="120" y2="2030" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1515" font-family="Helvetica" x="100" y="2029.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1516" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1517" font-family="Helvetica" x="135" y="2029.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1518" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTREFCLK10 </tspan></text><line id="SvgjsLine1519" x1="105" y1="2050" x2="120" y2="2050" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1520" font-family="Helvetica" x="100" y="2049.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1521" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1522" font-family="Helvetica" x="135" y="2049.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1523" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTREFCLK11 </tspan></text><line id="SvgjsLine1524" x1="105" y1="2070" x2="120" y2="2070" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1525" font-family="Helvetica" x="100" y="2069.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1526" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1527" font-family="Helvetica" x="135" y="2069.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1528" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTSOUTHREFCLK00 </tspan></text><line id="SvgjsLine1529" x1="105" y1="2090" x2="120" y2="2090" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1530" font-family="Helvetica" x="100" y="2089.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1531" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1532" font-family="Helvetica" x="135" y="2089.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1533" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTSOUTHREFCLK01 </tspan></text><line id="SvgjsLine1534" x1="105" y1="2110" x2="120" y2="2110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1535" font-family="Helvetica" x="100" y="2109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1536" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1537" font-family="Helvetica" x="135" y="2109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1538" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTSOUTHREFCLK10 </tspan></text><line id="SvgjsLine1539" x1="105" y1="2130" x2="120" y2="2130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1540" font-family="Helvetica" x="100" y="2129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1541" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1542" font-family="Helvetica" x="135" y="2129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1543" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   GTSOUTHREFCLK11 </tspan></text><line id="SvgjsLine1544" x1="105" y1="2150" x2="120" y2="2150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1545" font-family="Helvetica" x="100" y="2149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1546" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1547" font-family="Helvetica" x="135" y="2149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1548" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PCIERATEQPLL0 </tspan></text><line id="SvgjsLine1549" x1="105" y1="2170" x2="120" y2="2170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1550" font-family="Helvetica" x="100" y="2169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1551" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1552" font-family="Helvetica" x="135" y="2169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1553" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PCIERATEQPLL1 </tspan></text><line id="SvgjsLine1554" x1="105" y1="2190" x2="120" y2="2190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1555" font-family="Helvetica" x="100" y="2189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1556" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1557" font-family="Helvetica" x="135" y="2189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1558" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PMARSVD0 </tspan></text><line id="SvgjsLine1559" x1="105" y1="2210" x2="120" y2="2210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1560" font-family="Helvetica" x="100" y="2209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1561" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1562" font-family="Helvetica" x="135" y="2209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1563" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   PMARSVD1 </tspan></text><line id="SvgjsLine1564" x1="105" y1="2230" x2="120" y2="2230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1565" font-family="Helvetica" x="100" y="2229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1566" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1567" font-family="Helvetica" x="135" y="2229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1568" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0CLKRSVD0 </tspan></text><line id="SvgjsLine1569" x1="105" y1="2250" x2="120" y2="2250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1570" font-family="Helvetica" x="100" y="2249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1571" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1572" font-family="Helvetica" x="135" y="2249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1573" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0CLKRSVD1 </tspan></text><line id="SvgjsLine1574" x1="105" y1="2270" x2="120" y2="2270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1575" font-family="Helvetica" x="100" y="2269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1576" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1577" font-family="Helvetica" x="135" y="2269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1578" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0FBDIV </tspan></text><line id="SvgjsLine1579" x1="105" y1="2290" x2="120" y2="2290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1580" font-family="Helvetica" x="100" y="2289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1581" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1582" font-family="Helvetica" x="135" y="2289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1583" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0LOCKDETCLK </tspan></text><line id="SvgjsLine1584" x1="105" y1="2310" x2="120" y2="2310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1585" font-family="Helvetica" x="100" y="2309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1586" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1587" font-family="Helvetica" x="135" y="2309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1588" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0LOCKEN </tspan></text><line id="SvgjsLine1589" x1="105" y1="2330" x2="120" y2="2330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1590" font-family="Helvetica" x="100" y="2329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1591" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1592" font-family="Helvetica" x="135" y="2329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1593" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0PD </tspan></text><line id="SvgjsLine1594" x1="105" y1="2350" x2="120" y2="2350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1595" font-family="Helvetica" x="100" y="2349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1596" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1597" font-family="Helvetica" x="135" y="2349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1598" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0REFCLKSEL </tspan></text><line id="SvgjsLine1599" x1="105" y1="2370" x2="120" y2="2370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1600" font-family="Helvetica" x="100" y="2369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1601" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1602" font-family="Helvetica" x="135" y="2369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1603" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0RESET </tspan></text><line id="SvgjsLine1604" x1="105" y1="2390" x2="120" y2="2390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1605" font-family="Helvetica" x="100" y="2389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1606" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1607" font-family="Helvetica" x="135" y="2389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1608" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1CLKRSVD0 </tspan></text><line id="SvgjsLine1609" x1="105" y1="2410" x2="120" y2="2410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1610" font-family="Helvetica" x="100" y="2409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1611" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1612" font-family="Helvetica" x="135" y="2409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1613" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1CLKRSVD1 </tspan></text><line id="SvgjsLine1614" x1="105" y1="2430" x2="120" y2="2430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1615" font-family="Helvetica" x="100" y="2429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1616" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1617" font-family="Helvetica" x="135" y="2429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1618" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1FBDIV </tspan></text><line id="SvgjsLine1619" x1="105" y1="2450" x2="120" y2="2450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1620" font-family="Helvetica" x="100" y="2449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1621" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1622" font-family="Helvetica" x="135" y="2449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1623" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1LOCKDETCLK </tspan></text><line id="SvgjsLine1624" x1="105" y1="2470" x2="120" y2="2470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1625" font-family="Helvetica" x="100" y="2469.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1626" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1627" font-family="Helvetica" x="135" y="2469.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1628" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1LOCKEN </tspan></text><line id="SvgjsLine1629" x1="105" y1="2490" x2="120" y2="2490" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1630" font-family="Helvetica" x="100" y="2489.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1631" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1632" font-family="Helvetica" x="135" y="2489.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1633" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1PD </tspan></text><line id="SvgjsLine1634" x1="105" y1="2510" x2="120" y2="2510" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1635" font-family="Helvetica" x="100" y="2509.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1636" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [2:0] </tspan></text><text id="SvgjsText1637" font-family="Helvetica" x="135" y="2509.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1638" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1REFCLKSEL </tspan></text><line id="SvgjsLine1639" x1="105" y1="2530" x2="120" y2="2530" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1640" font-family="Helvetica" x="100" y="2529.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1641" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1642" font-family="Helvetica" x="135" y="2529.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1643" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1RESET </tspan></text><line id="SvgjsLine1644" x1="105" y1="2550" x2="120" y2="2550" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1645" font-family="Helvetica" x="100" y="2549.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1646" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1647" font-family="Helvetica" x="135" y="2549.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1648" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLLRSVD1 </tspan></text><line id="SvgjsLine1649" x1="105" y1="2570" x2="120" y2="2570" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1650" font-family="Helvetica" x="100" y="2569.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1651" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [4:0] </tspan></text><text id="SvgjsText1652" font-family="Helvetica" x="135" y="2569.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1653" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLLRSVD2 </tspan></text><line id="SvgjsLine1654" x1="105" y1="2590" x2="120" y2="2590" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1655" font-family="Helvetica" x="100" y="2589.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1656" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [4:0] </tspan></text><text id="SvgjsText1657" font-family="Helvetica" x="135" y="2589.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1658" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLLRSVD3 </tspan></text><line id="SvgjsLine1659" x1="105" y1="2610" x2="120" y2="2610" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1660" font-family="Helvetica" x="100" y="2609.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1661" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1662" font-family="Helvetica" x="135" y="2609.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1663" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   QPLLRSVD4 </tspan></text><line id="SvgjsLine1664" x1="105" y1="2630" x2="120" y2="2630" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1665" font-family="Helvetica" x="100" y="2629.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1666" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1667" font-family="Helvetica" x="135" y="2629.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1668" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   RCALENB </tspan></text><line id="SvgjsLine1669" x1="105" y1="2650" x2="120" y2="2650" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1670" font-family="Helvetica" x="100" y="2649.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1671" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [24:0] </tspan></text><text id="SvgjsText1672" font-family="Helvetica" x="135" y="2649.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1673" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0DATA </tspan></text><line id="SvgjsLine1674" x1="105" y1="2670" x2="120" y2="2670" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1675" font-family="Helvetica" x="100" y="2669.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1676" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1677" font-family="Helvetica" x="135" y="2669.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1678" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0RESET </tspan></text><line id="SvgjsLine1679" x1="105" y1="2690" x2="120" y2="2690" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1680" font-family="Helvetica" x="100" y="2689.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1681" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1682" font-family="Helvetica" x="135" y="2689.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1683" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0TOGGLE </tspan></text><line id="SvgjsLine1684" x1="105" y1="2710" x2="120" y2="2710" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1685" font-family="Helvetica" x="100" y="2709.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1686" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1687" font-family="Helvetica" x="135" y="2709.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1688" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM0WIDTH </tspan></text><line id="SvgjsLine1689" x1="105" y1="2730" x2="120" y2="2730" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1690" font-family="Helvetica" x="100" y="2729.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1691" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [24:0] </tspan></text><text id="SvgjsText1692" font-family="Helvetica" x="135" y="2729.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1693" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1DATA </tspan></text><line id="SvgjsLine1694" x1="105" y1="2750" x2="120" y2="2750" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1695" font-family="Helvetica" x="100" y="2749.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1696" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1697" font-family="Helvetica" x="135" y="2749.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1698" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1RESET </tspan></text><line id="SvgjsLine1699" x1="105" y1="2770" x2="120" y2="2770" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1700" font-family="Helvetica" x="100" y="2769.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1701" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1702" font-family="Helvetica" x="135" y="2769.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1703" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1TOGGLE </tspan></text><line id="SvgjsLine1704" x1="105" y1="2790" x2="120" y2="2790" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1705" font-family="Helvetica" x="100" y="2789.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1706" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1707" font-family="Helvetica" x="135" y="2789.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1708" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   SDM1WIDTH </tspan></text><line id="SvgjsLine1709" x1="105" y1="2810" x2="120" y2="2810" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1710" font-family="Helvetica" x="100" y="2809.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1711" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1712" font-family="Helvetica" x="135" y="2809.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1713" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   TCONGPI </tspan></text><line id="SvgjsLine1714" x1="105" y1="2830" x2="120" y2="2830" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1715" font-family="Helvetica" x="100" y="2829.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1716" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1717" font-family="Helvetica" x="135" y="2829.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1718" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   TCONPOWERUP </tspan></text><line id="SvgjsLine1719" x1="105" y1="2850" x2="120" y2="2850" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1720" font-family="Helvetica" x="100" y="2849.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1721" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1722" font-family="Helvetica" x="135" y="2849.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1723" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   TCONRESET </tspan></text><line id="SvgjsLine1724" x1="105" y1="2870" x2="120" y2="2870" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1725" font-family="Helvetica" x="100" y="2869.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1726" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1727" font-family="Helvetica" x="135" y="2869.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1728" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   TCONRSVDIN1 </tspan></text><line id="SvgjsLine1729" x1="105" y1="2890" x2="120" y2="2890" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1730" font-family="Helvetica" x="540" y="1669.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1731" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [15:0] </tspan></text><text id="SvgjsText1732" font-family="Helvetica" x="505" y="1669.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1733" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   DRPDO </tspan></text><line id="SvgjsLine1734" x1="520" y1="1690" x2="535" y2="1690" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1735" font-family="Helvetica" x="540" y="1689.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1736" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1737" font-family="Helvetica" x="505" y="1689.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1738" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   DRPRDY </tspan></text><line id="SvgjsLine1739" x1="520" y1="1710" x2="535" y2="1710" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1740" font-family="Helvetica" x="540" y="1709.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1741" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1742" font-family="Helvetica" x="505" y="1709.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1743" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   PMARSVDOUT0 </tspan></text><line id="SvgjsLine1744" x1="520" y1="1730" x2="535" y2="1730" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1745" font-family="Helvetica" x="540" y="1729.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1746" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1747" font-family="Helvetica" x="505" y="1729.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1748" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   PMARSVDOUT1 </tspan></text><line id="SvgjsLine1749" x1="520" y1="1750" x2="535" y2="1750" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1750" font-family="Helvetica" x="540" y="1749.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1751" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1752" font-family="Helvetica" x="505" y="1749.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1753" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0FBCLKLOST </tspan></text><line id="SvgjsLine1754" x1="520" y1="1770" x2="535" y2="1770" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1755" font-family="Helvetica" x="540" y="1769.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1756" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1757" font-family="Helvetica" x="505" y="1769.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1758" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0LOCK </tspan></text><line id="SvgjsLine1759" x1="520" y1="1790" x2="535" y2="1790" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1760" font-family="Helvetica" x="540" y="1789.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1761" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1762" font-family="Helvetica" x="505" y="1789.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1763" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0OUTCLK </tspan></text><line id="SvgjsLine1764" x1="520" y1="1810" x2="535" y2="1810" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1765" font-family="Helvetica" x="540" y="1809.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1766" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1767" font-family="Helvetica" x="505" y="1809.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1768" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0OUTREFCLK </tspan></text><line id="SvgjsLine1769" x1="520" y1="1830" x2="535" y2="1830" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1770" font-family="Helvetica" x="540" y="1829.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1771" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1772" font-family="Helvetica" x="505" y="1829.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1773" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL0REFCLKLOST </tspan></text><line id="SvgjsLine1774" x1="520" y1="1850" x2="535" y2="1850" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1775" font-family="Helvetica" x="540" y="1849.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1776" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1777" font-family="Helvetica" x="505" y="1849.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1778" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1FBCLKLOST </tspan></text><line id="SvgjsLine1779" x1="520" y1="1870" x2="535" y2="1870" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1780" font-family="Helvetica" x="540" y="1869.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1781" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1782" font-family="Helvetica" x="505" y="1869.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1783" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1LOCK </tspan></text><line id="SvgjsLine1784" x1="520" y1="1890" x2="535" y2="1890" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1785" font-family="Helvetica" x="540" y="1889.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1786" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1787" font-family="Helvetica" x="505" y="1889.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1788" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1OUTCLK </tspan></text><line id="SvgjsLine1789" x1="520" y1="1910" x2="535" y2="1910" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1790" font-family="Helvetica" x="540" y="1909.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1791" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1792" font-family="Helvetica" x="505" y="1909.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1793" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1OUTREFCLK </tspan></text><line id="SvgjsLine1794" x1="520" y1="1930" x2="535" y2="1930" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1795" font-family="Helvetica" x="540" y="1929.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1796" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1797" font-family="Helvetica" x="505" y="1929.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1798" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLL1REFCLKLOST </tspan></text><line id="SvgjsLine1799" x1="520" y1="1950" x2="535" y2="1950" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1800" font-family="Helvetica" x="540" y="1949.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1801" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1802" font-family="Helvetica" x="505" y="1949.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1803" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLLDMONITOR0 </tspan></text><line id="SvgjsLine1804" x1="520" y1="1970" x2="535" y2="1970" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1805" font-family="Helvetica" x="540" y="1969.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1806" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [7:0] </tspan></text><text id="SvgjsText1807" font-family="Helvetica" x="505" y="1969.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1808" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   QPLLDMONITOR1 </tspan></text><line id="SvgjsLine1809" x1="520" y1="1990" x2="535" y2="1990" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1810" font-family="Helvetica" x="540" y="1989.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1811" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1812" font-family="Helvetica" x="505" y="1989.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1813" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   REFCLKOUTMONITOR0 </tspan></text><line id="SvgjsLine1814" x1="520" y1="2010" x2="535" y2="2010" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1815" font-family="Helvetica" x="540" y="2009.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1816" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1817" font-family="Helvetica" x="505" y="2009.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1818" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   REFCLKOUTMONITOR1 </tspan></text><line id="SvgjsLine1819" x1="520" y1="2030" x2="535" y2="2030" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1820" font-family="Helvetica" x="540" y="2029.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1821" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1822" font-family="Helvetica" x="505" y="2029.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1823" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   RXRECCLK0SEL </tspan></text><line id="SvgjsLine1824" x1="520" y1="2050" x2="535" y2="2050" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1825" font-family="Helvetica" x="540" y="2049.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1826" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [1:0] </tspan></text><text id="SvgjsText1827" font-family="Helvetica" x="505" y="2049.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1828" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   RXRECCLK1SEL </tspan></text><line id="SvgjsLine1829" x1="520" y1="2070" x2="535" y2="2070" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1830" font-family="Helvetica" x="540" y="2069.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1831" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1832" font-family="Helvetica" x="505" y="2069.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1833" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   SDM0FINALOUT </tspan></text><line id="SvgjsLine1834" x1="520" y1="2090" x2="535" y2="2090" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1835" font-family="Helvetica" x="540" y="2089.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1836" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [14:0] </tspan></text><text id="SvgjsText1837" font-family="Helvetica" x="505" y="2089.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1838" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   SDM0TESTDATA </tspan></text><line id="SvgjsLine1839" x1="520" y1="2110" x2="535" y2="2110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1840" font-family="Helvetica" x="540" y="2109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1841" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1842" font-family="Helvetica" x="505" y="2109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1843" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   SDM1FINALOUT </tspan></text><line id="SvgjsLine1844" x1="520" y1="2130" x2="535" y2="2130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1845" font-family="Helvetica" x="540" y="2129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1846" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [14:0] </tspan></text><text id="SvgjsText1847" font-family="Helvetica" x="505" y="2129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1848" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   SDM1TESTDATA </tspan></text><line id="SvgjsLine1849" x1="520" y1="2150" x2="535" y2="2150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1850" font-family="Helvetica" x="540" y="2149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1851" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1852" font-family="Helvetica" x="505" y="2149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1853" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   TCONGPO </tspan></text><line id="SvgjsLine1854" x1="520" y1="2170" x2="535" y2="2170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1855" font-family="Helvetica" x="540" y="2169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1856" dy="26" x="540" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1857" font-family="Helvetica" x="505" y="2169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1858" dy="26" x="505" svgjs:data="{&quot;newLined&quot;:true}">   TCONRSVDOUT0 </tspan></text><line id="SvgjsLine1859" x1="520" y1="2190" x2="535" y2="2190" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright (c) 1995/2017 Xilinx, Inc.</p><p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p><p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p><p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. <strong><em>_  <em></em></strong> /   /\/   / /<strong><em>/  \  /     Vendor      : Xilinx \   \   \/      Version     : 2018.1 \   \          Description : Xilinx Unified Simulation Library Component /   /                        Gigabit Transceiver for UltraScale+ devices /</em></strong>/   /\      Filename    : GTHE4_COMMON.v \   \  /  \ __</em>\/___\ Revision: End Revision:</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XIL_TIMING</td>
+<td></td>
+<td>"UNPLACED"</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_QPLL0_FBDIV</td>
+<td>[0:0]</td>
+<td>1'b1</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_QPLL1_FBDIV</td>
+<td>[0:0]</td>
+<td>1'b1</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM0TOGGLE</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM1TOGGLE</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM0TOGGLE</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1DATA_HIGH</td>
+<td>[8:0]</td>
+<td>9'b000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1DATA_LOW</td>
+<td>[15:0]</td>
+<td>16'b0000000000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1TOGGLE</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG2</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG3</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG4</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG_RSVD</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>POR_CFG</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>PPF0_CFG</td>
+<td>[15:0]</td>
+<td>16'h0F00</td>
+<td></td>
+</tr>
+<tr>
+<td>PPF1_CFG</td>
+<td>[15:0]</td>
+<td>16'h0F00</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKOUT_RATE</td>
+<td></td>
+<td>"FULL"</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG0</td>
+<td>[15:0]</td>
+<td>16'h391C</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG1_G3</td>
+<td>[15:0]</td>
+<td>16'h0020</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG2</td>
+<td>[15:0]</td>
+<td>16'h0F80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG2_G3</td>
+<td>[15:0]</td>
+<td>16'h0F80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG3</td>
+<td>[15:0]</td>
+<td>16'h0120</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG4</td>
+<td>[15:0]</td>
+<td>16'h0002</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CP</td>
+<td>[9:0]</td>
+<td>10'b0000011111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CP_G3</td>
+<td>[9:0]</td>
+<td>10'b0000011111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_FBDIV</td>
+<td>integer</td>
+<td>66</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_FBDIV_G3</td>
+<td>integer</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_INIT_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_INIT_CFG1</td>
+<td>[7:0]</td>
+<td>8'h00</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LOCK_CFG</td>
+<td>[15:0]</td>
+<td>16'h01E8</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LOCK_CFG_G3</td>
+<td>[15:0]</td>
+<td>16'h21E8</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LPF</td>
+<td>[9:0]</td>
+<td>10'b1011111111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LPF_G3</td>
+<td>[9:0]</td>
+<td>10'b1111111111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_PCI_EN</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_RATE_SW_USE_DRP</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_REFCLK_DIV</td>
+<td>integer</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0040</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG2</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKOUT_RATE</td>
+<td></td>
+<td>"FULL"</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG0</td>
+<td>[15:0]</td>
+<td>16'h691C</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0020</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG1_G3</td>
+<td>[15:0]</td>
+<td>16'h0020</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG2</td>
+<td>[15:0]</td>
+<td>16'h0F80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG2_G3</td>
+<td>[15:0]</td>
+<td>16'h0F80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG3</td>
+<td>[15:0]</td>
+<td>16'h0120</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG4</td>
+<td>[15:0]</td>
+<td>16'h0002</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CP</td>
+<td>[9:0]</td>
+<td>10'b0000011111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CP_G3</td>
+<td>[9:0]</td>
+<td>10'b0000011111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_FBDIV</td>
+<td>integer</td>
+<td>66</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_FBDIV_G3</td>
+<td>integer</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_INIT_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_INIT_CFG1</td>
+<td>[7:0]</td>
+<td>8'h00</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LOCK_CFG</td>
+<td>[15:0]</td>
+<td>16'h01E8</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LOCK_CFG_G3</td>
+<td>[15:0]</td>
+<td>16'h21E8</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LPF</td>
+<td>[9:0]</td>
+<td>10'b1011111111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LPF_G3</td>
+<td>[9:0]</td>
+<td>10'b1111111111</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_PCI_EN</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_RATE_SW_USE_DRP</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_REFCLK_DIV</td>
+<td>integer</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG2</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR0</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR1</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR2</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR3</td>
+<td>[15:0]</td>
+<td>16'h0000</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLKOUT0_SEL</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLKOUT1_SEL</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td></td>
+</tr>
+<tr>
+<td>SARC_ENB</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>SARC_SEL</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0INITSEED0_0</td>
+<td>[15:0]</td>
+<td>16'b0000000000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0INITSEED0_1</td>
+<td>[8:0]</td>
+<td>9'b000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1INITSEED0_0</td>
+<td>[15:0]</td>
+<td>16'b0000000000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1INITSEED0_1</td>
+<td>[8:0]</td>
+<td>9'b000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_DEVICE</td>
+<td></td>
+<td>"ULTRASCALE_PLUS"</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_MODE</td>
+<td></td>
+<td>"FAST"</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_RESET_SPEEDUP</td>
+<td></td>
+<td>"TRUE"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DRPDO</td>
+<td>output</td>
+<td>[15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPRDY</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVDOUT0</td>
+<td>output</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVDOUT1</td>
+<td>output</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0FBCLKLOST</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0OUTCLK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0OUTREFCLK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0REFCLKLOST</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1FBCLKLOST</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1OUTCLK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1OUTREFCLK</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1REFCLKLOST</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLDMONITOR0</td>
+<td>output</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLDMONITOR1</td>
+<td>output</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLKOUTMONITOR0</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLKOUTMONITOR1</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLK0SEL</td>
+<td>output</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLK1SEL</td>
+<td>output</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0FINALOUT</td>
+<td>output</td>
+<td>[3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0TESTDATA</td>
+<td>output</td>
+<td>[14:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1FINALOUT</td>
+<td>output</td>
+<td>[3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1TESTDATA</td>
+<td>output</td>
+<td>[14:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONGPO</td>
+<td>output</td>
+<td>[9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRSVDOUT0</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BGBYPASSB</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BGMONITORENB</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BGPDB</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BGRCALOVRD</td>
+<td>input</td>
+<td>[4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>BGRCALOVRDENB</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DRPADDR</td>
+<td>input</td>
+<td>[15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPCLK</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DRPDI</td>
+<td>input</td>
+<td>[15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPEN</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DRPWE</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTGREFCLK0</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTGREFCLK1</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK00</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK01</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK10</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK11</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK00</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK01</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK10</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK11</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK00</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK01</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK10</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK11</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PCIERATEQPLL0</td>
+<td>input</td>
+<td>[2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PCIERATEQPLL1</td>
+<td>input</td>
+<td>[2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVD0</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVD1</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKRSVD0</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKRSVD1</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0FBDIV</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCKDETCLK</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCKEN</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0PD</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0REFCLKSEL</td>
+<td>input</td>
+<td>[2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0RESET</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKRSVD0</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKRSVD1</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1FBDIV</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCKDETCLK</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCKEN</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1PD</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1REFCLKSEL</td>
+<td>input</td>
+<td>[2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1RESET</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD1</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD2</td>
+<td>input</td>
+<td>[4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD3</td>
+<td>input</td>
+<td>[4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD4</td>
+<td>input</td>
+<td>[7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RCALENB</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0DATA</td>
+<td>input</td>
+<td>[24:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0RESET</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0TOGGLE</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0WIDTH</td>
+<td>input</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1DATA</td>
+<td>input</td>
+<td>[24:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1RESET</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1TOGGLE</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1WIDTH</td>
+<td>input</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONGPI</td>
+<td>input</td>
+<td>[9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONPOWERUP</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRESET</td>
+<td>input</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRSVDIN1</td>
+<td>input</td>
+<td>[1:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trig_attr</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>attr_test</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>attr_test</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>attr_err</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>glblGSR</td>
+<td>tri0</td>
+<td></td>
+</tr>
+<tr>
+<td>CSSDSTOPCLKDONE0_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CSSDSTOPCLKDONE1_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPRDY_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0FBCLKLOST_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0OUTCLK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0OUTREFCLK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0REFCLKLOST_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1FBCLKLOST_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1OUTCLK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1OUTREFCLK_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1REFCLKLOST_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLKOUTMONITOR0_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLKOUTMONITOR1_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRSVDOUT0_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONTDO_out</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0TESTDATA_out</td>
+<td>wire [14:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1TESTDATA_out</td>
+<td>wire [14:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPDO_out</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLK0SEL_out</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLK1SEL_out</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SARCCLK_out</td>
+<td>wire [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0FINALOUT_out</td>
+<td>wire [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1FINALOUT_out</td>
+<td>wire [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVDOUT0_out</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVDOUT1_out</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLDMONITOR0_out</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLDMONITOR1_out</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMASCANOUT_out</td>
+<td>wire [9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONGPO_out</td>
+<td>wire [9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>BGBYPASSB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>BGMONITORENB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>BGPDB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>BGRCALOVRDENB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CSSDSTOPCLK0_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CSSDSTOPCLK1_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPCLK_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPEN_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPWE_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTGREFCLK0_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTGREFCLK1_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK00_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK01_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK10_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTNORTHREFCLK11_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK00_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK01_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK10_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTREFCLK11_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK00_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK01_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK10_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>GTSOUTHREFCLK11_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>PMASCANENB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QDPMASCANMODEB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QDPMASCANRSTEN_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKRSVD0_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKRSVD1_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCKDETCLK_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0LOCKEN_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0PD_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0RESET_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKRSVD0_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKRSVD1_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCKDETCLK_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1LOCKEN_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1PD_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1RESET_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>RCALENB_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0RESET_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0TOGGLE_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1RESET_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1TOGGLE_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONMBISTMODE_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONPOWERUP_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONTCK_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONTDI_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONTMS_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONTRST_in</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPADDR_in</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPDI_in</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0WIDTH_in</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1WIDTH_in</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRESET_in</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRSVDIN1_in</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONSPD_in</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0DATA_in</td>
+<td>wire [24:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1DATA_in</td>
+<td>wire [24:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PCIERATEQPLL0_in</td>
+<td>wire [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PCIERATEQPLL1_in</td>
+<td>wire [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0REFCLKSEL_in</td>
+<td>wire [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1REFCLKSEL_in</td>
+<td>wire [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLK_in</td>
+<td>wire [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>BGRCALOVRD_in</td>
+<td>wire [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD2_in</td>
+<td>wire [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD3_in</td>
+<td>wire [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONRSVDIN0_in</td>
+<td>wire [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVD0_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMARSVD1_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0FBDIV_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1FBDIV_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD1_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLLRSVD4_in</td>
+<td>wire [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMASCANCLK_in</td>
+<td>wire [9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PMASCANIN_in</td>
+<td>wire [9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>TCONGPI_in</td>
+<td>wire [9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPCLK_delay</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPEN_delay</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPWE_delay</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPADDR_delay</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>DRPDI_delay</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>notifier</td>
+<td>reg</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MODULE_NAME</td>
+<td></td>
+<td>"GTHE4_COMMON"</td>
+<td>define constants</td>
+</tr>
+<tr>
+<td>AEN_QPLL0_FBDIV_REG</td>
+<td>[0:0]</td>
+<td>AEN_QPLL0_FBDIV</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_QPLL1_FBDIV_REG</td>
+<td>[0:0]</td>
+<td>AEN_QPLL1_FBDIV</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM0TOGGLE_REG</td>
+<td>[0:0]</td>
+<td>AEN_SDM0TOGGLE</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM1TOGGLE_REG</td>
+<td>[0:0]</td>
+<td>AEN_SDM1TOGGLE</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM0TOGGLE_REG</td>
+<td>[0:0]</td>
+<td>A_SDM0TOGGLE</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1DATA_HIGH_REG</td>
+<td>[8:0]</td>
+<td>A_SDM1DATA_HIGH</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1DATA_LOW_REG</td>
+<td>[15:0]</td>
+<td>A_SDM1DATA_LOW</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1TOGGLE_REG</td>
+<td>[0:0]</td>
+<td>A_SDM1TOGGLE</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG0_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG1_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG2_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG2</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG3_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG3</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG4_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG4</td>
+<td></td>
+</tr>
+<tr>
+<td>BIAS_CFG_RSVD_REG</td>
+<td>[15:0]</td>
+<td>BIAS_CFG_RSVD</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_CFG0_REG</td>
+<td>[15:0]</td>
+<td>COMMON_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_CFG1_REG</td>
+<td>[15:0]</td>
+<td>COMMON_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>POR_CFG_REG</td>
+<td>[15:0]</td>
+<td>POR_CFG</td>
+<td></td>
+</tr>
+<tr>
+<td>PPF0_CFG_REG</td>
+<td>[15:0]</td>
+<td>PPF0_CFG</td>
+<td></td>
+</tr>
+<tr>
+<td>PPF1_CFG_REG</td>
+<td>[15:0]</td>
+<td>PPF1_CFG</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0CLKOUT_RATE_REG</td>
+<td>[32:1]</td>
+<td>QPLL0CLKOUT_RATE</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG1_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG1_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG1_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG2_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG2</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG2_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG2_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG3_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CFG4_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_CFG4</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CP_REG</td>
+<td>[9:0]</td>
+<td>QPLL0_CP</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_CP_G3_REG</td>
+<td>[9:0]</td>
+<td>QPLL0_CP_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_FBDIV_REG</td>
+<td>[7:0]</td>
+<td>QPLL0_FBDIV</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_FBDIV_G3_REG</td>
+<td>[7:0]</td>
+<td>QPLL0_FBDIV_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_INIT_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_INIT_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_INIT_CFG1_REG</td>
+<td>[7:0]</td>
+<td>QPLL0_INIT_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LOCK_CFG_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_LOCK_CFG</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LOCK_CFG_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_LOCK_CFG_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LPF_REG</td>
+<td>[9:0]</td>
+<td>QPLL0_LPF</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_LPF_G3_REG</td>
+<td>[9:0]</td>
+<td>QPLL0_LPF_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_PCI_EN_REG</td>
+<td>[0:0]</td>
+<td>QPLL0_PCI_EN</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_RATE_SW_USE_DRP_REG</td>
+<td>[0:0]</td>
+<td>QPLL0_RATE_SW_USE_DRP</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_REFCLK_DIV_REG</td>
+<td>[4:0]</td>
+<td>QPLL0_REFCLK_DIV</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_SDM_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG1_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_SDM_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_SDM_CFG2_REG</td>
+<td>[15:0]</td>
+<td>QPLL0_SDM_CFG2</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1CLKOUT_RATE_REG</td>
+<td>[32:1]</td>
+<td>QPLL1CLKOUT_RATE</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG1_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG1_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG1_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG2_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG2</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG2_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG2_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG3_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CFG4_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_CFG4</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CP_REG</td>
+<td>[9:0]</td>
+<td>QPLL1_CP</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_CP_G3_REG</td>
+<td>[9:0]</td>
+<td>QPLL1_CP_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_FBDIV_REG</td>
+<td>[7:0]</td>
+<td>QPLL1_FBDIV</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_FBDIV_G3_REG</td>
+<td>[7:0]</td>
+<td>QPLL1_FBDIV_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_INIT_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_INIT_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_INIT_CFG1_REG</td>
+<td>[7:0]</td>
+<td>QPLL1_INIT_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LOCK_CFG_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_LOCK_CFG</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LOCK_CFG_G3_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_LOCK_CFG_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LPF_REG</td>
+<td>[9:0]</td>
+<td>QPLL1_LPF</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_LPF_G3_REG</td>
+<td>[9:0]</td>
+<td>QPLL1_LPF_G3</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_PCI_EN_REG</td>
+<td>[0:0]</td>
+<td>QPLL1_PCI_EN</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_RATE_SW_USE_DRP_REG</td>
+<td>[0:0]</td>
+<td>QPLL1_RATE_SW_USE_DRP</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_REFCLK_DIV_REG</td>
+<td>[4:0]</td>
+<td>QPLL1_REFCLK_DIV</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG0_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_SDM_CFG0</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG1_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_SDM_CFG1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_SDM_CFG2_REG</td>
+<td>[15:0]</td>
+<td>QPLL1_SDM_CFG2</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR0_REG</td>
+<td>[15:0]</td>
+<td>RSVD_ATTR0</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR1_REG</td>
+<td>[15:0]</td>
+<td>RSVD_ATTR1</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR2_REG</td>
+<td>[15:0]</td>
+<td>RSVD_ATTR2</td>
+<td></td>
+</tr>
+<tr>
+<td>RSVD_ATTR3_REG</td>
+<td>[15:0]</td>
+<td>RSVD_ATTR3</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLKOUT0_SEL_REG</td>
+<td>[1:0]</td>
+<td>RXRECCLKOUT0_SEL</td>
+<td></td>
+</tr>
+<tr>
+<td>RXRECCLKOUT1_SEL_REG</td>
+<td>[1:0]</td>
+<td>RXRECCLKOUT1_SEL</td>
+<td></td>
+</tr>
+<tr>
+<td>SARC_ENB_REG</td>
+<td>[0:0]</td>
+<td>SARC_ENB</td>
+<td></td>
+</tr>
+<tr>
+<td>SARC_SEL_REG</td>
+<td>[0:0]</td>
+<td>SARC_SEL</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0INITSEED0_0_REG</td>
+<td>[15:0]</td>
+<td>SDM0INITSEED0_0</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM0INITSEED0_1_REG</td>
+<td>[8:0]</td>
+<td>SDM0INITSEED0_1</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1INITSEED0_0_REG</td>
+<td>[15:0]</td>
+<td>SDM1INITSEED0_0</td>
+<td></td>
+</tr>
+<tr>
+<td>SDM1INITSEED0_1_REG</td>
+<td>[8:0]</td>
+<td>SDM1INITSEED0_1</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_DEVICE_REG</td>
+<td>[160:1]</td>
+<td>SIM_DEVICE</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_MODE_REG</td>
+<td>[48:1]</td>
+<td>SIM_MODE</td>
+<td></td>
+</tr>
+<tr>
+<td>SIM_RESET_SPEEDUP_REG</td>
+<td>[40:1]</td>
+<td>SIM_RESET_SPEEDUP</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_BGBS0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_BGBS1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_MASTER0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_MASTER1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_PD0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_PD1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_QPLL0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_QPLL1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_REFCLK0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_REFCLK1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_RESET0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_RESET1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM0DATA_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM0RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM0WIDTH_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM1DATA_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM1RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AEN_SDM1WIDTH_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>AQDMUXSEL1_REG</td>
+<td>[3:0]</td>
+<td>4'b0000</td>
+<td></td>
+</tr>
+<tr>
+<td>AVCC_SENSE_SEL_REG</td>
+<td>[3:0]</td>
+<td>4'b0000</td>
+<td></td>
+</tr>
+<tr>
+<td>AVTT_SENSE_SEL_REG</td>
+<td>[3:0]</td>
+<td>4'b0000</td>
+<td></td>
+</tr>
+<tr>
+<td>A_BGMONITOREN_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_BGPD_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_GTREFCLKPD0_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_GTREFCLKPD1_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL0LOCKEN_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL0PD_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL0RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL1LOCKEN_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL1PD_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_QPLL1RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM0DATA_HIGH_REG</td>
+<td>[8:0]</td>
+<td>9'b000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM0DATA_LOW_REG</td>
+<td>[15:0]</td>
+<td>16'b0000000000000000</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM0RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>A_SDM1RESET_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_AMUX_SEL0_REG</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_AMUX_SEL1_REG</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td></td>
+</tr>
+<tr>
+<td>COMMON_INSTANTIATED_REG</td>
+<td>[0:0]</td>
+<td>1'b1</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL0_AMONITOR_SEL_REG</td>
+<td>[2:0]</td>
+<td>3'b000</td>
+<td></td>
+</tr>
+<tr>
+<td>QPLL1_AMONITOR_SEL_REG</td>
+<td>[2:0]</td>
+<td>3'b000</td>
+<td></td>
+</tr>
+<tr>
+<td>RCALSAP_TESTEN_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>RCAL_APROBE_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK0_EN_DC_COUP_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK0_VCM_HIGH_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK0_VCM_LOW_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK1_EN_DC_COUP_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK1_VCM_HIGH_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>REFCLK1_VCM_LOW_REG</td>
+<td>[0:0]</td>
+<td>1'b0</td>
+<td></td>
+</tr>
+<tr>
+<td>VCCAUX_SENSE_SEL_REG</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @ (trig_attr) )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><ul>
+<li>unnamed: (  )</li>
+</ul><h2 id="instantiations">Instantiations</h2><ul>
+<li>SIP_GTHE4_COMMON_INST: SIP_GTHE4_COMMON</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+tie off</p></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>
