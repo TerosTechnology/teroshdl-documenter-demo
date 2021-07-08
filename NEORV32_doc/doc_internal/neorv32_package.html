@@ -1,0 +1,4829 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=neorv32_package><h1 id="package-neorv32_package">Package: neorv32_package</h1></a><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ispace_base_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"00000000"</td>
+<td>default instruction memory address space base address</td>
+</tr>
+<tr>
+<td>dspace_base_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"80000000"</td>
+<td>default data memory address space base address</td>
+</tr>
+<tr>
+<td>wb_pipe_mode_c</td>
+<td>boolean</td>
+<td>false</td>
+<td>protocol: false=classic/standard wishbone mode (default), true=pipelined wishbone mode</td>
+</tr>
+<tr>
+<td>wb_big_endian_c</td>
+<td>boolean</td>
+<td>false</td>
+<td>byte order: true=big-endian, false=little-endian (default)</td>
+</tr>
+<tr>
+<td>wb_rx_buffer_c</td>
+<td>boolean</td>
+<td>true</td>
+<td>use register buffer for RX data when true (default)</td>
+</tr>
+<tr>
+<td>ipb_entries_c</td>
+<td>natural</td>
+<td>2</td>
+<td>entries in CPU instruction prefetch buffer, has to be a power of 2, default=2</td>
+</tr>
+<tr>
+<td>cp_timeout_en_c</td>
+<td>boolean</td>
+<td>false</td>
+<td>auto-terminate pending co-processor operations after 256 cycles (for debugging only), default = false</td>
+</tr>
+<tr>
+<td>dedicated_reset_c</td>
+<td>boolean</td>
+<td>false</td>
+<td>use dedicated hardware reset value for UNCRITICAL registers (FALSE=reset value is irrelevant (might simplify HW), default; TRUE=defined LOW reset value)</td>
+</tr>
+<tr>
+<td>pmp_num_regions_critical_c</td>
+<td>natural</td>
+<td>8</td>
+<td>default=8</td>
+</tr>
+<tr>
+<td>max_proc_int_response_time_c</td>
+<td>natural</td>
+<td>15</td>
+<td>cycles after which an <em>unacknowledged</em> internal bus access will timeout and trigger a bus fault exception (min 2)</td>
+</tr>
+<tr>
+<td>jtag_tap_idcode_version_c</td>
+<td>std_ulogic_vector(03 downto 0)</td>
+<td>x"0"</td>
+<td>version</td>
+</tr>
+<tr>
+<td>jtag_tap_idcode_partid_c</td>
+<td>std_ulogic_vector(15 downto 0)</td>
+<td>x"cafe"</td>
+<td>part number</td>
+</tr>
+<tr>
+<td>jtag_tap_idcode_manid_c</td>
+<td>std_ulogic_vector(10 downto 0)</td>
+<td>"00000000000"</td>
+<td>manufacturer id</td>
+</tr>
+<tr>
+<td>data_width_c</td>
+<td>natural</td>
+<td>32</td>
+<td>native data path width - do not change!</td>
+</tr>
+<tr>
+<td>hw_version_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"01050710"</td>
+<td>no touchy!</td>
+</tr>
+<tr>
+<td>archid_c</td>
+<td>natural</td>
+<td>19</td>
+<td>official NEORV32 architecture ID - hands off!</td>
+</tr>
+<tr>
+<td>rf_r0_is_reg_c</td>
+<td>boolean</td>
+<td>true</td>
+<td>x0 is a <em>physical register</em> that has to be initialized to zero by the CPU</td>
+</tr>
+<tr>
+<td>def_rst_val_c</td>
+<td>std_ulogic</td>
+<td>cond_sel_stdulogic_f(dedicated_reset_c,<br><span style="padding-left:20px"> '0',<br><span style="padding-left:20px"> '-')</td>
+<td>Internal (auto-generated) Configurations ------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td>imem_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>ispace_base_c</td>
+<td>internal instruction memory base address</td>
+</tr>
+<tr>
+<td>dmem_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>dspace_base_c</td>
+<td>internal data memory base address</td>
+</tr>
+<tr>
+<td>boot_rom_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffff0000"</td>
+<td>bootloader base address, fixed!</td>
+</tr>
+<tr>
+<td>boot_rom_max_size_c</td>
+<td>natural</td>
+<td>32*1024</td>
+<td>max module's address space size in bytes, fixed!</td>
+</tr>
+<tr>
+<td>dm_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffff800"</td>
+<td>base address, fixed!</td>
+</tr>
+<tr>
+<td>dm_size_c</td>
+<td>natural</td>
+<td>4<em>32</em>4</td>
+<td>debug ROM address space size in bytes, fixed</td>
+</tr>
+<tr>
+<td>dm_code_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffff800"</td>
+<td></td>
+</tr>
+<tr>
+<td>dm_pbuf_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffff880"</td>
+<td></td>
+</tr>
+<tr>
+<td>dm_data_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffff900"</td>
+<td></td>
+</tr>
+<tr>
+<td>dm_sreg_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffff980"</td>
+<td></td>
+</tr>
+<tr>
+<td>io_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe00"</td>
+<td>IO: Peripheral Devices ("IO") Area --Control register(s) (including the device-enable) should be located at the base address of each device</td>
+</tr>
+<tr>
+<td>io_size_c</td>
+<td>natural</td>
+<td>512</td>
+<td>IO address space size in bytes, fixed!</td>
+</tr>
+<tr>
+<td>cfs_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe00"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>cfs_size_c</td>
+<td>natural</td>
+<td>32*4</td>
+<td>module's address space in bytes</td>
+</tr>
+<tr>
+<td>cfs_reg0_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe00"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg1_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe04"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg2_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe08"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg3_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe0c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg4_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe10"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg5_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe14"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg6_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe18"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg7_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe1c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg8_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe20"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg9_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe24"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg10_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe28"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg11_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe2c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg12_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe30"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg13_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe34"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg14_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe38"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg15_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe3c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg16_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe40"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg17_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe44"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg18_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe48"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg19_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe4c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg20_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe50"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg21_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe54"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg22_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe58"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg23_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe5c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg24_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe60"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg25_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe64"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg26_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe68"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg27_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe6c"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg28_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe70"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg29_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe74"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg30_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe78"</td>
+<td></td>
+</tr>
+<tr>
+<td>cfs_reg31_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe7c"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe80"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>pwm_size_c</td>
+<td>natural</td>
+<td>16*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>pwm_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe80"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty0_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe84"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty1_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe88"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty2_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe8c"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty3_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe90"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty4_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe94"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty5_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe98"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty6_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffe9c"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty7_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffea0"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty8_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffea4"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty9_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffea8"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty10_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffeac"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty11_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffeb0"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty12_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffeb4"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty13_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffeb8"</td>
+<td></td>
+</tr>
+<tr>
+<td>pwm_duty14_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffebc"</td>
+<td></td>
+</tr>
+<tr>
+<td>slink_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"fffffec0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>slink_size_c</td>
+<td>natural</td>
+<td>16*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>xirq_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff80"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>xirq_size_c</td>
+<td>natural</td>
+<td>4*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>xirq_enable_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff80"</td>
+<td></td>
+</tr>
+<tr>
+<td>xirq_pending_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff84"</td>
+<td></td>
+</tr>
+<tr>
+<td>xirq_source_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff88"</td>
+<td></td>
+</tr>
+<tr>
+<td>mtime_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff90"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>mtime_size_c</td>
+<td>natural</td>
+<td>4*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>mtime_time_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff90"</td>
+<td></td>
+</tr>
+<tr>
+<td>mtime_time_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff94"</td>
+<td></td>
+</tr>
+<tr>
+<td>mtime_cmp_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff98"</td>
+<td></td>
+</tr>
+<tr>
+<td>mtime_cmp_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffff9c"</td>
+<td></td>
+</tr>
+<tr>
+<td>uart0_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffa0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>uart0_size_c</td>
+<td>natural</td>
+<td>2*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>uart0_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffa0"</td>
+<td></td>
+</tr>
+<tr>
+<td>uart0_rtx_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffa4"</td>
+<td></td>
+</tr>
+<tr>
+<td>spi_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffa8"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>spi_size_c</td>
+<td>natural</td>
+<td>2*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>spi_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffa8"</td>
+<td></td>
+</tr>
+<tr>
+<td>spi_rtx_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffac"</td>
+<td></td>
+</tr>
+<tr>
+<td>twi_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>twi_size_c</td>
+<td>natural</td>
+<td>2*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>twi_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb0"</td>
+<td></td>
+</tr>
+<tr>
+<td>twi_rtx_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb4"</td>
+<td></td>
+</tr>
+<tr>
+<td>trng_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb8"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>trng_size_c</td>
+<td>natural</td>
+<td>1*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>trng_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb8"</td>
+<td></td>
+</tr>
+<tr>
+<td>wdt_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffbc"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>wdt_size_c</td>
+<td>natural</td>
+<td>1*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>wdt_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffbc"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>gpio_size_c</td>
+<td>natural</td>
+<td>4*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>gpio_in_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc0"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_in_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc4"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_out_lo_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffc8"</td>
+<td></td>
+</tr>
+<tr>
+<td>gpio_out_hi_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffcc"</td>
+<td></td>
+</tr>
+<tr>
+<td>uart1_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffd0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>uart1_size_c</td>
+<td>natural</td>
+<td>2*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>uart1_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffd0"</td>
+<td></td>
+</tr>
+<tr>
+<td>uart1_rtx_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffd4"</td>
+<td></td>
+</tr>
+<tr>
+<td>neoled_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffd8"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>neoled_size_c</td>
+<td>natural</td>
+<td>2*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>neoled_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffd8"</td>
+<td></td>
+</tr>
+<tr>
+<td>neoled_data_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffdc"</td>
+<td></td>
+</tr>
+<tr>
+<td>sysinfo_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffe0"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>sysinfo_size_c</td>
+<td>natural</td>
+<td>8*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>ctrl_rf_in_mux_c</td>
+<td>natural</td>
+<td>0</td>
+<td>input source select lsb (0=MEM, 1=ALU)</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs1_adr0_c</td>
+<td>natural</td>
+<td>1</td>
+<td>source register 1 address bit 0</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs1_adr1_c</td>
+<td>natural</td>
+<td>2</td>
+<td>source register 1 address bit 1</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs1_adr2_c</td>
+<td>natural</td>
+<td>3</td>
+<td>source register 1 address bit 2</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs1_adr3_c</td>
+<td>natural</td>
+<td>4</td>
+<td>source register 1 address bit 3</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs1_adr4_c</td>
+<td>natural</td>
+<td>5</td>
+<td>source register 1 address bit 4</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs2_adr0_c</td>
+<td>natural</td>
+<td>6</td>
+<td>source register 2 address bit 0</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs2_adr1_c</td>
+<td>natural</td>
+<td>7</td>
+<td>source register 2 address bit 1</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs2_adr2_c</td>
+<td>natural</td>
+<td>8</td>
+<td>source register 2 address bit 2</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs2_adr3_c</td>
+<td>natural</td>
+<td>9</td>
+<td>source register 2 address bit 3</td>
+</tr>
+<tr>
+<td>ctrl_rf_rs2_adr4_c</td>
+<td>natural</td>
+<td>10</td>
+<td>source register 2 address bit 4</td>
+</tr>
+<tr>
+<td>ctrl_rf_rd_adr0_c</td>
+<td>natural</td>
+<td>11</td>
+<td>destination register address bit 0</td>
+</tr>
+<tr>
+<td>ctrl_rf_rd_adr1_c</td>
+<td>natural</td>
+<td>12</td>
+<td>destination register address bit 1</td>
+</tr>
+<tr>
+<td>ctrl_rf_rd_adr2_c</td>
+<td>natural</td>
+<td>13</td>
+<td>destination register address bit 2</td>
+</tr>
+<tr>
+<td>ctrl_rf_rd_adr3_c</td>
+<td>natural</td>
+<td>14</td>
+<td>destination register address bit 3</td>
+</tr>
+<tr>
+<td>ctrl_rf_rd_adr4_c</td>
+<td>natural</td>
+<td>15</td>
+<td>destination register address bit 4</td>
+</tr>
+<tr>
+<td>ctrl_rf_wb_en_c</td>
+<td>natural</td>
+<td>16</td>
+<td>write back enable</td>
+</tr>
+<tr>
+<td>ctrl_rf_r0_we_c</td>
+<td>natural</td>
+<td>17</td>
+<td>force write access and force rd=r0</td>
+</tr>
+<tr>
+<td>ctrl_alu_arith_c</td>
+<td>natural</td>
+<td>18</td>
+<td>ALU arithmetic command</td>
+</tr>
+<tr>
+<td>ctrl_alu_logic0_c</td>
+<td>natural</td>
+<td>19</td>
+<td>ALU logic command bit 0</td>
+</tr>
+<tr>
+<td>ctrl_alu_logic1_c</td>
+<td>natural</td>
+<td>20</td>
+<td>ALU logic command bit 1</td>
+</tr>
+<tr>
+<td>ctrl_alu_func0_c</td>
+<td>natural</td>
+<td>21</td>
+<td>ALU function select command bit 0</td>
+</tr>
+<tr>
+<td>ctrl_alu_func1_c</td>
+<td>natural</td>
+<td>22</td>
+<td>ALU function select command bit 1</td>
+</tr>
+<tr>
+<td>ctrl_alu_addsub_c</td>
+<td>natural</td>
+<td>23</td>
+<td>0=ADD, 1=SUB</td>
+</tr>
+<tr>
+<td>ctrl_alu_opa_mux_c</td>
+<td>natural</td>
+<td>24</td>
+<td>operand A select (0=rs1, 1=PC)</td>
+</tr>
+<tr>
+<td>ctrl_alu_opb_mux_c</td>
+<td>natural</td>
+<td>25</td>
+<td>operand B select (0=rs2, 1=IMM)</td>
+</tr>
+<tr>
+<td>ctrl_alu_unsigned_c</td>
+<td>natural</td>
+<td>26</td>
+<td>is unsigned ALU operation</td>
+</tr>
+<tr>
+<td>ctrl_alu_shift_dir_c</td>
+<td>natural</td>
+<td>27</td>
+<td>shift direction (0=left, 1=right)</td>
+</tr>
+<tr>
+<td>ctrl_alu_shift_ar_c</td>
+<td>natural</td>
+<td>28</td>
+<td>is arithmetic shift</td>
+</tr>
+<tr>
+<td>ctrl_alu_frm0_c</td>
+<td>natural</td>
+<td>29</td>
+<td>FPU rounding mode bit 0</td>
+</tr>
+<tr>
+<td>ctrl_alu_frm1_c</td>
+<td>natural</td>
+<td>30</td>
+<td>FPU rounding mode bit 1</td>
+</tr>
+<tr>
+<td>ctrl_alu_frm2_c</td>
+<td>natural</td>
+<td>31</td>
+<td>FPU rounding mode bit 2</td>
+</tr>
+<tr>
+<td>ctrl_bus_size_lsb_c</td>
+<td>natural</td>
+<td>32</td>
+<td>transfer size lsb (00=byte, 01=half-word)</td>
+</tr>
+<tr>
+<td>ctrl_bus_size_msb_c</td>
+<td>natural</td>
+<td>33</td>
+<td>transfer size msb (10=word, 11=?)</td>
+</tr>
+<tr>
+<td>ctrl_bus_rd_c</td>
+<td>natural</td>
+<td>34</td>
+<td>read data request</td>
+</tr>
+<tr>
+<td>ctrl_bus_wr_c</td>
+<td>natural</td>
+<td>35</td>
+<td>write data request</td>
+</tr>
+<tr>
+<td>ctrl_bus_if_c</td>
+<td>natural</td>
+<td>36</td>
+<td>instruction fetch request</td>
+</tr>
+<tr>
+<td>ctrl_bus_mo_we_c</td>
+<td>natural</td>
+<td>37</td>
+<td>memory address and data output register write enable</td>
+</tr>
+<tr>
+<td>ctrl_bus_mi_we_c</td>
+<td>natural</td>
+<td>38</td>
+<td>memory data input register write enable</td>
+</tr>
+<tr>
+<td>ctrl_bus_unsigned_c</td>
+<td>natural</td>
+<td>39</td>
+<td>is unsigned load</td>
+</tr>
+<tr>
+<td>ctrl_bus_ierr_ack_c</td>
+<td>natural</td>
+<td>40</td>
+<td>acknowledge instruction fetch bus exceptions</td>
+</tr>
+<tr>
+<td>ctrl_bus_derr_ack_c</td>
+<td>natural</td>
+<td>41</td>
+<td>acknowledge data access bus exceptions</td>
+</tr>
+<tr>
+<td>ctrl_bus_fence_c</td>
+<td>natural</td>
+<td>42</td>
+<td>executed fence operation</td>
+</tr>
+<tr>
+<td>ctrl_bus_fencei_c</td>
+<td>natural</td>
+<td>43</td>
+<td>executed fencei operation</td>
+</tr>
+<tr>
+<td>ctrl_bus_lock_c</td>
+<td>natural</td>
+<td>44</td>
+<td>make atomic/exclusive access lock</td>
+</tr>
+<tr>
+<td>ctrl_bus_de_lock_c</td>
+<td>natural</td>
+<td>45</td>
+<td>remove atomic/exclusive access</td>
+</tr>
+<tr>
+<td>ctrl_bus_ch_lock_c</td>
+<td>natural</td>
+<td>46</td>
+<td>evaluate atomic/exclusive lock (SC operation)</td>
+</tr>
+<tr>
+<td>ctrl_cp_id_lsb_c</td>
+<td>natural</td>
+<td>47</td>
+<td>cp select ID lsb</td>
+</tr>
+<tr>
+<td>ctrl_cp_id_msb_c</td>
+<td>natural</td>
+<td>48</td>
+<td>cp select ID msb</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct3_0_c</td>
+<td>natural</td>
+<td>49</td>
+<td>funct3 bit 0</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct3_1_c</td>
+<td>natural</td>
+<td>50</td>
+<td>funct3 bit 1</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct3_2_c</td>
+<td>natural</td>
+<td>51</td>
+<td>funct3 bit 2</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_0_c</td>
+<td>natural</td>
+<td>52</td>
+<td>funct12 bit 0</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_1_c</td>
+<td>natural</td>
+<td>53</td>
+<td>funct12 bit 1</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_2_c</td>
+<td>natural</td>
+<td>54</td>
+<td>funct12 bit 2</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_3_c</td>
+<td>natural</td>
+<td>55</td>
+<td>funct12 bit 3</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_4_c</td>
+<td>natural</td>
+<td>56</td>
+<td>funct12 bit 4</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_5_c</td>
+<td>natural</td>
+<td>57</td>
+<td>funct12 bit 5</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_6_c</td>
+<td>natural</td>
+<td>58</td>
+<td>funct12 bit 6</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_7_c</td>
+<td>natural</td>
+<td>59</td>
+<td>funct12 bit 7</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_8_c</td>
+<td>natural</td>
+<td>60</td>
+<td>funct12 bit 8</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_9_c</td>
+<td>natural</td>
+<td>61</td>
+<td>funct12 bit 9</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_10_c</td>
+<td>natural</td>
+<td>62</td>
+<td>funct12 bit 10</td>
+</tr>
+<tr>
+<td>ctrl_ir_funct12_11_c</td>
+<td>natural</td>
+<td>63</td>
+<td>funct12 bit 11</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_0_c</td>
+<td>natural</td>
+<td>64</td>
+<td>opcode7 bit 0</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_1_c</td>
+<td>natural</td>
+<td>65</td>
+<td>opcode7 bit 1</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_2_c</td>
+<td>natural</td>
+<td>66</td>
+<td>opcode7 bit 2</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_3_c</td>
+<td>natural</td>
+<td>67</td>
+<td>opcode7 bit 3</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_4_c</td>
+<td>natural</td>
+<td>68</td>
+<td>opcode7 bit 4</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_5_c</td>
+<td>natural</td>
+<td>69</td>
+<td>opcode7 bit 5</td>
+</tr>
+<tr>
+<td>ctrl_ir_opcode7_6_c</td>
+<td>natural</td>
+<td>70</td>
+<td>opcode7 bit 6</td>
+</tr>
+<tr>
+<td>ctrl_priv_lvl_lsb_c</td>
+<td>natural</td>
+<td>71</td>
+<td>privilege level lsb</td>
+</tr>
+<tr>
+<td>ctrl_priv_lvl_msb_c</td>
+<td>natural</td>
+<td>72</td>
+<td>privilege level msb</td>
+</tr>
+<tr>
+<td>ctrl_sleep_c</td>
+<td>natural</td>
+<td>73</td>
+<td>set when CPU is in sleep mode</td>
+</tr>
+<tr>
+<td>ctrl_trap_c</td>
+<td>natural</td>
+<td>74</td>
+<td>set when CPU is entering trap execution</td>
+</tr>
+<tr>
+<td>ctrl_debug_running_c</td>
+<td>natural</td>
+<td>75</td>
+<td>CPU is in debug mode when set</td>
+</tr>
+<tr>
+<td>ctrl_width_c</td>
+<td>natural</td>
+<td>76</td>
+<td>control bus size</td>
+</tr>
+<tr>
+<td>cmp_equal_c</td>
+<td>natural</td>
+<td>0</td>
+<td>Comparator Bus --------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td>cmp_less_c</td>
+<td>natural</td>
+<td>1</td>
+<td>for signed and unsigned comparisons</td>
+</tr>
+<tr>
+<td>instr_opcode_lsb_c</td>
+<td>natural</td>
+<td>0</td>
+<td>opcode bit 0</td>
+</tr>
+<tr>
+<td>instr_opcode_msb_c</td>
+<td>natural</td>
+<td>6</td>
+<td>opcode bit 6</td>
+</tr>
+<tr>
+<td>instr_rd_lsb_c</td>
+<td>natural</td>
+<td>7</td>
+<td>destination register address bit 0</td>
+</tr>
+<tr>
+<td>instr_rd_msb_c</td>
+<td>natural</td>
+<td>11</td>
+<td>destination register address bit 4</td>
+</tr>
+<tr>
+<td>instr_funct3_lsb_c</td>
+<td>natural</td>
+<td>12</td>
+<td>funct3 bit 0</td>
+</tr>
+<tr>
+<td>instr_funct3_msb_c</td>
+<td>natural</td>
+<td>14</td>
+<td>funct3 bit 2</td>
+</tr>
+<tr>
+<td>instr_rs1_lsb_c</td>
+<td>natural</td>
+<td>15</td>
+<td>source register 1 address bit 0</td>
+</tr>
+<tr>
+<td>instr_rs1_msb_c</td>
+<td>natural</td>
+<td>19</td>
+<td>source register 1 address bit 4</td>
+</tr>
+<tr>
+<td>instr_rs2_lsb_c</td>
+<td>natural</td>
+<td>20</td>
+<td>source register 2 address bit 0</td>
+</tr>
+<tr>
+<td>instr_rs2_msb_c</td>
+<td>natural</td>
+<td>24</td>
+<td>source register 2 address bit 4</td>
+</tr>
+<tr>
+<td>instr_funct7_lsb_c</td>
+<td>natural</td>
+<td>25</td>
+<td>funct7 bit 0</td>
+</tr>
+<tr>
+<td>instr_funct7_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>funct7 bit 6</td>
+</tr>
+<tr>
+<td>instr_funct12_lsb_c</td>
+<td>natural</td>
+<td>20</td>
+<td>funct12 bit 0</td>
+</tr>
+<tr>
+<td>instr_funct12_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>funct12 bit 11</td>
+</tr>
+<tr>
+<td>instr_imm12_lsb_c</td>
+<td>natural</td>
+<td>20</td>
+<td>immediate12 bit 0</td>
+</tr>
+<tr>
+<td>instr_imm12_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>immediate12 bit 11</td>
+</tr>
+<tr>
+<td>instr_imm20_lsb_c</td>
+<td>natural</td>
+<td>12</td>
+<td>immediate20 bit 0</td>
+</tr>
+<tr>
+<td>instr_imm20_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>immediate20 bit 21</td>
+</tr>
+<tr>
+<td>instr_csr_id_lsb_c</td>
+<td>natural</td>
+<td>20</td>
+<td>csr select bit 0</td>
+</tr>
+<tr>
+<td>instr_csr_id_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>csr select bit 11</td>
+</tr>
+<tr>
+<td>instr_funct5_lsb_c</td>
+<td>natural</td>
+<td>27</td>
+<td>funct5 select bit 0</td>
+</tr>
+<tr>
+<td>instr_funct5_msb_c</td>
+<td>natural</td>
+<td>31</td>
+<td>funct5 select bit 4</td>
+</tr>
+<tr>
+<td>opcode_lui_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0110111"</td>
+<td>load upper immediate</td>
+</tr>
+<tr>
+<td>opcode_auipc_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0010111"</td>
+<td>add upper immediate to PC</td>
+</tr>
+<tr>
+<td>opcode_alui_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0010011"</td>
+<td>ALU operation with immediate (operation via funct3 and funct7)</td>
+</tr>
+<tr>
+<td>opcode_alu_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0110011"</td>
+<td>ALU operation (operation via funct3 and funct7)</td>
+</tr>
+<tr>
+<td>opcode_jal_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1101111"</td>
+<td>jump and link</td>
+</tr>
+<tr>
+<td>opcode_jalr_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1100111"</td>
+<td>jump and link with register</td>
+</tr>
+<tr>
+<td>opcode_branch_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1100011"</td>
+<td>branch (condition set via funct3)</td>
+</tr>
+<tr>
+<td>opcode_load_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0000011"</td>
+<td>load (data type via funct3)</td>
+</tr>
+<tr>
+<td>opcode_store_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0100011"</td>
+<td>store (data type via funct3)</td>
+</tr>
+<tr>
+<td>opcode_fence_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0001111"</td>
+<td>fence / fence.i</td>
+</tr>
+<tr>
+<td>opcode_syscsr_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1110011"</td>
+<td>system/csr access (type via funct3)</td>
+</tr>
+<tr>
+<td>opcode_atomic_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0101111"</td>
+<td>atomic operations (A extension)</td>
+</tr>
+<tr>
+<td>opcode_fop_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1010011"</td>
+<td>dual/single opearand instruction</td>
+</tr>
+<tr>
+<td>funct3_beq_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>branch if equal</td>
+</tr>
+<tr>
+<td>funct3_bne_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>branch if not equal</td>
+</tr>
+<tr>
+<td>funct3_blt_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"100"</td>
+<td>branch if less than</td>
+</tr>
+<tr>
+<td>funct3_bge_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"101"</td>
+<td>branch if greater than or equal</td>
+</tr>
+<tr>
+<td>funct3_bltu_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"110"</td>
+<td>branch if less than (unsigned)</td>
+</tr>
+<tr>
+<td>funct3_bgeu_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"111"</td>
+<td>branch if greater than or equal (unsigned)</td>
+</tr>
+<tr>
+<td>funct3_lb_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>load byte</td>
+</tr>
+<tr>
+<td>funct3_lh_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>load half word</td>
+</tr>
+<tr>
+<td>funct3_lw_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"010"</td>
+<td>load word</td>
+</tr>
+<tr>
+<td>funct3_lbu_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"100"</td>
+<td>load byte (unsigned)</td>
+</tr>
+<tr>
+<td>funct3_lhu_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"101"</td>
+<td>load half word (unsigned)</td>
+</tr>
+<tr>
+<td>funct3_sb_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>store byte</td>
+</tr>
+<tr>
+<td>funct3_sh_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>store half word</td>
+</tr>
+<tr>
+<td>funct3_sw_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"010"</td>
+<td>store word</td>
+</tr>
+<tr>
+<td>funct3_subadd_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>sub/add via funct7</td>
+</tr>
+<tr>
+<td>funct3_sll_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>shift logical left</td>
+</tr>
+<tr>
+<td>funct3_slt_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"010"</td>
+<td>set on less</td>
+</tr>
+<tr>
+<td>funct3_sltu_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"011"</td>
+<td>set on less unsigned</td>
+</tr>
+<tr>
+<td>funct3_xor_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"100"</td>
+<td>xor</td>
+</tr>
+<tr>
+<td>funct3_sr_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"101"</td>
+<td>shift right via funct7</td>
+</tr>
+<tr>
+<td>funct3_or_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"110"</td>
+<td>or</td>
+</tr>
+<tr>
+<td>funct3_and_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"111"</td>
+<td>and</td>
+</tr>
+<tr>
+<td>funct3_env_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>ecall, ebreak, mret, wfi, …</td>
+</tr>
+<tr>
+<td>funct3_csrrw_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>atomic r/w</td>
+</tr>
+<tr>
+<td>funct3_csrrs_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"010"</td>
+<td>atomic read &amp; set bit</td>
+</tr>
+<tr>
+<td>funct3_csrrc_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"011"</td>
+<td>atomic read &amp; clear bit</td>
+</tr>
+<tr>
+<td>funct3_csrrwi_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"101"</td>
+<td>atomic r/w immediate</td>
+</tr>
+<tr>
+<td>funct3_csrrsi_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"110"</td>
+<td>atomic read &amp; set bit immediate</td>
+</tr>
+<tr>
+<td>funct3_csrrci_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"111"</td>
+<td>atomic read &amp; clear bit immediate</td>
+</tr>
+<tr>
+<td>funct3_fence_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"000"</td>
+<td>fence - order IO/memory access (-&gt;NOP)</td>
+</tr>
+<tr>
+<td>funct3_fencei_c</td>
+<td>std_ulogic_vector(2 downto 0)</td>
+<td>"001"</td>
+<td>fencei - instructon stream sync</td>
+</tr>
+<tr>
+<td>funct12_ecall_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"000"</td>
+<td>ECALL</td>
+</tr>
+<tr>
+<td>funct12_ebreak_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"001"</td>
+<td>EBREAK</td>
+</tr>
+<tr>
+<td>funct12_mret_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"302"</td>
+<td>MRET</td>
+</tr>
+<tr>
+<td>funct12_wfi_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"105"</td>
+<td>WFI</td>
+</tr>
+<tr>
+<td>funct12_dret_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"7b2"</td>
+<td>DRET</td>
+</tr>
+<tr>
+<td>funct5_a_lr_c</td>
+<td>std_ulogic_vector(4 downto 0)</td>
+<td>"00010"</td>
+<td>LR</td>
+</tr>
+<tr>
+<td>funct5_a_sc_c</td>
+<td>std_ulogic_vector(4 downto 0)</td>
+<td>"00011"</td>
+<td>SC</td>
+</tr>
+<tr>
+<td>float_single_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"00"</td>
+<td>single-precision (32-bit)</td>
+</tr>
+<tr>
+<td>float_double_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"01"</td>
+<td>double-precision (64-bit)</td>
+</tr>
+<tr>
+<td>float_half_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"10"</td>
+<td>half-precision (16-bit)</td>
+</tr>
+<tr>
+<td>float_quad_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"11"</td>
+<td>quad-precision (128-bit)</td>
+</tr>
+<tr>
+<td>fp_class_neg_inf_c</td>
+<td>natural</td>
+<td>0</td>
+<td>negative infinity</td>
+</tr>
+<tr>
+<td>fp_class_neg_norm_c</td>
+<td>natural</td>
+<td>1</td>
+<td>negative normal number</td>
+</tr>
+<tr>
+<td>fp_class_neg_denorm_c</td>
+<td>natural</td>
+<td>2</td>
+<td>negative subnormal number</td>
+</tr>
+<tr>
+<td>fp_class_neg_zero_c</td>
+<td>natural</td>
+<td>3</td>
+<td>negative zero</td>
+</tr>
+<tr>
+<td>fp_class_pos_zero_c</td>
+<td>natural</td>
+<td>4</td>
+<td>positive zero</td>
+</tr>
+<tr>
+<td>fp_class_pos_denorm_c</td>
+<td>natural</td>
+<td>5</td>
+<td>positive subnormal number</td>
+</tr>
+<tr>
+<td>fp_class_pos_norm_c</td>
+<td>natural</td>
+<td>6</td>
+<td>positive normal number</td>
+</tr>
+<tr>
+<td>fp_class_pos_inf_c</td>
+<td>natural</td>
+<td>7</td>
+<td>positive infinity</td>
+</tr>
+<tr>
+<td>fp_class_snan_c</td>
+<td>natural</td>
+<td>8</td>
+<td>signaling NaN (sNaN)</td>
+</tr>
+<tr>
+<td>fp_class_qnan_c</td>
+<td>natural</td>
+<td>9</td>
+<td>quiet NaN (qNaN)</td>
+</tr>
+<tr>
+<td>fp_exc_nv_c</td>
+<td>natural</td>
+<td>0</td>
+<td>invalid operation</td>
+</tr>
+<tr>
+<td>fp_exc_dz_c</td>
+<td>natural</td>
+<td>1</td>
+<td>divide by zero</td>
+</tr>
+<tr>
+<td>fp_exc_of_c</td>
+<td>natural</td>
+<td>2</td>
+<td>overflow</td>
+</tr>
+<tr>
+<td>fp_exc_uf_c</td>
+<td>natural</td>
+<td>3</td>
+<td>underflow</td>
+</tr>
+<tr>
+<td>fp_exc_nx_c</td>
+<td>natural</td>
+<td>4</td>
+<td>inexact</td>
+</tr>
+<tr>
+<td>fp_single_qnan_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"7fc00000"</td>
+<td>quiet NaN</td>
+</tr>
+<tr>
+<td>fp_single_snan_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"7fa00000"</td>
+<td>signaling NaN</td>
+</tr>
+<tr>
+<td>fp_single_pos_inf_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"7f800000"</td>
+<td>positive infinity</td>
+</tr>
+<tr>
+<td>fp_single_neg_inf_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"ff800000"</td>
+<td>negative infinity</td>
+</tr>
+<tr>
+<td>fp_single_pos_zero_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"00000000"</td>
+<td>positive zero</td>
+</tr>
+<tr>
+<td>fp_single_neg_zero_c</td>
+<td>std_ulogic_vector(31 downto 0)</td>
+<td>x"80000000"</td>
+<td>negative zero</td>
+</tr>
+<tr>
+<td>csr_class_float_c</td>
+<td>std_ulogic_vector(07 downto 0)</td>
+<td>x"00"</td>
+<td>floating point</td>
+</tr>
+<tr>
+<td>csr_fflags_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"001"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_frm_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"002"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_fcsr_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"003"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_class_setup_c</td>
+<td>std_ulogic_vector(07 downto 0)</td>
+<td>x"30"</td>
+<td>trap setup</td>
+</tr>
+<tr>
+<td>csr_mstatus_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"300"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_misa_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"301"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mie_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"304"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mtvec_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"305"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mcounteren_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"306"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_cnt_setup_c</td>
+<td>std_ulogic_vector(06 downto 0)</td>
+<td>x"3" &amp; "001"</td>
+<td>counter setup</td>
+</tr>
+<tr>
+<td>csr_mcountinhibit_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"320"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent3_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"323"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent4_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"324"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent5_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"325"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent6_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"326"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent7_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"327"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent8_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"328"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent9_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"329"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent10_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent11_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent12_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent13_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent14_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent15_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"32f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent16_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"330"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent17_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"331"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent18_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"332"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent19_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"333"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent20_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"334"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent21_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"335"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent22_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"336"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent23_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"337"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent24_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"338"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent25_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"339"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent26_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent27_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent28_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent29_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent30_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmevent31_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"33f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_class_trap_c</td>
+<td>std_ulogic_vector(07 downto 0)</td>
+<td>x"34"</td>
+<td>machine trap handling</td>
+</tr>
+<tr>
+<td>csr_mscratch_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"340"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mepc_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"341"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mcause_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"342"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mtval_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"343"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mip_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"344"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_class_pmpcfg_c</td>
+<td>std_ulogic_vector(07 downto 0)</td>
+<td>x"3a"</td>
+<td>pmp configuration</td>
+</tr>
+<tr>
+<td>csr_pmpcfg0_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a0"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg1_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg2_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg3_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a3"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg4_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a4"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg5_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a5"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg6_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a6"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg7_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a7"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg8_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a8"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg9_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3a9"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg10_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3aa"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg11_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ab"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg12_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ac"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg13_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ad"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg14_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ae"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpcfg15_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3af"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr0_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b0"</td>
+<td>physical memory protection - address --</td>
+</tr>
+<tr>
+<td>csr_pmpaddr1_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr2_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr3_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b3"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr4_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b4"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr5_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b5"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr6_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b6"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr7_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b7"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr8_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b8"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr9_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3b9"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr10_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ba"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr11_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3bb"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr12_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3bc"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr13_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3bd"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr14_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3be"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr15_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3bf"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr16_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c0"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr17_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr18_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr19_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c3"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr20_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c4"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr21_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c5"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr22_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c6"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr23_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c7"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr24_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c8"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr25_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3c9"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr26_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ca"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr27_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3cb"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr28_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3cc"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr29_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3cd"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr30_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ce"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr31_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3cf"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr32_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d0"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr33_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr34_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr35_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d3"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr36_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d4"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr37_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d5"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr38_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d6"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr39_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d7"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr40_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d8"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr41_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3d9"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr42_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3da"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr43_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3db"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr44_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3dc"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr45_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3dd"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr46_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3de"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr47_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3df"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr48_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e0"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr49_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr50_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr51_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e3"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr52_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e4"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr53_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e5"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr54_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e6"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr55_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e7"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr56_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e8"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr57_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3e9"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr58_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ea"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr59_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3eb"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr60_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ec"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr61_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ed"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr62_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ee"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_pmpaddr63_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"3ef"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_class_debug_c</td>
+<td>std_ulogic_vector(09 downto 0)</td>
+<td>x"7b" &amp; "00"</td>
+<td>debug registers</td>
+</tr>
+<tr>
+<td>csr_dcsr_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"7b0"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_dpc_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"7b1"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_dscratch0_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"7b2"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mcycle_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b00"</td>
+<td>machine counters/timers --</td>
+</tr>
+<tr>
+<td>csr_minstret_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b02"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter3_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b03"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter4_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b04"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter5_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b05"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter6_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b06"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter7_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b07"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter8_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b08"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter9_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b09"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter10_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter11_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter12_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter13_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter14_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter15_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b0f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter16_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b10"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter17_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b11"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter18_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b12"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter19_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b13"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter20_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b14"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter21_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b15"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter22_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b16"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter23_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b17"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter24_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b18"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter25_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b19"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter26_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter27_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter28_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter29_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter30_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter31_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b1f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mcycleh_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b80"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_minstreth_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b82"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter3h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b83"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter4h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b84"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter5h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b85"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter6h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b86"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter7h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b87"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter8h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b88"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter9h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b89"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter10h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter11h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter12h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter13h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter14h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter15h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b8f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter16h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b90"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter17h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b91"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter18h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b92"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter19h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b93"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter20h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b94"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter21h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b95"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter22h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b96"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter23h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b97"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter24h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b98"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter25h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b99"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter26h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9a"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter27h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9b"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter28h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9c"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter29h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9d"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter30h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9e"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhpmcounter31h_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"b9f"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_cycle_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c00"</td>
+<td><<< standard read-only CSRs >&gt;&gt; --user counters/timers --</td>
+</tr>
+<tr>
+<td>csr_time_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c01"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_instret_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c02"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_cycleh_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c80"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_timeh_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c81"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_instreth_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"c82"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mvendorid_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"f11"</td>
+<td>machine information registers --</td>
+</tr>
+<tr>
+<td>csr_marchid_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"f12"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mimpid_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"f13"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mhartid_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"f14"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mzext_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"fc0"</td>
+<td><<< custom (NEORV32-specific) read-only CSRs >&gt;&gt; --</td>
+</tr>
+<tr>
+<td>cp_sel_shifter_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"00"</td>
+<td>shift operation</td>
+</tr>
+<tr>
+<td>cp_sel_muldiv_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"01"</td>
+<td>multiplication/division operations ('M' extension)</td>
+</tr>
+<tr>
+<td>cp_sel_fpu_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"11"</td>
+<td>floating-point unit ('Zfinx' extension)</td>
+</tr>
+<tr>
+<td>alu_arith_cmd_addsub_c</td>
+<td>std_ulogic</td>
+<td>'0'</td>
+<td>r.arith &lt;= A +/- B</td>
+</tr>
+<tr>
+<td>alu_arith_cmd_slt_c</td>
+<td>std_ulogic</td>
+<td>'1'</td>
+<td>r.arith &lt;= A &lt; B</td>
+</tr>
+<tr>
+<td>alu_logic_cmd_movb_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"00"</td>
+<td>r.logic &lt;= B</td>
+</tr>
+<tr>
+<td>alu_logic_cmd_xor_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"01"</td>
+<td>r.logic &lt;= A xor B</td>
+</tr>
+<tr>
+<td>alu_logic_cmd_or_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"10"</td>
+<td>r.logic &lt;= A or B</td>
+</tr>
+<tr>
+<td>alu_logic_cmd_and_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"11"</td>
+<td>r.logic &lt;= A and B</td>
+</tr>
+<tr>
+<td>alu_func_cmd_arith_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"00"</td>
+<td>r &lt;= r.arith</td>
+</tr>
+<tr>
+<td>alu_func_cmd_logic_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"01"</td>
+<td>r &lt;= r.logic</td>
+</tr>
+<tr>
+<td>alu_func_cmd_csrr_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"10"</td>
+<td>r &lt;= CSR read</td>
+</tr>
+<tr>
+<td>alu_func_cmd_copro_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"11"</td>
+<td>r &lt;= CP result (multi-cycle)</td>
+</tr>
+<tr>
+<td>trap_ima_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00000"</td>
+<td>0.0:  instruction misaligned</td>
+</tr>
+<tr>
+<td>trap_iba_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00001"</td>
+<td>0.1:  instruction access fault</td>
+</tr>
+<tr>
+<td>trap_iil_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00010"</td>
+<td>0.2:  illegal instruction</td>
+</tr>
+<tr>
+<td>trap_brk_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00011"</td>
+<td>0.3:  breakpoint</td>
+</tr>
+<tr>
+<td>trap_lma_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00100"</td>
+<td>0.4:  load address misaligned</td>
+</tr>
+<tr>
+<td>trap_lbe_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00101"</td>
+<td>0.5:  load access fault</td>
+</tr>
+<tr>
+<td>trap_sma_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00110"</td>
+<td>0.6:  store address misaligned</td>
+</tr>
+<tr>
+<td>trap_sbe_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "00111"</td>
+<td>0.7:  store access fault</td>
+</tr>
+<tr>
+<td>trap_uenv_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "01000"</td>
+<td>0.8:  environment call from u-mode</td>
+</tr>
+<tr>
+<td>trap_menv_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "0" &amp; "01011"</td>
+<td>0.11: environment call from m-mode</td>
+</tr>
+<tr>
+<td>trap_nmi_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "00000"</td>
+<td>1.0:  non-maskable interrupt</td>
+</tr>
+<tr>
+<td>trap_msi_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "00011"</td>
+<td>1.3:  machine software interrupt</td>
+</tr>
+<tr>
+<td>trap_mti_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "00111"</td>
+<td>1.7:  machine timer interrupt</td>
+</tr>
+<tr>
+<td>trap_mei_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "01011"</td>
+<td>1.11: machine external interrupt</td>
+</tr>
+<tr>
+<td>trap_firq0_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10000"</td>
+<td>1.16: fast interrupt 0</td>
+</tr>
+<tr>
+<td>trap_firq1_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10001"</td>
+<td>1.17: fast interrupt 1</td>
+</tr>
+<tr>
+<td>trap_firq2_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10010"</td>
+<td>1.18: fast interrupt 2</td>
+</tr>
+<tr>
+<td>trap_firq3_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10011"</td>
+<td>1.19: fast interrupt 3</td>
+</tr>
+<tr>
+<td>trap_firq4_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10100"</td>
+<td>1.20: fast interrupt 4</td>
+</tr>
+<tr>
+<td>trap_firq5_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10101"</td>
+<td>1.21: fast interrupt 5</td>
+</tr>
+<tr>
+<td>trap_firq6_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10110"</td>
+<td>1.22: fast interrupt 6</td>
+</tr>
+<tr>
+<td>trap_firq7_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "10111"</td>
+<td>1.23: fast interrupt 7</td>
+</tr>
+<tr>
+<td>trap_firq8_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11000"</td>
+<td>1.24: fast interrupt 8</td>
+</tr>
+<tr>
+<td>trap_firq9_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11001"</td>
+<td>1.25: fast interrupt 9</td>
+</tr>
+<tr>
+<td>trap_firq10_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11010"</td>
+<td>1.26: fast interrupt 10</td>
+</tr>
+<tr>
+<td>trap_firq11_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11011"</td>
+<td>1.27: fast interrupt 11</td>
+</tr>
+<tr>
+<td>trap_firq12_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11100"</td>
+<td>1.28: fast interrupt 12</td>
+</tr>
+<tr>
+<td>trap_firq13_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11101"</td>
+<td>1.29: fast interrupt 13</td>
+</tr>
+<tr>
+<td>trap_firq14_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11110"</td>
+<td>1.30: fast interrupt 14</td>
+</tr>
+<tr>
+<td>trap_firq15_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "0" &amp; "11111"</td>
+<td>1.31: fast interrupt 15</td>
+</tr>
+<tr>
+<td>trap_db_break_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"0" &amp; "1" &amp; "00010"</td>
+<td>break instruction (sync / EXCEPTION)</td>
+</tr>
+<tr>
+<td>trap_db_halt_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "1" &amp; "00011"</td>
+<td>external halt request (async / IRQ)</td>
+</tr>
+<tr>
+<td>trap_db_step_c</td>
+<td>std_ulogic_vector(6 downto 0)</td>
+<td>"1" &amp; "1" &amp; "00100"</td>
+<td>single-stepping (async / IRQ)</td>
+</tr>
+<tr>
+<td>exception_iaccess_c</td>
+<td>natural</td>
+<td>0</td>
+<td>instruction access fault</td>
+</tr>
+<tr>
+<td>exception_iillegal_c</td>
+<td>natural</td>
+<td>1</td>
+<td>illegal instruction</td>
+</tr>
+<tr>
+<td>exception_ialign_c</td>
+<td>natural</td>
+<td>2</td>
+<td>instruction address misaligned</td>
+</tr>
+<tr>
+<td>exception_m_envcall_c</td>
+<td>natural</td>
+<td>3</td>
+<td>ENV call from m-mode</td>
+</tr>
+<tr>
+<td>exception_u_envcall_c</td>
+<td>natural</td>
+<td>4</td>
+<td>ENV call from u-mode</td>
+</tr>
+<tr>
+<td>exception_break_c</td>
+<td>natural</td>
+<td>5</td>
+<td>breakpoint</td>
+</tr>
+<tr>
+<td>exception_salign_c</td>
+<td>natural</td>
+<td>6</td>
+<td>store address misaligned</td>
+</tr>
+<tr>
+<td>exception_lalign_c</td>
+<td>natural</td>
+<td>7</td>
+<td>load address misaligned</td>
+</tr>
+<tr>
+<td>exception_saccess_c</td>
+<td>natural</td>
+<td>8</td>
+<td>store access fault</td>
+</tr>
+<tr>
+<td>exception_laccess_c</td>
+<td>natural</td>
+<td>9</td>
+<td>load access fault</td>
+</tr>
+<tr>
+<td>exception_db_break_c</td>
+<td>natural</td>
+<td>10</td>
+<td>enter debug mode via ebreak instruction ("sync EXCEPTION")</td>
+</tr>
+<tr>
+<td>exception_width_c</td>
+<td>natural</td>
+<td>11</td>
+<td>length of this list in bits</td>
+</tr>
+<tr>
+<td>interrupt_nm_irq_c</td>
+<td>natural</td>
+<td>0</td>
+<td>non-maskable interrupt</td>
+</tr>
+<tr>
+<td>interrupt_msw_irq_c</td>
+<td>natural</td>
+<td>1</td>
+<td>machine software interrupt</td>
+</tr>
+<tr>
+<td>interrupt_mtime_irq_c</td>
+<td>natural</td>
+<td>2</td>
+<td>machine timer interrupt</td>
+</tr>
+<tr>
+<td>interrupt_mext_irq_c</td>
+<td>natural</td>
+<td>3</td>
+<td>machine external interrupt</td>
+</tr>
+<tr>
+<td>interrupt_firq_0_c</td>
+<td>natural</td>
+<td>4</td>
+<td>fast interrupt channel 0</td>
+</tr>
+<tr>
+<td>interrupt_firq_1_c</td>
+<td>natural</td>
+<td>5</td>
+<td>fast interrupt channel 1</td>
+</tr>
+<tr>
+<td>interrupt_firq_2_c</td>
+<td>natural</td>
+<td>6</td>
+<td>fast interrupt channel 2</td>
+</tr>
+<tr>
+<td>interrupt_firq_3_c</td>
+<td>natural</td>
+<td>7</td>
+<td>fast interrupt channel 3</td>
+</tr>
+<tr>
+<td>interrupt_firq_4_c</td>
+<td>natural</td>
+<td>8</td>
+<td>fast interrupt channel 4</td>
+</tr>
+<tr>
+<td>interrupt_firq_5_c</td>
+<td>natural</td>
+<td>9</td>
+<td>fast interrupt channel 5</td>
+</tr>
+<tr>
+<td>interrupt_firq_6_c</td>
+<td>natural</td>
+<td>10</td>
+<td>fast interrupt channel 6</td>
+</tr>
+<tr>
+<td>interrupt_firq_7_c</td>
+<td>natural</td>
+<td>11</td>
+<td>fast interrupt channel 7</td>
+</tr>
+<tr>
+<td>interrupt_firq_8_c</td>
+<td>natural</td>
+<td>12</td>
+<td>fast interrupt channel 8</td>
+</tr>
+<tr>
+<td>interrupt_firq_9_c</td>
+<td>natural</td>
+<td>13</td>
+<td>fast interrupt channel 9</td>
+</tr>
+<tr>
+<td>interrupt_firq_10_c</td>
+<td>natural</td>
+<td>14</td>
+<td>fast interrupt channel 10</td>
+</tr>
+<tr>
+<td>interrupt_firq_11_c</td>
+<td>natural</td>
+<td>15</td>
+<td>fast interrupt channel 11</td>
+</tr>
+<tr>
+<td>interrupt_firq_12_c</td>
+<td>natural</td>
+<td>16</td>
+<td>fast interrupt channel 12</td>
+</tr>
+<tr>
+<td>interrupt_firq_13_c</td>
+<td>natural</td>
+<td>17</td>
+<td>fast interrupt channel 13</td>
+</tr>
+<tr>
+<td>interrupt_firq_14_c</td>
+<td>natural</td>
+<td>18</td>
+<td>fast interrupt channel 14</td>
+</tr>
+<tr>
+<td>interrupt_firq_15_c</td>
+<td>natural</td>
+<td>19</td>
+<td>fast interrupt channel 15</td>
+</tr>
+<tr>
+<td>interrupt_db_halt_c</td>
+<td>natural</td>
+<td>20</td>
+<td>enter debug mode via external halt request ("async IRQ")</td>
+</tr>
+<tr>
+<td>interrupt_db_step_c</td>
+<td>natural</td>
+<td>21</td>
+<td>enter debug mode via single-stepping ("async IRQ")</td>
+</tr>
+<tr>
+<td>interrupt_width_c</td>
+<td>natural</td>
+<td>22</td>
+<td>length of this list in bits</td>
+</tr>
+<tr>
+<td>priv_mode_m_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"11"</td>
+<td>machine mode</td>
+</tr>
+<tr>
+<td>priv_mode_u_c</td>
+<td>std_ulogic_vector(1 downto 0)</td>
+<td>"00"</td>
+<td>user mode</td>
+</tr>
+<tr>
+<td>hpmcnt_event_cy_c</td>
+<td>natural</td>
+<td>0</td>
+<td>Active cycle</td>
+</tr>
+<tr>
+<td>hpmcnt_event_never_c</td>
+<td>natural</td>
+<td>1</td>
+<td>Unused / never (actually, this would be used for TIME)</td>
+</tr>
+<tr>
+<td>hpmcnt_event_ir_c</td>
+<td>natural</td>
+<td>2</td>
+<td>Retired instruction</td>
+</tr>
+<tr>
+<td>hpmcnt_event_cir_c</td>
+<td>natural</td>
+<td>3</td>
+<td>Retired compressed instruction</td>
+</tr>
+<tr>
+<td>hpmcnt_event_wait_if_c</td>
+<td>natural</td>
+<td>4</td>
+<td>Instruction fetch memory wait cycle</td>
+</tr>
+<tr>
+<td>hpmcnt_event_wait_ii_c</td>
+<td>natural</td>
+<td>5</td>
+<td>Instruction issue wait cycle</td>
+</tr>
+<tr>
+<td>hpmcnt_event_wait_mc_c</td>
+<td>natural</td>
+<td>6</td>
+<td>Multi-cycle ALU-operation wait cycle</td>
+</tr>
+<tr>
+<td>hpmcnt_event_load_c</td>
+<td>natural</td>
+<td>7</td>
+<td>Load operation</td>
+</tr>
+<tr>
+<td>hpmcnt_event_store_c</td>
+<td>natural</td>
+<td>8</td>
+<td>Store operation</td>
+</tr>
+<tr>
+<td>hpmcnt_event_wait_ls_c</td>
+<td>natural</td>
+<td>9</td>
+<td>Load/store memory wait cycle</td>
+</tr>
+<tr>
+<td>hpmcnt_event_jump_c</td>
+<td>natural</td>
+<td>10</td>
+<td>Unconditional jump</td>
+</tr>
+<tr>
+<td>hpmcnt_event_branch_c</td>
+<td>natural</td>
+<td>11</td>
+<td>Conditional branch (taken or not taken)</td>
+</tr>
+<tr>
+<td>hpmcnt_event_tbranch_c</td>
+<td>natural</td>
+<td>12</td>
+<td>Conditional taken branch</td>
+</tr>
+<tr>
+<td>hpmcnt_event_trap_c</td>
+<td>natural</td>
+<td>13</td>
+<td>Entered trap</td>
+</tr>
+<tr>
+<td>hpmcnt_event_illegal_c</td>
+<td>natural</td>
+<td>14</td>
+<td>Illegal instruction exception</td>
+</tr>
+<tr>
+<td>hpmcnt_event_size_c</td>
+<td>natural</td>
+<td>15</td>
+<td>length of this list</td>
+</tr>
+<tr>
+<td>clk_div2_c</td>
+<td>natural</td>
+<td>0</td>
+<td>Clock Generator -------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td>clk_div4_c</td>
+<td>natural</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div8_c</td>
+<td>natural</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div64_c</td>
+<td>natural</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div128_c</td>
+<td>natural</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div1024_c</td>
+<td>natural</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div2048_c</td>
+<td>natural</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_div4096_c</td>
+<td>natural</td>
+<td>7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sdata_8x32_t</td>
+<td></td>
+<td>External Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td>sdata_8x32r_t</td>
+<td></td>
+<td>resolved type</td>
+</tr>
+<tr>
+<td>pmp_ctrl_if_t</td>
+<td></td>
+<td>Internal Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td>pmp_addr_if_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cp_data_if_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mem32_t</td>
+<td>array (natural range &lt;&gt;) of std_ulogic_vector(31 downto 0)</td>
+<td>memory with 32-bit entries</td>
+</tr>
+<tr>
+<td>mem8_t</td>
+<td>array (natural range &lt;&gt;) of std_ulogic_vector(07 downto 0)</td>
+<td>memory with 8-bit entries</td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><ul>
+<li>index_size_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return natural </font></li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</p></div><ul>
+<li>cond_sel_natural_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : natural;<br><span style="padding-left:20px"> val_f : natural) </font> <font id="function_return">return natural </font></li>
+</ul><ul>
+<li>cond_sel_int_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : integer;<br><span style="padding-left:20px"> val_f : integer) </font> <font id="function_return">return integer </font></li>
+</ul><ul>
+<li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : std_ulogic_vector;<br><span style="padding-left:20px"> val_f : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>cond_sel_stdulogic_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : std_ulogic;<br><span style="padding-left:20px"> val_f : std_ulogic) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>cond_sel_string_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : string;<br><span style="padding-left:20px"> val_f : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>bool_to_ulogic_f <font id="function_arguments">(cond : boolean) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>or_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>and_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>xor_reduce_f <font id="function_arguments">(a : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
+</ul><ul>
+<li>to_hexchar_f <font id="function_arguments">(input : std_ulogic_vector(3 downto 0)) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>hexchar_to_stdulogicvector_f <font id="function_arguments">(input : character) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>bit_rev_f <font id="function_arguments">(input : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>is_power_of_two_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return boolean </font></li>
+</ul><ul>
+<li>bswap32_f <font id="function_arguments">(input : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+</ul><ul>
+<li>char_tolower_f <font id="function_arguments">(ch : character) </font> <font id="function_return">return character </font></li>
+</ul><ul>
+<li>str_equal_f <font id="function_arguments">(str0 : string;<br><span style="padding-left:20px"> str1 : string) </font> <font id="function_return">return boolean </font></li>
+</ul>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>
