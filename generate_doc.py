@@ -39,7 +39,7 @@ def execute_teroshdl(name, folder, output_type, vhdl_symbol, verilog_symbol):
     verilog_symbol_cmd = f"--symbol_verilog \"{verilog_symbol}\""
 
     output_path = f"./teroshdl_doc/{name}_doc"
-    cmd = f"teroshdl-hdl-documenter -o {output_type} {vhdl_symbol_cmd} {verilog_symbol_cmd} --recursive --fsm -s {signal_extract} -c {constants_extract} -p {processes_extract} --dep --outpath {output_path} --input {folder}"
+    cmd = f"teroshdl-hdl-documenter --recursive -o {output_type} {vhdl_symbol_cmd} {verilog_symbol_cmd} --recursive --fsm -s {signal_extract} -c {constants_extract} -p {processes_extract} --dep --outpath {output_path} --input {folder}"
     exec_command(cmd)
 
 
