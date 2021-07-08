@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1094,7 +1099,7 @@
 <tr>
 <td>C_NET_MAC_SOURCEFILTER_NONE</td>
 <td>T_NET_MAC_INTERFACE</td>
-<td>(Address =&gt; to_net_mac_address("00:00:00:00:00:01"), Mask =&gt; C_NET_MAC_MASK_EMPTY)</td>
+<td>(Address =&gt; to_net_mac_address("00:00:00:00:00:01"),<br><span style="padding-left:20px"> Mask =&gt; C_NET_MAC_MASK_EMPTY)</td>
 <td></td>
 </tr>
 <tr>
@@ -1166,7 +1171,7 @@
 <tr>
 <td>C_NET_IPV4_TOS_DEFAULT</td>
 <td>T_NET_IPV4_TYPE_OF_SERVICE</td>
-<td>(Precedence =&gt; C_NET_IPV4_TOS_PRECEDENCE_ROUTINE, Delay =&gt; '0', Throughput =&gt; '0', Relibility =&gt; '0')</td>
+<td>(Precedence =&gt; C_NET_IPV4_TOS_PRECEDENCE_ROUTINE,<br><span style="padding-left:20px"> Delay =&gt; '0',<br><span style="padding-left:20px"> Throughput =&gt; '0',<br><span style="padding-left:20px"> Relibility =&gt; '0')</td>
 <td></td>
 </tr>
 <tr>
@@ -1645,17 +1650,17 @@
 <tbody>
 <tr>
 <td>T_NET_ETH_PHY_DATA_INTERFACE</td>
-<td>( NET_ETH_PHY_DATA_INTERFACE_MII, NET_ETH_PHY_DATA_INTERFACE_GMII, NET_ETH_PHY_DATA_INTERFACE_RGMII, NET_ETH_PHY_DATA_INTERFACE_SGMII )</td>
+<td>( NET_ETH_PHY_DATA_INTERFACE_MII,<br><span style="padding-left:20px"> NET_ETH_PHY_DATA_INTERFACE_GMII,<br><span style="padding-left:20px"> NET_ETH_PHY_DATA_INTERFACE_RGMII,<br><span style="padding-left:20px"> NET_ETH_PHY_DATA_INTERFACE_SGMII )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHY_MANAGEMENT_INTERFACE</td>
-<td>( NET_ETH_PHY_MANAGEMENT_INTERFACE_NONE, NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO, NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO_OVER_IIC )</td>
+<td>( NET_ETH_PHY_MANAGEMENT_INTERFACE_NONE,<br><span style="padding-left:20px"> NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO,<br><span style="padding-left:20px"> NET_ETH_PHY_MANAGEMENT_INTERFACE_MDIO_OVER_IIC )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCSCORE</td>
-<td>( NET_ETH_PCSCORE_GENERIC_GMII, NET_ETH_PCSCORE_XILINX_HARDCORE, NET_ETH_PCSCORE_XILINX_PCSCORE )</td>
+<td>( NET_ETH_PCSCORE_GENERIC_GMII,<br><span style="padding-left:20px"> NET_ETH_PCSCORE_XILINX_HARDCORE,<br><span style="padding-left:20px"> NET_ETH_PCSCORE_XILINX_PCSCORE )</td>
 <td></td>
 </tr>
 <tr>
@@ -1665,17 +1670,17 @@
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_COMMAND</td>
-<td>( NET_ETH_PHYC_CMD_NONE, NET_ETH_PHYC_CMD_HARD_RESET, NET_ETH_PHYC_CMD_SOFT_RESET )</td>
+<td>( NET_ETH_PHYC_CMD_NONE,<br><span style="padding-left:20px"> NET_ETH_PHYC_CMD_HARD_RESET,<br><span style="padding-left:20px"> NET_ETH_PHYC_CMD_SOFT_RESET )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_STATUS</td>
-<td>( NET_ETH_PHYC_STATUS_POWER_DOWN, NET_ETH_PHYC_STATUS_RESETING, NET_ETH_PHYC_STATUS_CONNECTING, NET_ETH_PHYC_STATUS_CONNECTED, NET_ETH_PHYC_STATUS_DISCONNECTING, NET_ETH_PHYC_STATUS_DISCONNECTED, NET_ETH_PHYC_STATUS_ERROR )</td>
+<td>( NET_ETH_PHYC_STATUS_POWER_DOWN,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_RESETING,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_CONNECTING,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_CONNECTED,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_DISCONNECTING,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_DISCONNECTED,<br><span style="padding-left:20px"> NET_ETH_PHYC_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_PHYCONTROLLER_ERROR</td>
-<td>( NET_ETH_PHYC_ERROR_NONE, NET_ETH_PHYC_ERROR_NO_CABLE )</td>
+<td>( NET_ETH_PHYC_ERROR_NONE,<br><span style="padding-left:20px"> NET_ETH_PHYC_ERROR_NO_CABLE )</td>
 <td></td>
 </tr>
 <tr>
@@ -1710,32 +1715,32 @@
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_SYNC_STATUS</td>
-<td>( NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL, NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK )</td>
+<td>( NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL,<br><span style="padding-left:20px"> NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK )</td>
 <td>==========================================================================================================================================================Ethernet: physical coding sublayer (PCS)==========================================================================================================================================================1000BASE-X - synchronization</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS</td>
-<td>( NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE, NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG, NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA )</td>
+<td>( NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_CONFIG,<br><span style="padding-left:20px"> NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS_DATA )</td>
 <td>1000BASE-X - autonegotiation</td>
 </tr>
 <tr>
 <td>T_NET_ETH_RS_DATA_INTERFACE</td>
-<td>( NET_ETH_RS_DATA_INTERFACE_MII, NET_ETH_RS_DATA_INTERFACE_GMII, NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER )</td>
+<td>( NET_ETH_RS_DATA_INTERFACE_MII,<br><span style="padding-left:20px"> NET_ETH_RS_DATA_INTERFACE_GMII,<br><span style="padding-left:20px"> NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER )</td>
 <td>==========================================================================================================================================================Ethernet: reconcilation sublayer (RS)==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_COMMAND</td>
-<td>( NET_ETH_CMD_NONE, NET_ETH_CMD_HARD_RESET, NET_ETH_CMD_SOFT_RESET--, )</td>
+<td>( NET_ETH_CMD_NONE,<br><span style="padding-left:20px"> NET_ETH_CMD_HARD_RESET,<br><span style="padding-left:20px"> NET_ETH_CMD_SOFT_RESET--,<br><span style="padding-left:20px"> )</td>
 <td>==========================================================================================================================================================Ethernet: MAC Control-Layer==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_STATUS</td>
-<td>( NET_ETH_STATUS_POWER_DOWN, NET_ETH_STATUS_RESETING, NET_ETH_STATUS_CONNECTING, NET_ETH_STATUS_CONNECTED, NET_ETH_STATUS_DISCONNECTING, NET_ETH_STATUS_DISCONNECTED, NET_ETH_STATUS_ERROR )</td>
+<td>( NET_ETH_STATUS_POWER_DOWN,<br><span style="padding-left:20px"> NET_ETH_STATUS_RESETING,<br><span style="padding-left:20px"> NET_ETH_STATUS_CONNECTING,<br><span style="padding-left:20px"> NET_ETH_STATUS_CONNECTED,<br><span style="padding-left:20px"> NET_ETH_STATUS_DISCONNECTING,<br><span style="padding-left:20px"> NET_ETH_STATUS_DISCONNECTED,<br><span style="padding-left:20px"> NET_ETH_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ETH_ERROR</td>
-<td>( NET_ETH_ERROR_NONE, NET_ETH_ERROR_MAC_ERROR, NET_ETH_ERROR_PHY_ERROR, NET_ETH_ERROR_PCS_ERROR, NET_ETH_ERROR_NO_CABLE )</td>
+<td>( NET_ETH_ERROR_NONE,<br><span style="padding-left:20px"> NET_ETH_ERROR_MAC_ERROR,<br><span style="padding-left:20px"> NET_ETH_ERROR_PHY_ERROR,<br><span style="padding-left:20px"> NET_ETH_ERROR_PCS_ERROR,<br><span style="padding-left:20px"> NET_ETH_ERROR_NO_CABLE )</td>
 <td></td>
 </tr>
 <tr>
@@ -1750,12 +1755,12 @@
 </tr>
 <tr>
 <td>T_NET_MAC_ADDRESS_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_MAC_ADDRESS</td>
 <td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_MAC_ETHERNETTYPE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;)    of T_NET_MAC_ETHERNETTYPE</td>
 <td></td>
 </tr>
 <tr>
@@ -1765,7 +1770,7 @@
 </tr>
 <tr>
 <td>T_NET_MAC_INTERFACE_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_NET_MAC_INTERFACE</td>
 <td></td>
 </tr>
 <tr>
@@ -1775,12 +1780,12 @@
 </tr>
 <tr>
 <td>T_NET_MAC_CONFIGURATION_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;)    of T_NET_MAC_CONFIGURATION</td>
 <td>arrays</td>
 </tr>
 <tr>
 <td>T_ETH_SFC_TYPE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_MAC_SFC_TYPE</td>
 <td>arrays</td>
 </tr>
 <tr>
@@ -1795,17 +1800,17 @@
 </tr>
 <tr>
 <td>T_NET_IPV4_ADDRESS_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV4_ADDRESS</td>
 <td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_IPV4_PROTOCOL_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV4_PROTOCOL</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_IPV4_TYPE_OF_SERVICE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV4_TYPE_OF_SERVICE</td>
 <td></td>
 </tr>
 <tr>
@@ -1820,32 +1825,32 @@
 </tr>
 <tr>
 <td>T_NET_IPV6_ADDRESS_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV6_ADDRESS</td>
 <td>arrays</td>
 </tr>
 <tr>
 <td>T_NET_IPV6_PREFIX_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV6_PREFIX</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_IPV6_NEXT_HEADER_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_IPV6_NEXT_HEADER</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_COMMAND</td>
-<td>( NET_ARP_ARPCACHE_CMD_NONE, NET_ARP_ARPCACHE_CMD_ADD )</td>
+<td>( NET_ARP_ARPCACHE_CMD_NONE,<br><span style="padding-left:20px"> NET_ARP_ARPCACHE_CMD_ADD )</td>
 <td>==========================================================================================================================================================internet layer: Address Resolution Protocol (ARP)==========================================================================================================================================================commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_STATUS</td>
-<td>( NET_ARP_ARPCACHE_STATUS_IDLE, NET_ARP_ARPCACHE_STATUS_UPDATING, NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE )</td>
+<td>( NET_ARP_ARPCACHE_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ARP_ARPCACHE_STATUS_UPDATING,<br><span style="padding-left:20px"> NET_ARP_ARPCACHE_STATUS_UPDATE_COMPLETE )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ARP_IPPOOL_COMMAND</td>
-<td>( NET_ARP_IPPOOL_CMD_NONE, NET_ARP_IPPOOL_CMD_ADD, NET_ARP_IPPOOL_CMD_EDIT, NET_ARP_IPPOOL_CMD_REMOVE )</td>
+<td>( NET_ARP_IPPOOL_CMD_NONE,<br><span style="padding-left:20px"> NET_ARP_IPPOOL_CMD_ADD,<br><span style="padding-left:20px"> NET_ARP_IPPOOL_CMD_EDIT,<br><span style="padding-left:20px"> NET_ARP_IPPOOL_CMD_REMOVE )</td>
 <td></td>
 </tr>
 <tr>
@@ -1855,62 +1860,62 @@
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_NET_ARP_ARPCACHE_LINE</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ARP_TESTER_COMMAND</td>
-<td>( NET_ARP_TESTER_CMD_NONE, NET_ARP_TESTER_CMD_LOOP )</td>
+<td>( NET_ARP_TESTER_CMD_NONE,<br><span style="padding-left:20px"> NET_ARP_TESTER_CMD_LOOP )</td>
 <td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_TESTER_STATUS</td>
-<td>( NET_ARP_TESTER_STATUS_IDLE, NET_ARP_TESTER_STATUS_TESTING, NET_ARP_TESTER_STATUS_TEST_COMPLETE )</td>
+<td>( NET_ARP_TESTER_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ARP_TESTER_STATUS_TESTING,<br><span style="padding-left:20px"> NET_ARP_TESTER_STATUS_TEST_COMPLETE )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_COMMAND</td>
-<td>( NET_ICMPV4_CMD_NONE, NET_ICMPV4_CMD_ECHO_REQUEST )</td>
+<td>( NET_ICMPV4_CMD_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_CMD_ECHO_REQUEST )</td>
 <td>commands</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_COMMAND</td>
-<td>( NET_ICMPV4_TX_CMD_NONE, NET_ICMPV4_TX_CMD_ECHO_REQUEST, NET_ICMPV4_TX_CMD_ECHO_REPLY )</td>
+<td>( NET_ICMPV4_TX_CMD_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_TX_CMD_ECHO_REQUEST,<br><span style="padding-left:20px"> NET_ICMPV4_TX_CMD_ECHO_REPLY )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_COMMAND</td>
-<td>( NET_ICMPV4_RX_CMD_NONE, NET_ICMPV4_RX_CMD_CLEAR )</td>
+<td>( NET_ICMPV4_RX_CMD_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_RX_CMD_CLEAR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_STATUS</td>
-<td>( NET_ICMPV4_STATUS_IDLE, NET_ICMPV4_STATUS_SENDING, NET_ICMPV4_STATUS_SEND_COMPLETE, NET_ICMPV4_STATUS_ERROR )</td>
+<td>( NET_ICMPV4_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ICMPV4_STATUS_SENDING,<br><span style="padding-left:20px"> NET_ICMPV4_STATUS_SEND_COMPLETE,<br><span style="padding-left:20px"> NET_ICMPV4_STATUS_ERROR )</td>
 <td>status</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_STATUS</td>
-<td>( NET_ICMPV4_TX_STATUS_IDLE, NET_ICMPV4_TX_STATUS_SENDING, NET_ICMPV4_TX_STATUS_SEND_COMPLETE, NET_ICMPV4_TX_STATUS_ERROR )</td>
+<td>( NET_ICMPV4_TX_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ICMPV4_TX_STATUS_SENDING,<br><span style="padding-left:20px"> NET_ICMPV4_TX_STATUS_SEND_COMPLETE,<br><span style="padding-left:20px"> NET_ICMPV4_TX_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_STATUS</td>
-<td>( NET_ICMPV4_RX_STATUS_IDLE, NET_ICMPV4_RX_STATUS_RECEIVING, NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REQUEST, NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REPLY, NET_ICMPV4_RX_STATUS_ERROR )</td>
+<td>( NET_ICMPV4_RX_STATUS_IDLE,<br><span style="padding-left:20px"> NET_ICMPV4_RX_STATUS_RECEIVING,<br><span style="padding-left:20px"> NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REQUEST,<br><span style="padding-left:20px"> NET_ICMPV4_RX_STATUS_RECEIVED_ECHO_REPLY,<br><span style="padding-left:20px"> NET_ICMPV4_RX_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_ERROR</td>
-<td>( NET_ICMPV4_ERROR_NONE, NET_ICMPV4_ERROR_TIMEOUT, NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE, NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED, NET_ICMPV4_ERROR_FSM )</td>
+<td>( NET_ICMPV4_ERROR_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_ERROR_TIMEOUT,<br><span style="padding-left:20px"> NET_ICMPV4_ERROR_RECEIVED_CORRUPT_MESSAGE,<br><span style="padding-left:20px"> NET_ICMPV4_ERROR_MESSAGE_NOT_SUPPORTED,<br><span style="padding-left:20px"> NET_ICMPV4_ERROR_FSM )</td>
 <td>errors</td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_TX_ERROR</td>
-<td>( NET_ICMPV4_TX_ERROR_NONE, NET_ICMPV4_TX_ERROR_FSM )</td>
+<td>( NET_ICMPV4_TX_ERROR_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_TX_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_ICMPV4_RX_ERROR</td>
-<td>( NET_ICMPV4_RX_ERROR_NONE, NET_ICMPV4_RX_ERROR_UNKNOWN_CODE, NET_ICMPV4_RX_ERROR_UNKNOWN_TYPE, NET_ICMPV4_RX_ERROR_CHECKSUM_ERROR, NET_ICMPV4_RX_ERROR_FSM )</td>
+<td>( NET_ICMPV4_RX_ERROR_NONE,<br><span style="padding-left:20px"> NET_ICMPV4_RX_ERROR_UNKNOWN_CODE,<br><span style="padding-left:20px"> NET_ICMPV4_RX_ERROR_UNKNOWN_TYPE,<br><span style="padding-left:20px"> NET_ICMPV4_RX_ERROR_CHECKSUM_ERROR,<br><span style="padding-left:20px"> NET_ICMPV4_RX_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
@@ -1925,17 +1930,17 @@
 </tr>
 <tr>
 <td>T_NET_NDP_DESTINATIONCACHE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;)    of T_NET_NDP_DESTINATIONCACHE_LINE</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_NDP_NEIGHBORCACHE_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;)    of T_NET_NDP_NEIGHBORCACHE_LINE</td>
 <td></td>
 </tr>
 <tr>
 <td>T_NET_NDP_REACHABILITY_STATE</td>
-<td>( NET_NDP_REACHABILITY_STATE_UNKNOWN, NET_NDP_REACHABILITY_STATE_INCOMPLETE, NET_NDP_REACHABILITY_STATE_REACHABLE, NET_NDP_REACHABILITY_STATE_STALE, NET_NDP_REACHABILITY_STATE_DELAY, NET_NDP_REACHABILITY_STATE_PROBE )</td>
+<td>( NET_NDP_REACHABILITY_STATE_UNKNOWN,<br><span style="padding-left:20px"> NET_NDP_REACHABILITY_STATE_INCOMPLETE,<br><span style="padding-left:20px"> NET_NDP_REACHABILITY_STATE_REACHABLE,<br><span style="padding-left:20px"> NET_NDP_REACHABILITY_STATE_STALE,<br><span style="padding-left:20px"> NET_NDP_REACHABILITY_STATE_DELAY,<br><span style="padding-left:20px"> NET_NDP_REACHABILITY_STATE_PROBE )</td>
 <td></td>
 </tr>
 <tr>
@@ -1945,7 +1950,7 @@
 </tr>
 <tr>
 <td>T_NET_UDP_PORTPAIR_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_NET_UDP_PORTPAIR</td>
 <td></td>
 </tr>
 </tbody>

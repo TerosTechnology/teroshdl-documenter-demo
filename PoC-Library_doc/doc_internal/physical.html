@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1060,22 +1065,22 @@
 </tr>
 <tr>
 <td>T_TIMEVEC</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of time</td>
 <td>vector data types</td>
 </tr>
 <tr>
 <td>T_FREQVEC</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of FREQ</td>
 <td></td>
 </tr>
 <tr>
 <td>T_BAUDVEC</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of BAUD</td>
 <td></td>
 </tr>
 <tr>
 <td>T_MEMVEC</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of MEMORY</td>
 <td></td>
 </tr>
 </tbody>
@@ -1089,42 +1094,42 @@ conversion functions</p></div><ul>
 </ul><ul>
 <li>to_baud <font id="function_arguments">(str : string) </font> <font id="function_return">return BAUD </font></li>
 </ul><ul>
-<li>div <font id="function_arguments">(a : time; b : time) </font> <font id="function_return">return real </font></li>
+<li>div <font id="function_arguments">(a : time;<br><span style="padding-left:20px"> b : time) </font> <font id="function_return">return real </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 inter-type arithmetic</p></div><ul>
-<li>div <font id="function_arguments">(a : FREQ; b : FREQ) </font> <font id="function_return">return real </font></li>
+<li>div <font id="function_arguments">(a : FREQ;<br><span style="padding-left:20px"> b : FREQ) </font> <font id="function_return">return real </font></li>
 </ul><ul>
-<li>ite <font id="function_arguments">(cond : boolean; value1 : time;    value2 : time) </font> <font id="function_return">return time </font></li>
+<li>ite <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> value1 : time;<br><span style="padding-left:20px">    value2 : time) </font> <font id="function_return">return time </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 if-then-else</p></div><ul>
-<li>ite <font id="function_arguments">(cond : boolean; value1 : FREQ;    value2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
+<li>ite <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> value1 : FREQ;<br><span style="padding-left:20px">    value2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
 </ul><ul>
-<li>ite <font id="function_arguments">(cond : boolean; value1 : BAUD;    value2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
+<li>ite <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> value1 : BAUD;<br><span style="padding-left:20px">    value2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
 </ul><ul>
-<li>ite <font id="function_arguments">(cond : boolean; value1 : MEMORY;    value2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
+<li>ite <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> value1 : MEMORY;<br><span style="padding-left:20px">    value2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
 </ul><ul>
-<li>tmin <font id="function_arguments">(arg1 : time; arg2 : time) </font> <font id="function_return">return time </font></li>
+<li>tmin <font id="function_arguments">(arg1 : time;<br><span style="padding-left:20px"> arg2 : time) </font> <font id="function_return">return time </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: min(arg1, arg2) for times</p></div><ul>
-<li>fmin <font id="function_arguments">(arg1 : FREQ; arg2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
+<li>fmin <font id="function_arguments">(arg1 : FREQ;<br><span style="padding-left:20px"> arg2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: min(arg1, arg2) for frequencies</p></div><ul>
-<li>bmin <font id="function_arguments">(arg1 : BAUD; arg2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
+<li>bmin <font id="function_arguments">(arg1 : BAUD;<br><span style="padding-left:20px"> arg2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: min(arg1, arg2) for symbols per second</p></div><ul>
-<li>mmin <font id="function_arguments">(arg1 : MEMORY; arg2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
+<li>mmin <font id="function_arguments">(arg1 : MEMORY;<br><span style="padding-left:20px"> arg2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: min(arg1, arg2) for memory</p></div><ul>
-<li>tmax <font id="function_arguments">(arg1 : time; arg2 : time) </font> <font id="function_return">return time </font></li>
+<li>tmax <font id="function_arguments">(arg1 : time;<br><span style="padding-left:20px"> arg2 : time) </font> <font id="function_return">return time </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: max(arg1, arg2) for times</p></div><ul>
-<li>fmax <font id="function_arguments">(arg1 : FREQ; arg2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
+<li>fmax <font id="function_arguments">(arg1 : FREQ;<br><span style="padding-left:20px"> arg2 : FREQ) </font> <font id="function_return">return FREQ </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: max(arg1, arg2) for frequencies</p></div><ul>
-<li>bmax <font id="function_arguments">(arg1 : BAUD; arg2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
+<li>bmax <font id="function_arguments">(arg1 : BAUD;<br><span style="padding-left:20px"> arg2 : BAUD) </font> <font id="function_return">return BAUD </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: max(arg1, arg2) for symbols per second</p></div><ul>
-<li>mmax <font id="function_arguments">(arg1 : MEMORY; arg2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
+<li>mmax <font id="function_arguments">(arg1 : MEMORY;<br><span style="padding-left:20px"> arg2 : MEMORY) </font> <font id="function_return">return MEMORY </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Calculates: max(arg1, arg2) for memory</p></div><ul>
 <li>tmin <font id="function_arguments">(vec : T_TIMEVEC) </font> <font id="function_return">return time </font></li>
@@ -1222,41 +1227,41 @@ convert standard types (NATURAL, REAL) to frequency (FREQ)</p></div><ul>
 </ul><ul>
 <li>GHz2Freq <font id="function_arguments">(f_GHz : REAL) </font> <font id="function_return">return FREQ </font></li>
 </ul><ul>
-<li>to_real <font id="function_arguments">(t : time;            scale : time) </font> <font id="function_return">return REAL </font></li>
+<li>to_real <font id="function_arguments">(t : time;<br><span style="padding-left:20px">            scale : time) </font> <font id="function_return">return REAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 convert physical types to standard type (REAL)</p></div><ul>
-<li>to_real <font id="function_arguments">(f : FREQ;            scale : FREQ) </font> <font id="function_return">return REAL </font></li>
+<li>to_real <font id="function_arguments">(f : FREQ;<br><span style="padding-left:20px">            scale : FREQ) </font> <font id="function_return">return REAL </font></li>
 </ul><ul>
-<li>to_real <font id="function_arguments">(br : BAUD;            scale : BAUD) </font> <font id="function_return">return REAL </font></li>
+<li>to_real <font id="function_arguments">(br : BAUD;<br><span style="padding-left:20px">            scale : BAUD) </font> <font id="function_return">return REAL </font></li>
 </ul><ul>
-<li>to_real <font id="function_arguments">(mem : MEMORY;    scale : MEMORY) </font> <font id="function_return">return REAL </font></li>
+<li>to_real <font id="function_arguments">(mem : MEMORY;<br><span style="padding-left:20px">    scale : MEMORY) </font> <font id="function_return">return REAL </font></li>
 </ul><ul>
-<li>to_int <font id="function_arguments">(t : time;            scale : time;       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
+<li>to_int <font id="function_arguments">(t : time;<br><span style="padding-left:20px">            scale : time;<br><span style="padding-left:20px">       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 convert physical types to standard type (INTEGER)</p></div><ul>
-<li>to_int <font id="function_arguments">(f : FREQ;            scale : FREQ;       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
+<li>to_int <font id="function_arguments">(f : FREQ;<br><span style="padding-left:20px">            scale : FREQ;<br><span style="padding-left:20px">       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
 </ul><ul>
-<li>to_int <font id="function_arguments">(br : BAUD;        scale : BAUD;       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
+<li>to_int <font id="function_arguments">(br : BAUD;<br><span style="padding-left:20px">        scale : BAUD;<br><span style="padding-left:20px">       RoundingStyle : T_ROUNDING_STYLE := ROUND_TO_NEAREST) </font> <font id="function_return">return integer </font></li>
 </ul><ul>
-<li>to_int <font id="function_arguments">(mem : MEMORY;    scale : MEMORY; RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return integer </font></li>
+<li>to_int <font id="function_arguments">(mem : MEMORY;<br><span style="padding-left:20px">    scale : MEMORY;<br><span style="padding-left:20px"> RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return integer </font></li>
 </ul><ul>
-<li>TimingToCycles <font id="function_arguments">(Timing : time; Clock_Period            : time; RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return natural </font></li>
+<li>TimingToCycles <font id="function_arguments">(Timing : time;<br><span style="padding-left:20px"> Clock_Period            : time;<br><span style="padding-left:20px"> RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return natural </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 calculate needed counter cycles to achieve a given 1. timing/delay and 2. frequency/period</p></div><ul>
-<li>TimingToCycles <font id="function_arguments">(Timing : time; Clock_Frequency    : FREQ; RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return natural </font></li>
+<li>TimingToCycles <font id="function_arguments">(Timing : time;<br><span style="padding-left:20px"> Clock_Frequency    : FREQ;<br><span style="padding-left:20px"> RoundingStyle : T_ROUNDING_STYLE := ROUND_UP) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>CyclesToDelay <font id="function_arguments">(Cycles : natural; Clock_Period            : time) </font> <font id="function_return">return time </font></li>
+<li>CyclesToDelay <font id="function_arguments">(Cycles : natural;<br><span style="padding-left:20px"> Clock_Period            : time) </font> <font id="function_return">return time </font></li>
 </ul><ul>
-<li>CyclesToDelay <font id="function_arguments">(Cycles : natural; Clock_Frequency    : FREQ) </font> <font id="function_return">return time </font></li>
+<li>CyclesToDelay <font id="function_arguments">(Cycles : natural;<br><span style="padding-left:20px"> Clock_Frequency    : FREQ) </font> <font id="function_return">return time </font></li>
 </ul><ul>
-<li>to_string <font id="function_arguments">(t : time; precision : natural) </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(t : time;<br><span style="padding-left:20px"> precision : natural) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 convert and format physical types to STRING</p></div><ul>
-<li>to_string <font id="function_arguments">(f : FREQ; precision : natural) </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(f : FREQ;<br><span style="padding-left:20px"> precision : natural) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>to_string <font id="function_arguments">(br : BAUD; precision : natural) </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(br : BAUD;<br><span style="padding-left:20px"> precision : natural) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>to_string <font id="function_arguments">(mem : MEMORY; precision : natural) </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(mem : MEMORY;<br><span style="padding-left:20px"> precision : natural) </font> <font id="function_return">return string </font></li>
 </ul>
     </article class="markdown-body">
 

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1050,32 +1055,32 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>test_runner_setup <font id="function_arguments">( signal runner : inout runner_sync_t; constant runner_cfg : in string := runner_cfg_default) </font> <font id="function_return">return ()</font></li>
+<li>test_runner_setup <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant runner_cfg : in string := runner_cfg_default) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>test_runner_cleanup <font id="function_arguments">( signal runner: inout runner_sync_t; external_failure : boolean := false; allow_disabled_errors : boolean := false; allow_disabled_failures : boolean := false; fail_on_warning : boolean := false) </font> <font id="function_return">return ()</font></li>
+<li>test_runner_cleanup <font id="function_arguments">( signal runner: inout runner_sync_t;<br><span style="padding-left:20px"> external_failure : boolean := false;<br><span style="padding-left:20px"> allow_disabled_errors : boolean := false;<br><span style="padding-left:20px"> allow_disabled_failures : boolean := false;<br><span style="padding-left:20px"> fail_on_warning : boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_timeout <font id="function_arguments">(signal runner : inout runner_sync_t; constant timeout : in time) </font> <font id="function_return">return ()</font></li>
+<li>set_timeout <font id="function_arguments">(signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant timeout : in time) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Set watchdog timeout dynamically relative to current timeOverrides time argument to test_runner_watchdog procedure</p></div><ul>
-<li>test_runner_watchdog <font id="function_arguments">( signal runner                    : inout runner_sync_t; constant timeout                 : in    time; constant do_runner_cleanup : boolean := true) </font> <font id="function_return">return ()</font></li>
+<li>test_runner_watchdog <font id="function_arguments">( signal runner                    : inout runner_sync_t;<br><span style="padding-left:20px"> constant timeout                 : in    time;<br><span style="padding-left:20px"> constant do_runner_cleanup : boolean := true) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>timeout_notification <font id="function_arguments">( signal runner : runner_sync_t ) </font> <font id="function_return">return boolean </font></li>
 </ul><ul>
-<li>lock_entry <font id="function_arguments">( signal runner : inout runner_sync_t; constant phase : in runner_legal_phase_t; constant logger : in logger_t := runner_trace_logger; constant line_num  : in natural := 0; constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
+<li>lock_entry <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant phase : in runner_legal_phase_t;<br><span style="padding-left:20px"> constant logger : in logger_t := runner_trace_logger;<br><span style="padding-left:20px"> constant line_num  : in natural := 0;<br><span style="padding-left:20px"> constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>unlock_entry <font id="function_arguments">( signal runner : inout runner_sync_t; constant phase : in runner_legal_phase_t; constant logger : in logger_t := runner_trace_logger; constant line_num  : in natural := 0; constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
+<li>unlock_entry <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant phase : in runner_legal_phase_t;<br><span style="padding-left:20px"> constant logger : in logger_t := runner_trace_logger;<br><span style="padding-left:20px"> constant line_num  : in natural := 0;<br><span style="padding-left:20px"> constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>lock_exit <font id="function_arguments">( signal runner : inout runner_sync_t; constant phase : in runner_legal_phase_t; constant logger : in logger_t := runner_trace_logger; constant line_num  : in natural := 0; constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
+<li>lock_exit <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant phase : in runner_legal_phase_t;<br><span style="padding-left:20px"> constant logger : in logger_t := runner_trace_logger;<br><span style="padding-left:20px"> constant line_num  : in natural := 0;<br><span style="padding-left:20px"> constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>unlock_exit <font id="function_arguments">( signal runner : inout runner_sync_t; constant phase : in runner_legal_phase_t; constant logger : in logger_t := runner_trace_logger; constant line_num  : in natural := 0; constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
+<li>unlock_exit <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant phase : in runner_legal_phase_t;<br><span style="padding-left:20px"> constant logger : in logger_t := runner_trace_logger;<br><span style="padding-left:20px"> constant line_num  : in natural := 0;<br><span style="padding-left:20px"> constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_until <font id="function_arguments">( signal runner : in runner_sync_t; constant phase : in runner_legal_phase_t; constant logger : in logger_t := runner_trace_logger; constant line_num  : in natural := 0; constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
+<li>wait_until <font id="function_arguments">( signal runner : in runner_sync_t;<br><span style="padding-left:20px"> constant phase : in runner_legal_phase_t;<br><span style="padding-left:20px"> constant logger : in logger_t := runner_trace_logger;<br><span style="padding-left:20px"> constant line_num  : in natural := 0;<br><span style="padding-left:20px"> constant file_name : in string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>entry_gate <font id="function_arguments">( signal runner : inout runner_sync_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>exit_gate <font id="function_arguments">( signal runner : in runner_sync_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>notify <font id="function_arguments">(signal runner : inout runner_sync_t; idx : natural := runner_event_idx) </font> <font id="function_return">return ()</font></li>
+<li>notify <font id="function_arguments">(signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> idx : natural := runner_event_idx) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Private</p></div>
     </article class="markdown-body">

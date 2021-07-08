@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1035,22 +1040,22 @@
 </ul><ul>
 <li>isstd_logic <font id="function_arguments">(constant Char : character ) </font> <font id="function_return">return boolean </font></li>
 </ul><ul>
-<li>IfElse <font id="function_arguments">(Expr : boolean ; A, B : string) </font> <font id="function_return">return string </font></li>
+<li>IfElse <font id="function_arguments">(Expr : boolean ;<br><span style="padding-left:20px"> A,<br><span style="padding-left:20px"> B : string) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Crutch until VHDL-2019 conditional initialization</p></div><ul>
-<li>SkipWhiteSpace <font id="function_arguments">( variable L     : InOut line ; variable Empty : out   boolean ) </font> <font id="function_return">return ()</font></li>
+<li>SkipWhiteSpace <font id="function_arguments">( variable L     : InOut line ;<br><span style="padding-left:20px"> variable Empty : out   boolean ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>SkipWhiteSpace <font id="function_arguments">(variable L : InOut line) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>EmptyOrCommentLine <font id="function_arguments">( variable L                : InOut  line ; variable Empty            : InOut  boolean ; variable MultiLineComment : inout  boolean ) </font> <font id="function_return">return ()</font></li>
+<li>EmptyOrCommentLine <font id="function_arguments">( variable L                : InOut  line ;<br><span style="padding-left:20px"> variable Empty            : InOut  boolean ;<br><span style="padding-left:20px"> variable MultiLineComment : inout  boolean ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>ReadUntilDelimiterOrEOL <font id="function_arguments">( variable L         : InOut line ; variable Name      : InOut line ; constant Delimiter : In    character ; variable ReadValid : Out   boolean ) </font> <font id="function_return">return ()</font></li>
+<li>ReadUntilDelimiterOrEOL <font id="function_arguments">( variable L         : InOut line ;<br><span style="padding-left:20px"> variable Name      : InOut line ;<br><span style="padding-left:20px"> constant Delimiter : In    character ;<br><span style="padding-left:20px"> variable ReadValid : Out   boolean ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FindDelimiter <font id="function_arguments">( variable L                : InOut line ; constant Delimiter        : In    character ; variable Found            : Out   boolean ) </font> <font id="function_return">return ()</font></li>
+<li>FindDelimiter <font id="function_arguments">( variable L                : InOut line ;<br><span style="padding-left:20px"> constant Delimiter        : In    character ;<br><span style="padding-left:20px"> variable Found            : Out   boolean ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>ReadHexToken <font id="function_arguments">( variable L      : InOut line ; variable Result : Out   std_logic_vector ; variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font></li>
+<li>ReadHexToken <font id="function_arguments">( variable L      : InOut line ;<br><span style="padding-left:20px"> variable Result : Out   std_logic_vector ;<br><span style="padding-left:20px"> variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>ReadBinaryToken <font id="function_arguments">( variable L      : InOut line ; variable Result : Out   std_logic_vector ; variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font></li>
+<li>ReadBinaryToken <font id="function_arguments">( variable L      : InOut line ;<br><span style="padding-left:20px"> variable Result : Out   std_logic_vector ;<br><span style="padding-left:20px"> variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

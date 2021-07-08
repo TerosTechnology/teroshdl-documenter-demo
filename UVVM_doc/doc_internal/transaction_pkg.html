@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,12 +1031,12 @@
 <tbody>
 <tr>
 <td>global_uart_vvc_transaction_trigger</td>
-<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right, 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
+<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right,<br><span style="padding-left:20px"> 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
 <td></td>
 </tr>
 <tr>
 <td>global_uart_monitor_transaction_trigger</td>
-<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right, 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
+<td>t_uart_transaction_trigger_array(t_sub_channel'left to t_sub_channel'right,<br><span style="padding-left:20px"> 0 to C_MAX_VVC_INSTANCE_NUM-1)</td>
 <td>Global monitor transaction info trigger signal</td>
 </tr>
 </tbody>
@@ -1062,19 +1067,19 @@
 <tr>
 <td>C_VVC_META_DEFAULT</td>
 <td>t_vvc_meta</td>
-<td>(     msg     =&gt; (others =&gt; ' '),     cmd_idx =&gt; -1     )</td>
+<td>(     msg     =&gt; (others =&gt; ' '),<br><span style="padding-left:20px">     cmd_idx =&gt; -1     )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_ERROR_INFO_DEFAULT</td>
 <td>t_error_info</td>
-<td>(     parity_bit_error  =&gt; false,     stop_bit_error    =&gt; false     )</td>
+<td>(     parity_bit_error  =&gt; false,<br><span style="padding-left:20px">     stop_bit_error    =&gt; false     )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_BASE_TRANSACTION_SET_DEFAULT</td>
 <td>t_base_transaction</td>
-<td>(     operation           =&gt; NO_OPERATION,     data                =&gt; (others =&gt; '0'),     vvc_meta            =&gt; C_VVC_META_DEFAULT,     transaction_status  =&gt; C_TRANSACTION_STATUS_DEFAULT,     error_info          =&gt; C_ERROR_INFO_DEFAULT     )</td>
+<td>(     operation           =&gt; NO_OPERATION,<br><span style="padding-left:20px">     data                =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">     vvc_meta            =&gt; C_VVC_META_DEFAULT,<br><span style="padding-left:20px">     transaction_status  =&gt; C_TRANSACTION_STATUS_DEFAULT,<br><span style="padding-left:20px">     error_info          =&gt; C_ERROR_INFO_DEFAULT     )</td>
 <td></td>
 </tr>
 <tr>
@@ -1097,12 +1102,12 @@
 <tbody>
 <tr>
 <td>t_operation</td>
-<td>( NO_OPERATION, AWAIT_COMPLETION, AWAIT_ANY_COMPLETION, ENABLE_LOG_MSG, DISABLE_LOG_MSG, FLUSH_COMMAND_QUEUE, FETCH_RESULT, INSERT_DELAY, TERMINATE_CURRENT_COMMAND, TRANSMIT, RECEIVE, EXPECT)</td>
+<td>( NO_OPERATION,<br><span style="padding-left:20px"> AWAIT_COMPLETION,<br><span style="padding-left:20px"> AWAIT_ANY_COMPLETION,<br><span style="padding-left:20px"> ENABLE_LOG_MSG,<br><span style="padding-left:20px"> DISABLE_LOG_MSG,<br><span style="padding-left:20px"> FLUSH_COMMAND_QUEUE,<br><span style="padding-left:20px"> FETCH_RESULT,<br><span style="padding-left:20px"> INSERT_DELAY,<br><span style="padding-left:20px"> TERMINATE_CURRENT_COMMAND,<br><span style="padding-left:20px"> TRANSMIT,<br><span style="padding-left:20px"> RECEIVE,<br><span style="padding-left:20px"> EXPECT)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_transaction_status</td>
-<td>(INACTIVE, IN_PROGRESS, FAILED, SUCCEEDED)</td>
+<td>(INACTIVE,<br><span style="padding-left:20px"> IN_PROGRESS,<br><span style="padding-left:20px"> FAILED,<br><span style="padding-left:20px"> SUCCEEDED)</td>
 <td>Transaction status</td>
 </tr>
 <tr>
@@ -1127,12 +1132,12 @@
 </tr>
 <tr>
 <td>t_uart_transaction_trigger_array</td>
-<td></td>
+<td>array (t_sub_channel range &lt;&gt;,<br><span style="padding-left:20px"> natural range &lt;&gt;) of std_logic</td>
 <td>Global transaction info trigger signal</td>
 </tr>
 <tr>
 <td>t_uart_transaction_group_array</td>
-<td></td>
+<td>array (t_sub_channel range &lt;&gt;,<br><span style="padding-left:20px"> natural range &lt;&gt;) of t_transaction_group</td>
 <td>Shared transaction info variable</td>
 </tr>
 </tbody>

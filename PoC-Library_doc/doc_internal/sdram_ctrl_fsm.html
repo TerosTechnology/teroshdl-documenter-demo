@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1500,19 +1505,19 @@
 <tr>
 <td>MODE_REG</td>
 <td>std_logic_vector(8 downto 0)</td>
-<td>"00" &amp; std_logic_vector(to_unsigned(CL, 3)) &amp;     "0"  &amp; std_logic_vector(to_unsigned(BL-1, 3))</td>
+<td>"00" &amp; std_logic_vector(to_unsigned(CL,<br><span style="padding-left:20px"> 3)) &amp;     "0"  &amp; std_logic_vector(to_unsigned(BL-1,<br><span style="padding-left:20px"> 3))</td>
 <td>Value for Mode Register  bit 6--0: CL, sequential burst, BL  bit 8: reset DLL</td>
 </tr>
 <tr>
 <td>TIMER_TREFI_INIT</td>
 <td>signed(log2ceil(T_REFI-2) downto 0)</td>
-<td>to_signed(T_REFI-2, timer_tREFI'length)</td>
+<td>to_signed(T_REFI-2,<br><span style="padding-left:20px"> timer_tREFI'length)</td>
 <td></td>
 </tr>
 <tr>
 <td>TIMER_TRAS_INIT</td>
 <td>signed(log2ceil(T_RAS-2) downto 0)</td>
-<td>to_signed(T_RAS-1 -2, timer_tRAS'length)</td>
+<td>to_signed(T_RAS-1 -2,<br><span style="padding-left:20px"> timer_tRAS'length)</td>
 <td></td>
 </tr>
 </tbody>
@@ -1529,17 +1534,17 @@
 <tbody>
 <tr>
 <td>FSM_TYPE</td>
-<td>(INIT1, INIT2, INIT3, INIT4, INIT5, INIT6, INIT7, INIT8, INIT9, INIT10, INIT11, DO_ACTIVATE, DO_READ1, DO_READ2, DO_WRITE1, DO_WRITE2, CHECKNXT, DO_PRECHARGE, DO_AUTO_REFRESH)</td>
+<td>(INIT1,<br><span style="padding-left:20px"> INIT2,<br><span style="padding-left:20px"> INIT3,<br><span style="padding-left:20px"> INIT4,<br><span style="padding-left:20px"> INIT5,<br><span style="padding-left:20px"> INIT6,<br><span style="padding-left:20px"> INIT7,<br><span style="padding-left:20px"> INIT8,<br><span style="padding-left:20px"> INIT9,<br><span style="padding-left:20px"> INIT10,<br><span style="padding-left:20px"> INIT11,<br><span style="padding-left:20px"> DO_ACTIVATE,<br><span style="padding-left:20px"> DO_READ1,<br><span style="padding-left:20px"> DO_READ2,<br><span style="padding-left:20px"> DO_WRITE1,<br><span style="padding-left:20px"> DO_WRITE2,<br><span style="padding-left:20px"> CHECKNXT,<br><span style="padding-left:20px"> DO_PRECHARGE,<br><span style="padding-left:20px"> DO_AUTO_REFRESH)</td>
 <td>FSM</td>
 </tr>
 <tr>
 <td>SD_A_SEL_TYPE</td>
-<td>(SD_A_SEL_EXT_MODE_REG, SD_A_SEL_MODE_REG, SD_A_SEL_ROW_ADDR, SD_A_SEL_COL_ADDR)</td>
+<td>(SD_A_SEL_EXT_MODE_REG,<br><span style="padding-left:20px"> SD_A_SEL_MODE_REG,<br><span style="padding-left:20px"> SD_A_SEL_ROW_ADDR,<br><span style="padding-left:20px"> SD_A_SEL_COL_ADDR)</td>
 <td></td>
 </tr>
 <tr>
 <td>SD_BA_SEL_TYPE</td>
-<td>(SD_BA_SEL_EXT_MODE_REG, SD_BA_SEL_MODE_REG, SD_BA_SEL_ADDR)</td>
+<td>(SD_BA_SEL_EXT_MODE_REG,<br><span style="padding-left:20px"> SD_BA_SEL_MODE_REG,<br><span style="padding-left:20px"> SD_BA_SEL_ADDR)</td>
 <td></td>
 </tr>
 </tbody>

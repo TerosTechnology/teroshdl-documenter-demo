@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1040,19 +1045,19 @@
 <tr>
 <td>C_EXPECT_RECEIVED_DATA_STRING_SEPARATOR</td>
 <td>string</td>
-<td>"; "</td>
+<td>";<br><span style="padding-left:20px"> "</td>
 <td></td>
 </tr>
 <tr>
 <td>C_BFM_ERROR_INJECTION_INACTIVE</td>
 <td>t_bfm_error_injection</td>
-<td>(     parity_bit_error  =&gt; false,     stop_bit_error    =&gt; false   )</td>
+<td>(     parity_bit_error  =&gt; false,<br><span style="padding-left:20px">     stop_bit_error    =&gt; false   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_UART_BFM_CONFIG_DEFAULT</td>
 <td>t_uart_bfm_config</td>
-<td>(     bit_time                                  =&gt; -1 ns,     num_data_bits                             =&gt; 8,     idle_state                                =&gt; '1',     num_stop_bits                             =&gt; STOP_BITS_ONE,     parity                                    =&gt; PARITY_ODD,     timeout                                   =&gt; 0 ns,                -- will default never time out     timeout_severity                          =&gt; error,     num_bytes_to_log_before_expected_data     =&gt; 10,     match_strictness                          =&gt; MATCH_EXACT,     id_for_bfm                                =&gt; ID_BFM,     id_for_bfm_wait                           =&gt; ID_BFM_WAIT,     id_for_bfm_poll                           =&gt; ID_BFM_POLL,     id_for_bfm_poll_summary                   =&gt; ID_BFM_POLL_SUMMARY,     error_injection                           =&gt; C_BFM_ERROR_INJECTION_INACTIVE     )</td>
+<td>(     bit_time                                  =&gt; -1 ns,<br><span style="padding-left:20px">     num_data_bits                             =&gt; 8,<br><span style="padding-left:20px">     idle_state                                =&gt; '1',<br><span style="padding-left:20px">     num_stop_bits                             =&gt; STOP_BITS_ONE,<br><span style="padding-left:20px">     parity                                    =&gt; PARITY_ODD,<br><span style="padding-left:20px">     timeout                                   =&gt; 0 ns,<br><span style="padding-left:20px">                -- will default never time out     timeout_severity                          =&gt; error,<br><span style="padding-left:20px">     num_bytes_to_log_before_expected_data     =&gt; 10,<br><span style="padding-left:20px">     match_strictness                          =&gt; MATCH_EXACT,<br><span style="padding-left:20px">     id_for_bfm                                =&gt; ID_BFM,<br><span style="padding-left:20px">     id_for_bfm_wait                           =&gt; ID_BFM_WAIT,<br><span style="padding-left:20px">     id_for_bfm_poll                           =&gt; ID_BFM_POLL,<br><span style="padding-left:20px">     id_for_bfm_poll_summary                   =&gt; ID_BFM_POLL_SUMMARY,<br><span style="padding-left:20px">     error_injection                           =&gt; C_BFM_ERROR_INJECTION_INACTIVE     )</td>
 <td></td>
 </tr>
 </tbody>
@@ -1069,7 +1074,7 @@
 <tbody>
 <tr>
 <td>uart_expect_received_data_array</td>
-<td></td>
+<td>array (natural range&lt;&gt;) of std_logic_vector(C_DATA_MAX_LENGTH-1 downto 0)</td>
 <td></td>
 </tr>
 <tr>
@@ -1084,17 +1089,17 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>uart_transmit <font id="function_arguments">( constant data_value         : in  std_logic_vector; constant msg                : in  string; signal tx                   : inout std_logic; constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in  string             := C_SCOPE; constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
+<li>uart_transmit <font id="function_arguments">( constant data_value         : in  std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal tx                   : inout std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string             := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong></p>
 <ul>
 <li>This procedure transmits data 'data_value' to the UART DUT- The TX configuration can be set in the config parameter</li>
 </ul></div><ul>
-<li>uart_receive <font id="function_arguments">( variable data_value         : out std_logic_vector; constant msg                : in  string; signal rx                   : in  std_logic; signal terminate_loop       : in  std_logic; constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in  string            := C_SCOPE; constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel; constant ext_proc_call      : in  string            := "" -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+<li>uart_receive <font id="function_arguments">( variable data_value         : out std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal rx                   : in  std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in  std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant ext_proc_call      : in  string            := "" -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong></p>
 <ul>
 <li>This procedure reads data from the UART DUT and returns it in 'data_value'- The RX configuration can be set in the config parameter</li>
 </ul></div><ul>
-<li>uart_expect <font id="function_arguments">( constant data_exp           : in std_logic_vector; constant msg                : in string; signal rx                   : in std_logic; signal terminate_loop       : in std_logic; constant max_receptions     : in natural           := 1; constant timeout            : in time              := -1 ns; constant alert_level        : in t_alert_level     := ERROR; constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT; constant scope              : in string            := C_SCOPE; constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
+<li>uart_expect <font id="function_arguments">( constant data_exp           : in std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in string;<br><span style="padding-left:20px"> signal rx                   : in std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in std_logic;<br><span style="padding-left:20px"> constant max_receptions     : in natural           := 1;<br><span style="padding-left:20px"> constant timeout            : in time              := -1 ns;<br><span style="padding-left:20px"> constant alert_level        : in t_alert_level     := ERROR;<br><span style="padding-left:20px"> constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong></p>
 <ul>
 <li>This procedure reads data from the UART DUT and compares it to the data in  'data_exp'.- If the read data is inconsistent with the 'data_exp' data, a new read will  be performed, and the new read data will be compared with 'data_exp'.  This process will continue untill one of the following conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_receptions'    c) The time spent reading is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_receptions' is set to 0, it will be interpreted as no limitation on number of reads- The RX configuration can be set in the config parameter</li>

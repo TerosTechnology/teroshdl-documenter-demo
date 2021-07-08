@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1256,13 +1261,13 @@
 <tr>
 <td>PROTOCOL_ADDRESS_LENGTH</td>
 <td>positive</td>
-<td>ite((ALLOWED_PROTOCOL_IPV6 = FALSE), PROTOCOL_IPV4_ADDRESS_LENGTH, PROTOCOL_IPV6_ADDRESS_LENGTH)</td>
+<td>ite((ALLOWED_PROTOCOL_IPV6 = FALSE),<br><span style="padding-left:20px"> PROTOCOL_IPV4_ADDRESS_LENGTH,<br><span style="padding-left:20px"> PROTOCOL_IPV6_ADDRESS_LENGTH)</td>
 <td>IPv4 -&gt; 4 bytes; IPv6 -&gt; 16 bytes</td>
 </tr>
 <tr>
 <td>READER_COUNTER_BITS</td>
 <td>positive</td>
-<td>log2ceilnz(imax(HARDWARE_ADDRESS_LENGTH, PROTOCOL_ADDRESS_LENGTH))</td>
+<td>log2ceilnz(imax(HARDWARE_ADDRESS_LENGTH,<br><span style="padding-left:20px"> PROTOCOL_ADDRESS_LENGTH))</td>
 <td></td>
 </tr>
 </tbody>
@@ -1279,7 +1284,7 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>( ST_IDLE, ST_SEND_HARDWARE_type_0,  ST_SEND_HARDWARE_type_1, ST_SEND_PROTOCOL_type_0,  ST_SEND_PROTOCOL_type_1, ST_SEND_HARDWARE_ADDRESS_LENGTH, ST_SEND_PROTOCOL_ADDRESS_LENGTH, ST_SEND_OPERATION_0,      ST_SEND_OPERATION_1, ST_SEND_SENDER_MAC,        ST_SEND_SENDER_IP, ST_SEND_TARGET_MAC,        ST_SEND_TARGET_IP, ST_COMPLETE )</td>
+<td>( ST_IDLE,<br><span style="padding-left:20px"> ST_SEND_HARDWARE_type_0,<br><span style="padding-left:20px">  ST_SEND_HARDWARE_type_1,<br><span style="padding-left:20px"> ST_SEND_PROTOCOL_type_0,<br><span style="padding-left:20px">  ST_SEND_PROTOCOL_type_1,<br><span style="padding-left:20px"> ST_SEND_HARDWARE_ADDRESS_LENGTH,<br><span style="padding-left:20px"> ST_SEND_PROTOCOL_ADDRESS_LENGTH,<br><span style="padding-left:20px"> ST_SEND_OPERATION_0,<br><span style="padding-left:20px">      ST_SEND_OPERATION_1,<br><span style="padding-left:20px"> ST_SEND_SENDER_MAC,<br><span style="padding-left:20px">        ST_SEND_SENDER_IP,<br><span style="padding-left:20px"> ST_SEND_TARGET_MAC,<br><span style="padding-left:20px">        ST_SEND_TARGET_IP,<br><span style="padding-left:20px"> ST_COMPLETE )</td>
 <td></td>
 </tr>
 </tbody>

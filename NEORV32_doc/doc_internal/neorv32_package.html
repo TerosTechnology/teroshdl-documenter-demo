@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1058,7 +1063,7 @@
 <tr>
 <td>ipb_entries_c</td>
 <td>natural</td>
-<td>4</td>
+<td>2</td>
 <td>entries in CPU instruction prefetch buffer, has to be a power of 2, default=2</td>
 </tr>
 <tr>
@@ -1112,7 +1117,7 @@
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
-<td>x"01050708"</td>
+<td>x"01050710"</td>
 <td>no touchy!</td>
 </tr>
 <tr>
@@ -1130,7 +1135,7 @@
 <tr>
 <td>def_rst_val_c</td>
 <td>std_ulogic</td>
-<td>cond_sel_stdulogic_f(dedicated_reset_c, '0', '-')</td>
+<td>cond_sel_stdulogic_f(dedicated_reset_c,<br><span style="padding-left:20px"> '0',<br><span style="padding-left:20px"> '-')</td>
 <td>Internal (auto-generated) Configurations ------------------------------------------------------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
@@ -1530,39 +1535,33 @@
 <td>module's address space size in bytes</td>
 </tr>
 <tr>
-<td>trng_base_c</td>
+<td>xirq_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff88"</td>
+<td>x"ffffff80"</td>
 <td>base address</td>
 </tr>
 <tr>
-<td>trng_size_c</td>
+<td>xirq_size_c</td>
 <td>natural</td>
-<td>1*4</td>
+<td>4*4</td>
 <td>module's address space size in bytes</td>
 </tr>
 <tr>
-<td>trng_ctrl_addr_c</td>
+<td>xirq_enable_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff88"</td>
+<td>x"ffffff80"</td>
 <td></td>
 </tr>
 <tr>
-<td>wdt_base_c</td>
+<td>xirq_pending_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff8c"</td>
-<td>base address</td>
+<td>x"ffffff84"</td>
+<td></td>
 </tr>
 <tr>
-<td>wdt_size_c</td>
-<td>natural</td>
-<td>1*4</td>
-<td>module's address space size in bytes</td>
-</tr>
-<tr>
-<td>wdt_ctrl_addr_c</td>
+<td>xirq_source_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
-<td>x"ffffff8c"</td>
+<td>x"ffffff88"</td>
 <td></td>
 </tr>
 <tr>
@@ -1671,6 +1670,42 @@
 <td>twi_rtx_addr_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"ffffffb4"</td>
+<td></td>
+</tr>
+<tr>
+<td>trng_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb8"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>trng_size_c</td>
+<td>natural</td>
+<td>1*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>trng_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffb8"</td>
+<td></td>
+</tr>
+<tr>
+<td>wdt_base_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffbc"</td>
+<td>base address</td>
+</tr>
+<tr>
+<td>wdt_size_c</td>
+<td>natural</td>
+<td>1*4</td>
+<td>module's address space size in bytes</td>
+</tr>
+<tr>
+<td>wdt_ctrl_addr_c</td>
+<td>std_ulogic_vector(data_width_c-1 downto 0)</td>
+<td>x"ffffffbc"</td>
 <td></td>
 </tr>
 <tr>
@@ -4721,6 +4756,11 @@
 <td>External Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
+<td>sdata_8x32r_t</td>
+<td></td>
+<td>resolved type</td>
+</tr>
+<tr>
 <td>pmp_ctrl_if_t</td>
 <td></td>
 <td>Internal Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
@@ -4737,12 +4777,12 @@
 </tr>
 <tr>
 <td>mem32_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of std_ulogic_vector(31 downto 0)</td>
 <td>memory with 32-bit entries</td>
 </tr>
 <tr>
 <td>mem8_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of std_ulogic_vector(07 downto 0)</td>
 <td>memory with 8-bit entries</td>
 </tr>
 </tbody>
@@ -4750,15 +4790,15 @@
 <li>index_size_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return natural </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</p></div><ul>
-<li>cond_sel_natural_f <font id="function_arguments">(cond : boolean; val_t : natural; val_f : natural) </font> <font id="function_return">return natural </font></li>
+<li>cond_sel_natural_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : natural;<br><span style="padding-left:20px"> val_f : natural) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>cond_sel_int_f <font id="function_arguments">(cond : boolean; val_t : integer; val_f : integer) </font> <font id="function_return">return integer </font></li>
+<li>cond_sel_int_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : integer;<br><span style="padding-left:20px"> val_f : integer) </font> <font id="function_return">return integer </font></li>
 </ul><ul>
-<li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic_vector; val_f : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
+<li>cond_sel_stdulogicvector_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : std_ulogic_vector;<br><span style="padding-left:20px"> val_f : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
 </ul><ul>
-<li>cond_sel_stdulogic_f <font id="function_arguments">(cond : boolean; val_t : std_ulogic; val_f : std_ulogic) </font> <font id="function_return">return std_ulogic </font></li>
+<li>cond_sel_stdulogic_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : std_ulogic;<br><span style="padding-left:20px"> val_f : std_ulogic) </font> <font id="function_return">return std_ulogic </font></li>
 </ul><ul>
-<li>cond_sel_string_f <font id="function_arguments">(cond : boolean; val_t : string; val_f : string) </font> <font id="function_return">return string </font></li>
+<li>cond_sel_string_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : string;<br><span style="padding-left:20px"> val_f : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>bool_to_ulogic_f <font id="function_arguments">(cond : boolean) </font> <font id="function_return">return std_ulogic </font></li>
 </ul><ul>
@@ -4780,7 +4820,7 @@ Helper Functions ---------------------------------------------------------------
 </ul><ul>
 <li>char_tolower_f <font id="function_arguments">(ch : character) </font> <font id="function_return">return character </font></li>
 </ul><ul>
-<li>str_equal_f <font id="function_arguments">(str0 : string; str1 : string) </font> <font id="function_return">return boolean </font></li>
+<li>str_equal_f <font id="function_arguments">(str0 : string;<br><span style="padding-left:20px"> str1 : string) </font> <font id="function_return">return boolean </font></li>
 </ul>
     </article class="markdown-body">
 

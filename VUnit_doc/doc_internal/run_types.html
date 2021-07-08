@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1052,7 +1057,7 @@
 <tr>
 <td>runner_cfg_default</td>
 <td>string</td>
-<td>"enabled_test_cases : <strong>all</strong>, output path : , active python runner : false"</td>
+<td>"enabled_test_cases : <strong>all</strong>,<br><span style="padding-left:20px"> output path : ,<br><span style="padding-left:20px"> active python runner : false"</td>
 <td>Subtype deprecated, use string instead</td>
 </tr>
 <tr>
@@ -1117,7 +1122,7 @@
 <tbody>
 <tr>
 <td>runner_phase_t</td>
-<td>(test_runner_entry, test_runner_setup, test_suite_setup, test_case_setup, test_case, test_case_cleanup, test_suite_cleanup, test_runner_cleanup, test_runner_exit)</td>
+<td>(test_runner_entry,<br><span style="padding-left:20px"> test_runner_setup,<br><span style="padding-left:20px"> test_suite_setup,<br><span style="padding-left:20px"> test_case_setup,<br><span style="padding-left:20px"> test_case,<br><span style="padding-left:20px"> test_case_cleanup,<br><span style="padding-left:20px"> test_suite_cleanup,<br><span style="padding-left:20px"> test_runner_cleanup,<br><span style="padding-left:20px"> test_runner_exit)</td>
 <td></td>
 </tr>
 <tr>
@@ -1127,7 +1132,7 @@
 </tr>
 <tr>
 <td>boolean_array_t</td>
-<td></td>
+<td>array (integer range &lt;&gt;) of boolean</td>
 <td></td>
 </tr>
 </tbody>

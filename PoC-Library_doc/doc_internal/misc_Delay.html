@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1103,7 +1108,7 @@
 </tr>
 <tr>
 <td>DataOut_i</td>
-<td>T_SLM(TAPS'length - 1 downto 0, BITS - 1 downto 0)</td>
+<td>T_SLM(TAPS'length - 1 downto 0,<br><span style="padding-left:20px"> BITS - 1 downto 0)</td>
 <td></td>
 </tr>
 </tbody>
@@ -1139,7 +1144,7 @@
 <tbody>
 <tr>
 <td>T_DELAY_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of std_logic_vector(BITS - 1 downto 0)</td>
 <td></td>
 </tr>
 </tbody>

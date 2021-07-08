@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,117 +1031,117 @@
 <tbody>
 <tr>
 <td>T_SLVV_2</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_2</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_3</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_3</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_4</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_4</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_8</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_8</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_12</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_12</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_16</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_16</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_24</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_24</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_32</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_32</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_48</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_48</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_64</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_64</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_128</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_128</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_256</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_256</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLVV_512</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SLV_512</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SLM</td>
-<td></td>
+<td>array(natural range &lt;&gt;,<br><span style="padding-left:20px"> natural range &lt;&gt;) of std_logic</td>
 <td>STD_LOGIC_MATRIXs</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>low <font id="function_arguments">(lenvec : T_POSVEC; index : natural) </font> <font id="function_return">return natural </font></li>
+<li>low <font id="function_arguments">(lenvec : T_POSVEC;<br><span style="padding-left:20px"> index : natural) </font> <font id="function_return">return natural </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 WORKAROUND: for Xilinx ISE/iSim Version:    14.2 Issue:     myMatrix'range(n) for n &gt;= 2 returns always myMatrix'range(1)==========================================================================Function declarations==========================================================================slicing boundary calulations</p></div><ul>
-<li>high <font id="function_arguments">(lenvec : T_POSVEC; index : natural) </font> <font id="function_return">return natural </font></li>
+<li>high <font id="function_arguments">(lenvec : T_POSVEC;<br><span style="padding-left:20px"> index : natural) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural) </font> <font id="function_return">return ()</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM;<br><span style="padding-left:20px"> slv : std_logic_vector;<br><span style="padding-left:20px"> constant RowIndex : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 assign vector to complete row</p></div><ul>
-<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural; Position : natural) </font> <font id="function_return">return ()</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM;<br><span style="padding-left:20px"> slv : std_logic_vector;<br><span style="padding-left:20px"> constant RowIndex : natural;<br><span style="padding-left:20px"> Position : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 assign short vector to row starting at position</p></div><ul>
-<li>assign_row <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant RowIndex : natural; High : natural; Low : natural) </font> <font id="function_return">return ()</font></li>
+<li>assign_row <font id="function_arguments">(signal slm : out T_SLM;<br><span style="padding-left:20px"> slv : std_logic_vector;<br><span style="padding-left:20px"> constant RowIndex : natural;<br><span style="padding-left:20px"> High : natural;<br><span style="padding-left:20px"> Low : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 assign short vector to row in range high:low</p></div><ul>
-<li>assign_col <font id="function_arguments">(signal slm : out T_SLM; slv : std_logic_vector; constant ColIndex : natural) </font> <font id="function_return">return ()</font></li>
+<li>assign_col <font id="function_arguments">(signal slm : out T_SLM;<br><span style="padding-left:20px"> slv : std_logic_vector;<br><span style="padding-left:20px"> constant ColIndex : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 assign vector to complete column</p></div><ul>
-<li>slm_slice <font id="function_arguments">(slm : T_SLM; RowIndex : natural; ColIndex : natural; Height : natural; Width : natural) </font> <font id="function_return">return T_SLM </font></li>
+<li>slm_slice <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> RowIndex : natural;<br><span style="padding-left:20px"> ColIndex : natural;<br><span style="padding-left:20px"> Height : natural;<br><span style="padding-left:20px"> Width : natural) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get submatrix in boundingbox RowIndex,ColIndex,Height,Width</p></div><ul>
-<li>slm_slice_rows <font id="function_arguments">(slm : T_SLM; High : natural; Low : natural) </font> <font id="function_return">return T_SLM </font></li>
+<li>slm_slice_rows <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> High : natural;<br><span style="padding-left:20px"> Low : natural) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get submatrix / all rows in RowIndex range high:low</p></div><ul>
-<li>slm_slice_cols <font id="function_arguments">(slm : T_SLM; High : natural; Low : natural) </font> <font id="function_return">return T_SLM </font></li>
+<li>slm_slice_cols <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> High : natural;<br><span style="padding-left:20px"> Low : natural) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get submatrix / all columns in ColIndex range high:low</p></div><ul>
-<li>slm_merge_rows <font id="function_arguments">(slm1 : T_SLM; slm2 : T_SLM) </font> <font id="function_return">return T_SLM </font></li>
+<li>slm_merge_rows <font id="function_arguments">(slm1 : T_SLM;<br><span style="padding-left:20px"> slm2 : T_SLM) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Matrix concatenation: slm_merge_*</p></div><ul>
-<li>slm_merge_cols <font id="function_arguments">(slm1 : T_SLM; slm2 : T_SLM) </font> <font id="function_return">return T_SLM </font></li>
+<li>slm_merge_cols <font id="function_arguments">(slm1 : T_SLM;<br><span style="padding-left:20px"> slm2 : T_SLM) </font> <font id="function_return">return T_SLM </font></li>
 </ul><ul>
-<li>get_col <font id="function_arguments">(slm : T_SLM; ColIndex : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>get_col <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> ColIndex : natural) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get a matrix column</p></div><ul>
-<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> RowIndex : natural) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get a matrix row</p></div><ul>
-<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural; Length : positive) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> RowIndex : natural;<br><span style="padding-left:20px"> Length : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get a matrix row of defined length [length - 1 downto 0]</p></div><ul>
-<li>get_row <font id="function_arguments">(slm : T_SLM; RowIndex : natural; High : natural; Low : natural) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>get_row <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> RowIndex : natural;<br><span style="padding-left:20px"> High : natural;<br><span style="padding-left:20px"> Low : natural) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 get a sub vector of a matrix row at high:low</p></div><ul>
 <li>to_slv <font id="function_arguments">(slvv : T_SLVV_2) </font> <font id="function_return">return std_logic_vector </font></li>
@@ -1207,7 +1212,7 @@ Convert matrix to avector-vector: to_slvv_*</p></div><ul>
 </ul><ul>
 <li>to_slvv_512 <font id="function_arguments">(slm : T_SLM) </font> <font id="function_return">return T_SLVV_512 </font></li>
 </ul><ul>
-<li>to_slm <font id="function_arguments">(slv : std_logic_vector; ROWS : positive; COLS : positive) </font> <font id="function_return">return T_SLM </font></li>
+<li>to_slm <font id="function_arguments">(slv : std_logic_vector;<br><span style="padding-left:20px"> ROWS : positive;<br><span style="padding-left:20px"> COLS : positive) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 create matrix from vector</p></div><ul>
 <li>to_slm <font id="function_arguments">(slvv : T_SLVV_4) </font> <font id="function_return">return T_SLM </font></li>
@@ -1262,13 +1267,13 @@ Reverse vector elements</p></div><ul>
 </ul><ul>
 <li>rev <font id="function_arguments">(slvv : T_SLVV_512) </font> <font id="function_return">return T_SLVV_512 </font></li>
 </ul><ul>
-<li>resize <font id="function_arguments">(slm : T_SLM; size : positive) </font> <font id="function_return">return T_SLM </font></li>
+<li>resize <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> size : positive) </font> <font id="function_return">return T_SLM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 TODO:</p></div><ul>
-<li>to_string <font id="function_arguments">(slvv : T_SLVV_8; sep : character := ':') </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(slvv : T_SLVV_8;<br><span style="padding-left:20px"> sep : character := ':') </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 to_string</p></div><ul>
-<li>to_string <font id="function_arguments">(slm : T_SLM; groups : positive := 4; format : character := 'b') </font> <font id="function_return">return string </font></li>
+<li>to_string <font id="function_arguments">(slm : T_SLM;<br><span style="padding-left:20px"> groups : positive := 4;<br><span style="padding-left:20px"> format : character := 'b') </font> <font id="function_return">return string </font></li>
 </ul>
     </article class="markdown-body">
 

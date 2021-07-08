@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1015,21 +1020,21 @@
 
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=test_support><h1 id="package-test_support">Package: test_support</h1></a><h2 id="functions">Functions</h2><ul>
-<li>assert_true <font id="function_arguments">( constant expr : in boolean; constant msg  : in string := ""; constant level : in severity_level := error) </font> <font id="function_return">return ()</font></li>
+<li>assert_true <font id="function_arguments">( constant expr : in boolean;<br><span style="padding-left:20px"> constant msg  : in string := "";<br><span style="padding-left:20px"> constant level : in severity_level := error) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>verify_passed_checks <font id="function_arguments">( variable stat : inout checker_stat_t; constant expected_n_passed : in integer := -1) </font> <font id="function_return">return ()</font></li>
+<li>verify_passed_checks <font id="function_arguments">( variable stat : inout checker_stat_t;<br><span style="padding-left:20px"> constant expected_n_passed : in integer := -1) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>verify_passed_checks <font id="function_arguments">( checker : checker_t; variable stat : inout checker_stat_t; constant expected_n_passed : in integer := -1) </font> <font id="function_return">return ()</font></li>
+<li>verify_passed_checks <font id="function_arguments">( checker : checker_t;<br><span style="padding-left:20px"> variable stat : inout checker_stat_t;<br><span style="padding-left:20px"> constant expected_n_passed : in integer := -1) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>verify_failed_checks <font id="function_arguments">( variable stat : inout checker_stat_t; constant expected_n_failed : in integer := -1) </font> <font id="function_return">return ()</font></li>
+<li>verify_failed_checks <font id="function_arguments">( variable stat : inout checker_stat_t;<br><span style="padding-left:20px"> constant expected_n_failed : in integer := -1) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>verify_failed_checks <font id="function_arguments">( checker : checker_t; variable stat : inout checker_stat_t; constant expected_n_failed : in integer := -1) </font> <font id="function_return">return ()</font></li>
+<li>verify_failed_checks <font id="function_arguments">( checker : checker_t;<br><span style="padding-left:20px"> variable stat : inout checker_stat_t;<br><span style="padding-left:20px"> constant expected_n_failed : in integer := -1) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>apply_sequence <font id="function_arguments">( constant seq : in string; signal clk        : in  std_logic; signal data       : out std_logic; constant active_rising_clk_edge : in boolean := true) </font> <font id="function_return">return ()</font></li>
+<li>apply_sequence <font id="function_arguments">( constant seq : in string;<br><span style="padding-left:20px"> signal clk        : in  std_logic;<br><span style="padding-left:20px"> signal data       : out std_logic;<br><span style="padding-left:20px"> constant active_rising_clk_edge : in boolean := true) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>apply_sequence <font id="function_arguments">( constant seq : in string; signal clk        : in  std_logic; signal data       : out std_logic_vector; constant active_rising_clk_edge : in boolean := true) </font> <font id="function_return">return ()</font></li>
+<li>apply_sequence <font id="function_arguments">( constant seq : in string;<br><span style="padding-left:20px"> signal clk        : in  std_logic;<br><span style="padding-left:20px"> signal data       : out std_logic_vector;<br><span style="padding-left:20px"> constant active_rising_clk_edge : in boolean := true) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>clock_edge <font id="function_arguments">( signal clk                : in std_logic; constant wait_rising_edge : in boolean := true) </font> <font id="function_return">return boolean </font></li>
+<li>clock_edge <font id="function_arguments">( signal clk                : in std_logic;<br><span style="padding-left:20px"> constant wait_rising_edge : in boolean := true) </font> <font id="function_return">return boolean </font></li>
 </ul>
     </article class="markdown-body">
 

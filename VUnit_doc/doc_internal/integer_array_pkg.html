@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1028,7 +1033,7 @@
 <tr>
 <td>null_integer_array</td>
 <td>integer_array_t</td>
-<td>(     length =&gt; 0,     width =&gt; 0,     height =&gt; 0,     depth =&gt; 0,     bit_width =&gt; 0,     is_signed =&gt; false,     lower_limit =&gt; integer'low,     upper_limit =&gt; integer'low,     data =&gt; null_ptr     )</td>
+<td>(     length =&gt; 0,<br><span style="padding-left:20px">     width =&gt; 0,<br><span style="padding-left:20px">     height =&gt; 0,<br><span style="padding-left:20px">     depth =&gt; 0,<br><span style="padding-left:20px">     bit_width =&gt; 0,<br><span style="padding-left:20px">     is_signed =&gt; false,<br><span style="padding-left:20px">     lower_limit =&gt; integer'low,<br><span style="padding-left:20px">     upper_limit =&gt; integer'low,<br><span style="padding-left:20px">     data =&gt; null_ptr     )</td>
 <td>Ensure null_integer_array is the default VHDL value of the record</td>
 </tr>
 </tbody>
@@ -1050,30 +1055,30 @@
 </tr>
 <tr>
 <td>integer_array_vec_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of integer_array_t</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>deallocate <font id="function_arguments">( variable arr : inout integer_array_t ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set <font id="function_arguments">( arr   : integer_array_t; idx   : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+<li>set <font id="function_arguments">( arr   : integer_array_t;<br><span style="padding-left:20px"> idx   : integer;<br><span style="padding-left:20px"> value : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set <font id="function_arguments">( arr   : integer_array_t; x,y   : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+<li>set <font id="function_arguments">( arr   : integer_array_t;<br><span style="padding-left:20px"> x,<br><span style="padding-left:20px">y   : integer;<br><span style="padding-left:20px"> value : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set <font id="function_arguments">( arr   : integer_array_t; x,y,z : integer; value : integer ) </font> <font id="function_return">return ()</font></li>
+<li>set <font id="function_arguments">( arr   : integer_array_t;<br><span style="padding-left:20px"> x,<br><span style="padding-left:20px">y,<br><span style="padding-left:20px">z : integer;<br><span style="padding-left:20px"> value : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>append <font id="function_arguments">( variable arr : inout integer_array_t; value        : integer ) </font> <font id="function_return">return ()</font></li>
+<li>append <font id="function_arguments">( variable arr : inout integer_array_t;<br><span style="padding-left:20px"> value        : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>reshape <font id="function_arguments">( variable arr : inout integer_array_t; length       : integer ) </font> <font id="function_return">return ()</font></li>
+<li>reshape <font id="function_arguments">( variable arr : inout integer_array_t;<br><span style="padding-left:20px"> length       : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>reshape <font id="function_arguments">( variable arr  : inout integer_array_t; width, height : integer ) </font> <font id="function_return">return ()</font></li>
+<li>reshape <font id="function_arguments">( variable arr  : inout integer_array_t;<br><span style="padding-left:20px"> width,<br><span style="padding-left:20px"> height : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>reshape <font id="function_arguments">( variable arr         : inout integer_array_t; width, height, depth : integer ) </font> <font id="function_return">return ()</font></li>
+<li>reshape <font id="function_arguments">( variable arr         : inout integer_array_t;<br><span style="padding-left:20px"> width,<br><span style="padding-left:20px"> height,<br><span style="padding-left:20px"> depth : integer ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>save_csv <font id="function_arguments">( arr       : integer_array_t; file_name : string ) </font> <font id="function_return">return ()</font></li>
+<li>save_csv <font id="function_arguments">( arr       : integer_array_t;<br><span style="padding-left:20px"> file_name : string ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>save_raw <font id="function_arguments">( arr       : integer_array_t; file_name : string ) </font> <font id="function_return">return ()</font></li>
+<li>save_raw <font id="function_arguments">( arr       : integer_array_t;<br><span style="padding-left:20px"> file_name : string ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

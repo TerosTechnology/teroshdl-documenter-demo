@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1040,13 +1045,13 @@
 <tr>
 <td>C_SYNC_FLAG_DEFAULT</td>
 <td>t_sync_flag_record</td>
-<td>(     flag_name   =&gt; (others =&gt; NUL),     is_blocked  =&gt; true   )</td>
+<td>(     flag_name   =&gt; (others =&gt; NUL),<br><span style="padding-left:20px">     is_blocked  =&gt; true   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_WATCHDOG_CTRL_DEFAULT</td>
 <td>t_watchdog_ctrl</td>
-<td>(     extend      =&gt; false,     restart     =&gt; false,     terminate   =&gt; false,     extension   =&gt; 0 ns,     new_timeout =&gt; 0 ns   )</td>
+<td>(     extend      =&gt; false,<br><span style="padding-left:20px">     restart     =&gt; false,<br><span style="padding-left:20px">     terminate   =&gt; false,<br><span style="padding-left:20px">     extension   =&gt; 0 ns,<br><span style="padding-left:20px">     new_timeout =&gt; 0 ns   )</td>
 <td></td>
 </tr>
 <tr>
@@ -1058,7 +1063,7 @@
 <tr>
 <td>C_UVVM_STATUS_DEFAULT</td>
 <td>t_uvvm_status</td>
-<td>(     found_unexpected_simulation_warnings_or_worse     =&gt; 0,     found_unexpected_simulation_errors_or_worse       =&gt; 0,     mismatch_on_expected_simulation_warnings_or_worse =&gt; 0,     mismatch_on_expected_simulation_errors_or_worse   =&gt; 0,     info_on_finishing_await_any_completion            =&gt; (vvc_name    =&gt; (C_INFO_ON_FINISHING_AWAIT_ANY_COMPLETION_VVC_NAME_DEFAULT, others =&gt; ' '),                                                           vvc_cmd_idx =&gt; 0,                                                           vvc_time_of_completion =&gt; 0 ns)   )</td>
+<td>(     found_unexpected_simulation_warnings_or_worse     =&gt; 0,<br><span style="padding-left:20px">     found_unexpected_simulation_errors_or_worse       =&gt; 0,<br><span style="padding-left:20px">     mismatch_on_expected_simulation_warnings_or_worse =&gt; 0,<br><span style="padding-left:20px">     mismatch_on_expected_simulation_errors_or_worse   =&gt; 0,<br><span style="padding-left:20px">     info_on_finishing_await_any_completion            =&gt; (vvc_name    =&gt; (C_INFO_ON_FINISHING_AWAIT_ANY_COMPLETION_VVC_NAME_DEFAULT,<br><span style="padding-left:20px"> others =&gt; ' '),<br><span style="padding-left:20px">                                                           vvc_cmd_idx =&gt; 0,<br><span style="padding-left:20px">                                                           vvc_time_of_completion =&gt; 0 ns)   )</td>
 <td></td>
 </tr>
 <tr>
@@ -1086,17 +1091,17 @@
 </tr>
 <tr>
 <td>t_natural_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of natural</td>
 <td></td>
 </tr>
 <tr>
 <td>t_integer_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of integer</td>
 <td></td>
 </tr>
 <tr>
 <td>t_slv_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of std_logic_vector</td>
 <td></td>
 </tr>
 <tr>
@@ -1106,122 +1111,122 @@
 </tr>
 <tr>
 <td>t_signed_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of signed</td>
 <td></td>
 </tr>
 <tr>
 <td>t_unsigned_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of unsigned</td>
 <td></td>
 </tr>
 <tr>
 <td>t_natural_vector</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of natural</td>
 <td>Additions to predefined vector types</td>
 </tr>
 <tr>
 <td>t_positive_vector</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of positive</td>
 <td></td>
 </tr>
 <tr>
 <td>t_info_target</td>
-<td>(LOG_INFO, ALERT_INFO, USER_INFO)</td>
+<td>(LOG_INFO,<br><span style="padding-left:20px"> ALERT_INFO,<br><span style="padding-left:20px"> USER_INFO)</td>
 <td>Note: Most types below have a matching to_string() in 'string_methods_pkg.vhd'</td>
 </tr>
 <tr>
 <td>t_alert_level</td>
-<td>(NO_ALERT, NOTE, TB_NOTE, WARNING, TB_WARNING, MANUAL_CHECK, ERROR, TB_ERROR, FAILURE, TB_FAILURE)</td>
+<td>(NO_ALERT,<br><span style="padding-left:20px"> NOTE,<br><span style="padding-left:20px"> TB_NOTE,<br><span style="padding-left:20px"> WARNING,<br><span style="padding-left:20px"> TB_WARNING,<br><span style="padding-left:20px"> MANUAL_CHECK,<br><span style="padding-left:20px"> ERROR,<br><span style="padding-left:20px"> TB_ERROR,<br><span style="padding-left:20px"> FAILURE,<br><span style="padding-left:20px"> TB_FAILURE)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_enabled</td>
-<td>(ENABLED, DISABLED, NA)</td>
+<td>(ENABLED,<br><span style="padding-left:20px"> DISABLED,<br><span style="padding-left:20px"> NA)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_attention</td>
-<td>(REGARD, EXPECT, IGNORE)</td>
+<td>(REGARD,<br><span style="padding-left:20px"> EXPECT,<br><span style="padding-left:20px"> IGNORE)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_radix</td>
-<td>(BIN, HEX, DEC, HEX_BIN_IF_INVALID)</td>
+<td>(BIN,<br><span style="padding-left:20px"> HEX,<br><span style="padding-left:20px"> DEC,<br><span style="padding-left:20px"> HEX_BIN_IF_INVALID)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_radix_prefix</td>
-<td>(EXCL_RADIX, INCL_RADIX)</td>
+<td>(EXCL_RADIX,<br><span style="padding-left:20px"> INCL_RADIX)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_order</td>
-<td>(INTERMEDIATE, FINAL)</td>
+<td>(INTERMEDIATE,<br><span style="padding-left:20px"> FINAL)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_ascii_allow</td>
-<td>(ALLOW_ALL, ALLOW_PRINTABLE_ONLY)</td>
+<td>(ALLOW_ALL,<br><span style="padding-left:20px"> ALLOW_PRINTABLE_ONLY)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_blocking_mode</td>
-<td>(BLOCKING, NON_BLOCKING)</td>
+<td>(BLOCKING,<br><span style="padding-left:20px"> NON_BLOCKING)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_from_point_in_time</td>
-<td>(FROM_NOW, FROM_LAST_EVENT)</td>
+<td>(FROM_NOW,<br><span style="padding-left:20px"> FROM_LAST_EVENT)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_vvc_select</td>
-<td>(ANY_OF, ALL_OF, ALL_VVCS)</td>
+<td>(ANY_OF,<br><span style="padding-left:20px"> ALL_OF,<br><span style="padding-left:20px"> ALL_VVCS)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_list_action</td>
-<td>(KEEP_LIST, CLEAR_LIST)</td>
+<td>(KEEP_LIST,<br><span style="padding-left:20px"> CLEAR_LIST)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_format_zeros</td>
-<td>(AS_IS, KEEP_LEADING_0, SKIP_LEADING_0)</td>
+<td>(AS_IS,<br><span style="padding-left:20px"> KEEP_LEADING_0,<br><span style="padding-left:20px"> SKIP_LEADING_0)</td>
 <td>AS_IS is deprecated and will be removed. Use KEEP_LEADING_0.</td>
 </tr>
 <tr>
 <td>t_format_string</td>
-<td>(AS_IS, TRUNCATE, SKIP_LEADING_SPACE)</td>
+<td>(AS_IS,<br><span style="padding-left:20px"> TRUNCATE,<br><span style="padding-left:20px"> SKIP_LEADING_SPACE)</td>
 <td>Deprecated, will be removed.</td>
 </tr>
 <tr>
 <td>t_format_spaces</td>
-<td>(KEEP_LEADING_SPACE, SKIP_LEADING_SPACE)</td>
+<td>(KEEP_LEADING_SPACE,<br><span style="padding-left:20px"> SKIP_LEADING_SPACE)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_truncate_string</td>
-<td>(ALLOW_TRUNCATE, DISALLOW_TRUNCATE)</td>
+<td>(ALLOW_TRUNCATE,<br><span style="padding-left:20px"> DISALLOW_TRUNCATE)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_log_format</td>
-<td>(FORMATTED, UNFORMATTED)</td>
+<td>(FORMATTED,<br><span style="padding-left:20px"> UNFORMATTED)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_log_if_block_empty</td>
-<td>(WRITE_HDR_IF_BLOCK_EMPTY, SKIP_LOG_IF_BLOCK_EMPTY, NOTIFY_IF_BLOCK_EMPTY)</td>
+<td>(WRITE_HDR_IF_BLOCK_EMPTY,<br><span style="padding-left:20px"> SKIP_LOG_IF_BLOCK_EMPTY,<br><span style="padding-left:20px"> NOTIFY_IF_BLOCK_EMPTY)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_log_destination</td>
-<td>(CONSOLE_AND_LOG, CONSOLE_ONLY, LOG_ONLY)</td>
+<td>(CONSOLE_AND_LOG,<br><span style="padding-left:20px"> CONSOLE_ONLY,<br><span style="padding-left:20px"> LOG_ONLY)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_match_strictness</td>
-<td>(MATCH_STD, MATCH_STD_INCL_Z, MATCH_EXACT)</td>
+<td>(MATCH_STD,<br><span style="padding-left:20px"> MATCH_STD_INCL_Z,<br><span style="padding-left:20px"> MATCH_EXACT)</td>
 <td></td>
 </tr>
 <tr>
@@ -1246,12 +1251,12 @@
 </tr>
 <tr>
 <td>t_quietness</td>
-<td>(NON_QUIET, QUIET)</td>
+<td>(NON_QUIET,<br><span style="padding-left:20px"> QUIET)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_deprecate_setting</td>
-<td>(NO_DEPRECATE, DEPRECATE_ONCE, ALWAYS_DEPRECATE)</td>
+<td>(NO_DEPRECATE,<br><span style="padding-left:20px"> DEPRECATE_ONCE,<br><span style="padding-left:20px"> ALWAYS_DEPRECATE)</td>
 <td></td>
 </tr>
 <tr>
@@ -1261,27 +1266,27 @@
 </tr>
 <tr>
 <td>t_action_when_transfer_is_done</td>
-<td>(RELEASE_LINE_AFTER_TRANSFER, HOLD_LINE_AFTER_TRANSFER)</td>
+<td>(RELEASE_LINE_AFTER_TRANSFER,<br><span style="padding-left:20px"> HOLD_LINE_AFTER_TRANSFER)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_when_to_start_transfer</td>
-<td>(START_TRANSFER_IMMEDIATE, START_TRANSFER_ON_NEXT_SS)</td>
+<td>(START_TRANSFER_IMMEDIATE,<br><span style="padding-left:20px"> START_TRANSFER_ON_NEXT_SS)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_action_between_words</td>
-<td>(RELEASE_LINE_BETWEEN_WORDS, HOLD_LINE_BETWEEN_WORDS)</td>
+<td>(RELEASE_LINE_BETWEEN_WORDS,<br><span style="padding-left:20px"> HOLD_LINE_BETWEEN_WORDS)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_byte_endianness</td>
-<td>(LOWER_BYTE_LEFT, LOWER_BYTE_RIGHT, LOWER_WORD_LEFT, LOWER_WORD_RIGHT, FIRST_BYTE_LEFT, FIRST_BYTE_RIGHT)</td>
+<td>(LOWER_BYTE_LEFT,<br><span style="padding-left:20px"> LOWER_BYTE_RIGHT,<br><span style="padding-left:20px"> LOWER_WORD_LEFT,<br><span style="padding-left:20px"> LOWER_WORD_RIGHT,<br><span style="padding-left:20px"> FIRST_BYTE_LEFT,<br><span style="padding-left:20px"> FIRST_BYTE_RIGHT)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_pulse_continuation</td>
-<td>(ALLOW_PULSE_CONTINUATION, NO_PULSE_CONTINUATION_ALLOWED)</td>
+<td>(ALLOW_PULSE_CONTINUATION,<br><span style="padding-left:20px"> NO_PULSE_CONTINUATION_ALLOWED)</td>
 <td></td>
 </tr>
 <tr>
@@ -1296,7 +1301,7 @@
 </tr>
 <tr>
 <td>t_flag_returning</td>
-<td>(KEEP_UNBLOCKED, RETURN_TO_BLOCK)</td>
+<td>(KEEP_UNBLOCKED,<br><span style="padding-left:20px"> RETURN_TO_BLOCK)</td>
 <td>value after unblock</td>
 </tr>
 <tr>
@@ -1306,7 +1311,7 @@
 </tr>
 <tr>
 <td>t_sync_flag_record_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of t_sync_flag_record</td>
 <td></td>
 </tr>
 <tr>
@@ -1331,17 +1336,17 @@
 </tr>
 <tr>
 <td>t_parity</td>
-<td>( PARITY_NONE, PARITY_ODD, PARITY_EVEN )</td>
+<td>( PARITY_NONE,<br><span style="padding-left:20px"> PARITY_ODD,<br><span style="padding-left:20px"> PARITY_EVEN )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_stop_bits</td>
-<td>( STOP_BITS_ONE, STOP_BITS_ONE_AND_HALF, STOP_BITS_TWO )</td>
+<td>( STOP_BITS_ONE,<br><span style="padding-left:20px"> STOP_BITS_ONE_AND_HALF,<br><span style="padding-left:20px"> STOP_BITS_TWO )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_check_type</td>
-<td>(CHECK_VALUE, CHECK_VALUE_IN_RANGE, CHECK_STABLE, CHECK_TIME_WINDOW)</td>
+<td>(CHECK_VALUE,<br><span style="padding-left:20px"> CHECK_VALUE_IN_RANGE,<br><span style="padding-left:20px"> CHECK_STABLE,<br><span style="padding-left:20px"> CHECK_TIME_WINDOW)</td>
 <td></td>
 </tr>
 <tr>
@@ -1351,7 +1356,7 @@
 </tr>
 <tr>
 <td>t_transaction_result</td>
-<td>(ACK, NAK, ERROR)</td>
+<td>(ACK,<br><span style="padding-left:20px"> NAK,<br><span style="padding-left:20px"> ERROR)</td>
 <td>add more when needed</td>
 </tr>
 <tr>
@@ -1366,7 +1371,7 @@
 </tr>
 <tr>
 <td>t_bfm_delay_type</td>
-<td>(NO_DELAY, TIME_FINISH2START, TIME_START2START)</td>
+<td>(NO_DELAY,<br><span style="padding-left:20px"> TIME_FINISH2START,<br><span style="padding-left:20px"> TIME_START2START)</td>
 <td></td>
 </tr>
 <tr>
@@ -1381,42 +1386,42 @@
 </tr>
 <tr>
 <td>t_data_routing</td>
-<td>( NA, TO_SB, TO_BUFFER, FROM_BUFFER, TO_RECEIVE_BUFFER)</td>
+<td>( NA,<br><span style="padding-left:20px"> TO_SB,<br><span style="padding-left:20px"> TO_BUFFER,<br><span style="padding-left:20px"> FROM_BUFFER,<br><span style="padding-left:20px"> TO_RECEIVE_BUFFER)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_bfm_sync</td>
-<td>( SYNC_ON_CLOCK_ONLY, SYNC_WITH_SETUP_AND_HOLD )</td>
+<td>( SYNC_ON_CLOCK_ONLY,<br><span style="padding-left:20px"> SYNC_WITH_SETUP_AND_HOLD )</td>
 <td>TO_FILE and FROM_FILE may be added later on</td>
 </tr>
 <tr>
 <td>t_test_status</td>
-<td>(NA, PASS, FAIL)</td>
+<td>(NA,<br><span style="padding-left:20px"> PASS,<br><span style="padding-left:20px"> FAIL)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_activity</td>
-<td>(ACTIVE, INACTIVE)</td>
+<td>(ACTIVE,<br><span style="padding-left:20px"> INACTIVE)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_extent_tickoff</td>
-<td>(LIST_SINGLE_TICKOFF, LIST_EVERY_TICKOFF)</td>
+<td>(LIST_SINGLE_TICKOFF,<br><span style="padding-left:20px"> LIST_EVERY_TICKOFF)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_identifier_option</td>
-<td>(ENTRY_NUM, POSITION)</td>
+<td>(ENTRY_NUM,<br><span style="padding-left:20px"> POSITION)</td>
 <td>Identifier_option: Typically describes what the next parameter means.- ENTRY_NUM :    Incremented for each entry added to the queue.    Unlike POSITION, the ENTRY_NUMBER will stay the same for this entry, even if entries are inserted before this entry- POSITION :    Position of entry in queue, independent of when the entry was inserted.</td>
 </tr>
 <tr>
 <td>t_range_option</td>
-<td>(SINGLE, AND_LOWER, AND_HIGHER)</td>
+<td>(SINGLE,<br><span style="padding-left:20px"> AND_LOWER,<br><span style="padding-left:20px"> AND_HIGHER)</td>
 <td></td>
 </tr>
 <tr>
 <td>t_tag_usage</td>
-<td>(TAG, NO_TAG)</td>
+<td>(TAG,<br><span style="padding-left:20px"> NO_TAG)</td>
 <td></td>
 </tr>
 </tbody>

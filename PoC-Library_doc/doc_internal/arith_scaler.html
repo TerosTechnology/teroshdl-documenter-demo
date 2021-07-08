@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1156,7 +1161,7 @@
 <tr>
 <td>X</td>
 <td>positive</td>
-<td>log2ceil(imax(imax(MULS), imax(DIVS)/2+1))</td>
+<td>log2ceil(imax(imax(MULS),<br><span style="padding-left:20px"> imax(DIVS)/2+1))</td>
 <td></td>
 </tr>
 <tr>
@@ -1186,7 +1191,7 @@
 <tr>
 <td>MAX_ANY_STEPS</td>
 <td>positive</td>
-<td>imax(MAX_MUL_STEPS, MAX_DIV_STEPS)</td>
+<td>imax(MAX_MUL_STEPS,<br><span style="padding-left:20px"> MAX_DIV_STEPS)</td>
 <td></td>
 </tr>
 <tr>
@@ -1214,7 +1219,7 @@
 </tr>
 <tr>
 <td>tResMasks</td>
-<td></td>
+<td>array(natural range&lt;&gt;) of tResMask</td>
 <td></td>
 </tr>
 </tbody>

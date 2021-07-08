@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1058,22 +1063,22 @@
 <tbody>
 <tr>
 <td>T_SIM_BOOLVEC</td>
-<td></td>
+<td>array(integer range &lt;&gt;) of boolean</td>
 <td>===========================================================================Simulation Task and Status Management===========================================================================</td>
 </tr>
 <tr>
 <td>T_SIM_PROCESS_ID_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SIM_PROCESS_ID</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SIM_TEST_STATUS</td>
-<td>( SIM_TEST_STATUS_CREATED, SIM_TEST_STATUS_ACTIVE, SIM_TEST_STATUS_ENDED, SIM_TEST_STATUS_ZOMBI )</td>
+<td>( SIM_TEST_STATUS_CREATED,<br><span style="padding-left:20px"> SIM_TEST_STATUS_ACTIVE,<br><span style="padding-left:20px"> SIM_TEST_STATUS_ENDED,<br><span style="padding-left:20px"> SIM_TEST_STATUS_ZOMBI )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_SIM_PROCESS_STATUS</td>
-<td>( SIM_PROCESS_STATUS_ACTIVE, SIM_PROCESS_STATUS_ENDED )</td>
+<td>( SIM_PROCESS_STATUS_ACTIVE,<br><span style="padding-left:20px"> SIM_PROCESS_STATUS_ENDED )</td>
 <td></td>
 </tr>
 <tr>
@@ -1083,7 +1088,7 @@
 </tr>
 <tr>
 <td>T_SIM_TEST_VECTOR</td>
-<td></td>
+<td>array(integer range &lt;&gt;) of T_SIM_TEST</td>
 <td></td>
 </tr>
 <tr>
@@ -1093,7 +1098,7 @@
 </tr>
 <tr>
 <td>T_SIM_PROCESS_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_SIM_PROCESS</td>
 <td></td>
 </tr>
 <tr>
@@ -1115,11 +1120,11 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; SeedValue : in T_SIM_RAND_SEED) </font> <font id="function_return">return ()</font></li>
+<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> SeedValue : in T_SIM_RAND_SEED) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; SeedVector : in T_INTVEC) </font> <font id="function_return">return ()</font></li>
+<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> SeedVector : in T_INTVEC) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; SeedVector : in string) </font> <font id="function_return">return ()</font></li>
+<li>randInitializeSeed <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> SeedVector : in string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randInitializeSeed <font id="function_arguments">()</font> <font id="function_return">return T_SIM_RAND_SEED </font></li>
 </ul><ul>
@@ -1129,28 +1134,28 @@
 </ul><ul>
 <li>randInitializeSeed <font id="function_arguments">(SeedVector : string) </font> <font id="function_return">return T_SIM_RAND_SEED </font></li>
 </ul><ul>
-<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL) </font> <font id="function_return">return ()</font></li>
+<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Uniform distributed random values===========================================================================</p></div><ul>
-<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out integer; Minimum : integer; Maximum : integer) </font> <font id="function_return">return ()</font></li>
+<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out integer;<br><span style="padding-left:20px"> Minimum : integer;<br><span style="padding-left:20px"> Maximum : integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL; Minimum : REAL; Maximum : REAL) </font> <font id="function_return">return ()</font></li>
+<li>randUniformDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL;<br><span style="padding-left:20px"> Minimum : REAL;<br><span style="padding-left:20px"> Maximum : REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL; StandardDeviation : REAL := 1.0; Mean : REAL := 0.0) </font> <font id="function_return">return ()</font></li>
+<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL;<br><span style="padding-left:20px"> StandardDeviation : REAL := 1.0;<br><span style="padding-left:20px"> Mean : REAL := 0.0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Normal / Gaussian distributed random values===========================================================================</p></div><ul>
-<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out integer; StandardDeviation : in REAL; Mean : in REAL; Minimum : in integer; Maximum : in integer) </font> <font id="function_return">return ()</font></li>
+<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out integer;<br><span style="padding-left:20px"> StandardDeviation : in REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in integer;<br><span style="padding-left:20px"> Maximum : in integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL; StandardDeviation : in REAL; Mean : in REAL; Minimum : in REAL; Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
+<li>randNormalDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL;<br><span style="padding-left:20px"> StandardDeviation : in REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in REAL;<br><span style="padding-left:20px"> Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL; Mean : in REAL) </font> <font id="function_return">return ()</font></li>
+<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL;<br><span style="padding-left:20px"> Mean : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Poisson distributed random values===========================================================================</p></div><ul>
-<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out integer; Mean : in REAL; Minimum : in integer; Maximum : in integer) </font> <font id="function_return">return ()</font></li>
+<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out integer;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in integer;<br><span style="padding-left:20px"> Maximum : in integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED; Value : out REAL; Mean : in REAL; Minimum : in REAL; Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
+<li>randPoissonDistributedValue <font id="function_arguments">(Seed : inout T_SIM_RAND_SEED;<br><span style="padding-left:20px"> Value : out REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in REAL;<br><span style="padding-left:20px"> Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>ite <font id="function_arguments">(cond : boolean; value1 : T_DEGREE; value2 : T_DEGREE) </font> <font id="function_return">return T_DEGREE </font></li>
+<li>ite <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> value1 : T_DEGREE;<br><span style="padding-left:20px"> value2 : T_DEGREE) </font> <font id="function_return">return T_DEGREE </font></li>
 </ul>
     </article class="markdown-body">
 

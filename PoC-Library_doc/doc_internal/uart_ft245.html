@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1257,7 +1262,7 @@
 <tr>
 <td>DELAY_LOAD</td>
 <td>unsigned(DELAY_WIDTH-1 downto 0)</td>
-<td>to_unsigned(DELAY_CYCLES, DELAY_WIDTH)</td>
+<td>to_unsigned(DELAY_CYCLES,<br><span style="padding-left:20px"> DELAY_WIDTH)</td>
 <td>delay register load value</td>
 </tr>
 </tbody>
@@ -1274,7 +1279,7 @@
 <tbody>
 <tr>
 <td>tState</td>
-<td>( IDLE, RD1, RD2, RD3, RD4, WR1, WR2, WR3, WR4 )</td>
+<td>( IDLE,<br><span style="padding-left:20px"> RD1,<br><span style="padding-left:20px"> RD2,<br><span style="padding-left:20px"> RD3,<br><span style="padding-left:20px"> RD4,<br><span style="padding-left:20px"> WR1,<br><span style="padding-left:20px"> WR2,<br><span style="padding-left:20px"> WR3,<br><span style="padding-left:20px"> WR4 )</td>
 <td>FSM</td>
 </tr>
 </tbody>

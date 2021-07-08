@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1028,7 +1033,7 @@
 <tr>
 <td>null_memory</td>
 <td>memory_t</td>
-<td>(p_logger =&gt; null_logger,                                       p_check_permissions =&gt; boolean'low,                                       p_default_endian =&gt; endianness_t'low,                                       others =&gt; null_ptr)</td>
+<td>(p_logger =&gt; null_logger,<br><span style="padding-left:20px">                                       p_check_permissions =&gt; boolean'low,<br><span style="padding-left:20px">                                       p_default_endian =&gt; endianness_t'low,<br><span style="padding-left:20px">                                       others =&gt; null_ptr)</td>
 <td></td>
 </tr>
 <tr>
@@ -1040,7 +1045,7 @@
 <tr>
 <td>null_buffer</td>
 <td>buffer_t</td>
-<td>(p_memory_ref =&gt; null_memory,                                       p_name =&gt; null_string_ptr,                                       p_address =&gt; natural'low,                                       p_num_bytes =&gt; natural'low)</td>
+<td>(p_memory_ref =&gt; null_memory,<br><span style="padding-left:20px">                                       p_name =&gt; null_string_ptr,<br><span style="padding-left:20px">                                       p_address =&gt; natural'low,<br><span style="padding-left:20px">                                       p_num_bytes =&gt; natural'low)</td>
 <td></td>
 </tr>
 </tbody>
@@ -1057,7 +1062,7 @@
 <tbody>
 <tr>
 <td>endianness_arg_t</td>
-<td>(little_endian, big_endian, default_endian)</td>
+<td>(little_endian,<br><span style="padding-left:20px"> big_endian,<br><span style="padding-left:20px"> default_endian)</td>
 <td></td>
 </tr>
 <tr>
@@ -1067,7 +1072,7 @@
 </tr>
 <tr>
 <td>permissions_t</td>
-<td>(no_access, write_only, read_only, read_and_write)</td>
+<td>(no_access,<br><span style="padding-left:20px"> write_only,<br><span style="padding-left:20px"> read_only,<br><span style="padding-left:20px"> read_and_write)</td>
 <td></td>
 </tr>
 <tr>
@@ -1080,24 +1085,24 @@
 <li>clear <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Empties the memory by removing all data and permissions</p></div><ul>
-<li>write_byte <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t) </font> <font id="function_return">return ()</font></li>
+<li>write_byte <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> byte : byte_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>write_word <font id="function_arguments">(memory : memory_t; address : natural; word : std_logic_vector; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+<li>write_word <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> word : std_logic_vector;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>write_integer <font id="function_arguments">(memory : memory_t; address : natural; word : integer; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+<li>write_integer <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> word : integer;<br><span style="padding-left:20px"> bytes_per_word : natural range 1 to 4 := 4;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Write integer</p></div><ul>
-<li>set_permissions <font id="function_arguments">(memory : memory_t; address : natural; permissions : permissions_t) </font> <font id="function_return">return ()</font></li>
+<li>set_permissions <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> permissions : permissions_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>clear_expected_byte <font id="function_arguments">(memory : memory_t; address : natural) </font> <font id="function_return">return ()</font></li>
+<li>clear_expected_byte <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_expected_byte <font id="function_arguments">(memory : memory_t; address : natural; expected : byte_t) </font> <font id="function_return">return ()</font></li>
+<li>set_expected_byte <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> expected : byte_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_expected_word <font id="function_arguments">(memory : memory_t; address : natural; expected : std_logic_vector; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+<li>set_expected_word <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> expected : std_logic_vector;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_expected_integer <font id="function_arguments">(memory : memory_t; address : natural; expected : integer; bytes_per_word : natural range 1 to 4 := 4; endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
+<li>set_expected_integer <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> expected : integer;<br><span style="padding-left:20px"> bytes_per_word : natural range 1 to 4 := 4;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>check_expected_was_written <font id="function_arguments">(memory : memory_t; address : natural; num_bytes : natural) </font> <font id="function_return">return ()</font></li>
+<li>check_expected_was_written <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> num_bytes : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Check that all expected bytes within address range was writtenwith correct value</p></div><ul>
 <li>check_expected_was_written <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
@@ -1106,7 +1111,7 @@ Check that all expected bytes within the entire memory was writtenwith correct v
 <li>check_expected_was_written <font id="function_arguments">(buf : buffer_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Check that all expected bytes was written with correct value in buffer</p></div><ul>
-<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t; address : natural; byte : byte_t) </font> <font id="function_return">return ()</font></li>
+<li>write_byte_unchecked <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> byte : byte_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Perform write of one byte without running any address or data checks</p></div>
     </article class="markdown-body">

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1036,22 +1041,22 @@
 </tr>
 <tr>
 <td>T_IO_TRISTATE_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_TRISTATE</td>
 <td>Do not use this type for <code>inout</code> ports of synthesizable IP cores to drivevalues in both directions, see also:ref:<code>ISSUES:General:inout_records</code>.</td>
 </tr>
 <tr>
 <td>T_IO_LVDS_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_LVDS</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_DATARATE</td>
-<td>(IO_DATARATE_SDR, IO_DATARATE_DDR, IO_DATARATE_QDR)</td>
+<td>(IO_DATARATE_SDR,<br><span style="padding-left:20px"> IO_DATARATE_DDR,<br><span style="padding-left:20px"> IO_DATARATE_QDR)</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_7SEGMENT_CHAR</td>
-<td>( IO_7SEGMENT_CHAR_0, IO_7SEGMENT_CHAR_1, IO_7SEGMENT_CHAR_2, IO_7SEGMENT_CHAR_3, IO_7SEGMENT_CHAR_4, IO_7SEGMENT_CHAR_5, IO_7SEGMENT_CHAR_6, IO_7SEGMENT_CHAR_7, IO_7SEGMENT_CHAR_8, IO_7SEGMENT_CHAR_9, IO_7SEGMENT_CHAR_A, IO_7SEGMENT_CHAR_B, IO_7SEGMENT_CHAR_C, IO_7SEGMENT_CHAR_D, IO_7SEGMENT_CHAR_E, IO_7SEGMENT_CHAR_F, IO_7SEGMENT_CHAR_H, IO_7SEGMENT_CHAR_O, IO_7SEGMENT_CHAR_U, IO_7SEGMENT_CHAR_MINUS )</td>
+<td>( IO_7SEGMENT_CHAR_0,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_1,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_2,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_3,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_4,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_5,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_6,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_7,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_8,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_9,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_A,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_B,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_C,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_D,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_E,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_F,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_H,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_O,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_U,<br><span style="padding-left:20px"> IO_7SEGMENT_CHAR_MINUS )</td>
 <td></td>
 </tr>
 <tr>
@@ -1061,37 +1066,37 @@
 </tr>
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_COMMAND</td>
-<td>( IO_MDIO_MDIOC_CMD_NONE, IO_MDIO_MDIOC_CMD_CHECK_ADDRESS, IO_MDIO_MDIOC_CMD_READ, IO_MDIO_MDIOC_CMD_WRITE, IO_MDIO_MDIOC_CMD_ABORT )</td>
+<td>( IO_MDIO_MDIOC_CMD_NONE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_CHECK_ADDRESS,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_READ,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_WRITE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_ABORT )</td>
 <td>MDIOController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_STATUS</td>
-<td>( IO_MDIO_MDIOC_STATUS_IDLE, IO_MDIO_MDIOC_STATUS_CHECKING, IO_MDIO_MDIOC_STATUS_CHECK_OK, IO_MDIO_MDIOC_STATUS_CHECK_FAILED, IO_MDIO_MDIOC_STATUS_READING, IO_MDIO_MDIOC_STATUS_READ_COMPLETE, IO_MDIO_MDIOC_STATUS_WRITING, IO_MDIO_MDIOC_STATUS_WRITE_COMPLETE, IO_MDIO_MDIOC_STATUS_ERROR )</td>
+<td>( IO_MDIO_MDIOC_STATUS_IDLE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_CHECKING,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_CHECK_OK,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_CHECK_FAILED,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_READING,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_READ_COMPLETE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_WRITING,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_WRITE_COMPLETE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_ERROR</td>
-<td>( IO_MDIO_MDIOC_ERROR_NONE, IO_MDIO_MDIOC_ERROR_ADDRESS_NOT_FOUND, IO_MDIO_MDIOC_ERROR_FSM )</td>
+<td>( IO_MDIO_MDIOC_ERROR_NONE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_ERROR_ADDRESS_NOT_FOUND,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_LCDBUS_COMMAND</td>
-<td>( IO_LCDBUS_CMD_NONE, IO_LCDBUS_CMD_READ, IO_LCDBUS_CMD_WRITE )</td>
+<td>( IO_LCDBUS_CMD_NONE,<br><span style="padding-left:20px"> IO_LCDBUS_CMD_READ,<br><span style="padding-left:20px"> IO_LCDBUS_CMD_WRITE )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_LCDBUS_STATUS</td>
-<td>( IO_LCDBUS_STATUS_RESETTING, IO_LCDBUS_STATUS_IDLE, IO_LCDBUS_STATUS_READING, IO_LCDBUS_STATUS_READ_COMPLETE, IO_LCDBUS_STATUS_WRITING, IO_LCDBUS_STATUS_WRITE_COMPLETE, IO_LCDBUS_STATUS_ERROR )</td>
+<td>( IO_LCDBUS_STATUS_RESETTING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_IDLE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_READING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_READ_COMPLETE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_WRITING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_WRITE_COMPLETE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_ERROR )</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>io_tristate_driver <font id="function_arguments">( signal pad      : inout std_logic_vector; signal tristate : inout T_IO_TRISTATE_VECTOR ) </font> <font id="function_return">return ()</font></li>
+<li>io_tristate_driver <font id="function_arguments">( signal pad      : inout std_logic_vector;<br><span style="padding-left:20px"> signal tristate : inout T_IO_TRISTATE_VECTOR ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Drive a std_logic_vector from a Tri-State bus and in reverse.Use this procedure only in simulation, see also:ref:<code>ISSUES:General:inout_records</code>.</p></div><ul>
-<li>io_7SegmentDisplayEncoding <font id="function_arguments">(hex    : std_logic_vector(3 downto 0); dot : std_logic := '0'; WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>io_7SegmentDisplayEncoding <font id="function_arguments">(hex    : std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> dot : std_logic := '0';<br><span style="padding-left:20px"> WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
-<li>io_7SegmentDisplayEncoding <font id="function_arguments">(digit    : T_BCD; dot : std_logic := '0'; WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
+<li>io_7SegmentDisplayEncoding <font id="function_arguments">(digit    : T_BCD;<br><span style="padding-left:20px"> dot : std_logic := '0';<br><span style="padding-left:20px"> WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul>
     </article class="markdown-body">
 

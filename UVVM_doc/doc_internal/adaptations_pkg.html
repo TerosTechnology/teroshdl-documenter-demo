@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1213,13 +1218,13 @@
 <tr>
 <td>C_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
-<td>(     ID_NEVER            =&gt; DISABLED,     ID_UTIL_BURIED      =&gt; DISABLED,     ID_BITVIS_DEBUG     =&gt; DISABLED,     ID_COVERAGE_MAKEBIN =&gt; DISABLED,     ID_COVERAGE_ADDBIN  =&gt; DISABLED,     ID_COVERAGE_ICOVER  =&gt; DISABLED,     others              =&gt; ENABLED   )</td>
+<td>(     ID_NEVER            =&gt; DISABLED,<br><span style="padding-left:20px">     ID_UTIL_BURIED      =&gt; DISABLED,<br><span style="padding-left:20px">     ID_BITVIS_DEBUG     =&gt; DISABLED,<br><span style="padding-left:20px">     ID_COVERAGE_MAKEBIN =&gt; DISABLED,<br><span style="padding-left:20px">     ID_COVERAGE_ADDBIN  =&gt; DISABLED,<br><span style="padding-left:20px">     ID_COVERAGE_ICOVER  =&gt; DISABLED,<br><span style="padding-left:20px">     others              =&gt; ENABLED   )</td>
 <td>Default message Id panel to be used for all message Id panels, except: - VVC message Id panels, see constant C_VVC_MSG_ID_PANEL_DEFAULT</td>
 </tr>
 <tr>
 <td>C_MSG_ID_INDENT</td>
 <td>t_msg_id_indent</td>
-<td>(     ID_IMMEDIATE_CMD_WAIT    =&gt; "  ..",     ID_CMD_INTERPRETER       =&gt; "  "   &amp; NUL &amp; NUL,     ID_CMD_INTERPRETER_WAIT  =&gt; "  ..",     ID_CMD_EXECUTOR          =&gt; "  "   &amp; NUL &amp; NUL,     ID_CMD_EXECUTOR_WAIT     =&gt; "  ..",     ID_UVVM_SEND_CMD         =&gt; "-&gt;"   &amp; NUL &amp; NUL,     ID_UVVM_CMD_ACK          =&gt; "    ",     ID_NEW_HVVC_CMD_SEQ      =&gt; "  "   &amp; NUL &amp; NUL,     ID_AWAIT_COMPLETION_WAIT =&gt; ".."   &amp; NUL &amp; NUL,     ID_AWAIT_COMPLETION_END  =&gt; "  "   &amp; NUL &amp; NUL,     others                   =&gt; ""     &amp; NUL &amp; NUL &amp; NUL &amp; NUL   )</td>
+<td>(     ID_IMMEDIATE_CMD_WAIT    =&gt; "  ..",<br><span style="padding-left:20px">     ID_CMD_INTERPRETER       =&gt; "  "   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     ID_CMD_INTERPRETER_WAIT  =&gt; "  ..",<br><span style="padding-left:20px">     ID_CMD_EXECUTOR          =&gt; "  "   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     ID_CMD_EXECUTOR_WAIT     =&gt; "  ..",<br><span style="padding-left:20px">     ID_UVVM_SEND_CMD         =&gt; "-&gt;"   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     ID_UVVM_CMD_ACK          =&gt; "    ",<br><span style="padding-left:20px">     ID_NEW_HVVC_CMD_SEQ      =&gt; "  "   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     ID_AWAIT_COMPLETION_WAIT =&gt; ".."   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     ID_AWAIT_COMPLETION_END  =&gt; "  "   &amp; NUL &amp; NUL,<br><span style="padding-left:20px">     others                   =&gt; ""     &amp; NUL &amp; NUL &amp; NUL &amp; NUL   )</td>
 <td></td>
 </tr>
 <tr>
@@ -1237,7 +1242,7 @@
 <tr>
 <td>C_DEFAULT_STOP_LIMIT</td>
 <td>t_alert_counters</td>
-<td>(note to manual_check =&gt; 0,                                                        others               =&gt; 1)</td>
+<td>(note to manual_check =&gt; 0,<br><span style="padding-left:20px">                                                        others               =&gt; 1)</td>
 <td>0 = Never stop</td>
 </tr>
 <tr>
@@ -1261,7 +1266,7 @@
 <tr>
 <td>C_EMPTY_NODE</td>
 <td>t_hierarchy_node</td>
-<td>((1 to C_HIERARCHY_NODE_NAME_LENGTH =&gt; ' '),                                                 (others =&gt; (others =&gt; 0)),                                                 (others =&gt; 0),                                                 (others =&gt; true))</td>
+<td>((1 to C_HIERARCHY_NODE_NAME_LENGTH =&gt; ' '),<br><span style="padding-left:20px">                                                 (others =&gt; (others =&gt; 0)),<br><span style="padding-left:20px">                                                 (others =&gt; 0),<br><span style="padding-left:20px">                                                 (others =&gt; true))</td>
 <td></td>
 </tr>
 <tr>
@@ -1357,7 +1362,7 @@
 <tr>
 <td>C_VVC_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
-<td>(     ID_NEVER                  =&gt; DISABLED,     ID_UTIL_BURIED            =&gt; DISABLED,     ID_CHANNEL_BFM            =&gt; DISABLED,     ID_CHANNEL_EXECUTOR       =&gt; DISABLED,     ID_CHANNEL_EXECUTOR_WAIT  =&gt; DISABLED,     others                    =&gt; ENABLED   )</td>
+<td>(     ID_NEVER                  =&gt; DISABLED,<br><span style="padding-left:20px">     ID_UTIL_BURIED            =&gt; DISABLED,<br><span style="padding-left:20px">     ID_CHANNEL_BFM            =&gt; DISABLED,<br><span style="padding-left:20px">     ID_CHANNEL_EXECUTOR       =&gt; DISABLED,<br><span style="padding-left:20px">     ID_CHANNEL_EXECUTOR_WAIT  =&gt; DISABLED,<br><span style="padding-left:20px">     others                    =&gt; ENABLED   )</td>
 <td>Default message Id panel intended for use in the VVCs</td>
 </tr>
 <tr>
@@ -1393,7 +1398,7 @@
 <tr>
 <td>C_SB_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
-<td>(     ID_CTRL =&gt; ENABLED,     ID_DATA =&gt; DISABLED,     others  =&gt; DISABLED   )</td>
+<td>(     ID_CTRL =&gt; ENABLED,<br><span style="padding-left:20px">     ID_DATA =&gt; DISABLED,<br><span style="padding-left:20px">     others  =&gt; DISABLED   )</td>
 <td>Default message Id panel intended for use in SB</td>
 </tr>
 <tr>
@@ -1453,13 +1458,13 @@
 <tr>
 <td>C_VVC_ID_DEFAULT</td>
 <td>t_vvc_id</td>
-<td>(     name      =&gt; (others =&gt; NUL),     instance  =&gt; 0,     channel   =&gt; NA   )</td>
+<td>(     name      =&gt; (others =&gt; NUL),<br><span style="padding-left:20px">     instance  =&gt; 0,<br><span style="padding-left:20px">     channel   =&gt; NA   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_VVC_STATE_DEFAULT</td>
 <td>t_vvc_state</td>
-<td>(     activity                  =&gt; INACTIVE,     last_cmd_idx_executed     =&gt; -1,     await_selected_supported  =&gt; true   )</td>
+<td>(     activity                  =&gt; INACTIVE,<br><span style="padding-left:20px">     last_cmd_idx_executed     =&gt; -1,<br><span style="padding-left:20px">     await_selected_supported  =&gt; true   )</td>
 <td></td>
 </tr>
 <tr>
@@ -1482,7 +1487,7 @@
 <tbody>
 <tr>
 <td>t_msg_id</td>
-<td>( NO_ID,                    -- Used as default prior to setting actual ID when transfering ID as a field in a record ID_UTIL_BURIED,           -- Used for buried log messages where msg and scope cannot be modified from outside ID_BITVIS_DEBUG,          -- Bitvis internal ID used for UVVM debugging ID_UTIL_SETUP,            -- Used for Utility setup ID_LOG_MSG_CTRL,          -- Used inside Utility library only - when enabling/disabling msg IDs. ID_ALERT_CTRL,            -- Used inside Utility library only - when setting IGNORE or REGARD on various alerts. ID_NEVER,                 -- Used for avoiding log entry. Cannot be enabled. ID_FINISH_OR_STOP,        -- Used when terminating the complete simulation - independent of why ID_CLOCK_GEN,             -- Used for logging when clock generators are enabled or disabled ID_GEN_PULSE,             -- Used for logging when a gen_pulse procedure starts pulsing a signal ID_BLOCKING,              -- Used for logging when using synchronisation flags ID_WATCHDOG,              -- Used for logging the activity of the watchdog ID_POS_ACK,               -- To write a positive acknowledge on a check ID_LOG_HDR,               -- ONLY allowed in test sequencer, Log section headers ID_LOG_HDR_LARGE,         -- ONLY allowed in test sequencer, Large log section headers ID_LOG_HDR_XL,            -- ONLY allowed in test sequencer, Extra large log section headers ID_SEQUENCER,             -- ONLY allowed in test sequencer, Normal log (not log headers) ID_SEQUENCER_SUB,         -- ONLY allowed in test sequencer, Subprograms defined in sequencer ID_BFM,                   -- Used inside a BFM (to log BFM access) ID_BFM_WAIT,              -- Used inside a BFM to indicate that it is waiting for something (e.g. for ready) ID_BFM_POLL,              -- Used inside a BFM when polling until reading a given value. I.e. to show all reads until expected value found (e.g. for sbi_poll_until()) ID_BFM_POLL_SUMMARY,      -- Used inside a BFM when showing the summary of data that has been received while waiting for expected data. ID_CHANNEL_BFM,           -- Used inside a BFM when the protocol is split into separate channels ID_TERMINATE_CMD,         -- Typically used inside a loop in a procedure to end the loop (e.g. for sbi_poll_until() or any looped generation of random stimuli ID_SEGMENT_INITIATE,      -- Notify that a segment is about to be transmitted or received ID_SEGMENT_COMPLETE,      -- Notify that a segment has been transmitted or received ID_SEGMENT_HDR,           -- Notify that a segment header has been transmitted or received. It also writes header info ID_SEGMENT_DATA,          -- Notify that a segment data has been transmitted or received. It also writes segment data ID_PACKET_INITIATE,       -- Notify that a packet is about to be transmitted or received ID_PACKET_PREAMBLE,       -- Notify that a packet preamble has been transmitted or received ID_PACKET_COMPLETE,       -- Notify that a packet has been transmitted or received ID_PACKET_HDR,            -- Notify that a packet header has been transmitted or received. It also writes header info ID_PACKET_DATA,           -- Notify that a packet data has been transmitted or received. It also writes packet data ID_PACKET_CHECKSUM,       -- Notify that a packet checksum has been transmitted or received ID_PACKET_GAP,            -- Notify that an interpacket gap is in process ID_FRAME_INITIATE,        -- Notify that a frame is about to be transmitted or received ID_FRAME_COMPLETE,        -- Notify that a frame has been transmitted or received ID_FRAME_HDR,             -- Notify that a frame header has been transmitted or received. It also writes header info ID_FRAME_DATA,            -- Notify that a frame data has been transmitted or received. It also writes frame data ID_COVERAGE_MAKEBIN,      -- Log messages from MakeBin (IllegalBin/GenBin/IgnoreBin) ID_COVERAGE_ADDBIN,       -- Log messages from AddBin/AddCross ID_COVERAGE_ICOVER,       -- ICover logging, NB: Very low level debugging. Can result in large amount of data. ID_COVERAGE_CONFIG,       -- Logging of configuration in the coverage package ID_COVERAGE_SUMMARY,      -- Report logging : Summary of coverage, with both covered bins and holes ID_COVERAGE_HOLES,        -- Report logging : Holes only ID_UVVM_SEND_CMD,         -- Logs the commands sent to the VVC ID_UVVM_CMD_ACK,          -- Logs the command's ACKs or timeouts from the VVC ID_UVVM_CMD_RESULT,       -- Logs the fetched results from the VVC ID_CMD_INTERPRETER,       -- Message from VVC interpreter about correctly received and queued/issued command ID_CMD_INTERPRETER_WAIT,  -- Message from VVC interpreter that it is actively waiting for a command ID_IMMEDIATE_CMD,         -- Message from VVC interpreter that an IMMEDIATE command has been executed ID_IMMEDIATE_CMD_WAIT,    -- Message from VVC interpreter that an IMMEDIATE command is waiting for command to complete ID_CMD_EXECUTOR,          -- Message from VVC executor about correctly received command - prior to actual execution ID_CMD_EXECUTOR_WAIT,     -- Message from VVC executor that it is actively waiting for a command ID_CHANNEL_EXECUTOR,      -- Message from a channel specific VVC executor process ID_CHANNEL_EXECUTOR_WAIT, -- Message from a channel specific VVC executor process that it is actively waiting for a command ID_NEW_HVVC_CMD_SEQ,      -- Message from a lower level VVC which receives a new command sequence from an HVVC ID_INSERTED_DELAY,        -- Message from VVC executor that it is waiting a given delay ID_OLD_AWAIT_COMPLETION,  -- Temporary log messages related to old await_completion mechanism. Will be removed in v3.0 ID_AWAIT_COMPLETION,      -- Used for logging the procedure call waiting for completion ID_AWAIT_COMPLETION_LIST, -- Used for logging modifications to the list of VVCs waiting for completion ID_AWAIT_COMPLETION_WAIT, -- Used for logging when the procedure starts waiting for completion ID_AWAIT_COMPLETION_END,  -- Used for logging when the procedure has finished waiting for completion ID_UVVM_DATA_QUEUE,       -- Information about UVVM data FIFO/stack (initialization, put, get, etc) ID_CONSTRUCTOR,           -- Constructor message from VVCs (or other components/process when needed) ID_CONSTRUCTOR_SUB,       -- Constructor message for lower level constructor messages (like Queue-information and other limitations) ID_VVC_ACTIVITY, ID_MONITOR,               -- General monitor information ID_MONITOR_ERROR,         -- General monitor errors ID_DATA,                  -- To write general handling of data ID_CTRL,                  -- To write general control/config information ID_FILE_OPEN_CLOSE,       -- Id used when opening / closing file ID_FILE_PARSER,           -- Id used in file parsers ID_SPEC_COV,              -- Messages from the specification coverage methods ALL_MESSAGES              -- Applies to ALL message ID apart from ID_NEVER )</td>
+<td>( NO_ID,<br><span style="padding-left:20px">                    -- Used as default prior to setting actual ID when transfering ID as a field in a record ID_UTIL_BURIED,<br><span style="padding-left:20px">           -- Used for buried log messages where msg and scope cannot be modified from outside ID_BITVIS_DEBUG,<br><span style="padding-left:20px">          -- Bitvis internal ID used for UVVM debugging ID_UTIL_SETUP,<br><span style="padding-left:20px">            -- Used for Utility setup ID_LOG_MSG_CTRL,<br><span style="padding-left:20px">          -- Used inside Utility library only - when enabling/disabling msg IDs. ID_ALERT_CTRL,<br><span style="padding-left:20px">            -- Used inside Utility library only - when setting IGNORE or REGARD on various alerts. ID_NEVER,<br><span style="padding-left:20px">                 -- Used for avoiding log entry. Cannot be enabled. ID_FINISH_OR_STOP,<br><span style="padding-left:20px">        -- Used when terminating the complete simulation - independent of why ID_CLOCK_GEN,<br><span style="padding-left:20px">             -- Used for logging when clock generators are enabled or disabled ID_GEN_PULSE,<br><span style="padding-left:20px">             -- Used for logging when a gen_pulse procedure starts pulsing a signal ID_BLOCKING,<br><span style="padding-left:20px">              -- Used for logging when using synchronisation flags ID_WATCHDOG,<br><span style="padding-left:20px">              -- Used for logging the activity of the watchdog ID_POS_ACK,<br><span style="padding-left:20px">               -- To write a positive acknowledge on a check ID_LOG_HDR,<br><span style="padding-left:20px">               -- ONLY allowed in test sequencer,<br><span style="padding-left:20px"> Log section headers ID_LOG_HDR_LARGE,<br><span style="padding-left:20px">         -- ONLY allowed in test sequencer,<br><span style="padding-left:20px"> Large log section headers ID_LOG_HDR_XL,<br><span style="padding-left:20px">            -- ONLY allowed in test sequencer,<br><span style="padding-left:20px"> Extra large log section headers ID_SEQUENCER,<br><span style="padding-left:20px">             -- ONLY allowed in test sequencer,<br><span style="padding-left:20px"> Normal log (not log headers) ID_SEQUENCER_SUB,<br><span style="padding-left:20px">         -- ONLY allowed in test sequencer,<br><span style="padding-left:20px"> Subprograms defined in sequencer ID_BFM,<br><span style="padding-left:20px">                   -- Used inside a BFM (to log BFM access) ID_BFM_WAIT,<br><span style="padding-left:20px">              -- Used inside a BFM to indicate that it is waiting for something (e.g. for ready) ID_BFM_POLL,<br><span style="padding-left:20px">              -- Used inside a BFM when polling until reading a given value. I.e. to show all reads until expected value found (e.g. for sbi_poll_until()) ID_BFM_POLL_SUMMARY,<br><span style="padding-left:20px">      -- Used inside a BFM when showing the summary of data that has been received while waiting for expected data. ID_CHANNEL_BFM,<br><span style="padding-left:20px">           -- Used inside a BFM when the protocol is split into separate channels ID_TERMINATE_CMD,<br><span style="padding-left:20px">         -- Typically used inside a loop in a procedure to end the loop (e.g. for sbi_poll_until() or any looped generation of random stimuli ID_SEGMENT_INITIATE,<br><span style="padding-left:20px">      -- Notify that a segment is about to be transmitted or received ID_SEGMENT_COMPLETE,<br><span style="padding-left:20px">      -- Notify that a segment has been transmitted or received ID_SEGMENT_HDR,<br><span style="padding-left:20px">           -- Notify that a segment header has been transmitted or received. It also writes header info ID_SEGMENT_DATA,<br><span style="padding-left:20px">          -- Notify that a segment data has been transmitted or received. It also writes segment data ID_PACKET_INITIATE,<br><span style="padding-left:20px">       -- Notify that a packet is about to be transmitted or received ID_PACKET_PREAMBLE,<br><span style="padding-left:20px">       -- Notify that a packet preamble has been transmitted or received ID_PACKET_COMPLETE,<br><span style="padding-left:20px">       -- Notify that a packet has been transmitted or received ID_PACKET_HDR,<br><span style="padding-left:20px">            -- Notify that a packet header has been transmitted or received. It also writes header info ID_PACKET_DATA,<br><span style="padding-left:20px">           -- Notify that a packet data has been transmitted or received. It also writes packet data ID_PACKET_CHECKSUM,<br><span style="padding-left:20px">       -- Notify that a packet checksum has been transmitted or received ID_PACKET_GAP,<br><span style="padding-left:20px">            -- Notify that an interpacket gap is in process ID_FRAME_INITIATE,<br><span style="padding-left:20px">        -- Notify that a frame is about to be transmitted or received ID_FRAME_COMPLETE,<br><span style="padding-left:20px">        -- Notify that a frame has been transmitted or received ID_FRAME_HDR,<br><span style="padding-left:20px">             -- Notify that a frame header has been transmitted or received. It also writes header info ID_FRAME_DATA,<br><span style="padding-left:20px">            -- Notify that a frame data has been transmitted or received. It also writes frame data ID_COVERAGE_MAKEBIN,<br><span style="padding-left:20px">      -- Log messages from MakeBin (IllegalBin/GenBin/IgnoreBin) ID_COVERAGE_ADDBIN,<br><span style="padding-left:20px">       -- Log messages from AddBin/AddCross ID_COVERAGE_ICOVER,<br><span style="padding-left:20px">       -- ICover logging,<br><span style="padding-left:20px"> NB: Very low level debugging. Can result in large amount of data. ID_COVERAGE_CONFIG,<br><span style="padding-left:20px">       -- Logging of configuration in the coverage package ID_COVERAGE_SUMMARY,<br><span style="padding-left:20px">      -- Report logging : Summary of coverage,<br><span style="padding-left:20px"> with both covered bins and holes ID_COVERAGE_HOLES,<br><span style="padding-left:20px">        -- Report logging : Holes only ID_UVVM_SEND_CMD,<br><span style="padding-left:20px">         -- Logs the commands sent to the VVC ID_UVVM_CMD_ACK,<br><span style="padding-left:20px">          -- Logs the command's ACKs or timeouts from the VVC ID_UVVM_CMD_RESULT,<br><span style="padding-left:20px">       -- Logs the fetched results from the VVC ID_CMD_INTERPRETER,<br><span style="padding-left:20px">       -- Message from VVC interpreter about correctly received and queued/issued command ID_CMD_INTERPRETER_WAIT,<br><span style="padding-left:20px">  -- Message from VVC interpreter that it is actively waiting for a command ID_IMMEDIATE_CMD,<br><span style="padding-left:20px">         -- Message from VVC interpreter that an IMMEDIATE command has been executed ID_IMMEDIATE_CMD_WAIT,<br><span style="padding-left:20px">    -- Message from VVC interpreter that an IMMEDIATE command is waiting for command to complete ID_CMD_EXECUTOR,<br><span style="padding-left:20px">          -- Message from VVC executor about correctly received command - prior to actual execution ID_CMD_EXECUTOR_WAIT,<br><span style="padding-left:20px">     -- Message from VVC executor that it is actively waiting for a command ID_CHANNEL_EXECUTOR,<br><span style="padding-left:20px">      -- Message from a channel specific VVC executor process ID_CHANNEL_EXECUTOR_WAIT,<br><span style="padding-left:20px"> -- Message from a channel specific VVC executor process that it is actively waiting for a command ID_NEW_HVVC_CMD_SEQ,<br><span style="padding-left:20px">      -- Message from a lower level VVC which receives a new command sequence from an HVVC ID_INSERTED_DELAY,<br><span style="padding-left:20px">        -- Message from VVC executor that it is waiting a given delay ID_OLD_AWAIT_COMPLETION,<br><span style="padding-left:20px">  -- Temporary log messages related to old await_completion mechanism. Will be removed in v3.0 ID_AWAIT_COMPLETION,<br><span style="padding-left:20px">      -- Used for logging the procedure call waiting for completion ID_AWAIT_COMPLETION_LIST,<br><span style="padding-left:20px"> -- Used for logging modifications to the list of VVCs waiting for completion ID_AWAIT_COMPLETION_WAIT,<br><span style="padding-left:20px"> -- Used for logging when the procedure starts waiting for completion ID_AWAIT_COMPLETION_END,<br><span style="padding-left:20px">  -- Used for logging when the procedure has finished waiting for completion ID_UVVM_DATA_QUEUE,<br><span style="padding-left:20px">       -- Information about UVVM data FIFO/stack (initialization,<br><span style="padding-left:20px"> put,<br><span style="padding-left:20px"> get,<br><span style="padding-left:20px"> etc) ID_CONSTRUCTOR,<br><span style="padding-left:20px">           -- Constructor message from VVCs (or other components/process when needed) ID_CONSTRUCTOR_SUB,<br><span style="padding-left:20px">       -- Constructor message for lower level constructor messages (like Queue-information and other limitations) ID_VVC_ACTIVITY,<br><span style="padding-left:20px"> ID_MONITOR,<br><span style="padding-left:20px">               -- General monitor information ID_MONITOR_ERROR,<br><span style="padding-left:20px">         -- General monitor errors ID_DATA,<br><span style="padding-left:20px">                  -- To write general handling of data ID_CTRL,<br><span style="padding-left:20px">                  -- To write general control/config information ID_FILE_OPEN_CLOSE,<br><span style="padding-left:20px">       -- Id used when opening / closing file ID_FILE_PARSER,<br><span style="padding-left:20px">           -- Id used in file parsers ID_SPEC_COV,<br><span style="padding-left:20px">              -- Messages from the specification coverage methods ALL_MESSAGES              -- Applies to ALL message ID apart from ID_NEVER )</td>
 <td></td>
 </tr>
 <tr>
@@ -1497,32 +1502,32 @@
 </tr>
 <tr>
 <td>t_data_source</td>
-<td>( NA, FROM_BUFFER, RANDOM, RANDOM_TO_BUFFER )</td>
+<td>( NA,<br><span style="padding-left:20px"> FROM_BUFFER,<br><span style="padding-left:20px"> RANDOM,<br><span style="padding-left:20px"> RANDOM_TO_BUFFER )</td>
 <td>Deprecated, will be removed.</td>
 </tr>
 <tr>
 <td>t_error_injection</td>
-<td>( NA, RANDOM_BIT_ERROR, RANDOM_DATA_ERROR, RANDOM_ADDRESS_ERROR )</td>
+<td>( NA,<br><span style="padding-left:20px"> RANDOM_BIT_ERROR,<br><span style="padding-left:20px"> RANDOM_DATA_ERROR,<br><span style="padding-left:20px"> RANDOM_ADDRESS_ERROR )</td>
 <td>Deprecated, will be removed.</td>
 </tr>
 <tr>
 <td>t_randomisation</td>
-<td>( NA, RANDOM, RANDOM_FAVOUR_EDGES )</td>
+<td>( NA,<br><span style="padding-left:20px"> RANDOM,<br><span style="padding-left:20px"> RANDOM_FAVOUR_EDGES )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_channel</td>
-<td>( NA,               -- When channel is not relevant ALL_CHANNELS,     -- When command shall be received by all channels RX, TX )</td>
+<td>( NA,<br><span style="padding-left:20px">               -- When channel is not relevant ALL_CHANNELS,<br><span style="padding-left:20px">     -- When command shall be received by all channels RX,<br><span style="padding-left:20px"> TX )</td>
 <td></td>
 </tr>
 <tr>
 <td>t_interface</td>
-<td>(SBI, GMII)</td>
+<td>(SBI,<br><span style="padding-left:20px"> GMII)</td>
 <td>HVVC supported interfaces</td>
 </tr>
 <tr>
 <td>t_frame_field</td>
-<td>( HEADER, PAYLOAD, CHECKSUM )</td>
+<td>( HEADER,<br><span style="padding-left:20px"> PAYLOAD,<br><span style="padding-left:20px"> CHECKSUM )</td>
 <td>For frame-based communication</td>
 </tr>
 <tr>

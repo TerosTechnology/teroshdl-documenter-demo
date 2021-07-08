@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1034,7 +1039,7 @@
 <tr>
 <td>C_GMII_BFM_CONFIG_DEFAULT</td>
 <td>t_gmii_bfm_config</td>
-<td>(     max_wait_cycles          =&gt; 12, -- Standard minimum interpacket gap (Gigabith Ethernet)     max_wait_cycles_severity =&gt; ERROR,     clock_period             =&gt; -1 ns,     clock_period_margin      =&gt; 0 ns,     clock_margin_severity    =&gt; TB_ERROR,     setup_time               =&gt; -1 ns,     hold_time                =&gt; -1 ns,     bfm_sync                 =&gt; SYNC_ON_CLOCK_ONLY,     match_strictness         =&gt; MATCH_EXACT,     id_for_bfm               =&gt; ID_BFM   )</td>
+<td>(     max_wait_cycles          =&gt; 12,<br><span style="padding-left:20px"> -- Standard minimum interpacket gap (Gigabith Ethernet)     max_wait_cycles_severity =&gt; ERROR,<br><span style="padding-left:20px">     clock_period             =&gt; -1 ns,<br><span style="padding-left:20px">     clock_period_margin      =&gt; 0 ns,<br><span style="padding-left:20px">     clock_margin_severity    =&gt; TB_ERROR,<br><span style="padding-left:20px">     setup_time               =&gt; -1 ns,<br><span style="padding-left:20px">     hold_time                =&gt; -1 ns,<br><span style="padding-left:20px">     bfm_sync                 =&gt; SYNC_ON_CLOCK_ONLY,<br><span style="padding-left:20px">     match_strictness         =&gt; MATCH_EXACT,<br><span style="padding-left:20px">     id_for_bfm               =&gt; ID_BFM   )</td>
 <td>Define the default value for the BFM config</td>
 </tr>
 </tbody>
@@ -1071,11 +1076,11 @@
 This function returns a GMII interface with initialized signals.All input signals are initialized to 0All output signals are initialized to Z</p></div><ul>
 <li>init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_rx_if </font></li>
 </ul><ul>
-<li>gmii_write <font id="function_arguments">( constant data_array   : in    t_slv_array; constant msg          : in    string            := ""; signal   gmii_tx_if   : inout t_gmii_tx_if; constant scope        : in    string            := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel; constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+<li>gmii_write <font id="function_arguments">( constant data_array   : in    t_slv_array;<br><span style="padding-left:20px"> constant msg          : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_tx_if   : inout t_gmii_tx_if;<br><span style="padding-left:20px"> constant scope        : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>gmii_read <font id="function_arguments">( variable data_array    : out   t_slv_array; variable data_len      : out   natural; constant msg           : in    string            := ""; signal   gmii_rx_if    : inout t_gmii_rx_if; constant scope         : in    string            := C_SCOPE; constant msg_id_panel  : in    t_msg_id_panel    := shared_msg_id_panel; constant config        : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT; constant ext_proc_call : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
+<li>gmii_read <font id="function_arguments">( variable data_array    : out   t_slv_array;<br><span style="padding-left:20px"> variable data_len      : out   natural;<br><span style="padding-left:20px"> constant msg           : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_rx_if    : inout t_gmii_rx_if;<br><span style="padding-left:20px"> constant scope         : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>gmii_expect <font id="function_arguments">( constant data_exp     : in    t_slv_array; constant msg          : in    string            := ""; signal   gmii_rx_if   : inout t_gmii_rx_if; constant alert_level  : in    t_alert_level     := ERROR; constant scope        : in    string            := C_SCOPE; constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel; constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
+<li>gmii_expect <font id="function_arguments">( constant data_exp     : in    t_slv_array;<br><span style="padding-left:20px"> constant msg          : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_rx_if   : inout t_gmii_rx_if;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level     := ERROR;<br><span style="padding-left:20px"> constant scope        : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

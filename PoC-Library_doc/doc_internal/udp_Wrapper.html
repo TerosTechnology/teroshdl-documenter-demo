@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1446,17 +1451,17 @@
 </tr>
 <tr>
 <td>StmMux_In_Data</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, T_SLV_8'range)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> T_SLV_8'range)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmMux_In_Meta</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, isum(STMMUX_META_BITS) - 1 downto 0)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> isum(STMMUX_META_BITS) - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmMux_In_Meta_rev</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, STMMUX_META_REV_BITS - 1 downto 0)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> STMMUX_META_REV_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
@@ -1736,17 +1741,17 @@
 </tr>
 <tr>
 <td>StmDeMux_Out_Data</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, STMDEMUX_DATA_BITS - 1 downto 0)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> STMDEMUX_DATA_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmDeMux_Out_MetaOut</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmDeMux_Out_MetaOut_rev</td>
-<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0, STMDEMUX_META_REV_BITS - 1 downto 0)</td>
+<td>T_SLM(UDP_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> STMDEMUX_META_REV_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
@@ -1830,7 +1835,7 @@
 <tr>
 <td>STMMUX_META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         STMMUX_META_STREAMID_SRCIP          =&gt; 8,       STMMUX_META_STREAMID_DESTIP         =&gt; 8,       STMMUX_META_STREAMID_SRCPORT        =&gt; 16,      STMMUX_META_STREAMID_DESTPORT       =&gt; 16,      STMMUX_META_STREAMID_LENGTH         =&gt; 16   )</td>
+<td>(         STMMUX_META_STREAMID_SRCIP          =&gt; 8,<br><span style="padding-left:20px">       STMMUX_META_STREAMID_DESTIP         =&gt; 8,<br><span style="padding-left:20px">       STMMUX_META_STREAMID_SRCPORT        =&gt; 16,<br><span style="padding-left:20px">      STMMUX_META_STREAMID_DESTPORT       =&gt; 16,<br><span style="padding-left:20px">      STMMUX_META_STREAMID_LENGTH         =&gt; 16   )</td>
 <td></td>
 </tr>
 <tr>
@@ -1866,13 +1871,13 @@
 <tr>
 <td>TX_FCS_META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         TX_FCS_META_STREAMID_SRCIP          =&gt; 8,       TX_FCS_META_STREAMID_DESTIP         =&gt; 8,       TX_FCS_META_STREAMID_SRCPORT        =&gt; 16,      TX_FCS_META_STREAMID_DESTPORT       =&gt; 16,      TX_FCS_META_STREAMID_LEN                =&gt; 16   )</td>
+<td>(         TX_FCS_META_STREAMID_SRCIP          =&gt; 8,<br><span style="padding-left:20px">       TX_FCS_META_STREAMID_DESTIP         =&gt; 8,<br><span style="padding-left:20px">       TX_FCS_META_STREAMID_SRCPORT        =&gt; 16,<br><span style="padding-left:20px">      TX_FCS_META_STREAMID_DESTPORT       =&gt; 16,<br><span style="padding-left:20px">      TX_FCS_META_STREAMID_LEN                =&gt; 16   )</td>
 <td></td>
 </tr>
 <tr>
 <td>TX_FCS_META_FIFO_DEPTHS</td>
 <td>T_POSVEC</td>
-<td>(         TX_FCS_META_STREAMID_SRCIP          =&gt; ite((IP_VERSION = 6), 16, 4),        TX_FCS_META_STREAMID_DESTIP         =&gt; ite((IP_VERSION = 6), 16, 4),        TX_FCS_META_STREAMID_SRCPORT        =&gt; 1,       TX_FCS_META_STREAMID_DESTPORT       =&gt; 1,       TX_FCS_META_STREAMID_LEN                =&gt; 1    )</td>
+<td>(         TX_FCS_META_STREAMID_SRCIP          =&gt; ite((IP_VERSION = 6),<br><span style="padding-left:20px"> 16,<br><span style="padding-left:20px"> 4),<br><span style="padding-left:20px">        TX_FCS_META_STREAMID_DESTIP         =&gt; ite((IP_VERSION = 6),<br><span style="padding-left:20px"> 16,<br><span style="padding-left:20px"> 4),<br><span style="padding-left:20px">        TX_FCS_META_STREAMID_SRCPORT        =&gt; 1,<br><span style="padding-left:20px">       TX_FCS_META_STREAMID_DESTPORT       =&gt; 1,<br><span style="padding-left:20px">       TX_FCS_META_STREAMID_LEN                =&gt; 1    )</td>
 <td></td>
 </tr>
 <tr>
@@ -1968,7 +1973,7 @@
 <tr>
 <td>STMDEMUX_META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         STMDEMUX_META_STREAMID_SRCMAC           =&gt; 8,       STMDEMUX_META_STREAMID_DESTMAC      =&gt; 8,       STMDEMUX_META_STREAMID_ETHTYPE      =&gt; 16,      STMDEMUX_META_STREAMID_SRCIP            =&gt; 8,       STMDEMUX_META_STREAMID_DESTIP           =&gt; 8,       STMDEMUX_META_STREAMID_LENGTH           =&gt; 16,      STMDEMUX_META_STREAMID_PROTO            =&gt; 8,       STMDEMUX_META_STREAMID_SRCPORT      =&gt; 16,      STMDEMUX_META_STREAMID_DESTPORT     =&gt; 16   )</td>
+<td>(         STMDEMUX_META_STREAMID_SRCMAC           =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_DESTMAC      =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_ETHTYPE      =&gt; 16,<br><span style="padding-left:20px">      STMDEMUX_META_STREAMID_SRCIP            =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_DESTIP           =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_LENGTH           =&gt; 16,<br><span style="padding-left:20px">      STMDEMUX_META_STREAMID_PROTO            =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_SRCPORT      =&gt; 16,<br><span style="padding-left:20px">      STMDEMUX_META_STREAMID_DESTPORT     =&gt; 16   )</td>
 <td></td>
 </tr>
 <tr>

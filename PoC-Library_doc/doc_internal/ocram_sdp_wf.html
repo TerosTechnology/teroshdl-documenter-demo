@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1126,7 +1131,7 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>addr_equal <font id="function_arguments">(a1 : unsigned; a2 : unsigned) </font> <font id="function_return">return X01 </font></li>
+<li>addr_equal <font id="function_arguments">(a1 : unsigned;<br><span style="padding-left:20px"> a2 : unsigned) </font> <font id="function_return">return X01 </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Compares two addresses, returns 'X' if either <code>a1</code> or <code>a2</code> containsmeta-values, otherwise returns '1' if <code>a1 == a2</code> is true else'0'. Returns 'X' even when the addresses contain '-' values, to signal anundefined outcome.</p></div><h2 id="processes">Processes</h2><ul>
 <li>unnamed: ( clk )</li>

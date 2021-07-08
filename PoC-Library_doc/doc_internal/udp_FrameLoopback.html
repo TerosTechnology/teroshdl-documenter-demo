@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1253,7 +1258,7 @@
 <tr>
 <td>IPADDRESS_LENGTH</td>
 <td>positive</td>
-<td>ite((IP_VERSION = 4), 4, 16)</td>
+<td>ite((IP_VERSION = 4),<br><span style="padding-left:20px"> 4,<br><span style="padding-left:20px"> 16)</td>
 <td></td>
 </tr>
 <tr>
@@ -1283,13 +1288,13 @@
 <tr>
 <td>META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         META_STREAMID_SRCADDR           =&gt; 8,       META_STREAMID_DESTADDR      =&gt; 8,       META_STREAMID_SRCPORT           =&gt; 16,      META_STREAMID_DESTPORT      =&gt; 16   )</td>
+<td>(         META_STREAMID_SRCADDR           =&gt; 8,<br><span style="padding-left:20px">       META_STREAMID_DESTADDR      =&gt; 8,<br><span style="padding-left:20px">       META_STREAMID_SRCPORT           =&gt; 16,<br><span style="padding-left:20px">      META_STREAMID_DESTPORT      =&gt; 16   )</td>
 <td></td>
 </tr>
 <tr>
 <td>META_FIFO_DEPTHS</td>
 <td>T_POSVEC</td>
-<td>(         META_STREAMID_SRCADDR           =&gt; IPADDRESS_LENGTH,        META_STREAMID_DESTADDR      =&gt; IPADDRESS_LENGTH,        META_STREAMID_SRCPORT           =&gt; 1,       META_STREAMID_DESTPORT      =&gt; 1    )</td>
+<td>(         META_STREAMID_SRCADDR           =&gt; IPADDRESS_LENGTH,<br><span style="padding-left:20px">        META_STREAMID_DESTADDR      =&gt; IPADDRESS_LENGTH,<br><span style="padding-left:20px">        META_STREAMID_SRCPORT           =&gt; 1,<br><span style="padding-left:20px">       META_STREAMID_DESTPORT      =&gt; 1    )</td>
 <td></td>
 </tr>
 </tbody>

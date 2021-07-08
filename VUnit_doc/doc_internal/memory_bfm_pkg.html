@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1063,15 +1068,15 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>write <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+<li>write <font id="function_arguments">( signal net       : inout network_t;<br><span style="padding-left:20px"> constant address : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>blocking_write <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+<li>blocking_write <font id="function_arguments">( signal net       : inout network_t;<br><span style="padding-left:20px"> constant address : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> constant data    : in    std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>read <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); variable future  : out   msg_t) </font> <font id="function_return">return ()</font></li>
+<li>read <font id="function_arguments">( signal net       : inout network_t;<br><span style="padding-left:20px"> constant address : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> variable future  : out   msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>get <font id="function_arguments">( signal net      : inout network_t; variable future : inout msg_t; variable data   : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+<li>get <font id="function_arguments">( signal net      : inout network_t;<br><span style="padding-left:20px"> variable future : inout msg_t;<br><span style="padding-left:20px"> variable data   : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>read <font id="function_arguments">( signal net       : inout network_t; constant address : in    unsigned(7 downto 0); variable data    : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
+<li>read <font id="function_arguments">( signal net       : inout network_t;<br><span style="padding-left:20px"> constant address : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> variable data    : out   std_logic_vector(7 downto 0)) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

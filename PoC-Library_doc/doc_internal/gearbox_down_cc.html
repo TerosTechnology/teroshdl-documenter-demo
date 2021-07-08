@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1303,7 +1308,7 @@
 <tr>
 <td>BITS_PER_CHUNK</td>
 <td>positive</td>
-<td>greatestCommonDivisor(INPUT_BITS, OUTPUT_BITS)</td>
+<td>greatestCommonDivisor(INPUT_BITS,<br><span style="padding-left:20px"> OUTPUT_BITS)</td>
 <td></td>
 </tr>
 <tr>
@@ -1338,7 +1343,7 @@
 <tbody>
 <tr>
 <td>T_CHUNK_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_CHUNK</td>
 <td></td>
 </tr>
 <tr>
@@ -1348,7 +1353,7 @@
 </tr>
 <tr>
 <td>T_MUX_INPUT_LIST</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_MUX_INPUT</td>
 <td></td>
 </tr>
 <tr>
@@ -1358,7 +1363,7 @@
 </tr>
 <tr>
 <td>T_MUX_DESCRIPTIONS</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_MUX_INPUT_STRUCT</td>
 <td></td>
 </tr>
 </tbody>

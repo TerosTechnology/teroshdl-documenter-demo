@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1111,7 +1116,7 @@
 <tbody>
 <tr>
 <td>OsvvmOptionsType</td>
-<td>(OPT_INIT_PARM_DETECT, OPT_USE_DEFAULT, DISABLED, FALSE, ENABLED, TRUE)</td>
+<td>(OPT_INIT_PARM_DETECT,<br><span style="padding-left:20px"> OPT_USE_DEFAULT,<br><span style="padding-left:20px"> DISABLED,<br><span style="padding-left:20px"> FALSE,<br><span style="padding-left:20px"> ENABLED,<br><span style="padding-left:20px"> TRUE)</td>
 <td></td>
 </tr>
 <tr>
@@ -1126,20 +1131,20 @@
 Requires that TRUE is last and ENABLED is 2nd to last</p></div><ul>
 <li>to_OsvvmOptionsType <font id="function_arguments">(A : boolean) </font> <font id="function_return">return OsvvmOptionsType </font></li>
 </ul><ul>
-<li>SetOsvvmGlobalOptions <font id="function_arguments">( WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ; WriteBinInfo    : OsvvmOptionsType := OPT_INIT_PARM_DETECT ; WriteCount      : OsvvmOptionsType := OPT_INIT_PARM_DETECT ; WriteAnyIllegal : OsvvmOptionsType := OPT_INIT_PARM_DETECT ; WritePrefix     : string := OSVVM_STRING_INIT_PARM_DETECT ; DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ; PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ; FailName        : string := OSVVM_STRING_INIT_PARM_DETECT ) </font> <font id="function_return">return ()</font></li>
+<li>SetOsvvmGlobalOptions <font id="function_arguments">( WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteBinInfo    : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteCount      : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAnyIllegal : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WritePrefix     : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailName        : string := OSVVM_STRING_INIT_PARM_DETECT ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Accessor Functions</p></div><ul>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C, D : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C,<br><span style="padding-left:20px"> D : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
 </ul><ul>
 <li>IsOsvvmStringSet <font id="function_arguments">(A : string) </font> <font id="function_return">return boolean </font></li>
 </ul><ul>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B : string) </font> <font id="function_return">return string </font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C : string) </font> <font id="function_return">return string </font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>ResolveOsvvmOption <font id="function_arguments">(A, B, C, D : string) </font> <font id="function_return">return string </font></li>
+<li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C,<br><span style="padding-left:20px"> D : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>OsvvmDeallocate <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul>

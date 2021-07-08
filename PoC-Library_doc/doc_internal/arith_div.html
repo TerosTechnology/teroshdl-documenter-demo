@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1169,7 +1174,7 @@
 <tr>
 <td>DEPTH</td>
 <td>natural</td>
-<td>ite(PIPELINED, STEPS, 0)</td>
+<td>ite(PIPELINED,<br><span style="padding-left:20px"> STEPS,<br><span style="padding-left:20px"> 0)</td>
 <td>Physical Depth</td>
 </tr>
 <tr>
@@ -1198,17 +1203,17 @@
 <tbody>
 <tr>
 <td>residue_vector</td>
-<td></td>
+<td>array(natural range&lt;&gt;) of residue</td>
 <td></td>
 </tr>
 <tr>
 <td>divisor_vector</td>
-<td></td>
+<td>array(natural range&lt;&gt;) of divisor</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>div_step <font id="function_arguments">(av : residue; dv : divisor) </font> <font id="function_return">return residue </font></li>
+<li>div_step <font id="function_arguments">(av : residue;<br><span style="padding-left:20px"> dv : divisor) </font> <font id="function_return">return residue </font></li>
 </ul><h2 id="processes">Processes</h2><ul>
 <li>unnamed: ( clk )</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />

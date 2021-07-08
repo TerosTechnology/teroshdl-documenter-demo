@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,7 +1031,7 @@
 <tbody>
 <tr>
 <td>ScoreboardReportType</td>
-<td>(REPORT_ERROR, REPORT_ALL, REPORT_NONE)</td>
+<td>(REPORT_ERROR,<br><span style="padding-left:20px"> REPORT_ALL,<br><span style="padding-left:20px"> REPORT_NONE)</td>
 <td>replaced by affirmations</td>
 </tr>
 <tr>
@@ -1036,12 +1041,12 @@
 </tr>
 <tr>
 <td>ScoreboardIdArrayType</td>
-<td></td>
+<td>array (integer range &lt;&gt;) of ScoreboardIdType</td>
 <td></td>
 </tr>
 <tr>
 <td>ScoreboardIdMatrixType</td>
-<td></td>
+<td>array (integer range &lt;&gt;,<br><span style="padding-left:20px"> integer range &lt;&gt;) of ScoreboardIdType</td>
 <td></td>
 </tr>
 <tr>
@@ -1051,46 +1056,46 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Push items into the scoreboard/FIFO<br />
 Simple Scoreboard, no tag</p></div><ul>
-<li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; constant Tag    : in  string ; constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Simple Tagged Scoreboard</p></div><ul>
-<li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ; constant ActualData   : in ActualType ) </font> <font id="function_return">return ()</font></li>
+<li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ActualData   : in ActualType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Check received item with item in the scoreboard/FIFO<br />
 Simple Scoreboard, no tag</p></div><ul>
-<li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ; constant Tag          : in  string ; constant ActualData   : in  ActualType ) </font> <font id="function_return">return ()</font></li>
+<li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag          : in  string ;<br><span style="padding-left:20px"> constant ActualData   : in  ActualType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Simple Tagged Scoreboard</p></div><ul>
-<li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Pop the top item (FIFO) from the scoreboard/FIFO<br />
 Simple Scoreboard, no tag</p></div><ul>
-<li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; constant Tag    : in  string ; variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Simple Tagged Scoreboard</p></div><ul>
-<li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; constant Tag    : in  string ; variable Item   : out ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> variable Item   : out ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Peek at the top item (FIFO) from the scoreboard/FIFO<br />
 Simple Tagged Scoreboard</p></div><ul>
-<li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
+<li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Simple Scoreboard, no tag</p></div><ul>
-<li>SetAlertLogID <font id="function_arguments">( constant ID              : in  ScoreboardIDType ; constant Name            : in  string ; constant ParentID        : in  AlertLogIDType := ALERTLOG_BASE_ID ; constant CreateHierarchy : in  Boolean := TRUE ) </font> <font id="function_return">return ()</font></li>
+<li>SetAlertLogID <font id="function_arguments">( constant ID              : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Name            : in  string ;<br><span style="padding-left:20px"> constant ParentID        : in  AlertLogIDType := ALERTLOG_BASE_ID ;<br><span style="padding-left:20px"> constant CreateHierarchy : in  Boolean := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 SetAlertLogID - associate an AlertLogID with a scoreboard to allow integrated error reporting</p></div><ul>
-<li>SetAlertLogID <font id="function_arguments">( constant ID     : in  ScoreboardIDType ; constant A      : AlertLogIDType ) </font> <font id="function_return">return ()</font></li>
+<li>SetAlertLogID <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant A      : AlertLogIDType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Use when an AlertLogID is used by multiple items (Model or other Scoreboards).  See also AlertLogPkg.GetAlertLogID</p></div><ul>
-<li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ; constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
+<li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Flush - Remove elements in the scoreboard upto and including the one with ItemNumber<br />
 See Find to identify an ItemNumber of a particular value and tag (if applicable)<br />
 Simple Scoreboards</p></div><ul>
-<li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ; constant Tag         :  in  string ; constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
+<li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag         :  in  string ;<br><span style="padding-left:20px"> constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Tagged Scoreboards - only removes items that also match the tag</p></div><ul>
 <li>Deallocate <font id="function_arguments">( constant ID     : in  ScoreboardIDType ) </font> <font id="function_return">return ()</font></li>
@@ -1100,9 +1105,9 @@ another simulation is started, a simulator will release all allocated items.  </
 <li>Initialize <font id="function_arguments">( constant ID     : in  ScoreboardIDType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Deletes all allocated items</p></div><ul>
-<li>CheckFinish <font id="function_arguments">( ID                 : ScoreboardIDType ; FinishCheckCount   : integer ; FinishEmpty        : boolean ) </font> <font id="function_return">return ()</font></li>
+<li>CheckFinish <font id="function_arguments">( ID                 : ScoreboardIDType ;<br><span style="padding-left:20px"> FinishCheckCount   : integer ;<br><span style="padding-left:20px"> FinishEmpty        : boolean ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>SetReportMode <font id="function_arguments">( constant ID           : in  ScoreboardIDType ; constant ReportModeIn : in  ScoreboardReportType ) </font> <font id="function_return">return ()</font></li>
+<li>SetReportMode <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ReportModeIn : in  ScoreboardReportType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 SetReportMode  <br />
 Not AlertFlow<br />

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1128,12 +1133,12 @@
 <tr>
 <td>INIT_GRAY</td>
 <td>unsigned(BITS-1 downto 0)</td>
-<td>gray_encode(INIT, BITS)</td>
+<td>gray_encode(INIT,<br><span style="padding-left:20px"> BITS)</td>
 <td>Counter Register</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>gray_encode <font id="function_arguments">(val : natural; len : positive) </font> <font id="function_return">return unsigned </font></li>
+<li>gray_encode <font id="function_arguments">(val : natural;<br><span style="padding-left:20px"> len : positive) </font> <font id="function_return">return unsigned </font></li>
 </ul><ul>
 <li>parity <font id="function_arguments">(val : unsigned) </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />

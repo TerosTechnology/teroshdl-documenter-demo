@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1077,53 +1082,53 @@
 <li>get_logger <font id="function_arguments">(bus_handle : bus_master_t) </font> <font id="function_return">return logger_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Return the logger used by the bus master</p></div><ul>
-<li>write_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; constant data : std_logic_vector; constant byte_enable : std_logic_vector := "") </font> <font id="function_return">return ()</font></li>
+<li>write_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> constant data : std_logic_vector;<br><span style="padding-left:20px"> constant byte_enable : std_logic_vector := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Write the bus</p></div><ul>
-<li>write_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; constant data : std_logic_vector; constant byte_enable : std_logic_vector := "") </font> <font id="function_return">return ()</font></li>
+<li>write_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> constant data : std_logic_vector;<br><span style="padding-left:20px"> constant byte_enable : std_logic_vector := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; constant burst_length : positive; constant data : queue_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> constant data : queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Procedures for burst bus write: Caller is responsible for allocation anddeallocation of data queue. Procedure cunsumes burst_length data wordsfrom data queue. If data queue has less data words, all datawords are consumed and pop from empty queue error is raised.</p></div><ul>
-<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; constant burst_length : positive; constant data : queue_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_write_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> constant data : queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Non blocking: Read the bus returning a reference to the future reply</p></div><ul>
-<li>read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; constant burst_length : positive; variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; constant burst_length : positive; variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>await_read_bus_reply <font id="function_arguments">(signal net : inout network_t; variable reference : inout bus_reference_t; variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
+<li>await_read_bus_reply <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t;<br><span style="padding-left:20px"> variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Await read bus reply data</p></div><ul>
-<li>await_burst_read_bus_reply <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant data : queue_t; variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
+<li>await_burst_read_bus_reply <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant data : queue_t;<br><span style="padding-left:20px"> variable reference : inout bus_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Procedure for burst read reply: Caller is responsible for allocation anddeallocation of data queue. Procedure pushes burst_length data wordsinto data queue.</p></div><ul>
-<li>check_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; constant expected : std_logic_vector; constant msg : string := "") </font> <font id="function_return">return ()</font></li>
+<li>check_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> constant expected : std_logic_vector;<br><span style="padding-left:20px"> constant msg : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Read bus and check result against expected data</p></div><ul>
-<li>check_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; constant expected : std_logic_vector; constant msg : string := "") </font> <font id="function_return">return ()</font></li>
+<li>check_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> constant expected : std_logic_vector;<br><span style="padding-left:20px"> constant msg : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: read bus with immediate reply</p></div><ul>
-<li>read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
+<li>read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> variable data : inout std_logic_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : std_logic_vector; constant burst_length : positive; constant data : queue_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : std_logic_vector;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> constant data : queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Procedure for burst bus read: Caller is responsible for allocation anddeallocation of data queue. Procedure pushes burst_length data wordsinto data queue.</p></div><ul>
-<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t; constant bus_handle : bus_master_t; constant address : natural; constant burst_length : positive; constant data : queue_t) </font> <font id="function_return">return ()</font></li>
+<li>burst_read_bus <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> constant bus_handle : bus_master_t;<br><span style="padding-left:20px"> constant address : natural;<br><span style="padding-left:20px"> constant burst_length : positive;<br><span style="padding-left:20px"> constant data : queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_until_read_equals <font id="function_arguments">( signal net : inout network_t; bus_handle   : bus_master_t; addr         : std_logic_vector; value        : std_logic_vector; timeout      : delay_length := delay_length'high; msg    : string       := "") </font> <font id="function_return">return ()</font></li>
+<li>wait_until_read_equals <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> bus_handle   : bus_master_t;<br><span style="padding-left:20px"> addr         : std_logic_vector;<br><span style="padding-left:20px"> value        : std_logic_vector;<br><span style="padding-left:20px"> timeout      : delay_length := delay_length'high;<br><span style="padding-left:20px"> msg    : string       := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Wait until a read from address equals the value usingstd_match If timeout is reached error with msg</p></div><ul>
-<li>wait_until_read_bit_equals <font id="function_arguments">( signal net : inout network_t; bus_handle   : bus_master_t; addr         : std_logic_vector; idx          : natural; value        : std_logic; timeout      : delay_length := delay_length'high; msg    : string       := "") </font> <font id="function_return">return ()</font></li>
+<li>wait_until_read_bit_equals <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> bus_handle   : bus_master_t;<br><span style="padding-left:20px"> addr         : std_logic_vector;<br><span style="padding-left:20px"> idx          : natural;<br><span style="padding-left:20px"> value        : std_logic;<br><span style="padding-left:20px"> timeout      : delay_length := delay_length'high;<br><span style="padding-left:20px"> msg    : string       := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Wait until a read from address has the bit with thisindex set to value If timeout is reached error with msg</p></div><ul>
-<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t; bus_handle : bus_master_t) </font> <font id="function_return">return ()</font></li>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> bus_handle : bus_master_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Wait until all operations scheduled before this command has finished</p></div>
     </article class="markdown-body">

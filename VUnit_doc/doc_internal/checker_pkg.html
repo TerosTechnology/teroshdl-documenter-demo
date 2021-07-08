@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1055,19 +1060,19 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>set_default_log_level <font id="function_arguments">(checker : checker_t; default_log_level : log_level_t) </font> <font id="function_return">return ()</font></li>
+<li>set_default_log_level <font id="function_arguments">(checker : checker_t;<br><span style="padding-left:20px"> default_log_level : log_level_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>passing_check <font id="function_arguments">(checker : checker_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>passing_check <font id="function_arguments">( checker   : checker_t; msg       : string; line_num  : natural := 0; file_name : string  := "") </font> <font id="function_return">return ()</font></li>
+<li>passing_check <font id="function_arguments">( checker   : checker_t;<br><span style="padding-left:20px"> msg       : string;<br><span style="padding-left:20px"> line_num  : natural := 0;<br><span style="padding-left:20px"> file_name : string  := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>failing_check <font id="function_arguments">( checker   : checker_t; msg       : string; level     : log_level_t := null_log_level; line_num  : natural                := 0; file_name : string                 := "") </font> <font id="function_return">return ()</font></li>
+<li>failing_check <font id="function_arguments">( checker   : checker_t;<br><span style="padding-left:20px"> msg       : string;<br><span style="padding-left:20px"> level     : log_level_t := null_log_level;<br><span style="padding-left:20px"> line_num  : natural                := 0;<br><span style="padding-left:20px"> file_name : string                 := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>to_string <font id="function_arguments">(stat : checker_stat_t) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>reset_checker_stat <font id="function_arguments">(checker     : checker_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>get_checker_stat <font id="function_arguments">(checker       :     checker_t; variable stat : out checker_stat_t) </font> <font id="function_return">return ()</font></li>
+<li>get_checker_stat <font id="function_arguments">(checker       :     checker_t;<br><span style="padding-left:20px"> variable stat : out checker_stat_t) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

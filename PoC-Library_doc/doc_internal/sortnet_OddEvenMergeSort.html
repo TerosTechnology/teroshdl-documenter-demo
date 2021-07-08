@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1169,7 +1174,7 @@
 </tr>
 <tr>
 <td>In_Data_d</td>
-<td>T_SLM(INPUTS - 1 downto 0, DATA_BITS - 1 downto 0)</td>
+<td>T_SLM(INPUTS - 1 downto 0,<br><span style="padding-left:20px"> DATA_BITS - 1 downto 0)</td>
 <td></td>
 </tr>
 <tr>
@@ -1194,7 +1199,7 @@
 </tr>
 <tr>
 <td>DataOutputs_d</td>
-<td>T_SLM(INPUTS - 1 downto 0, DATA_BITS - 1 downto 0)</td>
+<td>T_SLM(INPUTS - 1 downto 0,<br><span style="padding-left:20px"> DATA_BITS - 1 downto 0)</td>
 <td></td>
 </tr>
 </tbody>
@@ -1260,17 +1265,17 @@
 <tbody>
 <tr>
 <td>T_META_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_META</td>
 <td></td>
 </tr>
 <tr>
 <td>T_DATA_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_DATA</td>
 <td></td>
 </tr>
 <tr>
 <td>T_DATA_MATRIX</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_DATA_VECTOR(INPUTS - 1 downto 0)</td>
 <td></td>
 </tr>
 </tbody>

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1037,61 +1042,61 @@ Destroy actor. Mailboxes are deallocated and dependent subscriptions areremoved.
 <li>reset_messenger <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Reset communication system. All actors are destroyed.</p></div><ul>
-<li>resize_mailbox <font id="function_arguments">(actor : actor_t; new_size : natural; mailbox_id : mailbox_id_t := inbox) </font> <font id="function_return">return ()</font></li>
+<li>resize_mailbox <font id="function_arguments">(actor : actor_t;<br><span style="padding-left:20px"> new_size : natural;<br><span style="padding-left:20px"> mailbox_id : mailbox_id_t := inbox) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Resize actor mailbox. Reducing size below the number of messages in themailbox in runtime error</p></div><ul>
-<li>send <font id="function_arguments">( signal net        : inout network_t; constant receiver : in    actor_t; variable msg      : inout msg_t; constant timeout  : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">( signal net        : inout network_t;<br><span style="padding-left:20px"> constant receiver : in    actor_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t;<br><span style="padding-left:20px"> constant timeout  : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Send message to receiver. Blocking if reciever or any subscriber inbox isfull.</p></div><ul>
-<li>send <font id="function_arguments">( signal net         : inout network_t; constant receivers : in    actor_vec_t; variable msg       : inout msg_t; constant timeout   : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>send <font id="function_arguments">( signal net         : inout network_t;<br><span style="padding-left:20px"> constant receivers : in    actor_vec_t;<br><span style="padding-left:20px"> variable msg       : inout msg_t;<br><span style="padding-left:20px"> constant timeout   : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Send message to an array of receivers. Blocking if any reciever or any subscriber inbox isfull.</p></div><ul>
-<li>receive <font id="function_arguments">( signal net        : inout network_t; constant receiver : in    actor_t; variable msg      : inout msg_t; constant timeout  : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>receive <font id="function_arguments">( signal net        : inout network_t;<br><span style="padding-left:20px"> constant receiver : in    actor_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t;<br><span style="padding-left:20px"> constant timeout  : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Receive message sent to receiver. Returns oldest message or the firstincoming if the inbox is empty. msg is initially deleted.</p></div><ul>
-<li>receive <font id="function_arguments">( signal net         : inout network_t; constant receivers : in    actor_vec_t; variable msg       : inout msg_t; constant timeout   : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>receive <font id="function_arguments">( signal net         : inout network_t;<br><span style="padding-left:20px"> constant receivers : in    actor_vec_t;<br><span style="padding-left:20px"> variable msg       : inout msg_t;<br><span style="padding-left:20px"> constant timeout   : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Receive message sent to any of the receivers. Returns oldest message or the firstincoming if the inboxes are empty. Receiver inboxes are emptied from leftto right. msg is initially deleted.</p></div><ul>
-<li>reply <font id="function_arguments">( signal net           : inout network_t; variable request_msg : inout msg_t; variable reply_msg   : inout msg_t; constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>reply <font id="function_arguments">( signal net           : inout network_t;<br><span style="padding-left:20px"> variable request_msg : inout msg_t;<br><span style="padding-left:20px"> variable reply_msg   : inout msg_t;<br><span style="padding-left:20px"> constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Reply to request_msg with reply_msg. request_msg may be anonymous. Blocking if recieveror any subscriber inbox is full.</p></div><ul>
-<li>receive_reply <font id="function_arguments">( signal net           : inout network_t; variable request_msg : inout msg_t; variable reply_msg   : inout msg_t; constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>receive_reply <font id="function_arguments">( signal net           : inout network_t;<br><span style="padding-left:20px"> variable request_msg : inout msg_t;<br><span style="padding-left:20px"> variable reply_msg   : inout msg_t;<br><span style="padding-left:20px"> constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Receive a reply_msg to request_msg. request_msg may be anonymous. reply_msg is initially deleted.</p></div><ul>
-<li>publish <font id="function_arguments">( signal net       : inout network_t; constant sender  : in    actor_t; variable msg     : inout msg_t; constant timeout : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>publish <font id="function_arguments">( signal net       : inout network_t;<br><span style="padding-left:20px"> constant sender  : in    actor_t;<br><span style="padding-left:20px"> variable msg     : inout msg_t;<br><span style="padding-left:20px"> constant timeout : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Publish a message from sender to all its subscribers. Blocking if reciever or any subscriber inbox isfull.</p></div><ul>
-<li>acknowledge <font id="function_arguments">( signal net            : inout network_t; variable request_msg  : inout msg_t; constant positive_ack : in    boolean := true; constant timeout      : in    time    := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>acknowledge <font id="function_arguments">( signal net            : inout network_t;<br><span style="padding-left:20px"> variable request_msg  : inout msg_t;<br><span style="padding-left:20px"> constant positive_ack : in    boolean := true;<br><span style="padding-left:20px"> constant timeout      : in    time    := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Positive or negative acknowledge of a request_msg. Same as a reply with aboolean reply message.</p></div><ul>
-<li>receive_reply <font id="function_arguments">( signal net            : inout network_t; variable request_msg  : inout msg_t; variable positive_ack : out   boolean; constant timeout      : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>receive_reply <font id="function_arguments">( signal net            : inout network_t;<br><span style="padding-left:20px"> variable request_msg  : inout msg_t;<br><span style="padding-left:20px"> variable positive_ack : out   boolean;<br><span style="padding-left:20px"> constant timeout      : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Receive positive or negative acknowledge for a request_msg. request_msgmay be anonymous. reply_msg is initially deleted.</p></div><ul>
-<li>request <font id="function_arguments">( signal net           : inout network_t; constant receiver    : in    actor_t; variable request_msg : inout msg_t; variable reply_msg   : inout msg_t; constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">( signal net           : inout network_t;<br><span style="padding-left:20px"> constant receiver    : in    actor_t;<br><span style="padding-left:20px"> variable request_msg : inout msg_t;<br><span style="padding-left:20px"> variable reply_msg   : inout msg_t;<br><span style="padding-left:20px"> constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 This request is the same as send of request_msg to receiver followed by areceive_reply of a reply_msg</p></div><ul>
-<li>request <font id="function_arguments">( signal net            : inout network_t; constant receiver     : in    actor_t; variable request_msg  : inout msg_t; variable positive_ack : out   boolean; constant timeout      : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>request <font id="function_arguments">( signal net            : inout network_t;<br><span style="padding-left:20px"> constant receiver     : in    actor_t;<br><span style="padding-left:20px"> variable request_msg  : inout msg_t;<br><span style="padding-left:20px"> variable positive_ack : out   boolean;<br><span style="padding-left:20px"> constant timeout      : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 This request is the same as send of request_msg to receiver followed by areceive_reply of a positive or negative acknowledge.</p></div><ul>
-<li>wait_for_message <font id="function_arguments">( signal net        : in  network_t; constant receiver : in  actor_t; variable status   : out com_status_t; constant timeout  : in  time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>wait_for_message <font id="function_arguments">( signal net        : in  network_t;<br><span style="padding-left:20px"> constant receiver : in  actor_t;<br><span style="padding-left:20px"> variable status   : out com_status_t;<br><span style="padding-left:20px"> constant timeout  : in  time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Wait for message sent to receiver. status = ok if message isreceived before the timeout, status = timeout otherwise.</p></div><ul>
-<li>wait_for_message <font id="function_arguments">( signal net         : in  network_t; constant receivers : in  actor_vec_t; variable status    : out com_status_t; constant timeout   : in  time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>wait_for_message <font id="function_arguments">( signal net         : in  network_t;<br><span style="padding-left:20px"> constant receivers : in  actor_vec_t;<br><span style="padding-left:20px"> variable status    : out com_status_t;<br><span style="padding-left:20px"> constant timeout   : in  time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Wait for message sent to any of the listed receivers. status = okif message is received before the timeout, status = timeout otherwise.</p></div><ul>
-<li>wait_for_reply <font id="function_arguments">( signal net           : inout network_t; variable request_msg : inout msg_t; variable status      : out   com_status_t; constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
+<li>wait_for_reply <font id="function_arguments">( signal net           : inout network_t;<br><span style="padding-left:20px"> variable request_msg : inout msg_t;<br><span style="padding-left:20px"> variable status      : out   com_status_t;<br><span style="padding-left:20px"> constant timeout     : in    time := max_timeout) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Wait for reply to request_msg. status = okif message is received before the timeout, status = timeout otherwise.</p></div><ul>
-<li>get_message <font id="function_arguments">(signal net : inout network_t; receiver : actor_t; variable msg : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>get_message <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> receiver : actor_t;<br><span style="padding-left:20px"> variable msg : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Get oldest message from receiver inbox. Runtime error if inbox is empty.</p></div><ul>
-<li>get_reply <font id="function_arguments">( signal net           : inout network_t; variable request_msg : inout msg_t; variable reply_msg : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>get_reply <font id="function_arguments">( signal net           : inout network_t;<br><span style="padding-left:20px"> variable request_msg : inout msg_t;<br><span style="padding-left:20px"> variable reply_msg : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Get reply message to request_msg. Runtime error if reply message isn't available.</p></div><ul>
-<li>subscribe <font id="function_arguments">( subscriber   : actor_t; publisher    : actor_t; traffic_type : subscription_traffic_type_t := published) </font> <font id="function_return">return ()</font></li>
+<li>subscribe <font id="function_arguments">( subscriber   : actor_t;<br><span style="padding-left:20px"> publisher    : actor_t;<br><span style="padding-left:20px"> traffic_type : subscription_traffic_type_t := published) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Make subscriber subscribe on the specified publisher and traffic type. Fora description of the traffic types see com_types.vhd</p></div><ul>
-<li>unsubscribe <font id="function_arguments">( subscriber   : actor_t; publisher    : actor_t; traffic_type : subscription_traffic_type_t := published) </font> <font id="function_return">return ()</font></li>
+<li>unsubscribe <font id="function_arguments">( subscriber   : actor_t;<br><span style="padding-left:20px"> publisher    : actor_t;<br><span style="padding-left:20px"> traffic_type : subscription_traffic_type_t := published) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Remove subscription on the given publisher and traffic type.</p></div><ul>
 <li>deallocate <font id="function_arguments">(variable mailbox_state : inout mailbox_state_t) </font> <font id="function_return">return ()</font></li>

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1052,7 +1057,7 @@
 <tr>
 <td>null_msg</td>
 <td>msg_t</td>
-<td>(     id =&gt; no_message_id,     msg_type =&gt; null_msg_type,     status =&gt; null_message_error,     sender =&gt; null_actor,     receiver =&gt; null_actor,     request_id =&gt; no_message_id,     data =&gt; null_queue)</td>
+<td>(     id =&gt; no_message_id,<br><span style="padding-left:20px">     msg_type =&gt; null_msg_type,<br><span style="padding-left:20px">     status =&gt; null_message_error,<br><span style="padding-left:20px">     sender =&gt; null_actor,<br><span style="padding-left:20px">     receiver =&gt; null_actor,<br><span style="padding-left:20px">     request_id =&gt; no_message_id,<br><span style="padding-left:20px">     data =&gt; null_queue)</td>
 <td></td>
 </tr>
 <tr>
@@ -1099,7 +1104,7 @@
 <tbody>
 <tr>
 <td>com_status_t</td>
-<td>(ok, timeout, null_message_error, unknown_actor_error, unknown_receiver_error, unknown_subscriber_error, unknown_publisher_error, deferred_receiver_error, already_a_subscriber_error, not_a_subscriber_error, full_inbox_error, reply_missing_request_id_error, unknown_request_id_error, deprecated_interface_error, insufficient_size_error, duplicate_actor_name_error)</td>
+<td>(ok,<br><span style="padding-left:20px"> timeout,<br><span style="padding-left:20px"> null_message_error,<br><span style="padding-left:20px"> unknown_actor_error,<br><span style="padding-left:20px"> unknown_receiver_error,<br><span style="padding-left:20px"> unknown_subscriber_error,<br><span style="padding-left:20px"> unknown_publisher_error,<br><span style="padding-left:20px"> deferred_receiver_error,<br><span style="padding-left:20px"> already_a_subscriber_error,<br><span style="padding-left:20px"> not_a_subscriber_error,<br><span style="padding-left:20px"> full_inbox_error,<br><span style="padding-left:20px"> reply_missing_request_id_error,<br><span style="padding-left:20px"> unknown_request_id_error,<br><span style="padding-left:20px"> deprecated_interface_error,<br><span style="padding-left:20px"> insufficient_size_error,<br><span style="padding-left:20px"> duplicate_actor_name_error)</td>
 <td></td>
 </tr>
 <tr>
@@ -1109,12 +1114,12 @@
 </tr>
 <tr>
 <td>actor_vec_t</td>
-<td></td>
+<td>array (integer range &lt;&gt;) of actor_t</td>
 <td></td>
 </tr>
 <tr>
 <td>mailbox_id_t</td>
-<td>(inbox, outbox)</td>
+<td>(inbox,<br><span style="padding-left:20px"> outbox)</td>
 <td>Mailboxes owned by an actor</td>
 </tr>
 <tr>
@@ -1144,7 +1149,7 @@
 </tr>
 <tr>
 <td>msg_vec_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of msg_t</td>
 <td></td>
 </tr>
 <tr>
@@ -1154,7 +1159,7 @@
 </tr>
 <tr>
 <td>subscription_traffic_type_t</td>
-<td>(published, outbound, inbound)</td>
+<td>(published,<br><span style="padding-left:20px"> outbound,<br><span style="padding-left:20px"> inbound)</td>
 <td>published - Messages published by publisheroutbound - All non-anonymous outbound messages from publisherinbound - All inbound messages to publisher. Replies anonymous requests are excluded.</td>
 </tr>
 <tr>
@@ -1164,7 +1169,7 @@
 </tr>
 <tr>
 <td>subscription_vec_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of subscription_t</td>
 <td></td>
 </tr>
 <tr>
@@ -1189,7 +1194,7 @@
 </tr>
 <tr>
 <td>actor_state_vec_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of actor_state_t</td>
 <td></td>
 </tr>
 <tr>
@@ -1204,9 +1209,9 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>unexpected_msg_type <font id="function_arguments">(msg_type : msg_type_t; logger : logger_t := com_logger) </font> <font id="function_return">return ()</font></li>
+<li>unexpected_msg_type <font id="function_arguments">(msg_type : msg_type_t;<br><span style="padding-left:20px"> logger : logger_t := com_logger) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push_msg_type <font id="function_arguments">(msg : msg_t; msg_type : msg_type_t; logger : logger_t := com_logger) </font> <font id="function_return">return ()</font></li>
+<li>push_msg_type <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> msg_type : msg_type_t;<br><span style="padding-left:20px"> logger : logger_t := com_logger) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>handle_message <font id="function_arguments">(variable msg_type : inout msg_type_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
@@ -1222,73 +1227,73 @@ Return sending actor of message if defined, null_actor otherwise</p></div><ul>
 <li>message_type <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return msg_type_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Return message type of message without consuming it as pop_msg_type would</p></div><ul>
-<li>push <font id="function_arguments">(queue : queue_t; variable value : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(queue : queue_t;<br><span style="padding-left:20px"> variable value : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Push message into a queue.The message is set to null to avoid duplicate ownership</p></div><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : integer) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : character) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : character) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : boolean) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : boolean) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : real) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : real) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : bit) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : bit) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : std_ulogic) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : std_ulogic) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : severity_level) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : severity_level) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : file_open_status) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : file_open_status) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : file_open_kind) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : file_open_kind) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : bit_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : bit_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : std_ulogic_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : std_ulogic_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : complex) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : complex) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : complex_polar) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : complex_polar) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : ieee.numeric_bit.unsigned) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : ieee.numeric_bit.unsigned) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : ieee.numeric_bit.signed) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : ieee.numeric_bit.signed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : ieee.numeric_std.unsigned) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : ieee.numeric_std.unsigned) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : ieee.numeric_std.signed) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : ieee.numeric_std.signed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : string) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : time) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : time) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; variable value : inout integer_vector_ptr_t) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout integer_vector_ptr_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 The value is set to null to avoid duplicate ownership</p></div><ul>
-<li>push <font id="function_arguments">(msg : msg_t; variable value : inout string_ptr_t) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout string_ptr_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 The value is set to null to avoid duplicate ownership</p></div><ul>
-<li>push <font id="function_arguments">(msg : msg_t; variable value : inout queue_t) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 The value is set to null to avoid duplicate ownership</p></div><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : boolean_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : boolean_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : integer_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : integer_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : real_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : real_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : time_vector) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : time_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : ufixed) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : ufixed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : sfixed) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : sfixed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; value : float) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : float) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push <font id="function_arguments">(msg : msg_t; variable value : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>push_ref <font id="function_arguments">(constant msg : msg_t; value : inout integer_array_t) </font> <font id="function_return">return ()</font></li>
+<li>push_ref <font id="function_arguments">(constant msg : msg_t;<br><span style="padding-left:20px"> value : inout integer_array_t) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

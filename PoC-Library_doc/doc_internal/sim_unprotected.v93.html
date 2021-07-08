@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1015,14 +1020,14 @@
 
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=sim_unprotected><h1 id="package-sim_unprotected">Package: sim_unprotected</h1></a><h2 id="functions">Functions</h2><ul>
-<li>initialize <font id="function_arguments">(MaxAssertFailures : natural := natural'high; MaxSimulationRuntime : TIME := TIME'high) </font> <font id="function_return">return ()</font></li>
+<li>initialize <font id="function_arguments">(MaxAssertFailures : natural := natural'high;<br><span style="padding-left:20px"> MaxSimulationRuntime : TIME := TIME'high) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>finalize <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>fail <font id="function_arguments">(Message : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Assertions</p></div><ul>
-<li>assertion <font id="function_arguments">(Condition : boolean; Message : string := "") </font> <font id="function_return">return ()</font></li>
+<li>assertion <font id="function_arguments">(Condition : boolean;<br><span style="padding-left:20px"> Message : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>writeMessage <font id="function_arguments">(Message : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>

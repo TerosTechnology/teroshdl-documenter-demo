@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1410,17 +1415,17 @@
 </tr>
 <tr>
 <td>StmMux_In_Data</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, T_SLV_8'range)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> T_SLV_8'range)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmMux_In_Meta</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, isum(TXSTMMUX_META_BITS) - 1 downto 0)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> isum(TXSTMMUX_META_BITS) - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>StmMux_In_Meta_rev</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, TXSTMMUX_META_REV_BITS - 1 downto 0)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> TXSTMMUX_META_REV_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
@@ -1605,17 +1610,17 @@
 </tr>
 <tr>
 <td>RX_StmDeMux_Data</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, STMDEMUX_DATA_BITS - 1 downto 0)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> STMDEMUX_DATA_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>RX_StmDeMux_MetaOut</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> isum(STMDEMUX_META_BITS) - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>RX_StmDeMux_MetaOut_rev</td>
-<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0, STMDEMUX_META_REV_BITS - 1 downto 0)</td>
+<td>T_SLM(IPV4_SWITCH_PORTS - 1 downto 0,<br><span style="padding-left:20px"> STMDEMUX_META_REV_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
@@ -1669,7 +1674,7 @@
 <tr>
 <td>TXSTMMUX_META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         TXSTMMUX_META_STREAMID_SRCADR           =&gt; 8,       TXSTMMUX_META_STREAMID_DESTADR      =&gt; 8,       TXSTMMUX_META_STREAMID_LENGTH           =&gt; 16,      TXSTMMUX_META_STREAMID_PROTOCOL     =&gt; 8    )</td>
+<td>(         TXSTMMUX_META_STREAMID_SRCADR           =&gt; 8,<br><span style="padding-left:20px">       TXSTMMUX_META_STREAMID_DESTADR      =&gt; 8,<br><span style="padding-left:20px">       TXSTMMUX_META_STREAMID_LENGTH           =&gt; 16,<br><span style="padding-left:20px">      TXSTMMUX_META_STREAMID_PROTOCOL     =&gt; 8    )</td>
 <td></td>
 </tr>
 <tr>
@@ -1777,7 +1782,7 @@
 <tr>
 <td>STMDEMUX_META_BITS</td>
 <td>T_POSVEC</td>
-<td>(         STMDEMUX_META_STREAMID_SRCMAC       =&gt; 8,       STMDEMUX_META_STREAMID_DESTMAC  =&gt; 8,       STMDEMUX_META_STREAMID_ETHTYPE  =&gt; 16,      STMDEMUX_META_STREAMID_SRCIP            =&gt; 8,       STMDEMUX_META_STREAMID_DESTIP       =&gt; 8,       STMDEMUX_META_STREAMID_LENGTH       =&gt; 16,      STMDEMUX_META_STREAMID_PROTO            =&gt; 8    )</td>
+<td>(         STMDEMUX_META_STREAMID_SRCMAC       =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_DESTMAC  =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_ETHTYPE  =&gt; 16,<br><span style="padding-left:20px">      STMDEMUX_META_STREAMID_SRCIP            =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_DESTIP       =&gt; 8,<br><span style="padding-left:20px">       STMDEMUX_META_STREAMID_LENGTH       =&gt; 16,<br><span style="padding-left:20px">      STMDEMUX_META_STREAMID_PROTO            =&gt; 8    )</td>
 <td></td>
 </tr>
 <tr>

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,16 +1031,16 @@
 <tbody>
 <tr>
 <td>integer_array</td>
-<td></td>
+<td>array (integer range &lt;&gt;) of integer</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array ) </font> <font id="function_return">return ()</font></li>
+<li>TestInit <font id="function_arguments">(TestName : string ;<br><span style="padding-left:20px"> variable Results : inout integer_array ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>TestInit <font id="function_arguments">(TestName : string ; variable Results : inout integer_array ; variable Count : inout natural ) </font> <font id="function_return">return ()</font></li>
+<li>TestInit <font id="function_arguments">(TestName : string ;<br><span style="padding-left:20px"> variable Results : inout integer_array ;<br><span style="padding-left:20px"> variable Count : inout natural ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>AccumulateResults <font id="function_arguments">(IntVal : integer ; Num : integer ; variable Results : inout integer_array) </font> <font id="function_return">return ()</font></li>
+<li>AccumulateResults <font id="function_arguments">(IntVal : integer ;<br><span style="padding-left:20px"> Num : integer ;<br><span style="padding-left:20px"> variable Results : inout integer_array) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>PrintResults <font id="function_arguments">(Results : integer_array) </font> <font id="function_return">return ()</font></li>
 </ul>

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1017,19 +1022,19 @@
 <a id=com_debug_codec_builder_pkg><h1 id="package-com_debug_codec_builder_pkg">Package: com_debug_codec_builder_pkg</h1></a><h2 id="functions">Functions</h2><ul>
 <li>open_group <font id="function_arguments">( variable l : inout line) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>append_group <font id="function_arguments">( variable l       : inout line; constant element : in    string) </font> <font id="function_return">return ()</font></li>
+<li>append_group <font id="function_arguments">( variable l       : inout line;<br><span style="padding-left:20px"> constant element : in    string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>close_group <font id="function_arguments">( variable l      : inout line; variable code   : out   string; variable length : out   natural) </font> <font id="function_return">return ()</font></li>
+<li>close_group <font id="function_arguments">( variable l      : inout line;<br><span style="padding-left:20px"> variable code   : out   string;<br><span style="padding-left:20px"> variable length : out   natural) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>create_group <font id="function_arguments">( constant num_of_elements : natural range 0 to 10; constant element1        : string := ""; constant element2        : string := ""; constant element3        : string := ""; constant element4        : string := ""; constant element5        : string := ""; constant element6        : string := ""; constant element7        : string := ""; constant element8        : string := ""; constant element9        : string := ""; constant element10       : string := "") </font> <font id="function_return">return string </font></li>
+<li>create_group <font id="function_arguments">( constant num_of_elements : natural range 0 to 10;<br><span style="padding-left:20px"> constant element1        : string := "";<br><span style="padding-left:20px"> constant element2        : string := "";<br><span style="padding-left:20px"> constant element3        : string := "";<br><span style="padding-left:20px"> constant element4        : string := "";<br><span style="padding-left:20px"> constant element5        : string := "";<br><span style="padding-left:20px"> constant element6        : string := "";<br><span style="padding-left:20px"> constant element7        : string := "";<br><span style="padding-left:20px"> constant element8        : string := "";<br><span style="padding-left:20px"> constant element9        : string := "";<br><span style="padding-left:20px"> constant element10       : string := "") </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>create_array_group <font id="function_arguments">( constant arr           : string; constant range_left1   : string; constant range_right1  : string; constant is_ascending1 : boolean; constant range_left2   : string  := ""; constant range_right2  : string  := ""; constant is_ascending2 : boolean := true) </font> <font id="function_return">return string </font></li>
+<li>create_array_group <font id="function_arguments">( constant arr           : string;<br><span style="padding-left:20px"> constant range_left1   : string;<br><span style="padding-left:20px"> constant range_right1  : string;<br><span style="padding-left:20px"> constant is_ascending1 : boolean;<br><span style="padding-left:20px"> constant range_left2   : string  := "";<br><span style="padding-left:20px"> constant range_right2  : string  := "";<br><span style="padding-left:20px"> constant is_ascending2 : boolean := true) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>escape_special_characters <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>split_group <font id="function_arguments">( constant grp                 : in    string; variable elements            : inout lines_t; constant max_num_of_elements : in    natural; variable length              : inout natural) </font> <font id="function_return">return ()</font></li>
+<li>split_group <font id="function_arguments">( constant grp                 : in    string;<br><span style="padding-left:20px"> variable elements            : inout lines_t;<br><span style="padding-left:20px"> constant max_num_of_elements : in    natural;<br><span style="padding-left:20px"> variable length              : inout natural) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>get_element <font id="function_arguments">( constant grp      : in string; constant position : in natural) </font> <font id="function_return">return string </font></li>
+<li>get_element <font id="function_arguments">( constant grp      : in string;<br><span style="padding-left:20px"> constant position : in natural) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>get_first_element <font id="function_arguments">( constant grp : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>

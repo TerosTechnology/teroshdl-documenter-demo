@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1028,13 +1033,13 @@
 <tr>
 <td>C_XIL_DRP_BUS_IN_EMPTY</td>
 <td>T_XIL_DRP_BUS_IN</td>
-<td>(         Clock           =&gt; '0',         Enable      =&gt; '0',         ReadWrite =&gt; '0',       Address     =&gt; (others =&gt; '0'),         Data            =&gt; (others =&gt; '0'))</td>
+<td>(         Clock           =&gt; '0',<br><span style="padding-left:20px">         Enable      =&gt; '0',<br><span style="padding-left:20px">         ReadWrite =&gt; '0',<br><span style="padding-left:20px">       Address     =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">         Data            =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
 <td>C_XIL_DRP_BUS_OUT_EMPTY</td>
 <td>T_XIL_DRP_BUS_OUT</td>
-<td>(         Ack             =&gt; '0',         Data            =&gt; (others =&gt; '0'))</td>
+<td>(         Ack             =&gt; '0',<br><span style="padding-left:20px">         Data            =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
@@ -1046,13 +1051,13 @@
 <tr>
 <td>C_XIL_DRP_CONFIG_EMPTY</td>
 <td>T_XIL_DRP_CONFIG</td>
-<td>(         Address =&gt;  (others =&gt; '0'),        Data =&gt;         (others =&gt; '0'),        Mask =&gt;         (others =&gt; '0')     )</td>
+<td>(         Address =&gt;  (others =&gt; '0'),<br><span style="padding-left:20px">        Data =&gt;         (others =&gt; '0'),<br><span style="padding-left:20px">        Mask =&gt;         (others =&gt; '0')     )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_XIL_DRP_CONFIG_SET_EMPTY</td>
 <td>T_XIL_DRP_CONFIG_SET</td>
-<td>(         Configs     =&gt; (others =&gt; C_XIL_DRP_CONFIG_EMPTY),      LastIndex   =&gt; 0    )</td>
+<td>(         Configs     =&gt; (others =&gt; C_XIL_DRP_CONFIG_EMPTY),<br><span style="padding-left:20px">      LastIndex   =&gt; 0    )</td>
 <td></td>
 </tr>
 </tbody>
@@ -1069,17 +1074,17 @@
 <tbody>
 <tr>
 <td>T_XIL_CHIPSCOPE_CONTROL_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_XIL_CHIPSCOPE_CONTROL</td>
 <td></td>
 </tr>
 <tr>
 <td>T_XIL_DRP_ADDRESS_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_XIL_DRP_ADDRESS</td>
 <td></td>
 </tr>
 <tr>
 <td>T_XIL_DRP_DATA_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_XIL_DRP_DATA</td>
 <td></td>
 </tr>
 <tr>
@@ -1099,7 +1104,7 @@
 </tr>
 <tr>
 <td>T_XIL_DRP_CONFIG_VECTOR</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_XIL_DRP_CONFIG</td>
 <td></td>
 </tr>
 <tr>
@@ -1109,7 +1114,7 @@
 </tr>
 <tr>
 <td>T_XIL_DRP_CONFIG_ROM</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of T_XIL_DRP_CONFIG_SET</td>
 <td></td>
 </tr>
 </tbody>

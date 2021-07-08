@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1239,20 +1244,20 @@
 <tr>
 <td>C_SCOPE</td>
 <td>string</td>
-<td>C_VVC_NAME &amp; "," &amp; to_string(GC_INSTANCE_IDX)</td>
+<td>C_VVC_NAME &amp; ",<br><span style="padding-left:20px">" &amp; to_string(GC_INSTANCE_IDX)</td>
 <td></td>
 </tr>
 <tr>
 <td>C_VVC_LABELS</td>
 <td>t_vvc_labels</td>
-<td>assign_vvc_labels(C_SCOPE, C_VVC_NAME, GC_INSTANCE_IDX, NA)</td>
+<td>assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> NA)</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record; constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font></li>
+<li>get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record;<br><span style="padding-left:20px"> constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font></li>
 </ul><ul>
-<li>peek_command_and_prepare_executor <font id="function_arguments">( variable command              : inout t_vvc_cmd_record; variable command_queue        : inout work.td_cmd_queue_pkg.t_generic_queue; constant vvc_config           : in    t_vvc_config; variable vvc_status           : inout t_vvc_status; signal   queue_is_increasing  : in    boolean; signal   executor_is_busy     : inout boolean; constant vvc_labels           : in    t_vvc_labels; constant msg_id_panel         : in    t_msg_id_panel := shared_msg_id_panel; --UVVM: unused, remove in v3.0 constant executor_id          : in    t_msg_id := ID_CMD_EXECUTOR; constant executor_wait_id     : in    t_msg_id := ID_CMD_EXECUTOR_WAIT ) </font> <font id="function_return">return ()</font></li>
+<li>peek_command_and_prepare_executor <font id="function_arguments">( variable command              : inout t_vvc_cmd_record;<br><span style="padding-left:20px"> variable command_queue        : inout work.td_cmd_queue_pkg.t_generic_queue;<br><span style="padding-left:20px"> constant vvc_config           : in    t_vvc_config;<br><span style="padding-left:20px"> variable vvc_status           : inout t_vvc_status;<br><span style="padding-left:20px"> signal   queue_is_increasing  : in    boolean;<br><span style="padding-left:20px"> signal   executor_is_busy     : inout boolean;<br><span style="padding-left:20px"> constant vvc_labels           : in    t_vvc_labels;<br><span style="padding-left:20px"> constant msg_id_panel         : in    t_msg_id_panel := shared_msg_id_panel;<br><span style="padding-left:20px"> --UVVM: unused,<br><span style="padding-left:20px"> remove in v3.0 constant executor_id          : in    t_msg_id := ID_CMD_EXECUTOR;<br><span style="padding-left:20px"> constant executor_wait_id     : in    t_msg_id := ID_CMD_EXECUTOR_WAIT ) </font> <font id="function_return">return ()</font></li>
 </ul><h2 id="processes">Processes</h2><ul>
 <li>cmd_interpreter: (  )</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />

@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,7 +1031,7 @@
 <tbody>
 <tr>
 <td>line_vector</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of line</td>
 <td></td>
 </tr>
 <tr>
@@ -1036,31 +1041,31 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>count <font id="function_arguments">( constant s : string; constant substring : string; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+<li>count <font id="function_arguments">( constant s : string;<br><span style="padding-left:20px"> constant substring : string;<br><span style="padding-left:20px"> constant start : natural := 0;<br><span style="padding-left:20px"> constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>count <font id="function_arguments">( constant s : string; constant char : character := ' '; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+<li>count <font id="function_arguments">( constant s : string;<br><span style="padding-left:20px"> constant char : character := ' ';<br><span style="padding-left:20px"> constant start : natural := 0;<br><span style="padding-left:20px"> constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>find <font id="function_arguments">( constant s : string; constant substring : string; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+<li>find <font id="function_arguments">( constant s : string;<br><span style="padding-left:20px"> constant substring : string;<br><span style="padding-left:20px"> constant start : natural := 0;<br><span style="padding-left:20px"> constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>find <font id="function_arguments">( constant s : string; constant char : character; constant start : natural := 0; constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
+<li>find <font id="function_arguments">( constant s : string;<br><span style="padding-left:20px"> constant char : character;<br><span style="padding-left:20px"> constant start : natural := 0;<br><span style="padding-left:20px"> constant stop : natural := 0) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
-<li>strip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+<li>strip <font id="function_arguments">( str : string;<br><span style="padding-left:20px"> chars : string := " ") </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>rstrip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+<li>rstrip <font id="function_arguments">( str : string;<br><span style="padding-left:20px"> chars : string := " ") </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>lstrip <font id="function_arguments">( str : string; chars : string := " ") </font> <font id="function_return">return string </font></li>
+<li>lstrip <font id="function_arguments">( str : string;<br><span style="padding-left:20px"> chars : string := " ") </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>image <font id="function_arguments">( constant data : std_logic_vector) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>hex_image <font id="function_arguments">( constant data : std_logic_vector) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : character; constant new_segment : character; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+<li>replace <font id="function_arguments">( constant s      : string;<br><span style="padding-left:20px"> constant old_segment : character;<br><span style="padding-left:20px"> constant new_segment : character;<br><span style="padding-left:20px"> constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : string; constant new_segment : character; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+<li>replace <font id="function_arguments">( constant s      : string;<br><span style="padding-left:20px"> constant old_segment : string;<br><span style="padding-left:20px"> constant new_segment : character;<br><span style="padding-left:20px"> constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : character; constant new_segment : string; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+<li>replace <font id="function_arguments">( constant s      : string;<br><span style="padding-left:20px"> constant old_segment : character;<br><span style="padding-left:20px"> constant new_segment : string;<br><span style="padding-left:20px"> constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
 </ul><ul>
-<li>replace <font id="function_arguments">( constant s      : string; constant old_segment : string; constant new_segment : string; constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
+<li>replace <font id="function_arguments">( constant s      : string;<br><span style="padding-left:20px"> constant old_segment : string;<br><span style="padding-left:20px"> constant new_segment : string;<br><span style="padding-left:20px"> constant cnt : in natural := natural'high) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>title <font id="function_arguments">( constant s : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>

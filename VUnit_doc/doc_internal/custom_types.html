@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,7 +1031,7 @@
 <tbody>
 <tr>
 <td>enum1_t</td>
-<td>(red, green, blue)</td>
+<td>(red,<br><span style="padding-left:20px"> green,<br><span style="padding-left:20px"> blue)</td>
 <td></td>
 </tr>
 <tr>
@@ -1071,7 +1076,7 @@
 </tr>
 <tr>
 <td>record8_msg_type_t</td>
-<td>(read, write)</td>
+<td>(read,<br><span style="padding-left:20px"> write)</td>
 <td></td>
 </tr>
 <tr>
@@ -1081,12 +1086,12 @@
 </tr>
 <tr>
 <td>int_2d_t</td>
-<td></td>
+<td>array (integer range &lt;&gt;,<br><span style="padding-left:20px"> integer range &lt;&gt;) of integer</td>
 <td></td>
 </tr>
 <tr>
 <td>record9_msg_type_t</td>
-<td>(foo, bar)</td>
+<td>(foo,<br><span style="padding-left:20px"> bar)</td>
 <td></td>
 </tr>
 <tr>
@@ -1111,22 +1116,22 @@
 </tr>
 <tr>
 <td>array4_t</td>
-<td></td>
+<td>array (positive range &lt;&gt;) of natural</td>
 <td></td>
 </tr>
 <tr>
 <td>array5_t</td>
-<td></td>
+<td>array (integer range &lt;&gt;,<br><span style="padding-left:20px"> integer range &lt;&gt;) of natural</td>
 <td></td>
 </tr>
 <tr>
 <td>fruit_t</td>
-<td>(apple, banana, melon, kiwi, orange, papaya)</td>
+<td>(apple,<br><span style="padding-left:20px"> banana,<br><span style="padding-left:20px"> melon,<br><span style="padding-left:20px"> kiwi,<br><span style="padding-left:20px"> orange,<br><span style="padding-left:20px"> papaya)</td>
 <td></td>
 </tr>
 <tr>
 <td>array6_t</td>
-<td></td>
+<td>array (fruit_t range &lt;&gt;) of natural</td>
 <td></td>
 </tr>
 <tr>

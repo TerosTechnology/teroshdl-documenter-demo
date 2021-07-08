@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1070,21 +1075,21 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>runner_init <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_active_python_runner <font id="function_arguments">(runner : runner_t; value : boolean) </font> <font id="function_return">return ()</font></li>
+<li>set_active_python_runner <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> value : boolean) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>lock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+<li>lock_entry <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>unlock_entry <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+<li>unlock_entry <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>lock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+<li>lock_exit <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>unlock_exit <font id="function_arguments">(runner : runner_t; phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
+<li>unlock_exit <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> phase : runner_legal_phase_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_phase <font id="function_arguments">(runner : runner_t; new_phase : runner_phase_t) </font> <font id="function_return">return ()</font></li>
+<li>set_phase <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_phase : runner_phase_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_test_case_name <font id="function_arguments">(runner : runner_t; index : positive; new_name : string) </font> <font id="function_return">return ()</font></li>
+<li>set_test_case_name <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> index : positive;<br><span style="padding-left:20px"> new_name : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_num_of_test_cases <font id="function_arguments">(runner : runner_t; new_value : integer) </font> <font id="function_return">return ()</font></li>
+<li>set_num_of_test_cases <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_value : integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>inc_num_of_test_cases <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
@@ -1094,9 +1099,9 @@
 </ul><ul>
 <li>inc_test_suite_iteration <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_run_test_case <font id="function_arguments">(runner : runner_t; index : positive; new_name : string) </font> <font id="function_return">return ()</font></li>
+<li>set_run_test_case <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> index : positive;<br><span style="padding-left:20px"> new_name : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_running_test_case <font id="function_arguments">(runner : runner_t; new_name  : string) </font> <font id="function_return">return ()</font></li>
+<li>set_running_test_case <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_name  : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>inc_num_of_run_test_cases <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
@@ -1106,7 +1111,7 @@
 </ul><ul>
 <li>set_run_all <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_run_all <font id="function_arguments">(runner : runner_t; new_value : boolean) </font> <font id="function_return">return ()</font></li>
+<li>set_run_all <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_value : boolean) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>inc_test_case_iteration <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
@@ -1120,9 +1125,9 @@
 </ul><ul>
 <li>clear_test_suite_exit_after_error <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_cfg <font id="function_arguments">(runner : runner_t; new_value : string) </font> <font id="function_return">return ()</font></li>
+<li>set_cfg <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_value : string) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>set_timeout <font id="function_arguments">(runner : runner_t; timeout : time) </font> <font id="function_return">return ()</font></li>
+<li>set_timeout <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> timeout : time) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>p_disable_simulation_exit <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />

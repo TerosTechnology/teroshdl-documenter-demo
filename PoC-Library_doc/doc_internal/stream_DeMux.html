@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1242,12 +1247,12 @@
 </tr>
 <tr>
 <td>Out_Data_i</td>
-<td>T_SLM(PORTS - 1 downto 0, DATA_BITS - 1 downto 0)</td>
+<td>T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> DATA_BITS - 1 downto 0)</td>
 <td>necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave)</td>
 </tr>
 <tr>
 <td>Out_Meta_i</td>
-<td>T_SLM(PORTS - 1 downto 0, META_BITS - 1 downto 0)</td>
+<td>T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_BITS - 1 downto 0)</td>
 <td></td>
 </tr>
 </tbody>
@@ -1264,7 +1269,7 @@
 <tbody>
 <tr>
 <td>T_STATE</td>
-<td>(ST_IDLE, ST_DATAFLOW, ST_DISCARD_FRAME)</td>
+<td>(ST_IDLE,<br><span style="padding-left:20px"> ST_DATAFLOW,<br><span style="padding-left:20px"> ST_DISCARD_FRAME)</td>
 <td></td>
 </tr>
 </tbody>

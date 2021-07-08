@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1036,62 +1041,62 @@
 </tr>
 <tr>
 <td>T_IO_IIC_SERIAL_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_IIC_SERIAL</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_SERIAL_PCB_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_IIC_SERIAL_PCB</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_BUSMODE</td>
-<td>( IO_IIC_BUSMODE_SMBUS,                            --   100 kHz; additional timing restrictions IO_IIC_BUSMODE_STANDARDMODE,           --   100 kHz IO_IIC_BUSMODE_FASTMODE,                   --   400 kHz IO_IIC_BUSMODE_FASTMODEPLUS,           -- 1.000 kHz IO_IIC_BUSMODE_HIGHSPEEDMODE,          -- 3.400 kHz IO_IIC_BUSMODE_ULTRAFASTMODE           -- 5.000 kHz; unidirectional )</td>
+<td>( IO_IIC_BUSMODE_SMBUS,<br><span style="padding-left:20px">                            --   100 kHz;<br><span style="padding-left:20px"> additional timing restrictions IO_IIC_BUSMODE_STANDARDMODE,<br><span style="padding-left:20px">           --   100 kHz IO_IIC_BUSMODE_FASTMODE,<br><span style="padding-left:20px">                   --   400 kHz IO_IIC_BUSMODE_FASTMODEPLUS,<br><span style="padding-left:20px">           -- 1.000 kHz IO_IIC_BUSMODE_HIGHSPEEDMODE,<br><span style="padding-left:20px">          -- 3.400 kHz IO_IIC_BUSMODE_ULTRAFASTMODE           -- 5.000 kHz;<br><span style="padding-left:20px"> unidirectional )</td>
 <td>IICBusController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IICBUS_COMMAND</td>
-<td>( IO_IICBUS_CMD_NONE, IO_IICBUS_CMD_SEND_START_CONDITION, IO_IICBUS_CMD_SEND_RESTART_CONDITION, IO_IICBUS_CMD_SEND_STOP_CONDITION, IO_IICBUS_CMD_SEND_LOW, IO_IICBUS_CMD_SEND_HIGH, IO_IICBUS_CMD_RECEIVE )</td>
+<td>( IO_IICBUS_CMD_NONE,<br><span style="padding-left:20px"> IO_IICBUS_CMD_SEND_START_CONDITION,<br><span style="padding-left:20px"> IO_IICBUS_CMD_SEND_RESTART_CONDITION,<br><span style="padding-left:20px"> IO_IICBUS_CMD_SEND_STOP_CONDITION,<br><span style="padding-left:20px"> IO_IICBUS_CMD_SEND_LOW,<br><span style="padding-left:20px"> IO_IICBUS_CMD_SEND_HIGH,<br><span style="padding-left:20px"> IO_IICBUS_CMD_RECEIVE )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IICBUS_STATUS</td>
-<td>( IO_IICBUS_STATUS_RESETING, IO_IICBUS_STATUS_IDLE, IO_IICBUS_STATUS_SENDING, IO_IICBUS_STATUS_SEND_COMPLETE, IO_IICBUS_STATUS_RECEIVING, IO_IICBUS_STATUS_RECEIVED_START_CONDITION, IO_IICBUS_STATUS_RECEIVED_STOP_CONDITION, IO_IICBUS_STATUS_RECEIVED_LOW, IO_IICBUS_STATUS_RECEIVED_HIGH, IO_IICBUS_STATUS_ERROR, IO_IICBUS_STATUS_BUS_ERROR )</td>
+<td>( IO_IICBUS_STATUS_RESETING,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_IDLE,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_SENDING,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_SEND_COMPLETE,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_RECEIVING,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_RECEIVED_START_CONDITION,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_RECEIVED_STOP_CONDITION,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_RECEIVED_LOW,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_RECEIVED_HIGH,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_ERROR,<br><span style="padding-left:20px"> IO_IICBUS_STATUS_BUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_COMMAND</td>
-<td>( IO_IIC_CMD_NONE, IO_IIC_CMD_QUICKCOMMAND_READ,    -- use this to check for an device address IO_IIC_CMD_QUICKCOMMAND_WRITE, IO_IIC_CMD_SEND_BYTES, IO_IIC_CMD_RECEIVE_BYTES, IO_IIC_CMD_PROCESS_CALL )</td>
+<td>( IO_IIC_CMD_NONE,<br><span style="padding-left:20px"> IO_IIC_CMD_QUICKCOMMAND_READ,<br><span style="padding-left:20px">    -- use this to check for an device address IO_IIC_CMD_QUICKCOMMAND_WRITE,<br><span style="padding-left:20px"> IO_IIC_CMD_SEND_BYTES,<br><span style="padding-left:20px"> IO_IIC_CMD_RECEIVE_BYTES,<br><span style="padding-left:20px"> IO_IIC_CMD_PROCESS_CALL )</td>
 <td>IICController==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IIC_STATUS</td>
-<td>( IO_IIC_STATUS_IDLE, IO_IIC_STATUS_EXECUTING, IO_IIC_STATUS_EXECUTE_OK, IO_IIC_STATUS_EXECUTE_FAILED, IO_IIC_STATUS_SENDING, IO_IIC_STATUS_SEND_COMPLETE, IO_IIC_STATUS_RECEIVING, IO_IIC_STATUS_RECEIVE_COMPLETE, IO_IIC_STATUS_CALLING, IO_IIC_STATUS_CALL_COMPLETE, IO_IIC_STATUS_ERROR )</td>
+<td>( IO_IIC_STATUS_IDLE,<br><span style="padding-left:20px"> IO_IIC_STATUS_EXECUTING,<br><span style="padding-left:20px"> IO_IIC_STATUS_EXECUTE_OK,<br><span style="padding-left:20px"> IO_IIC_STATUS_EXECUTE_FAILED,<br><span style="padding-left:20px"> IO_IIC_STATUS_SENDING,<br><span style="padding-left:20px"> IO_IIC_STATUS_SEND_COMPLETE,<br><span style="padding-left:20px"> IO_IIC_STATUS_RECEIVING,<br><span style="padding-left:20px"> IO_IIC_STATUS_RECEIVE_COMPLETE,<br><span style="padding-left:20px"> IO_IIC_STATUS_CALLING,<br><span style="padding-left:20px"> IO_IIC_STATUS_CALL_COMPLETE,<br><span style="padding-left:20px"> IO_IIC_STATUS_ERROR )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_ERROR</td>
-<td>( IO_IIC_ERROR_NONE, IO_IIC_ERROR_ADDRESS_ERROR, IO_IIC_ERROR_ACK_ERROR, IO_IIC_ERROR_BUS_ERROR, IO_IIC_ERROR_FSM )</td>
+<td>( IO_IIC_ERROR_NONE,<br><span style="padding-left:20px"> IO_IIC_ERROR_ADDRESS_ERROR,<br><span style="padding-left:20px"> IO_IIC_ERROR_ACK_ERROR,<br><span style="padding-left:20px"> IO_IIC_ERROR_BUS_ERROR,<br><span style="padding-left:20px"> IO_IIC_ERROR_FSM )</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_COMMAND_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_IIC_COMMAND</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_STATUS_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_IIC_STATUS</td>
 <td></td>
 </tr>
 <tr>
 <td>T_IO_IIC_ERROR_VECTOR</td>
-<td></td>
+<td>array(natural range &lt;&gt;) of T_IO_IIC_ERROR</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>io_tristate_driver <font id="function_arguments">( signal pad  : inout T_IO_IIC_SERIAL_PCB; signal iot  : inout T_IO_IIC_SERIAL ) </font> <font id="function_return">return ()</font></li>
+<li>io_tristate_driver <font id="function_arguments">( signal pad  : inout T_IO_IIC_SERIAL_PCB;<br><span style="padding-left:20px"> signal iot  : inout T_IO_IIC_SERIAL ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Drive std_logic values from Tri-State signals and in reverse.Use this procedure only in simulation</p></div>
     </article class="markdown-body">

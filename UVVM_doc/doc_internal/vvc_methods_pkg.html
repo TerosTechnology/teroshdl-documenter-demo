@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1051,25 +1056,25 @@
 <tr>
 <td>C_WISHBONE_INTER_BFM_DELAY_DEFAULT</td>
 <td>t_inter_bfm_delay</td>
-<td>(     delay_type                          =&gt; NO_DELAY,     delay_in_time                       =&gt; 0 ns,     inter_bfm_delay_violation_severity  =&gt; WARNING   )</td>
+<td>(     delay_type                          =&gt; NO_DELAY,<br><span style="padding-left:20px">     delay_in_time                       =&gt; 0 ns,<br><span style="padding-left:20px">     inter_bfm_delay_violation_severity  =&gt; WARNING   )</td>
 <td>Type found in UVVM-Util types_pkg</td>
 </tr>
 <tr>
 <td>C_WISHBONE_VVC_CONFIG_DEFAULT</td>
 <td>t_vvc_config</td>
-<td>(     inter_bfm_delay                       =&gt; C_WISHBONE_INTER_BFM_DELAY_DEFAULT,     cmd_queue_count_max                   =&gt; C_CMD_QUEUE_COUNT_MAX,     cmd_queue_count_threshold             =&gt; C_CMD_QUEUE_COUNT_THRESHOLD,     cmd_queue_count_threshold_severity    =&gt; C_CMD_QUEUE_COUNT_THRESHOLD_SEVERITY,     result_queue_count_max                =&gt; C_RESULT_QUEUE_COUNT_MAX,     result_queue_count_threshold_severity =&gt; C_RESULT_QUEUE_COUNT_THRESHOLD_SEVERITY,     result_queue_count_threshold          =&gt; C_RESULT_QUEUE_COUNT_THRESHOLD,     bfm_config                            =&gt; C_WISHBONE_BFM_CONFIG_DEFAULT,     msg_id_panel                          =&gt; C_VVC_MSG_ID_PANEL_DEFAULT,     parent_msg_id_panel                   =&gt; C_VVC_MSG_ID_PANEL_DEFAULT   )</td>
+<td>(     inter_bfm_delay                       =&gt; C_WISHBONE_INTER_BFM_DELAY_DEFAULT,<br><span style="padding-left:20px">     cmd_queue_count_max                   =&gt; C_CMD_QUEUE_COUNT_MAX,<br><span style="padding-left:20px">     cmd_queue_count_threshold             =&gt; C_CMD_QUEUE_COUNT_THRESHOLD,<br><span style="padding-left:20px">     cmd_queue_count_threshold_severity    =&gt; C_CMD_QUEUE_COUNT_THRESHOLD_SEVERITY,<br><span style="padding-left:20px">     result_queue_count_max                =&gt; C_RESULT_QUEUE_COUNT_MAX,<br><span style="padding-left:20px">     result_queue_count_threshold_severity =&gt; C_RESULT_QUEUE_COUNT_THRESHOLD_SEVERITY,<br><span style="padding-left:20px">     result_queue_count_threshold          =&gt; C_RESULT_QUEUE_COUNT_THRESHOLD,<br><span style="padding-left:20px">     bfm_config                            =&gt; C_WISHBONE_BFM_CONFIG_DEFAULT,<br><span style="padding-left:20px">     msg_id_panel                          =&gt; C_VVC_MSG_ID_PANEL_DEFAULT,<br><span style="padding-left:20px">     parent_msg_id_panel                   =&gt; C_VVC_MSG_ID_PANEL_DEFAULT   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_VVC_STATUS_DEFAULT</td>
 <td>t_vvc_status</td>
-<td>(     current_cmd_idx      =&gt; 0,     previous_cmd_idx     =&gt; 0,     pending_cmd_cnt      =&gt; 0   )</td>
+<td>(     current_cmd_idx      =&gt; 0,<br><span style="padding-left:20px">     previous_cmd_idx     =&gt; 0,<br><span style="padding-left:20px">     pending_cmd_cnt      =&gt; 0   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_TRANSACTION_INFO_DEFAULT</td>
 <td>t_transaction_info</td>
-<td>(     -- Example:     operation           =&gt;  NO_OPERATION,     addr                =&gt; (others =&gt; '0'),     data                =&gt; (others =&gt; '0'),     msg                 =&gt; (others =&gt; ' ')   )</td>
+<td>(     -- Example:     operation           =&gt;  NO_OPERATION,<br><span style="padding-left:20px">     addr                =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">     data                =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">     msg                 =&gt; (others =&gt; ' ')   )</td>
 <td></td>
 </tr>
 </tbody>
@@ -1091,7 +1096,7 @@
 </tr>
 <tr>
 <td>t_vvc_config_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of t_vvc_config</td>
 <td></td>
 </tr>
 <tr>
@@ -1101,7 +1106,7 @@
 </tr>
 <tr>
 <td>t_vvc_status_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of t_vvc_status</td>
 <td></td>
 </tr>
 <tr>
@@ -1111,20 +1116,20 @@
 </tr>
 <tr>
 <td>t_transaction_info_array</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of t_transaction_info</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>wishbone_write <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data                : in    std_logic_vector; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+<li>wishbone_write <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data_routing        : in    t_data_routing; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant data_routing        : in    t_data_routing;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant msg                 : in    string; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+<li>wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wishbone_check <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record; constant vvc_instance_idx    : in    integer; constant addr                : in    unsigned; constant data                : in    std_logic_vector; constant msg                 : in    string; constant alert_level         : in    t_alert_level  := ERROR; constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT; constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
+<li>wishbone_check <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant alert_level         : in    t_alert_level  := ERROR;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>update_vvc_activity_register <font id="function_arguments">( signal global_trigger_vvc_activity_register : inout std_logic; variable vvc_status                         : inout t_vvc_status; constant activity                           : in    t_activity; constant entry_num_in_vvc_activity_register : in    integer; constant last_cmd_idx_executed              : in    natural; constant command_queue_is_empty             : in    boolean; constant scope                              : in    string := C_VVC_NAME) </font> <font id="function_return">return ()</font></li>
+<li>update_vvc_activity_register <font id="function_arguments">( signal global_trigger_vvc_activity_register : inout std_logic;<br><span style="padding-left:20px"> variable vvc_status                         : inout t_vvc_status;<br><span style="padding-left:20px"> constant activity                           : in    t_activity;<br><span style="padding-left:20px"> constant entry_num_in_vvc_activity_register : in    integer;<br><span style="padding-left:20px"> constant last_cmd_idx_executed              : in    natural;<br><span style="padding-left:20px"> constant command_queue_is_empty             : in    boolean;<br><span style="padding-left:20px"> constant scope                              : in    string := C_VVC_NAME) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>pad_wishbone_sb <font id="function_arguments">( constant data : in std_logic_vector ) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul>

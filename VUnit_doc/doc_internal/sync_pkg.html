@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1045,19 +1050,19 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t; handle     :       sync_handle_t) </font> <font id="function_return">return ()</font></li>
+<li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> handle     :       sync_handle_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Blocking: Wait until all operations requested from the VC have been finished</p></div><ul>
-<li>wait_for_time <font id="function_arguments">(signal net : inout network_t; handle     :       sync_handle_t; delay      :       delay_length) </font> <font id="function_return">return ()</font></li>
+<li>wait_for_time <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> handle     :       sync_handle_t;<br><span style="padding-left:20px"> delay      :       delay_length) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Non-blocking: Make VC wait for a delay before starting the next operation</p></div><ul>
-<li>handle_wait_until_idle <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>handle_wait_until_idle <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Standard implementation of wait_until_idle VCI which may be used by VC</p></div><ul>
-<li>handle_wait_for_time <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>handle_wait_for_time <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Standard implementation of wait_for_time VCI which may be used by VC</p></div><ul>
-<li>handle_sync_message <font id="function_arguments">(signal net        : inout network_t; variable msg_type : inout msg_type_t; variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
+<li>handle_sync_message <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Standard implementation of synchronization VCI which may be used by VC</p></div>
     </article class="markdown-body">

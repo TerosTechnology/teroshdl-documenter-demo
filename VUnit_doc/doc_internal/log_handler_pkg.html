@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1057,7 +1062,7 @@
 <tbody>
 <tr>
 <td>deprecated_log_format_t</td>
-<td>( raw,  level,  verbose,  csv,  off)</td>
+<td>( raw,<br><span style="padding-left:20px">  level,<br><span style="padding-left:20px">  verbose,<br><span style="padding-left:20px">  csv,<br><span style="padding-left:20px">  off)</td>
 <td></td>
 </tr>
 <tr>
@@ -1067,22 +1072,22 @@
 </tr>
 <tr>
 <td>log_handler_vec_t</td>
-<td></td>
+<td>array (natural range &lt;&gt;) of log_handler_t</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>set_format <font id="function_arguments">(log_handler : log_handler_t; format : log_format_t; use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
+<li>set_format <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> format : log_format_t;<br><span style="padding-left:20px"> use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Set the format to be used by the log handler</p></div><ul>
-<li>get_format <font id="function_arguments">(constant log_handler : in log_handler_t; variable format : out log_format_t; variable use_color : out boolean) </font> <font id="function_return">return ()</font></li>
+<li>get_format <font id="function_arguments">(constant log_handler : in log_handler_t;<br><span style="padding-left:20px"> variable format : out log_format_t;<br><span style="padding-left:20px"> variable use_color : out boolean) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 Get the format used by the log handler</p></div><ul>
-<li>update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t; value : natural) </font> <font id="function_return">return ()</font></li>
+<li>update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> value : natural) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>log_to_handler <font id="function_arguments">(log_handler : log_handler_t; logger_name : string; msg : string; log_level : log_level_t; log_time : time; sequence_number : natural; line_num : natural := 0; file_name : string := "") </font> <font id="function_return">return ()</font></li>
+<li>log_to_handler <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> logger_name : string;<br><span style="padding-left:20px"> msg : string;<br><span style="padding-left:20px"> log_level : log_level_t;<br><span style="padding-left:20px"> log_time : time;<br><span style="padding-left:20px"> sequence_number : natural;<br><span style="padding-left:20px"> line_num : natural := 0;<br><span style="padding-left:20px"> file_name : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>init_log_handler <font id="function_arguments">(log_handler : log_handler_t; format : log_format_t; file_name : string; use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
+<li>init_log_handler <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> format : log_format_t;<br><span style="padding-left:20px"> file_name : string;<br><span style="padding-left:20px"> use_color : boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

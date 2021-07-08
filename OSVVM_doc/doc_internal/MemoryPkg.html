@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1050,7 +1055,7 @@
 </tr>
 <tr>
 <td>MemoryIDArrayType</td>
-<td></td>
+<td>array (integer range &lt;&gt;) of MemoryIDType</td>
 <td></td>
 </tr>
 <tr>
@@ -1060,35 +1065,35 @@
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>MemWrite <font id="function_arguments">( ID    : MemoryIDType ; Addr  : std_logic_vector ; Data  : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>MemWrite <font id="function_arguments">( ID    : MemoryIDType ;<br><span style="padding-left:20px"> Addr  : std_logic_vector ;<br><span style="padding-left:20px"> Data  : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>MemRead <font id="function_arguments">( ID    : in MemoryIDType ; Addr  : in  std_logic_vector ; Data  : out std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>MemRead <font id="function_arguments">( ID    : in MemoryIDType ;<br><span style="padding-left:20px"> Addr  : in  std_logic_vector ;<br><span style="padding-left:20px"> Data  : out std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>MemErase <font id="function_arguments">(ID : in MemoryIDType) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadH <font id="function_arguments">(    -- Hexadecimal File Read ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ; EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadH <font id="function_arguments">(    -- Hexadecimal File Read ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ;<br><span style="padding-left:20px"> EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadH <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadH <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadH <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadH <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadB <font id="function_arguments">(    -- Binary File Read ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ; EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadB <font id="function_arguments">(    -- Binary File Read ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ;<br><span style="padding-left:20px"> EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadB <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadB <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileReadB <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ) </font> <font id="function_return">return ()</font></li>
+<li>FileReadB <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteH <font id="function_arguments">(    -- Hexadecimal File Write ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ; EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteH <font id="function_arguments">(    -- Hexadecimal File Write ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ;<br><span style="padding-left:20px"> EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteH <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteH <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteH <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteH <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteB <font id="function_arguments">(    -- Binary File Write ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ; EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteB <font id="function_arguments">(    -- Binary File Write ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ;<br><span style="padding-left:20px"> EndAddr      : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteB <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ; StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteB <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ;<br><span style="padding-left:20px"> StartAddr    : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>FileWriteB <font id="function_arguments">( ID           : MemoryIDType ; FileName     : string ) </font> <font id="function_return">return ()</font></li>
+<li>FileWriteB <font id="function_arguments">( ID           : MemoryIDType ;<br><span style="padding-left:20px"> FileName     : string ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

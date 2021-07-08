@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1046,7 +1051,7 @@
 <tr>
 <td>C_VVC_CMD_DEFAULT</td>
 <td>t_vvc_cmd_record</td>
-<td>(     addr                      =&gt; (others =&gt; '0'),     data                      =&gt; (others =&gt; '0'),     max_receptions            =&gt; 1,     -- Common VVC fields     operation                 =&gt; NO_OPERATION,     proc_call                 =&gt; (others =&gt; NUL),     msg                       =&gt; (others =&gt; NUL),     data_routing              =&gt; NA,     cmd_idx                   =&gt; 0,     command_type              =&gt; NO_COMMAND_TYPE,     msg_id                    =&gt; NO_ID,     gen_integer_array         =&gt; (others =&gt; -1),     gen_boolean               =&gt; false,     timeout                   =&gt; 0 ns,     alert_level               =&gt; FAILURE,     delay                     =&gt; 0 ns,     quietness                 =&gt; NON_QUIET,     parent_msg_id_panel       =&gt; C_UNUSED_MSG_ID_PANEL   )</td>
+<td>(     addr                      =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">     data                      =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">     max_receptions            =&gt; 1,<br><span style="padding-left:20px">     -- Common VVC fields     operation                 =&gt; NO_OPERATION,<br><span style="padding-left:20px">     proc_call                 =&gt; (others =&gt; NUL),<br><span style="padding-left:20px">     msg                       =&gt; (others =&gt; NUL),<br><span style="padding-left:20px">     data_routing              =&gt; NA,<br><span style="padding-left:20px">     cmd_idx                   =&gt; 0,<br><span style="padding-left:20px">     command_type              =&gt; NO_COMMAND_TYPE,<br><span style="padding-left:20px">     msg_id                    =&gt; NO_ID,<br><span style="padding-left:20px">     gen_integer_array         =&gt; (others =&gt; -1),<br><span style="padding-left:20px">     gen_boolean               =&gt; false,<br><span style="padding-left:20px">     timeout                   =&gt; 0 ns,<br><span style="padding-left:20px">     alert_level               =&gt; FAILURE,<br><span style="padding-left:20px">     delay                     =&gt; 0 ns,<br><span style="padding-left:20px">     quietness                 =&gt; NON_QUIET,<br><span style="padding-left:20px">     parent_msg_id_panel       =&gt; C_UNUSED_MSG_ID_PANEL   )</td>
 <td></td>
 </tr>
 </tbody>
@@ -1063,7 +1068,7 @@
 <tbody>
 <tr>
 <td>t_operation</td>
-<td>( NO_OPERATION, AWAIT_COMPLETION, AWAIT_ANY_COMPLETION, ENABLE_LOG_MSG, DISABLE_LOG_MSG, FLUSH_COMMAND_QUEUE, FETCH_RESULT, INSERT_DELAY, TERMINATE_CURRENT_COMMAND, WRITE, READ, CHECK )</td>
+<td>( NO_OPERATION,<br><span style="padding-left:20px"> AWAIT_COMPLETION,<br><span style="padding-left:20px"> AWAIT_ANY_COMPLETION,<br><span style="padding-left:20px"> ENABLE_LOG_MSG,<br><span style="padding-left:20px"> DISABLE_LOG_MSG,<br><span style="padding-left:20px"> FLUSH_COMMAND_QUEUE,<br><span style="padding-left:20px"> FETCH_RESULT,<br><span style="padding-left:20px"> INSERT_DELAY,<br><span style="padding-left:20px"> TERMINATE_CURRENT_COMMAND,<br><span style="padding-left:20px"> WRITE,<br><span style="padding-left:20px"> READ,<br><span style="padding-left:20px"> CHECK )</td>
 <td></td>
 </tr>
 <tr>
@@ -1083,7 +1088,7 @@
 </tr>
 <tr>
 <td>t_last_received_cmd_idx</td>
-<td></td>
+<td>array (t_channel range &lt;&gt;,<br><span style="padding-left:20px">natural range &lt;&gt;) of integer</td>
 <td></td>
 </tr>
 </tbody>

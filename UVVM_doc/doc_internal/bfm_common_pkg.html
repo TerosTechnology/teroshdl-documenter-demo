@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1026,24 +1031,24 @@
 <tbody>
 <tr>
 <td>t_normalization_mode</td>
-<td>(ALLOW_WIDER, ALLOW_NARROWER, ALLOW_WIDER_NARROWER, ALLOW_EXACT_ONLY)</td>
+<td>(ALLOW_WIDER,<br><span style="padding-left:20px"> ALLOW_NARROWER,<br><span style="padding-left:20px"> ALLOW_WIDER_NARROWER,<br><span style="padding-left:20px"> ALLOW_EXACT_ONLY)</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>wait_until_given_time_after_rising_edge <font id="function_arguments">( signal clk         : in std_logic; constant wait_time : in time ) </font> <font id="function_return">return ()</font></li>
+<li>wait_until_given_time_after_rising_edge <font id="function_arguments">( signal clk         : in std_logic;<br><span style="padding-left:20px"> constant wait_time : in time ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_until_given_time_before_rising_edge <font id="function_arguments">( signal clk            : in std_logic; constant time_to_edge : in time; constant clk_period   : in time ) </font> <font id="function_return">return ()</font></li>
+<li>wait_until_given_time_before_rising_edge <font id="function_arguments">( signal clk            : in std_logic;<br><span style="padding-left:20px"> constant time_to_edge : in time;<br><span style="padding-left:20px"> constant clk_period   : in time ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_num_rising_edge <font id="function_arguments">( signal clk               : in std_logic; constant num_rising_edge : in natural ) </font> <font id="function_return">return ()</font></li>
+<li>wait_num_rising_edge <font id="function_arguments">( signal clk               : in std_logic;<br><span style="padding-left:20px"> constant num_rising_edge : in natural ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_num_rising_edge_plus_margin <font id="function_arguments">( signal clk               : in std_logic; constant num_rising_edge : in natural; constant margin          : in time ) </font> <font id="function_return">return ()</font></li>
+<li>wait_num_rising_edge_plus_margin <font id="function_arguments">( signal clk               : in std_logic;<br><span style="padding-left:20px"> constant num_rising_edge : in natural;<br><span style="padding-left:20px"> constant margin          : in time ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_on_bfm_sync_start <font id="function_arguments">( signal clk                      : in std_logic; constant bfm_sync               : in t_bfm_sync; constant setup_time             : in time  := -1 ns; constant config_clock_period    : in time  := -1 ns; variable time_of_falling_edge   : out time; variable time_of_rising_edge    : out time ) </font> <font id="function_return">return ()</font></li>
+<li>wait_on_bfm_sync_start <font id="function_arguments">( signal clk                      : in std_logic;<br><span style="padding-left:20px"> constant bfm_sync               : in t_bfm_sync;<br><span style="padding-left:20px"> constant setup_time             : in time  := -1 ns;<br><span style="padding-left:20px"> constant config_clock_period    : in time  := -1 ns;<br><span style="padding-left:20px"> variable time_of_falling_edge   : out time;<br><span style="padding-left:20px"> variable time_of_rising_edge    : out time ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>wait_on_bfm_exit <font id="function_arguments">( signal clk                      : in std_logic; constant bfm_sync               : in t_bfm_sync; constant hold_time              : in time := -1 ns; constant time_of_falling_edge   : in time := -1 ns; constant time_of_rising_edge    : in time := -1 ns ) </font> <font id="function_return">return ()</font></li>
+<li>wait_on_bfm_exit <font id="function_arguments">( signal clk                      : in std_logic;<br><span style="padding-left:20px"> constant bfm_sync               : in t_bfm_sync;<br><span style="padding-left:20px"> constant hold_time              : in time := -1 ns;<br><span style="padding-left:20px"> constant time_of_falling_edge   : in time := -1 ns;<br><span style="padding-left:20px"> constant time_of_rising_edge    : in time := -1 ns ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
-<li>check_clock_period_margin <font id="function_arguments">( signal   clock                          : in std_logic; constant bfm_sync                       : in t_bfm_sync; constant time_of_falling_edge           : in time; constant time_of_rising_edge            : in time; constant config_clock_period            : in time; constant config_clock_period_margin     : in time; constant config_clock_margin_severity   : in t_alert_level := TB_ERROR ) </font> <font id="function_return">return ()</font></li>
+<li>check_clock_period_margin <font id="function_arguments">( signal   clock                          : in std_logic;<br><span style="padding-left:20px"> constant bfm_sync                       : in t_bfm_sync;<br><span style="padding-left:20px"> constant time_of_falling_edge           : in time;<br><span style="padding-left:20px"> constant time_of_rising_edge            : in time;<br><span style="padding-left:20px"> constant config_clock_period            : in time;<br><span style="padding-left:20px"> constant config_clock_period_margin     : in time;<br><span style="padding-left:20px"> constant config_clock_margin_severity   : in t_alert_level := TB_ERROR ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

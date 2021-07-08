@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1031,18 +1036,18 @@
 </tr>
 <tr>
 <td>VendorCovRangeArrayType</td>
-<td></td>
+<td>array ( integer range &lt;&gt; ) of VendorCovRangeType</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>VendorCovSetName <font id="function_arguments">( obj: VendorCovHandleType; name: string ) </font> <font id="function_return">return ()</font></li>
+<li>VendorCovSetName <font id="function_arguments">( obj: VendorCovHandleType;<br><span style="padding-left:20px"> name: string ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
  Sets/Updates the name of the Coverage Model. Should not be called until the data structure is created by VendorCovPointCreate or VendorCovCrossCreate. Replaces name that was set by VendorCovPointCreate or VendorCovCrossCreate.</p></div><ul>
-<li>VendorCovBinAdd <font id="function_arguments">( obj: VendorCovHandleType; bins: VendorCovRangeArrayType; Action: integer; atleast: integer; name: string ) </font> <font id="function_return">return ()</font></li>
+<li>VendorCovBinAdd <font id="function_arguments">( obj: VendorCovHandleType;<br><span style="padding-left:20px"> bins: VendorCovRangeArrayType;<br><span style="padding-left:20px"> Action: integer;<br><span style="padding-left:20px"> atleast: integer;<br><span style="padding-left:20px"> name: string ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
  Add a bin or set of bins to either a Point/Item or Cross Functional Coverage Model Checking for sizing that is different from original sizing already done in OSVVM CoveragePkg It is important to maintain an index that corresponds to the order the bins were entered as that is used when coverage is recorded.</p></div><ul>
-<li>VendorCovBinInc <font id="function_arguments">( obj: VendorCovHandleType; index: integer ) </font> <font id="function_return">return ()</font></li>
+<li>VendorCovBinInc <font id="function_arguments">( obj: VendorCovHandleType;<br><span style="padding-left:20px"> index: integer ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
  Increment the coverage of bin identified by index number. Index ranges from 1 to Number of Bins. Index corresponds to the order the bins were entered (starting from 1)</p></div>
     </article class="markdown-body">

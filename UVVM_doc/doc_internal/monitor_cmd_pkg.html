@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1034,19 +1039,19 @@
 <tr>
 <td>C_UART_MONITOR_MSG_ID_PANEL_DEFAULT</td>
 <td>t_msg_id_panel</td>
-<td>(     ID_MONITOR =&gt; ENABLED,     others     =&gt; DISABLED   )</td>
+<td>(     ID_MONITOR =&gt; ENABLED,<br><span style="padding-left:20px">     others     =&gt; DISABLED   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT</td>
 <td>t_uart_interface_config</td>
-<td>(     bit_time         =&gt; 0 ns,     num_data_bits    =&gt; 8,     parity           =&gt; PARITY_ODD,     num_stop_bits    =&gt; STOP_BITS_ONE   )</td>
+<td>(     bit_time         =&gt; 0 ns,<br><span style="padding-left:20px">     num_data_bits    =&gt; 8,<br><span style="padding-left:20px">     parity           =&gt; PARITY_ODD,<br><span style="padding-left:20px">     num_stop_bits    =&gt; STOP_BITS_ONE   )</td>
 <td></td>
 </tr>
 <tr>
 <td>C_UART_MONITOR_CONFIG_DEFAULT</td>
 <td>t_uart_monitor_config</td>
-<td>(     scope_name               =&gt; (1 to 14 =&gt; "set scope name", others =&gt; NUL),     msg_id_panel             =&gt; C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,     interface_config         =&gt; C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT,     transaction_display_time =&gt; 0 ns   )</td>
+<td>(     scope_name               =&gt; (1 to 14 =&gt; "set scope name",<br><span style="padding-left:20px"> others =&gt; NUL),<br><span style="padding-left:20px">     msg_id_panel             =&gt; C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,<br><span style="padding-left:20px">     interface_config         =&gt; C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT,<br><span style="padding-left:20px">     transaction_display_time =&gt; 0 ns   )</td>
 <td></td>
 </tr>
 </tbody>
@@ -1073,12 +1078,12 @@
 </tr>
 <tr>
 <td>t_uart_monitor_config_array</td>
-<td></td>
+<td>array (t_channel range &lt;&gt;,<br><span style="padding-left:20px"> natural range &lt;&gt;) of t_uart_monitor_config</td>
 <td></td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
-<li>monitor_constructor <font id="function_arguments">( constant monitor_config        : in  t_uart_monitor_config; variable shared_monitor_config : out t_uart_monitor_config ) </font> <font id="function_return">return ()</font></li>
+<li>monitor_constructor <font id="function_arguments">( constant monitor_config        : in  t_uart_monitor_config;<br><span style="padding-left:20px"> variable shared_monitor_config : out t_uart_monitor_config ) </font> <font id="function_return">return ()</font></li>
 </ul>
     </article class="markdown-body">
 

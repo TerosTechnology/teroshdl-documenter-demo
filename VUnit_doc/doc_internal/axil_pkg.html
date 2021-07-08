@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1028,7 +1033,7 @@
 <tr>
 <td>axil_addr_m2s_init</td>
 <td>axil_addr_m2s_t</td>
-<td>(valid =&gt; '0',                                                     addr =&gt; (others =&gt; '0'))</td>
+<td>(valid =&gt; '0',<br><span style="padding-left:20px">                                                     addr =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
@@ -1046,13 +1051,13 @@
 <tr>
 <td>axil_read_s2m_init</td>
 <td>axil_read_s2m_t</td>
-<td>(valid =&gt; '0',                                                     data =&gt; (others =&gt; '0'),                                                     resp =&gt; (others =&gt; '0'))</td>
+<td>(valid =&gt; '0',<br><span style="padding-left:20px">                                                     data =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">                                                     resp =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
 <td>axil_write_m2s_init</td>
 <td>axil_write_m2s_t</td>
-<td>(valid =&gt; '0',                                                       data =&gt; (others =&gt; '0'),                                                       strb =&gt; (others =&gt; '0'))</td>
+<td>(valid =&gt; '0',<br><span style="padding-left:20px">                                                       data =&gt; (others =&gt; '0'),<br><span style="padding-left:20px">                                                       strb =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
@@ -1070,19 +1075,19 @@
 <tr>
 <td>axil_wresp_s2m_init</td>
 <td>axil_wresp_s2m_t</td>
-<td>(valid =&gt; '0',                                                       resp =&gt; (others =&gt; '0'))</td>
+<td>(valid =&gt; '0',<br><span style="padding-left:20px">                                                       resp =&gt; (others =&gt; '0'))</td>
 <td></td>
 </tr>
 <tr>
 <td>axil_m2s_init</td>
 <td>axil_m2s_t</td>
-<td>(ar =&gt; axil_addr_m2s_init,                                           aw =&gt; axil_addr_m2s_init,                                           r =&gt; axil_read_m2s_init,                                           w =&gt; axil_write_m2s_init,                                           b =&gt; axil_wresp_m2s_init)</td>
+<td>(ar =&gt; axil_addr_m2s_init,<br><span style="padding-left:20px">                                           aw =&gt; axil_addr_m2s_init,<br><span style="padding-left:20px">                                           r =&gt; axil_read_m2s_init,<br><span style="padding-left:20px">                                           w =&gt; axil_write_m2s_init,<br><span style="padding-left:20px">                                           b =&gt; axil_wresp_m2s_init)</td>
 <td></td>
 </tr>
 <tr>
 <td>axil_s2m_init</td>
 <td>axil_s2m_t</td>
-<td>(ar =&gt; axil_addr_s2m_init,                                           aw =&gt; axil_addr_s2m_init,                                           r =&gt; axil_read_s2m_init,                                           w =&gt; axil_write_s2m_init,                                           b =&gt; axil_wresp_s2m_init)</td>
+<td>(ar =&gt; axil_addr_s2m_init,<br><span style="padding-left:20px">                                           aw =&gt; axil_addr_s2m_init,<br><span style="padding-left:20px">                                           r =&gt; axil_read_s2m_init,<br><span style="padding-left:20px">                                           w =&gt; axil_write_s2m_init,<br><span style="padding-left:20px">                                           b =&gt; axil_wresp_s2m_init)</td>
 <td></td>
 </tr>
 </tbody>

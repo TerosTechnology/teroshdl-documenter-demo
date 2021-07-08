@@ -6,6 +6,11 @@
   vertical-align: text-bottom;
 }
 
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
 .markdown-body .anchor {
   float: left;
   line-height: 1;
@@ -1137,13 +1142,13 @@
 <tr>
 <td>TIME_UNIT_INTERVAL</td>
 <td>time</td>
-<td>1 sec / (to_real(BAUDRATE, 1 Bd) * real(UART_OVERSAMPLING_RATE))</td>
+<td>1 sec / (to_real(BAUDRATE,<br><span style="padding-left:20px"> 1 Bd) * real(UART_OVERSAMPLING_RATE))</td>
 <td></td>
 </tr>
 <tr>
 <td>BAUDRATE_COUNTER_MAX</td>
 <td>positive</td>
-<td>TimingToCycles(TIME_UNIT_INTERVAL, CLOCK_FREQ)</td>
+<td>TimingToCycles(TIME_UNIT_INTERVAL,<br><span style="padding-left:20px"> CLOCK_FREQ)</td>
 <td></td>
 </tr>
 <tr>
