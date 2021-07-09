@@ -1430,7 +1430,7 @@
 <text text-anchor="middle" x="28511.7384" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">math_complex.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl -->
-<g id="edge5" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl</title>
 <path fill="none" stroke="#000000" d="M28439.9633,-215.8314C28451.9012,-206.8779 28466.464,-195.9558 28479.3444,-186.2955"/>
 <polygon fill="#000000" stroke="#000000" points="28481.6213,-188.9629 28487.5213,-180.1628 28477.4213,-183.3629 28481.6213,-188.9629"/>
@@ -1458,7 +1458,7 @@
 <text text-anchor="middle" x="28419.7384" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">math_real.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl -->
-<g id="edge3" class="edge">
+<g id="edge5" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl</title>
 <path fill="none" stroke="#000000" d="M28329.8298,-218.1614C28259.2842,-204.7425 28170.1125,-186.6532 28164.7384,-180 28153.2015,-165.7171 28151.85,-91.7604 28168.7384,-72 28192.5506,-44.1383 28289.3486,-29.7889 28355.535,-23.0889"/>
 <polygon fill="#000000" stroke="#000000" points="28356.2666,-26.5342 28365.8788,-22.0784 28355.5859,-19.5674 28356.2666,-26.5342"/>
@@ -1472,13 +1472,13 @@
 <text text-anchor="middle" x="28241.7384" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">math_complex.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real&#45;body.vhdl -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real&#45;body.vhdl</title>
 <path fill="none" stroke="#000000" d="M28286.6553,-143.8314C28310.6734,-134.1162 28340.4218,-122.0831 28365.6976,-111.8592"/>
 <polygon fill="#000000" stroke="#000000" points="28367.1866,-115.0325 28375.1445,-108.038 28364.5617,-108.5432 28367.1866,-115.0325"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl</title>
 <path fill="none" stroke="#000000" d="M28214.2208,-143.9194C28189.4114,-125.3871 28159.5452,-95.9697 28178.7384,-72 28200.5527,-44.7569 28292.0771,-30.3257 28355.8329,-23.4284"/>
 <polygon fill="#000000" stroke="#000000" points="28356.23,-26.906 28365.8119,-22.3853 28355.5022,-19.944 28356.23,-26.906"/>
@@ -1688,7 +1688,7 @@
 <text text-anchor="middle" x="28607.7384" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">math_complex&#45;body.vhdl</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl -->
-<g id="edge16" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl</title>
 <path fill="none" stroke="#000000" d="M28583.5135,-215.8314C28571.5756,-206.8779 28557.0128,-195.9558 28544.1324,-186.2955"/>
 <polygon fill="#000000" stroke="#000000" points="28546.0555,-183.3629 28535.9555,-180.1628 28541.8555,-188.9629 28546.0555,-183.3629"/>
@@ -1700,19 +1700,19 @@
 <polygon fill="#000000" stroke="#000000" points="28501.6943,-104.3104 28491.1395,-105.2309 28499.9646,-111.0934 28501.6943,-104.3104"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl -->
-<g id="edge14" class="edge">
+<g id="edge16" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex&#45;body.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl</title>
 <path fill="none" stroke="#000000" d="M28631.2565,-215.9111C28669.2871,-184.5099 28736.3181,-118.7947 28697.7384,-72 28671.1533,-39.754 28557.2795,-26.5217 28483.7741,-21.2705"/>
 <polygon fill="#000000" stroke="#000000" points="28483.8986,-17.7709 28473.6833,-20.5813 28483.4216,-24.7546 28483.8986,-17.7709"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real&#45;body.vhdl -->
-<g id="edge18" class="edge">
+<g id="edge17" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real&#45;body.vhdl</title>
 <path fill="none" stroke="#000000" d="M28488.5229,-143.8314C28477.1914,-134.9632 28463.392,-124.1637 28451.1357,-114.5718"/>
 <polygon fill="#000000" stroke="#000000" points="28452.9786,-111.5697 28442.9465,-108.1628 28448.6644,-117.0822 28452.9786,-111.5697"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl -->
-<g id="edge17" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/ieee2008/math_complex.vhdl&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/surf/base/vhdl&#45;libs/openieee/math_real.vhdl</title>
 <path fill="none" stroke="#000000" d="M28513.4792,-143.9977C28514.4511,-124.73 28513.3564,-93.9742 28499.7384,-72 28492.1382,-59.7362 28480.6007,-49.6133 28468.6342,-41.5786"/>
 <polygon fill="#000000" stroke="#000000" points="28470.2262,-38.4456 28459.8951,-36.0963 28466.5063,-44.3754 28470.2262,-38.4456"/>

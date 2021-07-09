@@ -126,7 +126,6 @@
 - Package: [global_signals_and_shared_variables_pkg ](./doc_internal/global_signals_and_shared_variables_pkg.md)
 - Package: [hierarchy_linked_list_pkg ](./doc_internal/hierarchy_linked_list_pkg.md)
 - Package: [license_pkg ](./doc_internal/license_pkg.md)
-- Package: [methods_pkg ](./doc_internal/methods_pkg.md)
 - Package: [protected_types_pkg ](./doc_internal/protected_types_pkg.md)
 - Package: [string_methods_pkg ](./doc_internal/string_methods_pkg.md)
 - Package: [types_pkg ](./doc_internal/types_pkg.md)

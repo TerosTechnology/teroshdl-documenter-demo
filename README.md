@@ -1,8 +1,10 @@
 # Open source projects:
-Created: 08/07/2021 21:13:40
+Created: 09/07/2021 19:21:19
 - Project: [CordicHDL ](./CordicHDL_doc/README.md) ([go to Github project](https://github.com/qarlosalberto/cordicHDL.git))
 - Project: [SURF ](./SURF_doc/README.md) ([go to Github project](https://github.com/slaclab/surf))
+- Project: [OscillatorIMP ](./OscillatorIMP_doc/README.md) ([go to Github project](https://github.com/oscimp/fpga_ip.git))
 - Project: [SERV ](./SERV_doc/README.md) ([go to Github project](https://github.com/olofk/serv))
+- Project: [analig-devices-hdl ](./analig-devices-hdl_doc/README.md) ([go to Github project](https://github.com/analogdevicesinc/hdl.git))
 - Project: [zx128-MiSTer ](./zx128-MiSTer_doc/README.md) ([go to Github project](https://github.com/Kyp069/zx128-MiSTer.git))
 - Project: [NEORV32 ](./NEORV32_doc/README.md) ([go to Github project](https://github.com/stnolting/neorv32.git))
 - Project: [Verilog-ethernet ](./Verilog-ethernet_doc/README.md) ([go to Github project](https://github.com/alexforencich/verilog-ethernet.git))

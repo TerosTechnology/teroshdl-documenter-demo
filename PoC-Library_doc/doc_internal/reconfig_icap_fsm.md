@@ -102,4 +102,5 @@ update sync status
 
 ## State machines
 
+- update sync status
 ![Diagram_state_machine_0]( stm_reconfig_icap_fsm_00.svg "Diagram")

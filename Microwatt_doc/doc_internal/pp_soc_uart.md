@@ -88,4 +88,5 @@ Add a few FFs on the RX input to avoid metastability issues
 - recv_buffer: work.pp_fifo
 ## State machines
 
-![Diagram_state_machine_0]( stm_pp_soc_uart_00.svg "Diagram")![Diagram_state_machine_1]( stm_pp_soc_uart_11.svg "Diagram")![Diagram_state_machine_2]( stm_pp_soc_uart_22.svg "Diagram")
+![Diagram_state_machine_0]( stm_pp_soc_uart_00.svg "Diagram")![Diagram_state_machine_1]( stm_pp_soc_uart_11.svg "Diagram")- -------- Wishbone Interface ----------
+![Diagram_state_machine_2]( stm_pp_soc_uart_22.svg "Diagram")

@@ -60,4 +60,8 @@ Send Ethernet frames once they have been completely stored in the internal regis
 
 ## State machines
 
+- ----------------------------------------------------------------------------------
+GMII interface
+----------------------------------------------------------------------------------
+Send Ethernet frames once they have been completely stored in the internal registers.
 ![Diagram_state_machine_0]( stm_ethernet_mac_00.svg "Diagram")
