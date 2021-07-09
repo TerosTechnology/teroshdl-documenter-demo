@@ -34,6 +34,13 @@ zx128-MiSTer:
     vhdl_symbol: ""
     verilog_symbol: "" 
 
+OpenWifi:
+    url: https://github.com/open-sdr/openwifi-hw.git
+    folder: openwifi-hw/ip
+    vhdl_symbol: ""
+    verilog_symbol: "" 
+
+
 NEORV32:
     url: https://github.com/stnolting/neorv32.git
     folder: neorv32/rtl  
