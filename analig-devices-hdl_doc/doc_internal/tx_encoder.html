@@ -1,0 +1,1537 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=tx_encoder><h1 id="entity-tx_encoder">Entity: tx_encoder</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 955 310"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="455,0 470,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="350" height="30" fill="black" x="470" y="0"></rect><rect id="SvgjsRect1007" width="346" height="25" fill="#bdecb6" x="472" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="450" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   integer range 16 to 32 </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="485" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   DATA_WIDTH </tspan></text><line id="SvgjsLine1012" x1="455" y1="15" x2="470" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="350" height="270" fill="black" x="470" y="35"></rect><rect id="SvgjsRect1014" width="346" height="265" fill="#fdfd96" x="472" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="450" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="485" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   up_clk </tspan></text><line id="SvgjsLine1019" x1="455" y1="50" x2="470" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="450" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="485" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   data_clk </tspan></text><line id="SvgjsLine1024" x1="455" y1="70" x2="470" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="450" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="485" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   resetn </tspan></text><line id="SvgjsLine1029" x1="455" y1="90" x2="470" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="450" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(3 downto 0) </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="485" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   conf_mode </tspan></text><line id="SvgjsLine1034" x1="455" y1="110" x2="470" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="450" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(7 downto 0) </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="485" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   conf_ratio </tspan></text><line id="SvgjsLine1039" x1="455" y1="130" x2="470" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="450" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="485" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   conf_txdata </tspan></text><line id="SvgjsLine1044" x1="455" y1="150" x2="470" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="450" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="485" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   conf_txen </tspan></text><line id="SvgjsLine1049" x1="455" y1="170" x2="470" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="450" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(1 downto 0) </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="485" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   chstat_freq </tspan></text><line id="SvgjsLine1054" x1="455" y1="190" x2="470" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="450" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="485" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   chstat_gstat </tspan></text><line id="SvgjsLine1059" x1="455" y1="210" x2="470" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="450" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="485" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   chstat_preem </tspan></text><line id="SvgjsLine1064" x1="455" y1="230" x2="470" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="450" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="485" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   chstat_copy </tspan></text><line id="SvgjsLine1069" x1="455" y1="250" x2="470" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="450" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="485" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   chstat_audio </tspan></text><line id="SvgjsLine1074" x1="455" y1="270" x2="470" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="450" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(DATA_WIDTH - 1 downto 0) </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="485" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   sample_data </tspan></text><line id="SvgjsLine1079" x1="455" y1="290" x2="470" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="840" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="840" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="805" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="805" svgjs:data="{&quot;newLined&quot;:true}">   sample_data_ack </tspan></text><line id="SvgjsLine1084" x1="820" y1="50" x2="835" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="840" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="840" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="805" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="805" svgjs:data="{&quot;newLined&quot;:true}">   channel </tspan></text><line id="SvgjsLine1089" x1="820" y1="70" x2="835" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="840" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="840" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="805" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="805" svgjs:data="{&quot;newLined&quot;:true}">   spdif_tx_o </tspan></text><line id="SvgjsLine1094" x1="820" y1="90" x2="835" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>CVS Revision History $Log: not supported by cvs2svn $</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DATA_WIDTH</td>
+<td>integer range 16 to 32</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>up_clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td>clock</td>
+</tr>
+<tr>
+<td>data_clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td>data clock</td>
+</tr>
+<tr>
+<td>resetn</td>
+<td>in</td>
+<td>std_logic</td>
+<td>resetn</td>
+</tr>
+<tr>
+<td>conf_mode</td>
+<td>in</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>sample format</td>
+</tr>
+<tr>
+<td>conf_ratio</td>
+<td>in</td>
+<td>std_logic_vector(7 downto 0)</td>
+<td>clock divider</td>
+</tr>
+<tr>
+<td>conf_txdata</td>
+<td>in</td>
+<td>std_logic</td>
+<td>sample data enable</td>
+</tr>
+<tr>
+<td>conf_txen</td>
+<td>in</td>
+<td>std_logic</td>
+<td>spdif signal enable</td>
+</tr>
+<tr>
+<td>chstat_freq</td>
+<td>in</td>
+<td>std_logic_vector(1 downto 0)</td>
+<td>sample freq.</td>
+</tr>
+<tr>
+<td>chstat_gstat</td>
+<td>in</td>
+<td>std_logic</td>
+<td>generation status</td>
+</tr>
+<tr>
+<td>chstat_preem</td>
+<td>in</td>
+<td>std_logic</td>
+<td>preemphasis status</td>
+</tr>
+<tr>
+<td>chstat_copy</td>
+<td>in</td>
+<td>std_logic</td>
+<td>copyright bit</td>
+</tr>
+<tr>
+<td>chstat_audio</td>
+<td>in</td>
+<td>std_logic</td>
+<td>data format</td>
+</tr>
+<tr>
+<td>sample_data</td>
+<td>in</td>
+<td>std_logic_vector(DATA_WIDTH - 1 downto 0)</td>
+<td>audio data</td>
+</tr>
+<tr>
+<td>sample_data_ack</td>
+<td>out</td>
+<td>std_logic</td>
+<td>sample buffer read</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>spdif_tx_o</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spdif_clk_en</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>spdif_out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>clk_cnt</td>
+<td>integer range 0 to 511</td>
+<td></td>
+</tr>
+<tr>
+<td>bufctrl</td>
+<td>buf_states</td>
+<td></td>
+</tr>
+<tr>
+<td>cha_samp_ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>chb_samp_ack</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>framest</td>
+<td>frame_states</td>
+<td></td>
+</tr>
+<tr>
+<td>frame_cnt</td>
+<td>integer range 0 to 191</td>
+<td></td>
+</tr>
+<tr>
+<td>bit_cnt</td>
+<td>integer range 0 to 31</td>
+<td></td>
+</tr>
+<tr>
+<td>par_cnt</td>
+<td>integer range 0 to 31</td>
+<td></td>
+</tr>
+<tr>
+<td>inv_preamble</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>toggle</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>valid</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>def_user_data</td>
+<td>std_logic_vector(191 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>def_ch_status</td>
+<td>std_logic_vector(191 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>active_user_data</td>
+<td>std_logic_vector(191 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>active_ch_status</td>
+<td>std_logic_vector(191 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>std_logic_vector(23 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>par_vector</td>
+<td>std_logic_vector(26 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>send_audio</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cdc_sync_stage0_tick_counter</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cdc_sync_stage1_tick_counter</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cdc_sync_stage2_tick_counter</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>cdc_sync_stage3_tick_counter</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>tick_counter</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X_PREAMBLE</td>
+<td>std_logic_vector(0 to 7)</td>
+<td>"11100010"</td>
+<td></td>
+</tr>
+<tr>
+<td>Y_PREAMBLE</td>
+<td>std_logic_vector(0 to 7)</td>
+<td>"11100100"</td>
+<td></td>
+</tr>
+<tr>
+<td>Z_PREAMBLE</td>
+<td>std_logic_vector(0 to 7)</td>
+<td>"11101000"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buf_states</td>
+<td>(IDLE,<br><span style="padding-left:20px"> READ_CHA,<br><span style="padding-left:20px"> READ_CHB,<br><span style="padding-left:20px"> CHA_RDY,<br><span style="padding-left:20px"> CHB_RDY)</td>
+<td></td>
+</tr>
+<tr>
+<td>frame_states</td>
+<td>(IDLE,<br><span style="padding-left:20px"> BLOCK_START,<br><span style="padding-left:20px"> CHANNEL_A,<br><span style="padding-left:20px"> CHANNEL_B)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><ul>
+<li>encode_bit <font id="function_arguments">( signal bit_cnt    : integer;<br><span style="padding-left:20px">        -- sub-frame bit position signal valid : std_logic;<br><span style="padding-left:20px">           -- validity bit signal frame_cnt : integer;<br><span style="padding-left:20px">         -- frame counter signal par_cnt : integer;<br><span style="padding-left:20px">           -- parity counter signal user_data  : std_logic_vector(191 downto 0);<br><span style="padding-left:20px"> signal ch_status  : std_logic_vector(191 downto 0);<br><span style="padding-left:20px"> signal audio      : std_logic_vector(23 downto 0);<br><span style="padding-left:20px"> signal toggle     : std_logic;<br><span style="padding-left:20px"> signal prev_spdif : std_logic) </font> <font id="function_return">return std_logic </font></li>
+</ul><h2 id="processes">Processes</h2><ul>
+<li>DCLK: ( data_clk )</li>
+</ul><ul>
+<li>unnamed: ( up_clk )</li>
+</ul><ul>
+<li>CGEN: ( up_clk )</li>
+</ul><ul>
+<li>SRD: ( up_clk )</li>
+</ul><ul>
+<li>TXSYNC: ( data_clk )</li>
+</ul><ul>
+<li>FRST: ( up_clk )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+State machine that generates sub-frames and blocks</p></div><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="300pt" height="434pt"
+ viewBox="0.00 0.00 300.00 434.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 430)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-430 296,-430 296,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_bufctrl</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 272,-8 272,-8 278,-8 284,-14 284,-20 284,-20 284,-406 284,-406 284,-412 278,-418 272,-418 272,-418 20,-418 20,-418 14,-418 8,-412 8,-406 8,-406 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="129.6656" y="-399.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">bufctrl</text>
+</g>
+<!-- bufctrl -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="116,-380 60,-380 60,-344 116,-344 116,-380"/>
+<text text-anchor="start" x="74.6644" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M72.3333,-345C72.3333,-345 103.6667,-345 103.6667,-345 109.3333,-345 115,-350.6667 115,-356.3333 115,-356.3333 115,-367.6667 115,-367.6667 115,-373.3333 109.3333,-379 103.6667,-379 103.6667,-379 72.3333,-379 72.3333,-379 66.6667,-379 61,-373.3333 61,-367.6667 61,-367.6667 61,-356.3333 61,-356.3333 61,-350.6667 66.6667,-345 72.3333,-345"/>
+</g>
+<!-- READ_CHA -->
+<g id="node3" class="node state regular">
+<title>READ_CHA</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="131.5,-298 44.5,-298 44.5,-262 131.5,-262 131.5,-298"/>
+<text text-anchor="start" x="55.8348" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">READ_CHA</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M56.8333,-263C56.8333,-263 119.1667,-263 119.1667,-263 124.8333,-263 130.5,-268.6667 130.5,-274.3333 130.5,-274.3333 130.5,-285.6667 130.5,-285.6667 130.5,-291.3333 124.8333,-297 119.1667,-297 119.1667,-297 56.8333,-297 56.8333,-297 51.1667,-297 45.5,-291.3333 45.5,-285.6667 45.5,-285.6667 45.5,-274.3333 45.5,-274.3333 45.5,-268.6667 51.1667,-263 56.8333,-263"/>
+</g>
+<!-- IDLE&#45;&gt;READ_CHA -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;READ_CHA</title>
+<path fill="none" stroke="#000000" d="M88,-343.8015C88,-333.3976 88,-320.1215 88,-308.3768"/>
+<polygon fill="#000000" stroke="#000000" points="91.5001,-308.1476 88,-298.1476 84.5001,-308.1476 91.5001,-308.1476"/>
+<text text-anchor="start" x="88" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">conf_txdata = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- CHA_RDY -->
+<g id="node4" class="node state regular">
+<title>CHA_RDY</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="103.5,-216 24.5,-216 24.5,-180 103.5,-180 103.5,-216"/>
+<text text-anchor="start" x="35.8362" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">CHA_RDY</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M36.8333,-181C36.8333,-181 91.1667,-181 91.1667,-181 96.8333,-181 102.5,-186.6667 102.5,-192.3333 102.5,-192.3333 102.5,-203.6667 102.5,-203.6667 102.5,-209.3333 96.8333,-215 91.1667,-215 91.1667,-215 36.8333,-215 36.8333,-215 31.1667,-215 25.5,-209.3333 25.5,-203.6667 25.5,-203.6667 25.5,-192.3333 25.5,-192.3333 25.5,-186.6667 31.1667,-181 36.8333,-181"/>
+</g>
+<!-- READ_CHA&#45;&gt;CHA_RDY -->
+<g id="edge2" class="edge transition">
+<title>READ_CHA&#45;&gt;CHA_RDY</title>
+<path fill="none" stroke="#000000" d="M82.6736,-261.8015C79.5975,-251.2915 75.6635,-237.8503 72.2003,-226.0177"/>
+<polygon fill="#000000" stroke="#000000" points="75.4796,-224.7618 69.3115,-216.1476 68.7615,-226.7281 75.4796,-224.7618"/>
+<text text-anchor="middle" x="78.3895" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- READ_CHB -->
+<g id="node5" class="node state regular">
+<title>READ_CHB</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="129.5,-134 42.5,-134 42.5,-98 129.5,-98 129.5,-134"/>
+<text text-anchor="start" x="53.8348" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">READ_CHB</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M54.8333,-99C54.8333,-99 117.1667,-99 117.1667,-99 122.8333,-99 128.5,-104.6667 128.5,-110.3333 128.5,-110.3333 128.5,-121.6667 128.5,-121.6667 128.5,-127.3333 122.8333,-133 117.1667,-133 117.1667,-133 54.8333,-133 54.8333,-133 49.1667,-133 43.5,-127.3333 43.5,-121.6667 43.5,-121.6667 43.5,-110.3333 43.5,-110.3333 43.5,-104.6667 49.1667,-99 54.8333,-99"/>
+</g>
+<!-- CHA_RDY&#45;&gt;READ_CHB -->
+<g id="edge3" class="edge transition">
+<title>CHA_RDY&#45;&gt;READ_CHB</title>
+<path fill="none" stroke="#000000" d="M55.9735,-179.7424C53.2062,-170.8681 51.5753,-160.1662 55.047,-151 56.1603,-148.0605 57.6458,-145.2089 59.3653,-142.4861"/>
+<polygon fill="#000000" stroke="#000000" points="62.3143,-144.3863 65.4853,-134.2771 56.7022,-140.2024 62.3143,-144.3863"/>
+<text text-anchor="start" x="55" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cha_samp_ack = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- CHB_RDY -->
+<g id="node6" class="node state regular">
+<title>CHB_RDY</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="172.5,-52 93.5,-52 93.5,-16 172.5,-16 172.5,-52"/>
+<text text-anchor="start" x="104.8362" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">CHB_RDY</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M105.8333,-17C105.8333,-17 160.1667,-17 160.1667,-17 165.8333,-17 171.5,-22.6667 171.5,-28.3333 171.5,-28.3333 171.5,-39.6667 171.5,-39.6667 171.5,-45.3333 165.8333,-51 160.1667,-51 160.1667,-51 105.8333,-51 105.8333,-51 100.1667,-51 94.5,-45.3333 94.5,-39.6667 94.5,-39.6667 94.5,-28.3333 94.5,-28.3333 94.5,-22.6667 100.1667,-17 105.8333,-17"/>
+</g>
+<!-- READ_CHB&#45;&gt;CHB_RDY -->
+<g id="edge4" class="edge transition">
+<title>READ_CHB&#45;&gt;CHB_RDY</title>
+<path fill="none" stroke="#000000" d="M96.4308,-97.8015C102.6374,-86.973 110.6274,-73.033 117.555,-60.9466"/>
+<polygon fill="#000000" stroke="#000000" points="120.6621,-62.564 122.5983,-52.1476 114.5889,-59.083 120.6621,-62.564"/>
+<text text-anchor="middle" x="113.3895" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- CHB_RDY&#45;&gt;READ_CHA -->
+<g id="edge5" class="edge transition">
+<title>CHB_RDY&#45;&gt;READ_CHA</title>
+<path fill="none" stroke="#000000" d="M166.914,-52.0565C173.8087,-58.154 179,-65.7998 179,-75 179,-239 179,-239 179,-239 179,-248.8356 161.1056,-258.0104 141.1871,-265.1764"/>
+<polygon fill="#000000" stroke="#000000" points="139.9752,-261.8916 131.6343,-268.4246 142.2287,-268.519 139.9752,-261.8916"/>
+<text text-anchor="start" x="179" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">chb_samp_ack = &#39;1&#39; &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div><ul>
+<li>State machine that generates sub-frames and blocks</li>
+</ul><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="294pt" height="400pt"
+ viewBox="0.00 0.00 294.00 400.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 396)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-396 290,-396 290,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_framest</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 266,-8 266,-8 272,-8 278,-14 278,-20 278,-20 278,-372 278,-372 278,-378 272,-384 266,-384 266,-384 20,-384 20,-384 14,-384 8,-378 8,-372 8,-372 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="122.9996" y="-365.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">framest</text>
+</g>
+<!-- framest -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="135,-346 79,-346 79,-310 135,-310 135,-346"/>
+<text text-anchor="start" x="93.6644" y="-324.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M91.3333,-311C91.3333,-311 122.6667,-311 122.6667,-311 128.3333,-311 134,-316.6667 134,-322.3333 134,-322.3333 134,-333.6667 134,-333.6667 134,-339.3333 128.3333,-345 122.6667,-345 122.6667,-345 91.3333,-345 91.3333,-345 85.6667,-345 80,-339.3333 80,-333.6667 80,-333.6667 80,-322.3333 80,-322.3333 80,-316.6667 85.6667,-311 91.3333,-311"/>
+</g>
+<!-- BLOCK_START -->
+<g id="node3" class="node state regular">
+<title>BLOCK_START</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="161,-264 53,-264 53,-228 161,-228 161,-264"/>
+<text text-anchor="start" x="63.6626" y="-242.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">BLOCK_START</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M65.3333,-229C65.3333,-229 148.6667,-229 148.6667,-229 154.3333,-229 160,-234.6667 160,-240.3333 160,-240.3333 160,-251.6667 160,-251.6667 160,-257.3333 154.3333,-263 148.6667,-263 148.6667,-263 65.3333,-263 65.3333,-263 59.6667,-263 54,-257.3333 54,-251.6667 54,-251.6667 54,-240.3333 54,-240.3333 54,-234.6667 59.6667,-229 65.3333,-229"/>
+</g>
+<!-- IDLE&#45;&gt;BLOCK_START -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;BLOCK_START</title>
+<path fill="none" stroke="#000000" d="M107,-309.8015C107,-299.3976 107,-286.1215 107,-274.3768"/>
+<polygon fill="#000000" stroke="#000000" points="110.5001,-274.1476 107,-264.1476 103.5001,-274.1476 110.5001,-274.1476"/>
+<text text-anchor="middle" x="108.3895" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- CHANNEL_B -->
+<g id="node5" class="node state regular">
+<title>CHANNEL_B</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="162,-158 68,-158 68,-122 162,-122 162,-158"/>
+<text text-anchor="start" x="78.9994" y="-136.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">CHANNEL_B</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M80.3333,-123C80.3333,-123 149.6667,-123 149.6667,-123 155.3333,-123 161,-128.6667 161,-134.3333 161,-134.3333 161,-145.6667 161,-145.6667 161,-151.3333 155.3333,-157 149.6667,-157 149.6667,-157 80.3333,-157 80.3333,-157 74.6667,-157 69,-151.3333 69,-145.6667 69,-145.6667 69,-134.3333 69,-134.3333 69,-128.6667 74.6667,-123 80.3333,-123"/>
+</g>
+<!-- BLOCK_START&#45;&gt;CHANNEL_B -->
+<g id="edge2" class="edge transition">
+<title>BLOCK_START&#45;&gt;CHANNEL_B</title>
+<path fill="none" stroke="#000000" d="M70.1964,-227.8258C64.2262,-223.188 58.861,-217.6022 55.36,-211 47.8643,-196.8644 47.4092,-188.8847 55.36,-175 57.5412,-171.1908 60.316,-167.7558 63.4702,-164.6657"/>
+<polygon fill="#000000" stroke="#000000" points="65.9593,-167.1482 71.4179,-158.0678 61.4881,-161.7623 65.9593,-167.1482"/>
+<text text-anchor="start" x="55" y="-196" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">toggle = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="55" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (bit_cnt &lt; 31) &#160;&#160;</text>
+</g>
+<!-- CHANNEL_A -->
+<g id="node4" class="node state regular">
+<title>CHANNEL_A</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="167,-52 73,-52 73,-16 167,-16 167,-52"/>
+<text text-anchor="start" x="83.9994" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">CHANNEL_A</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M85.3333,-17C85.3333,-17 154.6667,-17 154.6667,-17 160.3333,-17 166,-22.6667 166,-28.3333 166,-28.3333 166,-39.6667 166,-39.6667 166,-45.3333 160.3333,-51 154.6667,-51 154.6667,-51 85.3333,-51 85.3333,-51 79.6667,-51 74,-45.3333 74,-39.6667 74,-39.6667 74,-28.3333 74,-28.3333 74,-22.6667 79.6667,-17 85.3333,-17"/>
+</g>
+<!-- CHANNEL_A&#45;&gt;CHANNEL_B -->
+<g id="edge3" class="edge transition">
+<title>CHANNEL_A&#45;&gt;CHANNEL_B</title>
+<path fill="none" stroke="#000000" d="M80.8255,-52.0299C74.6147,-56.6595 69.0363,-62.2793 65.36,-69 57.6816,-83.0371 57.9952,-90.7958 65.36,-105 67.2181,-108.5836 69.6305,-111.8781 72.3899,-114.8898"/>
+<polygon fill="#000000" stroke="#000000" points="70.1312,-117.5685 79.8456,-121.7972 74.8886,-112.4335 70.1312,-117.5685"/>
+<text text-anchor="start" x="65" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">toggle = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="65" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (bit_cnt &lt; 31) &#160;&#160;</text>
+</g>
+<!-- CHANNEL_B&#45;&gt;BLOCK_START -->
+<g id="edge5" class="edge transition">
+<title>CHANNEL_B&#45;&gt;BLOCK_START</title>
+<path fill="none" stroke="#000000" d="M131.0991,-158.0787C134.7361,-163.2051 138.0858,-169.0267 140,-175 144.8828,-190.2367 145.905,-196.1295 140,-211 138.7671,-214.1047 137.1139,-217.0937 135.2017,-219.9274"/>
+<polygon fill="#000000" stroke="#000000" points="132.3299,-217.9155 128.8499,-227.9225 137.8108,-222.2699 132.3299,-217.9155"/>
+<text text-anchor="start" x="144" y="-202" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">toggle = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="144" y="-190" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (bit_cnt &lt; 31) &#160;&#160;</text>
+<text text-anchor="start" x="144" y="-178" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (frame_cnt &lt; 191) &#160;&#160;</text>
+</g>
+<!-- CHANNEL_B&#45;&gt;CHANNEL_A -->
+<g id="edge4" class="edge transition">
+<title>CHANNEL_B&#45;&gt;CHANNEL_A</title>
+<path fill="none" stroke="#000000" d="M138.5121,-121.7492C143.1838,-116.8607 147.435,-111.1926 150,-105 156.1229,-90.2179 155.5511,-84.0062 150,-69 148.9241,-66.0914 147.4865,-63.2615 145.8214,-60.553"/>
+<polygon fill="#000000" stroke="#000000" points="148.5931,-58.4131 139.8922,-52.3677 142.9241,-62.5195 148.5931,-58.4131"/>
+<text text-anchor="start" x="154" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">frame_cnt &lt; 191 &#160;&#160;</text>
+<text text-anchor="start" x="154" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">toggle = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="154" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (bit_cnt &lt; 31) &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

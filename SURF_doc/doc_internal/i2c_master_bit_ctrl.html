@@ -1,0 +1,1640 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=i2c_master_bit_ctrl><h1 id="entity-i2c_master_bit_ctrl">Entity: i2c_master_bit_ctrl</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 865 270"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="495,0 510,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="220" height="50" fill="black" x="510" y="0"></rect><rect id="SvgjsRect1007" width="216" height="45" fill="#bdecb6" x="512" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="490" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="525" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   filter </tspan></text><line id="SvgjsLine1012" x1="495" y1="15" x2="510" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="490" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="525" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   dynfilt </tspan></text><line id="SvgjsLine1017" x1="495" y1="35" x2="510" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="220" height="210" fill="black" x="510" y="55"></rect><rect id="SvgjsRect1019" width="216" height="205" fill="#fdfd96" x="512" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="490" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="525" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1024" x1="495" y1="70" x2="510" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="490" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="525" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   rst </tspan></text><line id="SvgjsLine1029" x1="495" y1="90" x2="510" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="490" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="525" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   nReset </tspan></text><line id="SvgjsLine1034" x1="495" y1="110" x2="510" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="490" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="525" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   ena </tspan></text><line id="SvgjsLine1039" x1="495" y1="130" x2="510" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="490" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(15 downto 0) </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="525" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   clk_cnt </tspan></text><line id="SvgjsLine1044" x1="495" y1="150" x2="510" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="490" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(3 downto 0) </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="525" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   cmd </tspan></text><line id="SvgjsLine1049" x1="495" y1="170" x2="510" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="490" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="525" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   din </tspan></text><line id="SvgjsLine1054" x1="495" y1="190" x2="510" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="490" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector((filter-1)*dynfilt downto 0) </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="525" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   filt </tspan></text><line id="SvgjsLine1059" x1="495" y1="210" x2="510" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="490" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="525" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   scl_i </tspan></text><line id="SvgjsLine1064" x1="495" y1="230" x2="510" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="490" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="525" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="525" svgjs:data="{&quot;newLined&quot;:true}">   sda_i </tspan></text><line id="SvgjsLine1069" x1="495" y1="250" x2="510" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="750" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="715" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   cmd_ack </tspan></text><line id="SvgjsLine1074" x1="730" y1="70" x2="745" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="750" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="715" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   busy </tspan></text><line id="SvgjsLine1079" x1="730" y1="90" x2="745" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="750" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="715" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   al </tspan></text><line id="SvgjsLine1084" x1="730" y1="110" x2="745" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="750" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="715" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   dout </tspan></text><line id="SvgjsLine1089" x1="730" y1="130" x2="745" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="750" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="715" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   scl_o </tspan></text><line id="SvgjsLine1094" x1="730" y1="150" x2="745" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="750" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="715" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   scl_oen </tspan></text><line id="SvgjsLine1099" x1="730" y1="170" x2="745" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="750" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="715" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   sda_o </tspan></text><line id="SvgjsLine1104" x1="730" y1="190" x2="745" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="750" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="750" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="715" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="715" svgjs:data="{&quot;newLined&quot;:true}">   sda_oen </tspan></text><line id="SvgjsLine1109" x1="730" y1="210" x2="745" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>CVS Log $Id: i2c_master_bit_ctrl.vhd,v 1.14 2006/10/11 12:10:13 rherveille Exp $ $Date: 2006/10/11 12:10:13 $ $Revision: 1.14 $ $Author: rherveille $ $Locker:  $ $State: Exp $ Change History: $Log: i2c_master_bit_ctrl.vhd,v $ Revision 1.14  2006/10/11 12:10:13  rherveille Added missing semicolons ';' on endif Revision 1.13  2006/10/06 10:48:24  rherveille fixed short scl high pulse after clock stretch Revision 1.12  2004/05/07 11:53:31  rherveille Fixed previous fix :) Made a variable vs signal mistake. Revision 1.11  2004/05/07 11:04:00  rherveille Fixed a bug where the core would signal an arbitration lost (AL bit set), when another master controls the bus and the other master generates a STOP bit. Revision 1.10  2004/02/27 07:49:43  rherveille Fixed a bug in the arbitration-lost signal generation. VHDL version only. Revision 1.9  2003/08/12 14:48:37  rherveille Forgot an 'end if' :-/ Revision 1.8  2003/08/09 07:01:13  rherveille Fixed a bug in the Arbitration Lost generation caused by delay on the (external) sda line. Fixed a potential bug in the byte controller's host-acknowledge generation. Revision 1.7  2003/02/05 00:06:02  rherveille Fixed a bug where the core would trigger an erroneous 'arbitration lost' interrupt after being reset, when the reset pulse width &lt; 3 clk cycles. Revision 1.6  2003/02/01 02:03:06  rherveille Fixed a few 'arbitration lost' bugs. VHDL version only. Revision 1.5  2002/12/26 16:05:47  rherveille Core is now a Multimaster I2C controller. Revision 1.4  2002/11/30 22:24:37  rherveille Cleaned up code Revision 1.3  2002/10/30 18:09:53  rherveille Fixed some reported minor start/stop generation timing issuess. Revision 1.2  2002/06/15 07:37:04  rherveille Fixed a small timing bug in the bit controller.\nAdded verilog simulation environment. Revision 1.1  2001/11/05 12:02:33  rherveille Split i2c_master_core.vhd into separate files for each entity; same layout as verilog version. Code updated, is now up-to-date to doc. rev.0.4. Added headers. Modified by Jan Andersson (jan@gaisler.com):</p><ul><li>Added two start states to fulfill Set-up time forrepeated START condition.</li><li>Modified synchronization of SCL and SDA. START and STOP detectionis now performed after a two stage synchronizer and is alsofiltered.</li><li>Changed evaluation order of 'slave_wait', 'en' and 'cnt' ingeneration of clk_en signal to prevent clk_en assertion whenslave_wait is asserted.</li><li>Needed to differentiate between slave clock stretching and masterclock synchronization.</li><li>Added register s_state which contains the next state in caseof clock synchronization</li><li>Incorporated change in wr_b state from SVN rev. 72 oforiginal OC version (delay check of SDA).</li><li>Added 'filter' generic that determines length of filter.Original OC core has a median filter implemented. The solutionimplemented in this version is a plain shift register with alength determined by the new generic. All samples in thisregister must be equal, otherwise the SCL or SDA value used bythe core will not be changed. Every SCL/SDA transition that isnot stable for 'filter' system clock cycles is disregarded.This solution is potentially more vulnerable against shortperiods of relatively quick fluctuations on the line, howeverit should do a better job of ignoring 50 ns pulses and stillallow us to respond quickly to events on the line - assumingthat the core has been correctly configured.Core revision has been increased to 2 (in GRLIB PnP)</li><li>Added 'dynfilt' generic to allow dynamic adjustment of thefilter. This component takes in a filt vector that is used toreload a filter counter. The filt vector is assigned via thecore's APB interface.Reorganized parts of the code, moving signals into blocks.Core revision increased to 3.Bit controller sectionTranslate simple commands into SCL/SDA transitionsEach command has 5 states, A/B/C/D/idlestart:    SCL  <del>~</del><del>~</del><del>~~____repstart  SCL  <strong><em><strong><em>/</del><del>~</del>_</strong>stop      SCL  ___</em></em></strong>/<del>~</del><del>~</del>~Timing:      Normal mode     Fast modeFscl         100KHz          400KHzTh_scl       4.0us           0.6us   High period of SCLTl_scl       4.7us           1.3us   Low period of SCLTsu:sta      4.7us           0.6us   setup time for a repeated start conditionTsu:sto      4.0us           0.6us   setup time for a stop conditonTbuf         4.7us           1.3us   Bus free time between a stop and start condition</li></ul></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter</td>
+<td>integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dynfilt</td>
+<td>integer</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>rst</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>nReset</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>ena</td>
+<td>in</td>
+<td>std_logic</td>
+<td>core enable signal</td>
+</tr>
+<tr>
+<td>clk_cnt</td>
+<td>in</td>
+<td>std_logic_vector(15 downto 0)</td>
+<td>clock prescale value</td>
+</tr>
+<tr>
+<td>cmd</td>
+<td>in</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>cmd_ack</td>
+<td>out</td>
+<td>std_logic</td>
+<td>command completed</td>
+</tr>
+<tr>
+<td>busy</td>
+<td>out</td>
+<td>std_logic</td>
+<td>i2c bus busy</td>
+</tr>
+<tr>
+<td>al</td>
+<td>out</td>
+<td>std_logic</td>
+<td>arbitration lost</td>
+</tr>
+<tr>
+<td>din</td>
+<td>in</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>dout</td>
+<td>out</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+<tr>
+<td>filt</td>
+<td>in</td>
+<td>std_logic_vector((filter-1)*dynfilt downto 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>scl_i</td>
+<td>in</td>
+<td>std_logic</td>
+<td>i2c clock line input</td>
+</tr>
+<tr>
+<td>scl_o</td>
+<td>out</td>
+<td>std_logic</td>
+<td>i2c clock line output</td>
+</tr>
+<tr>
+<td>scl_oen</td>
+<td>out</td>
+<td>std_logic</td>
+<td>i2c clock line output enable, active low</td>
+</tr>
+<tr>
+<td>sda_i</td>
+<td>in</td>
+<td>std_logic</td>
+<td>i2c data line input</td>
+</tr>
+<tr>
+<td>sda_o</td>
+<td>out</td>
+<td>std_logic</td>
+<td>i2c data line output</td>
+</tr>
+<tr>
+<td>sda_oen</td>
+<td>out</td>
+<td>std_logic</td>
+<td>i2c data line output enable, active low</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c_state</td>
+<td>states</td>
+<td></td>
+</tr>
+<tr>
+<td>s_state</td>
+<td>states</td>
+<td></td>
+</tr>
+<tr>
+<td>iscl_oen</td>
+<td>std_logic</td>
+<td>internal I2C lines</td>
+</tr>
+<tr>
+<td>isda_oen</td>
+<td>std_logic</td>
+<td>internal I2C lines</td>
+</tr>
+<tr>
+<td>sda_chk</td>
+<td>std_logic</td>
+<td>check SDA status (multi-master arbitration)</td>
+</tr>
+<tr>
+<td>fSCL</td>
+<td>std_logic_vector(1 downto 0)</td>
+<td>Filtered SCL and SDA inputs</td>
+</tr>
+<tr>
+<td>fSDA</td>
+<td>std_logic_vector(1 downto 0)</td>
+<td>Filtered SCL and SDA inputs</td>
+</tr>
+<tr>
+<td>clk_en</td>
+<td>std_logic</td>
+<td>clock generation signals</td>
+</tr>
+<tr>
+<td>slave_wait</td>
+<td>std_logic</td>
+<td>clock generation signals</td>
+</tr>
+<tr>
+<td>ial</td>
+<td>std_logic</td>
+<td>internal arbitration lost signal</td>
+</tr>
+<tr>
+<td>cnt</td>
+<td>std_logic_vector(15 downto 0)</td>
+<td>clock divider counter</td>
+</tr>
+<tr>
+<td>csync</td>
+<td>std_logic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I2C_CMD_NOP</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>"0000"</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C_CMD_START</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>"0001"</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C_CMD_STOP</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>"0010"</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C_CMD_READ</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>"0100"</td>
+<td></td>
+</tr>
+<tr>
+<td>I2C_CMD_WRITE</td>
+<td>std_logic_vector(3 downto 0)</td>
+<td>"1000"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>states</td>
+<td>(idle,<br><span style="padding-left:20px"> start_a,<br><span style="padding-left:20px"> start_b,<br><span style="padding-left:20px"> start_c,<br><span style="padding-left:20px"> start_d,<br><span style="padding-left:20px"> start_e,<br><span style="padding-left:20px"> start_f,<br><span style="padding-left:20px"> start_g,<br><span style="padding-left:20px"> stop_a,<br><span style="padding-left:20px"> stop_b,<br><span style="padding-left:20px"> stop_c,<br><span style="padding-left:20px"> stop_d,<br><span style="padding-left:20px"> rd_a,<br><span style="padding-left:20px"> rd_b,<br><span style="padding-left:20px"> rd_c,<br><span style="padding-left:20px"> rd_d,<br><span style="padding-left:20px"> wr_a,<br><span style="padding-left:20px"> wr_b,<br><span style="padding-left:20px"> wr_c,<br><span style="padding-left:20px"> wr_d)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>gen_clken: ( clk, nReset )</li>
+</ul><ul>
+<li>nxt_state_decoder: ( clk, nReset, c_state, cmd )</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+generate statemachine</p></div><h2 id="state-machines">State machines</h2><div><ul>
+<li>generate statemachine</li>
+</ul><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="762pt" height="692pt"
+ viewBox="0.00 0.00 762.00 692.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 688)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-688 758,-688 758,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_c_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 734,-8 734,-8 740,-8 746,-14 746,-20 746,-20 746,-664 746,-664 746,-670 740,-676 734,-676 734,-676 20,-676 20,-676 14,-676 8,-670 8,-664 8,-664 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="357.659" y="-657.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">c_state</text>
+</g>
+<!-- c_state -->
+<!-- idle -->
+<g id="node2" class="node state regular">
+<title>idle</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="415,-632 359,-632 359,-596 415,-596 415,-632"/>
+<text text-anchor="start" x="377.6664" y="-610.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">idle</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M371.3333,-597C371.3333,-597 402.6667,-597 402.6667,-597 408.3333,-597 414,-602.6667 414,-608.3333 414,-608.3333 414,-619.6667 414,-619.6667 414,-625.3333 408.3333,-631 402.6667,-631 402.6667,-631 371.3333,-631 371.3333,-631 365.6667,-631 360,-625.3333 360,-619.6667 360,-619.6667 360,-608.3333 360,-608.3333 360,-602.6667 365.6667,-597 371.3333,-597"/>
+</g>
+<!-- idle&#45;&gt;idle -->
+<g id="edge5" class="edge transition">
+<title>idle&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M415.0183,-619.9381C426.888,-620.3856 437,-618.4063 437,-614 437,-610.9707 432.2205,-609.0885 425.3762,-608.3533"/>
+<polygon fill="#000000" stroke="#000000" points="425.1128,-604.8446 415.0183,-608.0619 424.9158,-611.8419 425.1128,-604.8446"/>
+<text text-anchor="start" x="437" y="-629" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (cmd = I2C_CMD_START) &#160;&#160;</text>
+<text text-anchor="start" x="437" y="-617" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (cmd = I2C_CMD_STOP) &#160;&#160;</text>
+<text text-anchor="start" x="437" y="-605" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (cmd = I2C_CMD_WRITE) &#160;&#160;</text>
+<text text-anchor="start" x="437" y="-593" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (cmd = I2C_CMD_READ) &#160;&#160;</text>
+</g>
+<!-- start_a -->
+<g id="node3" class="node state regular">
+<title>start_a</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="82,-544 24,-544 24,-508 82,-508 82,-544"/>
+<text text-anchor="start" x="34.6616" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_a</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M36.3333,-509C36.3333,-509 69.6667,-509 69.6667,-509 75.3333,-509 81,-514.6667 81,-520.3333 81,-520.3333 81,-531.6667 81,-531.6667 81,-537.3333 75.3333,-543 69.6667,-543 69.6667,-543 36.3333,-543 36.3333,-543 30.6667,-543 25,-537.3333 25,-531.6667 25,-531.6667 25,-520.3333 25,-520.3333 25,-514.6667 30.6667,-509 36.3333,-509"/>
+</g>
+<!-- idle&#45;&gt;start_a -->
+<g id="edge1" class="edge transition">
+<title>idle&#45;&gt;start_a</title>
+<path fill="none" stroke="#000000" d="M358.8148,-612.5675C282.4128,-608.4044 75.6928,-595.1766 55.161,-573 50.5724,-568.0438 48.7226,-561.3859 48.321,-554.6426"/>
+<polygon fill="#000000" stroke="#000000" points="51.8345,-554.3276 48.6965,-544.2081 44.839,-554.0757 51.8345,-554.3276"/>
+<text text-anchor="start" x="55" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cmd = I2C_CMD_START &#160;&#160;</text>
+</g>
+<!-- stop_a -->
+<g id="node10" class="node state regular">
+<title>stop_a</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="264,-544 206,-544 206,-508 264,-508 264,-544"/>
+<text text-anchor="start" x="216.991" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">stop_a</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M218.3333,-509C218.3333,-509 251.6667,-509 251.6667,-509 257.3333,-509 263,-514.6667 263,-520.3333 263,-520.3333 263,-531.6667 263,-531.6667 263,-537.3333 257.3333,-543 251.6667,-543 251.6667,-543 218.3333,-543 218.3333,-543 212.6667,-543 207,-537.3333 207,-531.6667 207,-531.6667 207,-520.3333 207,-520.3333 207,-514.6667 212.6667,-509 218.3333,-509"/>
+</g>
+<!-- idle&#45;&gt;stop_a -->
+<g id="edge2" class="edge transition">
+<title>idle&#45;&gt;stop_a</title>
+<path fill="none" stroke="#000000" d="M358.8853,-609.5379C321.7143,-603.0588 259.1114,-589.9464 243.71,-573 239.0949,-567.9219 236.5524,-561.2209 235.2251,-554.475"/>
+<polygon fill="#000000" stroke="#000000" points="238.6465,-553.5941 234.0165,-544.0644 231.6932,-554.4014 238.6465,-553.5941"/>
+<text text-anchor="start" x="243" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cmd = I2C_CMD_STOP &#160;&#160;</text>
+</g>
+<!-- rd_a -->
+<g id="node14" class="node state regular">
+<title>rd_a</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="661,-544 605,-544 605,-508 661,-508 661,-544"/>
+<text text-anchor="start" x="620.9964" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">rd_a</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M617.3333,-509C617.3333,-509 648.6667,-509 648.6667,-509 654.3333,-509 660,-514.6667 660,-520.3333 660,-520.3333 660,-531.6667 660,-531.6667 660,-537.3333 654.3333,-543 648.6667,-543 648.6667,-543 617.3333,-543 617.3333,-543 611.6667,-543 606,-537.3333 606,-531.6667 606,-531.6667 606,-520.3333 606,-520.3333 606,-514.6667 611.6667,-509 617.3333,-509"/>
+</g>
+<!-- idle&#45;&gt;rd_a -->
+<g id="edge4" class="edge transition">
+<title>idle&#45;&gt;rd_a</title>
+<path fill="none" stroke="#000000" d="M415.2731,-612.7207C450.3504,-610.2539 511.3495,-603.0442 559,-582 576.2089,-574.3999 593.1144,-562.0825 606.413,-550.9323"/>
+<polygon fill="#000000" stroke="#000000" points="608.928,-553.3844 614.1977,-544.1931 604.3464,-548.0921 608.928,-553.3844"/>
+<text text-anchor="start" x="592" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cmd = I2C_CMD_READ &#160;&#160;</text>
+</g>
+<!-- wr_a -->
+<g id="node18" class="node state regular">
+<title>wr_a</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="453,-544 397,-544 397,-508 453,-508 453,-544"/>
+<text text-anchor="start" x="412.0004" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">wr_a</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M409.3333,-509C409.3333,-509 440.6667,-509 440.6667,-509 446.3333,-509 452,-514.6667 452,-520.3333 452,-520.3333 452,-531.6667 452,-531.6667 452,-537.3333 446.3333,-543 440.6667,-543 440.6667,-543 409.3333,-543 409.3333,-543 403.6667,-543 398,-537.3333 398,-531.6667 398,-531.6667 398,-520.3333 398,-520.3333 398,-514.6667 403.6667,-509 409.3333,-509"/>
+</g>
+<!-- idle&#45;&gt;wr_a -->
+<g id="edge3" class="edge transition">
+<title>idle&#45;&gt;wr_a</title>
+<path fill="none" stroke="#000000" d="M394.8736,-595.7663C400.1216,-583.6132 407.1181,-567.4107 413.0477,-553.6791"/>
+<polygon fill="#000000" stroke="#000000" points="416.3853,-554.7785 417.1365,-544.2103 409.9588,-552.0034 416.3853,-554.7785"/>
+<text text-anchor="start" x="409" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cmd = I2C_CMD_WRITE &#160;&#160;</text>
+</g>
+<!-- start_b -->
+<g id="node4" class="node state regular">
+<title>start_b</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="130,-462 72,-462 72,-426 130,-426 130,-462"/>
+<text text-anchor="start" x="82.6616" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_b</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M84.3333,-427C84.3333,-427 117.6667,-427 117.6667,-427 123.3333,-427 129,-432.6667 129,-438.3333 129,-438.3333 129,-449.6667 129,-449.6667 129,-455.3333 123.3333,-461 117.6667,-461 117.6667,-461 84.3333,-461 84.3333,-461 78.6667,-461 73,-455.3333 73,-449.6667 73,-449.6667 73,-438.3333 73,-438.3333 73,-432.6667 78.6667,-427 84.3333,-427"/>
+</g>
+<!-- start_a&#45;&gt;start_b -->
+<g id="edge6" class="edge transition">
+<title>start_a&#45;&gt;start_b</title>
+<path fill="none" stroke="#000000" d="M63.6528,-507.8015C69.9914,-496.973 78.1514,-483.033 85.2264,-470.9466"/>
+<polygon fill="#000000" stroke="#000000" points="88.3457,-472.5459 90.377,-462.1476 82.3046,-469.0096 88.3457,-472.5459"/>
+<text text-anchor="middle" x="81.3895" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_c -->
+<g id="node5" class="node state regular">
+<title>start_c</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="150,-380 92,-380 92,-344 150,-344 150,-380"/>
+<text text-anchor="start" x="102.997" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_c</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M104.3333,-345C104.3333,-345 137.6667,-345 137.6667,-345 143.3333,-345 149,-350.6667 149,-356.3333 149,-356.3333 149,-367.6667 149,-367.6667 149,-373.3333 143.3333,-379 137.6667,-379 137.6667,-379 104.3333,-379 104.3333,-379 98.6667,-379 93,-373.3333 93,-367.6667 93,-367.6667 93,-356.3333 93,-356.3333 93,-350.6667 98.6667,-345 104.3333,-345"/>
+</g>
+<!-- start_b&#45;&gt;start_c -->
+<g id="edge7" class="edge transition">
+<title>start_b&#45;&gt;start_c</title>
+<path fill="none" stroke="#000000" d="M105.4386,-425.8015C108.0021,-415.2915 111.2804,-401.8503 114.1664,-390.0177"/>
+<polygon fill="#000000" stroke="#000000" points="117.6044,-390.6922 116.5738,-380.1476 110.8038,-389.0334 117.6044,-390.6922"/>
+<text text-anchor="middle" x="113.3895" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_d -->
+<g id="node6" class="node state regular">
+<title>start_d</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="176,-298 118,-298 118,-262 176,-262 176,-298"/>
+<text text-anchor="start" x="128.6616" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_d</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M130.3333,-263C130.3333,-263 163.6667,-263 163.6667,-263 169.3333,-263 175,-268.6667 175,-274.3333 175,-274.3333 175,-285.6667 175,-285.6667 175,-291.3333 169.3333,-297 163.6667,-297 163.6667,-297 130.3333,-297 130.3333,-297 124.6667,-297 119,-291.3333 119,-285.6667 119,-285.6667 119,-274.3333 119,-274.3333 119,-268.6667 124.6667,-263 130.3333,-263"/>
+</g>
+<!-- start_c&#45;&gt;start_d -->
+<g id="edge8" class="edge transition">
+<title>start_c&#45;&gt;start_d</title>
+<path fill="none" stroke="#000000" d="M126.7702,-343.8015C130.1027,-333.2915 134.3645,-319.8503 138.1163,-308.0177"/>
+<polygon fill="#000000" stroke="#000000" points="141.5597,-308.7378 141.2459,-298.1476 134.8871,-306.622 141.5597,-308.7378"/>
+<text text-anchor="middle" x="136.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_e -->
+<g id="node7" class="node state regular">
+<title>start_e</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="255,-216 197,-216 197,-180 255,-180 255,-216"/>
+<text text-anchor="start" x="207.6616" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_e</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M209.3333,-181C209.3333,-181 242.6667,-181 242.6667,-181 248.3333,-181 254,-186.6667 254,-192.3333 254,-192.3333 254,-203.6667 254,-203.6667 254,-209.3333 248.3333,-215 242.6667,-215 242.6667,-215 209.3333,-215 209.3333,-215 203.6667,-215 198,-209.3333 198,-203.6667 198,-203.6667 198,-192.3333 198,-192.3333 198,-186.6667 203.6667,-181 209.3333,-181"/>
+</g>
+<!-- start_d&#45;&gt;start_e -->
+<g id="edge9" class="edge transition">
+<title>start_d&#45;&gt;start_e</title>
+<path fill="none" stroke="#000000" d="M164.5327,-261.8015C175.3742,-250.5483 189.453,-235.9348 201.4007,-223.5335"/>
+<polygon fill="#000000" stroke="#000000" points="204.0988,-225.7775 208.5163,-216.1476 199.0577,-220.9208 204.0988,-225.7775"/>
+<text text-anchor="middle" x="192.3895" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_f -->
+<g id="node8" class="node state regular">
+<title>start_f</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="298,-134 242,-134 242,-98 298,-98 298,-134"/>
+<text text-anchor="start" x="253.3296" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_f</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M254.3333,-99C254.3333,-99 285.6667,-99 285.6667,-99 291.3333,-99 297,-104.6667 297,-110.3333 297,-110.3333 297,-121.6667 297,-121.6667 297,-127.3333 291.3333,-133 285.6667,-133 285.6667,-133 254.3333,-133 254.3333,-133 248.6667,-133 243,-127.3333 243,-121.6667 243,-121.6667 243,-110.3333 243,-110.3333 243,-104.6667 248.6667,-99 254.3333,-99"/>
+</g>
+<!-- start_e&#45;&gt;start_f -->
+<g id="edge10" class="edge transition">
+<title>start_e&#45;&gt;start_f</title>
+<path fill="none" stroke="#000000" d="M235.765,-179.8015C241.5185,-169.0791 248.909,-155.306 255.3498,-143.3026"/>
+<polygon fill="#000000" stroke="#000000" points="258.6181,-144.6141 260.2623,-134.1476 252.45,-141.3043 258.6181,-144.6141"/>
+<text text-anchor="middle" x="251.3895" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_g -->
+<g id="node9" class="node state regular">
+<title>start_g</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="347,-52 289,-52 289,-16 347,-16 347,-52"/>
+<text text-anchor="start" x="299.6616" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">start_g</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M301.3333,-17C301.3333,-17 334.6667,-17 334.6667,-17 340.3333,-17 346,-22.6667 346,-28.3333 346,-28.3333 346,-39.6667 346,-39.6667 346,-45.3333 340.3333,-51 334.6667,-51 334.6667,-51 301.3333,-51 301.3333,-51 295.6667,-51 290,-45.3333 290,-39.6667 290,-39.6667 290,-28.3333 290,-28.3333 290,-22.6667 295.6667,-17 301.3333,-17"/>
+</g>
+<!-- start_f&#45;&gt;start_g -->
+<g id="edge11" class="edge transition">
+<title>start_f&#45;&gt;start_g</title>
+<path fill="none" stroke="#000000" d="M280.6528,-97.8015C286.9914,-86.973 295.1514,-73.033 302.2264,-60.9466"/>
+<polygon fill="#000000" stroke="#000000" points="305.3457,-62.5459 307.377,-52.1476 299.3046,-59.0096 305.3457,-62.5459"/>
+<text text-anchor="middle" x="298.3895" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- start_g&#45;&gt;idle -->
+<g id="edge12" class="edge transition">
+<title>start_g&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M347.2313,-47.725C356.7892,-54.3505 365,-63.4139 365,-75 365,-567 365,-567 365,-567 365,-573.6219 366.8135,-580.3157 369.3992,-586.4942"/>
+<polygon fill="#000000" stroke="#000000" points="366.3786,-588.2819 373.9482,-595.6948 372.6535,-585.1794 366.3786,-588.2819"/>
+<text text-anchor="middle" x="366.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- stop_b -->
+<g id="node11" class="node state regular">
+<title>stop_b</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="265,-462 207,-462 207,-426 265,-426 265,-462"/>
+<text text-anchor="start" x="217.991" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">stop_b</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M219.3333,-427C219.3333,-427 252.6667,-427 252.6667,-427 258.3333,-427 264,-432.6667 264,-438.3333 264,-438.3333 264,-449.6667 264,-449.6667 264,-455.3333 258.3333,-461 252.6667,-461 252.6667,-461 219.3333,-461 219.3333,-461 213.6667,-461 208,-455.3333 208,-449.6667 208,-449.6667 208,-438.3333 208,-438.3333 208,-432.6667 213.6667,-427 219.3333,-427"/>
+</g>
+<!-- stop_a&#45;&gt;stop_b -->
+<g id="edge13" class="edge transition">
+<title>stop_a&#45;&gt;stop_b</title>
+<path fill="none" stroke="#000000" d="M235.2219,-507.8015C235.3488,-497.3976 235.5107,-484.1215 235.6539,-472.3768"/>
+<polygon fill="#000000" stroke="#000000" points="239.1564,-472.1896 235.7787,-462.1476 232.1569,-472.1041 239.1564,-472.1896"/>
+<text text-anchor="middle" x="236.3895" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- stop_c -->
+<g id="node12" class="node state regular">
+<title>stop_c</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="263.5,-380 206.5,-380 206.5,-344 263.5,-344 263.5,-380"/>
+<text text-anchor="start" x="217.8264" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">stop_c</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M218.8333,-345C218.8333,-345 251.1667,-345 251.1667,-345 256.8333,-345 262.5,-350.6667 262.5,-356.3333 262.5,-356.3333 262.5,-367.6667 262.5,-367.6667 262.5,-373.3333 256.8333,-379 251.1667,-379 251.1667,-379 218.8333,-379 218.8333,-379 213.1667,-379 207.5,-373.3333 207.5,-367.6667 207.5,-367.6667 207.5,-356.3333 207.5,-356.3333 207.5,-350.6667 213.1667,-345 218.8333,-345"/>
+</g>
+<!-- stop_b&#45;&gt;stop_c -->
+<g id="edge14" class="edge transition">
+<title>stop_b&#45;&gt;stop_c</title>
+<path fill="none" stroke="#000000" d="M235.7781,-425.8015C235.6512,-415.3976 235.4893,-402.1215 235.3461,-390.3768"/>
+<polygon fill="#000000" stroke="#000000" points="238.8431,-390.1041 235.2213,-380.1476 231.8436,-390.1896 238.8431,-390.1041"/>
+<text text-anchor="middle" x="236.3895" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- stop_d -->
+<g id="node13" class="node state regular">
+<title>stop_d</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="264,-298 206,-298 206,-262 264,-262 264,-298"/>
+<text text-anchor="start" x="216.991" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">stop_d</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M218.3333,-263C218.3333,-263 251.6667,-263 251.6667,-263 257.3333,-263 263,-268.6667 263,-274.3333 263,-274.3333 263,-285.6667 263,-285.6667 263,-291.3333 257.3333,-297 251.6667,-297 251.6667,-297 218.3333,-297 218.3333,-297 212.6667,-297 207,-291.3333 207,-285.6667 207,-285.6667 207,-274.3333 207,-274.3333 207,-268.6667 212.6667,-263 218.3333,-263"/>
+</g>
+<!-- stop_c&#45;&gt;stop_d -->
+<g id="edge15" class="edge transition">
+<title>stop_c&#45;&gt;stop_d</title>
+<path fill="none" stroke="#000000" d="M235,-343.8015C235,-333.3976 235,-320.1215 235,-308.3768"/>
+<polygon fill="#000000" stroke="#000000" points="238.5001,-308.1476 235,-298.1476 231.5001,-308.1476 238.5001,-308.1476"/>
+<text text-anchor="middle" x="236.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- stop_d&#45;&gt;idle -->
+<g id="edge16" class="edge transition">
+<title>stop_d&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M205.7097,-290.7645C193.4522,-297.3238 182,-307.1564 182,-321 182,-567 182,-567 182,-567 182,-600.8427 289.4864,-610.3175 348.7969,-612.9695"/>
+<polygon fill="#000000" stroke="#000000" points="348.7927,-616.4721 358.9255,-613.3772 349.0744,-609.4778 348.7927,-616.4721"/>
+<text text-anchor="middle" x="183.3895" y="-441" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- rd_b -->
+<g id="node15" class="node state regular">
+<title>rd_b</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="676,-462 620,-462 620,-426 676,-426 676,-462"/>
+<text text-anchor="start" x="635.9964" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">rd_b</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M632.3333,-427C632.3333,-427 663.6667,-427 663.6667,-427 669.3333,-427 675,-432.6667 675,-438.3333 675,-438.3333 675,-449.6667 675,-449.6667 675,-455.3333 669.3333,-461 663.6667,-461 663.6667,-461 632.3333,-461 632.3333,-461 626.6667,-461 621,-455.3333 621,-449.6667 621,-449.6667 621,-438.3333 621,-438.3333 621,-432.6667 626.6667,-427 632.3333,-427"/>
+</g>
+<!-- rd_a&#45;&gt;rd_b -->
+<g id="edge17" class="edge transition">
+<title>rd_a&#45;&gt;rd_b</title>
+<path fill="none" stroke="#000000" d="M636.329,-507.8015C638.2516,-497.2915 640.7103,-483.8503 642.8748,-472.0177"/>
+<polygon fill="#000000" stroke="#000000" points="646.3237,-472.6142 644.6803,-462.1476 639.438,-471.3545 646.3237,-472.6142"/>
+<text text-anchor="middle" x="642.3895" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- rd_c -->
+<g id="node16" class="node state regular">
+<title>rd_c</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="688,-380 632,-380 632,-344 688,-344 688,-380"/>
+<text text-anchor="start" x="648.3318" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">rd_c</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M644.3333,-345C644.3333,-345 675.6667,-345 675.6667,-345 681.3333,-345 687,-350.6667 687,-356.3333 687,-356.3333 687,-367.6667 687,-367.6667 687,-373.3333 681.3333,-379 675.6667,-379 675.6667,-379 644.3333,-379 644.3333,-379 638.6667,-379 633,-373.3333 633,-367.6667 633,-367.6667 633,-356.3333 633,-356.3333 633,-350.6667 638.6667,-345 644.3333,-345"/>
+</g>
+<!-- rd_b&#45;&gt;rd_c -->
+<g id="edge18" class="edge transition">
+<title>rd_b&#45;&gt;rd_c</title>
+<path fill="none" stroke="#000000" d="M650.6632,-425.8015C652.1857,-415.3976 654.1286,-402.1215 655.8473,-390.3768"/>
+<polygon fill="#000000" stroke="#000000" points="659.3593,-390.549 657.3443,-380.1476 652.4331,-389.5354 659.3593,-390.549"/>
+<text text-anchor="middle" x="655.3895" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- rd_d -->
+<g id="node17" class="node state regular">
+<title>rd_d</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="707,-298 651,-298 651,-262 707,-262 707,-298"/>
+<text text-anchor="start" x="666.9964" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">rd_d</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M663.3333,-263C663.3333,-263 694.6667,-263 694.6667,-263 700.3333,-263 706,-268.6667 706,-274.3333 706,-274.3333 706,-285.6667 706,-285.6667 706,-291.3333 700.3333,-297 694.6667,-297 694.6667,-297 663.3333,-297 663.3333,-297 657.6667,-297 652,-291.3333 652,-285.6667 652,-285.6667 652,-274.3333 652,-274.3333 652,-268.6667 657.6667,-263 663.3333,-263"/>
+</g>
+<!-- rd_c&#45;&gt;rd_d -->
+<g id="edge19" class="edge transition">
+<title>rd_c&#45;&gt;rd_d</title>
+<path fill="none" stroke="#000000" d="M664.2167,-343.8015C666.652,-333.2915 669.7664,-319.8503 672.5081,-308.0177"/>
+<polygon fill="#000000" stroke="#000000" points="675.9474,-308.6796 674.7951,-298.1476 669.1281,-307.0994 675.9474,-308.6796"/>
+<text text-anchor="middle" x="671.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- rd_d&#45;&gt;idle -->
+<g id="edge20" class="edge transition">
+<title>rd_d&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M707,-288.9326C721,-295.3268 735,-305.5768 735,-321 735,-485 735,-485 735,-485 735,-525.3148 743.1632,-546.2518 713,-573 691.786,-591.8122 506.8838,-606.1341 425.3474,-611.5932"/>
+<polygon fill="#000000" stroke="#000000" points="424.7623,-608.124 415.0143,-612.2745 425.2229,-615.1089 424.7623,-608.124"/>
+<text text-anchor="middle" x="736.3895" y="-441" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- wr_b -->
+<g id="node19" class="node state regular">
+<title>wr_b</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="493,-462 437,-462 437,-426 493,-426 493,-462"/>
+<text text-anchor="start" x="452.0004" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">wr_b</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M449.3333,-427C449.3333,-427 480.6667,-427 480.6667,-427 486.3333,-427 492,-432.6667 492,-438.3333 492,-438.3333 492,-449.6667 492,-449.6667 492,-455.3333 486.3333,-461 480.6667,-461 480.6667,-461 449.3333,-461 449.3333,-461 443.6667,-461 438,-455.3333 438,-449.6667 438,-449.6667 438,-438.3333 438,-438.3333 438,-432.6667 443.6667,-427 449.3333,-427"/>
+</g>
+<!-- wr_a&#45;&gt;wr_b -->
+<g id="edge21" class="edge transition">
+<title>wr_a&#45;&gt;wr_b</title>
+<path fill="none" stroke="#000000" d="M433.8773,-507.8015C439.1077,-497.0791 445.8263,-483.306 451.6817,-471.3026"/>
+<polygon fill="#000000" stroke="#000000" points="454.9089,-472.6698 456.1475,-462.1476 448.6175,-469.6008 454.9089,-472.6698"/>
+<text text-anchor="middle" x="448.3895" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- wr_c -->
+<g id="node20" class="node state regular">
+<title>wr_c</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="516,-380 460,-380 460,-344 516,-344 516,-380"/>
+<text text-anchor="start" x="475.3358" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">wr_c</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M472.3333,-345C472.3333,-345 503.6667,-345 503.6667,-345 509.3333,-345 515,-350.6667 515,-356.3333 515,-356.3333 515,-367.6667 515,-367.6667 515,-373.3333 509.3333,-379 503.6667,-379 503.6667,-379 472.3333,-379 472.3333,-379 466.6667,-379 461,-373.3333 461,-367.6667 461,-367.6667 461,-356.3333 461,-356.3333 461,-350.6667 466.6667,-345 472.3333,-345"/>
+</g>
+<!-- wr_b&#45;&gt;wr_c -->
+<g id="edge22" class="edge transition">
+<title>wr_b&#45;&gt;wr_c</title>
+<path fill="none" stroke="#000000" d="M470.1044,-425.8015C473.0524,-415.2915 476.8225,-401.8503 480.1414,-390.0177"/>
+<polygon fill="#000000" stroke="#000000" points="483.579,-390.7213 482.9098,-380.1476 476.8391,-388.8308 483.579,-390.7213"/>
+<text text-anchor="middle" x="479.3895" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- wr_d -->
+<g id="node21" class="node state regular">
+<title>wr_d</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="537,-298 481,-298 481,-262 537,-262 537,-298"/>
+<text text-anchor="start" x="496.0004" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">wr_d</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M493.3333,-263C493.3333,-263 524.6667,-263 524.6667,-263 530.3333,-263 536,-268.6667 536,-274.3333 536,-274.3333 536,-285.6667 536,-285.6667 536,-291.3333 530.3333,-297 524.6667,-297 524.6667,-297 493.3333,-297 493.3333,-297 487.6667,-297 482,-291.3333 482,-285.6667 482,-285.6667 482,-274.3333 482,-274.3333 482,-268.6667 487.6667,-263 493.3333,-263"/>
+</g>
+<!-- wr_c&#45;&gt;wr_d -->
+<g id="edge23" class="edge transition">
+<title>wr_c&#45;&gt;wr_d</title>
+<path fill="none" stroke="#000000" d="M492.6606,-343.8015C495.3522,-333.2915 498.7944,-319.8503 501.8247,-308.0177"/>
+<polygon fill="#000000" stroke="#000000" points="505.262,-308.7033 504.3524,-298.1476 498.4809,-306.9666 505.262,-308.7033"/>
+<text text-anchor="middle" x="500.3895" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- wr_d&#45;&gt;idle -->
+<g id="edge24" class="edge transition">
+<title>wr_d&#45;&gt;idle</title>
+<path fill="none" stroke="#000000" d="M537.115,-294.7135C545.7383,-301.3385 553,-310.1411 553,-321 553,-567 553,-567 553,-567 553,-593.4253 474.138,-605.7515 425.1261,-610.8604"/>
+<polygon fill="#000000" stroke="#000000" points="424.7677,-607.3786 415.1596,-611.8435 425.455,-614.3448 424.7677,-607.3786"/>
+<text text-anchor="middle" x="554.3895" y="-441" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+</g>
+</svg>
+</div></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

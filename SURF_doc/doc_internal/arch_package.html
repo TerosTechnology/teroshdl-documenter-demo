@@ -1,0 +1,3387 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=arch_package><h1 id="package-arch_package">Package: arch_package</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>MICRON TECHNOLOGY, INC. - CONFIDENTIAL AND PROPRIETARY INFORMATION</p>
+<p></div></p><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmd</td>
+<td>UTYPE_cmdtype</td>
+<td></td>
+</tr>
+<tr>
+<td>raw_cmd</td>
+<td>UTYPE_cmdtype</td>
+<td></td>
+</tr>
+<tr>
+<td>rank</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>bank_group</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>bank</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>addr</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>odt</td>
+<td>bit</td>
+<td>Defaults to 0.</td>
+</tr>
+<tr>
+<td>sim_time</td>
+<td>int</td>
+<td>Population optional.</td>
+</tr>
+<tr>
+<td>cycle_count</td>
+<td>int</td>
+<td>Population optional.</td>
+</tr>
+<tr>
+<td>tCK</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>typedef</td>
+<td>endclass</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_blreg</td>
+<td>enum {<br><span style="padding-left:20px">rBL8=0,<br><span style="padding-left:20px"> rBLFLY=1,<br><span style="padding-left:20px"> rBL4=2}</td>
+<td></td>
+</tr>
+<tr>
+<td>_debug</td>
+<td>bit</td>
+<td></td>
+</tr>
+<tr>
+<td>_by_mode</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>_num_dms</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>endpackage</td>
+<td>endclass</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAX_DM_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_DBI_BITS</td>
+<td>int</td>
+<td>MAX_DM_BITS</td>
+<td>DM/DBI share pins in current spec.</td>
+</tr>
+<tr>
+<td>MAX_ADDR_BITS</td>
+<td>int</td>
+<td>21</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_ROW_ADDR_BITS</td>
+<td>int</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_COL_ADDR_BITS</td>
+<td>int</td>
+<td>13</td>
+<td>Include AP/BLFLY</td>
+</tr>
+<tr>
+<td>MAX_BANK_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_RANK_BITS</td>
+<td>int</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_DQ_BITS</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_DQS_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_CRC_EQUATION</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_CRC_TRANSFERS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BANK_GROUP_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BURST_LEN</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>AUTOPRECHARGEADDR</td>
+<td>int</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>BLFLYSELECT</td>
+<td>int</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>BANK_GROUP_SHIFT</td>
+<td>int</td>
+<td>MAX_ADDR_BITS + MAX_BANK_BITS</td>
+<td></td>
+</tr>
+<tr>
+<td>BANK_SHIFT</td>
+<td>int</td>
+<td>MAX_ADDR_BITS</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_MODEREGS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>int</td>
+<td>MAX_ADDR_BITS + MAX_BANK_BITS + MAX_BANK_GROUP_BITS</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_MODEREG_SET_BITS</td>
+<td>int</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BANKS_PER_GROUP</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BANK_GROUPS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_RANKS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>RTT_BITS</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>FAW_DEPTH</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>LOAD_MODE_CMD</td>
+<td></td>
+<td>5'b01000</td>
+<td>{cs, act, ras, cas, we}</td>
+</tr>
+<tr>
+<td>MIN_BL</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_BL</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BL</td>
+<td>int</td>
+<td>MAX_BURST_LEN</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_BT</td>
+<td>UTYPE_bt</td>
+<td>INT</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_CL</td>
+<td>int</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_CL</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_CL</td>
+<td>int</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_AL</td>
+<td>int</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_AL_REG</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_AL_CLKS</td>
+<td>int</td>
+<td>MAX_CL - 1</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_CWL</td>
+<td>int</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_CWL</td>
+<td>int</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_CWL</td>
+<td>int</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_RL</td>
+<td>int</td>
+<td>MIN_CL - 1</td>
+<td>subtract one for the DLL disable mode.</td>
+</tr>
+<tr>
+<td>MAX_RL</td>
+<td>int</td>
+<td>MAX_CL + MAX_AL_CLKS</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_WL</td>
+<td>int</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_WL</td>
+<td>int</td>
+<td>MAX_CWL + MAX_AL_CLKS</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN_WR</td>
+<td>int</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_WR</td>
+<td>int</td>
+<td>28</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_WR</td>
+<td>int</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_CAL</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_CAL</td>
+<td>int</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_LPASR</td>
+<td>UTYPE_lpasr</td>
+<td>LPASR_NORM</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_RTTW</td>
+<td>UTYPE_rttw</td>
+<td>RTTW_DIS</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_MPR_MODE</td>
+<td>UTYPE_mpr</td>
+<td>SERIAL</td>
+<td></td>
+</tr>
+<tr>
+<td>DEF_DELAY_WRITE</td>
+<td>UTYPE_delay_write_crc_dm</td>
+<td>DELAY_WRITE_4</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_DATA_BITS</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_SELECT_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_MPR_PATTERNS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_TEMP_BITS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_MPR_TEMPS</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_TEMP0</td>
+<td>int</td>
+<td>'b0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_TEMP1</td>
+<td>int</td>
+<td>'b0000_0001</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_TEMP2</td>
+<td>int</td>
+<td>'b0000_0010</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_TEMP3</td>
+<td>int</td>
+<td>'b0000_0011</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_MPR_DEFAULT_PATTERNS</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_PAT_DEFAULT0</td>
+<td>int</td>
+<td>'b0101_0101</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_PAT_DEFAULT1</td>
+<td>int</td>
+<td>'b0011_0011</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_PAT_DEFAULT2</td>
+<td>int</td>
+<td>'b0000_1111</td>
+<td></td>
+</tr>
+<tr>
+<td>MPR_PAT_DEFAULT3</td>
+<td>int</td>
+<td>'b0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODE_REG_WIDTH</td>
+<td>int</td>
+<td>MODEREG_BITS</td>
+<td>Mode Register Definitions</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'0</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b00 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b00 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b00 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b01 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b01 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b01 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0</td>
+<td>2'b01 &lt;&lt; BANK_GROUP_SHIFT</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1100_0000_1000_0000</td>
+<td>MR0 Codes</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0_BLFLY</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td></td>
+</tr>
+<tr>
+<td>NUM_BLMODE</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0_SEQ</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0101_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0101_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0110_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0110_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0111_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0111_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0001_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0001_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0010_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0010_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0011_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0011_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0111_0100</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0_CL12</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0110_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1010_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1100_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1110_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0010_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0100_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0110_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_1000_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_1010_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_1100_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_1110_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_1110_0000_0000</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR0_WR12</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1110_0000_0110_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0110</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0110</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_1000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_1000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_1000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR1_AL0</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0011_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0101_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0110_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0111_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0111_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR1_RTTN_DIS</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR1</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1100_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0100</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0100</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_1000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_1000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_1000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_1000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR2_CWL12</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1100_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1100_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR2_LPASR_NORM</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0110_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1010_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1100_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1110_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1110_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR2</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1110_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR3_MPR_PATTERN</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR3_MPR_DIS</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1100_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0100_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0110_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0110_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_1000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_1000_0000_0000</td>
+<td>`MR3</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR3_MPR_SERIAL</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1100_0000_0010_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1100_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0100_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR4_CAL0</td>
+<td></td>
+</tr>
+<tr>
+<td>MR4_CAL_SHIFT</td>
+<td>int</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>MR4_CAL_BITS</td>
+<td>int</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR4</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1100_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0001</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0010</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0011</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0100</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0101</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0110</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0111</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0111</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_1000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0001_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0010_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1100_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_0100_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0001_1100_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>MR5_RTTP_DIS</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0010_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0010_0000_0000_0000</td>
+<td>`MR5</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1110_0000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0011_1111</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MR6_VREF_OFFSET_SHIFT</td>
+<td>int</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0100_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_1000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_0100_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0000_1100_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_0100_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_1000_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_1100_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0000_0001_1100_0000_0000</td>
+<td>`MR6</td>
+</tr>
+<tr>
+<td>MODEREG_BITS</td>
+<td>reg[MODEREG_BITS:0]</td>
+<td>'b0011_1111_1111_1111_1111</td>
+<td>`MR7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTYPE_TS</td>
+<td>enum {<br><span style="padding-left:20px">                                      TS_1875,<br><span style="padding-left:20px"> TS_1500,<br><span style="padding-left:20px"> TS_1250,<br><span style="padding-left:20px"> TS_1072,<br><span style="padding-left:20px"> TS_938,<br><span style="padding-left:20px"> TS_833,<br><span style="padding-left:20px"> TS_750,<br><span style="padding-left:20px"> TS_682,<br><span style="padding-left:20px"> TS_625,<br><span style="padding-left:20px">                   NUM_TS     }</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_tCKMode</td>
+<td>enum {<br><span style="padding-left:20px">         TCK_MIN,<br><span style="padding-left:20px"> TCK_MAX,<br><span style="padding-left:20px"> TCK_RANDOM     }</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_TimingParameters</td>
+<td>struct packed {<br><span style="padding-left:20px">         UTYPE_TS ts_loaded;<br><span style="padding-left:20px">         UTYPE_tCKMode tck_mode;<br><span style="padding-left:20px">         int ClockDutyCycle,<br><span style="padding-left:20px"> tCHp_min,<br><span style="padding-left:20px"> tCHp_max;<br><span style="padding-left:20px">         int tCK,<br><span style="padding-left:20px"> tCK_min,<br><span style="padding-left:20px"> tCK_max,<br><span style="padding-left:20px"> tCK_shmoo,<br><span style="padding-left:20px"> tOffset;<br><span style="padding-left:20px">         int tDQSQ,<br><span style="padding-left:20px"> tQHp,<br><span style="padding-left:20px"> tDS,<br><span style="padding-left:20px"> tDH,<br><span style="padding-left:20px"> tIPW;<br><span style="padding-left:20px">         int tRPREp,<br><span style="padding-left:20px"> tRPSTp,<br><span style="padding-left:20px"> tQSHp,<br><span style="padding-left:20px"> tQSLp;<br><span style="padding-left:20px">         int tWPSTp,<br><span style="padding-left:20px"> tWPREp;<br><span style="padding-left:20px">         int tDQSCK,<br><span style="padding-left:20px"> tDQSCK_min,<br><span style="padding-left:20px"> tDQSCK_max,<br><span style="padding-left:20px"> tDQSCK_dll_on,<br><span style="padding-left:20px"> tDQSCK_dll_off,<br><span style="padding-left:20px"> tDQSCK_dll_off_min,<br><span style="padding-left:20px"> tDQSCK_dll_off_max;<br><span style="padding-left:20px">         int tDQSLp,<br><span style="padding-left:20px"> tDQSLp_min,<br><span style="padding-left:20px"> tDQSLp_max,<br><span style="padding-left:20px"> tDQSHp_min,<br><span style="padding-left:20px"> tDQSHp_max,<br><span style="padding-left:20px"> tDQSHp;<br><span style="padding-left:20px">         int tDQSSp,<br><span style="padding-left:20px"> tDQSSp_min,<br><span style="padding-left:20px"> tDQSSp_max,<br><span style="padding-left:20px"> tDQSSp_2tCK_min,<br><span style="padding-left:20px"> tDQSSp_2tCK_max,<br><span style="padding-left:20px"> tDQSSp_1tCK_min,<br><span style="padding-left:20px"> tDQSSp_1tCK_max;<br><span style="padding-left:20px">         int tDLLKc;<br><span style="padding-left:20px">         int tRTP,<br><span style="padding-left:20px"> tRTPc,<br><span style="padding-left:20px"> tRTP_min,<br><span style="padding-left:20px"> tRTPc_min;<br><span style="padding-left:20px">         int tWTR_L,<br><span style="padding-left:20px"> tWTRc_L,<br><span style="padding-left:20px"> tWTR_L_CRC_DM,<br><span style="padding-left:20px"> tWTRc_L_CRC_DM;<br><span style="padding-left:20px">         int tWTR_S,<br><span style="padding-left:20px"> tWTRc_S,<br><span style="padding-left:20px"> tWTR_S_CRC_DM,<br><span style="padding-left:20px"> tWTRc_S_CRC_DM;<br><span style="padding-left:20px">         int tWR,<br><span style="padding-left:20px"> tWRc,<br><span style="padding-left:20px"> tWR_CRC_DMc,<br><span style="padding-left:20px"> tWR_MPRc;<br><span style="padding-left:20px">         int tCAL_min,<br><span style="padding-left:20px"> tCALc_min;<br><span style="padding-left:20px">         int tMRDc,<br><span style="padding-left:20px"> tMOD,<br><span style="padding-left:20px"> tMODc,<br><span style="padding-left:20px"> tMPRRc;<br><span style="padding-left:20px">         int tRCD,<br><span style="padding-left:20px"> tRCDc,<br><span style="padding-left:20px"> tRP,<br><span style="padding-left:20px"> tRPc,<br><span style="padding-left:20px"> tRAS,<br><span style="padding-left:20px"> tRASc,<br><span style="padding-left:20px"> tRC,<br><span style="padding-left:20px"> tRCc;<br><span style="padding-left:20px">         int tCCD_L,<br><span style="padding-left:20px"> tCCDc_L,<br><span style="padding-left:20px"> tCCD_S,<br><span style="padding-left:20px"> tCCDc_S;<br><span style="padding-left:20px">         int tRRD_L,<br><span style="padding-left:20px"> tRRDc_L,<br><span style="padding-left:20px"> tRRD_S,<br><span style="padding-left:20px"> tRRDc_S,<br><span style="padding-left:20px"> tRRDc_dlr,<br><span style="padding-left:20px"> tFAW,<br><span style="padding-left:20px"> tFAWc_dlr,<br><span style="padding-left:20px"> tIS,<br><span style="padding-left:20px"> tIH,<br><span style="padding-left:20px"> tDIPW;<br><span style="padding-left:20px">         int tZQinitc,<br><span style="padding-left:20px"> tZQoperc,<br><span style="padding-left:20px"> tZQCSc,<br><span style="padding-left:20px"> tZQRTT,<br><span style="padding-left:20px"> tZQRTTc;<br><span style="padding-left:20px">         int tRFC,<br><span style="padding-left:20px"> tRFCc,<br><span style="padding-left:20px"> tRFC1,<br><span style="padding-left:20px"> tRFC1c,<br><span style="padding-left:20px"> tRFC2,<br><span style="padding-left:20px"> tRFC2c,<br><span style="padding-left:20px"> tRFC4,<br><span style="padding-left:20px"> tRFC4c,<br><span style="padding-left:20px"> tRFCc_dlr;<br><span style="padding-left:20px">         int tXPR;<br><span style="padding-left:20px">         int tXS,<br><span style="padding-left:20px"> tXSc,<br><span style="padding-left:20px"> tXS_Fast,<br><span style="padding-left:20px"> tXS_Fastc,<br><span style="padding-left:20px"> tXSDLLc,<br><span style="padding-left:20px"> tCKESRc,<br><span style="padding-left:20px"> tCKSRE,<br><span style="padding-left:20px"> tCKSREc,<br><span style="padding-left:20px"> tCKSRX,<br><span style="padding-left:20px"> tCKSRXc,<br><span style="padding-left:20px"> tXSR;<br><span style="padding-left:20px">         int tXP,<br><span style="padding-left:20px"> tXPc,<br><span style="padding-left:20px"> tXPDLL,<br><span style="padding-left:20px"> tXPDLLc,<br><span style="padding-left:20px"> tCKE,<br><span style="padding-left:20px"> tCKEc,<br><span style="padding-left:20px"> tCPDEDc,<br><span style="padding-left:20px"> tPD,<br><span style="padding-left:20px"> tPDc;<br><span style="padding-left:20px">         int tACTPDENc,<br><span style="padding-left:20px"> tPREPDENc,<br><span style="padding-left:20px"> tREFPDENc,<br><span style="padding-left:20px"> tMRSPDENc,<br><span style="padding-left:20px"> tMRSPDEN,<br><span style="padding-left:20px"> tRDPDENc,<br><span style="padding-left:20px"> tWRPDENc,<br><span style="padding-left:20px"> tWRAPDENc;<br><span style="padding-left:20px">         int tODTHc,<br><span style="padding-left:20px"> tAON,<br><span style="padding-left:20px"> tAON_min,<br><span style="padding-left:20px"> tAON_max,<br><span style="padding-left:20px"> tAOFp,<br><span style="padding-left:20px"> tAOFp_min,<br><span style="padding-left:20px"> tAOFp_max,<br><span style="padding-left:20px"> tADCp,<br><span style="padding-left:20px"> tADCp_min,<br><span style="padding-left:20px"> tADCp_max;<br><span style="padding-left:20px">         int tAONPD,<br><span style="padding-left:20px"> tAONPDc,<br><span style="padding-left:20px"> tAONPD_min,<br><span style="padding-left:20px"> tAONPD_max,<br><span style="padding-left:20px"> tAOF,<br><span style="padding-left:20px"> tAOFPD,<br><span style="padding-left:20px"> tAOFPDc,<br><span style="padding-left:20px"> tAOFPD_min,<br><span style="padding-left:20px"> tAOFPD_max,<br><span style="padding-left:20px"> tAOFASp,<br><span style="padding-left:20px"> tAONASp_min,<br><span style="padding-left:20px"> tAONASp_max,<br><span style="padding-left:20px"> tAOFASp_min,<br><span style="padding-left:20px"> tAOFASp_max;<br><span style="padding-left:20px">         int tWLMRDc,<br><span style="padding-left:20px"> tWLDQSENc,<br><span style="padding-left:20px"> tWLS,<br><span style="padding-left:20px"> tWLS_nominal,<br><span style="padding-left:20px"> tWLSc,<br><span style="padding-left:20px"> tWLH,<br><span style="padding-left:20px"> tWLHc;<br><span style="padding-left:20px">         int tWLO_nominal,<br><span style="padding-left:20px"> tWLO_min,<br><span style="padding-left:20px"> tWLO_max,<br><span style="padding-left:20px"> tWLOE_min,<br><span style="padding-left:20px"> tWLOE_nominal,<br><span style="padding-left:20px"> tWLOE_max,<br><span style="padding-left:20px"> tWLOc_min,<br><span style="padding-left:20px"> tWLOc_max,<br><span style="padding-left:20px"> tWLOEc_min,<br><span style="padding-left:20px"> tWLOEc_max;<br><span style="padding-left:20px">         int tPAR_ALERT_ON_CYCLES,<br><span style="padding-left:20px"> tPAR_ALERT_ON,<br><span style="padding-left:20px"> tPAR_ALERT_ON_max,<br><span style="padding-left:20px"> tPAR_ALERT_OFF,<br><span style="padding-left:20px"> tPAR_CLOSE_BANKS,<br><span style="padding-left:20px"> tPAR_tRP_tRAS_adjustment,<br><span style="padding-left:20px"> tPAR_tRP_holdoff_adjustment;<br><span style="padding-left:20px">         int tPAR_ALERT_PW,<br><span style="padding-left:20px"> tPAR_ALERT_PW_min,<br><span style="padding-left:20px"> tPAR_ALERT_PW_max,<br><span style="padding-left:20px"> tPAR_ALERT_PWc,<br><span style="padding-left:20px"> tPAR_ALERT_PWc_min,<br><span style="padding-left:20px"> tPAR_ALERT_PWc_max;<br><span style="padding-left:20px">         int tCRC_ALERT,<br><span style="padding-left:20px"> tCRC_ALERT_min,<br><span style="padding-left:20px"> tCRC_ALERT_max,<br><span style="padding-left:20px"> tCRC_ALERT_PWc_min,<br><span style="padding-left:20px"> tCRC_ALERT_PWc_max,<br><span style="padding-left:20px"> tCRC_ALERT_PWc;<br><span style="padding-left:20px">         int tSDO,<br><span style="padding-left:20px"> tSDOc,<br><span style="padding-left:20px"> tSDO_max,<br><span style="padding-left:20px"> tSDOc_max;<br><span style="padding-left:20px">         int tSYNC_GEARc,<br><span style="padding-left:20px"> tCMD_GEARc,<br><span style="padding-left:20px"> tGD_TRANSITIONc;<br><span style="padding-left:20px">         int tMPED,<br><span style="padding-left:20px"> tMPEDc,<br><span style="padding-left:20px"> tCKMPE,<br><span style="padding-left:20px"> tCKMPEc,<br><span style="padding-left:20px"> tCKMPX,<br><span style="padding-left:20px"> tCKMPXc,<br><span style="padding-left:20px"> tMPX_H,<br><span style="padding-left:20px"> tXMPDLLc,<br><span style="padding-left:20px"> tXMPc;<br><span style="padding-left:20px">         int tPWRUP,<br><span style="padding-left:20px"> tRESET,<br><span style="padding-left:20px"> tRESETCKE;<br><span style="padding-left:20px">         int tBSCAN_Enable,<br><span style="padding-left:20px"> tBSCAN_Valid;<br><span style="padding-left:20px">         int tWLO_project,<br><span style="padding-left:20px"> tRP_ref_internal,<br><span style="padding-left:20px"> tRPc_ref_internal;<br><span style="padding-left:20px">     }</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_cmdtype</td>
+<td>enum{<br><span style="padding-left:20px">         cmdACT,<br><span style="padding-left:20px"> cmdPRE,<br><span style="padding-left:20px"> cmdWR,<br><span style="padding-left:20px"> cmdRD,<br><span style="padding-left:20px"> cmdPREA,<br><span style="padding-left:20px">         cmdNOP,<br><span style="padding-left:20px"> cmdDES,<br><span style="padding-left:20px"> cmdRDA,<br><span style="padding-left:20px"> cmdWRA,<br><span style="padding-left:20px"> cmdBST,<br><span style="padding-left:20px">         cmdREF,<br><span style="padding-left:20px"> cmdREFA,<br><span style="padding-left:20px"> cmdSREFE,<br><span style="padding-left:20px"> cmdSREFX,<br><span style="padding-left:20px">         cmdNOCLK,<br><span style="padding-left:20px"> cmdLMR,<br><span style="padding-left:20px"> cmdPDX,<br><span style="padding-left:20px"> cmdAPDE,<br><span style="padding-left:20px"> cmdPPDE,<br><span style="padding-left:20px"> cmdZQ     }</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_alreg</td>
+<td>enum {<br><span style="padding-left:20px">rAL0=0,<br><span style="padding-left:20px"> rALN1=1,<br><span style="padding-left:20px"> rALN2=2,<br><span style="padding-left:20px"> rALN3=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_bt</td>
+<td>enum {<br><span style="padding-left:20px">SEQ=0,<br><span style="padding-left:20px"> INT=1}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_odi</td>
+<td>enum {<br><span style="padding-left:20px">ODI_34=34,<br><span style="padding-left:20px"> ODI_48=48,<br><span style="padding-left:20px"> ODI_40=40,<br><span style="padding-left:20px"> ODI_RES3=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_rttn</td>
+<td>enum {<br><span style="padding-left:20px">RTTN_DIS=0,<br><span style="padding-left:20px"> RTTN_60=60,<br><span style="padding-left:20px"> RTTN_120=120,<br><span style="padding-left:20px"> RTTN_40=40,<br><span style="padding-left:20px"> RTTN_240=240,<br><span style="padding-left:20px"> RTTN_48=48,<br><span style="padding-left:20px"> RTTN_80=80,<br><span style="padding-left:20px"> RTTN_34=34}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_rttw</td>
+<td>enum {<br><span style="padding-left:20px">RTTW_DIS=0,<br><span style="padding-left:20px"> RTTW_120=120,<br><span style="padding-left:20px"> RTTW_240=240,<br><span style="padding-left:20px"> RTTW_Z=3,<br><span style="padding-left:20px"> RTTW_80=80,<br><span style="padding-left:20px"> RTTW_RES5=5,<br><span style="padding-left:20px"> RTTW_RES6=6,<br><span style="padding-left:20px"> RTTW_RES7=7}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_mpr</td>
+<td>enum {<br><span style="padding-left:20px">SERIAL=0,<br><span style="padding-left:20px"> PARALLEL=1,<br><span style="padding-left:20px"> STAGGERED=2,<br><span style="padding-left:20px"> MPR_RES3=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_mprpage</td>
+<td>enum {<br><span style="padding-left:20px">MPR_PATTERN=0,<br><span style="padding-left:20px"> MPR_PARITY=1,<br><span style="padding-left:20px"> MPR_MODEREG=2,<br><span style="padding-left:20px"> MPR_PAGE3=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_delay_write_crc_dm</td>
+<td>enum {<br><span style="padding-left:20px">DELAY_WRITE_4=4,<br><span style="padding-left:20px"> DELAY_WRITE_5=5,<br><span style="padding-left:20px"> DELAY_WRITE_6=6,<br><span style="padding-left:20px"> DELAY_WRITE_RES3=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_lpasr</td>
+<td>enum {<br><span style="padding-left:20px">LPASR_NORM=0,<br><span style="padding-left:20px"> LPASR_REDUCED=1,<br><span style="padding-left:20px"> LPASR_EXTENDED=2,<br><span style="padding-left:20px"> LPASR_AUTO=3}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_refmode</td>
+<td>enum {<br><span style="padding-left:20px">REF_1X=0,<br><span style="padding-left:20px"> REF_2X=1,<br><span style="padding-left:20px"> REF_4X=2,<br><span style="padding-left:20px"> REF_RES3=3,<br><span style="padding-left:20px"> REF_RES4=4,<br><span style="padding-left:20px"> REF_FLY2X=5,<br><span style="padding-left:20px"> REF_FLY4X=6,<br><span style="padding-left:20px"> REF_RES7=7}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_caparity_latency</td>
+<td>enum {<br><span style="padding-left:20px">CAPARITY_L0=0,<br><span style="padding-left:20px"> CAPARITY_L4=4,<br><span style="padding-left:20px"> CAPARITY_L5=5,<br><span style="padding-left:20px"> CAPARITY_L6=6,<br><span style="padding-left:20px"> CAPARITY_L8=8,<br><span style="padding-left:20px"> CAPARITY_RES5,<br><span style="padding-left:20px"> CAPARITY_RES6,<br><span style="padding-left:20px"> CAPARITY_RES7}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_rttp</td>
+<td>enum {<br><span style="padding-left:20px">RTTP_DIS=0,<br><span style="padding-left:20px"> RTTP_60=60,<br><span style="padding-left:20px"> RTTP_120=120,<br><span style="padding-left:20px"> RTTP_40=40,<br><span style="padding-left:20px"> RTTP_34=34,<br><span style="padding-left:20px"> RTTP_48=48,<br><span style="padding-left:20px"> RTTP_80=80,<br><span style="padding-left:20px"> RTTP_240=240}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_vrefdqrange</td>
+<td>enum {<br><span style="padding-left:20px">VREF_DQ_RANGE1=0,<br><span style="padding-left:20px"> VREF_DQ_RANGE2=1}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_DutModeConfig</td>
+<td>struct packed {<br><span style="padding-left:20px">         UTYPE_blreg BL_reg;<br><span style="padding-left:20px">          int BL;<br><span style="padding-left:20px">          UTYPE_bt BT;<br><span style="padding-left:20px">          int CL;<br><span style="padding-left:20px">         bit DLL_reset;<br><span style="padding-left:20px">         int write_recovery;<br><span style="padding-left:20px">         bit DLL_enable;<br><span style="padding-left:20px">         UTYPE_odi ODI;<br><span style="padding-left:20px">         UTYPE_alreg AL_reg;<br><span style="padding-left:20px">          int AL;<br><span style="padding-left:20px">          bit write_levelization;<br><span style="padding-left:20px">         UTYPE_rttn rtt_nominal;<br><span style="padding-left:20px">         bit tDQS;<br><span style="padding-left:20px">         bit qOff;<br><span style="padding-left:20px">         int CWL;<br><span style="padding-left:20px">          UTYPE_lpasr LPASR;<br><span style="padding-left:20px">         UTYPE_rttw rtt_write;<br><span style="padding-left:20px">         bit write_crc_enable;<br><span style="padding-left:20px">         bit trr_enable;<br><span style="padding-left:20px">         int trr_ba;<br><span style="padding-left:20px">         int trr_bg;<br><span style="padding-left:20px">         UTYPE_mprpage MPR_page;<br><span style="padding-left:20px">         bit MPR_enable;<br><span style="padding-left:20px">         bit gear_down;<br><span style="padding-left:20px">         bit perdram_addr;<br><span style="padding-left:20px">         bit temp_sense_enable;<br><span style="padding-left:20px">         UTYPE_refmode refresh_mode;<br><span style="padding-left:20px">         UTYPE_delay_write_crc_dm delay_write_crc_dm;<br><span style="padding-left:20px">         UTYPE_mpr MPR_mode;<br><span style="padding-left:20px">         bit DCC;<br><span style="padding-left:20px">         bit MPS;<br><span style="padding-left:20px">         bit TCR_range;<br><span style="padding-left:20px">         bit TCR_mode;<br><span style="padding-left:20px">         bit vref_monitor;<br><span style="padding-left:20px">         int CAL;<br><span style="padding-left:20px">          bit fast_self_refresh;<br><span style="padding-left:20px">         bit preamble_training;<br><span style="padding-left:20px">         int rd_preamble_clocks;<br><span style="padding-left:20px">         int wr_preamble_clocks;<br><span style="padding-left:20px">         bit ppr_enable;<br><span style="padding-left:20px">         UTYPE_caparity_latency CA_parity_latency;<br><span style="padding-left:20px">         bit crc_error;<br><span style="padding-left:20px">         bit CA_parity_error;<br><span style="padding-left:20px">         bit odt_buffer_disable;<br><span style="padding-left:20px">         UTYPE_rttp rtt_park;<br><span style="padding-left:20px">         bit sticky_parity_error;<br><span style="padding-left:20px">         bit dm_enable;<br><span style="padding-left:20px">         bit latched_dm_enable;<br><span style="padding-left:20px">         bit write_dbi;<br><span style="padding-left:20px">         bit latched_write_dbi;<br><span style="padding-left:20px">         bit read_dbi;<br><span style="padding-left:20px">         bit latched_read_dbi;<br><span style="padding-left:20px">         bit dll_frozen;<br><span style="padding-left:20px">         int vref_training_offset;<br><span style="padding-left:20px">         bit vref_training_range;<br><span style="padding-left:20px">         bit vref_training;<br><span style="padding-left:20px">         int tCCD_L;<br><span style="padding-left:20px">                  int RL,<br><span style="padding-left:20px"> WL_calculated;<br><span style="padding-left:20px">         }</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_density</td>
+<td>enum {<br><span style="padding-left:20px">_2G=2,<br><span style="padding-left:20px"> _4G=4,<br><span style="padding-left:20px"> _8G=8,<br><span style="padding-left:20px"> _16G=16}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_archtype</td>
+<td>enum {<br><span style="padding-left:20px">DDR4,<br><span style="padding-left:20px"> PRE_DDR5}</td>
+<td></td>
+</tr>
+<tr>
+<td>UTYPE_dutconfig</td>
+<td>struct packed{<br><span style="padding-left:20px">         UTYPE_archtype arch_type;<br><span style="padding-left:20px">         UTYPE_density density;<br><span style="padding-left:20px">         int by_mode;<br><span style="padding-left:20px">         int banks_per_group;<br><span style="padding-left:20px">         int bank_mask;<br><span style="padding-left:20px">         int bank_groups;<br><span style="padding-left:20px">         int bank_group_mask;<br><span style="padding-left:20px">         int ranks;<br><span style="padding-left:20px">         int banks_per_rank;<br><span style="padding-left:20px">         int rank_mask;<br><span style="padding-left:20px">         int row_addr_bits;<br><span style="padding-left:20px">         int row_cmd_bits;<br><span style="padding-left:20px">         int row_bits;<br><span style="padding-left:20px">          int row_mask;<br><span style="padding-left:20px">          int row_addr_mask;<br><span style="padding-left:20px">          int col_mask;<br><span style="padding-left:20px">         logic[MAX_DQ_BITS-1:0] dq_mask;<br><span style="padding-left:20px">         int num_dqs;<br><span style="padding-left:20px">         logic[MAX_DQS_BITS-1:0] dqs_mask;<br><span style="padding-left:20px">         int num_dqss;<br><span style="padding-left:20px">         logic[MAX_DM_BITS-1:0] dm_mask;<br><span style="padding-left:20px">         int num_dms;<br><span style="padding-left:20px">                  int min_CL,<br><span style="padding-left:20px"> max_CL;<br><span style="padding-left:20px">         int max_CL_dbi_enabled,<br><span style="padding-left:20px"> max_CL_dbi_disabled,<br><span style="padding-left:20px"> min_CL_dbi_enabled,<br><span style="padding-left:20px"> min_CL_dbi_disabled;<br><span style="padding-left:20px">         int min_CWL,<br><span style="padding-left:20px"> max_CWL;<br><span style="padding-left:20px">         int min_CL_dll_off,<br><span style="padding-left:20px"> max_CL_dll_off;<br><span style="padding-left:20px">         int min_CAL,<br><span style="padding-left:20px"> max_CAL;<br><span style="padding-left:20px">                  bit CAL_feature;<br><span style="padding-left:20px">         bit tDQS_feature;<br><span style="padding-left:20px">         bit LPASR_feature;<br><span style="padding-left:20px">         bit gear_down_feature;<br><span style="padding-left:20px">         bit trr_feature;<br><span style="padding-left:20px">         bit ppr_feature;<br><span style="padding-left:20px">         bit write_crc_feature;<br><span style="padding-left:20px">         bit write_dbi_feature;<br><span style="padding-left:20px">         bit read_dbi_feature;<br><span style="padding-left:20px">         bit dm_enable_feature;<br><span style="padding-left:20px">         bit rd_preamble_clocks_feature;<br><span style="padding-left:20px">         bit wr_preamble_clocks_feature;<br><span style="padding-left:20px">         bit preamble_training_feature;<br><span style="padding-left:20px">         bit TCR_feature;<br><span style="padding-left:20px">         bit MPS_feature;<br><span style="padding-left:20px">         bit perdram_addr_feature;<br><span style="padding-left:20px">         bit refresh_mode_feature;<br><span style="padding-left:20px">         bit parity_error_feature;<br><span style="padding-left:20px">         bit CA_parity_latency_feature;<br><span style="padding-left:20px">         int max_CA_parity_latency;<br><span style="padding-left:20px">         bit crc_error_feature;<br><span style="padding-left:20px">         bit parity_alert_feature;<br><span style="padding-left:20px">         bit sticky_parity_error_feature;<br><span style="padding-left:20px">         bit temp_sense_feature;<br><span style="padding-left:20px">         bit rtt_park_feature;<br><span style="padding-left:20px">         bit dll_frozen_feature;<br><span style="padding-left:20px">         bit cl_17_19_21_feature;<br><span style="padding-left:20px">         bit cl_a12_feature;<br><span style="padding-left:20px">         bit extended_wr;<br><span style="padding-left:20px">         bit ignore_dbi_with_mpr;<br><span style="padding-left:20px">     }</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><ul>
+<li>Clone <font id="function_arguments">(DDR4_cmd)</font> <font id="function_return">return (void)</font></li>
+</ul><ul>
+<li>Populate <font id="function_arguments">(UTYPE_cmdtype cmd_,<br><span style="padding-left:20px"> int rank_,<br><span style="padding-left:20px"> int bank_group_,<br><span style="padding-left:20px"> int bank_,<br><span style="padding-left:20px"> int addr_,<br><span style="padding-left:20px"> int)</font> <font id="function_return">return (void)</font></li>
+</ul><ul>
+<li>dut_config_populate <font id="function_arguments">(inout UTYPE_dutconfig dut_config)</font> <font id="function_return">return (void)</font></li>
+</ul><ul>
+<li>BuildFrame <font id="function_arguments">(input logic[MAX_DQ_BITS*MAX_BURST_LEN-1:0] dq_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font></li>
+</ul><ul>
+<li>BitOrder <font id="function_arguments">(logic[MAX_DQ_BITS<em>MAX_BURST_LEN-1:0] dq_in,<br><span style="padding-left:20px"> )</font> <font id="function_return">return (logic[(MAX_DQ_BITS+MAX_DBI_BITS)</em>MAX_BURST_LEN-1:0])</font></li>
+</ul><ul>
+<li>AddCRC <font id="function_arguments">(logic[MAX_DQ_BITS<em>MAX_BURST_L)</font> <font id="function_return">return (logic[MAX_DQ_BITS</em>(MAX_BURST_LEN+MAX_CRC_TRANSFERS)-1:0])</font></li>
+</ul><ul>
+<li>GetCRC <font id="function_arguments">(logic[MAX_DQ_BITS*(MAX_BURST_LEN+MAX_CRC_TRANSFERS)-1:0])</font> <font id="function_return">return (logic[MAX_DQ_BITS-1:0])</font></li>
+</ul><ul>
+<li>Calculate <font id="function_arguments">(logic[MAX_DQ_BITS*MAX_BURST_LEN-1:0] dq_in)</font> <font id="function_return">return (logic[MAX_DQ_BITS-1:0])</font></li>
+</ul><ul>
+<li>CalculatePerEquation <font id="function_arguments">(int eq_number,<br><span style="padding-left:20px"> logic[(MAX_DQ_BITS+MAX_DBI_BITS)*MAX_BURST_LEN-1:0])</font> <font id="function_return">return (logic)</font></li>
+</ul><ul>
+<li>Verify <font id="function_arguments">()</font> <font id="function_return">return (void)</font></li>
+</ul>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>
