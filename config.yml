@@ -10,9 +10,21 @@ SURF:
     vhdl_symbol: ""
     verilog_symbol: ""
 
+OscillatorIMP:
+    url: https://github.com/oscimp/fpga_ip.git
+    folder: fpga_ip/
+    vhdl_symbol: ""
+    verilog_symbol: ""
+
 SERV:
     url: https://github.com/olofk/serv
     folder: serv/rtl/
+    vhdl_symbol: ""
+    verilog_symbol: ""
+    
+analig-devices-hdl:
+    url: https://github.com/analogdevicesinc/hdl.git
+    folder: hdl/library/
     vhdl_symbol: ""
     verilog_symbol: ""
 
@@ -30,7 +42,7 @@ NEORV32:
 
 Verilog-ethernet:
     url: https://github.com/alexforencich/verilog-ethernet.git
-    folder: verilog-ethernet/
+    folder: verilog-ethernet/rtl
     vhdl_symbol: ""
     verilog_symbol: ""
 
