@@ -1,0 +1,2055 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=dot11_tx><h1 id="entity-dot11_tx">Entity: dot11_tx</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 775 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="155,0 170,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="450" height="150" fill="black" x="170" y="15"></rect><rect id="SvgjsRect1007" width="446" height="145" fill="#fdfd96" x="172" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="150" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="185" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   clk </tspan></text><line id="SvgjsLine1012" x1="155" y1="30" x2="170" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="150" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="185" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   phy_tx_arest </tspan></text><line id="SvgjsLine1017" x1="155" y1="50" x2="170" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="150" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="185" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   phy_tx_start </tspan></text><line id="SvgjsLine1022" x1="155" y1="70" x2="170" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="150" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire [6:0] </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="185" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   init_pilot_scram_state </tspan></text><line id="SvgjsLine1027" x1="155" y1="90" x2="170" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="150" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire [6:0] </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="185" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   init_data_scram_state </tspan></text><line id="SvgjsLine1032" x1="155" y1="110" x2="170" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="150" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire [63:0] </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="185" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   bram_din </tspan></text><line id="SvgjsLine1037" x1="155" y1="130" x2="170" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="150" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="150" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="185" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="185" svgjs:data="{&quot;newLined&quot;:true}">   result_iq_ready </tspan></text><line id="SvgjsLine1042" x1="155" y1="150" x2="170" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="640" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="605" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   phy_tx_done </tspan></text><line id="SvgjsLine1047" x1="620" y1="30" x2="635" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="640" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="605" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   phy_tx_started </tspan></text><line id="SvgjsLine1052" x1="620" y1="50" x2="635" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="640" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   [9:0] </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="605" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   bram_addr </tspan></text><line id="SvgjsLine1057" x1="620" y1="70" x2="635" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="640" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="605" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   result_iq_valid </tspan></text><line id="SvgjsLine1062" x1="620" y1="90" x2="635" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="640" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   wire [15:0] </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="605" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   result_i </tspan></text><line id="SvgjsLine1067" x1="620" y1="110" x2="635" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="640" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="640" svgjs:data="{&quot;newLined&quot;:true}">   wire [15:0] </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="605" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="605" svgjs:data="{&quot;newLined&quot;:true}">   result_q </tspan></text><line id="SvgjsLine1072" x1="620" y1="130" x2="635" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clk</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>phy_tx_arest</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>phy_tx_start</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>phy_tx_done</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>phy_tx_started</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>init_pilot_scram_state</td>
+<td>input</td>
+<td>wire [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>init_data_scram_state</td>
+<td>input</td>
+<td>wire [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bram_din</td>
+<td>input</td>
+<td>wire [63:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bram_addr</td>
+<td>output</td>
+<td>[9:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>result_iq_ready</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>result_iq_valid</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>result_i</td>
+<td>output</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>result_q</td>
+<td>output</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FSM3_reset</td>
+<td>reg</td>
+<td>Reset after transmiting a whole packet</td>
+</tr>
+<tr>
+<td>reset_int</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>state1</td>
+<td>reg [1:0]</td>
+<td>Data collection states</td>
+</tr>
+<tr>
+<td>state11</td>
+<td>reg [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>state2</td>
+<td>reg [1:0]</td>
+<td>IQ sample generation states</td>
+</tr>
+<tr>
+<td>state3</td>
+<td>reg [2:0]</td>
+<td>IQ sample forwarding states</td>
+</tr>
+<tr>
+<td>PKT_TYPE</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>plcp_bit_cnt</td>
+<td>reg [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>service_bit_cnt</td>
+<td>reg [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>psdu_bit_cnt</td>
+<td>reg [14:0]</td>
+<td>Maximum number of PSDU bits = 4095*8 = 32760</td>
+</tr>
+<tr>
+<td>ofdm_cnt_FSM1</td>
+<td>reg [10:0]</td>
+<td>Maximum number of OFDM symbols = 1 + ceil((16+4095*8+6)/24) = 1367</td>
+</tr>
+<tr>
+<td>l_stf</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>l_ltf</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>preamble_addr</td>
+<td>reg  [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ht_stf</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ht_ltf</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>crc_en</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>crc_data</td>
+<td>wire [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fcs</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fcs_idx</td>
+<td>reg  [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bit_scram</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>data_scram_state</td>
+<td>reg [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>enc_reset</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>enc_en</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>N_BPSC</td>
+<td>reg [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>N_DBPS</td>
+<td>reg [8:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>RATE</td>
+<td>reg [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>PSDU_BIT_LEN</td>
+<td>reg [14:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>S_GI</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>dbps_cnt_FSM1</td>
+<td>reg [8:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_idata</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_odata</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_ivalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_ovalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_iready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_oready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_enc_fifo_space</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ofdm_cnt_FSM2</td>
+<td>reg  [10:0]</td>
+<td>Puncturing and interleaving index look up table</td>
+</tr>
+<tr>
+<td>dbps_cnt_FSM2</td>
+<td>reg  [8:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>punc_info</td>
+<td>wire [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>interlv_addrs</td>
+<td>wire [17:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>enc_pos</td>
+<td>reg</td>
+<td>This is a RAM module for holding convolutionally encoded, punctured and interleaved bits. Bit puncturing is implicitly carried out, such that punc_interlv_lut provides write address along with puncturing ON/OFF signal</td>
+</tr>
+<tr>
+<td>bits_ram_en</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>punc_bit</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_ram_waddr</td>
+<td>wire [8:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mod_addr</td>
+<td>reg  [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>bits_to_mod</td>
+<td>wire [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>mod_IQ</td>
+<td>wire [31:0]</td>
+<td>BPSK, QPSK, 16-QAM and 64-QAM modulation</td>
+</tr>
+<tr>
+<td>pilot_iq</td>
+<td>reg  [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pilot_scram_state</td>
+<td>reg  [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ht_polarity</td>
+<td>reg  [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pilot_gain</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>DC_SB_IQ</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_iq</td>
+<td>reg [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>iq_cnt</td>
+<td>reg [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_ce</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_o_sync</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_o_result</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>dbps_size</td>
+<td>wire [8:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_status</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_ce_reg</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_o_result_reg</td>
+<td>reg [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_o_iq_cnt</td>
+<td>reg [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ifft_o_sync_cnt</td>
+<td>reg [10:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>nof_iq2send</td>
+<td>reg [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_idata</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_odata</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_ivalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_ovalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_iready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_oready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_fifo_space</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_idata</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_odata</td>
+<td>wire [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_ivalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_ovalid</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_iready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_oready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_fifo_space</td>
+<td>wire [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_turn</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>pkt_iq_sent</td>
+<td>reg [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_iq_sent</td>
+<td>reg [13:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1_WAIT_PKT</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>S1_L_SIG</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>S1_HT_SIG</td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>S1_DATA</td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_SERVICE</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_PSDU_DATA</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_PSDU_CRC</td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_TAIL</td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_PAD</td>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>S11_RESET</td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>S2_PUNC_INTERLV</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>S2_PILOT_DC_SB</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>S2_MOD_IFFT_INPUT</td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>S2_RESET</td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_WAIT_PKT</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_L_STF</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_L_LTF</td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_L_SIG</td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_HT_SIG</td>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_HT_STF</td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_HT_LTF</td>
+<td></td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>S3_DATA</td>
+<td></td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>LEGACY</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>HT</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>NO_OUTPUT_YET</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>OUTPUT_STARTED</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>CP_FIFO</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>PKT_FIFO</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @* )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @* )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge clk) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
+<li>l_stf_rom: l_stf_rom</li>
+</ul><ul>
+<li>l_ltf_rom: l_ltf_rom</li>
+</ul><ul>
+<li>ht_stf_rom: ht_stf_rom</li>
+</ul><ul>
+<li>ht_ltf_rom: ht_ltf_rom</li>
+</ul><ul>
+<li>fcs_inst: crc32_tx</li>
+</ul><ul>
+<li>convenc: convenc</li>
+</ul><ul>
+<li>bits_enc_fifo: axi_fifo_bram</li>
+</ul><ul>
+<li>punc_interlv_lut: punc_interlv_lut</li>
+</ul><ul>
+<li>bits_ram: ram_simo</li>
+</ul><ul>
+<li>modulation: modulation</li>
+</ul><ul>
+<li>ifft64: ifftmain</li>
+</ul><ul>
+<li>CP_fifo: axi_fifo_bram</li>
+</ul><ul>
+<li>pkt_fifo: axi_fifo_bram</li>
+</ul><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="464pt" height="364pt"
+ viewBox="0.00 0.00 464.28 364.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 360)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-360 460.277,-360 460.277,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_state1</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 359,-8 359,-8 365,-8 371,-14 371,-20 371,-20 371,-336 371,-336 371,-342 365,-348 359,-348 359,-348 20,-348 20,-348 14,-348 8,-342 8,-336 8,-336 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="173.159" y="-329.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">state1</text>
+</g>
+<!-- state1 -->
+<!-- S1_WAIT_PKT -->
+<g id="node2" class="node state regular">
+<title>S1_WAIT_PKT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="212.5,-310 109.5,-310 109.5,-274 212.5,-274 212.5,-310"/>
+<text text-anchor="start" x="120.8266" y="-288.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S1_WAIT_PKT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M121.8333,-275C121.8333,-275 200.1667,-275 200.1667,-275 205.8333,-275 211.5,-280.6667 211.5,-286.3333 211.5,-286.3333 211.5,-297.6667 211.5,-297.6667 211.5,-303.3333 205.8333,-309 200.1667,-309 200.1667,-309 121.8333,-309 121.8333,-309 116.1667,-309 110.5,-303.3333 110.5,-297.6667 110.5,-297.6667 110.5,-286.3333 110.5,-286.3333 110.5,-280.6667 116.1667,-275 121.8333,-275"/>
+</g>
+<!-- S1_L_SIG -->
+<g id="node3" class="node state regular">
+<title>S1_L_SIG</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="199.5,-228 122.5,-228 122.5,-192 199.5,-192 199.5,-228"/>
+<text text-anchor="start" x="133.8208" y="-206.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S1_L_SIG</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M134.8333,-193C134.8333,-193 187.1667,-193 187.1667,-193 192.8333,-193 198.5,-198.6667 198.5,-204.3333 198.5,-204.3333 198.5,-215.6667 198.5,-215.6667 198.5,-221.3333 192.8333,-227 187.1667,-227 187.1667,-227 134.8333,-227 134.8333,-227 129.1667,-227 123.5,-221.3333 123.5,-215.6667 123.5,-215.6667 123.5,-204.3333 123.5,-204.3333 123.5,-198.6667 129.1667,-193 134.8333,-193"/>
+</g>
+<!-- S1_WAIT_PKT&#45;&gt;S1_L_SIG -->
+<g id="edge1" class="edge transition">
+<title>S1_WAIT_PKT&#45;&gt;S1_L_SIG</title>
+<path fill="none" stroke="#000000" d="M161,-273.8015C161,-263.3976 161,-250.1215 161,-238.3768"/>
+<polygon fill="#000000" stroke="#000000" points="164.5001,-238.1476 161,-228.1476 157.5001,-238.1476 164.5001,-238.1476"/>
+<text text-anchor="start" x="161" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">phy_tx_start &#160;&#160;</text>
+</g>
+<!-- S1_HT_SIG -->
+<g id="node4" class="node state regular">
+<title>S1_HT_SIG</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="102,-134 16,-134 16,-98 102,-98 102,-134"/>
+<text text-anchor="start" x="26.6594" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S1_HT_SIG</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.3333,-99C28.3333,-99 89.6667,-99 89.6667,-99 95.3333,-99 101,-104.6667 101,-110.3333 101,-110.3333 101,-121.6667 101,-121.6667 101,-127.3333 95.3333,-133 89.6667,-133 89.6667,-133 28.3333,-133 28.3333,-133 22.6667,-133 17,-127.3333 17,-121.6667 17,-121.6667 17,-110.3333 17,-110.3333 17,-104.6667 22.6667,-99 28.3333,-99"/>
+</g>
+<!-- S1_L_SIG&#45;&gt;S1_HT_SIG -->
+<g id="edge2" class="edge transition">
+<title>S1_L_SIG&#45;&gt;S1_HT_SIG</title>
+<path fill="none" stroke="#000000" d="M122.3201,-202.1891C95.5014,-195.8975 63.1986,-186.2641 55.057,-175 48.7426,-166.2639 48.2713,-154.7687 49.9122,-144.2473"/>
+<polygon fill="#000000" stroke="#000000" points="53.3946,-144.7066 52.119,-134.1888 46.5572,-143.2065 53.3946,-144.7066"/>
+<text text-anchor="start" x="55" y="-166" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">RATE == 5&#39;b01011 &amp;&amp; PKT_TYPE == HT &#160;&#160;</text>
+<text text-anchor="start" x="55" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">plcp_bit_cnt == 23 &#160;&#160;</text>
+</g>
+<!-- S1_DATA -->
+<g id="node5" class="node state regular">
+<title>S1_DATA</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="139.5,-52 64.5,-52 64.5,-16 139.5,-16 139.5,-52"/>
+<text text-anchor="start" x="75.8282" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S1_DATA</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M76.8333,-17C76.8333,-17 127.1667,-17 127.1667,-17 132.8333,-17 138.5,-22.6667 138.5,-28.3333 138.5,-28.3333 138.5,-39.6667 138.5,-39.6667 138.5,-45.3333 132.8333,-51 127.1667,-51 127.1667,-51 76.8333,-51 76.8333,-51 71.1667,-51 65.5,-45.3333 65.5,-39.6667 65.5,-39.6667 65.5,-28.3333 65.5,-28.3333 65.5,-22.6667 71.1667,-17 76.8333,-17"/>
+</g>
+<!-- S1_L_SIG&#45;&gt;S1_DATA -->
+<g id="edge3" class="edge transition">
+<title>S1_L_SIG&#45;&gt;S1_DATA</title>
+<path fill="none" stroke="#000000" d="M199.5562,-199.5435C220.7152,-192.9419 243.8769,-183.9875 250,-175 256.0057,-166.1847 254.6485,-160.6005 250,-151 229.1006,-107.8369 183.6948,-75.7749 148.6514,-56.2348"/>
+<polygon fill="#000000" stroke="#000000" points="149.9903,-52.9797 139.5299,-51.2974 146.6581,-59.1357 149.9903,-52.9797"/>
+<text text-anchor="start" x="239" y="-119" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (RATE == 5&#39;b01011 &amp;&amp; PKT_TYPE == HT) &#160;&#160;</text>
+<text text-anchor="start" x="239" y="-107" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">plcp_bit_cnt == 23 &#160;&#160;</text>
+</g>
+<!-- S1_HT_SIG&#45;&gt;S1_DATA -->
+<g id="edge4" class="edge transition">
+<title>S1_HT_SIG&#45;&gt;S1_DATA</title>
+<path fill="none" stroke="#000000" d="M53.0548,-97.7351C51.1592,-88.6578 50.5471,-77.7818 54.959,-69 56.7584,-65.4185 59.117,-62.1107 61.8205,-59.0771"/>
+<polygon fill="#000000" stroke="#000000" points="64.3111,-61.5383 69.1282,-52.1018 59.4779,-56.4747 64.3111,-61.5383"/>
+<text text-anchor="start" x="54" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">plcp_bit_cnt == 47 &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="417pt" height="376pt"
+ viewBox="0.00 0.00 417.00 376.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 372)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-372 413,-372 413,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_state2</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 389,-8 389,-8 395,-8 401,-14 401,-20 401,-20 401,-348 401,-348 401,-354 395,-360 389,-360 389,-360 20,-360 20,-360 14,-360 8,-354 8,-348 8,-348 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="188.159" y="-341.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">state2</text>
+</g>
+<!-- state2 -->
+<!-- S2_PUNC_INTERLV -->
+<g id="node2" class="node state regular">
+<title>S2_PUNC_INTERLV</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="206,-322 72,-322 72,-286 206,-286 206,-322"/>
+<text text-anchor="start" x="82.663" y="-300.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S2_PUNC_INTERLV</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M84.3333,-287C84.3333,-287 193.6667,-287 193.6667,-287 199.3333,-287 205,-292.6667 205,-298.3333 205,-298.3333 205,-309.6667 205,-309.6667 205,-315.3333 199.3333,-321 193.6667,-321 193.6667,-321 84.3333,-321 84.3333,-321 78.6667,-321 73,-315.3333 73,-309.6667 73,-309.6667 73,-298.3333 73,-298.3333 73,-292.6667 78.6667,-287 84.3333,-287"/>
+</g>
+<!-- S2_PILOT_DC_SB -->
+<g id="node3" class="node state regular">
+<title>S2_PILOT_DC_SB</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="143,-216 19,-216 19,-180 143,-180 143,-216"/>
+<text text-anchor="start" x="29.6544" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S2_PILOT_DC_SB</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M31.3333,-181C31.3333,-181 130.6667,-181 130.6667,-181 136.3333,-181 142,-186.6667 142,-192.3333 142,-192.3333 142,-203.6667 142,-203.6667 142,-209.3333 136.3333,-215 130.6667,-215 130.6667,-215 31.3333,-215 31.3333,-215 25.6667,-215 20,-209.3333 20,-203.6667 20,-203.6667 20,-192.3333 20,-192.3333 20,-186.6667 25.6667,-181 31.3333,-181"/>
+</g>
+<!-- S2_PUNC_INTERLV&#45;&gt;S2_PILOT_DC_SB -->
+<g id="edge1" class="edge transition">
+<title>S2_PUNC_INTERLV&#45;&gt;S2_PILOT_DC_SB</title>
+<path fill="none" stroke="#000000" d="M72.4803,-285.7954C65.5174,-281.3615 59.3269,-275.8502 54.755,-269 45.8729,-255.6918 49.696,-248.1792 54.755,-233 55.678,-230.2305 56.9156,-227.5035 58.3523,-224.8689"/>
+<polygon fill="#000000" stroke="#000000" points="61.3726,-226.6431 63.8373,-216.3389 55.4848,-222.8571 61.3726,-226.6431"/>
+<text text-anchor="start" x="54" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dbps_cnt_FSM2 == dbps_size&#45;1 &#160;&#160;</text>
+<text text-anchor="start" x="54" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">enc_pos == 1 || |punc_info == 1 &#160;&#160;</text>
+<text text-anchor="start" x="54" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pkt_fifo_space &gt; 63 &amp;&amp; CP_fifo_space &gt; 15 &amp;&amp; bits_enc_fifo_ovalid == 1 &#160;&#160;</text>
+</g>
+<!-- S2_MOD_IFFT_INPUT -->
+<g id="node4" class="node state regular">
+<title>S2_MOD_IFFT_INPUT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="178.5,-134 33.5,-134 33.5,-98 178.5,-98 178.5,-134"/>
+<text text-anchor="start" x="44.5002" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S2_MOD_IFFT_INPUT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M45.8333,-99C45.8333,-99 166.1667,-99 166.1667,-99 171.8333,-99 177.5,-104.6667 177.5,-110.3333 177.5,-110.3333 177.5,-121.6667 177.5,-121.6667 177.5,-127.3333 171.8333,-133 166.1667,-133 166.1667,-133 45.8333,-133 45.8333,-133 40.1667,-133 34.5,-127.3333 34.5,-121.6667 34.5,-121.6667 34.5,-110.3333 34.5,-110.3333 34.5,-104.6667 40.1667,-99 45.8333,-99"/>
+</g>
+<!-- S2_PILOT_DC_SB&#45;&gt;S2_MOD_IFFT_INPUT -->
+<g id="edge2" class="edge transition">
+<title>S2_PILOT_DC_SB&#45;&gt;S2_MOD_IFFT_INPUT</title>
+<path fill="none" stroke="#000000" d="M86.5483,-179.8015C89.7526,-169.2915 93.8505,-155.8503 97.458,-144.0177"/>
+<polygon fill="#000000" stroke="#000000" points="100.8987,-144.7336 100.4672,-134.1476 94.203,-142.6922 100.8987,-144.7336"/>
+<text text-anchor="middle" x="96.3895" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- S2_RESET -->
+<g id="node5" class="node state regular">
+<title>S2_RESET</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="211.5,-52 128.5,-52 128.5,-16 211.5,-16 211.5,-52"/>
+<text text-anchor="start" x="139.8268" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S2_RESET</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M140.8333,-17C140.8333,-17 199.1667,-17 199.1667,-17 204.8333,-17 210.5,-22.6667 210.5,-28.3333 210.5,-28.3333 210.5,-39.6667 210.5,-39.6667 210.5,-45.3333 204.8333,-51 199.1667,-51 199.1667,-51 140.8333,-51 140.8333,-51 135.1667,-51 129.5,-45.3333 129.5,-39.6667 129.5,-39.6667 129.5,-28.3333 129.5,-28.3333 129.5,-22.6667 135.1667,-17 140.8333,-17"/>
+</g>
+<!-- S2_MOD_IFFT_INPUT&#45;&gt;S2_RESET -->
+<g id="edge3" class="edge transition">
+<title>S2_MOD_IFFT_INPUT&#45;&gt;S2_RESET</title>
+<path fill="none" stroke="#000000" d="M118.6457,-97.9009C124.9459,-89.0641 132.7745,-78.348 140.139,-69 142.4498,-66.0668 144.9125,-63.0377 147.3945,-60.0455"/>
+<polygon fill="#000000" stroke="#000000" points="150.1516,-62.2052 153.9185,-52.3026 144.7984,-57.6947 150.1516,-62.2052"/>
+<text text-anchor="start" x="140" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (iq_cnt &lt; 63) &#160;&#160;</text>
+</g>
+<!-- S2_RESET&#45;&gt;S2_PUNC_INTERLV -->
+<g id="edge4" class="edge transition">
+<title>S2_RESET&#45;&gt;S2_PUNC_INTERLV</title>
+<path fill="none" stroke="#000000" d="M211.725,-50.1473C220.4169,-56.2625 227,-64.3948 227,-75 227,-142.5 227,-142.5 227,-142.5 227,-224.1983 345.8386,-162.4284 387,-233 395.0612,-246.8209 397.4935,-256.9216 387,-269 386.284,-269.8242 288.7522,-283.404 216.2298,-293.4013"/>
+<polygon fill="#000000" stroke="#000000" points="215.604,-289.9544 206.1753,-294.7865 216.5594,-296.8889 215.604,-289.9544"/>
+<text text-anchor="start" x="230" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ofdm_cnt_FSM2 &lt; ofdm_cnt_FSM1 &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div><ul>
+<li>////////////////////////////////////////////////////////////////////////<br />
+DOT11 TX FINITE STATE MACHINE 3<br />
+////////////////////////////////////////////////////////////////////////</li>
+</ul><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="422pt" height="692pt"
+ viewBox="0.00 0.00 422.31 692.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 688)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-688 418.312,-688 418.312,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_state3</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 336,-8 336,-8 342,-8 348,-14 348,-20 348,-20 348,-664 348,-664 348,-670 342,-676 336,-676 336,-676 20,-676 20,-676 14,-676 8,-670 8,-664 8,-664 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="161.659" y="-657.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">state3</text>
+</g>
+<!-- state3 -->
+<!-- S3_WAIT_PKT -->
+<g id="node2" class="node state regular">
+<title>S3_WAIT_PKT</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="126.5,-638 23.5,-638 23.5,-602 126.5,-602 126.5,-638"/>
+<text text-anchor="start" x="34.8266" y="-616.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_WAIT_PKT</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M35.8333,-603C35.8333,-603 114.1667,-603 114.1667,-603 119.8333,-603 125.5,-608.6667 125.5,-614.3333 125.5,-614.3333 125.5,-625.6667 125.5,-625.6667 125.5,-631.3333 119.8333,-637 114.1667,-637 114.1667,-637 35.8333,-637 35.8333,-637 30.1667,-637 24.5,-631.3333 24.5,-625.6667 24.5,-625.6667 24.5,-614.3333 24.5,-614.3333 24.5,-608.6667 30.1667,-603 35.8333,-603"/>
+</g>
+<!-- S3_L_STF -->
+<g id="node3" class="node state regular">
+<title>S3_L_STF</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="114.5,-556 35.5,-556 35.5,-520 114.5,-520 114.5,-556"/>
+<text text-anchor="start" x="46.8248" y="-534.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_L_STF</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M47.8333,-521C47.8333,-521 102.1667,-521 102.1667,-521 107.8333,-521 113.5,-526.6667 113.5,-532.3333 113.5,-532.3333 113.5,-543.6667 113.5,-543.6667 113.5,-549.3333 107.8333,-555 102.1667,-555 102.1667,-555 47.8333,-555 47.8333,-555 42.1667,-555 36.5,-549.3333 36.5,-543.6667 36.5,-543.6667 36.5,-532.3333 36.5,-532.3333 36.5,-526.6667 42.1667,-521 47.8333,-521"/>
+</g>
+<!-- S3_WAIT_PKT&#45;&gt;S3_L_STF -->
+<g id="edge1" class="edge transition">
+<title>S3_WAIT_PKT&#45;&gt;S3_L_STF</title>
+<path fill="none" stroke="#000000" d="M75,-601.8015C75,-591.3976 75,-578.1215 75,-566.3768"/>
+<polygon fill="#000000" stroke="#000000" points="78.5001,-566.1476 75,-556.1476 71.5001,-566.1476 78.5001,-566.1476"/>
+<text text-anchor="start" x="75" y="-576" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">phy_tx_start &#160;&#160;</text>
+</g>
+<!-- S3_L_LTF -->
+<g id="node4" class="node state regular">
+<title>S3_L_LTF</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="114,-474 36,-474 36,-438 114,-438 114,-474"/>
+<text text-anchor="start" x="46.9908" y="-452.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_L_LTF</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M48.3333,-439C48.3333,-439 101.6667,-439 101.6667,-439 107.3333,-439 113,-444.6667 113,-450.3333 113,-450.3333 113,-461.6667 113,-461.6667 113,-467.3333 107.3333,-473 101.6667,-473 101.6667,-473 48.3333,-473 48.3333,-473 42.6667,-473 37,-467.3333 37,-461.6667 37,-461.6667 37,-450.3333 37,-450.3333 37,-444.6667 42.6667,-439 48.3333,-439"/>
+</g>
+<!-- S3_L_STF&#45;&gt;S3_L_LTF -->
+<g id="edge2" class="edge transition">
+<title>S3_L_STF&#45;&gt;S3_L_LTF</title>
+<path fill="none" stroke="#000000" d="M75,-519.8015C75,-509.3976 75,-496.1215 75,-484.3768"/>
+<polygon fill="#000000" stroke="#000000" points="78.5001,-484.1476 75,-474.1476 71.5001,-484.1476 78.5001,-484.1476"/>
+<text text-anchor="start" x="75" y="-494" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (preamble_addr &lt; 159) &#160;&#160;</text>
+</g>
+<!-- S3_L_SIG -->
+<g id="node5" class="node state regular">
+<title>S3_L_SIG</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="113.5,-392 36.5,-392 36.5,-356 113.5,-356 113.5,-392"/>
+<text text-anchor="start" x="47.8208" y="-370.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_L_SIG</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M48.8333,-357C48.8333,-357 101.1667,-357 101.1667,-357 106.8333,-357 112.5,-362.6667 112.5,-368.3333 112.5,-368.3333 112.5,-379.6667 112.5,-379.6667 112.5,-385.3333 106.8333,-391 101.1667,-391 101.1667,-391 48.8333,-391 48.8333,-391 43.1667,-391 37.5,-385.3333 37.5,-379.6667 37.5,-379.6667 37.5,-368.3333 37.5,-368.3333 37.5,-362.6667 43.1667,-357 48.8333,-357"/>
+</g>
+<!-- S3_L_LTF&#45;&gt;S3_L_SIG -->
+<g id="edge3" class="edge transition">
+<title>S3_L_LTF&#45;&gt;S3_L_SIG</title>
+<path fill="none" stroke="#000000" d="M75,-437.8015C75,-427.3976 75,-414.1215 75,-402.3768"/>
+<polygon fill="#000000" stroke="#000000" points="78.5001,-402.1476 75,-392.1476 71.5001,-402.1476 78.5001,-402.1476"/>
+<text text-anchor="start" x="75" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (preamble_addr &lt; 159) &#160;&#160;</text>
+</g>
+<!-- S3_HT_SIG -->
+<g id="node6" class="node state regular">
+<title>S3_HT_SIG</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="169,-298 83,-298 83,-262 169,-262 169,-298"/>
+<text text-anchor="start" x="93.6594" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_HT_SIG</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M95.3333,-263C95.3333,-263 156.6667,-263 156.6667,-263 162.3333,-263 168,-268.6667 168,-274.3333 168,-274.3333 168,-285.6667 168,-285.6667 168,-291.3333 162.3333,-297 156.6667,-297 156.6667,-297 95.3333,-297 95.3333,-297 89.6667,-297 84,-291.3333 84,-285.6667 84,-285.6667 84,-274.3333 84,-274.3333 84,-268.6667 89.6667,-263 95.3333,-263"/>
+</g>
+<!-- S3_L_SIG&#45;&gt;S3_HT_SIG -->
+<g id="edge5" class="edge transition">
+<title>S3_L_SIG&#45;&gt;S3_HT_SIG</title>
+<path fill="none" stroke="#000000" d="M84.8333,-355.8759C92.3121,-342.0915 102.7262,-322.8968 111.2086,-307.2627"/>
+<polygon fill="#000000" stroke="#000000" points="114.5044,-308.5273 116.1969,-298.0685 108.3516,-305.1891 114.5044,-308.5273"/>
+<text text-anchor="start" x="106" y="-330" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (PKT_TYPE == LEGACY) &#160;&#160;</text>
+<text text-anchor="start" x="106" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pkt_iq_sent == 383 &amp;&amp; CP_iq_sent == 16 &#160;&#160;</text>
+</g>
+<!-- S3_DATA -->
+<g id="node9" class="node state regular">
+<title>S3_DATA</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="125.5,-52 50.5,-52 50.5,-16 125.5,-16 125.5,-52"/>
+<text text-anchor="start" x="61.8282" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_DATA</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M62.8333,-17C62.8333,-17 113.1667,-17 113.1667,-17 118.8333,-17 124.5,-22.6667 124.5,-28.3333 124.5,-28.3333 124.5,-39.6667 124.5,-39.6667 124.5,-45.3333 118.8333,-51 113.1667,-51 113.1667,-51 62.8333,-51 62.8333,-51 57.1667,-51 51.5,-45.3333 51.5,-39.6667 51.5,-39.6667 51.5,-28.3333 51.5,-28.3333 51.5,-22.6667 57.1667,-17 62.8333,-17"/>
+</g>
+<!-- S3_L_SIG&#45;&gt;S3_DATA -->
+<g id="edge4" class="edge transition">
+<title>S3_L_SIG&#45;&gt;S3_DATA</title>
+<path fill="none" stroke="#000000" d="M51.7774,-355.8388C44.3436,-347.9579 38,-338.0079 38,-327 38,-327 38,-327 38,-75 38,-69.1766 40.0531,-64.0298 43.3272,-59.5244"/>
+<polygon fill="#000000" stroke="#000000" points="46.0238,-61.767 50.3596,-52.0999 40.9417,-56.9532 46.0238,-61.767"/>
+<text text-anchor="start" x="38" y="-201" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">PKT_TYPE == LEGACY &#160;&#160;</text>
+<text text-anchor="start" x="38" y="-189" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pkt_iq_sent == 383 &amp;&amp; CP_iq_sent == 16 &#160;&#160;</text>
+</g>
+<!-- S3_HT_STF -->
+<g id="node7" class="node state regular">
+<title>S3_HT_STF</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="340,-216 252,-216 252,-180 340,-180 340,-216"/>
+<text text-anchor="start" x="262.6634" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_HT_STF</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M264.3333,-181C264.3333,-181 327.6667,-181 327.6667,-181 333.3333,-181 339,-186.6667 339,-192.3333 339,-192.3333 339,-203.6667 339,-203.6667 339,-209.3333 333.3333,-215 327.6667,-215 327.6667,-215 264.3333,-215 264.3333,-215 258.6667,-215 253,-209.3333 253,-203.6667 253,-203.6667 253,-192.3333 253,-192.3333 253,-186.6667 258.6667,-181 264.3333,-181"/>
+</g>
+<!-- S3_HT_SIG&#45;&gt;S3_HT_STF -->
+<g id="edge6" class="edge transition">
+<title>S3_HT_SIG&#45;&gt;S3_HT_STF</title>
+<path fill="none" stroke="#000000" d="M163.7285,-261.8015C189.0167,-249.6037 222.4898,-233.4579 249.4352,-220.4607"/>
+<polygon fill="#000000" stroke="#000000" points="251.1834,-223.5034 258.6698,-216.0063 248.1422,-217.1985 251.1834,-223.5034"/>
+<text text-anchor="start" x="222" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pkt_iq_sent == 511 &amp;&amp; CP_iq_sent == 48 &#160;&#160;</text>
+</g>
+<!-- S3_HT_LTF -->
+<g id="node8" class="node state regular">
+<title>S3_HT_LTF</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="205.5,-134 118.5,-134 118.5,-98 205.5,-98 205.5,-134"/>
+<text text-anchor="start" x="129.8294" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">S3_HT_LTF</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M130.8333,-99C130.8333,-99 193.1667,-99 193.1667,-99 198.8333,-99 204.5,-104.6667 204.5,-110.3333 204.5,-110.3333 204.5,-121.6667 204.5,-121.6667 204.5,-127.3333 198.8333,-133 193.1667,-133 193.1667,-133 130.8333,-133 130.8333,-133 125.1667,-133 119.5,-127.3333 119.5,-121.6667 119.5,-121.6667 119.5,-110.3333 119.5,-110.3333 119.5,-104.6667 125.1667,-99 130.8333,-99"/>
+</g>
+<!-- S3_HT_STF&#45;&gt;S3_HT_LTF -->
+<g id="edge7" class="edge transition">
+<title>S3_HT_STF&#45;&gt;S3_HT_LTF</title>
+<path fill="none" stroke="#000000" d="M266.2611,-179.8015C246.8307,-167.9113 221.27,-152.2697 200.3205,-139.4499"/>
+<polygon fill="#000000" stroke="#000000" points="202.0124,-136.3819 191.6558,-134.1476 198.3586,-142.3527 202.0124,-136.3819"/>
+<text text-anchor="start" x="237" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (preamble_addr &lt; 79) &#160;&#160;</text>
+</g>
+<!-- S3_HT_LTF&#45;&gt;S3_DATA -->
+<g id="edge8" class="edge transition">
+<title>S3_HT_LTF&#45;&gt;S3_DATA</title>
+<path fill="none" stroke="#000000" d="M145.577,-97.8015C135.5175,-86.6545 122.4824,-72.2103 111.3597,-59.8851"/>
+<polygon fill="#000000" stroke="#000000" points="113.6752,-57.2267 104.3771,-52.1476 108.4784,-61.9164 113.6752,-57.2267"/>
+<text text-anchor="start" x="129" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (preamble_addr &lt; 79) &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

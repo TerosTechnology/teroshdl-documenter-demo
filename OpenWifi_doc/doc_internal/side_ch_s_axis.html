@@ -1,0 +1,1300 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=side_ch_s_axis><h1 id="entity-side_ch_s_axis">Entity: side_ch_s_axis</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1285 270"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="415,0 430,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="460" height="70" fill="black" x="430" y="0"></rect><rect id="SvgjsRect1007" width="456" height="65" fill="#bdecb6" x="432" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="410" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="445" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   C_S_AXIS_TDATA_WIDTH </tspan></text><line id="SvgjsLine1012" x1="415" y1="15" x2="430" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="410" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="445" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   MAX_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1017" x1="415" y1="35" x2="430" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="410" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="445" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   MAX_BIT_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1022" x1="415" y1="55" x2="430" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="460" height="190" fill="black" x="430" y="75"></rect><rect id="SvgjsRect1024" width="456" height="185" fill="#fdfd96" x="432" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="410" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="445" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   s_axis_endless_mode </tspan></text><line id="SvgjsLine1029" x1="415" y1="90" x2="430" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="410" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="445" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1034" x1="415" y1="110" x2="430" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="410" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="445" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   pl_ask_data </tspan></text><line id="SvgjsLine1039" x1="415" y1="130" x2="430" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="410" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="445" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_ACLK </tspan></text><line id="SvgjsLine1044" x1="415" y1="150" x2="430" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="410" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="445" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_ARESETN </tspan></text><line id="SvgjsLine1049" x1="415" y1="170" x2="430" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="410" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire [C_S_AXIS_TDATA_WIDTH-1 : 0] </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="445" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_TDATA </tspan></text><line id="SvgjsLine1054" x1="415" y1="190" x2="430" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="410" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire [(C_S_AXIS_TDATA_WIDTH/8)-1 : 0] </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="445" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_TSTRB </tspan></text><line id="SvgjsLine1059" x1="415" y1="210" x2="430" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="410" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="445" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_TLAST </tspan></text><line id="SvgjsLine1064" x1="415" y1="230" x2="430" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="410" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="445" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="445" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_TVALID </tspan></text><line id="SvgjsLine1069" x1="415" y1="250" x2="430" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="910" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="910" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="875" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="875" svgjs:data="{&quot;newLined&quot;:true}">   s_axis_state </tspan></text><line id="SvgjsLine1074" x1="890" y1="90" x2="905" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="910" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="910" svgjs:data="{&quot;newLined&quot;:true}">   wire [C_S_AXIS_TDATA_WIDTH-1 : 0] </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="875" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="875" svgjs:data="{&quot;newLined&quot;:true}">   data_to_pl </tspan></text><line id="SvgjsLine1079" x1="890" y1="110" x2="905" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="910" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="910" svgjs:data="{&quot;newLined&quot;:true}">   wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0] </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="875" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="875" svgjs:data="{&quot;newLined&quot;:true}">   s_axis_data_count </tspan></text><line id="SvgjsLine1084" x1="890" y1="130" x2="905" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="910" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="910" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="875" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="875" svgjs:data="{&quot;newLined&quot;:true}">   emptyn_to_pl </tspan></text><line id="SvgjsLine1089" x1="890" y1="150" x2="905" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="910" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="910" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="875" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="875" svgjs:data="{&quot;newLined&quot;:true}">   S_AXIS_TREADY </tspan></text><line id="SvgjsLine1094" x1="890" y1="170" x2="905" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>based on Xilinx module template Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_S_AXIS_TDATA_WIDTH</td>
+<td>integer</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_NUM_DMA_SYMBOL</td>
+<td>integer</td>
+<td>8192</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX_BIT_NUM_DMA_SYMBOL</td>
+<td>integer</td>
+<td>14</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s_axis_endless_mode</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_NUM_DMA_SYMBOL</td>
+<td>input</td>
+<td>wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>s_axis_state</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>data_to_pl</td>
+<td>output</td>
+<td>wire [C_S_AXIS_TDATA_WIDTH-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>pl_ask_data</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>s_axis_data_count</td>
+<td>output</td>
+<td>wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>emptyn_to_pl</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_ACLK</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_ARESETN</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_TREADY</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_TDATA</td>
+<td>input</td>
+<td>wire [C_S_AXIS_TDATA_WIDTH-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_TSTRB</td>
+<td>input</td>
+<td>wire [(C_S_AXIS_TDATA_WIDTH/8)-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_TLAST</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>S_AXIS_TVALID</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mst_exec_state</td>
+<td>reg</td>
+<td>In this state FIFO is written with the</td>
+</tr>
+<tr>
+<td>axis_tready</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>fifo_wren</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>write_pointer</td>
+<td>reg  [bit_num-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>writes_done</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>EMPTY</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>FULL</td>
+<td>wire</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit_num</td>
+<td>integer</td>
+<td>clogb2(MAX_NUM_DMA_SYMBOL)</td>
+<td></td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>[1:0]</td>
+<td>1'b0</td>
+<td>This is the initial/idle state</td>
+</tr>
+<tr>
+<td>WRITE_FIFO</td>
+<td>[1:0]</td>
+<td>1'b1</td>
+<td>This is the initial/idle state</td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><ul>
+<li>clogb2 <font id="function_arguments">(input integer bit_depth)</font> <font id="function_return">return (integer)</font></li>
+</ul><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge S_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge S_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
+<li>fifo64_1clk_dep512_i: fifo64_1clk_dep512</li>
+</ul><h2 id="state-machines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="252pt" height="188pt"
+ viewBox="0.00 0.00 252.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-184 248,-184 248,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_mst_exec_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 224,-8 224,-8 230,-8 236,-14 236,-20 236,-20 236,-160 236,-160 236,-166 230,-172 224,-172 224,-172 20,-172 20,-172 14,-172 8,-166 8,-160 8,-160 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="79.988" y="-153.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">mst_exec_state</text>
+</g>
+<!-- mst_exec_state -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="75,-134 19,-134 19,-98 75,-98 75,-134"/>
+<text text-anchor="start" x="33.6644" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M31.3333,-99C31.3333,-99 62.6667,-99 62.6667,-99 68.3333,-99 74,-104.6667 74,-110.3333 74,-110.3333 74,-121.6667 74,-121.6667 74,-127.3333 68.3333,-133 62.6667,-133 62.6667,-133 31.3333,-133 31.3333,-133 25.6667,-133 20,-127.3333 20,-121.6667 20,-121.6667 20,-110.3333 20,-110.3333 20,-104.6667 25.6667,-99 31.3333,-99"/>
+</g>
+<!-- IDLE&#45;&gt;IDLE -->
+<g id="edge2" class="edge transition">
+<title>IDLE&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M75.0183,-120.8247C86.888,-121.1883 97,-119.5801 97,-116 97,-113.5387 92.2205,-112.0094 85.3762,-111.4121"/>
+<polygon fill="#000000" stroke="#000000" points="85.0957,-107.9049 75.0183,-111.1753 84.9356,-114.903 85.0957,-107.9049"/>
+<text text-anchor="start" x="97" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (S_AXIS_TVALID) &#160;&#160;</text>
+</g>
+<!-- WRITE_FIFO -->
+<g id="node3" class="node state regular">
+<title>WRITE_FIFO</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="118,-52 24,-52 24,-16 118,-16 118,-52"/>
+<text text-anchor="start" x="34.67" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">WRITE_FIFO</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M36.3333,-17C36.3333,-17 105.6667,-17 105.6667,-17 111.3333,-17 117,-22.6667 117,-28.3333 117,-28.3333 117,-39.6667 117,-39.6667 117,-45.3333 111.3333,-51 105.6667,-51 105.6667,-51 36.3333,-51 36.3333,-51 30.6667,-51 25,-45.3333 25,-39.6667 25,-39.6667 25,-28.3333 25,-28.3333 25,-22.6667 30.6667,-17 36.3333,-17"/>
+</g>
+<!-- IDLE&#45;&gt;WRITE_FIFO -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;WRITE_FIFO</title>
+<path fill="none" stroke="#000000" d="M49.0106,-97.892C50.2697,-89.053 52.2122,-78.3377 55.086,-69 55.8419,-66.5438 56.7304,-64.0348 57.6945,-61.5444"/>
+<polygon fill="#000000" stroke="#000000" points="60.9826,-62.7554 61.6669,-52.1827 54.5387,-60.021 60.9826,-62.7554"/>
+<text text-anchor="start" x="55" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">S_AXIS_TVALID &#160;&#160;</text>
+</g>
+<!-- WRITE_FIFO&#45;&gt;IDLE -->
+<g id="edge3" class="edge transition">
+<title>WRITE_FIFO&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M118.0201,-47.9885C135.834,-55.8523 149.7336,-66.9368 140,-81 133.3719,-90.5764 107.8654,-99.7872 85.238,-106.3542"/>
+<polygon fill="#000000" stroke="#000000" points="84.1414,-103.0265 75.4522,-109.0886 86.0252,-109.7682 84.1414,-103.0265"/>
+<text text-anchor="start" x="143" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">writes_done &#160;&#160;</text>
+</g>
+<!-- WRITE_FIFO&#45;&gt;WRITE_FIFO -->
+<g id="edge4" class="edge transition">
+<title>WRITE_FIFO&#45;&gt;WRITE_FIFO</title>
+<path fill="none" stroke="#000000" d="M118.0851,-38.8322C130.5552,-38.556 140,-36.9453 140,-34 140,-31.9291 135.3306,-30.518 128.2234,-29.7666"/>
+<polygon fill="#000000" stroke="#000000" points="128.2741,-26.2636 118.0851,-29.1678 127.8613,-33.2514 128.2741,-26.2636"/>
+<text text-anchor="start" x="140" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (writes_done) &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

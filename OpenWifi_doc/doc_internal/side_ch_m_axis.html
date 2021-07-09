@@ -1,0 +1,1360 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=side_ch_m_axis><h1 id="entity-side_ch_m_axis">Entity: side_ch_m_axis</h1></a><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1285 250"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="395,0 410,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="460" height="70" fill="black" x="410" y="0"></rect><rect id="SvgjsRect1007" width="456" height="65" fill="#bdecb6" x="412" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="390" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="425" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   MAX_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1012" x1="395" y1="15" x2="410" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="390" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="425" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   MAX_BIT_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1017" x1="395" y1="35" x2="410" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="390" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   integer </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="425" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   C_M_AXIS_TDATA_WIDTH </tspan></text><line id="SvgjsLine1022" x1="395" y1="55" x2="410" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="460" height="170" fill="black" x="410" y="75"></rect><rect id="SvgjsRect1024" width="456" height="165" fill="#fdfd96" x="412" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="390" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="425" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   m_axis_endless_mode </tspan></text><line id="SvgjsLine1029" x1="395" y1="90" x2="410" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="390" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="425" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_NUM_DMA_SYMBOL </tspan></text><line id="SvgjsLine1034" x1="395" y1="110" x2="410" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="390" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="425" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   m_axis_start_1trans </tspan></text><line id="SvgjsLine1039" x1="395" y1="130" x2="410" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="390" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire [C_M_AXIS_TDATA_WIDTH-1 : 0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="425" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   data_to_ps </tspan></text><line id="SvgjsLine1044" x1="395" y1="150" x2="410" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="390" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="425" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   data_to_ps_valid </tspan></text><line id="SvgjsLine1049" x1="395" y1="170" x2="410" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="390" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="425" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_ACLK </tspan></text><line id="SvgjsLine1054" x1="395" y1="190" x2="410" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="390" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="425" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_ARESETN </tspan></text><line id="SvgjsLine1059" x1="395" y1="210" x2="410" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="390" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="390" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="425" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_TREADY </tspan></text><line id="SvgjsLine1064" x1="395" y1="230" x2="410" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="890" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0] </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="855" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   m_axis_data_count </tspan></text><line id="SvgjsLine1069" x1="870" y1="90" x2="885" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="890" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="855" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   fulln_to_pl </tspan></text><line id="SvgjsLine1074" x1="870" y1="110" x2="885" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="890" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="855" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_TVALID </tspan></text><line id="SvgjsLine1079" x1="870" y1="130" x2="885" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="890" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire [C_M_AXIS_TDATA_WIDTH-1 : 0] </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="855" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_TDATA </tspan></text><line id="SvgjsLine1084" x1="870" y1="150" x2="885" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="890" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="855" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_TSTRB </tspan></text><line id="SvgjsLine1089" x1="870" y1="170" x2="885" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="890" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="890" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="855" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="855" svgjs:data="{&quot;newLined&quot;:true}">   M_AXIS_TLAST </tspan></text><line id="SvgjsLine1094" x1="870" y1="190" x2="885" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>based on Xilinx module template Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;</p></div><h2 id="generics">Generics</h2>
+<table>
+<thead>
+<tr>
+<th id="generic_name">Generic name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAX_NUM_DMA_SYMBOL</td>
+<td>integer</td>
+<td>8192</td>
+<td>parameter integer START_COUNT_CFG = 0, parameter integer WAIT_COUNT_BITS = 5,</td>
+</tr>
+<tr>
+<td>MAX_BIT_NUM_DMA_SYMBOL</td>
+<td>integer</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>C_M_AXIS_TDATA_WIDTH</td>
+<td>integer</td>
+<td>64</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m_axis_endless_mode</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_NUM_DMA_SYMBOL</td>
+<td>input</td>
+<td>wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>m_axis_start_1trans</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>data_to_ps</td>
+<td>input</td>
+<td>wire [C_M_AXIS_TDATA_WIDTH-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>data_to_ps_valid</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>m_axis_data_count</td>
+<td>output</td>
+<td>wire [MAX_BIT_NUM_DMA_SYMBOL-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>fulln_to_pl</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_ACLK</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_ARESETN</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_TVALID</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_TDATA</td>
+<td>output</td>
+<td>wire [C_M_AXIS_TDATA_WIDTH-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_TSTRB</td>
+<td>output</td>
+<td>wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0]</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_TLAST</td>
+<td>output</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>M_AXIS_TREADY</td>
+<td>input</td>
+<td>wire</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mst_exec_state</td>
+<td>reg [1:0]</td>
+<td>In this state the</td>
+</tr>
+<tr>
+<td>read_pointer</td>
+<td>reg [bit_num-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>axis_tvalid</td>
+<td>wire</td>
+<td>reg [WAIT_COUNT_BITS-1 : 0]     count;</td>
+</tr>
+<tr>
+<td>axis_tlast</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>axis_tlast_delay</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_en</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>tx_done</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>EMPTY</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>init_txn_ff</td>
+<td>reg</td>
+<td></td>
+</tr>
+<tr>
+<td>init_txn_pulse</td>
+<td>wire</td>
+<td></td>
+</tr>
+<tr>
+<td>FULL</td>
+<td>wire</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit_num</td>
+<td>integer</td>
+<td>clogb2(MAX_NUM_DMA_SYMBOL)</td>
+<td></td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>[1:0]</td>
+<td>2'b00</td>
+<td>This is the initial/idle state</td>
+</tr>
+<tr>
+<td>INIT_COUNTER</td>
+<td>[1:0]</td>
+<td>2'b01</td>
+<td>This is the initial/idle state</td>
+</tr>
+<tr>
+<td>SEND_STREAM</td>
+<td>[1:0]</td>
+<td>2'b10</td>
+<td>This is the initial/idle state</td>
+</tr>
+</tbody>
+</table><h2 id="functions">Functions</h2><ul>
+<li>clogb2 <font id="function_arguments">(input integer bit_depth)</font> <font id="function_return">return (integer)</font></li>
+</ul><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge M_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
+<li>unnamed: ( @(posedge M_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><div id="descriptions"><p><strong>Description</strong><br />
+Control state machine implementation</p></div><ul>
+<li>unnamed: ( @(posedge M_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><div id="descriptions"><p><strong>Description</strong><br />
+Delay the axis_tvalid and axis_tlast signal by one clock cycle<br />
+to match the latency of M_AXIS_TDATA</p></div><ul>
+<li>unnamed: ( @(posedge M_AXIS_ACLK) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
+<li>m_axis_xpm_fifo_sync0: xpm_fifo_sync</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+fifo64_1clk fifo64_1clk_i (<br />
+.CLK(M_AXIS_ACLK),<br />
+.DATAO(M_AXIS_TDATA),<br />
+.DI(data_to_ps),<br />
+.EMPTY(EMPTY),<br />
+.FULL(FULL),<br />
+.RDEN(tx_en),<br />
+.RST(!M_AXIS_ARESETN),<br />
+.WREN(data_to_ps_valid),<br />
+.data_count(m_axis_data_count)<br />
+);</p></div><h2 id="state-machines">State machines</h2><div><ul>
+<li>Control state machine implementation</li>
+</ul><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="238pt" height="270pt"
+ viewBox="0.00 0.00 238.00 270.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 266)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-266 234,-266 234,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_mst_exec_state</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 210,-8 210,-8 216,-8 222,-14 222,-20 222,-20 222,-242 222,-242 222,-248 216,-254 210,-254 210,-254 20,-254 20,-254 14,-254 8,-248 8,-242 8,-242 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="72.988" y="-235.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">mst_exec_state</text>
+</g>
+<!-- mst_exec_state -->
+<!-- IDLE -->
+<g id="node2" class="node state regular">
+<title>IDLE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="82,-216 26,-216 26,-180 82,-180 82,-216"/>
+<text text-anchor="start" x="40.6644" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">IDLE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M38.3333,-181C38.3333,-181 69.6667,-181 69.6667,-181 75.3333,-181 81,-186.6667 81,-192.3333 81,-192.3333 81,-203.6667 81,-203.6667 81,-209.3333 75.3333,-215 69.6667,-215 69.6667,-215 38.3333,-215 38.3333,-215 32.6667,-215 27,-209.3333 27,-203.6667 27,-203.6667 27,-192.3333 27,-192.3333 27,-186.6667 32.6667,-181 38.3333,-181"/>
+</g>
+<!-- IDLE&#45;&gt;IDLE -->
+<g id="edge2" class="edge transition">
+<title>IDLE&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M82.0183,-202.8247C93.888,-203.1883 104,-201.5801 104,-198 104,-195.5387 99.2205,-194.0094 92.3762,-193.4121"/>
+<polygon fill="#000000" stroke="#000000" points="92.0957,-189.9049 82.0183,-193.1753 91.9356,-196.903 92.0957,-189.9049"/>
+<text text-anchor="start" x="104" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (init_txn_pulse) &#160;&#160;</text>
+</g>
+<!-- INIT_COUNTER -->
+<g id="node3" class="node state regular">
+<title>INIT_COUNTER</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="126,-134 16,-134 16,-98 126,-98 126,-134"/>
+<text text-anchor="start" x="26.6732" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">INIT_COUNTER</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.3333,-99C28.3333,-99 113.6667,-99 113.6667,-99 119.3333,-99 125,-104.6667 125,-110.3333 125,-110.3333 125,-121.6667 125,-121.6667 125,-127.3333 119.3333,-133 113.6667,-133 113.6667,-133 28.3333,-133 28.3333,-133 22.6667,-133 17,-127.3333 17,-121.6667 17,-121.6667 17,-110.3333 17,-110.3333 17,-104.6667 22.6667,-99 28.3333,-99"/>
+</g>
+<!-- IDLE&#45;&gt;INIT_COUNTER -->
+<g id="edge1" class="edge transition">
+<title>IDLE&#45;&gt;INIT_COUNTER</title>
+<path fill="none" stroke="#000000" d="M57.7729,-179.8015C59.9518,-169.2915 62.7384,-155.8503 65.1915,-144.0177"/>
+<polygon fill="#000000" stroke="#000000" points="68.6347,-144.6499 67.2377,-134.1476 61.7805,-143.2288 68.6347,-144.6499"/>
+<text text-anchor="start" x="63" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_txn_pulse &#160;&#160;</text>
+</g>
+<!-- SEND_STREAM -->
+<g id="node4" class="node state regular">
+<title>SEND_STREAM</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="127.5,-52 16.5,-52 16.5,-16 127.5,-16 127.5,-52"/>
+<text text-anchor="start" x="27.5006" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">SEND_STREAM</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M28.8333,-17C28.8333,-17 115.1667,-17 115.1667,-17 120.8333,-17 126.5,-22.6667 126.5,-28.3333 126.5,-28.3333 126.5,-39.6667 126.5,-39.6667 126.5,-45.3333 120.8333,-51 115.1667,-51 115.1667,-51 28.8333,-51 28.8333,-51 23.1667,-51 17.5,-45.3333 17.5,-39.6667 17.5,-39.6667 17.5,-28.3333 17.5,-28.3333 17.5,-22.6667 23.1667,-17 28.8333,-17"/>
+</g>
+<!-- INIT_COUNTER&#45;&gt;SEND_STREAM -->
+<g id="edge3" class="edge transition">
+<title>INIT_COUNTER&#45;&gt;SEND_STREAM</title>
+<path fill="none" stroke="#000000" d="M71.2219,-97.8015C71.3488,-87.3976 71.5107,-74.1215 71.6539,-62.3768"/>
+<polygon fill="#000000" stroke="#000000" points="75.1564,-62.1896 71.7787,-52.1476 68.1569,-62.1041 75.1564,-62.1896"/>
+<text text-anchor="middle" x="72.3895" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- SEND_STREAM&#45;&gt;IDLE -->
+<g id="edge4" class="edge transition">
+<title>SEND_STREAM&#45;&gt;IDLE</title>
+<path fill="none" stroke="#000000" d="M127.5857,-47.6852C149.7046,-54.8009 170,-64.257 170,-75 170,-157 170,-157 170,-157 170,-165.4567 125.6076,-179.1408 91.747,-188.3485"/>
+<polygon fill="#000000" stroke="#000000" points="90.8358,-184.9691 82.0804,-190.935 92.6452,-191.7312 90.8358,-184.9691"/>
+<text text-anchor="start" x="170" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">tx_done &#160;&#160;</text>
+</g>
+<!-- SEND_STREAM&#45;&gt;SEND_STREAM -->
+<g id="edge5" class="edge transition">
+<title>SEND_STREAM&#45;&gt;SEND_STREAM</title>
+<path fill="none" stroke="#000000" d="M127.7324,-38.756C140.3044,-38.3275 149.5,-36.7422 149.5,-34 149.5,-32.0719 144.9539,-30.7157 137.8844,-29.9315"/>
+<polygon fill="#000000" stroke="#000000" points="137.946,-26.4278 127.7324,-29.244 137.473,-33.4118 137.946,-26.4278"/>
+<text text-anchor="start" x="149.5" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (tx_done) &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>
