@@ -1,6 +1,7 @@
 # Open source projects:
-Created: 09/07/2021 20:33:12
+Created: 14/07/2021 20:44:08
 - Project: [CordicHDL ](./CordicHDL_doc/README.md) ([go to Github project](https://github.com/qarlosalberto/cordicHDL.git))
+- Project: [verilog-axi ](./verilog-axi_doc/README.md) ([go to Github project](https://github.com/alexforencich/verilog-axi.git))
 - Project: [SURF ](./SURF_doc/README.md) ([go to Github project](https://github.com/slaclab/surf))
 - Project: [OscillatorIMP ](./OscillatorIMP_doc/README.md) ([go to Github project](https://github.com/oscimp/fpga_ip.git))
 - Project: [SERV ](./SERV_doc/README.md) ([go to Github project](https://github.com/olofk/serv))

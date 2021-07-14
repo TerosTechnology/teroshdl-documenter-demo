@@ -50,6 +50,7 @@
 | PULSE_2_PERIOD   |      | 10    |             |
 | PULSE_3_PERIOD   |      | 10    |             |
 | PULSE_0_EXT_SYNC |      | 0     |             |
+| PULSE_0_OFFSET   |      | 0     |             |
 | PULSE_1_OFFSET   |      | 0     |             |
 | PULSE_2_OFFSET   |      | 0     |             |
 | PULSE_3_OFFSET   |      | 0     |             |

@@ -48,17 +48,18 @@
 | FIFO_SAFE    | boolean | false | true = allow read/write only if entry available         |
 ## Ports
 
-| Port name | Direction | Type                                     | Description                         |
-| --------- | --------- | ---------------------------------------- | ----------------------------------- |
-| clk_i     | in        | std_ulogic                               | clock, rising edge                  |
-| rstn_i    | in        | std_ulogic                               | async reset, low-active             |
-| clear_i   | in        | std_ulogic                               | sync reset, high-active             |
-| wdata_i   | in        | std_ulogic_vector(FIFO_WIDTH-1 downto 0) | write data                          |
-| we_i      | in        | std_ulogic                               | write enable                        |
-| free_o    | out       | std_ulogic                               | at least one entry is free when set |
-| re_i      | in        | std_ulogic                               | read enable                         |
-| rdata_o   | out       | std_ulogic_vector(FIFO_WIDTH-1 downto 0) | read data                           |
-| avail_o   | out       | std_ulogic                               | data available when set             |
+| Port name | Direction | Type                                                 | Description                         |
+| --------- | --------- | ---------------------------------------------------- | ----------------------------------- |
+| clk_i     | in        | std_ulogic                                           | clock, rising edge                  |
+| rstn_i    | in        | std_ulogic                                           | async reset, low-active             |
+| clear_i   | in        | std_ulogic                                           | sync reset, high-active             |
+| level_o   | out       | std_ulogic_vector(index_size_f(FIFO_DEPTH) downto 0) | fill level                          |
+| wdata_i   | in        | std_ulogic_vector(FIFO_WIDTH-1 downto 0)             | write data                          |
+| we_i      | in        | std_ulogic                                           | write enable                        |
+| free_o    | out       | std_ulogic                                           | at least one entry is free when set |
+| re_i      | in        | std_ulogic                                           | read enable                         |
+| rdata_o   | out       | std_ulogic_vector(FIFO_WIDTH-1 downto 0)             | read data                           |
+| avail_o   | out       | std_ulogic                                           | data available when set             |
 ## Signals
 
 | Name | Type   | Description |

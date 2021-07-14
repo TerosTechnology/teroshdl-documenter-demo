@@ -39,7 +39,7 @@
 | ID             |      | 0     |             |
 | ASYNC_CLK_EN   |      | 1     |             |
 | N_PWMS         |      | 1     |             |
-| PWM_0_EXT_SYNC |      | 0     |             |
+| PWM_EXT_SYNC   |      | 0     |             |
 | EXT_ASYNC_SYNC |      | 0     |             |
 | PULSE_0_WIDTH  |      | 7     |             |
 | PULSE_1_WIDTH  |      | 7     |             |
@@ -49,6 +49,7 @@
 | PULSE_1_PERIOD |      | 10    |             |
 | PULSE_2_PERIOD |      | 10    |             |
 | PULSE_3_PERIOD |      | 10    |             |
+| PULSE_0_OFFSET |      | 0     |             |
 | PULSE_1_OFFSET |      | 0     |             |
 | PULSE_2_OFFSET |      | 0     |             |
 | PULSE_3_OFFSET |      | 0     |             |
@@ -85,34 +86,35 @@
 | pwm_3         | output    |        |               |
 ## Signals
 
-| Name           | Type         | Description         |
-| -------------- | ------------ | ------------------- |
-| sync_0         | reg          | internal registers  |
-| sync_1         | reg          |                     |
-| sync_2         | reg          |                     |
-| sync_3         | reg          |                     |
-| sync_active_0  | reg          |                     |
-| sync_active_1  | reg          |                     |
-| sync_active_2  | reg          |                     |
-| sync_active_3  | reg          |                     |
-| clk            | wire         | internal signals    |
-| up_clk         | wire         |                     |
-| up_rstn        | wire         |                     |
-| up_rreq_s      | wire         |                     |
-| up_wack_s      | wire         |                     |
-| up_rack_s      | wire         |                     |
-| up_raddr_s     | wire [ 13:0] |                     |
-| up_rdata_s     | wire [ 31:0] |                     |
-| up_wreq_s      | wire         |                     |
-| up_waddr_s     | wire [ 13:0] |                     |
-| up_wdata_s     | wire [ 31:0] |                     |
-| pwm_width_s    | wire [127:0] |                     |
-| pwm_period_s   | wire [127:0] |                     |
-| pwm_offset_s   | wire [127:0] |                     |
-| pwm_counter    | wire [ 31:0] |                     |
-| load_config_s  | wire         |                     |
-| pwm_gen_resetn | wire         |                     |
-| ext_sync_s     | wire         |                     |
+| Name                   | Type         | Description         |
+| ---------------------- | ------------ | ------------------- |
+| sync_0                 | reg          | internal registers  |
+| sync_1                 | reg          |                     |
+| sync_2                 | reg          |                     |
+| sync_3                 | reg          |                     |
+| offset_cnt             | reg   [31:0] |                     |
+| offset_alignment       | reg          |                     |
+| pause_cnt_d            | reg          |                     |
+| clk                    | wire         | internal signals    |
+| up_clk                 | wire         |                     |
+| up_rstn                | wire         |                     |
+| up_rreq_s              | wire         |                     |
+| up_wack_s              | wire         |                     |
+| up_rack_s              | wire         |                     |
+| up_raddr_s             | wire [ 13:0] |                     |
+| up_rdata_s             | wire [ 31:0] |                     |
+| up_wreq_s              | wire         |                     |
+| up_waddr_s             | wire [ 13:0] |                     |
+| up_wdata_s             | wire [ 31:0] |                     |
+| pwm_width_s            | wire [127:0] |                     |
+| pwm_period_s           | wire [127:0] |                     |
+| pwm_offset_s           | wire [127:0] |                     |
+| pwm_counter            | wire [ 31:0] |                     |
+| load_config_s          | wire         |                     |
+| pwm_gen_resetn         | wire         |                     |
+| ext_sync_s             | wire         |                     |
+| pause_cnt              | wire         |                     |
+| offset_alignment_ready | wire         |                     |
 ## Constants
 
 | Name         | Type   | Value                                        | Description |
@@ -120,6 +122,10 @@
 | CORE_VERSION | [31:0] | {<br><span style="padding-left:20px">16'h000 | MAJOR */    |
 | CORE_MAGIC   | [31:0] | 32'h601a3471                                 | PLSG        |
 ## Processes
+- unnamed: ( @(posedge clk) )
+**Description**
+offset counter
+
 - unnamed: ( @(posedge clk) )
 ## Instantiations
 

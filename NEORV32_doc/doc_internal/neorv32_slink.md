@@ -8,9 +8,10 @@
 #################################################################################################
 # << NEORV32 - Stream Link Interface (SLINK) >>                                                 #
 # ********************************************************************************************* #
-# Up to 8 input (RX) and up to 8 output (TX) stream links are supported. Each stream direction  #
-# provides a global interrupt to indicate that a RX link has received new data or that a TX     #
-# has finished sending data. Each link is provides an internal FIFO for buffering.              #
+# Up to 8 input (RX) and up to 8 output (TX) stream links are supported. Each link provides an  #
+# internal FIFO for buffering. Each stream direction provides a global interrupt to indicate    #
+# that a RX link has received new data or that a TX link has finished sending data              #
+# (if FIFO_DEPTH = 1) OR if RX/TX link FIFO has become half full (if FIFO_DEPTH > 1).           #
 # ********************************************************************************************* #
 # BSD 3-Clause License                                                                          #
 #                                                                                               #
@@ -71,64 +72,60 @@
 | slink_rx_rdy_o | out       | std_ulogic_vector(7 downto 0)  | ready to receive     |
 ## Signals
 
-| Name              | Type                           | Description            |
-| ----------------- | ------------------------------ | ---------------------- |
-| ack_read          | std_ulogic                     | bus access control --  |
-| ack_write         | std_ulogic                     |                        |
-| acc_en            | std_ulogic                     |                        |
-| addr              | std_ulogic_vector(31 downto 0) |                        |
-| enable            | std_ulogic                     | global enable          |
-| tx_fifo_free_buf  | std_ulogic_vector(7 downto 0)  | interrupt generator -- |
-| rx_fifo_avail_buf | std_ulogic_vector(7 downto 0)  |                        |
-| rx_fifo_rdata     | fifo_data_t                    |                        |
-| fifo_clear        | std_ulogic                     |                        |
-| link_sel          | std_ulogic_vector(7 downto 0)  |                        |
-| tx_fifo_we        | std_ulogic_vector(7 downto 0)  |                        |
-|  tx_fifo_free     | std_ulogic_vector(7 downto 0)  |                        |
-| rx_fifo_re        | std_ulogic_vector(7 downto 0)  |                        |
-|  rx_fifo_avail    | std_ulogic_vector(7 downto 0)  |                        |
+| Name              | Type                           | Description           |
+| ----------------- | ------------------------------ | --------------------- |
+| ack_read          | std_ulogic                     | bus access control -- |
+| ack_write         | std_ulogic                     |                       |
+| acc_en            | std_ulogic                     |                       |
+| addr              | std_ulogic_vector(31 downto 0) |                       |
+| enable            | std_ulogic                     | global enable         |
+| rx_fifo_rdata     | fifo_data_t                    |                       |
+| rx_fifo_level     | fifo_rx_level_t                |                       |
+| tx_fifo_level     | fifo_tx_level_t                |                       |
+| fifo_clear        | std_ulogic                     |                       |
+| link_sel          | std_ulogic_vector(7 downto 0)  |                       |
+| tx_fifo_we        | std_ulogic_vector(7 downto 0)  |                       |
+|     rx_fifo_re    | std_ulogic_vector(7 downto 0)  |                       |
+| rx_fifo_avail     | std_ulogic_vector(7 downto 0)  |                       |
+|  rx_fifo_avail_ff | std_ulogic_vector(7 downto 0)  |                       |
+| tx_fifo_free      | std_ulogic_vector(7 downto 0)  |                       |
+|   tx_fifo_free_ff | std_ulogic_vector(7 downto 0)  |                       |
+| rx_fifo_half      | std_ulogic_vector(7 downto 0)  |                       |
+|   rx_fifo_half_ff | std_ulogic_vector(7 downto 0)  |                       |
+| tx_fifo_half      | std_ulogic_vector(7 downto 0)  |                       |
+|   tx_fifo_half_ff | std_ulogic_vector(7 downto 0)  |                       |
+| irq               | irq_t                          |                       |
 ## Constants
 
-| Name             | Type    | Value                       | Description                                  |
-| ---------------- | ------- | --------------------------- | -------------------------------------------- |
-| hi_abb_c         | natural |  index_size_f(io_size_c)-1  | high address boundary bit                    |
-| lo_abb_c         | natural |  index_size_f(slink_size_c) | low address boundary bit                     |
-| ctrl_rx0_avail_c | natural |   0                         | r/-: set if TX link 0 is ready to send       |
-| ctrl_rx1_avail_c | natural |   1                         | r/-: set if TX link 1 is ready to send       |
-| ctrl_rx2_avail_c | natural |   2                         | r/-: set if TX link 2 is ready to send       |
-| ctrl_rx3_avail_c | natural |   3                         | r/-: set if TX link 3 is ready to send       |
-| ctrl_rx4_avail_c | natural |   4                         | r/-: set if TX link 4 is ready to send       |
-| ctrl_rx5_avail_c | natural |   5                         | r/-: set if TX link 5 is ready to send       |
-| ctrl_rx6_avail_c | natural |   6                         | r/-: set if TX link 6 is ready to send       |
-| ctrl_rx7_avail_c | natural |   7                         | r/-: set if TX link 7 is ready to send       |
-| ctrl_tx0_free_c  | natural |   8                         | r/-: set if RX link 0 data available         |
-| ctrl_tx1_free_c  | natural |   9                         | r/-: set if RX link 1 data available         |
-| ctrl_tx2_free_c  | natural |  10                         | r/-: set if RX link 2 data available         |
-| ctrl_tx3_free_c  | natural |  11                         | r/-: set if RX link 3 data available         |
-| ctrl_tx4_free_c  | natural |  12                         | r/-: set if RX link 4 data available         |
-| ctrl_tx5_free_c  | natural |  13                         | r/-: set if RX link 5 data available         |
-| ctrl_tx6_free_c  | natural |  14                         | r/-: set if RX link 6 data available         |
-| ctrl_tx7_free_c  | natural |  15                         | r/-: set if RX link 7 data available         |
-| ctrl_rx_num0_c   | natural |  16                         | r/-: number of implemented RX links -1 bit 0 |
-| ctrl_rx_num1_c   | natural |  17                         | r/-: number of implemented RX links -1 bit 1 |
-| ctrl_rx_num2_c   | natural |  18                         | r/-: number of implemented RX links -1 bit 2 |
-| ctrl_tx_num0_c   | natural |  19                         | r/-: number of implemented TX links -1 bit 0 |
-| ctrl_tx_num1_c   | natural |  20                         | r/-: number of implemented TX links -1 bit 1 |
-| ctrl_tx_num2_c   | natural |  21                         | r/-: number of implemented TX links -1 bit 2 |
-| ctrl_rx_size0_c  | natural |  22                         | r/-: log2(RX FIFO size) bit 0                |
-| ctrl_rx_size1_c  | natural |  23                         | r/-: log2(RX FIFO size) bit 1                |
-| ctrl_rx_size2_c  | natural |  24                         | r/-: log2(RX FIFO size) bit 2                |
-| ctrl_rx_size3_c  | natural |  25                         | r/-: log2(RX FIFO size) bit 3                |
-| ctrl_tx_size0_c  | natural |  26                         | r/-: log2(TX FIFO size) bit 0                |
-| ctrl_tx_size1_c  | natural |  27                         | r/-: log2(TX FIFO size) bit 1                |
-| ctrl_tx_size2_c  | natural |  28                         | r/-: log2(TX FIFO size) bit 2                |
-| ctrl_tx_size3_c  | natural |  29                         | r/-: log2(TX FIFO size) bit 3                |
-| ctrl_en_c        | natural |  31                         | r/w: global enable                           |
+| Name                  | Type    | Value                       | Description                                              |
+| --------------------- | ------- | --------------------------- | -------------------------------------------------------- |
+| hi_abb_c              | natural |  index_size_f(io_size_c)-1  | high address boundary bit                                |
+| lo_abb_c              | natural |  index_size_f(slink_size_c) | low address boundary bit                                 |
+| ctrl_rx_num_lsb_c     | natural |   0                         | r/-: number of implemented RX links                      |
+| ctrl_rx_num_msb_c     | natural |   3                         |                                                          |
+| ctrl_tx_num_lsb_c     | natural |   4                         | r/-: number of implemented TX links                      |
+| ctrl_tx_num_msb_c     | natural |   7                         |                                                          |
+| ctrl_rx_size_lsb_c    | natural |   8                         | r/-: log2(RX FIFO size)                                  |
+| ctrl_rx_size_msb_c    | natural |  11                         |                                                          |
+| ctrl_tx_size_lsb_c    | natural |  12                         | r/-: log2(TX FIFO size)                                  |
+| ctrl_tx_size_msb_c    | natural |  15                         |                                                          |
+| ctrl_en_c             | natural |  31                         | r/w: global enable                                       |
+| status_rx_avail_lsb_c | natural |   0                         | r/-: set if TX link 0..7 is ready to send                |
+| status_rx_avail_msb_c | natural |   7                         |                                                          |
+| status_tx_free_lsb_c  | natural |   8                         | r/-: set if RX link 0..7 data available                  |
+| status_tx_free_msb_c  | natural |  15                         |                                                          |
+| status_rx_half_lsb_c  | natural |  16                         | r/-: set if TX link 0..7 FIFO fill-level is >= half-full |
+| status_rx_half_msb_c  | natural |  23                         |                                                          |
+| status_tx_half_lsb_c  | natural |  24                         | r/-: set if RX link 0..7 FIFO fill-level is > half-full  |
+| status_tx_half_msb_c  | natural |  31                         |                                                          |
 ## Types
 
-| Name        | Type | Description                   |
-| ----------- | ---- | ----------------------------- |
-| fifo_data_t |      | stream link fifo interface -- |
+| Name            | Type | Description                   |
+| --------------- | ---- | ----------------------------- |
+| fifo_data_t     |      | stream link fifo interface -- |
+| fifo_rx_level_t |      |                               |
+| fifo_tx_level_t |      |                               |
+| irq_t           |      | interrupt controller --       |
 ## Processes
 - rw_access: ( clk_i )
 **Description**
@@ -136,10 +133,23 @@ word aligned
 Read/Write Access ----------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
 
-- irq_generator: ( clk_i )
+- level_monitor: ( rx_fifo_level, tx_fifo_level )
+**Description**
+FIFO Level Monitoring ------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+- irq_arbiter: ( clk_i )
 **Description**
 Interrupt Generator --------------------------------------------------------------------
 -------------------------------------------------------------------------------------------
+
+- irq_generator_sync: ( clk_i )
+**Description**
+status buffer --
+
+- irq_generator_comb: ( clk_i )
+**Description**
+IRQ event detector --
 
 - link_select: ( addr )
 **Description**

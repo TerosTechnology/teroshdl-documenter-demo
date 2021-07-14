@@ -22,19 +22,19 @@ contained in the LICENSE.txt file.
 | TPD_G        | time | 1 ns  |             |
 ## Ports
 
-| Port name  | Direction | Type             | Description             |
-| ---------- | --------- | ---------------- | ----------------------- |
-| clk        | in        | sl               | Clock and Reset         |
-| rst        | in        | sl               | Active HIGH reset       |
-| txValid    | in        | sl               | tValid                  |
-| txReady    | out       | sl               | tReady                  |
-| txData     | in        | slv(63 downto 0) | tData                   |
-| txEnable   | in        | sl               |                         |
-| txSof      | in        | sl               | tUser.FirstByte.BIT1    |
-| txEof      | in        | sl               | tLast                   |
-| txEofe     | in        | sl               | tUser.LastByte.BIT0     |
-| phyTxValid | out       | sl               | 66-bit Output Interface |
-| phyTxData  | out       | slv(65 downto 0) |                         |
+| Port name  | Direction | Type             | Description          |
+| ---------- | --------- | ---------------- | -------------------- |
+| clk        | in        | sl               | Clock and Reset      |
+| rst        | in        | sl               | Active HIGH reset    |
+| txValid    | in        | sl               | tValid               |
+| txReady    | out       | sl               | tReady               |
+| txData     | in        | slv(63 downto 0) | tData                |
+| txSof      | in        | sl               | tUser.FirstByte.BIT1 |
+| txEof      | in        | sl               | tLast                |
+| txEofe     | in        | sl               | tUser.LastByte.BIT0  |
+| phyTxValid | out       | sl               | tValid               |
+| phyTxReady | in        | sl               | tReady               |
+| phyTxData  | out       | slv(65 downto 0) |                      |
 ## Signals
 
 | Name        | Type                | Description                            |

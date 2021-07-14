@@ -174,10 +174,10 @@
 | wb_err_i_int       | std_ulogic                                    |             |
 | fence_o_int        | std_ulogic                                    |             |
 | fencei_o_int       | std_ulogic                                    |             |
-| slink_tx_dat_o_int | sdata_8x32r_t                                 |             |
+| slink_tx_dat_o_int | sdata_8x32_t                                  |             |
 | slink_tx_val_o_int | std_logic_vector(7 downto 0)                  |             |
 | slink_tx_rdy_i_int | std_logic_vector(7 downto 0)                  |             |
-| slink_rx_dat_i_int | sdata_8x32r_t                                 |             |
+| slink_rx_dat_i_int | sdata_8x32_t                                  |             |
 | slink_rx_val_i_int | std_logic_vector(7 downto 0)                  |             |
 | slink_rx_rdy_o_int | std_logic_vector(7 downto 0)                  |             |
 | gpio_o_int         | std_ulogic_vector(63 downto 0)                |             |

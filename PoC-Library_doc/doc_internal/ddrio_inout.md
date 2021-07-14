@@ -28,7 +28,7 @@ the falling edge directly before this rising edge. Thus sampling starts with
 the falling edge of the clock as depicted in the following waveform.
 .. wavedrom::
    
-![alt text](wavedrom_jDC10.svg "title") 
+![alt text](wavedrom_963u0.svg "title") 
 
 ``Pad`` must be connected to a PAD because FPGAs only have these registers in
 IOBs.
