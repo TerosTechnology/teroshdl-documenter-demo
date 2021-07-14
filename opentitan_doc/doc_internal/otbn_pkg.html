@@ -1,0 +1,1353 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=otbn_pkg><h1 id="package-otbn_pkg">Package: otbn_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+ Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
+ SPDX-License-Identifier: Apache-2.0</p>
+<p></div></p><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WLEN</td>
+<td>int</td>
+<td>256</td>
+<td></td>
+</tr>
+<tr>
+<td>ExtWLEN</td>
+<td>int</td>
+<td>WLEN * 39 / 32</td>
+<td>"Extended" WLEN: the size of the datapath with added integrity bits</td>
+</tr>
+<tr>
+<td>BaseIntgWidth</td>
+<td>int</td>
+<td>39</td>
+<td>Width of base (32b) data path with added integrity bits</td>
+</tr>
+<tr>
+<td>BaseWordsPerWLEN</td>
+<td>int</td>
+<td>WLEN / 32</td>
+<td>Number of 32-bit words per WLEN</td>
+</tr>
+<tr>
+<td>NFlagGroups</td>
+<td>int</td>
+<td>2</td>
+<td>Number of flag groups</td>
+</tr>
+<tr>
+<td>GprAw</td>
+<td>int</td>
+<td>5</td>
+<td>Width of the GPR index/address</td>
+</tr>
+<tr>
+<td>NGpr</td>
+<td>int</td>
+<td>2 ** GprAw</td>
+<td>Number of General Purpose Registers (GPRs)</td>
+</tr>
+<tr>
+<td>WdrAw</td>
+<td>int</td>
+<td>5</td>
+<td>Width of the WDR index/address</td>
+</tr>
+<tr>
+<td>NWdr</td>
+<td>int</td>
+<td>2 ** WdrAw</td>
+<td>Number of Wide Data Registers (WDRs)</td>
+</tr>
+<tr>
+<td>EdnDataWidth</td>
+<td>int</td>
+<td>256</td>
+<td>Width of entropy input</td>
+</tr>
+<tr>
+<td>AlertFatal</td>
+<td>int</td>
+<td>0</td>
+<td>Toplevel constants ============================================================================</td>
+</tr>
+<tr>
+<td>AlertRecov</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>CsrNumWidth</td>
+<td>int</td>
+<td>12</td>
+<td>Control and Status Registers (CSRs)</td>
+</tr>
+<tr>
+<td>NWsr</td>
+<td>int</td>
+<td>4</td>
+<td>Number of WSRs</td>
+</tr>
+<tr>
+<td>WsrNumWidth</td>
+<td>int</td>
+<td>$clog2(NWsr)</td>
+<td></td>
+</tr>
+<tr>
+<td>NIspr</td>
+<td>int</td>
+<td>5</td>
+<td>Internal Special Purpose Registers (ISPRs) CSRs and WSRs have some overlap into what they map into. ISPRs are the actual registers in the design which CSRs and WSRs are mapped on to.</td>
+</tr>
+<tr>
+<td>IsprNumWidth</td>
+<td>int</td>
+<td>$clog2(NIspr)</td>
+<td></td>
+</tr>
+<tr>
+<td>FlagsWidth</td>
+<td>int</td>
+<td>$bits(flags_t)</td>
+<td></td>
+</tr>
+<tr>
+<td>UrndLfsrWidth</td>
+<td>int</td>
+<td>256</td>
+<td>URNG PRNG default LFSR seed and permutation A single default seed is split into 64 bit chunks, a separate LFSR is used for each chunk. All LFSR chunks use the same permutation. These LFSR parameters have been generated with $ ./util/design/gen-lfsr-seed.py --width 256 --seed 2840984437 --prefix "Urnd"</td>
+</tr>
+<tr>
+<td>urnd_lfsr_seed_t</td>
+<td>urnd_lfsr_seed_t</td>
+<td>256'h84ddfadaf7e1134d70aa1c59de6197ff25a4fe335d095f1e2cba89acbe4a07e9</td>
+<td></td>
+</tr>
+<tr>
+<td>UrndChunkLfsrWidth</td>
+<td>int</td>
+<td>64</td>
+<td>These LFSR parameters have been generated with $ ./util/design/gen-lfsr-seed.py --width 64 --seed 2840984437 --prefix "UrndChunk"</td>
+</tr>
+<tr>
+<td>urnd_chunk_lfsr_perm_t</td>
+<td>urnd_chunk_lfsr_perm_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_pkg</td>
+<td>otp_ctrl_pkg::otbn_key_t</td>
+<td>128'h14e8cecae3040d5e12286bb3cc113298</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_pkg</td>
+<td>otp_ctrl_pkg::otbn_nonce_t</td>
+<td>64'hf79780bc735f3843</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>regfile_e</td>
+<td>enum integer {<br><span style="padding-left:20px">     RegFileFF    = 0,<br><span style="padding-left:20px">      RegFileFPGA  = 1     }</td>
+<td>Register file implementation selection enum.</td>
+</tr>
+<tr>
+<td>err_bits_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic fatal_reg;<br><span style="padding-left:20px">     logic fatal_dmem;<br><span style="padding-left:20px">     logic fatal_imem;<br><span style="padding-left:20px">     logic loop;<br><span style="padding-left:20px">     logic illegal_insn;<br><span style="padding-left:20px">     logic call_stack;<br><span style="padding-left:20px">     logic bad_insn_addr;<br><span style="padding-left:20px">     logic bad_data_addr;<br><span style="padding-left:20px">   }</td>
+<td>Note: These errors are duplicated in the register HJSON (../data/otbn.hjson), the ISS (../dv/otbnsim/sim/alert.py), and the DIF. If updating them here, update those too.</td>
+</tr>
+<tr>
+<td>insn_subset_e</td>
+<td>enum logic {<br><span style="padding-left:20px">     InsnSubsetBase = 1'b0,<br><span style="padding-left:20px">       InsnSubsetBignum = 1'b1    }</td>
+<td>Constants =====================================================================================</td>
+</tr>
+<tr>
+<td>insn_opcode_e</td>
+<td>enum logic [6:0] {<br><span style="padding-left:20px">     InsnOpcodeBaseLoad       = 7'h03,<br><span style="padding-left:20px">     InsnOpcodeBaseMemMisc    = 7'h0f,<br><span style="padding-left:20px">     InsnOpcodeBaseOpImm      = 7'h13,<br><span style="padding-left:20px">     InsnOpcodeBaseAuipc      = 7'h17,<br><span style="padding-left:20px">     InsnOpcodeBaseStore      = 7'h23,<br><span style="padding-left:20px">     InsnOpcodeBaseOp         = 7'h33,<br><span style="padding-left:20px">     InsnOpcodeBaseLui        = 7'h37,<br><span style="padding-left:20px">     InsnOpcodeBaseBranch     = 7'h63,<br><span style="padding-left:20px">     InsnOpcodeBaseJalr       = 7'h67,<br><span style="padding-left:20px">     InsnOpcodeBaseJal        = 7'h6f,<br><span style="padding-left:20px">     InsnOpcodeBaseSystem     = 7'h73,<br><span style="padding-left:20px">     InsnOpcodeBignumMisc     = 7'h0B,<br><span style="padding-left:20px">     InsnOpcodeBignumArith    = 7'h2B,<br><span style="padding-left:20px">     InsnOpcodeBignumMulqacc  = 7'h3B,<br><span style="padding-left:20px">     InsnOpcodeBignumBaseMisc = 7'h7B   }</td>
+<td>Opcodes (field [6:0] in the instruction), matching the RISC-V specification for the base instruction subset.</td>
+</tr>
+<tr>
+<td>alu_op_base_e</td>
+<td>enum logic [3:0] {<br><span style="padding-left:20px">     AluOpBaseAdd,<br><span style="padding-left:20px">     AluOpBaseSub,<br><span style="padding-left:20px">      AluOpBaseXor,<br><span style="padding-left:20px">     AluOpBaseOr,<br><span style="padding-left:20px">     AluOpBaseAnd,<br><span style="padding-left:20px">     AluOpBaseNot,<br><span style="padding-left:20px">      AluOpBaseSra,<br><span style="padding-left:20px">     AluOpBaseSrl,<br><span style="padding-left:20px">     AluOpBaseSll   }</td>
+<td></td>
+</tr>
+<tr>
+<td>alu_op_bignum_e</td>
+<td>enum logic [3:0] {<br><span style="padding-left:20px">     AluOpBignumAdd,<br><span style="padding-left:20px">     AluOpBignumAddc,<br><span style="padding-left:20px">     AluOpBignumAddm,<br><span style="padding-left:20px">      AluOpBignumSub,<br><span style="padding-left:20px">     AluOpBignumSubb,<br><span style="padding-left:20px">     AluOpBignumSubm,<br><span style="padding-left:20px">      AluOpBignumRshi,<br><span style="padding-left:20px">      AluOpBignumXor,<br><span style="padding-left:20px">     AluOpBignumOr,<br><span style="padding-left:20px">     AluOpBignumAnd,<br><span style="padding-left:20px">     AluOpBignumNot   }</td>
+<td>TODO: Can we arrange this to simplify decoding logic?</td>
+</tr>
+<tr>
+<td>comparison_op_base_e</td>
+<td>enum logic {<br><span style="padding-left:20px">     ComparisonOpBaseEq,<br><span style="padding-left:20px">     ComparisonOpBaseNeq   }</td>
+<td></td>
+</tr>
+<tr>
+<td>op_a_sel_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     OpASelRegister  = 'd0,<br><span style="padding-left:20px">     OpASelZero = 'd1,<br><span style="padding-left:20px">     OpASelCurrPc = 'd2   }</td>
+<td>Operand a source selection</td>
+</tr>
+<tr>
+<td>op_b_sel_e</td>
+<td>enum logic {<br><span style="padding-left:20px">     OpBSelRegister  = 'd0,<br><span style="padding-left:20px">     OpBSelImmediate = 'd1   }</td>
+<td>Operand b source selection</td>
+</tr>
+<tr>
+<td>imm_b_sel_base_e</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     ImmBaseBI,<br><span style="padding-left:20px">     ImmBaseBS,<br><span style="padding-left:20px">     ImmBaseBB,<br><span style="padding-left:20px">     ImmBaseBU,<br><span style="padding-left:20px">     ImmBaseBJ,<br><span style="padding-left:20px">     ImmBaseBL,<br><span style="padding-left:20px">     ImmBaseBX   }</td>
+<td>Immediate b selection for base ISA</td>
+</tr>
+<tr>
+<td>shamt_sel_bignum_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     ShamtSelBignumA,<br><span style="padding-left:20px">     ShamtSelBignumS,<br><span style="padding-left:20px">     ShamtSelBignumZero   }</td>
+<td>Shift amount select for bignum ISA</td>
+</tr>
+<tr>
+<td>rf_wd_sel_e</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     RfWdSelEx,<br><span style="padding-left:20px">     RfWdSelNextPc,<br><span style="padding-left:20px">     RfWdSelLsu,<br><span style="padding-left:20px">     RfWdSelIspr,<br><span style="padding-left:20px">     RfWdSelIncr,<br><span style="padding-left:20px">     RfWdSelMac,<br><span style="padding-left:20px">     RfWdSelMovSel   }</td>
+<td>Regfile write data selection</td>
+</tr>
+<tr>
+<td>csr_e</td>
+<td>enum logic [CsrNumWidth-1:0] {<br><span style="padding-left:20px">     CsrFg0         = 12'h7C0,<br><span style="padding-left:20px">     CsrFg1         = 12'h7C1,<br><span style="padding-left:20px">     CsrFlags       = 12'h7C8,<br><span style="padding-left:20px">     CsrMod0        = 12'h7D0,<br><span style="padding-left:20px">     CsrMod1        = 12'h7D1,<br><span style="padding-left:20px">     CsrMod2        = 12'h7D2,<br><span style="padding-left:20px">     CsrMod3        = 12'h7D3,<br><span style="padding-left:20px">     CsrMod4        = 12'h7D4,<br><span style="padding-left:20px">     CsrMod5        = 12'h7D5,<br><span style="padding-left:20px">     CsrMod6        = 12'h7D6,<br><span style="padding-left:20px">     CsrMod7        = 12'h7D7,<br><span style="padding-left:20px">     CsrRnd         = 12'hFC0,<br><span style="padding-left:20px">     CsrRndPrefetch = 12'hFC1,<br><span style="padding-left:20px">     CsrUrnd        = 12'hFC2   }</td>
+<td></td>
+</tr>
+<tr>
+<td>wsr_e</td>
+<td>enum logic [WsrNumWidth-1:0] {<br><span style="padding-left:20px">     WsrMod   = 'd0,<br><span style="padding-left:20px">     WsrRnd   = 'd1,<br><span style="padding-left:20px">     WsrAcc   = 'd2,<br><span style="padding-left:20px">     WsrUrnd  = 'd3   }</td>
+<td></td>
+</tr>
+<tr>
+<td>ispr_e</td>
+<td>enum logic [IsprNumWidth-1:0] {<br><span style="padding-left:20px">     IsprMod   = 'd0,<br><span style="padding-left:20px">     IsprRnd   = 'd1,<br><span style="padding-left:20px">     IsprAcc   = 'd2,<br><span style="padding-left:20px">     IsprFlags = 'd3,<br><span style="padding-left:20px">     IsprUrnd  = 'd4   }</td>
+<td></td>
+</tr>
+<tr>
+<td>flag_group_t</td>
+<td>logic [$clog2(NFlagGroups)-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>flags_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic Z;<br><span style="padding-left:20px">     logic L;<br><span style="padding-left:20px">     logic M;<br><span style="padding-left:20px">     logic C;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>flag_e</td>
+<td>enum logic [$clog2(FlagsWidth)-1:0] {<br><span style="padding-left:20px">     FlagC = 'd0,<br><span style="padding-left:20px">     FlagM = 'd1,<br><span style="padding-left:20px">     FlagL = 'd2,<br><span style="padding-left:20px">     FlagZ = 'd3   }</td>
+<td></td>
+</tr>
+<tr>
+<td>insn_dec_shared_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     insn_subset_e   subset;<br><span style="padding-left:20px">     logic           ecall_insn;<br><span style="padding-left:20px">     logic           ld_insn;<br><span style="padding-left:20px">     logic           st_insn;<br><span style="padding-left:20px">     logic           branch_insn;<br><span style="padding-left:20px">     logic           jump_insn;<br><span style="padding-left:20px">     logic           loop_insn;<br><span style="padding-left:20px">     logic           ispr_rd_insn;<br><span style="padding-left:20px">     logic           ispr_wr_insn;<br><span style="padding-left:20px">     logic           ispr_rs_insn;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>insn_dec_base_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [4:0]          d;<br><span style="padding-left:20px">                  logic [4:0]          a;<br><span style="padding-left:20px">                  logic [4:0]          b;<br><span style="padding-left:20px">                  logic [31:0]         i;<br><span style="padding-left:20px">                  alu_op_base_e        alu_op;<br><span style="padding-left:20px">     comparison_op_base_e comparison_op;<br><span style="padding-left:20px">     op_a_sel_e           op_a_sel;<br><span style="padding-left:20px">     op_b_sel_e           op_b_sel;<br><span style="padding-left:20px">     logic                rf_ren_a;<br><span style="padding-left:20px">     logic                rf_ren_b;<br><span style="padding-left:20px">     logic                rf_we;<br><span style="padding-left:20px">     rf_wd_sel_e          rf_wdata_sel;<br><span style="padding-left:20px">     logic [11:0]         loop_bodysize;<br><span style="padding-left:20px">     logic                loop_immediate;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>insn_dec_bignum_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [WdrAw-1:0]        d;<br><span style="padding-left:20px">                logic [WdrAw-1:0]        a;<br><span style="padding-left:20px">                logic [WdrAw-1:0]        b;<br><span style="padding-left:20px">                logic [WLEN-1:0]         i;<br><span style="padding-left:20px">                 logic                    rf_a_indirect;<br><span style="padding-left:20px">                                                   logic                    rf_b_indirect;<br><span style="padding-left:20px">                                                   logic                    rf_d_indirect;<br><span style="padding-left:20px">                                                    logic                    d_inc;<br><span style="padding-left:20px">                                                               logic                    a_inc;<br><span style="padding-left:20px">                                                               logic                    a_wlen_word_inc;<br><span style="padding-left:20px">                                                     logic                    b_inc;<br><span style="padding-left:20px">                                                                     logic [$clog2(WLEN)-1:0] alu_shift_amt;<br><span style="padding-left:20px">        logic                    alu_shift_right;<br><span style="padding-left:20px">       flag_group_t             alu_flag_group;<br><span style="padding-left:20px">     flag_e                   alu_sel_flag;<br><span style="padding-left:20px">     logic                    alu_flag_en;<br><span style="padding-left:20px">     logic                    mac_flag_en;<br><span style="padding-left:20px">     alu_op_bignum_e          alu_op;<br><span style="padding-left:20px">     op_b_sel_e               alu_op_b_sel;<br><span style="padding-left:20px">      logic [1:0]              mac_op_a_qw_sel;<br><span style="padding-left:20px">     logic [1:0]              mac_op_b_qw_sel;<br><span style="padding-left:20px">     logic                    mac_wr_hw_sel_upper;<br><span style="padding-left:20px">     logic [1:0]              mac_pre_acc_shift;<br><span style="padding-left:20px">     logic                    mac_zero_acc;<br><span style="padding-left:20px">     logic                    mac_shift_out;<br><span style="padding-left:20px">     logic                    mac_en;<br><span style="padding-left:20px">      logic                    rf_we;<br><span style="padding-left:20px">     rf_wd_sel_e              rf_wdata_sel;<br><span style="padding-left:20px">     logic                    rf_ren_a;<br><span style="padding-left:20px">     logic                    rf_ren_b;<br><span style="padding-left:20px">      logic                    sel_insn;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>alu_base_operation_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     alu_op_base_e     op;<br><span style="padding-left:20px">     logic [31:0] operand_a;<br><span style="padding-left:20px">     logic [31:0] operand_b;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>alu_base_comparison_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     comparison_op_base_e op;<br><span style="padding-left:20px">     logic [31:0] operand_a;<br><span style="padding-left:20px">     logic [31:0] operand_b;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>alu_bignum_operation_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     alu_op_bignum_e op;<br><span style="padding-left:20px">     logic [WLEN-1:0]         operand_a;<br><span style="padding-left:20px">     logic [WLEN-1:0]         operand_b;<br><span style="padding-left:20px">     logic                    shift_right;<br><span style="padding-left:20px">     logic [$clog2(WLEN)-1:0] shift_amt;<br><span style="padding-left:20px">     flag_group_t             flag_group;<br><span style="padding-left:20px">     flag_e                   sel_flag;<br><span style="padding-left:20px">     logic                    alu_flag_en;<br><span style="padding-left:20px">     logic                    mac_flag_en;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>mac_bignum_operation_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [WLEN-1:0] operand_a;<br><span style="padding-left:20px">     logic [WLEN-1:0] operand_b;<br><span style="padding-left:20px">     logic [1:0]      operand_a_qw_sel;<br><span style="padding-left:20px">     logic [1:0]      operand_b_qw_sel;<br><span style="padding-left:20px">     logic            wr_hw_sel_upper;<br><span style="padding-left:20px">     logic [1:0]      pre_acc_shift_imm;<br><span style="padding-left:20px">     logic            zero_acc;<br><span style="padding-left:20px">     logic            shift_acc;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otbn_state_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     OtbnStateHalt,<br><span style="padding-left:20px">     OtbnStateUrndRefresh,<br><span style="padding-left:20px">     OtbnStateRun,<br><span style="padding-left:20px">     OtbnStateStall   }</td>
+<td>States for controller state machine</td>
+</tr>
+<tr>
+<td>otbn_start_stop_state_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     OtbnStartStopStateHalt,<br><span style="padding-left:20px">     OtbnStartStopStateUrndRefresh,<br><span style="padding-left:20px">     OtbnStartStopStateRunning   }</td>
+<td></td>
+</tr>
+<tr>
+<td>urnd_lfsr_seed_t</td>
+<td>logic [UrndLfsrWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>urnd_chunk_lfsr_perm_t</td>
+<td>logic [UrndChunkLfsrWidth-1:0][$clog2(UrndChunkLfsrWidth)-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>otbn_dmem_nonce_t</td>
+<td>logic [63:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>otbn_imem_nonce_t</td>
+<td>logic [63:0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

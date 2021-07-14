@@ -1,0 +1,2138 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=otp_ctrl_reg_pkg><h1 id="package-otp_ctrl_reg_pkg">Package: otp_ctrl_reg_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+ Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
+ SPDX-License-Identifier: Apache-2.0<br />
+ Register Package auto-generated by <code>reggen</code> containing data structure</p>
+<p></div></p><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NumSramKeyReqSlots</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>OtpByteAddrWidth</td>
+<td>int</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td>NumErrorEntries</td>
+<td>int</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>NumDaiWords</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>NumDigestWords</td>
+<td>int</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>NumSwCfgWindowWords</td>
+<td>int</td>
+<td>512</td>
+<td></td>
+</tr>
+<tr>
+<td>NumDebugWindowWords</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>NumPart</td>
+<td>int</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgOffset</td>
+<td>int</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgSize</td>
+<td>int</td>
+<td>768</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgAstCfgOffset</td>
+<td>int</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgAstCfgSize</td>
+<td>int</td>
+<td>256</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgRomExtSkuOffset</td>
+<td>int</td>
+<td>256</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgRomExtSkuSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgUseSwRsaVerifyOffset</td>
+<td>int</td>
+<td>260</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgUseSwRsaVerifySize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgKeyIsValidOffset</td>
+<td>int</td>
+<td>264</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgKeyIsValidSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgDigestOffset</td>
+<td>int</td>
+<td>760</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorSwCfgDigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>OwnerSwCfgOffset</td>
+<td>int</td>
+<td>768</td>
+<td></td>
+</tr>
+<tr>
+<td>OwnerSwCfgSize</td>
+<td>int</td>
+<td>768</td>
+<td></td>
+</tr>
+<tr>
+<td>RomErrorReportingOffset</td>
+<td>int</td>
+<td>768</td>
+<td></td>
+</tr>
+<tr>
+<td>RomErrorReportingSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>RomBootstrapEnOffset</td>
+<td>int</td>
+<td>772</td>
+<td></td>
+</tr>
+<tr>
+<td>RomBootstrapEnSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>RomFaultResponseOffset</td>
+<td>int</td>
+<td>776</td>
+<td></td>
+</tr>
+<tr>
+<td>RomFaultResponseSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertClassEnOffset</td>
+<td>int</td>
+<td>780</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertClassEnSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertEscalationOffset</td>
+<td>int</td>
+<td>784</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertEscalationSize</td>
+<td>int</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertClassificationOffset</td>
+<td>int</td>
+<td>788</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertClassificationSize</td>
+<td>int</td>
+<td>320</td>
+<td></td>
+</tr>
+<tr>
+<td>RomLocalAlertClassificationOffset</td>
+<td>int</td>
+<td>1108</td>
+<td></td>
+</tr>
+<tr>
+<td>RomLocalAlertClassificationSize</td>
+<td>int</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertAccumThreshOffset</td>
+<td>int</td>
+<td>1172</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertAccumThreshSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertTimeoutCyclesOffset</td>
+<td>int</td>
+<td>1188</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertTimeoutCyclesSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertPhaseCyclesOffset</td>
+<td>int</td>
+<td>1204</td>
+<td></td>
+</tr>
+<tr>
+<td>RomAlertPhaseCyclesSize</td>
+<td>int</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>OwnerSwCfgDigestOffset</td>
+<td>int</td>
+<td>1528</td>
+<td></td>
+</tr>
+<tr>
+<td>OwnerSwCfgDigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>HwCfgOffset</td>
+<td>int</td>
+<td>1536</td>
+<td></td>
+</tr>
+<tr>
+<td>HwCfgSize</td>
+<td>int</td>
+<td>240</td>
+<td></td>
+</tr>
+<tr>
+<td>DeviceIdOffset</td>
+<td>int</td>
+<td>1536</td>
+<td></td>
+</tr>
+<tr>
+<td>DeviceIdSize</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>EnSramIfetchOffset</td>
+<td>int</td>
+<td>1568</td>
+<td></td>
+</tr>
+<tr>
+<td>EnSramIfetchSize</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>EnCsrngSwAppReadOffset</td>
+<td>int</td>
+<td>1569</td>
+<td></td>
+</tr>
+<tr>
+<td>EnCsrngSwAppReadSize</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>EnEntropySrcFwReadOffset</td>
+<td>int</td>
+<td>1570</td>
+<td></td>
+</tr>
+<tr>
+<td>EnEntropySrcFwReadSize</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>EnEntropySrcFwOverOffset</td>
+<td>int</td>
+<td>1571</td>
+<td></td>
+</tr>
+<tr>
+<td>EnEntropySrcFwOverSize</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>HwCfgDigestOffset</td>
+<td>int</td>
+<td>1768</td>
+<td></td>
+</tr>
+<tr>
+<td>HwCfgDigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret0Offset</td>
+<td>int</td>
+<td>1776</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret0Size</td>
+<td>int</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>TestUnlockTokenOffset</td>
+<td>int</td>
+<td>1776</td>
+<td></td>
+</tr>
+<tr>
+<td>TestUnlockTokenSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>TestExitTokenOffset</td>
+<td>int</td>
+<td>1792</td>
+<td></td>
+</tr>
+<tr>
+<td>TestExitTokenSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret0DigestOffset</td>
+<td>int</td>
+<td>1808</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret0DigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret1Offset</td>
+<td>int</td>
+<td>1816</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret1Size</td>
+<td>int</td>
+<td>88</td>
+<td></td>
+</tr>
+<tr>
+<td>FlashAddrKeySeedOffset</td>
+<td>int</td>
+<td>1816</td>
+<td></td>
+</tr>
+<tr>
+<td>FlashAddrKeySeedSize</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>FlashDataKeySeedOffset</td>
+<td>int</td>
+<td>1848</td>
+<td></td>
+</tr>
+<tr>
+<td>FlashDataKeySeedSize</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>SramDataKeySeedOffset</td>
+<td>int</td>
+<td>1880</td>
+<td></td>
+</tr>
+<tr>
+<td>SramDataKeySeedSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret1DigestOffset</td>
+<td>int</td>
+<td>1896</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret1DigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret2Offset</td>
+<td>int</td>
+<td>1904</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret2Size</td>
+<td>int</td>
+<td>88</td>
+<td></td>
+</tr>
+<tr>
+<td>RmaTokenOffset</td>
+<td>int</td>
+<td>1904</td>
+<td></td>
+</tr>
+<tr>
+<td>RmaTokenSize</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorRootKeyShare0Offset</td>
+<td>int</td>
+<td>1920</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorRootKeyShare0Size</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorRootKeyShare1Offset</td>
+<td>int</td>
+<td>1952</td>
+<td></td>
+</tr>
+<tr>
+<td>CreatorRootKeyShare1Size</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret2DigestOffset</td>
+<td>int</td>
+<td>1984</td>
+<td></td>
+</tr>
+<tr>
+<td>Secret2DigestSize</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleOffset</td>
+<td>int</td>
+<td>1992</td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleSize</td>
+<td>int</td>
+<td>56</td>
+<td></td>
+</tr>
+<tr>
+<td>LcTransitionCntOffset</td>
+<td>int</td>
+<td>1992</td>
+<td></td>
+</tr>
+<tr>
+<td>LcTransitionCntSize</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>LcStateOffset</td>
+<td>int</td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr>
+<td>LcStateSize</td>
+<td>int</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>NumAlerts</td>
+<td>int</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>int</td>
+<td>14</td>
+<td>Address widths within the block</td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>undefined</td>
+<td>Register offsets</td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>28</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>34</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>38</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>48</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>50</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>54</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>58</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>68</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>70</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>74</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>78</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_INTR_TEST_RESVAL</td>
+<td>logic [1:0]</td>
+<td>undefined</td>
+<td>Reset values for hwext registers and their fields</td>
+</tr>
+<tr>
+<td>OTP_CTRL_INTR_TEST_OTP_OPERATION_DONE_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_INTR_TEST_OTP_ERROR_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_ALERT_TEST_RESVAL</td>
+<td>logic [2:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_ALERT_TEST_FATAL_MACRO_ERROR_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_ALERT_TEST_FATAL_CHECK_ERROR_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_ALERT_TEST_FATAL_BUS_INTEG_ERROR_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_STATUS_RESVAL</td>
+<td>logic [15:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_ERR_CODE_RESVAL</td>
+<td>logic [26:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_DIRECT_ACCESS_REGWEN_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_DIRECT_ACCESS_REGWEN_DIRECT_ACCESS_REGWEN_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_DIRECT_ACCESS_CMD_RESVAL</td>
+<td>logic [2:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_DIRECT_ACCESS_RDATA_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_DIRECT_ACCESS_RDATA_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_CHECK_TRIGGER_RESVAL</td>
+<td>logic [1:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_CREATOR_SW_CFG_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_CREATOR_SW_CFG_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_OWNER_SW_CFG_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_OWNER_SW_CFG_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_HW_CFG_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_HW_CFG_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET0_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET0_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET1_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET1_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET2_DIGEST_0_RESVAL</td>
+<td>logic [31:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SECRET2_DIGEST_1_RESVAL</td>
+<td>logic [31:0]</td>
+<td>logic [BlockAw-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_SW_CFG_WINDOW_SIZE</td>
+<td>int unsigned</td>
+<td>800</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>2000</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_TEST_ACCESS_SIZE</td>
+<td>int unsigned</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>OTP_CTRL_PERMIT</td>
+<td>logic [3:0]</td>
+<td>undefined</td>
+<td>Register width information to check illegal writes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>otp_ctrl_reg2hw_intr_state_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } otp_operation_done;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } otp_error;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_intr_enable_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } otp_operation_done;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } otp_error;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_intr_test_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } otp_operation_done;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } otp_error;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_alert_test_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } fatal_macro_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } fatal_check_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } fatal_bus_integ_error;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_direct_access_cmd_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } rd;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } wr;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } digest;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_direct_access_address_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [10:0] q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_direct_access_wdata_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_check_trigger_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } integrity;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">       logic        qe;<br><span style="padding-left:20px">     } consistency;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_check_timeout_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_integrity_check_period_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_consistency_check_period_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_creator_sw_cfg_read_lock_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_owner_sw_cfg_read_lock_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_intr_state_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">       logic        de;<br><span style="padding-left:20px">     } otp_operation_done;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">       logic        de;<br><span style="padding-left:20px">     } otp_error;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_status_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } creator_sw_cfg_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } owner_sw_cfg_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } hw_cfg_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } secret0_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } secret1_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } secret2_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } life_cycle_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } dai_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } lci_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } timeout_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } lfsr_fsm_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } scrambling_fsm_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } key_deriv_fsm_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } bus_integ_error;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } dai_idle;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        d;<br><span style="padding-left:20px">     } check_pending;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_err_code_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [2:0]  d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_direct_access_regwen_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_direct_access_rdata_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_creator_sw_cfg_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_owner_sw_cfg_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_hw_cfg_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_secret0_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_secret1_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_secret2_digest_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [31:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_ctrl_reg2hw_direct_access_wdata_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     otp_ctrl_reg2hw_intr_state_reg_t intr_state;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_intr_enable_reg_t intr_enable;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_intr_test_reg_t intr_test;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_alert_test_reg_t alert_test;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_direct_access_cmd_reg_t direct_access_cmd;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_direct_access_address_reg_t direct_access_address;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_direct_access_wdata_mreg_t [1:0] direct_access_wdata;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_check_trigger_reg_t check_trigger;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_check_timeout_reg_t check_timeout;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_integrity_check_period_reg_t integrity_check_period;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_consistency_check_period_reg_t consistency_check_period;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_creator_sw_cfg_read_lock_reg_t creator_sw_cfg_read_lock;<br><span style="padding-left:20px">      otp_ctrl_reg2hw_owner_sw_cfg_read_lock_reg_t owner_sw_cfg_read_lock;<br><span style="padding-left:20px">    }</td>
+<td>Register -&gt; HW type</td>
+</tr>
+<tr>
+<td>otp_ctrl_hw2reg_err_code_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     otp_ctrl_hw2reg_intr_state_reg_t intr_state;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_status_reg_t status;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_err_code_mreg_t [8:0] err_code;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_direct_access_regwen_reg_t direct_access_regwen;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_direct_access_rdata_mreg_t [1:0] direct_access_rdata;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_creator_sw_cfg_digest_mreg_t [1:0] creator_sw_cfg_digest;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_owner_sw_cfg_digest_mreg_t [1:0] owner_sw_cfg_digest;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_hw_cfg_digest_mreg_t [1:0] hw_cfg_digest;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_secret0_digest_mreg_t [1:0] secret0_digest;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_secret1_digest_mreg_t [1:0] secret1_digest;<br><span style="padding-left:20px">      otp_ctrl_hw2reg_secret2_digest_mreg_t [1:0] secret2_digest;<br><span style="padding-left:20px">    }</td>
+<td>HW -&gt; register type</td>
+</tr>
+<tr>
+<td>otp_ctrl_id_e</td>
+<td>enum int {<br><span style="padding-left:20px">     OTP_CTRL_INTR_STATE,<br><span style="padding-left:20px">     OTP_CTRL_INTR_ENABLE,<br><span style="padding-left:20px">     OTP_CTRL_INTR_TEST,<br><span style="padding-left:20px">     OTP_CTRL_ALERT_TEST,<br><span style="padding-left:20px">     OTP_CTRL_STATUS,<br><span style="padding-left:20px">     OTP_CTRL_ERR_CODE,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_REGWEN,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_CMD,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_ADDRESS,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_WDATA_0,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_WDATA_1,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_RDATA_0,<br><span style="padding-left:20px">     OTP_CTRL_DIRECT_ACCESS_RDATA_1,<br><span style="padding-left:20px">     OTP_CTRL_CHECK_TRIGGER_REGWEN,<br><span style="padding-left:20px">     OTP_CTRL_CHECK_TRIGGER,<br><span style="padding-left:20px">     OTP_CTRL_CHECK_REGWEN,<br><span style="padding-left:20px">     OTP_CTRL_CHECK_TIMEOUT,<br><span style="padding-left:20px">     OTP_CTRL_INTEGRITY_CHECK_PERIOD,<br><span style="padding-left:20px">     OTP_CTRL_CONSISTENCY_CHECK_PERIOD,<br><span style="padding-left:20px">     OTP_CTRL_CREATOR_SW_CFG_READ_LOCK,<br><span style="padding-left:20px">     OTP_CTRL_OWNER_SW_CFG_READ_LOCK,<br><span style="padding-left:20px">     OTP_CTRL_CREATOR_SW_CFG_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_CREATOR_SW_CFG_DIGEST_1,<br><span style="padding-left:20px">     OTP_CTRL_OWNER_SW_CFG_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_OWNER_SW_CFG_DIGEST_1,<br><span style="padding-left:20px">     OTP_CTRL_HW_CFG_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_HW_CFG_DIGEST_1,<br><span style="padding-left:20px">     OTP_CTRL_SECRET0_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_SECRET0_DIGEST_1,<br><span style="padding-left:20px">     OTP_CTRL_SECRET1_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_SECRET1_DIGEST_1,<br><span style="padding-left:20px">     OTP_CTRL_SECRET2_DIGEST_0,<br><span style="padding-left:20px">     OTP_CTRL_SECRET2_DIGEST_1   }</td>
+<td>Register index</td>
+</tr>
+</tbody>
+</table>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>

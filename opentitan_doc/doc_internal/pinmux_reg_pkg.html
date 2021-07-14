@@ -1,0 +1,4356 @@
+
+<style>
+  .markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<a id=pinmux_reg_pkg><h1 id="package-pinmux_reg_pkg">Package: pinmux_reg_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+ Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
+ SPDX-License-Identifier: Apache-2.0<br />
+ Register Package auto-generated by <code>reggen</code> containing data structure</p>
+<p></div></p><h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="value">Value</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AttrDw</td>
+<td>int</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>NMioPeriphIn</td>
+<td>int</td>
+<td>33</td>
+<td></td>
+</tr>
+<tr>
+<td>NMioPeriphOut</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>NMioPads</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>NDioPads</td>
+<td>int</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>NWkupDetect</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>WkupCntWidth</td>
+<td>int</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>NumAlerts</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>int</td>
+<td>11</td>
+<td>Address widths within the block</td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>undefined</td>
+<td>Register offsets</td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>28</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>34</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>38</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>48</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>50</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>54</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>58</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>68</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>70</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>74</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>78</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>84</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>88</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>90</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>94</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>98</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>100</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>104</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>108</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>110</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>114</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>118</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>120</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>124</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>128</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>130</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>134</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>138</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>140</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>144</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>148</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>154</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>158</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>160</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>164</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>168</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>170</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>174</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>178</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>180</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>184</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>188</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>190</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>194</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>198</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>200</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>204</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>208</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>210</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>214</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>218</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>220</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>224</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>228</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>230</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>234</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>238</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>240</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>244</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>248</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>250</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>254</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>258</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>260</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>264</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>268</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>270</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>274</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>278</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>280</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>284</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>288</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>290</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>294</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>298</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>304</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>308</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>310</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>314</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>318</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>320</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>324</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>328</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>330</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>334</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>338</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>340</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>344</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>348</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>350</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>354</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>358</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>360</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>364</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>368</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>370</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>374</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>378</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>380</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>384</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>388</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>390</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>394</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>398</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>400</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>404</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>408</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>410</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>414</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>418</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>420</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>424</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>428</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>430</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>434</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>438</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>440</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>444</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>448</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>450</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>454</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>458</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>460</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>464</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>468</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>470</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>474</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>478</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>480</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>484</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>488</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>490</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>494</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>498</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>500</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>504</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>508</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>510</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>514</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>518</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>520</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>524</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>528</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>530</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>534</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>538</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>540</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>544</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>548</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>550</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>554</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>558</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>560</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>564</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>568</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>570</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>574</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>578</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>580</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>584</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>588</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>590</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>594</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>598</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>a8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ac</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>b8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>bc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>cc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>d8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>dc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>e8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>ec</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f0</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f4</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>f8</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>fc</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>604</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>608</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>610</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>614</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>618</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>620</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>624</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>628</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>630</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>634</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>638</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>640</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>644</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>648</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>650</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>654</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>658</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>660</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>664</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>668</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>c</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>670</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockAw</td>
+<td>logic [BlockAw-1:0]</td>
+<td>674</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_ALERT_TEST_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td>Reset values for hwext registers and their fields</td>
+</tr>
+<tr>
+<td>PINMUX_ALERT_TEST_FATAL_FAULT_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_0_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_0_ATTR_0_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_1_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_1_ATTR_1_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_2_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_2_ATTR_2_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_3_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_3_ATTR_3_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_4_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_4_ATTR_4_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_5_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_5_ATTR_5_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_6_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_6_ATTR_6_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_7_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_7_ATTR_7_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_8_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_8_ATTR_8_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_9_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_9_ATTR_9_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_10_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_10_ATTR_10_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_11_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_11_ATTR_11_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_12_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_12_ATTR_12_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_13_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_13_ATTR_13_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_14_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_14_ATTR_14_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_15_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_15_ATTR_15_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_16_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_16_ATTR_16_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_17_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_17_ATTR_17_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_18_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_18_ATTR_18_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_19_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_19_ATTR_19_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_20_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_20_ATTR_20_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_21_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_21_ATTR_21_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_22_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_22_ATTR_22_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_23_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_23_ATTR_23_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_24_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_24_ATTR_24_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_25_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_25_ATTR_25_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_26_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_26_ATTR_26_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_27_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_27_ATTR_27_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_28_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_28_ATTR_28_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_29_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_29_ATTR_29_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_30_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_30_ATTR_30_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_31_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_MIO_PAD_ATTR_31_ATTR_31_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_0_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_0_ATTR_0_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_1_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_1_ATTR_1_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_2_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_2_ATTR_2_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_3_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_3_ATTR_3_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_4_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_4_ATTR_4_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_5_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_5_ATTR_5_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_6_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_6_ATTR_6_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_7_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_7_ATTR_7_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_8_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_8_ATTR_8_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_9_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_9_ATTR_9_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_10_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_10_ATTR_10_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_11_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_11_ATTR_11_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_12_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_12_ATTR_12_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_13_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_13_ATTR_13_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_14_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_14_ATTR_14_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_15_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_DIO_PAD_ATTR_15_ATTR_15_RESVAL</td>
+<td>logic [12:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_RESVAL</td>
+<td>logic [7:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_0_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_1_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_2_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_3_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_4_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_5_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_6_RESVAL</td>
+<td>logic [0:0]</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_WKUP_CAUSE_CAUSE_7_RESVAL</td>
+<td>logic [0:0]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PINMUX_PERMIT</td>
+<td>logic [3:0]</td>
+<td>undefined</td>
+<td>Register width information to check illegal writes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pinmux_reg2hw_alert_test_reg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">     logic        qe;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_periph_insel_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [5:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_outsel_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [5:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_pad_attr_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [12:0] q;<br><span style="padding-left:20px">     logic        qe;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_dio_pad_attr_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [12:0] q;<br><span style="padding-left:20px">     logic        qe;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_pad_sleep_status_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_pad_sleep_en_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_pad_sleep_mode_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [1:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_dio_pad_sleep_status_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_dio_pad_sleep_en_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_dio_pad_sleep_mode_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [1:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_wkup_detector_en_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_wkup_detector_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic [2:0]  q;<br><span style="padding-left:20px">     } mode;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } filter;<br><span style="padding-left:20px">     struct packed {<br><span style="padding-left:20px">       logic        q;<br><span style="padding-left:20px">     } miodio;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_wkup_detector_cnt_th_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [7:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_wkup_detector_padsel_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [5:0]  q;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_wkup_cause_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        q;<br><span style="padding-left:20px">     logic        qe;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_mio_pad_attr_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [12:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_dio_pad_attr_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [12:0] d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_mio_pad_sleep_status_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        d;<br><span style="padding-left:20px">     logic        de;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_dio_pad_sleep_status_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        d;<br><span style="padding-left:20px">     logic        de;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_wkup_cause_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        d;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>pinmux_reg2hw_mio_periph_insel_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     pinmux_reg2hw_alert_test_reg_t alert_test;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_periph_insel_mreg_t [32:0] mio_periph_insel;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_outsel_mreg_t [31:0] mio_outsel;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_pad_attr_mreg_t [31:0] mio_pad_attr;<br><span style="padding-left:20px">      pinmux_reg2hw_dio_pad_attr_mreg_t [15:0] dio_pad_attr;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_pad_sleep_status_mreg_t [31:0] mio_pad_sleep_status;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_pad_sleep_en_mreg_t [31:0] mio_pad_sleep_en;<br><span style="padding-left:20px">      pinmux_reg2hw_mio_pad_sleep_mode_mreg_t [31:0] mio_pad_sleep_mode;<br><span style="padding-left:20px">      pinmux_reg2hw_dio_pad_sleep_status_mreg_t [15:0] dio_pad_sleep_status;<br><span style="padding-left:20px">      pinmux_reg2hw_dio_pad_sleep_en_mreg_t [15:0] dio_pad_sleep_en;<br><span style="padding-left:20px">      pinmux_reg2hw_dio_pad_sleep_mode_mreg_t [15:0] dio_pad_sleep_mode;<br><span style="padding-left:20px">      pinmux_reg2hw_wkup_detector_en_mreg_t [7:0] wkup_detector_en;<br><span style="padding-left:20px">      pinmux_reg2hw_wkup_detector_mreg_t [7:0] wkup_detector;<br><span style="padding-left:20px">      pinmux_reg2hw_wkup_detector_cnt_th_mreg_t [7:0] wkup_detector_cnt_th;<br><span style="padding-left:20px">      pinmux_reg2hw_wkup_detector_padsel_mreg_t [7:0] wkup_detector_padsel;<br><span style="padding-left:20px">      pinmux_reg2hw_wkup_cause_mreg_t [7:0] wkup_cause;<br><span style="padding-left:20px">    }</td>
+<td>Register -&gt; HW type</td>
+</tr>
+<tr>
+<td>pinmux_hw2reg_mio_pad_attr_mreg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     pinmux_hw2reg_mio_pad_attr_mreg_t [31:0] mio_pad_attr;<br><span style="padding-left:20px">      pinmux_hw2reg_dio_pad_attr_mreg_t [15:0] dio_pad_attr;<br><span style="padding-left:20px">      pinmux_hw2reg_mio_pad_sleep_status_mreg_t [31:0] mio_pad_sleep_status;<br><span style="padding-left:20px">      pinmux_hw2reg_dio_pad_sleep_status_mreg_t [15:0] dio_pad_sleep_status;<br><span style="padding-left:20px">      pinmux_hw2reg_wkup_cause_mreg_t [7:0] wkup_cause;<br><span style="padding-left:20px">    }</td>
+<td>HW -&gt; register type</td>
+</tr>
+</tbody>
+</table>
+    </article class="markdown-body">
+
+    </body>
+    
+    <br><br><br><br><br><br>
