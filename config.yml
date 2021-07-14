@@ -4,6 +4,12 @@ CordicHDL:
     vhdl_symbol: "!"
     verilog_symbol: "!"
 
+verilog-axi:
+    url: https://github.com/alexforencich/verilog-axi.git
+    folder: verilog-axi/rtl
+    vhdl_symbol: ""
+    verilog_symbol: ""
+
 SURF:
     url: https://github.com/slaclab/surf
     folder: surf/
