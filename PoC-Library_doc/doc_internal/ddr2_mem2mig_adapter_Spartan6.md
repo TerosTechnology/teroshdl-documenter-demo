@@ -1,5 +1,6 @@
 # Entity: ddr2_mem2mig_adapter_Spartan6
 
+- **File**: ddr2_mem2mig_adapter_Spartan6.vhdl
 ## Diagram
 
 ![Diagram](ddr2_mem2mig_adapter_Spartan6.svg "Diagram")

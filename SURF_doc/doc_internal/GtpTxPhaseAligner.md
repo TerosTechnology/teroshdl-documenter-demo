@@ -1,5 +1,6 @@
 # Entity: GtpTxPhaseAligner
 
+- **File**: GtpTxPhaseAligner.vhd
 ## Diagram
 
 ![Diagram](GtpTxPhaseAligner.svg "Diagram")

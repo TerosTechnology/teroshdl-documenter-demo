@@ -1,5 +1,6 @@
 # Entity: iq_abs_avg
 
+- **File**: iq_abs_avg.v
 ## Diagram
 
 ![Diagram](iq_abs_avg.svg "Diagram")

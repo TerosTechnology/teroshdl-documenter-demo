@@ -1,5 +1,6 @@
 # Entity: SspEncoder10b12b
 
+- **File**: SspEncoder10b12b.vhd
 ## Diagram
 
 ![Diagram](SspEncoder10b12b.svg "Diagram")

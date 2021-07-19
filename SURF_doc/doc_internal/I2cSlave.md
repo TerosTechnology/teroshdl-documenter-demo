@@ -1,5 +1,6 @@
 # Entity: I2cSlave
 
+- **File**: I2cSlave.vhd
 ## Diagram
 
 ![Diagram](I2cSlave.svg "Diagram")

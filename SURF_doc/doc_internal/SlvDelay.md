@@ -1,5 +1,6 @@
 # Entity: SlvDelay
 
+- **File**: SlvDelay.vhd
 ## Diagram
 
 ![Diagram](SlvDelay.svg "Diagram")

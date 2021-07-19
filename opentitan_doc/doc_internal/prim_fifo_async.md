@@ -1,5 +1,6 @@
 # Entity: prim_fifo_async
 
+- **File**: prim_fifo_async.sv
 ## Diagram
 
 ![Diagram](prim_fifo_async.svg "Diagram")

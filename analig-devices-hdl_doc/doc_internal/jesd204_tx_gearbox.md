@@ -1,5 +1,6 @@
 # Entity: jesd204_tx_gearbox
 
+- **File**: jesd204_tx_gearbox.v
 ## Diagram
 
 ![Diagram](jesd204_tx_gearbox.svg "Diagram")

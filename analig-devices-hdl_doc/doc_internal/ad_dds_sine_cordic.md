@@ -1,5 +1,6 @@
 # Entity: ad_dds_sine_cordic
 
+- **File**: ad_dds_sine_cordic.v
 ## Diagram
 
 ![Diagram](ad_dds_sine_cordic.svg "Diagram")

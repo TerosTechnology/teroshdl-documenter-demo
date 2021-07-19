@@ -1,5 +1,6 @@
 # Entity: tsf_timer
 
+- **File**: tsf_timer.v
 ## Diagram
 
 ![Diagram](tsf_timer.svg "Diagram")

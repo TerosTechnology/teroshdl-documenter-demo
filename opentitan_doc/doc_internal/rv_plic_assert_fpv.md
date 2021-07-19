@@ -1,5 +1,6 @@
 # Entity: rv_plic_assert_fpv
 
+- **File**: rv_plic_assert_fpv.sv
 ## Diagram
 
 ![Diagram](rv_plic_assert_fpv.svg "Diagram")

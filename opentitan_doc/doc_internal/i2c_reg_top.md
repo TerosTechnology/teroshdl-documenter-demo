@@ -1,5 +1,6 @@
 # Entity: i2c_reg_top
 
+- **File**: i2c_reg_top.sv
 ## Diagram
 
 ![Diagram](i2c_reg_top.svg "Diagram")

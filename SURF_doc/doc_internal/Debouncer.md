@@ -1,5 +1,6 @@
 # Entity: Debouncer
 
+- **File**: Debouncer.vhd
 ## Diagram
 
 ![Diagram](Debouncer.svg "Diagram")

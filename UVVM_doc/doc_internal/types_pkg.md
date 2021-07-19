@@ -1,5 +1,6 @@
 # Package: types_pkg
 
+- **File**: types_pkg.vhd
 ## Constants
 
 | Name                                                      | Type               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Description                                                             |

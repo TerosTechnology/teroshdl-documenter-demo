@@ -1,5 +1,6 @@
 # Entity: TenGigEthGtyUltraScaleWrapper
 
+- **File**: TenGigEthGtyUltraScaleWrapper.vhd
 ## Diagram
 
 ![Diagram](TenGigEthGtyUltraScaleWrapper.svg "Diagram")

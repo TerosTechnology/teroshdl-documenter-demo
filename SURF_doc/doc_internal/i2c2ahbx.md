@@ -1,5 +1,6 @@
 # Entity: i2c2ahbx
 
+- **File**: i2c2ahbx.vhd
 ## Diagram
 
 ![Diagram](i2c2ahbx.svg "Diagram")

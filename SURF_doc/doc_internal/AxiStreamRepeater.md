@@ -1,5 +1,6 @@
 # Entity: AxiStreamRepeater
 
+- **File**: AxiStreamRepeater.vhd
 ## Diagram
 
 ![Diagram](AxiStreamRepeater.svg "Diagram")

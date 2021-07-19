@@ -1,5 +1,6 @@
 # Entity: elastic_buffer
 
+- **File**: elastic_buffer.v
 ## Diagram
 
 ![Diagram](elastic_buffer.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: XauiGthUltraScaleWrapper
 
+- **File**: XauiGthUltraScaleWrapper.vhd
 ## Diagram
 
 ![Diagram](XauiGthUltraScaleWrapper.svg "Diagram")

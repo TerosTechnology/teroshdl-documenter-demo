@@ -1,5 +1,6 @@
 # Entity: pwm_sync_bit
 
+- **File**: pwm_sync_bit.vhd
 ## Diagram
 
 ![Diagram](pwm_sync_bit.svg "Diagram")

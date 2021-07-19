@@ -1,5 +1,6 @@
 # Package: axilite_channel_handler_pkg
 
+- **File**: axilite_channel_handler_pkg.vhd
 ## Constants
 
 | Name    | Type   | Value                      | Description |

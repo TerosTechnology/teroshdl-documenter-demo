@@ -1,5 +1,6 @@
 # Entity: arbiter
 
+- **File**: arbiter.v
 ## Diagram
 
 ![Diagram](arbiter.svg "Diagram")

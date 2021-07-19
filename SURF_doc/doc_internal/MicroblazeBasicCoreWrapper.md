@@ -1,5 +1,6 @@
 # Entity: MicroblazeBasicCoreWrapper
 
+- **File**: MicroblazeBasicCoreWrapper.vhd
 ## Diagram
 
 ![Diagram](MicroblazeBasicCoreWrapper.svg "Diagram")

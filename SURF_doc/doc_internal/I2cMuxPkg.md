@@ -1,5 +1,6 @@
 # Package: I2cMuxPkg
 
+- **File**: I2cMuxPkg.vhd
 ## Constants
 
 | Name                          | Type                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Description |

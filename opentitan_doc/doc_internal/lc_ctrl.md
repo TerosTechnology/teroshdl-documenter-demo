@@ -1,5 +1,6 @@
 # Entity: lc_ctrl
 
+- **File**: lc_ctrl.sv
 ## Diagram
 
 ![Diagram](lc_ctrl.svg "Diagram")

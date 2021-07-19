@@ -1,5 +1,6 @@
 # Package: prim_esc_pkg
 
+- **File**: prim_esc_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

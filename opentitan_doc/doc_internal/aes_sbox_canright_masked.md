@@ -1,5 +1,6 @@
 # Entity: aes_masked_inverse_gf2p4
 
+- **File**: aes_sbox_canright_masked.sv
 ## Diagram
 
 ![Diagram](aes_sbox_canright_masked.svg "Diagram")

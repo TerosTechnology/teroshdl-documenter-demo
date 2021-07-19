@@ -1,5 +1,6 @@
 # Entity: pattgen_chan
 
+- **File**: pattgen_chan.sv
 ## Diagram
 
 ![Diagram](pattgen_chan.svg "Diagram")

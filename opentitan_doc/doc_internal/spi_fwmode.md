@@ -1,5 +1,6 @@
 # Entity: spi_fwmode
 
+- **File**: spi_fwmode.sv
 ## Diagram
 
 ![Diagram](spi_fwmode.svg "Diagram")

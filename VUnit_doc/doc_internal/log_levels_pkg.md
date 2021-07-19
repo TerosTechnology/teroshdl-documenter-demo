@@ -1,5 +1,6 @@
 # Package: log_levels_pkg
 
+- **File**: log_levels_pkg.vhd
 ## Constants
 
 | Name                      | Type                    | Value                                                                          | Description |

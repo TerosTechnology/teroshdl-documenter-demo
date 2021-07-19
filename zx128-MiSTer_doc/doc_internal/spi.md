@@ -1,5 +1,6 @@
 # Entity: spi
 
+- **File**: spi.v
 ## Diagram
 
 ![Diagram](spi.svg "Diagram")

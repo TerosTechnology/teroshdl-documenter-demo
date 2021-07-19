@@ -1,5 +1,6 @@
 # Entity: byte_to_word_fcs_sn_insert
 
+- **File**: byte_to_word_fcs_sn_insert.v
 ## Diagram
 
 ![Diagram](byte_to_word_fcs_sn_insert.svg "Diagram")

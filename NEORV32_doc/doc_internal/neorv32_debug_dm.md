@@ -1,5 +1,6 @@
 # Entity: neorv32_debug_dm
 
+- **File**: neorv32_debug_dm.vhd
 ## Diagram
 
 ![Diagram](neorv32_debug_dm.svg "Diagram")

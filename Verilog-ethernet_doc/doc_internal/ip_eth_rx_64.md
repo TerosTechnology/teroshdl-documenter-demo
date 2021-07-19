@@ -1,5 +1,6 @@
 # Entity: ip_eth_rx_64
 
+- **File**: ip_eth_rx_64.v
 ## Diagram
 
 ![Diagram](ip_eth_rx_64.svg "Diagram")

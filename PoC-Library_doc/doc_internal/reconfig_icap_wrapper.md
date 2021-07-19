@@ -1,5 +1,6 @@
 # Entity: reconfig_icap_wrapper
 
+- **File**: reconfig_icap_wrapper.vhdl
 ## Diagram
 
 ![Diagram](reconfig_icap_wrapper.svg "Diagram")

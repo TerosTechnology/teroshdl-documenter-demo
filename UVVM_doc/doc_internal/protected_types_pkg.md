@@ -1,5 +1,6 @@
 # Package: protected_types_pkg
 
+- **File**: protected_types_pkg.vhd
 ## Types
 
 | Name                                 | Type | Description |

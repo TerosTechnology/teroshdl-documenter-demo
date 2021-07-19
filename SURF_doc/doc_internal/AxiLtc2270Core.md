@@ -1,5 +1,6 @@
 # Entity: AxiLtc2270Core
 
+- **File**: AxiLtc2270Core.vhd
 ## Diagram
 
 ![Diagram](AxiLtc2270Core.svg "Diagram")

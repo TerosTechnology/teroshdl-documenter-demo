@@ -1,5 +1,6 @@
 # Entity: pidv3_axi_logic
 
+- **File**: pidv3_axi_logic.vhd
 ## Diagram
 
 ![Diagram](pidv3_axi_logic.svg "Diagram")

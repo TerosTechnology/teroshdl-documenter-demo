@@ -1,5 +1,6 @@
 # Entity: mdc_mdio
 
+- **File**: mdc_mdio.v
 ## Diagram
 
 ![Diagram](mdc_mdio.svg "Diagram")

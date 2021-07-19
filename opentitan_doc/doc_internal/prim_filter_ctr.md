@@ -1,5 +1,6 @@
 # Entity: prim_filter_ctr
 
+- **File**: prim_filter_ctr.sv
 ## Diagram
 
 ![Diagram](prim_filter_ctr.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: usbuart_reg_pkg
 
+- **File**: usbuart_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

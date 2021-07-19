@@ -1,5 +1,6 @@
 # Entity: tb_coverage
 
+- **File**: tb_coverage.vhd
 ## Diagram
 
 ![Diagram](tb_coverage.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: spi_passthrough
 
+- **File**: spi_passthrough.sv
 ## Diagram
 
 ![Diagram](spi_passthrough.svg "Diagram")

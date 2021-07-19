@@ -1,5 +1,6 @@
 # Entity: io_KeyPadScanner
 
+- **File**: io_KeyPadScanner.vhdl
 ## Diagram
 
 ![Diagram](io_KeyPadScanner.svg "Diagram")

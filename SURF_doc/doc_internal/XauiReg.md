@@ -1,5 +1,6 @@
 # Entity: XauiReg
 
+- **File**: XauiReg.vhd
 ## Diagram
 
 ![Diagram](XauiReg.svg "Diagram")

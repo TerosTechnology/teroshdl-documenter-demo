@@ -1,5 +1,6 @@
 # Entity: SsiCmdMasterPulser
 
+- **File**: SsiCmdMasterPulser.vhd
 ## Diagram
 
 ![Diagram](SsiCmdMasterPulser.svg "Diagram")

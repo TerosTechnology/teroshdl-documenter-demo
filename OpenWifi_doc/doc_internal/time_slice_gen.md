@@ -1,5 +1,6 @@
 # Entity: time_slice_gen
 
+- **File**: time_slice_gen.v
 ## Diagram
 
 ![Diagram](time_slice_gen.svg "Diagram")

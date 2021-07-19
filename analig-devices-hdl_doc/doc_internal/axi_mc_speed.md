@@ -1,5 +1,6 @@
 # Entity: axi_mc_speed
 
+- **File**: axi_mc_speed.v
 ## Diagram
 
 ![Diagram](axi_mc_speed.svg "Diagram")

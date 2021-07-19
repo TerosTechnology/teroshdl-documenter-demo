@@ -1,5 +1,6 @@
 # Entity: irqc
 
+- **File**: irqc.vhd
 ## Diagram
 
 ![Diagram](irqc.svg "Diagram")

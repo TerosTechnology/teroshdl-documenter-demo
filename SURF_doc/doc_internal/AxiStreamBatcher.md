@@ -1,5 +1,6 @@
 # Entity: AxiStreamBatcher
 
+- **File**: AxiStreamBatcher.vhd
 ## Diagram
 
 ![Diagram](AxiStreamBatcher.svg "Diagram")

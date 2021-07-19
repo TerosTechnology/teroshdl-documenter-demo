@@ -1,5 +1,6 @@
 # Entity: ClinkUartThrottle
 
+- **File**: ClinkUartThrottle.vhd
 ## Diagram
 
 ![Diagram](ClinkUartThrottle.svg "Diagram")

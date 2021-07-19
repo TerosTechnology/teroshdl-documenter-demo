@@ -1,5 +1,6 @@
 # Entity: Dsp48Comparator4x12b
 
+- **File**: Dsp48Comparator4x12b.vhd
 ## Diagram
 
 ![Diagram](Dsp48Comparator4x12b.svg "Diagram")

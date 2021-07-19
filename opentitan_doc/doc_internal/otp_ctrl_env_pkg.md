@@ -1,5 +1,6 @@
 # Package: otp_ctrl_env_pkg
 
+- **File**: otp_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

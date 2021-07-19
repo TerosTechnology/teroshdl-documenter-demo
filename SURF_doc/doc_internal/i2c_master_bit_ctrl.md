@@ -1,5 +1,6 @@
 # Entity: i2c_master_bit_ctrl
 
+- **File**: i2c_master_bit_ctrl.vhd
 ## Diagram
 
 ![Diagram](i2c_master_bit_ctrl.svg "Diagram")

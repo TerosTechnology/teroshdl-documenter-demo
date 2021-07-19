@@ -1,5 +1,6 @@
 # Entity: delay_30_degrees
 
+- **File**: delay_30_degrees.v
 ## Diagram
 
 ![Diagram](delay_30_degrees.svg "Diagram")

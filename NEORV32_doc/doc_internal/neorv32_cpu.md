@@ -1,5 +1,6 @@
 # Entity: neorv32_cpu
 
+- **File**: neorv32_cpu.vhd
 ## Diagram
 
 ![Diagram](neorv32_cpu.svg "Diagram")
@@ -72,6 +73,7 @@
 | FAST_MUL_EN                  | boolean                        | false       | use DSPs for M extension's multiplier                                    |
 | FAST_SHIFT_EN                | boolean                        | false       | use barrel shifter for shift operations                                  |
 | CPU_CNT_WIDTH                | natural                        | 64          | total width of CPU cycle and instret counters (0..64)                    |
+| CPU_IPB_ENTRIES              | natural                        | 2           | entries is instruction prefetch buffer, has to be a power of 2           |
 | PMP_NUM_REGIONS              | natural                        | 0           | number of regions (0..64)                                                |
 | PMP_MIN_GRANULARITY          | natural                        | 64*1024     | minimal region granularity in bytes, has to be a power of 2, min 8 bytes |
 | HPM_NUM_CNTS                 | natural                        | 0           | number of implemented HPM counters (0..29)                               |

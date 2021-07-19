@@ -1,5 +1,6 @@
 # Entity: AdiConfigSlave
 
+- **File**: AdiConfigSlave.vhd
 ## Diagram
 
 ![Diagram](AdiConfigSlave.svg "Diagram")

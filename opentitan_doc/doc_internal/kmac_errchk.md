@@ -1,5 +1,6 @@
 # Entity: kmac_errchk
 
+- **File**: kmac_errchk.sv
 ## Diagram
 
 ![Diagram](kmac_errchk.svg "Diagram")

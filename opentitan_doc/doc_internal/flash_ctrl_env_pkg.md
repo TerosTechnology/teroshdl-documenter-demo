@@ -1,5 +1,6 @@
 # Package: flash_ctrl_env_pkg
 
+- **File**: flash_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

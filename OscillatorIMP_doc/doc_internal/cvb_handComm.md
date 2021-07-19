@@ -1,5 +1,6 @@
 # Entity: cvb_handComm
 
+- **File**: cvb_handComm.vhd
 ## Diagram
 
 ![Diagram](cvb_handComm.svg "Diagram")

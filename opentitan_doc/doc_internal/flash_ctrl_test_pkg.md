@@ -1,5 +1,6 @@
 # Package: flash_ctrl_test_pkg
 
+- **File**: flash_ctrl_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

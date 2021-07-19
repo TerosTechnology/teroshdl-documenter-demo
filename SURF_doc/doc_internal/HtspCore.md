@@ -1,5 +1,6 @@
 # Entity: HtspCore
 
+- **File**: HtspCore.vhd
 ## Diagram
 
 ![Diagram](HtspCore.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: UdpDebugBridgeWrapper
 
+- **File**: UdpDebugBridgeWrapper.vhd
 ## Diagram
 
 ![Diagram](UdpDebugBridgeWrapper.svg "Diagram")

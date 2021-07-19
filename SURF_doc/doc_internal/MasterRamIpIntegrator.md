@@ -1,5 +1,6 @@
 # Entity: MasterRamIpIntegrator
 
+- **File**: MasterRamIpIntegrator.vhd
 ## Diagram
 
 ![Diagram](MasterRamIpIntegrator.svg "Diagram")

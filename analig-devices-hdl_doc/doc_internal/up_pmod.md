@@ -1,5 +1,6 @@
 # Entity: up_pmod
 
+- **File**: up_pmod.v
 ## Diagram
 
 ![Diagram](up_pmod.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: spi_host
 
+- **File**: spi_host.sv
 ## Diagram
 
 ![Diagram](spi_host.svg "Diagram")
@@ -41,99 +42,98 @@ Copyright lowRISC contributors.
 | intr_spi_event_o | output    |                 |                       |
 ## Signals
 
-| Name                  | Type                  | Description                                                            |
-| --------------------- | --------------------- | ---------------------------------------------------------------------- |
-| reg2hw                | spi_host_reg2hw_t     |                                                                        |
-| hw2reg                | spi_host_hw2reg_t     |                                                                        |
-| fifo_win_h2d          | tlul_pkg::tl_h2d_t    |                                                                        |
-| fifo_win_d2h          | tlul_pkg::tl_d2h_t    |                                                                        |
-| alert_test            | logic [NumAlerts-1:0] | Register module                                                        |
-| alerts                | logic [NumAlerts-1:0] | Register module                                                        |
-| sck                   | logic                 |                                                                        |
-| csb                   | logic [NumCS-1:0]     |                                                                        |
-| sd_out                | logic [3:0]           |                                                                        |
-| sd_en                 | logic [3:0]           |                                                                        |
-| sd_i                  | logic [3:0]           |                                                                        |
-| unused_pt_sck_gate_en | logic                 |                                                                        |
-| unused_scan           | logic                 | TODO: REMOVE THIS CODE Temp tie-offs to silence lint warnings          |
-| command_valid         | logic                 |                                                                        |
-| core_command_valid    | logic                 |                                                                        |
-| command_busy          | logic                 |                                                                        |
-| core_command_ready    | logic                 |                                                                        |
-| core_command          | command_t             |                                                                        |
-| command               | command_t             |                                                                        |
-| error_csid_inval      | logic                 |                                                                        |
-| error_cmd_inval       | logic                 |                                                                        |
-| error_busy            | logic                 |                                                                        |
-| test_csid_inval       | logic                 |                                                                        |
-| test_dir_inval        | logic                 |                                                                        |
-| test_speed_inval      | logic                 |                                                                        |
-| csid                  | logic [CSW-1:0]       |                                                                        |
-|                       | [CSW-1:0]             |                                                                        |
-| cmd_qes               | logic [3:0]           |                                                                        |
-| active                | logic                 |                                                                        |
-| core_active           | logic                 |                                                                        |
-| rx_stall              | logic                 |                                                                        |
-| core_rx_stall         | logic                 |                                                                        |
-| tx_stall              | logic                 |                                                                        |
-| core_tx_stall         | logic                 |                                                                        |
-| sw_rst                | logic                 |                                                                        |
-| core_sw_rst           | logic                 |                                                                        |
-| tx_data               | logic [31:0]          |                                                                        |
-| tx_be                 | logic [3:0]           |                                                                        |
-| tx_valid              | logic                 |                                                                        |
-| tx_ready              | logic                 |                                                                        |
-| rx_data               | logic [31:0]          |                                                                        |
-| rx_valid              | logic                 |                                                                        |
-| rx_ready              | logic                 |                                                                        |
-| core_tx_data          | logic [31:0]          |                                                                        |
-| core_tx_be            | logic [3:0]           |                                                                        |
-| core_tx_valid         | logic                 |                                                                        |
-| core_tx_ready         | logic                 |                                                                        |
-| core_rx_data          | logic [31:0]          |                                                                        |
-| core_rx_valid         | logic                 |                                                                        |
-| core_rx_ready         | logic                 |                                                                        |
-| rx_watermark          | logic [7:0]           |                                                                        |
-| tx_watermark          | logic [7:0]           |                                                                        |
-| rx_qd                 | logic [7:0]           |                                                                        |
-| tx_qd                 | logic [7:0]           |                                                                        |
-| tx_empty              | logic                 |                                                                        |
-| tx_full               | logic                 |                                                                        |
-| tx_wm                 | logic                 |                                                                        |
-| rx_empty              | logic                 |                                                                        |
-| rx_full               | logic                 |                                                                        |
-| rx_wm                 | logic                 |                                                                        |
-| error_overflow        | logic                 |                                                                        |
-| error_underflow       | logic                 |                                                                        |
-| en_sw                 | logic                 | CDCs for a handful of continuous or pulsed control and status signals  |
-| enb_error             | logic                 |                                                                        |
-| en                    | logic                 |                                                                        |
-| core_en               | logic                 |                                                                        |
-| event_error           | logic                 |                                                                        |
-| error_vec             | logic [4:0]           |                                                                        |
-| error_mask            | logic [4:0]           |                                                                        |
-| sw_error_status       | logic [4:0]           |                                                                        |
-| event_spi_event       | logic                 |                                                                        |
-| event_idle            | logic                 |                                                                        |
-| event_ready           | logic                 |                                                                        |
-| event_tx_wm           | logic                 |                                                                        |
-| event_rx_wm           | logic                 |                                                                        |
-| event_tx_empty        | logic                 |                                                                        |
-| event_rx_full         | logic                 |                                                                        |
-| event_vector          | logic [5:0]           |                                                                        |
-| event_mask            | logic [5:0]           |                                                                        |
-| idle_d                | logic                 |                                                                        |
-| idle_q                | logic                 |                                                                        |
-| ready_d               | logic                 |                                                                        |
-| ready_q               | logic                 |                                                                        |
-| tx_wm_d               | logic                 |                                                                        |
-| tx_wm_q               | logic                 |                                                                        |
-| rx_wm_d               | logic                 |                                                                        |
-| rx_wm_q               | logic                 |                                                                        |
-| tx_empty_d            | logic                 |                                                                        |
-| tx_empty_q            | logic                 |                                                                        |
-| rx_full_d             | logic                 |                                                                        |
-| rx_full_q             | logic                 |                                                                        |
+| Name                  | Type                                                | Description                                                            |
+| --------------------- | --------------------------------------------------- | ---------------------------------------------------------------------- |
+| reg2hw                | spi_host_reg2hw_t                                   |                                                                        |
+| hw2reg                | spi_host_hw2reg_t                                   |                                                                        |
+| fifo_win_h2d          | tlul_pkg::tl_h2d_t                                  |                                                                        |
+| fifo_win_d2h          | tlul_pkg::tl_d2h_t                                  |                                                                        |
+| alert_test            | logic [NumAlerts-1:0]                               | Register module                                                        |
+| alerts                | logic [NumAlerts-1:0]                               | Register module                                                        |
+| sck                   | logic                                               |                                                                        |
+| csb                   | logic [NumCS-1:0]                                   |                                                                        |
+| sd_out                | logic [3:0]                                         |                                                                        |
+| sd_en                 | logic [3:0]                                         |                                                                        |
+| sd_i                  | logic [3:0]                                         |                                                                        |
+| unused_pt_sck_gate_en | logic                                               |                                                                        |
+| unused_scan           | logic                                               | TODO: REMOVE THIS CODE Temp tie-offs to silence lint warnings          |
+| command_valid         | logic                                               |                                                                        |
+| core_command_valid    | logic                                               |                                                                        |
+| command_busy          | logic                                               |                                                                        |
+| core_command_ready    | logic                                               |                                                                        |
+| core_command          | command_t                                           |                                                                        |
+| command               | command_t                                           |                                                                        |
+| error_csid_inval      | logic                                               |                                                                        |
+| error_cmd_inval       | logic                                               |                                                                        |
+| error_busy            | logic                                               |                                                                        |
+| test_csid_inval       | logic                                               |                                                                        |
+| test_dir_inval        | logic                                               |                                                                        |
+| test_speed_inval      | logic                                               |                                                                        |
+| configopts            | spi_host_reg_pkg::spi_host_reg2hw_configopts_mreg_t |                                                                        |
+| cmd_qes               | logic [3:0]                                         |                                                                        |
+| active                | logic                                               |                                                                        |
+| core_active           | logic                                               |                                                                        |
+| rx_stall              | logic                                               |                                                                        |
+| core_rx_stall         | logic                                               |                                                                        |
+| tx_stall              | logic                                               |                                                                        |
+| core_tx_stall         | logic                                               |                                                                        |
+| sw_rst                | logic                                               |                                                                        |
+| core_sw_rst           | logic                                               |                                                                        |
+| tx_data               | logic [31:0]                                        |                                                                        |
+| tx_be                 | logic [3:0]                                         |                                                                        |
+| tx_valid              | logic                                               |                                                                        |
+| tx_ready              | logic                                               |                                                                        |
+| rx_data               | logic [31:0]                                        |                                                                        |
+| rx_valid              | logic                                               |                                                                        |
+| rx_ready              | logic                                               |                                                                        |
+| core_tx_data          | logic [31:0]                                        |                                                                        |
+| core_tx_be            | logic [3:0]                                         |                                                                        |
+| core_tx_valid         | logic                                               |                                                                        |
+| core_tx_ready         | logic                                               |                                                                        |
+| core_rx_data          | logic [31:0]                                        |                                                                        |
+| core_rx_valid         | logic                                               |                                                                        |
+| core_rx_ready         | logic                                               |                                                                        |
+| rx_watermark          | logic [7:0]                                         |                                                                        |
+| tx_watermark          | logic [7:0]                                         |                                                                        |
+| rx_qd                 | logic [7:0]                                         |                                                                        |
+| tx_qd                 | logic [7:0]                                         |                                                                        |
+| tx_empty              | logic                                               |                                                                        |
+| tx_full               | logic                                               |                                                                        |
+| tx_wm                 | logic                                               |                                                                        |
+| rx_empty              | logic                                               |                                                                        |
+| rx_full               | logic                                               |                                                                        |
+| rx_wm                 | logic                                               |                                                                        |
+| error_overflow        | logic                                               |                                                                        |
+| error_underflow       | logic                                               |                                                                        |
+| en_sw                 | logic                                               | CDCs for a handful of continuous or pulsed control and status signals  |
+| enb_error             | logic                                               |                                                                        |
+| en                    | logic                                               |                                                                        |
+| core_en               | logic                                               |                                                                        |
+| event_error           | logic                                               |                                                                        |
+| error_vec             | logic [4:0]                                         |                                                                        |
+| error_mask            | logic [4:0]                                         |                                                                        |
+| sw_error_status       | logic [4:0]                                         |                                                                        |
+| event_spi_event       | logic                                               |                                                                        |
+| event_idle            | logic                                               |                                                                        |
+| event_ready           | logic                                               |                                                                        |
+| event_tx_wm           | logic                                               |                                                                        |
+| event_rx_wm           | logic                                               |                                                                        |
+| event_tx_empty        | logic                                               |                                                                        |
+| event_rx_full         | logic                                               |                                                                        |
+| event_vector          | logic [5:0]                                         |                                                                        |
+| event_mask            | logic [5:0]                                         |                                                                        |
+| idle_d                | logic                                               |                                                                        |
+| idle_q                | logic                                               |                                                                        |
+| ready_d               | logic                                               |                                                                        |
+| ready_q               | logic                                               |                                                                        |
+| tx_wm_d               | logic                                               |                                                                        |
+| tx_wm_q               | logic                                               |                                                                        |
+| rx_wm_d               | logic                                               |                                                                        |
+| rx_wm_q               | logic                                               |                                                                        |
+| tx_empty_d            | logic                                               |                                                                        |
+| tx_empty_q            | logic                                               |                                                                        |
+| rx_full_d             | logic                                               |                                                                        |
+| rx_full_q             | logic                                               |                                                                        |
 ## Processes
 - unnamed: (  )
 - unnamed: (  )

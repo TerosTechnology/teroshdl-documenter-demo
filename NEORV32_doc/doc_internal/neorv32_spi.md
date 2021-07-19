@@ -1,5 +1,6 @@
 # Entity: neorv32_spi
 
+- **File**: neorv32_spi.vhd
 ## Diagram
 
 ![Diagram](neorv32_spi.svg "Diagram")

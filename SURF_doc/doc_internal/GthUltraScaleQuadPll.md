@@ -1,5 +1,6 @@
 # Entity: GthUltraScaleQuadPll
 
+- **File**: GthUltraScaleQuadPll.vhd
 ## Diagram
 
 ![Diagram](GthUltraScaleQuadPll.svg "Diagram")

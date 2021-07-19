@@ -1,5 +1,6 @@
 # Entity: adder
 
+- **File**: adder.vhd
 ## Diagram
 
 ![Diagram](adder.svg "Diagram")

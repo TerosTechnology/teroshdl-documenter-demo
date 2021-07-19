@@ -1,5 +1,6 @@
 # Entity: GLinkEncoder
 
+- **File**: GLinkEncoder.vhd
 ## Diagram
 
 ![Diagram](GLinkEncoder.svg "Diagram")

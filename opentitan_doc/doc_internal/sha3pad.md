@@ -1,5 +1,6 @@
 # Entity: sha3pad
 
+- **File**: sha3pad.sv
 ## Diagram
 
 ![Diagram](sha3pad.svg "Diagram")
@@ -87,9 +88,6 @@ but below is easier to understand
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
 - unnamed: (  )
 - unnamed: (  )
-**Description**
-TODO: msg_ready_o mux
-
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )

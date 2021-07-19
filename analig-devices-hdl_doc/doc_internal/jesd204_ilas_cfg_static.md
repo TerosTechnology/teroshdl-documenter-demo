@@ -1,5 +1,6 @@
 # Entity: jesd204_ilas_config_static
 
+- **File**: jesd204_ilas_cfg_static.v
 ## Diagram
 
 ![Diagram](jesd204_ilas_cfg_static.svg "Diagram")

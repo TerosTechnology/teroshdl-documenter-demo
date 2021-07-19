@@ -1,5 +1,6 @@
 # Package: otbn_pkg
 
+- **File**: otbn_trace_if.sv
 ## Description
 
 Copyright lowRISC contributors.

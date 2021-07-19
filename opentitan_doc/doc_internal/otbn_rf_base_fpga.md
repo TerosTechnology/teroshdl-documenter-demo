@@ -1,5 +1,6 @@
 # Entity: otbn_rf_base_fpga
 
+- **File**: otbn_rf_base_fpga.sv
 ## Diagram
 
 ![Diagram](otbn_rf_base_fpga.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tlul_sram_byte
 
+- **File**: tlul_sram_byte.sv
 ## Diagram
 
 ![Diagram](tlul_sram_byte.svg "Diagram")

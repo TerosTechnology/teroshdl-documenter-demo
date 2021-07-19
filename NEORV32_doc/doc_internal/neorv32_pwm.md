@@ -1,5 +1,6 @@
 # Entity: neorv32_pwm
 
+- **File**: neorv32_pwm.vhd
 ## Diagram
 
 ![Diagram](neorv32_pwm.svg "Diagram")

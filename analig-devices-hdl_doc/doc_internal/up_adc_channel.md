@@ -1,5 +1,6 @@
 # Entity: up_adc_channel
 
+- **File**: up_adc_channel.v
 ## Diagram
 
 ![Diagram](up_adc_channel.svg "Diagram")

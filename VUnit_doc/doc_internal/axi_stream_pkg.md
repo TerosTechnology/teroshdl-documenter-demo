@@ -1,5 +1,6 @@
 # Package: axi_stream_pkg
 
+- **File**: axi_stream_pkg.vhd
 ## Constants
 
 | Name                                | Type                          | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                             |

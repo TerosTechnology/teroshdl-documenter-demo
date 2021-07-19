@@ -1,5 +1,6 @@
 # Entity: Idelaye3Wrapper
 
+- **File**: Idelaye3Wrapper.vhd
 ## Diagram
 
 ![Diagram](Idelaye3Wrapper.svg "Diagram")

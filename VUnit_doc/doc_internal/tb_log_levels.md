@@ -1,5 +1,6 @@
 # Entity: tb_log_levels
 
+- **File**: tb_log_levels.vhd
 ## Diagram
 
 ![Diagram](tb_log_levels.svg "Diagram")

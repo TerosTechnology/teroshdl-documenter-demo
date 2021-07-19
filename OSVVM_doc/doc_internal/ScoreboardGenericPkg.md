@@ -1,5 +1,6 @@
 # Package: ScoreboardGenericPkg
 
+- **File**: ScoreboardGenericPkg.vhd
 ## Types
 
 | Name                   | Type                                                                                                             | Description               |

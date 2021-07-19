@@ -1,5 +1,6 @@
 # Entity: toplevel
 
+- **File**: top-generic.vhdl
 ## Diagram
 
 ![Diagram](top-generic.svg "Diagram")

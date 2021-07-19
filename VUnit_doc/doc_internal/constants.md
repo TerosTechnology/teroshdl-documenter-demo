@@ -1,5 +1,6 @@
 # Package: constants_pkg
 
+- **File**: constants.vhd
 ## Constants
 
 | Name     | Type    | Value | Description |

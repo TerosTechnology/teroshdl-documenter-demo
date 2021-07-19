@@ -1,5 +1,6 @@
 # Package: lc_ctrl_pkg
 
+- **File**: lc_ctrl_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

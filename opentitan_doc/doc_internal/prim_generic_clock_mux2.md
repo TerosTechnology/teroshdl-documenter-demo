@@ -1,5 +1,6 @@
 # Entity: prim_generic_clock_mux2
 
+- **File**: prim_generic_clock_mux2.sv
 ## Diagram
 
 ![Diagram](prim_generic_clock_mux2.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: mac_RX_SrcMAC_Filter
 
+- **File**: mac_RX_SrcMAC_Filter.vhdl
 ## Diagram
 
 ![Diagram](mac_RX_SrcMAC_Filter.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: AxiResize
 
+- **File**: AxiResize.vhd
 ## Diagram
 
 ![Diagram](AxiResize.svg "Diagram")

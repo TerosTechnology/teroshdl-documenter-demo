@@ -1,5 +1,6 @@
 # Package: aes_reg_pkg
 
+- **File**: aes_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

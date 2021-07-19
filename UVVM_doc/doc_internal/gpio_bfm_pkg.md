@@ -1,5 +1,6 @@
 # Package: gpio_bfm_pkg
 
+- **File**: gpio_bfm_pkg.vhd
 ## Constants
 
 | Name                      | Type              | Value                                                                                                                                                                                                                                                                                                                         | Description                                 |

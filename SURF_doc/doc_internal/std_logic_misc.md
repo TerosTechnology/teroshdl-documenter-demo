@@ -1,5 +1,6 @@
 # Package: std_logic_misc
 
+- **File**: std_logic_misc.vhdl
 ## Types
 
 | Name     | Type                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description |

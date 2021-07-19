@@ -1,5 +1,6 @@
 # Entity: slv_to_sl_axi_sync_slv
 
+- **File**: slv_to_sl_axi_sync_slv.vhd
 ## Diagram
 
 ![Diagram](slv_to_sl_axi_sync_slv.svg "Diagram")

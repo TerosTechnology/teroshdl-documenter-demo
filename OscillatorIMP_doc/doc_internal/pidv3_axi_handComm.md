@@ -1,5 +1,6 @@
 # Entity: pidv3_axi_handComm
 
+- **File**: pidv3_axi_handComm.vhd
 ## Diagram
 
 ![Diagram](pidv3_axi_handComm.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: FifoAlteraMf
 
+- **File**: FifoAlteraMf.vhd
 ## Diagram
 
 ![Diagram](FifoAlteraMf.svg "Diagram")

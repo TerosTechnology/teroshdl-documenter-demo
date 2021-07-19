@@ -1,5 +1,6 @@
 # Entity: flash_ctrl_erase
 
+- **File**: flash_ctrl_erase.sv
 ## Diagram
 
 ![Diagram](flash_ctrl_erase.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: RogueTcpMemoryWrap
 
+- **File**: RogueTcpMemoryWrap.vhd
 ## Diagram
 
 ![Diagram](RogueTcpMemoryWrap.svg "Diagram")

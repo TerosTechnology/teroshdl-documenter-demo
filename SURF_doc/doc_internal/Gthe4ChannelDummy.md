@@ -1,5 +1,6 @@
 # Entity: Gthe4ChannelDummy
 
+- **File**: Gthe4ChannelDummy.vhd
 ## Diagram
 
 ![Diagram](Gthe4ChannelDummy.svg "Diagram")

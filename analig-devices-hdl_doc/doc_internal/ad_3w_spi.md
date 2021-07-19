@@ -1,5 +1,6 @@
 # Entity: ad_3w_spi
 
+- **File**: ad_3w_spi.v
 ## Diagram
 
 ![Diagram](ad_3w_spi.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_memory
 
+- **File**: tb_memory.vhd
 ## Diagram
 
 ![Diagram](tb_memory.svg "Diagram")

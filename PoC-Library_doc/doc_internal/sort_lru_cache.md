@@ -1,5 +1,6 @@
 # Entity: sort_lru_cache
 
+- **File**: sort_lru_cache.vhdl
 ## Diagram
 
 ![Diagram](sort_lru_cache.svg "Diagram")

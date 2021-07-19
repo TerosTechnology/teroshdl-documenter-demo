@@ -1,5 +1,6 @@
 # Entity: SsiDbgTap
 
+- **File**: SsiDbgTap.vhd
 ## Diagram
 
 ![Diagram](SsiDbgTap.svg "Diagram")

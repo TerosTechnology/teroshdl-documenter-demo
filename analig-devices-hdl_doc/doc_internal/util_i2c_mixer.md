@@ -1,5 +1,6 @@
 # Entity: util_i2c_mixer
 
+- **File**: util_i2c_mixer.vhd
 ## Diagram
 
 ![Diagram](util_i2c_mixer.svg "Diagram")

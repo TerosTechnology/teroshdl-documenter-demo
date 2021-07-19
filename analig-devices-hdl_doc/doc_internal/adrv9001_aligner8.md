@@ -1,5 +1,6 @@
 # Entity: adrv9001_aligner8
 
+- **File**: adrv9001_aligner8.v
 ## Diagram
 
 ![Diagram](adrv9001_aligner8.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: sysrst_ctrl_pin
 
+- **File**: sysrst_ctrl_pin.sv
 ## Diagram
 
 ![Diagram](sysrst_ctrl_pin.svg "Diagram")

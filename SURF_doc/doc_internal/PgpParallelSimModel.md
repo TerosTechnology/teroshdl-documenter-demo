@@ -1,5 +1,6 @@
 # Entity: PgpParallelSimModel
 
+- **File**: PgpParallelSimModel.vhd
 ## Diagram
 
 ![Diagram](PgpParallelSimModel.svg "Diagram")

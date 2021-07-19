@@ -1,5 +1,6 @@
 # Package: otbn_test_pkg
 
+- **File**: otbn_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

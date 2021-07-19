@@ -1,5 +1,6 @@
 # Package: codec_2008p_pkg
 
+- **File**: codec-2008p.vhd
 ## Functions
 - encode <font id="function_arguments">( constant data : boolean_vector) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return boolean_vector </font>

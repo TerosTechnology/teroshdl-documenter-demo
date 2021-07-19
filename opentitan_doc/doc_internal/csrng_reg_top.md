@@ -1,5 +1,6 @@
 # Entity: csrng_reg_top
 
+- **File**: csrng_reg_top.sv
 ## Diagram
 
 ![Diagram](csrng_reg_top.svg "Diagram")
@@ -85,9 +86,6 @@ Copyright lowRISC contributors.
 | genbits_vld_genbits_fips_qs    | logic              |                                                                                                                           |
 | genbits_re                     | logic              |                                                                                                                           |
 | genbits_qs                     | logic [31:0]       |                                                                                                                           |
-| halt_main_sm_we                | logic              |                                                                                                                           |
-| halt_main_sm_wd                | logic              |                                                                                                                           |
-| main_sm_sts_qs                 | logic              |                                                                                                                           |
 | int_state_num_we               | logic              |                                                                                                                           |
 | int_state_num_qs               | logic [3:0]        |                                                                                                                           |
 | int_state_num_wd               | logic [3:0]        |                                                                                                                           |
@@ -127,7 +125,7 @@ Copyright lowRISC contributors.
 | sel_tracking_sm_we             | logic              |                                                                                                                           |
 | sel_tracking_sm_wd             | logic [1:0]        |                                                                                                                           |
 | tracking_sm_obs_qs             | logic [31:0]       |                                                                                                                           |
-| addr_hit                       | logic [19:0]       |                                                                                                                           |
+| addr_hit                       | logic [17:0]       |                                                                                                                           |
 | unused_wdata                   | logic              | Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers  |
 | unused_be                      | logic              |                                                                                                                           |
 ## Constants
@@ -255,14 +253,6 @@ F[genbits_fips]: 1:1
 - u_genbits: prim_subreg_ext
 **Description**
 R[genbits]: V(True)
-
-- u_halt_main_sm: prim_subreg
-**Description**
-R[halt_main_sm]: V(False)
-
-- u_main_sm_sts: prim_subreg
-**Description**
-R[main_sm_sts]: V(False)
 
 - u_int_state_num: prim_subreg
 **Description**

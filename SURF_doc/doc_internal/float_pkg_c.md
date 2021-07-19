@@ -1,5 +1,6 @@
 # Package: float_pkg
 
+- **File**: float_pkg_c.vhd
 ## Constants
 
 | Name                 | Type       | Value                                                      | Description                                                                                                                                             |

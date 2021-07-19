@@ -1,5 +1,6 @@
 # Entity: axi_adc_decimate_filter
 
+- **File**: axi_adc_decimate_filter.v
 ## Diagram
 
 ![Diagram](axi_adc_decimate_filter.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: nco_counter_synchronizer_vector
 
+- **File**: nco_counter_synchronizer_vector.vhd
 ## Diagram
 
 ![Diagram](nco_counter_synchronizer_vector.svg "Diagram")

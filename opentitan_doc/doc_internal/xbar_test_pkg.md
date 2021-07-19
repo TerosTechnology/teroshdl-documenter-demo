@@ -1,5 +1,6 @@
 # Package: xbar_test_pkg
 
+- **File**: xbar_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

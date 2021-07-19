@@ -1,5 +1,6 @@
 # Entity: xgmii_deinterleave
 
+- **File**: xgmii_deinterleave.v
 ## Diagram
 
 ![Diagram](xgmii_deinterleave.svg "Diagram")

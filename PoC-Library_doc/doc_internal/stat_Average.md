@@ -1,5 +1,6 @@
 # Entity: stat_Average
 
+- **File**: stat_Average.vhdl
 ## Diagram
 
 ![Diagram](stat_Average.svg "Diagram")

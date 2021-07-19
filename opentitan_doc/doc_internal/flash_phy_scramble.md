@@ -1,5 +1,6 @@
 # Entity: flash_phy_scramble
 
+- **File**: flash_phy_scramble.sv
 ## Diagram
 
 ![Diagram](flash_phy_scramble.svg "Diagram")

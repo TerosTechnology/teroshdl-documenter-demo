@@ -1,5 +1,6 @@
 # Entity: SyncTrigPeriod
 
+- **File**: SyncTrigPeriod.vhd
 ## Diagram
 
 ![Diagram](SyncTrigPeriod.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_axis_loop
 
+- **File**: tb_axis_loop.vhd
 ## Diagram
 
 ![Diagram](tb_axis_loop.svg "Diagram")

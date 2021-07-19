@@ -1,5 +1,6 @@
 # Entity: rising_edge_detector
 
+- **File**: rising_edge_detector.sv
 ## Diagram
 
 ![Diagram](rising_edge_detector.svg "Diagram")

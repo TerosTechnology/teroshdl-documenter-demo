@@ -1,5 +1,6 @@
 # Entity: cn0363_phase_data_sync
 
+- **File**: cn0363_phase_data_sync.v
 ## Diagram
 
 ![Diagram](cn0363_phase_data_sync.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: prim_msb_extend
 
+- **File**: prim_msb_extend.sv
 ## Diagram
 
 ![Diagram](prim_msb_extend.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_log_deprecated
 
+- **File**: tb_deprecated.vhd
 ## Diagram
 
 ![Diagram](tb_deprecated.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: avl_adxcvr_octet_swap
 
+- **File**: avl_adxcvr_octet_swap.v
 ## Diagram
 
 ![Diagram](avl_adxcvr_octet_swap.svg "Diagram")

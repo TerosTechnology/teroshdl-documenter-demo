@@ -1,5 +1,6 @@
 # Package: hmac_env_pkg
 
+- **File**: hmac_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

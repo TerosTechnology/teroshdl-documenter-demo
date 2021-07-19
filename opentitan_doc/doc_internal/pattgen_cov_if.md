@@ -1,5 +1,6 @@
 # Package: uvm_pkg
 
+- **File**: pattgen_cov_if.sv
 ## Description
 
 Copyright lowRISC contributors.

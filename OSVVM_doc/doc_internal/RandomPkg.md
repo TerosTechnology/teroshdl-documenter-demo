@@ -1,5 +1,6 @@
 # Package: RandomPkg
 
+- **File**: RandomPkg.vhd
 ## Description
 
 comment out following 3 lines with VHDL-2008.  Leave in for VHDL-2002

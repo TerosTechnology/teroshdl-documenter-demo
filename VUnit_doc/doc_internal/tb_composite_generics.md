@@ -1,5 +1,6 @@
 # Entity: tb_composite_generics
 
+- **File**: tb_composite_generics.vhd
 ## Diagram
 
 ![Diagram](tb_composite_generics.svg "Diagram")

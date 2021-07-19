@@ -1,5 +1,6 @@
 # Entity: serv_decode
 
+- **File**: serv_decode.v
 ## Diagram
 
 ![Diagram](serv_decode.svg "Diagram")

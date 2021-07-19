@@ -1,5 +1,6 @@
 # Entity: mixer_sin
 
+- **File**: mixer_sin.vhd
 ## Diagram
 
 ![Diagram](mixer_sin.svg "Diagram")

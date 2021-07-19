@@ -1,5 +1,6 @@
 # Entity: AxisToJtagCore
 
+- **File**: AxisToJtagCore.vhd
 ## Diagram
 
 ![Diagram](AxisToJtagCore.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: pmod_SSD
 
+- **File**: pmod_SSD.vhdl
 ## Diagram
 
 ![Diagram](pmod_SSD.svg "Diagram")

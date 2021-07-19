@@ -1,5 +1,6 @@
 # Entity: up_ad5766_sequencer
 
+- **File**: up_ad5766_sequencer.v
 ## Diagram
 
 ![Diagram](up_ad5766_sequencer.svg "Diagram")

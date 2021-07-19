@@ -1,5 +1,6 @@
 # Entity: adc_ctrl_fsm
 
+- **File**: adc_ctrl_fsm.sv
 ## Diagram
 
 ![Diagram](adc_ctrl_fsm.svg "Diagram")

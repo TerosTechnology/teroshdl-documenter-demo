@@ -1,5 +1,6 @@
 # Entity: fft_axi
 
+- **File**: fft_axi.vhd
 ## Diagram
 
 ![Diagram](fft_axi.svg "Diagram")

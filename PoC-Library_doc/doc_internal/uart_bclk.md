@@ -1,5 +1,6 @@
 # Entity: uart_bclk
 
+- **File**: uart_bclk.vhdl
 ## Diagram
 
 ![Diagram](uart_bclk.svg "Diagram")

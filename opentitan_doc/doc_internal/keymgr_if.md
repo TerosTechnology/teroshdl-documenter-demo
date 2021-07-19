@@ -1,5 +1,6 @@
 # Package: uvm_pkg
 
+- **File**: keymgr_if.sv
 ## Description
 
 Copyright lowRISC contributors.

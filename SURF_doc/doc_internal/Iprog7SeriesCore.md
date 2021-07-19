@@ -1,5 +1,6 @@
 # Entity: Iprog7SeriesCore
 
+- **File**: Iprog7SeriesCore.vhd
 ## Diagram
 
 ![Diagram](Iprog7SeriesCore.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: RstSync
 
+- **File**: RstSync.vhd
 ## Diagram
 
 ![Diagram](RstSync.svg "Diagram")

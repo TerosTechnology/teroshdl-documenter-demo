@@ -1,5 +1,6 @@
 # Entity: keymgr_sideload_key
 
+- **File**: keymgr_sideload_key.sv
 ## Diagram
 
 ![Diagram](keymgr_sideload_key.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: fft_top_logic
 
+- **File**: fft_top_logic.vhd
 ## Diagram
 
 ![Diagram](fft_top_logic.svg "Diagram")

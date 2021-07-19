@@ -1,5 +1,6 @@
 # Entity: DeviceDnaUltraScale
 
+- **File**: DeviceDnaUltraScale.vhd
 ## Diagram
 
 ![Diagram](DeviceDnaUltraScale.svg "Diagram")

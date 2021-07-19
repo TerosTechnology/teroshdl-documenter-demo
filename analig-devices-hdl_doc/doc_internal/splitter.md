@@ -1,5 +1,6 @@
 # Entity: splitter
 
+- **File**: splitter.v
 ## Diagram
 
 ![Diagram](splitter.svg "Diagram")

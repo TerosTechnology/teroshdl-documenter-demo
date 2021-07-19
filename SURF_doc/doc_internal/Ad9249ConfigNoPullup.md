@@ -1,5 +1,6 @@
 # Entity: Ad9249ConfigNoPullup
 
+- **File**: Ad9249ConfigNoPullup.vhd
 ## Diagram
 
 ![Diagram](Ad9249ConfigNoPullup.svg "Diagram")

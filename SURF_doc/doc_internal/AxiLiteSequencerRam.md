@@ -1,5 +1,6 @@
 # Entity: AxiLiteSequencerRam
 
+- **File**: AxiLiteSequencerRam.vhd
 ## Diagram
 
 ![Diagram](AxiLiteSequencerRam.svg "Diagram")

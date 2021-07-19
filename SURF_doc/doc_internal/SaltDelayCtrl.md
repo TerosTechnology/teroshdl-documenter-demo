@@ -1,5 +1,6 @@
 # Entity: SaltDelayCtrl
 
+- **File**: SaltDelayCtrl.vhd
 ## Diagram
 
 ![Diagram](SaltDelayCtrl.svg "Diagram")

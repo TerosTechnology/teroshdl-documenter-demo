@@ -1,5 +1,6 @@
 # Package: adc_ctrl_test_pkg
 
+- **File**: adc_ctrl_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

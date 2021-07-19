@@ -1,5 +1,6 @@
 # Entity: prim_multibit_sync
 
+- **File**: prim_multibit_sync.sv
 ## Diagram
 
 ![Diagram](prim_multibit_sync.svg "Diagram")

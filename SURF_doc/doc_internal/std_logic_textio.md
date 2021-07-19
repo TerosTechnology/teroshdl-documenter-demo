@@ -1,5 +1,6 @@
 # Package: STD_LOGIC_TEXTIO
 
+- **File**: std_logic_textio.vhdl
 ## Functions
 - READ <font id="function_arguments">(L:inout LINE;<br><span style="padding-left:20px"> VALUE:out STD_ULOGIC) </font> <font id="function_return">return ()</font>
 - READ <font id="function_arguments">(L:inout LINE;<br><span style="padding-left:20px"> VALUE:out STD_ULOGIC;<br><span style="padding-left:20px"> GOOD: out BOOLEAN) </font> <font id="function_return">return ()</font>

@@ -1,5 +1,6 @@
 # Entity: util_axis_upscale
 
+- **File**: util_axis_upscale.v
 ## Diagram
 
 ![Diagram](util_axis_upscale.svg "Diagram")

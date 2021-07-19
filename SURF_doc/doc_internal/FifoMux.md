@@ -1,5 +1,6 @@
 # Entity: FifoMux
 
+- **File**: FifoMux.vhd
 ## Diagram
 
 ![Diagram](FifoMux.svg "Diagram")

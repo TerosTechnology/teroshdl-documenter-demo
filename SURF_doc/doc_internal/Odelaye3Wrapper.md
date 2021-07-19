@@ -1,5 +1,6 @@
 # Entity: Odelaye3Wrapper
 
+- **File**: Odelaye3Wrapper.vhd
 ## Diagram
 
 ![Diagram](Odelaye3Wrapper.svg "Diagram")

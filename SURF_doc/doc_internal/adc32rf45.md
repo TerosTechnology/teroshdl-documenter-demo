@@ -1,5 +1,6 @@
 # Entity: adc32rf45
 
+- **File**: adc32rf45.vhd
 ## Diagram
 
 ![Diagram](adc32rf45.svg "Diagram")

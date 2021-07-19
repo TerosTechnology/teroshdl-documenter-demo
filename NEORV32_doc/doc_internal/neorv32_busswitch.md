@@ -1,5 +1,6 @@
 # Entity: neorv32_busswitch
 
+- **File**: neorv32_busswitch.vhd
 ## Diagram
 
 ![Diagram](neorv32_busswitch.svg "Diagram")

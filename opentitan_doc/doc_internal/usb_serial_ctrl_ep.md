@@ -1,5 +1,6 @@
 # Entity: usb_serial_ctrl_ep
 
+- **File**: usb_serial_ctrl_ep.sv
 ## Diagram
 
 ![Diagram](usb_serial_ctrl_ep.svg "Diagram")

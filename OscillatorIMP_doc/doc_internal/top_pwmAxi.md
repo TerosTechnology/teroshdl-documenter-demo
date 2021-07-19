@@ -1,5 +1,6 @@
 # Entity: top_pwmaxi
 
+- **File**: top_pwmAxi.vhd
 ## Diagram
 
 ![Diagram](top_pwmAxi.svg "Diagram")

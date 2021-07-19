@@ -1,5 +1,6 @@
 # Entity: aon_timer_core
 
+- **File**: aon_timer_core.sv
 ## Diagram
 
 ![Diagram](aon_timer_core.svg "Diagram")

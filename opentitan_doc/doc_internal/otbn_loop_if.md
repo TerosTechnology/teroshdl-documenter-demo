@@ -1,5 +1,6 @@
 # Package: otbn_env_pkg
 
+- **File**: otbn_loop_if.sv
 ## Description
 
 Copyright lowRISC contributors.

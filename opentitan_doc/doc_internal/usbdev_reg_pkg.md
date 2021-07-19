@@ -1,5 +1,6 @@
 # Package: usbdev_reg_pkg
 
+- **File**: usbdev_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

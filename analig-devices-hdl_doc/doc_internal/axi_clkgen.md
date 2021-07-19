@@ -1,5 +1,6 @@
 # Entity: axi_clkgen
 
+- **File**: axi_clkgen.v
 ## Diagram
 
 ![Diagram](axi_clkgen.svg "Diagram")

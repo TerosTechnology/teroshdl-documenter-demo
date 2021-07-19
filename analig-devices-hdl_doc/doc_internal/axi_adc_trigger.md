@@ -1,5 +1,6 @@
 # Entity: axi_adc_trigger
 
+- **File**: axi_adc_trigger.v
 ## Diagram
 
 ![Diagram](axi_adc_trigger.svg "Diagram")

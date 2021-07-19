@@ -1,5 +1,6 @@
 # Package: edn_reg_pkg
 
+- **File**: edn_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

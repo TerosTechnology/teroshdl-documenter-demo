@@ -1,5 +1,6 @@
 # Package: hmac_test_pkg
 
+- **File**: hmac_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

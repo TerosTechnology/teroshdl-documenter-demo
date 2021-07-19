@@ -1,5 +1,6 @@
 # Entity: rx_decode
 
+- **File**: rx_decode.vhd
 ## Diagram
 
 ![Diagram](rx_decode.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: SimpleDualPortRamXpm
 
+- **File**: SimpleDualPortRamXpm.vhd
 ## Diagram
 
 ![Diagram](SimpleDualPortRamXpm.svg "Diagram")

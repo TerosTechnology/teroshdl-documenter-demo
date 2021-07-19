@@ -1,5 +1,6 @@
 # Entity: cordic_sincos_engine
 
+- **File**: cordic_sincos_engine.vhd
 ## Diagram
 
 ![Diagram](cordic_sincos_engine.svg "Diagram")

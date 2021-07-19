@@ -1,5 +1,6 @@
 # Entity: MdioSeqCore
 
+- **File**: MdioSeqCore.vhd
 ## Diagram
 
 ![Diagram](MdioSeqCore.svg "Diagram")

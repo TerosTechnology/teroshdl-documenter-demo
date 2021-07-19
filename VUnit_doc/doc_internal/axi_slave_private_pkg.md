@@ -1,5 +1,6 @@
 # Package: axi_slave_private_pkg
 
+- **File**: axi_slave_private_pkg.vhd
 ## Types
 
 | Name                | Type                                                           | Description |

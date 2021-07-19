@@ -1,5 +1,6 @@
 # Entity: AxiStreamGearbox
 
+- **File**: AxiStreamGearbox.vhd
 ## Diagram
 
 ![Diagram](AxiStreamGearbox.svg "Diagram")

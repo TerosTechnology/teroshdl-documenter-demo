@@ -1,5 +1,6 @@
 # Package: aes_model_dpi_pkg
 
+- **File**: aes_model_dpi_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

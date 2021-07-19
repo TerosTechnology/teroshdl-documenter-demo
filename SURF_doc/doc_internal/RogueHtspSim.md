@@ -1,5 +1,6 @@
 # Entity: RogueHtspSim
 
+- **File**: RogueHtspSim.vhd
 ## Diagram
 
 ![Diagram](RogueHtspSim.svg "Diagram")

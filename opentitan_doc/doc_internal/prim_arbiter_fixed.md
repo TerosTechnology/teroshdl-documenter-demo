@@ -1,5 +1,6 @@
 # Entity: prim_arbiter_fixed
 
+- **File**: prim_arbiter_fixed.sv
 ## Diagram
 
 ![Diagram](prim_arbiter_fixed.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: otbn_core
 
+- **File**: otbn_core.sv
 ## Diagram
 
 ![Diagram](otbn_core.svg "Diagram")
@@ -136,7 +137,7 @@ Copyright lowRISC contributors.
 | urnd_data                     | logic [WLEN-1:0]             |                                                                |
 | controller_start              | logic                        |                                                                |
 | controller_start_addr         | logic [ImemAddrWidth-1:0]    |                                                                |
-| insn_cnt_reset                | logic                        |                                                                |
+| state_reset                   | logic                        |                                                                |
 | insn_cnt                      | logic [31:0]                 |                                                                |
 ## Constants
 

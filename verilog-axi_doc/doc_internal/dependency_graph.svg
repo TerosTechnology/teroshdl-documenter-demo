@@ -170,13 +170,13 @@
 <text text-anchor="middle" x="701.6809" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_crossbar_addr.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/arbiter.v -->
-<g id="edge10" class="edge">
+<g id="edge11" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/arbiter.v</title>
 <path fill="none" stroke="#000000" d="M644.1775,-143.9243C601.4276,-131.1525 545.1518,-114.3399 506.8796,-102.9058"/>
 <polygon fill="#000000" stroke="#000000" points="507.6567,-99.4852 497.0732,-99.9761 505.6528,-106.1923 507.6567,-99.4852"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_addr.v -->
-<g id="edge11" class="edge">
+<g id="edge9" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_addr.v</title>
 <path fill="none" stroke="#000000" d="M703.9239,-143.8314C703.603,-136.131 703.2215,-126.9743 702.8649,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="706.3615,-118.2589 702.4481,-108.4133 699.3676,-118.5503 706.3615,-118.2589"/>
@@ -190,19 +190,19 @@
 <text text-anchor="middle" x="850.6809" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_register_rd.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_register_rd.v -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_rd.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_register_rd.v</title>
 <path fill="none" stroke="#000000" d="M741.5229,-143.8314C760.7891,-134.3302 784.5508,-122.6121 804.9801,-112.5374"/>
 <polygon fill="#000000" stroke="#000000" points="806.6832,-115.6 814.1039,-108.038 803.5871,-109.3219 806.6832,-115.6"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/arbiter.v -->
-<g id="edge13" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/arbiter.v</title>
 <path fill="none" stroke="#000000" d="M786.1653,-146.0344C782.9627,-145.3275 779.7879,-144.6451 776.6809,-144 680.9831,-124.1298 567.7577,-105.8884 507.1507,-96.5456"/>
 <polygon fill="#000000" stroke="#000000" points="507.5892,-93.072 497.174,-95.0149 506.5275,-99.9911 507.5892,-93.072"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_addr.v -->
-<g id="edge14" class="edge">
+<g id="edge12" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_addr.v</title>
 <path fill="none" stroke="#000000" d="M813.0819,-143.8314C793.3312,-134.2874 768.9512,-122.5065 748.0392,-112.4013"/>
 <polygon fill="#000000" stroke="#000000" points="749.5362,-109.2376 739.0095,-108.038 746.4906,-115.5403 749.5362,-109.2376"/>
@@ -216,7 +216,7 @@
 <text text-anchor="middle" x="989.6809" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_register_wr.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_register_wr.v -->
-<g id="edge12" class="edge">
+<g id="edge13" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_crossbar_wr.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_register_wr.v</title>
 <path fill="none" stroke="#000000" d="M885.7565,-143.8314C903.947,-134.4089 926.3467,-122.8062 945.6869,-112.7883"/>
 <polygon fill="#000000" stroke="#000000" points="947.3469,-115.8701 954.6166,-108.1628 944.1272,-109.6545 947.3469,-115.8701"/>
@@ -238,7 +238,7 @@
 <text text-anchor="middle" x="1720.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_dma_rd.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma_rd.v -->
-<g id="edge15" class="edge">
+<g id="edge16" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma_rd.v</title>
 <path fill="none" stroke="#000000" d="M1764.7927,-215.8314C1757.9279,-207.454 1749.6508,-197.3531 1742.1298,-188.1749"/>
 <polygon fill="#000000" stroke="#000000" points="1744.815,-185.9297 1735.7695,-180.4133 1739.4006,-190.3665 1744.815,-185.9297"/>
@@ -252,7 +252,7 @@
 <text text-anchor="middle" x="1839.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_dma_wr.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma_wr.v -->
-<g id="edge16" class="edge">
+<g id="edge15" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axi_dma_wr.v</title>
 <path fill="none" stroke="#000000" d="M1794.8214,-215.8314C1801.8026,-207.454 1810.22,-197.3531 1817.8685,-188.1749"/>
 <polygon fill="#000000" stroke="#000000" points="1820.6234,-190.3362 1824.3365,-180.4133 1815.2458,-185.8548 1820.6234,-190.3362"/>
@@ -452,7 +452,7 @@
 <text text-anchor="middle" x="2617.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axil_cdc_rd.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc_rd.v -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc_rd.v</title>
 <path fill="none" stroke="#000000" d="M2661.0451,-215.8314C2654.3648,-207.5386 2646.3241,-197.557 2638.9905,-188.4533"/>
 <polygon fill="#000000" stroke="#000000" points="2641.5128,-186.0052 2632.5138,-180.4133 2636.0615,-190.3965 2641.5128,-186.0052"/>
@@ -466,7 +466,7 @@
 <text text-anchor="middle" x="2734.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axil_cdc_wr.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc_wr.v -->
-<g id="edge29" class="edge">
+<g id="edge28" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;axi/rtl/axil_cdc_wr.v</title>
 <path fill="none" stroke="#000000" d="M2690.5691,-215.8314C2697.4339,-207.454 2705.711,-197.3531 2713.232,-188.1749"/>
 <polygon fill="#000000" stroke="#000000" points="2715.9612,-190.3665 2719.5923,-180.4133 2710.5468,-185.9297 2715.9612,-190.3665"/>

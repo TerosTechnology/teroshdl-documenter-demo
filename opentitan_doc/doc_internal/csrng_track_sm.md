@@ -1,5 +1,6 @@
 # Entity: csrng_track_sm
 
+- **File**: csrng_track_sm.sv
 ## Diagram
 
 ![Diagram](csrng_track_sm.svg "Diagram")

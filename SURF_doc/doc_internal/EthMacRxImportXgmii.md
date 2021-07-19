@@ -1,5 +1,6 @@
 # Entity: EthMacRxImportXgmii
 
+- **File**: EthMacRxImportXgmii.vhd
 ## Diagram
 
 ![Diagram](EthMacRxImportXgmii.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axi_dataReal_dma_direct
 
+- **File**: axi_dataReal_dma_direct.vhd
 ## Diagram
 
 ![Diagram](axi_dataReal_dma_direct.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: cordic_top
 
+- **File**: cordic_top.vhd
 ## Diagram
 
 ![Diagram](cordic_top.svg "Diagram")

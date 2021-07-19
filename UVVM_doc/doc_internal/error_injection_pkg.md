@@ -1,5 +1,6 @@
 # Package: error_injection_pkg
 
+- **File**: error_injection_pkg.vhd
 ## Constants
 
 | Name                  | Type                     | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Description |

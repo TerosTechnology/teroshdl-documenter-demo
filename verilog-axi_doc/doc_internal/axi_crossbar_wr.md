@@ -1,5 +1,6 @@
 # Entity: axi_crossbar_wr
 
+- **File**: axi_crossbar_wr.v
 ## Diagram
 
 ![Diagram](axi_crossbar_wr.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: gmii_bfm_pkg
 
+- **File**: gmii_bfm_pkg.vhd
 ## Constants
 
 | Name                      | Type              | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                 |

@@ -1,5 +1,6 @@
 # Entity: Decoder8b10b
 
+- **File**: Decoder8b10b.vhd
 ## Diagram
 
 ![Diagram](Decoder8b10b.svg "Diagram")

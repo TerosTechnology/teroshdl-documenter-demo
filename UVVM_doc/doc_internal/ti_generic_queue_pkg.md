@@ -1,5 +1,6 @@
 # Package: ti_generic_queue_pkg
 
+- **File**: ti_generic_queue_pkg.vhd
 ## Constants
 
 | Name       | Type    | Value | Description |

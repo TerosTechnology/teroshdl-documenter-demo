@@ -1,5 +1,6 @@
 # Package: entropy_src_test_pkg
 
+- **File**: entropy_src_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: sysrst_ctrl_combofsm
 
+- **File**: sysrst_ctrl_combofsm.sv
 ## Diagram
 
 ![Diagram](sysrst_ctrl_combofsm.svg "Diagram")

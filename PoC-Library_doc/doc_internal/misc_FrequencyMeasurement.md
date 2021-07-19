@@ -1,5 +1,6 @@
 # Entity: misc_FrequencyMeasurement
 
+- **File**: misc_FrequencyMeasurement.vhdl
 ## Diagram
 
 ![Diagram](misc_FrequencyMeasurement.svg "Diagram")

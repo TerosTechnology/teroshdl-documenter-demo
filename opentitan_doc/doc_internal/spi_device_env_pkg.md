@@ -1,5 +1,6 @@
 # Package: spi_device_env_pkg
 
+- **File**: spi_device_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

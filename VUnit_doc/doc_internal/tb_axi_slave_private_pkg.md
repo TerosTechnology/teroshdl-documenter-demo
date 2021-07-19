@@ -1,5 +1,6 @@
 # Entity: tb_axi_slave_private_pkg
 
+- **File**: tb_axi_slave_private_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_axi_slave_private_pkg.svg "Diagram")

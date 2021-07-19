@@ -1,5 +1,6 @@
 # Entity: tb_sync_pkg
 
+- **File**: tb_sync_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_sync_pkg.svg "Diagram")

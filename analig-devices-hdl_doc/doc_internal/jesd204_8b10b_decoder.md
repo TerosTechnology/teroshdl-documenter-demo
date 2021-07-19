@@ -1,5 +1,6 @@
 # Entity: jesd204_8b10b_decoder
 
+- **File**: jesd204_8b10b_decoder.v
 ## Diagram
 
 ![Diagram](jesd204_8b10b_decoder.svg "Diagram")

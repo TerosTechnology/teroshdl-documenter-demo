@@ -1,5 +1,6 @@
 # Entity: DspSquareDiffMult
 
+- **File**: DspSquareDiffMult.vhd
 ## Diagram
 
 ![Diagram](DspSquareDiffMult.svg "Diagram")

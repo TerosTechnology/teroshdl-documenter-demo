@@ -1,5 +1,6 @@
 # Package: string_ptr_pkg
 
+- **File**: string_ptr_pkg.vhd
 ## Constants
 
 | Name                     | Type         | Value                | Description |

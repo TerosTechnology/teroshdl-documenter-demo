@@ -1,5 +1,6 @@
 # Entity: openofdm_tx_s_axi
 
+- **File**: openofdm_tx_s_axi.v
 ## Diagram
 
 ![Diagram](openofdm_tx_s_axi.svg "Diagram")

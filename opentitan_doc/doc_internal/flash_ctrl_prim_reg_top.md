@@ -1,5 +1,6 @@
 # Entity: flash_ctrl_prim_reg_top
 
+- **File**: flash_ctrl_prim_reg_top.sv
 ## Diagram
 
 ![Diagram](flash_ctrl_prim_reg_top.svg "Diagram")

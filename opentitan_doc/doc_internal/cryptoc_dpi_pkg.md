@@ -1,5 +1,6 @@
 # Package: cryptoc_dpi_pkg
 
+- **File**: cryptoc_dpi_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

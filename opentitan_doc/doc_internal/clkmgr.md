@@ -1,5 +1,6 @@
 # Entity: clkmgr
 
+- **File**: clkmgr.sv
 ## Diagram
 
 ![Diagram](clkmgr.svg "Diagram")

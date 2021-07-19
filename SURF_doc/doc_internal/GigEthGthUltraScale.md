@@ -1,5 +1,6 @@
 # Entity: GigEthGthUltraScale
 
+- **File**: GigEthGthUltraScale.vhd
 ## Diagram
 
 ![Diagram](GigEthGthUltraScale.svg "Diagram")

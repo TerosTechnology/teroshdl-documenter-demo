@@ -1,5 +1,6 @@
 # Entity: jesd204_up_ilas_mem
 
+- **File**: jesd204_up_ilas_mem.v
 ## Diagram
 
 ![Diagram](jesd204_up_ilas_mem.svg "Diagram")

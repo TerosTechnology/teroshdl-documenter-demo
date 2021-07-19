@@ -1,5 +1,6 @@
 # Package: prim_secded_pkg
 
+- **File**: prim_secded_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: axi_dmac_regmap_request
 
+- **File**: axi_dmac_regmap_request.v
 ## Diagram
 
 ![Diagram](axi_dmac_regmap_request.svg "Diagram")

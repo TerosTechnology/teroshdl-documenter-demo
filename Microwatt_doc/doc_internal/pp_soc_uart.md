@@ -1,5 +1,6 @@
 # Entity: pp_soc_uart
 
+- **File**: pp_soc_uart.vhd
 ## Diagram
 
 ![Diagram](pp_soc_uart.svg "Diagram")

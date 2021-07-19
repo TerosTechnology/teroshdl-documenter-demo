@@ -1,5 +1,6 @@
 # Entity: tb_bus_master_pkg
 
+- **File**: tb_bus_master_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_bus_master_pkg.svg "Diagram")

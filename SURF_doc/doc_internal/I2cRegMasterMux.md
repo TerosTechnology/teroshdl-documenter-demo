@@ -1,5 +1,6 @@
 # Entity: I2cRegMasterMux
 
+- **File**: I2cRegMasterMux.vhd
 ## Diagram
 
 ![Diagram](I2cRegMasterMux.svg "Diagram")

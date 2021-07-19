@@ -1,5 +1,6 @@
 # Entity: jesd204_scrambler_64b
 
+- **File**: jesd204_scrambler_64b.v
 ## Diagram
 
 ![Diagram](jesd204_scrambler_64b.svg "Diagram")

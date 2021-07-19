@@ -1,5 +1,6 @@
 # Entity: arith_prefix_or
 
+- **File**: arith_prefix_or.vhdl
 ## Diagram
 
 ![Diagram](arith_prefix_or.svg "Diagram")

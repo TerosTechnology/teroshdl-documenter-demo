@@ -1,5 +1,6 @@
 # Entity: lc_ctrl_reg_top
 
+- **File**: lc_ctrl_reg_top.sv
 ## Diagram
 
 ![Diagram](lc_ctrl_reg_top.svg "Diagram")

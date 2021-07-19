@@ -1,5 +1,6 @@
 # Package: sim_types
 
+- **File**: sim_types.vhdl
 ## Description
 
 use			PoC.physical.all;

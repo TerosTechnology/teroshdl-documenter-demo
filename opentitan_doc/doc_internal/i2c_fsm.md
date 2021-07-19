@@ -1,5 +1,6 @@
 # Entity: i2c_fsm
 
+- **File**: i2c_fsm.sv
 ## Diagram
 
 ![Diagram](i2c_fsm.svg "Diagram")

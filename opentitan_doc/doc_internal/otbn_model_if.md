@@ -1,5 +1,6 @@
 # Package: prim_util_pkg
 
+- **File**: otbn_model_if.sv
 ## Description
 
 Copyright lowRISC contributors.

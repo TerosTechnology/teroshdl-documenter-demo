@@ -1,5 +1,6 @@
 # Entity: SyncMinMax
 
+- **File**: SyncMinMax.vhd
 ## Diagram
 
 ![Diagram](SyncMinMax.svg "Diagram")

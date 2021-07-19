@@ -1,5 +1,6 @@
 # Entity: stream_FrameGenerator
 
+- **File**: stream_FrameGenerator.vhdl
 ## Diagram
 
 ![Diagram](stream_FrameGenerator.svg "Diagram")

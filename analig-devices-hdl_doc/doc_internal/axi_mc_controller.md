@@ -1,5 +1,6 @@
 # Entity: axi_mc_controller
 
+- **File**: axi_mc_controller.v
 ## Diagram
 
 ![Diagram](axi_mc_controller.svg "Diagram")

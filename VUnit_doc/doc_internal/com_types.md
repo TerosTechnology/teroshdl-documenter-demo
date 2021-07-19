@@ -1,5 +1,6 @@
 # Package: com_types_pkg
 
+- **File**: com_types.vhd
 ## Constants
 
 | Name          | Type         | Value                                                                                                                                                                                                                                                                                                                                                                                                                               | Description                                                           |

@@ -1,5 +1,6 @@
 # Entity: GLinkGtx7FixedLat
 
+- **File**: GLinkGtx7FixedLat.vhd
 ## Diagram
 
 ![Diagram](GLinkGtx7FixedLat.svg "Diagram")

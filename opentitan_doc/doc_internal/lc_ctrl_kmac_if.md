@@ -1,5 +1,6 @@
 # Entity: lc_ctrl_kmac_if
 
+- **File**: lc_ctrl_kmac_if.sv
 ## Diagram
 
 ![Diagram](lc_ctrl_kmac_if.svg "Diagram")

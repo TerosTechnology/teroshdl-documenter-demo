@@ -1,5 +1,6 @@
 # Entity: jesd204_lane_latency_monitor
 
+- **File**: jesd204_lane_latency_monitor.v
 ## Diagram
 
 ![Diagram](jesd204_lane_latency_monitor.svg "Diagram")

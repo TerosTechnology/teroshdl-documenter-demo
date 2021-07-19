@@ -1,5 +1,6 @@
 # Entity: Pgp4TxLiteWrapper
 
+- **File**: Pgp4TxLiteWrapper.vhd
 ## Diagram
 
 ![Diagram](Pgp4TxLiteWrapper.svg "Diagram")

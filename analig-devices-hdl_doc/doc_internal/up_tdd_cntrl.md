@@ -1,5 +1,6 @@
 # Entity: up_tdd_cntrl
 
+- **File**: up_tdd_cntrl.v
 ## Diagram
 
 ![Diagram](up_tdd_cntrl.svg "Diagram")

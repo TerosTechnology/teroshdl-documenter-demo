@@ -1,5 +1,6 @@
 # Entity: dataComplex_dma_direct_handCom
 
+- **File**: dataComplex_dma_direct_handCom.vhd
 ## Diagram
 
 ![Diagram](dataComplex_dma_direct_handCom.svg "Diagram")

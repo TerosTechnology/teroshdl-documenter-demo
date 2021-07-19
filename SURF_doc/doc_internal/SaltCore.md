@@ -1,5 +1,6 @@
 # Entity: SaltCore
 
+- **File**: SaltCore.vhd
 ## Diagram
 
 ![Diagram](SaltCore.svg "Diagram")

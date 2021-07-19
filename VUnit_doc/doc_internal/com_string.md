@@ -1,5 +1,6 @@
 # Package: com_string_pkg
 
+- **File**: com_string.vhd
 ## Functions
 - to_detailed_string <font id="function_arguments">( constant data : real) </font> <font id="function_return">return string </font>
 - to_detailed_string <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font>

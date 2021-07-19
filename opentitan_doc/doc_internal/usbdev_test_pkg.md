@@ -1,5 +1,6 @@
 # Package: usbdev_test_pkg
 
+- **File**: usbdev_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

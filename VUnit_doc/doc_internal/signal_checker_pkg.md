@@ -1,5 +1,6 @@
 # Package: signal_checker_pkg
 
+- **File**: signal_checker_pkg.vhd
 ## Constants
 
 | Name       | Type       | Value                   | Description                      |

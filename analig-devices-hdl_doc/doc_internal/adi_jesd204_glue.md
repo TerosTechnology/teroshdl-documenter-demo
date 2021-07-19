@@ -1,5 +1,6 @@
 # Entity: adi_jesd204_glue
 
+- **File**: adi_jesd204_glue.v
 ## Diagram
 
 ![Diagram](adi_jesd204_glue.svg "Diagram")

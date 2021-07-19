@@ -1,5 +1,6 @@
 # Entity: xpu_s_axi
 
+- **File**: xpu_s_axi.v
 ## Diagram
 
 ![Diagram](xpu_s_axi.svg "Diagram")

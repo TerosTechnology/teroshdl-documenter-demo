@@ -1,5 +1,6 @@
 # Entity: fft_data_handler
 
+- **File**: fft_data_handler.vhd
 ## Diagram
 
 ![Diagram](fft_data_handler.svg "Diagram")

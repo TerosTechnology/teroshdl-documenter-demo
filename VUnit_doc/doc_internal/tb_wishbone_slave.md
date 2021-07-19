@@ -1,5 +1,6 @@
 # Entity: tb_wishbone_slave
 
+- **File**: tb_wishbone_slave.vhd
 ## Diagram
 
 ![Diagram](tb_wishbone_slave.svg "Diagram")

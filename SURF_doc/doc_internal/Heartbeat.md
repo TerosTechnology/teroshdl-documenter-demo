@@ -1,5 +1,6 @@
 # Entity: Heartbeat
 
+- **File**: Heartbeat.vhd
 ## Diagram
 
 ![Diagram](Heartbeat.svg "Diagram")

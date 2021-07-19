@@ -1,5 +1,6 @@
 # Package: aes_env_pkg
 
+- **File**: aes_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

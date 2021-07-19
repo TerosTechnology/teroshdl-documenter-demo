@@ -1,5 +1,6 @@
 # Entity: arith_shifter_barrel
 
+- **File**: arith_shifter_barrel.vhdl
 ## Diagram
 
 ![Diagram](arith_shifter_barrel.svg "Diagram")

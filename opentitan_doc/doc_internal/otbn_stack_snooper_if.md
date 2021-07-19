@@ -1,5 +1,6 @@
 # Package: prim_util_pkg
 
+- **File**: otbn_stack_snooper_if.sv
 ## Description
 
 Copyright lowRISC contributors.

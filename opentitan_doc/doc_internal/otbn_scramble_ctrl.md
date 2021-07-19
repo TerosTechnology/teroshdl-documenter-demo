@@ -1,5 +1,6 @@
 # Entity: otbn_scramble_ctrl
 
+- **File**: otbn_scramble_ctrl.sv
 ## Diagram
 
 ![Diagram](otbn_scramble_ctrl.svg "Diagram")

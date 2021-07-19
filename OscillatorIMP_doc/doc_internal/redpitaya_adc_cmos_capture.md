@@ -1,5 +1,6 @@
 # Entity: redpitaya_adc_cmos_capture
 
+- **File**: redpitaya_adc_cmos_capture.vhd
 ## Diagram
 
 ![Diagram](redpitaya_adc_cmos_capture.svg "Diagram")

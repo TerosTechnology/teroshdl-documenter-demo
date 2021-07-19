@@ -1,5 +1,6 @@
 # Entity: axi_dma
 
+- **File**: axi_dma.vhd
 ## Diagram
 
 ![Diagram](axi_dma.svg "Diagram")

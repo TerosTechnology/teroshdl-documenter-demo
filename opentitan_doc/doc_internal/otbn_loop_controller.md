@@ -1,5 +1,6 @@
 # Entity: otbn_loop_controller
 
+- **File**: otbn_loop_controller.sv
 ## Diagram
 
 ![Diagram](otbn_loop_controller.svg "Diagram")
@@ -20,6 +21,7 @@ Copyright lowRISC contributors.
 | ------------------- | --------- | ------------------- | ----------- |
 | clk_i               | input     |                     |             |
 | rst_ni              | input     |                     |             |
+| state_reset_i       | input     |                     |             |
 | insn_valid_i        | input     |                     |             |
 | insn_addr_i         | input     | [ImemAddrWidth-1:0] |             |
 | next_insn_addr_i    | input     | [ImemAddrWidth-1:0] |             |

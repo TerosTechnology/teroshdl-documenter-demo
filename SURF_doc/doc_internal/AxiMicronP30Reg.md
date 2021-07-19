@@ -1,5 +1,6 @@
 # Entity: AxiMicronP30Reg
 
+- **File**: AxiMicronP30Reg.vhd
 ## Diagram
 
 ![Diagram](AxiMicronP30Reg.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: checker_pkg
 
+- **File**: checker_pkg.vhd
 ## Constants
 
 | Name         | Type      | Value                 | Description |

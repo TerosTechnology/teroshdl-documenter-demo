@@ -1,5 +1,6 @@
 # Entity: prim_alert_rxtx_fatal_fpv
 
+- **File**: prim_alert_rxtx_fatal_fpv.sv
 ## Diagram
 
 ![Diagram](prim_alert_rxtx_fatal_fpv.svg "Diagram")

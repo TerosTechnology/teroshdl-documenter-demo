@@ -1,5 +1,6 @@
 # Package: uart_pkg
 
+- **File**: uart_pkg.vhd
 ## Functions
 - find_num_hits <font id="function_arguments">( vector    : std_logic_vector;<br><span style="padding-left:20px"> pattern   : std_logic) </font> <font id="function_return">return integer </font>
 - find_most_repeated_bit <font id="function_arguments">( vector    : std_logic_vector) </font> <font id="function_return">return std_logic </font>

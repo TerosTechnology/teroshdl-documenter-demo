@@ -1,5 +1,6 @@
 # Package: pmod
 
+- **File**: pmod.pkg.vhdl
 ## Types
 
 | Name               | Type | Description |

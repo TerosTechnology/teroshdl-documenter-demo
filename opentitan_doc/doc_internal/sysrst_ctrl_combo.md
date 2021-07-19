@@ -1,5 +1,6 @@
 # Entity: sysrst_ctrl_combo
 
+- **File**: sysrst_ctrl_combo.sv
 ## Diagram
 
 ![Diagram](sysrst_ctrl_combo.svg "Diagram")

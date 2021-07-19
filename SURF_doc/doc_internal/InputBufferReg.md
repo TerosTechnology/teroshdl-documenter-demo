@@ -1,5 +1,6 @@
 # Entity: InputBufferReg
 
+- **File**: InputBufferReg.vhd
 ## Diagram
 
 ![Diagram](InputBufferReg.svg "Diagram")

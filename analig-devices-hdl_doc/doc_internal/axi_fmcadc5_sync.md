@@ -1,5 +1,6 @@
 # Entity: axi_fmcadc5_sync
 
+- **File**: axi_fmcadc5_sync.v
 ## Diagram
 
 ![Diagram](axi_fmcadc5_sync.svg "Diagram")

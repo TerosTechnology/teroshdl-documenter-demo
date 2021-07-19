@@ -1,5 +1,6 @@
 # Entity: up_adc_common
 
+- **File**: up_adc_common.v
 ## Diagram
 
 ![Diagram](up_adc_common.svg "Diagram")

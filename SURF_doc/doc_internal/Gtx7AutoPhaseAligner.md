@@ -1,5 +1,6 @@
 # Entity: Gtx7AutoPhaseAligner
 
+- **File**: Gtx7AutoPhaseAligner.vhd
 ## Diagram
 
 ![Diagram](Gtx7AutoPhaseAligner.svg "Diagram")

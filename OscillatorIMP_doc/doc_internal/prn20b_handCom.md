@@ -1,5 +1,6 @@
 # Entity: prn20b_handCom
 
+- **File**: prn20b_handCom.vhd
 ## Diagram
 
 ![Diagram](prn20b_handCom.svg "Diagram")

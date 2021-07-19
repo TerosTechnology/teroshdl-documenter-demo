@@ -1,5 +1,6 @@
 # Entity: HtspRx
 
+- **File**: HtspRx.vhd
 ## Diagram
 
 ![Diagram](HtspRx.svg "Diagram")

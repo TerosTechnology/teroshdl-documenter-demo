@@ -1,5 +1,6 @@
 # Package: gpio_env_pkg
 
+- **File**: gpio_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: flash_phy_rd_buffers
 
+- **File**: flash_phy_rd_buffers.sv
 ## Diagram
 
 ![Diagram](flash_phy_rd_buffers.svg "Diagram")

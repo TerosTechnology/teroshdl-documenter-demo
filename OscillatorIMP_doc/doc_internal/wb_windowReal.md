@@ -1,5 +1,6 @@
 # Entity: wb_windowReal
 
+- **File**: wb_windowReal.vhd
 ## Diagram
 
 ![Diagram](wb_windowReal.svg "Diagram")

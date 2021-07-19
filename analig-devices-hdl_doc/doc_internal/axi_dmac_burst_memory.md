@@ -1,5 +1,6 @@
 # Entity: axi_dmac_burst_memory
 
+- **File**: axi_dmac_burst_memory.v
 ## Diagram
 
 ![Diagram](axi_dmac_burst_memory.svg "Diagram")

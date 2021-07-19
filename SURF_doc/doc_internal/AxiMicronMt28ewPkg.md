@@ -1,5 +1,6 @@
 # Package: AxiMicronMt28ewPkg
 
+- **File**: AxiMicronMt28ewPkg.vhd
 ## Types
 
 | Name                            | Type                                                                                                     | Description |

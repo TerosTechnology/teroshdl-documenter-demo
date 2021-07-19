@@ -1,5 +1,6 @@
 # Entity: ClockManagerUltraScale
 
+- **File**: ClockManagerUltraScale.vhd
 ## Diagram
 
 ![Diagram](ClockManagerUltraScale.svg "Diagram")

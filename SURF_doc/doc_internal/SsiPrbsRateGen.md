@@ -1,5 +1,6 @@
 # Entity: SsiPrbsRateGen
 
+- **File**: SsiPrbsRateGen.vhd
 ## Diagram
 
 ![Diagram](SsiPrbsRateGen.svg "Diagram")

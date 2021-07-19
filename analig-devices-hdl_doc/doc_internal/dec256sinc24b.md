@@ -1,5 +1,6 @@
 # Entity: dec256sinc24b
 
+- **File**: dec256sinc24b.v
 ## Diagram
 
 ![Diagram](dec256sinc24b.svg "Diagram")

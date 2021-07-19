@@ -1,5 +1,6 @@
 # Entity: SrpV3AxiLiteFull
 
+- **File**: SrpV3AxiLiteFull.vhd
 ## Diagram
 
 ![Diagram](SrpV3AxiLiteFull.svg "Diagram")

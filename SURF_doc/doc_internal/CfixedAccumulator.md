@@ -1,5 +1,6 @@
 # Entity: CfixedAccumulator
 
+- **File**: CfixedAccumulator.vhd
 ## Diagram
 
 ![Diagram](CfixedAccumulator.svg "Diagram")

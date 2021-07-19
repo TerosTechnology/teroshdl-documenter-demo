@@ -1,5 +1,6 @@
 # Entity: fifo_glue
 
+- **File**: fifo_glue.vhdl
 ## Diagram
 
 ![Diagram](fifo_glue.svg "Diagram")

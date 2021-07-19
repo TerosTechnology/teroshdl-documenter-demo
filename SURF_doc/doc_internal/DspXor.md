@@ -1,5 +1,6 @@
 # Entity: DspXor
 
+- **File**: DspXor.vhd
 ## Diagram
 
 ![Diagram](DspXor.svg "Diagram")

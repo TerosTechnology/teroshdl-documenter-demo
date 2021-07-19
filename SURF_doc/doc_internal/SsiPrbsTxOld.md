@@ -1,5 +1,6 @@
 # Entity: SsiPrbsTxOld
 
+- **File**: SsiPrbsTxOld.vhd
 ## Diagram
 
 ![Diagram](SsiPrbsTxOld.svg "Diagram")

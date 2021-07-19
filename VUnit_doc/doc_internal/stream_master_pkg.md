@@ -1,5 +1,6 @@
 # Package: stream_master_pkg
 
+- **File**: stream_master_pkg.vhd
 ## Constants
 
 | Name            | Type       | Value                        | Description                                                        |

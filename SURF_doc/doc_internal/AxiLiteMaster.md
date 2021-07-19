@@ -1,5 +1,6 @@
 # Entity: AxiLiteMaster
 
+- **File**: AxiLiteMaster.vhd
 ## Diagram
 
 ![Diagram](AxiLiteMaster.svg "Diagram")

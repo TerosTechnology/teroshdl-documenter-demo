@@ -1,5 +1,6 @@
 # Entity: neorv32_ProcessorTop_MinimalBoot
 
+- **File**: neorv32_ProcessorTop_MinimalBoot.vhd
 ## Diagram
 
 ![Diagram](neorv32_ProcessorTop_MinimalBoot.svg "Diagram")

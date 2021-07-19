@@ -1,5 +1,6 @@
 # Package: crypto_dpi_prince_pkg
 
+- **File**: crypto_dpi_prince_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: jtag_tap_top
 
+- **File**: jtag_tap_top.sv
 ## Diagram
 
 ![Diagram](jtag_tap_top.svg "Diagram")

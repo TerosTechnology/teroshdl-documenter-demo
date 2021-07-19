@@ -1,5 +1,6 @@
 # Package: sysrst_ctrl_reg_pkg
 
+- **File**: sysrst_ctrl_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: prim_secded_28_22_enc
 
+- **File**: prim_secded_28_22_enc.sv
 ## Diagram
 
 ![Diagram](prim_secded_28_22_enc.svg "Diagram")

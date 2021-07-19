@@ -1,5 +1,6 @@
 # Entity: pinmux_fpv
 
+- **File**: pinmux_fpv.sv
 ## Diagram
 
 ![Diagram](pinmux_fpv.svg "Diagram")

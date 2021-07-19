@@ -1,5 +1,6 @@
 # Package: rv_plic_reg_pkg
 
+- **File**: rv_plic_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

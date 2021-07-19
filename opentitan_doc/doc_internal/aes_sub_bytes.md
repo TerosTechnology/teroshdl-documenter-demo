@@ -1,5 +1,6 @@
 # Entity: aes_sub_bytes
 
+- **File**: aes_sub_bytes.sv
 ## Diagram
 
 ![Diagram](aes_sub_bytes.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: ClkRst
 
+- **File**: ClkRst.vhd
 ## Diagram
 
 ![Diagram](ClkRst.svg "Diagram")

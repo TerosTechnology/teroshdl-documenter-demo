@@ -1,5 +1,6 @@
 # Entity: stream_Mux
 
+- **File**: stream_Mux.vhdl
 ## Diagram
 
 ![Diagram](stream_Mux.svg "Diagram")

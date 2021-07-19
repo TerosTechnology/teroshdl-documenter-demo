@@ -1,5 +1,6 @@
 # Entity: tb_com_codec
 
+- **File**: tb_com_codec.vhd
 ## Diagram
 
 ![Diagram](tb_com_codec.svg "Diagram")

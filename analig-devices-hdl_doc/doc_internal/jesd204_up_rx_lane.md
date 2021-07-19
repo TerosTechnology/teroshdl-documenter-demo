@@ -1,5 +1,6 @@
 # Entity: jesd204_up_rx_lane
 
+- **File**: jesd204_up_rx_lane.v
 ## Diagram
 
 ![Diagram](jesd204_up_rx_lane.svg "Diagram")

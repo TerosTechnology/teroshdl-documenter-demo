@@ -1,5 +1,6 @@
 # Entity: sync_Reset_Xilinx
 
+- **File**: sync_Reset_Xilinx.vhdl
 ## Diagram
 
 ![Diagram](sync_Reset_Xilinx.svg "Diagram")

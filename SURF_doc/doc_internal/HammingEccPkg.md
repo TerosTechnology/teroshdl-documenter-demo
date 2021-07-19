@@ -1,5 +1,6 @@
 # Package: HammingEccPkg
 
+- **File**: HammingEccPkg.vhd
 ## Functions
 - hammingEccPartiyWidth <font id="function_arguments">(k : positive) </font> <font id="function_return">return positive </font>
 - hammingEccDataWidth <font id="function_arguments">(k   : positive) </font> <font id="function_return">return positive </font>

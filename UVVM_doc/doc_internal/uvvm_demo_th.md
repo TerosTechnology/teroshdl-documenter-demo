@@ -1,5 +1,6 @@
 # Entity: uvvm_demo_th
 
+- **File**: uvvm_demo_th.vhd
 ## Diagram
 
 ![Diagram](uvvm_demo_th.svg "Diagram")

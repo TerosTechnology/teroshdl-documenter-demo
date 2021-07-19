@@ -1,5 +1,6 @@
 # Entity: butterfly
 
+- **File**: butterfly.v
 ## Diagram
 
 ![Diagram](butterfly.svg "Diagram")

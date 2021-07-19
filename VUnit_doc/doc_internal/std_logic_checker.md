@@ -1,5 +1,6 @@
 # Entity: std_logic_checker
 
+- **File**: std_logic_checker.vhd
 ## Diagram
 
 ![Diagram](std_logic_checker.svg "Diagram")

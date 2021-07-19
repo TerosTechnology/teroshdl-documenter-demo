@@ -1,5 +1,6 @@
 # Entity: ad_ip_jesd204_tpl_dac_core
 
+- **File**: ad_ip_jesd204_tpl_dac_core.v
 ## Diagram
 
 ![Diagram](ad_ip_jesd204_tpl_dac_core.svg "Diagram")

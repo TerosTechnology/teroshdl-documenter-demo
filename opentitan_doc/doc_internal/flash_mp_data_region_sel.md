@@ -1,5 +1,6 @@
 # Entity: flash_mp_data_region_sel
 
+- **File**: flash_mp_data_region_sel.sv
 ## Diagram
 
 ![Diagram](flash_mp_data_region_sel.svg "Diagram")

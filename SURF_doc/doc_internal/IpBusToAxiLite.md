@@ -1,5 +1,6 @@
 # Entity: IpBusToAxiLite
 
+- **File**: IpBusToAxiLite.vhd
 ## Diagram
 
 ![Diagram](IpBusToAxiLite.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_with_vhdl_runner
 
+- **File**: tb_with_vhdl_runner.vhd
 ## Diagram
 
 ![Diagram](tb_with_vhdl_runner.svg "Diagram")

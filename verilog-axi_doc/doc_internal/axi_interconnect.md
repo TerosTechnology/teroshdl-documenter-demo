@@ -1,5 +1,6 @@
 # Entity: axi_interconnect
 
+- **File**: axi_interconnect.v
 ## Diagram
 
 ![Diagram](axi_interconnect.svg "Diagram")

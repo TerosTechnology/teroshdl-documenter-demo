@@ -1,5 +1,6 @@
 # Entity: rom_ctrl_rom_reg_top
 
+- **File**: rom_ctrl_rom_reg_top.sv
 ## Diagram
 
 ![Diagram](rom_ctrl_rom_reg_top.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: SaltTxResize
 
+- **File**: SaltTxResize.vhd
 ## Diagram
 
 ![Diagram](SaltTxResize.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_checker
 
+- **File**: tb_checker.vhd
 ## Diagram
 
 ![Diagram](tb_checker.svg "Diagram")

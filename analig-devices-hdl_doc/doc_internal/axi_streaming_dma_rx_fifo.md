@@ -1,5 +1,6 @@
 # Entity: axi_streaming_dma_rx_fifo
 
+- **File**: axi_streaming_dma_rx_fifo.vhd
 ## Diagram
 
 ![Diagram](axi_streaming_dma_rx_fifo.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: AxiRssiPkg
 
+- **File**: AxiRssiPkg.vhd
 ## Constants
 
 | Name              | Type          | Value                                                                                                                                                                                                                                                                                      | Description |

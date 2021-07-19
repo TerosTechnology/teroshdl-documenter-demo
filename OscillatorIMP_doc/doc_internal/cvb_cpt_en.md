@@ -1,5 +1,6 @@
 # Entity: cvb_cpt_en
 
+- **File**: cvb_cpt_en.vhd
 ## Diagram
 
 ![Diagram](cvb_cpt_en.svg "Diagram")

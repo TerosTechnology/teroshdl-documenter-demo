@@ -1,5 +1,6 @@
 # Entity: axi_usb_fx3
 
+- **File**: axi_usb_fx3.v
 ## Diagram
 
 ![Diagram](axi_usb_fx3.svg "Diagram")

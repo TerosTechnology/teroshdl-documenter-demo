@@ -1,5 +1,6 @@
 # Entity: AxiVersionIpIntegrator
 
+- **File**: AxiVersionIpIntegrator.vhd
 ## Diagram
 
 ![Diagram](AxiVersionIpIntegrator.svg "Diagram")

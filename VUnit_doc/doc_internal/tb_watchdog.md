@@ -1,5 +1,6 @@
 # Entity: tb_watchdog
 
+- **File**: tb_watchdog.vhd
 ## Diagram
 
 ![Diagram](tb_watchdog.svg "Diagram")

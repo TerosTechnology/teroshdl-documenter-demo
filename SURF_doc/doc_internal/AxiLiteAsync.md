@@ -1,5 +1,6 @@
 # Entity: AxiLiteAsync
 
+- **File**: AxiLiteAsync.vhd
 ## Diagram
 
 ![Diagram](AxiLiteAsync.svg "Diagram")

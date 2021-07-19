@@ -1,5 +1,6 @@
 # Entity: ptp_clock_cdc
 
+- **File**: ptp_clock_cdc.v
 ## Diagram
 
 ![Diagram](ptp_clock_cdc.svg "Diagram")

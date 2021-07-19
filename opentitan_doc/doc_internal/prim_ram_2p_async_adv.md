@@ -1,5 +1,6 @@
 # Entity: prim_ram_2p_async_adv
 
+- **File**: prim_ram_2p_async_adv.sv
 ## Diagram
 
 ![Diagram](prim_ram_2p_async_adv.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: eth_phy_10g_rx
 
+- **File**: eth_phy_10g_rx.v
 ## Diagram
 
 ![Diagram](eth_phy_10g_rx.svg "Diagram")

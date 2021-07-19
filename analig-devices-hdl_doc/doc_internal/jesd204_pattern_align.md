@@ -1,5 +1,6 @@
 # Entity: jesd204_pattern_align
 
+- **File**: jesd204_pattern_align.v
 ## Diagram
 
 ![Diagram](jesd204_pattern_align.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axi_mc_current_monitor
 
+- **File**: axi_mc_current_monitor.v
 ## Diagram
 
 ![Diagram](axi_mc_current_monitor.svg "Diagram")

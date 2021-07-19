@@ -1,5 +1,6 @@
 # Entity: Pgp4Gtx7
 
+- **File**: Pgp4Gtx7.vhd
 ## Diagram
 
 ![Diagram](Pgp4Gtx7.svg "Diagram")

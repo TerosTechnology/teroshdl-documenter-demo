@@ -1,5 +1,6 @@
 # Entity: spi_fwm_rxf_ctrl
 
+- **File**: spi_fwm_rxf_ctrl.sv
 ## Diagram
 
 ![Diagram](spi_fwm_rxf_ctrl.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: otbn_mock_edn
 
+- **File**: otbn_mock_edn.sv
 ## Diagram
 
 ![Diagram](otbn_mock_edn.svg "Diagram")

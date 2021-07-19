@@ -1,5 +1,6 @@
 # Entity: up_hdmi_rx
 
+- **File**: up_hdmi_rx.v
 ## Diagram
 
 ![Diagram](up_hdmi_rx.svg "Diagram")

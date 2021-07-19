@@ -1,5 +1,6 @@
 # Entity: cplx_conj
 
+- **File**: cplx_conj.v
 ## Diagram
 
 ![Diagram](cplx_conj.svg "Diagram")

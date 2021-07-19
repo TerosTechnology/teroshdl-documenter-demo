@@ -1,5 +1,6 @@
 # Entity: axi_register
 
+- **File**: axi_register.v
 ## Diagram
 
 ![Diagram](axi_register.svg "Diagram")

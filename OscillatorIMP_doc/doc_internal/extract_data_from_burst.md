@@ -1,5 +1,6 @@
 # Entity: extract_data_from_burst
 
+- **File**: extract_data_from_burst.vhd
 ## Diagram
 
 ![Diagram](extract_data_from_burst.svg "Diagram")

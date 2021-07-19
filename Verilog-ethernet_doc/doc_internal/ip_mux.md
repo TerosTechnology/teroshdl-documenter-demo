@@ -1,5 +1,6 @@
 # Entity: ip_mux
 
+- **File**: ip_mux.v
 ## Diagram
 
 ![Diagram](ip_mux.svg "Diagram")

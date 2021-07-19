@@ -1,5 +1,6 @@
 # Entity: check_valid_burst
 
+- **File**: check_valid_burst.vhd
 ## Diagram
 
 ![Diagram](check_valid_burst.svg "Diagram")

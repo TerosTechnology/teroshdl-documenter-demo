@@ -1,5 +1,6 @@
 # Entity: prim_lfsr_fpv
 
+- **File**: prim_lfsr_fpv.sv
 ## Diagram
 
 ![Diagram](prim_lfsr_fpv.svg "Diagram")

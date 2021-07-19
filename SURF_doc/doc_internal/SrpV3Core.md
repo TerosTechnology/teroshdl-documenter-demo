@@ -1,5 +1,6 @@
 # Entity: SrpV3Core
 
+- **File**: SrpV3Core.vhd
 ## Diagram
 
 ![Diagram](SrpV3Core.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: AxiLiteRingBuffer
 
+- **File**: AxiLiteRingBuffer.vhd
 ## Diagram
 
 ![Diagram](AxiLiteRingBuffer.svg "Diagram")

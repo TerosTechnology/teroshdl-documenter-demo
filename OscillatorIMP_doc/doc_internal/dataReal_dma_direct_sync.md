@@ -1,5 +1,6 @@
 # Entity: dataReal_dma_direct_sync
 
+- **File**: dataReal_dma_direct_sync.vhd
 ## Diagram
 
 ![Diagram](dataReal_dma_direct_sync.svg "Diagram")

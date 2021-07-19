@@ -1,5 +1,6 @@
 # Entity: side_ch_m_axis
 
+- **File**: side_ch_m_axis.v
 ## Diagram
 
 ![Diagram](side_ch_m_axis.svg "Diagram")

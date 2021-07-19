@@ -1,5 +1,6 @@
 # Package: dictionary
 
+- **File**: dictionary.vhd
 ## Constants
 
 | Name              | Type                | Value                               | Description |

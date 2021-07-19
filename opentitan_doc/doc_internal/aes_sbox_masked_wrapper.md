@@ -1,5 +1,6 @@
 # Entity: aes_sbox_masked_wrapper
 
+- **File**: aes_sbox_masked_wrapper.sv
 ## Diagram
 
 ![Diagram](aes_sbox_masked_wrapper.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axi_dac_interpolate_reg
 
+- **File**: axi_dac_interpolate_reg.v
 ## Diagram
 
 ![Diagram](axi_dac_interpolate_reg.svg "Diagram")

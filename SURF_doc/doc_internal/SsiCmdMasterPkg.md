@@ -1,5 +1,6 @@
 # Package: SsiCmdMasterPkg
 
+- **File**: SsiCmdMasterPkg.vhd
 ## Constants
 
 | Name                  | Type             | Value                                                                                                                                                                | Description |

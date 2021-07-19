@@ -1,5 +1,6 @@
 # Entity: control_registers
 
+- **File**: control_registers.v
 ## Diagram
 
 ![Diagram](control_registers.svg "Diagram")

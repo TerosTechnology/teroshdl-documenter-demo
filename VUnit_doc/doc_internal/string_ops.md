@@ -1,5 +1,6 @@
 # Package: string_ops
 
+- **File**: string_ops.vhd
 ## Types
 
 | Name        | Type                              | Description |

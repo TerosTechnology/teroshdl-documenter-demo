@@ -1,5 +1,6 @@
 # Entity: otbn_controller
 
+- **File**: otbn_controller.sv
 ## Diagram
 
 ![Diagram](otbn_controller.svg "Diagram")
@@ -91,7 +92,7 @@ Copyright lowRISC contributors.
 | rnd_req_o                     | output    |                        |                                                       |
 | rnd_prefetch_req_o            | output    |                        |                                                       |
 | rnd_valid_i                   | input     |                        |                                                       |
-| insn_cnt_reset_i              | input     |                        |                                                       |
+| state_reset_i                 | input     |                        |                                                       |
 | insn_cnt_o                    | output    | [31:0]                 |                                                       |
 ## Signals
 

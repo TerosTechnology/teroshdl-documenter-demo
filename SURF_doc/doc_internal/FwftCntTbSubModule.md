@@ -1,5 +1,6 @@
 # Entity: FwftCntTbSubModule
 
+- **File**: FwftCntTbSubModule.vhd
 ## Diagram
 
 ![Diagram](FwftCntTbSubModule.svg "Diagram")

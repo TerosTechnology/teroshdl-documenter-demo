@@ -1,5 +1,6 @@
 # Entity: tb_with_generic_config
 
+- **File**: tb_with_generic_config.vhd
 ## Diagram
 
 ![Diagram](tb_with_generic_config.svg "Diagram")

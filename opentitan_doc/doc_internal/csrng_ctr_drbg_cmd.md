@@ -1,5 +1,6 @@
 # Entity: csrng_ctr_drbg_cmd
 
+- **File**: csrng_ctr_drbg_cmd.sv
 ## Diagram
 
 ![Diagram](csrng_ctr_drbg_cmd.svg "Diagram")

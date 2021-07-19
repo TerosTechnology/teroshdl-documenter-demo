@@ -1,5 +1,6 @@
 # Entity: rv_core_ibex_peri
 
+- **File**: rv_core_ibex_peri.sv
 ## Diagram
 
 ![Diagram](rv_core_ibex_peri.svg "Diagram")

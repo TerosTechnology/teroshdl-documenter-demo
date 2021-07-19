@@ -1,5 +1,6 @@
 # Package: sortnet
 
+- **File**: sortnet.pkg.vhdl
 ## Description
 
 use			PoC.utils.all;

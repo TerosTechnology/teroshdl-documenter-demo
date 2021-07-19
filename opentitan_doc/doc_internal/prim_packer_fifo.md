@@ -1,5 +1,6 @@
 # Entity: prim_packer_fifo
 
+- **File**: prim_packer_fifo.sv
 ## Diagram
 
 ![Diagram](prim_packer_fifo.svg "Diagram")

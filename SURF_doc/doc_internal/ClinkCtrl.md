@@ -1,5 +1,6 @@
 # Entity: ClinkCtrl
 
+- **File**: ClinkCtrl.vhd
 ## Diagram
 
 ![Diagram](ClinkCtrl.svg "Diagram")

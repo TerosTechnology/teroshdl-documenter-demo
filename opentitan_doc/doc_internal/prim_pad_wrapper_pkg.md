@@ -1,5 +1,6 @@
 # Package: prim_pad_wrapper_pkg
 
+- **File**: prim_pad_wrapper_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: hmac_reg_top
 
+- **File**: hmac_reg_top.sv
 ## Diagram
 
 ![Diagram](hmac_reg_top.svg "Diagram")

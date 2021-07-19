@@ -1,5 +1,6 @@
 # Package: flash_phy_pkg
 
+- **File**: flash_phy_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

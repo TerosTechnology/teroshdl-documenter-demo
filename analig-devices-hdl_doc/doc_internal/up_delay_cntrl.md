@@ -1,5 +1,6 @@
 # Entity: up_delay_cntrl
 
+- **File**: up_delay_cntrl.v
 ## Diagram
 
 ![Diagram](up_delay_cntrl.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Ad9249Config
 
+- **File**: Ad9249Config.vhd
 ## Diagram
 
 ![Diagram](Ad9249Config.svg "Diagram")

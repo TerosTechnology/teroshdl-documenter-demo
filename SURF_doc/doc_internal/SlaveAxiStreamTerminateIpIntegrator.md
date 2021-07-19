@@ -1,5 +1,6 @@
 # Entity: SlaveAxiStreamTerminateIpIntegrator
 
+- **File**: SlaveAxiStreamTerminateIpIntegrator.vhd
 ## Diagram
 
 ![Diagram](SlaveAxiStreamTerminateIpIntegrator.svg "Diagram")

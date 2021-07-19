@@ -1,5 +1,6 @@
 # Entity: spi_cmdparse
 
+- **File**: spi_cmdparse.sv
 ## Diagram
 
 ![Diagram](spi_cmdparse.svg "Diagram")

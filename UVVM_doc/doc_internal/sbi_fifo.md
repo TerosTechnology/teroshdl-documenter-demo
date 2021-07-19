@@ -1,5 +1,6 @@
 # Entity: sbi_fifo
 
+- **File**: sbi_fifo.vhd
 ## Diagram
 
 ![Diagram](sbi_fifo.svg "Diagram")

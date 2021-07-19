@@ -1,5 +1,6 @@
 # Entity: gen_radar_prog
 
+- **File**: gen_radar_prog.vhd
 ## Diagram
 
 ![Diagram](gen_radar_prog.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: alert_handler_env_pkg
 
+- **File**: alert_handler_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.
@@ -9,20 +10,20 @@ Copyright lowRISC contributors.
 
 ## Constants
 
-| Name       | Type                  | Value                                 | Description                                                                                                                                                            |
-| ---------- | --------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| uint       | uint                  | alert_handler_reg_pkg::NAlerts        | parameters                                                                                                                                                             |
-| uint       | uint                  | 4                                     |                                                                                                                                                                        |
-| uint       | uint                  | 8                                     |                                                                                                                                                                        |
-| uint       | uint                  | 4                                     |                                                                                                                                                                        |
-| uint       | uint                  | 4                                     |                                                                                                                                                                        |
-| uint       | uint                  | 4                                     |                                                                                                                                                                        |
-| uint       | uint                  | $clog2(NUM_ALERT_HANDLER_CLASSES) - 1 |                                                                                                                                                                        |
-| uint       | uint                  | 2                                     |                                                                                                                                                                        |
-| uint       | uint                  | 4                                     |                                                                                                                                                                        |
-| NUM_ALERTS | bit  [NUM_ALERTS-1:0] | alert_handler_reg_pkg::AsyncOn        |                                                                                                                                                                        |
-| uint       | uint                  | 100                                   | ignore esc signal cycle count after ping occurs - as ping response might ended up adding one extra cycle to the calculated cnt, or even combine two signals into one.  |
-| uint       | uint                  | 100                                   | set the max ping timeout cycle to constrain the simulation run time                                                                                                    |
+| Name       | Type                  | Value                          | Description                                                                                                                                                            |
+| ---------- | --------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| uint       | uint                  | alert_handler_reg_pkg::NAlerts | parameters                                                                                                                                                             |
+| uint       | uint                  | 4                              |                                                                                                                                                                        |
+| uint       | uint                  | 8                              |                                                                                                                                                                        |
+| uint       | uint                  | 4                              |                                                                                                                                                                        |
+| uint       | uint                  | 4                              |                                                                                                                                                                        |
+| uint       | uint                  | 4                              |                                                                                                                                                                        |
+| uint       | uint                  | $clog2(NUM_ALERT_CLASSES) - 1  |                                                                                                                                                                        |
+| uint       | uint                  | 2                              |                                                                                                                                                                        |
+| uint       | uint                  | 4                              |                                                                                                                                                                        |
+| NUM_ALERTS | bit  [NUM_ALERTS-1:0] | alert_handler_reg_pkg::AsyncOn |                                                                                                                                                                        |
+| uint       | uint                  | 100                            | ignore esc signal cycle count after ping occurs - as ping response might ended up adding one extra cycle to the calculated cnt, or even combine two signals into one.  |
+| uint       | uint                  | 100                            | set the max ping timeout cycle to constrain the simulation run time                                                                                                    |
 ## Types
 
 | Name               | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description                                      |

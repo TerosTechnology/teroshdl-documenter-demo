@@ -1,5 +1,6 @@
 # Entity: tb_no_fail_on_warning
 
+- **File**: tb_no_fail_on_warning.vhd
 ## Diagram
 
 ![Diagram](tb_no_fail_on_warning.svg "Diagram")

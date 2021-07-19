@@ -1,5 +1,6 @@
 # Entity: ClkOutBufDiff
 
+- **File**: ClkOutBufDiff.vhd
 ## Diagram
 
 ![Diagram](ClkOutBufDiff.svg "Diagram")

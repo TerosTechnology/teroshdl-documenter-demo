@@ -1,5 +1,6 @@
 # Entity: aes_ctr
 
+- **File**: aes_ctr.sv
 ## Diagram
 
 ![Diagram](aes_ctr.svg "Diagram")

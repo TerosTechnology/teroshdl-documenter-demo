@@ -1,5 +1,6 @@
 # Entity: otbn_idle_checker
 
+- **File**: otbn_idle_checker.sv
 ## Diagram
 
 ![Diagram](otbn_idle_checker.svg "Diagram")

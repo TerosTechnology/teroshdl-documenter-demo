@@ -1,5 +1,6 @@
 # Entity: ClockDivider
 
+- **File**: ClockDivider.vhd
 ## Diagram
 
 ![Diagram](ClockDivider.svg "Diagram")

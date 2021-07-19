@@ -1,5 +1,6 @@
 # Entity: SspLowSpeedDecoderReg
 
+- **File**: SspLowSpeedDecoderReg.vhd
 ## Diagram
 
 ![Diagram](SspLowSpeedDecoderReg.svg "Diagram")

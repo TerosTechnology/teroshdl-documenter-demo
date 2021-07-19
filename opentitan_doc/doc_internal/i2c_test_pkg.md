@@ -1,5 +1,6 @@
 # Package: i2c_test_pkg
 
+- **File**: i2c_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

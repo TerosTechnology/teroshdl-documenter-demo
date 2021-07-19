@@ -1,5 +1,6 @@
 # Entity: neorv32_ProcessorTop_stdlogic
 
+- **File**: neorv32_ProcessorTop_stdlogic.vhd
 ## Diagram
 
 ![Diagram](neorv32_ProcessorTop_stdlogic.svg "Diagram")

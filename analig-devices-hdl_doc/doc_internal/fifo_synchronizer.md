@@ -1,5 +1,6 @@
 # Entity: fifo_synchronizer
 
+- **File**: fifo_synchronizer.vhd
 ## Diagram
 
 ![Diagram](fifo_synchronizer.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: flash_ctrl_info_cfg
 
+- **File**: flash_ctrl_info_cfg.sv
 ## Diagram
 
 ![Diagram](flash_ctrl_info_cfg.svg "Diagram")

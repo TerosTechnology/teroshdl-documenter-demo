@@ -1,5 +1,6 @@
 # Entity: dmac_src_axi_stream
 
+- **File**: src_axi_stream.v
 ## Diagram
 
 ![Diagram](src_axi_stream.svg "Diagram")

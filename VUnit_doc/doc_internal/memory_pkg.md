@@ -1,5 +1,6 @@
 # Package: memory_pkg
 
+- **File**: memory_pkg.vhd
 ## Constants
 
 | Name          | Type     | Value                                                                                                                                                                                                                                                                                                                                                  | Description           |

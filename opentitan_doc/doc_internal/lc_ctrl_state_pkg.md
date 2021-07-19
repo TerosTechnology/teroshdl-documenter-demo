@@ -1,5 +1,6 @@
 # Package: lc_ctrl_state_pkg
 
+- **File**: lc_ctrl_state_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

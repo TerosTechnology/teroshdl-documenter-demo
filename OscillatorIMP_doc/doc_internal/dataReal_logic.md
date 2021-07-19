@@ -1,5 +1,6 @@
 # Entity: dataReal_to_ram_subtop
 
+- **File**: dataReal_logic.vhd
 ## Diagram
 
 ![Diagram](dataReal_logic.svg "Diagram")

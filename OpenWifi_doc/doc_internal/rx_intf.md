@@ -1,5 +1,6 @@
 # Entity: rx_intf
 
+- **File**: rx_intf.v
 ## Diagram
 
 ![Diagram](rx_intf.svg "Diagram")

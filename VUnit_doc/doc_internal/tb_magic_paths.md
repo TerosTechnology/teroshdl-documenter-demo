@@ -1,5 +1,6 @@
 # Entity: tb_magic_paths
 
+- **File**: tb_magic_paths.vhd
 ## Diagram
 
 ![Diagram](tb_magic_paths.svg "Diagram")

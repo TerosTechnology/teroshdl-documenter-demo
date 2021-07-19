@@ -1,5 +1,6 @@
 # Entity: fir_decim
 
+- **File**: fir_decim.v
 ## Diagram
 
 ![Diagram](fir_decim.svg "Diagram")

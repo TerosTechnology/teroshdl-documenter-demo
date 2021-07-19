@@ -1,5 +1,6 @@
 # Entity: AxiLiteToDrp
 
+- **File**: AxiLiteToDrp.vhd
 ## Diagram
 
 ![Diagram](AxiLiteToDrp.svg "Diagram")

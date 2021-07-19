@@ -1,5 +1,6 @@
 # Package: GigEthPkg
 
+- **File**: GigEthPkg.vhd
 ## Constants
 
 | Name                         | Type             | Value                                                                                                                                                                       | Description                                                 |

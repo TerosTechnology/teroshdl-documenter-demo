@@ -1,5 +1,6 @@
 # Entity: ethernet_mac
 
+- **File**: ethernet_mac.vhd
 ## Diagram
 
 ![Diagram](ethernet_mac.svg "Diagram")

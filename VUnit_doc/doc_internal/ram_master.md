@@ -1,5 +1,6 @@
 # Entity: ram_master
 
+- **File**: ram_master.vhd
 ## Diagram
 
 ![Diagram](ram_master.svg "Diagram")

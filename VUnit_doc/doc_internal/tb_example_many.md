@@ -1,5 +1,6 @@
 # Entity: tb_example_many
 
+- **File**: tb_example_many.vhd
 ## Diagram
 
 ![Diagram](tb_example_many.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Pgp2bGtp7FixedLat
 
+- **File**: Pgp2bGtp7FixedLat.vhd
 ## Diagram
 
 ![Diagram](Pgp2bGtp7FixedLat.svg "Diagram")

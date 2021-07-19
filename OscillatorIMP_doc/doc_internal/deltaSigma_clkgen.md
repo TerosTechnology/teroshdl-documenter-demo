@@ -1,5 +1,6 @@
 # Entity: deltaSigma_clkgen
 
+- **File**: deltaSigma_clkgen.vhd
 ## Diagram
 
 ![Diagram](deltaSigma_clkgen.svg "Diagram")

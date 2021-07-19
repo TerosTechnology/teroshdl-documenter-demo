@@ -1,5 +1,6 @@
 # Package: i2c_env_pkg
 
+- **File**: i2c_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

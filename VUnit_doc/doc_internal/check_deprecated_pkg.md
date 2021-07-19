@@ -1,5 +1,6 @@
 # Package: check_deprecated_pkg
 
+- **File**: check_deprecated_pkg.vhd
 ## Constants
 
 | Name               | Type   | Value             | Description                                                    |

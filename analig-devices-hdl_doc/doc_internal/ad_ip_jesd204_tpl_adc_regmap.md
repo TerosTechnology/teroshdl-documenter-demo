@@ -1,5 +1,6 @@
 # Entity: ad_ip_jesd204_tpl_adc_regmap
 
+- **File**: ad_ip_jesd204_tpl_adc_regmap.v
 ## Diagram
 
 ![Diagram](ad_ip_jesd204_tpl_adc_regmap.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: otp_ctrl_dai
 
+- **File**: otp_ctrl_dai.sv
 ## Diagram
 
 ![Diagram](otp_ctrl_dai.svg "Diagram")

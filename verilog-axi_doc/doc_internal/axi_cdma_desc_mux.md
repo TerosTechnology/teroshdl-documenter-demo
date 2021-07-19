@@ -1,5 +1,6 @@
 # Entity: axi_cdma_desc_mux
 
+- **File**: axi_cdma_desc_mux.v
 ## Diagram
 
 ![Diagram](axi_cdma_desc_mux.svg "Diagram")

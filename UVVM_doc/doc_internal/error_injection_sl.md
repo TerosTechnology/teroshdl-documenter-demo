@@ -1,5 +1,6 @@
 # Entity: error_injection_sl
 
+- **File**: error_injection_sl.vhd
 ## Diagram
 
 ![Diagram](error_injection_sl.svg "Diagram")

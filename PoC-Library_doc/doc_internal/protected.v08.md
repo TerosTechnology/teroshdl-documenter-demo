@@ -1,5 +1,6 @@
 # Package: ProtectedTypes
 
+- **File**: protected.v08.vhdl
 ## Description
 
 use			PoC.my_project.all;

@@ -1,5 +1,6 @@
 # Package: axi_slave_pkg
 
+- **File**: axi_slave_pkg.vhd
 ## Constants
 
 | Name                                               | Type       | Value                                                            | Description       |

@@ -1,5 +1,6 @@
 # Entity: prim_gate_gen
 
+- **File**: prim_gate_gen.sv
 ## Diagram
 
 ![Diagram](prim_gate_gen.svg "Diagram")

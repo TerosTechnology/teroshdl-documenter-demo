@@ -1,5 +1,6 @@
 # Entity: serv_ctrl
 
+- **File**: serv_ctrl.v
 ## Diagram
 
 ![Diagram](serv_ctrl.svg "Diagram")

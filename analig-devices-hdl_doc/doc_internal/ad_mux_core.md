@@ -1,5 +1,6 @@
 # Entity: ad_mux_core
 
+- **File**: ad_mux_core.v
 ## Diagram
 
 ![Diagram](ad_mux_core.svg "Diagram")

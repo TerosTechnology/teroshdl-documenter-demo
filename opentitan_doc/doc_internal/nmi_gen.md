@@ -1,5 +1,6 @@
 # Entity: nmi_gen
 
+- **File**: nmi_gen.sv
 ## Diagram
 
 ![Diagram](nmi_gen.svg "Diagram")

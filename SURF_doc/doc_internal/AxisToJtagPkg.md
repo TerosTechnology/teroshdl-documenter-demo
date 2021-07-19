@@ -1,5 +1,6 @@
 # Package: AxisToJtagPkg
 
+- **File**: AxisToJtagPkg.vhd
 ## Description
 
 This module implements a simple protocol for encoding XVC transactions over

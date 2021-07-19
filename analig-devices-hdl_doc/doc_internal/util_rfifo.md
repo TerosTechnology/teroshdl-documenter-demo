@@ -1,5 +1,6 @@
 # Entity: util_rfifo
 
+- **File**: util_rfifo.v
 ## Diagram
 
 ![Diagram](util_rfifo.svg "Diagram")

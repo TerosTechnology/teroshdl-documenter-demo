@@ -1,5 +1,6 @@
 # Entity: lc_ctrl_fsm
 
+- **File**: lc_ctrl_fsm.sv
 ## Diagram
 
 ![Diagram](lc_ctrl_fsm.svg "Diagram")

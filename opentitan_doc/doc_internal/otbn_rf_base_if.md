@@ -1,5 +1,6 @@
 # Package: otbn_env_pkg
 
+- **File**: otbn_rf_base_if.sv
 ## Description
 
 Copyright lowRISC contributors.

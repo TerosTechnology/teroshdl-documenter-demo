@@ -1,5 +1,6 @@
 # Entity: mac_RX_DestMAC_Switch
 
+- **File**: mac_RX_DestMAC_Switch.vhdl
 ## Diagram
 
 ![Diagram](mac_RX_DestMAC_Switch.svg "Diagram")

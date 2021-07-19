@@ -1,5 +1,6 @@
 # Entity: misc_bit_lz
 
+- **File**: misc_bit_lz.vhdl
 ## Diagram
 
 ![Diagram](misc_bit_lz.svg "Diagram")

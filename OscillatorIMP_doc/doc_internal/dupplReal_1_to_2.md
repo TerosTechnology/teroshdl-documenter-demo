@@ -1,5 +1,6 @@
 # Entity: dupplReal_1_to_2
 
+- **File**: dupplReal_1_to_2.vhd
 ## Diagram
 
 ![Diagram](dupplReal_1_to_2.svg "Diagram")

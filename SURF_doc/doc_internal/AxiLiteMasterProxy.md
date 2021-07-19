@@ -1,5 +1,6 @@
 # Entity: AxiLiteMasterProxy
 
+- **File**: AxiLiteMasterProxy.vhd
 ## Diagram
 
 ![Diagram](AxiLiteMasterProxy.svg "Diagram")

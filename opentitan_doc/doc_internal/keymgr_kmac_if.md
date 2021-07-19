@@ -1,5 +1,6 @@
 # Entity: keymgr_kmac_if
 
+- **File**: keymgr_kmac_if.sv
 ## Diagram
 
 ![Diagram](keymgr_kmac_if.svg "Diagram")

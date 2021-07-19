@@ -1,5 +1,6 @@
 # Package: aon_timer_env_pkg
 
+- **File**: aon_timer_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

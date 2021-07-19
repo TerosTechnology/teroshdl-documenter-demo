@@ -1,5 +1,6 @@
 # Entity: Pgp2bLane
 
+- **File**: Pgp2bLane.vhd
 ## Diagram
 
 ![Diagram](Pgp2bLane.svg "Diagram")

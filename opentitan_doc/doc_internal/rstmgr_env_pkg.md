@@ -1,5 +1,6 @@
 # Package: rstmgr_env_pkg
 
+- **File**: rstmgr_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

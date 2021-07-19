@@ -1,5 +1,6 @@
 # Entity: GLinkTxToRx
 
+- **File**: GLinkTxToRx.vhd
 ## Diagram
 
 ![Diagram](GLinkTxToRx.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: support_pkg
 
+- **File**: support_pkg.vhd
 ## Functions
 - blocking_send_to_bridge <font id="function_arguments">( signal   hvvc_to_bridge   : inout t_hvvc_to_bridge;<br><span style="padding-left:20px"> signal   bridge_to_hvvc   : in  t_bridge_to_hvvc;<br><span style="padding-left:20px"> constant data_words       : in  t_slv_array;<br><span style="padding-left:20px"> constant dut_if_field_idx : in  integer;<br><span style="padding-left:20px"> constant dut_if_field_pos : in  t_field_position;<br><span style="padding-left:20px"> constant scope            : in  string;<br><span style="padding-left:20px"> constant msg_id_panel     : in  t_msg_id_panel ) </font> <font id="function_return">return ()</font>
 - blocking_request_from_bridge <font id="function_arguments">( signal   hvvc_to_bridge   : inout t_hvvc_to_bridge;<br><span style="padding-left:20px"> signal   bridge_to_hvvc   : in  t_bridge_to_hvvc;<br><span style="padding-left:20px"> constant num_data_words   : in  positive;<br><span style="padding-left:20px"> constant dut_if_field_idx : in  integer;<br><span style="padding-left:20px"> constant dut_if_field_pos : in  t_field_position;<br><span style="padding-left:20px"> constant scope            : in  string;<br><span style="padding-left:20px"> constant msg_id_panel     : in  t_msg_id_panel ) </font> <font id="function_return">return ()</font>

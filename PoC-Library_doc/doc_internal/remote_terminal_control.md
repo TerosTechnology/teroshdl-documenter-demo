@@ -1,5 +1,6 @@
 # Entity: remote_terminal_control
 
+- **File**: remote_terminal_control.vhdl
 ## Diagram
 
 ![Diagram](remote_terminal_control.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: pack_shell
 
+- **File**: pack_shell.v
 ## Diagram
 
 ![Diagram](pack_shell.svg "Diagram")

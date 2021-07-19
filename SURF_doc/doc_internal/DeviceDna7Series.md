@@ -1,5 +1,6 @@
 # Entity: DeviceDna7Series
 
+- **File**: DeviceDna7Series.vhd
 ## Diagram
 
 ![Diagram](DeviceDna7Series.svg "Diagram")

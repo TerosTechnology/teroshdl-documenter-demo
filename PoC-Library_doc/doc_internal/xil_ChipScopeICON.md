@@ -1,5 +1,6 @@
 # Entity: xil_ChipScopeICON
 
+- **File**: xil_ChipScopeICON.vhdl
 ## Diagram
 
 ![Diagram](xil_ChipScopeICON.svg "Diagram")

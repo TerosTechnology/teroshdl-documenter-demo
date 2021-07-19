@@ -1,5 +1,6 @@
 # Entity: mixer_redim
 
+- **File**: mixer_redim.vhd
 ## Diagram
 
 ![Diagram](mixer_redim.svg "Diagram")

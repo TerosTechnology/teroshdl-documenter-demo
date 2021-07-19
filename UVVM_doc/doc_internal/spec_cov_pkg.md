@@ -1,5 +1,6 @@
 # Package: spec_cov_pkg
 
+- **File**: spec_cov_pkg.vhd
 ## Functions
 - initialize_req_cov <font id="function_arguments">( constant testcase         : string;<br><span style="padding-left:20px"> constant req_list_file    : string;<br><span style="padding-left:20px"> constant partial_cov_file : string ) </font> <font id="function_return">return ()</font>
 - initialize_req_cov <font id="function_arguments">( constant testcase         : string;<br><span style="padding-left:20px"> constant partial_cov_file : string ) </font> <font id="function_return">return ()</font>

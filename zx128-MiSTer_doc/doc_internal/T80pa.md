@@ -1,5 +1,6 @@
 # Entity: T80pa
 
+- **File**: T80pa.vhd
 ## Diagram
 
 ![Diagram](T80pa.svg "Diagram")

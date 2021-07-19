@@ -1,5 +1,6 @@
 # Entity: axi_dmac_transfer
 
+- **File**: axi_dmac_transfer.v
 ## Diagram
 
 ![Diagram](axi_dmac_transfer.svg "Diagram")

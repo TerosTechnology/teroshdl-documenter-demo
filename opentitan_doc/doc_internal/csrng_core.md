@@ -1,5 +1,6 @@
 # Entity: csrng_core
 
+- **File**: csrng_core.sv
 ## Diagram
 
 ![Diagram](csrng_core.svg "Diagram")
@@ -266,8 +267,6 @@ Copyright lowRISC contributors.
 | state_db_reg_rd_id_pulse            | logic                      |                                                                                                                  |
 | state_db_reg_rd_id                  | logic [StateId-1:0]        |                                                                                                                  |
 | state_db_reg_rd_val                 | logic [31:0]               |                                                                                                                  |
-| halt_main_sm                        | logic                      |                                                                                                                  |
-| main_sm_sts                         | logic                      |                                                                                                                  |
 | err_code_test_bit                   | logic [30:0]               |                                                                                                                  |
 | ctr_drbg_upd_es_ack                 | logic                      |                                                                                                                  |
 | ctr_drbg_gen_es_ack                 | logic                      |                                                                                                                  |

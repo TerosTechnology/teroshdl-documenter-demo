@@ -1,5 +1,6 @@
 # Package: ResizePkg
 
+- **File**: ResizePkg.vhd
 ## Functions
 - Extend <font id="function_arguments">(A: std_logic_vector;<br><span style="padding-left:20px"> Size : natural) </font> <font id="function_return">return std_logic_vector </font>
 - Reduce <font id="function_arguments">(A: std_logic_vector;<br><span style="padding-left:20px"> Size : natural) </font> <font id="function_return">return std_logic_vector </font>

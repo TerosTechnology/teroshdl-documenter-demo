@@ -1,5 +1,6 @@
 # Entity: entropy_src
 
+- **File**: entropy_src.sv
 ## Diagram
 
 ![Diagram](entropy_src.svg "Diagram")

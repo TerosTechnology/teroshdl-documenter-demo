@@ -1,5 +1,6 @@
 # Entity: arith_scaler
 
+- **File**: arith_scaler.vhdl
 ## Diagram
 
 ![Diagram](arith_scaler.svg "Diagram")

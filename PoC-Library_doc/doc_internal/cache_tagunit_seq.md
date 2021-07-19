@@ -1,5 +1,6 @@
 # Entity: cache_tagunit_seq
 
+- **File**: cache_tagunit_seq.vhdl
 ## Diagram
 
 ![Diagram](cache_tagunit_seq.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: spi_host_byte_merge
 
+- **File**: spi_host_byte_merge.sv
 ## Diagram
 
 ![Diagram](spi_host_byte_merge.svg "Diagram")

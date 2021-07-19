@@ -1,5 +1,6 @@
 # Entity: prim_generic_flop_2sync
 
+- **File**: prim_generic_flop_2sync.sv
 ## Diagram
 
 ![Diagram](prim_generic_flop_2sync.svg "Diagram")

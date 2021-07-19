@@ -1,5 +1,6 @@
 # Package: AxiLitePkg
 
+- **File**: AxiLitePkg.vhd
 ## Constants
 
 | Name                                | Type                                     | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Description              |

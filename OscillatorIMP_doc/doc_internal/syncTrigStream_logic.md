@@ -1,5 +1,6 @@
 # Entity: syncTrigStream_logic
 
+- **File**: syncTrigStream_logic.vhd
 ## Diagram
 
 ![Diagram](syncTrigStream_logic.svg "Diagram")

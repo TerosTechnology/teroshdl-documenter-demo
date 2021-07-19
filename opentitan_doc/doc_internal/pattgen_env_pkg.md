@@ -1,5 +1,6 @@
 # Package: pattgen_env_pkg
 
+- **File**: pattgen_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

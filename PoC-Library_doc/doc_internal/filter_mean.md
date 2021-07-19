@@ -1,5 +1,6 @@
 # Entity: filter_mean
 
+- **File**: filter_mean.vhdl
 ## Diagram
 
 ![Diagram](filter_mean.svg "Diagram")

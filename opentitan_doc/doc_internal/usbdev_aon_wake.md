@@ -1,5 +1,6 @@
 # Entity: usbdev_aon_wake
 
+- **File**: usbdev_aon_wake.sv
 ## Diagram
 
 ![Diagram](usbdev_aon_wake.svg "Diagram")

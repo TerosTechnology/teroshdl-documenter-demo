@@ -1,5 +1,6 @@
 # Package: nmi_gen_reg_pkg
 
+- **File**: nmi_gen_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

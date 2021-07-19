@@ -1,5 +1,6 @@
 # Package: com_pkg
 
+- **File**: com_api.vhd
 ## Signals
 
 | Name | Type      | Description |

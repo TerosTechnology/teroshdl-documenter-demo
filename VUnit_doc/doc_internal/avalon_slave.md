@@ -1,5 +1,6 @@
 # Entity: avalon_slave
 
+- **File**: avalon_slave.vhd
 ## Diagram
 
 ![Diagram](avalon_slave.svg "Diagram")

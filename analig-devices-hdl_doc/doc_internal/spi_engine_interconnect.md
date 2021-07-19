@@ -1,5 +1,6 @@
 # Entity: spi_engine_interconnect
 
+- **File**: spi_engine_interconnect.v
 ## Diagram
 
 ![Diagram](spi_engine_interconnect.svg "Diagram")

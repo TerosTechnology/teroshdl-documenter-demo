@@ -1,5 +1,6 @@
 # Package: sram_ctrl_env_pkg
 
+- **File**: sram_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: AxisJtagDebugBridge
 
+- **File**: AxisJtagDebugBridge.vhd
 ## Diagram
 
 ![Diagram](AxisJtagDebugBridge.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: syncTrigStream_sync_bit
 
+- **File**: syncTrigStream_sync_bit.vhd
 ## Diagram
 
 ![Diagram](syncTrigStream_sync_bit.svg "Diagram")

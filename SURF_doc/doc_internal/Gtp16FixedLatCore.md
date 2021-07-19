@@ -1,5 +1,6 @@
 # Entity: Gtp16FixedLatCore
 
+- **File**: Gtp16FixedLatCore.vhd
 ## Diagram
 
 ![Diagram](Gtp16FixedLatCore.svg "Diagram")

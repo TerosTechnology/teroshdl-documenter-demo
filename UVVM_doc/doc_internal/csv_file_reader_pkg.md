@@ -1,5 +1,6 @@
 # Package: csv_file_reader_pkg
 
+- **File**: csv_file_reader_pkg.vhd
 ## Description
 
 Define operations to read formatted data from a comma-separated-values file

@@ -1,5 +1,6 @@
 # Package: ResolutionPkg
 
+- **File**: ResolutionPkg.vhd
 ## Constants
 
 | Name                     | Type           | Value  | Description |

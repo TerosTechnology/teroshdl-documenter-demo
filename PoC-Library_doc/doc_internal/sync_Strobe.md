@@ -1,5 +1,6 @@
 # Entity: sync_Strobe
 
+- **File**: sync_Strobe.vhdl
 ## Diagram
 
 ![Diagram](sync_Strobe.svg "Diagram")

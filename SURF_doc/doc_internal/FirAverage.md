@@ -1,5 +1,6 @@
 # Entity: FirAverage
 
+- **File**: FirAverage.vhd
 ## Diagram
 
 ![Diagram](FirAverage.svg "Diagram")

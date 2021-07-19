@@ -1,5 +1,6 @@
 # Entity: toplevel
 
+- **File**: top-arty.vhdl
 ## Diagram
 
 ![Diagram](top-arty.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: csrng_env_pkg
 
+- **File**: csrng_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.
@@ -11,7 +12,7 @@ Copyright lowRISC contributors.
 
 | Name           | Type                  | Value                                                                           | Description |
 | -------------- | --------------------- | ------------------------------------------------------------------------------- | ----------- |
-| uint           | uint                  | 1                                                                               | parameters  |
+| uint           | uint                  | 2                                                                               | parameters  |
 | LIST_OF_ALERTS | string                | {<br><span style="padding-left:20px">"fatal_alert"}                             |             |
 | uint           | uint                  | 1                                                                               |             |
 | uint           | uint                  | 256                                                                             |             |

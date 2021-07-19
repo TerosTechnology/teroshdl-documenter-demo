@@ -1,5 +1,6 @@
 # Package: com_deprecated_pkg
 
+- **File**: com_deprecated.vhd
 ## Constants
 
 | Name            | Type         | Value          | Description |

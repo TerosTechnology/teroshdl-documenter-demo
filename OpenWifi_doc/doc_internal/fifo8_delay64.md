@@ -1,5 +1,6 @@
 # Entity: fifo8_delay64
 
+- **File**: fifo8_delay64.v
 ## Diagram
 
 ![Diagram](fifo8_delay64.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: XadcSimpleCore
 
+- **File**: XadcSimpleCore.vhd
 ## Diagram
 
 ![Diagram](XadcSimpleCore.svg "Diagram")

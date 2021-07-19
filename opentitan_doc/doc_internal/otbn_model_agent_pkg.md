@@ -1,5 +1,6 @@
 # Package: otbn_model_agent_pkg
 
+- **File**: otbn_model_agent_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

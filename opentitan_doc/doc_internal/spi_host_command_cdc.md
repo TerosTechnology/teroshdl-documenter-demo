@@ -1,5 +1,6 @@
 # Entity: spi_host_command_cdc
 
+- **File**: spi_host_command_cdc.sv
 ## Diagram
 
 ![Diagram](spi_host_command_cdc.svg "Diagram")

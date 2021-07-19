@@ -1,5 +1,6 @@
 # Entity: tb_random
 
+- **File**: tb_random_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_random_pkg.svg "Diagram")

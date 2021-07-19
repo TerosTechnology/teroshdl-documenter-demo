@@ -1,5 +1,6 @@
 # Entity: PwrUpRst
 
+- **File**: PwrUpRst.vhd
 ## Diagram
 
 ![Diagram](PwrUpRst.svg "Diagram")

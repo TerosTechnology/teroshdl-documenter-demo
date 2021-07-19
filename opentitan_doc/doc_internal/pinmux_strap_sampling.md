@@ -1,5 +1,6 @@
 # Entity: pinmux_strap_sampling
 
+- **File**: pinmux_strap_sampling.sv
 ## Diagram
 
 ![Diagram](pinmux_strap_sampling.svg "Diagram")

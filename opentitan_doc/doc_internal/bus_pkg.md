@@ -1,5 +1,6 @@
 # Package: bus_pkg
 
+- **File**: bus_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

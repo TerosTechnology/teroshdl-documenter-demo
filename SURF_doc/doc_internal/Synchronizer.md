@@ -1,5 +1,6 @@
 # Entity: Synchronizer
 
+- **File**: Synchronizer.vhd
 ## Diagram
 
 ![Diagram](Synchronizer.svg "Diagram")

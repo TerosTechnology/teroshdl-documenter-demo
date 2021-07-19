@@ -1,5 +1,6 @@
 # Entity: RssiHeaderReg
 
+- **File**: RssiHeaderReg.vhd
 ## Diagram
 
 ![Diagram](RssiHeaderReg.svg "Diagram")

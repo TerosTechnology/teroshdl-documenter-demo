@@ -1,5 +1,6 @@
 # Entity: fifo_shift
 
+- **File**: fifo_shift.vhdl
 ## Diagram
 
 ![Diagram](fifo_shift.svg "Diagram")

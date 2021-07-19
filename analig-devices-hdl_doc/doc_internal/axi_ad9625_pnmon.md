@@ -1,5 +1,6 @@
 # Entity: axi_ad9625_pnmon
 
+- **File**: axi_ad9625_pnmon.v
 ## Diagram
 
 ![Diagram](axi_ad9625_pnmon.svg "Diagram")

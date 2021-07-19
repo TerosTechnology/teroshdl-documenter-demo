@@ -1,5 +1,6 @@
 # Entity: AxiI2cRegMasterCore
 
+- **File**: AxiI2cRegMasterCore.vhd
 ## Diagram
 
 ![Diagram](AxiI2cRegMasterCore.svg "Diagram")

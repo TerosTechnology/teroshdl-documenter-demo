@@ -1,5 +1,6 @@
 # Entity: axil_ram
 
+- **File**: axil_ram.v
 ## Diagram
 
 ![Diagram](axil_ram.svg "Diagram")

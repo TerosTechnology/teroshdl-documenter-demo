@@ -1,5 +1,6 @@
 # Entity: AxiStreamPrbsFlowCtrl
 
+- **File**: AxiStreamPrbsFlowCtrl.vhd
 ## Diagram
 
 ![Diagram](AxiStreamPrbsFlowCtrl.svg "Diagram")

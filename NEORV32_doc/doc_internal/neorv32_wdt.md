@@ -1,5 +1,6 @@
 # Entity: neorv32_wdt
 
+- **File**: neorv32_wdt.vhd
 ## Diagram
 
 ![Diagram](neorv32_wdt.svg "Diagram")

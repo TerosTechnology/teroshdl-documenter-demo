@@ -1,5 +1,6 @@
 # Package: Gtx7CfgPkg
 
+- **File**: Gtx7CfgPkg.vhd
 ## Constants
 
 | Name                     | Type         | Value                                                                                                                                                                                                                                                                                          | Description |

@@ -1,5 +1,6 @@
 # Entity: prim_gf_mult
 
+- **File**: prim_gf_mult.sv
 ## Diagram
 
 ![Diagram](prim_gf_mult.svg "Diagram")

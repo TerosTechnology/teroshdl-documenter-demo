@@ -1,5 +1,6 @@
 # Entity: Mux
 
+- **File**: Mux.vhd
 ## Diagram
 
 ![Diagram](Mux.svg "Diagram")

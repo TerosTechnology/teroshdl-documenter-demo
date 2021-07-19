@@ -1,5 +1,6 @@
 # Entity: oddr
 
+- **File**: oddr.v
 ## Diagram
 
 ![Diagram](oddr.svg "Diagram")

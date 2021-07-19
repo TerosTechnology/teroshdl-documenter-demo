@@ -1,5 +1,6 @@
 # Entity: nco_counter_cos_rom
 
+- **File**: nco_counter_cos_rom.vhd
 ## Diagram
 
 ![Diagram](nco_counter_cos_rom.svg "Diagram")

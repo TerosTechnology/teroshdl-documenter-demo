@@ -1,5 +1,6 @@
 # Entity: keymgr_cfg_en
 
+- **File**: keymgr_cfg_en.sv
 ## Diagram
 
 ![Diagram](keymgr_cfg_en.svg "Diagram")

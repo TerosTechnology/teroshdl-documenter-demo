@@ -1,5 +1,6 @@
 # Entity: clock_generator
 
+- **File**: clk_gen_mcmm.vhd
 ## Diagram
 
 ![Diagram](clk_gen_mcmm.svg "Diagram")

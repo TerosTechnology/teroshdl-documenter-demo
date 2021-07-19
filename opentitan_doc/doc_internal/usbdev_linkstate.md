@@ -1,5 +1,6 @@
 # Entity: usbdev_linkstate
 
+- **File**: usbdev_linkstate.sv
 ## Diagram
 
 ![Diagram](usbdev_linkstate.svg "Diagram")

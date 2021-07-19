@@ -1,5 +1,6 @@
 # Package: UdpDebugBridgePkg
 
+- **File**: UdpDebugBridgePkg.vhd
 ## Description
 
 Configuration constants (used for generics) for AxisJtagDebugBridge

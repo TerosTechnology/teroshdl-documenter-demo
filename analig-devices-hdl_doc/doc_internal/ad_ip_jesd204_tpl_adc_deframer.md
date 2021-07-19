@@ -1,5 +1,6 @@
 # Entity: ad_ip_jesd204_tpl_adc_deframer
 
+- **File**: ad_ip_jesd204_tpl_adc_deframer.v
 ## Diagram
 
 ![Diagram](ad_ip_jesd204_tpl_adc_deframer.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Gtp7RxRst
 
+- **File**: Gtp7RxRst.vhd
 ## Diagram
 
 ![Diagram](Gtp7RxRst.svg "Diagram")

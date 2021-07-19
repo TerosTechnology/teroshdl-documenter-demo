@@ -1,5 +1,6 @@
 # Package: clkmgr_env_pkg
 
+- **File**: clkmgr_if.sv
 ## Description
 
 Copyright lowRISC contributors.

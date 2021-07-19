@@ -1,5 +1,6 @@
 # Entity: lc_ctrl_state_decode
 
+- **File**: lc_ctrl_state_decode.sv
 ## Diagram
 
 ![Diagram](lc_ctrl_state_decode.svg "Diagram")

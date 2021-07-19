@@ -1,5 +1,6 @@
 # Package: stream_slave_pkg
 
+- **File**: stream_slave_pkg.vhd
 ## Constants
 
 | Name           | Type       | Value                       | Description                                                       |

@@ -1,5 +1,6 @@
 # Entity: AxiStreamMux
 
+- **File**: AxiStreamMux.vhd
 ## Diagram
 
 ![Diagram](AxiStreamMux.svg "Diagram")

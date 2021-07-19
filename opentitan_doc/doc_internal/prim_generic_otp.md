@@ -1,5 +1,6 @@
 # Entity: prim_generic_otp
 
+- **File**: prim_generic_otp.sv
 ## Diagram
 
 ![Diagram](prim_generic_otp.svg "Diagram")

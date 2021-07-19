@@ -1,5 +1,6 @@
 # Entity: ClkOutBufSingle
 
+- **File**: ClkOutBufSingle.vhd
 ## Diagram
 
 ![Diagram](ClkOutBufSingle.svg "Diagram")

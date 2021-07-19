@@ -1,5 +1,6 @@
 # Entity: AxiStreamPacketizer2
 
+- **File**: AxiStreamPacketizer2.vhd
 ## Diagram
 
 ![Diagram](AxiStreamPacketizer2.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: waveform
 
+- **File**: sim_waveform.vhdl
 ## Types
 
 | Name                        | Type                                                    | Description                                                                                     |

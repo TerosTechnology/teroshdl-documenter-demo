@@ -1,5 +1,6 @@
 # Package: AxiStreamPacketizer2Pkg
 
+- **File**: AxiStreamPacketizer2Pkg.vhd
 ## Constants
 
 | Name                           | Type                 | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description                          |

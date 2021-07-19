@@ -1,5 +1,6 @@
 # Entity: cic_decim
 
+- **File**: cic_decim.v
 ## Diagram
 
 ![Diagram](cic_decim.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: io_PulseWidthModulation
 
+- **File**: io_PulseWidthModulation.vhdl
 ## Diagram
 
 ![Diagram](io_PulseWidthModulation.svg "Diagram")

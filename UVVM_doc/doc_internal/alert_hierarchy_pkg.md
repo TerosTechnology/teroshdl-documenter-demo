@@ -1,5 +1,6 @@
 # Package: alert_hierarchy_pkg
 
+- **File**: alert_hierarchy_pkg.vhd
 ## Functions
 - initialize_hierarchy <font id="function_arguments">( constant base_scope : string := C_BASE_HIERARCHY_LEVEL;<br><span style="padding-left:20px"> constant stop_limit : t_alert_counters := (others => 0) ) </font> <font id="function_return">return ()</font>
 - add_to_alert_hierarchy <font id="function_arguments">( constant scope : string;<br><span style="padding-left:20px"> constant parent_scope : string := C_BASE_HIERARCHY_LEVEL;<br><span style="padding-left:20px"> constant stop_limit : t_alert_counters := (others => 0) ) </font> <font id="function_return">return ()</font>

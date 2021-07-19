@@ -1,5 +1,6 @@
 # Entity: clkmgr_byp
 
+- **File**: clkmgr_byp.sv
 ## Diagram
 
 ![Diagram](clkmgr_byp.svg "Diagram")

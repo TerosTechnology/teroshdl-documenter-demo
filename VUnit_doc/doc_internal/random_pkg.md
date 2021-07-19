@@ -1,5 +1,6 @@
 # Package: random_pkg
 
+- **File**: random_pkg.vhd
 ## Functions
 - random_integer_vector_ptr <font id="function_arguments">(variable rnd : inout RandomPType;<br><span style="padding-left:20px"> variable integer_vector_ptr : inout integer_vector_ptr_t;<br><span style="padding-left:20px"> length : natural;<br><span style="padding-left:20px"> min_value : integer;<br><span style="padding-left:20px"> max_value : integer) </font> <font id="function_return">return ()</font>
 - random_integer_vector_ptr <font id="function_arguments">(variable rnd : inout RandomPType;<br><span style="padding-left:20px"> variable integer_vector_ptr : inout integer_vector_ptr_t;<br><span style="padding-left:20px"> length : natural;<br><span style="padding-left:20px"> bits_per_word : positive;<br><span style="padding-left:20px"> is_signed : boolean) </font> <font id="function_return">return ()</font>

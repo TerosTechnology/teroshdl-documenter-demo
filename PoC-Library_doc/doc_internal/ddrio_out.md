@@ -1,5 +1,6 @@
 # Entity: ddrio_out
 
+- **File**: ddrio_out.vhdl
 ## Diagram
 
 ![Diagram](ddrio_out.svg "Diagram")
@@ -25,7 +26,7 @@ If ``NO_OUTPUT_ENABLE = false`` then output is disabled after power-up.
 If ``NO_OUTPUT_ENABLE = true`` then output after power-up equals ``INIT_VALUE``.
 .. wavedrom::
    
-![alt text](wavedrom_CKsn0.svg "title") 
+![alt text](wavedrom_mV6b0.svg "title") 
 
 ``Pad`` must be connected to a PAD because FPGAs only have these registers in
 IOBs.

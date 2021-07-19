@@ -1,5 +1,6 @@
 # Entity: AxiStreamScatterGather
 
+- **File**: AxiStreamScatterGather.vhd
 ## Diagram
 
 ![Diagram](AxiStreamScatterGather.svg "Diagram")

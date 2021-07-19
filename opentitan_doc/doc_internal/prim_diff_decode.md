@@ -1,5 +1,6 @@
 # Entity: prim_diff_decode
 
+- **File**: prim_diff_decode.sv
 ## Diagram
 
 ![Diagram](prim_diff_decode.svg "Diagram")

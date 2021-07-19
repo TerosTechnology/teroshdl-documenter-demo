@@ -1,5 +1,6 @@
 # Entity: SpiMaster
 
+- **File**: SpiMaster.vhd
 ## Diagram
 
 ![Diagram](SpiMaster.svg "Diagram")

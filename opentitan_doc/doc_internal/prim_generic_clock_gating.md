@@ -1,5 +1,6 @@
 # Entity: prim_generic_clock_gating
 
+- **File**: prim_generic_clock_gating.sv
 ## Diagram
 
 ![Diagram](prim_generic_clock_gating.svg "Diagram")

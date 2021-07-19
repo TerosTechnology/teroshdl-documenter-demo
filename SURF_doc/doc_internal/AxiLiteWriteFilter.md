@@ -1,5 +1,6 @@
 # Entity: AxiLiteWriteFilter
 
+- **File**: AxiLiteWriteFilter.vhd
 ## Diagram
 
 ![Diagram](AxiLiteWriteFilter.svg "Diagram")

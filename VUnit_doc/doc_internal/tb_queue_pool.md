@@ -1,5 +1,6 @@
 # Entity: tb_queue_pool
 
+- **File**: tb_queue_pool.vhd
 ## Diagram
 
 ![Diagram](tb_queue_pool.svg "Diagram")

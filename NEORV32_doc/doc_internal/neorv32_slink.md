@@ -1,5 +1,6 @@
 # Entity: neorv32_slink
 
+- **File**: neorv32_slink.vhd
 ## Diagram
 
 ![Diagram](neorv32_slink.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: rtc_clock
 
+- **File**: rtc_clock.sv
 ## Diagram
 
 ![Diagram](rtc_clock.svg "Diagram")

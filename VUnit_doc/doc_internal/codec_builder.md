@@ -1,5 +1,6 @@
 # Package: codec_builder_pkg
 
+- **File**: codec_builder.vhd
 ## Constants
 
 | Name                         | Type     | Value                                          | Description |

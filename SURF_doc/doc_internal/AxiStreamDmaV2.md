@@ -1,5 +1,6 @@
 # Entity: AxiStreamDmaV2
 
+- **File**: AxiStreamDmaV2.vhd
 ## Diagram
 
 ![Diagram](AxiStreamDmaV2.svg "Diagram")

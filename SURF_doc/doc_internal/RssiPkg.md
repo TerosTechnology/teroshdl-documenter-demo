@@ -1,5 +1,6 @@
 # Package: RssiPkg
 
+- **File**: RssiPkg.vhd
 ## Constants
 
 | Name               | Type                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description         |

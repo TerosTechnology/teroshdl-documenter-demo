@@ -1,5 +1,6 @@
 # Package: pinmux_pkg
 
+- **File**: pinmux_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

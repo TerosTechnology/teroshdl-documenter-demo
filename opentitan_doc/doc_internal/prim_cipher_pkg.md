@@ -1,5 +1,6 @@
 # Package: prim_cipher_pkg
 
+- **File**: prim_cipher_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: adrv9001_rx_link
 
+- **File**: adrv9001_rx_link.v
 ## Diagram
 
 ![Diagram](adrv9001_rx_link.svg "Diagram")

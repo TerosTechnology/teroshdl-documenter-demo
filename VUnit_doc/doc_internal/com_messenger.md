@@ -1,5 +1,6 @@
 # Package: com_messenger_pkg
 
+- **File**: com_messenger.vhd
 ## Types
 
 | Name                         | Type                                                     | Description |

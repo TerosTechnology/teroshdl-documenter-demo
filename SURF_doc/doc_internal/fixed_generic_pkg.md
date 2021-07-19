@@ -1,5 +1,6 @@
 # Package: fixed_generic_pkg
 
+- **File**: fixed_generic_pkg.vhdl
 ## Constants
 
 | Name            | Type   | Value                                               | Description |

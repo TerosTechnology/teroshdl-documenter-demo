@@ -1,5 +1,6 @@
 # Package: axi_channel_handler_pkg
 
+- **File**: axi_channel_handler_pkg.vhd
 ## Constants
 
 | Name    | Type   | Value                  | Description |

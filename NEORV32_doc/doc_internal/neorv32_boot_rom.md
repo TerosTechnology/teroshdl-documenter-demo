@@ -1,5 +1,6 @@
 # Entity: neorv32_boot_rom
 
+- **File**: neorv32_boot_rom.vhd
 ## Diagram
 
 ![Diagram](neorv32_boot_rom.svg "Diagram")

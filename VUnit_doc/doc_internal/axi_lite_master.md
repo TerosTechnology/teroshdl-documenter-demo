@@ -1,5 +1,6 @@
 # Entity: axi_lite_master
 
+- **File**: axi_lite_master.vhd
 ## Diagram
 
 ![Diagram](axi_lite_master.svg "Diagram")

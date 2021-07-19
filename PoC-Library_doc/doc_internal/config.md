@@ -1,5 +1,6 @@
 # Package: config_private
 
+- **File**: config.vhdl
 ## Types
 
 | Name                         | Type                                              | Description                                |

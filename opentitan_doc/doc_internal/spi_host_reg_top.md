@@ -1,5 +1,6 @@
 # Entity: spi_host_reg_top
 
+- **File**: spi_host_reg_top.sv
 ## Diagram
 
 ![Diagram](spi_host_reg_top.svg "Diagram")
@@ -66,8 +67,6 @@ Copyright lowRISC contributors.
 | control_rx_watermark_wd   | logic [7:0]        |                                                                                                                           |
 | control_tx_watermark_qs   | logic [7:0]        |                                                                                                                           |
 | control_tx_watermark_wd   | logic [7:0]        |                                                                                                                           |
-| control_passthru_qs       | logic              |                                                                                                                           |
-| control_passthru_wd       | logic              |                                                                                                                           |
 | control_sw_rst_qs         | logic              |                                                                                                                           |
 | control_sw_rst_wd         | logic              |                                                                                                                           |
 | control_spien_qs          | logic              |                                                                                                                           |
@@ -221,10 +220,6 @@ F[rx_watermark]: 7:0
 - u_control_tx_watermark: prim_subreg
 **Description**
 F[tx_watermark]: 15:8
-
-- u_control_passthru: prim_subreg
-**Description**
-F[passthru]: 29:29
 
 - u_control_sw_rst: prim_subreg
 **Description**

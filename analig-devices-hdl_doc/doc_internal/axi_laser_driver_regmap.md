@@ -1,5 +1,6 @@
 # Entity: axi_laser_driver_regmap
 
+- **File**: axi_laser_driver_regmap.v
 ## Diagram
 
 ![Diagram](axi_laser_driver_regmap.svg "Diagram")

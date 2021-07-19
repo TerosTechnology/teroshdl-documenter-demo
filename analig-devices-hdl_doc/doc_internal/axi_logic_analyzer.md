@@ -1,5 +1,6 @@
 # Entity: axi_logic_analyzer
 
+- **File**: axi_logic_analyzer.v
 ## Diagram
 
 ![Diagram](axi_logic_analyzer.svg "Diagram")

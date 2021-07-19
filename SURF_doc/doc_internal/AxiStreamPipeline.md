@@ -1,5 +1,6 @@
 # Entity: AxiStreamPipeline
 
+- **File**: AxiStreamPipeline.vhd
 ## Diagram
 
 ![Diagram](AxiStreamPipeline.svg "Diagram")

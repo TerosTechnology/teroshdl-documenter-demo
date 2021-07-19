@@ -1,5 +1,6 @@
 # Package: wishbone_bfm_pkg
 
+- **File**: wishbone_bfm_pkg.vhd
 ## Constants
 
 | Name                          | Type                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Description                                 |

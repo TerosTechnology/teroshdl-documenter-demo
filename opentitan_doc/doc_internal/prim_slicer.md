@@ -1,5 +1,6 @@
 # Entity: prim_slicer
 
+- **File**: prim_slicer.sv
 ## Diagram
 
 ![Diagram](prim_slicer.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: EthCrc32Pkg
 
+- **File**: EthCrc32Pkg.vhd
 ## Functions
 - crc32Parallel1Byte <font id="function_arguments">(crcCur : slv(31 downto 0);<br><span style="padding-left:20px"> data : slv(7 downto 0)) </font> <font id="function_return">return slv </font>
 - crc32Parallel2Byte <font id="function_arguments">(crcCur : slv(31 downto 0);<br><span style="padding-left:20px"> data : slv(15 downto 0)) </font> <font id="function_return">return slv </font>

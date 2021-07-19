@@ -1,5 +1,6 @@
 # Entity: timer_core
 
+- **File**: timer_core.sv
 ## Diagram
 
 ![Diagram](timer_core.svg "Diagram")

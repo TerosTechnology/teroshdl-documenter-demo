@@ -1,5 +1,6 @@
 # Entity: Caui4GtyIpWrapper
 
+- **File**: Caui4GtyIpWrapper.vhd
 ## Diagram
 
 ![Diagram](Caui4GtyIpWrapper.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: cvb_check_mean
 
+- **File**: cvb_check_mean.vhd
 ## Diagram
 
 ![Diagram](cvb_check_mean.svg "Diagram")

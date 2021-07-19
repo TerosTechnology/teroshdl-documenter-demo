@@ -1,5 +1,6 @@
 # Package: lc_ctrl_env_pkg
 
+- **File**: lc_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

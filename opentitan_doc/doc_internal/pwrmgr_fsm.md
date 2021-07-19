@@ -1,5 +1,6 @@
 # Entity: pwrmgr_fsm
 
+- **File**: pwrmgr_fsm.sv
 ## Diagram
 
 ![Diagram](pwrmgr_fsm.svg "Diagram")

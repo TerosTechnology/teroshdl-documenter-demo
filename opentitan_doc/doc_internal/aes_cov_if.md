@@ -1,5 +1,6 @@
 # Package: uvm_pkg
 
+- **File**: aes_cov_if.sv
 ## Description
 
 Copyright lowRISC contributors.

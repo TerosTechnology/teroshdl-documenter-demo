@@ -1,5 +1,6 @@
 # Package: EthMacPkg
 
+- **File**: EthMacPkg.vhd
 ## Constants
 
 | Name                      | Type                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description                                                                                         |

@@ -1,5 +1,6 @@
 # Entity: Pgp2bGth7MultiLane
 
+- **File**: Pgp2bGth7MultiLane.vhd
 ## Diagram
 
 ![Diagram](Pgp2bGth7MultiLane.svg "Diagram")

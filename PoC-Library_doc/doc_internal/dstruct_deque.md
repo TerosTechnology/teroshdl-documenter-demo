@@ -1,5 +1,6 @@
 # Entity: dstruct_deque
 
+- **File**: dstruct_deque.vhdl
 ## Diagram
 
 ![Diagram](dstruct_deque.svg "Diagram")

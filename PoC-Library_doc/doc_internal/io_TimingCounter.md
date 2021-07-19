@@ -1,5 +1,6 @@
 # Entity: io_TimingCounter
 
+- **File**: io_TimingCounter.vhdl
 ## Diagram
 
 ![Diagram](io_TimingCounter.svg "Diagram")

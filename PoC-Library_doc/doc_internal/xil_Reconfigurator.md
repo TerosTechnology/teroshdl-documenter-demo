@@ -1,5 +1,6 @@
 # Entity: xil_Reconfigurator
 
+- **File**: xil_Reconfigurator.vhdl
 ## Diagram
 
 ![Diagram](xil_Reconfigurator.svg "Diagram")

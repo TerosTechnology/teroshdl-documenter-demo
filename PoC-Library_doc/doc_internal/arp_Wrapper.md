@@ -1,5 +1,6 @@
 # Entity: arp_Wrapper
 
+- **File**: arp_Wrapper.vhdl
 ## Diagram
 
 ![Diagram](arp_Wrapper.svg "Diagram")

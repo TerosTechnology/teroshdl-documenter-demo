@@ -1,5 +1,6 @@
 # Entity: sortnet_MergeSort_Streamed
 
+- **File**: sortnet_MergeSort_Streamed.vhdl
 ## Diagram
 
 ![Diagram](sortnet_MergeSort_Streamed.svg "Diagram")

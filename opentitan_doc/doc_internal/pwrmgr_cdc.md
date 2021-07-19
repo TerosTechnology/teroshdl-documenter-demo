@@ -1,5 +1,6 @@
 # Entity: pwrmgr_cdc
 
+- **File**: pwrmgr_cdc.sv
 ## Diagram
 
 ![Diagram](pwrmgr_cdc.svg "Diagram")

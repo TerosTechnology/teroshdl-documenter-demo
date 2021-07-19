@@ -1,5 +1,6 @@
 # Entity: tb_com_msg_building
 
+- **File**: tb_com_msg_building.vhd
 ## Diagram
 
 ![Diagram](tb_com_msg_building.svg "Diagram")

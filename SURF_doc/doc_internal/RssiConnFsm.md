@@ -1,5 +1,6 @@
 # Entity: RssiConnFsm
 
+- **File**: RssiConnFsm.vhd
 ## Diagram
 
 ![Diagram](RssiConnFsm.svg "Diagram")

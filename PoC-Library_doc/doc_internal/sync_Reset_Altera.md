@@ -1,5 +1,6 @@
 # Entity: sync_Reset_Altera
 
+- **File**: sync_Reset_Altera.vhdl
 ## Diagram
 
 ![Diagram](sync_Reset_Altera.svg "Diagram")

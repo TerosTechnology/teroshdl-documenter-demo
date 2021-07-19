@@ -1,5 +1,6 @@
 # Package: sram_ctrl_reg_pkg
 
+- **File**: sram_ctrl_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: T80_Reg
 
+- **File**: T80_Reg.vhd
 ## Diagram
 
 ![Diagram](T80_Reg.svg "Diagram")

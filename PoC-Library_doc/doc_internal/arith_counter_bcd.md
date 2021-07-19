@@ -1,5 +1,6 @@
 # Entity: arith_counter_bcd
 
+- **File**: arith_counter_bcd.vhdl
 ## Diagram
 
 ![Diagram](arith_counter_bcd.svg "Diagram")

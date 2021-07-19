@@ -1,5 +1,6 @@
 # Entity: serv_bufreg
 
+- **File**: serv_bufreg.v
 ## Diagram
 
 ![Diagram](serv_bufreg.svg "Diagram")

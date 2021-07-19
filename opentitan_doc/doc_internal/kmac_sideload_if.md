@@ -1,5 +1,6 @@
 # Package: keymgr_pkg
 
+- **File**: kmac_sideload_if.sv
 ## Description
 
 Copyright lowRISC contributors.

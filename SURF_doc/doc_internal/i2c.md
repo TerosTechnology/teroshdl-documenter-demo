@@ -1,5 +1,6 @@
 # Package: i2c
 
+- **File**: i2c.vhd
 ## Types
 
 | Name             | Type | Description       |

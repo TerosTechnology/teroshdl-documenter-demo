@@ -1,5 +1,6 @@
 # Package: monitor_cmd_pkg
 
+- **File**: monitor_cmd_pkg.vhd
 ## Constants
 
 | Name                                    | Type                    | Value                                                                                                                                                                                                                                                                                                                                                                                                                   | Description |

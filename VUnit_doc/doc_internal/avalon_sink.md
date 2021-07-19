@@ -1,5 +1,6 @@
 # Entity: avalon_sink
 
+- **File**: avalon_sink.vhd
 ## Diagram
 
 ![Diagram](avalon_sink.svg "Diagram")

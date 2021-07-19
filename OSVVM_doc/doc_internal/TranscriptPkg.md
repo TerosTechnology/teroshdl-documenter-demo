@@ -1,5 +1,6 @@
 # Package: TranscriptPkg
 
+- **File**: TranscriptPkg.vhd
 ## Functions
 - TranscriptOpen <font id="function_arguments">(Status: InOut FILE_OPEN_STATUS;<br><span style="padding-left:20px"> ExternalName: STRING;<br><span style="padding-left:20px"> OpenKind: WRITE_APPEND_OPEN_KIND := WRITE_MODE) </font> <font id="function_return">return ()</font>
 **Description**

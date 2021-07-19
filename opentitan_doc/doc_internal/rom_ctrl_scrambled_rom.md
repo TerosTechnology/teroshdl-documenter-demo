@@ -1,5 +1,6 @@
 # Entity: rom_ctrl_scrambled_rom
 
+- **File**: rom_ctrl_scrambled_rom.sv
 ## Diagram
 
 ![Diagram](rom_ctrl_scrambled_rom.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: digestpp_dpi_pkg
 
+- **File**: digestpp_dpi_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

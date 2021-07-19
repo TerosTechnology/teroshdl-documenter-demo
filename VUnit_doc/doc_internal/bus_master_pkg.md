@@ -1,5 +1,6 @@
 # Package: bus_master_pkg
 
+- **File**: bus_master_pkg.vhd
 ## Constants
 
 | Name                | Type       | Value                                   | Description                                    |

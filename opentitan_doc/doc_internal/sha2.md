@@ -1,5 +1,6 @@
 # Entity: sha2
 
+- **File**: sha2.sv
 ## Diagram
 
 ![Diagram](sha2.svg "Diagram")

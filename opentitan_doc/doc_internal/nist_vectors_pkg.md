@@ -1,5 +1,6 @@
 # Package: nist_vectors_pkg
 
+- **File**: nist_vectors_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

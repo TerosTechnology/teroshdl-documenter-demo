@@ -1,5 +1,6 @@
 # Entity: AxiRateGen
 
+- **File**: AxiRateGen.vhd
 ## Diagram
 
 ![Diagram](AxiRateGen.svg "Diagram")

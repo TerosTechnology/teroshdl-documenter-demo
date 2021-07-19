@@ -1,5 +1,6 @@
 # Package: jtag_pkg
 
+- **File**: jtag_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

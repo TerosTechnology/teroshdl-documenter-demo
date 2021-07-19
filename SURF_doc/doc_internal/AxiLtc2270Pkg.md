@@ -1,5 +1,6 @@
 # Package: AxiLtc2270Pkg
 
+- **File**: AxiLtc2270Pkg.vhd
 ## Constants
 
 | Name                         | Type                   | Value                                                                                                                                                                                                                                                                                                    | Description |

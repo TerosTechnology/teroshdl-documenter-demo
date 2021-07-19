@@ -1,5 +1,6 @@
 # Entity: random
 
+- **File**: fpga-random.vhdl
 ## Diagram
 
 ![Diagram](fpga-random.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axi_dmac_reset_manager
 
+- **File**: axi_dmac_reset_manager.v
 ## Diagram
 
 ![Diagram](axi_dmac_reset_manager.svg "Diagram")

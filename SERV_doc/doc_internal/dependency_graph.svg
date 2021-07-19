@@ -98,13 +98,13 @@
 <text text-anchor="middle" x="348.8941" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">serv_rf_top.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_ram.v -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_ram.v</title>
 <path fill="none" stroke="#000000" d="M316.8466,-143.8314C300.4521,-134.5368 280.3155,-123.1208 262.8112,-113.1971"/>
 <polygon fill="#000000" stroke="#000000" points="264.3567,-110.05 253.9313,-108.1628 260.9044,-116.1395 264.3567,-110.05"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_ram_if.v -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_ram_if.v</title>
 <path fill="none" stroke="#000000" d="M348.8941,-143.8314C348.8941,-136.131 348.8941,-126.9743 348.8941,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="352.3942,-118.4132 348.8941,-108.4133 345.3942,-118.4133 352.3942,-118.4132"/>
@@ -132,55 +132,55 @@
 <text text-anchor="middle" x="938.8941" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">serv_state.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_alu.v -->
-<g id="edge10" class="edge">
+<g id="edge11" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_alu.v</title>
 <path fill="none" stroke="#000000" d="M424.7544,-74.3779C421.7805,-73.4913 418.8055,-72.6843 415.8941,-72 276.7582,-39.2979 233.1791,-68.0976 89.8067,-35.8615"/>
 <polygon fill="#000000" stroke="#000000" points="90.2947,-32.3821 79.7635,-33.5413 88.719,-39.2025 90.2947,-32.3821"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_bufreg.v -->
-<g id="edge8" class="edge">
+<g id="edge5" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_bufreg.v</title>
 <path fill="none" stroke="#000000" d="M424.7038,-74.579C421.7418,-73.6452 418.7833,-72.7726 415.8941,-72 327.8605,-48.4577 300.4104,-57.1596 208.0602,-36.1128"/>
 <polygon fill="#000000" stroke="#000000" points="208.8445,-32.7018 198.3106,-33.8365 207.253,-39.5185 208.8445,-32.7018"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_csr.v -->
-<g id="edge4" class="edge">
+<g id="edge9" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_csr.v</title>
 <path fill="none" stroke="#000000" d="M424.5613,-75.0445C421.6328,-74.0014 418.7207,-72.9771 415.8941,-72 369.6536,-56.015 355.4955,-53.2314 305.1658,-36.0266"/>
 <polygon fill="#000000" stroke="#000000" points="306.2889,-32.7117 295.6942,-32.7656 304.0101,-39.3304 306.2889,-32.7117"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_ctrl.v -->
-<g id="edge12" class="edge">
+<g id="edge7" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_ctrl.v</title>
 <path fill="none" stroke="#000000" d="M436.8841,-71.8314C422.818,-62.7074 405.6001,-51.539 390.5008,-41.7449"/>
 <polygon fill="#000000" stroke="#000000" points="392.1894,-38.6684 381.8951,-36.1628 388.3801,-44.5412 392.1894,-38.6684"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_decode.v -->
-<g id="edge5" class="edge">
+<g id="edge6" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_decode.v</title>
 <path fill="none" stroke="#000000" d="M464.8941,-71.8314C464.8941,-64.131 464.8941,-54.9743 464.8941,-46.4166"/>
 <polygon fill="#000000" stroke="#000000" points="468.3942,-46.4132 464.8941,-36.4133 461.3942,-46.4133 468.3942,-46.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_immdec.v -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_immdec.v</title>
 <path fill="none" stroke="#000000" d="M496.9416,-71.8314C513.3361,-62.5368 533.4727,-51.1208 550.977,-41.1971"/>
 <polygon fill="#000000" stroke="#000000" points="552.8838,-44.1395 559.8569,-36.1628 549.4315,-38.05 552.8838,-44.1395"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_mem_if.v -->
-<g id="edge6" class="edge">
+<g id="edge12" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_mem_if.v</title>
 <path fill="none" stroke="#000000" d="M505.1462,-78.6547C541.7677,-68.325 597.5801,-52.5626 655.5772,-36.0865"/>
 <polygon fill="#000000" stroke="#000000" points="656.6184,-39.4293 665.2807,-33.329 654.7048,-32.6959 656.6184,-39.4293"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_if.v -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_rf_if.v</title>
 <path fill="none" stroke="#000000" d="M505.1413,-85.3803C563.958,-78.1438 676.8521,-62.4173 780.7802,-36.0752"/>
 <polygon fill="#000000" stroke="#000000" points="781.6737,-39.4594 790.4855,-33.577 779.9287,-32.6804 781.6737,-39.4594"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_state.v -->
-<g id="edge11" class="edge">
+<g id="edge4" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_top.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/serv/rtl/serv_state.v</title>
 <path fill="none" stroke="#000000" d="M505.1953,-87.339C578.7077,-81.9404 739.4598,-67.6197 883.2734,-35.8957"/>
 <polygon fill="#000000" stroke="#000000" points="884.1655,-39.2827 893.1586,-33.6813 882.6353,-32.452 884.1655,-39.2827"/>

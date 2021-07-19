@@ -1,5 +1,6 @@
 # Entity: arith_sqrt
 
+- **File**: arith_sqrt.vhdl
 ## Diagram
 
 ![Diagram](arith_sqrt.svg "Diagram")

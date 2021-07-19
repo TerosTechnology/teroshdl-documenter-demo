@@ -1,5 +1,6 @@
 # Entity: tb_axi_statistics_pkg
 
+- **File**: tb_axi_statistics_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_axi_statistics_pkg.svg "Diagram")

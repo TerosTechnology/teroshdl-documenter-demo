@@ -1,5 +1,6 @@
 # Entity: SsiFrameLimiter
 
+- **File**: SsiFrameLimiter.vhd
 ## Diagram
 
 ![Diagram](SsiFrameLimiter.svg "Diagram")

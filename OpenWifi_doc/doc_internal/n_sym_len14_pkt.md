@@ -1,5 +1,6 @@
 # Entity: n_sym_len14_pkt
 
+- **File**: n_sym_len14_pkt.v
 ## Diagram
 
 ![Diagram](n_sym_len14_pkt.svg "Diagram")

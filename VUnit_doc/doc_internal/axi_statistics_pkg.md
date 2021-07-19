@@ -1,5 +1,6 @@
 # Package: axi_statistics_pkg
 
+- **File**: axi_statistics_pkg.vhd
 ## Constants
 
 | Name                | Type             | Value                                  | Description |

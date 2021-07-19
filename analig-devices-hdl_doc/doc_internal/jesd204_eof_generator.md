@@ -1,5 +1,6 @@
 # Entity: jesd204_eof_generator
 
+- **File**: jesd204_eof_generator.v
 ## Diagram
 
 ![Diagram](jesd204_eof_generator.svg "Diagram")

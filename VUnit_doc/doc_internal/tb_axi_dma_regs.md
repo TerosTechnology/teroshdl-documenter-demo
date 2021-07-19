@@ -1,5 +1,6 @@
 # Entity: tb_axi_dma_regs
 
+- **File**: tb_axi_dma_regs.vhd
 ## Diagram
 
 ![Diagram](tb_axi_dma_regs.svg "Diagram")

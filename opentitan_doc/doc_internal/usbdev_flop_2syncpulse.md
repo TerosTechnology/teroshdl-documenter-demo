@@ -1,5 +1,6 @@
 # Entity: usbdev_flop_2syncpulse
 
+- **File**: usbdev_flop_2syncpulse.sv
 ## Diagram
 
 ![Diagram](usbdev_flop_2syncpulse.svg "Diagram")

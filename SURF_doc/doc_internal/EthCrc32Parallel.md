@@ -1,5 +1,6 @@
 # Entity: EthCrc32Parallel
 
+- **File**: EthCrc32Parallel.vhd
 ## Diagram
 
 ![Diagram](EthCrc32Parallel.svg "Diagram")

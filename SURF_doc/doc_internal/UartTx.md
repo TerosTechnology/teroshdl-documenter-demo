@@ -1,5 +1,6 @@
 # Entity: UartTx
 
+- **File**: UartTx.vhd
 ## Diagram
 
 ![Diagram](UartTx.svg "Diagram")

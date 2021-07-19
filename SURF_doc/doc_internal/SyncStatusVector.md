@@ -1,5 +1,6 @@
 # Entity: SyncStatusVector
 
+- **File**: SyncStatusVector.vhd
 ## Diagram
 
 ![Diagram](SyncStatusVector.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: GigEthLvdsUltraScaleWrapper
 
+- **File**: GigEthLvdsUltraScaleWrapper.vhd
 ## Diagram
 
 ![Diagram](GigEthLvdsUltraScaleWrapper.svg "Diagram")

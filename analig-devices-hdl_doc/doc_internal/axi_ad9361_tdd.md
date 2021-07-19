@@ -1,5 +1,6 @@
 # Entity: axi_ad9361_tdd
 
+- **File**: axi_ad9361_tdd.v
 ## Diagram
 
 ![Diagram](axi_ad9361_tdd.svg "Diagram")

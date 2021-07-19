@@ -1,5 +1,6 @@
 # Entity: SelectIoRxGearboxAligner
 
+- **File**: SelectIoRxGearboxAligner.vhd
 ## Diagram
 
 ![Diagram](SelectIoRxGearboxAligner.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: rom_ctrl_test_pkg
 
+- **File**: rom_ctrl_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

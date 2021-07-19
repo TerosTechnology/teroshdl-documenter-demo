@@ -1,5 +1,6 @@
 # Package: strings
 
+- **File**: strings.vhdl
 ## Constants
 
 | Name      | Type      | Value                                                                                                                                                                                                                                                                                                                                        | Description |

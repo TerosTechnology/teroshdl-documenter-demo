@@ -1,5 +1,6 @@
 # Entity: Pgp3RxGearboxAligner
 
+- **File**: Pgp3RxGearboxAligner.vhd
 ## Diagram
 
 ![Diagram](Pgp3RxGearboxAligner.svg "Diagram")

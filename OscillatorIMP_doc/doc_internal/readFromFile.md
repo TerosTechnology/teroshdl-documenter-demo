@@ -1,5 +1,6 @@
 # Entity: readFromFile
 
+- **File**: readFromFile.vhd
 ## Diagram
 
 ![Diagram](readFromFile.svg "Diagram")

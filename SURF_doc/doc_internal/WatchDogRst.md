@@ -1,5 +1,6 @@
 # Entity: WatchDogRst
 
+- **File**: WatchDogRst.vhd
 ## Diagram
 
 ![Diagram](WatchDogRst.svg "Diagram")

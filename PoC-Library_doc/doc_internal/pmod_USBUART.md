@@ -1,5 +1,6 @@
 # Entity: pmod_USBUART
 
+- **File**: pmod_USBUART.vhdl
 ## Diagram
 
 ![Diagram](pmod_USBUART.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tb_string_ptr
 
+- **File**: tb_string_ptr.vhd
 ## Diagram
 
 ![Diagram](tb_string_ptr.svg "Diagram")

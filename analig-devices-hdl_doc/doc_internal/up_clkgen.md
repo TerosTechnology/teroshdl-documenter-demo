@@ -1,5 +1,6 @@
 # Entity: up_clkgen
 
+- **File**: up_clkgen.v
 ## Diagram
 
 ![Diagram](up_clkgen.svg "Diagram")

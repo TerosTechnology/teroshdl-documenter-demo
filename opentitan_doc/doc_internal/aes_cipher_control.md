@@ -1,5 +1,6 @@
 # Entity: aes_cipher_control
 
+- **File**: aes_cipher_control.sv
 ## Diagram
 
 ![Diagram](aes_cipher_control.svg "Diagram")

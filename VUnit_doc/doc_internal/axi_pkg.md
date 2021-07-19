@@ -1,5 +1,6 @@
 # Package: axi_pkg
 
+- **File**: axi_pkg.vhd
 ## Constants
 
 | Name                  | Type             | Value                 | Description |

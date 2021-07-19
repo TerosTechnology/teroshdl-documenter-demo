@@ -1,5 +1,6 @@
 # Entity: otp_ctrl_token_const
 
+- **File**: otp_ctrl_token_const.sv
 ## Diagram
 
 ![Diagram](otp_ctrl_token_const.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: wb_axi_to_dac
 
+- **File**: wb_axi_to_dac.vhd
 ## Diagram
 
 ![Diagram](wb_axi_to_dac.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: tlul_socket_1n
 
+- **File**: tlul_socket_1n.sv
 ## Diagram
 
 ![Diagram](tlul_socket_1n.svg "Diagram")

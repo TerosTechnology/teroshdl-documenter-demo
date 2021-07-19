@@ -1,5 +1,6 @@
 # Entity: neorv32_xirq
 
+- **File**: neorv32_xirq.vhd
 ## Diagram
 
 ![Diagram](neorv32_xirq.svg "Diagram")

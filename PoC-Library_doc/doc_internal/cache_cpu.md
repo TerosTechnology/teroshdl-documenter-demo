@@ -1,5 +1,6 @@
 # Entity: cache_cpu
 
+- **File**: cache_cpu.vhdl
 ## Diagram
 
 ![Diagram](cache_cpu.svg "Diagram")

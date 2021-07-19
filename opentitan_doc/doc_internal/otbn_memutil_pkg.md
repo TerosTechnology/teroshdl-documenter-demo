@@ -1,5 +1,6 @@
 # Package: otbn_memutil_pkg
 
+- **File**: otbn_memutil_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

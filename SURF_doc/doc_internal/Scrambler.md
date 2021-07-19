@@ -1,5 +1,6 @@
 # Entity: Scrambler
 
+- **File**: Scrambler.vhd
 ## Diagram
 
 ![Diagram](Scrambler.svg "Diagram")

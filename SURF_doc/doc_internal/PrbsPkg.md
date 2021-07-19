@@ -1,5 +1,6 @@
 # Package: PrbsPkg
 
+- **File**: PrbsPkg.vhd
 ## Functions
 - getPrbs1xTap <font id="function_arguments">(input : slv;<br><span style="padding-left:20px"> tap0 : natural) </font> <font id="function_return">return slv </font>
 - getPrbs2xTap <font id="function_arguments">(input : slv;<br><span style="padding-left:20px"> tap0,<br><span style="padding-left:20px"> tap1 : natural) </font> <font id="function_return">return slv </font>

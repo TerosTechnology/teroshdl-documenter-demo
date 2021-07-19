@@ -1,5 +1,6 @@
 # Entity: ddr3_mem2mig_adapter_Series7
 
+- **File**: ddr3_mem2mig_adapter_Series7.vhdl
 ## Diagram
 
 ![Diagram](ddr3_mem2mig_adapter_Series7.svg "Diagram")

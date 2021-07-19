@@ -1,5 +1,6 @@
 # Entity: axi_laser_driver
 
+- **File**: axi_laser_driver.v
 ## Diagram
 
 ![Diagram](axi_laser_driver.svg "Diagram")

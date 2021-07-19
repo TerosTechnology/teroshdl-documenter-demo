@@ -1,5 +1,6 @@
 # Entity: io_GlitchFilter
 
+- **File**: io_GlitchFilter.vhdl
 ## Diagram
 
 ![Diagram](io_GlitchFilter.svg "Diagram")

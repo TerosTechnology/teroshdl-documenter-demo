@@ -1,5 +1,6 @@
 # Package: aes_test_pkg
 
+- **File**: aes_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

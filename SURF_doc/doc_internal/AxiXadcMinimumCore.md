@@ -1,5 +1,6 @@
 # Entity: AxiXadcMinimumCore
 
+- **File**: AxiXadcMinimumCore.vhd
 ## Diagram
 
 ![Diagram](AxiXadcMinimumCore.svg "Diagram")

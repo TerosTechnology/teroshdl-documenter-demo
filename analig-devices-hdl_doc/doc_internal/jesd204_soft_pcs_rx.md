@@ -1,5 +1,6 @@
 # Entity: jesd204_soft_pcs_rx
 
+- **File**: jesd204_soft_pcs_rx.v
 ## Diagram
 
 ![Diagram](jesd204_soft_pcs_rx.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Ad9249ReadoutGroup
 
+- **File**: Ad9249ReadoutGroup.vhd
 ## Diagram
 
 ![Diagram](Ad9249ReadoutGroup.svg "Diagram")

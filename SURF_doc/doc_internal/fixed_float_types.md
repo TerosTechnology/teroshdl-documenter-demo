@@ -1,5 +1,6 @@
 # Package: fixed_float_types
 
+- **File**: fixed_float_types.vhdl
 ## Types
 
 | Name                      | Type                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                   |

@@ -1,5 +1,6 @@
 # Entity: safe_domain
 
+- **File**: safe_domain.sv
 ## Diagram
 
 ![Diagram](safe_domain.svg "Diagram")

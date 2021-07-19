@@ -1,5 +1,6 @@
 # Package: rom_ctrl_reg_pkg
 
+- **File**: rom_ctrl_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Package: prim_alert_pkg
 
+- **File**: prim_alert_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: csrng_state_db
 
+- **File**: csrng_state_db.sv
 ## Diagram
 
 ![Diagram](csrng_state_db.svg "Diagram")
@@ -44,42 +45,49 @@ Copyright lowRISC contributors.
 | state_db_wr_v_i            | input     | [BlkLen-1:0]  |                  |
 | state_db_wr_res_ctr_i      | input     | [CtrLen-1:0]  |                  |
 | state_db_wr_sts_i          | input     |               |                  |
-| state_db_lc_en_i           | input     |               | status interface |
+| state_db_is_dump_en_i      | input     |               | status interface |
 | state_db_reg_rd_sel_i      | input     |               |                  |
 | state_db_reg_rd_id_pulse_i | input     |               |                  |
+| state_db_reg_rd_id_i       | input     | [StateId-1:0] |                  |
 | state_db_reg_rd_val_o      | output    | [31:0]        |                  |
 | state_db_sts_ack_o         | output    |               |                  |
 | state_db_sts_sts_o         | output    |               |                  |
 | state_db_sts_id_o          | output    | [StateId-1:0] |                  |
 ## Signals
 
-| Name                | Type                              | Description       |
-| ------------------- | --------------------------------- | ----------------- |
-| state_db_id         | logic [StateId-1:0]               |                   |
-| state_db_key        | logic [KeyLen-1:0]                |                   |
-| state_db_v          | logic [BlkLen-1:0]                |                   |
-| state_db_rc         | logic [CtrLen-1:0]                |                   |
-| state_db_fips       | logic                             |                   |
-| state_db_inst_st    | logic                             |                   |
-| state_db_sts        | logic                             |                   |
-| state_db_write      | logic                             |                   |
-| instance_status     | logic                             |                   |
-| int_st_out_sel      | logic [NApps-1:0]                 |                   |
-| internal_states_out | logic [InternalStateWidth-1:0]    |                   |
-| internal_state_diag | logic [RegInternalStateWidth-1:0] |                   |
-| reg_rd_ptr_inc      | logic                             |                   |
-| state_db_sts_ack_q  | logic                             | flops             |
-| state_db_sts_ack_d  | logic                             | flops             |
-| state_db_sts_sts_q  | logic                             |                   |
-| state_db_sts_sts_d  | logic                             |                   |
-| state_db_sts_id_q   | logic [StateId-1:0]               |                   |
-| state_db_sts_id_d   | logic [StateId-1:0]               |                   |
-| reg_rd_ptr_q        | logic [StateId-1:0]               |                   |
-| reg_rd_ptr_d        | logic [StateId-1:0]               |                   |
-| internal_states_q   | logic [InternalStateWidth-1:0]    | flops - no reset  |
-| internal_states_d   | logic [InternalStateWidth-1:0]    | flops - no reset  |
-| internal_state_pl_q | logic [InternalStateWidth-1:0]    |                   |
-| internal_state_pl_d | logic [InternalStateWidth-1:0]    |                   |
+| Name                     | Type                              | Description       |
+| ------------------------ | --------------------------------- | ----------------- |
+| state_db_id              | logic [StateId-1:0]               |                   |
+| state_db_key             | logic [KeyLen-1:0]                |                   |
+| state_db_v               | logic [BlkLen-1:0]                |                   |
+| state_db_rc              | logic [CtrLen-1:0]                |                   |
+| state_db_fips            | logic                             |                   |
+| state_db_inst_st         | logic                             |                   |
+| state_db_sts             | logic                             |                   |
+| state_db_write           | logic                             |                   |
+| instance_status          | logic                             |                   |
+| int_st_out_sel           | logic [NApps-1:0]                 |                   |
+| int_st_dump_sel          | logic [NApps-1:0]                 |                   |
+| internal_states_out      | logic [InternalStateWidth-1:0]    |                   |
+| internal_states_dump     | logic [InternalStateWidth-1:0]    |                   |
+| internal_state_diag      | logic [RegInternalStateWidth-1:0] |                   |
+| reg_rd_ptr_inc           | logic                             |                   |
+| state_db_sts_ack_q       | logic                             | flops             |
+| state_db_sts_ack_d       | logic                             | flops             |
+| state_db_sts_sts_q       | logic                             |                   |
+| state_db_sts_sts_d       | logic                             |                   |
+| state_db_sts_id_q        | logic [StateId-1:0]               |                   |
+| state_db_sts_id_d        | logic [StateId-1:0]               |                   |
+| reg_rd_ptr_q             | logic [StateId-1:0]               |                   |
+| reg_rd_ptr_d             | logic [StateId-1:0]               |                   |
+| int_st_dump_id_q         | logic [StateId-1:0]               |                   |
+| int_st_dump_id_d         | logic [StateId-1:0]               |                   |
+| internal_states_q        | logic [InternalStateWidth-1:0]    | flops - no reset  |
+| internal_states_d        | logic [InternalStateWidth-1:0]    | flops - no reset  |
+| internal_state_pl_q      | logic [InternalStateWidth-1:0]    |                   |
+| internal_state_pl_d      | logic [InternalStateWidth-1:0]    |                   |
+| internal_state_pl_dump_q | logic [InternalStateWidth-1:0]    |                   |
+| internal_state_pl_dump_d | logic [InternalStateWidth-1:0]    |                   |
 ## Constants
 
 | Name                  | Type | Value                              | Description |

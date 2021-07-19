@@ -1,5 +1,6 @@
 # Entity: neorv32_cpu_cp_fpu
 
+- **File**: neorv32_cpu_cp_fpu.vhd
 ## Diagram
 
 ![Diagram](neorv32_cpu_cp_fpu.svg "Diagram")

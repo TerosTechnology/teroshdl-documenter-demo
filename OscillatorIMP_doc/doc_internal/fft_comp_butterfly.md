@@ -1,5 +1,6 @@
 # Entity: fft_comp_butterfly
 
+- **File**: fft_comp_butterfly.vhd
 ## Diagram
 
 ![Diagram](fft_comp_butterfly.svg "Diagram")

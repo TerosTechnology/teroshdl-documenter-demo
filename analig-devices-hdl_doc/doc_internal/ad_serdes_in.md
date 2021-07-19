@@ -1,5 +1,6 @@
 # Entity: ad_serdes_in
 
+- **File**: ad_serdes_in.v
 ## Diagram
 
 ![Diagram](ad_serdes_in.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: avl_adxcfg
 
+- **File**: avl_adxcfg.v
 ## Diagram
 
 ![Diagram](avl_adxcfg.svg "Diagram")

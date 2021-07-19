@@ -1,5 +1,6 @@
 # Entity: alert_handler_reg_top
 
+- **File**: alert_handler_reg_top.sv
 ## Diagram
 
 ![Diagram](alert_handler_reg_top.svg "Diagram")
@@ -24,378 +25,454 @@ Copyright lowRISC contributors.
 | devmode_i  | input     |      | If 1, explicit error return for unmapped register access |
 ## Signals
 
-| Name                   | Type               | Description                                                                                                               |
-| ---------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| reg_we                 | logic              | register signals                                                                                                          |
-| reg_re                 | logic              |                                                                                                                           |
-| reg_addr               | logic [AW-1:0]     |                                                                                                                           |
-| reg_wdata              | logic [DW-1:0]     |                                                                                                                           |
-| reg_be                 | logic [DBW-1:0]    |                                                                                                                           |
-| reg_rdata              | logic [DW-1:0]     |                                                                                                                           |
-| reg_error              | logic              |                                                                                                                           |
-| addrmiss               | logic              |                                                                                                                           |
-| wr_err                 | logic              |                                                                                                                           |
-| reg_rdata_next         | logic [DW-1:0]     |                                                                                                                           |
-| tl_reg_h2d             | tlul_pkg::tl_h2d_t |                                                                                                                           |
-| tl_reg_d2h             | tlul_pkg::tl_d2h_t |                                                                                                                           |
-| intg_err               | logic              | incoming payload check                                                                                                    |
-| intg_err_q             | logic              |                                                                                                                           |
-| tl_o_pre               | tlul_pkg::tl_d2h_t | outgoing integrity generation                                                                                             |
-| intr_state_we          | logic              | Define SW related signals Format: <reg>_<field>_{wd|we|qs} or <reg>_{wd|we|qs} if field == 1 or 0                         |
-| intr_state_classa_qs   | logic              |                                                                                                                           |
-| intr_state_classa_wd   | logic              |                                                                                                                           |
-| intr_state_classb_qs   | logic              |                                                                                                                           |
-| intr_state_classb_wd   | logic              |                                                                                                                           |
-| intr_state_classc_qs   | logic              |                                                                                                                           |
-| intr_state_classc_wd   | logic              |                                                                                                                           |
-| intr_state_classd_qs   | logic              |                                                                                                                           |
-| intr_state_classd_wd   | logic              |                                                                                                                           |
-| intr_enable_we         | logic              |                                                                                                                           |
-| intr_enable_classa_qs  | logic              |                                                                                                                           |
-| intr_enable_classa_wd  | logic              |                                                                                                                           |
-| intr_enable_classb_qs  | logic              |                                                                                                                           |
-| intr_enable_classb_wd  | logic              |                                                                                                                           |
-| intr_enable_classc_qs  | logic              |                                                                                                                           |
-| intr_enable_classc_wd  | logic              |                                                                                                                           |
-| intr_enable_classd_qs  | logic              |                                                                                                                           |
-| intr_enable_classd_wd  | logic              |                                                                                                                           |
-| intr_test_we           | logic              |                                                                                                                           |
-| intr_test_classa_wd    | logic              |                                                                                                                           |
-| intr_test_classb_wd    | logic              |                                                                                                                           |
-| intr_test_classc_wd    | logic              |                                                                                                                           |
-| intr_test_classd_wd    | logic              |                                                                                                                           |
-| ping_timer_regwen_we   | logic              |                                                                                                                           |
-| ping_timer_regwen_qs   | logic              |                                                                                                                           |
-| ping_timer_regwen_wd   | logic              |                                                                                                                           |
-| ping_timeout_cyc_we    | logic              |                                                                                                                           |
-| ping_timeout_cyc_qs    | logic [15:0]       |                                                                                                                           |
-| ping_timeout_cyc_wd    | logic [15:0]       |                                                                                                                           |
-| ping_timer_en_we       | logic              |                                                                                                                           |
-| ping_timer_en_qs       | logic              |                                                                                                                           |
-| ping_timer_en_wd       | logic              |                                                                                                                           |
-| alert_regwen_0_we      | logic              |                                                                                                                           |
-| alert_regwen_0_qs      | logic              |                                                                                                                           |
-| alert_regwen_0_wd      | logic              |                                                                                                                           |
-| alert_regwen_1_we      | logic              |                                                                                                                           |
-| alert_regwen_1_qs      | logic              |                                                                                                                           |
-| alert_regwen_1_wd      | logic              |                                                                                                                           |
-| alert_regwen_2_we      | logic              |                                                                                                                           |
-| alert_regwen_2_qs      | logic              |                                                                                                                           |
-| alert_regwen_2_wd      | logic              |                                                                                                                           |
-| alert_regwen_3_we      | logic              |                                                                                                                           |
-| alert_regwen_3_qs      | logic              |                                                                                                                           |
-| alert_regwen_3_wd      | logic              |                                                                                                                           |
-| alert_en_0_we          | logic              |                                                                                                                           |
-| alert_en_0_qs          | logic              |                                                                                                                           |
-| alert_en_0_wd          | logic              |                                                                                                                           |
-| alert_en_1_we          | logic              |                                                                                                                           |
-| alert_en_1_qs          | logic              |                                                                                                                           |
-| alert_en_1_wd          | logic              |                                                                                                                           |
-| alert_en_2_we          | logic              |                                                                                                                           |
-| alert_en_2_qs          | logic              |                                                                                                                           |
-| alert_en_2_wd          | logic              |                                                                                                                           |
-| alert_en_3_we          | logic              |                                                                                                                           |
-| alert_en_3_qs          | logic              |                                                                                                                           |
-| alert_en_3_wd          | logic              |                                                                                                                           |
-| alert_class_0_we       | logic              |                                                                                                                           |
-| alert_class_0_qs       | logic [1:0]        |                                                                                                                           |
-| alert_class_0_wd       | logic [1:0]        |                                                                                                                           |
-| alert_class_1_we       | logic              |                                                                                                                           |
-| alert_class_1_qs       | logic [1:0]        |                                                                                                                           |
-| alert_class_1_wd       | logic [1:0]        |                                                                                                                           |
-| alert_class_2_we       | logic              |                                                                                                                           |
-| alert_class_2_qs       | logic [1:0]        |                                                                                                                           |
-| alert_class_2_wd       | logic [1:0]        |                                                                                                                           |
-| alert_class_3_we       | logic              |                                                                                                                           |
-| alert_class_3_qs       | logic [1:0]        |                                                                                                                           |
-| alert_class_3_wd       | logic [1:0]        |                                                                                                                           |
-| alert_cause_0_we       | logic              |                                                                                                                           |
-| alert_cause_0_qs       | logic              |                                                                                                                           |
-| alert_cause_0_wd       | logic              |                                                                                                                           |
-| alert_cause_1_we       | logic              |                                                                                                                           |
-| alert_cause_1_qs       | logic              |                                                                                                                           |
-| alert_cause_1_wd       | logic              |                                                                                                                           |
-| alert_cause_2_we       | logic              |                                                                                                                           |
-| alert_cause_2_qs       | logic              |                                                                                                                           |
-| alert_cause_2_wd       | logic              |                                                                                                                           |
-| alert_cause_3_we       | logic              |                                                                                                                           |
-| alert_cause_3_qs       | logic              |                                                                                                                           |
-| alert_cause_3_wd       | logic              |                                                                                                                           |
-| loc_alert_regwen_0_we  | logic              |                                                                                                                           |
-| loc_alert_regwen_0_qs  | logic              |                                                                                                                           |
-| loc_alert_regwen_0_wd  | logic              |                                                                                                                           |
-| loc_alert_regwen_1_we  | logic              |                                                                                                                           |
-| loc_alert_regwen_1_qs  | logic              |                                                                                                                           |
-| loc_alert_regwen_1_wd  | logic              |                                                                                                                           |
-| loc_alert_regwen_2_we  | logic              |                                                                                                                           |
-| loc_alert_regwen_2_qs  | logic              |                                                                                                                           |
-| loc_alert_regwen_2_wd  | logic              |                                                                                                                           |
-| loc_alert_regwen_3_we  | logic              |                                                                                                                           |
-| loc_alert_regwen_3_qs  | logic              |                                                                                                                           |
-| loc_alert_regwen_3_wd  | logic              |                                                                                                                           |
-| loc_alert_regwen_4_we  | logic              |                                                                                                                           |
-| loc_alert_regwen_4_qs  | logic              |                                                                                                                           |
-| loc_alert_regwen_4_wd  | logic              |                                                                                                                           |
-| loc_alert_en_0_we      | logic              |                                                                                                                           |
-| loc_alert_en_0_qs      | logic              |                                                                                                                           |
-| loc_alert_en_0_wd      | logic              |                                                                                                                           |
-| loc_alert_en_1_we      | logic              |                                                                                                                           |
-| loc_alert_en_1_qs      | logic              |                                                                                                                           |
-| loc_alert_en_1_wd      | logic              |                                                                                                                           |
-| loc_alert_en_2_we      | logic              |                                                                                                                           |
-| loc_alert_en_2_qs      | logic              |                                                                                                                           |
-| loc_alert_en_2_wd      | logic              |                                                                                                                           |
-| loc_alert_en_3_we      | logic              |                                                                                                                           |
-| loc_alert_en_3_qs      | logic              |                                                                                                                           |
-| loc_alert_en_3_wd      | logic              |                                                                                                                           |
-| loc_alert_en_4_we      | logic              |                                                                                                                           |
-| loc_alert_en_4_qs      | logic              |                                                                                                                           |
-| loc_alert_en_4_wd      | logic              |                                                                                                                           |
-| loc_alert_class_0_we   | logic              |                                                                                                                           |
-| loc_alert_class_0_qs   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_0_wd   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_1_we   | logic              |                                                                                                                           |
-| loc_alert_class_1_qs   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_1_wd   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_2_we   | logic              |                                                                                                                           |
-| loc_alert_class_2_qs   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_2_wd   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_3_we   | logic              |                                                                                                                           |
-| loc_alert_class_3_qs   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_3_wd   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_4_we   | logic              |                                                                                                                           |
-| loc_alert_class_4_qs   | logic [1:0]        |                                                                                                                           |
-| loc_alert_class_4_wd   | logic [1:0]        |                                                                                                                           |
-| loc_alert_cause_0_we   | logic              |                                                                                                                           |
-| loc_alert_cause_0_qs   | logic              |                                                                                                                           |
-| loc_alert_cause_0_wd   | logic              |                                                                                                                           |
-| loc_alert_cause_1_we   | logic              |                                                                                                                           |
-| loc_alert_cause_1_qs   | logic              |                                                                                                                           |
-| loc_alert_cause_1_wd   | logic              |                                                                                                                           |
-| loc_alert_cause_2_we   | logic              |                                                                                                                           |
-| loc_alert_cause_2_qs   | logic              |                                                                                                                           |
-| loc_alert_cause_2_wd   | logic              |                                                                                                                           |
-| loc_alert_cause_3_we   | logic              |                                                                                                                           |
-| loc_alert_cause_3_qs   | logic              |                                                                                                                           |
-| loc_alert_cause_3_wd   | logic              |                                                                                                                           |
-| loc_alert_cause_4_we   | logic              |                                                                                                                           |
-| loc_alert_cause_4_qs   | logic              |                                                                                                                           |
-| loc_alert_cause_4_wd   | logic              |                                                                                                                           |
-| classa_regwen_we       | logic              |                                                                                                                           |
-| classa_regwen_qs       | logic              |                                                                                                                           |
-| classa_regwen_wd       | logic              |                                                                                                                           |
-| classa_ctrl_we         | logic              |                                                                                                                           |
-| classa_ctrl_en_qs      | logic              |                                                                                                                           |
-| classa_ctrl_en_wd      | logic              |                                                                                                                           |
-| classa_ctrl_lock_qs    | logic              |                                                                                                                           |
-| classa_ctrl_lock_wd    | logic              |                                                                                                                           |
-| classa_ctrl_en_e0_qs   | logic              |                                                                                                                           |
-| classa_ctrl_en_e0_wd   | logic              |                                                                                                                           |
-| classa_ctrl_en_e1_qs   | logic              |                                                                                                                           |
-| classa_ctrl_en_e1_wd   | logic              |                                                                                                                           |
-| classa_ctrl_en_e2_qs   | logic              |                                                                                                                           |
-| classa_ctrl_en_e2_wd   | logic              |                                                                                                                           |
-| classa_ctrl_en_e3_qs   | logic              |                                                                                                                           |
-| classa_ctrl_en_e3_wd   | logic              |                                                                                                                           |
-| classa_ctrl_map_e0_qs  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e0_wd  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e1_qs  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e1_wd  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e2_qs  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e2_wd  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e3_qs  | logic [1:0]        |                                                                                                                           |
-| classa_ctrl_map_e3_wd  | logic [1:0]        |                                                                                                                           |
-| classa_clr_regwen_we   | logic              |                                                                                                                           |
-| classa_clr_regwen_qs   | logic              |                                                                                                                           |
-| classa_clr_regwen_wd   | logic              |                                                                                                                           |
-| classa_clr_we          | logic              |                                                                                                                           |
-| classa_clr_wd          | logic              |                                                                                                                           |
-| classa_accum_cnt_re    | logic              |                                                                                                                           |
-| classa_accum_cnt_qs    | logic [15:0]       |                                                                                                                           |
-| classa_accum_thresh_we | logic              |                                                                                                                           |
-| classa_accum_thresh_qs | logic [15:0]       |                                                                                                                           |
-| classa_accum_thresh_wd | logic [15:0]       |                                                                                                                           |
-| classa_timeout_cyc_we  | logic              |                                                                                                                           |
-| classa_timeout_cyc_qs  | logic [31:0]       |                                                                                                                           |
-| classa_timeout_cyc_wd  | logic [31:0]       |                                                                                                                           |
-| classa_phase0_cyc_we   | logic              |                                                                                                                           |
-| classa_phase0_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classa_phase0_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classa_phase1_cyc_we   | logic              |                                                                                                                           |
-| classa_phase1_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classa_phase1_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classa_phase2_cyc_we   | logic              |                                                                                                                           |
-| classa_phase2_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classa_phase2_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classa_phase3_cyc_we   | logic              |                                                                                                                           |
-| classa_phase3_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classa_phase3_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classa_esc_cnt_re      | logic              |                                                                                                                           |
-| classa_esc_cnt_qs      | logic [31:0]       |                                                                                                                           |
-| classa_state_re        | logic              |                                                                                                                           |
-| classa_state_qs        | logic [2:0]        |                                                                                                                           |
-| classb_regwen_we       | logic              |                                                                                                                           |
-| classb_regwen_qs       | logic              |                                                                                                                           |
-| classb_regwen_wd       | logic              |                                                                                                                           |
-| classb_ctrl_we         | logic              |                                                                                                                           |
-| classb_ctrl_en_qs      | logic              |                                                                                                                           |
-| classb_ctrl_en_wd      | logic              |                                                                                                                           |
-| classb_ctrl_lock_qs    | logic              |                                                                                                                           |
-| classb_ctrl_lock_wd    | logic              |                                                                                                                           |
-| classb_ctrl_en_e0_qs   | logic              |                                                                                                                           |
-| classb_ctrl_en_e0_wd   | logic              |                                                                                                                           |
-| classb_ctrl_en_e1_qs   | logic              |                                                                                                                           |
-| classb_ctrl_en_e1_wd   | logic              |                                                                                                                           |
-| classb_ctrl_en_e2_qs   | logic              |                                                                                                                           |
-| classb_ctrl_en_e2_wd   | logic              |                                                                                                                           |
-| classb_ctrl_en_e3_qs   | logic              |                                                                                                                           |
-| classb_ctrl_en_e3_wd   | logic              |                                                                                                                           |
-| classb_ctrl_map_e0_qs  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e0_wd  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e1_qs  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e1_wd  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e2_qs  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e2_wd  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e3_qs  | logic [1:0]        |                                                                                                                           |
-| classb_ctrl_map_e3_wd  | logic [1:0]        |                                                                                                                           |
-| classb_clr_regwen_we   | logic              |                                                                                                                           |
-| classb_clr_regwen_qs   | logic              |                                                                                                                           |
-| classb_clr_regwen_wd   | logic              |                                                                                                                           |
-| classb_clr_we          | logic              |                                                                                                                           |
-| classb_clr_wd          | logic              |                                                                                                                           |
-| classb_accum_cnt_re    | logic              |                                                                                                                           |
-| classb_accum_cnt_qs    | logic [15:0]       |                                                                                                                           |
-| classb_accum_thresh_we | logic              |                                                                                                                           |
-| classb_accum_thresh_qs | logic [15:0]       |                                                                                                                           |
-| classb_accum_thresh_wd | logic [15:0]       |                                                                                                                           |
-| classb_timeout_cyc_we  | logic              |                                                                                                                           |
-| classb_timeout_cyc_qs  | logic [31:0]       |                                                                                                                           |
-| classb_timeout_cyc_wd  | logic [31:0]       |                                                                                                                           |
-| classb_phase0_cyc_we   | logic              |                                                                                                                           |
-| classb_phase0_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classb_phase0_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classb_phase1_cyc_we   | logic              |                                                                                                                           |
-| classb_phase1_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classb_phase1_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classb_phase2_cyc_we   | logic              |                                                                                                                           |
-| classb_phase2_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classb_phase2_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classb_phase3_cyc_we   | logic              |                                                                                                                           |
-| classb_phase3_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classb_phase3_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classb_esc_cnt_re      | logic              |                                                                                                                           |
-| classb_esc_cnt_qs      | logic [31:0]       |                                                                                                                           |
-| classb_state_re        | logic              |                                                                                                                           |
-| classb_state_qs        | logic [2:0]        |                                                                                                                           |
-| classc_regwen_we       | logic              |                                                                                                                           |
-| classc_regwen_qs       | logic              |                                                                                                                           |
-| classc_regwen_wd       | logic              |                                                                                                                           |
-| classc_ctrl_we         | logic              |                                                                                                                           |
-| classc_ctrl_en_qs      | logic              |                                                                                                                           |
-| classc_ctrl_en_wd      | logic              |                                                                                                                           |
-| classc_ctrl_lock_qs    | logic              |                                                                                                                           |
-| classc_ctrl_lock_wd    | logic              |                                                                                                                           |
-| classc_ctrl_en_e0_qs   | logic              |                                                                                                                           |
-| classc_ctrl_en_e0_wd   | logic              |                                                                                                                           |
-| classc_ctrl_en_e1_qs   | logic              |                                                                                                                           |
-| classc_ctrl_en_e1_wd   | logic              |                                                                                                                           |
-| classc_ctrl_en_e2_qs   | logic              |                                                                                                                           |
-| classc_ctrl_en_e2_wd   | logic              |                                                                                                                           |
-| classc_ctrl_en_e3_qs   | logic              |                                                                                                                           |
-| classc_ctrl_en_e3_wd   | logic              |                                                                                                                           |
-| classc_ctrl_map_e0_qs  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e0_wd  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e1_qs  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e1_wd  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e2_qs  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e2_wd  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e3_qs  | logic [1:0]        |                                                                                                                           |
-| classc_ctrl_map_e3_wd  | logic [1:0]        |                                                                                                                           |
-| classc_clr_regwen_we   | logic              |                                                                                                                           |
-| classc_clr_regwen_qs   | logic              |                                                                                                                           |
-| classc_clr_regwen_wd   | logic              |                                                                                                                           |
-| classc_clr_we          | logic              |                                                                                                                           |
-| classc_clr_wd          | logic              |                                                                                                                           |
-| classc_accum_cnt_re    | logic              |                                                                                                                           |
-| classc_accum_cnt_qs    | logic [15:0]       |                                                                                                                           |
-| classc_accum_thresh_we | logic              |                                                                                                                           |
-| classc_accum_thresh_qs | logic [15:0]       |                                                                                                                           |
-| classc_accum_thresh_wd | logic [15:0]       |                                                                                                                           |
-| classc_timeout_cyc_we  | logic              |                                                                                                                           |
-| classc_timeout_cyc_qs  | logic [31:0]       |                                                                                                                           |
-| classc_timeout_cyc_wd  | logic [31:0]       |                                                                                                                           |
-| classc_phase0_cyc_we   | logic              |                                                                                                                           |
-| classc_phase0_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classc_phase0_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classc_phase1_cyc_we   | logic              |                                                                                                                           |
-| classc_phase1_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classc_phase1_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classc_phase2_cyc_we   | logic              |                                                                                                                           |
-| classc_phase2_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classc_phase2_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classc_phase3_cyc_we   | logic              |                                                                                                                           |
-| classc_phase3_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classc_phase3_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classc_esc_cnt_re      | logic              |                                                                                                                           |
-| classc_esc_cnt_qs      | logic [31:0]       |                                                                                                                           |
-| classc_state_re        | logic              |                                                                                                                           |
-| classc_state_qs        | logic [2:0]        |                                                                                                                           |
-| classd_regwen_we       | logic              |                                                                                                                           |
-| classd_regwen_qs       | logic              |                                                                                                                           |
-| classd_regwen_wd       | logic              |                                                                                                                           |
-| classd_ctrl_we         | logic              |                                                                                                                           |
-| classd_ctrl_en_qs      | logic              |                                                                                                                           |
-| classd_ctrl_en_wd      | logic              |                                                                                                                           |
-| classd_ctrl_lock_qs    | logic              |                                                                                                                           |
-| classd_ctrl_lock_wd    | logic              |                                                                                                                           |
-| classd_ctrl_en_e0_qs   | logic              |                                                                                                                           |
-| classd_ctrl_en_e0_wd   | logic              |                                                                                                                           |
-| classd_ctrl_en_e1_qs   | logic              |                                                                                                                           |
-| classd_ctrl_en_e1_wd   | logic              |                                                                                                                           |
-| classd_ctrl_en_e2_qs   | logic              |                                                                                                                           |
-| classd_ctrl_en_e2_wd   | logic              |                                                                                                                           |
-| classd_ctrl_en_e3_qs   | logic              |                                                                                                                           |
-| classd_ctrl_en_e3_wd   | logic              |                                                                                                                           |
-| classd_ctrl_map_e0_qs  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e0_wd  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e1_qs  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e1_wd  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e2_qs  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e2_wd  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e3_qs  | logic [1:0]        |                                                                                                                           |
-| classd_ctrl_map_e3_wd  | logic [1:0]        |                                                                                                                           |
-| classd_clr_regwen_we   | logic              |                                                                                                                           |
-| classd_clr_regwen_qs   | logic              |                                                                                                                           |
-| classd_clr_regwen_wd   | logic              |                                                                                                                           |
-| classd_clr_we          | logic              |                                                                                                                           |
-| classd_clr_wd          | logic              |                                                                                                                           |
-| classd_accum_cnt_re    | logic              |                                                                                                                           |
-| classd_accum_cnt_qs    | logic [15:0]       |                                                                                                                           |
-| classd_accum_thresh_we | logic              |                                                                                                                           |
-| classd_accum_thresh_qs | logic [15:0]       |                                                                                                                           |
-| classd_accum_thresh_wd | logic [15:0]       |                                                                                                                           |
-| classd_timeout_cyc_we  | logic              |                                                                                                                           |
-| classd_timeout_cyc_qs  | logic [31:0]       |                                                                                                                           |
-| classd_timeout_cyc_wd  | logic [31:0]       |                                                                                                                           |
-| classd_phase0_cyc_we   | logic              |                                                                                                                           |
-| classd_phase0_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classd_phase0_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classd_phase1_cyc_we   | logic              |                                                                                                                           |
-| classd_phase1_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classd_phase1_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classd_phase2_cyc_we   | logic              |                                                                                                                           |
-| classd_phase2_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classd_phase2_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classd_phase3_cyc_we   | logic              |                                                                                                                           |
-| classd_phase3_cyc_qs   | logic [31:0]       |                                                                                                                           |
-| classd_phase3_cyc_wd   | logic [31:0]       |                                                                                                                           |
-| classd_esc_cnt_re      | logic              |                                                                                                                           |
-| classd_esc_cnt_qs      | logic [31:0]       |                                                                                                                           |
-| classd_state_re        | logic              |                                                                                                                           |
-| classd_state_qs        | logic [2:0]        |                                                                                                                           |
-| addr_hit               | logic [93:0]       |                                                                                                                           |
-| unused_wdata           | logic              | Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers  |
-| unused_be              | logic              |                                                                                                                           |
+| Name                            | Type               | Description                                                                                                               |
+| ------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| reg_we                          | logic              | register signals                                                                                                          |
+| reg_re                          | logic              |                                                                                                                           |
+| reg_addr                        | logic [AW-1:0]     |                                                                                                                           |
+| reg_wdata                       | logic [DW-1:0]     |                                                                                                                           |
+| reg_be                          | logic [DBW-1:0]    |                                                                                                                           |
+| reg_rdata                       | logic [DW-1:0]     |                                                                                                                           |
+| reg_error                       | logic              |                                                                                                                           |
+| addrmiss                        | logic              |                                                                                                                           |
+| wr_err                          | logic              |                                                                                                                           |
+| reg_rdata_next                  | logic [DW-1:0]     |                                                                                                                           |
+| tl_reg_h2d                      | tlul_pkg::tl_h2d_t |                                                                                                                           |
+| tl_reg_d2h                      | tlul_pkg::tl_d2h_t |                                                                                                                           |
+| intg_err                        | logic              | incoming payload check                                                                                                    |
+| intg_err_q                      | logic              |                                                                                                                           |
+| tl_o_pre                        | tlul_pkg::tl_d2h_t | outgoing integrity generation                                                                                             |
+| intr_state_we                   | logic              | Define SW related signals Format: <reg>_<field>_{wd|we|qs} or <reg>_{wd|we|qs} if field == 1 or 0                         |
+| intr_state_classa_qs            | logic              |                                                                                                                           |
+| intr_state_classa_wd            | logic              |                                                                                                                           |
+| intr_state_classb_qs            | logic              |                                                                                                                           |
+| intr_state_classb_wd            | logic              |                                                                                                                           |
+| intr_state_classc_qs            | logic              |                                                                                                                           |
+| intr_state_classc_wd            | logic              |                                                                                                                           |
+| intr_state_classd_qs            | logic              |                                                                                                                           |
+| intr_state_classd_wd            | logic              |                                                                                                                           |
+| intr_enable_we                  | logic              |                                                                                                                           |
+| intr_enable_classa_qs           | logic              |                                                                                                                           |
+| intr_enable_classa_wd           | logic              |                                                                                                                           |
+| intr_enable_classb_qs           | logic              |                                                                                                                           |
+| intr_enable_classb_wd           | logic              |                                                                                                                           |
+| intr_enable_classc_qs           | logic              |                                                                                                                           |
+| intr_enable_classc_wd           | logic              |                                                                                                                           |
+| intr_enable_classd_qs           | logic              |                                                                                                                           |
+| intr_enable_classd_wd           | logic              |                                                                                                                           |
+| intr_test_we                    | logic              |                                                                                                                           |
+| intr_test_classa_wd             | logic              |                                                                                                                           |
+| intr_test_classb_wd             | logic              |                                                                                                                           |
+| intr_test_classc_wd             | logic              |                                                                                                                           |
+| intr_test_classd_wd             | logic              |                                                                                                                           |
+| ping_timer_regwen_we            | logic              |                                                                                                                           |
+| ping_timer_regwen_qs            | logic              |                                                                                                                           |
+| ping_timer_regwen_wd            | logic              |                                                                                                                           |
+| ping_timeout_cyc_shadowed_re    | logic              |                                                                                                                           |
+| ping_timeout_cyc_shadowed_we    | logic              |                                                                                                                           |
+| ping_timeout_cyc_shadowed_qs    | logic [15:0]       |                                                                                                                           |
+| ping_timeout_cyc_shadowed_wd    | logic [15:0]       |                                                                                                                           |
+| ping_timer_en_shadowed_re       | logic              |                                                                                                                           |
+| ping_timer_en_shadowed_we       | logic              |                                                                                                                           |
+| ping_timer_en_shadowed_qs       | logic              |                                                                                                                           |
+| ping_timer_en_shadowed_wd       | logic              |                                                                                                                           |
+| alert_regwen_0_we               | logic              |                                                                                                                           |
+| alert_regwen_0_qs               | logic              |                                                                                                                           |
+| alert_regwen_0_wd               | logic              |                                                                                                                           |
+| alert_regwen_1_we               | logic              |                                                                                                                           |
+| alert_regwen_1_qs               | logic              |                                                                                                                           |
+| alert_regwen_1_wd               | logic              |                                                                                                                           |
+| alert_regwen_2_we               | logic              |                                                                                                                           |
+| alert_regwen_2_qs               | logic              |                                                                                                                           |
+| alert_regwen_2_wd               | logic              |                                                                                                                           |
+| alert_regwen_3_we               | logic              |                                                                                                                           |
+| alert_regwen_3_qs               | logic              |                                                                                                                           |
+| alert_regwen_3_wd               | logic              |                                                                                                                           |
+| alert_en_shadowed_0_re          | logic              |                                                                                                                           |
+| alert_en_shadowed_0_we          | logic              |                                                                                                                           |
+| alert_en_shadowed_0_qs          | logic              |                                                                                                                           |
+| alert_en_shadowed_0_wd          | logic              |                                                                                                                           |
+| alert_en_shadowed_1_re          | logic              |                                                                                                                           |
+| alert_en_shadowed_1_we          | logic              |                                                                                                                           |
+| alert_en_shadowed_1_qs          | logic              |                                                                                                                           |
+| alert_en_shadowed_1_wd          | logic              |                                                                                                                           |
+| alert_en_shadowed_2_re          | logic              |                                                                                                                           |
+| alert_en_shadowed_2_we          | logic              |                                                                                                                           |
+| alert_en_shadowed_2_qs          | logic              |                                                                                                                           |
+| alert_en_shadowed_2_wd          | logic              |                                                                                                                           |
+| alert_en_shadowed_3_re          | logic              |                                                                                                                           |
+| alert_en_shadowed_3_we          | logic              |                                                                                                                           |
+| alert_en_shadowed_3_qs          | logic              |                                                                                                                           |
+| alert_en_shadowed_3_wd          | logic              |                                                                                                                           |
+| alert_class_shadowed_0_re       | logic              |                                                                                                                           |
+| alert_class_shadowed_0_we       | logic              |                                                                                                                           |
+| alert_class_shadowed_0_qs       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_0_wd       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_1_re       | logic              |                                                                                                                           |
+| alert_class_shadowed_1_we       | logic              |                                                                                                                           |
+| alert_class_shadowed_1_qs       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_1_wd       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_2_re       | logic              |                                                                                                                           |
+| alert_class_shadowed_2_we       | logic              |                                                                                                                           |
+| alert_class_shadowed_2_qs       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_2_wd       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_3_re       | logic              |                                                                                                                           |
+| alert_class_shadowed_3_we       | logic              |                                                                                                                           |
+| alert_class_shadowed_3_qs       | logic [1:0]        |                                                                                                                           |
+| alert_class_shadowed_3_wd       | logic [1:0]        |                                                                                                                           |
+| alert_cause_0_we                | logic              |                                                                                                                           |
+| alert_cause_0_qs                | logic              |                                                                                                                           |
+| alert_cause_0_wd                | logic              |                                                                                                                           |
+| alert_cause_1_we                | logic              |                                                                                                                           |
+| alert_cause_1_qs                | logic              |                                                                                                                           |
+| alert_cause_1_wd                | logic              |                                                                                                                           |
+| alert_cause_2_we                | logic              |                                                                                                                           |
+| alert_cause_2_qs                | logic              |                                                                                                                           |
+| alert_cause_2_wd                | logic              |                                                                                                                           |
+| alert_cause_3_we                | logic              |                                                                                                                           |
+| alert_cause_3_qs                | logic              |                                                                                                                           |
+| alert_cause_3_wd                | logic              |                                                                                                                           |
+| loc_alert_regwen_0_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_0_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_0_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_1_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_1_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_1_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_2_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_2_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_2_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_3_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_3_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_3_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_4_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_4_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_4_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_5_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_5_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_5_wd           | logic              |                                                                                                                           |
+| loc_alert_regwen_6_we           | logic              |                                                                                                                           |
+| loc_alert_regwen_6_qs           | logic              |                                                                                                                           |
+| loc_alert_regwen_6_wd           | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_0_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_0_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_0_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_0_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_1_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_1_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_1_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_1_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_2_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_2_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_2_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_2_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_3_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_3_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_3_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_3_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_4_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_4_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_4_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_4_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_5_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_5_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_5_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_5_wd      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_6_re      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_6_we      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_6_qs      | logic              |                                                                                                                           |
+| loc_alert_en_shadowed_6_wd      | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_0_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_0_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_0_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_0_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_1_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_1_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_1_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_1_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_2_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_2_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_2_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_2_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_3_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_3_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_3_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_3_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_4_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_4_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_4_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_4_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_5_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_5_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_5_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_5_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_6_re   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_6_we   | logic              |                                                                                                                           |
+| loc_alert_class_shadowed_6_qs   | logic [1:0]        |                                                                                                                           |
+| loc_alert_class_shadowed_6_wd   | logic [1:0]        |                                                                                                                           |
+| loc_alert_cause_0_we            | logic              |                                                                                                                           |
+| loc_alert_cause_0_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_0_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_1_we            | logic              |                                                                                                                           |
+| loc_alert_cause_1_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_1_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_2_we            | logic              |                                                                                                                           |
+| loc_alert_cause_2_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_2_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_3_we            | logic              |                                                                                                                           |
+| loc_alert_cause_3_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_3_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_4_we            | logic              |                                                                                                                           |
+| loc_alert_cause_4_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_4_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_5_we            | logic              |                                                                                                                           |
+| loc_alert_cause_5_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_5_wd            | logic              |                                                                                                                           |
+| loc_alert_cause_6_we            | logic              |                                                                                                                           |
+| loc_alert_cause_6_qs            | logic              |                                                                                                                           |
+| loc_alert_cause_6_wd            | logic              |                                                                                                                           |
+| classa_regwen_we                | logic              |                                                                                                                           |
+| classa_regwen_qs                | logic              |                                                                                                                           |
+| classa_regwen_wd                | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_re         | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_we         | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_qs      | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_wd      | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_lock_qs    | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_lock_wd    | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e0_qs   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e0_wd   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e1_qs   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e1_wd   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e2_qs   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e2_wd   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e3_qs   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_en_e3_wd   | logic              |                                                                                                                           |
+| classa_ctrl_shadowed_map_e0_qs  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e0_wd  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e1_qs  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e1_wd  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e2_qs  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e2_wd  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e3_qs  | logic [1:0]        |                                                                                                                           |
+| classa_ctrl_shadowed_map_e3_wd  | logic [1:0]        |                                                                                                                           |
+| classa_clr_regwen_we            | logic              |                                                                                                                           |
+| classa_clr_regwen_qs            | logic              |                                                                                                                           |
+| classa_clr_regwen_wd            | logic              |                                                                                                                           |
+| classa_clr_we                   | logic              |                                                                                                                           |
+| classa_clr_wd                   | logic              |                                                                                                                           |
+| classa_accum_cnt_re             | logic              |                                                                                                                           |
+| classa_accum_cnt_qs             | logic [15:0]       |                                                                                                                           |
+| classa_accum_thresh_shadowed_re | logic              |                                                                                                                           |
+| classa_accum_thresh_shadowed_we | logic              |                                                                                                                           |
+| classa_accum_thresh_shadowed_qs | logic [15:0]       |                                                                                                                           |
+| classa_accum_thresh_shadowed_wd | logic [15:0]       |                                                                                                                           |
+| classa_timeout_cyc_shadowed_re  | logic              |                                                                                                                           |
+| classa_timeout_cyc_shadowed_we  | logic              |                                                                                                                           |
+| classa_timeout_cyc_shadowed_qs  | logic [31:0]       |                                                                                                                           |
+| classa_timeout_cyc_shadowed_wd  | logic [31:0]       |                                                                                                                           |
+| classa_phase0_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classa_phase0_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classa_phase0_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classa_phase0_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classa_phase1_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classa_phase1_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classa_phase1_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classa_phase1_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classa_phase2_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classa_phase2_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classa_phase2_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classa_phase2_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classa_phase3_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classa_phase3_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classa_phase3_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classa_phase3_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classa_esc_cnt_re               | logic              |                                                                                                                           |
+| classa_esc_cnt_qs               | logic [31:0]       |                                                                                                                           |
+| classa_state_re                 | logic              |                                                                                                                           |
+| classa_state_qs                 | logic [2:0]        |                                                                                                                           |
+| classb_regwen_we                | logic              |                                                                                                                           |
+| classb_regwen_qs                | logic              |                                                                                                                           |
+| classb_regwen_wd                | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_re         | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_we         | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_qs      | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_wd      | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_lock_qs    | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_lock_wd    | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e0_qs   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e0_wd   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e1_qs   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e1_wd   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e2_qs   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e2_wd   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e3_qs   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_en_e3_wd   | logic              |                                                                                                                           |
+| classb_ctrl_shadowed_map_e0_qs  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e0_wd  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e1_qs  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e1_wd  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e2_qs  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e2_wd  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e3_qs  | logic [1:0]        |                                                                                                                           |
+| classb_ctrl_shadowed_map_e3_wd  | logic [1:0]        |                                                                                                                           |
+| classb_clr_regwen_we            | logic              |                                                                                                                           |
+| classb_clr_regwen_qs            | logic              |                                                                                                                           |
+| classb_clr_regwen_wd            | logic              |                                                                                                                           |
+| classb_clr_we                   | logic              |                                                                                                                           |
+| classb_clr_wd                   | logic              |                                                                                                                           |
+| classb_accum_cnt_re             | logic              |                                                                                                                           |
+| classb_accum_cnt_qs             | logic [15:0]       |                                                                                                                           |
+| classb_accum_thresh_shadowed_re | logic              |                                                                                                                           |
+| classb_accum_thresh_shadowed_we | logic              |                                                                                                                           |
+| classb_accum_thresh_shadowed_qs | logic [15:0]       |                                                                                                                           |
+| classb_accum_thresh_shadowed_wd | logic [15:0]       |                                                                                                                           |
+| classb_timeout_cyc_shadowed_re  | logic              |                                                                                                                           |
+| classb_timeout_cyc_shadowed_we  | logic              |                                                                                                                           |
+| classb_timeout_cyc_shadowed_qs  | logic [31:0]       |                                                                                                                           |
+| classb_timeout_cyc_shadowed_wd  | logic [31:0]       |                                                                                                                           |
+| classb_phase0_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classb_phase0_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classb_phase0_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classb_phase0_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classb_phase1_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classb_phase1_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classb_phase1_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classb_phase1_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classb_phase2_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classb_phase2_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classb_phase2_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classb_phase2_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classb_phase3_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classb_phase3_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classb_phase3_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classb_phase3_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classb_esc_cnt_re               | logic              |                                                                                                                           |
+| classb_esc_cnt_qs               | logic [31:0]       |                                                                                                                           |
+| classb_state_re                 | logic              |                                                                                                                           |
+| classb_state_qs                 | logic [2:0]        |                                                                                                                           |
+| classc_regwen_we                | logic              |                                                                                                                           |
+| classc_regwen_qs                | logic              |                                                                                                                           |
+| classc_regwen_wd                | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_re         | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_we         | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_qs      | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_wd      | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_lock_qs    | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_lock_wd    | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e0_qs   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e0_wd   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e1_qs   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e1_wd   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e2_qs   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e2_wd   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e3_qs   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_en_e3_wd   | logic              |                                                                                                                           |
+| classc_ctrl_shadowed_map_e0_qs  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e0_wd  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e1_qs  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e1_wd  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e2_qs  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e2_wd  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e3_qs  | logic [1:0]        |                                                                                                                           |
+| classc_ctrl_shadowed_map_e3_wd  | logic [1:0]        |                                                                                                                           |
+| classc_clr_regwen_we            | logic              |                                                                                                                           |
+| classc_clr_regwen_qs            | logic              |                                                                                                                           |
+| classc_clr_regwen_wd            | logic              |                                                                                                                           |
+| classc_clr_we                   | logic              |                                                                                                                           |
+| classc_clr_wd                   | logic              |                                                                                                                           |
+| classc_accum_cnt_re             | logic              |                                                                                                                           |
+| classc_accum_cnt_qs             | logic [15:0]       |                                                                                                                           |
+| classc_accum_thresh_shadowed_re | logic              |                                                                                                                           |
+| classc_accum_thresh_shadowed_we | logic              |                                                                                                                           |
+| classc_accum_thresh_shadowed_qs | logic [15:0]       |                                                                                                                           |
+| classc_accum_thresh_shadowed_wd | logic [15:0]       |                                                                                                                           |
+| classc_timeout_cyc_shadowed_re  | logic              |                                                                                                                           |
+| classc_timeout_cyc_shadowed_we  | logic              |                                                                                                                           |
+| classc_timeout_cyc_shadowed_qs  | logic [31:0]       |                                                                                                                           |
+| classc_timeout_cyc_shadowed_wd  | logic [31:0]       |                                                                                                                           |
+| classc_phase0_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classc_phase0_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classc_phase0_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classc_phase0_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classc_phase1_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classc_phase1_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classc_phase1_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classc_phase1_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classc_phase2_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classc_phase2_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classc_phase2_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classc_phase2_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classc_phase3_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classc_phase3_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classc_phase3_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classc_phase3_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classc_esc_cnt_re               | logic              |                                                                                                                           |
+| classc_esc_cnt_qs               | logic [31:0]       |                                                                                                                           |
+| classc_state_re                 | logic              |                                                                                                                           |
+| classc_state_qs                 | logic [2:0]        |                                                                                                                           |
+| classd_regwen_we                | logic              |                                                                                                                           |
+| classd_regwen_qs                | logic              |                                                                                                                           |
+| classd_regwen_wd                | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_re         | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_we         | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_qs      | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_wd      | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_lock_qs    | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_lock_wd    | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e0_qs   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e0_wd   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e1_qs   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e1_wd   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e2_qs   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e2_wd   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e3_qs   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_en_e3_wd   | logic              |                                                                                                                           |
+| classd_ctrl_shadowed_map_e0_qs  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e0_wd  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e1_qs  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e1_wd  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e2_qs  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e2_wd  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e3_qs  | logic [1:0]        |                                                                                                                           |
+| classd_ctrl_shadowed_map_e3_wd  | logic [1:0]        |                                                                                                                           |
+| classd_clr_regwen_we            | logic              |                                                                                                                           |
+| classd_clr_regwen_qs            | logic              |                                                                                                                           |
+| classd_clr_regwen_wd            | logic              |                                                                                                                           |
+| classd_clr_we                   | logic              |                                                                                                                           |
+| classd_clr_wd                   | logic              |                                                                                                                           |
+| classd_accum_cnt_re             | logic              |                                                                                                                           |
+| classd_accum_cnt_qs             | logic [15:0]       |                                                                                                                           |
+| classd_accum_thresh_shadowed_re | logic              |                                                                                                                           |
+| classd_accum_thresh_shadowed_we | logic              |                                                                                                                           |
+| classd_accum_thresh_shadowed_qs | logic [15:0]       |                                                                                                                           |
+| classd_accum_thresh_shadowed_wd | logic [15:0]       |                                                                                                                           |
+| classd_timeout_cyc_shadowed_re  | logic              |                                                                                                                           |
+| classd_timeout_cyc_shadowed_we  | logic              |                                                                                                                           |
+| classd_timeout_cyc_shadowed_qs  | logic [31:0]       |                                                                                                                           |
+| classd_timeout_cyc_shadowed_wd  | logic [31:0]       |                                                                                                                           |
+| classd_phase0_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classd_phase0_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classd_phase0_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classd_phase0_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classd_phase1_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classd_phase1_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classd_phase1_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classd_phase1_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classd_phase2_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classd_phase2_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classd_phase2_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classd_phase2_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classd_phase3_cyc_shadowed_re   | logic              |                                                                                                                           |
+| classd_phase3_cyc_shadowed_we   | logic              |                                                                                                                           |
+| classd_phase3_cyc_shadowed_qs   | logic [31:0]       |                                                                                                                           |
+| classd_phase3_cyc_shadowed_wd   | logic [31:0]       |                                                                                                                           |
+| classd_esc_cnt_re               | logic              |                                                                                                                           |
+| classd_esc_cnt_qs               | logic [31:0]       |                                                                                                                           |
+| classd_state_re                 | logic              |                                                                                                                           |
+| classd_state_qs                 | logic [2:0]        |                                                                                                                           |
+| addr_hit                        | logic [101:0]      |                                                                                                                           |
+| unused_wdata                    | logic              | Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers  |
+| unused_be                       | logic              |                                                                                                                           |
 ## Constants
 
 | Name | Type | Value | Description |
@@ -475,13 +552,13 @@ F[classd]: 3:3
 **Description**
 R[ping_timer_regwen]: V(False)
 
-- u_ping_timeout_cyc: prim_subreg
+- u_ping_timeout_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[ping_timeout_cyc]: V(False)
+R[ping_timeout_cyc_shadowed]: V(False)
 
-- u_ping_timer_en: prim_subreg
+- u_ping_timer_en_shadowed: prim_subreg_shadow
 **Description**
-R[ping_timer_en]: V(False)
+R[ping_timer_en_shadowed]: V(False)
 
 - u_loc_alert_regwen_0: prim_subreg
 **Description**
@@ -508,48 +585,58 @@ R[loc_alert_regwen_3]: V(False)
 Subregister 4 of Multireg loc_alert_regwen
 R[loc_alert_regwen_4]: V(False)
 
+- u_loc_alert_regwen_5: prim_subreg
+**Description**
+Subregister 5 of Multireg loc_alert_regwen
+R[loc_alert_regwen_5]: V(False)
+
+- u_loc_alert_regwen_6: prim_subreg
+**Description**
+Subregister 6 of Multireg loc_alert_regwen
+R[loc_alert_regwen_6]: V(False)
+
 - u_classa_regwen: prim_subreg
 **Description**
 R[classa_regwen]: V(False)
 
-- u_classa_ctrl_en: prim_subreg
+- u_classa_ctrl_shadowed_en: prim_subreg_shadow
 **Description**
-R[classa_ctrl]: V(False)
+R[classa_ctrl_shadowed]: V(False)
 F[en]: 0:0
 
-- u_classa_ctrl_lock: prim_subreg
+- u_classa_ctrl_shadowed_lock: prim_subreg_shadow
 **Description**
 F[lock]: 1:1
 
-- u_classa_ctrl_en_e0: prim_subreg
+- u_classa_ctrl_shadowed_en_e0: prim_subreg_shadow
 **Description**
 F[en_e0]: 2:2
 
-- u_classa_ctrl_en_e1: prim_subreg
+- u_classa_ctrl_shadowed_en_e1: prim_subreg_shadow
 **Description**
 F[en_e1]: 3:3
 
-- u_classa_ctrl_en_e2: prim_subreg
+- u_classa_ctrl_shadowed_en_e2: prim_subreg_shadow
 **Description**
 F[en_e2]: 4:4
 
-- u_classa_ctrl_en_e3: prim_subreg
+- u_classa_ctrl_shadowed_en_e3: prim_subreg_shadow
 **Description**
 F[en_e3]: 5:5
 
-- u_classa_ctrl_map_e0: prim_subreg
+- u_classa_ctrl_shadowed_map_e0: prim_subreg_shadow
 **Description**
 F[map_e0]: 7:6
 
-- u_classa_ctrl_map_e1: prim_subreg
+- u_classa_ctrl_shadowed_map_e1: prim_subreg_shadow
 **Description**
 F[map_e1]: 9:8
 
-- u_classa_ctrl_map_e2: prim_subreg
+- u_classa_ctrl_shadowed_map_e2: prim_subreg_shadow
 **Description**
 F[map_e2]: 11:10
 
-- u_classa_ctrl_map_e3: prim_subreg
+- u_classa_ctrl_shadowed_map_e3: prim_subreg_shadow
 **Description**
 F[map_e3]: 13:12
 
@@ -565,29 +652,29 @@ R[classa_clr]: V(False)
 **Description**
 R[classa_accum_cnt]: V(True)
 
-- u_classa_accum_thresh: prim_subreg
+- u_classa_accum_thresh_shadowed: prim_subreg_shadow
 **Description**
-R[classa_accum_thresh]: V(False)
+R[classa_accum_thresh_shadowed]: V(False)
 
-- u_classa_timeout_cyc: prim_subreg
+- u_classa_timeout_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classa_timeout_cyc]: V(False)
+R[classa_timeout_cyc_shadowed]: V(False)
 
-- u_classa_phase0_cyc: prim_subreg
+- u_classa_phase0_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classa_phase0_cyc]: V(False)
+R[classa_phase0_cyc_shadowed]: V(False)
 
-- u_classa_phase1_cyc: prim_subreg
+- u_classa_phase1_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classa_phase1_cyc]: V(False)
+R[classa_phase1_cyc_shadowed]: V(False)
 
-- u_classa_phase2_cyc: prim_subreg
+- u_classa_phase2_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classa_phase2_cyc]: V(False)
+R[classa_phase2_cyc_shadowed]: V(False)
 
-- u_classa_phase3_cyc: prim_subreg
+- u_classa_phase3_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classa_phase3_cyc]: V(False)
+R[classa_phase3_cyc_shadowed]: V(False)
 
 - u_classa_esc_cnt: prim_subreg_ext
 **Description**
@@ -601,44 +688,44 @@ R[classa_state]: V(True)
 **Description**
 R[classb_regwen]: V(False)
 
-- u_classb_ctrl_en: prim_subreg
+- u_classb_ctrl_shadowed_en: prim_subreg_shadow
 **Description**
-R[classb_ctrl]: V(False)
+R[classb_ctrl_shadowed]: V(False)
 F[en]: 0:0
 
-- u_classb_ctrl_lock: prim_subreg
+- u_classb_ctrl_shadowed_lock: prim_subreg_shadow
 **Description**
 F[lock]: 1:1
 
-- u_classb_ctrl_en_e0: prim_subreg
+- u_classb_ctrl_shadowed_en_e0: prim_subreg_shadow
 **Description**
 F[en_e0]: 2:2
 
-- u_classb_ctrl_en_e1: prim_subreg
+- u_classb_ctrl_shadowed_en_e1: prim_subreg_shadow
 **Description**
 F[en_e1]: 3:3
 
-- u_classb_ctrl_en_e2: prim_subreg
+- u_classb_ctrl_shadowed_en_e2: prim_subreg_shadow
 **Description**
 F[en_e2]: 4:4
 
-- u_classb_ctrl_en_e3: prim_subreg
+- u_classb_ctrl_shadowed_en_e3: prim_subreg_shadow
 **Description**
 F[en_e3]: 5:5
 
-- u_classb_ctrl_map_e0: prim_subreg
+- u_classb_ctrl_shadowed_map_e0: prim_subreg_shadow
 **Description**
 F[map_e0]: 7:6
 
-- u_classb_ctrl_map_e1: prim_subreg
+- u_classb_ctrl_shadowed_map_e1: prim_subreg_shadow
 **Description**
 F[map_e1]: 9:8
 
-- u_classb_ctrl_map_e2: prim_subreg
+- u_classb_ctrl_shadowed_map_e2: prim_subreg_shadow
 **Description**
 F[map_e2]: 11:10
 
-- u_classb_ctrl_map_e3: prim_subreg
+- u_classb_ctrl_shadowed_map_e3: prim_subreg_shadow
 **Description**
 F[map_e3]: 13:12
 
@@ -654,29 +741,29 @@ R[classb_clr]: V(False)
 **Description**
 R[classb_accum_cnt]: V(True)
 
-- u_classb_accum_thresh: prim_subreg
+- u_classb_accum_thresh_shadowed: prim_subreg_shadow
 **Description**
-R[classb_accum_thresh]: V(False)
+R[classb_accum_thresh_shadowed]: V(False)
 
-- u_classb_timeout_cyc: prim_subreg
+- u_classb_timeout_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classb_timeout_cyc]: V(False)
+R[classb_timeout_cyc_shadowed]: V(False)
 
-- u_classb_phase0_cyc: prim_subreg
+- u_classb_phase0_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classb_phase0_cyc]: V(False)
+R[classb_phase0_cyc_shadowed]: V(False)
 
-- u_classb_phase1_cyc: prim_subreg
+- u_classb_phase1_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classb_phase1_cyc]: V(False)
+R[classb_phase1_cyc_shadowed]: V(False)
 
-- u_classb_phase2_cyc: prim_subreg
+- u_classb_phase2_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classb_phase2_cyc]: V(False)
+R[classb_phase2_cyc_shadowed]: V(False)
 
-- u_classb_phase3_cyc: prim_subreg
+- u_classb_phase3_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classb_phase3_cyc]: V(False)
+R[classb_phase3_cyc_shadowed]: V(False)
 
 - u_classb_esc_cnt: prim_subreg_ext
 **Description**
@@ -690,44 +777,44 @@ R[classb_state]: V(True)
 **Description**
 R[classc_regwen]: V(False)
 
-- u_classc_ctrl_en: prim_subreg
+- u_classc_ctrl_shadowed_en: prim_subreg_shadow
 **Description**
-R[classc_ctrl]: V(False)
+R[classc_ctrl_shadowed]: V(False)
 F[en]: 0:0
 
-- u_classc_ctrl_lock: prim_subreg
+- u_classc_ctrl_shadowed_lock: prim_subreg_shadow
 **Description**
 F[lock]: 1:1
 
-- u_classc_ctrl_en_e0: prim_subreg
+- u_classc_ctrl_shadowed_en_e0: prim_subreg_shadow
 **Description**
 F[en_e0]: 2:2
 
-- u_classc_ctrl_en_e1: prim_subreg
+- u_classc_ctrl_shadowed_en_e1: prim_subreg_shadow
 **Description**
 F[en_e1]: 3:3
 
-- u_classc_ctrl_en_e2: prim_subreg
+- u_classc_ctrl_shadowed_en_e2: prim_subreg_shadow
 **Description**
 F[en_e2]: 4:4
 
-- u_classc_ctrl_en_e3: prim_subreg
+- u_classc_ctrl_shadowed_en_e3: prim_subreg_shadow
 **Description**
 F[en_e3]: 5:5
 
-- u_classc_ctrl_map_e0: prim_subreg
+- u_classc_ctrl_shadowed_map_e0: prim_subreg_shadow
 **Description**
 F[map_e0]: 7:6
 
-- u_classc_ctrl_map_e1: prim_subreg
+- u_classc_ctrl_shadowed_map_e1: prim_subreg_shadow
 **Description**
 F[map_e1]: 9:8
 
-- u_classc_ctrl_map_e2: prim_subreg
+- u_classc_ctrl_shadowed_map_e2: prim_subreg_shadow
 **Description**
 F[map_e2]: 11:10
 
-- u_classc_ctrl_map_e3: prim_subreg
+- u_classc_ctrl_shadowed_map_e3: prim_subreg_shadow
 **Description**
 F[map_e3]: 13:12
 
@@ -743,29 +830,29 @@ R[classc_clr]: V(False)
 **Description**
 R[classc_accum_cnt]: V(True)
 
-- u_classc_accum_thresh: prim_subreg
+- u_classc_accum_thresh_shadowed: prim_subreg_shadow
 **Description**
-R[classc_accum_thresh]: V(False)
+R[classc_accum_thresh_shadowed]: V(False)
 
-- u_classc_timeout_cyc: prim_subreg
+- u_classc_timeout_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classc_timeout_cyc]: V(False)
+R[classc_timeout_cyc_shadowed]: V(False)
 
-- u_classc_phase0_cyc: prim_subreg
+- u_classc_phase0_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classc_phase0_cyc]: V(False)
+R[classc_phase0_cyc_shadowed]: V(False)
 
-- u_classc_phase1_cyc: prim_subreg
+- u_classc_phase1_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classc_phase1_cyc]: V(False)
+R[classc_phase1_cyc_shadowed]: V(False)
 
-- u_classc_phase2_cyc: prim_subreg
+- u_classc_phase2_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classc_phase2_cyc]: V(False)
+R[classc_phase2_cyc_shadowed]: V(False)
 
-- u_classc_phase3_cyc: prim_subreg
+- u_classc_phase3_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classc_phase3_cyc]: V(False)
+R[classc_phase3_cyc_shadowed]: V(False)
 
 - u_classc_esc_cnt: prim_subreg_ext
 **Description**
@@ -779,44 +866,44 @@ R[classc_state]: V(True)
 **Description**
 R[classd_regwen]: V(False)
 
-- u_classd_ctrl_en: prim_subreg
+- u_classd_ctrl_shadowed_en: prim_subreg_shadow
 **Description**
-R[classd_ctrl]: V(False)
+R[classd_ctrl_shadowed]: V(False)
 F[en]: 0:0
 
-- u_classd_ctrl_lock: prim_subreg
+- u_classd_ctrl_shadowed_lock: prim_subreg_shadow
 **Description**
 F[lock]: 1:1
 
-- u_classd_ctrl_en_e0: prim_subreg
+- u_classd_ctrl_shadowed_en_e0: prim_subreg_shadow
 **Description**
 F[en_e0]: 2:2
 
-- u_classd_ctrl_en_e1: prim_subreg
+- u_classd_ctrl_shadowed_en_e1: prim_subreg_shadow
 **Description**
 F[en_e1]: 3:3
 
-- u_classd_ctrl_en_e2: prim_subreg
+- u_classd_ctrl_shadowed_en_e2: prim_subreg_shadow
 **Description**
 F[en_e2]: 4:4
 
-- u_classd_ctrl_en_e3: prim_subreg
+- u_classd_ctrl_shadowed_en_e3: prim_subreg_shadow
 **Description**
 F[en_e3]: 5:5
 
-- u_classd_ctrl_map_e0: prim_subreg
+- u_classd_ctrl_shadowed_map_e0: prim_subreg_shadow
 **Description**
 F[map_e0]: 7:6
 
-- u_classd_ctrl_map_e1: prim_subreg
+- u_classd_ctrl_shadowed_map_e1: prim_subreg_shadow
 **Description**
 F[map_e1]: 9:8
 
-- u_classd_ctrl_map_e2: prim_subreg
+- u_classd_ctrl_shadowed_map_e2: prim_subreg_shadow
 **Description**
 F[map_e2]: 11:10
 
-- u_classd_ctrl_map_e3: prim_subreg
+- u_classd_ctrl_shadowed_map_e3: prim_subreg_shadow
 **Description**
 F[map_e3]: 13:12
 
@@ -832,29 +919,29 @@ R[classd_clr]: V(False)
 **Description**
 R[classd_accum_cnt]: V(True)
 
-- u_classd_accum_thresh: prim_subreg
+- u_classd_accum_thresh_shadowed: prim_subreg_shadow
 **Description**
-R[classd_accum_thresh]: V(False)
+R[classd_accum_thresh_shadowed]: V(False)
 
-- u_classd_timeout_cyc: prim_subreg
+- u_classd_timeout_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classd_timeout_cyc]: V(False)
+R[classd_timeout_cyc_shadowed]: V(False)
 
-- u_classd_phase0_cyc: prim_subreg
+- u_classd_phase0_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classd_phase0_cyc]: V(False)
+R[classd_phase0_cyc_shadowed]: V(False)
 
-- u_classd_phase1_cyc: prim_subreg
+- u_classd_phase1_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classd_phase1_cyc]: V(False)
+R[classd_phase1_cyc_shadowed]: V(False)
 
-- u_classd_phase2_cyc: prim_subreg
+- u_classd_phase2_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classd_phase2_cyc]: V(False)
+R[classd_phase2_cyc_shadowed]: V(False)
 
-- u_classd_phase3_cyc: prim_subreg
+- u_classd_phase3_cyc_shadowed: prim_subreg_shadow
 **Description**
-R[classd_phase3_cyc]: V(False)
+R[classd_phase3_cyc_shadowed]: V(False)
 
 - u_classd_esc_cnt: prim_subreg_ext
 **Description**

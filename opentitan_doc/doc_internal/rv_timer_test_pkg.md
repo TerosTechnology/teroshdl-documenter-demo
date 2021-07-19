@@ -1,5 +1,6 @@
 # Package: rv_timer_test_pkg
 
+- **File**: rv_timer_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

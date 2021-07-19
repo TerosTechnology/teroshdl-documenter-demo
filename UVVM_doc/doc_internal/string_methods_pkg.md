@@ -1,5 +1,6 @@
 # Package: string_methods_pkg
 
+- **File**: string_methods_pkg.vhd
 ## Functions
 - bitvis_assert <font id="function_arguments">( val        : boolean;<br><span style="padding-left:20px"> severeness : severity_level;<br><span style="padding-left:20px"> msg        : string;<br><span style="padding-left:20px"> scope      : string ) </font> <font id="function_return">return ()</font>
 - justify <font id="function_arguments">( val       : string;<br><span style="padding-left:20px"> width     : natural := 0;<br><span style="padding-left:20px"> justified : side := RIGHT;<br><span style="padding-left:20px"> format: t_format_string := AS_IS -- No defaults on 4 first param - to avoid ambiguity with std.textio ) </font> <font id="function_return">return string </font>

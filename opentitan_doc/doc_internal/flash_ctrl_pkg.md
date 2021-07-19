@@ -1,5 +1,6 @@
 # Package: flash_ctrl_pkg
 
+- **File**: flash_ctrl_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

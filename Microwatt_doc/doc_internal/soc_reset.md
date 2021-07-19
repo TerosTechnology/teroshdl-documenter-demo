@@ -1,5 +1,6 @@
 # Entity: soc_reset
 
+- **File**: soc_reset.vhdl
 ## Diagram
 
 ![Diagram](soc_reset.svg "Diagram")

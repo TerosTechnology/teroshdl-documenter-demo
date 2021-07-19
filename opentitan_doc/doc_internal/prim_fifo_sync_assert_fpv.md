@@ -1,5 +1,6 @@
 # Entity: prim_fifo_sync_assert_fpv
 
+- **File**: prim_fifo_sync_assert_fpv.sv
 ## Diagram
 
 ![Diagram](prim_fifo_sync_assert_fpv.svg "Diagram")

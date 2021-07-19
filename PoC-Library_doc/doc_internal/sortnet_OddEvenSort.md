@@ -1,5 +1,6 @@
 # Entity: sortnet_OddEvenSort
 
+- **File**: sortnet_OddEvenSort.vhdl
 ## Diagram
 
 ![Diagram](sortnet_OddEvenSort.svg "Diagram")

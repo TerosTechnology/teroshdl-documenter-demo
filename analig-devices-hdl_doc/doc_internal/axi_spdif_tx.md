@@ -1,5 +1,6 @@
 # Entity: axi_spdif_tx
 
+- **File**: axi_spdif_tx.vhd
 ## Diagram
 
 ![Diagram](axi_spdif_tx.svg "Diagram")

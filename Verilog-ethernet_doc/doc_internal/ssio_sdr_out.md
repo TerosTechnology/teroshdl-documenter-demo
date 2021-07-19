@@ -1,5 +1,6 @@
 # Entity: ssio_sdr_out
 
+- **File**: ssio_sdr_out.v
 ## Diagram
 
 ![Diagram](ssio_sdr_out.svg "Diagram")

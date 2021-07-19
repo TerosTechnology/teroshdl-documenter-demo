@@ -1,5 +1,6 @@
 # Entity: AxiAd5780Core
 
+- **File**: AxiAd5780Core.vhd
 ## Diagram
 
 ![Diagram](AxiAd5780Core.svg "Diagram")

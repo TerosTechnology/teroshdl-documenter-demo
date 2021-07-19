@@ -1,5 +1,6 @@
 # Entity: AxiStreamBatcherEventBuilder
 
+- **File**: AxiStreamBatcherEventBuilder.vhd
 ## Diagram
 
 ![Diagram](AxiStreamBatcherEventBuilder.svg "Diagram")

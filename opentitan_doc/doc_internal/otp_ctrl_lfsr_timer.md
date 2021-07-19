@@ -1,5 +1,6 @@
 # Entity: otp_ctrl_lfsr_timer
 
+- **File**: otp_ctrl_lfsr_timer.sv
 ## Diagram
 
 ![Diagram](otp_ctrl_lfsr_timer.svg "Diagram")

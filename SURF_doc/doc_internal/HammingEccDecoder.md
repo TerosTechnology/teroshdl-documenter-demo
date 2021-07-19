@@ -1,5 +1,6 @@
 # Entity: HammingEccDecoder
 
+- **File**: HammingEccDecoder.vhd
 ## Diagram
 
 ![Diagram](HammingEccDecoder.svg "Diagram")

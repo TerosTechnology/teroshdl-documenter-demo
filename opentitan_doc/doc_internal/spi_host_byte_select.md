@@ -1,5 +1,6 @@
 # Entity: spi_host_byte_select
 
+- **File**: spi_host_byte_select.sv
 ## Diagram
 
 ![Diagram](spi_host_byte_select.svg "Diagram")

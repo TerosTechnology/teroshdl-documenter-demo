@@ -1,5 +1,6 @@
 # Entity: RssiChksum
 
+- **File**: RssiChksum.vhd
 ## Diagram
 
 ![Diagram](RssiChksum.svg "Diagram")

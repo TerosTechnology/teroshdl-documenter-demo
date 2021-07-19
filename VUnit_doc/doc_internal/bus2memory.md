@@ -1,5 +1,6 @@
 # Entity: bus2memory
 
+- **File**: bus2memory.vhd
 ## Diagram
 
 ![Diagram](bus2memory.svg "Diagram")

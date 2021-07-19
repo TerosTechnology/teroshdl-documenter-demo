@@ -1,5 +1,6 @@
 # Entity: axi_stream_slave
 
+- **File**: axi_stream_slave.vhd
 ## Diagram
 
 ![Diagram](axi_stream_slave.svg "Diagram")

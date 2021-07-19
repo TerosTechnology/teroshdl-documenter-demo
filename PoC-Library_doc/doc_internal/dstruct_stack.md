@@ -1,5 +1,6 @@
 # Entity: dstruct_stack
 
+- **File**: dstruct_stack.vhdl
 ## Diagram
 
 ![Diagram](dstruct_stack.svg "Diagram")

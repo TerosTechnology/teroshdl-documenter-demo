@@ -1,5 +1,6 @@
 # Package: Vital_Memory
 
+- **File**: memory_p.vhdl
 ## Constants
 
 | Name                     | Type              | Value                                                                                                                                                                                                                                                                                         | Description |

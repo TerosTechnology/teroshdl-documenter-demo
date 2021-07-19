@@ -1,5 +1,6 @@
 # Entity: firReal_top
 
+- **File**: firReal_top.vhd
 ## Diagram
 
 ![Diagram](firReal_top.svg "Diagram")

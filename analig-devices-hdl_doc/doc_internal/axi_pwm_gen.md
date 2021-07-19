@@ -1,5 +1,6 @@
 # Entity: axi_pwm_gen
 
+- **File**: axi_pwm_gen.v
 ## Diagram
 
 ![Diagram](axi_pwm_gen.svg "Diagram")

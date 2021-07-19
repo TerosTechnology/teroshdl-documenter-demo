@@ -1,5 +1,6 @@
 # Entity: tb_counting_errors
 
+- **File**: tb_counting_errors.vhd
 ## Diagram
 
 ![Diagram](tb_counting_errors.svg "Diagram")

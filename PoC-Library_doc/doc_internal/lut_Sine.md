@@ -1,5 +1,6 @@
 # Entity: lut_Sine
 
+- **File**: lut_Sine.vhdl
 ## Diagram
 
 ![Diagram](lut_Sine.svg "Diagram")

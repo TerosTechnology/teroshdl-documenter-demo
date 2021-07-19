@@ -1,5 +1,6 @@
 # Entity: AxiLiteCrossbarI2cMux
 
+- **File**: AxiLiteCrossbarI2cMux.vhd
 ## Diagram
 
 ![Diagram](AxiLiteCrossbarI2cMux.svg "Diagram")

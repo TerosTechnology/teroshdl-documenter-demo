@@ -1,5 +1,6 @@
 # Entity: tlul_adapter_reg
 
+- **File**: tlul_adapter_reg.sv
 ## Diagram
 
 ![Diagram](tlul_adapter_reg.svg "Diagram")

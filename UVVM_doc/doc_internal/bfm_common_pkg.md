@@ -1,5 +1,6 @@
 # Package: bfm_common_pkg
 
+- **File**: bfm_common_pkg.vhd
 ## Types
 
 | Name                 | Type                                                                                                                                                                               | Description |

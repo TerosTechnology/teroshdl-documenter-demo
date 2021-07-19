@@ -1,5 +1,6 @@
 # Entity: gmii_phy_if
 
+- **File**: gmii_phy_if.v
 ## Diagram
 
 ![Diagram](gmii_phy_if.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: nco_counter_logic
 
+- **File**: nco_counter_logic.vhd
 ## Diagram
 
 ![Diagram](nco_counter_logic.svg "Diagram")

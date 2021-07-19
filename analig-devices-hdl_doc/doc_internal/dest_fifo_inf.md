@@ -1,5 +1,6 @@
 # Entity: dmac_dest_fifo_inf
 
+- **File**: dest_fifo_inf.v
 ## Diagram
 
 ![Diagram](dest_fifo_inf.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: log_deprecated_pkg
 
+- **File**: log_deprecated_pkg.vhd
 ## Functions
 - logger_init <font id="function_arguments">( variable logger : inout logger_t;<br><span style="padding-left:20px"> default_src     :       string                  := "";<br><span style="padding-left:20px"> file_name       :       string                  := "log.csv";<br><span style="padding-left:20px"> display_format  :       deprecated_log_format_t := raw;<br><span style="padding-left:20px"> file_format     :       deprecated_log_format_t := off;<br><span style="padding-left:20px"> stop_level      :       log_level_t             := failure;<br><span style="padding-left:20px"> separator       :       character               := ',<br><span style="padding-left:20px">';<br><span style="padding-left:20px"> append          :       boolean                 := false) </font> <font id="function_return">return ()</font>
 **Description**

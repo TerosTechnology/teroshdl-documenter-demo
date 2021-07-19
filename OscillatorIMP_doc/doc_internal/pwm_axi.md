@@ -1,5 +1,6 @@
 # Entity: pwm_axi
 
+- **File**: pwm_axi.vhd
 ## Diagram
 
 ![Diagram](pwm_axi.svg "Diagram")

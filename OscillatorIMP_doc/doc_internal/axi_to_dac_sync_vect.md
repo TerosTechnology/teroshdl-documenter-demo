@@ -1,5 +1,6 @@
 # Entity: axi_to_dac_sync_vect
 
+- **File**: axi_to_dac_sync_vect.vhd
 ## Diagram
 
 ![Diagram](axi_to_dac_sync_vect.svg "Diagram")

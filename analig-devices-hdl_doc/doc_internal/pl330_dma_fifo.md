@@ -1,5 +1,6 @@
 # Entity: pl330_dma_fifo
 
+- **File**: pl330_dma_fifo.vhd
 ## Diagram
 
 ![Diagram](pl330_dma_fifo.svg "Diagram")

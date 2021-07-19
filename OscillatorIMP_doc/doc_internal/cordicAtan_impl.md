@@ -1,5 +1,6 @@
 # Entity: cordicAtan_impl
 
+- **File**: cordicAtan_impl.vhd
 ## Diagram
 
 ![Diagram](cordicAtan_impl.svg "Diagram")

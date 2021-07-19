@@ -1,5 +1,6 @@
 # Entity: keyboard
 
+- **File**: keyboard.v
 ## Diagram
 
 ![Diagram](keyboard.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Gtp7AutoPhaseAligner
 
+- **File**: Gtp7AutoPhaseAligner.vhd
 ## Diagram
 
 ![Diagram](Gtp7AutoPhaseAligner.svg "Diagram")

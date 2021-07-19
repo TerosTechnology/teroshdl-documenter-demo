@@ -1,5 +1,6 @@
 # Entity: dataReal_resizer
 
+- **File**: dataReal_resizer.vhd
 ## Diagram
 
 ![Diagram](dataReal_resizer.svg "Diagram")

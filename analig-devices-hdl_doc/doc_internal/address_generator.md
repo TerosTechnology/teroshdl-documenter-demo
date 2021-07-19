@@ -1,5 +1,6 @@
 # Entity: dmac_address_generator
 
+- **File**: address_generator.v
 ## Diagram
 
 ![Diagram](address_generator.svg "Diagram")

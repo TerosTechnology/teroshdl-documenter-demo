@@ -1,5 +1,6 @@
 # Package: spi_host_test_pkg
 
+- **File**: spi_host_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

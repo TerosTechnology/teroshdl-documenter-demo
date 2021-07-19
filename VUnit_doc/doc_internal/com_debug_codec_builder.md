@@ -1,5 +1,6 @@
 # Package: com_debug_codec_builder_pkg
 
+- **File**: com_debug_codec_builder.vhd
 ## Functions
 - open_group <font id="function_arguments">( variable l : inout line) </font> <font id="function_return">return ()</font>
 - append_group <font id="function_arguments">( variable l       : inout line;<br><span style="padding-left:20px"> constant element : in    string) </font> <font id="function_return">return ()</font>

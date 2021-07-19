@@ -1,5 +1,6 @@
 # Entity: AxiStreamSplitter
 
+- **File**: AxiStreamSplitter.vhd
 ## Diagram
 
 ![Diagram](AxiStreamSplitter.svg "Diagram")

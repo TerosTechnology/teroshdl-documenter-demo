@@ -1,5 +1,6 @@
 # Entity: prim_xilinx_flop
 
+- **File**: prim_xilinx_flop.sv
 ## Diagram
 
 ![Diagram](prim_xilinx_flop.svg "Diagram")

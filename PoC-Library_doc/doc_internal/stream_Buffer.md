@@ -1,5 +1,6 @@
 # Entity: stream_Buffer
 
+- **File**: stream_Buffer.vhdl
 ## Diagram
 
 ![Diagram](stream_Buffer.svg "Diagram")

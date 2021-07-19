@@ -1,5 +1,6 @@
 # Entity: SyncTrigRateVector
 
+- **File**: SyncTrigRateVector.vhd
 ## Diagram
 
 ![Diagram](SyncTrigRateVector.svg "Diagram")

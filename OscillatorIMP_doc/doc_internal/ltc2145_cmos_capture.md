@@ -1,5 +1,6 @@
 # Entity: ltc2145_cmos_capture
 
+- **File**: ltc2145_cmos_capture.vhd
 ## Diagram
 
 ![Diagram](ltc2145_cmos_capture.svg "Diagram")

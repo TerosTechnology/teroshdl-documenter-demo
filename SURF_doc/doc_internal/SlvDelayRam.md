@@ -1,5 +1,6 @@
 # Entity: SlvDelayRam
 
+- **File**: SlvDelayRam.vhd
 ## Diagram
 
 ![Diagram](SlvDelayRam.svg "Diagram")

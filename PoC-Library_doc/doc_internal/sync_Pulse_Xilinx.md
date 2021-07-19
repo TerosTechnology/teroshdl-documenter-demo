@@ -1,5 +1,6 @@
 # Entity: sync_Pulse_Xilinx
 
+- **File**: sync_Pulse_Xilinx.vhdl
 ## Diagram
 
 ![Diagram](sync_Pulse_Xilinx.svg "Diagram")

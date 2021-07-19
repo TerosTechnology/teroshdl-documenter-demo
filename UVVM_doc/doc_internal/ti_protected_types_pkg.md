@@ -1,5 +1,6 @@
 # Package: ti_protected_types_pkg
 
+- **File**: ti_protected_types_pkg.vhd
 ## Types
 
 | Name            | Type | Description |

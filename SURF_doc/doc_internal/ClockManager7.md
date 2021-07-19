@@ -1,5 +1,6 @@
 # Entity: ClockManager7
 
+- **File**: ClockManager7.vhd
 ## Diagram
 
 ![Diagram](ClockManager7.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: fft_coeff_handler
 
+- **File**: fft_coeff_handler.vhd
 ## Diagram
 
 ![Diagram](fft_coeff_handler.svg "Diagram")

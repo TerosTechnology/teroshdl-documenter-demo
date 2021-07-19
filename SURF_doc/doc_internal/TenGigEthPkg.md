@@ -1,5 +1,6 @@
 # Package: TenGigEthPkg
 
+- **File**: TenGigEthPkg.vhd
 ## Constants
 
 | Name                      | Type            | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Description |

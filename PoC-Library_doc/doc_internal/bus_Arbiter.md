@@ -1,5 +1,6 @@
 # Entity: bus_Arbiter
 
+- **File**: bus_Arbiter.vhdl
 ## Diagram
 
 ![Diagram](bus_Arbiter.svg "Diagram")

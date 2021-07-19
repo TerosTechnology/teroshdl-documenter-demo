@@ -1,5 +1,6 @@
 # Entity: ad_tdd_control
 
+- **File**: ad_tdd_control.v
 ## Diagram
 
 ![Diagram](ad_tdd_control.svg "Diagram")

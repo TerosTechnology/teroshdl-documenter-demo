@@ -1,5 +1,6 @@
 # Entity: axi_ad7616_maxis2wrfifo
 
+- **File**: axi_ad7616_maxis2wrfifo.v
 ## Diagram
 
 ![Diagram](axi_ad7616_maxis2wrfifo.svg "Diagram")

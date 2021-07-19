@@ -1,5 +1,6 @@
 # Entity: tb_elab_fail
 
+- **File**: tb_elab_fail.vhd
 ## Diagram
 
 ![Diagram](tb_elab_fail.svg "Diagram")

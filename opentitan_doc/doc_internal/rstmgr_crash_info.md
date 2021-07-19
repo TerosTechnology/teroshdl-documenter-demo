@@ -1,5 +1,6 @@
 # Entity: rstmgr_crash_info
 
+- **File**: rstmgr_crash_info.sv
 ## Diagram
 
 ![Diagram](rstmgr_crash_info.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: iq_rssi_to_db
 
+- **File**: iq_rssi_to_db.v
 ## Diagram
 
 ![Diagram](iq_rssi_to_db.svg "Diagram")

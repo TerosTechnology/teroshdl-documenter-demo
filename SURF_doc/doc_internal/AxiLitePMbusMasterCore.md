@@ -1,5 +1,6 @@
 # Entity: AxiLitePMbusMasterCore
 
+- **File**: AxiLitePMbusMasterCore.vhd
 ## Diagram
 
 ![Diagram](AxiLitePMbusMasterCore.svg "Diagram")

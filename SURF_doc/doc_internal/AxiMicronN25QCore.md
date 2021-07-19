@@ -1,5 +1,6 @@
 # Entity: AxiMicronN25QCore
 
+- **File**: AxiMicronN25QCore.vhd
 ## Diagram
 
 ![Diagram](AxiMicronN25QCore.svg "Diagram")

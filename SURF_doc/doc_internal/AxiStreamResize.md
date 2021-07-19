@@ -1,5 +1,6 @@
 # Entity: AxiStreamResize
 
+- **File**: AxiStreamResize.vhd
 ## Diagram
 
 ![Diagram](AxiStreamResize.svg "Diagram")

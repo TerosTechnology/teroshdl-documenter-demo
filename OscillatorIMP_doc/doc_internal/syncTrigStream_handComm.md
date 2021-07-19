@@ -1,5 +1,6 @@
 # Entity: syncTrigStream_handComm
 
+- **File**: syncTrigStream_handComm.vhd
 ## Diagram
 
 ![Diagram](syncTrigStream_handComm.svg "Diagram")

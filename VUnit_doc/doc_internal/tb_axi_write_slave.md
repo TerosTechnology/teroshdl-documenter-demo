@@ -1,5 +1,6 @@
 # Entity: tb_axi_write_slave
 
+- **File**: tb_axi_write_slave.vhd
 ## Diagram
 
 ![Diagram](tb_axi_write_slave.svg "Diagram")

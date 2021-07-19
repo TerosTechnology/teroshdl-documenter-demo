@@ -1,5 +1,6 @@
 # Entity: jesd204_tx_static_config
 
+- **File**: jesd204_tx_static_config.v
 ## Diagram
 
 ![Diagram](jesd204_tx_static_config.svg "Diagram")

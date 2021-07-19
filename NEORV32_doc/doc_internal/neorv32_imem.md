@@ -1,5 +1,6 @@
 # Entity: neorv32_imem
 
+- **File**: neorv32_imem.vhd
 ## Diagram
 
 ![Diagram](neorv32_imem.svg "Diagram")

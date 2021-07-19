@@ -1,5 +1,6 @@
 # Entity: xcorr_prn_slow_complex_ram
 
+- **File**: xcorr_prn_slow_complex_ram.vhd
 ## Diagram
 
 ![Diagram](xcorr_prn_slow_complex_ram.svg "Diagram")

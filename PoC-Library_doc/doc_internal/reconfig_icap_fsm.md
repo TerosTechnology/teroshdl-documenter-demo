@@ -1,5 +1,6 @@
 # Entity: reconfig_icap_fsm
 
+- **File**: reconfig_icap_fsm.vhdl
 ## Diagram
 
 ![Diagram](reconfig_icap_fsm.svg "Diagram")

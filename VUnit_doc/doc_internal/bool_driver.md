@@ -1,5 +1,6 @@
 # Entity: bool_driver
 
+- **File**: bool_driver.vhd
 ## Diagram
 
 ![Diagram](bool_driver.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: prim_xilinx_pad_wrapper
 
+- **File**: prim_xilinx_pad_wrapper.sv
 ## Diagram
 
 ![Diagram](prim_xilinx_pad_wrapper.svg "Diagram")

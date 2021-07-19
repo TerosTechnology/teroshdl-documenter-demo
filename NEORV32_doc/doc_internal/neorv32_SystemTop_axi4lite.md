@@ -1,5 +1,6 @@
 # Entity: neorv32_SystemTop_axi4lite
 
+- **File**: neorv32_SystemTop_axi4lite.vhd
 ## Diagram
 
 ![Diagram](neorv32_SystemTop_axi4lite.svg "Diagram")

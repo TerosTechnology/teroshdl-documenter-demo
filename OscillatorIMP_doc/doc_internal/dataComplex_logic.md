@@ -1,5 +1,6 @@
 # Entity: dataComplex_to_ram_subtop
 
+- **File**: dataComplex_logic.vhd
 ## Diagram
 
 ![Diagram](dataComplex_logic.svg "Diagram")

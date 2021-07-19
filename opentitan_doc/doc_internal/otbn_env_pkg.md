@@ -1,5 +1,6 @@
 # Package: otbn_env_pkg
 
+- **File**: otbn_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

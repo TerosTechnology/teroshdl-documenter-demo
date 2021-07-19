@@ -1,5 +1,6 @@
 # Entity: GtpRxCommaAligner
 
+- **File**: GtpRxCommaAligner.vhd
 ## Diagram
 
 ![Diagram](GtpRxCommaAligner.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: sha3_pkg
 
+- **File**: sha3_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: nco_counter_synchronizer_bit
 
+- **File**: nco_counter_synchronizer_bit.vhd
 ## Diagram
 
 ![Diagram](nco_counter_synchronizer_bit.svg "Diagram")

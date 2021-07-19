@@ -1,5 +1,6 @@
 # Entity: stat_Minimum
 
+- **File**: stat_Minimum.vhdl
 ## Diagram
 
 ![Diagram](stat_Minimum.svg "Diagram")

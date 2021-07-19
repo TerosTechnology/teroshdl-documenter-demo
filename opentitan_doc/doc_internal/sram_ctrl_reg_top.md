@@ -1,5 +1,6 @@
 # Entity: sram_ctrl_reg_top
 
+- **File**: sram_ctrl_reg_top.sv
 ## Diagram
 
 ![Diagram](sram_ctrl_reg_top.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: avalon_st_bfm_pkg
 
+- **File**: avalon_st_bfm_pkg.vhd
 ## Constants
 
 | Name                           | Type                   | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Description                                                   |

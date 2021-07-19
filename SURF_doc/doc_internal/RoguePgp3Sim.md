@@ -1,5 +1,6 @@
 # Entity: RoguePgp3Sim
 
+- **File**: RoguePgp3Sim.vhd
 ## Diagram
 
 ![Diagram](RoguePgp3Sim.svg "Diagram")

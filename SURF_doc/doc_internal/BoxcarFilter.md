@@ -1,5 +1,6 @@
 # Entity: BoxcarFilter
 
+- **File**: BoxcarFilter.vhd
 ## Diagram
 
 ![Diagram](BoxcarFilter.svg "Diagram")

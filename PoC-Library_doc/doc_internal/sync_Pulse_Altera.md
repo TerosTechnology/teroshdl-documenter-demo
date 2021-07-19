@@ -1,5 +1,6 @@
 # Entity: sync_Pulse_Altera
 
+- **File**: sync_Pulse_Altera.vhdl
 ## Diagram
 
 ![Diagram](sync_Pulse_Altera.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: custom_types_pkg
 
+- **File**: custom_types.vhd
 ## Types
 
 | Name               | Type                                                                                                                                                                                                                              | Description                                                                                         |

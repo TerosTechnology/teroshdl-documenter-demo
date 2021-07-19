@@ -1,5 +1,6 @@
 # Entity: axi_ad9001_core
 
+- **File**: axi_adrv9001_core.v
 ## Diagram
 
 ![Diagram](axi_adrv9001_core.svg "Diagram")

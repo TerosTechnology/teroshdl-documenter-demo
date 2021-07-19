@@ -1,5 +1,6 @@
 # Entity: csrng_block_encrypt
 
+- **File**: csrng_block_encrypt.sv
 ## Diagram
 
 ![Diagram](csrng_block_encrypt.svg "Diagram")

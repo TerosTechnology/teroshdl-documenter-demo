@@ -1,5 +1,6 @@
 # Entity: tb_std_logic_checker
 
+- **File**: tb_std_logic_checker.vhd
 ## Diagram
 
 ![Diagram](tb_std_logic_checker.svg "Diagram")

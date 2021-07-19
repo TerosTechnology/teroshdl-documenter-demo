@@ -1,5 +1,6 @@
 # Entity: error_monitor
 
+- **File**: error_monitor.v
 ## Diagram
 
 ![Diagram](error_monitor.svg "Diagram")

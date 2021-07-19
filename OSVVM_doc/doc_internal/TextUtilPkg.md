@@ -1,5 +1,6 @@
 # Package: TextUtilPkg
 
+- **File**: TextUtilPkg.vhd
 ## Functions
 - IsUpper <font id="function_arguments">(constant Char : character ) </font> <font id="function_return">return boolean </font>
 - IsLower <font id="function_arguments">(constant Char : character ) </font> <font id="function_return">return boolean </font>

@@ -1,5 +1,6 @@
 # Entity: rx_phase_det
 
+- **File**: rx_phase_det.vhd
 ## Diagram
 
 ![Diagram](rx_phase_det.svg "Diagram")

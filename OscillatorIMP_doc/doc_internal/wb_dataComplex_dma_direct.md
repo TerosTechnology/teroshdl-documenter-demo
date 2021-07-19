@@ -1,5 +1,6 @@
 # Entity: wb_dataComplex_dma_direct
 
+- **File**: wb_dataComplex_dma_direct.vhd
 ## Diagram
 
 ![Diagram](wb_dataComplex_dma_direct.svg "Diagram")

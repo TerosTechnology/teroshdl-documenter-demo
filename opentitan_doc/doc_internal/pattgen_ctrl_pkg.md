@@ -1,5 +1,6 @@
 # Package: pattgen_ctrl_pkg
 
+- **File**: pattgen_ctrl_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

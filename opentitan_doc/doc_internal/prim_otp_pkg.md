@@ -1,5 +1,6 @@
 # Package: prim_otp_pkg
 
+- **File**: prim_otp_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Package: otbn_reg_pkg
 
+- **File**: otbn_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

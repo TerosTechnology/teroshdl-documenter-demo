@@ -1,5 +1,6 @@
 # Package: rom_ctrl_env_pkg
 
+- **File**: rom_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.
@@ -18,7 +19,7 @@ Copyright lowRISC contributors.
 | uint               | uint        | 256                                           | The top bytes in memory hold the digest KMAC's max digest size is larger than what is required, so declare the size here.  |
 | MAX_CHECK_ADDR     | uint        | rom_ctrl_reg_pkg::ROM_CTRL_ROM_SIZE           |                                                                                                                            |
 | KMAC_DATA_SIZE     | uint        | MAX_CHECK_ADDR                                | The data for each line in rom up to the digest is padded out to the kmac message width                                     |
-| uint               | uint        | 40                                            | The rom width is rounded up to 40 for scrambling symmetry                                                                  |
+| uint               | uint        | 39                                            | The rom width in bits                                                                                                      |
 ## Types
 
 | Name         | Type                | Description |

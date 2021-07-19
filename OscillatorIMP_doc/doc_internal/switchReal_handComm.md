@@ -1,5 +1,6 @@
 # Entity: switchReal_handComm
 
+- **File**: switchReal_handComm.vhd
 ## Diagram
 
 ![Diagram](switchReal_handComm.svg "Diagram")

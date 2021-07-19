@@ -1,5 +1,6 @@
 # Entity: neorv32_ProcessorTop_Test
 
+- **File**: neorv32_ProcessorTop_Test.vhd
 ## Diagram
 
 ![Diagram](neorv32_ProcessorTop_Test.svg "Diagram")

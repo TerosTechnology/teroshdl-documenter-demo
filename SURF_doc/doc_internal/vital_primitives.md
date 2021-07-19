@@ -1,5 +1,6 @@
 # Package: VITAL_Primitives
 
+- **File**: vital_primitives.vhdl
 ## Types
 
 | Name                | Type                                                                                                      | Description |

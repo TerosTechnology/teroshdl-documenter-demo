@@ -1,5 +1,6 @@
 # Entity: usb_fs_rx
 
+- **File**: usb_fs_rx.sv
 ## Diagram
 
 ![Diagram](usb_fs_rx.svg "Diagram")

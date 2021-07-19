@@ -1,5 +1,6 @@
 # Entity: io_7SegmentMux_HEX
 
+- **File**: io_7SegmentMux_HEX.vhdl
 ## Diagram
 
 ![Diagram](io_7SegmentMux_HEX.svg "Diagram")

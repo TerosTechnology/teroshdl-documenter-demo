@@ -1,5 +1,6 @@
 # Entity: run_tests
 
+- **File**: run_tests.vhd
 ## Diagram
 
 ![Diagram](run_tests.svg "Diagram")

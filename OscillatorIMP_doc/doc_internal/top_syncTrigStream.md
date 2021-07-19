@@ -1,5 +1,6 @@
 # Entity: top_genpulsetwowaycplx
 
+- **File**: top_syncTrigStream.vhd
 ## Diagram
 
 ![Diagram](top_syncTrigStream.svg "Diagram")

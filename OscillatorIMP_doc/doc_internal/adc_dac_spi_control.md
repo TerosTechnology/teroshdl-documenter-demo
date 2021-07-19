@@ -1,5 +1,6 @@
 # Entity: adc_dac_spi_control
 
+- **File**: adc_dac_spi_control.v
 ## Diagram
 
 ![Diagram](adc_dac_spi_control.svg "Diagram")

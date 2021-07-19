@@ -1,5 +1,6 @@
 # Entity: dmac_2d_transfer
 
+- **File**: 2d_transfer.v
 ## Diagram
 
 ![Diagram](2d_transfer.svg "Diagram")

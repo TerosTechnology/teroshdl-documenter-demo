@@ -1,5 +1,6 @@
 # Entity: StreamPatternTester
 
+- **File**: StreamPatternTester.vhd
 ## Diagram
 
 ![Diagram](StreamPatternTester.svg "Diagram")

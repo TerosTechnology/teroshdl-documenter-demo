@@ -1,5 +1,6 @@
 # Package: aes_sbox_canright_pkg
 
+- **File**: aes_sbox_canright_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

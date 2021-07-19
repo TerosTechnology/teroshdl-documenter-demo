@@ -1,5 +1,6 @@
 # Entity: DS2411Core
 
+- **File**: DS2411Core.vhd
 ## Diagram
 
 ![Diagram](DS2411Core.svg "Diagram")

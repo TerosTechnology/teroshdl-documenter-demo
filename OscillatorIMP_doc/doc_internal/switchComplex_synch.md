@@ -1,5 +1,6 @@
 # Entity: switchComplex_synch
 
+- **File**: switchComplex_synch.vhd
 ## Diagram
 
 ![Diagram](switchComplex_synch.svg "Diagram")

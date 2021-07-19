@@ -1,5 +1,6 @@
 # Package: prim_ram_2p_pkg
 
+- **File**: prim_ram_2p_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

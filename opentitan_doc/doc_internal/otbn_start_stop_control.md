@@ -1,5 +1,6 @@
 # Entity: otbn_start_stop_control
 
+- **File**: otbn_start_stop_control.sv
 ## Diagram
 
 ![Diagram](otbn_start_stop_control.svg "Diagram")
@@ -30,7 +31,7 @@ Copyright lowRISC contributors.
 | urnd_reseed_busy_i      | input     |                     |             |
 | urnd_advance_o          | output    |                     |             |
 | ispr_init_o             | output    |                     |             |
-| insn_cnt_reset_o        | output    |                     |             |
+| state_reset_o           | output    |                     |             |
 ## Signals
 
 | Name          | Type                      | Description |

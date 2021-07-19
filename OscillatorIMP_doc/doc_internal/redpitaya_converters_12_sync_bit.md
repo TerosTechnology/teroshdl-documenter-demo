@@ -1,5 +1,6 @@
 # Entity: redpitaya_converters_12_sync_bit
 
+- **File**: redpitaya_converters_12_sync_bit.vhd
 ## Diagram
 
 ![Diagram](redpitaya_converters_12_sync_bit.svg "Diagram")

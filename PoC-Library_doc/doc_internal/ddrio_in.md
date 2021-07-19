@@ -1,5 +1,6 @@
 # Entity: ddrio_in
 
+- **File**: ddrio_in.vhdl
 ## Diagram
 
 ![Diagram](ddrio_in.svg "Diagram")
@@ -21,7 +22,7 @@ the falling edge directly before this rising edge. Thus sampling starts with
 the falling edge of the clock as depicted in the following waveform.
 .. wavedrom::
    
-![alt text](wavedrom_JbL60.svg "title") 
+![alt text](wavedrom_QakG0.svg "title") 
 
 After power-up, the output ports ``DataIn_high`` and ``DataIn_low`` both equal
 INIT_VALUE.

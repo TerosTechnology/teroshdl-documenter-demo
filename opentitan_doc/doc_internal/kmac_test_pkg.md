@@ -1,5 +1,6 @@
 # Package: kmac_test_pkg
 
+- **File**: kmac_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: sdram
 
+- **File**: sdram.v
 ## Diagram
 
 ![Diagram](sdram.svg "Diagram")

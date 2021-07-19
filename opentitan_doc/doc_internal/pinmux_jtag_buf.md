@@ -1,5 +1,6 @@
 # Entity: pinmux_jtag_buf
 
+- **File**: pinmux_jtag_buf.sv
 ## Diagram
 
 ![Diagram](pinmux_jtag_buf.svg "Diagram")

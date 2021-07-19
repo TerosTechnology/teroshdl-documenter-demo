@@ -1,5 +1,6 @@
 # Entity: AxiVersionLegacy
 
+- **File**: AxiVersionLegacy.vhd
 ## Diagram
 
 ![Diagram](AxiVersionLegacy.svg "Diagram")

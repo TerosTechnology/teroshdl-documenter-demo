@@ -1,5 +1,6 @@
 # Package: Pgp2bPkg
 
+- **File**: Pgp2bPkg.vhd
 ## Constants
 
 | Name                         | Type                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |

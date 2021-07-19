@@ -1,5 +1,6 @@
 # Entity: xil_BSCAN
 
+- **File**: xil_BSCAN.vhdl
 ## Diagram
 
 ![Diagram](xil_BSCAN.svg "Diagram")

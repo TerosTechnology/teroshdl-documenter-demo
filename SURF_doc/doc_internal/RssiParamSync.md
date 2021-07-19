@@ -1,5 +1,6 @@
 # Entity: RssiParamSync
 
+- **File**: RssiParamSync.vhd
 ## Diagram
 
 ![Diagram](RssiParamSync.svg "Diagram")

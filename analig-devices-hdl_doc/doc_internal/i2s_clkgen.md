@@ -1,5 +1,6 @@
 # Entity: i2s_clkgen
 
+- **File**: i2s_clkgen.vhd
 ## Diagram
 
 ![Diagram](i2s_clkgen.svg "Diagram")

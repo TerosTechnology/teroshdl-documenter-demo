@@ -1,5 +1,6 @@
 # Entity: arith_counter_ring
 
+- **File**: arith_counter_ring.vhdl
 ## Diagram
 
 ![Diagram](arith_counter_ring.svg "Diagram")

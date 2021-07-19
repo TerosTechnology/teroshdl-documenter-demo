@@ -1,5 +1,6 @@
 # Entity: sortnet_BitonicSort
 
+- **File**: sortnet_BitonicSort.vhdl
 ## Diagram
 
 ![Diagram](sortnet_BitonicSort.svg "Diagram")

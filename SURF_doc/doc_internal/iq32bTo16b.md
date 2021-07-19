@@ -1,5 +1,6 @@
 # Entity: iq32bTo16b
 
+- **File**: iq32bTo16b.vhd
 ## Diagram
 
 ![Diagram](iq32bTo16b.svg "Diagram")

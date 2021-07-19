@@ -1,5 +1,6 @@
 # Entity: arith_convert_bin2bcd
 
+- **File**: arith_convert_bin2bcd.vhdl
 ## Diagram
 
 ![Diagram](arith_convert_bin2bcd.svg "Diagram")

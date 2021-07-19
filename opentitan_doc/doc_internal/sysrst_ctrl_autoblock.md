@@ -1,5 +1,6 @@
 # Entity: sysrst_ctrl_autoblock
 
+- **File**: sysrst_ctrl_autoblock.sv
 ## Diagram
 
 ![Diagram](sysrst_ctrl_autoblock.svg "Diagram")

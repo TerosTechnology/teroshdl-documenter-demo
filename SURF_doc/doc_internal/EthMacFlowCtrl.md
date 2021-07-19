@@ -1,5 +1,6 @@
 # Entity: EthMacFlowCtrl
 
+- **File**: EthMacFlowCtrl.vhd
 ## Diagram
 
 ![Diagram](EthMacFlowCtrl.svg "Diagram")

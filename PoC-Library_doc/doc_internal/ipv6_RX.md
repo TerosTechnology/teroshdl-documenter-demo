@@ -1,5 +1,6 @@
 # Entity: ipv6_RX
 
+- **File**: ipv6_RX.vhdl
 ## Diagram
 
 ![Diagram](ipv6_RX.svg "Diagram")

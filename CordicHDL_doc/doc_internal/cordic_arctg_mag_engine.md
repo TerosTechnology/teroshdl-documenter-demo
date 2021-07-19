@@ -1,5 +1,6 @@
 # Entity: cordic_arctg_mag_engine
 
+- **File**: cordic_arctg_mag_engine.vhd
 ## Diagram
 
 ![Diagram](cordic_arctg_mag_engine.svg "Diagram")

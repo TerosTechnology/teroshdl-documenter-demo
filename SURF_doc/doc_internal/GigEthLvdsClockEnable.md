@@ -1,5 +1,6 @@
 # Entity: GigEthLvdsClockEnable
 
+- **File**: GigEthLvdsClockEnable.vhd
 ## Diagram
 
 ![Diagram](GigEthLvdsClockEnable.svg "Diagram")

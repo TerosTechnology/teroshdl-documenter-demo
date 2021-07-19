@@ -1,5 +1,6 @@
 # Entity: dataComplex_resizer
 
+- **File**: dataComplex_resizer.vhd
 ## Diagram
 
 ![Diagram](dataComplex_resizer.svg "Diagram")

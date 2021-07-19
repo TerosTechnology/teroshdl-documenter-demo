@@ -1,5 +1,6 @@
 # Entity: Sgmii88E1111LvdsUltraScale
 
+- **File**: Sgmii88E1111LvdsUltraScale.vhd
 ## Diagram
 
 ![Diagram](Sgmii88E1111LvdsUltraScale.svg "Diagram")

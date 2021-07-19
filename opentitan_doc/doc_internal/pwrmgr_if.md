@@ -1,5 +1,6 @@
 # Package: pwrmgr_env_pkg
 
+- **File**: pwrmgr_if.sv
 ## Description
 
 Copyright lowRISC contributors.

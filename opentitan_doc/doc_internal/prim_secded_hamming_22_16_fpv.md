@@ -1,5 +1,6 @@
 # Entity: prim_secded_hamming_22_16_fpv
 
+- **File**: prim_secded_hamming_22_16_fpv.sv
 ## Diagram
 
 ![Diagram](prim_secded_hamming_22_16_fpv.svg "Diagram")

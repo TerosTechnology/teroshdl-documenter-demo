@@ -1,5 +1,6 @@
 # Entity: comm_scramble
 
+- **File**: comm_scramble.vhdl
 ## Diagram
 
 ![Diagram](comm_scramble.svg "Diagram")

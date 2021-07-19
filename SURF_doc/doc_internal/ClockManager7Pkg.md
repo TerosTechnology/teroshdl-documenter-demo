@@ -1,5 +1,6 @@
 # Package: ClockManager7Pkg
 
+- **File**: ClockManager7Pkg.vhd
 ## Types
 
 | Name                  | Type                                              | Description |

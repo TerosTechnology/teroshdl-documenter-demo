@@ -1,5 +1,6 @@
 # Entity: aes_prng_masking
 
+- **File**: aes_prng_masking.sv
 ## Diagram
 
 ![Diagram](aes_prng_masking.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: axi_dma_regs_pkg
 
+- **File**: axi_dma_regs_pkg.vhd
 ## Constants
 
 | Name                       | Type                          | Value                                                                                            | Description |

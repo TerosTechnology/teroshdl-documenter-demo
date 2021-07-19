@@ -1,5 +1,6 @@
 # Entity: arith_counter_free
 
+- **File**: arith_counter_free.vhdl
 ## Diagram
 
 ![Diagram](arith_counter_free.svg "Diagram")

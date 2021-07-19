@@ -1,5 +1,6 @@
 # Entity: AxiStreamSelector
 
+- **File**: AxiStreamSelector.vhd
 ## Diagram
 
 ![Diagram](AxiStreamSelector.svg "Diagram")

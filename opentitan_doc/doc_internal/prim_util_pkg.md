@@ -1,5 +1,6 @@
 # Package: prim_util_pkg
 
+- **File**: prim_util_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

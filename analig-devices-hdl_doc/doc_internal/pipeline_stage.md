@@ -1,5 +1,6 @@
 # Entity: pipeline_stage
 
+- **File**: pipeline_stage.v
 ## Diagram
 
 ![Diagram](pipeline_stage.svg "Diagram")

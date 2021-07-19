@@ -1,5 +1,6 @@
 # Entity: rtc_date
 
+- **File**: rtc_date.sv
 ## Diagram
 
 ![Diagram](rtc_date.svg "Diagram")

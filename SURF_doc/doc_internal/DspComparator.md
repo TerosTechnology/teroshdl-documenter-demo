@@ -1,5 +1,6 @@
 # Entity: DspComparator
 
+- **File**: DspComparator.vhd
 ## Diagram
 
 ![Diagram](DspComparator.svg "Diagram")

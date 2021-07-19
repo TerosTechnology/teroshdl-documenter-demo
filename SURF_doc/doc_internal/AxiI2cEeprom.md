@@ -1,5 +1,6 @@
 # Entity: AxiI2cEeprom
 
+- **File**: AxiI2cEeprom.vhd
 ## Diagram
 
 ![Diagram](AxiI2cEeprom.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: switchReal_synch
 
+- **File**: switchReal_synch.vhd
 ## Diagram
 
 ![Diagram](switchReal_synch.svg "Diagram")

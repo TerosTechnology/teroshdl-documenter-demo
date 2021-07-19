@@ -1,5 +1,6 @@
 # Entity: axi_gpreg_io
 
+- **File**: axi_gpreg_io.v
 ## Diagram
 
 ![Diagram](axi_gpreg_io.svg "Diagram")

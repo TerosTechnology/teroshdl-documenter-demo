@@ -1,5 +1,6 @@
 # Package: keymgr_env_pkg
 
+- **File**: keymgr_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Package: rjtag_pkg
 
+- **File**: rjtag_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

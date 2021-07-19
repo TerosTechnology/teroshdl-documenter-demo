@@ -1,5 +1,6 @@
 # Package: usb_consts_pkg
 
+- **File**: usb_consts_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

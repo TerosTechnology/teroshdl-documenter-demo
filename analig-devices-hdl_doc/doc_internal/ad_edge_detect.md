@@ -1,5 +1,6 @@
 # Entity: ad_edge_detect
 
+- **File**: ad_edge_detect.v
 ## Diagram
 
 ![Diagram](ad_edge_detect.svg "Diagram")

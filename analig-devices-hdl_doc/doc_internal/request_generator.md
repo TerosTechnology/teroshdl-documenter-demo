@@ -1,5 +1,6 @@
 # Entity: dmac_request_generator
 
+- **File**: request_generator.v
 ## Diagram
 
 ![Diagram](request_generator.svg "Diagram")

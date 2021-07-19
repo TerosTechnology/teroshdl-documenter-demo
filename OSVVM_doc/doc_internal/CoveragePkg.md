@@ -1,5 +1,6 @@
 # Package: CoveragePkg
 
+- **File**: CoveragePkg.vhd
 ## Constants
 
 | Name                     | Type                                           | Value                                                                                                                                                                                                                                                                              | Description                                                                        |

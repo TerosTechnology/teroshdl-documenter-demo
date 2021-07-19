@@ -1,5 +1,6 @@
 # Entity: spi_host_fsm
 
+- **File**: spi_host_fsm.sv
 ## Diagram
 
 ![Diagram](spi_host_fsm.svg "Diagram")

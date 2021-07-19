@@ -1,5 +1,6 @@
 # Entity: MasterAxiLiteIpIntegrator
 
+- **File**: MasterAxiLiteIpIntegrator.vhd
 ## Diagram
 
 ![Diagram](MasterAxiLiteIpIntegrator.svg "Diagram")

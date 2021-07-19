@@ -1,5 +1,6 @@
 # Package: Jesd204bPkg
 
+- **File**: Jesd204bPkg.vhd
 ## Constants
 
 | Name                      | Type             | Value                                                                                                                                                                                                                                                                                                                                                                                         | Description                                                   |

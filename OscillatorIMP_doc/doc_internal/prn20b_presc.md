@@ -1,5 +1,6 @@
 # Entity: prn20b_presc
 
+- **File**: prn20b_presc.vhd
 ## Diagram
 
 ![Diagram](prn20b_presc.svg "Diagram")

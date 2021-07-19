@@ -1,5 +1,6 @@
 # Package: rv_dm_test_pkg
 
+- **File**: rv_dm_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

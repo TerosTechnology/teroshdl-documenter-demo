@@ -1,5 +1,6 @@
 # Entity: rv_plic_target
 
+- **File**: rv_plic_target.sv
 ## Diagram
 
 ![Diagram](rv_plic_target.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: RawEthFramerPkg
 
+- **File**: RawEthFramerPkg.vhd
 ## Constants
 
 | Name                  | Type                | Value                                                                                                                                                                                                          | Description                                                                                     |

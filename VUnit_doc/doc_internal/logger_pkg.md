@@ -1,5 +1,6 @@
 # Package: logger_pkg
 
+- **File**: logger_pkg.vhd
 ## Constants
 
 | Name          | Type     | Value                 | Description                                          |

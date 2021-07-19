@@ -1,5 +1,6 @@
 # Entity: tb_external_framework_integration
 
+- **File**: tb_external_framework_integration.vhd
 ## Diagram
 
 ![Diagram](tb_external_framework_integration.svg "Diagram")

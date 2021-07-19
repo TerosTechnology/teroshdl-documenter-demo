@@ -1,5 +1,6 @@
 # Entity: SinCosTaylor
 
+- **File**: SinCosTaylor.vhd
 ## Diagram
 
 ![Diagram](SinCosTaylor.svg "Diagram")

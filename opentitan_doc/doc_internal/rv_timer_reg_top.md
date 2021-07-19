@@ -1,5 +1,6 @@
 # Entity: rv_timer_reg_top
 
+- **File**: rv_timer_reg_top.sv
 ## Diagram
 
 ![Diagram](rv_timer_reg_top.svg "Diagram")

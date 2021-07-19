@@ -1,5 +1,6 @@
 # Entity: mean_vector_axi
 
+- **File**: mean_vector_axi.vhd
 ## Diagram
 
 ![Diagram](mean_vector_axi.svg "Diagram")

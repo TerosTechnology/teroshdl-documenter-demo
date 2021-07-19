@@ -1,5 +1,6 @@
 # Entity: otbn_rf_bignum
 
+- **File**: otbn_rf_bignum.sv
 ## Diagram
 
 ![Diagram](otbn_rf_bignum.svg "Diagram")

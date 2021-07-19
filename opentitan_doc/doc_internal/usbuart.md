@@ -1,5 +1,6 @@
 # Entity: usbuart
 
+- **File**: usbuart.sv
 ## Diagram
 
 ![Diagram](usbuart.svg "Diagram")

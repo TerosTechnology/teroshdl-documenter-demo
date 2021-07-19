@@ -1,5 +1,6 @@
 # Package: dict_pkg
 
+- **File**: dict_pkg.vhd
 ## Constants
 
 | Name      | Type   | Value                 | Description |

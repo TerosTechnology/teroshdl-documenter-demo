@@ -1,5 +1,6 @@
 # Entity: rx_cap_reg
 
+- **File**: rx_cap_reg.vhd
 ## Diagram
 
 ![Diagram](rx_cap_reg.svg "Diagram")

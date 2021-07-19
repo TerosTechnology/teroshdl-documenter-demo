@@ -1,5 +1,6 @@
 # Package: test_support
 
+- **File**: test_support.vhd
 ## Functions
 - assert_true <font id="function_arguments">( constant expr : in boolean;<br><span style="padding-left:20px"> constant msg  : in string := "";<br><span style="padding-left:20px"> constant level : in severity_level := error) </font> <font id="function_return">return ()</font>
 - verify_passed_checks <font id="function_arguments">( variable stat : inout checker_stat_t;<br><span style="padding-left:20px"> constant expected_n_passed : in integer := -1) </font> <font id="function_return">return ()</font>

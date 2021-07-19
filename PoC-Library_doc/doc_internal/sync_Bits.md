@@ -1,5 +1,6 @@
 # Entity: sync_Bits
 
+- **File**: sync_Bits.vhdl
 ## Diagram
 
 ![Diagram](sync_Bits.svg "Diagram")

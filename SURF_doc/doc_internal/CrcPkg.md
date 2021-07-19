@@ -1,5 +1,6 @@
 # Package: CrcPkg
 
+- **File**: CrcPkg.vhd
 ## Functions
 - crcByteLookup <font id="function_arguments">(inByte : slv;<br><span style="padding-left:20px"> constant poly : slv) </font> <font id="function_return">return slv </font>
 - crcLfsrShift <font id="function_arguments">(lfsr : slv;<br><span style="padding-left:20px"> constant poly : slv;<br><span style="padding-left:20px"> input : sl) </font> <font id="function_return">return slv </font>

@@ -1,5 +1,6 @@
 # Entity: align_mux
 
+- **File**: align_mux.v
 ## Diagram
 
 ![Diagram](align_mux.svg "Diagram")

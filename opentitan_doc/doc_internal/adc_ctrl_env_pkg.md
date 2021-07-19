@@ -1,5 +1,6 @@
 # Package: adc_ctrl_env_pkg
 
+- **File**: adc_ctrl_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

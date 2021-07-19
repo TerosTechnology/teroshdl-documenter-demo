@@ -1,5 +1,6 @@
 # Entity: cvb_gen_new_flow
 
+- **File**: cvb_gen_new_flow.vhd
 ## Diagram
 
 ![Diagram](cvb_gen_new_flow.svg "Diagram")

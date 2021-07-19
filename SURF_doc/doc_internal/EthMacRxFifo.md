@@ -1,5 +1,6 @@
 # Entity: EthMacRxFifo
 
+- **File**: EthMacRxFifo.vhd
 ## Diagram
 
 ![Diagram](EthMacRxFifo.svg "Diagram")

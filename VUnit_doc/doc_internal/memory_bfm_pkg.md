@@ -1,5 +1,6 @@
 # Package: memory_bfm_pkg
 
+- **File**: memory_bfm_pkg.vhd
 ## Constants
 
 | Name                       | Type       | Value                                   | Description |

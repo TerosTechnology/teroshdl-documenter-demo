@@ -1,5 +1,6 @@
 # Package: hmac_reg_pkg
 
+- **File**: hmac_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

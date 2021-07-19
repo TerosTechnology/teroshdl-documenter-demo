@@ -1,5 +1,6 @@
 # Entity: comm_crc
 
+- **File**: comm_crc.vhdl
 ## Diagram
 
 ![Diagram](comm_crc.svg "Diagram")

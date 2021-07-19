@@ -1,5 +1,6 @@
 # Entity: pp_fifo
 
+- **File**: pp_fifo.vhd
 ## Diagram
 
 ![Diagram](pp_fifo.svg "Diagram")

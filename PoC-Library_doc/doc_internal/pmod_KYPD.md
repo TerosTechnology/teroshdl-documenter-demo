@@ -1,5 +1,6 @@
 # Entity: pmod_KYPD
 
+- **File**: pmod_KYPD.vhdl
 ## Diagram
 
 ![Diagram](pmod_KYPD.svg "Diagram")

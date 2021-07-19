@@ -1,5 +1,6 @@
 # Entity: tb_check_equal_real
 
+- **File**: tb_check_equal_real.vhd
 ## Diagram
 
 ![Diagram](tb_check_equal_real.svg "Diagram")

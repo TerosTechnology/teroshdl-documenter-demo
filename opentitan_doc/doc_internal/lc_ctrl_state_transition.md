@@ -1,5 +1,6 @@
 # Entity: lc_ctrl_state_transition
 
+- **File**: lc_ctrl_state_transition.sv
 ## Diagram
 
 ![Diagram](lc_ctrl_state_transition.svg "Diagram")

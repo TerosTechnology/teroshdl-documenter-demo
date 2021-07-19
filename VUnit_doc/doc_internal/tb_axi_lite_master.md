@@ -1,5 +1,6 @@
 # Entity: tb_axi_lite_master
 
+- **File**: tb_axi_lite_master.vhd
 ## Diagram
 
 ![Diagram](tb_axi_lite_master.svg "Diagram")

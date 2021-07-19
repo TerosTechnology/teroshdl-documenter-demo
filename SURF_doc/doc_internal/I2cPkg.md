@@ -1,5 +1,6 @@
 # Package: I2cPkg
 
+- **File**: I2cPkg.vhd
 ## Constants
 
 | Name                         | Type                       | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Description |

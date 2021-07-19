@@ -1,5 +1,6 @@
 # Entity: sdram_ctrl_phy_s3esk
 
+- **File**: sdram_ctrl_phy_s3esk.vhdl
 ## Diagram
 
 ![Diagram](sdram_ctrl_phy_s3esk.svg "Diagram")

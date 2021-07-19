@@ -1,5 +1,6 @@
 # Entity: top
 
+- **File**: top.vhd
 ## Diagram
 
 ![Diagram](top.svg "Diagram")

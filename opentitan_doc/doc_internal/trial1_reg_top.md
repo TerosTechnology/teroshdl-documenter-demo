@@ -1,5 +1,6 @@
 # Entity: trial1_reg_top
 
+- **File**: trial1_reg_top.sv
 ## Diagram
 
 ![Diagram](trial1_reg_top.svg "Diagram")

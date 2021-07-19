@@ -1,5 +1,6 @@
 # Package: pwrmgr_test_pkg
 
+- **File**: pwrmgr_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

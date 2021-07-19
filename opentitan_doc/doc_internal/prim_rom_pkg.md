@@ -1,5 +1,6 @@
 # Package: prim_rom_pkg
 
+- **File**: prim_rom_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.
@@ -7,6 +8,11 @@ Copyright lowRISC contributors.
  SPDX-License-Identifier: Apache-2.0
  
 
+## Constants
+
+| Name      | Type      | Value | Description |
+| --------- | --------- | ----- | ----------- |
+| rom_cfg_t | rom_cfg_t | '0    |             |
 ## Types
 
 | Name      | Type                                                                                                                                                                         | Description |

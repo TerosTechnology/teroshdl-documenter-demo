@@ -1,5 +1,6 @@
 # Entity: axi_hdmi_rx_es
 
+- **File**: axi_hdmi_rx_es.v
 ## Diagram
 
 ![Diagram](axi_hdmi_rx_es.svg "Diagram")

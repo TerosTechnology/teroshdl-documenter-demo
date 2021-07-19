@@ -1,5 +1,6 @@
 # Entity: cw_exp
 
+- **File**: cw_exp.v
 ## Diagram
 
 ![Diagram](cw_exp.svg "Diagram")

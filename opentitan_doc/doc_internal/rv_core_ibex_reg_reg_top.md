@@ -1,8 +1,9 @@
-# Entity: rv_core_ibex_peri_reg_top
+# Entity: rv_core_ibex_reg_reg_top
 
+- **File**: rv_core_ibex_reg_reg_top.sv
 ## Diagram
 
-![Diagram](rv_core_ibex_peri_reg_top.svg "Diagram")
+![Diagram](rv_core_ibex_reg_reg_top.svg "Diagram")
 ## Description
 
 Copyright lowRISC contributors.

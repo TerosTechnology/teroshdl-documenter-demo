@@ -1,5 +1,6 @@
 # Entity: gearbox_down_dc
 
+- **File**: gearbox_down_dc.vhdl
 ## Diagram
 
 ![Diagram](gearbox_down_dc.svg "Diagram")

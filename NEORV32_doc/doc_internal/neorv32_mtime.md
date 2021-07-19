@@ -1,5 +1,6 @@
 # Entity: neorv32_mtime
 
+- **File**: neorv32_mtime.vhd
 ## Diagram
 
 ![Diagram](neorv32_mtime.svg "Diagram")

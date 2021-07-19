@@ -1,5 +1,6 @@
 # Package: ethernet_mac_pkg
 
+- **File**: ethernet_mac_pkg.vhd
 ## Constants
 
 | Name                | Type                 | Value  | Description |

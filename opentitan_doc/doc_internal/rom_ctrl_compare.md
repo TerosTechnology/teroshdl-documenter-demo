@@ -1,5 +1,6 @@
 # Entity: rom_ctrl_compare
 
+- **File**: rom_ctrl_compare.sv
 ## Diagram
 
 ![Diagram](rom_ctrl_compare.svg "Diagram")

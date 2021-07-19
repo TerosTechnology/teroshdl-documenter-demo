@@ -1,5 +1,6 @@
 # Package: generic_queue_pkg
 
+- **File**: generic_queue_pkg.vhd
 ## Constants
 
 | Name       | Type    | Value | Description |

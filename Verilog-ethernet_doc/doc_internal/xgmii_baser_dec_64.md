@@ -1,5 +1,6 @@
 # Entity: xgmii_baser_dec_64
 
+- **File**: xgmii_baser_dec_64.v
 ## Diagram
 
 ![Diagram](xgmii_baser_dec_64.svg "Diagram")

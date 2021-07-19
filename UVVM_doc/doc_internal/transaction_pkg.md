@@ -1,5 +1,6 @@
 # Package: transaction_pkg
 
+- **File**: transaction_pkg.vhd
 ## Signals
 
 | Name                                    | Type                                                                                                                                           | Description                                    |

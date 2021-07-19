@@ -1,5 +1,6 @@
 # Package: uart_env_pkg
 
+- **File**: uart_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

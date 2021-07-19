@@ -1,5 +1,6 @@
 # Entity: Ad9249Deserializer
 
+- **File**: Ad9249Deserializer.vhd
 ## Diagram
 
 ![Diagram](Ad9249Deserializer.svg "Diagram")

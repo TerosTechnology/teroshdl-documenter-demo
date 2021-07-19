@@ -1,5 +1,6 @@
 # Entity: io_FrequencyCounter
 
+- **File**: io_FrequencyCounter.vhdl
 ## Diagram
 
 ![Diagram](io_FrequencyCounter.svg "Diagram")

@@ -1,5 +1,6 @@
 # Package: trial1_reg_pkg
 
+- **File**: trial1_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

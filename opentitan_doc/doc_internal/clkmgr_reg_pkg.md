@@ -1,5 +1,6 @@
 # Package: clkmgr_reg_pkg
 
+- **File**: clkmgr_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

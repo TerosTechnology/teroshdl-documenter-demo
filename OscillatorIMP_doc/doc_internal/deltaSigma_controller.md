@@ -1,5 +1,6 @@
 # Entity: deltaSigma_controller
 
+- **File**: deltaSigma_controller.vhd
 ## Diagram
 
 ![Diagram](deltaSigma_controller.svg "Diagram")

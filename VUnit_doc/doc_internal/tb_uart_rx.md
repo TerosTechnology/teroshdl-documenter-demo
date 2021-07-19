@@ -1,5 +1,6 @@
 # Entity: tb_uart_rx
 
+- **File**: tb_uart_rx.vhd
 ## Diagram
 
 ![Diagram](tb_uart_rx.svg "Diagram")

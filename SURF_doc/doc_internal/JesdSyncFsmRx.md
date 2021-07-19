@@ -1,5 +1,6 @@
 # Entity: JesdSyncFsmRx
 
+- **File**: JesdSyncFsmRx.vhd
 ## Diagram
 
 ![Diagram](JesdSyncFsmRx.svg "Diagram")

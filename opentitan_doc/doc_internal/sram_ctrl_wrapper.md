@@ -1,5 +1,6 @@
 # Entity: sram_ctrl_wrapper
 
+- **File**: sram_ctrl_wrapper.sv
 ## Diagram
 
 ![Diagram](sram_ctrl_wrapper.svg "Diagram")

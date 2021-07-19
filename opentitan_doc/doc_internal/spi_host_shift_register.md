@@ -1,5 +1,6 @@
 # Entity: spi_host_shift_register
 
+- **File**: spi_host_shift_register.sv
 ## Diagram
 
 ![Diagram](spi_host_shift_register.svg "Diagram")

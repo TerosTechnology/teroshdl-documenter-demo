@@ -1,5 +1,6 @@
 # Entity: up_xfer_cntrl
 
+- **File**: up_xfer_cntrl.v
 ## Diagram
 
 ![Diagram](up_xfer_cntrl.svg "Diagram")

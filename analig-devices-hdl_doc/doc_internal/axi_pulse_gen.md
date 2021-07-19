@@ -1,5 +1,6 @@
 # Entity: axi_pulse_gen
 
+- **File**: axi_pulse_gen.v
 ## Diagram
 
 ![Diagram](axi_pulse_gen.svg "Diagram")

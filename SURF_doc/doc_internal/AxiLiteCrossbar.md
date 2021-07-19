@@ -1,5 +1,6 @@
 # Entity: AxiLiteCrossbar
 
+- **File**: AxiLiteCrossbar.vhd
 ## Diagram
 
 ![Diagram](AxiLiteCrossbar.svg "Diagram")

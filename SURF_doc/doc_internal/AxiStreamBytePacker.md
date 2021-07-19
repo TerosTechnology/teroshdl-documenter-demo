@@ -1,5 +1,6 @@
 # Entity: AxiStreamBytePacker
 
+- **File**: AxiStreamBytePacker.vhd
 ## Diagram
 
 ![Diagram](AxiStreamBytePacker.svg "Diagram")

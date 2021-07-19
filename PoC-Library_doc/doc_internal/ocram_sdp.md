@@ -1,5 +1,6 @@
 # Entity: ocram_sdp
 
+- **File**: ocram_sdp.vhdl
 ## Diagram
 
 ![Diagram](ocram_sdp.svg "Diagram")

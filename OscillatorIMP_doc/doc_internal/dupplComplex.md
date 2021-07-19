@@ -1,5 +1,6 @@
 # Entity: dupplComplex
 
+- **File**: dupplComplex.vhd
 ## Diagram
 
 ![Diagram](dupplComplex.svg "Diagram")

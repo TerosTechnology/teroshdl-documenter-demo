@@ -1,5 +1,6 @@
 # Entity: nmi_gen_reg_top
 
+- **File**: nmi_gen_reg_top.sv
 ## Diagram
 
 ![Diagram](nmi_gen_reg_top.svg "Diagram")

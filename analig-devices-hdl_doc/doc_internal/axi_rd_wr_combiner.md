@@ -1,5 +1,6 @@
 # Entity: axi_rd_wr_combiner
 
+- **File**: axi_rd_wr_combiner.v
 ## Diagram
 
 ![Diagram](axi_rd_wr_combiner.svg "Diagram")

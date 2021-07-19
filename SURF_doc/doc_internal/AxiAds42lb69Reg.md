@@ -1,5 +1,6 @@
 # Entity: AxiAds42lb69Reg
 
+- **File**: AxiAds42lb69Reg.vhd
 ## Diagram
 
 ![Diagram](AxiAds42lb69Reg.svg "Diagram")

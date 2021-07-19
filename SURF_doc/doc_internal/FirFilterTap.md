@@ -1,5 +1,6 @@
 # Entity: FirFilterTap
 
+- **File**: FirFilterTap.vhd
 ## Diagram
 
 ![Diagram](FirFilterTap.svg "Diagram")

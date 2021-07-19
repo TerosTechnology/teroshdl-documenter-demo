@@ -1,5 +1,6 @@
 # Entity: priority_encoder
 
+- **File**: priority_encoder.v
 ## Diagram
 
 ![Diagram](priority_encoder.svg "Diagram")

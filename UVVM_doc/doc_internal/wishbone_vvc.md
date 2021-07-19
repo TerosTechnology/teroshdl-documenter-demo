@@ -1,5 +1,6 @@
 # Entity: wishbone_vvc
 
+- **File**: wishbone_vvc.vhd
 ## Diagram
 
 ![Diagram](wishbone_vvc.svg "Diagram")

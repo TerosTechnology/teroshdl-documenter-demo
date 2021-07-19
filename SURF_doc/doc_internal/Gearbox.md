@@ -1,5 +1,6 @@
 # Entity: Gearbox
 
+- **File**: Gearbox.vhd
 ## Diagram
 
 ![Diagram](Gearbox.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axi_adc_decimate
 
+- **File**: axi_adc_decimate.v
 ## Diagram
 
 ![Diagram](axi_adc_decimate.svg "Diagram")

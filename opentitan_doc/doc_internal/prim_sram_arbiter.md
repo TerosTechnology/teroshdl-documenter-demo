@@ -1,5 +1,6 @@
 # Entity: prim_sram_arbiter
 
+- **File**: prim_sram_arbiter.sv
 ## Diagram
 
 ![Diagram](prim_sram_arbiter.svg "Diagram")

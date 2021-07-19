@@ -1,5 +1,6 @@
 # Entity: axi_cdma
 
+- **File**: axi_cdma.v
 ## Diagram
 
 ![Diagram](axi_cdma.svg "Diagram")

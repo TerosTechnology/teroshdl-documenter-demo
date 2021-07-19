@@ -1,5 +1,6 @@
 # Entity: tb_many_ways_to_fail
 
+- **File**: tb_many_ways_to_fail.vhd
 ## Diagram
 
 ![Diagram](tb_many_ways_to_fail.svg "Diagram")

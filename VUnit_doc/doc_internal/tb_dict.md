@@ -1,5 +1,6 @@
 # Entity: tb_dict
 
+- **File**: tb_dict.vhd
 ## Diagram
 
 ![Diagram](tb_dict.svg "Diagram")

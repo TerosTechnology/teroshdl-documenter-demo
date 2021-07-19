@@ -1,5 +1,6 @@
 # Entity: clkmgr_reg_top
 
+- **File**: clkmgr_reg_top.sv
 ## Diagram
 
 ![Diagram](clkmgr_reg_top.svg "Diagram")

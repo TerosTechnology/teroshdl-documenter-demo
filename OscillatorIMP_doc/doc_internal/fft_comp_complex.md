@@ -1,5 +1,6 @@
 # Entity: fft_comp_complex
 
+- **File**: fft_comp_complex.vhd
 ## Diagram
 
 ![Diagram](fft_comp_complex.svg "Diagram")

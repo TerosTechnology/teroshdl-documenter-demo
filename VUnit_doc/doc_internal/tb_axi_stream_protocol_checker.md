@@ -1,5 +1,6 @@
 # Entity: tb_axi_stream_protocol_checker
 
+- **File**: tb_axi_stream_protocol_checker.vhd
 ## Diagram
 
 ![Diagram](tb_axi_stream_protocol_checker.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: axis_eth_fcs
 
+- **File**: axis_eth_fcs.v
 ## Diagram
 
 ![Diagram](axis_eth_fcs.svg "Diagram")

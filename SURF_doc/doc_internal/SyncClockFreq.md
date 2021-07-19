@@ -1,5 +1,6 @@
 # Entity: SyncClockFreq
 
+- **File**: SyncClockFreq.vhd
 ## Diagram
 
 ![Diagram](SyncClockFreq.svg "Diagram")

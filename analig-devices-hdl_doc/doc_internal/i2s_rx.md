@@ -1,5 +1,6 @@
 # Entity: i2s_rx
 
+- **File**: i2s_rx.vhd
 ## Diagram
 
 ![Diagram](i2s_rx.svg "Diagram")

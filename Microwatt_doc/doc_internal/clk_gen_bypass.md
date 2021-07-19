@@ -1,5 +1,6 @@
 # Entity: clock_generator
 
+- **File**: clk_gen_bypass.vhd
 ## Diagram
 
 ![Diagram](clk_gen_bypass.svg "Diagram")

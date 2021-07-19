@@ -1,5 +1,6 @@
 # Entity: phy_rx_parse
 
+- **File**: phy_rx_parse.v
 ## Diagram
 
 ![Diagram](phy_rx_parse.svg "Diagram")

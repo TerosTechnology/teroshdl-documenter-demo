@@ -1,5 +1,6 @@
 # Entity: rom
 
+- **File**: rom.v
 ## Diagram
 
 ![Diagram](rom.svg "Diagram")

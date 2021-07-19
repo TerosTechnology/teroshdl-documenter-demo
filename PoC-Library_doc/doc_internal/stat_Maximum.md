@@ -1,5 +1,6 @@
 # Entity: stat_Maximum
 
+- **File**: stat_Maximum.vhdl
 ## Diagram
 
 ![Diagram](stat_Maximum.svg "Diagram")

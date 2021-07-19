@@ -1,5 +1,6 @@
 # Entity: tb_infinite_events
 
+- **File**: tb_infinite_events.vhd
 ## Diagram
 
 ![Diagram](tb_infinite_events.svg "Diagram")

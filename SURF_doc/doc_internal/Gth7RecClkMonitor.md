@@ -1,5 +1,6 @@
 # Entity: Gth7RecClkMonitor
 
+- **File**: Gth7RecClkMonitor.vhd
 ## Diagram
 
 ![Diagram](Gth7RecClkMonitor.svg "Diagram")

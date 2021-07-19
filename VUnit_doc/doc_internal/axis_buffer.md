@@ -1,5 +1,6 @@
 # Entity: axis_buffer
 
+- **File**: axis_buffer.vhd
 ## Diagram
 
 ![Diagram](axis_buffer.svg "Diagram")

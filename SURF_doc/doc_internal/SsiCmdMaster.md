@@ -1,5 +1,6 @@
 # Entity: SsiCmdMaster
 
+- **File**: SsiCmdMaster.vhd
 ## Diagram
 
 ![Diagram](SsiCmdMaster.svg "Diagram")

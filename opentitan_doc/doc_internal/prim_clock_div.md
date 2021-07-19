@@ -1,5 +1,6 @@
 # Entity: prim_clock_div
 
+- **File**: prim_clock_div.sv
 ## Diagram
 
 ![Diagram](prim_clock_div.svg "Diagram")

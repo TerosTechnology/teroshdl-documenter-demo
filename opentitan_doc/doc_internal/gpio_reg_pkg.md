@@ -1,5 +1,6 @@
 # Package: gpio_reg_pkg
 
+- **File**: gpio_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Package: spi_host_cmd_pkg
 
+- **File**: spi_host_cmd_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

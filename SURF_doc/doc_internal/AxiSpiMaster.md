@@ -1,5 +1,6 @@
 # Entity: AxiSpiMaster
 
+- **File**: AxiSpiMaster.vhd
 ## Diagram
 
 ![Diagram](AxiSpiMaster.svg "Diagram")

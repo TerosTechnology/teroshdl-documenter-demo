@@ -1,5 +1,6 @@
 # Entity: kmac
 
+- **File**: kmac.sv
 ## Diagram
 
 ![Diagram](kmac.svg "Diagram")
@@ -46,7 +47,7 @@ Copyright lowRISC contributors.
 | kmac_st_d                    | kmac_st_e                              |                                                                                                                                                                                                                                                            |
 | reg2hw                       | kmac_reg2hw_t                          |                                                                                                                                                                                                                                                            |
 | hw2reg                       | kmac_hw2reg_t                          |                                                                                                                                                                                                                                                            |
-| devmode                      | logic                                  | devmode signals comes from LifeCycle. TODO: Implement                                                                                                                                                                                                      |
+| devmode                      | logic                                  | devmode ties to 1 as KMAC should be operated at the beginning for ROM_CTRL.                                                                                                                                                                                |
 | tl_win_h2d                   | tlul_pkg::tl_h2d_t                     |                                                                                                                                                                                                                                                            |
 | tl_win_d2h                   | tlul_pkg::tl_d2h_t                     |                                                                                                                                                                                                                                                            |
 | sha3_start                   | logic                                  | SHA3 core control signals and its response. Sequence: start --> process(multiple) --> get absorbed event --> {run -->} done                                                                                                                                |

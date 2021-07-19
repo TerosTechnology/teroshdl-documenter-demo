@@ -1,5 +1,6 @@
 # Entity: dmac_src_mm_axi
 
+- **File**: src_axi_mm.v
 ## Diagram
 
 ![Diagram](src_axi_mm.svg "Diagram")

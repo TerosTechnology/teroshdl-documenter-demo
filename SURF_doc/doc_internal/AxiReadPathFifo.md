@@ -1,5 +1,6 @@
 # Entity: AxiReadPathFifo
 
+- **File**: AxiReadPathFifo.vhd
 ## Diagram
 
 ![Diagram](AxiReadPathFifo.svg "Diagram")

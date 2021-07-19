@@ -1,5 +1,6 @@
 # Package: uart_test_pkg
 
+- **File**: uart_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

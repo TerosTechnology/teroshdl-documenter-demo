@@ -1,5 +1,6 @@
 # Entity: tx_encoder
 
+- **File**: tx_encoder.vhd
 ## Diagram
 
 ![Diagram](tx_encoder.svg "Diagram")

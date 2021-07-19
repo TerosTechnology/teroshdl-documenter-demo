@@ -1,5 +1,6 @@
 # Entity: pidv3_axi_sync_bit
 
+- **File**: pidv3_axi_sync_bit.vhd
 ## Diagram
 
 ![Diagram](pidv3_axi_sync_bit.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: rstmgr_reg_top
 
+- **File**: rstmgr_reg_top.sv
 ## Diagram
 
 ![Diagram](rstmgr_reg_top.svg "Diagram")

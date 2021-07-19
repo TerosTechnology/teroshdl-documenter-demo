@@ -1,5 +1,6 @@
 # Entity: axi_pwm_gen_regmap
 
+- **File**: axi_pwm_gen_regmap.v
 ## Diagram
 
 ![Diagram](axi_pwm_gen_regmap.svg "Diagram")

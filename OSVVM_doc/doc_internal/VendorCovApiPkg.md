@@ -1,5 +1,6 @@
 # Package: VendorCovApiPkg
 
+- **File**: VendorCovApiPkg.vhd
 ## Types
 
 | Name                    | Type                                              | Description                                                        |

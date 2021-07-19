@@ -1,5 +1,6 @@
 # Entity: neorv32_cpu_cp_shifter
 
+- **File**: neorv32_cpu_cp_shifter.vhd
 ## Diagram
 
 ![Diagram](neorv32_cpu_cp_shifter.svg "Diagram")

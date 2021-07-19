@@ -1,5 +1,6 @@
 # Package: types_pkg
 
+- **File**: types.vhd
 ## Types
 
 | Name                                  | Type                                                                                                | Description |

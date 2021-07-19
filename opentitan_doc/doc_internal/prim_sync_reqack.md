@@ -1,5 +1,6 @@
 # Entity: prim_sync_reqack
 
+- **File**: prim_sync_reqack.sv
 ## Diagram
 
 ![Diagram](prim_sync_reqack.svg "Diagram")

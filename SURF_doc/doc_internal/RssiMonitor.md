@@ -1,5 +1,6 @@
 # Entity: RssiMonitor
 
+- **File**: RssiMonitor.vhd
 ## Diagram
 
 ![Diagram](RssiMonitor.svg "Diagram")

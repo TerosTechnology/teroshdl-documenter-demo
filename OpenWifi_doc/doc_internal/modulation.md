@@ -1,5 +1,6 @@
 # Entity: modulation
 
+- **File**: modulation.v
 ## Diagram
 
 ![Diagram](modulation.svg "Diagram")

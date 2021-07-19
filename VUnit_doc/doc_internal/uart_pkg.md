@@ -1,5 +1,6 @@
 # Package: uart_pkg
 
+- **File**: uart_pkg.vhd
 ## Constants
 
 | Name                   | Type       | Value                               | Description |

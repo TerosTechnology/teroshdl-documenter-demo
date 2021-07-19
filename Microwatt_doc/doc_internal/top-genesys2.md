@@ -1,5 +1,6 @@
 # Entity: toplevel
 
+- **File**: top-genesys2.vhdl
 ## Diagram
 
 ![Diagram](top-genesys2.svg "Diagram")

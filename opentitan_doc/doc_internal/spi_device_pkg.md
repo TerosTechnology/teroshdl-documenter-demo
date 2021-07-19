@@ -1,5 +1,6 @@
 # Package: spi_device_pkg
 
+- **File**: spi_device_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

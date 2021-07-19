@@ -1,5 +1,6 @@
 # Entity: bitreverse
 
+- **File**: bitreverse.v
 ## Diagram
 
 ![Diagram](bitreverse.svg "Diagram")

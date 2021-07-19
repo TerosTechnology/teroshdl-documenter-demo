@@ -1,5 +1,6 @@
 # Entity: FirFilterSingleChannel
 
+- **File**: FirFilterSingleChannel.vhd
 ## Diagram
 
 ![Diagram](FirFilterSingleChannel.svg "Diagram")

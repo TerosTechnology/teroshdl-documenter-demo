@@ -1,5 +1,6 @@
 # Entity: Gth7RxFixedLatPhaseAligner
 
+- **File**: Gth7RxFixedLatPhaseAligner.vhd
 ## Diagram
 
 ![Diagram](Gth7RxFixedLatPhaseAligner.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: prim_subreg_shadow
 
+- **File**: prim_subreg_shadow.sv
 ## Diagram
 
 ![Diagram](prim_subreg_shadow.svg "Diagram")
@@ -12,11 +13,12 @@ Copyright lowRISC contributors.
  
 ## Generics
 
-| Generic name | Type           | Value | Description                     |
-| ------------ | -------------- | ----- | ------------------------------- |
-| DW           | int            | 32    |                                 |
-| SWACCESS     |                | "RW"  | {RW, RO, WO, W1C, W1S, W0C, RC} |
-| DW           | logic [DW-1:0] | '0    | reset value                     |
+| Generic name      | Type           | Value   | Description                     |
+| ----------------- | -------------- | ------- | ------------------------------- |
+| DW                | int            | 32      |                                 |
+| SWACCESS          |                | "RW"    | {RW, RO, WO, W1C, W1S, W0C, RC} |
+| DW                | logic [DW-1:0] | '0      | reset value                     |
+| INVERTED_SWACCESS | bit [3*8-1:0]  | "W0C" : |                                 |
 ## Ports
 
 | Port name   | Direction | Type     | Description                                                                               |

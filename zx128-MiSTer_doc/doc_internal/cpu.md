@@ -1,5 +1,6 @@
 # Entity: cpu
 
+- **File**: cpu.v
 ## Diagram
 
 ![Diagram](cpu.svg "Diagram")

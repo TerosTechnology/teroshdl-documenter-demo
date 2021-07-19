@@ -1,5 +1,6 @@
 # Entity: AxiStreamTap
 
+- **File**: AxiStreamTap.vhd
 ## Diagram
 
 ![Diagram](AxiStreamTap.svg "Diagram")

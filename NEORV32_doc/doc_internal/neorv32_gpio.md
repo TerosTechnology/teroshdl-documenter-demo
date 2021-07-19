@@ -1,5 +1,6 @@
 # Entity: neorv32_gpio
 
+- **File**: neorv32_gpio.vhd
 ## Diagram
 
 ![Diagram](neorv32_gpio.svg "Diagram")

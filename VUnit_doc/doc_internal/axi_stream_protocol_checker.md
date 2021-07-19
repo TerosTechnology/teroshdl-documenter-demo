@@ -1,5 +1,6 @@
 # Entity: axi_stream_protocol_checker
 
+- **File**: axi_stream_protocol_checker.vhd
 ## Diagram
 
 ![Diagram](axi_stream_protocol_checker.svg "Diagram")

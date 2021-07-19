@@ -1,5 +1,6 @@
 # Package: integer_array_pkg
 
+- **File**: integer_array_pkg.vhd
 ## Constants
 
 | Name               | Type            | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Description                                                       |

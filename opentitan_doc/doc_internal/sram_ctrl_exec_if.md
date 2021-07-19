@@ -1,5 +1,6 @@
 # Package: lc_ctrl_pkg
 
+- **File**: sram_ctrl_exec_if.sv
 ## Description
 
 Copyright lowRISC contributors.

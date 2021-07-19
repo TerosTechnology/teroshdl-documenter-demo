@@ -1,5 +1,6 @@
 # Package: rstmgr_pkg
 
+- **File**: rstmgr_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

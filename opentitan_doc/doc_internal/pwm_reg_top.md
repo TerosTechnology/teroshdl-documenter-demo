@@ -1,5 +1,6 @@
 # Entity: pwm_reg_top
 
+- **File**: pwm_reg_top.sv
 ## Diagram
 
 ![Diagram](pwm_reg_top.svg "Diagram")

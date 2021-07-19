@@ -1,5 +1,6 @@
 # Entity: ht_stf_rom
 
+- **File**: ht_stf_rom.v
 ## Diagram
 
 ![Diagram](ht_stf_rom.svg "Diagram")

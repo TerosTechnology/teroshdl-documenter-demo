@@ -1,5 +1,6 @@
 # Entity: ethernet_vvc
 
+- **File**: ethernet_vvc.vhd
 ## Diagram
 
 ![Diagram](ethernet_vvc.svg "Diagram")

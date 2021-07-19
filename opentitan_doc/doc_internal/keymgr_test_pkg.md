@@ -1,5 +1,6 @@
 # Package: keymgr_test_pkg
 
+- **File**: keymgr_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

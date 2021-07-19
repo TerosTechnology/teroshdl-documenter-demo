@@ -1,5 +1,6 @@
 # Package: NameStorePkg
 
+- **File**: NameStorePkg.vhd
 ## Constants
 
 | Name         | Type       | Value       | Description |

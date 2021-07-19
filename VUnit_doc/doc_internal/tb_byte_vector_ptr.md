@@ -1,5 +1,6 @@
 # Entity: tb_byte_vector_ptr
 
+- **File**: tb_byte_vector_ptr.vhd
 ## Diagram
 
 ![Diagram](tb_byte_vector_ptr.svg "Diagram")

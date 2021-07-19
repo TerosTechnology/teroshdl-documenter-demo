@@ -1,5 +1,6 @@
 # Entity: JtagSerDesCore
 
+- **File**: JtagSerDesCore.vhd
 ## Diagram
 
 ![Diagram](JtagSerDesCore.svg "Diagram")

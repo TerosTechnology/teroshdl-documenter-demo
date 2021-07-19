@@ -1,5 +1,6 @@
 # Entity: dmac_data_mover
 
+- **File**: data_mover.v
 ## Diagram
 
 ![Diagram](data_mover.svg "Diagram")

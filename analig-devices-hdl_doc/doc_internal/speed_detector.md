@@ -1,5 +1,6 @@
 # Entity: speed_detector
 
+- **File**: speed_detector.v
 ## Diagram
 
 ![Diagram](speed_detector.svg "Diagram")

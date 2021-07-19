@@ -1,5 +1,6 @@
 # Package: pwrmgr_pkg
 
+- **File**: pwrmgr_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: io_FanControl
 
+- **File**: io_FanControl.vhdl
 ## Diagram
 
 ![Diagram](io_FanControl.svg "Diagram")

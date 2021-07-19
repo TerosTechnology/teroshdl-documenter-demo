@@ -1,5 +1,6 @@
 # Entity: prnGenerator
 
+- **File**: prnGenerator.vhd
 ## Diagram
 
 ![Diagram](prnGenerator.svg "Diagram")

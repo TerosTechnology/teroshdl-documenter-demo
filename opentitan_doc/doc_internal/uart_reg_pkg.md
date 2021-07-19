@@ -1,5 +1,6 @@
 # Package: uart_reg_pkg
 
+- **File**: uart_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

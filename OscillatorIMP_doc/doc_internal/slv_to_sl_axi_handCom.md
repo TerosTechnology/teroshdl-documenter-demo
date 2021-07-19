@@ -1,5 +1,6 @@
 # Entity: slv_to_sl_axi_handCom
 
+- **File**: slv_to_sl_axi_handCom.vhd
 ## Diagram
 
 ![Diagram](slv_to_sl_axi_handCom.svg "Diagram")

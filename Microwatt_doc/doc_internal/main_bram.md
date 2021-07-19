@@ -1,5 +1,6 @@
 # Entity: main_bram
 
+- **File**: main_bram.vhdl
 ## Diagram
 
 ![Diagram](main_bram.svg "Diagram")

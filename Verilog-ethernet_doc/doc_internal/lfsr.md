@@ -1,5 +1,6 @@
 # Entity: lfsr
 
+- **File**: lfsr.v
 ## Diagram
 
 ![Diagram](lfsr.svg "Diagram")

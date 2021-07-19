@@ -1,5 +1,6 @@
 # Entity: tb_avalon_stream_pkg
 
+- **File**: tb_avalon_stream_pkg.vhd
 ## Diagram
 
 ![Diagram](tb_avalon_stream_pkg.svg "Diagram")

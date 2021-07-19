@@ -1,5 +1,6 @@
 # Entity: cache_replacement_policy
 
+- **File**: cache_replacement_policy.vhdl
 ## Diagram
 
 ![Diagram](cache_replacement_policy.svg "Diagram")

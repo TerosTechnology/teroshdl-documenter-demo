@@ -1,5 +1,6 @@
 # Entity: tlul_fifo_sync
 
+- **File**: tlul_fifo_sync.sv
 ## Diagram
 
 ![Diagram](tlul_fifo_sync.svg "Diagram")

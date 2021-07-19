@@ -1,5 +1,6 @@
 # Entity: prim_generic_pad_attr
 
+- **File**: prim_generic_pad_attr.sv
 ## Diagram
 
 ![Diagram](prim_generic_pad_attr.svg "Diagram")

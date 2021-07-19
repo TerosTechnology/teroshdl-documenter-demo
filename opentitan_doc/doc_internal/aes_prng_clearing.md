@@ -1,5 +1,6 @@
 # Entity: aes_prng_clearing
 
+- **File**: aes_prng_clearing.sv
 ## Diagram
 
 ![Diagram](aes_prng_clearing.svg "Diagram")

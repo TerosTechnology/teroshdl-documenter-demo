@@ -1,5 +1,6 @@
 # Entity: Sgmii88E1111Mdio
 
+- **File**: Sgmii88E1111Mdio.vhd
 ## Diagram
 
 ![Diagram](Sgmii88E1111Mdio.svg "Diagram")

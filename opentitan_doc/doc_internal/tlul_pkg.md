@@ -1,5 +1,6 @@
 # Package: tlul_pkg
 
+- **File**: tlul_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

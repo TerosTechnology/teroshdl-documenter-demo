@@ -1,5 +1,6 @@
 # Entity: TenGigEthGtyUltraScaleClk
 
+- **File**: TenGigEthGtyUltraScaleClk.vhd
 ## Diagram
 
 ![Diagram](TenGigEthGtyUltraScaleClk.svg "Diagram")

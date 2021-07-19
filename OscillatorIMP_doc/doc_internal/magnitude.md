@@ -1,5 +1,6 @@
 # Entity: magnitude
 
+- **File**: magnitude.v
 ## Diagram
 
 ![Diagram](magnitude.svg "Diagram")

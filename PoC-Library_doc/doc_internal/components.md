@@ -1,5 +1,6 @@
 # Package: components
 
+- **File**: components.vhdl
 ## Functions
 - registered <font id="function_arguments">(signal Clock : std_logic;<br><span style="padding-left:20px"> constant IsRegistered : boolean) </font> <font id="function_return">return boolean </font>
 - ffrs <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">	rst : std_logic := '0';<br><span style="padding-left:20px"> set : std_logic := '0') </font> <font id="function_return">return std_logic </font>

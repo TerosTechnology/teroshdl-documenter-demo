@@ -1,5 +1,6 @@
 # Entity: ddrio_in_altera
 
+- **File**: ddrio_in_altera.vhdl
 ## Diagram
 
 ![Diagram](ddrio_in_altera.svg "Diagram")

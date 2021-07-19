@@ -1,5 +1,6 @@
 # Entity: dc_rm
 
+- **File**: dc_rm.v
 ## Diagram
 
 ![Diagram](dc_rm.svg "Diagram")

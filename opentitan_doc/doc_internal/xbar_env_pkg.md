@@ -1,5 +1,6 @@
 # Package: xbar_env_pkg
 
+- **File**: xbar_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

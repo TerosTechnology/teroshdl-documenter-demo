@@ -1,5 +1,6 @@
 # Package: fixed_float_types
 
+- **File**: fixed_float_types_c.vhd
 ## Types
 
 | Name                      | Type                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                   |

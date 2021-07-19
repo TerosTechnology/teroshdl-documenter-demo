@@ -1,5 +1,6 @@
 # Entity: axis_baser_tx_64
 
+- **File**: axis_baser_tx_64.v
 ## Diagram
 
 ![Diagram](axis_baser_tx_64.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: neorv32_icache
 
+- **File**: neorv32_icache.vhd
 ## Diagram
 
 ![Diagram](neorv32_icache.svg "Diagram")

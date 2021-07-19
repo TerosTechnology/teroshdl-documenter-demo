@@ -1,5 +1,6 @@
 # Entity: tb_minimal
 
+- **File**: tb_minimal.vhd
 ## Diagram
 
 ![Diagram](tb_minimal.svg "Diagram")

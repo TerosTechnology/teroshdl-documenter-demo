@@ -1,5 +1,6 @@
 # Package: pwm_env_pkg
 
+- **File**: pwm_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

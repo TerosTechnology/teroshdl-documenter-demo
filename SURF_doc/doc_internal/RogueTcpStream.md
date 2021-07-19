@@ -1,5 +1,6 @@
 # Entity: RogueTcpStream
 
+- **File**: RogueTcpStream.vhd
 ## Diagram
 
 ![Diagram](RogueTcpStream.svg "Diagram")

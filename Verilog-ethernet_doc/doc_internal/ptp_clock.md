@@ -1,5 +1,6 @@
 # Entity: ptp_clock
 
+- **File**: ptp_clock.v
 ## Diagram
 
 ![Diagram](ptp_clock.svg "Diagram")

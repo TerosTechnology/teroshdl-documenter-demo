@@ -1,5 +1,6 @@
 # Entity: neorv32_wishbone
 
+- **File**: neorv32_wishbone.vhd
 ## Diagram
 
 ![Diagram](neorv32_wishbone.svg "Diagram")

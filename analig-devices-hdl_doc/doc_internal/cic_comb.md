@@ -1,5 +1,6 @@
 # Entity: cic_comb
 
+- **File**: cic_comb.v
 ## Diagram
 
 ![Diagram](cic_comb.svg "Diagram")

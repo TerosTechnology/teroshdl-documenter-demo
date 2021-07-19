@@ -1,5 +1,6 @@
 # Entity: EthMacRxFilter
 
+- **File**: EthMacRxFilter.vhd
 ## Diagram
 
 ![Diagram](EthMacRxFilter.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Pgp2bGth7VarLatWrapper
 
+- **File**: Pgp2bGth7VarLatWrapper.vhd
 ## Diagram
 
 ![Diagram](Pgp2bGth7VarLatWrapper.svg "Diagram")

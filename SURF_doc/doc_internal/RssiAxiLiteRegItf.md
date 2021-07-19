@@ -1,5 +1,6 @@
 # Entity: RssiAxiLiteRegItf
 
+- **File**: RssiAxiLiteRegItf.vhd
 ## Diagram
 
 ![Diagram](RssiAxiLiteRegItf.svg "Diagram")

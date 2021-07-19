@@ -1,5 +1,6 @@
 # Entity: pwm_chan
 
+- **File**: pwm_chan.sv
 ## Diagram
 
 ![Diagram](pwm_chan.svg "Diagram")

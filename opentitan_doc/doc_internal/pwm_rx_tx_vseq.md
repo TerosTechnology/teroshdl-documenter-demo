@@ -1,5 +1,6 @@
 # Package: begin
 
+- **File**: pwm_rx_tx_vseq.sv
 ## Description
 
 Copyright lowRISC contributors.

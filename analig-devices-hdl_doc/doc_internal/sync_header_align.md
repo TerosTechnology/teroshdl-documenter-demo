@@ -1,5 +1,6 @@
 # Entity: sync_header_align
 
+- **File**: sync_header_align.v
 ## Diagram
 
 ![Diagram](sync_header_align.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: io_7SegmentMux_BCD
 
+- **File**: io_7SegmentMux_BCD.vhdl
 ## Diagram
 
 ![Diagram](io_7SegmentMux_BCD.svg "Diagram")

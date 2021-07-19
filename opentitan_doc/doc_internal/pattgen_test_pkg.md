@@ -1,5 +1,6 @@
 # Package: pattgen_test_pkg
 
+- **File**: pattgen_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

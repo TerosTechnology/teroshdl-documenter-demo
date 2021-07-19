@@ -1,5 +1,6 @@
 # Package: pwm_reg_pkg
 
+- **File**: pwm_reg_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

@@ -1,5 +1,6 @@
 # Entity: EthMacRxBypass
 
+- **File**: EthMacRxBypass.vhd
 ## Diagram
 
 ![Diagram](EthMacRxBypass.svg "Diagram")

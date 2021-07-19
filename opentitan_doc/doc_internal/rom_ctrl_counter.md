@@ -1,5 +1,6 @@
 # Entity: rom_ctrl_counter
 
+- **File**: rom_ctrl_counter.sv
 ## Diagram
 
 ![Diagram](rom_ctrl_counter.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: flash_ctrl_wrapper
 
+- **File**: flash_ctrl_wrapper.sv
 ## Diagram
 
 ![Diagram](flash_ctrl_wrapper.svg "Diagram")

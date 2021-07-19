@@ -1,5 +1,6 @@
 # Package: csrng_test_pkg
 
+- **File**: csrng_test_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

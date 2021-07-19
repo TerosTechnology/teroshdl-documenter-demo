@@ -1,5 +1,6 @@
 # Entity: AxiStreamCombiner
 
+- **File**: AxiStreamCombiner.vhd
 ## Diagram
 
 ![Diagram](AxiStreamCombiner.svg "Diagram")

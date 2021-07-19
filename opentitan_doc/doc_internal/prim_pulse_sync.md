@@ -1,5 +1,6 @@
 # Entity: prim_pulse_sync
 
+- **File**: prim_pulse_sync.sv
 ## Diagram
 
 ![Diagram](prim_pulse_sync.svg "Diagram")

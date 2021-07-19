@@ -1,5 +1,6 @@
 # Package: usbdev_env_pkg
 
+- **File**: usbdev_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

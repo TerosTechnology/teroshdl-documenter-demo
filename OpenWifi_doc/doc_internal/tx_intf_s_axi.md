@@ -1,5 +1,6 @@
 # Entity: tx_intf_s_axi
 
+- **File**: tx_intf_s_axi.v
 ## Diagram
 
 ![Diagram](tx_intf_s_axi.svg "Diagram")

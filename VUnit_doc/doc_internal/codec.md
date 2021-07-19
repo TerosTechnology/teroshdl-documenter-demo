@@ -1,5 +1,6 @@
 # Package: codec_pkg
 
+- **File**: codec.vhd
 ## Types
 
 | Name    | Type                             | Description |

@@ -1,5 +1,6 @@
 # Package: core_pkg
 
+- **File**: core_pkg.vhd
 ## Functions
 - setup <font id="function_arguments">(file_name : string) </font> <font id="function_return">return ()</font>
 - test_start <font id="function_arguments">(test_name : string) </font> <font id="function_return">return ()</font>

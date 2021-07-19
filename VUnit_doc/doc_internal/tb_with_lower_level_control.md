@@ -1,5 +1,6 @@
 # Entity: tb_with_lower_level_control
 
+- **File**: tb_with_lower_level_control.vhd
 ## Diagram
 
 ![Diagram](tb_with_lower_level_control.svg "Diagram")

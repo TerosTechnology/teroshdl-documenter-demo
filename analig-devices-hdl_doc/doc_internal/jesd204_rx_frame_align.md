@@ -1,5 +1,6 @@
 # Entity: jesd204_rx_frame_align
 
+- **File**: jesd204_rx_frame_align.v
 ## Diagram
 
 ![Diagram](jesd204_rx_frame_align.svg "Diagram")

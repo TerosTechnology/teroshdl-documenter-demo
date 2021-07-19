@@ -1,5 +1,6 @@
 # Entity: redpitaya_adc_dac_clk
 
+- **File**: redpitaya_adc_dac_clk.v
 ## Diagram
 
 ![Diagram](redpitaya_adc_dac_clk.svg "Diagram")

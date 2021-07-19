@@ -1,5 +1,6 @@
 # Package: avalon_pkg
 
+- **File**: avalon_pkg.vhd
 ## Constants
 
 | Name                | Type     | Value                               | Description |

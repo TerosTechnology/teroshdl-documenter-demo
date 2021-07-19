@@ -1,5 +1,6 @@
 # Entity: neorv32_cpu_decompressor
 
+- **File**: neorv32_cpu_decompressor.vhd
 ## Diagram
 
 ![Diagram](neorv32_cpu_decompressor.svg "Diagram")

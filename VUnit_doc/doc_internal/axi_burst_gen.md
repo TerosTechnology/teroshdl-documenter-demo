@@ -1,5 +1,6 @@
 # Entity: axi_burst_gen
 
+- **File**: axi_burst_gen.vhd
 ## Diagram
 
 ![Diagram](axi_burst_gen.svg "Diagram")

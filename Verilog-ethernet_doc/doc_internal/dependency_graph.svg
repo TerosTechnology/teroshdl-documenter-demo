@@ -26,7 +26,7 @@
 <text text-anchor="middle" x="3537.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">arp_cache.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_cache.v -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_cache.v</title>
 <path fill="none" stroke="#000000" d="M3731.7485,-147.6758C3728.8354,-146.3538 3725.8878,-145.1001 3723.0168,-144 3669.4968,-123.4925 3651.6454,-125.1542 3592.9604,-108.1771"/>
 <polygon fill="#000000" stroke="#000000" points="3593.7615,-104.7643 3583.1795,-105.2861 3591.7773,-111.4772 3593.7615,-104.7643"/>
@@ -40,7 +40,7 @@
 <text text-anchor="middle" x="3759.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">arp_eth_rx.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_eth_rx.v -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_eth_rx.v</title>
 <path fill="none" stroke="#000000" d="M3759.0168,-143.8314C3759.0168,-136.131 3759.0168,-126.9743 3759.0168,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="3762.5169,-118.4132 3759.0168,-108.4133 3755.5169,-118.4133 3762.5169,-118.4132"/>
@@ -54,7 +54,7 @@
 <text text-anchor="middle" x="3648.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">arp_eth_tx.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_eth_tx.v -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp_eth_tx.v</title>
 <path fill="none" stroke="#000000" d="M3731.8631,-144.3868C3717.6989,-135.1992 3700.1675,-123.8275 3684.8032,-113.8615"/>
 <polygon fill="#000000" stroke="#000000" points="3686.3435,-110.6888 3676.0492,-108.1832 3682.5341,-116.5615 3686.3435,-110.6888"/>
@@ -296,7 +296,7 @@
 <text text-anchor="middle" x="1217.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_10g.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_rx_32.v -->
-<g id="edge21" class="edge">
+<g id="edge20" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_rx_32.v</title>
 <path fill="none" stroke="#000000" d="M1273.0346,-147.9468C1316.7589,-136.9776 1378.0057,-121.6126 1426.4458,-109.4603"/>
 <polygon fill="#000000" stroke="#000000" points="1427.4175,-112.8251 1436.2652,-106.9969 1425.7141,-106.0355 1427.4175,-112.8251"/>
@@ -308,13 +308,13 @@
 <polygon fill="#000000" stroke="#000000" points="1099.4316,-108.6929 1088.857,-108.038 1096.7152,-115.1443 1099.4316,-108.6929"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_tx_32.v -->
-<g id="edge18" class="edge">
+<g id="edge21" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_tx_32.v</title>
 <path fill="none" stroke="#000000" d="M1212.4746,-143.8314C1210.5284,-136.0463 1208.21,-126.7729 1206.0505,-118.1347"/>
 <polygon fill="#000000" stroke="#000000" points="1209.441,-117.2658 1203.6201,-108.4133 1202.65,-118.9636 1209.441,-117.2658"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_tx_64.v -->
-<g id="edge20" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_xgmii_tx_64.v</title>
 <path fill="none" stroke="#000000" d="M1250.8307,-143.8314C1268.2875,-134.4516 1289.7655,-122.9112 1308.352,-112.9244"/>
 <polygon fill="#000000" stroke="#000000" points="1310.0614,-115.9792 1317.2138,-108.1628 1306.7482,-109.8129 1310.0614,-115.9792"/>
@@ -328,7 +328,7 @@
 <text text-anchor="middle" x="1107.0168" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_10g_fifo.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v -->
-<g id="edge25" class="edge">
+<g id="edge22" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g.v</title>
 <path fill="none" stroke="#000000" d="M1153.396,-287.9215C1169.7853,-279.3556 1186.8901,-267.5314 1198.0168,-252 1210.8263,-234.1195 1215.3521,-209.427 1216.7999,-190.4283"/>
 <polygon fill="#000000" stroke="#000000" points="1220.3042,-190.4356 1217.3285,-180.2673 1213.3136,-190.0719 1220.3042,-190.4356"/>
@@ -342,7 +342,7 @@
 <text text-anchor="middle" x="997.0168" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ptp_clock_cdc.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_clock_cdc.v -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_clock_cdc.v</title>
 <path fill="none" stroke="#000000" d="M1079.2592,-287.8314C1065.3198,-278.7074 1048.257,-267.539 1033.2937,-257.7449"/>
 <polygon fill="#000000" stroke="#000000" points="1035.0494,-254.711 1024.7656,-252.1628 1031.2158,-260.5679 1035.0494,-254.711"/>
@@ -356,7 +356,7 @@
 <text text-anchor="middle" x="1131.0168" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ptp_tag_insert.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_tag_insert.v -->
-<g id="edge22" class="edge">
+<g id="edge25" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_tag_insert.v</title>
 <path fill="none" stroke="#000000" d="M1113.073,-287.8314C1115.668,-280.0463 1118.7592,-270.7729 1121.6386,-262.1347"/>
 <polygon fill="#000000" stroke="#000000" points="1125.0371,-263.0069 1124.879,-252.4133 1118.3963,-260.7933 1125.0371,-263.0069"/>
@@ -370,7 +370,7 @@
 <text text-anchor="middle" x="864.0168" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ptp_ts_extract.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_ts_extract.v -->
-<g id="edge24" class="edge">
+<g id="edge23" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_ts_extract.v</title>
 <path fill="none" stroke="#000000" d="M1046.0113,-287.9243C1011.186,-277.6057 967.4585,-264.6494 931.5943,-254.023"/>
 <polygon fill="#000000" stroke="#000000" points="932.2836,-250.5769 921.7013,-251.0917 930.2949,-257.2884 932.2836,-250.5769"/>
@@ -384,13 +384,13 @@
 <text text-anchor="middle" x="2590.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_1g.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_1g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_gmii_rx.v -->
-<g id="edge27" class="edge">
+<g id="edge26" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_1g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_gmii_rx.v</title>
 <path fill="none" stroke="#000000" d="M2620.8026,-143.8314C2636.4071,-134.6221 2655.5408,-123.3301 2672.2471,-113.4706"/>
 <polygon fill="#000000" stroke="#000000" points="2674.4077,-116.2596 2681.2409,-108.1628 2670.8499,-110.2312 2674.4077,-116.2596"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_1g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_gmii_tx.v -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_1g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_gmii_tx.v</title>
 <path fill="none" stroke="#000000" d="M2590.0168,-143.8314C2590.0168,-136.131 2590.0168,-126.9743 2590.0168,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="2593.5169,-118.4132 2590.0168,-108.4133 2586.5169,-118.4133 2593.5169,-118.4132"/>
@@ -552,7 +552,7 @@
 <text text-anchor="middle" x="405.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_phy_10g_rx.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v -->
-<g id="edge39" class="edge">
+<g id="edge38" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v</title>
 <path fill="none" stroke="#000000" d="M646.6006,-217.572C601.1095,-207.1076 541.8381,-193.4733 493.3899,-182.3286"/>
 <polygon fill="#000000" stroke="#000000" points="494.0689,-178.8935 483.5387,-180.0626 492.4996,-185.7153 494.0689,-178.8935"/>
@@ -566,7 +566,7 @@
 <text text-anchor="middle" x="735.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_phy_10g_tx.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v -->
-<g id="edge38" class="edge">
+<g id="edge39" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v</title>
 <path fill="none" stroke="#000000" d="M722.3066,-215.8314C724.1248,-208.131 726.2867,-198.9743 728.3073,-190.4166"/>
 <polygon fill="#000000" stroke="#000000" points="731.7776,-190.95 730.6692,-180.4133 724.9649,-189.3414 731.7776,-190.95"/>
@@ -580,31 +580,31 @@
 <text text-anchor="middle" x="888.0168" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_mac_phy_10g_fifo.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v -->
-<g id="edge41" class="edge">
+<g id="edge42" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g.v</title>
 <path fill="none" stroke="#000000" d="M845.1186,-287.8314C822.2811,-278.159 794.0188,-266.1891 769.9481,-255.9944"/>
 <polygon fill="#000000" stroke="#000000" points="771.1797,-252.7151 760.6065,-252.038 768.4497,-259.1608 771.1797,-252.7151"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_clock_cdc.v -->
-<g id="edge42" class="edge">
+<g id="edge41" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_clock_cdc.v</title>
 <path fill="none" stroke="#000000" d="M915.5221,-287.8314C929.3348,-278.7074 946.2424,-267.539 961.0697,-257.7449"/>
 <polygon fill="#000000" stroke="#000000" points="963.1054,-260.5949 969.5203,-252.1628 959.2472,-254.7541 963.1054,-260.5949"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_tag_insert.v -->
-<g id="edge40" class="edge">
+<g id="edge43" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_tag_insert.v</title>
 <path fill="none" stroke="#000000" d="M949.0223,-287.9243C983.8476,-277.6057 1027.5751,-264.6494 1063.4393,-254.023"/>
 <polygon fill="#000000" stroke="#000000" points="1064.7387,-257.2884 1073.3323,-251.0917 1062.75,-250.5769 1064.7387,-257.2884"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_ts_extract.v -->
-<g id="edge43" class="edge">
+<g id="edge40" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_fifo.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ptp_ts_extract.v</title>
 <path fill="none" stroke="#000000" d="M881.9606,-287.8314C879.3656,-280.0463 876.2744,-270.7729 873.395,-262.1347"/>
 <polygon fill="#000000" stroke="#000000" points="876.6373,-260.7933 870.1546,-252.4133 869.9965,-263.0069 876.6373,-260.7933"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_baser_rx_64.v -->
-<g id="edge45" class="edge">
+<g id="edge44" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_baser_rx_64.v</title>
 <path fill="none" stroke="#000000" d="M404.5121,-143.8314C404.2982,-136.131 404.0439,-126.9743 403.8062,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="407.3047,-118.3122 403.5283,-108.4133 400.3074,-118.5066 407.3047,-118.3122"/>
@@ -618,13 +618,13 @@
 <text text-anchor="middle" x="245.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_phy_10g_rx_if.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v -->
-<g id="edge44" class="edge">
+<g id="edge45" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v</title>
 <path fill="none" stroke="#000000" d="M364.642,-143.8314C343.3381,-134.2446 317.0185,-122.4008 294.4957,-112.2655"/>
 <polygon fill="#000000" stroke="#000000" points="295.6567,-108.95 285.1012,-108.038 292.7842,-115.3334 295.6567,-108.95"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_baser_tx_64.v -->
-<g id="edge46" class="edge">
+<g id="edge47" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/axis_baser_tx_64.v</title>
 <path fill="none" stroke="#000000" d="M774.6345,-143.8314C795.539,-134.2446 821.3651,-122.4008 843.4656,-112.2655"/>
 <polygon fill="#000000" stroke="#000000" points="845.0532,-115.388 852.684,-108.038 842.1352,-109.0252 845.0532,-115.388"/>
@@ -638,7 +638,7 @@
 <text text-anchor="middle" x="735.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">eth_phy_10g_tx_if.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx_if.v -->
-<g id="edge47" class="edge">
+<g id="edge46" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_mac_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx_if.v</title>
 <path fill="none" stroke="#000000" d="M735.0168,-143.8314C735.0168,-136.131 735.0168,-126.9743 735.0168,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="738.5169,-118.4132 735.0168,-108.4133 731.5169,-118.4133 738.5169,-118.4132"/>
@@ -688,7 +688,7 @@
 <polygon fill="#000000" stroke="#000000" points="519.7147,-187.2978 527.4313,-180.038 516.8717,-180.9011 519.7147,-187.2978"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v -->
-<g id="edge50" class="edge">
+<g id="edge51" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v</title>
 <path fill="none" stroke="#000000" d="M243.5215,-143.8314C243.7354,-136.131 243.9897,-126.9743 244.2274,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="247.7262,-118.5066 244.5053,-108.4133 240.7289,-118.3122 247.7262,-118.5066"/>
@@ -702,7 +702,7 @@
 <text text-anchor="middle" x="78.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">xgmii_baser_dec_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/xgmii_baser_dec_64.v -->
-<g id="edge51" class="edge">
+<g id="edge50" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/xgmii_baser_dec_64.v</title>
 <path fill="none" stroke="#000000" d="M201.3803,-143.8314C179.3126,-134.2018 152.0261,-122.295 128.7311,-112.1299"/>
 <polygon fill="#000000" stroke="#000000" points="129.9191,-108.8296 119.3539,-108.038 127.1194,-115.2454 129.9191,-108.8296"/>
@@ -730,19 +730,19 @@
 <polygon fill="#000000" stroke="#000000" points="320.1054,-44.5949 326.5203,-36.1628 316.2472,-38.7541 320.1054,-44.5949"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_frame_sync.v -->
-<g id="edge54" class="edge">
+<g id="edge52" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_frame_sync.v</title>
 <path fill="none" stroke="#000000" d="M217.7638,-71.8314C204.0779,-62.7074 187.3253,-51.539 172.6341,-41.7449"/>
 <polygon fill="#000000" stroke="#000000" points="174.523,-38.7977 164.261,-36.1628 170.6401,-44.6221 174.523,-38.7977"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/lfsr.v -->
-<g id="edge52" class="edge">
+<g id="edge54" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_rx_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/lfsr.v</title>
 <path fill="none" stroke="#000000" d="M316.4316,-73.2631C319.3242,-72.7973 322.1941,-72.3729 325.0168,-72 579.8582,-38.3366 1406.8906,-21.9452 1592.7174,-18.6364"/>
 <polygon fill="#000000" stroke="#000000" points="1592.8691,-22.1343 1602.8058,-18.4584 1592.7456,-15.1354 1592.8691,-22.1343"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx_if.v -->
-<g id="edge55" class="edge">
+<g id="edge56" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx_if.v</title>
 <path fill="none" stroke="#000000" d="M610.158,-143.8314C632.4932,-134.2018 660.1104,-122.295 683.6878,-112.1299"/>
 <polygon fill="#000000" stroke="#000000" points="685.3815,-115.2112 693.1787,-108.038 682.6101,-108.7831 685.3815,-115.2112"/>
@@ -756,7 +756,7 @@
 <text text-anchor="middle" x="568.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">xgmii_baser_enc_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/xgmii_baser_enc_64.v -->
-<g id="edge56" class="edge">
+<g id="edge55" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_phy_10g_tx.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/xgmii_baser_enc_64.v</title>
 <path fill="none" stroke="#000000" d="M568.0168,-143.8314C568.0168,-136.131 568.0168,-126.9743 568.0168,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="571.5169,-118.4132 568.0168,-108.4133 564.5169,-118.4133 571.5169,-118.4132"/>
@@ -776,7 +776,7 @@
 <text text-anchor="middle" x="1638.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ssio_sdr_in.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/gmii_phy_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ssio_sdr_in.v -->
-<g id="edge58" class="edge">
+<g id="edge59" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/gmii_phy_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ssio_sdr_in.v</title>
 <path fill="none" stroke="#000000" d="M2405.1826,-159.9893C2263.3128,-153.9211 1852.0079,-134.6649 1697.1283,-107.8834"/>
 <polygon fill="#000000" stroke="#000000" points="1697.3284,-104.3628 1686.8648,-106.0255 1696.0814,-111.2509 1697.3284,-104.3628"/>
@@ -790,7 +790,7 @@
 <text text-anchor="middle" x="2835.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ssio_sdr_out.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/gmii_phy_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ssio_sdr_out.v -->
-<g id="edge59" class="edge">
+<g id="edge58" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/gmii_phy_if.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ssio_sdr_out.v</title>
 <path fill="none" stroke="#000000" d="M2502.6959,-149.6516C2511.4301,-147.6262 2520.4712,-145.6525 2529.0168,-144 2633.4884,-123.7981 2664.1287,-130.8828 2771.7424,-108.1224"/>
 <polygon fill="#000000" stroke="#000000" points="2772.6613,-111.5048 2781.7006,-105.9785 2771.1879,-104.6616 2772.6613,-111.5048"/>
@@ -856,7 +856,7 @@
 <text text-anchor="middle" x="3294.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ip_eth_rx_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_eth_rx_64.v -->
-<g id="edge63" class="edge">
+<g id="edge62" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_eth_rx_64.v</title>
 <path fill="none" stroke="#000000" d="M3526.1806,-147.0437C3523.4488,-145.9401 3520.7017,-144.9063 3518.0168,-144 3451.137,-121.4249 3429.3359,-125.8404 3357.9825,-108.3975"/>
 <polygon fill="#000000" stroke="#000000" points="3358.6144,-104.9476 3348.0634,-105.9114 3356.9125,-111.7376 3358.6144,-104.9476"/>
@@ -870,7 +870,7 @@
 <text text-anchor="middle" x="3419.0168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ip_eth_tx_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_eth_tx_64.v -->
-<g id="edge62" class="edge">
+<g id="edge63" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_eth_tx_64.v</title>
 <path fill="none" stroke="#000000" d="M3526.3901,-146.0209C3507.7142,-136.2769 3483.5388,-123.6637 3462.8575,-112.8734"/>
 <polygon fill="#000000" stroke="#000000" points="3464.4196,-109.7407 3453.9348,-108.2181 3461.1816,-115.9468 3464.4196,-109.7407"/>
@@ -898,13 +898,13 @@
 <polygon fill="#000000" stroke="#000000" points="3792.257,-183.5697 3782.2249,-180.1628 3787.9428,-189.0822 3792.257,-183.5697"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_arb_mux.v -->
-<g id="edge64" class="edge">
+<g id="edge66" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_arb_mux.v</title>
 <path fill="none" stroke="#000000" d="M3802.8194,-215.8314C3776.8202,-206.0306 3744.5632,-193.8709 3717.2887,-183.5894"/>
 <polygon fill="#000000" stroke="#000000" points="3718.4594,-180.2904 3707.8676,-180.038 3715.9902,-186.8404 3718.4594,-180.2904"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip.v -->
-<g id="edge66" class="edge">
+<g id="edge64" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip.v</title>
 <path fill="none" stroke="#000000" d="M3885.84,-215.8314C3906.1971,-205.2103 3931.864,-191.8188 3952.5049,-181.0497"/>
 <polygon fill="#000000" stroke="#000000" points="3954.3509,-184.0343 3961.5978,-176.3056 3951.1129,-177.8282 3954.3509,-184.0343"/>
@@ -918,19 +918,19 @@
 <text text-anchor="middle" x="3601.0168" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ip_complete_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v -->
-<g id="edge69" class="edge">
+<g id="edge67" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/arp.v</title>
 <path fill="none" stroke="#000000" d="M3643.0205,-215.9877C3664.5243,-206.6346 3691.2804,-194.7969 3722.5615,-180.1276"/>
 <polygon fill="#000000" stroke="#000000" points="3724.4025,-183.1293 3731.9565,-175.7004 3721.4186,-176.7971 3724.4025,-183.1293"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_arb_mux.v -->
-<g id="edge67" class="edge">
+<g id="edge68" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/eth_arb_mux.v</title>
 <path fill="none" stroke="#000000" d="M3615.905,-215.8314C3622.7698,-207.454 3631.0469,-197.3531 3638.5679,-188.1749"/>
 <polygon fill="#000000" stroke="#000000" points="3641.2971,-190.3665 3644.9282,-180.4133 3635.8827,-185.9297 3641.2971,-190.3665"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v -->
-<g id="edge68" class="edge">
+<g id="edge69" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_64.v</title>
 <path fill="none" stroke="#000000" d="M3589.9137,-215.8314C3584.9494,-207.7079 3578.9946,-197.9637 3573.524,-189.0118"/>
 <polygon fill="#000000" stroke="#000000" points="3576.4704,-187.121 3568.2694,-180.4133 3570.4974,-190.7712 3576.4704,-187.121"/>
@@ -1150,7 +1150,7 @@
 <text text-anchor="middle" x="3291.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">udp_checksum_gen_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_checksum_gen_64.v -->
-<g id="edge83" class="edge">
+<g id="edge84" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_checksum_gen_64.v</title>
 <path fill="none" stroke="#000000" d="M3379.2404,-215.8314C3364.1475,-206.6221 3345.6411,-195.3301 3329.4825,-185.4706"/>
 <polygon fill="#000000" stroke="#000000" points="3331.1431,-182.3838 3320.7837,-180.1628 3327.497,-188.3593 3331.1431,-182.3838"/>
@@ -1164,7 +1164,7 @@
 <text text-anchor="middle" x="3453.0168" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">udp_ip_rx_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_ip_rx_64.v -->
-<g id="edge84" class="edge">
+<g id="edge83" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_ip_rx_64.v</title>
 <path fill="none" stroke="#000000" d="M3420.1199,-215.8314C3425.0842,-207.7079 3431.039,-197.9637 3436.5096,-189.0118"/>
 <polygon fill="#000000" stroke="#000000" points="3439.5362,-190.7712 3441.7642,-180.4133 3433.5632,-187.121 3439.5362,-190.7712"/>
@@ -1226,13 +1226,13 @@
 <text text-anchor="middle" x="3601.0168" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">udp_complete_64.v</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_arb_mux.v -->
-<g id="edge91" class="edge">
+<g id="edge90" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_arb_mux.v</title>
 <path fill="none" stroke="#000000" d="M3634.0736,-287.8314C3650.9845,-278.5368 3671.7553,-267.1208 3689.8109,-257.1971"/>
 <polygon fill="#000000" stroke="#000000" points="3691.8928,-260.0468 3698.9705,-252.1628 3688.5211,-253.9122 3691.8928,-260.0468"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v -->
-<g id="edge90" class="edge">
+<g id="edge91" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/udp_complete_64.v&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/verilog&#45;ethernet/rtl/ip_complete_64.v</title>
 <path fill="none" stroke="#000000" d="M3601.0168,-287.8314C3601.0168,-280.131 3601.0168,-270.9743 3601.0168,-262.4166"/>
 <polygon fill="#000000" stroke="#000000" points="3604.5169,-262.4132 3601.0168,-252.4133 3597.5169,-262.4133 3604.5169,-262.4132"/>

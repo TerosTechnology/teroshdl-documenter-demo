@@ -1,5 +1,6 @@
 # Entity: pwrmgr_wake_info
 
+- **File**: pwrmgr_wake_info.sv
 ## Diagram
 
 ![Diagram](pwrmgr_wake_info.svg "Diagram")

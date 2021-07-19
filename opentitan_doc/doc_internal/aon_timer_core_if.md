@@ -1,5 +1,6 @@
 # Package: lc_ctrl_pkg
 
+- **File**: aon_timer_core_if.sv
 ## Description
 
 Copyright lowRISC contributors.

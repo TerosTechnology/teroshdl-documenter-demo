@@ -1,5 +1,6 @@
 # Package: math
 
+- **File**: math.vhdl
 ## Functions
 - squareNumber <font id="function_arguments">(N : natural) </font> <font id="function_return">return natural </font>
 - cubicNumber <font id="function_arguments">(N : natural) </font> <font id="function_return">return natural </font>

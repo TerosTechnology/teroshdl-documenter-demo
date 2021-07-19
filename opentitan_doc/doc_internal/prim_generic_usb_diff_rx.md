@@ -1,5 +1,6 @@
 # Entity: prim_generic_usb_diff_rx
 
+- **File**: prim_generic_usb_diff_rx.sv
 ## Diagram
 
 ![Diagram](prim_generic_usb_diff_rx.svg "Diagram")

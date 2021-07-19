@@ -1,5 +1,6 @@
 # Entity: otbn_rf_base
 
+- **File**: otbn_rf_base.sv
 ## Diagram
 
 ![Diagram](otbn_rf_base.svg "Diagram")
@@ -20,7 +21,7 @@ Copyright lowRISC contributors.
 | ------------------ | --------- | ------------------- | ----------- |
 | clk_i              | input     |                     |             |
 | rst_ni             | input     |                     |             |
-| start_i            | input     |                     |             |
+| state_reset_i      | input     |                     |             |
 | wr_addr_i          | input     | [4:0]               |             |
 | wr_en_i            | input     |                     |             |
 | wr_data_no_intg_i  | input     | [31:0]              |             |

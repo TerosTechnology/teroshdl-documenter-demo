@@ -1,5 +1,6 @@
 # Package: sync_pkg
 
+- **File**: sync_pkg.vhd
 ## Constants
 
 | Name                      | Type       | Value                                  | Description                                                              |

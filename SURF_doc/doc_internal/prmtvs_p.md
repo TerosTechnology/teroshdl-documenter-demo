@@ -1,5 +1,6 @@
 # Package: VITAL_Primitives
 
+- **File**: prmtvs_p.vhdl
 ## Types
 
 | Name                | Type                                                                                                      | Description |

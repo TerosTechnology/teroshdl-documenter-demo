@@ -1,5 +1,6 @@
 # Package: edn_env_pkg
 
+- **File**: edn_env_pkg.sv
 ## Description
 
 Copyright lowRISC contributors.

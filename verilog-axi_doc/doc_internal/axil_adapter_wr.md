@@ -1,5 +1,6 @@
 # Entity: axil_adapter_wr
 
+- **File**: axil_adapter_wr.v
 ## Diagram
 
 ![Diagram](axil_adapter_wr.svg "Diagram")

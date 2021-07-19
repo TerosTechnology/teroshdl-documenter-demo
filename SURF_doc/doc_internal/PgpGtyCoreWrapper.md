@@ -1,5 +1,6 @@
 # Entity: PgpGtyCoreWrapper
 
+- **File**: PgpGtyCoreWrapper.vhd
 ## Diagram
 
 ![Diagram](PgpGtyCoreWrapper.svg "Diagram")

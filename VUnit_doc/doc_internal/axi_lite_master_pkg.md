@@ -1,5 +1,6 @@
 # Package: axi_lite_master_pkg
 
+- **File**: axi_lite_master_pkg.vhd
 ## Constants
 
 | Name               | Type       | Value                           | Description |

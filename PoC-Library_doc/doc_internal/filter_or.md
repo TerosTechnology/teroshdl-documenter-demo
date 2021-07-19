@@ -1,5 +1,6 @@
 # Entity: filter_or
 
+- **File**: filter_or.vhdl
 ## Diagram
 
 ![Diagram](filter_or.svg "Diagram")

@@ -1,5 +1,6 @@
 # Entity: Crc32
 
+- **File**: Crc32.vhd
 ## Diagram
 
 ![Diagram](Crc32.svg "Diagram")

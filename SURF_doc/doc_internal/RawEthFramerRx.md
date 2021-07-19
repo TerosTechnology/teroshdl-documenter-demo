@@ -1,5 +1,6 @@
 # Entity: RawEthFramerRx
 
+- **File**: RawEthFramerRx.vhd
 ## Diagram
 
 ![Diagram](RawEthFramerRx.svg "Diagram")

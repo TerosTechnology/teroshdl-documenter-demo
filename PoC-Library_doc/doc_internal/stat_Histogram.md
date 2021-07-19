@@ -1,5 +1,6 @@
 # Entity: stat_Histogram
 
+- **File**: stat_Histogram.vhdl
 ## Diagram
 
 ![Diagram](stat_Histogram.svg "Diagram")

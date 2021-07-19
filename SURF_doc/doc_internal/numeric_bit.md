@@ -1,5 +1,6 @@
 # Package: NUMERIC_BIT
 
+- **File**: numeric_bit.vhdl
 ## Constants
 
 | Name            | Type   | Value                        | Description |

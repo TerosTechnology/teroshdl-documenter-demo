@@ -1,5 +1,6 @@
 # Entity: soc_domain
 
+- **File**: soc_domain.sv
 ## Diagram
 
 ![Diagram](soc_domain.svg "Diagram")

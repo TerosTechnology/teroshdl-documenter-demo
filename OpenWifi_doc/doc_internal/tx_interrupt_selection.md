@@ -1,5 +1,6 @@
 # Entity: tx_interrupt_selection
 
+- **File**: tx_interrupt_selection.v
 ## Diagram
 
 ![Diagram](tx_interrupt_selection.svg "Diagram")

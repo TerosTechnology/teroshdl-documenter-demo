@@ -1,5 +1,6 @@
 # Entity: up_axi
 
+- **File**: up_axi.v
 ## Diagram
 
 ![Diagram](up_axi.svg "Diagram")

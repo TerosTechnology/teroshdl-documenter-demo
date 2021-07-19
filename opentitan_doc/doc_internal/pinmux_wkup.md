@@ -1,5 +1,6 @@
 # Entity: pinmux_wkup
 
+- **File**: pinmux_wkup.sv
 ## Diagram
 
 ![Diagram](pinmux_wkup.svg "Diagram")

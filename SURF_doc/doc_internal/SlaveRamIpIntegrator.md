@@ -1,5 +1,6 @@
 # Entity: SlaveRamIpIntegrator
 
+- **File**: SlaveRamIpIntegrator.vhd
 ## Diagram
 
 ![Diagram](SlaveRamIpIntegrator.svg "Diagram")

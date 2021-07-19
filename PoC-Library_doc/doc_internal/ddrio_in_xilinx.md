@@ -1,5 +1,6 @@
 # Entity: ddrio_in_xilinx
 
+- **File**: ddrio_in_xilinx.vhdl
 ## Diagram
 
 ![Diagram](ddrio_in_xilinx.svg "Diagram")

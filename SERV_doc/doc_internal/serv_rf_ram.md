@@ -1,5 +1,6 @@
 # Entity: serv_rf_ram
 
+- **File**: serv_rf_ram.v
 ## Diagram
 
 ![Diagram](serv_rf_ram.svg "Diagram")

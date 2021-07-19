@@ -1,5 +1,6 @@
 # Entity: RogueSideBandWrap
 
+- **File**: RogueSideBandWrap.vhd
 ## Diagram
 
 ![Diagram](RogueSideBandWrap.svg "Diagram")

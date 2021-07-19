@@ -1,5 +1,6 @@
 # Entity: Gtp7QuadPll
 
+- **File**: Gtp7QuadPll.vhd
 ## Diagram
 
 ![Diagram](Gtp7QuadPll.svg "Diagram")

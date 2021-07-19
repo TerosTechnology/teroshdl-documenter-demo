@@ -1,5 +1,6 @@
 # Entity: cordic_demod
 
+- **File**: cordic_demod.v
 ## Diagram
 
 ![Diagram](cordic_demod.svg "Diagram")

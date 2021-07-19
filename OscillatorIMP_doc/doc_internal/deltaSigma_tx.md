@@ -1,5 +1,6 @@
 # Entity: deltaSigma_tx
 
+- **File**: deltaSigma_tx.vhd
 ## Diagram
 
 ![Diagram](deltaSigma_tx.svg "Diagram")
