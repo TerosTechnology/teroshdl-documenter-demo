@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=axi_bfm_pkg><h1 id="package-axi_bfm_pkg">Package: axi_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<a id=axi_bfm_pkg><h1 id="package-axi_bfm_pkg">Package: axi_bfm_pkg</h1></a><ul>
+<li><strong>File</strong>: axi_bfm_pkg.vhd</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1153,9 +1155,9 @@ This procedure writes data to the AXI interface specified in axi_if- When the wr
 This procedure reads data from the AXI interface specified in axi_if,and returns the read data in rdata_value.</p></div><ul>
 <li>axi_check <font id="function_arguments">( constant arid_value     : in    std_logic_vector              := "";<br><span style="padding-left:20px"> constant araddr_value   : in    unsigned;<br><span style="padding-left:20px"> constant arlen_value    : in    unsigned(7 downto 0)          := (others=>'0');<br><span style="padding-left:20px"> constant arsize_value   : in    integer range 1 to 128        := 4;<br><span style="padding-left:20px"> constant arburst_value  : in    t_axburst                     := INCR;<br><span style="padding-left:20px"> constant arlock_value   : in    t_axlock                      := NORMAL;<br><span style="padding-left:20px"> constant arcache_value  : in    std_logic_vector(3 downto 0)  := (others=>'0');<br><span style="padding-left:20px"> constant arprot_value   : in    t_axprot                      := UNPRIVILEGED_NONSECURE_DATA;<br><span style="padding-left:20px"> constant arqos_value    : in    std_logic_vector(3 downto 0)  := (others=>'0');<br><span style="padding-left:20px"> constant arregion_value : in    std_logic_vector(3 downto 0)  := (others=>'0');<br><span style="padding-left:20px"> constant aruser_value   : in    std_logic_vector              := "";<br><span style="padding-left:20px"> constant rdata_exp      : in    t_slv_array;<br><span style="padding-left:20px"> constant rresp_exp      : in    t_xresp_array                 := C_EMPTY_XRESP_ARRAY;<br><span style="padding-left:20px"> constant ruser_exp      : in    t_slv_array                   := C_EMPTY_SLV_ARRAY;<br><span style="padding-left:20px"> constant msg            : in    string;<br><span style="padding-left:20px"> signal   clk            : in    std_logic;<br><span style="padding-left:20px"> signal   axi_if         : inout t_axi_if;<br><span style="padding-left:20px"> constant alert_level    : in    t_alert_level                 := error;<br><span style="padding-left:20px"> constant scope          : in    string                        := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel   : in    t_msg_id_panel                := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config         : in    t_axi_bfm_config              := C_AXI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure reads data from the AXI interface specified in axi_if,and compares it to the data in data_exp.- If the received data inconsistent with data_exp, an alert with severity  alert_level is issued.- If the received data was correct, a log message with ID id_for_bfm is issued.</p></div>
+This procedure reads data from the AXI interface specified in axi_if,and compares it to the data in data_exp.- If the received data inconsistent with data_exp, an alert with severity  alert_level is issued.- If the received data was correct, a log message with ID id_for_bfm is issued.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

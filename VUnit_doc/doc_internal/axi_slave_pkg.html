@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=axi_slave_pkg><h1 id="package-axi_slave_pkg">Package: axi_slave_pkg</h1></a><h2 id="constants">Constants</h2>
+<a id=axi_slave_pkg><h1 id="package-axi_slave_pkg">Package: axi_slave_pkg</h1></a><ul>
+<li><strong>File</strong>: axi_slave_pkg.vhd</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1142,9 +1144,9 @@ Short hand for set_response_latency when min and max are the same</p></div><ul>
 Get statistics object from axi slaveDynamically allocates new statistics object which must he deallocated whenusedThis procedure will automatically deallocate the input statistics objectif it is not null</p></div><ul>
 <li>enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</p></div>
+Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

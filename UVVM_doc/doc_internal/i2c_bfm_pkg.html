@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=i2c_bfm_pkg><h1 id="package-i2c_bfm_pkg">Package: i2c_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<a id=i2c_bfm_pkg><h1 id="package-i2c_bfm_pkg">Package: i2c_bfm_pkg</h1></a><ul>
+<li><strong>File</strong>: i2c_bfm_pkg.vhd</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1138,9 +1140,9 @@ This procedure receives an I2C transaction from an I2C master DUT,and compares t
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 This procedure receives an I2C transaction from an I2C master DUT,and compares the read data to the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The I2C interface in this procedure is given as a t_i2c_if signal record</p></div><ul>
 <li>i2c_master_quick_command <font id="function_arguments">( constant addr_value                   : in    unsigned;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal i2c_if                         : inout t_i2c_if;<br><span style="padding-left:20px"> constant rw_bit                       : in    std_logic                      := C_WRITE_BIT;<br><span style="padding-left:20px"> constant exp_ack                      : in    boolean                        := true;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant alert_level                  : in    t_alert_level                  := error;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_i2c_bfm_config               := C_I2C_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul>
+</ul><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

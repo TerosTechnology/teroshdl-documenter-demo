@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=kmac_env_pkg><h1 id="package-kmac_env_pkg">Package: kmac_env_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+<a id=kmac_env_pkg><h1 id="package-kmac_env_pkg">Package: kmac_env_pkg</h1></a><ul>
+<li><strong>File</strong>: kmac_env_pkg.sv</li>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
  SPDX-License-Identifier: Apache-2.0</p>
 <p></div></p><h2 id="constants">Constants</h2>
@@ -1223,7 +1225,7 @@
 </tr>
 <tr>
 <td>kmac_app_st_e</td>
-<td>enum bit [3:0] {<br><span style="padding-left:20px">     StIdle                  = 4'b0000,<br><span style="padding-left:20px">     StAppCfg                = 4'b1110,<br><span style="padding-left:20px">     StAppMsg                = 4'b0101,<br><span style="padding-left:20px">     StAppOutLen             = 4'b0110,<br><span style="padding-left:20px">     StAppProcess            = 4'b1010,<br><span style="padding-left:20px">     StAppWait               = 4'b0111,<br><span style="padding-left:20px">     StSw                    = 4'b0100,<br><span style="padding-left:20px">     StKeyMgrErrKeyNotValid  = 4'b1111   }</td>
+<td>enum bit [9:0] {<br><span style="padding-left:20px">     StIdle                  = 10'b1011011010,<br><span style="padding-left:20px">     StAppCfg                = 10'b0001010000,<br><span style="padding-left:20px">     StAppMsg                = 10'b0001011111,<br><span style="padding-left:20px">     StAppOutLen             = 10'b1011001111,<br><span style="padding-left:20px">     StAppProcess            = 10'b1000100110,<br><span style="padding-left:20px">     StAppWait               = 10'b0010010110,<br><span style="padding-left:20px">     StSw                    = 10'b0111111111,<br><span style="padding-left:20px">     StKeyMgrErrKeyNotValid  = 10'b1001110100,<br><span style="padding-left:20px">     StError                 = 10'b1101011101   }</td>
 <td>state values of the App FSM</td>
 </tr>
 <tr>
@@ -1249,9 +1251,9 @@ Helper functions that returns the KMAC key size in bytes/words/blocks</p></div><
 <li>get_key_size_words <font id="function_arguments">(kmac_pkg::key_len_e)</font> <font id="function_return">return (int)</font></li>
 </ul><ul>
 <li>get_key_size_blocks <font id="function_arguments">(kmac_pkg::key_len_e)</font> <font id="function_return">return (int)</font></li>
-</ul>
+</ul><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

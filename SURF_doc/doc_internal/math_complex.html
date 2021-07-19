@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=MATH_COMPLEX><h1 id="package-math_complex">Package: MATH_COMPLEX</h1></a><h2 id="constants">Constants</h2>
+<a id=MATH_COMPLEX><h1 id="package-math_complex">Package: MATH_COMPLEX</h1></a><ul>
+<li><strong>File</strong>: math_complex.vhdl</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1160,9 +1162,9 @@ Purpose:        Returns hyperbolic sine of ZSpecial values:        SINH(MATH_CZE
 Purpose:        Returns principal value of hyperbolic sine of ZSpecial values:        SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0 and                                           Z.ARG = 0.0        SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI and                                           Z.ARG = MATH_PI_OVER_2        SINH(Z) = COMPLEX_POLAR'(1.0, MATH_PI_OVER_2) if Z.MAG =                        MATH_PI_OVER_2 and Z.ARG = MATH_PI_OVER_2        SINH(Z) = COMPLEX_POLAR'(1.0, -MATH_PI_OVER_2) if Z.MAG =                        MATH_PI_OVER_2 and Z.ARG = -MATH_PI_OVER_2Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
 <li>COSH <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns hyperbolic cosine of ZSpecial values:        COSH(MATH_CZERO) = MATH_CBASE_1        COSH(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and Z.IM = MATH_PI        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI_OVER_2        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = -MATH_PI_OVER_2Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(COSH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +                                        COS(Z.IM)</em>COS(Z.IM))Notes:        None</p></div>
+Purpose:        Returns hyperbolic cosine of ZSpecial values:        COSH(MATH_CZERO) = MATH_CBASE_1        COSH(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and Z.IM = MATH_PI        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI_OVER_2        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = -MATH_PI_OVER_2Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(COSH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +                                        COS(Z.IM)</em>COS(Z.IM))Notes:        None</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

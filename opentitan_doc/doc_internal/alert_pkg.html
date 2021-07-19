@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=alert_pkg><h1 id="package-alert_pkg">Package: alert_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+<a id=alert_pkg><h1 id="package-alert_pkg">Package: alert_pkg</h1></a><ul>
+<li><strong>File</strong>: alert_pkg.sv</li>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
  SPDX-License-Identifier: Apache-2.0</p>
 <p></div></p><h2 id="signals">Signals</h2>
@@ -1173,13 +1175,13 @@
 </tr>
 <tr>
 <td>reg2hw_wrap_t</td>
-<td>struct packed {<br><span style="padding-left:20px">          logic                                              ping_enable;<br><span style="padding-left:20px">             logic [PING_CNT_DW-1:0]                            ping_timeout_cyc;<br><span style="padding-left:20px">        logic [NAlerts-1:0]                                alert_ping_en;<br><span style="padding-left:20px">                logic [N_LOC_ALERT-1:0]                            loc_alert_en;<br><span style="padding-left:20px">            logic [N_LOC_ALERT-1:0][CLASS_DW-1:0]              loc_alert_class;<br><span style="padding-left:20px">         logic [NAlerts-1:0]                                alert_en;<br><span style="padding-left:20px">                logic [NAlerts-1:0][CLASS_DW-1:0]                  alert_class;<br><span style="padding-left:20px">                  logic [N_CLASSES-1:0]                              class_en;<br><span style="padding-left:20px">                logic [N_CLASSES-1:0]                              class_clr;<br><span style="padding-left:20px">               logic [N_CLASSES-1:0][AccuCntDw-1:0]               class_accum_thresh;<br><span style="padding-left:20px">      logic [N_CLASSES-1:0][EscCntDw-1:0]                class_timeout_cyc;<br><span style="padding-left:20px">       logic [N_CLASSES-1:0][N_PHASES-1:0][EscCntDw-1:0]  class_phase_cyc;<br><span style="padding-left:20px">         logic [N_CLASSES-1:0][N_ESC_SEV-1:0]               class_esc_en;<br><span style="padding-left:20px">            logic [N_CLASSES-1:0][N_ESC_SEV-1:0][PHASE_DW-1:0] class_esc_map;<br><span style="padding-left:20px">         }</td>
+<td>struct packed {<br><span style="padding-left:20px">          logic                                              shadowed_err_update;<br><span style="padding-left:20px">     logic                                              shadowed_err_storage;<br><span style="padding-left:20px">          logic                                              ping_enable;<br><span style="padding-left:20px">             logic [PING_CNT_DW-1:0]                            ping_timeout_cyc;<br><span style="padding-left:20px">        logic [NAlerts-1:0]                                alert_ping_en;<br><span style="padding-left:20px">                logic [N_LOC_ALERT-1:0]                            loc_alert_en;<br><span style="padding-left:20px">            logic [N_LOC_ALERT-1:0][CLASS_DW-1:0]              loc_alert_class;<br><span style="padding-left:20px">         logic [NAlerts-1:0]                                alert_en;<br><span style="padding-left:20px">                logic [NAlerts-1:0][CLASS_DW-1:0]                  alert_class;<br><span style="padding-left:20px">                  logic [N_CLASSES-1:0]                              class_en;<br><span style="padding-left:20px">                logic [N_CLASSES-1:0]                              class_clr;<br><span style="padding-left:20px">               logic [N_CLASSES-1:0][AccuCntDw-1:0]               class_accum_thresh;<br><span style="padding-left:20px">      logic [N_CLASSES-1:0][EscCntDw-1:0]                class_timeout_cyc;<br><span style="padding-left:20px">       logic [N_CLASSES-1:0][N_PHASES-1:0][EscCntDw-1:0]  class_phase_cyc;<br><span style="padding-left:20px">         logic [N_CLASSES-1:0][N_ESC_SEV-1:0]               class_esc_en;<br><span style="padding-left:20px">            logic [N_CLASSES-1:0][N_ESC_SEV-1:0][PHASE_DW-1:0] class_esc_map;<br><span style="padding-left:20px">         }</td>
 <td></td>
 </tr>
 </tbody>
-</table>
+</table><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

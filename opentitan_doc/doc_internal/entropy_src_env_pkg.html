@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=entropy_src_env_pkg><h1 id="package-entropy_src_env_pkg">Package: entropy_src_env_pkg</h1></a><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
+<a id=entropy_src_env_pkg><h1 id="package-entropy_src_env_pkg">Package: entropy_src_env_pkg</h1></a><ul>
+<li><strong>File</strong>: entropy_src_env_pkg.sv</li>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
  SPDX-License-Identifier: Apache-2.0</p>
 <p></div></p><h2 id="constants">Constants</h2>
@@ -1035,9 +1037,15 @@
 <tbody>
 <tr>
 <td>TL_DW</td>
-<td>bit [11:0][TL_DW-1:0]</td>
-<td>{<br><span style="padding-left:20px">32'h4836cb5a,<br><span style="padding-left:20px"></td>
+<td>bit [TL_DW-1:0]</td>
+<td>32'h76543210</td>
 <td>parameters</td>
+</tr>
+<tr>
+<td>TL_DW</td>
+<td>bit [TL_DW-1:0]</td>
+<td>32'hfedcba98</td>
+<td></td>
 </tr>
 <tr>
 <td>LIST_OF_ALERTS</td>
@@ -1074,9 +1082,9 @@
 <td></td>
 </tr>
 </tbody>
-</table>
+</table><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

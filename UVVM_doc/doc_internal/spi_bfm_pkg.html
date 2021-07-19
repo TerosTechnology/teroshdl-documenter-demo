@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=spi_bfm_pkg><h1 id="package-spi_bfm_pkg">Package: spi_bfm_pkg</h1></a><h2 id="constants">Constants</h2>
+<a id=spi_bfm_pkg><h1 id="package-spi_bfm_pkg">Package: spi_bfm_pkg</h1></a><ul>
+<li><strong>File</strong>: spi_bfm_pkg.vhd</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1136,9 +1138,9 @@ Multi-word</p></div><ul>
 This procedure receives an SPI transaction, and compares the read datato the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_check <font id="function_arguments">( constant data_exp               : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level            : in    t_alert_level            := error;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div>
+Multi-word</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

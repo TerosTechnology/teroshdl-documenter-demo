@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=Vital_Memory><h1 id="package-vital_memory">Package: Vital_Memory</h1></a><h2 id="constants">Constants</h2>
+<a id=Vital_Memory><h1 id="package-vital_memory">Package: Vital_Memory</h1></a><ul>
+<li><strong>File</strong>: memory_p.vhdl</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1312,9 +1314,9 @@ Description: These procedures control the effect of memory operations           
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 ----------------------------------------------------------------------------Procedure:   VitalMemoryViolationParameters:  DataOutBus          - Output zero delay data bus out             MemoryData          - Pointer to memory data structure             PortFlag            - Indicates port operating mode             DataInBus           - Input value of data bus in             AddressValue        - Decoded value of the AddressBus             ViolationFlags      - Aggregate of scalar violation vars             ViolationFlagsArray - Concatenation of vector violation vars             ViolationTable      - Input memory violation table             PortType            - The type of port (currently not used)             PortName            - Port name string for messages             HeaderMsg           - Header string for messages             MsgOn               - Control the generation of messages             MsgSeverity         - Control level of message generationDescription: This procedure is intended to implement all actions on the             memory contents and data out bus as a result of timing viols.             It uses the memory action table to perform various corruption             policies specified by the user. ----------------------------------------------------------------------------</p></div><ul>
 <li>VitalMemoryViolation <font id="function_arguments">( VARIABLE DataOutBus           : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData           : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE PortFlag             : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT DataInBus            : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT AddressValue         : IN VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT ViolationFlags       : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ViolationTable       : IN VitalMemoryTableType;<br><span style="padding-left:20px"> CONSTANT PortType             : IN VitalPortType;<br><span style="padding-left:20px"> CONSTANT PortName             : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg            : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn                : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity          : IN SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
-</ul>
+</ul><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    

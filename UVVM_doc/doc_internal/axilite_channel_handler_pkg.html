@@ -1019,7 +1019,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=axilite_channel_handler_pkg><h1 id="package-axilite_channel_handler_pkg">Package: axilite_channel_handler_pkg</h1></a><h2 id="constants">Constants</h2>
+<a id=axilite_channel_handler_pkg><h1 id="package-axilite_channel_handler_pkg">Package: axilite_channel_handler_pkg</h1></a><ul>
+<li><strong>File</strong>: axilite_channel_handler_pkg.vhd</li>
+</ul><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1055,9 +1057,9 @@ This procedure writes adress on the read address channel- When the write is comp
 This procedure receives read data on the read data channel,and returns the read data- If the received response was inconsistent with config.expected_response,   an alert with severity config.expected_response_severity is issued.</p></div><ul>
 <li>read_data_channel_check <font id="function_arguments">( constant rdata_exp    : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal   clk          : in    std_logic;<br><span style="padding-left:20px"> signal   rready       : inout std_logic;<br><span style="padding-left:20px"> signal   rdata        : in    std_logic_vector;<br><span style="padding-left:20px"> signal   rresp        : in    std_logic_vector(1 downto 0);<br><span style="padding-left:20px"> signal   rvalid       : in    std_logic;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level         := error;<br><span style="padding-left:20px"> constant scope        : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_axilite_bfm_config  := C_AXILITE_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure receives and checks read data and read response on the read data channel- If the received data is inconsistent with rdata_exp,   an alert with severity alert_level is issued.- If the received data is correct, a log message with ID id_for_bfm is issued.</p></div>
+This procedure receives and checks read data and read response on the read data channel- If the received data is inconsistent with rdata_exp,   an alert with severity alert_level is issued.- If the received data is correct, a log message with ID id_for_bfm is issued.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
     
-    <br><br><br><br><br><br>
+    
