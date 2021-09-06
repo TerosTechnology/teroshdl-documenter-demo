@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=spi_p2s><h1 id="entity-spi_p2s">Entity: spi_p2s</h1></a><ul>
 <li><strong>File</strong>: spi_p2s.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 565 190"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="145,0 160,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="310" height="170" fill="black" x="160" y="15"></rect><rect id="SvgjsRect1007" width="306" height="165" fill="#fdfd96" x="162" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="140" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="175" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="145" y1="30" x2="160" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="140" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="175" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="145" y1="50" x2="160" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="140" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="175" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   data_valid_i </tspan></text><line id="SvgjsLine1022" x1="145" y1="70" x2="160" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="140" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">   spi_byte_t </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="175" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   data_i </tspan></text><line id="SvgjsLine1027" x1="145" y1="90" x2="160" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="140" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="175" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   csb_i </tspan></text><line id="SvgjsLine1032" x1="145" y1="110" x2="160" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="140" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="175" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   cpha_i </tspan></text><line id="SvgjsLine1037" x1="145" y1="130" x2="160" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="140" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="175" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   order_i </tspan></text><line id="SvgjsLine1042" x1="145" y1="150" x2="160" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="140" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">   io_mode_e </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="175" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   io_mode_i </tspan></text><line id="SvgjsLine1047" x1="145" y1="170" x2="160" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="490" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="455" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   data_sent_o </tspan></text><line id="SvgjsLine1052" x1="470" y1="30" x2="485" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="490" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="455" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   s_en_o </tspan></text><line id="SvgjsLine1057" x1="470" y1="50" x2="485" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="490" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="455" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   s_o </tspan></text><line id="SvgjsLine1062" x1="470" y1="70" x2="485" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0SPI byte to SPI (Single/ Dual/ Quad)</p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 565 190"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="145,0 160,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="310" height="170" fill="black" x="160" y="15"></rect><rect id="SvgjsRect1007" width="306" height="165" fill="#fdfd96" x="162" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="140" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="175" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="145" y1="30" x2="160" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="140" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="175" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="145" y1="50" x2="160" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="140" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="175" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   data_valid_i </tspan></text><line id="SvgjsLine1022" x1="145" y1="70" x2="160" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="140" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">   spi_byte_t </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="175" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   data_i </tspan></text><line id="SvgjsLine1027" x1="145" y1="90" x2="160" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="140" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="175" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   csb_i </tspan></text><line id="SvgjsLine1032" x1="145" y1="110" x2="160" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="140" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="175" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   cpha_i </tspan></text><line id="SvgjsLine1037" x1="145" y1="130" x2="160" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="140" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="175" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   order_i </tspan></text><line id="SvgjsLine1042" x1="145" y1="150" x2="160" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="140" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="140" svgjs:data="{&quot;newLined&quot;:true}">   io_mode_e </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="175" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="175" svgjs:data="{&quot;newLined&quot;:true}">   io_mode_i </tspan></text><line id="SvgjsLine1047" x1="145" y1="170" x2="160" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="490" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="455" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   data_sent_o </tspan></text><line id="SvgjsLine1052" x1="470" y1="30" x2="485" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="490" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="455" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   s_en_o </tspan></text><line id="SvgjsLine1057" x1="470" y1="50" x2="485" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="490" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="490" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="455" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="455" svgjs:data="{&quot;newLined&quot;:true}">   s_o </tspan></text><line id="SvgjsLine1062" x1="470" y1="70" x2="485" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>SPI byte to SPI (Single/ Dual/ Quad)</p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1084,13 +1159,13 @@
 <td>cpha_i</td>
 <td>input</td>
 <td></td>
-<td>ConfigurationIf CPHA=1, then the first byte should be delayed. But this does not matter in SPI Flash. Only applicable to Generic mode</td>
+<td>Configuration If CPHA=1, then the first byte should be delayed.  But this does not matter in SPI Flash. Only applicable to Generic mode</td>
 </tr>
 <tr>
 <td>order_i</td>
 <td>input</td>
 <td></td>
-<td>Controltxorder: controls which bit goes out first.</td>
+<td>Control txorder: controls which bit goes out first.</td>
 </tr>
 <tr>
 <td>io_mode_i</td>
@@ -1117,17 +1192,17 @@
 <tr>
 <td>io_mode</td>
 <td>io_mode_e</td>
-<td>Latching io_mode_i when last beat is set. This guarantees cnt not abruptly changed during operation which affects <code>last_beat</code> again.</td>
+<td>Latching io_mode_i when last beat is set.  This guarantees cnt not abruptly changed during operation  which affects <code>last_beat</code> again.</td>
 </tr>
 <tr>
 <td>first_beat</td>
 <td>logic</td>
-<td>in Mode3, the logic skips first clock edge to move to next bit. This is not necessary for Flash / Passthrough mode. But Generic mode sends the data through TX line right after reset</td>
+<td>in Mode3, the logic skips first clock edge to move to next bit.  This is not necessary for Flash / Passthrough mode. But Generic mode  sends the data through TX line right after reset</td>
 </tr>
 <tr>
 <td>last_beat</td>
 <td>logic</td>
-<td>in Mode3, the logic skips first clock edge to move to next bit. This is not necessary for Flash / Passthrough mode. But Generic mode sends the data through TX line right after reset</td>
+<td>in Mode3, the logic skips first clock edge to move to next bit.  This is not necessary for Flash / Passthrough mode. But Generic mode  sends the data through TX line right after reset</td>
 </tr>
 <tr>
 <td>cnt</td>
@@ -1166,7 +1241,7 @@
 <td>Bits</td>
 <td>int unsigned</td>
 <td>$bits(spi_byte_t)</td>
-<td></td>
+<td>//////////////  Definition // //////////////</td>
 </tr>
 <tr>
 <td>BitWidth</td>
@@ -1200,38 +1275,28 @@
 </table><h2 id="processes">Processes</h2><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Enable selection<br />
-in Single mode, line 1 is for output.<br />
-in Dual mode, line 0:1 are for output<br />
-in Quad mode, all lines 0:3 are for output.</p></div><ul>
+ Enable selection  in Single mode, line 1 is for output.  in Dual mode, line 0:1 are for output  in Quad mode, all lines 0:3 are for output. </p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-So, the logic generating <code>sent</code> signal looks not straightforward. It tries<br />
-assert second last beat. So, in SingleIO (right after reset always), it<br />
-asserts at 7th beat. Then the mode could be changed to Dual/ Quad.</p></div><ul>
+ <code>data_sent</code>  Popping signal is a little bit tricky if p2s supports Quad IO  The sent signal cannot be sent at the end of the beat, as it does not have  enought time to affect the FIFO.<br>  If the sent signal asserted at the first beat, at the very first byte of  SPI has no time to assert valid signal. So the sent signal does not affect  the FIFO. So the logic sends first byte twice.<br>  This won't affect in Flash mode as in Flash/Passthrough mode, first byte is  always SPI command. It does not send anything on the SPI bus.<br>  So, the logic generating <code>sent</code> signal looks not straightforward. It tries  assert second last beat. So, in SingleIO (right after reset always), it  asserts at 7th beat. Then the mode could be changed to Dual/ Quad. </p></div><ul>
 <li>unnamed: ( @(posedge clk_i) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-data shift</p></div><ul>
+ data shift </p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-SPI out</p></div><ul>
+ SPI out </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Following logic has high chance to break the rule. As there's no<br />
-indication of the end of a byte. <code>data_sent_o</code> is not a valid indicator<br />
-as the signal asserted one cycle earlier than the last beat.</p></div><ul>
+ io_mode  io_mode reset value is SingleIO (as described in assumption)  Then, every byte sent, the logic updates its value to <code>io_mode_i</code>  This makes the logic safer than direct use of <code>io_mode_i</code>.  If <code>io_mode_i</code> value is changed within a byte, it affects to <code>last_beat</code>  then, the incorrect <code>last_beat</code> affects <code>cnt</code>, which could break  the data operation.<br>  Following logic has high chance to break the rule. As there's no  indication of the end of a byte. <code>data_sent_o</code> is not a valid indicator  as the signal asserted one cycle earlier than the last beat. </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-cnt<br />
-TODO: Consider dummy cycle that is not aligned to a byte<br />
-Is this valid scenario?</p></div><ul>
+ cnt  TODO: Consider dummy cycle that is not aligned to a byte        Is this valid scenario? </p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Last beat depends on the mode</p></div><ul>
+ Last beat depends on the mode </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-At reset, tx state sits in TxIdle. It moves to TxActive.<br />
-This is to delay the first posedge in Mode 3.</p></div><br><br><br><br><br><br>
+/////////  State // /////////  At reset, tx state sits in TxIdle. It moves to TxActive.  This is to delay the first posedge in Mode 3. </p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

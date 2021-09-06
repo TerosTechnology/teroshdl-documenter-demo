@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,8 +1098,8 @@
 <li><strong>File</strong>: kmac_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- kmac_pkg</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>kmac_pkg</p>
 <p></div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
@@ -1106,13 +1181,13 @@
 <td>MaxKeyLen</td>
 <td>int</td>
 <td>512</td>
-<td>Key related definitions If this value is changed, please modify the logic inside kmac_core that assigns the value into <code>encoded_key</code></td>
+<td>Key related definitions  If this value is changed, please modify the logic inside kmac_core  that assigns the value into <code>encoded_key</code></td>
 </tr>
 <tr>
 <td>MaxEncodedKeyLenW</td>
 <td>int</td>
 <td>$clog2(MaxKeyLen+1)</td>
-<td>size of encode_string(Key) $ceil($clog2(MaxKeyLen+1)/8)</td>
+<td>size of encode_string(Key)  $ceil($clog2(MaxKeyLen+1)/8)</td>
 </tr>
 <tr>
 <td>MaxEncodedKeyLenByte</td>
@@ -1130,7 +1205,7 @@
 <td>MaxEncodedKeyW</td>
 <td>int</td>
 <td>MaxKeyLen + MaxEncodedKeyLenSize + 8</td>
-<td>Secret Key  left_encode(len(Key)) ----------  ------------------------</td>
+<td>Secret Key  left_encode(len(Key))                              ----------  ------------------------</td>
 </tr>
 <tr>
 <td>TimerPrescalerW</td>
@@ -1145,10 +1220,22 @@
 <td></td>
 </tr>
 <tr>
+<td>EntropyLfsrW</td>
+<td>int unsigned</td>
+<td>64</td>
+<td>entropy lfsr related</td>
+</tr>
+<tr>
+<td>lfsr_perm_t</td>
+<td>lfsr_perm_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>NumAppIntf</td>
 <td>int unsigned</td>
 <td>3</td>
-<td>Number of the application interface Currently KMAC has three interface. 0: KeyMgr 1: LC_CTRL 2: ROM_CTRL Make sure to change <code>width</code> of app inter-module signal definition if this value is changed.</td>
+<td>/////////////////////////  Application interface // /////////////////////////  Number of the application interface  Currently KMAC has three interface.  0: KeyMgr  1: LC_CTRL  2: ROM_CTRL  Make sure to change <code>width</code> of app inter-module signal definition  if this value is changed.</td>
 </tr>
 <tr>
 <td>EncodedStringEmpty</td>
@@ -1183,12 +1270,12 @@
 <tr>
 <td>key_len_e</td>
 <td>enum logic [2:0] {<br><span style="padding-left:20px">     Key128 = 3'b 000,<br><span style="padding-left:20px">      Key192 = 3'b 001,<br><span style="padding-left:20px">      Key256 = 3'b 010,<br><span style="padding-left:20px">      Key384 = 3'b 011,<br><span style="padding-left:20px">      Key512 = 3'b 100     }</td>
-<td>key_len is SW configurable CSR. Current KMAC allows 5 key length options. This value determines the KMAC core how to map the value from Secret Key register to key size block</td>
+<td>key_len is SW configurable CSR.  Current KMAC allows 5 key length options.  This value determines the KMAC core how to map the value  from Secret Key register to key size block</td>
 </tr>
 <tr>
 <td>kmac_cmd_e</td>
 <td>enum logic [3:0] {<br><span style="padding-left:20px">     CmdNone      = 4'b 0000,<br><span style="padding-left:20px">     CmdStart     = 4'b 0001,<br><span style="padding-left:20px">     CmdProcess   = 4'b 0010,<br><span style="padding-left:20px">     CmdManualRun = 4'b 0100,<br><span style="padding-left:20px">     CmdDone      = 4'b 1000   }</td>
-<td>kmac_cmd_e defines the possible command sets that software issues via !!CMD register. This is mainly to limit the error scenario that SW writes multiple commands at once.</td>
+<td>kmac_cmd_e defines the possible command sets that software issues via  !!CMD register. This is mainly to limit the error scenario that SW writes  multiple commands at once.</td>
 </tr>
 <tr>
 <td>entropy_mode_e</td>
@@ -1196,9 +1283,14 @@
 <td>Entropy Mode Selection : Should be matched to register package Enum value</td>
 </tr>
 <tr>
+<td>lfsr_perm_t</td>
+<td>logic [EntropyLfsrW-1:0][$clog2(EntropyLfsrW)-1:0]</td>
+<td></td>
+</tr>
+<tr>
 <td>app_mode_e</td>
 <td>enum bit [1:0] {<br><span style="padding-left:20px">               AppSHA3   = 0,<br><span style="padding-left:20px">                AppCShake = 1,<br><span style="padding-left:20px">           AppKMAC   = 2   }</td>
-<td>Application Algorithm Each interface can choose algorithms among SHA3, cSHAKE, KMAC</td>
+<td>Application Algorithm  Each interface can choose algorithms among SHA3, cSHAKE, KMAC</td>
 </tr>
 <tr>
 <td>app_config_t</td>

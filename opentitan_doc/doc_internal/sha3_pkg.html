@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,8 +1098,8 @@
 <li><strong>File</strong>: sha3_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- sha3_pkg</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>sha3_pkg</p>
 <p></div></p><h2 id="signals">Signals</h2>
 <table>
 <thead>
@@ -1075,7 +1150,7 @@
 <td>MaxFnEncodeSize</td>
 <td>int</td>
 <td>+ 8 - 1</td>
-<td>Calculate left_encode(len( X )) bit size. Assume the enc_8(n) is always 1 (up to 255 byte of len(S) size) e.g) 248bit --&gt; two bytes , 256bit --&gt; three bytes round8bit(clog2(X+1))/8</td>
+<td>Calculate left_encode(len( X )) bit size.  Assume the enc_8(n) is always 1 (up to 255 byte of len(S) size)  e.g) 248bit --&gt; two bytes , 256bit --&gt; three bytes   round8bit(clog2(X+1))/8</td>
 </tr>
 <tr>
 <td>MaxCsEncodeSize</td>
@@ -1111,7 +1186,7 @@
 <td>MsgWidth</td>
 <td>int</td>
 <td>64</td>
-<td>1. keccak_round logic datapath. Keccak round logic assumes MsgWidth divides 1600 keccak state <code>Width</code>. Choose the value accordingly. 2. sha3pad module has fixed width mux for funcpad logic. If MsgWidth is changed, the logic also need to be revised. 3. kmac core logic also has fixed size mux for appeding output length. Revise the case statement to fit into revised MsgWidth value.</td>
+<td>Datapath width in KMAC, this also affects the output of MSG_FIFO  This is assumed as 64 in KMAC design. If this value is changed, some parts  of the KMAC design need to be changed.<br>  1. keccak_round logic datapath. Keccak round logic assumes MsgWidth     divides 1600 keccak state <code>Width</code>. Choose the value accordingly.  2. sha3pad module has fixed width mux for funcpad logic. If MsgWidth is     changed, the logic also need to be revised.  3. kmac core logic also has fixed size mux for appeding output length.     Revise the case statement to fit into revised MsgWidth value.</td>
 </tr>
 <tr>
 <td>MsgStrbW</td>
@@ -1164,22 +1239,22 @@
 <tr>
 <td>sha3_mode_e</td>
 <td>enum logic[1:0] {<br><span style="padding-left:20px">     Sha3   = 2'b 00,<br><span style="padding-left:20px">     Shake  = 2'b 10,<br><span style="padding-left:20px">     CShake = 2'b 11   }</td>
-<td>Please remind that if input strings N and S are empty, SW shall choose SHAKE even for cSHAKE operation.</td>
+<td>Keccak module supports SHA3, SHAKE, cSHAKE function.  This mode determines if the module uses encoded N and S or not.  Also it chooses the padding value.<br>     mode</td>
 </tr>
 <tr>
 <td>keccak_strength_e</td>
 <td>enum logic [2:0] {<br><span style="padding-left:20px">     L128 = 3'b 000,<br><span style="padding-left:20px">      L224 = 3'b 001,<br><span style="padding-left:20px">      L256 = 3'b 010,<br><span style="padding-left:20px">      L384 = 3'b 011,<br><span style="padding-left:20px">      L512 = 3'b 100     }</td>
-<td>keccak_strength_e determines the security strength against collision attack This value decides the <em>rate</em> and <em>capacity</em> of the keccak states. It affects the sha3pad module too. the padding module implements <code>bytepad(X,168)</code> for L128, <code>bytepad(X,136)</code> for L256 in cSHAKE</td>
+<td>keccak_strength_e determines the security strength against collision attack  This value decides the <em>rate</em> and <em>capacity</em> of the keccak states.  It affects the sha3pad module too. the padding module implements  <code>bytepad(X,168)</code> for L128, <code>bytepad(X,136)</code> for L256 in cSHAKE</td>
 </tr>
 <tr>
 <td>sha3_st_e</td>
 <td>enum logic [2:0] {<br><span style="padding-left:20px">     StIdle,<br><span style="padding-left:20px">                               StAbsorb,<br><span style="padding-left:20px">                                                                   StSqueeze,<br><span style="padding-left:20px">                     StManualRun,<br><span style="padding-left:20px">                StFlush   }</td>
-<td>SHA3 core state. This state value is used in sha3core module and also in KMAC top module and the register interface for sw to track the sha3 status.</td>
+<td>SHA3 core state. This state value is used in sha3core module  and also in KMAC top module and the register interface for sw to track the  sha3 status.</td>
 </tr>
 <tr>
 <td>err_code_e</td>
 <td>enum logic [7:0] {<br><span style="padding-left:20px">     ErrNone = 8'h 00,<br><span style="padding-left:20px">                     ErrSha3SwControl = 8'h 80   }</td>
-<td></td>
+<td>////////////////  Error Report // ////////////////</td>
 </tr>
 <tr>
 <td>err_t</td>
@@ -1190,11 +1265,14 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>encode_bytepad_len <font id="function_arguments">(keccak_strength_e kstrength)</font> <font id="function_return">return (logic [15:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Bytepading function<br />
-<code>encode_bytepad_len</code> represents the first two bytes of bytepad()<br />
-It depends on the block size. We can reuse KeccakRate<br />
-10000000 || 00010101 // 168<br />
-10000000 || 00010001 // 136</p></div><br><br><br><br><br><br>
+/////////////<br />
+ Functions //<br />
+/////////////<br />
+ Bytepading function<br />
+ <code>encode_bytepad_len</code> represents the first two bytes of bytepad()<br />
+ It depends on the block size. We can reuse KeccakRate<br />
+ 10000000 || 00010101 // 168<br />
+ 10000000 || 00010001 // 136</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

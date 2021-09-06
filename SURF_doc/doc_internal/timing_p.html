@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1036,7 +1111,7 @@
 <td>VitalZeroDelay</td>
 <td>VitalDelayType</td>
 <td>0 ns</td>
-<td>----------------------------------------------------------------------<strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong>----------------------------------------------------------------------</td>
+<td>----------------------------------------------------------------------  <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong>  ----------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>VitalZeroDelay01</td>
@@ -1241,7 +1316,7 @@
 <tr>
 <td>VitalSkewExpectedType</td>
 <td>(none,<br><span style="padding-left:20px"> s1r,<br><span style="padding-left:20px"> s1f,<br><span style="padding-left:20px"> s2r,<br><span style="padding-left:20px"> s2f)</td>
-<td></td>
+<td>Addition of Vital Skew Type Information   March 14, 1998  -------------------------------------------------------------------------  Procedures and Type Definitions for Defining Skews  -------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>VitalSkewDataType</td>
@@ -1253,43 +1328,660 @@
 <li>VitalTimingDataInit <font id="function_arguments">()</font> <font id="function_return">RETURN VitalTimingDataType </font></li>
 </ul><ul>
 <li>VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType ) </font> <font id="function_return">RETURN VitalDelayType01Z </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalExtendToFillDelay</p>
+<p>Description:     A six element array of delay values of type <br />
+                  VitalDelayType01Z is returned when a 1, 2 or 6<br />
+                  element array is given.  This function will convert<br />
+                  VitalDelayType and VitalDelayType01 delay values into<br />
+                  a VitalDelayType01Z type following these rules:</p>
+<pre><code>              When a VitalDelayType is passed, all six transition
+              values are assigned the input value.  When a 
+              VitalDelayType01 is passed, the 01 transitions are
+              assigned to the 01, 0Z and Z1 transitions and the 10
+              transitions are assigned to 10, 1Z and Z0 transition
+              values.  When a VitalDelayType01Z is passed, the values
+              are kept as is.
+
+              The function is overloaded based on input type.
+
+              There is no function to fill a 12 value delay
+              type.</code></pre>
+<p>Arguments:         </p>
+<p>IN                 Type           Description<br />
+                     Delay          A one, two or six delay value Vital-<br />
+                                    DelayType is passed and a six delay,<br />
+                                    VitalDelayType01Z, item is returned.        </p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+   VitalDelayType01Z</p>
+<hr /></div><ul>
 <li>VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType01 ) </font> <font id="function_return">RETURN VitalDelayType01Z </font></li>
 </ul><ul>
 <li>VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType01Z ) </font> <font id="function_return">RETURN VitalDelayType01Z </font></li>
 </ul><ul>
 <li>VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType ) </font> <font id="function_return">RETURN TIME </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalCalcDelay</p>
+<p>Description:     This function accepts a 1, 2 or 6 value delay and <br />
+                  chooses the correct delay time to delay the NewVal <br />
+                  signal.  This function is overloaded based on the<br />
+                  delay type passed. The function returns a single value<br />
+                  of time.</p>
+<pre><code>              This function is provided for Level 0 models in order
+              to calculate the delay which should be applied 
+              for the passed signal. The delay selection is performed
+              using the OldVal and the NewVal to determine the 
+              transition to select.  The default value of OldVal is X.
+
+              This function cannot be used in a Level 1 model since
+              the VitalPathDelay routines perform the delay path
+              selection and output driving function.</code></pre>
+<p>Arguments:         </p>
+<p>IN                 Type           Description<br />
+                      NewVal         New value of the signal to be<br />
+                                     assigned   <br />
+                      OldVal         Previous value of the signal.<br />
+                                     Default value is 'X'<br />
+                      Delay          The delay structure from which to<br />
+                                     select the appropriate delay.  The<br />
+                                     function overload is based on the<br />
+                                     type of delay passed.  In the case of<br />
+                                     the single delay, VitalDelayType, no<br />
+                                     selection is performed, since there<br />
+                                     is only one value to choose from.<br />
+                                     For the other cases, the transition<br />
+                                     from the old value to the new value<br />
+                                     decide the value returned.  </p>
+<p>INOUT<br />
+   none </p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+   Time                              The time value selected from the<br />
+                                     Delay INPUT is returned.</p>
+<hr /></div><ul>
 <li>VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType01 ) </font> <font id="function_return">RETURN TIME </font></li>
 </ul><ul>
 <li>VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType01Z ) </font> <font id="function_return">RETURN TIME </font></li>
 </ul><ul>
 <li>VitalPathDelay <font id="function_arguments">( SIGNAL   OutSignal          : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData         : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName      : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp            : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths              : IN    VitalPathArrayType;<br><span style="padding-left:20px"> CONSTANT DefaultDelay       : IN    VitalDelayType      := VitalZeroDelay;<br><span style="padding-left:20px"> CONSTANT Mode               : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn                : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn              : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity        : IN    SEVERITY_LEVEL      := WARNING;<br><span style="padding-left:20px"> CONSTANT NegPreemptOn       : IN    BOOLEAN             := FALSE;<br><span style="padding-left:20px">  --IR225 3/14/98 CONSTANT IgnoreDefaultDelay : IN    BOOLEAN             := FALSE   --IR248 3/14/98 ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalPathDelay</p>
+<p>Description:     VitalPathDelay is the Level 1 routine used to select<br />
+                  the propagation delay path and schedule a new output <br />
+                  value.</p>
+<pre><code>              For single and dual delay values, VitalDelayType and
+              VitalDelayType01 are used.  The output value is
+              scheduled with a calculated delay without strength
+              modification.  
+
+              For the six delay value, VitalDelayType01Z, the output 
+              value is scheduled with a calculated delay.  The drive 
+              strength can be modified to handle weak signal strengths
+              to model tri-state devices, pull-ups and pull-downs as
+              an example.
+
+              The correspondence between the delay type and the
+              path delay function is as follows:
+
+              Delay Type                Path Type
+
+              VitalDelayType            VitalPathDelay
+              VitalDelayType01          VitalPathDelay01
+              VitalDelayType01Z         VitalPathDelay01Z
+
+              For each of these routines, the following capabilities
+              is provided:
+
+              o Transition dependent path delay selection
+              o User controlled glitch detection with the ability
+                to generate "X" on output and report the violation
+              o Control of the severity level for message generation
+              o Scheduling of the computed values on the specified
+                signal.
+
+              Selection of the appropriate path delay begins with the
+              candidate paths.  The candidate paths are selected by
+              identifying the paths for which the PathCondition is 
+              true.  If there is a single candidate path, then that
+              delay is selected.  If there is more than one candidate
+              path, then the shortest delay is selected using 
+              transition dependent delay selection.  If there is no 
+              candidate paths, then the delay specified by the 
+              DefaultDelay parameter to the path delay is used.
+
+              Once the delay is known, the output signal is then
+              scheduled with that delay.  In the case of 
+              VitalPathDelay01Z, an additional result mapping of
+              the output value is performed before scheduling.  The
+              result mapping is performed after transition dependent
+              delay selection but before scheduling the final output.
+
+              In order to perform glitch detection, the user is
+              obligated to provide a variable of VitalGlitchDataType
+              for the propagation delay functions to use.  The user
+              cannot modify or use this information.</code></pre>
+<p>Arguments:         </p>
+<p>IN             Type                   Description<br />
+   OutSignalName  string                 The name of the output signal<br />
+   OutTemp        std_logic              The new output value to be driven<br />
+   Paths          VitalPathArrayType     A list of paths of VitalPathArray<br />
+                  VitalPathArrayType01   type.  The VitalPathDelay routine<br />
+                  VitalPathArrayType01Z  is overloaded based on the type<br />
+                                         of constant passed in.  With<br />
+                                         VitalPathArrayType01Z, the<br />
+                                         resulting output strengths can be<br />
+                                         mapped.<br />
+   DefaultDelay   VitalDelayType         The default delay can be changed <br />
+                  VitalDelayType01       from zero-delay to another set<br />
+                  VitalDelayType01Z      of values.</p>
+<p>IgnoreDefaultDelay BOOLEAN            If TRUE, the default delay will<br />
+                                         be used when no paths are<br />
+                                         selected.  If false, no event<br />
+                                         will be scheduled if no paths are<br />
+                                         selected.</p>
+<p>Mode           VitalGlitchKindType    The value of this constant<br />
+                                         selects the type of glitch<br />
+                                         detection.<br />
+                       OnEvent           Glitch on transition event<br />
+                     | OnDetect          Glitch immediate on detection<br />
+                     | VitalInertial     No glitch, use INERTIAL<br />
+                                         assignment<br />
+                     | VitalTransport    No glitch, use TRANSPORT <br />
+                                         assignment<br />
+   XOn            BOOLEAN                Control for generation of 'X' on <br />
+                                         glitch.  When TRUE, 'X's are<br />
+                                         scheduled for glitches, otherwise<br />
+                                         no are generated.             <br />
+   MsgOn          BOOLEAN                Control for message generation on<br />
+                                         glitch detect.  When TRUE,<br />
+                                         glitches are reported, otherwise<br />
+                                         they are not reported.      <br />
+   MsgSeverity    SEVERITY_LEVEL         The level at which the message,<br />
+                                         or assertion, will be reported. <br />
+   IgnoreDefaultDelay BOOLEAN            Tells the VPD whether to use the<br />
+                                         default delay value in the absense<br />
+                                         of a valid delay for input conditions 3/14/98 MG</p>
+<p>OutputMap      VitalOutputMapType     For VitalPathDelay01Z, the output<br />
+                                         can be mapped to alternate<br />
+                                         strengths to model tri-state <br />
+                                         devices, pull-ups and pull-downs.  </p>
+<p>INOUT<br />
+   GlitchData     VitalGlitchDataType    The internal data storage<br />
+                                         variable required to detect<br />
+                                         glitches.</p>
+<p>OUT<br />
+   OutSignal      std_logic              The output signal to be driven</p>
+<p>Returns              <br />
+   none </p>
+<hr /></div><ul>
 <li>VitalPathDelay01 <font id="function_arguments">( SIGNAL   OutSignal          : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData         : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName      : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp            : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths              : IN    VitalPathArray01Type;<br><span style="padding-left:20px"> CONSTANT DefaultDelay       : IN    VitalDelayType01    := VitalZeroDelay01;<br><span style="padding-left:20px"> CONSTANT Mode               : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn                : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn              : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity        : IN    SEVERITY_LEVEL      := WARNING;<br><span style="padding-left:20px"> CONSTANT NegPreemptOn       : IN    BOOLEAN             := FALSE;<br><span style="padding-left:20px">  --IR225 3/14/98 CONSTANT IgnoreDefaultDelay : IN    BOOLEAN             := FALSE;<br><span style="padding-left:20px">  --IR248 3/14/98 CONSTANT RejectFastPath     : IN    BOOLEAN             := FALSE   --IR250 ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalPathDelay01Z <font id="function_arguments">( SIGNAL   OutSignal          : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData         : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName      : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp            : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths              : IN    VitalPathArray01ZType;<br><span style="padding-left:20px"> CONSTANT DefaultDelay       : IN    VitalDelayType01Z   := VitalZeroDelay01Z;<br><span style="padding-left:20px"> CONSTANT Mode               : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn                : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn              : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity        : IN    SEVERITY_LEVEL      := WARNING;<br><span style="padding-left:20px"> CONSTANT OutputMap          : IN    VitalOutputMapType  := VitalDefaultOutputMap;<br><span style="padding-left:20px"> CONSTANT NegPreemptOn       : IN    BOOLEAN             := FALSE;<br><span style="padding-left:20px">  --IR225 3/14/98 CONSTANT IgnoreDefaultDelay : IN    BOOLEAN             := FALSE;<br><span style="padding-left:20px">  --IR248 3/14/98 CONSTANT RejectFastPath     : IN    BOOLEAN             := FALSE   --IR250 ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalWireDelay</p>
+<p>Description:     VitalWireDelay is used to delay an input signal.<br />
+                  The delay is selected from the input parameter passed.<br />
+                  The function is useful for back annotation of actual<br />
+                  net delays.  </p>
+<pre><code>              The function is overloaded to permit passing a delay
+              value for twire for VitalDelayType, VitalDelayType01
+              and VitalDelayType01Z.  twire is a generic which can
+              be back annotated and must be constructed to follow
+              the SDF to generic mapping rules.       </code></pre>
+<p>Arguments:         </p>
+<p>IN          Type                  Description         <br />
+   InSig       std_ulogic            The input signal (port) to be<br />
+                                     delayed.<br />
+   twire       VitalDelayType        The delay value for which the input <br />
+               VitalDelayType01      signal should be delayed.  For Vital-<br />
+               VitalDelayType01Z     DelayType, the value is single value <br />
+                                     passed.  For VitalDelayType01 and<br />
+                                     VitalDelayType01Z, the appropriate<br />
+                                     delay value is selected by VitalCalc-<br />
+                                     Delay.</p>
+<p>INOUT<br />
+   none </p>
+<p>OUT<br />
+   OutSig      std_ulogic            The internal delayed signal</p>
+<p>Returns              <br />
+   none </p>
+<hr /></div><ul>
 <li>VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType01 ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType01Z ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalSignalDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT dly        : IN   TIME ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalSignalDelay</p>
+<p>Description:     The VitalSignalDelay procedure is called in a signal<br />
+                  delay block in the architecture to delay the <br />
+                  appropriate test or reference signal in order to <br />
+                  accommodate negative constraint checks.</p>
+<pre><code>              The amount of delay is of type TIME and is a constant.</code></pre>
+<p>Arguments:         </p>
+<p>IN                Type            Description         <br />
+   InSig             std_ulogic      The signal to be delayed.<br />
+   dly               TIME            The amount of time the signal is<br />
+                                     delayed.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   OutSig            std_ulogic      The delayed signal</p>
+<p>Returns              <br />
+   none</p>
+<hr /></div><ul>
 <li>VitalSetupHoldCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupLow      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldHigh      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldLow       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableSetupOnRef  : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableHoldOnRef   : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableHoldOnTest  : IN BOOLEAN := TRUE     --IR252 3/23/98 ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalSetupHoldCheck</p>
+<p>Description:    The VitalSetupHoldCheck procedure detects a setup or a <br />
+                 hold violation on the input test signal with respect<br />
+                 to the corresponding input reference signal.  The timing <br />
+                 constraints are specified through parameters <br />
+                 representing the high and low values for the setup and<br />
+                 hold values for the setup and hold times.  This <br />
+                 procedure assumes non-negative values for setup and hold <br />
+                 timing constraints. </p>
+<pre><code>             It is assumed that negative timing constraints
+             are handled by internally delaying the test or
+             reference signals.  Negative setup times result in
+             a delayed reference signal.  Negative hold times
+             result in a delayed test signal.  Furthermore, the
+             delays and constraints associated with these and
+             other signals may need to be appropriately
+             adjusted so that all constraint intervals overlap
+             the delayed reference signals and all constraint
+             values (with respect to the delayed signals) are
+             non-negative.
+
+             This function is overloaded based on the input
+             TestSignal.  A vector and scalar form are provided.</code></pre>
+<p>TestSignal XXXXXXXXXXXX____________________________XXXXXXXXXXXXXXXXXXXXXX<br />
+            :<br />
+            :        --&gt;|       error region       |<--
+            :
+            _______________________________
+ RefSignal                                 \______________________________
+            :           |                  |       |
+            :           |               -->|       |<-- thold
+            :        -->|     tsetup       |&lt;--</p>
+<p>Arguments:         </p>
+<p>IN                 Type           Description    <br />
+   TestSignal         std_ulogic     Value of test signal<br />
+                      std_logic_vector<br />
+   TestSignalName     STRING         Name of test signal<br />
+   TestDelay          TIME           Model's internal delay associated<br />
+                                     with TestSignal<br />
+   RefSignal          std_ulogic     Value of reference signal<br />
+   RefSignalName      STRING         Name of reference signal<br />
+   RefDelay           TIME           Model's internal delay associated<br />
+                                     with RefSignal<br />
+   SetupHigh          TIME           Absolute minimum time duration before<br />
+                                     the transition of RefSignal for which<br />
+                                     transitions of TestSignal are allowed<br />
+                                     to proceed to the "1" state without<br />
+                                     causing a setup violation.      <br />
+   SetupLow           TIME           Absolute minimum time duration before <br />
+                                     the transition of RefSignal for which<br />
+                                     transitions of TestSignal are allowed<br />
+                                     to proceed to the "0" state without<br />
+                                     causing a setup violation.      <br />
+   HoldHigh           TIME           Absolute minimum time duration after<br />
+                                     the transition of RefSignal for which<br />
+                                     transitions of TestSignal are allowed<br />
+                                     to proceed to the "1" state without<br />
+                                     causing a hold violation.      <br />
+   HoldLow            TIME           Absolute minimum time duration after <br />
+                                     the transition of RefSignal for which<br />
+                                     transitions of TestSignal are allowed<br />
+                                     to proceed to the "0" state without<br />
+                                     causing a hold violation.      <br />
+   CheckEnabled       BOOLEAN        Check performed if TRUE.<br />
+   RefTransition      VitalEdgeSymbolType<br />
+                                     Reference edge specified. Events on<br />
+                                     the RefSignal which match the edge<br />
+                                     spec. are used as reference edges.      <br />
+   HeaderMsg          STRING         String that will accompany any<br />
+                                     assertion messages produced.<br />
+   XOn                BOOLEAN         If TRUE, Violation output parameter<br />
+                                     is set to "X". Otherwise, Violation<br />
+                                     is always set to "0".<br />
+   MsgOn              BOOLEAN        If TRUE, set and hold violation <br />
+                                     message will be generated.<br />
+                                     Otherwise, no messages are generated,<br />
+                                     even upon violations.<br />
+   MsgSeverity        SEVERITY_LEVEL Severity level for the assertion.      <br />
+   EnableSetupOnTest  BOOLEAN        If FALSE at the time that the <br />
+                                     TestSignal signal changes, <br />
+                                     no setup check will be performed.<br />
+   EnableSetupOnRef   BOOLEAN        If FALSE at the time that the <br />
+                                     RefSignal signal changes, <br />
+                                     no setup check will be performed.<br />
+   EnableHoldOnRef    BOOLEAN        If FALSE at the time that the <br />
+                                     RefSignal signal changes, <br />
+                                     no hold check will be performed.<br />
+   EnableHoldOnTest   BOOLEAN        If FALSE at the time that the <br />
+                                     TestSignal signal changes, <br />
+                                     no hold check will be performed.</p>
+<p>INOUT<br />
+   TimingData         VitalTimingDataType  <br />
+                                     VitalSetupHoldCheck information<br />
+                                     storage area.  This is used<br />
+                                     internally to detect reference edges<br />
+                                     and record the time of the last edge.</p>
+<p>OUT<br />
+   Violation   X01                   This is the violation flag returned. </p>
+<p>Returns              <br />
+   none    </p>
+<hr /></div><ul>
 <li>VitalSetupHoldCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupLow      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldHigh      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldLow       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableSetupOnRef  : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableHoldOnRef   : IN BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableHoldOnTest  : IN BOOLEAN := TRUE     --IR252 3/23/98 ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalRecoveryRemovalCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Recovery      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Removal       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT ActiveLow     : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT EnableRecOnTest : IN   BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableRecOnRef  : IN   BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableRemOnRef  : IN   BOOLEAN := TRUE;<br><span style="padding-left:20px">    --IR252 3/23/98 CONSTANT EnableRemOnTest : IN   BOOLEAN := TRUE     --IR252 3/23/98 ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalRecoveryRemovalCheck</p>
+<p>Description:     The VitalRecoveryRemovalCheck detects the presence of<br />
+                  a recovery or removal violation on the input test <br />
+                  signal with respect to the corresponding input reference<br />
+                  signal.  It assumes non-negative values of setup and<br />
+                  hold timing constraints.  The timing constraint is <br />
+                  specified through parameters representing the recovery<br />
+                  and removal times associated with a reference edge of <br />
+                  the reference signal.  A flag indicates whether a test<br />
+                  signal is asserted when it is high or when it is low.</p>
+<pre><code>              It is assumed that negative timing constraints 
+              are handled by internally delaying the test or 
+              reference signals.  Negative recovery times result in 
+              a delayed reference signal.  Negative removal times 
+              result in a delayed test signal.  Furthermore, the 
+              delays and constraints associated with these and
+              other signals may need to be appropriately
+              adjusted so that all constraint intervals overlap 
+              the delayed reference signals and all constraint
+              values (with respect to the delayed signals) are
+              non-negative.</code></pre>
+<p>Arguments:         </p>
+<p>IN               Type             Description<br />
+   TestSignal       std_ulogic       Value of TestSignal.  The routine is<br />
+   TestSignalName   STRING           Name of TestSignal <br />
+   TestDelay        TIME             Model internal delay associated with<br />
+                                     the TestSignal<br />
+   RefSignal        std_ulogic       Value of RefSignal<br />
+   RefSignalName    STRING           Name of RefSignal<br />
+   RefDelay         TIME             Model internal delay associated with<br />
+                                     the RefSignal<br />
+   Recovery         TIME             A change to an unasserted value on<br />
+                                     the asynchronous TestSignal must<br />
+                                     precede reference edge (on RefSignal)<br />
+                                     by at least this time.<br />
+   Removal          TIME             An asserted condition must be present<br />
+                                     on the asynchronous TestSignal for at<br />
+                                     least the removal time following a<br />
+                                     reference edge on RefSignal.<br />
+   ActiveLow        BOOLEAN          A flag which indicates if TestSignal<br />
+                                     is asserted when it is low - "0."<br />
+                                     FALSE indicate that TestSignal is<br />
+                                     asserted when it has a value "1."<br />
+   CheckEnabled     BOOLEAN          The check in enabled when the value<br />
+                                     is TRUE, otherwise the constraints <br />
+                                     are not checked.<br />
+   RefTransition    VitalEdgeSymbolType  <br />
+                                     Reference edge specifier.  Events on<br />
+                                     RefSignal will match the edge<br />
+                                     specified.<br />
+   HeaderMsg         STRING          A header message that will accompany<br />
+                                     any assertion message.<br />
+   XOn               BOOLEAN         When TRUE, the output Violation is<br />
+                                     set to "X."  When FALSE, it is always <br />
+                                     "0."<br />
+   MsgOn             BOOLEAN         When TRUE, violation messages are<br />
+                                     output.  When FALSE, no messages are<br />
+                                     generated.<br />
+   MsgSeverity       SEVERITY_LEVEL  Severity level of the asserted<br />
+                                     message.<br />
+   EnableRecOnTest   BOOLEAN         If FALSE at the time that the <br />
+                                     TestSignal signal changes, <br />
+                                     no recovery check will be performed.<br />
+   EnableRecOnRef    BOOLEAN         If FALSE at the time that the <br />
+                                     RefSignal signal changes, <br />
+                                     no recovery check will be performed.<br />
+   EnableRemOnRef    BOOLEAN         If FALSE at the time that the <br />
+                                     RefSignal signal changes, <br />
+                                     no removal check will be performed.<br />
+   EnableRemOnTest   BOOLEAN         If FALSE at the time that the <br />
+                                     TestSignal signal changes, <br />
+                                     no removal check will be performed.</p>
+<p>INOUT<br />
+    TimingData       VitalTimingDataType <br />
+                                     VitalRecoveryRemovalCheck information<br />
+                                     storage area.  This is used<br />
+                                     internally to detect reference edges<br />
+                                     and record the time of the last edge.<br />
+   OUT<br />
+    Violation        X01             This is the violation flag returned.</p>
+<p>Returns              <br />
+           none</p>
+<hr /></div><ul>
 <li>VitalPeriodPulseCheck <font id="function_arguments">( VARIABLE Violation      : OUT    X01;<br><span style="padding-left:20px"> VARIABLE PeriodData     : INOUT  VitalPeriodDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Period         : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT PulseWidthHigh : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT PulseWidthLow  : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalPeriodPulseCheck</p>
+<p>Description:    VitalPeriodPulseCheck checks for minimum<br />
+                 periodicity and pulse width for "1" and "0" values of<br />
+                 the input test signal.  The timing constraint is <br />
+                 specified through parameters representing the minimal<br />
+                 period between successive rising and falling edges of<br />
+                 the input test signal and the minimum pulse widths <br />
+                 associated with high and low values.  </p>
+<pre><code>             VitalPeriodCheck's accepts rising and falling edges
+             from 1 and 0 as well as transitions to and from 'X.'
+
+                _______________         __________
+   ____________|               |_______|
+
+               |&lt;--- pw_hi ---&gt;|
+               |&lt;-------- period -----&gt;|
+                            --&gt;| pw_lo |&lt;--</code></pre>
+<p>Arguments:<br />
+  IN                 Type           Description<br />
+    TestSignal        std_ulogic     Value of test signal  <br />
+    TestSignalName    STRING         Name of the test signal<br />
+    TestDelay         TIME           Model's internal delay associated<br />
+                                     with TestSignal<br />
+    Period            TIME           Minimum period allowed between<br />
+                                     consecutive rising ('P') or <br />
+                                     falling ('F') transitions.<br />
+    PulseWidthHigh    TIME           Minimum time allowed for a high<br />
+                                     pulse ('1' or 'H')<br />
+    PulseWidthLow     TIME           Minimum time allowed for a low<br />
+                                     pulse ('0' or 'L')<br />
+    CheckEnabled      BOOLEAN        Check performed if TRUE.<br />
+    HeaderMsg         STRING         String that will accompany any<br />
+                                     assertion messages produced.   <br />
+    XOn               BOOLEAN        If TRUE, Violation output parameter<br />
+                                     is set to "X". Otherwise, Violation<br />
+                                     is always set to "0".<br />
+                                     XOnChecks is a global that allows for<br />
+                                     only timing checks to be turned on. <br />
+    MsgOn             BOOLEAN        If TRUE, period/pulse violation<br />
+                                     message will be generated.<br />
+                                     Otherwise, no messages are generated,<br />
+                                     even though a violation is detected.<br />
+                                     MsgOnChecks allows for only timing<br />
+                                     check messages to be turned on. <br />
+    MsgSeverity       SEVERITY_LEVEL Severity level for the assertion.</p>
+<p>INOUT<br />
+    PeriodData        VitalPeriodDataType <br />
+                                     VitalPeriodPulseCheck information<br />
+                                     storage area.  This is used<br />
+                                     internally to detect reference edges<br />
+                                     and record the pulse and period<br />
+                                     times.<br />
+   OUT<br />
+    Violation         X01            This is the violation flag returned. </p>
+<p>Returns              <br />
+    none</p>
+<hr /></div><ul>
 <li>VitalInPhaseSkewCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01;<br><span style="padding-left:20px"> VARIABLE SkewData          : INOUT  VitalSkewDataType;<br><span style="padding-left:20px"> SIGNAL   Signal1           : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT Signal1Name       : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT Signal1Delay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   Signal2           : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT Signal2Name       : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT Signal2Delay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SkewS1S2RiseRise  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS2S1RiseRise  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS1S2FallFall  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS2S1FallFall  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING  := "";<br><span style="padding-left:20px"> SIGNAL   Trigger           : INOUT  std_ulogic ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalInPhaseSkewCheck</p>
+<p>Description:    The VitalInPhaseSkewCheck procedure detects an in-phase<br />
+                 skew violation between input signals Signal1 and Signal2.<br />
+                 This is a timer based skew check in which a<br />
+                 violation is detected if Signal1 and Signal2 are in<br />
+                 different logic states longer than the specified skew <br />
+                 interval.</p>
+<pre><code>             The timing constraints are specified through parameters
+             representing the skew values for the different states
+             of Signal1 and Signal2.</code></pre>
+<p>Signal2    XXXXXXXXXXXX___________________________XXXXXXXXXXXXXXXXXXXXXX<br />
+            :<br />
+            :        --&gt;|                         |&lt;--<br />
+            :      Signal2 should go low in this region<br />
+            :</p>
+<pre><code>        ____________</code></pre>
+<p>Signal1                _________________________________________________<br />
+            :           |                         |<br />
+            :           |<-------- tskew -------->|</p>
+<p>Arguments:</p>
+<p>IN                 Type           Description<br />
+   Signal1            std_ulogic     Value of first signal<br />
+   Signal1Name        STRING         Name of first signal<br />
+   Signal1Delay       TIME           Model's internal delay associated<br />
+                                     with Signal1<br />
+   Signal2            std_ulogic     Value of second signal<br />
+   Signal2Name        STRING         Name of second signal<br />
+   Signal2Delay       TIME           Model's internal delay associated<br />
+                                     with Signal2<br />
+   SkewS1S2RiseRise   TIME           Absolute maximum time duration for<br />
+                                     which Signal2 can remain at "0"<br />
+                                     after Signal1 goes to the "1" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS2S1RiseRise   TIME           Absolute maximum time duration for<br />
+                                     which Signal1 can remain at "0"<br />
+                                     after Signal2 goes to the "1" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS1S2FallFall   TIME           Absolute maximum time duration for<br />
+                                     which Signal2 can remain at "1"<br />
+                                     after Signal1 goes to the "0" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS2S1FallFall   TIME           Absolute maximum time duration for<br />
+                                     which Signal1 can remain at "1"<br />
+                                     after Signal2 goes to the "0" state,<br />
+                                     without causing a skew violation.<br />
+   CheckEnabled       BOOLEAN        Check performed if TRUE.<br />
+   HeaderMsg          STRING         String that will accompany any<br />
+                                     assertion messages produced.<br />
+   XOn                BOOLEAN        If TRUE, Violation output parameter<br />
+                                     is set to "X". Otherwise, Violation<br />
+                                     is always set to "0."      <br />
+   MsgOn              BOOLEAN        If TRUE, skew timing violation <br />
+                                     messages will be generated.<br />
+                                     Otherwise, no messages are generated,<br />
+                                     even upon violations.      <br />
+   MsgSeverity        SEVERITY_LEVEL Severity level for the assertion.</p>
+<p>INOUT<br />
+   SkewData           VitalSkewDataType<br />
+                                     VitalInPhaseSkewCheck information<br />
+                                     storage area.  This is used<br />
+                                     internally to detect signal edges<br />
+                                     and record the time of the last edge.</p>
+<p>Trigger            std_ulogic     This signal is used to trigger the<br />
+                                     process in which the timing check<br />
+                                     occurs upon expiry of the skew<br />
+                                     interval.</p>
+<p>OUT<br />
+   Violation   X01                   This is the violation flag returned.</p>
+<p>Returns<br />
+   none</p>
+<hr /></div><ul>
 <li>VitalOutPhaseSkewCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01;<br><span style="padding-left:20px"> VARIABLE SkewData          : INOUT  VitalSkewDataType;<br><span style="padding-left:20px"> SIGNAL   Signal1           : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT Signal1Name       : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT Signal1Delay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   Signal2           : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT Signal2Name       : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT Signal2Delay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SkewS1S2RiseFall  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS2S1RiseFall  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS1S2FallRise  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT SkewS2S1FallRise  : IN     TIME := TIME'HIGH;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING  := "";<br><span style="padding-left:20px"> SIGNAL   Trigger           : INOUT  std_ulogic ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><br><br><br><br><br><br>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalOutPhaseSkewCheck</p>
+<p>Description:    The VitalOutPhaseSkewCheck procedure detects an <br />
+                 out-of-phase skew violation between input signals Signal1<br />
+                 and Signal2. This is a timer based skew check in<br />
+                 which a violation is detected if Signal1 and Signal2 are<br />
+                 in the same logic state longer than the specified skew<br />
+                 interval.  </p>
+<pre><code>             The timing constraints are specified through parameters
+             representing the skew values for the different states
+             of Signal1 and Signal2.</code></pre>
+<p>Signal2    XXXXXXXXXXXX___________________________XXXXXXXXXXXXXXXXXXXXXX<br />
+            :<br />
+            :        --&gt;|                         |&lt;--<br />
+            :     Signal2 should go high in this region<br />
+            :</p>
+<pre><code>        ____________</code></pre>
+<p>Signal1                _________________________________________________  <br />
+            :           |                         |<br />
+            :           |<-------- tskew -------->|</p>
+<p>Arguments:</p>
+<p>IN                 Type           Description<br />
+   Signal1            std_ulogic     Value of first signal<br />
+   Signal1Name        STRING         Name of first signal<br />
+   Signal1Delay       TIME           Model's internal delay associated<br />
+                                     with Signal1<br />
+   Signal2            std_ulogic     Value of second signal<br />
+   Signal2Name        STRING         Name of second signal<br />
+   Signal2Delay       TIME           Model's internal delay associated<br />
+                                     with Signal2<br />
+   SkewS1S2RiseFall   TIME           Absolute maximum time duration for<br />
+                                     which Signal2 can remain at "1"<br />
+                                     after Signal1 goes to the "1" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS2S1RiseFall   TIME           Absolute maximum time duration for<br />
+                                     which Signal1 can remain at "1"<br />
+                                     after Signal2 goes to the "1" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS1S2FallRise   TIME           Absolute maximum time duration for<br />
+                                     which Signal2 can remain at "0"<br />
+                                     after Signal1 goes to the "0" state,<br />
+                                     without causing a skew violation.<br />
+   SkewS2S1FallRise   TIME           Absolute maximum time duration for<br />
+                                     which Signal1 can remain at "0"<br />
+                                     after Signal2 goes to the "0" state,<br />
+                                     without causing a skew violation.<br />
+   CheckEnabled       BOOLEAN        Check performed if TRUE.<br />
+   HeaderMsg          STRING         String that will accompany any<br />
+                                     assertion messages produced.<br />
+   XOn                BOOLEAN        If TRUE, Violation output parameter<br />
+                                     is set to "X". Otherwise, Violation<br />
+                                     is always set to "0."<br />
+   MsgOn              BOOLEAN        If TRUE, skew timing violation<br />
+                                     messages will be generated.<br />
+                                     Otherwise, no messages are generated,<br />
+                                     even upon violations.<br />
+   MsgSeverity        SEVERITY_LEVEL Severity level for the assertion.</p>
+<p>INOUT<br />
+   SkewData           VitalSkewDataType<br />
+                                     VitalInPhaseSkewCheck information<br />
+                                     storage area.  This is used<br />
+                                     internally to detect signal edges<br />
+                                     and record the time of the last edge.</p>
+<p>Trigger            std_ulogic     This signal is used to trigger the<br />
+                                     process in which the timing check<br />
+                                     occurs upon expiry of the skew<br />
+                                     interval.</p>
+<p>OUT<br />
+   Violation   X01                   This is the violation flag returned.</p>
+<p>Returns<br />
+   none</p>
+<hr /></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

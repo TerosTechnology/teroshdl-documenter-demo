@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=pwm_reg_top><h1 id="entity-pwm_reg_top">Entity: pwm_reg_top</h1></a><ul>
 <li><strong>File</strong>: pwm_reg_top.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 110"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="90" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="85" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1032" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1037" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1042" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 395 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="290" height="130" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="286" height="125" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_core_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_core_ni </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="370" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="370" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="335" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="335" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1042" x1="350" y1="30" x2="365" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="370" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="370" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="335" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="335" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1047" x1="350" y1="50" x2="365" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="370" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="370" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="335" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="335" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1052" x1="350" y1="70" x2="365" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1040,6 +1115,18 @@
 </tr>
 <tr>
 <td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_core_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_core_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1136,6 +1223,11 @@
 <td></td>
 </tr>
 <tr>
+<td>reg_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
 <td>tl_reg_h2d</td>
 <td>tlul_pkg::tl_h2d_t</td>
 <td></td>
@@ -1161,9 +1253,14 @@
 <td>outgoing integrity generation</td>
 </tr>
 <tr>
+<td>sync_core_update</td>
+<td>logic</td>
+<td>cdc oversampling signals</td>
+</tr>
+<tr>
 <td>alert_test_we</td>
 <td>logic</td>
-<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+<td>Define SW related signals  Format: <reg><em><field></em>{wd</td>
 </tr>
 <tr>
 <td>alert_test_wd</td>
@@ -1177,11 +1274,11 @@
 </tr>
 <tr>
 <td>regen_qs</td>
-<td>logic</td>
+<td>logic [0:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>regen_wd</td>
+<td>regen_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1191,32 +1288,12 @@
 <td></td>
 </tr>
 <tr>
-<td>cfg_clk_div_qs</td>
-<td>logic [26:0]</td>
+<td>cfg_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>cfg_clk_div_wd</td>
-<td>logic [26:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>cfg_dc_resn_qs</td>
-<td>logic [3:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>cfg_dc_resn_wd</td>
-<td>logic [3:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>cfg_cntr_en_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>cfg_cntr_en_wd</td>
+<td>cfg_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1226,62 +1303,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_en_en_0_qs</td>
-<td>logic</td>
+<td>pwm_en_qs</td>
+<td>logic [5:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_en_en_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_4_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_4_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_5_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_en_en_5_wd</td>
+<td>pwm_en_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1291,62 +1318,12 @@
 <td></td>
 </tr>
 <tr>
-<td>invert_invert_0_qs</td>
-<td>logic</td>
+<td>invert_qs</td>
+<td>logic [5:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>invert_invert_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_4_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_4_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_5_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>invert_invert_5_wd</td>
+<td>invert_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1356,32 +1333,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_0_phase_delay_0_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_0_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_0_phase_delay_0_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_0_htbt_en_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_0_htbt_en_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_0_blink_en_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_0_blink_en_0_wd</td>
+<td>pwm_param_0_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1391,32 +1348,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_1_phase_delay_1_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_1_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_1_phase_delay_1_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_1_htbt_en_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_1_htbt_en_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_1_blink_en_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_1_blink_en_1_wd</td>
+<td>pwm_param_1_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1426,32 +1363,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_2_phase_delay_2_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_2_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_2_phase_delay_2_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_2_htbt_en_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_2_htbt_en_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_2_blink_en_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_2_blink_en_2_wd</td>
+<td>pwm_param_2_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1461,32 +1378,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_3_phase_delay_3_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_3_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_3_phase_delay_3_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_3_htbt_en_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_3_htbt_en_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_3_blink_en_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_3_blink_en_3_wd</td>
+<td>pwm_param_3_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1496,32 +1393,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_4_phase_delay_4_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_4_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_4_phase_delay_4_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_4_htbt_en_4_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_4_htbt_en_4_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_4_blink_en_4_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_4_blink_en_4_wd</td>
+<td>pwm_param_4_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1531,32 +1408,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_5_phase_delay_5_qs</td>
-<td>logic [15:0]</td>
+<td>pwm_param_5_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pwm_param_5_phase_delay_5_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_5_htbt_en_5_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_5_htbt_en_5_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_5_blink_en_5_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pwm_param_5_blink_en_5_wd</td>
+<td>pwm_param_5_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1566,23 +1423,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_0_a_0_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_0_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_0_a_0_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_0_b_0_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_0_b_0_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_0_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1591,23 +1438,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_1_a_1_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_1_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_1_a_1_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_1_b_1_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_1_b_1_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_1_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1616,23 +1453,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_2_a_2_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_2_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_2_a_2_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_2_b_2_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_2_b_2_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_2_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1641,23 +1468,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_3_a_3_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_3_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_3_a_3_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_3_b_3_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_3_b_3_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_3_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1666,23 +1483,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_4_a_4_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_4_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_4_a_4_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_4_b_4_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_4_b_4_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_4_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1691,23 +1498,13 @@
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_5_a_5_qs</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_5_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>duty_cycle_5_a_5_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_5_b_5_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>duty_cycle_5_b_5_wd</td>
-<td>logic [15:0]</td>
+<td>duty_cycle_5_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1716,23 +1513,13 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_0_x_0_qs</td>
-<td>logic [15:0]</td>
+<td>blink_param_0_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_0_x_0_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_0_y_0_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_0_y_0_wd</td>
-<td>logic [15:0]</td>
+<td>blink_param_0_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1741,23 +1528,13 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_1_x_1_qs</td>
-<td>logic [15:0]</td>
+<td>blink_param_1_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_1_x_1_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_1_y_1_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_1_y_1_wd</td>
-<td>logic [15:0]</td>
+<td>blink_param_1_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1766,23 +1543,13 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_2_x_2_qs</td>
-<td>logic [15:0]</td>
+<td>blink_param_2_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_2_x_2_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_2_y_2_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_2_y_2_wd</td>
-<td>logic [15:0]</td>
+<td>blink_param_2_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1791,23 +1558,13 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_3_x_3_qs</td>
-<td>logic [15:0]</td>
+<td>blink_param_3_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_3_x_3_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_3_y_3_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_3_y_3_wd</td>
-<td>logic [15:0]</td>
+<td>blink_param_3_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1816,23 +1573,13 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_4_x_4_qs</td>
-<td>logic [15:0]</td>
+<td>blink_param_4_qs</td>
+<td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_4_x_4_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_4_y_4_qs</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>blink_param_4_y_4_wd</td>
-<td>logic [15:0]</td>
+<td>blink_param_4_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1841,23 +1588,743 @@
 <td></td>
 </tr>
 <tr>
-<td>blink_param_5_x_5_qs</td>
+<td>blink_param_5_qs</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>blink_param_5_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_regen_qs_int</td>
+<td>logic</td>
+<td>Define register CDC handling.  CDC handling is done on a per-reg instead of per-field boundary.</td>
+</tr>
+<tr>
+<td>core_regen_d</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_regen_wdata</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_regen_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_regen_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_clk_div_qs_int</td>
+<td>logic [26:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_dc_resn_qs_int</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_cntr_en_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_cfg_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_cfg_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_4_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_en_5_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_d</td>
+<td>logic [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_wdata</td>
+<td>logic [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_en_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_en_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_4_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_invert_5_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_d</td>
+<td>logic [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_wdata</td>
+<td>logic [5:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_invert_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_invert_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_0_phase_delay_0_qs_int</td>
 <td>logic [15:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_5_x_5_wd</td>
+<td>core_pwm_param_0_htbt_en_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_0_blink_en_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_0_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_0_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_1_phase_delay_1_qs_int</td>
 <td>logic [15:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_5_y_5_qs</td>
+<td>core_pwm_param_1_htbt_en_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_1_blink_en_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_1_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_1_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_2_phase_delay_2_qs_int</td>
 <td>logic [15:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>blink_param_5_y_5_wd</td>
+<td>core_pwm_param_2_htbt_en_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_2_blink_en_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_2_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_2_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_phase_delay_3_qs_int</td>
 <td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_htbt_en_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_blink_en_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_phase_delay_4_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_htbt_en_4_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_blink_en_4_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_4_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_4_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_phase_delay_5_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_htbt_en_5_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_blink_en_5_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_pwm_param_5_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_pwm_param_5_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_0_a_0_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_0_b_0_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_0_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_0_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_1_a_1_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_1_b_1_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_1_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_1_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_2_a_2_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_2_b_2_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_2_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_2_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_3_a_3_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_3_b_3_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_3_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_3_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_4_a_4_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_4_b_4_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_4_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_4_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_4_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_4_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_5_a_5_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_5_b_5_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_5_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_5_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_duty_cycle_5_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_duty_cycle_5_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_0_x_0_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_0_y_0_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_0_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_0_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_1_x_1_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_1_y_1_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_1_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_1_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_2_x_2_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_2_y_2_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_2_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_2_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_3_x_3_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_3_y_3_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_3_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_3_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_4_x_4_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_4_y_4_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_4_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_4_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_4_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_4_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_5_x_5_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_5_y_5_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_5_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_5_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>core_blink_param_5_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_core_blink_param_5_wdata</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1866,9 +2333,19 @@
 <td></td>
 </tr>
 <tr>
+<td>shadow_busy</td>
+<td>logic</td>
+<td>shadow busy</td>
+</tr>
+<tr>
+<td>reg_busy_sel</td>
+<td>logic</td>
+<td>register busy</td>
+</tr>
+<tr>
 <td>unused_wdata</td>
 <td>logic</td>
-<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+<td>Unused signal tieoff  wdata / byte enable are not always fully used  add a blanket unused statement to handle lint waivers</td>
 </tr>
 <tr>
 <td>unused_be</td>
@@ -1913,34 +2390,126 @@
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Check sub-word write is permitted</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Check sub-word write is permitted </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
+ Read data return </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_chk: tlul_cmd_intg_chk</li>
 </ul><ul>
 <li>u_rsp_intg_gen: tlul_rsp_intg_gen</li>
 </ul><ul>
 <li>u_reg_if: tlul_adapter_reg</li>
 </ul><ul>
+<li>u_core_tgl: prim_pulse_sync</li>
+</ul><ul>
+<li>u_regen_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_cfg_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_en_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_invert_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_4_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pwm_param_5_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_4_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_duty_cycle_5_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_4_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_blink_param_5_cdc: prim_reg_cdc</li>
+</ul><ul>
 <li>u_alert_test: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Register instances<br />
-R[alert_test]: V(True)</p></div><ul>
+ Register instances<br />
+ R[alert_test]: V(True)</p></div><ul>
 <li>u_regen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[regen]: V(False)</p></div><ul>
+ R[regen]: V(False)</p></div><ul>
 <li>u_cfg_clk_div: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[cfg]: V(False)<br />
-F[clk_div]: 26:0</p></div><ul>
+ R[cfg]: V(False)<br />
+   F[clk_div]: 26:0</p></div><ul>
 <li>u_cfg_dc_resn: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[dc_resn]: 30:27</p></div><ul>
+   F[dc_resn]: 30:27</p></div><ul>
 <li>u_cfg_cntr_en: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[cntr_en]: 31:31</p></div><br><br><br><br><br><br>
+   F[cntr_en]: 31:31</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=axi_ad9684_pnmon><h1 id="entity-axi_ad9684_pnmon">Entity: axi_ad9684_pnmon</h1></a><ul>
 <li><strong>File</strong>: axi_ad9684_pnmon.v</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 475 90"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="105,0 120,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="310" height="70" fill="black" x="120" y="15"></rect><rect id="SvgjsRect1007" width="306" height="65" fill="#fdfd96" x="122" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="100" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="135" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_clk </tspan></text><line id="SvgjsLine1012" x1="105" y1="30" x2="120" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="100" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [27:0] </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="135" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_data </tspan></text><line id="SvgjsLine1017" x1="105" y1="50" x2="120" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="100" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [ 3:0] </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="135" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_pnseq_sel </tspan></text><line id="SvgjsLine1022" x1="105" y1="70" x2="120" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="450" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="415" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="415" svgjs:data="{&quot;newLined&quot;:true}">   adc_pn_oos </tspan></text><line id="SvgjsLine1027" x1="430" y1="30" x2="445" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="450" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="415" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="415" svgjs:data="{&quot;newLined&quot;:true}">   adc_pn_err </tspan></text><line id="SvgjsLine1032" x1="430" y1="50" x2="445" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><hr /><hr /><p>Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.In this HDL repository, there are many different and unique modules, consistingof various HDL (Verilog or VHDL) components. The individual modules aredeveloped independently, and may be accompanied by separate and unique licenseterms.The user should read each of these license terms, and understand thefreedoms and responsibilities that he or she has by using this source/core.This core is distributed in the hope that it will be useful, but WITHOUT ANYWARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FORA PARTICULAR PURPOSE.Redistribution and use of source or resulting binaries, with or without modificationof this file, are permitted under one of the following two license terms:</p><ol><li>The GNU General Public License version 2 as published by theFree Software Foundation, which can be found in the top level directoryof this repository (LICENSE_GPL2), and also online at:<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>OR</li><li>An ADI specific BSD license, which can be found in the top level directoryof this repository (LICENSE_ADIBSD), and also on-line at:<a href="https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD">https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD</a>This will allow to generate bit files and not release the source code,as long as it attaches to an ADI device.</li></ol><hr /><hr /><p>PN monitors</p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 475 90"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="105,0 120,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="310" height="70" fill="black" x="120" y="15"></rect><rect id="SvgjsRect1007" width="306" height="65" fill="#fdfd96" x="122" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="100" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="135" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_clk </tspan></text><line id="SvgjsLine1012" x1="105" y1="30" x2="120" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="100" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [27:0] </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="135" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_data </tspan></text><line id="SvgjsLine1017" x1="105" y1="50" x2="120" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="100" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="100" svgjs:data="{&quot;newLined&quot;:true}">   [ 3:0] </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="135" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="135" svgjs:data="{&quot;newLined&quot;:true}">   adc_pnseq_sel </tspan></text><line id="SvgjsLine1022" x1="105" y1="70" x2="120" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="450" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="415" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="415" svgjs:data="{&quot;newLined&quot;:true}">   adc_pn_oos </tspan></text><line id="SvgjsLine1027" x1="430" y1="30" x2="445" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="450" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="450" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="415" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="415" svgjs:data="{&quot;newLined&quot;:true}">   adc_pn_err </tspan></text><line id="SvgjsLine1032" x1="430" y1="50" x2="445" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><hr /> <hr /> <p>Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.</p> <p>In this HDL repository, there are many different and unique modules, consisting  of various HDL (Verilog or VHDL) components. The individual modules are  developed independently, and may be accompanied by separate and unique license  terms.</p> <p>The user should read each of these license terms, and understand the  freedoms and responsibilities that he or she has by using this source/core.</p> <p>This core is distributed in the hope that it will be useful, but WITHOUT ANY  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR  A PARTICULAR PURPOSE.</p> <p>Redistribution and use of source or resulting binaries, with or without modification  of this file, are permitted under one of the following two license terms:</p> <ol> <li>The GNU General Public License version 2 as published by the   Free Software Foundation, which can be found in the top level directory   of this repository (LICENSE_GPL2), and also online at:   <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a></li> </ol> <p>OR</p> <ol start="2"> <li>An ADI specific BSD license, which can be found in the top level directory   of this repository (LICENSE_ADIBSD), and also on-line at:   <a href="https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD">https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD</a>   This will allow to generate bit files and not release the source code,   as long as it attaches to an ADI device.</li> </ol> <hr /> <hr /> <p>PN monitors</p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1097,15 +1172,15 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>pn23 <font id="function_arguments">()</font> <font id="function_return">return ([27:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-PN23 function</p></div><ul>
+ PN23 function</p></div><ul>
 <li>pn9 <font id="function_arguments">()</font> <font id="function_return">return ([31:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-PN9 function</p></div><h2 id="processes">Processes</h2><ul>
+ PN9 function</p></div><h2 id="processes">Processes</h2><ul>
 <li>unnamed: ( @(posedge adc_clk) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>i_pnmon: ad_pnmon</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-pn oos &amp; pn err</p></div><br><br><br><br><br><br>
+ pn oos &amp; pn err</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

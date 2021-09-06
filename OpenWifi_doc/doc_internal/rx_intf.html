@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1133,7 +1208,7 @@
 <td>adc_clk</td>
 <td>input</td>
 <td>wire</td>
-<td>-------------debug purpose----------------from ad9361_adc_pack</td>
+<td>-------------debug purpose---------------- from ad9361_adc_pack</td>
 </tr>
 <tr>
 <td>adc_rst</td>
@@ -1151,7 +1226,7 @@
 <td>adc_valid</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>(* mark_debug = "true" *) input wire adc_sync,</td>
 </tr>
 <tr>
 <td>iq0_from_tx_intf</td>
@@ -1561,12 +1636,12 @@
 <tr>
 <td>slv_reg16</td>
 <td>wire [(C_S00_AXI_DATA_WIDTH-1):0]</td>
-<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg14; // wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg15; //</td>
+<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg14; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg15; //</td>
 </tr>
 <tr>
 <td>m00_axis_tvalid_inner</td>
 <td>wire</td>
-<td></td>
+<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg17; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg18;   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg19; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg20; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg21; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg22; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg23; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg24;   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg25; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg26;   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg27; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg28; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg29; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg30; //   wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg31; //  for direct loop back</td>
 </tr>
 <tr>
 <td>m00_axis_tdata_inner</td>
@@ -1696,7 +1771,7 @@
 <tr>
 <td>monitor_num_dma_symbol_to_ps</td>
 <td>wire [(MAX_BIT_NUM_DMA_SYMBOL-1) : 0]</td>
-<td></td>
+<td>wire [(MAX_BIT_NUM_DMA_SYMBOL-1) : 0] monitor_num_dma_symbol_to_pl;</td>
 </tr>
 <tr>
 <td>num_dma_symbol_to_ps</td>
@@ -1706,7 +1781,7 @@
 <tr>
 <td>m_axis_auto_rst</td>
 <td>wire</td>
-<td></td>
+<td>wire fcs_invalid_from_acc_delay;</td>
 </tr>
 <tr>
 <td>m_axis_rst</td>
@@ -1803,15 +1878,15 @@
 </ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>xpm_cdc_array_single_inst_mute_adc: xpm_cdc_array_single</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
----------------------------fro mute_adc_out_to_bb control from acc domain to adc domain-------------------------------------</p></div><ul>
+ ---------------------------fro mute_adc_out_to_bb control from acc domain to adc domain-------------------------------------</p></div><ul>
 <li>xpm_cdc_array_single_inst_ant_flag: xpm_cdc_array_single</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
----------------------------fro antenna selection from acc domain to adc domain-------------------------------------</p></div><ul>
+ ---------------------------fro antenna selection from acc domain to adc domain-------------------------------------</p></div><ul>
 <li>adc_intf_i: adc_intf</li>
 </ul><ul>
 <li>rx_intf_s_axi_i: rx_intf_s_axi</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Instantiation of Axi Bus Interface S00_AXI</p></div><ul>
+ Instantiation of Axi Bus Interface S00_AXI</p></div><ul>
 <li>rx_iq_intf_i: rx_iq_intf</li>
 </ul><ul>
 <li>byte_to_word_fcs_sn_insert_inst: byte_to_word_fcs_sn_insert</li>

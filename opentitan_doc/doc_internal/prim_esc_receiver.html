@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=prim_esc_receiver><h1 id="entity-prim_esc_receiver">Entity: prim_esc_receiver</h1></a><ul>
 <li><strong>File</strong>: prim_esc_receiver.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 518.3333333333334 210"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="125,0 140,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="253.33333333333337" height="130" fill="black" x="140" y="0"></rect><rect id="SvgjsRect1007" width="249.33333333333337" height="125" fill="#bdecb6" x="142" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="120" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="155" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   N_ESC_SEV </tspan></text><line id="SvgjsLine1012" x1="125" y1="15" x2="140" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="120" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="155" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   PING_CNT_DW </tspan></text><line id="SvgjsLine1017" x1="125" y1="35" x2="140" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="120" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="155" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   MarginFactor </tspan></text><line id="SvgjsLine1022" x1="125" y1="55" x2="140" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="120" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="155" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   NumWaitCounts </tspan></text><line id="SvgjsLine1027" x1="125" y1="75" x2="140" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="120" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="155" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   NumTimeoutCounts </tspan></text><line id="SvgjsLine1032" x1="125" y1="95" x2="140" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="120" y="94.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="155" y="94.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   TimeoutCntDw </tspan></text><line id="SvgjsLine1037" x1="125" y1="115" x2="140" y2="115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1038" width="253.33333333333337" height="70" fill="black" x="140" y="135"></rect><rect id="SvgjsRect1039" width="249.33333333333337" height="65" fill="#fdfd96" x="142" y="137"></rect><text id="SvgjsText1040" font-family="Helvetica" x="120" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="155" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1044" x1="125" y1="150" x2="140" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="120" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="155" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1049" x1="125" y1="170" x2="140" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="120" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   esc_tx_t </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="155" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   esc_tx_i </tspan></text><line id="SvgjsLine1054" x1="125" y1="190" x2="140" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="413.33333333333337" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="413.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="378.33333333333337" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="378.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_en_o </tspan></text><line id="SvgjsLine1059" x1="393.33333333333337" y1="150" x2="408.33333333333337" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="413.33333333333337" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="413.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_rx_t </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="378.33333333333337" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="378.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_rx_o </tspan></text><line id="SvgjsLine1064" x1="393.33333333333337" y1="170" x2="408.33333333333337" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0This module decodes escalation enable pulses that have been encoded usingthe prim_esc_sender module.The module supports in-band ping testing of the escalationwires. This is accomplished by the sender module that places a single-cycle,differentially encoded pulse on esc_p/n which will be interpreted as a pingrequest by the receiver module. The receiver module responds by sending backthe response pattern "1010".Native escalation enable pulses are differentiated from pingrequests by making sure that these pulses are always longer than 1 cycle.See also: prim_esc_sender, prim_diff_decode, alert_handler</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 518.3333333333334 210"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="125,0 140,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="253.33333333333337" height="130" fill="black" x="140" y="0"></rect><rect id="SvgjsRect1007" width="249.33333333333337" height="125" fill="#bdecb6" x="142" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="120" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="155" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   N_ESC_SEV </tspan></text><line id="SvgjsLine1012" x1="125" y1="15" x2="140" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="120" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="155" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   PING_CNT_DW </tspan></text><line id="SvgjsLine1017" x1="125" y1="35" x2="140" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="120" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="155" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   MarginFactor </tspan></text><line id="SvgjsLine1022" x1="125" y1="55" x2="140" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="120" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="155" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   NumWaitCounts </tspan></text><line id="SvgjsLine1027" x1="125" y1="75" x2="140" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="120" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="155" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   NumTimeoutCounts </tspan></text><line id="SvgjsLine1032" x1="125" y1="95" x2="140" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="120" y="94.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="155" y="94.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   TimeoutCntDw </tspan></text><line id="SvgjsLine1037" x1="125" y1="115" x2="140" y2="115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1038" width="253.33333333333337" height="70" fill="black" x="140" y="135"></rect><rect id="SvgjsRect1039" width="249.33333333333337" height="65" fill="#fdfd96" x="142" y="137"></rect><text id="SvgjsText1040" font-family="Helvetica" x="120" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="155" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1044" x1="125" y1="150" x2="140" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="120" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="155" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1049" x1="125" y1="170" x2="140" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="120" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   esc_tx_t </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="155" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   esc_tx_i </tspan></text><line id="SvgjsLine1054" x1="125" y1="190" x2="140" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="413.33333333333337" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="413.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="378.33333333333337" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="378.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_en_o </tspan></text><line id="SvgjsLine1059" x1="393.33333333333337" y1="150" x2="408.33333333333337" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="413.33333333333337" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="413.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_rx_t </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="378.33333333333337" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="378.33333333333337" svgjs:data="{&quot;newLined&quot;:true}">   esc_rx_o </tspan></text><line id="SvgjsLine1064" x1="393.33333333333337" y1="170" x2="408.33333333333337" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>This module decodes escalation enable pulses that have been encoded using  the prim_esc_sender module.</p> <p>The module supports in-band ping testing of the escalation  wires. This is accomplished by the sender module that places a single-cycle,  differentially encoded pulse on esc_p/n which will be interpreted as a ping  request by the receiver module. The receiver module responds by sending back  the response pattern "1010".</p> <p>Native escalation enable pulses are differentiated from ping  requests by making sure that these pulses are always longer than 1 cycle.</p> <p>See also: prim_esc_sender, prim_diff_decode, alert_handler</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1036,19 +1111,19 @@
 <td>N_ESC_SEV</td>
 <td>int</td>
 <td>4</td>
-<td>The number of escalation severities. Should be set to the Alert Handler's N_ESC_SEV when this primitive is instantiated.</td>
+<td>The number of escalation severities. Should be set to the Alert Handler's N_ESC_SEV when this  primitive is instantiated.</td>
 </tr>
 <tr>
 <td>PING_CNT_DW</td>
 <td>int</td>
 <td>16</td>
-<td>The width of the Alert Handler's ping counter. Should be set to the Alert Handler's PING_CNT_DW when this primitive is instantiated.</td>
+<td>The width of the Alert Handler's ping counter. Should be set to the Alert Handler's PING_CNT_DW  when this primitive is instantiated.</td>
 </tr>
 <tr>
 <td>MarginFactor</td>
 <td>int</td>
 <td>4</td>
-<td>Do NOT modify this counter value, when instantiating it in the design. It is only exposed to reduce the state space in the FPV testbench.</td>
+<td>This counter monitors incoming ping requests and auto-escalates if the alert handler  ceases to send them regularly. The maximum number of cycles between subsequent ping requests  is N_ESC_SEV x (2 x 2 x 2**PING_CNT_DW), see also implementation of the ping timer  (alert_handler_ping_timer.sv). The timeout counter below uses a timeout that is 4x larger than  that in order to incorporate some margin.<br>  Do NOT modify this counter value, when instantiating it in the design. It is only exposed to  reduce the state space in the FPV testbench.</td>
 </tr>
 <tr>
 <td>NumWaitCounts</td>
@@ -1125,32 +1200,32 @@
 <tr>
 <td>esc_level</td>
 <td>logic</td>
-<td></td>
+<td>///////////////////////////////  decode differential signals // ///////////////////////////////</td>
 </tr>
 <tr>
 <td>esc_p</td>
 <td>logic</td>
-<td></td>
+<td>///////////////////////////////  decode differential signals // ///////////////////////////////</td>
 </tr>
 <tr>
 <td>esc_n</td>
 <td>logic</td>
-<td></td>
+<td>///////////////////////////////  decode differential signals // ///////////////////////////////</td>
 </tr>
 <tr>
 <td>sigint_detected</td>
 <td>logic</td>
-<td></td>
+<td>///////////////////////////////  decode differential signals // ///////////////////////////////</td>
 </tr>
 <tr>
 <td>ping_en</td>
 <td>logic</td>
-<td></td>
+<td>//////////////////////////////////////////  Ping Monitor Counter / Auto Escalation // //////////////////////////////////////////</td>
 </tr>
 <tr>
 <td>esc_en</td>
 <td>logic</td>
-<td></td>
+<td>//////////////////////////////////////////  Ping Monitor Counter / Auto Escalation // //////////////////////////////////////////</td>
 </tr>
 <tr>
 <td>cnt_q</td>
@@ -1209,7 +1284,7 @@
 <td>MarginFactor</td>
 <td>int</td>
 <td>4</td>
-<td>Do NOT modify this counter value, when instantiating it in the design. It is only exposed to reduce the state space in the FPV testbench.</td>
+<td>This counter monitors incoming ping requests and auto-escalates if the alert handler  ceases to send them regularly. The maximum number of cycles between subsequent ping requests  is N_ESC_SEV x (2 x 2 x 2**PING_CNT_DW), see also implementation of the ping timer  (alert_handler_ping_timer.sv). The timeout counter below uses a timeout that is 4x larger than  that in order to incorporate some margin.<br>  Do NOT modify this counter value, when instantiating it in the design. It is only exposed to  reduce the state space in the FPV testbench.</td>
 </tr>
 <tr>
 <td>NumWaitCounts</td>
@@ -1238,22 +1313,23 @@
 <tr>
 <td>state_e</td>
 <td>enum logic [2:0] {<br><span style="padding-left:20px">Idle,<br><span style="padding-left:20px"> Check,<br><span style="padding-left:20px"> PingResp,<br><span style="padding-left:20px"> EscResp,<br><span style="padding-left:20px"> SigInt}</td>
-<td></td>
+<td>///////////////  RX/TX Logic // ///////////////</td>
 </tr>
 </tbody>
 </table><h2 id="processes">Processes</h2><ul>
 <li>p_fsm: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>p_regs: ( @(posedge clk_i or negedge rst_ni) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><h2 id="instantiations">Instantiations</h2><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
+/////////////  Registers // ///////////// </p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_prim_buf_esc: prim_buf</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This prevents further tool optimizations of the differential signal.</p></div><ul>
+ This prevents further tool optimizations of the differential signal.</p></div><ul>
 <li>u_decode_esc: prim_diff_decode</li>
 </ul><ul>
 <li>u_prim_generic_flop: prim_generic_flop</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This prevents further tool optimizations of the differential signal.</p></div><br><br><br><br><br><br>
+ This prevents further tool optimizations of the differential signal.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

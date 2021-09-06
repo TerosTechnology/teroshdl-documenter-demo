@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1045,24 +1120,6 @@
 <td>default data memory address space base address</td>
 </tr>
 <tr>
-<td>wb_pipe_mode_c</td>
-<td>boolean</td>
-<td>false</td>
-<td>protocol: false=classic/standard wishbone mode (default), true=pipelined wishbone mode</td>
-</tr>
-<tr>
-<td>wb_big_endian_c</td>
-<td>boolean</td>
-<td>false</td>
-<td>byte order: true=big-endian, false=little-endian (default)</td>
-</tr>
-<tr>
-<td>wb_rx_buffer_c</td>
-<td>boolean</td>
-<td>true</td>
-<td>use register buffer for RX data when true (default)</td>
-</tr>
-<tr>
 <td>cp_timeout_en_c</td>
 <td>boolean</td>
 <td>false</td>
@@ -1113,7 +1170,7 @@
 <tr>
 <td>hw_version_c</td>
 <td>std_ulogic_vector(31 downto 0)</td>
-<td>x"01050714"</td>
+<td>x"01050904"</td>
 <td>no touchy!</td>
 </tr>
 <tr>
@@ -1123,16 +1180,10 @@
 <td>official NEORV32 architecture ID - hands off!</td>
 </tr>
 <tr>
-<td>rf_r0_is_reg_c</td>
-<td>boolean</td>
-<td>true</td>
-<td>x0 is a <em>physical register</em> that has to be initialized to zero by the CPU</td>
-</tr>
-<tr>
 <td>def_rst_val_c</td>
 <td>std_ulogic</td>
 <td>cond_sel_stdulogic_f(dedicated_reset_c,<br><span style="padding-left:20px"> '0',<br><span style="padding-left:20px"> '-')</td>
-<td>Internal (auto-generated) Configurations ------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>Internal (auto-generated) Configurations -----------------------------------------------  -------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>imem_base_c</td>
@@ -1198,7 +1249,7 @@
 <td>io_base_c</td>
 <td>std_ulogic_vector(data_width_c-1 downto 0)</td>
 <td>x"fffffe00"</td>
-<td>IO: Peripheral Devices ("IO") Area --Control register(s) (including the device-enable) should be located at the base address of each device</td>
+<td>IO: Peripheral Devices ("IO") Area --  Control register(s) (including the device-enable) should be located at the base address of each device</td>
 </tr>
 <tr>
 <td>io_size_c</td>
@@ -1903,370 +1954,364 @@
 <td>write back enable</td>
 </tr>
 <tr>
-<td>ctrl_rf_r0_we_c</td>
-<td>natural</td>
-<td>17</td>
-<td>force write access and force rd=r0</td>
-</tr>
-<tr>
 <td>ctrl_alu_arith_c</td>
 <td>natural</td>
-<td>18</td>
+<td>17</td>
 <td>ALU arithmetic command</td>
 </tr>
 <tr>
 <td>ctrl_alu_logic0_c</td>
 <td>natural</td>
-<td>19</td>
+<td>18</td>
 <td>ALU logic command bit 0</td>
 </tr>
 <tr>
 <td>ctrl_alu_logic1_c</td>
 <td>natural</td>
-<td>20</td>
+<td>19</td>
 <td>ALU logic command bit 1</td>
 </tr>
 <tr>
 <td>ctrl_alu_func0_c</td>
 <td>natural</td>
-<td>21</td>
+<td>20</td>
 <td>ALU function select command bit 0</td>
 </tr>
 <tr>
 <td>ctrl_alu_func1_c</td>
 <td>natural</td>
-<td>22</td>
+<td>21</td>
 <td>ALU function select command bit 1</td>
 </tr>
 <tr>
 <td>ctrl_alu_addsub_c</td>
 <td>natural</td>
-<td>23</td>
+<td>22</td>
 <td>0=ADD, 1=SUB</td>
 </tr>
 <tr>
 <td>ctrl_alu_opa_mux_c</td>
 <td>natural</td>
-<td>24</td>
+<td>23</td>
 <td>operand A select (0=rs1, 1=PC)</td>
 </tr>
 <tr>
 <td>ctrl_alu_opb_mux_c</td>
 <td>natural</td>
-<td>25</td>
+<td>24</td>
 <td>operand B select (0=rs2, 1=IMM)</td>
 </tr>
 <tr>
 <td>ctrl_alu_unsigned_c</td>
 <td>natural</td>
-<td>26</td>
+<td>25</td>
 <td>is unsigned ALU operation</td>
 </tr>
 <tr>
 <td>ctrl_alu_shift_dir_c</td>
 <td>natural</td>
-<td>27</td>
+<td>26</td>
 <td>shift direction (0=left, 1=right)</td>
 </tr>
 <tr>
 <td>ctrl_alu_shift_ar_c</td>
 <td>natural</td>
-<td>28</td>
+<td>27</td>
 <td>is arithmetic shift</td>
 </tr>
 <tr>
 <td>ctrl_alu_frm0_c</td>
 <td>natural</td>
-<td>29</td>
+<td>28</td>
 <td>FPU rounding mode bit 0</td>
 </tr>
 <tr>
 <td>ctrl_alu_frm1_c</td>
 <td>natural</td>
-<td>30</td>
+<td>29</td>
 <td>FPU rounding mode bit 1</td>
 </tr>
 <tr>
 <td>ctrl_alu_frm2_c</td>
 <td>natural</td>
-<td>31</td>
+<td>30</td>
 <td>FPU rounding mode bit 2</td>
 </tr>
 <tr>
 <td>ctrl_bus_size_lsb_c</td>
 <td>natural</td>
-<td>32</td>
+<td>31</td>
 <td>transfer size lsb (00=byte, 01=half-word)</td>
 </tr>
 <tr>
 <td>ctrl_bus_size_msb_c</td>
 <td>natural</td>
-<td>33</td>
+<td>32</td>
 <td>transfer size msb (10=word, 11=?)</td>
 </tr>
 <tr>
 <td>ctrl_bus_rd_c</td>
 <td>natural</td>
-<td>34</td>
+<td>33</td>
 <td>read data request</td>
 </tr>
 <tr>
 <td>ctrl_bus_wr_c</td>
 <td>natural</td>
-<td>35</td>
+<td>34</td>
 <td>write data request</td>
 </tr>
 <tr>
 <td>ctrl_bus_if_c</td>
 <td>natural</td>
-<td>36</td>
+<td>35</td>
 <td>instruction fetch request</td>
 </tr>
 <tr>
 <td>ctrl_bus_mo_we_c</td>
 <td>natural</td>
-<td>37</td>
+<td>36</td>
 <td>memory address and data output register write enable</td>
 </tr>
 <tr>
 <td>ctrl_bus_mi_we_c</td>
 <td>natural</td>
-<td>38</td>
+<td>37</td>
 <td>memory data input register write enable</td>
 </tr>
 <tr>
 <td>ctrl_bus_unsigned_c</td>
 <td>natural</td>
-<td>39</td>
+<td>38</td>
 <td>is unsigned load</td>
 </tr>
 <tr>
 <td>ctrl_bus_ierr_ack_c</td>
 <td>natural</td>
-<td>40</td>
+<td>39</td>
 <td>acknowledge instruction fetch bus exceptions</td>
 </tr>
 <tr>
 <td>ctrl_bus_derr_ack_c</td>
 <td>natural</td>
-<td>41</td>
+<td>40</td>
 <td>acknowledge data access bus exceptions</td>
 </tr>
 <tr>
 <td>ctrl_bus_fence_c</td>
 <td>natural</td>
-<td>42</td>
+<td>41</td>
 <td>executed fence operation</td>
 </tr>
 <tr>
 <td>ctrl_bus_fencei_c</td>
 <td>natural</td>
-<td>43</td>
+<td>42</td>
 <td>executed fencei operation</td>
 </tr>
 <tr>
 <td>ctrl_bus_lock_c</td>
 <td>natural</td>
-<td>44</td>
+<td>43</td>
 <td>make atomic/exclusive access lock</td>
 </tr>
 <tr>
 <td>ctrl_bus_de_lock_c</td>
 <td>natural</td>
-<td>45</td>
+<td>44</td>
 <td>remove atomic/exclusive access</td>
 </tr>
 <tr>
 <td>ctrl_bus_ch_lock_c</td>
 <td>natural</td>
-<td>46</td>
+<td>45</td>
 <td>evaluate atomic/exclusive lock (SC operation)</td>
 </tr>
 <tr>
 <td>ctrl_cp_id_lsb_c</td>
 <td>natural</td>
-<td>47</td>
+<td>46</td>
 <td>cp select ID lsb</td>
 </tr>
 <tr>
 <td>ctrl_cp_id_msb_c</td>
 <td>natural</td>
-<td>48</td>
+<td>47</td>
 <td>cp select ID msb</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_0_c</td>
 <td>natural</td>
-<td>49</td>
+<td>48</td>
 <td>funct3 bit 0</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_1_c</td>
 <td>natural</td>
-<td>50</td>
+<td>49</td>
 <td>funct3 bit 1</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct3_2_c</td>
 <td>natural</td>
-<td>51</td>
+<td>50</td>
 <td>funct3 bit 2</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_0_c</td>
 <td>natural</td>
-<td>52</td>
+<td>51</td>
 <td>funct12 bit 0</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_1_c</td>
 <td>natural</td>
-<td>53</td>
+<td>52</td>
 <td>funct12 bit 1</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_2_c</td>
 <td>natural</td>
-<td>54</td>
+<td>53</td>
 <td>funct12 bit 2</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_3_c</td>
 <td>natural</td>
-<td>55</td>
+<td>54</td>
 <td>funct12 bit 3</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_4_c</td>
 <td>natural</td>
-<td>56</td>
+<td>55</td>
 <td>funct12 bit 4</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_5_c</td>
 <td>natural</td>
-<td>57</td>
+<td>56</td>
 <td>funct12 bit 5</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_6_c</td>
 <td>natural</td>
-<td>58</td>
+<td>57</td>
 <td>funct12 bit 6</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_7_c</td>
 <td>natural</td>
-<td>59</td>
+<td>58</td>
 <td>funct12 bit 7</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_8_c</td>
 <td>natural</td>
-<td>60</td>
+<td>59</td>
 <td>funct12 bit 8</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_9_c</td>
 <td>natural</td>
-<td>61</td>
+<td>60</td>
 <td>funct12 bit 9</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_10_c</td>
 <td>natural</td>
-<td>62</td>
+<td>61</td>
 <td>funct12 bit 10</td>
 </tr>
 <tr>
 <td>ctrl_ir_funct12_11_c</td>
 <td>natural</td>
-<td>63</td>
+<td>62</td>
 <td>funct12 bit 11</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_0_c</td>
 <td>natural</td>
-<td>64</td>
+<td>63</td>
 <td>opcode7 bit 0</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_1_c</td>
 <td>natural</td>
-<td>65</td>
+<td>64</td>
 <td>opcode7 bit 1</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_2_c</td>
 <td>natural</td>
-<td>66</td>
+<td>65</td>
 <td>opcode7 bit 2</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_3_c</td>
 <td>natural</td>
-<td>67</td>
+<td>66</td>
 <td>opcode7 bit 3</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_4_c</td>
 <td>natural</td>
-<td>68</td>
+<td>67</td>
 <td>opcode7 bit 4</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_5_c</td>
 <td>natural</td>
-<td>69</td>
+<td>68</td>
 <td>opcode7 bit 5</td>
 </tr>
 <tr>
 <td>ctrl_ir_opcode7_6_c</td>
 <td>natural</td>
-<td>70</td>
+<td>69</td>
 <td>opcode7 bit 6</td>
 </tr>
 <tr>
 <td>ctrl_priv_lvl_lsb_c</td>
 <td>natural</td>
-<td>71</td>
+<td>70</td>
 <td>privilege level lsb</td>
 </tr>
 <tr>
 <td>ctrl_priv_lvl_msb_c</td>
 <td>natural</td>
-<td>72</td>
+<td>71</td>
 <td>privilege level msb</td>
 </tr>
 <tr>
 <td>ctrl_sleep_c</td>
 <td>natural</td>
-<td>73</td>
+<td>72</td>
 <td>set when CPU is in sleep mode</td>
 </tr>
 <tr>
 <td>ctrl_trap_c</td>
 <td>natural</td>
-<td>74</td>
+<td>73</td>
 <td>set when CPU is entering trap execution</td>
 </tr>
 <tr>
 <td>ctrl_debug_running_c</td>
 <td>natural</td>
-<td>75</td>
+<td>74</td>
 <td>CPU is in debug mode when set</td>
 </tr>
 <tr>
 <td>ctrl_width_c</td>
 <td>natural</td>
-<td>76</td>
+<td>75</td>
 <td>control bus size</td>
 </tr>
 <tr>
 <td>cmp_equal_c</td>
 <td>natural</td>
 <td>0</td>
-<td>Comparator Bus --------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>Comparator Bus -------------------------------------------------------------------------  -------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>cmp_less_c</td>
@@ -2888,8 +2933,8 @@
 </tr>
 <tr>
 <td>csr_class_setup_c</td>
-<td>std_ulogic_vector(07 downto 0)</td>
-<td>x"30"</td>
+<td>std_ulogic_vector(08 downto 0)</td>
+<td>x"30" &amp; '0'</td>
 <td>trap setup</td>
 </tr>
 <tr>
@@ -2920,6 +2965,12 @@
 <td>csr_mcounteren_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"306"</td>
+<td></td>
+</tr>
+<tr>
+<td>csr_mstatush_c</td>
+<td>std_ulogic_vector(11 downto 0)</td>
+<td>x"310"</td>
 <td></td>
 </tr>
 <tr>
@@ -3110,8 +3161,8 @@
 </tr>
 <tr>
 <td>csr_class_trap_c</td>
-<td>std_ulogic_vector(07 downto 0)</td>
-<td>x"34"</td>
+<td>std_ulogic_vector(08 downto 0)</td>
+<td>x"34" &amp; '0'</td>
 <td>machine trap handling</td>
 </tr>
 <tr>
@@ -4030,7 +4081,7 @@
 <td>csr_cycle_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
 <td>x"c00"</td>
-<td><<< standard read-only CSRs >&gt;&gt; --user counters/timers --</td>
+<td><<< standard read-only CSRs >&gt;&gt; --  user counters/timers --</td>
 </tr>
 <tr>
 <td>csr_time_c</td>
@@ -4087,10 +4138,10 @@
 <td></td>
 </tr>
 <tr>
-<td>csr_mzext_c</td>
+<td>csr_mconfigptr_c</td>
 <td>std_ulogic_vector(11 downto 0)</td>
-<td>x"fc0"</td>
-<td><<< custom (NEORV32-specific) read-only CSRs >&gt;&gt; --</td>
+<td>x"f15"</td>
+<td></td>
 </tr>
 <tr>
 <td>cp_sel_shifter_c</td>
@@ -4690,7 +4741,7 @@
 <td>clk_div2_c</td>
 <td>natural</td>
 <td>0</td>
-<td>Clock Generator -------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>Clock Generator ------------------------------------------------------------------------  -------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>clk_div4_c</td>
@@ -4749,7 +4800,7 @@
 <tr>
 <td>sdata_8x32_t</td>
 <td></td>
-<td>External Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>External Interface Types ---------------------------------------------------------------  -------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>sdata_8x32r_t</td>
@@ -4759,7 +4810,7 @@
 <tr>
 <td>pmp_ctrl_if_t</td>
 <td></td>
-<td>Internal Interface Types ----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>Internal Interface Types ---------------------------------------------------------------  -------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>pmp_addr_if_t</td>
@@ -4785,7 +4836,8 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>index_size_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return natural </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Helper Functions ------------------------------------------------------------------------------------------------------------------------------------------------------------------</p></div><ul>
+ Helper Functions -----------------------------------------------------------------------</p>
+<hr /></div><ul>
 <li>cond_sel_natural_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : natural;<br><span style="padding-left:20px"> val_f : natural) </font> <font id="function_return">return natural </font></li>
 </ul><ul>
 <li>cond_sel_int_f <font id="function_arguments">(cond : boolean;<br><span style="padding-left:20px"> val_t : integer;<br><span style="padding-left:20px"> val_f : integer) </font> <font id="function_return">return integer </font></li>
@@ -4814,7 +4866,7 @@ Helper Functions ---------------------------------------------------------------
 </ul><ul>
 <li>bswap32_f <font id="function_arguments">(input : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
 </ul><ul>
-<li>char_tolower_f <font id="function_arguments">(ch : character) </font> <font id="function_return">return character </font></li>
+<li>char_to_lower_f <font id="function_arguments">(ch : character) </font> <font id="function_return">return character </font></li>
 </ul><ul>
 <li>str_equal_f <font id="function_arguments">(str0 : string;<br><span style="padding-left:20px"> str1 : string) </font> <font id="function_return">return boolean </font></li>
 </ul><br><br><br><br><br><br>

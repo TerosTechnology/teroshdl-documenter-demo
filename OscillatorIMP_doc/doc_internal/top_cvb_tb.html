@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=top_cvb_tb><h1 id="entity-top_cvb_tb">Entity: top_cvb_tb</h1></a><ul>
 <li><strong>File</strong>: top_cvb_tb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>use work.sp_vision_test_pkg.all;</p></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -1154,7 +1229,7 @@
 <tr>
 <td>generate_en_s</td>
 <td>std_logic</td>
-<td></td>
+<td>--misc</td>
 </tr>
 <tr>
 <td>cpt_s</td>
@@ -1227,9 +1302,13 @@
 <li>store_result: ( clk, reset )</li>
 </ul><h2 id="instantiations">Instantiations</h2><ul>
 <li>cvb_logic_inst: work.cvb_logic</li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+start_mean_offset_s <= (ADDR_SIZE-1 downto 3 => '0') &amp; (2 downto 0 =&gt; '1');<br />
+max_allowed_val_s <= (ACCUM_SIZE-1 downto 4 => '0') &amp; (3 downto 0 =&gt; '1');<br />
+cpt_max_s <= (ADDR_SIZE-1 downto 4 => '0') &amp; (3 downto 0 =&gt; '1');</p></div><ul>
 <li>read_coeff: work.readComplexFromFile</li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+    -- read coeff for fir16 LUT</p></div><ul>
 <li>ram_i: work.cvb_ram</li>
 </ul><ul>
 <li>ram_q: work.cvb_ram</li>

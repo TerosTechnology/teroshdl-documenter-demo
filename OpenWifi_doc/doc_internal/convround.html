@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=convround><h1 id="entity-convround">Entity: convround</h1></a><ul>
 <li><strong>File</strong>: convround.v</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 645 110"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="285,0 300,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="180" height="30" fill="black" x="300" y="0"></rect><rect id="SvgjsRect1007" width="176" height="25" fill="#bdecb6" x="302" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="280" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="315" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   IWID </tspan></text><line id="SvgjsLine1012" x1="285" y1="15" x2="300" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="180" height="70" fill="black" x="300" y="35"></rect><rect id="SvgjsRect1014" width="176" height="65" fill="#fdfd96" x="302" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="280" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   i_clk </tspan></text><line id="SvgjsLine1019" x1="285" y1="50" x2="300" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="280" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">    i_ce </tspan></text><line id="SvgjsLine1024" x1="285" y1="70" x2="300" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="280" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire    signed  [(IWID-1):0] </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="315" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   i_val </tspan></text><line id="SvgjsLine1029" x1="285" y1="90" x2="300" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="500" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="500" svgjs:data="{&quot;newLined&quot;:true}">   [(OWID-1):0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="465" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="465" svgjs:data="{&quot;newLined&quot;:true}">   o_val </tspan></text><line id="SvgjsLine1034" x1="480" y1="50" x2="495" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Filename:     convround.vProject:    A General Purpose Pipelined FFT ImplementationPurpose:    A convergent rounding routine, also known as banker'sCreator:    Dan Gisselquist, Ph.D.Copyright (C) 2015-2019, Gisselquist Technology, LLCThis file is part of the general purpose pipelined FFT project.The pipelined FFT project is free software (firmware): you can redistributeit and/or modify it under the terms of the GNU Lesser General Public Licenseas published by the Free Software Foundation, either version 3 of theLicense, or (at your option) any later version.The pipelined FFT project is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; without even the implied warranty ofMERCHANTIBILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU LesserGeneral Public License for more details.You should have received a copy of the GNU Lesser General Public Licensealong with this program.  (It's in the $(ROOT)/doc directory.  Run makewith no target there if the PDF file isn't present.)  If not, see<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a> for a copy.License:    LGPL, v3, as defined and found on <a href="http://www.gnu.org">www.gnu.org</a>,</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 645 110"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="285,0 300,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="180" height="30" fill="black" x="300" y="0"></rect><rect id="SvgjsRect1007" width="176" height="25" fill="#bdecb6" x="302" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="280" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="315" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   IWID </tspan></text><line id="SvgjsLine1012" x1="285" y1="15" x2="300" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="180" height="70" fill="black" x="300" y="35"></rect><rect id="SvgjsRect1014" width="176" height="65" fill="#fdfd96" x="302" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="280" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   i_clk </tspan></text><line id="SvgjsLine1019" x1="285" y1="50" x2="300" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="280" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">    i_ce </tspan></text><line id="SvgjsLine1024" x1="285" y1="70" x2="300" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="280" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="280" svgjs:data="{&quot;newLined&quot;:true}">   wire    signed  [(IWID-1):0] </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="315" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   i_val </tspan></text><line id="SvgjsLine1029" x1="285" y1="90" x2="300" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="500" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="500" svgjs:data="{&quot;newLined&quot;:true}">   [(OWID-1):0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="465" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="465" svgjs:data="{&quot;newLined&quot;:true}">   o_val </tspan></text><line id="SvgjsLine1034" x1="480" y1="50" x2="495" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>//////////////////////////////////////////////////////////////////////////////</p> <p>Filename:     convround.v</p> <p>Project:    A General Purpose Pipelined FFT Implementation</p> <p>Purpose:    A convergent rounding routine, also known as banker's          rounding, Dutch rounding, Gaussian rounding, unbiased      rounding, or … more, at least according to Wikipedia.</p> <pre><code class="hljs">This form <span class="hljs-keyword">of</span> rounding works <span class="hljs-keyword">by</span> rounding, <span class="hljs-keyword">when</span> the direction <span class="hljs-keyword">is</span> <span class="hljs-keyword">in</span> question, towards the nearest even value.</code></pre> <p>Creator:    Dan Gisselquist, Ph.D.          Gisselquist Technology, LLC</p> <p>//////////////////////////////////////////////////////////////////////////////</p> <p>Copyright (C) 2015-2019, Gisselquist Technology, LLC</p> <p>This file is part of the general purpose pipelined FFT project.</p> <p>The pipelined FFT project is free software (firmware): you can redistribute  it and/or modify it under the terms of the GNU Lesser General Public License  as published by the Free Software Foundation, either version 3 of the  License, or (at your option) any later version.</p> <p>The pipelined FFT project is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTIBILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser  General Public License for more details.</p> <p>You should have received a copy of the GNU Lesser General Public License  along with this program.  (It's in the $(ROOT)/doc directory.  Run make  with no target there if the PDF file isn't present.)  If not, see  <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a> for a copy.</p> <p>License:    LGPL, v3, as defined and found on <a href="http://www.gnu.org">www.gnu.org</a>,          <a href="http://www.gnu.org/licenses/lgpl.html">http://www.gnu.org/licenses/lgpl.html</a></p> <p>//////////////////////////////////////////////////////////////////////////////</p> <p>`default_nettype    none</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>

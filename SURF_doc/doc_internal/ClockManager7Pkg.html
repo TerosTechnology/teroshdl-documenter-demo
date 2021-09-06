@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1046,8 +1121,19 @@
 <li>makeClockManager7Cfg <font id="function_arguments">( CLKIN_PERIOD_G         : real                             := 10.0;<br><span style="padding-left:20px">  -- Input period in ns );<br><span style="padding-left:20px"> DIVCLK_DIVIDE_G        : integer range 1 to 106           := 1;<br><span style="padding-left:20px"> CLKFBOUT_MULT_F_G      : real range 1.0 to 64.0           := 1.0;<br><span style="padding-left:20px"> CLKFBOUT_MULT_G        : integer range 2 to 64            := 5;<br><span style="padding-left:20px"> CLKOUT0_DIVIDE_F_G     : real range 1.0 to 128.0          := 1.0;<br><span style="padding-left:20px"> CLKOUT0_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT1_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT2_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT3_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT4_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT5_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT6_DIVIDE_G       : integer range 1 to 128           := 1;<br><span style="padding-left:20px"> CLKOUT0_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT1_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT2_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT3_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT4_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT5_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT6_PHASE_G        : real range -360.0 to 360.0       := 0.0;<br><span style="padding-left:20px"> CLKOUT0_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT1_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT2_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT3_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT4_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT5_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT6_DUTY_CYCLE_G   : real range 0.01 to 0.99          := 0.5;<br><span style="padding-left:20px"> CLKOUT0_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT1_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT2_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT3_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT4_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT5_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT6_RST_HOLD_G     : integer range 3 to positive'high := 3;<br><span style="padding-left:20px"> CLKOUT0_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT1_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT2_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT3_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT4_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT5_RST_POLARITY_G : sl                               := '1';<br><span style="padding-left:20px"> CLKOUT6_RST_POLARITY_G : sl                               := '1') </font> <font id="function_return">return ClockManager7CfgType </font></li>
 </ul><ul>
 <li>ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : ClockManager7CfgType;<br><span style="padding-left:20px"> e : ClockManager7CfgType) </font> <font id="function_return">return ClockManager7CfgType </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-     DIVCLK_DIVIDE_G    : integer range 1 to 106;     CLKFBOUT_MULT_F_G  : real range 1.0 to 64.0;     CLKFBOUT_MULT_G    : integer range 2 to 64;     CLKOUT0_DIVIDE_F_G : real range 1.0 to 128.0;     CLKOUT0_DIVIDE_G   : integer range 1 to 128;     CLKOUT1_DIVIDE_G   : integer range 1 to 128;     CLKOUT2_DIVIDE_G   : integer range 1 to 128;     CLKOUT3_DIVIDE_G   : integer range 1 to 128;     CLKOUT4_DIVIDE_G   : integer range 1 to 128;     CLKOUT5_DIVIDE_G   : integer range 1 to 128;     CLKOUT6_DIVIDE_G   : integer range 1 to 128;  end record ClockManager7CfgType;</p></div><br><br><br><br><br><br>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<pre><code>  DIVCLK_DIVIDE_G    : integer range 1 to 106;
+  CLKFBOUT_MULT_F_G  : real range 1.0 to 64.0;
+  CLKFBOUT_MULT_G    : integer range 2 to 64;
+  CLKOUT0_DIVIDE_F_G : real range 1.0 to 128.0;
+  CLKOUT0_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT1_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT2_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT3_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT4_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT5_DIVIDE_G   : integer range 1 to 128;
+  CLKOUT6_DIVIDE_G   : integer range 1 to 128;</code></pre>
+<p>end record ClockManager7CfgType;</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

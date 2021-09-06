@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=arith_shifter_barrel><h1 id="entity-arith_shifter_barrel">Entity: arith_shifter_barrel</h1></a><ul>
 <li><strong>File</strong>: arith_shifter_barrel.vhdl</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1215 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="515,0 530,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="290" height="30" fill="black" x="530" y="0"></rect><rect id="SvgjsRect1007" width="286" height="25" fill="#bdecb6" x="532" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="510" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="545" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   BITS </tspan></text><line id="SvgjsLine1012" x1="515" y1="15" x2="530" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="290" height="110" fill="black" x="530" y="35"></rect><rect id="SvgjsRect1014" width="286" height="105" fill="#fdfd96" x="532" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="510" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(BITS - 1 downto 0) </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="545" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   Input </tspan></text><line id="SvgjsLine1019" x1="515" y1="50" x2="530" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="510" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(log2ceilnz(BITS) - 1 downto 0) </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="545" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ShiftAmount </tspan></text><line id="SvgjsLine1024" x1="515" y1="70" x2="530" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="510" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="545" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ShiftRotate </tspan></text><line id="SvgjsLine1029" x1="515" y1="90" x2="530" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="510" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="545" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   LeftRight </tspan></text><line id="SvgjsLine1034" x1="515" y1="110" x2="530" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="510" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="545" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ArithmeticLogic </tspan></text><line id="SvgjsLine1039" x1="515" y1="130" x2="530" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="840" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="840" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(BITS - 1 downto 0) </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="805" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="805" svgjs:data="{&quot;newLined&quot;:true}">   Output </tspan></text><line id="SvgjsLine1044" x1="820" y1="50" x2="835" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>EMACS settings: -<em>-  tab-width: 2; indent-tabs-mode: t -</em>-vim: tabstop=2:shiftwidth=2:noexpandtab</p><h1 id="kate-tab-width-2-replace-tabs-off-indent-width-2">kate: tab-width 2; replace-tabs off; indent-width 2;</h1><p>Authors:                    Patrick LehmannEntity:                    Universal Barrel-Shifter</p><h2 id="description">Description:</h2><p>This Barrel-Shifter supports:</p><ul><li>shifting and rotating</li><li>right and left operations</li><li>arithmetic and logic mode (only valid for shift operations)This is equivalent to the CPU instructions: SLL, SLA, SRL, SRA, RL, RR</li></ul><h1 id="license">License:</h1><p>Copyright 2007-2015 Technische Universitaet Dresden - Germany,Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License atUnless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and</p><h1 id="limitations-under-the-license">limitations under the License.</h1></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1215 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="515,0 530,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="290" height="30" fill="black" x="530" y="0"></rect><rect id="SvgjsRect1007" width="286" height="25" fill="#bdecb6" x="532" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="510" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   positive </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="545" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   BITS </tspan></text><line id="SvgjsLine1012" x1="515" y1="15" x2="530" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="290" height="110" fill="black" x="530" y="35"></rect><rect id="SvgjsRect1014" width="286" height="105" fill="#fdfd96" x="532" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="510" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(BITS - 1 downto 0) </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="545" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   Input </tspan></text><line id="SvgjsLine1019" x1="515" y1="50" x2="530" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="510" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(log2ceilnz(BITS) - 1 downto 0) </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="545" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ShiftAmount </tspan></text><line id="SvgjsLine1024" x1="515" y1="70" x2="530" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="510" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="545" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ShiftRotate </tspan></text><line id="SvgjsLine1029" x1="515" y1="90" x2="530" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="510" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="545" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   LeftRight </tspan></text><line id="SvgjsLine1034" x1="515" y1="110" x2="530" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="510" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="510" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="545" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="545" svgjs:data="{&quot;newLined&quot;:true}">   ArithmeticLogic </tspan></text><line id="SvgjsLine1039" x1="515" y1="130" x2="530" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="840" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="840" svgjs:data="{&quot;newLined&quot;:true}">   std_logic_vector(BITS - 1 downto 0) </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="805" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="805" svgjs:data="{&quot;newLined&quot;:true}">   Output </tspan></text><line id="SvgjsLine1044" x1="820" y1="50" x2="835" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>EMACS settings: -<em>-  tab-width: 2; indent-tabs-mode: t -</em>-  vim: tabstop=2:shiftwidth=2:noexpandtab</p> <h1 id="kate-tab-width-2-replace-tabs-off-indent-width-2">kate: tab-width 2; replace-tabs off; indent-width 2;</h1> <p>Authors:                    Patrick Lehmann</p> <p>Entity:                    Universal Barrel-Shifter</p> <h2 id="description">Description:</h2> <p>This Barrel-Shifter supports:</p> <ul> <li>shifting and rotating</li> <li>right and left operations</li> <li>arithmetic and logic mode (only valid for shift operations)</li> </ul> <p>This is equivalent to the CPU instructions: SLL, SLA, SRL, SRA, RL, RR</p> <h1 id="license">License:</h1> <p>Copyright 2007-2015 Technische Universitaet Dresden - Germany,                                           Chair of VLSI-Design, Diagnostics and Architecture</p> <p>Licensed under the Apache License, Version 2.0 (the "License");  you may not use this file except in compliance with the License.  You may obtain a copy of the License at</p> <pre><code class="hljs">    http:<span class="hljs-regexp">//</span>www.apache.org<span class="hljs-regexp">/licenses/</span>LICENSE-<span class="hljs-number">2.0</span></code></pre> <p>Unless required by applicable law or agreed to in writing, software  distributed under the License is distributed on an "AS IS" BASIS,  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and</p> <h1 id="limitations-under-the-license">limitations under the License.</h1></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1126,18 +1201,23 @@
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td>OsvvmDefaultTimeUnitsPType</td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>IsEnabled <font id="function_arguments">(A : OsvvmOptionsType) </font> <font id="function_return">return boolean </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Requires that TRUE is last and ENABLED is 2nd to last</p></div><ul>
+ Requires that TRUE is last and ENABLED is 2nd to last</p></div><ul>
 <li>to_OsvvmOptionsType <font id="function_arguments">(A : boolean) </font> <font id="function_return">return OsvvmOptionsType </font></li>
 </ul><ul>
 <li>SetOsvvmGlobalOptions <font id="function_arguments">( WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteBinInfo    : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteCount      : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAnyIllegal : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WritePrefix     : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailName        : string := OSVVM_STRING_INIT_PARM_DETECT ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
 <li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Accessor Functions</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Accessor Functions</p></div><ul>
 <li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C,<br><span style="padding-left:20px"> D : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font></li>
 </ul><ul>
 <li>IsOsvvmStringSet <font id="function_arguments">(A : string) </font> <font id="function_return">return boolean </font></li>
@@ -1147,6 +1227,8 @@ Accessor Functions</p></div><ul>
 <li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C : string) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C,<br><span style="padding-left:20px"> D : string) </font> <font id="function_return">return string </font></li>
+</ul><ul>
+<li>SetOsvvmDefaultTimeUnits <font id="function_arguments">(A : time) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>OsvvmDeallocate <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>

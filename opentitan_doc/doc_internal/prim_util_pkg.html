@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,12 +1098,48 @@
 <li><strong>File</strong>: prim_util_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0</p>
+ SPDX-License-Identifier: Apache-2.0<br />
+*</p>
 <p></div></p><h2 id="functions">Functions</h2><ul>
 <li>_clog2 <font id="function_arguments">(integer)</font> <font id="function_return">return (integer)</font></li>
 </ul><ul>
 <li>vbits <font id="function_arguments">(integer)</font> <font id="function_return">return (integer)</font></li>
-</ul><br><br><br><br><br><br>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+*</p>
+<ul>
+<li>Math function: Number of bits needed to address |value| items.<br />
+*</li>
+<li>0        for value == 0</li>
+<li>vbits =          1        for value == 1</li>
+<li>ceil(log2(value)) for value &gt; 1<br />
+*<br />
+*</li>
+<li>The primary use case for this function is the definition of registers/arrays</li>
+<li>which are wide enough to contain |value| items.<br />
+*</li>
+<li>This function identical to $clog2() for all input values except the value 1;</li>
+<li>it could be considered an "enhanced" $clog2() function.<br />
+*<br />
+*</li>
+<li>Example 1:</li>
+<li>parameter Items = 1;</li>
+<li>localparam ItemsWidth = vbits(Items); // 1</li>
+<li>logic [ItemsWidth-1:0] item_register; // items_register is now [0:0]<br />
+*</li>
+<li>Example 2:</li>
+<li>parameter Items = 64;</li>
+<li>localparam ItemsWidth = vbits(Items); // 6</li>
+<li>logic [ItemsWidth-1:0] item_register; // items_register is now [5:0]<br />
+*</li>
+<li>Note: If you want to store the number "value" inside a register, you need</li>
+<li>a register with size vbits(value + 1), since you also need to store</li>
+<li>the number 0.<br />
+*</li>
+<li>Example 3:</li>
+<li>logic [vbits(64)-1:0]     store_64_logic_values; // width is [5:0]</li>
+<li>logic [vbits(64 + 1)-1:0] store_number_64;       // width is [6:0]<br />
+*/</li>
+</ul></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

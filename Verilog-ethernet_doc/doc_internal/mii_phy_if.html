@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1042,7 +1117,7 @@
 <td>CLOCK_INPUT_STYLE</td>
 <td></td>
 <td>"BUFIO2"</td>
-<td>Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2") Use BUFR for Virtex-5, Virtex-6, 7-series Use BUFG for Ultrascale Use BUFIO2 for Spartan-6</td>
+<td>Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2")  Use BUFR for Virtex-5, Virtex-6, 7-series  Use BUFG for Ultrascale  Use BUFIO2 for Spartan-6</td>
 </tr>
 </tbody>
 </table>
@@ -1067,7 +1142,7 @@
 <td>mac_mii_rx_clk</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* MII interface to MAC      */</td>
 </tr>
 <tr>
 <td>mac_mii_rx_rst</td>
@@ -1127,7 +1202,7 @@
 <td>phy_mii_rx_clk</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>* MII interface to PHY      */</td>
 </tr>
 <tr>
 <td>phy_mii_rxd</td>

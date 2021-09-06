@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1059,67 +1134,68 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Push items into the scoreboard/FIFO<br />
-Simple Scoreboard, no tag</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Push items into the scoreboard/FIFO<br />
+ Simple Scoreboard, no tag</p></div><ul>
 <li>Push <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> constant Item   : in  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Simple Tagged Scoreboard</p></div><ul>
+ Simple Tagged Scoreboard</p></div><ul>
 <li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ActualData   : in ActualType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Check received item with item in the scoreboard/FIFO<br />
-Simple Scoreboard, no tag</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Check received item with item in the scoreboard/FIFO<br />
+ Simple Scoreboard, no tag</p></div><ul>
 <li>Check <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag          : in  string ;<br><span style="padding-left:20px"> constant ActualData   : in  ActualType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Simple Tagged Scoreboard</p></div><ul>
+ Simple Tagged Scoreboard</p></div><ul>
 <li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Pop the top item (FIFO) from the scoreboard/FIFO<br />
-Simple Scoreboard, no tag</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Pop the top item (FIFO) from the scoreboard/FIFO<br />
+ Simple Scoreboard, no tag</p></div><ul>
 <li>Pop <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Simple Tagged Scoreboard</p></div><ul>
+ Simple Tagged Scoreboard</p></div><ul>
 <li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag    : in  string ;<br><span style="padding-left:20px"> variable Item   : out ExpectedType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Peek at the top item (FIFO) from the scoreboard/FIFO<br />
-Simple Tagged Scoreboard</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Peek at the top item (FIFO) from the scoreboard/FIFO<br />
+ Simple Tagged Scoreboard</p></div><ul>
 <li>Peek <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> variable Item   : out  ExpectedType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Simple Scoreboard, no tag</p></div><ul>
-<li>SetAlertLogID <font id="function_arguments">( constant ID              : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Name            : in  string ;<br><span style="padding-left:20px"> constant ParentID        : in  AlertLogIDType := ALERTLOG_BASE_ID ;<br><span style="padding-left:20px"> constant CreateHierarchy : in  Boolean := TRUE ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-SetAlertLogID - associate an AlertLogID with a scoreboard to allow integrated error reporting</p></div><ul>
+ Simple Scoreboard, no tag</p></div><ul>
+<li>SetAlertLogID <font id="function_arguments">( constant ID              : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Name            : in  string ;<br><span style="padding-left:20px"> constant ParentID        : in  AlertLogIDType := OSVVM_SCOREBOARD_ALERTLOG_ID ;<br><span style="padding-left:20px"> constant CreateHierarchy : in  Boolean := TRUE ;<br><span style="padding-left:20px"> constant DoNotReport     : in  Boolean := FALSE ) </font> <font id="function_return">return ()</font></li>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="-simple-tagged"> Simple, Tagged</h2>
+<p>SetAlertLogID - associate an AlertLogID with a scoreboard to allow integrated error reporting</p></div><ul>
 <li>SetAlertLogID <font id="function_arguments">( constant ID     : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant A      : AlertLogIDType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Use when an AlertLogID is used by multiple items (Model or other Scoreboards).  See also AlertLogPkg.GetAlertLogID</p></div><ul>
+ Use when an AlertLogID is used by multiple items (Model or other Scoreboards).  See also AlertLogPkg.GetAlertLogID</p></div><ul>
 <li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Flush - Remove elements in the scoreboard upto and including the one with ItemNumber<br />
-See Find to identify an ItemNumber of a particular value and tag (if applicable)<br />
-Simple Scoreboards</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Flush - Remove elements in the scoreboard upto and including the one with ItemNumber<br />
+ See Find to identify an ItemNumber of a particular value and tag (if applicable)<br />
+ Simple Scoreboards</p></div><ul>
 <li>Flush <font id="function_arguments">( constant ID          : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant Tag         :  in  string ;<br><span style="padding-left:20px"> constant ItemNumber  :  in  integer ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Tagged Scoreboards - only removes items that also match the tag</p></div><ul>
+ Tagged Scoreboards - only removes items that also match the tag</p></div><ul>
 <li>Deallocate <font id="function_arguments">( constant ID     : in  ScoreboardIDType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Generally these are not required.  When a simulation ends and <br />
-another simulation is started, a simulator will release all allocated items.  </p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Generally these are not required.  When a simulation ends and <br />
+ another simulation is started, a simulator will release all allocated items.  </p></div><ul>
 <li>Initialize <font id="function_arguments">( constant ID     : in  ScoreboardIDType ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Deletes all allocated items</p></div><ul>
+ Deletes all allocated items</p></div><ul>
 <li>CheckFinish <font id="function_arguments">( ID                 : ScoreboardIDType ;<br><span style="padding-left:20px"> FinishCheckCount   : integer ;<br><span style="padding-left:20px"> FinishEmpty        : boolean ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
 <li>SetReportMode <font id="function_arguments">( constant ID           : in  ScoreboardIDType ;<br><span style="padding-left:20px"> constant ReportModeIn : in  ScoreboardReportType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-SetReportMode  <br />
-Not AlertFlow<br />
-    REPORT_ALL:     Replaced by AlertLogPkg.SetLogEnable(PASSED, TRUE)<br />
-    REPORT_ERROR:   Replaced by AlertLogPkg.SetLogEnable(PASSED, FALSE)<br />
-    REPORT_NONE:    Deprecated, do not use.<br />
-AlertFlow:      <br />
-    REPORT_ALL:     Replaced by AlertLogPkg.SetLogEnable(AlertLogID, PASSED, TRUE)<br />
-    REPORT_ERROR:   Replaced by AlertLogPkg.SetLogEnable(AlertLogID, PASSED, FALSE)<br />
-    REPORT_NONE:    Replaced by AlertLogPkg.SetAlertEnable(AlertLogID, ERROR, FALSE)</p></div><br><br><br><br><br><br>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>SetReportMode  <br />
+ Not AlertFlow<br />
+     REPORT_ALL:     Replaced by AlertLogPkg.SetLogEnable(PASSED, TRUE)<br />
+     REPORT_ERROR:   Replaced by AlertLogPkg.SetLogEnable(PASSED, FALSE)<br />
+     REPORT_NONE:    Deprecated, do not use.<br />
+ AlertFlow:      <br />
+     REPORT_ALL:     Replaced by AlertLogPkg.SetLogEnable(AlertLogID, PASSED, TRUE)<br />
+     REPORT_ERROR:   Replaced by AlertLogPkg.SetLogEnable(AlertLogID, PASSED, FALSE)<br />
+     REPORT_NONE:    Replaced by AlertLogPkg.SetAlertEnable(AlertLogID, ERROR, FALSE)</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

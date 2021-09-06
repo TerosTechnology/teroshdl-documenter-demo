@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1053,35 +1128,39 @@
 <tr>
 <td>MdioCommandType</td>
 <td></td>
-<td>A command to be submitted to the MdioCore.Use the 'mdioReadCommand()/mdioWriteCommand() conveniencefunctions to initialize/create a MdioCommandType object.</td>
+<td>A command to be submitted to the MdioCore.  Use the 'mdioReadCommand()/mdioWriteCommand() convenience  functions to initialize/create a MdioCommandType object.</td>
 </tr>
 <tr>
 <td>MdioInstType</td>
 <td></td>
-<td>An mdio instruction. This record is intended tobe used as an element in a MdioProgramArray whichis a list of MdioCommandTypes amended with a 'last'bit. The 'last' bit marks the last command of asequence.</td>
+<td>An mdio instruction. This record is intended to  be used as an element in a MdioProgramArray which  is a list of MdioCommandTypes amended with a 'last'  bit. The 'last' bit marks the last command of a  sequence.</td>
 </tr>
 <tr>
 <td>MdioProgramArray</td>
 <td>array (natural range &lt;&gt;) of MdioInstType</td>
-<td>PROGRAMS_C is then used as the MDIO_PROG_G generic (MdioSeqCore) andthe indices 'SEQ_1_START_C', 'SEQ_2_START_C' etc. are used toinitiate processing of the respective sequences.</td>
+<td>A sequence of instructions. The 'MdioSeqCore' module  processes a sequence of commands up to and including one  that has the 'theLast' flag set.  An array may typically contain more than one sequence  of instructions. The user submits the index of the  first instruction to the MdioSeqCore which then executes  commands up to the next one that has the 'last' flag set.<br>  Example:     constant seq1 : MdioProgramArray := (        mdioWriteInst( PHY, REG0, DATA0 );        mdioWriteInst( PHY, REG1, DATA1 );        mdioWriteInst( PHY, REG2, DATA2, true );     );     constant seq2 : MdioProgramArray := (        mdioWriteInst( PHY, REGx, DATAx );        mdioWriteInst( PHY, REGy, DATAy, true );     );<br>     constant PROGRAMS_C : MdioProgramArray := ( seq1 &amp; seq2 );     constant SEQ_1_START_C : natural := 0;     constant SEQ_2_START_C : natural := SEQ_1_START_C + seq1'length;<br>  PROGRAMS_C is then used as the MDIO_PROG_G generic (MdioSeqCore) and  the indices 'SEQ_1_START_C', 'SEQ_2_START_C' etc. are used to  initiate processing of the respective sequences.</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>mdioReadCommand <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural ) </font> <font id="function_return">return MdioCommandType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-create a READ command</p></div><ul>
+ create a READ command</p></div><ul>
 <li>mdioWriteCommand <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> dataOut : in slv(15 downto 0) ) </font> <font id="function_return">return MdioCommandType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-create a WRITE command</p></div><ul>
+ create a WRITE command</p></div><ul>
 <li>mdioReadInst <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> theLast : in boolean := false ) </font> <font id="function_return">return MdioInstType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-create/initialize a READ instruction. 'theLast' mustbe set to 'true' if this instruction is the last oneof a sequence.</p></div><ul>
+ create/initialize a READ instruction. 'theLast' must<br />
+ be set to 'true' if this instruction is the last one<br />
+ of a sequence.</p></div><ul>
 <li>mdioWriteInst <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> dataOut : in slv(15 downto 0);<br><span style="padding-left:20px"> theLast : in boolean := false ) </font> <font id="function_return">return MdioInstType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-create/initialize a WRITE instruction. 'theLast' mustbe set to 'true' if this instruction is the last oneof a sequence.</p></div><ul>
+ create/initialize a WRITE instruction. 'theLast' must<br />
+ be set to 'true' if this instruction is the last one<br />
+ of a sequence.</p></div><ul>
 <li>mdioProgNumReadTransactions <font id="function_arguments">( prog : in MdioProgramArray ) </font> <font id="function_return">return natural </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-calculate the number of read transactions in a sequence</p></div><br><br><br><br><br><br>
+ calculate the number of read transactions in a sequence</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

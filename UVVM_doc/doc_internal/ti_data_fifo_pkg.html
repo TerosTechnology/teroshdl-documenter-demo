@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,13 +1098,45 @@
 <li><strong>File</strong>: ti_data_fifo_pkg.vhd</li>
 </ul><h2 id="functions">Functions</h2><ul>
 <li>uvvm_fifo_init <font id="function_arguments">( buffer_idx            : natural;<br><span style="padding-left:20px"> buffer_size_in_bits   : natural ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uvvm_fifo_init"> uvvm_fifo_init</h2>
+<p>This procedure allocates space in the buffer at the given buffer_idx.</p>
+<ul>
+<li>Parameters:<br />
+    - buffer_idx                    - The index of the FIFO (natural)<br />
+                                      that shall be initialized.<br />
+    - buffer_size_in_bits (natural) - The size of the FIFO</li>
+</ul></div><ul>
 <li>uvvm_fifo_put <font id="function_arguments">( buffer_idx        : natural;<br><span style="padding-left:20px"> data              : std_logic_vector ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uvvm_fifo_put"> uvvm_fifo_put</h2>
+<p>This procedure puts data into a FIFO with index buffer_idx.<br />
+ The size of the data is unconstrained, meaning that<br />
+ it can be any size. Pushing data with a size that is<br />
+ larger than the FIFO size results in wrapping, i.e.,<br />
+ that when reaching the end the data remaining will over-<br />
+ write the data that was written first.</p>
+<ul>
+<li>Parameters:<br />
+    - buffer_idx - The index of the FIFO (natural)<br />
+                   that shall be pushed to.<br />
+    - data       - The data that shall be pushed (slv)</li>
+</ul></div><ul>
 <li>uvvm_fifo_flush <font id="function_arguments">( buffer_idx            : natural ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uvvm_fifo_flush"> uvvm_fifo_flush</h2>
+<p>This procedure empties the FIFO given<br />
+ by buffer_idx.</p>
+<ul>
+<li>Parameters:<br />
+    - buffer_idx - The index of the FIFO (natural)<br />
+                   that shall be flushed.</li>
+</ul></div><ul>
 <li>uvvm_fifo_deallocate <font id="function_arguments">( dummy : t_void ) </font> <font id="function_return">return ()</font></li>
-</ul><br><br><br><br><br><br>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uvvm_fifo_deallocate"> uvvm_fifo_deallocate</h2>
+<p>This procedure deallocates all the FIFOs<br />
+ in the buffer.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

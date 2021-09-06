@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=ei_demo_tb><h1 id="entity-ei_demo_tb">Entity: ei_demo_tb</h1></a><ul>
 <li><strong>File</strong>: ei_demo_tb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 550 50"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="78.33333333333333,0 93.33333333333333,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="170" height="30" fill="black" x="93.33333333333333" y="0"></rect><rect id="SvgjsRect1007" width="166" height="25" fill="#bdecb6" x="95.33333333333333" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="73.33333333333333" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="73.33333333333333" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="108.33333333333333" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="108.33333333333333" svgjs:data="{&quot;newLined&quot;:true}">   GC_TESTCASE </tspan></text><line id="SvgjsLine1012" x1="78.33333333333333" y1="15" x2="93.33333333333333" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright 2020 BitvisLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT.Unless required by applicable law or agreed to in writing, software distributed under the License is distributed onan "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.Note : Any functionality not explicitly described in the documentation is subject to change at any timeDescription   : See library quick reference (under 'doc') and README-file(s)</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 550 50"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="78.33333333333333,0 93.33333333333333,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="170" height="30" fill="black" x="93.33333333333333" y="0"></rect><rect id="SvgjsRect1007" width="166" height="25" fill="#bdecb6" x="95.33333333333333" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="73.33333333333333" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="73.33333333333333" svgjs:data="{&quot;newLined&quot;:true}">   natural </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="108.33333333333333" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="108.33333333333333" svgjs:data="{&quot;newLined&quot;:true}">   GC_TESTCASE </tspan></text><line id="SvgjsLine1012" x1="78.33333333333333" y1="15" x2="93.33333333333333" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>================================================================================================================================  Copyright 2020 Bitvis  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT.</p> <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on  an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p> <h1 id="see-the-license-for-the-specific-language-governing-permissions-and-limitations-under-the-license">See the License for the specific language governing permissions and limitations under the License.</h1> <h2 id="note--any-functionality-not-explicitly-described-in-the-documentation-is-subject-to-change-at-any-time">Note : Any functionality not explicitly described in the documentation is subject to change at any time</h2> <hr /> <h2 id="description----see-library-quick-reference-under-doc-and-readme-files">Description   : See library quick reference (under 'doc') and README-file(s)</h2> <p>hdlunit:tb</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1052,7 +1127,7 @@
 <tr>
 <td>output_sl</td>
 <td>std_logic</td>
-<td>Error Injection VIPs input/output signalsstd_logic</td>
+<td>Error Injection VIPs input/output signals  std_logic</td>
 </tr>
 <tr>
 <td>input_sl</td>
@@ -1128,12 +1203,12 @@
 </table><h2 id="processes">Processes</h2><ul>
 <li>p_sequencer: (  )</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Testbench sequencer</p></div><h2 id="instantiations">Instantiations</h2><ul>
+---------------------------------------------------------------------------  Testbench sequencer --------------------------------------------------------------------------- </p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine</li>
 </ul><ul>
 <li>error_injector_sl: work.error_injection_sl</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Error injector</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-error-injector"> Error injector</h2></div><ul>
 <li>error_injector_slv: work.error_injection_slv</li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

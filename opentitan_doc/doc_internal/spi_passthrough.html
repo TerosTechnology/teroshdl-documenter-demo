@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=spi_passthrough><h1 id="entity-spi_passthrough">Entity: spi_passthrough</h1></a><ul>
 <li><strong>File</strong>: spi_passthrough.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 885 330"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="215,0 230,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="440" height="30" fill="black" x="230" y="0"></rect><rect id="SvgjsRect1007" width="436" height="25" fill="#bdecb6" x="232" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="210" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="245" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   NumCmdInfo </tspan></text><line id="SvgjsLine1012" x1="215" y1="15" x2="230" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="440" height="290" fill="black" x="230" y="35"></rect><rect id="SvgjsRect1014" width="436" height="285" fill="#fdfd96" x="232" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="210" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="245" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1019" x1="215" y1="50" x2="230" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="210" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="245" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1024" x1="215" y1="70" x2="230" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="210" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="245" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   clk_out_i </tspan></text><line id="SvgjsLine1029" x1="215" y1="90" x2="230" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="210" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [255:0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="245" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_cmd_filter_i </tspan></text><line id="SvgjsLine1034" x1="215" y1="110" x2="230" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="210" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [31:0] </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="245" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_mask_i </tspan></text><line id="SvgjsLine1039" x1="215" y1="130" x2="230" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="210" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [31:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="245" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_value_i </tspan></text><line id="SvgjsLine1044" x1="215" y1="150" x2="230" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="210" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="245" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_4b_en_i </tspan></text><line id="SvgjsLine1049" x1="215" y1="170" x2="230" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="210" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   spi_mode_e </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="245" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   spi_mode_i </tspan></text><line id="SvgjsLine1054" x1="215" y1="190" x2="230" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="210" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [NumCmdInfo-1:0] </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="245" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cmd_info_i </tspan></text><line id="SvgjsLine1059" x1="215" y1="210" x2="230" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="210" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="245" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_sck_i </tspan></text><line id="SvgjsLine1064" x1="215" y1="230" x2="230" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="210" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="245" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_csb_i </tspan></text><line id="SvgjsLine1069" x1="215" y1="250" x2="230" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="210" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="245" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_s_i </tspan></text><line id="SvgjsLine1074" x1="215" y1="270" x2="230" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="210" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_rsp_t </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="245" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_i </tspan></text><line id="SvgjsLine1079" x1="215" y1="290" x2="230" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="210" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="245" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   mailbox_hit_i </tspan></text><line id="SvgjsLine1084" x1="215" y1="310" x2="230" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="690" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="655" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   host_s_o </tspan></text><line id="SvgjsLine1089" x1="670" y1="50" x2="685" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="690" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="655" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   host_s_en_o </tspan></text><line id="SvgjsLine1094" x1="670" y1="70" x2="685" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="690" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_req_t </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="655" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_o </tspan></text><line id="SvgjsLine1099" x1="670" y1="90" x2="685" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="690" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="655" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   event_cmd_filtered_o </tspan></text><line id="SvgjsLine1104" x1="670" y1="110" x2="685" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Serial Peripheral Interface (SPI) Device Passthrough module.</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 885 330"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="215,0 230,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="440" height="30" fill="black" x="230" y="0"></rect><rect id="SvgjsRect1007" width="436" height="25" fill="#bdecb6" x="232" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="210" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="245" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   NumCmdInfo </tspan></text><line id="SvgjsLine1012" x1="215" y1="15" x2="230" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="440" height="290" fill="black" x="230" y="35"></rect><rect id="SvgjsRect1014" width="436" height="285" fill="#fdfd96" x="232" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="210" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="245" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1019" x1="215" y1="50" x2="230" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="210" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="245" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1024" x1="215" y1="70" x2="230" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="210" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="245" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   clk_out_i </tspan></text><line id="SvgjsLine1029" x1="215" y1="90" x2="230" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="210" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [255:0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="245" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_cmd_filter_i </tspan></text><line id="SvgjsLine1034" x1="215" y1="110" x2="230" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="210" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [31:0] </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="245" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_mask_i </tspan></text><line id="SvgjsLine1039" x1="215" y1="130" x2="230" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="210" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [31:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="245" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_value_i </tspan></text><line id="SvgjsLine1044" x1="215" y1="150" x2="230" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="210" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="245" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_addr_4b_en_i </tspan></text><line id="SvgjsLine1049" x1="215" y1="170" x2="230" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="210" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   spi_mode_e </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="245" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   spi_mode_i </tspan></text><line id="SvgjsLine1054" x1="215" y1="190" x2="230" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="210" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [NumCmdInfo-1:0] </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="245" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cmd_info_i </tspan></text><line id="SvgjsLine1059" x1="215" y1="210" x2="230" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="210" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="245" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_sck_i </tspan></text><line id="SvgjsLine1064" x1="215" y1="230" x2="230" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="210" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="245" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_csb_i </tspan></text><line id="SvgjsLine1069" x1="215" y1="250" x2="230" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="210" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="245" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   host_s_i </tspan></text><line id="SvgjsLine1074" x1="215" y1="270" x2="230" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="210" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_rsp_t </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="245" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_i </tspan></text><line id="SvgjsLine1079" x1="215" y1="290" x2="230" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="210" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="245" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   mailbox_hit_i </tspan></text><line id="SvgjsLine1084" x1="215" y1="310" x2="230" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="690" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="655" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   host_s_o </tspan></text><line id="SvgjsLine1089" x1="670" y1="50" x2="685" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="690" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [3:0] </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="655" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   host_s_en_o </tspan></text><line id="SvgjsLine1094" x1="670" y1="70" x2="685" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="690" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_req_t </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="655" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   passthrough_o </tspan></text><line id="SvgjsLine1099" x1="670" y1="90" x2="685" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="690" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="655" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   event_cmd_filtered_o </tspan></text><line id="SvgjsLine1104" x1="670" y1="110" x2="685" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Serial Peripheral Interface (SPI) Device Passthrough module.</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1073,7 +1148,7 @@
 <td>cfg_cmd_filter_i</td>
 <td>input</td>
 <td>[255:0]</td>
-<td>command filter information is given as 256bit register. It is subject to bechanged if command config is stored in DPSRAM. If that is supported, the command config is valid at the 6th command cycle and given only 8 bits.</td>
+<td>Configurations  command filter information is given as 256bit register. It is subject to be  changed if command config is stored in DPSRAM. If that is supported, the  command config is valid at the 6th command cycle and given only 8 bits.</td>
 </tr>
 <tr>
 <td>cfg_addr_mask_i</td>
@@ -1109,7 +1184,7 @@
 <td>host_sck_i</td>
 <td>input</td>
 <td></td>
-<td>Though it would be best if passthrough is able to re-use existing spi_s2pand cmdparse, but passthrough has to implement its own s2p and cmdparse to support the A/B binary scheme.</td>
+<td>SPI in  Though it would be best if passthrough is able to re-use existing spi_s2p  and cmdparse, but passthrough has to implement its own s2p and cmdparse to  support the A/B binary scheme.</td>
 </tr>
 <tr>
 <td>host_csb_i</td>
@@ -1151,13 +1226,13 @@
 <td>mailbox_hit_i</td>
 <td>input</td>
 <td></td>
-<td>If a read command falls into the mailbox address and the mailbox feature isenabled, the <code>Read Command</code> process module sends a signal to passthrough to take the control of the SPI line. If this signal asserts during Address phase, passthrough drops CSb to SPI Flash device and waits host's CSb de-assertion.</td>
+<td>Mailbox indicator  If a read command falls into the mailbox address and the mailbox feature is  enabled, the <code>Read Command</code> process module sends a signal to passthrough to  take the control of the SPI line. If this signal asserts during Address  phase, passthrough drops CSb to SPI Flash device and waits host's CSb  de-assertion.</td>
 </tr>
 <tr>
 <td>event_cmd_filtered_o</td>
 <td>output</td>
 <td></td>
-<td>event<code>cmd_filtered</code>: indicator of the incoming command filtered out</td>
+<td>event <code>cmd_filtered</code>: indicator of the incoming command filtered out</td>
 </tr>
 </tbody>
 </table><h2 id="signals">Signals</h2>
@@ -1183,7 +1258,7 @@
 <tr>
 <td>host_s_en_inclk</td>
 <td>logic [3:0]</td>
-<td>internal clock</td>
+<td>localparam cmd_type_t CmdInfoNone = '{     addr_en:          1'b 0,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 0,     dummy_en:         1'b 0,     payload_en:       4'h 0,     payload_dir:  PayloadIn,     addr_size:           '0,     dummy_size:          '0   };<br>   localparam cmd_type_t CmdInfoPayloadIn = '{     addr_en:          1'b 0,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 0,     dummy_en:         1'b 0,     payload_en:       4'h 1,     payload_dir:  PayloadIn,     addr_size:           '0,     dummy_size:          '0   };<br>   localparam cmd_type_t CmdInfoPayloadOut = '{     addr_en:          1'b 0,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 0,     dummy_en:         1'b 0,     payload_en:       4'h 2, // S[1]     payload_dir: PayloadOut,     addr_size:           '0,     dummy_size:          '0   };<br>   localparam cmd_type_t CmdInfoAddrPayloadIn = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 0,     payload_en:       4'h 1, // S[0] only     payload_dir:  PayloadIn, // Host sends Data     addr_size:           '0, // Logic decide     dummy_size:          '0   };<br>   localparam cmd_type_t CmdInfoAddrPayloadInQuad = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 0,     payload_en:       4'h F, // S[3:0]     payload_dir:  PayloadIn, // Host sends Data     addr_size:           '0, // Logic decide     dummy_size:          '0   };<br>   localparam cmd_type_t CmdInfoAddrPayloadOut = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 1,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 0,     payload_en:       4'h 2, // S[1] only     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:          '0   };<br>   // Address + Dummy + Payload but Address is 3B always   localparam cmd_type_t CmdInfoAddr3BDummyPayloadOut = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 0,     dummy_en:         1'b 1,     payload_en:       4'h 2, // S[1] only     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:        'h 7   };<br>   localparam cmd_type_t CmdInfoAddrDummyPayloadOut = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 1,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 1,     payload_en:       4'h 2, // S[1] only     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:        'h 7   };<br>   localparam cmd_type_t CmdInfoAddrDummyPayloadOutDual = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 1,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 1,     payload_en:       4'h 3, // S[1:0] only     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:        'h 7   };<br>   localparam cmd_type_t CmdInfoAddrDummyPayloadOutQuad = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 1,     addr_4b_affected: 1'b 1,     dummy_en:         1'b 1,     payload_en:       4'h F, // S[3:0]     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:        'h 7   };<br>   localparam cmd_type_t CmdInfoAddr = '{     addr_en:          1'b 1,     addr_swap_en:     1'b 0,     addr_4b_affected: 1'b 0, // TODO: ??     dummy_en:         1'b 0,     payload_en:       4'h 0,     payload_dir: PayloadOut, // Flash device sends Data     addr_size:           '0, // Logic decide     dummy_size:        'h 0   };   */  Not synthesizable in DC   localparam cmd_type_t PassThroughCmdInfoOld [256] = '{     // 8'h 00     'h 00: CmdInfoNone,<br>     // 8'h 01 Write Status 1     'h 01: CmdInfoPayloadIn,     // 8'h 15 Write Statur 2     'h 31: CmdInfoPayloadIn,     // 8'h 11 Write Status 3     'h 11: CmdInfoPayloadIn,<br>     // 8'h 02 Page Program     'h 02: CmdInfoAddrPayloadIn,     // 8'h 32 Quad Input Page Program : Expect to be filtered     'h 32: CmdInfoAddrPayloadInQuad,<br>     // 8'h 03 Read Data     'h 03: CmdInfoAddrPayloadOut,<br>     // 8'h 04 Write Disable     'h 04: CmdInfoNone,<br>     // 8'h 05 Read Status 1     'h 05: CmdInfoPayloadOut,     // 8'h 35 Read Status 2     'h 35: CmdInfoPayloadOut,     // 8'h 15 Read Status 3     'h 15: CmdInfoPayloadOut,<br>     // 8'h 06 Write Enable     'h 06: CmdInfoNone,<br>     // 8'h 0B Fast Read     'h 0B: CmdInfoAddrDummyPayloadOut,     // 8'h 3B Fast Read Dual Output     'h 3B: CmdInfoAddrDummyPayloadOutDual,     // 8'h 6B Fast Read Quad Output     'h 6B: CmdInfoAddrDummyPayloadOutQuad,<br>     // 8'h 20 Sector Erase (4kB)     'h 20: CmdInfoAddr,     // 8'h 52 Block Erase (32kB)     'h 52: CmdInfoAddr,     // 8'h D8 Block Erase (64kB)     'h D8: CmdInfoAddr,<br>     // 8'h 36 Individual Block Lock     'h 36: CmdInfoAddr,     // 8'h 39 Individual Block Unlock     'h 39: CmdInfoAddr,     // 8'h 3D Read Block Lock     'h 3D: CmdInfoAddrPayloadOut,<br>     // 8'h 38 Enter QPI : Expect to be filtered     'h 38: CmdInfoNone,<br>     // 8'h 42 Program Security Register     // 8'h 44 Erase Security Register     // 8'h 48 Read Security Register<br>     // 8'h 4B Read Unique ID<br>     // 8'h 5A Read SFDP     'h 5A: CmdInfoAddr3BDummyPayloadOut,<br>     // 8'h 90 Manufacture/Device ID<br>     // 8'h 9F JEDEC ID     'h 9F: CmdInfoPayloadOut,<br>     default: CmdInfoNone   };   */ ///////////  Signals // ///////////  internal clock</td>
 </tr>
 <tr>
 <td>device_s_en_inclk</td>
@@ -1213,7 +1288,7 @@
 <tr>
 <td>filter</td>
 <td>logic</td>
-<td>If the filter becomes 1 on the 8th beat, it lowers SCK enable signal to CG cell then, at the 8th posedge of SCK, csb_deassert becomes 1. <strong><em>_      <em></em></strong>      <strong><em></em> SCK             <em></em></strong>/ 7  ___</em>/ 8  ____/ <strong>_ filter       <strong><em><em></em></strong>/XXXXXX/   ___________</em></strong> <strong><em><strong><em>__</em></strong></em></strong> sck_gate_en                __________________ <strong><em><strong><em>__</em></strong></em></strong> csb_deassert <strong><em><strong><em>______</em></strong></em></strong>/</td>
+<td>If the filter becomes 1 on the 8th beat, it lowers SCK enable signal to CG  cell then, at the 8th posedge of SCK, csb_deassert becomes 1.                       <strong><em>_      <em></em></strong>      <strong><em></em>  SCK             <em></em></strong>/ 7  ___</em>/ 8  ____/                              <strong>_  filter       <strong><em><em></em></strong>/XXXXXX/   ___________</em></strong>               <strong><em><strong><em>__</em></strong></em></strong>  sck_gate_en                __________________                                  <strong><em><strong><em>__</em></strong></em></strong>  csb_deassert <strong><em><strong><em>______</em></strong></em></strong>/</td>
 </tr>
 <tr>
 <td>sck_gate_en</td>
@@ -1223,7 +1298,7 @@
 <tr>
 <td>csb_deassert</td>
 <td>logic</td>
-<td>However, the CSb output to the downstream flash device is better to be in the out clock domain. It helps the design constraints to be simpler. So, the <code>csb_deassert</code> is again latched at the outclk (which is the negedge of SCK).</td>
+<td>CSb to the downstream device control If 1, CSb is de-asserted. This signal  is glitch sensitive. This value is changed at SCK posedge. This does not  drive CSb output directly. CSb to downstream is OR-ed with this and CSb  from host system.<br>  <code>cdb_deassert</code> should be latched at the posedge of SCK. <code>filter</code> signal is  computed in between the 7th posedge of SCK and the 8th posedge. As the  command bit does not arrive until the 7th negedge of SCK, the filter signal  is not valid in the first half of the period. By latching the filter signal  at the posedge of the SCK, csb_deassert always shows correct value if the  command needs to be filtered or not.<br>  However, the CSb output to the downstream flash device is better to be in  the out clock domain. It helps the design constraints to be simpler. So,  the <code>csb_deassert</code> is again latched at the outclk (which is the negedge of  SCK).</td>
 </tr>
 <tr>
 <td>csb_deassert_outclk</td>
@@ -1308,7 +1383,7 @@
 <tr>
 <td>unused_cmd_info_fields</td>
 <td>logic</td>
-<td>Some of the fields of cmd_info are used in the big FSM below. The opcode field and the addr_* fields are ignored because we pick them from cmd_info_d instead (in a different FSM state). We rely on the synthesis tool not to generate the unneeded flops but must explicitly waive lint warnings about unused fields.</td>
+<td>Some of the fields of cmd_info are used in the big FSM below. The opcode field and the addr_*  fields are ignored because we pick them from cmd_info_d instead (in a different FSM state). We  rely on the synthesis tool not to generate the unneeded flops but must explicitly waive lint  warnings about unused fields.</td>
 </tr>
 <tr>
 <td>addr_set</td>
@@ -1328,7 +1403,7 @@
 <tr>
 <td>addr_swap</td>
 <td>logic</td>
-<td>Based on AddrCnt, the logic swap. TODO: Handle the DualIO, QuadIO cases</td>
+<td>Based on AddrCnt, the logic swap.  TODO: Handle the DualIO, QuadIO cases</td>
 </tr>
 <tr>
 <td>dummy_set</td>
@@ -1336,13 +1411,33 @@
 <td>Dummy Counter</td>
 </tr>
 <tr>
+<td>dummycnt_zero</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mbyte_set</td>
+<td>logic</td>
+<td>MByte counter</td>
+</tr>
+<tr>
+<td>mbytecnt_zero</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>mbyte_cnt</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
 <td>passthrough_s_en</td>
 <td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>st_d</td>
 <td>StFilter</td>
+<td>end</td>
 <td></td>
 </tr>
 <tr>
@@ -1414,8 +1509,8 @@
 <tbody>
 <tr>
 <td>passthrough_st_e</td>
-<td>enum logic [2:0] {<br><span style="padding-left:20px">               StIdle,<br><span style="padding-left:20px">                     StFilter,<br><span style="padding-left:20px">                          StWait,<br><span style="padding-left:20px">           //                         //                    //                    StDriving,<br><span style="padding-left:20px">     StHighZ,<br><span style="padding-left:20px">           //                         //               StAddress   }</td>
-<td>State</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">               StIdle,<br><span style="padding-left:20px">                     StFilter,<br><span style="padding-left:20px">                          StWait,<br><span style="padding-left:20px">           //                         //                    //                    StDriving,<br><span style="padding-left:20px">     StHighZ,<br><span style="padding-left:20px">           //                         //               StAddress,<br><span style="padding-left:20px">           StMByte   }</td>
+<td>///////////////  Definitions // ///////////////  State</td>
 </tr>
 </tbody>
 </table><h2 id="processes">Processes</h2><ul>
@@ -1425,16 +1520,17 @@
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Command Filter: CSb control</p></div><ul>
+ Command Filter: CSb control </p></div><ul>
 <li>unnamed: ( @(posedge clk_out_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
+ Bitcnt counter / Bitcnt increases until it hit the max value then wait reset. </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Search opcode @ 7th opcode</p></div><ul>
+ Search opcode @ 7th opcode </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
@@ -1447,10 +1543,9 @@ Search opcode @ 7th opcode</p></div><ul>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_out_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Address swap should happen in outclk domain.<br />
-The state machine operates in inclk domain.<br />
-The state generates mux selection signal.<br />
-The signal latched in outclk domain then activates the mux.</p></div><ul>
+ Address swap should happen in outclk domain.  The state machine operates in inclk domain.  The state generates mux selection signal.  The signal latched in outclk domain then activates the mux. </p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_out_i or negedge rst_ni) )</li>
@@ -1458,7 +1553,10 @@ The signal latched in outclk domain then activates the mux.</p></div><ul>
 <li>unnamed: ( @(posedge clk_out_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong></p>
+<ul>
+<li>END:   Passthrough Mux (!important) ------------------------------------ /////////////////  State Machine // ///////////////// </li>
+</ul></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><br><br><br><br><br><br>
     </article class="markdown-body">

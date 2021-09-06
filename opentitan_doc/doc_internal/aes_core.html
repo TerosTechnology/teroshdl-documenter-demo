@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=aes_core><h1 id="entity-aes_core">Entity: aes_core</h1></a><ul>
 <li><strong>File</strong>: aes_core.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 925 470"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="225,0 240,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="520" height="270" fill="black" x="240" y="0"></rect><rect id="SvgjsRect1007" width="516" height="265" fill="#bdecb6" x="242" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="220" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="255" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   AES192Enable </tspan></text><line id="SvgjsLine1012" x1="225" y1="15" x2="240" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="220" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="255" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   Masking </tspan></text><line id="SvgjsLine1017" x1="225" y1="35" x2="240" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="220" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   sbox_impl_e </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="255" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SBoxImpl </tspan></text><line id="SvgjsLine1022" x1="225" y1="55" x2="240" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="220" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="255" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecStartTriggerDelay </tspan></text><line id="SvgjsLine1027" x1="225" y1="75" x2="240" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="220" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="255" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecAllowForcingMasks </tspan></text><line id="SvgjsLine1032" x1="225" y1="95" x2="240" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="220" y="94.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="255" y="94.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecSkipPRNGReseeding </tspan></text><line id="SvgjsLine1037" x1="225" y1="115" x2="240" y2="115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="220" y="114.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="255" y="114.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   EntropyWidth </tspan></text><line id="SvgjsLine1042" x1="225" y1="135" x2="240" y2="135" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="220" y="134.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="255" y="134.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   NumShares </tspan></text><line id="SvgjsLine1047" x1="225" y1="155" x2="240" y2="155" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="220" y="154.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_seed_t </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="255" y="154.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingLfsrSeed </tspan></text><line id="SvgjsLine1052" x1="225" y1="175" x2="240" y2="175" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="220" y="174.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_perm_t </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="255" y="174.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingLfsrPerm </tspan></text><line id="SvgjsLine1057" x1="225" y1="195" x2="240" y2="195" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="220" y="194.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_perm_t </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="255" y="194.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingSharePerm </tspan></text><line id="SvgjsLine1062" x1="225" y1="215" x2="240" y2="215" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="220" y="214.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   masking_lfsr_seed_t </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="255" y="214.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstMaskingLfsrSeed </tspan></text><line id="SvgjsLine1067" x1="225" y1="235" x2="240" y2="235" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="220" y="234.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   mskg_chunk_lfsr_perm_t </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="255" y="234.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstMskgChunkLfsrPerm </tspan></text><line id="SvgjsLine1072" x1="225" y1="255" x2="240" y2="255" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1073" width="520" height="190" fill="black" x="240" y="275"></rect><rect id="SvgjsRect1074" width="516" height="185" fill="#fdfd96" x="242" y="277"></rect><text id="SvgjsText1075" font-family="Helvetica" x="220" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="255" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1079" x1="225" y1="290" x2="240" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="220" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="255" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1084" x1="225" y1="310" x2="240" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="220" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="255" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_ack_i </tspan></text><line id="SvgjsLine1089" x1="225" y1="330" x2="240" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="220" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [EntropyWidth-1:0] </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="255" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_i </tspan></text><line id="SvgjsLine1094" x1="225" y1="350" x2="240" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="220" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="255" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_ack_i </tspan></text><line id="SvgjsLine1099" x1="225" y1="370" x2="240" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="220" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [EntropyWidth-1:0] </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="255" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_i </tspan></text><line id="SvgjsLine1104" x1="225" y1="390" x2="240" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="220" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="255" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   lc_escalate_en_i </tspan></text><line id="SvgjsLine1109" x1="225" y1="410" x2="240" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="220" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="255" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_alert_i </tspan></text><line id="SvgjsLine1114" x1="225" y1="430" x2="240" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="220" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   aes_reg2hw_t </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="255" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1119" x1="225" y1="450" x2="240" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="780" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="745" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_req_o </tspan></text><line id="SvgjsLine1124" x1="760" y1="290" x2="775" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="780" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="745" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_req_o </tspan></text><line id="SvgjsLine1129" x1="760" y1="310" x2="775" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="780" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="745" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   alert_recov_o </tspan></text><line id="SvgjsLine1134" x1="760" y1="330" x2="775" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="780" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="745" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   alert_fatal_o </tspan></text><line id="SvgjsLine1139" x1="760" y1="350" x2="775" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="780" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">   aes_hw2reg_t </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="745" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1144" x1="760" y1="370" x2="775" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0AES core implementation</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 925 490"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="225,0 240,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="520" height="270" fill="black" x="240" y="0"></rect><rect id="SvgjsRect1007" width="516" height="265" fill="#bdecb6" x="242" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="220" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="255" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   AES192Enable </tspan></text><line id="SvgjsLine1012" x1="225" y1="15" x2="240" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="220" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="255" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   Masking </tspan></text><line id="SvgjsLine1017" x1="225" y1="35" x2="240" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="220" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   sbox_impl_e </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="255" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SBoxImpl </tspan></text><line id="SvgjsLine1022" x1="225" y1="55" x2="240" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="220" y="54.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="255" y="54.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecStartTriggerDelay </tspan></text><line id="SvgjsLine1027" x1="225" y1="75" x2="240" y2="75" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="220" y="74.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="255" y="74.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecAllowForcingMasks </tspan></text><line id="SvgjsLine1032" x1="225" y1="95" x2="240" y2="95" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="220" y="94.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="255" y="94.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   SecSkipPRNGReseeding </tspan></text><line id="SvgjsLine1037" x1="225" y1="115" x2="240" y2="115" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="220" y="114.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="255" y="114.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   EntropyWidth </tspan></text><line id="SvgjsLine1042" x1="225" y1="135" x2="240" y2="135" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="220" y="134.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="255" y="134.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   NumShares </tspan></text><line id="SvgjsLine1047" x1="225" y1="155" x2="240" y2="155" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="220" y="154.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_seed_t </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="255" y="154.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingLfsrSeed </tspan></text><line id="SvgjsLine1052" x1="225" y1="175" x2="240" y2="175" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="220" y="174.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_perm_t </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="255" y="174.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingLfsrPerm </tspan></text><line id="SvgjsLine1057" x1="225" y1="195" x2="240" y2="195" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="220" y="194.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   clearing_lfsr_perm_t </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="255" y="194.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstClearingSharePerm </tspan></text><line id="SvgjsLine1062" x1="225" y1="215" x2="240" y2="215" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="220" y="214.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   masking_lfsr_seed_t </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="255" y="214.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstMaskingLfsrSeed </tspan></text><line id="SvgjsLine1067" x1="225" y1="235" x2="240" y2="235" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="220" y="234.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   mskg_chunk_lfsr_perm_t </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="255" y="234.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   RndCnstMskgChunkLfsrPerm </tspan></text><line id="SvgjsLine1072" x1="225" y1="255" x2="240" y2="255" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1073" width="520" height="210" fill="black" x="240" y="275"></rect><rect id="SvgjsRect1074" width="516" height="205" fill="#fdfd96" x="242" y="277"></rect><text id="SvgjsText1075" font-family="Helvetica" x="220" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="255" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1079" x1="225" y1="290" x2="240" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="220" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="255" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1084" x1="225" y1="310" x2="240" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="220" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="255" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   rst_shadowed_ni </tspan></text><line id="SvgjsLine1089" x1="225" y1="330" x2="240" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="220" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="255" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_ack_i </tspan></text><line id="SvgjsLine1094" x1="225" y1="350" x2="240" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="220" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [EntropyWidth-1:0] </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="255" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_i </tspan></text><line id="SvgjsLine1099" x1="225" y1="370" x2="240" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="220" y="369.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="255" y="369.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_ack_i </tspan></text><line id="SvgjsLine1104" x1="225" y1="390" x2="240" y2="390" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="220" y="389.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   [EntropyWidth-1:0] </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="255" y="389.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_i </tspan></text><line id="SvgjsLine1109" x1="225" y1="410" x2="240" y2="410" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="220" y="409.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="255" y="409.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   lc_escalate_en_i </tspan></text><line id="SvgjsLine1114" x1="225" y1="430" x2="240" y2="430" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1115" font-family="Helvetica" x="220" y="429.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1116" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1117" font-family="Helvetica" x="255" y="429.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1118" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_alert_i </tspan></text><line id="SvgjsLine1119" x1="225" y1="450" x2="240" y2="450" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1120" font-family="Helvetica" x="220" y="449.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1121" dy="26" x="220" svgjs:data="{&quot;newLined&quot;:true}">   aes_reg2hw_t </tspan></text><text id="SvgjsText1122" font-family="Helvetica" x="255" y="449.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1123" dy="26" x="255" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1124" x1="225" y1="470" x2="240" y2="470" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1125" font-family="Helvetica" x="780" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1126" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1127" font-family="Helvetica" x="745" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1128" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   entropy_clearing_req_o </tspan></text><line id="SvgjsLine1129" x1="760" y1="290" x2="775" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1130" font-family="Helvetica" x="780" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1131" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1132" font-family="Helvetica" x="745" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1133" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   entropy_masking_req_o </tspan></text><line id="SvgjsLine1134" x1="760" y1="310" x2="775" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1135" font-family="Helvetica" x="780" y="309.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1136" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1137" font-family="Helvetica" x="745" y="309.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1138" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   alert_recov_o </tspan></text><line id="SvgjsLine1139" x1="760" y1="330" x2="775" y2="330" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1140" font-family="Helvetica" x="780" y="329.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1141" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1142" font-family="Helvetica" x="745" y="329.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1143" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   alert_fatal_o </tspan></text><line id="SvgjsLine1144" x1="760" y1="350" x2="775" y2="350" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1145" font-family="Helvetica" x="780" y="349.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1146" dy="26" x="780" svgjs:data="{&quot;newLined&quot;:true}">   aes_hw2reg_t </tspan></text><text id="SvgjsText1147" font-family="Helvetica" x="745" y="349.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1148" dy="26" x="745" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1149" x1="760" y1="370" x2="775" y2="370" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>AES core implementation</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1136,6 +1211,12 @@
 <td></td>
 </tr>
 <tr>
+<td>rst_shadowed_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>entropy_clearing_req_o</td>
 <td>output</td>
 <td></td>
@@ -1219,14 +1300,9 @@
 </thead>
 <tbody>
 <tr>
-<td>ctrl_re</td>
-<td>logic</td>
-<td>Signals</td>
-</tr>
-<tr>
 <td>ctrl_qe</td>
 <td>logic</td>
-<td></td>
+<td>Signals</td>
 </tr>
 <tr>
 <td>ctrl_we</td>
@@ -1239,11 +1315,6 @@
 <td></td>
 </tr>
 <tr>
-<td>mode</td>
-<td>aes_mode_e</td>
-<td></td>
-</tr>
-<tr>
 <td>aes_mode_q</td>
 <td>aes_mode_e</td>
 <td></td>
@@ -1251,11 +1322,6 @@
 <tr>
 <td>cipher_op</td>
 <td>ciph_op_e</td>
-<td></td>
-</tr>
-<tr>
-<td>key_len</td>
-<td>key_len_e</td>
 <td></td>
 </tr>
 <tr>
@@ -1271,16 +1337,6 @@
 <tr>
 <td>force_zero_masks_q</td>
 <td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>ctrl_d</td>
-<td>ctrl_reg_t</td>
-<td></td>
-</tr>
-<tr>
-<td>ctrl_q</td>
-<td>ctrl_reg_t</td>
 <td></td>
 </tr>
 <tr>
@@ -1739,11 +1795,6 @@
 <td>Unused signals</td>
 </tr>
 <tr>
-<td>unused_force_zero_masks</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
 <td>sp2v_sig</td>
 <td>sp2v_e [NumSp2VSig-1:0]</td>
 <td></td>
@@ -1791,12 +1842,13 @@
 <td>NumSp2VSig</td>
 <td>int unsigned</td>
 <td>NumSharesKey * NumRegsKey + NumSlicesCtr + 2</td>
-<td>If any sparsely encoded signal becomes invalid, the core controller further immediately de-asserts the data_out_we_o signal to prevent any data from being released. We use vectors of sparsely encoded signals to reduce code duplication.</td>
+<td>////////////////////////////  Sparsely Encoded Signals // ////////////////////////////  We use sparse encodings for various critical signals and must ensure that:  1. The synthesis tool doesn't optimize away the sparse encoding.  2. The sparsely encoded signal is always valid. More precisely, an alert or SVA is triggered     if a sparse signal takes on an invalid value.  3. The alert signal remains asserted until reset even if the sparse signal becomes valid again     This is achieved by driving the control FSM into the terminal error state whenever any     sparsely encoded signal becomes invalid.<br>  If any sparsely encoded signal becomes invalid, the core controller further immediately  de-asserts the data_out_we_o signal to prevent any data from being released.  We use vectors of sparsely encoded signals to reduce code duplication.</td>
 </tr>
 </tbody>
 </table><h2 id="processes">Processes</h2><ul>
 <li>key_init_get: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
+//////////  Inputs // ////////// </p></div><ul>
 <li>iv_get: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>data_in_get: (  )</li>
@@ -1805,42 +1857,37 @@
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>key_init_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Initial Key registers</p></div><ul>
+////////////////////  Key, IV and Data // ////////////////////  Initial Key registers </p></div><ul>
 <li>key_init_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>iv_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-IV registers</p></div><ul>
+ IV registers </p></div><ul>
 <li>iv_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>data_in_prev_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Previous input data register</p></div><ul>
+ Previous input data register </p></div><ul>
 <li>data_in_prev_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>state_in_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Convert input data/IV to state format (every word corresponds to one state column).<br />
-Mux for state input</p></div><ul>
+ Convert input data/IV to state format (every word corresponds to one state column).  Mux for state input </p></div><ul>
 <li>add_state_in_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Mux for addition to state input</p></div><ul>
+ Mux for addition to state input </p></div><ul>
 <li>add_state_out_mux: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Mux for addition to state output</p></div><ul>
-<li>mode_get: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
-<li>key_len_get: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+ Mux for addition to state output </p></div><ul>
 <li>data_in_reg_clear: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Input data register clear</p></div><ul>
+ Input data register clear </p></div><ul>
 <li>reg_sp_enc_err: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-We need to register the collected error signal to avoid circular loops in the core controller<br />
-related to iv_we and data_out_we.</p></div><ul>
+ We need to register the collected error signal to avoid circular loops in the core controller  related to iv_we and data_out_we. </p></div><ul>
 <li>data_out_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
+///////////  Outputs // /////////// </p></div><ul>
 <li>key_reg_put: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>iv_reg_put: (  )</li>
@@ -1849,23 +1896,47 @@ related to iv_we and data_out_we.</p></div><ul>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>ctrl_err_storage_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Fatal alert conditions need to remain asserted until reset.</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Fatal alert conditions need to remain asserted until reset. </p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_aes_prng_clearing: aes_prng_clearing</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-The clearing PRNG provides pseudo-random data for register clearing purposes.</p></div><ul>
+ The clearing PRNG provides pseudo-random data for register clearing purposes.</p></div><ul>
 <li>u_aes_ctr: aes_ctr</li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+///////////<br />
+ Counter //<br />
+///////////</p></div><ul>
 <li>u_aes_cipher_core: aes_cipher_core</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Cipher core</p></div><ul>
+ Cipher core</p></div><ul>
+<li>u_ctrl_reg_shadowed: aes_ctrl_reg_shadowed</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+////////////////////<br />
+ Control Register //<br />
+////////////////////<br />
+ Shadowed register primitve</p></div><ul>
 <li>u_aes_control: aes_control</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Control</p></div><ul>
+///////////<br />
+ Control //<br />
+///////////<br />
+ Control</p></div><ul>
 <li>u_aes_data_in_prev_sel_buf_chk: aes_sel_buf_chk</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-If any mux selector signal becomes invalid, the control FSM further prevents any data from<br />
+/////////////<br />
+ Selectors //<br />
+/////////////<br />
+ We use sparse encodings for these mux selector signals and must ensure that:</p>
+<ol>
+<li><p>The synthesis tool doesn't optimize away the sparse encoding.</p></li>
+<li><p>The selector signal is always valid. More precisely, an alert or SVA is triggered if a<br />
+selector signal takes on an invalid value.</p></li>
+<li><p>The alert signal remains asserted until reset even if the selector signal becomes valid<br />
+again. This is achieved by driving the control FSM into the terminal error state whenever<br />
+any mux selector signal becomes invalid.</p>
+<p>If any mux selector signal becomes invalid, the control FSM further prevents any data from<br />
 being released from the cipher core by de-asserting the write enable of the output data<br />
-registers.</p></div><ul>
+registers.</p></li>
+</ol></div><ul>
 <li>u_aes_state_in_sel_buf_chk: aes_sel_buf_chk</li>
 </ul><ul>
 <li>u_aes_add_state_in_sel_buf_chk: aes_sel_buf_chk</li>

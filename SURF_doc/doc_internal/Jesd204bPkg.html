@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1042,7 +1117,7 @@
 <td>K_CHAR_C</td>
 <td>slv(7 downto 0)</td>
 <td>x"BC"</td>
-<td>8B10B characters (8-bit values)K.28.5</td>
+<td>8B10B characters (8-bit values)  K.28.5</td>
 </tr>
 <tr>
 <td>R_CHAR_C</td>
@@ -1090,7 +1165,7 @@
 <td>PER_STEP_WIDTH_C</td>
 <td>positive</td>
 <td>16</td>
-<td>TX specificRamp step or square wave period slv width (max 16)</td>
+<td>TX specific  Ramp step or square wave period slv width (max 16)</td>
 </tr>
 <tr>
 <td>JESD_PRBS_TAPS_C</td>
@@ -1125,7 +1200,7 @@
 <tr>
 <td>jesdGtRxLaneType</td>
 <td></td>
-<td></td>
+<td>Sub-types ------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>jesdGtTxLaneType</td>
@@ -1175,41 +1250,43 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>detKcharFunc <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Detect K character</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="-functions"> Functions</h2>
+<p>Detect K character</p></div><ul>
 <li>varIndexOutFunc <font id="function_arguments">(shft_slv : slv;<br><span style="padding-left:20px"> index_slv : slv) </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Output variable index from SLV (use in variable length shift register)</p></div><ul>
+ Output variable index from SLV (use in variable length shift register)</p></div><ul>
 <li>detectPosFuncSwap <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Detect position of first non K character (Swapped)</p></div><ul>
+ Detect position of first non K character (Swapped)</p></div><ul>
 <li>detectPosFunc <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Detect position of first non K character</p></div><ul>
+ Detect position of first non K character</p></div><ul>
 <li>byteSwapSlv <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Byte swap slv (bytes int 2 or 4)</p></div><ul>
+ Byte swap slv (bytes int 2 or 4)</p></div><ul>
 <li>endianSwapSlv <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Swap little and big endians (bytes int 2 or 4)</p></div><ul>
+ Swap little and big endians (bytes int 2 or 4)</p></div><ul>
 <li>JesdDataAlign <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> position_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Align the data within the data buffer according to the position of the byte alignment word</p></div><ul>
+ Align the data within the data buffer according to the position of the byte alignment word</p></div><ul>
 <li>JesdCharAlign <font id="function_arguments">(char_slv : slv;<br><span style="padding-left:20px"> position_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Align the character within the buffer according to the position of the byte alignment word</p></div><ul>
+ Align the character within the buffer according to the position of the byte alignment word</p></div><ul>
 <li>slvToInt <font id="function_arguments">(data_slv : slv) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Convert standard logic vector to integer</p></div><ul>
+ Convert standard logic vector to integer</p></div><ul>
 <li>intToSlv <font id="function_arguments">(data_int : integer;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Convert integer to standard logic vector</p></div><ul>
+ Convert integer to standard logic vector</p></div><ul>
 <li>outSampleZero <font id="function_arguments">(F_int : positive;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Output offset binary zero</p></div><ul>
+ Output offset binary zero</p></div><ul>
 <li>invSigned <font id="function_arguments">(input : slv) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Invert functionsInvert signed</p></div><ul>
+ Invert functions<br />
+ Invert signed</p></div><ul>
 <li>invData <font id="function_arguments">(data    : slv;<br><span style="padding-left:20px"> F_int : positive;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
 <li>jesdScrambler <font id="function_arguments">( dataIn  : in    slv(15 downto 0);<br><span style="padding-left:20px"> lfsrIn  : in    slv(14 downto 0);<br><span style="padding-left:20px"> dataOut : inout slv(15 downto 0);<br><span style="padding-left:20px"> lfsrOut : inout slv(14 downto 0)) </font> <font id="function_return">return ()</font></li>

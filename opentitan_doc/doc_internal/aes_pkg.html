@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,8 +1098,8 @@
 <li><strong>File</strong>: aes_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- AES package</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>AES package</p>
 <p></div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
@@ -1106,7 +1181,7 @@
 <td>ClearingLfsrWidth</td>
 <td>int</td>
 <td>64</td>
-<td>Clearing PRNG default LFSR seed and permutation These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 64 --seed 31468618 --prefix "Clearing"</td>
+<td>Clearing PRNG default LFSR seed and permutation  These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 64 --seed 31468618 --prefix "Clearing"</td>
 </tr>
 <tr>
 <td>clearing_lfsr_seed_t</td>
@@ -1166,25 +1241,25 @@
 <td>Mux2SelWidth</td>
 <td>int</td>
 <td>3</td>
-<td></td>
+<td>Generic, sparse mux selector encodings  Encoding generated with:  $ ./util/design/sparse-fsm-encode.py -d 3 -m 2 -n 3 \       -s 31468618 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3:</td>
 </tr>
 <tr>
 <td>Mux3SelWidth</td>
 <td>int</td>
 <td>5</td>
-<td></td>
+<td>Encoding generated with:  $ ./sparse-fsm-encode.py -d 3 -m 3 -n 5 \       -s 31468618 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3:</td>
 </tr>
 <tr>
 <td>Mux4SelWidth</td>
 <td>int</td>
 <td>5</td>
-<td></td>
+<td>Encoding generated with:  $ ./sparse-fsm-encode.py -d 3 -m 4 -n 5 \       -s 31468618 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3:</td>
 </tr>
 <tr>
 <td>Mux6SelWidth</td>
 <td>int</td>
 <td>6</td>
-<td></td>
+<td>$ ./sparse-fsm-encode.py -d 3 -m 6 -n 6 \       -s 31468618 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3:</td>
 </tr>
 <tr>
 <td>DIPSelNum</td>
@@ -1503,37 +1578,52 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>aes_mul2 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multiplication by {02} (i.e. x) on GF(2^8)<br />
-with field generating polynomial {01}{1b} (9'h11b)<br />
-Sometimes also denoted by xtime().</p></div><ul>
+ Multiplication by {02} (i.e. x) on GF(2^8)<br />
+ with field generating polynomial {01}{1b} (9'h11b)<br />
+ Sometimes also denoted by xtime().</p></div><ul>
 <li>aes_mul4 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multiplication by {04} (i.e. x^2) on GF(2^8)<br />
-with field generating polynomial {01}{1b} (9'h11b)</p></div><ul>
+ Multiplication by {04} (i.e. x^2) on GF(2^8)<br />
+ with field generating polynomial {01}{1b} (9'h11b)</p></div><ul>
 <li>aes_div2 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Division by {02} (i.e. x) on GF(2^8)<br />
-with field generating polynomial {01}{1b} (9'h11b)<br />
-This is the inverse of aes_mul2() or xtime().</p></div><ul>
+ Division by {02} (i.e. x) on GF(2^8)<br />
+ with field generating polynomial {01}{1b} (9'h11b)<br />
+ This is the inverse of aes_mul2() or xtime().</p></div><ul>
 <li>aes_circ_byte_shift <font id="function_arguments">(logic [31:0] in,<br><span style="padding-left:20px"> logic [1:0])</font> <font id="function_return">return (logic [31:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Circular byte shift to the left</p></div><ul>
+ Circular byte shift to the left</p></div><ul>
 <li>aes_transpose <font id="function_arguments">(logic [3:0][3:0][7:0])</font> <font id="function_return">return (logic [3:0][3:0][7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Transpose state matrix</p></div><ul>
+ Transpose state matrix</p></div><ul>
 <li>aes_col_get <font id="function_arguments">(logic [3:0][3:0][7:0] in,<br><span style="padding-left:20px"> logic [1:0])</font> <font id="function_return">return (logic [3:0][7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Extract single column from state matrix</p></div><ul>
+ Extract single column from state matrix</p></div><ul>
 <li>aes_mvm <font id="function_arguments">(logic [7:0] vec_b,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Matrix-vector multiplication in GF(2^8): c = A * b</p></div><ul>
+ Matrix-vector multiplication in GF(2^8): c = A * b</p></div><ul>
 <li>aes_prd_get_lsbs <font id="function_arguments">(logic [(4*WidthPRDSBox)-1:0])</font> <font id="function_return">return (logic [3:0][7:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-When using a masked S-Box implementation other than Canright, we still select the 8 LSBs of<br />
-the per-S-Box PRD to form the input data mask of the corresponding byte. We do this to<br />
-distribute the input data masks over all LFSR chunks of the masking PRNG.<br />
-For one row of the state matrix, extract the 8 LSBs of the per-S-Box PRD from the PRNG output.<br />
-These bits are used as:</p>
+ Function for extracting LSBs of the per-S-Box pseudo-random data (PRD) from the output of the<br />
+ masking PRNG.</p>
+<p>The masking PRNG is used for generating both the PRD for the S-Boxes/SubBytes operation as<br />
+ well as for the input data masks. When using any of the masked Canright S-Box implementations,<br />
+ it is important that the SubBytes input masks (generated by the PRNG in Round X-1) and the<br />
+ SubBytes output masks (generated by the PRNG in Round X) are independent. Inside the PRNG,<br />
+ this is achieved by using multiple, separately re-seeded LFSR chunks and by selecting the<br />
+ separate LFSR chunks in alternating fashion. Since the input data masks become the SubBytes<br />
+ input masks in the first round, we select the same 8 bit lanes for the input data masks which<br />
+ are also used to form the SubBytes output mask for the masked Canright S-Box implementations,<br />
+ i.e., the 8 LSBs of the per S-Box PRD. In particular, we have:</p>
+<p>prng_output = { prd_key_expand, … , sb_prd[4], sb_out_mask[4], sb_prd[0], sb_out_mask[0] }</p>
+<p>Where sb_out_mask[x] contains the SubBytes output mask for byte x (when using a masked<br />
+ Canright S-Box implementation) and sb_prd[x] contains additional PRD consumed by SubBytes for<br />
+ byte x.</p>
+<p>When using a masked S-Box implementation other than Canright, we still select the 8 LSBs of<br />
+ the per-S-Box PRD to form the input data mask of the corresponding byte. We do this to<br />
+ distribute the input data masks over all LFSR chunks of the masking PRNG.<br />
+ For one row of the state matrix, extract the 8 LSBs of the per-S-Box PRD from the PRNG output.<br />
+ These bits are used as:</p>
 <ul>
 <li>input data masks, and</li>
 <li>SubBytes output mask when using a masked Canright S-Box implementation.</li>

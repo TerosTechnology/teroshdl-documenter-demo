@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,9 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=std_logic_misc><h1 id="package-std_logic_misc">Package: std_logic_misc</h1></a><ul>
 <li><strong>File</strong>: std_logic_misc.vhdl</li>
-</ul><h2 id="types">Types</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>library SYNOPSYS;<br />
+use SYNOPSYS.attributes.all;<br />
+</div></p><h2 id="types">Types</h2>
 <table>
 <thead>
 <tr>
@@ -1039,20 +1116,31 @@
 <tr>
 <td>MINOMAX</td>
 <td></td>
-<td></td>
+<td>synopsys synthesis_off</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>strength_map <font id="function_arguments">(input: STD_ULOGIC;<br><span style="padding-left:20px"> strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>functions for mapping the STD_(U)LOGIC according to STRENGTH</p>
+<hr /></div><ul>
 <li>strength_map_z <font id="function_arguments">(input:STD_ULOGIC;<br><span style="padding-left:20px"> strn:STRENGTH) </font> <font id="function_return">return STD_LOGIC </font></li>
 </ul><ul>
 <li>Drive <font id="function_arguments">(V: STD_ULOGIC_VECTOR) </font> <font id="function_return">return STD_LOGIC_VECTOR </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>conversion functions for STD_ULOGIC_VECTOR and STD_LOGIC_VECTOR</p>
+<hr />
+<p>synopsys synthesis_on</p></div><ul>
 <li>Drive <font id="function_arguments">(V: STD_LOGIC_VECTOR) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font></li>
 </ul><ul>
 <li>Sense <font id="function_arguments">(V: STD_ULOGIC;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_LOGIC </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+synopsys synthesis_off</p>
+<h2 id="attribute-closely_related_tcf-of-drive-function-is-true">attribute CLOSELY_RELATED_TCF of Drive: function is TRUE;</h2>
+<p>conversion functions for sensing various types<br />
+ (the second argument allows the user to specify the value to<br />
+  be returned when the network is undriven)</p>
+<hr /></div><ul>
 <li>Sense <font id="function_arguments">(V: STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_LOGIC_VECTOR </font></li>
 </ul><ul>
 <li>Sense <font id="function_arguments">(V: STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font></li>
@@ -1062,13 +1150,44 @@
 <li>Sense <font id="function_arguments">(V: STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font></li>
 </ul><ul>
 <li>STD_LOGIC_VECTORtoBIT_VECTOR <font id="function_arguments">(V: STD_LOGIC_VECTOR ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT_VECTOR </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h2 id="synopsys-synthesis_on">synopsys synthesis_on</h2>
+<pre><code>Function: STD_LOGIC_VECTORtoBIT_VECTOR STD_ULOGIC_VECTORtoBIT_VECTOR
+
+Purpose: Conversion fun. from STD_(U)LOGIC_VECTOR to BIT_VECTOR
+
+Mapping:    0, L --&gt; 0
+        1, H --&gt; 1
+        X, W --&gt; vX if Xflag is TRUE
+        X, W --&gt; 0  if Xflag is FALSE
+        Z --&gt; vZ if Zflag is TRUE
+        Z --&gt; 0  if Zflag is FALSE
+        U --&gt; vU if Uflag is TRUE
+        U --&gt; 0  if Uflag is FALSE
+        - --&gt; vDC if DCflag is TRUE
+        - --&gt; 0  if DCflag is FALSE</code></pre>
+<hr /></div><ul>
 <li>STD_ULOGIC_VECTORtoBIT_VECTOR <font id="function_arguments">(V: STD_ULOGIC_VECTOR ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><ul>
 <li>STD_ULOGICtoBIT <font id="function_arguments">(V: STD_ULOGIC ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<pre><code>Function: STD_ULOGICtoBIT
+
+Purpose: Conversion function from STD_(U)LOGIC to BIT
+
+Mapping:    0, L --&gt; 0
+        1, H --&gt; 1
+        X, W --&gt; vX if Xflag is TRUE
+        X, W --&gt; 0  if Xflag is FALSE
+        Z --&gt; vZ if Zflag is TRUE
+        Z --&gt; 0  if Zflag is FALSE
+        U --&gt; vU if Uflag is TRUE
+        U --&gt; 0  if Uflag is FALSE
+        - --&gt; vDC if DCflag is TRUE
+        - --&gt; 0  if DCflag is FALSE</code></pre>
+<hr /></div><ul>
 <li>AND_REDUCE <font id="function_arguments">(ARG: STD_LOGIC_VECTOR) </font> <font id="function_return">return UX01 </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
 <li>NAND_REDUCE <font id="function_arguments">(ARG: STD_LOGIC_VECTOR) </font> <font id="function_return">return UX01 </font></li>
 </ul><ul>
 <li>OR_REDUCE <font id="function_arguments">(ARG: STD_LOGIC_VECTOR) </font> <font id="function_return">return UX01 </font></li>
@@ -1092,7 +1211,8 @@
 <li>XNOR_REDUCE <font id="function_arguments">(ARG: STD_ULOGIC_VECTOR) </font> <font id="function_return">return UX01 </font></li>
 </ul><ul>
 <li>fun_BUF3S <font id="function_arguments">(Input,<br><span style="padding-left:20px"> Enable: UX01;<br><span style="padding-left:20px"> Strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+synopsys synthesis_off</p></div><ul>
 <li>fun_BUF3SL <font id="function_arguments">(Input,<br><span style="padding-left:20px"> Enable: UX01;<br><span style="padding-left:20px"> Strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font></li>
 </ul><ul>
 <li>fun_MUX2x1 <font id="function_arguments">(Input0,<br><span style="padding-left:20px"> Input1,<br><span style="padding-left:20px"> Sel: UX01) </font> <font id="function_return">return UX01 </font></li>

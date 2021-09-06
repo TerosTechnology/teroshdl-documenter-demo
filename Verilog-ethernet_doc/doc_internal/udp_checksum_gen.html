@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1048,7 +1123,7 @@
 <td>HEADER_FIFO_ADDR_WIDTH</td>
 <td></td>
 <td>$clog2(HEADER_FIFO_DEPTH)</td>
-<td></td>
+<td><br> UDP Frame<br>  Field                       Length  Destination MAC address     6 octets  Source MAC address          6 octets  Ethertype (0x0800)          2 octets  Version (4)                 4 bits  IHL (5-15)                  4 bits  DSCP (0)                    6 bits  ECN (0)                     2 bits  length                      2 octets  identification (0?)         2 octets  flags (010)                 3 bits  fragment offset (0)         13 bits  time to live (64?)          1 octet  protocol                    1 octet  header checksum             2 octets  source IP                   4 octets  destination IP              4 octets  options                     (IHL-5)*4 octets<br>  source port                 2 octets  desination port             2 octets  length                      2 octets  checksum                    2 octets<br>  payload                     length octets<br> This module receives a UDP frame with header fields in parallel and payload on an AXI stream interface, calculates the length and checksum, then produces the header fields in parallel along with the UDP payload in a separate AXI stream.<br> */</td>
 </tr>
 </tbody>
 </table>
@@ -1079,7 +1154,7 @@
 <td>s_udp_hdr_valid</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>* UDP frame input      */</td>
 </tr>
 <tr>
 <td>s_udp_hdr_ready</td>
@@ -1217,7 +1292,7 @@
 <td>m_udp_hdr_valid</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* UDP frame output      */</td>
 </tr>
 <tr>
 <td>m_udp_hdr_ready</td>
@@ -1379,7 +1454,7 @@
 <td>busy</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* Status signals      */</td>
 </tr>
 </tbody>
 </table><h2 id="signals">Signals</h2>
@@ -1555,7 +1630,7 @@
 <tr>
 <td>s_udp_payload_fifo_tdata</td>
 <td>wire [7:0]</td>
-<td></td>
+<td>* UDP Payload FIFO  */</td>
 </tr>
 <tr>
 <td>s_udp_payload_fifo_tvalid</td>
@@ -1605,12 +1680,12 @@
 <tr>
 <td>header_fifo_wr_ptr_reg</td>
 <td>reg [HEADER_FIFO_ADDR_WIDTH:0]</td>
-<td></td>
+<td>* UDP Header FIFO  */</td>
 </tr>
 <tr>
 <td>header_fifo_wr_ptr_next</td>
 <td>reg [HEADER_FIFO_ADDR_WIDTH:0]</td>
-<td></td>
+<td>* UDP Header FIFO  */</td>
 </tr>
 <tr>
 <td>header_fifo_rd_ptr_reg</td>
@@ -1890,12 +1965,12 @@
 </table><h2 id="processes">Processes</h2><ul>
 <li>unnamed: ( @* )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Write logic</p></div><ul>
+ Write logic </p></div><ul>
 <li>unnamed: ( @(posedge clk) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
 <li>unnamed: ( @* )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read logic</p></div><ul>
+ Read logic </p></div><ul>
 <li>unnamed: ( @(posedge clk) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
 <li>unnamed: ( @* )</li>

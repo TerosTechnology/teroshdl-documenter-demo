@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1050,10 +1125,20 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>resolved <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Resolution function. If S is empty, returns 'Z'. If S has one element, return the element. Otherwise, 'U' is the strongest.      then  'X'      then  '0' and '1'      then  'W'      then  'H' and 'L'      then  'Z'.</p></div><ul>
+  Resolution function.<br />
+  If S is empty, returns 'Z'.<br />
+  If S has one element, return the element.<br />
+  Otherwise, 'U' is the strongest.<br />
+       then  'X'<br />
+       then  '0' and '1'<br />
+       then  'W'<br />
+       then  'H' and 'L'<br />
+       then  'Z'.</p></div><ul>
 <li>to_bit <font id="function_arguments">(s : std_ulogic;<br><span style="padding-left:20px"> xmap : bit := '0') </font> <font id="function_return">return bit </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Conversion functions. The result range (for vectors) is S'Length - 1 downto 0. XMAP is return for values not in '0', '1', 'L', 'H'.</p></div><ul>
+  Conversion functions.<br />
+  The result range (for vectors) is S'Length - 1 downto 0.<br />
+  XMAP is return for values not in '0', '1', 'L', 'H'.</p></div><ul>
 <li>to_bitvector <font id="function_arguments">(s : std_logic_vector;<br><span style="padding-left:20px"> xmap : bit := '0') </font> <font id="function_return">return bit_vector </font></li>
 </ul><ul>
 <li>to_bitvector <font id="function_arguments">(s : std_ulogic_vector;<br><span style="padding-left:20px"> xmap : bit := '0') </font> <font id="function_return">return bit_vector </font></li>
@@ -1070,7 +1155,8 @@
 </ul><ul>
 <li>to_X01 <font id="function_arguments">(s : std_logic_vector) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Normalization. The result range (for vectors) is 1 to S'Length.</p></div><ul>
+  Normalization.<br />
+  The result range (for vectors) is 1 to S'Length.</p></div><ul>
 <li>to_X01 <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic_vector </font></li>
 </ul><ul>
 <li>to_X01 <font id="function_arguments">(s : std_ulogic) </font> <font id="function_return">return X01 </font></li>
@@ -1107,12 +1193,14 @@
 </ul><ul>
 <li>rising_edge <font id="function_arguments">(signal s : std_ulogic) </font> <font id="function_return">return boolean </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Edge detection. An edge is detected in case of event on s, and X01 normalized value rises from 0 to 1 or falls from 1 to 0.</p></div><ul>
+  Edge detection.<br />
+  An edge is detected in case of event on s, and X01 normalized value<br />
+  rises from 0 to 1 or falls from 1 to 0.</p></div><ul>
 <li>falling_edge <font id="function_arguments">(signal s : std_ulogic) </font> <font id="function_return">return boolean </font></li>
 </ul><ul>
 <li>is_X <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return boolean </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Test for unknown.  Only 0, 1, L and H are known values.</p></div><ul>
+  Test for unknown.  Only 0, 1, L and H are known values.</p></div><ul>
 <li>is_X <font id="function_arguments">(s : std_logic_vector) </font> <font id="function_return">return boolean </font></li>
 </ul><ul>
 <li>is_X <font id="function_arguments">(s : std_ulogic) </font> <font id="function_return">return boolean </font></li>

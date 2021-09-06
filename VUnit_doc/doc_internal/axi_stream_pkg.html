@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1048,7 +1123,7 @@
 <td>default_axi_stream_protocol_checker</td>
 <td>axi_stream_protocol_checker_t</td>
 <td>(     p_type        =&gt; default_component,<br><span style="padding-left:20px">     p_actor       =&gt; null_actor,<br><span style="padding-left:20px">     p_data_length =&gt; 0,<br><span style="padding-left:20px">     p_id_length   =&gt; 0,<br><span style="padding-left:20px">     p_dest_length =&gt; 0,<br><span style="padding-left:20px">     p_user_length =&gt; 0,<br><span style="padding-left:20px">     p_logger      =&gt; null_logger,<br><span style="padding-left:20px">     p_max_waits   =&gt; 0   )</td>
-<td>The default protocol checker is used to specify that the checkerconfiguration is defined by the parent component into which the checker isinstantiated.</td>
+<td>The default protocol checker is used to specify that the checker  configuration is defined by the parent component into which the checker is  instantiated.</td>
 </tr>
 <tr>
 <td>null_axi_stream_monitor</td>
@@ -1060,7 +1135,7 @@
 <td>default_axi_stream_monitor</td>
 <td>axi_stream_monitor_t</td>
 <td>(     p_type             =&gt; default_component,<br><span style="padding-left:20px">     p_actor            =&gt; null_actor,<br><span style="padding-left:20px">     p_data_length      =&gt; 0,<br><span style="padding-left:20px">     p_id_length        =&gt; 0,<br><span style="padding-left:20px">     p_dest_length      =&gt; 0,<br><span style="padding-left:20px">     p_user_length      =&gt; 0,<br><span style="padding-left:20px">     p_logger           =&gt; null_logger,<br><span style="padding-left:20px">     p_protocol_checker =&gt; null_axi_stream_protocol_checker   )</td>
-<td>The default monitor is used to specify that the monitorconfiguration is defined by the parent component into which the monitor isinstantiated.</td>
+<td>The default monitor is used to specify that the monitor  configuration is defined by the parent component into which the monitor is  instantiated.</td>
 </tr>
 <tr>
 <td>null_axi_stream_master</td>
@@ -1163,20 +1238,20 @@
 </ul><ul>
 <li>pop_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable tdata : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast : out std_logic;<br><span style="padding-left:20px"> variable tkeep : out std_logic_vector;<br><span style="padding-left:20px"> variable tstrb : out std_logic_vector;<br><span style="padding-left:20px"> variable tid   : out std_logic_vector;<br><span style="padding-left:20px"> variable tdest : out std_logic_vector;<br><span style="padding-left:20px"> variable tuser : out std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Blocking: pop a value from the axi stream</p></div><ul>
+ Blocking: pop a value from the axi stream</p></div><ul>
 <li>pop_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable tdata : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast : out std_logic ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>pop_axi_stream <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Non-blocking: pop a value from the axi stream to be read in the future</p></div><ul>
+ Non-blocking: pop a value from the axi stream to be read in the future</p></div><ul>
 <li>await_pop_axi_stream_reply <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t;<br><span style="padding-left:20px"> variable tdata     : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast     : out std_logic;<br><span style="padding-left:20px"> variable tkeep     : out std_logic_vector;<br><span style="padding-left:20px"> variable tstrb     : out std_logic_vector;<br><span style="padding-left:20px"> variable tid       : out std_logic_vector;<br><span style="padding-left:20px"> variable tdest     : out std_logic_vector;<br><span style="padding-left:20px"> variable tuser     : out std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Blocking: Wait for reply to non-blocking pop</p></div><ul>
+ Blocking: Wait for reply to non-blocking pop</p></div><ul>
 <li>await_pop_axi_stream_reply <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t;<br><span style="padding-left:20px"> variable tdata     : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast     : out std_logic ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>check_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream   : axi_stream_slave_t;<br><span style="padding-left:20px"> expected : std_logic_vector;<br><span style="padding-left:20px"> tlast    : std_logic        := '1';<br><span style="padding-left:20px"> tkeep    : std_logic_vector := "";<br><span style="padding-left:20px"> tstrb    : std_logic_vector := "";<br><span style="padding-left:20px"> tid      : std_logic_vector := "";<br><span style="padding-left:20px"> tdest    : std_logic_vector := "";<br><span style="padding-left:20px"> tuser    : std_logic_vector := "";<br><span style="padding-left:20px"> msg      : string           := "";<br><span style="padding-left:20px"> blocking : boolean          := true ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Blocking: read axi stream and check result against expected value</p></div><ul>
+ Blocking: read axi stream and check result against expected value</p></div><ul>
 <li>push_axi_stream_transaction <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> axi_stream_transaction : axi_stream_transaction_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>pop_axi_stream_transaction <font id="function_arguments">( constant msg                    : in msg_t;<br><span style="padding-left:20px"> variable axi_stream_transaction : out axi_stream_transaction_t ) </font> <font id="function_return">return ()</font></li>

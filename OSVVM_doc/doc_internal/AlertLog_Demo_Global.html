@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=AlertLog_Demo_Global><h1 id="entity-alertlog_demo_global">Entity: AlertLog_Demo_Global</h1></a><ul>
 <li><strong>File</strong>: AlertLog_Demo_Global.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>File Name:         AlertLog_Demo_Global.vhdDesign Unit Name:  AlertLog_Demo_GlobalRevision:          STANDARD VERSION,  2015.01Copyright (c) 2015 by SynthWorks Design Inc.  All rights reserved.Maintainer:        Jim Lewis      email:  <a href="&#x6d;a&#x69;&#x6c;t&#x6f;&#58;&#106;&#x69;&#x6d;&#64;s&#121;&#110;&#116;&#104;&#x77;&#111;&#x72;k&#x73;.&#99;&#x6f;&#109;">&#106;&#105;&#x6d;&#x40;&#x73;y&#110;&#x74;&#x68;&#x77;&#x6f;&#x72;&#x6b;&#115;&#x2e;&#x63;&#111;&#x6d;</a>Contributor(s):Jim Lewis      email:  <a href="&#x6d;&#97;&#105;&#x6c;t&#111;&#58;&#106;im&#64;&#115;&#121;&#x6e;&#x74;&#104;&#x77;&#111;&#x72;&#x6b;&#x73;&#46;&#99;&#x6f;&#109;">&#x6a;&#x69;&#109;&#x40;&#x73;&#121;&#x6e;&#x74;&#104;w&#111;&#114;&#107;&#x73;&#46;&#99;&#x6f;&#109;</a>Description:Demo showing use of the global counter in AlertLogPkgDeveloped for:Revision History:Date      Version    Description01/2015   2015.01    Refining tests01/2020   2020.01    Updated Licenses to ApacheThis file is part of OSVVM.</p><p>Copyright (c) 2015 - 2020 by SynthWorks Design Inc.</p><p>Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License at</p><p><a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></p><p>Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.</p></div><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>File Name:         AlertLog_Demo_Global.vhd   Design Unit Name:  AlertLog_Demo_Global   Revision:          STANDARD VERSION,  2015.01</p> <p>Copyright (c) 2015 by SynthWorks Design Inc.  All rights reserved.</p> <p>Maintainer:        Jim Lewis      email:  <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x6a;&#x69;&#x6d;&#64;&#x73;&#121;&#x6e;&#116;h&#119;o&#114;k&#x73;&#46;&#x63;&#x6f;&#109;">&#106;&#x69;&#109;&#64;&#115;&#x79;&#x6e;&#x74;&#x68;&#119;&#111;&#114;&#x6b;&#115;&#46;&#99;&#111;&#x6d;</a>   Contributor(s):      Jim Lewis      email:  <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#106;&#105;&#109;&#64;&#115;&#121;n&#116;&#104;&#119;&#x6f;&#x72;k&#115;&#x2e;&#x63;&#x6f;&#109;">&#106;&#105;&#x6d;&#x40;&#x73;&#121;&#x6e;&#116;&#104;&#119;o&#x72;&#x6b;&#x73;&#46;&#99;&#x6f;&#109;</a></p> <p>Description:     Demo showing use of the global counter in AlertLogPkg</p> <p>Developed for:          SynthWorks Design Inc.          Training Courses          11898 SW 128th Ave.          Tigard, Or  97223          <a href="http://www.SynthWorks.com">http://www.SynthWorks.com</a></p> <p>Revision History:     Date      Version    Description     01/2015   2015.01    Refining tests     01/2020   2020.01    Updated Licenses to Apache</p> <p>This file is part of OSVVM.</p> <p>Copyright (c) 2015 - 2020 by SynthWorks Design Inc.  </p> <p>Licensed under the Apache License, Version 2.0 (the "License");   you may not use this file except in compliance with the License.   You may obtain a copy of the License at</p> <pre><code class="hljs"> https:<span class="hljs-regexp">//</span>www.apache.org<span class="hljs-regexp">/licenses/</span>LICENSE-<span class="hljs-number">2.0</span></code></pre> <p>Unless required by applicable law or agreed to in writing, software   distributed under the License is distributed on an "AS IS" BASIS,   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   See the License for the specific language governing permissions and   limitations under the License.</p></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>

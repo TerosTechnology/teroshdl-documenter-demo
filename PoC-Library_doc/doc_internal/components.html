@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1026,28 +1101,28 @@
 </ul><ul>
 <li>ffrs <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">    rst : std_logic := '0';<br><span style="padding-left:20px"> set : std_logic := '0') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-RS-FlipFlop with dominant rst</p></div><ul>
+ RS-FlipFlop with dominant rst</p></div><ul>
 <li>ffsr <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">    rst : std_logic := '0';<br><span style="padding-left:20px"> set : std_logic := '0') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-RS-FlipFlop with dominant set</p></div><ul>
+ RS-FlipFlop with dominant set</p></div><ul>
 <li>ffdre <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">                    d : std_logic;<br><span style="padding-left:20px">              rst : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1';<br><span style="padding-left:20px"> constant INIT : std_logic := '0') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-D-FlipFlop with reset and enable</p></div><ul>
+ D-FlipFlop with reset and enable</p></div><ul>
 <li>ffdre <font id="function_arguments">(q : std_logic_vector;<br><span style="padding-left:20px">    d : std_logic_vector;<br><span style="padding-left:20px">   rst : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1';<br><span style="padding-left:20px"> constant INIT : std_logic_vector := (0 to 0 => '0')) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-D-FlipFlop with reset and enable</p></div><ul>
+ D-FlipFlop with reset and enable</p></div><ul>
 <li>ffdse <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">                    d : std_logic;<br><span style="padding-left:20px">              set : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-D-FlipFlop with set and enable</p></div><ul>
+ D-FlipFlop with set and enable</p></div><ul>
 <li>fftre <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">                    t : std_logic;<br><span style="padding-left:20px">              rst : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1';<br><span style="padding-left:20px"> constant INIT : std_logic := '0') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-T-FlipFlop with reset and enable</p></div><ul>
+ T-FlipFlop with reset and enable</p></div><ul>
 <li>fftse <font id="function_arguments">(q : std_logic;<br><span style="padding-left:20px">                    t : std_logic;<br><span style="padding-left:20px">              set : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-T-FlipFlop with set and enable</p></div><ul>
+ T-FlipFlop with set and enable</p></div><ul>
 <li>upcounter_next <font id="function_arguments">(cnt : unsigned;<br><span style="padding-left:20px"> rst : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1';<br><span style="padding-left:20px"> constant INIT : natural := 0) </font> <font id="function_return">return unsigned </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-counter</p></div><ul>
+ counter</p></div><ul>
 <li>upcounter_equal <font id="function_arguments">(cnt : unsigned;<br><span style="padding-left:20px"> value : natural) </font> <font id="function_return">return std_logic </font></li>
 </ul><ul>
 <li>downcounter_next <font id="function_arguments">(cnt : signed;<br><span style="padding-left:20px"> rst : std_logic := '0';<br><span style="padding-left:20px"> en : std_logic := '1';<br><span style="padding-left:20px"> constant INIT : integer := 0) </font> <font id="function_return">return signed </font></li>
@@ -1058,17 +1133,17 @@ counter</p></div><ul>
 </ul><ul>
 <li>shreg_left <font id="function_arguments">(q : std_logic_vector;<br><span style="padding-left:20px"> i : std_logic;<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-shiftregisters</p></div><ul>
+ shiftregisters</p></div><ul>
 <li>shreg_right <font id="function_arguments">(q : std_logic_vector;<br><span style="padding-left:20px"> i : std_logic;<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
 <li>rreg_left <font id="function_arguments">(q : std_logic_vector;<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-rotate registers</p></div><ul>
+ rotate registers</p></div><ul>
 <li>rreg_right <font id="function_arguments">(q : std_logic_vector;<br><span style="padding-left:20px"> en : std_logic := '1') </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
 <li>comp <font id="function_arguments">(value1 : std_logic_vector;<br><span style="padding-left:20px"> value2 : std_logic_vector) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-compare</p></div><ul>
+ compare</p></div><ul>
 <li>comp <font id="function_arguments">(value1 : unsigned;<br><span style="padding-left:20px"> value2 : unsigned) </font> <font id="function_return">return unsigned </font></li>
 </ul><ul>
 <li>comp <font id="function_arguments">(value1 : signed;<br><span style="padding-left:20px"> value2 : signed) </font> <font id="function_return">return signed </font></li>
@@ -1087,7 +1162,7 @@ compare</p></div><ul>
 </ul><ul>
 <li>mux <font id="function_arguments">(sel : std_logic;<br><span style="padding-left:20px"> sl0        : std_logic;<br><span style="padding-left:20px">                sl1     : std_logic) </font> <font id="function_return">return std_logic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-multiplexing</p></div><ul>
+ multiplexing</p></div><ul>
 <li>mux <font id="function_arguments">(sel : std_logic;<br><span style="padding-left:20px"> slv0    : std_logic_vector;<br><span style="padding-left:20px"> slv1    : std_logic_vector) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
 <li>mux <font id="function_arguments">(sel : std_logic;<br><span style="padding-left:20px"> us0        : unsigned;<br><span style="padding-left:20px">                 us1     : unsigned) </font> <font id="function_return">return unsigned </font></li>

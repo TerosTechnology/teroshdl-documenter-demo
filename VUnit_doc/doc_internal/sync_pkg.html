@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1054,19 +1129,19 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>wait_until_idle <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> handle     :       sync_handle_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Blocking: Wait until all operations requested from the VC have been finished</p></div><ul>
+ Blocking: Wait until all operations requested from the VC have been finished</p></div><ul>
 <li>wait_for_time <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> handle     :       sync_handle_t;<br><span style="padding-left:20px"> delay      :       delay_length) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Non-blocking: Make VC wait for a delay before starting the next operation</p></div><ul>
+ Non-blocking: Make VC wait for a delay before starting the next operation</p></div><ul>
 <li>handle_wait_until_idle <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Standard implementation of wait_until_idle VCI which may be used by VC</p></div><ul>
+ Standard implementation of wait_until_idle VCI which may be used by VC</p></div><ul>
 <li>handle_wait_for_time <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Standard implementation of wait_for_time VCI which may be used by VC</p></div><ul>
+ Standard implementation of wait_for_time VCI which may be used by VC</p></div><ul>
 <li>handle_sync_message <font id="function_arguments">(signal net        : inout network_t;<br><span style="padding-left:20px"> variable msg_type : inout msg_type_t;<br><span style="padding-left:20px"> variable msg      : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Standard implementation of synchronization VCI which may be used by VC</p></div><br><br><br><br><br><br>
+ Standard implementation of synchronization VCI which may be used by VC</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

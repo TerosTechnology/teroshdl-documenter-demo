@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=FirFilterSingleChannelTb><h1 id="entity-firfiltersinglechanneltb">Entity: FirFilterSingleChannelTb</h1></a><ul>
 <li><strong>File</strong>: FirFilterSingleChannelTb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>Company    : SLAC National Accelerator LaboratoryThis file is part of 'SLAC Firmware Standard Library'.It is subject to the license terms in the LICENSE.txt file found in thetop-level directory of this distribution and at:<a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.No part of 'SLAC Firmware Standard Library', including this file,may be copied, modified, propagated, or distributed except according tothe terms contained in the LICENSE.txt file.</p></div><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><hr /> <h2 id="company-----slac-national-accelerator-laboratory">Company    : SLAC National Accelerator Laboratory</h2> <p>This file is part of 'SLAC Firmware Standard Library'.  It is subject to the license terms in the LICENSE.txt file found in the  top-level directory of this distribution and at:     <a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.  No part of 'SLAC Firmware Standard Library', including this file,  may be copied, modified, propagated, or distributed except according to</p> <h2 id="the-terms-contained-in-the-licensetxt-file">the terms contained in the LICENSE.txt file.</h2></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -1091,7 +1166,7 @@
 <td>COEFFICIENTS_C</td>
 <td>IntegerArray(TAP_SIZE_C-1 downto 0)</td>
 <td>(       0   =&gt; 0,<br><span style="padding-left:20px">       1   =&gt; 0,<br><span style="padding-left:20px">       2   =&gt; 0,<br><span style="padding-left:20px">       3   =&gt; 0,<br><span style="padding-left:20px">       4   =&gt; 0,<br><span style="padding-left:20px">       5   =&gt; 0,<br><span style="padding-left:20px">       6   =&gt; 0,<br><span style="padding-left:20px">       7   =&gt; 0,<br><span style="padding-left:20px">       8   =&gt; 1,<br><span style="padding-left:20px">       9   =&gt; 1,<br><span style="padding-left:20px">       10  =&gt; 2,<br><span style="padding-left:20px">       11  =&gt; 2,<br><span style="padding-left:20px">       12  =&gt; 3,<br><span style="padding-left:20px">       13  =&gt; 4,<br><span style="padding-left:20px">       14  =&gt; 6,<br><span style="padding-left:20px">       15  =&gt; 7,<br><span style="padding-left:20px">       16  =&gt; 9,<br><span style="padding-left:20px">       17  =&gt; 11,<br><span style="padding-left:20px">       18  =&gt; 12,<br><span style="padding-left:20px">       19  =&gt; 15,<br><span style="padding-left:20px">       20  =&gt; 17,<br><span style="padding-left:20px">       21  =&gt; 20,<br><span style="padding-left:20px">       22  =&gt; 22,<br><span style="padding-left:20px">       23  =&gt; 25,<br><span style="padding-left:20px">       24  =&gt; 28,<br><span style="padding-left:20px">       25  =&gt; 31,<br><span style="padding-left:20px">       26  =&gt; 35,<br><span style="padding-left:20px">       27  =&gt; 38,<br><span style="padding-left:20px">       28  =&gt; 42,<br><span style="padding-left:20px">       29  =&gt; 46,<br><span style="padding-left:20px">       30  =&gt; 49,<br><span style="padding-left:20px">       31  =&gt; 53,<br><span style="padding-left:20px">       32  =&gt; 57,<br><span style="padding-left:20px">       33  =&gt; 61,<br><span style="padding-left:20px">       34  =&gt; 64,<br><span style="padding-left:20px">       35  =&gt; 68,<br><span style="padding-left:20px">       36  =&gt; 72,<br><span style="padding-left:20px">       37  =&gt; 75,<br><span style="padding-left:20px">       38  =&gt; 78,<br><span style="padding-left:20px">       39  =&gt; 82,<br><span style="padding-left:20px">       40  =&gt; 85,<br><span style="padding-left:20px">       41  =&gt; 87,<br><span style="padding-left:20px">       42  =&gt; 90,<br><span style="padding-left:20px">       43  =&gt; 92,<br><span style="padding-left:20px">       44  =&gt; 94,<br><span style="padding-left:20px">       45  =&gt; 96,<br><span style="padding-left:20px">       46  =&gt; 97,<br><span style="padding-left:20px">       47  =&gt; 99,<br><span style="padding-left:20px">       48  =&gt; 99,<br><span style="padding-left:20px">       49  =&gt; 100,<br><span style="padding-left:20px">       50  =&gt; 100,<br><span style="padding-left:20px">       51  =&gt; 100,<br><span style="padding-left:20px">       52  =&gt; 99,<br><span style="padding-left:20px">       53  =&gt; 99,<br><span style="padding-left:20px">       54  =&gt; 97,<br><span style="padding-left:20px">       55  =&gt; 96,<br><span style="padding-left:20px">       56  =&gt; 94,<br><span style="padding-left:20px">       57  =&gt; 92,<br><span style="padding-left:20px">       58  =&gt; 90,<br><span style="padding-left:20px">       59  =&gt; 87,<br><span style="padding-left:20px">       60  =&gt; 85,<br><span style="padding-left:20px">       61  =&gt; 82,<br><span style="padding-left:20px">       62  =&gt; 78,<br><span style="padding-left:20px">       63  =&gt; 75,<br><span style="padding-left:20px">       64  =&gt; 72,<br><span style="padding-left:20px">       65  =&gt; 68,<br><span style="padding-left:20px">       66  =&gt; 64,<br><span style="padding-left:20px">       67  =&gt; 61,<br><span style="padding-left:20px">       68  =&gt; 57,<br><span style="padding-left:20px">       69  =&gt; 53,<br><span style="padding-left:20px">       70  =&gt; 49,<br><span style="padding-left:20px">       71  =&gt; 46,<br><span style="padding-left:20px">       72  =&gt; 42,<br><span style="padding-left:20px">       73  =&gt; 38,<br><span style="padding-left:20px">       74  =&gt; 35,<br><span style="padding-left:20px">       75  =&gt; 31,<br><span style="padding-left:20px">       76  =&gt; 28,<br><span style="padding-left:20px">       77  =&gt; 25,<br><span style="padding-left:20px">       78  =&gt; 22,<br><span style="padding-left:20px">       79  =&gt; 20,<br><span style="padding-left:20px">       80  =&gt; 17,<br><span style="padding-left:20px">       81  =&gt; 15,<br><span style="padding-left:20px">       82  =&gt; 12,<br><span style="padding-left:20px">       83  =&gt; 11,<br><span style="padding-left:20px">       84  =&gt; 9,<br><span style="padding-left:20px">       85  =&gt; 7,<br><span style="padding-left:20px">       86  =&gt; 6,<br><span style="padding-left:20px">       87  =&gt; 4,<br><span style="padding-left:20px">       88  =&gt; 3,<br><span style="padding-left:20px">       89  =&gt; 2,<br><span style="padding-left:20px">       90  =&gt; 2,<br><span style="padding-left:20px">       91  =&gt; 1,<br><span style="padding-left:20px">       92  =&gt; 1,<br><span style="padding-left:20px">       93  =&gt; 0,<br><span style="padding-left:20px">       94  =&gt; 0,<br><span style="padding-left:20px">       95  =&gt; 0,<br><span style="padding-left:20px">       96  =&gt; 0,<br><span style="padding-left:20px">       97  =&gt; 0,<br><span style="padding-left:20px">       98  =&gt; 0,<br><span style="padding-left:20px">       99  =&gt; 0,<br><span style="padding-left:20px">       100 =&gt; 0)</td>
-<td></td>
+<td>-------------------------------------------------------------  Python Code to generate FIR taps for 1 MHz low pass filter -------------------------------------------------------------     taps = scipy.signal.firwin(101, cutoff = 1.0e6/nyquist_freq, window = "hanning")     for i in range(len(taps)):        taps[i] = floor(taps[i]*4096);        print( f'{i} =&gt; {int(taps[i])},' ) -------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>REG_INIT_C</td>

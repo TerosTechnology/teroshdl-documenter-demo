@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=irqc_demo_tb><h1 id="entity-irqc_demo_tb">Entity: irqc_demo_tb</h1></a><ul>
 <li><strong>File</strong>: irqc_demo_tb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright 2020 BitvisLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT.Unless required by applicable law or agreed to in writing, software distributed under the License is distributed onan "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.Note : Any functionality not explicitly described in the documentation is subject to change at any timeVHDL unit     : Bitvis IRQC Library : irqc_demo_tbDescription   : See dedicated powerpoint presentation and README-file(s)Test case entity</p></div><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>================================================================================================================================  Copyright 2020 Bitvis  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> and in the provided LICENSE.TXT.</p> <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on  an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p> <h1 id="see-the-license-for-the-specific-language-governing-permissions-and-limitations-under-the-license">See the License for the specific language governing permissions and limitations under the License.</h1> <h2 id="note--any-functionality-not-explicitly-described-in-the-documentation-is-subject-to-change-at-any-time">Note : Any functionality not explicitly described in the documentation is subject to change at any time</h2> <hr /> <p>VHDL unit     : Bitvis IRQC Library : irqc_demo_tb</p> <h2 id="description----see-dedicated-powerpoint-presentation-and-readme-files">Description   : See dedicated powerpoint presentation and README-file(s)</h2> <p>hdlunit:tb  Test case entity</p></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -1089,13 +1164,13 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>trim <font id="function_arguments">( constant source   : std_logic_vector;<br><span style="padding-left:20px"> constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return t_irq_source </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Trim (cut) a given vector to fit the number of irq sources (i.e. pot. reduce width)</p></div><ul>
+ Trim (cut) a given vector to fit the number of irq sources (i.e. pot. reduce width)</p></div><ul>
 <li>fit <font id="function_arguments">( constant source   : std_logic_vector;<br><span style="padding-left:20px"> constant num_bits : positive := C_NUM_SOURCES) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Fit a given vector to the number of irq sources by masking with zeros above irq width</p></div><h2 id="processes">Processes</h2><ul>
+ Fit a given vector to the number of irq sources by masking with zeros above irq width</p></div><h2 id="processes">Processes</h2><ul>
 <li>p_main: (  )</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-PROCESS: p_main</p></div><h2 id="instantiations">Instantiations</h2><ul>
+----------------------------------------------  PROCESS: p_main ---------------------------------------------- </p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>i_irqc: work.irqc</li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

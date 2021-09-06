@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1129,7 +1204,7 @@
 <td>NIspr</td>
 <td>int</td>
 <td>5</td>
-<td>Internal Special Purpose Registers (ISPRs) CSRs and WSRs have some overlap into what they map into. ISPRs are the actual registers in the design which CSRs and WSRs are mapped on to.</td>
+<td>Internal Special Purpose Registers (ISPRs)  CSRs and WSRs have some overlap into what they map into. ISPRs are the actual registers in the  design which CSRs and WSRs are mapped on to.</td>
 </tr>
 <tr>
 <td>IsprNumWidth</td>
@@ -1147,7 +1222,7 @@
 <td>UrndLfsrWidth</td>
 <td>int</td>
 <td>256</td>
-<td>URNG PRNG default LFSR seed and permutation A single default seed is split into 64 bit chunks, a separate LFSR is used for each chunk. All LFSR chunks use the same permutation. These LFSR parameters have been generated with $ ./util/design/gen-lfsr-seed.py --width 256 --seed 2840984437 --prefix "Urnd"</td>
+<td>URNG PRNG default LFSR seed and permutation  A single default seed is split into 64 bit chunks, a separate LFSR is used for each chunk. All  LFSR chunks use the same permutation.  These LFSR parameters have been generated with  $ ./util/design/gen-lfsr-seed.py --width 256 --seed 2840984437 --prefix "Urnd"</td>
 </tr>
 <tr>
 <td>urnd_lfsr_seed_t</td>
@@ -1159,7 +1234,7 @@
 <td>UrndChunkLfsrWidth</td>
 <td>int</td>
 <td>64</td>
-<td>These LFSR parameters have been generated with $ ./util/design/gen-lfsr-seed.py --width 64 --seed 2840984437 --prefix "UrndChunk"</td>
+<td>These LFSR parameters have been generated with  $ ./util/design/gen-lfsr-seed.py --width 64 --seed 2840984437 --prefix "UrndChunk"</td>
 </tr>
 <tr>
 <td>urnd_chunk_lfsr_perm_t</td>
@@ -1197,9 +1272,19 @@
 <td>Register file implementation selection enum.</td>
 </tr>
 <tr>
+<td>cmd_e</td>
+<td>enum logic [7:0] {<br><span style="padding-left:20px">     CmdExecute     = 8'h01,<br><span style="padding-left:20px">     CmdSecWipeDmem = 8'h02,<br><span style="padding-left:20px">     CmdSecWipeImem = 8'h03   }</td>
+<td>Command to execute. See the CMD register description in otbn.hjson for details.</td>
+</tr>
+<tr>
+<td>status_e</td>
+<td>enum logic [7:0] {<br><span style="padding-left:20px">     StatusIdle            = 8'h00,<br><span style="padding-left:20px">     StatusBusyExecute     = 8'h01,<br><span style="padding-left:20px">     StatusBusySecWipeDmem = 8'h02,<br><span style="padding-left:20px">     StatusBusySecWipeImem = 8'h03,<br><span style="padding-left:20px">     StatusLocked          = 8'hFF   }</td>
+<td>Status register values. See the STATUS register description in otbn.hjson for details.</td>
+</tr>
+<tr>
 <td>err_bits_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic fatal_reg;<br><span style="padding-left:20px">     logic fatal_dmem;<br><span style="padding-left:20px">     logic fatal_imem;<br><span style="padding-left:20px">     logic loop;<br><span style="padding-left:20px">     logic illegal_insn;<br><span style="padding-left:20px">     logic call_stack;<br><span style="padding-left:20px">     logic bad_insn_addr;<br><span style="padding-left:20px">     logic bad_data_addr;<br><span style="padding-left:20px">   }</td>
-<td>Note: These errors are duplicated in the register HJSON (../data/otbn.hjson), the ISS (../dv/otbnsim/sim/alert.py), and the DIF. If updating them here, update those too.</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic fatal_lifecycle_escalation;<br><span style="padding-left:20px">     logic fatal_illegal_bus_access;<br><span style="padding-left:20px">     logic fatal_reg;<br><span style="padding-left:20px">     logic fatal_dmem;<br><span style="padding-left:20px">     logic fatal_imem;<br><span style="padding-left:20px">     logic loop;<br><span style="padding-left:20px">     logic illegal_insn;<br><span style="padding-left:20px">     logic call_stack;<br><span style="padding-left:20px">     logic bad_insn_addr;<br><span style="padding-left:20px">     logic bad_data_addr;<br><span style="padding-left:20px">   }</td>
+<td>Error bits<br>  Note: These errors are duplicated in other places. If updating them here, update those too.</td>
 </tr>
 <tr>
 <td>insn_subset_e</td>
@@ -1209,7 +1294,7 @@
 <tr>
 <td>insn_opcode_e</td>
 <td>enum logic [6:0] {<br><span style="padding-left:20px">     InsnOpcodeBaseLoad       = 7'h03,<br><span style="padding-left:20px">     InsnOpcodeBaseMemMisc    = 7'h0f,<br><span style="padding-left:20px">     InsnOpcodeBaseOpImm      = 7'h13,<br><span style="padding-left:20px">     InsnOpcodeBaseAuipc      = 7'h17,<br><span style="padding-left:20px">     InsnOpcodeBaseStore      = 7'h23,<br><span style="padding-left:20px">     InsnOpcodeBaseOp         = 7'h33,<br><span style="padding-left:20px">     InsnOpcodeBaseLui        = 7'h37,<br><span style="padding-left:20px">     InsnOpcodeBaseBranch     = 7'h63,<br><span style="padding-left:20px">     InsnOpcodeBaseJalr       = 7'h67,<br><span style="padding-left:20px">     InsnOpcodeBaseJal        = 7'h6f,<br><span style="padding-left:20px">     InsnOpcodeBaseSystem     = 7'h73,<br><span style="padding-left:20px">     InsnOpcodeBignumMisc     = 7'h0B,<br><span style="padding-left:20px">     InsnOpcodeBignumArith    = 7'h2B,<br><span style="padding-left:20px">     InsnOpcodeBignumMulqacc  = 7'h3B,<br><span style="padding-left:20px">     InsnOpcodeBignumBaseMisc = 7'h7B   }</td>
-<td>Opcodes (field [6:0] in the instruction), matching the RISC-V specification for the base instruction subset.</td>
+<td>Opcodes (field [6:0] in the instruction), matching the RISC-V specification for the base  instruction subset.</td>
 </tr>
 <tr>
 <td>alu_op_base_e</td>
@@ -1284,7 +1369,7 @@
 <tr>
 <td>insn_dec_shared_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     insn_subset_e   subset;<br><span style="padding-left:20px">     logic           ecall_insn;<br><span style="padding-left:20px">     logic           ld_insn;<br><span style="padding-left:20px">     logic           st_insn;<br><span style="padding-left:20px">     logic           branch_insn;<br><span style="padding-left:20px">     logic           jump_insn;<br><span style="padding-left:20px">     logic           loop_insn;<br><span style="padding-left:20px">     logic           ispr_rd_insn;<br><span style="padding-left:20px">     logic           ispr_wr_insn;<br><span style="padding-left:20px">     logic           ispr_rs_insn;<br><span style="padding-left:20px">   }</td>
-<td></td>
+<td>TODO: Figure out how to add assertions for the enum type width; initial blocks, as produced by  ASSERT_INIT, aren't allowed in packages. `ASSERT_INIT(WsrESizeMatchesParameter_A, $bits(wsr_e) == WsrNumWidth)  Structures for decoded instructions, grouped into three:  - insn_dec_shared_t - Anything that applies to both bignum and base microarchitecture  - insn_dec_base_t - Anything that only applies to the base side microarchitecture  - insn_dec_bignum_t - Anything that only applies to bignum side microarchitecture<br>  TODO: The variable names are rather short, especially "i" is confusing. Think about renaming.<br></td>
 </tr>
 <tr>
 <td>insn_dec_base_t</td>

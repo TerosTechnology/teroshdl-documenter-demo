@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,26 +1098,9 @@
 <li><strong>File</strong>: flash_ctrl_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- Flash Controller module.</p>
-<p></div></p><h2 id="signals">Signals</h2>
-<table>
-<thead>
-<tr>
-<th id="name">Name</th>
-<th id="type">Type</th>
-<th id="description">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flash_ctrl_pkg</td>
-<td>endpackage</td>
-<td>max_info_banks</td>
-</tr>
-</tbody>
-</table>
-<h2 id="constants">Constants</h2>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>Flash Controller module.</p>
+<p></div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1054,10 +1112,16 @@
 </thead>
 <tbody>
 <tr>
+<td>TL_AW</td>
+<td>logic [top_pkg::TL_AW-1:0]</td>
+<td>'h20100000</td>
+<td></td>
+</tr>
+<tr>
 <td>NumBanks</td>
 <td>int unsigned</td>
 <td>flash_ctrl_reg_pkg::RegNumBanks</td>
-<td></td>
+<td>design parameters that can be altered through topgen</td>
 </tr>
 <tr>
 <td>PagesPerBank</td>
@@ -1093,7 +1157,7 @@
 <td>InfoTypeSize</td>
 <td>int</td>
 <td>undefined</td>
-<td>The following hard-wired values are there to work-around verilator. For some reason if the values are assigned through parameters verilator thinks they are not constant</td>
+<td>The following hard-wired values are there to work-around verilator.  For some reason if the values are assigned through parameters verilator thinks  they are not constant</td>
 </tr>
 <tr>
 <td>InfosPerBank</td>
@@ -1183,7 +1247,7 @@
 <td>BusBytes</td>
 <td>int</td>
 <td>BusWidth / 8</td>
-<td>flash ctrl / bus parameters flash / bus width may be different from actual flash word width</td>
+<td>flash ctrl / bus parameters  flash / bus width may be different from actual flash word width</td>
 </tr>
 <tr>
 <td>BusByteWidth</td>
@@ -1255,7 +1319,7 @@
 <td>SeedWidth</td>
 <td>int</td>
 <td>256</td>
-<td>parameters for connected components</td>
+<td>//////////////////////////  All memory protection, seed related parameters  Those related for seed pages should be template candidates //////////////////////////  parameters for connected components</td>
 </tr>
 <tr>
 <td>KeyWidth</td>
@@ -1273,7 +1337,7 @@
 <td>LfsrWidth</td>
 <td>int</td>
 <td>32</td>
-<td>Default Lfsr configurations These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 32 --seed 1274809145 --prefix ""</td>
+<td>Default Lfsr configurations  These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 32 --seed 1274809145 --prefix ""</td>
 </tr>
 <tr>
 <td>lfsr_seed_t</td>
@@ -1291,7 +1355,7 @@
 <td>NumSeeds</td>
 <td>int</td>
 <td>2</td>
-<td>flash life cycle / key manager management constants One page for creator seeds One page for owner seeds One page for isolated flash page</td>
+<td>flash life cycle / key manager management constants  One page for creator seeds  One page for owner seeds  One page for isolated flash page</td>
 </tr>
 <tr>
 <td>BankW</td>
@@ -1338,7 +1402,7 @@
 <tr>
 <td>HwInfoRules</td>
 <td>int</td>
-<td>3</td>
+<td>5</td>
 <td>hardware interface memory protection rules</td>
 </tr>
 <tr>
@@ -1369,7 +1433,7 @@
 <td>flash_key_t</td>
 <td>flash_key_t</td>
 <td>128'h5d707f8a2d01d400928fa691c6a6e0a4</td>
-<td></td>
+<td>//////////////////////////  Design time constants //////////////////////////</td>
 </tr>
 <tr>
 <td>flash_key_t</td>
@@ -1398,19 +1462,13 @@
 <tr>
 <td>WipeEntries</td>
 <td>int</td>
-<td>3</td>
+<td>5</td>
 <td>entries to be wiped</td>
 </tr>
 <tr>
 <td>RmaWipeEntries</td>
 <td>rma_wipe_entry_t</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>KEYMGR_FLASH_DEFAULT</td>
-<td>keymgr_flash_t</td>
-<td></td>
+<td>flash_ctrl_pkg</td>
 <td></td>
 </tr>
 </tbody>
@@ -1443,7 +1501,7 @@
 <tr>
 <td>flash_lcmgr_phase_e</td>
 <td>enum logic [1:0] {<br><span style="padding-left:20px">     PhaseSeed,<br><span style="padding-left:20px">     PhaseRma,<br><span style="padding-left:20px">     PhaseNone,<br><span style="padding-left:20px">     PhaseInvalid   }</td>
-<td>These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 64 --seed 691876113 --prefix "" lcmgr phase enum</td>
+<td>These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 64 --seed 691876113 --prefix ""  lcmgr phase enum</td>
 </tr>
 <tr>
 <td>info_page_cfg_t</td>
@@ -1473,7 +1531,7 @@
 <tr>
 <td>flash_op_e</td>
 <td>enum logic [1:0] {<br><span style="padding-left:20px">     FlashOpRead     = 2'h0,<br><span style="padding-left:20px">     FlashOpProgram  = 2'h1,<br><span style="padding-left:20px">     FlashOpErase    = 2'h2,<br><span style="padding-left:20px">     FlashOpInvalid  = 2'h3   }</td>
-<td>Flash Operations Supported</td>
+<td>//////////////////////////  Flash operation related enums //////////////////////////  Flash Operations Supported</td>
 </tr>
 <tr>
 <td>flash_prog_e</td>
@@ -1502,14 +1560,11 @@
 </tr>
 <tr>
 <td>mp_region_cfg_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic                 req;<br><span style="padding-left:20px">     logic                 scramble_en;<br><span style="padding-left:20px">     logic                 ecc_en;<br><span style="padding-left:20px">     logic                 he_en;<br><span style="padding-left:20px">     logic                 rd_buf_en;<br><span style="padding-left:20px">     logic                 ecc_multi_err_en;<br><span style="padding-left:20px">     logic                 rd;<br><span style="padding-left:20px">     logic                 prog;<br><span style="padding-left:20px">     logic                 pg_erase;<br><span style="padding-left:20px">     logic                 bk_erase;<br><span style="padding-left:20px">     logic                 erase_suspend;<br><span style="padding-left:20px">     flash_part_e          part;<br><span style="padding-left:20px">     logic [InfoTypesWidth-1:0] info_sel;<br><span style="padding-left:20px">     logic [BusAddrW-1:0]  addr;<br><span style="padding-left:20px">     logic [BusWidth-1:0]  prog_data;<br><span style="padding-left:20px">     logic                 prog_last;<br><span style="padding-left:20px">     flash_prog_e          prog_type;<br><span style="padding-left:20px">     mp_region_cfg_t [MpRegions:0] region_cfgs;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  addr_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  data_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  rand_addr_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  rand_data_key;<br><span style="padding-left:20px">     tlul_pkg::tl_h2d_t    tl_flash_c2p;<br><span style="padding-left:20px">     logic                 alert_trig;<br><span style="padding-left:20px">     logic                 alert_ack;<br><span style="padding-left:20px">     jtag_pkg::jtag_req_t  jtag_req;<br><span style="padding-left:20px">     logic                 intg_err;<br><span style="padding-left:20px">     lc_ctrl_pkg::lc_tx_t  flash_disable;<br><span style="padding-left:20px">   }</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic                 req;<br><span style="padding-left:20px">     logic                 scramble_en;<br><span style="padding-left:20px">     logic                 ecc_en;<br><span style="padding-left:20px">     logic                 he_en;<br><span style="padding-left:20px">     logic                 rd_buf_en;<br><span style="padding-left:20px">     logic                 ecc_multi_err_en;<br><span style="padding-left:20px">     logic                 rd;<br><span style="padding-left:20px">     logic                 prog;<br><span style="padding-left:20px">     logic                 pg_erase;<br><span style="padding-left:20px">     logic                 bk_erase;<br><span style="padding-left:20px">     logic                 erase_suspend;<br><span style="padding-left:20px">     flash_part_e          part;<br><span style="padding-left:20px">     logic [InfoTypesWidth-1:0] info_sel;<br><span style="padding-left:20px">     logic [BusAddrW-1:0]  addr;<br><span style="padding-left:20px">     logic [BusWidth-1:0]  prog_data;<br><span style="padding-left:20px">     logic                 prog_last;<br><span style="padding-left:20px">     flash_prog_e          prog_type;<br><span style="padding-left:20px">     mp_region_cfg_t [MpRegions:0] region_cfgs;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  addr_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  data_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  rand_addr_key;<br><span style="padding-left:20px">     logic [KeyWidth-1:0]  rand_data_key;<br><span style="padding-left:20px">     logic                 alert_trig;<br><span style="padding-left:20px">     logic                 alert_ack;<br><span style="padding-left:20px">     jtag_pkg::jtag_req_t  jtag_req;<br><span style="padding-left:20px">     logic                 intg_err;<br><span style="padding-left:20px">     lc_ctrl_pkg::lc_tx_t  flash_disable;<br><span style="padding-left:20px">   }</td>
 <td>Flash controller to memory</td>
 </tr>
 </tbody>
-</table><h2 id="functions">Functions</h2><ul>
-<li>max_info_pages <font id="function_arguments">(int infos[InfoTypes])</font> <font id="function_return">return (integer)</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-find the max number pages among info types</p></div><br><br><br><br><br><br>
+</table><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

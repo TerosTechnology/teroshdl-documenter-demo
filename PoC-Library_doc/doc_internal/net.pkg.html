@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1718,7 +1793,7 @@
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_SYNC_STATUS</td>
 <td>( NET_ETH_PCS_1000BASE_X_SYNC_STATUS_FAIL,<br><span style="padding-left:20px"> NET_ETH_PCS_1000BASE_X_SYNC_STATUS_OK )</td>
-<td>==========================================================================================================================================================Ethernet: physical coding sublayer (PCS)==========================================================================================================================================================1000BASE-X - synchronization</td>
+<td>==========================================================================================================================================================  Ethernet: physical coding sublayer (PCS)  ==========================================================================================================================================================  1000BASE-X - synchronization</td>
 </tr>
 <tr>
 <td>T_NET_ETH_PCS_1000BASE_X_AUTONEG_STATUS</td>
@@ -1728,12 +1803,12 @@
 <tr>
 <td>T_NET_ETH_RS_DATA_INTERFACE</td>
 <td>( NET_ETH_RS_DATA_INTERFACE_MII,<br><span style="padding-left:20px"> NET_ETH_RS_DATA_INTERFACE_GMII,<br><span style="padding-left:20px"> NET_ETH_RS_DATA_INTERFACE_TRANSCEIVER )</td>
-<td>==========================================================================================================================================================Ethernet: reconcilation sublayer (RS)==========================================================================================================================================================</td>
+<td>==========================================================================================================================================================  Ethernet: reconcilation sublayer (RS)  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_COMMAND</td>
 <td>( NET_ETH_CMD_NONE,<br><span style="padding-left:20px"> NET_ETH_CMD_HARD_RESET,<br><span style="padding-left:20px"> NET_ETH_CMD_SOFT_RESET--,<br><span style="padding-left:20px"> )</td>
-<td>==========================================================================================================================================================Ethernet: MAC Control-Layer==========================================================================================================================================================</td>
+<td>==========================================================================================================================================================  Ethernet: MAC Control-Layer  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_ETH_STATUS</td>
@@ -1748,7 +1823,7 @@
 <tr>
 <td>T_NET_MAC_ADDRESS</td>
 <td></td>
-<td>==========================================================================================================================================================Ethernet: MAC Data-Link-Layer==========================================================================================================================================================types</td>
+<td>==========================================================================================================================================================  Ethernet: MAC Data-Link-Layer  ==========================================================================================================================================================  types</td>
 </tr>
 <tr>
 <td>T_NET_MAC_ETHERNETTYPE</td>
@@ -1768,7 +1843,7 @@
 <tr>
 <td>T_NET_MAC_INTERFACE</td>
 <td></td>
-<td>==========================================================================================================================================================ETH_Wrapper: configuration data structures==========================================================================================================================================================</td>
+<td>==========================================================================================================================================================  ETH_Wrapper: configuration data structures  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_MAC_INTERFACE_VECTOR</td>
@@ -1793,7 +1868,7 @@
 <tr>
 <td>T_NET_IPV4_ADDRESS</td>
 <td></td>
-<td>==========================================================================================================================================================internet layer: Internet Protocol Version 4 (IPv4)==========================================================================================================================================================types</td>
+<td>==========================================================================================================================================================  internet layer: Internet Protocol Version 4 (IPv4)  ==========================================================================================================================================================  types</td>
 </tr>
 <tr>
 <td>T_NET_IPV4_TYPE_OF_SERVICE</td>
@@ -1818,7 +1893,7 @@
 <tr>
 <td>T_NET_IPV6_ADDRESS</td>
 <td></td>
-<td>==========================================================================================================================================================internet layer: Internet Protocol Version 6 (IPv6)==========================================================================================================================================================types</td>
+<td>==========================================================================================================================================================  internet layer: Internet Protocol Version 6 (IPv6)  ==========================================================================================================================================================  types</td>
 </tr>
 <tr>
 <td>T_NET_IPV6_PREFIX</td>
@@ -1843,7 +1918,7 @@
 <tr>
 <td>T_NET_ARP_ARPCACHE_COMMAND</td>
 <td>( NET_ARP_ARPCACHE_CMD_NONE,<br><span style="padding-left:20px"> NET_ARP_ARPCACHE_CMD_ADD )</td>
-<td>==========================================================================================================================================================internet layer: Address Resolution Protocol (ARP)==========================================================================================================================================================commands</td>
+<td>==========================================================================================================================================================  internet layer: Address Resolution Protocol (ARP)  ==========================================================================================================================================================  commands</td>
 </tr>
 <tr>
 <td>T_NET_ARP_ARPCACHE_STATUS</td>
@@ -1923,7 +1998,7 @@
 <tr>
 <td>T_NET_NDP_DESTINATIONCACHE_LINE</td>
 <td></td>
-<td>==========================================================================================================================================================internet layer: Neighbor Discovery Protocol (NDP)==========================================================================================================================================================</td>
+<td>==========================================================================================================================================================  internet layer: Neighbor Discovery Protocol (NDP)  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_NET_NDP_NEIGHBORCACHE_LINE</td>
@@ -1959,7 +2034,9 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>to_net_eth_RSDataInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-==========================================================================================================================================================Ethernet: ????????????????????==========================================================================================================================================================</p></div><ul>
+ ==========================================================================================================================================================<br />
+ Ethernet: ????????????????????<br />
+ ==========================================================================================================================================================</p></div><ul>
 <li>to_net_eth_PHYDataInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_DATA_INTERFACE </font></li>
 </ul><ul>
 <li>to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE </font></li>
@@ -1968,7 +2045,7 @@
 </ul><ul>
 <li>to_net_mac_address <font id="function_arguments">(slv : T_SLV_48) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-type conversion functions</p></div><ul>
+ type conversion functions</p></div><ul>
 <li>to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
 </ul><ul>
 <li>to_net_mac_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font></li>
@@ -1989,10 +2066,10 @@ type conversion functions</p></div><ul>
 </ul><ul>
 <li>getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR) </font> <font id="function_return">return positive </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-functions</p></div><ul>
+ functions</p></div><ul>
 <li>to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-type conversion functions</p></div><ul>
+ type conversion functions</p></div><ul>
 <li>to_net_ipv4_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font></li>
 </ul><ul>
 <li>to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8) </font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE </font></li>
@@ -2000,14 +2077,15 @@ type conversion functions</p></div><ul>
 <li>to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><ul>
 <li>to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE) </font> <font id="function_return">return std_logic_vector </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+    function to_slv(proto : T_NET_IPV4_PROTOCOL)                return STD_LOGIC_VECTOR;</p></div><ul>
 <li>to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return T_SLVV_8 </font></li>
 </ul><ul>
 <li>to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return string </font></li>
 </ul><ul>
 <li>to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-type conversion functions</p></div><ul>
+ type conversion functions</p></div><ul>
 <li>to_net_ipv6_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font></li>
 </ul><ul>
 <li>to_net_ipv6_prefix <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV6_PREFIX </font></li>

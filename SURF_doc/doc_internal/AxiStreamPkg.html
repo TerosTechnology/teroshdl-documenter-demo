@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1181,7 +1256,7 @@
 <tr>
 <td>AxiStreamCtrlType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------------------------------------------------------------------  Special control backpressure interface for use with stream fifos -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>AxiStreamCtrlArray</td>
@@ -1219,7 +1294,8 @@
 <li>toAxiStreamMaster <font id="function_arguments">(din : slv;<br><span style="padding-left:20px"> valid : sl;<br><span style="padding-left:20px"> c : AxiStreamConfigType) </font> <font id="function_return">return AxiStreamMasterType </font></li>
 </ul><ul>
 <li>axiStreamPacked <font id="function_arguments">( constant CONFIG_C : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster        : AxiStreamMasterType) </font> <font id="function_return">return boolean </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-helper-function-prototypes"> Helper function prototypes</h2></div><ul>
 <li>axiStreamGetUserPos <font id="function_arguments">( axisConfig : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : AxiStreamMasterType;<br><span style="padding-left:20px"> bytePos    : integer := -1) </font> <font id="function_return">return integer </font></li>
 </ul><ul>
 <li>axiStreamGetUserField <font id="function_arguments">( axisConfig : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : AxiStreamMasterType;<br><span style="padding-left:20px"> bytePos    : integer := -1) </font> <font id="function_return">return slv </font></li>
@@ -1230,10 +1306,10 @@
 </ul><ul>
 <li>axiStreamSetUserBit <font id="function_arguments">( axisConfig : in    AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : inout AxiStreamMasterType;<br><span style="padding-left:20px"> bitPos     : in    integer;<br><span style="padding-left:20px"> bitValue   : in    sl;<br><span style="padding-left:20px"> bytePos    : in    integer := -1) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
--1 = last</p></div><ul>
+ -1 = last</p></div><ul>
 <li>ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiStreamConfigType;<br><span style="padding-left:20px"> e : AxiStreamConfigType) </font> <font id="function_return">return AxiStreamConfigType </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
--1 = last</p></div><ul>
+ -1 = last</p></div><ul>
 <li>ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiStreamMasterType;<br><span style="padding-left:20px"> e : AxiStreamMasterType) </font> <font id="function_return">return AxiStreamMasterType </font></li>
 </ul><ul>
 <li>ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiStreamSlaveType;<br><span style="padding-left:20px"> e : AxiStreamSlaveType) </font> <font id="function_return">return AxiStreamSlaveType </font></li>

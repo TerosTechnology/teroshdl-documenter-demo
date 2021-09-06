@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,8 +1098,8 @@
 <li><strong>File</strong>: pwrmgr_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- Power Manager Package</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>Power Manager Package</p>
 <p></div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
@@ -1123,7 +1198,7 @@
 <tr>
 <td>pwr_ast_req_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     logic main_pd_n;<br><span style="padding-left:20px">     logic pwr_clamp_env;<br><span style="padding-left:20px">     logic pwr_clamp;<br><span style="padding-left:20px">     logic slow_clk_en;<br><span style="padding-left:20px">     logic core_clk_en;<br><span style="padding-left:20px">     logic io_clk_en;<br><span style="padding-left:20px">     logic usb_clk_en;<br><span style="padding-left:20px">   }</td>
-<td>pwrmgr to ast</td>
+<td>// The following structs should eventually be relocated to other modules. typedef enum logic [1:0] {   DiffValid = 2'b10,   DiffInvalid = 2'b01 } pwrmgr_diff_e;  pwrmgr to ast</td>
 </tr>
 <tr>
 <td>pwr_ast_rsp_t</td>

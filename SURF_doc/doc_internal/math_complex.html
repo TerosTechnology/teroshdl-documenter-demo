@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1042,7 +1117,7 @@
 <td>MATH_CBASE_1</td>
 <td>COMPLEX</td>
 <td>COMPLEX'(1.0,<br><span style="padding-left:20px"> 0.0)</td>
-<td></td>
+<td>Constant Definitions<br></td>
 </tr>
 <tr>
 <td>MATH_CBASE_J</td>
@@ -1071,7 +1146,7 @@
 <tr>
 <td>COMPLEX</td>
 <td></td>
-<td></td>
+<td>Type Definitions<br></td>
 </tr>
 <tr>
 <td>COMPLEX_POLAR</td>
@@ -1081,88 +1156,505 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>CMPLX <font id="function_arguments">(X : in REAL;<br><span style="padding-left:20px"> Y : in REAL := 0.0) </font> <font id="function_return">return COMPLEX </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ Purpose:<br />
+         Returns TRUE if L is not equal to R and returns FALSE<br />
+         otherwise<br />
+ Special values:<br />
+         COMPLEX_POLAR'(0.0, X) /= COMPLEX_POLAR'(0.0, Y) returns<br />
+         FALSE regardless of the value of X and Y.<br />
+ Domain:<br />
+         L in COMPLEX_POLAR and L.ARG /= -MATH_PI<br />
+         R in COMPLEX_POLAR and R.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if L.ARG = -MATH_PI<br />
+         Error if R.ARG = -MATH_PI<br />
+ Range:<br />
+         "/="(L,R) is either TRUE or FALSE<br />
+ Notes:<br />
+         None</p>
+<p>Function Declarations</p></div><ul>
 <li>GET_PRINCIPAL_VALUE <font id="function_arguments">(X : in REAL) </font> <font id="function_return">return PRINCIPAL_VALUE </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns COMPLEX number X + iYSpecial values:        NoneDomain:        X in REAL        Y in REALError conditions:        NoneRange:        CMPLX(X,Y) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns COMPLEX number X + iY<br />
+ Special values:<br />
+         None<br />
+ Domain:<br />
+         X in REAL<br />
+         Y in REAL<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         CMPLX(X,Y) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>COMPLEX_TO_POLAR <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of angle X; X in radiansSpecial values:        NoneDomain:        X in REALError conditions:        NoneRange:        -MATH_PI &lt; GET_PRINCIPAL_VALUE(X) &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of angle X; X in radians<br />
+ Special values:<br />
+         None<br />
+ Domain:<br />
+         X in REAL<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         -MATH_PI &lt; GET_PRINCIPAL_VALUE(X) &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>POLAR_TO_COMPLEX <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value COMPLEX_POLAR of ZSpecial values:        COMPLEX_TO_POLAR(MATH_CZERO) = COMPLEX_POLAR'(0.0, 0.0)        COMPLEX_TO_POLAR(Z) = COMPLEX_POLAR'(ABS(Z.IM),                             SIGN(Z.IM)*MATH_PI_OVER_2) if Z.RE = 0.0Domain:        Z in COMPLEXError conditions:        NoneRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value COMPLEX_POLAR of Z<br />
+ Special values:<br />
+         COMPLEX_TO_POLAR(MATH_CZERO) = COMPLEX_POLAR'(0.0, 0.0)<br />
+         COMPLEX_TO_POLAR(Z) = COMPLEX_POLAR'(ABS(Z.IM),<br />
+                              SIGN(Z.IM)*MATH_PI_OVER_2) if Z.RE = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>ARG <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return PRINCIPAL_VALUE </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns absolute value (magnitude) of ZSpecial values:        NoneDomain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        ABS(Z) &gt;= 0.0Notes:        ABS(Z) = Z.MAG</p></div><ul>
+ Purpose:<br />
+         Returns absolute value (magnitude) of Z<br />
+ Special values:<br />
+         None<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         ABS(Z) &gt;= 0.0<br />
+ Notes:<br />
+         ABS(Z) = Z.MAG</p></div><ul>
 <li>ARG <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return PRINCIPAL_VALUE </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns argument (angle) in radians of the principal        value of ZSpecial values:        ARG(Z) = 0.0 if Z.RE &gt;= 0.0 and Z.IM = 0.0        ARG(Z) = SIGN(Z.IM)*MATH_PI_OVER_2 if Z.RE = 0.0        ARG(Z) = MATH_PI if Z.RE &lt; 0.0        and Z.IM = 0.0Domain:        Z in COMPLEXError conditions:        NoneRange:        -MATH_PI &lt; ARG(Z) &lt;= MATH_PINotes:        ARG(Z) = ARCTAN(Z.IM, Z.RE)</p></div><ul>
+ Purpose:<br />
+         Returns argument (angle) in radians of the principal<br />
+         value of Z<br />
+ Special values:<br />
+         ARG(Z) = 0.0 if Z.RE &gt;= 0.0 and Z.IM = 0.0<br />
+         ARG(Z) = SIGN(Z.IM)*MATH_PI_OVER_2 if Z.RE = 0.0<br />
+         ARG(Z) = MATH_PI if Z.RE &lt; 0.0        and Z.IM = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         -MATH_PI &lt; ARG(Z) &lt;= MATH_PI<br />
+ Notes:<br />
+         ARG(Z) = ARCTAN(Z.IM, Z.RE)</p></div><ul>
 <li>CONJ <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of unary minus of ZSpecial values:        "-"(Z) = COMPLEX_POLAR'(Z.MAG, MATH_PI) if Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        Returns COMPLEX_POLAR'(Z.MAG, Z.ARG - SIGN(Z.ARG)*MATH_PI) if               Z.ARG /= 0.0</p></div><ul>
+ Purpose:<br />
+         Returns principal value of unary minus of Z<br />
+ Special values:<br />
+         "-"(Z) = COMPLEX_POLAR'(Z.MAG, MATH_PI) if Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         Returns COMPLEX_POLAR'(Z.MAG, Z.ARG - SIGN(Z.ARG)*MATH_PI) if<br />
+                Z.ARG /= 0.0</p></div><ul>
 <li>CONJ <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns complex conjugate of ZSpecial values:        NoneDomain:        Z in COMPLEXError conditions:        NoneRange:        CONJ(Z) is mathematically unboundedNotes:        Returns x -jy for Z= x + jy</p></div><ul>
+ Purpose:<br />
+         Returns complex conjugate of Z<br />
+ Special values:<br />
+         None<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         CONJ(Z) is mathematically unbounded<br />
+ Notes:<br />
+         Returns x -jy for Z= x + jy</p></div><ul>
 <li>SQRT <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of complex conjugate of ZSpecial values:        CONJ(Z) = COMPLEX_POLAR'(Z.MAG, MATH_PI) if Z.ARG = MATH_PIDomain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        Returns COMPLEX_POLAR'(Z.MAG, -Z.ARG) if Z.ARG /= MATH_PI</p></div><ul>
+ Purpose:<br />
+         Returns principal value of complex conjugate of Z<br />
+ Special values:<br />
+         CONJ(Z) = COMPLEX_POLAR'(Z.MAG, MATH_PI) if Z.ARG = MATH_PI<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         Returns COMPLEX_POLAR'(Z.MAG, -Z.ARG) if Z.ARG /= MATH_PI</p></div><ul>
 <li>SQRT <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns square root of Z with positive real part        or, if the real part is zero, the one with nonnegative        imaginary partSpecial values:        SQRT(MATH_CZERO) = MATH_CZERODomain:        Z in COMPLEXError conditions:        NoneRange:        SQRT(Z) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns square root of Z with positive real part<br />
+         or, if the real part is zero, the one with nonnegative<br />
+         imaginary part<br />
+ Special values:<br />
+         SQRT(MATH_CZERO) = MATH_CZERO<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         SQRT(Z) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>EXP <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns square root of Z with positive real part        or, if the real part is zero, the one with nonnegative        imaginary partSpecial values:        SQRT(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns square root of Z with positive real part<br />
+         or, if the real part is zero, the one with nonnegative<br />
+         imaginary part<br />
+ Special values:<br />
+         SQRT(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>EXP <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns exponential of ZSpecial values:        EXP(MATH_CZERO) = MATH_CBASE_1        EXP(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and ABS(Z.IM) = MATH_PI        EXP(Z) = SIGN(Z.IM)*MATH_CBASE_J if Z.RE = 0.0 and                                         ABS(Z.IM) =  MATH_PI_OVER_2Domain:        Z in COMPLEXError conditions:        NoneRange:        EXP(Z) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns exponential of Z<br />
+ Special values:<br />
+         EXP(MATH_CZERO) = MATH_CBASE_1<br />
+         EXP(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and ABS(Z.IM) = MATH_PI<br />
+         EXP(Z) = SIGN(Z.IM)*MATH_CBASE_J if Z.RE = 0.0 and<br />
+                                          ABS(Z.IM) =  MATH_PI_OVER_2<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         EXP(Z) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of exponential of ZSpecial values:        EXP(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG =0.0 and                                                       Z.ARG = 0.0        EXP(Z) = COMPLEX_POLAR'(1.0, MATH_PI) if Z.MAG = MATH_PI and                                       ABS(Z.ARG) = MATH_PI_OVER_2        EXP(Z) = COMPLEX_POLAR'(1.0, MATH_PI_OVER_2) if                                       Z.MAG = MATH_PI_OVER_2 and                                       Z.ARG = MATH_PI_OVER_2        EXP(Z) = COMPLEX_POLAR'(1.0, -MATH_PI_OVER_2) if                                       Z.MAG = MATH_PI_OVER_2 and                                       Z.ARG = -MATH_PI_OVER_2Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of exponential of Z<br />
+ Special values:<br />
+         EXP(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG =0.0 and<br />
+                                                        Z.ARG = 0.0<br />
+         EXP(Z) = COMPLEX_POLAR'(1.0, MATH_PI) if Z.MAG = MATH_PI and<br />
+                                        ABS(Z.ARG) = MATH_PI_OVER_2<br />
+         EXP(Z) = COMPLEX_POLAR'(1.0, MATH_PI_OVER_2) if<br />
+                                        Z.MAG = MATH_PI_OVER_2 and<br />
+                                        Z.ARG = MATH_PI_OVER_2<br />
+         EXP(Z) = COMPLEX_POLAR'(1.0, -MATH_PI_OVER_2) if<br />
+                                        Z.MAG = MATH_PI_OVER_2 and<br />
+                                        Z.ARG = -MATH_PI_OVER_2<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG2 <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns natural logarithm of ZSpecial values:        LOG(MATH_CBASE_1) = MATH_CZERO        LOG(-MATH_CBASE_1) = COMPLEX'(0.0, MATH_PI)        LOG(MATH_CBASE_J) = COMPLEX'(0.0, MATH_PI_OVER_2)        LOG(-MATH_CBASE_J) = COMPLEX'(0.0, -MATH_PI_OVER_2)        LOG(Z) = MATH_CBASE_1 if Z = COMPLEX'(MATH_E, 0.0)Domain:        Z in COMPLEX and ABS(Z) /= 0.0Error conditions:        Error if ABS(Z) = 0.0Range:        LOG(Z) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns natural logarithm of Z<br />
+ Special values:<br />
+         LOG(MATH_CBASE_1) = MATH_CZERO<br />
+         LOG(-MATH_CBASE_1) = COMPLEX'(0.0, MATH_PI)<br />
+         LOG(MATH_CBASE_J) = COMPLEX'(0.0, MATH_PI_OVER_2)<br />
+         LOG(-MATH_CBASE_J) = COMPLEX'(0.0, -MATH_PI_OVER_2)<br />
+         LOG(Z) = MATH_CBASE_1 if Z = COMPLEX'(MATH_E, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX and ABS(Z) /= 0.0<br />
+ Error conditions:<br />
+         Error if ABS(Z) = 0.0<br />
+ Range:<br />
+         LOG(Z) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG10 <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns logarithm base 2 of ZSpecial values:        LOG2(MATH_CBASE_1) = MATH_CZERO        LOG2(Z) = MATH_CBASE_1 if Z = COMPLEX'(2.0, 0.0)Domain:        Z in COMPLEX and ABS(Z) /= 0.0Error conditions:        Error if ABS(Z) = 0.0Range:        LOG2(Z) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns logarithm base 2 of Z<br />
+ Special values:<br />
+         LOG2(MATH_CBASE_1) = MATH_CZERO<br />
+         LOG2(Z) = MATH_CBASE_1 if Z = COMPLEX'(2.0, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX and ABS(Z) /= 0.0<br />
+ Error conditions:<br />
+         Error if ABS(Z) = 0.0<br />
+ Range:<br />
+         LOG2(Z) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns logarithm base 10 of ZSpecial values:        LOG10(MATH_CBASE_1) = MATH_CZERO        LOG10(Z) = MATH_CBASE_1 if Z = COMPLEX'(10.0, 0.0)Domain:        Z in COMPLEX and ABS(Z) /= 0.0Error conditions:        Error if ABS(Z) = 0.0Range:        LOG10(Z) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns logarithm base 10 of Z<br />
+ Special values:<br />
+         LOG10(MATH_CBASE_1) = MATH_CZERO<br />
+         LOG10(Z) = MATH_CBASE_1 if Z = COMPLEX'(10.0, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX and ABS(Z) /= 0.0<br />
+ Error conditions:<br />
+         Error if ABS(Z) = 0.0<br />
+ Range:<br />
+         LOG10(Z) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG2 <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of natural logarithm of ZSpecial values:        LOG(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and                                            Z.ARG = 0.0        LOG(Z) = COMPLEX_POLAR'(MATH_PI, MATH_PI_OVER_2) if                             Z.MAG = 1.0 and Z.ARG = MATH_PI        LOG(Z) = COMPLEX_POLAR'(MATH_PI_OVER_2, MATH_PI_OVER_2) if                             Z.MAG = 1.0 and  Z.ARG = MATH_PI_OVER_2        LOG(Z) = COMPLEX_POLAR'(MATH_PI_OVER_2, -MATH_PI_OVER_2) if                             Z.MAG = 1.0 and  Z.ARG = -MATH_PI_OVER_2        LOG(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = MATH_E and                                            Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI        Z.MAG /= 0.0Error conditions:        Error if Z.ARG = -MATH_PI        Error if Z.MAG = 0.0Range:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of natural logarithm of Z<br />
+ Special values:<br />
+         LOG(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and<br />
+                                             Z.ARG = 0.0<br />
+         LOG(Z) = COMPLEX_POLAR'(MATH_PI, MATH_PI_OVER_2) if<br />
+                              Z.MAG = 1.0 and Z.ARG = MATH_PI<br />
+         LOG(Z) = COMPLEX_POLAR'(MATH_PI_OVER_2, MATH_PI_OVER_2) if<br />
+                              Z.MAG = 1.0 and  Z.ARG = MATH_PI_OVER_2<br />
+         LOG(Z) = COMPLEX_POLAR'(MATH_PI_OVER_2, -MATH_PI_OVER_2) if<br />
+                              Z.MAG = 1.0 and  Z.ARG = -MATH_PI_OVER_2<br />
+         LOG(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = MATH_E and<br />
+                                             Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+         Z.MAG /= 0.0<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+         Error if Z.MAG = 0.0<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG10 <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of logarithm base 2 of ZSpecial values:        LOG2(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and                                             Z.ARG = 0.0        LOG2(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = 2.0 and                                            Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI        Z.MAG /= 0.0Error conditions:        Error if Z.ARG = -MATH_PI        Error if Z.MAG = 0.0Range:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:       None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of logarithm base 2 of Z<br />
+ Special values:<br />
+         LOG2(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and<br />
+                                              Z.ARG = 0.0<br />
+         LOG2(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = 2.0 and<br />
+                                             Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+         Z.MAG /= 0.0<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+         Error if Z.MAG = 0.0<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+        None</p></div><ul>
 <li>LOG <font id="function_arguments">(Z : in COMPLEX;<br><span style="padding-left:20px"> BASE : in REAL) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of logarithm base 10 of ZSpecial values:        LOG10(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and                                              Z.ARG = 0.0        LOG10(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = 10.0 and                                              Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI        Z.MAG /= 0.0Error conditions:        Error if Z.ARG = -MATH_PI        Error if Z.MAG = 0.0Range:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of logarithm base 10 of Z<br />
+ Special values:<br />
+         LOG10(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and<br />
+                                               Z.ARG = 0.0<br />
+         LOG10(Z) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = 10.0 and<br />
+                                               Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+         Z.MAG /= 0.0<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+         Error if Z.MAG = 0.0<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>LOG <font id="function_arguments">(Z : in COMPLEX_POLAR;<br><span style="padding-left:20px"> BASE : in REAL) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns logarithm base BASE of ZSpecial values:        LOG(MATH_CBASE_1, BASE) = MATH_CZERO        LOG(Z,BASE) = MATH_CBASE_1 if Z = COMPLEX'(BASE, 0.0)Domain:        Z in COMPLEX and ABS(Z) /= 0.0        BASE &gt; 0.0        BASE /= 1.0Error conditions:        Error if ABS(Z) = 0.0        Error if BASE &lt;= 0.0        Error if BASE = 1.0Range:        LOG(Z,BASE) is mathematically unboundedNotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns logarithm base BASE of Z<br />
+ Special values:<br />
+         LOG(MATH_CBASE_1, BASE) = MATH_CZERO<br />
+         LOG(Z,BASE) = MATH_CBASE_1 if Z = COMPLEX'(BASE, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX and ABS(Z) /= 0.0<br />
+         BASE &gt; 0.0<br />
+         BASE /= 1.0<br />
+ Error conditions:<br />
+         Error if ABS(Z) = 0.0<br />
+         Error if BASE &lt;= 0.0<br />
+         Error if BASE = 1.0<br />
+ Range:<br />
+         LOG(Z,BASE) is mathematically unbounded<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>SIN <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of logarithm base BASE of ZSpecial values:        LOG(Z, BASE) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and                                               Z.ARG = 0.0        LOG(Z, BASE) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = BASE and                                               Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI        Z.MAG /= 0.0        BASE &gt; 0.0        BASE /= 1.0Error conditions:        Error if Z.ARG = -MATH_PI        Error if Z.MAG = 0.0        Error if BASE <= 0.0        Error if BASE = 1.0Range:        result.MAG >= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of logarithm base BASE of Z<br />
+ Special values:<br />
+         LOG(Z, BASE) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 1.0 and<br />
+                                                Z.ARG = 0.0<br />
+         LOG(Z, BASE) = COMPLEX_POLAR'(1.0, 0.0) if Z.MAG = BASE and<br />
+                                                Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+         Z.MAG /= 0.0<br />
+         BASE &gt; 0.0<br />
+         BASE /= 1.0<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+         Error if Z.MAG = 0.0<br />
+         Error if BASE <= 0.0
+         Error if BASE = 1.0
+ Range:
+         result.MAG >= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>SIN <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns sine of ZSpecial values:        SIN(MATH_CZERO) = MATH_CZERO        SIN(Z) = MATH_CZERO if Z = COMPLEX'(MATH_PI, 0.0)Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(SIN(Z)) &lt;= SQRT(SIN(Z.RE)<em>SIN(Z.RE) +                                        SINH(Z.IM)</em>SINH(Z.IM))Notes:        None</p></div><ul>
+ Purpose:<br />
+         Returns sine of Z<br />
+ Special values:<br />
+         SIN(MATH_CZERO) = MATH_CZERO<br />
+         SIN(Z) = MATH_CZERO if Z = COMPLEX'(MATH_PI, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         ABS(SIN(Z)) &lt;= SQRT(SIN(Z.RE)<em>SIN(Z.RE) +
+                                         SINH(Z.IM)</em>SINH(Z.IM))<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>COS <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of sine of ZSpecial values:        SIN(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0 and                                           Z.ARG = 0.0        SIN(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI and                                           Z.ARG = 0.0Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of sine of Z<br />
+ Special values:<br />
+         SIN(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0 and<br />
+                                            Z.ARG = 0.0<br />
+         SIN(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI and<br />
+                                            Z.ARG = 0.0<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>COS <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns cosine of ZSpecial values:        COS(Z) = MATH_CZERO if Z = COMPLEX'(MATH_PI_OVER_2, 0.0)        COS(Z) = MATH_CZERO if Z = COMPLEX'(-MATH_PI_OVER_2, 0.0)Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(COS(Z)) &lt;= SQRT(COS(Z.RE)<em>COS(Z.RE) +                                        SINH(Z.IM)</em>SINH(Z.IM))Notes:        None</p></div><ul>
+ Purpose:<br />
+         Returns cosine of Z<br />
+ Special values:<br />
+         COS(Z) = MATH_CZERO if Z = COMPLEX'(MATH_PI_OVER_2, 0.0)<br />
+         COS(Z) = MATH_CZERO if Z = COMPLEX'(-MATH_PI_OVER_2, 0.0)<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         ABS(COS(Z)) &lt;= SQRT(COS(Z.RE)<em>COS(Z.RE) +
+                                         SINH(Z.IM)</em>SINH(Z.IM))<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>SINH <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of cosine of ZSpecial values:        COS(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI_OVER_2                                              and Z.ARG = 0.0        COS(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI_OVER_2                                              and Z.ARG = MATH_PIDomain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of cosine of Z<br />
+ Special values:<br />
+         COS(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI_OVER_2<br />
+                                               and Z.ARG = 0.0<br />
+         COS(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI_OVER_2<br />
+                                               and Z.ARG = MATH_PI<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>SINH <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns hyperbolic sine of ZSpecial values:        SINH(MATH_CZERO) = MATH_CZERO        SINH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI        SINH(Z) = MATH_CBASE_J if Z.RE = 0.0 and                                              Z.IM = MATH_PI_OVER_2        SINH(Z) = -MATH_CBASE_J if Z.RE = 0.0 and                                              Z.IM = -MATH_PI_OVER_2Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(SINH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +                                        SIN(Z.IM)</em>SIN(Z.IM))Notes:        None</p></div><ul>
+ Purpose:<br />
+         Returns hyperbolic sine of Z<br />
+ Special values:<br />
+         SINH(MATH_CZERO) = MATH_CZERO<br />
+         SINH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI<br />
+         SINH(Z) = MATH_CBASE_J if Z.RE = 0.0 and<br />
+                                               Z.IM = MATH_PI_OVER_2<br />
+         SINH(Z) = -MATH_CBASE_J if Z.RE = 0.0 and<br />
+                                               Z.IM = -MATH_PI_OVER_2<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         ABS(SINH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +
+                                         SIN(Z.IM)</em>SIN(Z.IM))<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>COSH <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns principal value of hyperbolic sine of ZSpecial values:        SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0 and                                           Z.ARG = 0.0        SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI and                                           Z.ARG = MATH_PI_OVER_2        SINH(Z) = COMPLEX_POLAR'(1.0, MATH_PI_OVER_2) if Z.MAG =                        MATH_PI_OVER_2 and Z.ARG = MATH_PI_OVER_2        SINH(Z) = COMPLEX_POLAR'(1.0, -MATH_PI_OVER_2) if Z.MAG =                        MATH_PI_OVER_2 and Z.ARG = -MATH_PI_OVER_2Domain:        Z in COMPLEX_POLAR and Z.ARG /= -MATH_PIError conditions:        Error if Z.ARG = -MATH_PIRange:        result.MAG &gt;= 0.0        -MATH_PI &lt; result.ARG &lt;= MATH_PINotes:        None</p></div><ul>
+ Purpose:<br />
+         Returns principal value of hyperbolic sine of Z<br />
+ Special values:<br />
+         SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = 0.0 and<br />
+                                            Z.ARG = 0.0<br />
+         SINH(Z) = COMPLEX_POLAR'(0.0, 0.0) if Z.MAG = MATH_PI and<br />
+                                            Z.ARG = MATH_PI_OVER_2<br />
+         SINH(Z) = COMPLEX_POLAR'(1.0, MATH_PI_OVER_2) if Z.MAG =<br />
+                         MATH_PI_OVER_2 and Z.ARG = MATH_PI_OVER_2<br />
+         SINH(Z) = COMPLEX_POLAR'(1.0, -MATH_PI_OVER_2) if Z.MAG =<br />
+                         MATH_PI_OVER_2 and Z.ARG = -MATH_PI_OVER_2<br />
+ Domain:<br />
+         Z in COMPLEX_POLAR and Z.ARG /= -MATH_PI<br />
+ Error conditions:<br />
+         Error if Z.ARG = -MATH_PI<br />
+ Range:<br />
+         result.MAG &gt;= 0.0<br />
+         -MATH_PI &lt; result.ARG &lt;= MATH_PI<br />
+ Notes:<br />
+         None</p></div><ul>
 <li>COSH <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Purpose:        Returns hyperbolic cosine of ZSpecial values:        COSH(MATH_CZERO) = MATH_CBASE_1        COSH(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and Z.IM = MATH_PI        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI_OVER_2        COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = -MATH_PI_OVER_2Domain:        Z in COMPLEXError conditions:        NoneRange:        ABS(COSH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +                                        COS(Z.IM)</em>COS(Z.IM))Notes:        None</p></div><br><br><br><br><br><br>
+ Purpose:<br />
+         Returns hyperbolic cosine of Z<br />
+ Special values:<br />
+         COSH(MATH_CZERO) = MATH_CBASE_1<br />
+         COSH(Z) = -MATH_CBASE_1 if Z.RE = 0.0 and Z.IM = MATH_PI<br />
+         COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = MATH_PI_OVER_2<br />
+         COSH(Z) = MATH_CZERO if Z.RE = 0.0 and Z.IM = -MATH_PI_OVER_2<br />
+ Domain:<br />
+         Z in COMPLEX<br />
+ Error conditions:<br />
+         None<br />
+ Range:<br />
+         ABS(COSH(Z)) &lt;= SQRT(SINH(Z.RE)<em>SINH(Z.RE) +
+                                         COS(Z.IM)</em>COS(Z.IM))<br />
+ Notes:<br />
+         None</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

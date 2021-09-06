@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,129 +1098,9 @@
 <li><strong>File</strong>: spi_device_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- Serial Peripheral Interface (SPI) Device module.</p>
-<p></div></p><h2 id="signals">Signals</h2>
-<table>
-<thead>
-<tr>
-<th id="name">Name</th>
-<th id="type">Type</th>
-<th id="description">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>spi_device_pkg</td>
-<td>endpackage</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="constants">Constants</h2>
-<table>
-<thead>
-<tr>
-<th id="name">Name</th>
-<th id="type">Type</th>
-<th id="value">Value</th>
-<th id="description">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SramAw</td>
-<td>int unsigned</td>
-<td>$clog2(spi_device_reg_pkg::SramDepth)</td>
-<td></td>
-</tr>
-<tr>
-<td>SramReadBufferIdx</td>
-<td>sram_addr_t</td>
-<td>sram_addr_t'(0)</td>
-<td>Calculate each space's base and size</td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>SramMailboxIdx</td>
-<td>sram_addr_t</td>
-<td>SramReadBufferIdx + SramReadBufferSize</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>SramSfdpIdx</td>
-<td>sram_addr_t</td>
-<td>SramMailboxIdx + SramMailboxSize</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>SramPayloadIdx</td>
-<td>sram_addr_t</td>
-<td>SramSfdpIdx + SramSfdpSize</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>SramCmdFifoIdx</td>
-<td>sram_addr_t</td>
-<td>SramPayloadIdx + SramPayloadSize</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>SramAddrFifoIdx</td>
-<td>sram_addr_t</td>
-<td>SramCmdFifoIdx + SramCmdFifoSize</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>sram_addr_t</td>
-<td>undefined</td>
-<td></td>
-</tr>
-<tr>
-<td>BitLength</td>
-<td>int unsigned</td>
-<td>SramMsgDepth * 32</td>
-<td>Max BitCount in a transaction</td>
-</tr>
-<tr>
-<td>BitCntW</td>
-<td>int unsigned</td>
-<td>$clog2(BitLength + 1)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="types">Types</h2>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>Serial Peripheral Interface (SPI) Device module.</p>
+<p></div></p><h2 id="types">Types</h2>
 <table>
 <thead>
 <tr>
@@ -1164,26 +1119,6 @@
 <td>passthrough_rsp_t</td>
 <td>struct packed {<br><span style="padding-left:20px">          logic [3:0] s;<br><span style="padding-left:20px">   }</td>
 <td></td>
-</tr>
-<tr>
-<td>sram_addr_t</td>
-<td>logic [SramAw-1:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_data_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic [SramDw-1:0]   data;<br><span style="padding-left:20px">   }</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_err_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic uncorr;<br><span style="padding-left:20px">     logic corr;<br><span style="padding-left:20px">   }</td>
-<td></td>
-</tr>
-<tr>
-<td>scan_mode_e</td>
-<td>enum logic [2:0] {<br><span style="padding-left:20px">     ClkInvSel,<br><span style="padding-left:20px">     CsbRstMuxSel,<br><span style="padding-left:20px">     TxRstMuxSel,<br><span style="padding-left:20px">     RxRstMuxSel,<br><span style="padding-left:20px">     ClkMuxSel,<br><span style="padding-left:20px">     ClkSramSel,<br><span style="padding-left:20px">     RstSramSel,<br><span style="padding-left:20px">     ScanModeUseLast   }</td>
-<td>spi device scanmode usage</td>
 </tr>
 </tbody>
 </table><br><br><br><br><br><br>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1265,13 +1340,13 @@
 <td>douta</td>
 <td>output</td>
 <td>wire [(WIFI_TX_BRAM_DATA_WIDTH-1):0]</td>
-<td></td>
+<td>for changing some bits to indicate it is the 1st pkt or retransmitted pkt</td>
 </tr>
 <tr>
 <td>tx_iq_fifo_empty</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>output wire [(IQ_DATA_WIDTH-1):0] i0, output wire [(IQ_DATA_WIDTH-1):0] q0,  output wire [(IQ_DATA_WIDTH-1):0] i1,  output wire [(IQ_DATA_WIDTH-1):0] q1,  output wire iq_valid, output wire [31:0] mixer_cfg,</td>
 </tr>
 <tr>
 <td>high_tx_allowed0</td>
@@ -1696,12 +1771,12 @@
 <tr>
 <td>slv_reg16</td>
 <td>wire [(C_S00_AXI_DATA_WIDTH-1):0]</td>
-<td></td>
+<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg15; //</td>
 </tr>
 <tr>
 <td>slv_reg21</td>
 <td>wire [(C_S00_AXI_DATA_WIDTH-1):0]</td>
-<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg20; //</td>
+<td></td>
 </tr>
 <tr>
 <td>slv_reg22</td>
@@ -1711,12 +1786,12 @@
 <tr>
 <td>slv_reg24</td>
 <td>wire [(C_S00_AXI_DATA_WIDTH-1):0]</td>
-<td></td>
+<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg23; //</td>
 </tr>
 <tr>
 <td>ant_data</td>
 <td>wire [(2*IQ_DATA_WIDTH-1) : 0]</td>
-<td></td>
+<td>wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg25; //  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg26;  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg27; //  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg28; //  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg29; //  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg30; //  wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg31; // MSB 8 bits are used for version read out</td>
 </tr>
 <tr>
 <td>ant_data_valid</td>
@@ -1786,7 +1861,7 @@
 <tr>
 <td>tx_queue_idx</td>
 <td>wire [1:0]</td>
-<td></td>
+<td>(* mark_debug = "true" *) wire [1:0] tx_queue_idx;</td>
 </tr>
 <tr>
 <td>linux_prio</td>
@@ -1902,13 +1977,13 @@
 </ul><ul>
 <li>tx_intf_s_axi_i: tx_intf_s_axi</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Instantiation of Axi Bus Interface S00_AXI</p></div><ul>
+ Instantiation of Axi Bus Interface S00_AXI</p></div><ul>
 <li>tx_status_fifo_i: tx_status_fifo</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
 hooked to slv_reg22!</p></div><ul>
 <li>tx_intf_s_axis_i: tx_intf_s_axis</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Instantiation of Axi Bus Interface S00_AXIS</p></div><ul>
+ Instantiation of Axi Bus Interface S00_AXIS</p></div><ul>
 <li>tx_interrupt_selection_i: tx_interrupt_selection</li>
 </ul><ul>
 <li>tx_bit_intf_i: tx_bit_intf</li>

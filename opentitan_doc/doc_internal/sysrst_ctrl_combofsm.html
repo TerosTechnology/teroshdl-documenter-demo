@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=sysrst_ctrl_combofsm><h1 id="entity-sysrst_ctrl_combofsm">Entity: sysrst_ctrl_combofsm</h1></a><ul>
 <li><strong>File</strong>: sysrst_ctrl_combofsm.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 635 210"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="195,0 210,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="380" height="50" fill="black" x="210" y="0"></rect><rect id="SvgjsRect1007" width="376" height="45" fill="#bdecb6" x="212" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="190" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="225" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   TIMER1BIT </tspan></text><line id="SvgjsLine1012" x1="195" y1="15" x2="210" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="190" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="225" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   TIMER2BIT </tspan></text><line id="SvgjsLine1017" x1="195" y1="35" x2="210" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="380" height="150" fill="black" x="210" y="55"></rect><rect id="SvgjsRect1019" width="376" height="145" fill="#fdfd96" x="212" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="190" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="225" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   clk_aon_i </tspan></text><line id="SvgjsLine1024" x1="195" y1="70" x2="210" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="190" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="225" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   rst_aon_ni </tspan></text><line id="SvgjsLine1029" x1="195" y1="90" x2="210" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="190" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="225" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   trigger_h_i </tspan></text><line id="SvgjsLine1034" x1="195" y1="110" x2="210" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="190" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="225" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   trigger_l_i </tspan></text><line id="SvgjsLine1039" x1="195" y1="130" x2="210" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="190" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   [TIMER1BIT-1:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="225" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cfg_timer1_i </tspan></text><line id="SvgjsLine1044" x1="195" y1="150" x2="210" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="190" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   [TIMER2BIT-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="225" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cfg_timer2_i </tspan></text><line id="SvgjsLine1049" x1="195" y1="170" x2="210" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="190" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="225" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   cfg_h2l_en_i </tspan></text><line id="SvgjsLine1054" x1="195" y1="190" x2="210" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="610" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="610" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="575" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="575" svgjs:data="{&quot;newLined&quot;:true}">   timer_h2l_cond_met </tspan></text><line id="SvgjsLine1059" x1="590" y1="70" x2="605" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Description sysrst_ctrl combo detection FSM module</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 675 210"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="215,0 230,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="400" height="50" fill="black" x="230" y="0"></rect><rect id="SvgjsRect1007" width="396" height="45" fill="#bdecb6" x="232" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="210" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="245" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   Timer1Width </tspan></text><line id="SvgjsLine1012" x1="215" y1="15" x2="230" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="210" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="245" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   Timer2Width </tspan></text><line id="SvgjsLine1017" x1="215" y1="35" x2="230" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="400" height="150" fill="black" x="230" y="55"></rect><rect id="SvgjsRect1019" width="396" height="145" fill="#fdfd96" x="232" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="210" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="245" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1024" x1="215" y1="70" x2="230" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="210" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="245" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1029" x1="215" y1="90" x2="230" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="210" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="245" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   trigger_h_i </tspan></text><line id="SvgjsLine1034" x1="215" y1="110" x2="230" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="210" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="245" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   trigger_l_i </tspan></text><line id="SvgjsLine1039" x1="215" y1="130" x2="230" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="210" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [Timer1Width-1:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="245" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_timer1_i </tspan></text><line id="SvgjsLine1044" x1="215" y1="150" x2="230" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="210" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">   [Timer2Width-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="245" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_timer2_i </tspan></text><line id="SvgjsLine1049" x1="215" y1="170" x2="230" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="210" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="210" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="245" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="245" svgjs:data="{&quot;newLined&quot;:true}">   cfg_h2l_en_i </tspan></text><line id="SvgjsLine1054" x1="215" y1="190" x2="230" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="650" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="650" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="615" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="615" svgjs:data="{&quot;newLined&quot;:true}">   timer_h2l_cond_met_o </tspan></text><line id="SvgjsLine1059" x1="630" y1="70" x2="645" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Description sysrst_ctrl combo detection FSM module</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1033,13 +1108,13 @@
 </thead>
 <tbody>
 <tr>
-<td>TIMER1BIT</td>
+<td>Timer1Width</td>
 <td>int unsigned</td>
 <td>16</td>
 <td></td>
 </tr>
 <tr>
-<td>TIMER2BIT</td>
+<td>Timer2Width</td>
 <td>int unsigned</td>
 <td>32</td>
 <td></td>
@@ -1058,13 +1133,13 @@
 </thead>
 <tbody>
 <tr>
-<td>clk_aon_i</td>
+<td>clk_i</td>
 <td>input</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>rst_aon_ni</td>
+<td>rst_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1073,25 +1148,25 @@
 <td>trigger_h_i</td>
 <td>input</td>
 <td></td>
-<td></td>
+<td>input vector is all "1"</td>
 </tr>
 <tr>
 <td>trigger_l_i</td>
 <td>input</td>
 <td></td>
-<td></td>
+<td>input vector is all "0"</td>
 </tr>
 <tr>
 <td>cfg_timer1_i</td>
 <td>input</td>
-<td>[TIMER1BIT-1:0]</td>
-<td></td>
+<td>[Timer1Width-1:0]</td>
+<td>debounce</td>
 </tr>
 <tr>
 <td>cfg_timer2_i</td>
 <td>input</td>
-<td>[TIMER2BIT-1:0]</td>
-<td></td>
+<td>[Timer2Width-1:0]</td>
+<td>detection</td>
 </tr>
 <tr>
 <td>cfg_h2l_en_i</td>
@@ -1100,7 +1175,7 @@
 <td></td>
 </tr>
 <tr>
-<td>timer_h2l_cond_met</td>
+<td>timer_h2l_cond_met_o</td>
 <td>output</td>
 <td></td>
 <td></td>
@@ -1143,12 +1218,12 @@
 </tr>
 <tr>
 <td>timer1_cnt_d</td>
-<td>logic [TIMER1BIT-1:0]</td>
+<td>logic [Timer1Width-1:0]</td>
 <td></td>
 </tr>
 <tr>
 <td>timer1_cnt_q</td>
-<td>logic [TIMER1BIT-1:0]</td>
+<td>logic [Timer1Width-1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -1163,12 +1238,12 @@
 </tr>
 <tr>
 <td>timer2_cnt_d</td>
-<td>logic [TIMER2BIT-1:0]</td>
+<td>logic [Timer2Width-1:0]</td>
 <td></td>
 </tr>
 <tr>
 <td>timer2_cnt_q</td>
-<td>logic [TIMER2BIT-1:0]</td>
+<td>logic [Timer2Width-1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -1205,22 +1280,22 @@
 <tbody>
 <tr>
 <td>timer_state_e</td>
-<td>enum logic [1:0] {<br><span style="padding-left:20px">                             IDLE = 2'h0,<br><span style="padding-left:20px">                             WAIT1 = 2'h1,<br><span style="padding-left:20px">                             WAIT2 = 2'h2,<br><span style="padding-left:20px">                             DONE = 2'h3                             }</td>
-<td></td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     IDLE  = 2'h0,<br><span style="padding-left:20px">     WAIT1 = 2'h1,<br><span style="padding-left:20px">     WAIT2 = 2'h2,<br><span style="padding-left:20px">     DONE  = 2'h3   }</td>
+<td>Four-state FSM IDLE-&gt;WAIT1-&gt;WAIT2-&gt;DONE FSM will detect a H2L transition to enter the wait1 state debounce timer defines the time for input to stablize FSM will check the input after the debounce period If the input stays at low, enter the wait2 state Detection timer defines the time for input to be held(pressed) FSM will enter the done state after the detection period</td>
 </tr>
 </tbody>
 </table><h2 id="processes">Processes</h2><ul>
-<li>i_trigger_h_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+<li>p_trigger_h_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
-<li>i_trigger_l_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+<li>p_trigger_l_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
-<li>i_timer_state_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+<li>p_timer_state_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
-<li>i_timer1_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+<li>p_timer1_cnt_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
-<li>i_timer2_cnt_reg: ( @(posedge clk_aon_i or negedge rst_aon_ni) )</li>
+<li>p_timer2_cnt_reg: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
-<li>timer_fsm: (  )</li>
+<li>p_timer_fsm: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 

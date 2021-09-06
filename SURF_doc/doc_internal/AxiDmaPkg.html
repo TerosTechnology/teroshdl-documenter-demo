@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1155,7 +1230,7 @@
 <tr>
 <td>AxiWriteDmaReqType</td>
 <td></td>
-<td>Base Record</td>
+<td>-----------------------------------  Write DMA Request (AxiStreamDmaWrite) -----------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiWriteDmaReqArray</td>
@@ -1165,7 +1240,7 @@
 <tr>
 <td>AxiWriteDmaAckType</td>
 <td></td>
-<td>Base Record</td>
+<td>-----------------------------------  Write DMA Acknowledge (AxiStreamDmaWrite) -----------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiWriteDmaAckArray</td>
@@ -1175,7 +1250,7 @@
 <tr>
 <td>AxiReadDmaReqType</td>
 <td></td>
-<td>Base Record</td>
+<td>-----------------------------------  Read DMA Request (AxiStreamDmaRead) -----------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiReadDmaReqArray</td>
@@ -1185,7 +1260,7 @@
 <tr>
 <td>AxiReadDmaAckType</td>
 <td></td>
-<td>Base Record</td>
+<td>-----------------------------------  Read DMA Acknowledge (AxiStreamDmaRead) -----------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiReadDmaAckArray</td>
@@ -1195,7 +1270,7 @@
 <tr>
 <td>AxiWriteDmaDescReqType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Write Descriptor Request (AxiStreamDmaV2)  Issued from dma write engine to request a free  descriptor from the pool. -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiWriteDmaDescReqArray</td>
@@ -1205,7 +1280,7 @@
 <tr>
 <td>AxiWriteDmaDescAckType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Write Descriptor Ack (AxiStreamDmaV2)  Returned to dma write engine in response to  AxiWriteDescReqType. -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiWriteDmaDescAckArray</td>
@@ -1215,7 +1290,7 @@
 <tr>
 <td>AxiWriteDmaDescRetType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Write Descriptor Return (AxiStreamDmaV2)  Returned from dma engine when frame is complete -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiWriteDmaDescRetArray</td>
@@ -1225,7 +1300,7 @@
 <tr>
 <td>AxiWriteDmaTrackType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Write Tracking (AxiStreamDmaV2)  Memory entry for tracking an in progress transaction. -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiWriteDmaTrackArray</td>
@@ -1235,7 +1310,7 @@
 <tr>
 <td>AxiReadDmaDescReqType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Read Descriptor Request (AxiStreamDmaV2)  Passed to DMA engine to initiate a read. -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiReadDmaDescReqArray</td>
@@ -1245,7 +1320,7 @@
 <tr>
 <td>AxiReadDmaDescRetType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------  DMA Read Descriptor Return (AxiStreamDmaV2)  Returned from dma engine when frame is complete -----------------------------------</td>
 </tr>
 <tr>
 <td>AxiReadDmaDescRetArray</td>

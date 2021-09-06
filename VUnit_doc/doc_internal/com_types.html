@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1127,7 +1202,7 @@
 <tr>
 <td>msg_type_t</td>
 <td></td>
-<td>A message type (of type msg_type_t) can be used identify the type of a message(of type msg_t) such that it can be parsed correctly.</td>
+<td>A message type (of type msg_type_t) can be used identify the type of a message  (of type msg_t) such that it can be parsed correctly.</td>
 </tr>
 <tr>
 <td>msg_types_t</td>
@@ -1162,7 +1237,7 @@
 <tr>
 <td>subscription_traffic_type_t</td>
 <td>(published,<br><span style="padding-left:20px"> outbound,<br><span style="padding-left:20px"> inbound)</td>
-<td>published - Messages published by publisheroutbound - All non-anonymous outbound messages from publisherinbound - All inbound messages to publisher. Replies anonymous requests are excluded.</td>
+<td>A subscriber can subscribe on three different types of traffic:<br>  published - Messages published by publisher  outbound - All non-anonymous outbound messages from publisher  inbound - All inbound messages to publisher. Replies anonymous requests are excluded.</td>
 </tr>
 <tr>
 <td>subscription_t</td>
@@ -1219,21 +1294,24 @@
 </ul><ul>
 <li>delete <font id="function_arguments">(msg : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Delete message. Memory allocated by the message is deallocated.</p></div><ul>
+ Delete message. Memory allocated by the message is deallocated.</p></div><ul>
 <li>sender <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return actor_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Return sending actor of message if defined, null_actor otherwise</p></div><ul>
+ Return sending actor of message if defined, null_actor otherwise</p></div><ul>
 <li>receiver <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return actor_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Return sending actor of message if defined, null_actor otherwise</p></div><ul>
+ Return sending actor of message if defined, null_actor otherwise</p></div><ul>
 <li>message_type <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return msg_type_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Return message type of message without consuming it as pop_msg_type would</p></div><ul>
+ Return message type of message without consuming it as pop_msg_type would</p></div><ul>
 <li>push <font id="function_arguments">(queue : queue_t;<br><span style="padding-left:20px"> variable value : inout msg_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Push message into a queue.The message is set to null to avoid duplicate ownership</p></div><ul>
+ Push message into a queue.<br />
+ The message is set to null to avoid duplicate ownership</p></div><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : integer) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Subprograms for pushing/popping data to/from a message. Data is popped</p>
+<h2 id="-from-a-message-in-the-same-order-they-were-pushed-fifo"> from a message in the same order they were pushed (FIFO)</h2></div><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : character) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : boolean) </font> <font id="function_return">return ()</font></li>
@@ -1272,13 +1350,13 @@ Push message into a queue.The message is set to null to avoid duplicate ownershi
 </ul><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout integer_vector_ptr_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-The value is set to null to avoid duplicate ownership</p></div><ul>
+ The value is set to null to avoid duplicate ownership</p></div><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout string_ptr_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-The value is set to null to avoid duplicate ownership</p></div><ul>
+ The value is set to null to avoid duplicate ownership</p></div><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout queue_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-The value is set to null to avoid duplicate ownership</p></div><ul>
+ The value is set to null to avoid duplicate ownership</p></div><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : boolean_vector) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : integer_vector) </font> <font id="function_return">return ()</font></li>

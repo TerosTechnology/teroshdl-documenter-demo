@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,8 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=uart_bfm_pkg><h1 id="package-uart_bfm_pkg">Package: uart_bfm_pkg</h1></a><ul>
 <li><strong>File</strong>: uart_bfm_pkg.vhd</li>
-</ul><h2 id="constants">Constants</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>=================================================================================================<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1092,24 +1168,44 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>uart_transmit <font id="function_arguments">( constant data_value         : in  std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal tx                   : inout std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string             := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-bfm-procedures"> BFM procedures</h2>
+<hr />
+<h2 id="-uart_transmit"> uart_transmit</h2>
 <ul>
-<li>This procedure transmits data 'data_value' to the UART DUT- The TX configuration can be set in the config parameter</li>
+<li>This procedure transmits data 'data_value' to the UART DUT</li>
+<li>The TX configuration can be set in the config parameter</li>
 </ul></div><ul>
 <li>uart_receive <font id="function_arguments">( variable data_value         : out std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal rx                   : in  std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in  std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant ext_proc_call      : in  string            := "" -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uart_receive"> uart_receive</h2>
 <ul>
-<li>This procedure reads data from the UART DUT and returns it in 'data_value'- The RX configuration can be set in the config parameter</li>
+<li>This procedure reads data from the UART DUT and returns it in 'data_value'</li>
+<li>The RX configuration can be set in the config parameter</li>
 </ul></div><ul>
 <li>uart_expect <font id="function_arguments">( constant data_exp           : in std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in string;<br><span style="padding-left:20px"> signal rx                   : in std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in std_logic;<br><span style="padding-left:20px"> constant max_receptions     : in natural           := 1;<br><span style="padding-left:20px"> constant timeout            : in time              := -1 ns;<br><span style="padding-left:20px"> constant alert_level        : in t_alert_level     := ERROR;<br><span style="padding-left:20px"> constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-uart_expect"> uart_expect</h2>
 <ul>
-<li>This procedure reads data from the UART DUT and compares it to the data in  'data_exp'.- If the read data is inconsistent with the 'data_exp' data, a new read will  be performed, and the new read data will be compared with 'data_exp'.  This process will continue untill one of the following conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_receptions'    c) The time spent reading is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_receptions' is set to 0, it will be interpreted as no limitation on number of reads- The RX configuration can be set in the config parameter</li>
+<li>This procedure reads data from the UART DUT and compares it to the data in<br />
+'data_exp'.</li>
+<li>If the read data is inconsistent with the 'data_exp' data, a new read will<br />
+be performed, and the new read data will be compared with 'data_exp'.<br />
+This process will continue untill one of the following conditions are met:<br />
+ a) The read data is equal to the expected data<br />
+ b) The number of reads equal 'max_receptions'<br />
+ c) The time spent reading is equal to the 'timeout'</li>
+<li>If 'timeout' is set to 0, it will be interpreted as no timeout</li>
+<li>If 'max_receptions' is set to 0, it will be interpreted as no limitation on number of reads</li>
+<li>The RX configuration can be set in the config parameter</li>
 </ul></div><ul>
 <li>odd_parity <font id="function_arguments">( constant data : std_logic_vector(7 downto 0)) </font> <font id="function_return">return std_logic </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-odd_parity"> odd_parity</h2>
 <ul>
-<li>This function checks if the data parity is odd or even- If the number of '1' in the 'data' input is odd, '1' will be returned- If the number of '1' in the 'data' input is even, '0' will be returned</li>
+<li>This function checks if the data parity is odd or even</li>
+<li>If the number of '1' in the 'data' input is odd, '1' will be returned</li>
+<li>If the number of '1' in the 'data' input is even, '0' will be returned</li>
 </ul></div><br><br><br><br><br><br>
     </article class="markdown-body">
 

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1186,24 +1261,33 @@
 <td>NumRounds</td>
 <td>int unsigned</td>
 <td>31</td>
-<td>parameters This is defined here so we can size all arrays properly.</td>
+<td>parameters  This is defined here so we can size all arrays properly.</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>get_keys <font id="function_arguments">(input bit [127:0] key,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Helper Functions</p></div><ul>
+ Helper Functions</p></div><ul>
 <li>sv_dpi_present_get_key_schedule <font id="function_arguments">(input bit [127:0]                   key,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This returns the list of round keys used during the course of the algorithm.</p></div><ul>
+////////////////////////////////////////////////////<br />
+ SV wrapper functions to be used by the testbench //<br />
+////////////////////////////////////////////////////<br />
+ This function takes in a 128 bit key by default, it determines how to<br />
+ split this key for the DPI calls based on the value of key_size_80.</p>
+<p>This returns the list of round keys used during the course of the algorithm.</p></div><ul>
 <li>sv_dpi_present_encrypt <font id="function_arguments">(input bit [63:0]                  plaintext,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This produces a list of all intermediate values produced after each round<br />
-of the algorithm, including the final encrypted ciphertext value.</p></div><ul>
+ This function encrypts the input plaintext with the PRESENT encryption<br />
+ algorithm using the specified number of rounds.</p>
+<p>This produces a list of all intermediate values produced after each round<br />
+ of the algorithm, including the final encrypted ciphertext value.</p></div><ul>
 <li>sv_dpi_present_decrypt <font id="function_arguments">(input bit [NumRounds-1:0][63:0]   ciphertext,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This produces a list of all intermediate values produced after each round<br />
-of the algorithm, including the final decrypted plaintext value.</p></div><br><br><br><br><br><br>
+ This function decrypts the input ciphertext with the PRESENT decryption<br />
+ algorithm using the specified number of rounds.</p>
+<p>This produces a list of all intermediate values produced after each round<br />
+ of the algorithm, including the final decrypted plaintext value.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

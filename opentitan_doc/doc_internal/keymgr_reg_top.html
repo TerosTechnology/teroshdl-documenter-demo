@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=keymgr_reg_top><h1 id="entity-keymgr_reg_top">Entity: keymgr_reg_top</h1></a><ul>
 <li><strong>File</strong>: keymgr_reg_top.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="110" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="105" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1037" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1042" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1047" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 435 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="330" height="130" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="326" height="125" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_shadowed_ni </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="410" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="375" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1042" x1="390" y1="30" x2="405" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="410" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="375" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1047" x1="390" y1="50" x2="405" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="410" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="375" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1052" x1="390" y1="70" x2="405" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1040,6 +1115,12 @@
 </tr>
 <tr>
 <td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_shadowed_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1142,6 +1223,11 @@
 <td></td>
 </tr>
 <tr>
+<td>reg_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
 <td>tl_reg_h2d</td>
 <td>tlul_pkg::tl_h2d_t</td>
 <td></td>
@@ -1169,7 +1255,7 @@
 <tr>
 <td>intr_state_we</td>
 <td>logic</td>
-<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+<td>Define SW related signals  Format: <reg><em><field></em>{wd</td>
 </tr>
 <tr>
 <td>intr_state_qs</td>
@@ -1283,26 +1369,31 @@
 </tr>
 <tr>
 <td>sideload_clear_qs</td>
-<td>logic</td>
+<td>logic [2:0]</td>
 <td></td>
 </tr>
 <tr>
 <td>sideload_clear_wd</td>
+<td>logic [2:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>reseed_interval_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>reseed_interval_we</td>
+<td>reseed_interval_shadowed_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>reseed_interval_qs</td>
+<td>reseed_interval_shadowed_qs</td>
 <td>logic [15:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>reseed_interval_wd</td>
+<td>reseed_interval_shadowed_wd</td>
 <td>logic [15:0]</td>
 <td></td>
 </tr>
@@ -1717,17 +1808,22 @@
 <td></td>
 </tr>
 <tr>
-<td>max_creator_key_ver_we</td>
+<td>max_creator_key_ver_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>max_creator_key_ver_qs</td>
+<td>max_creator_key_ver_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_creator_key_ver_shadowed_qs</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>max_creator_key_ver_wd</td>
+<td>max_creator_key_ver_shadowed_wd</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
@@ -1747,17 +1843,22 @@
 <td></td>
 </tr>
 <tr>
-<td>max_owner_int_key_ver_we</td>
+<td>max_owner_int_key_ver_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>max_owner_int_key_ver_qs</td>
+<td>max_owner_int_key_ver_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_owner_int_key_ver_shadowed_qs</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>max_owner_int_key_ver_wd</td>
+<td>max_owner_int_key_ver_shadowed_wd</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
@@ -1777,17 +1878,22 @@
 <td></td>
 </tr>
 <tr>
-<td>max_owner_key_ver_we</td>
+<td>max_owner_key_ver_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>max_owner_key_ver_qs</td>
+<td>max_owner_key_ver_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>max_owner_key_ver_shadowed_qs</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>max_owner_key_ver_wd</td>
+<td>max_owner_key_ver_shadowed_wd</td>
 <td>logic [31:0]</td>
 <td></td>
 </tr>
@@ -2067,16 +2173,6 @@
 <td></td>
 </tr>
 <tr>
-<td>err_code_invalid_cmd_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>err_code_invalid_cmd_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
 <td>err_code_invalid_kmac_input_qs</td>
 <td>logic</td>
 <td></td>
@@ -2087,24 +2183,84 @@
 <td></td>
 </tr>
 <tr>
-<td>err_code_invalid_kmac_data_qs</td>
+<td>err_code_invalid_shadow_update_qs</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>err_code_invalid_kmac_data_wd</td>
+<td>err_code_invalid_shadow_update_wd</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_cmd_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_kmac_fsm_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_kmac_op_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_kmac_out_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_regfile_intg_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_shadow_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_ctrl_fsm_intg_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>fault_status_ctrl_fsm_cnt_qs</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
 <td>addr_hit</td>
-<td>logic [58:0]</td>
+<td>logic [59:0]</td>
 <td></td>
+</tr>
+<tr>
+<td>shadow_busy</td>
+<td>logic</td>
+<td>shadow busy</td>
+</tr>
+<tr>
+<td>rst_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_rst_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_busy_sel</td>
+<td>logic</td>
+<td>register busy</td>
 </tr>
 <tr>
 <td>unused_wdata</td>
 <td>logic</td>
-<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+<td>Unused signal tieoff  wdata / byte enable are not always fully used  add a blanket unused statement to handle lint waivers</td>
 </tr>
 <tr>
 <td>unused_be</td>
@@ -2150,10 +2306,16 @@
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Check sub-word write is permitted</p></div><ul>
+ Check sub-word write is permitted </p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Read data return </p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_shadowed_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_chk: tlul_cmd_intg_chk</li>
 </ul><ul>
 <li>u_rsp_intg_gen: tlul_rsp_intg_gen</li>
@@ -2162,83 +2324,105 @@ Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
 </ul><ul>
 <li>u_intr_state: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Register instances<br />
-R[intr_state]: V(False)</p></div><ul>
+ Register instances<br />
+ R[intr_state]: V(False)</p></div><ul>
 <li>u_intr_enable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_enable]: V(False)</p></div><ul>
+ R[intr_enable]: V(False)</p></div><ul>
 <li>u_intr_test: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_test]: V(True)</p></div><ul>
+ R[intr_test]: V(True)</p></div><ul>
 <li>u_alert_test_fatal_fault_err: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[alert_test]: V(True)<br />
-F[fatal_fault_err]: 0:0</p></div><ul>
+ R[alert_test]: V(True)<br />
+   F[fatal_fault_err]: 0:0</p></div><ul>
 <li>u_alert_test_recov_operation_err: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[recov_operation_err]: 1:1</p></div><ul>
+   F[recov_operation_err]: 1:1</p></div><ul>
 <li>u_cfg_regwen: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[cfg_regwen]: V(True)</p></div><ul>
+ R[cfg_regwen]: V(True)</p></div><ul>
 <li>u_control_start: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[control]: V(False)<br />
-F[start]: 0:0</p></div><ul>
+ R[control]: V(False)<br />
+   F[start]: 0:0</p></div><ul>
 <li>u_control_operation: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[operation]: 6:4</p></div><ul>
+   F[operation]: 6:4</p></div><ul>
 <li>u_control_cdi_sel: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[cdi_sel]: 7:7</p></div><ul>
+   F[cdi_sel]: 7:7</p></div><ul>
 <li>u_control_dest_sel: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[dest_sel]: 14:12</p></div><ul>
+   F[dest_sel]: 14:12</p></div><ul>
 <li>u_sideload_clear: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[sideload_clear]: V(False)</p></div><ul>
-<li>u_reseed_interval: prim_subreg</li>
+ R[sideload_clear]: V(False)</p></div><ul>
+<li>u_reseed_interval_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[reseed_interval]: V(False)</p></div><ul>
+ R[reseed_interval_shadowed]: V(False)</p></div><ul>
 <li>u_sw_binding_regwen: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[sw_binding_regwen]: V(True)</p></div><ul>
+ R[sw_binding_regwen]: V(True)</p></div><ul>
 <li>u_max_creator_key_ver_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_creator_key_ver_regwen]: V(False)</p></div><ul>
-<li>u_max_creator_key_ver: prim_subreg</li>
+ R[max_creator_key_ver_regwen]: V(False)</p></div><ul>
+<li>u_max_creator_key_ver_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_creator_key_ver]: V(False)</p></div><ul>
+ R[max_creator_key_ver_shadowed]: V(False)</p></div><ul>
 <li>u_max_owner_int_key_ver_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_owner_int_key_ver_regwen]: V(False)</p></div><ul>
-<li>u_max_owner_int_key_ver: prim_subreg</li>
+ R[max_owner_int_key_ver_regwen]: V(False)</p></div><ul>
+<li>u_max_owner_int_key_ver_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_owner_int_key_ver]: V(False)</p></div><ul>
+ R[max_owner_int_key_ver_shadowed]: V(False)</p></div><ul>
 <li>u_max_owner_key_ver_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_owner_key_ver_regwen]: V(False)</p></div><ul>
-<li>u_max_owner_key_ver: prim_subreg</li>
+ R[max_owner_key_ver_regwen]: V(False)</p></div><ul>
+<li>u_max_owner_key_ver_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[max_owner_key_ver]: V(False)</p></div><ul>
+ R[max_owner_key_ver_shadowed]: V(False)</p></div><ul>
 <li>u_working_state: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[working_state]: V(False)</p></div><ul>
+ R[working_state]: V(False)</p></div><ul>
 <li>u_op_status: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[op_status]: V(False)</p></div><ul>
+ R[op_status]: V(False)</p></div><ul>
 <li>u_err_code_invalid_op: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[err_code]: V(False)<br />
-F[invalid_op]: 0:0</p></div><ul>
-<li>u_err_code_invalid_cmd: prim_subreg</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-F[invalid_cmd]: 1:1</p></div><ul>
+ R[err_code]: V(False)<br />
+   F[invalid_op]: 0:0</p></div><ul>
 <li>u_err_code_invalid_kmac_input: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[invalid_kmac_input]: 2:2</p></div><ul>
-<li>u_err_code_invalid_kmac_data: prim_subreg</li>
+   F[invalid_kmac_input]: 1:1</p></div><ul>
+<li>u_err_code_invalid_shadow_update: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[invalid_kmac_data]: 3:3</p></div><br><br><br><br><br><br>
+   F[invalid_shadow_update]: 2:2</p></div><ul>
+<li>u_fault_status_cmd: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ R[fault_status]: V(False)<br />
+   F[cmd]: 0:0</p></div><ul>
+<li>u_fault_status_kmac_fsm: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[kmac_fsm]: 1:1</p></div><ul>
+<li>u_fault_status_kmac_op: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[kmac_op]: 2:2</p></div><ul>
+<li>u_fault_status_kmac_out: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[kmac_out]: 3:3</p></div><ul>
+<li>u_fault_status_regfile_intg: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[regfile_intg]: 4:4</p></div><ul>
+<li>u_fault_status_shadow: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[shadow]: 5:5</p></div><ul>
+<li>u_fault_status_ctrl_fsm_intg: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[ctrl_fsm_intg]: 6:6</p></div><ul>
+<li>u_fault_status_ctrl_fsm_cnt: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[ctrl_fsm_cnt]: 7:7</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

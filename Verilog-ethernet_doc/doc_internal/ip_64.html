@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1048,7 +1123,7 @@
 <td>s_eth_hdr_valid</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>* Ethernet frame input      */</td>
 </tr>
 <tr>
 <td>s_eth_hdr_ready</td>
@@ -1114,7 +1189,7 @@
 <td>m_eth_hdr_valid</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* Ethernet frame output      */</td>
 </tr>
 <tr>
 <td>m_eth_hdr_ready</td>
@@ -1180,7 +1255,7 @@
 <td>arp_request_valid</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* ARP requests      */</td>
 </tr>
 <tr>
 <td>arp_request_ready</td>
@@ -1222,7 +1297,7 @@
 <td>s_ip_hdr_valid</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>* IP input      */</td>
 </tr>
 <tr>
 <td>s_ip_hdr_ready</td>
@@ -1312,7 +1387,7 @@
 <td>m_ip_hdr_valid</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* IP output      */</td>
 </tr>
 <tr>
 <td>m_ip_hdr_ready</td>
@@ -1456,7 +1531,7 @@
 <td>rx_busy</td>
 <td>output</td>
 <td>wire</td>
-<td></td>
+<td>* Status      */</td>
 </tr>
 <tr>
 <td>tx_busy</td>
@@ -1504,7 +1579,7 @@
 <td>local_mac</td>
 <td>input</td>
 <td>wire [47:0]</td>
-<td></td>
+<td>* Configuration      */</td>
 </tr>
 <tr>
 <td>local_ip</td>
@@ -1641,7 +1716,11 @@
 <li>unnamed: ( @(posedge clk) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>ip_eth_rx_64_inst: ip_eth_rx_64</li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<ul>
+<li>IP frame processing<br />
+*/</li>
+</ul></div><ul>
 <li>ip_eth_tx_64_inst: ip_eth_tx_64</li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

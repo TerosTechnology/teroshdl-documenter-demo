@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1064,37 +1139,50 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>divide <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This version of divide gives the user more controlufixed(a downto b) / ufixed(c downto d) = ufixed(a-d downto b-c-1)</p></div><ul>
+ This version of divide gives the user more control<br />
+ ufixed(a downto b) / ufixed(c downto d) = ufixed(a-d downto b-c-1)</p></div><ul>
 <li>divide <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This version of divide gives the user more controlsfixed(a downto b) / sfixed(c downto d) = sfixed(a-d+1 downto b-c)</p></div><ul>
+ This version of divide gives the user more control<br />
+ sfixed(a downto b) / sfixed(c downto d) = sfixed(a-d+1 downto b-c)</p></div><ul>
 <li>reciprocal <font id="function_arguments">( arg                  : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-These functions return 1/X1 / ufixed(a downto b) = ufixed(-b downto -a-1)</p></div><ul>
+ These functions return 1/X<br />
+ 1 / ufixed(a downto b) = ufixed(-b downto -a-1)</p></div><ul>
 <li>reciprocal <font id="function_arguments">( arg                  : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-1 / sfixed(a downto b) = sfixed(-b+1 downto -a)</p></div><ul>
+ 1 / sfixed(a downto b) = sfixed(-b+1 downto -a)</p></div><ul>
 <li>remainder <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-REM functionufixed (a downto b) rem ufixed (c downto d)  = ufixed (minimum(a,c) downto minimum(b,d))</p></div><ul>
+ REM function<br />
+ ufixed (a downto b) rem ufixed (c downto d)<br />
+   = ufixed (minimum(a,c) downto minimum(b,d))</p></div><ul>
 <li>remainder <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-sfixed (a downto b) rem sfixed (c downto d)  = sfixed (minimum(a,c) downto minimum(b,d))</p></div><ul>
+ sfixed (a downto b) rem sfixed (c downto d)<br />
+   = sfixed (minimum(a,c) downto minimum(b,d))</p></div><ul>
 <li>modulo <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> constant round_style : fixed_round_style_type := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits  : NATURAL                := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-mod functionufixed (a downto b) mod ufixed (c downto d)       = ufixed (minimum(a,c) downto minimum(b, d))</p></div><ul>
+ mod function<br />
+ ufixed (a downto b) mod ufixed (c downto d)<br />
+        = ufixed (minimum(a,c) downto minimum(b, d))</p></div><ul>
 <li>modulo <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                    : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits     : NATURAL                   := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-sfixed (a downto b) mod sfixed (c downto d)       = sfixed (c downto minimum(b, d))</p></div><ul>
+ sfixed (a downto b) mod sfixed (c downto d)<br />
+        = sfixed (c downto minimum(b, d))</p></div><ul>
 <li>add_carry <font id="function_arguments">( L,<br><span style="padding-left:20px"> R   : in  UNRESOLVED_ufixed;<br><span style="padding-left:20px"> c_in   : in  STD_ULOGIC;<br><span style="padding-left:20px"> result : out UNRESOLVED_ufixed;<br><span style="padding-left:20px"> c_out  : out STD_ULOGIC) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Procedure for those who need an "accumulator" function.add_carry (ufixed(a downto b), ufixed (c downto d))        = ufixed (maximum(a,c) downto minimum(b,d))</p></div><ul>
+ Procedure for those who need an "accumulator" function.<br />
+ add_carry (ufixed(a downto b), ufixed (c downto d))<br />
+         = ufixed (maximum(a,c) downto minimum(b,d))</p></div><ul>
 <li>add_carry <font id="function_arguments">( L,<br><span style="padding-left:20px"> R   : in  UNRESOLVED_sfixed;<br><span style="padding-left:20px"> c_in   : in  STD_ULOGIC;<br><span style="padding-left:20px"> result : out UNRESOLVED_sfixed;<br><span style="padding-left:20px"> c_out  : out STD_ULOGIC) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-add_carry (sfixed(a downto b), sfixed (c downto d))        = sfixed (maximum(a,c) downto minimum(b,d))</p></div><ul>
+ add_carry (sfixed(a downto b), sfixed (c downto d))<br />
+         = sfixed (maximum(a,c) downto minimum(b,d))</p></div><ul>
 <li>scalb <font id="function_arguments">(y : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> N : INTEGER) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Scales the result by a power of 2.  Width of input = width of output withthe binary point moved.</p></div><ul>
+ Scales the result by a power of 2.  Width of input = width of output with<br />
+ the binary point moved.</p></div><ul>
 <li>scalb <font id="function_arguments">(y : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> N : UNRESOLVED_SIGNED) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>scalb <font id="function_arguments">(y : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> N : INTEGER) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
@@ -1109,7 +1197,7 @@ Scales the result by a power of 2.  Width of input = width of output withthe bin
 </ul><ul>
 <li>maximum <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Overloads the default "maximum" and "minimum" function</p></div><ul>
+ Overloads the default "maximum" and "minimum" function</p></div><ul>
 <li>minimum <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>maximum <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : UNRESOLVED_sfixed) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
@@ -1158,91 +1246,115 @@ Overloads the default "maximum" and "minimum" function</p></div><ul>
 </ul><ul>
 <li>find_leftmost <font id="function_arguments">(arg : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> y : STD_ULOGIC) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-returns arg'low-1 if not found</p></div><ul>
+ returns arg'low-1 if not found</p></div><ul>
 <li>find_leftmost <font id="function_arguments">(arg : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> y : STD_ULOGIC) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>find_rightmost <font id="function_arguments">(arg : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> y : STD_ULOGIC) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-returns arg'high+1 if not found</p></div><ul>
+ returns arg'high+1 if not found</p></div><ul>
 <li>find_rightmost <font id="function_arguments">(arg : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> y : STD_ULOGIC) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>resize <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- input constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- integer portion constant right_index    : INTEGER;<br><span style="padding-left:20px">  -- size of fraction constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-resizes the number (larger or smaller)The returned result will be ufixed (left_index downto right_index)If "round_style" is fixed_round, then the result will be rounded.If the MSB of the remainder is a "1" AND the LSB of the unrounded resultis a '1' or the lower bits of the remainder include a '1' then the resultwill be increased by the smallest representable number for that type."overflow_style" can be fixed_saturate or fixed_wrap.In saturate mode, if the number overflows then the largest possiblerepresentable number is returned.  If wrap mode, then the upper bitsof the number are truncated.</p></div><ul>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="---resize-functions">   RESIZE Functions</h1>
+<p>resizes the number (larger or smaller)<br />
+ The returned result will be ufixed (left_index downto right_index)<br />
+ If "round_style" is fixed_round, then the result will be rounded.<br />
+ If the MSB of the remainder is a "1" AND the LSB of the unrounded result<br />
+ is a '1' or the lower bits of the remainder include a '1' then the result<br />
+ will be increased by the smallest representable number for that type.<br />
+ "overflow_style" can be fixed_saturate or fixed_wrap.<br />
+ In saturate mode, if the number overflows then the largest possible<br />
+ representable number is returned.  If wrap mode, then the upper bits<br />
+ of the number are truncated.</p></div><ul>
 <li>resize <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- input size_res                : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-"size_res" functions create the size of the output from the indicesof the "size_res" input.  The actual value of "size_res" is not used.</p></div><ul>
+ "size_res" functions create the size of the output from the indices<br />
+ of the "size_res" input.  The actual value of "size_res" is not used.</p></div><ul>
 <li>resize <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- input constant left_index     : INTEGER;<br><span style="padding-left:20px">            -- integer portion constant right_index    : INTEGER;<br><span style="padding-left:20px">            -- size of fraction constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Note that in "wrap" mode the sign bit is not replicated.  Thus theresize of a negative number can have a positive result in wrap mode.</p></div><ul>
+ Note that in "wrap" mode the sign bit is not replicated.  Thus the<br />
+ resize of a negative number can have a positive result in wrap mode.</p></div><ul>
 <li>resize <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- input size_res                : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : NATURAL;<br><span style="padding-left:20px">  -- integer constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- left index (high index) constant right_index    : INTEGER                   := 0;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-integer (natural) to unsigned fixed point.arguments are the upper and lower bounds of the number, thusufixed (7 downto -3) &lt;= to_ufixed (int, 7, -3);</p></div><ul>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="-conversion-functions"> Conversion Functions</h1>
+<p>integer (natural) to unsigned fixed point.<br />
+ arguments are the upper and lower bounds of the number, thus<br />
+ ufixed (7 downto -3) &lt;= to_ufixed (int, 7, -3);</p></div><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : NATURAL;<br><span style="padding-left:20px">            -- integer size_res                : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : REAL;<br><span style="padding-left:20px">     -- real constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- left index (high index) constant right_index    : INTEGER;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits     : NATURAL                   := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-real to unsigned fixed point</p></div><ul>
+ real to unsigned fixed point</p></div><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : REAL;<br><span style="padding-left:20px">     -- real size_res                : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits     : NATURAL                   := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : UNRESOLVED_UNSIGNED;<br><span style="padding-left:20px">             -- unsigned constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- left index (high index) constant right_index    : INTEGER                   := 0;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-unsigned to unsigned fixed point</p></div><ul>
+ unsigned to unsigned fixed point</p></div><ul>
 <li>to_ufixed <font id="function_arguments">( arg                     : UNRESOLVED_UNSIGNED;<br><span style="padding-left:20px">           -- unsigned size_res                : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>to_ufixed <font id="function_arguments">( arg : UNRESOLVED_UNSIGNED) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Performs a conversion.  ufixed (arg'range) is returned</p></div><ul>
+ Performs a conversion.  ufixed (arg'range) is returned</p></div><ul>
 <li>to_unsigned <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input constant size           : NATURAL;<br><span style="padding-left:20px">            -- length of output constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_UNSIGNED </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-unsigned fixed point to unsigned</p></div><ul>
+ unsigned fixed point to unsigned</p></div><ul>
 <li>to_unsigned <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">    -- fixed point input size_res                : UNRESOLVED_UNSIGNED;<br><span style="padding-left:20px">  -- used for length of output constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_UNSIGNED </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-unsigned fixed point to unsigned</p></div><ul>
+ unsigned fixed point to unsigned</p></div><ul>
 <li>to_real <font id="function_arguments">( arg : UNRESOLVED_ufixed) </font> <font id="function_return">return REAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-unsigned fixed point to real</p></div><ul>
+ unsigned fixed point to real</p></div><ul>
 <li>to_integer <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return NATURAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-unsigned fixed point to integer</p></div><ul>
+ unsigned fixed point to integer</p></div><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : INTEGER;<br><span style="padding-left:20px">   -- integer constant left_index     : INTEGER;<br><span style="padding-left:20px">   -- left index (high index) constant right_index    : INTEGER                   := 0;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Integer to UNRESOLVED_sfixed</p></div><ul>
+ Integer to UNRESOLVED_sfixed</p></div><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : INTEGER;<br><span style="padding-left:20px">            -- integer size_res                : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : REAL;<br><span style="padding-left:20px">     -- real constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- left index (high index) constant right_index    : INTEGER;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits     : NATURAL                   := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Real to sfixed</p></div><ul>
+ Real to sfixed</p></div><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : REAL;<br><span style="padding-left:20px">     -- real size_res                : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px"> constant guard_bits     : NATURAL                   := fixed_guard_bits) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : UNRESOLVED_SIGNED;<br><span style="padding-left:20px">               -- signed constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- left index (high index) constant right_index    : INTEGER                   := 0;<br><span style="padding-left:20px">  -- right index constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed to sfixed</p></div><ul>
+ signed to sfixed</p></div><ul>
 <li>to_sfixed <font id="function_arguments">( arg                     : UNRESOLVED_SIGNED;<br><span style="padding-left:20px">  -- signed size_res                : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- for size only constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><ul>
 <li>to_sfixed <font id="function_arguments">( arg : UNRESOLVED_SIGNED) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed to sfixed (output assumed to be size of signed input)</p></div><ul>
+ signed to sfixed (output assumed to be size of signed input)</p></div><ul>
 <li>to_sfixed <font id="function_arguments">( arg : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Conversion from ufixed to sfixed</p></div><ul>
+ Conversion from ufixed to sfixed</p></div><ul>
 <li>to_signed <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input constant size           : NATURAL;<br><span style="padding-left:20px">            -- length of output constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_SIGNED </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed fixed point to signed</p></div><ul>
+ signed fixed point to signed</p></div><ul>
 <li>to_signed <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input size_res                : UNRESOLVED_SIGNED;<br><span style="padding-left:20px">  -- used for length of output constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return UNRESOLVED_SIGNED </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed fixed point to signed</p></div><ul>
+ signed fixed point to signed</p></div><ul>
 <li>to_real <font id="function_arguments">( arg : UNRESOLVED_sfixed) </font> <font id="function_return">return REAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed fixed point to real</p></div><ul>
+ signed fixed point to real</p></div><ul>
 <li>to_integer <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px"> constant round_style    : fixed_round_style_type    := fixed_round_style) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed fixed point to integer</p></div><ul>
+ signed fixed point to integer</p></div><ul>
 <li>ufixed_high <font id="function_arguments">(left_index,<br><span style="padding-left:20px"> right_index   : INTEGER;<br><span style="padding-left:20px"> operation                 : CHARACTER := 'X';<br><span style="padding-left:20px"> left_index2,<br><span style="padding-left:20px"> right_index2 : INTEGER   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Because of the fairly complicated sizing rules in the fixed pointpackages these functions are provided to compute the result rangesExample:signal uf1 : ufixed (3 downto -3);signal uf2 : ufixed (4 downto -2);signal uf1multuf2 : ufixed (ufixed_high (3, -3, '<em>', 4, -2) downto                            ufixed_low (3, -3, '</em>', 4, -2));uf1multuf2 &lt;= uf1 * uf2;Valid characters: '+', '-', '*', '/', 'r' or 'R' (rem), 'm' or 'M' (mod),                  '1' (reciprocal), 'a' or 'A' (abs), 'n' or 'N' (unary -)</p></div><ul>
+ Because of the fairly complicated sizing rules in the fixed point<br />
+ packages these functions are provided to compute the result ranges<br />
+ Example:<br />
+ signal uf1 : ufixed (3 downto -3);<br />
+ signal uf2 : ufixed (4 downto -2);<br />
+ signal uf1multuf2 : ufixed (ufixed_high (3, -3, '<em>', 4, -2) downto
+                             ufixed_low (3, -3, '</em>', 4, -2));<br />
+ uf1multuf2 &lt;= uf1 * uf2;<br />
+ Valid characters: '+', '-', '*', '/', 'r' or 'R' (rem), 'm' or 'M' (mod),<br />
+                   '1' (reciprocal), 'a' or 'A' (abs), 'n' or 'N' (unary -)</p></div><ul>
 <li>ufixed_low <font id="function_arguments">(left_index,<br><span style="padding-left:20px"> right_index   : INTEGER;<br><span style="padding-left:20px"> operation                 : CHARACTER := 'X';<br><span style="padding-left:20px"> left_index2,<br><span style="padding-left:20px"> right_index2 : INTEGER   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>sfixed_high <font id="function_arguments">(left_index,<br><span style="padding-left:20px"> right_index   : INTEGER;<br><span style="padding-left:20px"> operation                 : CHARACTER := 'X';<br><span style="padding-left:20px"> left_index2,<br><span style="padding-left:20px"> right_index2 : INTEGER   := 0) </font> <font id="function_return">return INTEGER </font></li>
@@ -1251,7 +1363,10 @@ Because of the fairly complicated sizing rules in the fixed pointpackages these 
 </ul><ul>
 <li>ufixed_high <font id="function_arguments">(size_res  : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> operation : CHARACTER := 'X';<br><span style="padding-left:20px"> size_res2 : UNRESOLVED_ufixed) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Same as above, but using the "size_res" input only for their ranges:signal uf1multuf2 : ufixed (ufixed_high (uf1, '<em>', uf2) downto                            ufixed_low (uf1, '</em>', uf2));uf1multuf2 &lt;= uf1 * uf2;</p></div><ul>
+ Same as above, but using the "size_res" input only for their ranges:<br />
+ signal uf1multuf2 : ufixed (ufixed_high (uf1, '<em>', uf2) downto
+                             ufixed_low (uf1, '</em>', uf2));<br />
+ uf1multuf2 &lt;= uf1 * uf2;</p></div><ul>
 <li>ufixed_low <font id="function_arguments">(size_res  : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> operation : CHARACTER := 'X';<br><span style="padding-left:20px"> size_res2 : UNRESOLVED_ufixed) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>sfixed_high <font id="function_arguments">(size_res  : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> operation : CHARACTER := 'X';<br><span style="padding-left:20px"> size_res2 : UNRESOLVED_sfixed) </font> <font id="function_return">return INTEGER </font></li>
@@ -1260,20 +1375,21 @@ Same as above, but using the "size_res" input only for their ranges:signal uf1mu
 </ul><ul>
 <li>saturate <font id="function_arguments">( constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-purpose: returns a saturated number</p></div><ul>
+ purpose: returns a saturated number</p></div><ul>
 <li>saturate <font id="function_arguments">( constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-purpose: returns a saturated number</p></div><ul>
+ purpose: returns a saturated number</p></div><ul>
 <li>saturate <font id="function_arguments">( size_res : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>saturate <font id="function_arguments">( size_res : UNRESOLVED_sfixed) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><ul>
 <li>to_01 <font id="function_arguments">( s             : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input constant XMAP : STD_ULOGIC := '0') </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-maps meta-logical values</p></div><ul>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="-translation-functions"> Translation Functions</h1>
+<p>maps meta-logical values</p></div><ul>
 <li>to_01 <font id="function_arguments">( s             : UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input constant XMAP : STD_ULOGIC := '0') </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-maps meta-logical values</p></div><ul>
+ maps meta-logical values</p></div><ul>
 <li>Is_X <font id="function_arguments">(arg : UNRESOLVED_ufixed) </font> <font id="function_return">return BOOLEAN </font></li>
 </ul><ul>
 <li>Is_X <font id="function_arguments">(arg : UNRESOLVED_sfixed) </font> <font id="function_return">return BOOLEAN </font></li>
@@ -1292,7 +1408,10 @@ maps meta-logical values</p></div><ul>
 </ul><ul>
 <li>to_slv <font id="function_arguments">( arg : UNRESOLVED_ufixed) </font> <font id="function_return">return STD_LOGIC_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-straight vector conversion routines, needed for synthesis.These functions are here so that a std_logic_vector can beconverted to and from sfixed and ufixed.  Note that you cannot convert these vectors because of their negative index.</p></div><ul>
+ straight vector conversion routines, needed for synthesis.<br />
+ These functions are here so that a std_logic_vector can be<br />
+ converted to and from sfixed and ufixed.  Note that you can<br />
+ not convert these vectors because of their negative index.</p></div><ul>
 <li>to_slv <font id="function_arguments">( arg : UNRESOLVED_sfixed) </font> <font id="function_return">return STD_LOGIC_VECTOR </font></li>
 </ul><ul>
 <li>to_sulv <font id="function_arguments">( arg : UNRESOLVED_ufixed) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font></li>
@@ -1309,26 +1428,42 @@ straight vector conversion routines, needed for synthesis.These functions are he
 </ul><ul>
 <li>to_UFix <font id="function_arguments">( arg      : STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> width    : NATURAL;<br><span style="padding-left:20px">                 -- width of vector fraction : NATURAL) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-As a concession to those who use a graphical DSP environment,these functions take parameters in those tools format and createfixed point numbers.  These functions are designed to convert froma std_logic_vector to the VHDL fixed point format using the conventionsof these packages.  In a pure VHDL environment you should use the"to_ufixed" and "to_sfixed" routines.unsigned fixed point</p></div><ul>
+ As a concession to those who use a graphical DSP environment,<br />
+ these functions take parameters in those tools format and create<br />
+ fixed point numbers.  These functions are designed to convert from<br />
+ a std_logic_vector to the VHDL fixed point format using the conventions<br />
+ of these packages.  In a pure VHDL environment you should use the<br />
+ "to_ufixed" and "to_sfixed" routines.<br />
+ unsigned fixed point</p></div><ul>
 <li>to_SFix <font id="function_arguments">( arg      : STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> width    : NATURAL;<br><span style="padding-left:20px">                 -- width of vector fraction : NATURAL) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-signed fixed point</p></div><ul>
+ signed fixed point</p></div><ul>
 <li>UFix_high <font id="function_arguments">(width,<br><span style="padding-left:20px"> fraction   : NATURAL;<br><span style="padding-left:20px"> operation         : CHARACTER := 'X';<br><span style="padding-left:20px"> width2,<br><span style="padding-left:20px"> fraction2 : NATURAL   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-finding the bounds of a number.  These functions can be used like this:signal xxx : ufixed (7 downto -3);-- Which is the same as "ufixed (UFix_high (11,3) downto UFix_low(11,3))"signal yyy : ufixed (UFix_high (11, 3, "+", 11, 3)              downto UFix_low(11, 3, "+", 11, 3));Where "11" is the width of xxx (xxx'length),and 3 is the lower bound (abs (xxx'low))In a pure VHDL environment use "ufixed_high" and "ufixed_low"</p></div><ul>
+ finding the bounds of a number.  These functions can be used like this:<br />
+ signal xxx : ufixed (7 downto -3);<br />
+ -- Which is the same as "ufixed (UFix_high (11,3) downto UFix_low(11,3))"<br />
+ signal yyy : ufixed (UFix_high (11, 3, "+", 11, 3)<br />
+               downto UFix_low(11, 3, "+", 11, 3));<br />
+ Where "11" is the width of xxx (xxx'length),<br />
+ and 3 is the lower bound (abs (xxx'low))<br />
+ In a pure VHDL environment use "ufixed_high" and "ufixed_low"</p></div><ul>
 <li>UFix_low <font id="function_arguments">(width,<br><span style="padding-left:20px"> fraction   : NATURAL;<br><span style="padding-left:20px"> operation         : CHARACTER := 'X';<br><span style="padding-left:20px"> width2,<br><span style="padding-left:20px"> fraction2 : NATURAL   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>SFix_high <font id="function_arguments">(width,<br><span style="padding-left:20px"> fraction   : NATURAL;<br><span style="padding-left:20px"> operation         : CHARACTER := 'X';<br><span style="padding-left:20px"> width2,<br><span style="padding-left:20px"> fraction2 : NATURAL   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Same as above but for signed fixed point.  Note that the widthof a signed fixed point number ignores the sign bit, thuswidth = sxxx'length-1</p></div><ul>
+ Same as above but for signed fixed point.  Note that the width<br />
+ of a signed fixed point number ignores the sign bit, thus<br />
+ width = sxxx'length-1</p></div><ul>
 <li>SFix_low <font id="function_arguments">(width,<br><span style="padding-left:20px"> fraction   : NATURAL;<br><span style="padding-left:20px"> operation         : CHARACTER := 'X';<br><span style="padding-left:20px"> width2,<br><span style="padding-left:20px"> fraction2 : NATURAL   := 0) </font> <font id="function_return">return INTEGER </font></li>
 </ul><ul>
 <li>WRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-purpose: writes fixed point into a line</p></div><ul>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="-string-and-textio-functions"> string and textio Functions</h1>
+<p>purpose: writes fixed point into a line</p></div><ul>
 <li>WRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-purpose: writes fixed point into a line</p></div><ul>
+ purpose: writes fixed point into a line</p></div><ul>
 <li>READ <font id="function_arguments">(L     : inout LINE;<br><span style="padding-left:20px"> VALUE : out   UNRESOLVED_ufixed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>READ <font id="function_arguments">(L     : inout LINE;<br><span style="padding-left:20px"> VALUE : out   UNRESOLVED_ufixed;<br><span style="padding-left:20px"> GOOD  : out   BOOLEAN) </font> <font id="function_return">return ()</font></li>
@@ -1339,7 +1474,7 @@ purpose: writes fixed point into a line</p></div><ul>
 </ul><ul>
 <li>OWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-octal read and write</p></div><ul>
+ octal read and write</p></div><ul>
 <li>OWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>OREAD <font id="function_arguments">(L     : inout LINE;<br><span style="padding-left:20px"> VALUE : out   UNRESOLVED_ufixed) </font> <font id="function_return">return ()</font></li>
@@ -1352,10 +1487,10 @@ octal read and write</p></div><ul>
 </ul><ul>
 <li>HWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-hex read and write</p></div><ul>
+ hex read and write</p></div><ul>
 <li>HWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">               -- input line VALUE     : in    UNRESOLVED_sfixed;<br><span style="padding-left:20px">  -- fixed point input JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px"> FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-purpose: writes fixed point into a line</p></div><ul>
+ purpose: writes fixed point into a line</p></div><ul>
 <li>HREAD <font id="function_arguments">(L     : inout LINE;<br><span style="padding-left:20px"> VALUE : out   UNRESOLVED_ufixed) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>HREAD <font id="function_arguments">(L     : inout LINE;<br><span style="padding-left:20px"> VALUE : out   UNRESOLVED_ufixed;<br><span style="padding-left:20px"> GOOD  : out   BOOLEAN) </font> <font id="function_return">return ()</font></li>
@@ -1366,7 +1501,8 @@ purpose: writes fixed point into a line</p></div><ul>
 </ul><ul>
 <li>to_string <font id="function_arguments">(value : UNRESOLVED_ufixed) </font> <font id="function_return">return STRING </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-returns a string, useful for:assert (x = y) report "error found " &amp; to_string(x) severity error;</p></div><ul>
+ returns a string, useful for:<br />
+ assert (x = y) report "error found " &amp; to_string(x) severity error;</p></div><ul>
 <li>to_ostring <font id="function_arguments">(value : UNRESOLVED_ufixed) </font> <font id="function_return">return STRING </font></li>
 </ul><ul>
 <li>to_hstring <font id="function_arguments">(value : UNRESOLVED_ufixed) </font> <font id="function_return">return STRING </font></li>
@@ -1379,10 +1515,18 @@ returns a string, useful for:assert (x = y) report "error found " &amp; to_strin
 </ul><ul>
 <li>from_string <font id="function_arguments">( bstring              : STRING;<br><span style="padding-left:20px">      -- binary string constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-From string functions allow you to convert a string into a fixedpoint number.  Example: signal uf1 : ufixed (3 downto -3); uf1 &lt;= from_string ("0110.100", uf1'high, uf1'low); -- 6.5The "." is optional in this syntax, however it exist and isin the wrong location an error is produced.  Overflow willresult in saturation.</p></div><ul>
+ From string functions allow you to convert a string into a fixed<br />
+ point number.  Example:<br />
+  signal uf1 : ufixed (3 downto -3);<br />
+  uf1 &lt;= from_string ("0110.100", uf1'high, uf1'low); -- 6.5<br />
+ The "." is optional in this syntax, however it exist and is<br />
+ in the wrong location an error is produced.  Overflow will<br />
+ result in saturation.</p></div><ul>
 <li>from_ostring <font id="function_arguments">( ostring              : STRING;<br><span style="padding-left:20px">      -- Octal string constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Octal and hex conversions work as follows:uf1 &lt;= from_hstring ("6.8", 3, -3); -- 6.5 (bottom zeros dropped)uf1 &lt;= from_ostring ("06.4", 3, -3); -- 6.5 (top zeros dropped)</p></div><ul>
+ Octal and hex conversions work as follows:<br />
+ uf1 &lt;= from_hstring ("6.8", 3, -3); -- 6.5 (bottom zeros dropped)<br />
+ uf1 &lt;= from_ostring ("06.4", 3, -3); -- 6.5 (top zeros dropped)</p></div><ul>
 <li>from_hstring <font id="function_arguments">( hstring              : STRING;<br><span style="padding-left:20px">      -- hex string constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>from_string <font id="function_arguments">( bstring              : STRING;<br><span style="padding-left:20px">      -- binary string constant left_index  : INTEGER;<br><span style="padding-left:20px"> constant right_index : INTEGER) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>
@@ -1393,7 +1537,7 @@ Octal and hex conversions work as follows:uf1 &lt;= from_hstring ("6.8", 3, -3);
 </ul><ul>
 <li>from_string <font id="function_arguments">( bstring  : STRING;<br><span style="padding-left:20px">                  -- binary string size_res : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Same as above, "size_res" is used for it's range only.</p></div><ul>
+ Same as above, "size_res" is used for it's range only.</p></div><ul>
 <li>from_ostring <font id="function_arguments">( ostring  : STRING;<br><span style="padding-left:20px">                  -- Octal string size_res : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>from_hstring <font id="function_arguments">( hstring  : STRING;<br><span style="padding-left:20px">                  -- hex string size_res : UNRESOLVED_ufixed) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
@@ -1406,10 +1550,17 @@ Same as above, "size_res" is used for it's range only.</p></div><ul>
 </ul><ul>
 <li>from_string <font id="function_arguments">( bstring : STRING) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Direct conversion functions.  Example: signal uf1 : ufixed (3 downto -3); uf1 &lt;= from_string ("0110.100"); -- 6.5In this case the "." is not optional, and the size ofthe output must match exactly.</p></div><ul>
+ Direct conversion functions.  Example:<br />
+  signal uf1 : ufixed (3 downto -3);<br />
+  uf1 &lt;= from_string ("0110.100"); -- 6.5<br />
+ In this case the "." is not optional, and the size of<br />
+ the output must match exactly.</p></div><ul>
 <li>from_ostring <font id="function_arguments">( ostring : STRING) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Direct octal and hex conversion functions.  In this casethe string lengths must match.  Example:signal sf1 := sfixed (5 downto -3);sf1 &lt;= from_ostring ("71.4") -- -6.5</p></div><ul>
+ Direct octal and hex conversion functions.  In this case<br />
+ the string lengths must match.  Example:<br />
+ signal sf1 := sfixed (5 downto -3);<br />
+ sf1 &lt;= from_ostring ("71.4") -- -6.5</p></div><ul>
 <li>from_hstring <font id="function_arguments">( hstring : STRING) </font> <font id="function_return">return UNRESOLVED_ufixed </font></li>
 </ul><ul>
 <li>from_string <font id="function_arguments">( bstring : STRING) </font> <font id="function_return">return UNRESOLVED_sfixed </font></li>

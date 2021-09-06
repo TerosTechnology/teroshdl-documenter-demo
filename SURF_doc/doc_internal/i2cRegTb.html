@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=i2cRegTb><h1 id="entity-i2cregtb">Entity: i2cRegTb</h1></a><ul>
 <li><strong>File</strong>: i2cRegTb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>Company    : SLAC National Accelerator LaboratoryDescription: Simulation testbed for i2cRegThis file is part of 'SLAC Firmware Standard Library'.It is subject to the license terms in the LICENSE.txt file found in thetop-level directory of this distribution and at:<a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.No part of 'SLAC Firmware Standard Library', including this file,may be copied, modified, propagated, or distributed except according tothe terms contained in the LICENSE.txt file.</p></div><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><hr /> <h2 id="company-----slac-national-accelerator-laboratory">Company    : SLAC National Accelerator Laboratory</h2> <h2 id="description-simulation-testbed-for-i2creg">Description: Simulation testbed for i2cReg</h2> <p>This file is part of 'SLAC Firmware Standard Library'.  It is subject to the license terms in the LICENSE.txt file found in the  top-level directory of this distribution and at:     <a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.  No part of 'SLAC Firmware Standard Library', including this file,  may be copied, modified, propagated, or distributed except according to</p> <h2 id="the-terms-contained-in-the-licensetxt-file">the terms contained in the LICENSE.txt file.</h2></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -1108,42 +1183,42 @@
 </ul><ul>
 <li>i2cRegMaster_1: surf.i2cRegMaster</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Instantiate Master</p></div><ul>
+ Instantiate Master</p></div><ul>
 <li>ClkRst_Slave: surf.ClkRst</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Slaves<br />
-Instantiate 16 Ram slaves on the bus with varying address and data sizes, and varying i2c<br />
-addresses and clock speeds.<br />
- gen_i : for i in 0 to 3 generate<br />
-   gen_j : for j in 0 to 3 generate<br />
-     ClkRst_Slave : entity surf.ClkRst<br />
-       generic map (<br />
-         CLK_PERIOD_G      =&gt; (8+i)* 1 ns,<br />
-         CLK_DELAY_G       =&gt; j * 1 ns,<br />
-         RST_START_DELAY_G =&gt; 0 ns,<br />
-         RST_HOLD_TIME_G   =&gt; 5 us,<br />
-         SYNC_RESET_G      =&gt; true)<br />
-       port map (<br />
-         clkP =&gt; slaveClk(i<em>4+j),
-         clkN => open,
-         rst  => slaveRst(i</em>4+j),<br />
-         rstL =&gt; open);<br />
-     i2cRamSlave_1 : entity surf.i2cRamSlave<br />
-       generic map (<br />
-         TPD_G        =&gt; TPD_C,<br />
-         I2C_ADDR_G   =&gt; (i<em>4+j)</em>4+9,<br />
-         TENBIT_G     =&gt; 0, --(j = 3),<br />
-         FILTER_G     =&gt; 10, --integer((50.0 / (8.0+i)) + 2.0),<br />
-         ADDR_SIZE_G  =&gt; i+1,<br />
-         DATA_SIZE_G  =&gt; j+1,<br />
-         ENDIANNESS_G =&gt; 0) --i = 2 or i = 3)<br />
-       port map (<br />
-         clk    =&gt; slaveClk(i<em>4+j),
-         rst    => slaveRst(i</em>4+j),<br />
-         i2cSda =&gt; i2cSda,<br />
-         i2cScl =&gt; i2cScl);<br />
-   end generate gen_j;<br />
- end generate gen_i;</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<p>Slaves<br />
+ Instantiate 16 Ram slaves on the bus with varying address and data sizes, and varying i2c</p>
+<h2 id="-addresses-and-clock-speeds"> addresses and clock speeds.</h2>
+<p>gen_i : for i in 0 to 3 generate<br />
+    gen_j : for j in 0 to 3 generate<br />
+      ClkRst_Slave : entity surf.ClkRst<br />
+        generic map (<br />
+          CLK_PERIOD_G      =&gt; (8+i)* 1 ns,<br />
+          CLK_DELAY_G       =&gt; j * 1 ns,<br />
+          RST_START_DELAY_G =&gt; 0 ns,<br />
+          RST_HOLD_TIME_G   =&gt; 5 us,<br />
+          SYNC_RESET_G      =&gt; true)<br />
+        port map (<br />
+          clkP =&gt; slaveClk(i<em>4+j),
+          clkN => open,
+          rst  => slaveRst(i</em>4+j),<br />
+          rstL =&gt; open);<br />
+      i2cRamSlave_1 : entity surf.i2cRamSlave<br />
+        generic map (<br />
+          TPD_G        =&gt; TPD_C,<br />
+          I2C_ADDR_G   =&gt; (i<em>4+j)</em>4+9,<br />
+          TENBIT_G     =&gt; 0, --(j = 3),<br />
+          FILTER_G     =&gt; 10, --integer((50.0 / (8.0+i)) + 2.0),<br />
+          ADDR_SIZE_G  =&gt; i+1,<br />
+          DATA_SIZE_G  =&gt; j+1,<br />
+          ENDIANNESS_G =&gt; 0) --i = 2 or i = 3)<br />
+        port map (<br />
+          clk    =&gt; slaveClk(i<em>4+j),
+          rst    => slaveRst(i</em>4+j),<br />
+          i2cSda =&gt; i2cSda,<br />
+          i2cScl =&gt; i2cScl);<br />
+    end generate gen_j;<br />
+  end generate gen_i;</p></div><ul>
 <li>i2cRamSlave_1: surf.i2cRamSlave</li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

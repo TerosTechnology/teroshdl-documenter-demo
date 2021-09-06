@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,8 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=sbi_bfm_pkg><h1 id="package-sbi_bfm_pkg">Package: sbi_bfm_pkg</h1></a><ul>
 <li><strong>File</strong>: sbi_bfm_pkg.vhd</li>
-</ul><h2 id="constants">Constants</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>=================================================================================================<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1069,49 +1145,98 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>init_sbi_if_signals <font id="function_arguments">( addr_width : natural;<br><span style="padding-left:20px"> data_width : natural ) </font> <font id="function_return">return t_sbi_if </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="-bfm-procedures"> BFM procedures</h1>
+<hr />
+<h2 id="-init_sbi_if_signals"> init_sbi_if_signals</h2>
 <ul>
-<li>This function returns an SBI interface with initialized signals.- All SBI input signals are initialized to 0- All SBI output signals are initialized to Z</li>
+<li>This function returns an SBI interface with initialized signals.</li>
+<li>All SBI input signals are initialized to 0</li>
+<li>All SBI output signals are initialized to Z</li>
 </ul></div><ul>
 <li>sbi_write <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal wdata          : inout std_logic_vector;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_write"> sbi_write</h2>
 <ul>
-<li>This procedure writes data to the SBI DUT- The SBI interface in this procedure is given as individual signals</li>
+<li>This procedure writes data to the SBI DUT</li>
+<li>The SBI interface in this procedure is given as individual signals</li>
 </ul></div><ul>
 <li>sbi_write <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_write"> sbi_write</h2>
 <ul>
-<li>This procedure writes data 'data_value' to the SBI DUT address 'addr_value'- The SBI interface in this procedure is given as a t_sbi_if signal record</li>
+<li>This procedure writes data 'data_value' to the SBI DUT address 'addr_value'</li>
+<li>The SBI interface in this procedure is given as a t_sbi_if signal record</li>
 </ul></div><ul>
 <li>sbi_read <font id="function_arguments">( constant addr_value    : in    unsigned;<br><span style="padding-left:20px"> variable data_value    : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg           : in    string;<br><span style="padding-left:20px"> signal clk             : in    std_logic;<br><span style="padding-left:20px"> signal cs              : inout std_logic;<br><span style="padding-left:20px"> signal addr            : inout unsigned;<br><span style="padding-left:20px"> signal rena            : inout std_logic;<br><span style="padding-left:20px"> signal wena            : inout std_logic;<br><span style="padding-left:20px"> signal ready           : in    std_logic;<br><span style="padding-left:20px"> signal rdata           : in    std_logic_vector;<br><span style="padding-left:20px"> constant scope         : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure  ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_read"> sbi_read</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and  returns the read data in the output 'data_value'- The SBI interface in this procedure is given as individual signals</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and<br />
+returns the read data in the output 'data_value'</li>
+<li>The SBI interface in this procedure is given as individual signals</li>
 </ul></div><ul>
 <li>sbi_read <font id="function_arguments">( constant addr_value    : in    unsigned;<br><span style="padding-left:20px"> variable data_value    : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg           : in    string;<br><span style="padding-left:20px"> signal clk             : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if          : inout t_sbi_if;<br><span style="padding-left:20px"> constant scope         : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_read"> sbi_read</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and returns  the read data in the output 'data_value'- The SBI interface in this procedure is given as a t_sbi_if signal record</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and returns<br />
+the read data in the output 'data_value'</li>
+<li>The SBI interface in this procedure is given as a t_sbi_if signal record</li>
 </ul></div><ul>
 <li>sbi_check <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal rdata          : in    std_logic_vector;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_check"> sbi_check</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and  compares the read data to the expected data in 'data_exp'.- If the read data is inconsistent with the expected data, an alert with  severity 'alert_level' is triggered.- The SBI interface in this procedure is given as individual signals</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and<br />
+compares the read data to the expected data in 'data_exp'.</li>
+<li>If the read data is inconsistent with the expected data, an alert with<br />
+severity 'alert_level' is triggered.</li>
+<li>The SBI interface in this procedure is given as individual signals</li>
 </ul></div><ul>
 <li>sbi_check <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_check"> sbi_check</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and  compares the read data to the expected data in 'data_exp'.- If the read data is inconsistent with the expected data, an alert with  severity 'alert_level' is triggered.- The SBI interface in this procedure is given as a t_sbi_if signal record</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and<br />
+compares the read data to the expected data in 'data_exp'.</li>
+<li>If the read data is inconsistent with the expected data, an alert with<br />
+severity 'alert_level' is triggered.</li>
+<li>The SBI interface in this procedure is given as a t_sbi_if signal record</li>
 </ul></div><ul>
 <li>sbi_poll_until <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant max_polls    : in    integer          := 1;<br><span style="padding-left:20px"> constant timeout      : in    time             := 0 ns;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal rdata          : in    std_logic_vector;<br><span style="padding-left:20px"> signal terminate_loop : in    std_logic;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_poll_until"> sbi_poll_until</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and  compares the read data to the expected data in 'data_exp'.- If the read data is inconsistent with the expected data, a new read  will be performed, and the new read data will be compared with the  'data_exp'. This process will continue until one of the following  conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_polls'    c) The time spent polling is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_polls' is set to 0, it will be interpreted as no limitation on number of polls- The SBI interface in this procedure is given as individual signals</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and<br />
+compares the read data to the expected data in 'data_exp'.</li>
+<li>If the read data is inconsistent with the expected data, a new read<br />
+will be performed, and the new read data will be compared with the<br />
+'data_exp'. This process will continue until one of the following<br />
+conditions are met:<br />
+ a) The read data is equal to the expected data<br />
+ b) The number of reads equal 'max_polls'<br />
+ c) The time spent polling is equal to the 'timeout'</li>
+<li>If 'timeout' is set to 0, it will be interpreted as no timeout</li>
+<li>If 'max_polls' is set to 0, it will be interpreted as no limitation on number of polls</li>
+<li>The SBI interface in this procedure is given as individual signals</li>
 </ul></div><ul>
 <li>sbi_poll_until <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant max_polls    : in    integer          := 1;<br><span style="padding-left:20px"> constant timeout      : in    time             := 0 ns;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> signal terminate_loop : in    std_logic;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-sbi_poll_until"> sbi_poll_until</h2>
 <ul>
-<li>This procedure reads data from the SBI DUT address 'addr_value' and  compares the read data to the expected data in 'data_exp'.- If the read data is inconsistent with the expected data, a new read  will be performed, and the new read data will be compared with the  'data_exp'. This process will continue until one of the following  conditions are met:    a) The read data is equal to the expected data    b) The number of reads equal 'max_polls'    c) The time spent polling is equal to the 'timeout'- If 'timeout' is set to 0, it will be interpreted as no timeout- If 'max_polls' is set to 0, it will be interpreted as no limitation on number of polls- The SBI interface in this procedure is given as a t_sbi_if signal record</li>
+<li>This procedure reads data from the SBI DUT address 'addr_value' and<br />
+compares the read data to the expected data in 'data_exp'.</li>
+<li>If the read data is inconsistent with the expected data, a new read<br />
+will be performed, and the new read data will be compared with the<br />
+'data_exp'. This process will continue until one of the following<br />
+conditions are met:<br />
+ a) The read data is equal to the expected data<br />
+ b) The number of reads equal 'max_polls'<br />
+ c) The time spent polling is equal to the 'timeout'</li>
+<li>If 'timeout' is set to 0, it will be interpreted as no timeout</li>
+<li>If 'max_polls' is set to 0, it will be interpreted as no limitation on number of polls</li>
+<li>The SBI interface in this procedure is given as a t_sbi_if signal record</li>
 </ul></div><br><br><br><br><br><br>
     </article class="markdown-body">
 

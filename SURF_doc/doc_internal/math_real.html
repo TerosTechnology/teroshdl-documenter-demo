@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1148,14 +1223,15 @@
 </ul><ul>
 <li>REALMAX <font id="function_arguments">(X,<br><span style="padding-left:20px"> Y : REAL) </font> <font id="function_return">return REAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Contrary to fmod, the sign of the result is the sign of Y.</p></div><ul>
+  Contrary to fmod, the sign of the result is the sign of Y.</p></div><ul>
 <li>REALMIN <font id="function_arguments">(X,<br><span style="padding-left:20px"> Y : REAL) </font> <font id="function_return">return REAL </font></li>
 </ul><ul>
 <li>UNIFORM <font id="function_arguments">(SEED1,<br><span style="padding-left:20px"> SEED2 : inout POSITIVE;<br><span style="padding-left:20px"> X : out REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>SQRT <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- Algorithm from: Pierre L'Ecuyer, CACM June 1988 Volume 31 Number 6 page 747 figure 3.</p></div><ul>
+  Algorithm from: Pierre L'Ecuyer, CACM June 1988 Volume 31 Number 6<br />
+  page 747 figure 3.</p></div><ul>
 <li>CBRT <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font></li>
 </ul><ul>
 <li>EXP <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font></li>

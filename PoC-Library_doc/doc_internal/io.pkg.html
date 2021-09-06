@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1044,7 +1119,7 @@
 <tr>
 <td>T_IO_TRISTATE_VECTOR</td>
 <td>array(natural range &lt;&gt;) of T_IO_TRISTATE</td>
-<td>Do not use this type for <code>inout</code> ports of synthesizable IP cores to drivevalues in both directions, see also:ref:<code>ISSUES:General:inout_records</code>.</td>
+<td>Do not use this type for <code>inout</code> ports of synthesizable IP cores to drive  values in both directions, see also  :ref:<code>ISSUES:General:inout_records</code>.</td>
 </tr>
 <tr>
 <td>T_IO_LVDS_VECTOR</td>
@@ -1069,7 +1144,7 @@
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_COMMAND</td>
 <td>( IO_MDIO_MDIOC_CMD_NONE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_CHECK_ADDRESS,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_READ,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_WRITE,<br><span style="padding-left:20px"> IO_MDIO_MDIOC_CMD_ABORT )</td>
-<td>MDIOController==========================================================================================================================================================</td>
+<td>MDIOController  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_MDIO_MDIOCONTROLLER_STATUS</td>
@@ -1095,9 +1170,33 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>io_tristate_driver <font id="function_arguments">( signal pad      : inout std_logic_vector;<br><span style="padding-left:20px"> signal tristate : inout T_IO_TRISTATE_VECTOR ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Drive a std_logic_vector from a Tri-State bus and in reverse.Use this procedure only in simulation, see also:ref:<code>ISSUES:General:inout_records</code>.</p></div><ul>
+ Drive a std_logic_vector from a Tri-State bus and in reverse.<br />
+ Use this procedure only in simulation, see also<br />
+ :ref:<code>ISSUES:General:inout_records</code>.</p></div><ul>
 <li>io_7SegmentDisplayEncoding <font id="function_arguments">(hex    : std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> dot : std_logic := '0';<br><span style="padding-left:20px"> WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+constant C_IO_7SEGMENT_CHAR_ENCODING        : T_IO_7SEGMENT_CHAR_ENCODING := (<br />
+IO_7SEGMENT_CHAR_0<br />
+IO_7SEGMENT_CHAR_1<br />
+IO_7SEGMENT_CHAR_2<br />
+IO_7SEGMENT_CHAR_3<br />
+IO_7SEGMENT_CHAR_4<br />
+IO_7SEGMENT_CHAR_5<br />
+IO_7SEGMENT_CHAR_6<br />
+IO_7SEGMENT_CHAR_7<br />
+IO_7SEGMENT_CHAR_8<br />
+IO_7SEGMENT_CHAR_9<br />
+IO_7SEGMENT_CHAR_A<br />
+IO_7SEGMENT_CHAR_B<br />
+IO_7SEGMENT_CHAR_C<br />
+IO_7SEGMENT_CHAR_D<br />
+IO_7SEGMENT_CHAR_E<br />
+IO_7SEGMENT_CHAR_F<br />
+IO_7SEGMENT_CHAR_H<br />
+IO_7SEGMENT_CHAR_O<br />
+IO_7SEGMENT_CHAR_U<br />
+IO_7SEGMENT_CHAR_MINUS<br />
+);</p></div><ul>
 <li>io_7SegmentDisplayEncoding <font id="function_arguments">(digit    : T_BCD;<br><span style="padding-left:20px"> dot : std_logic := '0';<br><span style="padding-left:20px"> WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

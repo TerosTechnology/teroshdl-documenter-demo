@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1038,26 +1113,26 @@
 <tr>
 <td>LIST_OF_ALERTS</td>
 <td>string</td>
-<td>{<br><span style="padding-left:20px"> "fatal_intg_error",<br><span style="padding-left:20px"> "fatal_parity_error"}</td>
+<td>{<br><span style="padding-left:20px"> "fatal_error"}</td>
 <td>parameters</td>
 </tr>
 <tr>
 <td>uint</td>
 <td>uint</td>
-<td>2</td>
+<td>1</td>
 <td></td>
 </tr>
 <tr>
 <td>KDI_DATA_SIZE</td>
 <td>int</td>
 <td>1 + otp_ctrl_pkg::SramKeyWidth + otp_ctrl_pkg::SramNonceWidth</td>
-<td>Number of bits in the otp_ctrl_pkg::sram_otp_key_rsp_t struct: 1 bit for valid, SramKeyWidth bits for the key, SramNonceWidth bits for the nonce.</td>
+<td>Number of bits in the otp_ctrl_pkg::sram_otp_key_rsp_t struct:  1 bit for valid, SramKeyWidth bits for the key, SramNonceWidth bits for the nonce.</td>
 </tr>
 <tr>
 <td>KDI_PROPAGATION_CYCLES</td>
 <td>int</td>
-<td>4</td>
-<td>after a kDI transaction is copmleted, it needs 4 cycles in the SRAM clock domain to be properly synchronized and propagated through the DUT</td>
+<td>2</td>
+<td>after a KDI transaction is completed, it needs 2 cycles in the SRAM clock domain  to be properly synchronized and propagated through the DUT</td>
 </tr>
 <tr>
 <td>LC_ESCALATION_PROPAGATION_CYCLES</td>
@@ -1094,7 +1169,7 @@
 </tr>
 <tr>
 <td>sram_ctrl_status_e</td>
-<td>enum bit [1:0] {<br><span style="padding-left:20px">     SramCtrlError           = 0,<br><span style="padding-left:20px">     SramCtrlEscalated       = 1,<br><span style="padding-left:20px">     SramCtrlScrKeyValid     = 2,<br><span style="padding-left:20px">     SramCtrlScrKeySeedValid = 3   }</td>
+<td>enum bit [2:0] {<br><span style="padding-left:20px">     SramCtrlBusIntegError   = 0,<br><span style="padding-left:20px">     SramCtrlInitError       = 1,<br><span style="padding-left:20px">     SramCtrlEscalated       = 2,<br><span style="padding-left:20px">     SramCtrlScrKeyValid     = 3,<br><span style="padding-left:20px">     SramCtrlScrKeySeedValid = 4,<br><span style="padding-left:20px">     SramCtrlInitDone        = 5   }</td>
 <td></td>
 </tr>
 </tbody>

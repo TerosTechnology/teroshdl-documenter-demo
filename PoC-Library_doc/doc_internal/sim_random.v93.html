@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1024,7 +1099,7 @@
 </ul><h2 id="functions">Functions</h2><ul>
 <li>randomInitializeSeed <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-procedural interface</p></div><ul>
+ procedural interface</p></div><ul>
 <li>randomInitializeSeed <font id="function_arguments">(Seed : T_SIM_SEED) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomInitializeSeed <font id="function_arguments">(Seed1 : integer;<br><span style="padding-left:20px"> Seed2 : integer) </font> <font id="function_return">return ()</font></li>
@@ -1035,21 +1110,24 @@ procedural interface</p></div><ul>
 </ul><ul>
 <li>randomUniformDistributedValue <font id="function_arguments">(Value : out REAL) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Uniform distributed random values===========================================================================</p></div><ul>
+ Uniform distributed random values<br />
+ ===========================================================================</p></div><ul>
 <li>randomUniformDistributedValue <font id="function_arguments">(Value : out integer;<br><span style="padding-left:20px"> Minimum : in integer;<br><span style="padding-left:20px"> Maximum : in integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomUniformDistributedValue <font id="function_arguments">(Value : out REAL;<br><span style="padding-left:20px"> Minimum : in REAL;<br><span style="padding-left:20px"> Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomNormalDistributedValue <font id="function_arguments">(Value : out REAL;<br><span style="padding-left:20px"> StandardDeviation : in REAL := 1.0;<br><span style="padding-left:20px"> Mean : in REAL := 0.0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Normal / Gaussian distributed random values===========================================================================</p></div><ul>
+ Normal / Gaussian distributed random values<br />
+ ===========================================================================</p></div><ul>
 <li>randomNormalDistributedValue <font id="function_arguments">(Value : out integer;<br><span style="padding-left:20px"> StandardDeviation : in REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in integer;<br><span style="padding-left:20px"> Maximum : in integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomNormalDistributedValue <font id="function_arguments">(Value : out REAL;<br><span style="padding-left:20px"> StandardDeviation : in REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in REAL;<br><span style="padding-left:20px"> Maximum : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomPoissonDistributedValue <font id="function_arguments">(Value : out REAL;<br><span style="padding-left:20px"> Mean : in REAL) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Poisson distributed random values===========================================================================</p></div><ul>
+ Poisson distributed random values<br />
+ ===========================================================================</p></div><ul>
 <li>randomPoissonDistributedValue <font id="function_arguments">(Value : out integer;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in integer;<br><span style="padding-left:20px"> Maximum : in integer) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>randomPoissonDistributedValue <font id="function_arguments">(Value : out REAL;<br><span style="padding-left:20px"> Mean : in REAL;<br><span style="padding-left:20px"> Minimum : in REAL;<br><span style="padding-left:20px"> Maximum : in REAL) </font> <font id="function_return">return ()</font></li>

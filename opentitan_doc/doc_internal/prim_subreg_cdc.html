@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1019,9 +1094,9 @@
   <article class="markdown-body">
 
 <div id="teroshdl" class='templateTerosHDL'>
-<a id=nmi_gen><h1 id="entity-nmi_gen">Entity: nmi_gen</h1></a><ul>
-<li><strong>File</strong>: nmi_gen.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 695 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="195,0 210,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="290" height="30" fill="black" x="210" y="0"></rect><rect id="SvgjsRect1007" width="286" height="25" fill="#bdecb6" x="212" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="190" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   int unsigned </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="225" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   N_ESC_SEV </tspan></text><line id="SvgjsLine1012" x1="195" y1="15" x2="210" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1013" width="290" height="130" fill="black" x="210" y="35"></rect><rect id="SvgjsRect1014" width="286" height="125" fill="#fdfd96" x="212" y="37"></rect><text id="SvgjsText1015" font-family="Helvetica" x="190" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1017" font-family="Helvetica" x="225" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1018" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1019" x1="195" y1="50" x2="210" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1020" font-family="Helvetica" x="190" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="225" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1024" x1="195" y1="70" x2="210" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="190" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="225" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1029" x1="195" y1="90" x2="210" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="190" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="190" svgjs:data="{&quot;newLined&quot;:true}">   [N_ESC_SEV-1:0] </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="225" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="225" svgjs:data="{&quot;newLined&quot;:true}">   esc_tx_i </tspan></text><line id="SvgjsLine1034" x1="195" y1="110" x2="210" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="520" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="485" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1039" x1="500" y1="50" x2="515" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="520" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="485" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   intr_esc0_o </tspan></text><line id="SvgjsLine1044" x1="500" y1="70" x2="515" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="520" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="485" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   intr_esc1_o </tspan></text><line id="SvgjsLine1049" x1="500" y1="90" x2="515" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="520" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="485" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   intr_esc2_o </tspan></text><line id="SvgjsLine1054" x1="500" y1="110" x2="515" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="520" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="485" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   nmi_rst_req_o </tspan></text><line id="SvgjsLine1059" x1="500" y1="130" x2="515" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="520" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="520" svgjs:data="{&quot;newLined&quot;:true}">   [N_ESC_SEV-1:0] </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="485" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="485" svgjs:data="{&quot;newLined&quot;:true}">   esc_rx_o </tspan></text><line id="SvgjsLine1064" x1="500" y1="150" x2="515" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0NMI generator. This is a simple helper unit that wraps the escalation signalreceivers and converts them into interrupts such that they can be tested in system.See also alert handler documentation for more context.</p></div><h2 id="generics">Generics</h2>
+<a id=prim_subreg_cdc><h1 id="entity-prim_subreg_cdc">Entity: prim_subreg_cdc</h1></a><ul>
+<li><strong>File</strong>: prim_subreg_cdc.sv</li>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 565 230"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="125,0 140,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="300" height="50" fill="black" x="140" y="0"></rect><rect id="SvgjsRect1007" width="296" height="45" fill="#bdecb6" x="142" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="120" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="155" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   DW </tspan></text><line id="SvgjsLine1012" x1="125" y1="15" x2="140" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="120" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   logic [DW-1:0] </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="155" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   DW </tspan></text><line id="SvgjsLine1017" x1="125" y1="35" x2="140" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="300" height="170" fill="black" x="140" y="55"></rect><rect id="SvgjsRect1019" width="296" height="165" fill="#fdfd96" x="142" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="120" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="155" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   clk_src_i </tspan></text><line id="SvgjsLine1024" x1="125" y1="70" x2="140" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="120" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="155" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   rst_src_ni </tspan></text><line id="SvgjsLine1029" x1="125" y1="90" x2="140" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="120" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="155" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   clk_dst_i </tspan></text><line id="SvgjsLine1034" x1="125" y1="110" x2="140" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="120" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="155" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   rst_dst_ni </tspan></text><line id="SvgjsLine1039" x1="125" y1="130" x2="140" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="120" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="155" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   src_update_i </tspan></text><line id="SvgjsLine1044" x1="125" y1="150" x2="140" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="120" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="155" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   src_req_i </tspan></text><line id="SvgjsLine1049" x1="125" y1="170" x2="140" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="120" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   [DW-1:0] </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="155" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   src_data_i </tspan></text><line id="SvgjsLine1054" x1="125" y1="190" x2="140" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="120" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="120" svgjs:data="{&quot;newLined&quot;:true}">   [DW-1:0] </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="155" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="155" svgjs:data="{&quot;newLined&quot;:true}">   dst_data_i </tspan></text><line id="SvgjsLine1059" x1="125" y1="210" x2="140" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="460" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="460" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="425" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   src_busy_o </tspan></text><line id="SvgjsLine1064" x1="440" y1="70" x2="455" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="460" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="460" svgjs:data="{&quot;newLined&quot;:true}">   [DW-1:0] </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="425" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   src_data_o </tspan></text><line id="SvgjsLine1069" x1="440" y1="90" x2="455" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="460" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="460" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="425" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   dst_req_o </tspan></text><line id="SvgjsLine1074" x1="440" y1="110" x2="455" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="460" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="460" svgjs:data="{&quot;newLined&quot;:true}">   [DW-1:0] </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="425" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="425" svgjs:data="{&quot;newLined&quot;:true}">   dst_data_o </tspan></text><line id="SvgjsLine1079" x1="440" y1="130" x2="455" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Component handling register CDC</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1033,10 +1108,16 @@
 </thead>
 <tbody>
 <tr>
-<td>N_ESC_SEV</td>
-<td>int unsigned</td>
-<td>3</td>
-<td>leave constant</td>
+<td>DW</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>DW</td>
+<td>logic [DW-1:0]</td>
+<td>'0</td>
+<td>Reset value</td>
 </tr>
 </tbody>
 </table>
@@ -1052,63 +1133,75 @@
 </thead>
 <tbody>
 <tr>
-<td>clk_i</td>
+<td>clk_src_i</td>
 <td>input</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>rst_ni</td>
+<td>rst_src_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>tl_i</td>
+<td>clk_dst_i</td>
 <td>input</td>
 <td></td>
-<td>Bus Interface (device)</td>
-</tr>
-<tr>
-<td>tl_o</td>
-<td>output</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
-<td>intr_esc0_o</td>
-<td>output</td>
-<td></td>
-<td>Interrupt Requests</td>
-</tr>
-<tr>
-<td>intr_esc1_o</td>
-<td>output</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>intr_esc2_o</td>
-<td>output</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>nmi_rst_req_o</td>
-<td>output</td>
-<td></td>
-<td>Reset Requests</td>
-</tr>
-<tr>
-<td>esc_tx_i</td>
+<td>rst_dst_ni</td>
 <td>input</td>
-<td>[N_ESC_SEV-1:0]</td>
-<td>Escalation outputs</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>esc_rx_o</td>
+<td>src_update_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>src_req_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>src_data_i</td>
+<td>input</td>
+<td>[DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>src_busy_o</td>
 <td>output</td>
-<td>[N_ESC_SEV-1:0]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>src_data_o</td>
+<td>output</td>
+<td>[DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_data_i</td>
+<td>input</td>
+<td>[DW-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>dst_req_o</td>
+<td>output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dst_data_o</td>
+<td>output</td>
+<td>[DW-1:0]</td>
 <td></td>
 </tr>
 </tbody>
@@ -1123,49 +1216,44 @@
 </thead>
 <tbody>
 <tr>
-<td>esc_en</td>
-<td>logic [N_ESC_SEV-1:0]</td>
+<td>src_ack</td>
+<td>logic</td>
+<td>//////////////////////////  Source domain //////////////////////////</td>
+</tr>
+<tr>
+<td>src_busy_q</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>reg2hw</td>
-<td>nmi_gen_reg_pkg::nmi_gen_reg2hw_t</td>
+<td>src_q</td>
+<td>logic [DW-1:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>hw2reg</td>
-<td>nmi_gen_reg_pkg::nmi_gen_hw2reg_t</td>
+<td>busy</td>
+<td>logic</td>
+<td>src_q acts as both the write holding register and the software read back  register.  When software performs a write, the write data is captured in src_q for  CDC purposes.  When not performing a write, the src_q periodically  samples the destination domain using the src_update_i indication.<br>  To resolve software and hardware conflicts, the process is as follows:  When software issues a write, this module asserts "busy".  While busy,  src_q does not sample the destination value.  Since the  logic has committed to updating based on software command, there is an irreversible  window from which hardware writes are ignored.  Once the busy window completes,  the cdc portion then begins sampling once more.<br>  This is consistent with prim_subreg_arb where during software / hardware conflicts,  software is always prioritized.  The main difference is the conflict resolution window  is now larger instead of just one destination clock cycle.</td>
+</tr>
+<tr>
+<td>async_flag</td>
+<td>logic</td>
 <td></td>
 </tr>
 </tbody>
-</table>
-<h2 id="constants">Constants</h2>
-<table>
-<thead>
-<tr>
-<th id="name">Name</th>
-<th id="type">Type</th>
-<th id="value">Value</th>
-<th id="description">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N_ESC_SEV</td>
-<td>int unsigned</td>
-<td>3</td>
-<td>leave constant</td>
-</tr>
-</tbody>
-</table><h2 id="instantiations">Instantiations</h2><ul>
-<li>u_reg: nmi_gen_reg_top</li>
-</ul><ul>
-<li>i_intr_esc0: prim_intr_hw</li>
-</ul><ul>
-<li>i_intr_esc1: prim_intr_hw</li>
-</ul><ul>
-<li>i_intr_esc2: prim_intr_hw</li>
-</ul><br><br><br><br><br><br>
+</table><h2 id="processes">Processes</h2><ul>
+<li>unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><div id="descriptions"><p><strong>Description</strong><br />
+ busy indication back-pressures upstream if the register is accessed  again.  The busy indication is also used as a "commit" indication for  resolving software and hardware write conflicts </p></div><ul>
+<li>unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: ( @(posedge src_req_i or posedge ds )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><h2 id="instantiations">Instantiations</h2><ul>
+<li>u_prim_sync: prim_sync_reqack</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+//////////////////////////<br />
+ CDC handling<br />
+//////////////////////////</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

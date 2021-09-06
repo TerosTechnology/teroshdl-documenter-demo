@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1042,85 +1117,108 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>find_leftmost <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> Y : BIT) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: A.39</p></div><ul>
+ Result subtype: bit_vector(R'LENGTH-1 downto 0)<br />
+ Result: Computes "L mod R" where R is an UNSIGNED vector and L<br />
+         is a non-negative INTEGER.</p>
+<h1 id="---------if-no_of_bitsl--rlength-result-is-truncated-to-rlength">         If NO_OF_BITS(L) &gt; R'LENGTH, result is truncated to R'LENGTH.</h1>
+<p>Id: A.39</p></div><ul>
 <li>find_rightmost <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> Y : BIT) </font> <font id="function_return">return INTEGER </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: INTEGER<br />
-Result: Finds the leftmost occurrence of the value of Y in ARG.<br />
-        Returns the index of the occurrence if it exists, or -1 otherwise.<br />
-Id: A.41</p></div><ul>
+ Result subtype: INTEGER<br />
+ Result: Finds the leftmost occurrence of the value of Y in ARG.<br />
+         Returns the index of the occurrence if it exists, or -1 otherwise.<br />
+ Id: A.41</p></div><ul>
 <li>MINIMUM <font id="function_arguments">(L,<br><span style="padding-left:20px"> R : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: C.37</p></div><ul>
+ Result subtype: BOOLEAN<br />
+ Result: Computes "L /= R" where L is an UNSIGNED vector and</p>
+<h1 id="---------r-is-a-non-negative-integer">         R is a non-negative INTEGER.</h1>
+<p>Id: C.37</p></div><ul>
 <li>MINIMUM <font id="function_arguments">(L : NATURAL;<br><span style="padding-left:20px"> R : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: BIT_VECTOR<br />
-Result: Returns the lesser of two UNSIGNED vectors that may be<br />
-        of different lengths.<br />
-Id: C.39</p></div><ul>
+ Result subtype: BIT_VECTOR<br />
+ Result: Returns the lesser of two UNSIGNED vectors that may be<br />
+         of different lengths.<br />
+ Id: C.39</p></div><ul>
 <li>MINIMUM <font id="function_arguments">(L : BIT_VECTOR;<br><span style="padding-left:20px"> R : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: BIT_VECTOR<br />
-Result: Returns the lesser of a nonnegative INTEGER, L, and<br />
-        an UNSIGNED vector, R.<br />
-Id: C.41</p></div><ul>
+ Result subtype: BIT_VECTOR<br />
+ Result: Returns the lesser of a nonnegative INTEGER, L, and<br />
+         an UNSIGNED vector, R.<br />
+ Id: C.41</p></div><ul>
 <li>MAXIMUM <font id="function_arguments">(L,<br><span style="padding-left:20px"> R : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: C.43</p></div><ul>
+ Result subtype: BIT_VECTOR<br />
+ Result: Returns the lesser of an UNSIGNED vector, L, and</p>
+<h1 id="---------a-nonnegative-integer-r">         a nonnegative INTEGER, R.</h1>
+<p>Id: C.43</p></div><ul>
 <li>MAXIMUM <font id="function_arguments">(L : NATURAL;<br><span style="padding-left:20px"> R : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: BIT_VECTOR<br />
-Result: Returns the greater of two UNSIGNED vectors that may be<br />
-        of different lengths.<br />
-Id: C.45</p></div><ul>
+ Result subtype: BIT_VECTOR<br />
+ Result: Returns the greater of two UNSIGNED vectors that may be<br />
+         of different lengths.<br />
+ Id: C.45</p></div><ul>
 <li>MAXIMUM <font id="function_arguments">(L : BIT_VECTOR;<br><span style="padding-left:20px"> R : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: BIT_VECTOR<br />
-Result: Returns the greater of a nonnegative INTEGER, L, and<br />
-        an UNSIGNED vector, R.<br />
-Id: C.47</p></div><ul>
+ Result subtype: BIT_VECTOR<br />
+ Result: Returns the greater of a nonnegative INTEGER, L, and<br />
+         an UNSIGNED vector, R.<br />
+ Id: C.47</p></div><ul>
 <li>SHIFT_LEFT <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> COUNT : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: S.1</p></div><ul>
+ Result subtype: BIT<br />
+ Result: Computes "L /= R" where L is an UNSIGNED vector and</p>
+<h1 id="---------r-is-a-nonnegative-integer">         R is a nonnegative INTEGER.</h1>
+<h1 id="-shift-and-rotate-functions"> Shift and Rotate Functions</h1>
+<p>Id: S.1</p></div><ul>
 <li>SHIFT_RIGHT <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> COUNT : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: bit_vector(ARG'LENGTH-1 downto 0)<br />
-Result: Performs a shift-left on an UNSIGNED vector COUNT times.<br />
-        The vacated positions are filled with '0'.<br />
-        The COUNT leftmost elements are lost.<br />
-Id: S.2</p></div><ul>
+ Result subtype: bit_vector(ARG'LENGTH-1 downto 0)<br />
+ Result: Performs a shift-left on an UNSIGNED vector COUNT times.<br />
+         The vacated positions are filled with '0'.<br />
+         The COUNT leftmost elements are lost.<br />
+ Id: S.2</p></div><ul>
 <li>ROTATE_LEFT <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> COUNT : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: S.5</p></div><ul>
+ Result subtype: UNSIGNED(ARG'LENGTH-1 downto 0)<br />
+ Result: Performs a shift-right on an UNSIGNED vector COUNT times.<br />
+         The vacated positions are filled with '0'.</p>
+<h1 id="---------the-count-rightmost-elements-are-lost">         The COUNT rightmost elements are lost.</h1>
+<p>Id: S.5</p></div><ul>
 <li>ROTATE_RIGHT <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> COUNT : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: bit_vector(ARG'LENGTH-1 downto 0)<br />
-Result: Performs a rotate-left of an UNSIGNED vector COUNT times.<br />
-Id: S.6</p></div><ul>
+ Result subtype: bit_vector(ARG'LENGTH-1 downto 0)<br />
+ Result: Performs a rotate-left of an UNSIGNED vector COUNT times.<br />
+ Id: S.6</p></div><ul>
 <li>RESIZE <font id="function_arguments">(ARG : BIT_VECTOR;<br><span style="padding-left:20px"> NEW_SIZE : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: R.2</p></div><ul>
+ Result subtype: BIT_VECTOR(ARG'LENGTH-1 downto 0)</p>
+<h1 id="-result-shift_rightarg-count"> Result: SHIFT_RIGHT(ARG, COUNT)</h1>
+<h1 id="---resize-functions">   RESIZE Functions</h1>
+<p>Id: R.2</p></div><ul>
 <li>RESIZE <font id="function_arguments">(ARG,<br><span style="padding-left:20px"> SIZE_RES : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: bit_vector(NEW_SIZE-1 downto 0)<br />
-Result: Resizes the UNSIGNED vector ARG to the specified size.<br />
-        To create a larger vector, the new [leftmost] bit positions<br />
-        are filled with '0'. When truncating, the leftmost bits<br />
-        are dropped.</p></div><ul>
+ Result subtype: bit_vector(NEW_SIZE-1 downto 0)<br />
+ Result: Resizes the UNSIGNED vector ARG to the specified size.<br />
+         To create a larger vector, the new [leftmost] bit positions<br />
+         are filled with '0'. When truncating, the leftmost bits<br />
+         are dropped.</p></div><ul>
 <li>TO_INTEGER <font id="function_arguments">(ARG : BIT_VECTOR) </font> <font id="function_return">return NATURAL </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Id: D.1</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<h1 id="-result-subtype-bit_vector-size_reslength-1-downto-0"> Result subtype: BIT_VECTOR (SIZE_RES'length-1 downto 0)</h1>
+<h1 id="-conversion-functions"> Conversion Functions</h1>
+<p>Id: D.1</p></div><ul>
 <li>To_BitVector <font id="function_arguments">(ARG,<br><span style="padding-left:20px"> SIZE : NATURAL) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: NATURAL. Value cannot be negative since parameter is an<br />
-            UNSIGNED vector.<br />
-Result: Converts the UNSIGNED vector to an INTEGER.<br />
-Id: D.3</p></div><ul>
+ Result subtype: NATURAL. Value cannot be negative since parameter is an<br />
+             UNSIGNED vector.<br />
+ Result: Converts the UNSIGNED vector to an INTEGER.<br />
+ Id: D.3</p></div><ul>
 <li>To_BitVector <font id="function_arguments">(ARG : NATURAL;<br><span style="padding-left:20px"> SIZE_RES : BIT_VECTOR) </font> <font id="function_return">return BIT_VECTOR </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Result subtype: bit_vector(SIZE-1 downto 0)<br />
-Result: Converts a non-negative INTEGER to an UNSIGNED vector with<br />
-        the specified size.</p></div><br><br><br><br><br><br>
+ Result subtype: bit_vector(SIZE-1 downto 0)<br />
+ Result: Converts a non-negative INTEGER to an UNSIGNED vector with<br />
+         the specified size.</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

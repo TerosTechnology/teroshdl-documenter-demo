@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1055,8 +1130,20 @@
 <tr>
 <td>OtpTestCtrlWidth</td>
 <td>int</td>
+<td>32</td>
+<td>//////////////////////  General Parameters // //////////////////////  Number of vendor-specific test CSR bits coming from and going to  the life cycle TAP registers.</td>
+</tr>
+<tr>
+<td>OtpTestStatusWidth</td>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>OtpTestVectWidth</td>
+<td>int</td>
 <td>8</td>
-<td>Number of vendor-specific test CSR bits coming from the life cycle TAP registers.</td>
+<td></td>
 </tr>
 <tr>
 <td>EdnDataWidth</td>
@@ -1086,7 +1173,7 @@
 <td>LfsrUsageThreshold</td>
 <td>int</td>
 <td>16</td>
-<td>The LFSR will be reseeded once LfsrUsageThreshold values have been drawn from it.</td>
+<td>The LFSR will be reseeded once LfsrUsageThreshold  values have been drawn from it.</td>
 </tr>
 <tr>
 <td>DaiCmdWidth</td>
@@ -1101,7 +1188,13 @@
 <td>Width of HW CFG Enable Fields</td>
 </tr>
 <tr>
-<td>DeviceIdwidth</td>
+<td>DeviceIdWidth</td>
+<td>int</td>
+<td>256</td>
+<td></td>
+</tr>
+<tr>
+<td>ManufStateWidth</td>
 <td>int</td>
 <td>256</td>
 <td></td>
@@ -1110,7 +1203,7 @@
 <td>OtpWidth</td>
 <td>int</td>
 <td>16</td>
-<td>OTP-macro specific</td>
+<td>////////////////////////////////////  Typedefs for OTP Macro Interface // ////////////////////////////////////  OTP-macro specific</td>
 </tr>
 <tr>
 <td>OtpAddrWidth</td>
@@ -1158,7 +1251,7 @@
 <td>ScrmblKeyWidth</td>
 <td>int</td>
 <td>128</td>
-<td></td>
+<td>///////////////////////////////  Typedefs for OTP Scrambling // ///////////////////////////////</td>
 </tr>
 <tr>
 <td>ScrmblBlockWidth</td>
@@ -1182,13 +1275,13 @@
 <td>otp_lc_data_t</td>
 <td>otp_lc_data_t</td>
 <td>undefined</td>
-<td>Default for dangling connection. Note that we put the life cycle into TEST_UNLOCKED0 by default such that top levels without the OTP controller can still function.</td>
+<td>Default for dangling connection.  Note that we put the life cycle into  TEST_UNLOCKED0 by default such that top levels without  the OTP controller can still function.</td>
 </tr>
 <tr>
 <td>FlashKeySeedWidth</td>
 <td>int</td>
 <td>256</td>
-<td></td>
+<td>//////////////////////////////  Typedefs for Key Broadcast // //////////////////////////////</td>
 </tr>
 <tr>
 <td>SramKeySeedWidth</td>
@@ -1245,6 +1338,12 @@
 <td>Default for dangling connection</td>
 </tr>
 <tr>
+<td>sram_otp_key_rsp_t</td>
+<td>sram_otp_key_rsp_t</td>
+<td>undefined</td>
+<td>Default for dangling connection</td>
+</tr>
+<tr>
 <td>RndCnstLfsrSeedDefault</td>
 <td>lfsr_seed_t</td>
 <td>40'h453d28ea98</td>
@@ -1271,7 +1370,7 @@
 <tr>
 <td>access_e</td>
 <td>enum logic [7:0] {<br><span style="padding-left:20px">     Unlocked = 8'h5A,<br><span style="padding-left:20px">     Locked   = 8'hA5   }</td>
-<td>Redundantly encoded and complementary values are used to for signalling to the partition controller FSMs and the DAI whether a partition is locked or not. Any other value than "Unlocked" is interpreted as "Locked" in those FSMs.</td>
+<td>Redundantly encoded and complementary values are used to for signalling to the partition  controller FSMs and the DAI whether a partition is locked or not. Any other value than  "Unlocked" is interpreted as "Locked" in those FSMs.</td>
 </tr>
 <tr>
 <td>part_access_t</td>
@@ -1295,7 +1394,12 @@
 </tr>
 <tr>
 <td>otp_device_id_t</td>
-<td>logic [DeviceIdwidth-1:0]</td>
+<td>logic [DeviceIdWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>otp_manuf_state_t</td>
+<td>logic [ManufStateWidth-1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -1311,11 +1415,11 @@
 <tr>
 <td>otp_lc_data_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     logic                            valid;<br><span style="padding-left:20px">     logic                            error;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_state_e    state;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_cnt_e      count;<br><span style="padding-left:20px">                    lc_ctrl_pkg::lc_tx_t             secrets_valid;<br><span style="padding-left:20px">               lc_ctrl_pkg::lc_tx_t             test_tokens_valid;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_token_t    test_unlock_token;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_token_t    test_exit_token;<br><span style="padding-left:20px">               lc_ctrl_pkg::lc_tx_t             rma_token_valid;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_token_t    rma_token;<br><span style="padding-left:20px">   }</td>
-<td>The tokens below are all hash post-images</td>
+<td>/////////////////////////////  Typedefs for LC Interface // /////////////////////////////  The tokens below are all hash post-images</td>
 </tr>
 <tr>
 <td>lc_otp_program_req_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic req;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_state_e state;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_cnt_e   count;<br><span style="padding-left:20px">     logic [OtpTestCtrlWidth-1:0]  otp_test_ctrl;<br><span style="padding-left:20px">   }</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic req;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_state_e state;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_cnt_e   count;<br><span style="padding-left:20px">   }</td>
 <td></td>
 </tr>
 <tr>
@@ -1331,6 +1435,16 @@
 <tr>
 <td>lc_otp_token_rsp_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     logic ack;<br><span style="padding-left:20px">     lc_ctrl_state_pkg::lc_token_t hashed_token;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_otp_vendor_test_req_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [OtpTestCtrlWidth-1:0] ctrl;<br><span style="padding-left:20px">   }</td>
+<td></td>
+</tr>
+<tr>
+<td>lc_otp_vendor_test_rsp_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic [OtpTestStatusWidth-1:0] status;<br><span style="padding-left:20px">   }</td>
 <td></td>
 </tr>
 <tr>
@@ -1380,7 +1494,7 @@
 </tr>
 <tr>
 <td>sram_otp_key_rsp_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic        ack;<br><span style="padding-left:20px">              sram_key_t   key;<br><span style="padding-left:20px">             sram_nonce_t nonce;<br><span style="padding-left:20px">           logic        seed_valid;<br><span style="padding-left:20px">    }</td>
+<td>struct packed {<br><span style="padding-left:20px">     logic        ack;<br><span style="padding-left:20px">             sram_key_t   key;<br><span style="padding-left:20px">             sram_nonce_t nonce;<br><span style="padding-left:20px">           logic        seed_valid;<br><span style="padding-left:20px">    }</td>
 <td></td>
 </tr>
 <tr>
@@ -1391,7 +1505,7 @@
 <tr>
 <td>pwr_otp_init_req_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     logic init;<br><span style="padding-left:20px">   }</td>
-<td></td>
+<td>//////////////////////////////  Power/Reset Ctrl Interface // //////////////////////////////</td>
 </tr>
 <tr>
 <td>pwr_otp_init_rsp_t</td>
@@ -1406,7 +1520,7 @@
 <tr>
 <td>otp_ast_req_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     logic [OtpPwrSeqWidth-1:0] pwr_seq;<br><span style="padding-left:20px">   }</td>
-<td></td>
+<td>/////////////////  AST Interface // /////////////////</td>
 </tr>
 <tr>
 <td>otp_ast_rsp_t</td>
@@ -1416,7 +1530,7 @@
 <tr>
 <td>lfsr_seed_t</td>
 <td>logic [LfsrWidth-1:0]</td>
-<td>These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 40 --seed 4247488366</td>
+<td>/////////////////////////////////////////  Defaults for random netlist constants // /////////////////////////////////////////  These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 40 --seed 4247488366</td>
 </tr>
 <tr>
 <td>lfsr_perm_t</td>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1044,7 +1119,53 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>VitalAND <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>VITAL Primitives</p>
+<p>The primitives packages contains a collections of common gates, <br />
+ including AND, OR, XOR, NAND, NOR, XNOR, BUF, INV, MUX and DECODER <br />
+ functions.  In addition, for sequential devices, a STATE TABLE construct<br />
+ is provided.  For complex functions a modeler may wish to use either<br />
+ a collection of connected VITAL primitives, or a TRUTH TABLE construct.</p>
+<p>For each primitive a Function and Procedure is provided.  The primitive<br />
+ functions are provided to support behavioral modeling styles.  The <br />
+ primitive procedures are provided to support structural modeling styles.</p>
+<p>The procedures wait internally for an event on an input signal, compute<br />
+ the new result, perform glitch handling, schedule transaction on the<br />
+ output signals, and wait for future input events.  All of the functional <br />
+ (logic) input or output parameters of the primitive procedures are<br />
+ signals.  All the other parameters are constants.</p>
+<p>The procedure primitives are parameterized for separate path delays <br />
+ from each input signal.  All path delays default to 0 ns.</p>
+<p>The sequential primitive functions compute the defined function and <br />
+ return a value of type std_ulogic or std_logic_vector.  All parameters<br />
+ of the primitive functions are constants of mode IN.</p>
+<p>The primitives are based on 1164 operators. The user may also elect to<br />
+   express functions using the 1164 operators as well.  These styles are<br />
+   all equally acceptable methods for device modeling.</p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   N-input logic device function calls:<br />
+                    VitalAND  VitalOR  VitalXOR <br />
+                    VitalNAND VitalNOR VitalXNOR             </p>
+<p>Description:     The function calls return the evaluated logic function<br />
+                  corresponding to the function name.</p>
+<p>Arguments:         </p>
+<p>IN                Type                  Description<br />
+   Data              std_logic_vector      The input signals for the n-bit<br />
+                                           wide logic functions.<br />
+   ResultMap         VitalResultMapType    The output signal strength<br />
+                                           result map to modify default<br />
+                                           result mapping.  </p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+                      std_ulogic           The evaluated logic function of<br />
+                                           the n-bit wide primitives.</p>
+<hr /></div><ul>
 <li>VitalOR <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalXOR <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
@@ -1056,7 +1177,35 @@
 <li>VitalXNOR <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalAND <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  N-input logic device concurrent procedure calls.<br />
+                         VitalAND  VitalOR  VitalXOR <br />
+                         VitalNAND VitalNOR VitalXNOR             </p>
+<p>Description:     The procedure calls return the evaluated logic function<br />
+                  corresponding to the function name as a parameter to the<br />
+                  procedure.  Propagation delay form data to q is a<br />
+                  a parameter to the procedure.  A vector of delay values<br />
+                  for inputs to output are provided.  It is noted that<br />
+                  limitations in SDF make the back annotation of the delay<br />
+                  array difficult.</p>
+<p>Arguments:         </p>
+<p>IN                  Type                  Description<br />
+   Data               std_logic_vector       The input signals for the n-<br />
+                                             bit wide logic functions.<br />
+   tpd_data_q         VitalDelayArrayType01  The propagation delay from<br />
+                                             the data inputs to the output<br />
+                                             q.</p>
+<p>INOUT<br />
+   none </p>
+<p>OUT<br />
+   q                  std_ulogic             The output signal of the <br />
+                                             evaluated logic function.</p>
+<p>Returns  <br />
+   none            </p>
+<hr /></div><ul>
 <li>VitalOR <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalXOR <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
@@ -1068,7 +1217,36 @@
 <li>VitalXNOR <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalAND2 <font id="function_arguments">( CONSTANT       a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   2,3 and 4 input logic device function calls.</p>
+<pre><code>                VitalAND2    VitalOR2    VitalXOR2 
+                VitalAND3    VitalOR3    VitalXOR3             
+                VitalAND4    VitalOR4    VitalXOR4
+
+                VitalNAND2   VitalNOR2   VitalXNOR2             
+                VitalNAND3   VitalNOR3   VitalXNOR3 
+                VitalNAND4   VitalNOR4   VitalXNOR4             </code></pre>
+<p>Description:     The function calls return the evaluated 2, 3 or 4 input<br />
+                  logic function corresponding to the function name.</p>
+<p>Arguments:         </p>
+<p>IN             Type               Description<br />
+   a, b, c, d     std_ulogic         2 input devices have a and b as <br />
+                                     inputs.  3 input devices have a, b<br />
+                                     and c as inputs.  4 input devices <br />
+                                     have a, b, c and d as inputs.<br />
+   ResultMap      VitalResultMapType The output signal strength result map<br />
+                                     to modify default result mapping.   </p>
+<p>INOUT<br />
+   none  </p>
+<p>OUT<br />
+   none </p>
+<p>Returns              <br />
+                   std_ulogic        The result of the evaluated logic<br />
+                                     function.</p>
+<hr /></div><ul>
 <li>VitalOR2 <font id="function_arguments">( CONSTANT       a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalXOR2 <font id="function_arguments">( CONSTANT       a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
@@ -1104,8 +1282,52 @@
 <li>VitalXNOR4 <font id="function_arguments">( CONSTANT a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalAND2 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
- Returns                none-------------------------------------------------------------------------</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  2, 3 and 4 input logic device concurrent procedure<br />
+                  calls.</p>
+<pre><code>                VitalAND2    VitalOR2    VitalXOR2 
+                VitalAND3    VitalOR3    VitalXOR3             
+                VitalAND4    VitalOR4    VitalXOR4
+
+                VitalNAND2   VitalNOR2   VitalXNOR2             
+                VitalNAND3   VitalNOR3   VitalXNOR3 
+                VitalNAND4   VitalNOR4   VitalXNOR4             </code></pre>
+<p>Description:     The procedure calls return the evaluated logic function<br />
+                  corresponding to the function name as a parameter to the<br />
+                  procedure.  Propagation delays from a and b to q are <br />
+                  a parameter to the procedure.  The default propagation<br />
+                  delay is 0 ns.  </p>
+<p>Arguments:         </p>
+<p>IN             Type               Description<br />
+   a, b, c, d     std_ulogic         2 input devices have a and b as <br />
+                                     inputs.  3 input devices have a, b<br />
+                                     and c as inputs.  4 input devices <br />
+                                     have a, b, c and d as inputs.<br />
+   tpd_a_q        VitalDelayType01   The propagation delay from the a<br />
+                                     input to output q for 2, 3 and 4 <br />
+                                     input devices.<br />
+   tpd_b_q        VitalDelayType01   The propagation delay from the b<br />
+                                     input to output q for 2, 3 and 4 <br />
+                                     input devices.<br />
+   tpd_c_q        VitalDelayType01   The propagation delay from the c<br />
+                                     input to output q for 3 and 4 input <br />
+                                     devices.<br />
+   tpd_d_q        VitalDelayType01   The propagation delay from the d<br />
+                                     input to output q for 4 input <br />
+                                     devices.<br />
+   ResultMap      VitalResultMapType The output signal strength result map<br />
+                                     to modify default result mapping.  </p>
+<p>INOUT<br />
+   none </p>
+<p>OUT<br />
+   q              std_ulogic         The output signal of the evaluated<br />
+                                     logic function.</p>
+<p>Returns              <br />
+   none</p>
+<hr /></div><ul>
 <li>VitalOR2 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalXOR2 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
@@ -1141,7 +1363,40 @@
 <li>VitalXNOR4 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL   a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_c_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_d_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalBUF <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   Buffer logic device concurrent procedure calls.</p>
+<p>Description:     Four buffer sequential primitive function calls are<br />
+                  provided.  One is a simple buffer and the others <br />
+                  offer high and low enables and the four permits<br />
+                  propagation of Z as shown below:</p>
+<pre><code>                 VitalBUF     Standard non-inverting buffer
+                 VitalBUFIF0  Non-inverting buffer with Enable low
+                 VitalBUFIF1  Non-inverting buffer with Enable high
+                 VitalIDENT   Pass buffer capable of propagating Z</code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   Data          std_ulogic          Input to the buffers<br />
+   Enable        std_ulogic          Enable for the enable high and low<br />
+                                     buffers.<br />
+   ResultMap     VitalResultMapType  The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     simple buffer.  <br />
+                 VitalResultZMapType The output signal strength result map<br />
+                                     to modify default result mapping<br />
+                                     which has high impedance capability<br />
+                                     for the enable high, enable low and<br />
+                                     identity buffers.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+                  std_ulogic        The output signal of the evaluated <br />
+                                    buffer function.</p>
+<hr /></div><ul>
 <li>VitalBUFIF0 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalBUFIF1 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
@@ -1149,7 +1404,47 @@
 <li>VitalIDENT <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalBUF <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  Buffer device procedure calls. </p>
+<p>Description:     Four buffer concurrent primitive procedure calls are<br />
+                  provided.  One is a simple buffer and the others <br />
+                  offer high and low enables and the fourth permits<br />
+                  propagation of Z as shown below:</p>
+<pre><code>                 VitalBUF     Standard non-inverting buffer
+                 VitalBUFIF0  Non-inverting buffer with Enable low
+                 VitalBUFIF1  Non-inverting buffer with Enable high
+                 VitalIDENT   Pass buffer capable of propagating Z</code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   a             std_ulogic          Input signal to the buffers<br />
+   Enable        std_ulogic          Enable signal for the enable high and <br />
+                                     low buffers.<br />
+   tpd_a_q       VitalDelayType01    Propagation delay from input to <br />
+                                     output for the simple buffer.<br />
+                 VitalDelayType01Z   Propagation delay from input to <br />
+                                     to output for the enable high and low<br />
+                                     and identity buffers.<br />
+   tpd_enable_q  VitalDelayType01Z   Propagation delay from enable to<br />
+                                     output for the enable high and low<br />
+                                     buffers.<br />
+   ResultMap     VitalResultMapType  The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     simple buffer.  <br />
+                 VitalResultZMapType The output signal strength result map<br />
+                                     to modify default result mapping<br />
+                                     which has high impedance capability<br />
+                                     for the enable high, enable low and<br />
+                                     identity buffers.</p>
+<p>INOUT<br />
+  none   </p>
+<p>OUT<br />
+  q              std_ulogic          Output of the buffers.   </p>
+<p>Returns <br />
+  none             </p>
+<hr /></div><ul>
 <li>VitalBUFIF0 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalBUFIF1 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font></li>
@@ -1157,19 +1452,119 @@
 <li>VitalIDENT <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalINV <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   VitalINV, VitalINVIF0, VitalINVIF1</p>
+<p>Description:     Inverter functions which return the inverted signal<br />
+                  value.  Inverters with enable low and high are provided<br />
+                  which can drive high impedance when inactive.</p>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   Data          std_ulogic          Input to the inverter<br />
+   Enable        std_ulogic          Enable to the enable high and low<br />
+                                     inverters.<br />
+   ResultMap     VitalResultMap      The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     simple inverter.<br />
+                 VitalResultZMapType The output signal strength result map<br />
+                                     to modify default result mapping<br />
+                                     which has high impedance capability<br />
+                                     for the enable high, enable low<br />
+                                     inverters.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+                 std_ulogic          Output of the inverter</p>
+<hr /></div><ul>
 <li>VitalINVIF0 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalINVIF1 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalINV <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  VitalINV, VitalINVIF0, VitalINVIF1</p>
+<p>Description:     The concurrent primitive procedure calls implement a <br />
+                  signal inversion function.  The output is a parameter to<br />
+                  the procedure.  The path delay information is passed as<br />
+                  a parameter to the call.</p>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   a             std_ulogic          Input signal for the simple inverter<br />
+   Data          std_ulogic          Input signal for the enable high and<br />
+                                     low inverters.<br />
+   Enable        std_ulogic          Enable signal for the enable high and <br />
+                                     low inverters.<br />
+   tpd_a_q       VitalDelayType01    Propagation delay from input a to<br />
+                                     output q for the simple inverter.<br />
+   tpd_data_q    VitalDelayType01    Propagation delay from input data to<br />
+                                     output q for the enable high and low<br />
+                                     inverters.<br />
+   tpd_enable_q  VitalDelayType01Z   Propagation delay from input enable<br />
+                                     to output q for the enable high and <br />
+                                     low inverters.<br />
+   ResultMap     VitalResultMapType  The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     simple inverter. <br />
+                 VitalResultZMapType The output signal strength result map<br />
+                                     to modify default result mapping<br />
+                                     which has high impedance capability<br />
+                                     for the enable high, enable low<br />
+                                     inverters.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   q               std_ulogic        Output signal of the inverter.</p>
+<p>Returns              <br />
+   none</p>
+<hr /></div><ul>
 <li>VitalINVIF0 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalINVIF1 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMUX <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   VitalMUX, VitalMUX2, VitalMUX4, VitalMUX8</p>
+<p>Description:     The VitalMUX functions return the selected data bit <br />
+                  based on the value of dSelect.  For MUX2, the function<br />
+                  returns data0 when dselect is 0 and returns data1 when<br />
+                  dselect is 1.  When dselect is X, result is X for MUX2<br />
+                  when data0 /= data1.  X propagation is reduced when the<br />
+                  dselect signal is X and both data signals are identical.<br />
+                  When this is the case, the result returned is the value<br />
+                  of the data signals.</p>
+<pre><code>              For the N input device:
+
+                   N must equal 2**(bits of dSelect)  </code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   Data           std_logic_vector   Input signal for the N-bit, 4-bit and <br />
+                                     8-bit mux.<br />
+   Data1,Data0    std_ulogic         Input signals for the 2-bit mux.<br />
+   dSelect        std_ulogic         Select signal for 2-bit mux<br />
+                  std_logic_vector2  Select signal for 4-bit mux<br />
+                  std_logic_vector3  Select signal for 8-bit mux<br />
+                  std_logic_vector   Select signal for N-Bit mux<br />
+   ResultMap      VitalResultMapType The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     all muxes. </p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+                  std_ulogic         The value of the selected bit is <br />
+                                     returned.</p>
+<hr /></div><ul>
 <li>VitalMUX2 <font id="function_arguments">( CONSTANT Data1,<br><span style="padding-left:20px"> Data0 :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT      dSelect :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalMUX4 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector4;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
@@ -1177,7 +1572,56 @@
 <li>VitalMUX8 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector8;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font></li>
 </ul><ul>
 <li>VitalMUX <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  VitalMUX, VitalMUX2, VitalMUX4, VitalMUX8</p>
+<p>Description:     The VitalMUX concurrent primitive procedures calls<br />
+                  return in the output q the value of the selected data<br />
+                  bit based on the value of dsel.  For the two bit mux,<br />
+                  the data returned is either d0 or d1, the data input.<br />
+                  For 4, 8 and N-bit functions, data is the input and is<br />
+                  of type std_logic_vector.  For the 2-bit mux, if d0 or<br />
+                  d1 are X, the output is X only when d0 do not equal d1.<br />
+                  When d0 and d1 are equal, the return value is this value<br />
+                  to reduce X propagation.</p>
+<pre><code>              Propagation delay information is passed as a parameter
+              to the procedure call for delays from data to output and
+              select to output.  For 2-bit muxes, the propagation
+              delays from data are provided for d0 and d1 to output.</code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                   Description<br />
+   d1,d0          std_ulogic            Input signals for the 2-bit mux.<br />
+   Data           std_logic_vector4     Input signals for the 4-bit mux.<br />
+                  std_logic_vector8     Input signals for the 8-bit mux.<br />
+                  std_logic_vector      Input signals for the N-bit mux.<br />
+   dsel           std_ulogic            Select signal for the 2-bit mux.<br />
+                  std_logic_vector2     Select signals for the 4-bit mux.<br />
+                  std_logic_vector3     Select signals for the 8-bit mux.<br />
+                  std_logic_vector      Select signals for the N-bit mux.<br />
+   tpd_d1_q       VitalDelayType01      Propagation delay from input d1 to<br />
+                                        output q for 2-bit mux.<br />
+   tpd_d0_q       VitalDelayType01      Propagation delay from input d0 to<br />
+                                        output q for 2-bit mux.<br />
+   tpd_data_q     VitalDelayArrayType01 Propagation delay from input data<br />
+                                        to output q for 4-bit, 8-bit and<br />
+                                        N-bit muxes.<br />
+   tpd_dsel_q     VitalDelayType01      Propagation delay from input dsel<br />
+                                        to output q for 2-bit mux.<br />
+                  VitalDelayArrayType01 Propagation delay from input dsel<br />
+                                        to output q for 4-bit, 8-bit and<br />
+                                        N-bit muxes.<br />
+   ResultMap      VitalResultMapType    The output signal strength result<br />
+                                        map to modify default result<br />
+                                        mapping for all muxes.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   q              std_ulogic            The value of the selected signal.</p>
+<p>Returns              <br />
+   none</p>
+<hr /></div><ul>
 <li>VitalMUX2 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL       d1,<br><span style="padding-left:20px"> d0 :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_d1_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT   tpd_d0_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMUX4 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector4;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
@@ -1185,7 +1629,45 @@
 <li>VitalMUX8 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector8;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalDECODER <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Sequential <br />
+ Primitive<br />
+ Function Name:   VitalDECODER, VitalDECODER2, VitalDECODER4,<br />
+                  VitalDECODER8</p>
+<p>Description:     The VitalDECODER functions are the sequential primitive<br />
+                  calls for decoder logic.  The functions are provided<br />
+                  for N, 2, 4 and 8-bit outputs.  </p>
+<pre><code>              The N-bit decoder is (2**(bits of data)) wide.
+
+              The VitalDECODER returns 0 if enable is 0.
+              The VitalDECODER returns the result bit set to 1 if 
+              enable is 1.  All other bits of returned result are 
+              set to 0.
+
+              The returned array is in descending order: 
+              (n-1 downto 0).</code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                Description<br />
+   Data          std_ulogic          Input signal for 2-bit decoder.<br />
+                 std_logic_vector2   Input signals for 4-bit decoder.<br />
+                 std_logic_vector3   Input signals for 8-bit decoder.<br />
+                 std_logic_vector    Input signals for N-bit decoder.<br />
+   Enable        std_ulogic          Enable input signal.  The result is<br />
+                                     output when enable is high.<br />
+   ResultMap     VitalResultMapType  The output signal strength result map<br />
+                                     to modify default result mapping for<br />
+                                     all output signals of the decoders. </p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   none</p>
+<p>Returns              <br />
+                 std_logic_vector2  The output of the 2-bit decoder.<br />
+                 std_logic_vector4  The output of the 4-bit decoder.<br />
+                 std_logic_vector8  The output of the 8-bit decoder.   <br />
+                 std_logic_vector   The output of the n-bit decoder.</p>
+<hr /></div><ul>
 <li>VitalDECODER2 <font id="function_arguments">( CONSTANT       Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector2 </font></li>
 </ul><ul>
 <li>VitalDECODER4 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector4 </font></li>
@@ -1193,7 +1675,55 @@
 <li>VitalDECODER8 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector8 </font></li>
 </ul><ul>
 <li>VitalDECODER <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Concurrent<br />
+ Primitive<br />
+ Procedure Name:  VitalDECODER, VitalDECODER2, VitalDECODER4,<br />
+                  VitalDECODER8</p>
+<p>Description:     The VitalDECODER procedures are the concurrent primitive <br />
+                  procedure calls for decoder functions.  The procedures <br />
+                  are provided for N, 2, 4 and 8 outputs.  </p>
+<pre><code>              The N-bit decoder is (2**(bits of data)) wide.
+
+              The procedural form of the decoder is used for
+              distributed delay modeling.  The delay information for
+              each path is passed as an argument to the procedure.
+
+              Result is set to 0 if enable is 0.
+              The result bit represented by data is set to 1 if 
+              enable is 1.  All other bits of result are set to 0.
+
+              The result array is in descending order: (n-1 downto 0).
+
+              For the N-bit decoder, the delay path is a vector of
+              delays from inputs to outputs.  </code></pre>
+<p>Arguments:         </p>
+<p>IN            Type                  Description<br />
+   Data          std_ulogic            Input signal for 2-bit decoder.<br />
+                 std_logic_vector2     Input signals for 4-bit decoder.<br />
+                 std_logic_vector3     Input signals for 8-bit decoder.<br />
+                 std_logic_vector      Input signals for N-bit decoder.<br />
+   enable        std_ulogic            Enable input signal.  The result is<br />
+                                       output when enable is high. <br />
+   tpd_data_q    VitalDelayType01      Propagation delay from input data<br />
+                                       to output q for 2-bit decoder.<br />
+                 VitalDelayArrayType01 Propagation delay from input data<br />
+                                       to output q for 4, 8 and n-bit<br />
+                                       decoders.<br />
+   tpd_enable_q  VitalDelayType01      Propagation delay from input enable<br />
+                                       to output q for 2, 4, 8 and n-bit<br />
+                                       decoders.</p>
+<p>INOUT<br />
+  none</p>
+<p>OUT<br />
+  q              std_logic_vector2     Output signals for 2-bit decoder. <br />
+                 std_logic_vector4     Output signals for 4-bit decoder.<br />
+                 std_logic_vector8     Output signals for 8-bit decoder.<br />
+                 std_logic_vector      Output signals for n-bit decoder.</p>
+<p>Returns              <br />
+  none</p>
+<hr /></div><ul>
 <li>VitalDECODER2 <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector2;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalDECODER4 <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector4;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector2;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
@@ -1201,7 +1731,51 @@
 <li>VitalDECODER8 <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector8;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector3;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalTruthTable <font id="function_arguments">( CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> CONSTANT DataIn       : IN std_logic_vector ) </font> <font id="function_return">RETURN std_logic_vector </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalTruthTable</p>
+<p>Description:     VitalTruthTable implements a truth table.  Given<br />
+                  a set of inputs, a sequential search is performed<br />
+                  to match the input.  If a match is found, the output<br />
+                  is set based on the contents of the CONSTANT TruthTable.<br />
+                  If there is no match, all X's are returned.  There is<br />
+                  no limit to the size of the table.</p>
+<pre><code>              There is a procedure and function for VitalTruthTable.
+              For each of these, a single value output (std_logic) and
+              a multi-value output (std_logic_vector) are provided.
+
+              The first dimension of the table is for number of
+              entries in the truth table and second dimension is for
+              the number of elements in a row. The number of inputs
+              in the row should be Data'LENGTH plus result'LENGTH.
+
+              Elements is a row will be interpreted as
+              Input(NumInputs - 1),.., Input(0),
+                Result(NumOutputs - 1),.., Result(0)
+
+              All inputs will be mapped to the X01 subtype
+
+              If the value of Result is not in the range 'X' to 'Z'
+              then an error will be reported. Also, the Result is
+              always given either as a 0, 1, X or Z value.</code></pre>
+<p>Arguments:         </p>
+<p>IN            Type               Description<br />
+                 TruthTable         The input constant which defines the<br />
+                                    behavior in truth table form.<br />
+                 DataIn             The inputs to the truth table used to<br />
+                                    perform input match to select<br />
+                                    output(s) to value(s) to drive.</p>
+<p>INOUT<br />
+   none                 </p>
+<p>OUT<br />
+   Result         std_logic         Concurrent procedure version scalar<br />
+                                    output.<br />
+                  std_logic_vector  Concurrent procedure version vector<br />
+                                    output.</p>
+<p>Returns              <br />
+   Result         std_logic         Function version scalar output.<br />
+                  std_logic_vector  Function version vector output.</p>
+<hr /></div><ul>
 <li>VitalTruthTable <font id="function_arguments">( CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> CONSTANT DataIn       : IN std_logic_vector ) </font> <font id="function_return">RETURN std_logic </font></li>
 </ul><ul>
 <li>VitalTruthTable <font id="function_arguments">( SIGNAL   Result       : OUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn       : IN std_logic_vector     -- IR#236 ) </font> <font id="function_return">return ()</font></li>
@@ -1209,7 +1783,78 @@
 <li>VitalTruthTable <font id="function_arguments">( SIGNAL   Result       : OUT std_logic;<br><span style="padding-left:20px"> CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn       : IN std_logic_vector     -- IR#236 ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalStateTable <font id="function_arguments">( VARIABLE Result         : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PreviousDataIn : INOUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT StateTable     : IN VitalStateTableType;<br><span style="padding-left:20px"> CONSTANT DataIn         : IN  std_logic_vector;<br><span style="padding-left:20px"> CONSTANT NumStates      : IN NATURAL ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalStateTable</p>
+<p>Description:     VitalStateTable is a non-concurrent implementation of a<br />
+                  state machine (Moore Machine).  It is used to model<br />
+                  sequential devices and devices with internal states.</p>
+<pre><code>              The procedure takes the value of the state table
+              data set and performs a sequential search of the 
+              CONSTANT StateTable until a match is found.  Once a 
+              match is found, the result of that match is applied
+              to Result.  If there is no match, all X's are returned.
+              The resultant output becomes the input for the next 
+              state.
+
+              The first dimension of the table is the number of
+              entries in the state table and second dimension is the
+              number of elements in a row of the table. The number of
+              inputs in the row should be DataIn'LENGTH. Result should
+              contain the current state (which will become the next
+              state) as well as the outputs
+
+              Elements is a row of the table will be interpreted as
+              Input(NumInputs-1),.., Input(0), State(NumStates-1),
+               ..., State(0),Output(NumOutputs-1),.., Output(0)
+
+              where State(numStates-1) DOWNTO State(0) represent the
+              present state and Output(NumOutputs - 1) DOWNTO
+              Outputs(NumOutputs - NumStates) represent the new
+              values of the state variables (i.e. the next state).
+              Also, Output(NumOutputs - NumStates - 1)
+
+              This procedure returns the next state and the new
+              outputs when a match is made between the present state
+              and present inputs and the state table.  A search is
+              made starting at the top of the state table and
+              terminates with the first match.  If no match is found
+              then the next state and new outputs are set to all 'X's.
+
+              (Asynchronous inputs (i.e. resets and clears) must be
+              handled by placing the corresponding entries at the top
+              of the table. )
+
+              All inputs will be mapped to the X01 subtype.
+
+              NOTE:  Edge transitions should not be used as values
+                     for the state variables in the present state
+                     portion of the state table.  The only valid
+                     values that can be used for the present state
+                     portion of the state table are:
+                     'X', '0', '1', 'B', '-'</code></pre>
+<p>Arguments:         </p>
+<p>IN             Type                 Description      <br />
+   StateTable     VitalStateTableType  The input constant which defines<br />
+                                       the behavior in state table form.<br />
+   DataIn         std_logic_vector     The current state inputs to the<br />
+                                       state table used to perform input<br />
+                                       matches and transition<br />
+                                       calculations.<br />
+   NumStates      NATURAL              Number of state variables</p>
+<p>INOUT<br />
+   Result         std_logic            Output signal for scalar version of<br />
+                                       the concurrent procedure call.<br />
+                  std_logic_vector     Output signals for vector version<br />
+                                       of the concurrent procedure call.<br />
+   PreviousDataIn std_logic_vector     The previous inputs and states used<br />
+                                       in transition calculations and to <br />
+                                       set outputs for steady state cases. </p>
+<p>OUT<br />
+   none</p>
+<p>Returns  <br />
+   none            </p>
+<hr /></div><ul>
 <li>VitalStateTable <font id="function_arguments">( VARIABLE Result         : INOUT std_logic;<br><span style="padding-left:20px"> VARIABLE PreviousDataIn : INOUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT StateTable     : IN VitalStateTableType;<br><span style="padding-left:20px"> CONSTANT DataIn         : IN  std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalStateTable <font id="function_arguments">( SIGNAL   Result     : INOUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT StateTable : IN VitalStateTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn     : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT NumStates  : IN NATURAL ) </font> <font id="function_return">return ()</font></li>
@@ -1217,8 +1862,25 @@
 <li>VitalStateTable <font id="function_arguments">( SIGNAL   Result     : INOUT std_logic;<br><span style="padding-left:20px"> CONSTANT StateTable : IN VitalStateTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn     : IN std_logic_vector ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalResolve <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
- Returns                none                   -------------------------------------------------------------------------</p></div><br><br><br><br><br><br>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:   VitalResolve</p>
+<p>Description:     VitalResolve takes a vector of signals and resolves<br />
+                  them to a std_ulogic value.  This procedure can be used<br />
+                  to resolve multiple drivers in a single model.  </p>
+<p>Arguments:         </p>
+<p>IN           Type               Description<br />
+   Data         std_logic_vector   Set of input signals which drive a<br />
+                                   common signal.</p>
+<p>INOUT<br />
+   none</p>
+<p>OUT<br />
+   q            std_ulogic         Output signal which is the resolved <br />
+                                   value being driven by the collection of<br />
+                                   input signals.</p>
+<p>Returns              <br />
+   none</p>
+<hr /></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1176,14 +1251,15 @@
 <td>HALF_PERIODE</td>
 <td>time</td>
 <td>4 ns</td>
-<td></td>
+<td>5.0 ns;  -- Half clock period</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>to_string <font id="function_arguments">(sv: std_logic_vector) </font> <font id="function_return">return string </font></li>
 </ul><h2 id="processes">Processes</h2><ul>
 <li>stimulis: (  )</li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+    nco2_inst : entity work.nco_counter_logic   generic map(LUT_SIZE =&gt; LUT_SIZE, TEST =&gt; true,         COUNTER_SIZE =&gt; COUNTER_SIZE, DATA_SIZE =&gt; DATA_SIZE)   port map(rst_i =&gt; reset, clk_i =&gt; clk, cpu_clk_i =&gt; '0', -      cpt_off_i =&gt; (LUT_SIZE-1 downto 0 =&gt; '0'),      cpt_step_i =&gt; cpt_tmp_s,        test_o =&gt; open,         cos_o =&gt; cos2_s, sin_o =&gt; sin2_s,       cos_fake_o =&gt; cos2_fake_s, sin_fake_o =&gt; sin2_fake_s,       wave_en_o =&gt; wave2_en_s     ); nco3_inst : entity work.nco_counter_logic generic map(LUT_SIZE =&gt; 24,        COUNTER_SIZE =&gt; COUNTER_SIZE, DATA_SIZE =&gt; DATA_SIZE)   port map(rst_i =&gt; reset, clk_i =&gt; clk, cpu_clk_i =&gt; '0',        cpt_off_i =&gt; (24 downto 0 =&gt; '0'),      cpt_step_i =&gt; cpt_step_s,       test_o =&gt; open, step_scale_o =&gt; open,       cos_o =&gt; cos2_s, sin_o =&gt; sin2_s,       cos_fake_o =&gt; cos2_fake_s, sin_fake_o =&gt; sin2_fake_s,       wave_en_o =&gt; wave2_en_s     ); </p></div><ul>
 <li>clockp: (  )</li>
 </ul><ul>
 <li>store_result: ( clk, reset )</li>

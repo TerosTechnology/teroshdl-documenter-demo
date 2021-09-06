@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,8 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=Code12b14bPkg><h1 id="package-code12b14bpkg">Package: Code12b14bPkg</h1></a><ul>
 <li><strong>File</strong>: Code12b14bPkg.vhd</li>
-</ul><h2 id="constants">Constants</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>use surf.TextUtilPkg.all;<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1132,7 +1208,7 @@
 <td>K_120_0_CODE_C</td>
 <td>slv(13 downto 0)</td>
 <td>"00011011111000"</td>
-<td>constant K_55_15_C  : slv(11 downto 0) := "011110110111";   constant K_57_15_C  : slv(11 downto 0) := "011110111001";   constant K_87_15_C  : slv(11 downto 0) := "011111010111";   constant K_93_15_C  : slv(11 downto 0) := "011111011101";   constant K_117_15_C : slv(11 downto 0) := "011111110101";</td>
+<td>constant K_55_15_C  : slv(11 downto 0) := "011110110111";     constant K_57_15_C  : slv(11 downto 0) := "011110111001";     constant K_87_15_C  : slv(11 downto 0) := "011111010111";     constant K_93_15_C  : slv(11 downto 0) := "011111011101";     constant K_117_15_C : slv(11 downto 0) := "011111110101";</td>
 </tr>
 <tr>
 <td>K_120_1_CODE_C</td>
@@ -1228,19 +1304,19 @@
 <td>CODE_8B_C</td>
 <td>slv8Array(0 to 127)</td>
 <td>(       "01011000",<br><span style="padding-left:20px"> "00011001",<br><span style="padding-left:20px"> "00011010",<br><span style="padding-left:20px"> "00100011",<br><span style="padding-left:20px"> "01100100",<br><span style="padding-left:20px"> "10000101",<br><span style="padding-left:20px"> "10000110",<br><span style="padding-left:20px"> "10000111",<br><span style="padding-left:20px">  -- 7       "01101000",<br><span style="padding-left:20px"> "10001001",<br><span style="padding-left:20px"> "01001010",<br><span style="padding-left:20px"> "10001011",<br><span style="padding-left:20px"> "01001100",<br><span style="padding-left:20px"> "10001101",<br><span style="padding-left:20px"> "10001110",<br><span style="padding-left:20px"> "11000111",<br><span style="padding-left:20px">  -- 15       "00010011",<br><span style="padding-left:20px"> "10010001",<br><span style="padding-left:20px"> "10010010",<br><span style="padding-left:20px"> "10010011",<br><span style="padding-left:20px"> "10010100",<br><span style="padding-left:20px"> "10010101",<br><span style="padding-left:20px"> "10010110",<br><span style="padding-left:20px"> "00010111",<br><span style="padding-left:20px">  -- 23       "10011000",<br><span style="padding-left:20px"> "10011001",<br><span style="padding-left:20px"> "10011010",<br><span style="padding-left:20px"> "00011011",<br><span style="padding-left:20px"> "10011100",<br><span style="padding-left:20px"> "00011101",<br><span style="padding-left:20px"> "00011110",<br><span style="padding-left:20px"> "00011100",<br><span style="padding-left:20px">  -- 31       "00100101",<br><span style="padding-left:20px"> "10100001",<br><span style="padding-left:20px"> "00100110",<br><span style="padding-left:20px"> "10100011",<br><span style="padding-left:20px"> "10100100",<br><span style="padding-left:20px"> "10100101",<br><span style="padding-left:20px"> "10100110",<br><span style="padding-left:20px"> "00100111",<br><span style="padding-left:20px">  -- 39       "00101001",<br><span style="padding-left:20px"> "10101001",<br><span style="padding-left:20px"> "10101010",<br><span style="padding-left:20px"> "00101011",<br><span style="padding-left:20px"> "10101100",<br><span style="padding-left:20px"> "00101101",<br><span style="padding-left:20px"> "00101110",<br><span style="padding-left:20px"> "00101010",<br><span style="padding-left:20px">  -- 47       "00110010",<br><span style="padding-left:20px"> "10110001",<br><span style="padding-left:20px"> "10110010",<br><span style="padding-left:20px"> "00110011",<br><span style="padding-left:20px"> "10110100",<br><span style="padding-left:20px"> "00110101",<br><span style="padding-left:20px"> "00110110",<br><span style="padding-left:20px"> "00110111",<br><span style="padding-left:20px">  -- 55       "10111000",<br><span style="padding-left:20px"> "00111001",<br><span style="padding-left:20px"> "00111010",<br><span style="padding-left:20px"> "00111011",<br><span style="padding-left:20px"> "00111100",<br><span style="padding-left:20px"> "10111101",<br><span style="padding-left:20px"> "00110100",<br><span style="padding-left:20px"> "10111011",<br><span style="padding-left:20px">  -- 63       "01010100",<br><span style="padding-left:20px"> "11000001",<br><span style="padding-left:20px"> "11000010",<br><span style="padding-left:20px"> "11000011",<br><span style="padding-left:20px"> "01000001",<br><span style="padding-left:20px"> "11000101",<br><span style="padding-left:20px"> "11000110",<br><span style="padding-left:20px"> "01000111",<br><span style="padding-left:20px">  -- 71       "01001001",<br><span style="padding-left:20px"> "11001001",<br><span style="padding-left:20px"> "11001010",<br><span style="padding-left:20px"> "01001011",<br><span style="padding-left:20px"> "11001100",<br><span style="padding-left:20px"> "01001101",<br><span style="padding-left:20px"> "01001110",<br><span style="padding-left:20px"> "01000101",<br><span style="padding-left:20px">  -- 79       "01000011",<br><span style="padding-left:20px"> "11010001",<br><span style="padding-left:20px"> "11010010",<br><span style="padding-left:20px"> "01010011",<br><span style="padding-left:20px"> "11010100",<br><span style="padding-left:20px"> "01010101",<br><span style="padding-left:20px"> "01010110",<br><span style="padding-left:20px"> "01010111",<br><span style="padding-left:20px">  -- 87       "11011000",<br><span style="padding-left:20px"> "01011001",<br><span style="padding-left:20px"> "01011010",<br><span style="padding-left:20px"> "11010011",<br><span style="padding-left:20px"> "01011100",<br><span style="padding-left:20px"> "01011101",<br><span style="padding-left:20px"> "11001110",<br><span style="padding-left:20px"> "11011110",<br><span style="padding-left:20px">  -- 95       "01100010",<br><span style="padding-left:20px"> "11100001",<br><span style="padding-left:20px"> "11100010",<br><span style="padding-left:20px"> "01100011",<br><span style="padding-left:20px"> "11100100",<br><span style="padding-left:20px"> "01100101",<br><span style="padding-left:20px"> "01100110",<br><span style="padding-left:20px"> "11100111",<br><span style="padding-left:20px">  -- 103       "11101000",<br><span style="padding-left:20px"> "01101001",<br><span style="padding-left:20px"> "01101010",<br><span style="padding-left:20px"> "11101011",<br><span style="padding-left:20px"> "01101100",<br><span style="padding-left:20px"> "11101001",<br><span style="padding-left:20px"> "11101010",<br><span style="padding-left:20px"> "11101101",<br><span style="padding-left:20px">  -- 111       "00100100",<br><span style="padding-left:20px"> "01110001",<br><span style="padding-left:20px"> "01110010",<br><span style="padding-left:20px"> "01010001",<br><span style="padding-left:20px"> "01110100",<br><span style="padding-left:20px"> "01110101",<br><span style="padding-left:20px"> "01010010",<br><span style="padding-left:20px"> "01110111",<br><span style="padding-left:20px">  -- 119       "01111000",<br><span style="padding-left:20px"> "01100001",<br><span style="padding-left:20px"> "01111011",<br><span style="padding-left:20px"> "01110011",<br><span style="padding-left:20px"> "01111100",<br><span style="padding-left:20px"> "01111101",<br><span style="padding-left:20px"> "01111110",<br><span style="padding-left:20px"> "11101110")</td>
-<td>Array of codes for 7b/8b D codes   constant CODE_8B_C : slv8Array(0 to 127) := (      "00011010", "11110001", "10101110", "00100011", "00001101", "00010101", "00100110", "10000111",      "00010011", "00100101", "00101001", "10001011", "00101100", "10001101", "10001110", "00001111",      "00101010", "00110001", "00110010", "10010011", "00110100", "10010101", "10010110", "00010111",      "01000101", "10011001", "10011010", "10011011", "10011100", "00011101", "00011110", "00011001",      "01000111", "01100001", "01001001", "10100011", "01001010", "10100101", "10100110", "00100111",      "01011000", "10101001", "10101010", "10101011", "10101100", "10101101", "00101110", "00101111",      "01001100", "10110001", "10110010", "00110011", "10110100", "00110101", "00110110", "00110111",      "10111000", "00111001", "00111010", "00111011", "00111100", "00111101", "00111110", "00011011",      "01000100", "00011100", "01100010", "11000011", "00100100", "11000101", "11000110", "11000111",      "01101000", "11001001", "11001010", "01001011", "11001100", "01001101", "01001110", "01001111",      "01110000", "11010001", "11010010", "01010011", "11010100", "01010101", "01010110", "01010111",      "11011000", "01011001", "01011010", "01011011", "01011100", "01011101", "01011110", "00101011",      "00101101", "11100001", "11100010", "01100011", "11100100", "01100101", "01100110", "01100111",      "11101000", "01101001", "01101010", "01101011", "01101100", "01101101", "01101110", "01000011",      "11110000", "01110001", "01110010", "01110011", "01110100", "01110101", "01110110", "01110111",      "01111000", "01111001", "01111010", "01111011", "01111100", "10111101", "11110100", "11101001");</td>
+<td>Array of codes for 7b/8b D codes     constant CODE_8B_C : slv8Array(0 to 127) := (        "00011010", "11110001", "10101110", "00100011", "00001101", "00010101", "00100110", "10000111",        "00010011", "00100101", "00101001", "10001011", "00101100", "10001101", "10001110", "00001111",        "00101010", "00110001", "00110010", "10010011", "00110100", "10010101", "10010110", "00010111",        "01000101", "10011001", "10011010", "10011011", "10011100", "00011101", "00011110", "00011001",        "01000111", "01100001", "01001001", "10100011", "01001010", "10100101", "10100110", "00100111",        "01011000", "10101001", "10101010", "10101011", "10101100", "10101101", "00101110", "00101111",        "01001100", "10110001", "10110010", "00110011", "10110100", "00110101", "00110110", "00110111",        "10111000", "00111001", "00111010", "00111011", "00111100", "00111101", "00111110", "00011011",        "01000100", "00011100", "01100010", "11000011", "00100100", "11000101", "11000110", "11000111",        "01101000", "11001001", "11001010", "01001011", "11001100", "01001101", "01001110", "01001111",        "01110000", "11010001", "11010010", "01010011", "11010100", "01010101", "01010110", "01010111",        "11011000", "01011001", "01011010", "01011011", "01011100", "01011101", "01011110", "00101011",        "00101101", "11100001", "11100010", "01100011", "11100100", "01100101", "01100110", "01100111",        "11101000", "01101001", "01101010", "01101011", "01101100", "01101101", "01101110", "01000011",        "11110000", "01110001", "01110010", "01110011", "01110100", "01110101", "01110110", "01110111",        "01111000", "01111001", "01111010", "01111011", "01111100", "10111101", "11110100", "11101001");</td>
 </tr>
 <tr>
 <td>K_120_C</td>
 <td>slv(6 downto 0)</td>
 <td>"1111000"</td>
-<td>7/8 K-code constants   constant K_55_C  : slv(6 downto 0) := "0110111";   constant K_57_C  : slv(6 downto 0) := "0111001";   constant K_87_C  : slv(6 downto 0) := "1010111";   constant K_93_C  : slv(6 downto 0) := "1011101";   constant K_117_C : slv(6 downto 0) := "1110101";</td>
+<td>7/8 K-code constants     constant K_55_C  : slv(6 downto 0) := "0110111";     constant K_57_C  : slv(6 downto 0) := "0111001";     constant K_87_C  : slv(6 downto 0) := "1010111";     constant K_93_C  : slv(6 downto 0) := "1011101";     constant K_117_C : slv(6 downto 0) := "1110101";</td>
 </tr>
 <tr>
 <td>K_120_CODE_C</td>
 <td>slv(7 downto 0)</td>
 <td>"11111000"</td>
-<td>constant K_55_CODE_C  : slv(7 downto 0) := "10110111";   constant K_57_CODE_C  : slv(7 downto 0) := "10111001";   constant K_87_CODE_C  : slv(7 downto 0) := "11010111";   constant K_93_CODE_C  : slv(7 downto 0) := "11011101";   constant K_117_CODE_C : slv(7 downto 0) := "11110101";</td>
+<td>constant K_55_CODE_C  : slv(7 downto 0) := "10110111";     constant K_57_CODE_C  : slv(7 downto 0) := "10111001";     constant K_87_CODE_C  : slv(7 downto 0) := "11010111";     constant K_93_CODE_C  : slv(7 downto 0) := "11011101";     constant K_117_CODE_C : slv(7 downto 0) := "11110101";</td>
 </tr>
 <tr>
 <td>CODE_6B_C</td>
@@ -1348,7 +1424,7 @@
 <td>K_X_0_CODE_C</td>
 <td>slv(5 downto 0)</td>
 <td>"000110"</td>
-<td>Some of these are inverted from normal code.This doesn't matter as the encoder/decoder are currently writtenThese aren't used for encoder and both normal and inverted are checked for in decoder</td>
+<td>Some of these are inverted from normal code.  This doesn't matter as the encoder/decoder are currently written  These aren't used for encoder and both normal and inverted are checked for in decoder</td>
 </tr>
 <tr>
 <td>K_X_1_CODE_C</td>
@@ -1455,7 +1531,7 @@
 <tr>
 <td>KCodeEntryType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------------------------------------------------------------------  K-Code table -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>KCodeArray</td>
@@ -1465,7 +1541,7 @@
 <tr>
 <td>Encode7b8bType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------------------------------------------------------------------  Structures for holding 7/8 code table -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>Encode7b8bArray</td>
@@ -1475,7 +1551,7 @@
 <tr>
 <td>Encode5b6bType</td>
 <td></td>
-<td></td>
+<td>constant K78_TABLE_C : Encode7b8bArray(0 to 0); -----------------------------------------------------------------------------------------------  Structure for holding 5/6 code table -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>Encode5b6bArray</td>
@@ -1485,7 +1561,7 @@
 <tr>
 <td>EncodeTableType</td>
 <td></td>
-<td></td>
+<td>constant K56_TABLE_C : Encode5b6bArray(0 to 15); -----------------------------------------------------------------------------------------------  Structure for full encode table -----------------------------------------------------------------------------------------------</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
@@ -1497,13 +1573,14 @@
 </ul><ul>
 <li>toString <font id="function_arguments">(code : slv(11 downto 0);<br><span style="padding-left:20px"> k : sl) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Convert a 12 bit code into "D/K.x.y" form</p></div><ul>
+ Convert a 12 bit code into "D/K.x.y" form</p></div><ul>
 <li>makeEncode7b8bTable <font id="function_arguments">(a : slv8Array(0 to 127)) </font> <font id="function_return">return Encode7b8bArray </font></li>
 </ul><ul>
 <li>makeEncode5b6bTable <font id="function_arguments">(a : slv6Array(0 to 31)) </font> <font id="function_return">return Encode5b6bArray </font></li>
 </ul><ul>
 <li>encode12b14b <font id="function_arguments">( constant CODES_C : in    EncodeTableType;<br><span style="padding-left:20px"> dataIn           : in    slv(11 downto 0);<br><span style="padding-left:20px"> dataKIn          : in    sl;<br><span style="padding-left:20px"> dispIn           : in    slv(1 downto 0);<br><span style="padding-left:20px"> dataOut          : inout slv(13 downto 0);<br><span style="padding-left:20px"> dispOut          : inout slv(1 downto 0);<br><span style="padding-left:20px"> invalidK         : out   sl) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-procedures-for-encoding-and-decoding"> Procedures for encoding and decoding</h2></div><ul>
 <li>decode12b14b <font id="function_arguments">( constant CODES_C : in    EncodeTableType;<br><span style="padding-left:20px"> dataIn           : in    slv(13 downto 0);<br><span style="padding-left:20px"> dispIn           : in    slv(1 downto 0);<br><span style="padding-left:20px"> dataOut          : inout slv(11 downto 0);<br><span style="padding-left:20px"> dataKOut         : inout sl;<br><span style="padding-left:20px"> dispOut          : inout slv(1 downto 0);<br><span style="padding-left:20px"> codeError        : out   sl;<br><span style="padding-left:20px"> dispError        : inout sl) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,8 +1098,8 @@
 <li><strong>File</strong>: keymgr_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- key manager package</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>key manager package</p>
 <p></div></p><h2 id="signals">Signals</h2>
 <table>
 <thead>
@@ -1177,18 +1252,12 @@
 <td>seed_t</td>
 <td>seed_t</td>
 <td>256'h6EECBF9FC3C64230421DA1EAEC48F871070A3582E71AD4059D5D550784E9B9DE</td>
-<td>Target based deriviation seeds These are used during the generation stages for sideload</td>
+<td>Target based deriviation seeds  These are used during the generation stages for sideload</td>
 </tr>
 <tr>
 <td>seed_t</td>
 <td>seed_t</td>
 <td>256'hC1104CD94EBA084FA6438188038006489F3DF38771214AE0BBA65CEB9BC2366F</td>
-<td></td>
-</tr>
-<tr>
-<td>seed_t</td>
-<td>seed_t</td>
-<td>256'h075CF7939313EEC797019BD0036D9500374A8FD9121CC8E78E1E3359D5F77C4E</td>
 <td></td>
 </tr>
 <tr>
@@ -1207,7 +1276,7 @@
 <td>LfsrWidth</td>
 <td>int</td>
 <td>64</td>
-<td>Default Lfsr configurations These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 64 --seed 691876113 --prefix ""</td>
+<td>Default Lfsr configurations  These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 64 --seed 691876113 --prefix ""</td>
 </tr>
 <tr>
 <td>lfsr_seed_t</td>
@@ -1237,7 +1306,7 @@
 <td>AdvDataWidth</td>
 <td>int</td>
 <td>SwBindingWidth + 3*KeyWidth + DevIdWidth + HealthStateWidth</td>
-<td>Width calculations These are the largest calculations in use across all stages</td>
+<td>Width calculations  These are the largest calculations in use across all stages</td>
 </tr>
 <tr>
 <td>IdDataWidth</td>
@@ -1261,7 +1330,7 @@
 <td>KDFMaxWidth</td>
 <td>int</td>
 <td>1600</td>
-<td>Max Payload Width to derivation function see security strength description <a href="https://keccak.team/keccak.html">https://keccak.team/keccak.html</a> The max width here is chosen arbitrarily to ensure we do not get out of hand. Since KMAC is a MAC operation, the data can be as long as we need.</td>
+<td>Max Payload Width to derivation function  see security strength description <a href="https://keccak.team/keccak.html">https://keccak.team/keccak.html</a>  The max width here is chosen arbitrarily to ensure we do not get out of hand.  Since KMAC is a MAC operation, the data can be as long as we need.</td>
 </tr>
 <tr>
 <td>hw_key_req_t</td>
@@ -1284,7 +1353,7 @@
 <tr>
 <td>seed_t</td>
 <td>logic [KeyWidth-1:0]</td>
-<td>Default seeds These are generated using random.org byte dumper</td>
+<td>Default seeds  These are generated using random.org byte dumper</td>
 </tr>
 <tr>
 <td>lfsr_seed_t</td>
@@ -1308,8 +1377,13 @@
 </tr>
 <tr>
 <td>keymgr_key_dest_e</td>
-<td>enum logic [2:0] {<br><span style="padding-left:20px">     None,<br><span style="padding-left:20px">     Aes,<br><span style="padding-left:20px">     Hmac,<br><span style="padding-left:20px">     Kmac,<br><span style="padding-left:20px">     Otbn   }</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     None,<br><span style="padding-left:20px">     Aes,<br><span style="padding-left:20px">     Kmac,<br><span style="padding-left:20px">     Otbn   }</td>
 <td>Enumeration for sideload sel</td>
+</tr>
+<tr>
+<td>keymgr_cnt_style_e</td>
+<td>enum logic {<br><span style="padding-left:20px">     CrossCnt,<br><span style="padding-left:20px">      DupCnt       }</td>
+<td>Enumeration for hardened count style</td>
 </tr>
 <tr>
 <td>keymgr_gen_out_e</td>
@@ -1332,13 +1406,43 @@
 <td>Enumeration for operation status</td>
 </tr>
 <tr>
+<td>keymgr_sync_error_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     SyncErrInvalidOp,<br><span style="padding-left:20px">     SyncErrInvalidIn,<br><span style="padding-left:20px">     SyncErrLastIdx   }</td>
+<td>keymgr has 4 categories of errors  sync errors  - recoverable errors that happen during keymgr operation  async errors - recoverable errors that happen asynchronously  sync faults  - fatal errors that happen during keymgr operation  async faults - fatal errors that happen asynchronously</td>
+</tr>
+<tr>
+<td>keymgr_async_error_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     AsyncErrShadowUpdate,<br><span style="padding-left:20px">     AsyncErrLastIdx   }</td>
+<td></td>
+</tr>
+<tr>
+<td>keymgr_sync_fault_e</td>
+<td>enum logic [1:0] {<br><span style="padding-left:20px">     SyncFaultKmacOp,<br><span style="padding-left:20px">     SyncFaultKmacOut,<br><span style="padding-left:20px">     SyncFaultLastIdx   }</td>
+<td></td>
+</tr>
+<tr>
+<td>keymgr_async_fault_e</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     AsyncFaultKmacCmd,<br><span style="padding-left:20px">     AsyncFaultKmacFsm,<br><span style="padding-left:20px">     AsyncFaultRegIntg,<br><span style="padding-left:20px">     AsyncFaultShadow,<br><span style="padding-left:20px">     AsyncFaultFsmIntg,<br><span style="padding-left:20px">     AsyncFaultCntErr,<br><span style="padding-left:20px">     AsyncFaultLastIdx   }</td>
+<td></td>
+</tr>
+<tr>
 <td>keymgr_err_pos_e</td>
-<td>enum logic [2:0] {<br><span style="padding-left:20px">     ErrInvalidOp,<br><span style="padding-left:20px">     ErrInvalidCmd,<br><span style="padding-left:20px">     ErrInvalidIn,<br><span style="padding-left:20px">     ErrInvalidOut,<br><span style="padding-left:20px">     ErrLastPos   }</td>
-<td>Bit position of error code Error is encoded as 1 error per bit</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     ErrInvalidOp,<br><span style="padding-left:20px">     ErrInvalidIn,<br><span style="padding-left:20px">     ErrShadowUpdate,<br><span style="padding-left:20px">     ErrLastPos   }</td>
+<td>Bit position of error code  Error is encoded as 1 error per bit</td>
+</tr>
+<tr>
+<td>keymgr_fault_pos_e</td>
+<td>enum logic [3:0] {<br><span style="padding-left:20px">     FaultKmacCmd,<br><span style="padding-left:20px">     FaultKmacFsm,<br><span style="padding-left:20px">     FaultKmacOp,<br><span style="padding-left:20px">     FaultKmacOut,<br><span style="padding-left:20px">     FaultRegIntg,<br><span style="padding-left:20px">     FaultShadow,<br><span style="padding-left:20px">     FaultCtrlFsm,<br><span style="padding-left:20px">     FaultCtrlCnt,<br><span style="padding-left:20px">     FaultLastPos   }</td>
+<td>Bit position of fault status</td>
 </tr>
 <tr>
 <td>keymgr_key_update_e</td>
-<td>enum logic [2:0] {<br><span style="padding-left:20px">     KeyUpdateIdle,<br><span style="padding-left:20px">     KeyUpdateRandom,<br><span style="padding-left:20px">     KeyUpdateRoot,<br><span style="padding-left:20px">     KeyUpdateKmac,<br><span style="padding-left:20px">     KeyUpdateInvalid,<br><span style="padding-left:20px">     KeyUpdateWipe   }</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     KeyUpdateIdle,<br><span style="padding-left:20px">     KeyUpdateRandom,<br><span style="padding-left:20px">     KeyUpdateRoot,<br><span style="padding-left:20px">     KeyUpdateKmac,<br><span style="padding-left:20px">     KeyUpdateWipe   }</td>
+<td></td>
+</tr>
+<tr>
+<td>keymgr_sideload_clr_e</td>
+<td>enum logic [2:0] {<br><span style="padding-left:20px">     SideLoadClrIdle,<br><span style="padding-left:20px">     SideLoadClrAes,<br><span style="padding-left:20px">     SideLoadClrKmac,<br><span style="padding-left:20px">     SideLoadClrOtbn   }</td>
 <td></td>
 </tr>
 <tr>
@@ -1354,13 +1458,13 @@
 <tr>
 <td>keymgr_lc_en_usage_e</td>
 <td>enum logic [1:0] {<br><span style="padding-left:20px">     KeyMgrEnCtrl,<br><span style="padding-left:20px">     KeyMgrEnCfgEn,<br><span style="padding-left:20px">     KeyMgrEnSwBindingEn,<br><span style="padding-left:20px">     KeyMgrEnLast   }</td>
-<td>The following structs should be sourced from other modules defined here temporarily lc keymgr enable usage</td>
+<td>The following structs should be sourced from other modules  defined here temporarily  lc keymgr enable usage</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>perm_data <font id="function_arguments">()</font> <font id="function_return">return (logic[RandWidth-1:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-perm_data</p></div><br><br><br><br><br><br>
+ perm_data</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

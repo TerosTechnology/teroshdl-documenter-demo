@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1104,12 +1179,12 @@
 <tr>
 <td>VitalMemoryScheduleDataVectorType</td>
 <td>ARRAY (NATURAL RANGE &lt;&gt; ) OF VitalMemoryScheduleDataType</td>
-<td>Data type storing path delay and schedule information for output vectors</td>
+<td>Data type storing path delay and schedule information for output   vectors</td>
 </tr>
 <tr>
 <td>VitalPortStateType</td>
 <td>( UNDEF,<br><span style="padding-left:20px"> READ,<br><span style="padding-left:20px"> WRITE,<br><span style="padding-left:20px"> CORRUPT,<br><span style="padding-left:20px"> HIGHZ )</td>
-<td>VitalPortFlagType records runtime mode of port sub-word slices   TYPE VitalPortFlagType IS (       UNDEF,       READ,       WRITE,       CORRUPT,       HIGHZ,       NOCHANGE   );VitalPortFlagType records runtime mode of port sub-word slices</td>
+<td>VitalPortFlagType records runtime mode of port sub-word slices     TYPE VitalPortFlagType IS (         UNDEF,         READ,         WRITE,         CORRUPT,         HIGHZ,         NOCHANGE     );  VitalPortFlagType records runtime mode of port sub-word slices</td>
 </tr>
 <tr>
 <td>VitalPortFlagType</td>
@@ -1119,12 +1194,12 @@
 <tr>
 <td>VitalPortFlagVectorType</td>
 <td>ARRAY (NATURAL RANGE &lt;&gt;) OF VitalPortFlagType</td>
-<td>VitalPortFlagVectorType to be same width i as enables of a portor j multiples thereof, where j is the number of cross ports</td>
+<td>VitalPortFlagVectorType to be same width i as enables of a port  or j multiples thereof, where j is the number of cross ports</td>
 </tr>
 <tr>
 <td>MemoryWordType</td>
 <td>ARRAY (NATURAL RANGE &lt;&gt;) OF UX01</td>
-<td>----------------------------------------------------------------------------Functionality Section--------------------------------------------------------------------------------------------------------------------------------------------------------All Memory Types and Record definitions.----------------------------------------------------------------------------</td>
+<td>----------------------------------------------------------------------------  Functionality Section  ----------------------------------------------------------------------------  ----------------------------------------------------------------------------  All Memory Types and Record definitions.  ----------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>MemoryWordPtr</td>
@@ -1164,7 +1239,7 @@
 <tr>
 <td>VitalMemorySymbolType</td>
 <td>( '/',<br><span style="padding-left:20px">      -- 0 -&gt; 1 '\',<br><span style="padding-left:20px">      -- 1 -&gt; 0 'P',<br><span style="padding-left:20px">      -- Union of '/' and '^' (any edge to 1) 'N',<br><span style="padding-left:20px">      -- Union of '\' and 'v' (any edge to 0) 'r',<br><span style="padding-left:20px">      -- 0 -&gt; X 'f',<br><span style="padding-left:20px">      -- 1 -&gt; X 'p',<br><span style="padding-left:20px">      -- Union of '/' and 'r' (any edge from 0) 'n',<br><span style="padding-left:20px">      -- Union of '\' and 'f' (any edge from 1) 'R',<br><span style="padding-left:20px">      -- Union of '^' and 'p' (any possible rising edge) 'F',<br><span style="padding-left:20px">      -- Union of 'v' and 'n' (any possible falling edge) '^',<br><span style="padding-left:20px">      -- X -&gt; 1 'v',<br><span style="padding-left:20px">      -- X -&gt; 0 'E',<br><span style="padding-left:20px">      -- Union of 'v' and '^' (any edge from X) 'A',<br><span style="padding-left:20px">      -- Union of 'r' and '^' (rising edge to or from 'X')  'D',<br><span style="padding-left:20px">      -- Union of 'f' and 'v' (falling edge to or from 'X')  '*',<br><span style="padding-left:20px">      -- Union of 'R' and 'F' (any edge) 'X',<br><span style="padding-left:20px">      -- Unknown level '0',<br><span style="padding-left:20px">      -- low level '1',<br><span style="padding-left:20px">      -- high level 'B',<br><span style="padding-left:20px">      -- 0 or 1 'Z',<br><span style="padding-left:20px">      -- High Impedance 'S',<br><span style="padding-left:20px">      -- steady value  'g',<br><span style="padding-left:20px">      -- Good address (no transition) 'u',<br><span style="padding-left:20px">      -- Unknown address (no transition) 'i',<br><span style="padding-left:20px">      -- Invalid address (no transition) 'G',<br><span style="padding-left:20px">      -- Good address (with transition) 'U',<br><span style="padding-left:20px">      -- Unknown address (with transition) 'I',<br><span style="padding-left:20px">      -- Invalid address (with transition)  'w',<br><span style="padding-left:20px">      -- Write data to memory 's',<br><span style="padding-left:20px">      -- Retain previous memory contents  'c',<br><span style="padding-left:20px">      -- Corrupt entire memory with 'X' 'l',<br><span style="padding-left:20px">      -- Corrupt a word in memory with 'X' 'd',<br><span style="padding-left:20px">      -- Corrupt a single bit in memory with 'X' 'e',<br><span style="padding-left:20px">      -- Corrupt a word with 'X' based on data in 'C',<br><span style="padding-left:20px">      -- Corrupt a sub-word entire memory with 'X' 'L',<br><span style="padding-left:20px">      -- Corrupt a sub-word in memory with 'X'    'M',<br><span style="padding-left:20px">      -- Implicit read data from memory 'm',<br><span style="padding-left:20px">      -- Read data from memory 't'       -- Immediate assign/transfer data in  )</td>
-<td>----------------------------------------------------------------------------Symbol Literals used for Memory Table Modeling----------------------------------------------------------------------------Symbol literals from '/' to 'S' are closely related to MemoryTableMatchlookup matching and the order cannot be arbitrarily changed.The remaining symbol literals are interpreted directly and matchting ishandled in the MemoryMatch procedure itself.</td>
+<td>----------------------------------------------------------------------------  Symbol Literals used for Memory Table Modeling  ----------------------------------------------------------------------------  Symbol literals from '/' to 'S' are closely related to MemoryTableMatch  lookup matching and the order cannot be arbitrarily changed.  The remaining symbol literals are interpreted directly and matchting is  handled in the MemoryMatch procedure itself.</td>
 </tr>
 <tr>
 <td>VitalMemoryTableType</td>
@@ -1199,91 +1274,466 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>VitalMemoryInitPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> VARIABLE OutputDataArray   : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT NumBitsPerSubWord : IN INTEGER := DefaultNumBitsPerSubword ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Functions  : VitalMemory path delay procedures <br />
+                - VitalMemoryInitPathDelay<br />
+                - VitalMemoryAddPathDelay<br />
+                - VitalMemorySchedulePathDelay</p>
+<p>Description: VitalMemoryInitPathDelay, VitalMemoryAddPathDelay and<br />
+              VitalMemorySchedulePathDelay are Level 1 routines used <br />
+              for selecting the propagation delay paths based on<br />
+              path condition, transition type and delay values and<br />
+              schedule a new output value.</p>
+<pre><code>          Following features are implemented in these procedures:
+          o condition dependent path selection
+          o Transition dependent delay selection
+          o shortest delay path selection from multiple 
+            candidate paths
+          o Scheduling of the computed values on the specified 
+            signal.
+          o output retain behavior if outputRetain flag is set
+          o output mapping to alternate strengths to model 
+            pull-up, pull-down etc. 
+
+          &lt;More details to be added here&gt;</code></pre>
+<p>Following is information on overloading of the procedures.</p>
+<p>VitalMemoryInitPathDelay is overloaded for ScheduleDataArray and <br />
+ OutputDataArray</p>
+<hr />
+<pre><code>       ScheduleDataArray        OutputDataArray</code></pre>
+<hr />
+<pre><code>          Scalar                    Scalar
+          Vector                    Vector</code></pre>
+<hr />
+<p>VitalMemoryAddPathDelay is overloaded for ScheduleDataArray,<br />
+ PathDelayArray, InputSignal and delaytype.</p>
+<hr />
+<p>DelayType        InputSignal    ScheduleData     PathDelay<br />
+                                      Array          Array</p>
+<hr />
+<p>VitalDelayType      Scalar         Scalar          Scalar<br />
+  VitalDelayType      Scalar         Vector          Vector<br />
+  VitalDelayType      Vector         Scalar          Vector      <br />
+  VitalDelayType      Vector         Vector          Vector<br />
+  VitalDelayType01    Scalar         Scalar          Scalar<br />
+  VitalDelayType01    Scalar         Vector          Vector<br />
+  VitalDelayType01    Vector         Scalar          Vector<br />
+  VitalDelayType01    Vector         Vector          Vector<br />
+  VitalDelayType01Z   Scalar         Scalar          Scalar<br />
+  VitalDelayType01Z   Scalar         Vector          Vector<br />
+  VitalDelayType01Z   Vector         Scalar          Vector<br />
+  VitalDelayType01Z   Vector         Vector          Vector<br />
+  VitalDelayType01XZ  Scalar         Scalar          Scalar<br />
+  VitalDelayType01XZ  Scalar         Vector          Vector<br />
+  VitalDelayType01XZ  Vector         Scalar          Vector<br />
+  VitalDelayType01XZ  Vector         Vector          Vector</p>
+<hr />
+<p>VitalMemorySchedulePathDelay is overloaded for ScheduleDataArray,<br />
+  and OutSignal</p>
+<hr />
+<pre><code>       OutSignal                 ScheduleDataArray     </code></pre>
+<hr />
+<pre><code>         Scalar                      Scalar
+         Vector                      Vector</code></pre>
+<hr />
+<p>Procedure Declarations:</p>
+<p>Function     :   VitalMemoryInitPathDelay</p>
+<p>Arguments:</p>
+<p>INOUT               Type             Description</p>
+<p>ScheduleDataArray/  VitalMemoryScheduleDataVectorType/        <br />
+  ScheduleData        VitalMemoryScheduleDataType   <br />
+                                       Internal data variable for <br />
+                                       storing delay and schedule<br />
+                                       information for each output bit</p>
+<p>IN</p>
+<p>OutputDataArray/    STD_LOGIC_VECTOR/Array containing current output<br />
+  OutputData          STD_ULOGIC       value</p>
+<p>NumBitsPerSubWord   INTEGER          Number of bits per subword.<br />
+                                       Default value of this argument<br />
+                                       is DefaultNumBitsPerSubword <br />
+                                       which is interpreted as no <br />
+                                       subwords</p>
+<hr />
+<p>ScheduleDataArray - Vector<br />
+ OutputDataArray - Vector</p></div><ul>
 <li>VitalMemoryInitPathDelay <font id="function_arguments">( VARIABLE ScheduleData      : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> VARIABLE OutputData        : IN STD_ULOGIC ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<p>ScheduleDataArray - Scalar<br />
+ OutputDataArray - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime      : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelay            : IN VitalDelayType;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-#1DelayType - VitalDelayTypeInput     - Scalar Output    - Scalar Delay     - ScalarCondition - Scalar</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function     :   VitalMemoryAddPathDelay</p>
+<p>Arguments</p>
+<p>INOUT                 Type            Description</p>
+<p>ScheduleDataArray/    VitalMemoryScheduleDataVectorType/          <br />
+  ScheduleData          VitalMemoryScheduleDataType         <br />
+                                        Internal data variable for <br />
+                                        storing delay and schedule<br />
+                                        information for each output bit</p>
+<p>InputChangeTimeArray/ VitaltimeArrayT/Time     <br />
+  InputChangeTime                       Holds the time since the last <br />
+                                        input change</p>
+<p>IN</p>
+<p>InputSignal           STD_LOGIC_VECTOR<br />
+                        STD_ULOGIC/     Array holding the input value</p>
+<p>OutputSignalName      STRING          The output signal name</p>
+<p>PathDelayArray/       VitalDelayArrayType01ZX, <br />
+  PathDelay             VitalDelayArrayType01Z,<br />
+                        VitalDelayArrayType01,     <br />
+                        VitalDelayArrayType/<br />
+                        VitalDelayType01ZX,<br />
+                        VitalDelayType01Z,<br />
+                        VitalDelayType01,<br />
+                        VitalDelayType  Array of delay values</p>
+<p>ArcType               VitalMemoryArcType        <br />
+                                        Indicates the Path type. This<br />
+                                        can be SubwordArc, CrossArc or<br />
+                                        ParallelArc</p>
+<p>PathCondition         BOOLEAN         If True, the transition in<br />
+                                        the corresponding input signal<br />
+                                        is considered while <br />
+                                        caluculating the prop. delay<br />
+                                        else the transition is ignored.</p>
+<p>OutputRetainFlag      BOOLEAN         If specified TRUE,output retain<br />
+                                        (hold) behavior is implemented.</p>
+<hr />
+<p>#1<br />
+ DelayType - VitalDelayType<br />
+ Input     - Scalar <br />
+ Output    - Scalar <br />
+ Delay     - Scalar<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition     : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#2DelayType - VitalDelayTypeInput     - Scalar Output    - Vector Delay     - Vector Condition - Scalar</p></div><ul>
+ #2<br />
+ DelayType - VitalDelayType<br />
+ Input     - Scalar <br />
+ Output    - Vector <br />
+ Delay     - Vector <br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray: IN VitalBoolArrayT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#3DelayType - VitalDelayTypeInput     - Scalar Output    - Vector Delay     - Vector Condition - Vector</p></div><ul>
+ #3<br />
+ DelayType - VitalDelayType<br />
+ Input     - Scalar <br />
+ Output    - Vector <br />
+ Delay     - Vector <br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#4DelayType - VitalDelayTypeInput     - VectorOutput    - Scalar Delay     - VectorCondition - Scalar</p></div><ul>
+ #4<br />
+ DelayType - VitalDelayType<br />
+ Input     - Vector<br />
+ Output    - Scalar <br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray    : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#5DelayType - VitalDelayTypeInput     - VectorOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #5<br />
+ DelayType - VitalDelayType<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray    : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray   : IN VitalBoolArrayT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#6DelayType - VitalDelayTypeInput     - VectorOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #6<br />
+ DelayType - VitalDelayType<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime      : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelay            : IN VitalDelayType01;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#7DelayType - VitalDelayType01Input     - ScalarOutput    - ScalarDelay     - Scalar Condition - Scalar</p></div><ul>
+ #7<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Scalar<br />
+ Output    - Scalar<br />
+ Delay     - Scalar <br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray  : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition     : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#8DelayType - VitalDelayType01Input     - ScalarOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #8<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray  : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray: IN VitalBoolArrayT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#9DelayType - VitalDelayType01Input     - ScalarOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #9<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#10DelayType - VitalDelayType01Input     - VectorOutput    - ScalarDelay     - VectorCondition - Scalar</p></div><ul>
+ #10<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Vector<br />
+ Output    - Scalar<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray  : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#11DelayType - VitalDelayType01Input     - VectorOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #11<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray  : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray   : IN VitalBoolArrayT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#12DelayType - VitalDelayType01Input     - VectorOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #12<br />
+ DelayType - VitalDelayType01<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime      : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelay            : IN VitalDelayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#13DelayType - VitalDelayType01ZInput     - ScalarOutput    - ScalarDelay     - ScalarCondition - Scalar</p></div><ul>
+ #13<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Scalar<br />
+ Output    - Scalar<br />
+ Delay     - Scalar<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition     : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag  : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#14DelayType - VitalDelayType01ZInput     - ScalarOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #14<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray: IN VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag  : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#15DelayType - VitalDelayType01ZInput     - ScalarOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #15<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#16DelayType - VitalDelayType01ZInput     - VectorOutput    - ScalarDelay     - VectorCondition - Scalar</p></div><ul>
+ #16<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Vector<br />
+ Output    - Scalar<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#17DelayType - VitalDelayType01ZInput     - VectorOutput    - VectorDelay     - Vector Condition - Scalar</p></div><ul>
+ #17<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector <br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01Z;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray   : IN VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#18DelayType - VitalDelayType01ZInput     - VectorOutput    - VectorDelay     - Vector Condition - Vector</p></div><ul>
+ #18<br />
+ DelayType - VitalDelayType01Z<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector <br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime      : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelay            : IN VitalDelayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#19DelayType - VitalDelayType01ZXInput     - ScalarOutput    - ScalarDelay     - ScalarCondition - Scalar</p></div><ul>
+ #19<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Scalar<br />
+ Output    - Scalar<br />
+ Delay     - Scalar<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition     : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag  : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#20DelayType - VitalDelayType01ZXInput     - ScalarOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #20<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_ULOGIC;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTime   : INOUT Time;<br><span style="padding-left:20px"> CONSTANT PathDelayArray    : IN VitalDelayArrayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray: IN VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag  : IN BOOLEAN := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#21DelayType - VitalDelayType01ZXInput     - ScalarOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #21<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Scalar<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleData         : INOUT VitalMemoryScheduleDataType;<br><span style="padding-left:20px"> SIGNAL   InputSignal          : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName     : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#22DelayType - VitalDelayType01ZXInput     - VectorOutput    - ScalarDelay     - VectorCondition - Scalar</p></div><ul>
+ #22<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Vector<br />
+ Output    - Scalar<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathCondition        : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#23DelayType - VitalDelayType01ZXInput     - VectorOutput    - VectorDelay     - VectorCondition - Scalar</p></div><ul>
+ #23<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Scalar</p></div><ul>
 <li>VitalMemoryAddPathDelay <font id="function_arguments">( VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType;<br><span style="padding-left:20px"> SIGNAL   InputSignal       : IN STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> VARIABLE InputChangeTimeArray : INOUT VitalTimeArrayT;<br><span style="padding-left:20px"> CONSTANT PathDelayArray       : IN VitalDelayArrayType01ZX;<br><span style="padding-left:20px"> CONSTANT ArcType              : IN VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT PathConditionArray   : IN VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT OutputRetainFlag     : IN BOOLEAN := FALSE;<br><span style="padding-left:20px"> CONSTANT OutputRetainBehavior : IN OutputRetainBehaviorType := BitCorrupt ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-#24DelayType - VitalDelayType01ZXInput     - VectorOutput    - VectorDelay     - VectorCondition - Vector</p></div><ul>
+ #24<br />
+ DelayType - VitalDelayType01ZX<br />
+ Input     - Vector<br />
+ Output    - Vector<br />
+ Delay     - Vector<br />
+ Condition - Vector</p></div><ul>
 <li>VitalMemorySchedulePathDelay <font id="function_arguments">( SIGNAL   OutSignal         : OUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT PortFlag          : IN VitalPortFlagType := VitalDefaultPortFlag;<br><span style="padding-left:20px"> CONSTANT OutputMap : IN VitalOutputMapType := VitalDefaultOutputMap;<br><span style="padding-left:20px"> VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function     :   VitalMemorySchedulePathDelay</p>
+<p>Arguments:</p>
+<p>OUT                Type                 Description<br />
+  OutSignal          STD_LOGIC_VECTOR/    The output signal for <br />
+                     STD_ULOGIC           scheduling</p>
+<p>IN<br />
+  OutputSignalName   STRING               The name of the output signal</p>
+<p>IN<br />
+  PortFlag           VitalPortFlagType    Port flag variable from <br />
+                                          functional procedures</p>
+<p>IN<br />
+  OutputMap          VitalOutputMapType   For VitalPathDelay01Z, the <br />
+                                          output can be mapped to <br />
+                                          alternate strengths to model<br />
+                                          tri-state devices, pull-ups<br />
+                                          and pull-downs.</p>
+<p>INOUT<br />
+  ScheduleDataArray/ VitalMemoryScheduleDataVectorType/        <br />
+  ScheduleData       VitalMemoryScheduleDataType           <br />
+                                          Internal data variable for <br />
+                                          storing delay and schedule<br />
+                                          information for each <br />
+                                          output bit</p>
+<hr />
+<p>ScheduleDataArray - Vector<br />
+ OutputSignal - Vector</p></div><ul>
 <li>VitalMemorySchedulePathDelay <font id="function_arguments">( SIGNAL   OutSignal         : OUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT PortFlag          : IN VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT OutputMap : IN VitalOutputMapType := VitalDefaultOutputMap;<br><span style="padding-left:20px"> VARIABLE ScheduleDataArray : INOUT VitalMemoryScheduleDataVectorType ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<p>ScheduleDataArray - Vector<br />
+ OutputSignal - Vector</p></div><ul>
 <li>VitalMemorySchedulePathDelay <font id="function_arguments">( SIGNAL   OutSignal         : OUT std_ulogic;<br><span style="padding-left:20px"> CONSTANT OutputSignalName  : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT PortFlag          : IN VitalPortFlagType := VitalDefaultPortFlag;<br><span style="padding-left:20px"> CONSTANT OutputMap  : IN VitalOutputMapType := VitalDefaultOutputMap;<br><span style="padding-left:20px"> VARIABLE ScheduleData      : INOUT VitalMemoryScheduleDataType ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<p>ScheduleDataArray - Scalar<br />
+ OutputSignal - Scalar</p></div><ul>
 <li>VitalMemoryTimingDataInit <font id="function_arguments">()</font> <font id="function_return">RETURN VitalMemoryTimingDataType </font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr /></div><ul>
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01ArrayT;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalMemorySetupHoldCheck</p>
+<p>Description:    The VitalMemorySetupHoldCheck procedure detects a setup or a <br />
+                 hold violation on the input test signal with respect<br />
+                 to the corresponding input reference signal.  The timing <br />
+                 constraints are specified through parameters <br />
+                 representing the high and low values for the setup and<br />
+                 hold values for the setup and hold times.  This <br />
+                 procedure assumes non-negative values for setup and hold <br />
+                 timing constraints. </p>
+<pre><code>             It is assumed that negative timing constraints
+             are handled by internally delaying the test or
+             reference signals.  Negative setup times result in
+             a delayed reference signal.  Negative hold times
+             result in a delayed test signal.  Furthermore, the
+             delays and constraints associated with these and
+             other signals may need to be appropriately
+             adjusted so that all constraint intervals overlap
+             the delayed reference signals and all constraint
+             values (with respect to the delayed signals) are
+             non-negative.
+
+             This function is overloaded based on the input
+             TestSignal and reference signals. Parallel, Subword and
+             Cross Arc relationships between test and reference
+             signals are supported.</code></pre>
+<p>TestSignal XXXXXXXXXXXX____________________________XXXXXXXXXXXXXXXXXXXXXX<br />
+            :<br />
+            :        --&gt;|       error region       |<--
+            :
+            _______________________________
+ RefSignal                                 \______________________________
+            :           |                  |       |
+            :           |               -->|       |<-- thold
+            :        -->|     tsetup       |&lt;--</p>
+<p>Arguments:         </p>
+<p>IN                Type                Description    <br />
+   TestSignal       std_logic_vector    Value of test signal<br />
+   TestSignalName   STRING              Name of test signal<br />
+   TestDelay        VitalDelayArrayType Model's internal delay associated<br />
+                                        with TestSignal<br />
+   RefSignal        std_ulogic          Value of reference signal<br />
+                    std_logic_vector<br />
+   RefSignalName    STRING              Name of reference signal<br />
+   RefDelay         TIME                Model's internal delay associated<br />
+                    VitalDelayArrayType with RefSignal<br />
+   SetupHigh        VitalDelayArrayType Absolute minimum time duration <br />
+                                        before the transition of RefSignal<br />
+                                        for which transitions of <br />
+                                        TestSignal are allowed to proceed<br />
+                                        to the "1" state without causing<br />
+                                        a setup violation.      <br />
+   SetupLow         VitalDelayArrayType Absolute minimum time duration <br />
+                                        before the transition of RefSignal<br />
+                                        for which transitions of <br />
+                                        TestSignal are allowed to proceed <br />
+                                        to the "0" state without causing<br />
+                                        a setup violation.      <br />
+   HoldHigh         VitalDelayArrayType Absolute minimum time duration <br />
+                                        after the transition of RefSignal<br />
+                                        for which transitions of <br />
+                                        TestSignal are allowed to<br />
+                                        proceed to the "1" state without<br />
+                                        causing a hold violation.      <br />
+   HoldLow          VitalDelayArrayType Absolute minimum time duration<br />
+                                        after the transition of RefSignal<br />
+                                        for which transitions of <br />
+                                        TestSignal are allowed to<br />
+                                        proceed to the "0" state without<br />
+                                        causing a hold violation.      <br />
+   CheckEnabled     BOOLEAN             Check performed if TRUE.<br />
+   RefTransition    VitalEdgeSymbolType<br />
+                                        Reference edge specified. Events <br />
+                                        on the RefSignal which match the<br />
+                                        edge spec. are used as reference <br />
+                                        edges.      <br />
+   ArcType          VitalMemoryArcType<br />
+   NumBitsPerSubWord INTEGER<br />
+   HeaderMsg        STRING              String that will accompany any<br />
+                                        assertion messages produced.      <br />
+   XOn              BOOLEAN             If TRUE, Violation output <br />
+                                        parameter is set to "X". <br />
+                                        Otherwise, Violation is always<br />
+                                        set to "0."      <br />
+   MsgOn            BOOLEAN             If TRUE, set and hold violation <br />
+                                        message will be generated.<br />
+                                        Otherwise, no messages are<br />
+                                        generated, even upon violations.  <br />
+   MsgSeverity      SEVERITY_LEVEL      Severity level for the assertion. <br />
+   MsgFormat        VitalMemoryMsgFormatType<br />
+                                        Format of the Test/Reference <br />
+                                        signals in violation messages.</p>
+<p>INOUT<br />
+   TimingData       VitalMemoryTimingDataType  <br />
+                                        VitalMemorySetupHoldCheck information<br />
+                                        storage area.  This is used<br />
+                                        internally to detect reference <br />
+                                        edges and record the time of the <br />
+                                        last edge.</p>
+<p>OUT<br />
+   Violation        X01              This is the violation flag returned. <br />
+                    X01ArrayT        Overloaded for array type.</p>
+<hr /></div><ul>
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01ArrayT;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat         : IN     VitalMemoryMsgFormatType;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01ArrayT;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN     VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT NumBitsPerSubWord : IN     INTEGER := 1;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat         : IN     VitalMemoryMsgFormatType;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
@@ -1293,26 +1743,154 @@
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01ArrayT;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     VitalBoolArrayT;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN     VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT NumBitsPerSubWord : IN     INTEGER := 1;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat         : IN     VitalMemoryMsgFormatType;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat         : IN     VitalMemoryMsgFormatType;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+------------- following are not needed --------------------------</p></div><ul>
 <li>VitalMemorySetupHoldCheck <font id="function_arguments">( VARIABLE Violation         : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData        : INOUT  VitalMemoryTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal        : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName    : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> SIGNAL   RefSignal         : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT RefSignalName     : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupHigh         : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT SetupLow          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldHigh          : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT HoldLow           : IN     VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled      : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition     : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg         : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn               : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn             : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity       : IN     SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT ArcType           : IN     VitalMemoryArcType := CrossArc;<br><span style="padding-left:20px"> CONSTANT NumBitsPerSubWord : IN     INTEGER := 1;<br><span style="padding-left:20px"> CONSTANT MsgFormat         : IN     VitalMemoryMsgFormatType;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnTest : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableSetupOnRef  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnRef   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT EnableHoldOnTest  : IN     BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemoryPeriodPulseCheck <font id="function_arguments">( VARIABLE Violation      : OUT   X01ArrayT;<br><span style="padding-left:20px"> VARIABLE PeriodData     : INOUT VitalPeriodDataArrayType;<br><span style="padding-left:20px"> SIGNAL   TestSignal     : IN    std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName : IN    STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay      : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT Period         : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT PulseWidthHigh : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT PulseWidthLow  : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled   : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN    STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn            : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn          : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity    : IN    SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat      : IN    VitalMemoryMsgFormatType ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Function Name:  VitalPeriodPulseCheck</p>
+<p>Description:    VitalPeriodPulseCheck checks for minimum and maximum<br />
+                 periodicity and pulse width for "1" and "0" values of<br />
+                 the input test signal.  The timing constraint is <br />
+                 specified through parameters representing the minimal<br />
+                 period between successive rising and falling edges of<br />
+                 the input test signal and the minimum pulse widths <br />
+                 associated with high and low values.  </p>
+<pre><code>             VitalPeriodCheck's accepts rising and falling edges
+             from 1 and 0 as well as transitions to and from 'X.'
+
+                _______________         __________
+   ____________|               |_______|
+
+               |&lt;--- pw_hi ---&gt;|
+               |&lt;-------- period -----&gt;|
+                            --&gt;| pw_lo |&lt;--</code></pre>
+<p>Arguments:<br />
+    IN             Type              Description<br />
+    TestSignal     std_logic_vector  Value of test signal  <br />
+    TestSignalName STRING            Name of the test signal<br />
+    TestDelay      VitalDelayArrayType <br />
+                                     Model's internal delay associated<br />
+                                     with TestSignal<br />
+    Period         VitalDelayArrayType <br />
+                                     Minimum period allowed between<br />
+                                     consecutive rising ('P') or <br />
+                                     falling ('F') transitions.<br />
+    PulseWidthHigh VitalDelayArrayType <br />
+                                     Minimum time allowed for a high<br />
+                                     pulse ('1' or 'H')<br />
+    PulseWidthLow  VitalDelayArrayType <br />
+                                     Minimum time allowed for a low<br />
+                                     pulse ('0' or 'L')<br />
+    CheckEnabled   BOOLEAN           Check performed if TRUE.<br />
+    HeaderMsg      STRING            String that will accompany any<br />
+                                     assertion messages produced.   <br />
+    XOn            BOOLEAN           If TRUE, Violation output parameter<br />
+                                     is set to "X". Otherwise, Violation<br />
+                                     is always set to "0." <br />
+    MsgOn          BOOLEAN           If TRUE, period/pulse violation<br />
+                                     message will be generated.<br />
+                                     Otherwise, no messages are generated,<br />
+                                     even though a violation is detected. <br />
+    MsgSeverity    SEVERITY_LEVEL    Severity level for the assertion.<br />
+    MsgFormat      VitalMemoryMsgFormatType<br />
+                                     Format of the Test/Reference signals<br />
+                                     in violation messages.</p>
+<pre><code>INOUT
+PeriodData     VitalPeriodDataArrayType 
+                                 VitalPeriodPulseCheck information
+                                 storage area.  This is used
+                                 internally to detect reference edges
+                                 and record the pulse and period
+                                 times.
+OUT
+Violation      X01               This is the violation flag returned. 
+               X01ArrayT         Overloaded for array type.</code></pre>
+<hr /></div><ul>
 <li>VitalMemoryPeriodPulseCheck <font id="function_arguments">( VARIABLE Violation      : OUT   X01;<br><span style="padding-left:20px"> VARIABLE PeriodData     : INOUT VitalPeriodDataArrayType;<br><span style="padding-left:20px"> SIGNAL   TestSignal     : IN    std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName : IN    STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay      : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT Period         : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT PulseWidthHigh : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT PulseWidthLow  : IN    VitalDelayArrayType;<br><span style="padding-left:20px"> CONSTANT CheckEnabled   : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN    STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn            : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn          : IN    BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity    : IN    SEVERITY_LEVEL := WARNING;<br><span style="padding-left:20px"> CONSTANT MsgFormat      : IN    VitalMemoryMsgFormatType ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemoryTable <font id="function_arguments">( VARIABLE DataOutBus     : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData     : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE PrevControls   : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PrevDataInBus  : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PrevAddressBus : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PortFlag       : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT Controls       : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT DataInBus      : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT AddressBus     : IN std_logic_vector;<br><span style="padding-left:20px"> VARIABLE AddressValue   : INOUT VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT MemoryTable    : IN VitalMemoryTableType;<br><span style="padding-left:20px"> CONSTANT PortType       : IN VitalPortType := UNDEF;<br><span style="padding-left:20px"> CONSTANT PortName       : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn          : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity    : IN SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-----------------------------------------------------------------------------Procedure:   VitalMemoryTableParameters:  DataOutBus     - Output candidate zero delay data bus out             MemoryData     - Pointer to memory data structure             PrevControls   - Previous data in for edge detection             PrevEnableBus  - Previous enables for edge detection             PrevDataInBus  - Previous data bus for edge detection             PrevAddressBus - Previous address bus for edge detection             PortFlag       - Indicates port operating mode             PortFlagArray  - Vector form of PortFlag for sub-word             Controls       - Agregate of scalar control lines             EnableBus      - Concatenation of vector control lines             DataInBus      - Input value of data bus in             AddressBus     - Input value of address bus in             AddressValue   - Decoded value of the AddressBus             MemoryTable    - Input memory action table             PortType       - The type of port (currently not used)             PortName       - Port name string for messages             HeaderMsg      - Header string for messages             MsgOn          - Control the generation of messages             MsgSeverity    - Control level of message generationDescription: This procedure implements the majority of the memory              modeling functionality via lookup of the memory action             tables and performing the specified actions if matches             are found, or the default actions otherwise.  The             overloadings are provided for the word and sub-word             (using the EnableBus and PortFlagArray arguments) addressing             cases.----------------------------------------------------------------------------</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Procedure:   VitalMemoryTable<br />
+ Parameters:  DataOutBus     - Output candidate zero delay data bus out<br />
+              MemoryData     - Pointer to memory data structure<br />
+              PrevControls   - Previous data in for edge detection<br />
+              PrevEnableBus  - Previous enables for edge detection<br />
+              PrevDataInBus  - Previous data bus for edge detection<br />
+              PrevAddressBus - Previous address bus for edge detection<br />
+              PortFlag       - Indicates port operating mode<br />
+              PortFlagArray  - Vector form of PortFlag for sub-word<br />
+              Controls       - Agregate of scalar control lines<br />
+              EnableBus      - Concatenation of vector control lines<br />
+              DataInBus      - Input value of data bus in<br />
+              AddressBus     - Input value of address bus in<br />
+              AddressValue   - Decoded value of the AddressBus<br />
+              MemoryTable    - Input memory action table<br />
+              PortType       - The type of port (currently not used)<br />
+              PortName       - Port name string for messages<br />
+              HeaderMsg      - Header string for messages<br />
+              MsgOn          - Control the generation of messages<br />
+              MsgSeverity    - Control level of message generation<br />
+ Description: This procedure implements the majority of the memory <br />
+              modeling functionality via lookup of the memory action<br />
+              tables and performing the specified actions if matches<br />
+              are found, or the default actions otherwise.  The<br />
+              overloadings are provided for the word and sub-word<br />
+              (using the EnableBus and PortFlagArray arguments) addressing<br />
+              cases.</p>
+<hr /></div><ul>
 <li>VitalMemoryTable <font id="function_arguments">( VARIABLE DataOutBus     : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData     : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE PrevControls   : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PrevEnableBus  : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PrevDataInBus  : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PrevAddressBus : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PortFlagArray  : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT Controls       : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT EnableBus      : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT DataInBus      : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT AddressBus     : IN std_logic_vector;<br><span style="padding-left:20px"> VARIABLE AddressValue   : INOUT VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT MemoryTable    : IN VitalMemoryTableType;<br><span style="padding-left:20px"> CONSTANT PortType       : IN VitalPortType := UNDEF;<br><span style="padding-left:20px"> CONSTANT PortName       : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn          : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity    : IN SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemoryCrossPorts <font id="function_arguments">( VARIABLE DataOutBus             : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData             : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE SamePortFlag           : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT SamePortAddressValue   : IN VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT CrossPortFlagArray     : IN VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT CrossPortAddressArray  : IN VitalAddressValueVectorType;<br><span style="padding-left:20px"> CONSTANT CrossPortMode          : IN VitalCrossPortModeType := CpReadAndWriteContention;<br><span style="padding-left:20px"> CONSTANT PortName               : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg              : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn                  : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Description: These procedures control the effect of memory operations             on a given port due to operations on other ports in a             multi-port memory.             This includes data write through when reading and writing              to the same address, as well as write contention when             there are multiple write to the same address.             If addresses do not match then data bus is unchanged.              The DataOutBus can be diabled with 'Z' value.----------------------------------------------------------------------------</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Procedure:   VitalMemoryCrossPorts<br />
+ Parameters:  DataOutBus     - Output candidate zero delay data bus out<br />
+              MemoryData     - Pointer to memory data structure<br />
+              SamePortFlag   - Operating mode for same port<br />
+              SamePortAddressValue  - Decoded AddressBus for same port<br />
+              CrossPortFlagArray    - Operating modes for cross ports<br />
+              CrossPortAddressArray - Decoded AddressBus for cross ports<br />
+              CrossPortMode  - Write contention and crossport read control<br />
+              PortName       - Port name string for messages<br />
+              HeaderMsg      - Header string for messages<br />
+              MsgOn          - Control the generation of messages</p>
+<p>Description: These procedures control the effect of memory operations<br />
+              on a given port due to operations on other ports in a<br />
+              multi-port memory.<br />
+              This includes data write through when reading and writing <br />
+              to the same address, as well as write contention when<br />
+              there are multiple write to the same address.<br />
+              If addresses do not match then data bus is unchanged. <br />
+              The DataOutBus can be diabled with 'Z' value.</p>
+<hr /></div><ul>
 <li>VitalMemoryCrossPorts <font id="function_arguments">( VARIABLE MemoryData             : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> CONSTANT CrossPortFlagArray     : IN VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT CrossPortAddressArray  : IN VitalAddressValueVectorType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg              : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn                  : IN BOOLEAN := TRUE ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>VitalMemoryViolation <font id="function_arguments">( VARIABLE DataOutBus           : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData           : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE PortFlag             : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT DataInBus            : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT AddressValue         : IN VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT ViolationFlags       : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ViolationFlagsArray  : IN X01ArrayT;<br><span style="padding-left:20px"> CONSTANT ViolationSizesArray  : IN VitalMemoryViolFlagSizeType;<br><span style="padding-left:20px"> CONSTANT ViolationTable       : IN VitalMemoryTableType;<br><span style="padding-left:20px"> CONSTANT PortType             : IN VitalPortType;<br><span style="padding-left:20px"> CONSTANT PortName             : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg            : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn                : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity          : IN SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-----------------------------------------------------------------------------Procedure:   VitalMemoryViolationParameters:  DataOutBus          - Output zero delay data bus out             MemoryData          - Pointer to memory data structure             PortFlag            - Indicates port operating mode             DataInBus           - Input value of data bus in             AddressValue        - Decoded value of the AddressBus             ViolationFlags      - Aggregate of scalar violation vars             ViolationFlagsArray - Concatenation of vector violation vars             ViolationTable      - Input memory violation table             PortType            - The type of port (currently not used)             PortName            - Port name string for messages             HeaderMsg           - Header string for messages             MsgOn               - Control the generation of messages             MsgSeverity         - Control level of message generationDescription: This procedure is intended to implement all actions on the             memory contents and data out bus as a result of timing viols.             It uses the memory action table to perform various corruption             policies specified by the user. ----------------------------------------------------------------------------</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>Procedure:   VitalMemoryViolation<br />
+ Parameters:  DataOutBus          - Output zero delay data bus out<br />
+              MemoryData          - Pointer to memory data structure<br />
+              PortFlag            - Indicates port operating mode<br />
+              DataInBus           - Input value of data bus in<br />
+              AddressValue        - Decoded value of the AddressBus<br />
+              ViolationFlags      - Aggregate of scalar violation vars<br />
+              ViolationFlagsArray - Concatenation of vector violation vars<br />
+              ViolationTable      - Input memory violation table<br />
+              PortType            - The type of port (currently not used)<br />
+              PortName            - Port name string for messages<br />
+              HeaderMsg           - Header string for messages<br />
+              MsgOn               - Control the generation of messages<br />
+              MsgSeverity         - Control level of message generation<br />
+ Description: This procedure is intended to implement all actions on the<br />
+              memory contents and data out bus as a result of timing viols.<br />
+              It uses the memory action table to perform various corruption<br />
+              policies specified by the user. </p>
+<hr /></div><ul>
 <li>VitalMemoryViolation <font id="function_arguments">( VARIABLE DataOutBus           : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE MemoryData           : INOUT VitalMemoryDataType;<br><span style="padding-left:20px"> VARIABLE PortFlag             : INOUT VitalPortFlagVectorType;<br><span style="padding-left:20px"> CONSTANT DataInBus            : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT AddressValue         : IN VitalAddressValueType;<br><span style="padding-left:20px"> CONSTANT ViolationFlags       : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ViolationTable       : IN VitalMemoryTableType;<br><span style="padding-left:20px"> CONSTANT PortType             : IN VitalPortType;<br><span style="padding-left:20px"> CONSTANT PortName             : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT HeaderMsg            : IN STRING := "";<br><span style="padding-left:20px"> CONSTANT MsgOn                : IN BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity          : IN SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

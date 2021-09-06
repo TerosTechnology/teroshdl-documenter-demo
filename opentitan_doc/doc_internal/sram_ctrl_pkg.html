@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1053,21 +1128,9 @@
 </thead>
 <tbody>
 <tr>
-<td>Width</td>
+<td>DataWidth</td>
 <td>int</td>
-<td>32</td>
-<td></td>
-</tr>
-<tr>
-<td>AddrWidth</td>
-<td>int</td>
-<td>32</td>
-<td>This is later on pruned to the correct width at the SRAM wrapper interface.</td>
-</tr>
-<tr>
-<td>RandInitSeed</td>
-<td>int</td>
-<td>32</td>
+<td>32 + tlul_pkg::DataIntgWidth</td>
 <td></td>
 </tr>
 <tr>
@@ -1080,7 +1143,7 @@
 <td>otp_ctrl_pkg</td>
 <td>otp_ctrl_pkg::sram_key_t</td>
 <td>128'hbecda03b34bc0418a30a33861a610f71</td>
-<td></td>
+<td>///////////  RndCnst // ///////////</td>
 </tr>
 <tr>
 <td>otp_ctrl_pkg</td>
@@ -1089,9 +1152,21 @@
 <td></td>
 </tr>
 <tr>
+<td>LfsrWidth</td>
+<td>int</td>
+<td>32</td>
+<td>These LFSR parameters have been generated with  $ ./util/design/gen-lfsr-seed.py --width 32 --seed 3296833456 --prefix ""</td>
+</tr>
+<tr>
+<td>lfsr_seed_t</td>
+<td>lfsr_seed_t</td>
+<td>32'h10a81ea5</td>
+<td></td>
+</tr>
+<tr>
 <td>lfsr_perm_t</td>
 <td>lfsr_perm_t</td>
-<td>160'h8c24f71703eda8a2378916b6bf80c76651ebcea1</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -1107,28 +1182,13 @@
 </thead>
 <tbody>
 <tr>
+<td>lfsr_seed_t</td>
+<td>logic [LfsrWidth-1:0]</td>
+<td></td>
+</tr>
+<tr>
 <td>lfsr_perm_t</td>
-<td>logic [RandInitSeed-1:0][$clog2(RandInitSeed)-1:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_scr_req_t</td>
-<td>struct packed {<br><span style="padding-left:20px">          logic                                    valid;<br><span style="padding-left:20px">     logic [otp_ctrl_pkg::SramKeyWidth-1:0]   key;<br><span style="padding-left:20px">     logic [NonceWidth-1:0]                   nonce;<br><span style="padding-left:20px">   }</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_scr_init_req_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic                                    req;<br><span style="padding-left:20px">     logic [RandInitSeed-1:0]                 seed;<br><span style="padding-left:20px">   }</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_scr_rsp_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic [1:0]           rerror;<br><span style="padding-left:20px">      logic [AddrWidth-1:0] raddr;<br><span style="padding-left:20px">     }</td>
-<td></td>
-</tr>
-<tr>
-<td>sram_scr_init_rsp_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     logic                  ack;<br><span style="padding-left:20px">   }</td>
+<td>logic [LfsrWidth-1:0][$clog2(LfsrWidth)-1:0]</td>
 <td></td>
 </tr>
 </tbody>

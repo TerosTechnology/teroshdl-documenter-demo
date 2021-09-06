@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1026,79 +1101,85 @@
 </ul><ul>
 <li>print <font id="function_arguments">(active : boolean;<br><span style="padding-left:20px"> text : string) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-prints the message when activeuseful for debug switches</p></div><ul>
+ prints the message when active<br />
+ useful for debug switches</p></div><ul>
 <li>chr <font id="function_arguments">(sl : std_logic) </font> <font id="function_return">return character </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts std_logic into a character</p></div><ul>
+ converts std_logic into a character</p></div><ul>
 <li>str <font id="function_arguments">(sl : std_logic) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts std_logic into a string (1 to 1)</p></div><ul>
+ converts std_logic into a string (1 to 1)</p></div><ul>
 <li>str <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts std_logic_vector into a string (binary base)</p></div><ul>
+ converts std_logic_vector into a string (binary base)</p></div><ul>
 <li>str <font id="function_arguments">(b : boolean) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts boolean into a string</p></div><ul>
+ converts boolean into a string</p></div><ul>
 <li>chr <font id="function_arguments">(int : integer) </font> <font id="function_return">return character </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts an integer into a single character(can also be used for hex conversion and other bases)</p></div><ul>
+ converts an integer into a single character<br />
+ (can also be used for hex conversion and other bases)</p></div><ul>
 <li>int <font id="function_arguments">(c : character) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Converts a character into an integer</p></div><ul>
+ Converts a character into an integer</p></div><ul>
 <li>str <font id="function_arguments">(int : integer;<br><span style="padding-left:20px"> base : integer) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts integer into string using specified base</p></div><ul>
+ converts integer into string using specified base</p></div><ul>
 <li>int <font id="function_arguments">(s : string;<br><span style="padding-left:20px"> base : integer) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts a string with specified base into an integer</p></div><ul>
+ converts a string with specified base into an integer</p></div><ul>
 <li>str <font id="function_arguments">(int : integer) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts integer to string, using base 10</p></div><ul>
+ converts integer to string, using base 10</p></div><ul>
 <li>str <font id="function_arguments">(tim : time) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts a time to a string</p></div><ul>
+ converts a time to a string</p></div><ul>
 <li>hstr <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-convert std_logic_vector into a string in hex format</p></div><ul>
+ convert std_logic_vector into a string in hex format</p></div><ul>
 <li>toUpper <font id="function_arguments">(c : character) </font> <font id="function_return">return character </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-convert a character to upper case</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-functions-to-manipulate-strings"> functions to manipulate strings</h2>
+<p>convert a character to upper case</p></div><ul>
 <li>toLower <font id="function_arguments">(c : character) </font> <font id="function_return">return character </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-convert a character to lower case</p></div><ul>
+ convert a character to lower case</p></div><ul>
 <li>toUpper <font id="function_arguments">(s : string) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-convert a string to upper case</p></div><ul>
+ convert a string to upper case</p></div><ul>
 <li>toLower <font id="function_arguments">(s : string) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-convert a string to lower case</p></div><ul>
+ convert a string to lower case</p></div><ul>
 <li>isWhitespace <font id="function_arguments">(c : character) </font> <font id="function_return">return boolean </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-checks if whitespace (JFF)</p></div><ul>
+ checks if whitespace (JFF)</p></div><ul>
 <li>strip <font id="function_arguments">(s : string) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-remove leading whitespace (JFF)</p></div><ul>
+ remove leading whitespace (JFF)</p></div><ul>
 <li>firstString <font id="function_arguments">(s : string) </font> <font id="function_return">return string </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-return first nonwhitespace substring (JFF)</p></div><ul>
+ return first nonwhitespace substring (JFF)</p></div><ul>
 <li>chomp <font id="function_arguments">(variable s : inout string;<br><span style="padding-left:20px"> variable shead : out string) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-finds the first non-whitespace substring in a string and (JFF)returns both the substring and the original with the substring removed</p></div><ul>
+ finds the first non-whitespace substring in a string and (JFF)<br />
+ returns both the substring and the original with the substring removed</p></div><ul>
 <li>toSl <font id="function_arguments">(c : character) </font> <font id="function_return">return std_logic </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-converts a character into std_logic</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-functions-to-convert-strings-into-other-formats"> functions to convert strings into other formats</h2>
+<p>converts a character into std_logic</p></div><ul>
 <li>toSlv <font id="function_arguments">(s : string) </font> <font id="function_return">return std_logic_vector </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-converts a string into std_logic_vector</p></div><ul>
+ converts a string into std_logic_vector</p></div><ul>
 <li>strRead <font id="function_arguments">(file in_file :     text;<br><span style="padding-left:20px"> res_string   : out string) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-read variable length string from input file</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-file-io"> file I/O</h2>
+<p>read variable length string from input file</p></div><ul>
 <li>print <font id="function_arguments">(file out_file :    text;<br><span style="padding-left:20px"> new_string    : in string) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-print string to a file and start new line</p></div><ul>
+ print string to a file and start new line</p></div><ul>
 <li>print <font id="function_arguments">(file out_file :    text;<br><span style="padding-left:20px"> char          : in character) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-print character to a file and start new line</p></div><br><br><br><br><br><br>
+ print character to a file and start new line</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

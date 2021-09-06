@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1060,6 +1135,24 @@
 <td></td>
 </tr>
 <tr>
+<td>BytesPerPage</td>
+<td>uint</td>
+<td>FlashSizeBytes / FlashNumPages</td>
+<td>Number of bytes in each of the flash pages.</td>
+</tr>
+<tr>
+<td>BytesPerBank</td>
+<td>uint</td>
+<td>FlashSizeBytes / flash_ctrl_pkg::NumBanks</td>
+<td>Num of bytes in each of the flash banks for each of the flash partitions.</td>
+</tr>
+<tr>
+<td>InfoTypeBytes</td>
+<td>uint</td>
+<td>undefined</td>
+<td></td>
+</tr>
+<tr>
 <td>FlashNumBusWords</td>
 <td>uint</td>
 <td>FlashSizeBytes / top_pkg::TL_DBW</td>
@@ -1167,18 +1260,28 @@
 </tr>
 <tr>
 <td>flash_dv_part_e</td>
-<td>enum logic [flash_ctrl_pkg::InfoTypes:0] {<br><span style="padding-left:20px">      FlashPartData  = 0,<br><span style="padding-left:20px">     FlashPartInfo  = 1,<br><span style="padding-left:20px">     FlashPartInfo1 = 2,<br><span style="padding-left:20px">     FlashPartRed   = 4   }</td>
+<td>enum logic [flash_ctrl_pkg::InfoTypes:0] {<br><span style="padding-left:20px">      FlashPartData         = 0,<br><span style="padding-left:20px">     FlashPartInfo         = 1,<br><span style="padding-left:20px">     FlashPartInfo1        = 2,<br><span style="padding-left:20px">     FlashPartRedundancy   = 4   }</td>
 <td>Data partition and all info partitions</td>
 </tr>
 <tr>
 <td>flash_mp_region_cfg_t</td>
-<td>struct packed {<br><span style="padding-left:20px">     bit           en;<br><span style="padding-left:20px">              bit           read_en;<br><span style="padding-left:20px">         bit           program_en;<br><span style="padding-left:20px">      bit           erase_en;<br><span style="padding-left:20px">        flash_part_e  partition;<br><span style="padding-left:20px">       uint          num_pages;<br><span style="padding-left:20px">       uint          start_page;<br><span style="padding-left:20px">    }</td>
+<td>struct packed {<br><span style="padding-left:20px">     bit           en;<br><span style="padding-left:20px">              bit           read_en;<br><span style="padding-left:20px">         bit           program_en;<br><span style="padding-left:20px">      bit           erase_en;<br><span style="padding-left:20px">        uint          num_pages;<br><span style="padding-left:20px">       uint          start_page;<br><span style="padding-left:20px">    }</td>
+<td></td>
+</tr>
+<tr>
+<td>flash_bank_mp_info_page_cfg_t</td>
+<td>struct packed {<br><span style="padding-left:20px">     bit           en;<br><span style="padding-left:20px">              bit           read_en;<br><span style="padding-left:20px">         bit           program_en;<br><span style="padding-left:20px">      bit           erase_en;<br><span style="padding-left:20px">      }</td>
 <td></td>
 </tr>
 <tr>
 <td>flash_op_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     flash_dv_part_e partition;<br><span style="padding-left:20px">       flash_erase_e   erase_type;<br><span style="padding-left:20px">      flash_op_e      op;<br><span style="padding-left:20px">              uint            num_words;<br><span style="padding-left:20px">       bit [TL_AW-1:0] addr;<br><span style="padding-left:20px">          }</td>
 <td></td>
+</tr>
+<tr>
+<td>data_q_t</td>
+<td>logic [TL_DW-1:0]</td>
+<td>Data queue for flash transactions</td>
 </tr>
 </tbody>
 </table><br><br><br><br><br><br>

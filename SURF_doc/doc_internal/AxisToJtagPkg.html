@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1022,103 +1097,117 @@
 <a id=AxisToJtagPkg><h1 id="package-axistojtagpkg">Package: AxisToJtagPkg</h1></a><ul>
 <li><strong>File</strong>: AxisToJtagPkg.vhd</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>This module implements a simple protocol for encoding XVC transactions over<br />
-an AXI stream. Part of this is support for unreliable transport protocols<br />
-(by means of a memory buffer and transaction IDs).<br />
-Once the protocol header is processed the stream is delegated to the<br />
-AxisToJtagCore module.<br />
-INCOMING STREAM<br />
-The incoming Stream consists of consecutive words of AXIS_WIDTH_G bytes,<br />
-must be framed with 'TLAST' and is expected to have the following format :<br />
-   Header Word [, Payload ]<br />
-The header word is defined as<br />
-  [31:30]  Protocol Version -- currently "00"<br />
-  [29:28]  Command<br />
-  [27:00]  Command-specific parameter(s)<br />
-Note that if the core is configured for a stream width (AXIS_WIDTH_G) &gt; 4<br />
-then the header is padded up to the desired width, i.e., the paylod must<br />
-be word-aligned.<br />
-Each command word is answered with a reply word on the outgoing stream<br />
-(see below).<br />
-The following commands are currently defined:<br />
-     "00"  QUERY: request basic features such as word length, memory depth.<br />
-           Payload: NONE, i.e., TLAST should be asserted with this command.<br />
-     "01"  JTAG: shift jtag vectors. The vectors are shipped in the payload.<br />
-           The parameter bits for this command are defined as follows:<br />
-           [27:20] Transaction ID; this is used when the core is configured<br />
-                   with MEM_DEPTH_G &gt; 0 in order to support a non-reliable<br />
-                   transport.<br />
-           [19:00] JTAG vector length (in bits). The payload must provide<br />
-                   2*ceil( length / AXIS_WIDTH_G ) words of TMS/TDI vector<br />
-                   data. I.e., the length refers to the length of a single<br />
-                   TMS or TDI vector.<br />
-                   !!!!!!!<br />
-                    NOTE: the number in [19:00] encodes the actual number<br />
-                          minus 1. E.g., a value of 0 transmits one TMS<br />
-                          and one TDI bit. Two payload words are expected<br />
-                          in this example.<br />
-                   !!!!!!!<br />
-           Payload: sequence of words from the TMS and TDI bit-vectors:<br />
-                   TMS_WORD, TDI_WORD, TMS_WORD, TDI_WORD, …<br />
-                   Note that the user must format the stream accordingly<br />
-                   and therefore must be aware of the stream width. This<br />
-                   parameter is returned by the QUERY command.<br />
-                   If the number of bits supplied does not fill the last<br />
-                   word then the relevant bits must be lsb/right-aligned<br />
-                   in the last word.<br />
-                   TLAST must be asserted during the transmission of the<br />
-                   last TDI/payload word.<br />
-OUTGOING STREAM<br />
-The outgoing stream consists of consecutive words of AXIS_WIDTH_G bytes<br />
-and is framed with 'TLAST'. Each reply has the following format:<br />
-   Header Word [, Payload ]<br />
-The header word is defined as<br />
-  [31:30]  Protocol Version; if the user supplies an unsupported protocol<br />
-           version in the request header then the reply contains an error<br />
-           code (see below) and the protocol version in the reply is set<br />
-           to the supported version.<br />
-  [29:28]  Command -- the request command is returned unless an error occurred;<br />
-           in case of an error the command bits in the reply are:<br />
-           "10"  ERROR: An error was detected. The 8 least-significant bits<br />
-                 [7:0] contain an error code:<br />
-                 1: bad protocol version; the protocol version in the reply<br />
-                    is set to the supported version.<br />
-                 2: bad/unsupported command code<br />
-                 3: truncated input stream (TLAST detected before the<br />
-                    first TDI word was received). Note that a premature<br />
-                    TLAST which is detected after the first TDI word<br />
-                    does NOT flag an error but yields a truncated reply<br />
-                    (less TDO words than requested by the number of bits).<br />
-                 4: 'debug bridge not present' error. I.e., the FW only<br />
-                    implements a stub and no true debug bridge.<br />
-           "00"  QUERY: the response to a QUERY command encodes information<br />
-                 in the command-specific bits:<br />
-                [ 3: 0] AXIS_WIDTH_G - 1. I.e., this field encodes the<br />
-                        word size (minus one) used by the core. This information<br />
-                        is important for formatting the stream.<br />
-                [19: 4] MEM_DEPTH_G. Indicates how much memory (if any) was<br />
-                        configured in words.<br />
-                [27:20] TCK period. Encoded as<br />
-                                         200Mhz     1<br />
-                           round{ log10( ------- ) --- 256 }<br />
-                                          Ttck      4<br />
-                       With the special value 0 representing 'unknown'.<br />
-           "01"  JTAG: the response to a JTAG command is a sequence of<br />
-                 TDO words which form the TDO bit vector. The vector<br />
-                 stored in little-endian format (first bit of the vector<br />
-                 is the LSB of the first TDO word).<br />
-                 If the number of JTAG bits does not fill the last TDO<br />
-                 word completely then the relevant bits are right-<br />
-                 aligned.<br />
-RELIABILITY SUPPORT<br />
-If the transport mechanism contains unreliable segments with a potential for<br />
-data loss then a simple retry mechanism is not suitable because JTAG operations<br />
-are not necessarily idempotent.<br />
-The core can be configured to use internal memory (MEM_DEPTH_C &gt; 0) in which<br />
-case it stores the last JTAG TDO response in memory.<br />
-When the next JTAG command arrives the core inspects the 'transaction ID' field<br />
-of the command and if it is identical with the ID submitted along with the previous<br />
-transaction then the core detects a retried operation and does not actually execute<br />
-it again on JTAG but plays back the stored TDO response to the requestor.<br />
+ an AXI stream. Part of this is support for unreliable transport protocols<br />
+ (by means of a memory buffer and transaction IDs).<br />
+ Once the protocol header is processed the stream is delegated to the<br />
+ AxisToJtagCore module.</p>
+<p>INCOMING STREAM</p>
+<p>The incoming Stream consists of consecutive words of AXIS_WIDTH_G bytes,<br />
+ must be framed with 'TLAST' and is expected to have the following format :</p>
+<pre><code class="hljs"><span class="hljs-attribute"><span class="hljs-nomarkup">Header</span></span> Word<span class="hljs-meta"> [, Payload ]</span></code></pre>
+<p>The header word is defined as</p>
+<p>[31:30]  Protocol Version -- currently "00"<br />
+   [29:28]  Command<br />
+   [27:00]  Command-specific parameter(s)</p>
+<p>Note that if the core is configured for a stream width (AXIS_WIDTH_G) &gt; 4<br />
+ then the header is padded up to the desired width, i.e., the paylod must<br />
+ be word-aligned.</p>
+<p>Each command word is answered with a reply word on the outgoing stream<br />
+ (see below).</p>
+<p>The following commands are currently defined:</p>
+<pre><code class="hljs">  <span class="hljs-string">&quot;00&quot;</span>  QUERY: request basic features such <span class="hljs-keyword">as</span> <span class="hljs-built_in">word</span> <span class="hljs-built_in">length</span>, memory depth.
+
+        Payload: <span class="hljs-literal">NONE</span>, i.e., TLAST should be asserted <span class="hljs-keyword">with</span> this command.
+
+  <span class="hljs-string">&quot;01&quot;</span>  JTAG: shift jtag vectors. The vectors are shipped <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> payload.
+        The parameter bits <span class="hljs-keyword">for</span> this <span class="hljs-keyword">command</span> <span class="hljs-title">are</span> <span class="hljs-title">defined</span> <span class="hljs-title">as</span> <span class="hljs-title">follows</span>:
+
+        [<span class="hljs-number">27</span>:<span class="hljs-number">20</span>] Transaction ID; this is used when <span class="hljs-keyword">the</span> core is configured
+                <span class="hljs-keyword">with</span> MEM_DEPTH_G &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">in</span> order <span class="hljs-built_in">to</span> support <span class="hljs-keyword">a</span> non-reliable
+                transport.
+        [<span class="hljs-number">19</span>:<span class="hljs-number">00</span>] JTAG vector <span class="hljs-built_in">length</span> (<span class="hljs-keyword">in</span> bits). The payload must provide
+                <span class="hljs-number">2</span>*ceil( <span class="hljs-built_in">length</span> / AXIS_WIDTH_G ) <span class="hljs-keyword">words</span> <span class="hljs-keyword">of</span> TMS/TDI vector
+                data. I.e., <span class="hljs-keyword">the</span> <span class="hljs-built_in">length</span> refers <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">length</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">a</span> single
+                TMS <span class="hljs-keyword">or</span> TDI vector.
+                !!!!!!!
+                 NOTE: <span class="hljs-keyword">the</span> <span class="hljs-built_in">number</span> <span class="hljs-keyword">in</span> [<span class="hljs-number">19</span>:<span class="hljs-number">00</span>] encodes <span class="hljs-keyword">the</span> actual <span class="hljs-built_in">number</span>
+                       minus <span class="hljs-number">1.</span> E.g., <span class="hljs-keyword">a</span> <span class="hljs-built_in">value</span> <span class="hljs-keyword">of</span> <span class="hljs-number">0</span> transmits <span class="hljs-literal">one</span> TMS
+                       <span class="hljs-keyword">and</span> <span class="hljs-literal">one</span> TDI bit. Two payload <span class="hljs-keyword">words</span> are expected
+                       <span class="hljs-keyword">in</span> this example.
+                !!!!!!!
+
+        Payload: sequence <span class="hljs-keyword">of</span> <span class="hljs-keyword">words</span> <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> TMS <span class="hljs-keyword">and</span> TDI bit-vectors:
+
+                TMS_WORD, TDI_WORD, TMS_WORD, TDI_WORD, ...
+
+                Note that <span class="hljs-keyword">the</span> user must <span class="hljs-built_in">format</span> <span class="hljs-keyword">the</span> stream accordingly
+                <span class="hljs-keyword">and</span> therefore must be aware <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> stream width. This
+                parameter is returned <span class="hljs-keyword">by</span> <span class="hljs-keyword">the</span> QUERY command.
+
+                If <span class="hljs-keyword">the</span> <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> bits supplied does <span class="hljs-keyword">not</span> fill <span class="hljs-keyword">the</span> <span class="hljs-keyword">last</span>
+                <span class="hljs-built_in">word</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">the</span> relevant bits must be lsb/<span class="hljs-literal">right</span>-aligned
+                <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">last</span> <span class="hljs-built_in">word</span>.
+
+                TLAST must be asserted during <span class="hljs-keyword">the</span> transmission <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span>
+                <span class="hljs-keyword">last</span> TDI/payload <span class="hljs-built_in">word</span>.</code></pre>
+<p>OUTGOING STREAM</p>
+<p>The outgoing stream consists of consecutive words of AXIS_WIDTH_G bytes<br />
+ and is framed with 'TLAST'. Each reply has the following format:</p>
+<pre><code class="hljs"><span class="hljs-attribute"><span class="hljs-nomarkup">Header</span></span> Word<span class="hljs-meta"> [, Payload ]</span></code></pre>
+<p>The header word is defined as</p>
+<p>[31:30]  Protocol Version; if the user supplies an unsupported protocol<br />
+            version in the request header then the reply contains an error<br />
+            code (see below) and the protocol version in the reply is set<br />
+            to the supported version.</p>
+<p>[29:28]  Command -- the request command is returned unless an error occurred;<br />
+            in case of an error the command bits in the reply are:</p>
+<pre><code class="hljs">        <span class="hljs-string">&quot;10&quot;</span>  ERROR: An <span class="hljs-keyword">error</span> was detected. The <span class="hljs-number">8</span> least-significant bits
+              [<span class="hljs-number">7</span>:<span class="hljs-number">0</span>] <span class="hljs-keyword">contain</span> an <span class="hljs-keyword">error</span> code:
+              <span class="hljs-number">1</span>: bad protocol <span class="hljs-built_in">version</span>; <span class="hljs-keyword">the</span> protocol <span class="hljs-built_in">version</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> reply
+                 <span class="hljs-keyword">is</span> <span class="hljs-keyword">set</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> supported <span class="hljs-built_in">version</span>.
+              <span class="hljs-number">2</span>: bad/unsupported command code
+              <span class="hljs-number">3</span>: truncated input stream (TLAST detected <span class="hljs-keyword">before</span> <span class="hljs-keyword">the</span>
+                 <span class="hljs-keyword">first</span> TDI <span class="hljs-built_in">word</span> was received). Note <span class="hljs-keyword">that</span> a premature
+                 TLAST which <span class="hljs-keyword">is</span> detected <span class="hljs-keyword">after</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> TDI <span class="hljs-built_in">word</span>
+                 <span class="hljs-keyword">does</span> NOT flag an <span class="hljs-keyword">error</span> <span class="hljs-keyword">but</span> yields a truncated reply
+                 (less TDO <span class="hljs-built_in">words</span> than requested <span class="hljs-keyword">by</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> bits).
+              <span class="hljs-number">4</span>: &#x27;debug bridge <span class="hljs-keyword">not</span> present&#x27; <span class="hljs-keyword">error</span>. I.e., <span class="hljs-keyword">the</span> FW only
+                 implements a stub <span class="hljs-keyword">and</span> no <span class="hljs-literal">true</span> debug bridge.
+
+        <span class="hljs-string">&quot;00&quot;</span>  QUERY: <span class="hljs-keyword">the</span> response <span class="hljs-keyword">to</span> a QUERY command encodes information
+              <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> command-specific bits:
+
+             [ <span class="hljs-number">3</span>: <span class="hljs-number">0</span>] AXIS_WIDTH_G - <span class="hljs-number">1.</span> I.e., this field encodes <span class="hljs-keyword">the</span>
+                     <span class="hljs-built_in">word</span> size (minus one) used <span class="hljs-keyword">by</span> <span class="hljs-keyword">the</span> core. This information
+                     <span class="hljs-keyword">is</span> important <span class="hljs-keyword">for</span> formatting <span class="hljs-keyword">the</span> stream.
+             [<span class="hljs-number">19</span>: <span class="hljs-number">4</span>] MEM_DEPTH_G. Indicates how much memory (<span class="hljs-keyword">if</span> any) was
+                     configured <span class="hljs-keyword">in</span> <span class="hljs-built_in">words</span>.
+             [<span class="hljs-number">27</span>:<span class="hljs-number">20</span>] TCK period. Encoded <span class="hljs-keyword">as</span>
+
+                                      <span class="hljs-number">200</span>Mhz     <span class="hljs-number">1</span>
+                        <span class="hljs-built_in">round</span>{ log10( <span class="hljs-comment">------- ) --- 256 }</span>
+                                       Ttck      <span class="hljs-number">4</span>
+
+                    With <span class="hljs-keyword">the</span> special value <span class="hljs-number">0</span> representing &#x27;unknown&#x27;.
+
+
+        <span class="hljs-string">&quot;01&quot;</span>  JTAG: <span class="hljs-keyword">the</span> response <span class="hljs-keyword">to</span> a JTAG command <span class="hljs-keyword">is</span> a sequence <span class="hljs-keyword">of</span>
+              TDO <span class="hljs-built_in">words</span> which form <span class="hljs-keyword">the</span> TDO bit vector. The vector
+              stored <span class="hljs-keyword">in</span> little-endian format (<span class="hljs-keyword">first</span> bit <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> vector
+              <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> LSB <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> TDO <span class="hljs-built_in">word</span>).
+              If <span class="hljs-keyword">the</span> <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> JTAG bits <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> fill <span class="hljs-keyword">the</span> <span class="hljs-keyword">last</span> TDO
+              <span class="hljs-built_in">word</span> completely <span class="hljs-keyword">then</span> <span class="hljs-keyword">the</span> relevant bits are right-
+              aligned.</code></pre>
+<p>RELIABILITY SUPPORT</p>
+<p>If the transport mechanism contains unreliable segments with a potential for<br />
+ data loss then a simple retry mechanism is not suitable because JTAG operations<br />
+ are not necessarily idempotent.<br />
+ The core can be configured to use internal memory (MEM_DEPTH_C &gt; 0) in which<br />
+ case it stores the last JTAG TDO response in memory.<br />
+ When the next JTAG command arrives the core inspects the 'transaction ID' field<br />
+ of the command and if it is identical with the ID submitted along with the previous<br />
+ transaction then the core detects a retried operation and does not actually execute<br />
+ it again on JTAG but plays back the stored TDO response to the requestor.<br />
 </div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=alert_handler_reg_top><h1 id="entity-alert_handler_reg_top">Entity: alert_handler_reg_top</h1></a><ul>
 <li><strong>File</strong>: alert_handler_reg_top.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="110" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="105" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1037" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1042" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1047" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 435 150"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="330" height="130" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="326" height="125" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_shadowed_ni </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="410" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="375" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1042" x1="390" y1="30" x2="405" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="410" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="375" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1047" x1="390" y1="50" x2="405" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="410" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="410" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="375" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="375" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1052" x1="390" y1="70" x2="405" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1040,6 +1115,12 @@
 </tr>
 <tr>
 <td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_shadowed_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1142,6 +1223,11 @@
 <td></td>
 </tr>
 <tr>
+<td>reg_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
 <td>tl_reg_h2d</td>
 <td>tlul_pkg::tl_h2d_t</td>
 <td></td>
@@ -1169,7 +1255,7 @@
 <tr>
 <td>intr_state_we</td>
 <td>logic</td>
-<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+<td>Define SW related signals  Format: <reg><em><field></em>{wd</td>
 </tr>
 <tr>
 <td>intr_state_classa_qs</td>
@@ -2247,12 +2333,22 @@
 <td></td>
 </tr>
 <tr>
-<td>classa_clr_we</td>
+<td>classa_clr_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>classa_clr_wd</td>
+<td>classa_clr_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_clr_shadowed_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_clr_shadowed_wd</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2304,6 +2400,26 @@
 <tr>
 <td>classa_timeout_cyc_shadowed_wd</td>
 <td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_crashdump_trigger_shadowed_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_crashdump_trigger_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_crashdump_trigger_shadowed_qs</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classa_crashdump_trigger_shadowed_wd</td>
+<td>logic [1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -2547,12 +2663,22 @@
 <td></td>
 </tr>
 <tr>
-<td>classb_clr_we</td>
+<td>classb_clr_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>classb_clr_wd</td>
+<td>classb_clr_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_clr_shadowed_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_clr_shadowed_wd</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2604,6 +2730,26 @@
 <tr>
 <td>classb_timeout_cyc_shadowed_wd</td>
 <td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_crashdump_trigger_shadowed_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_crashdump_trigger_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_crashdump_trigger_shadowed_qs</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classb_crashdump_trigger_shadowed_wd</td>
+<td>logic [1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -2847,12 +2993,22 @@
 <td></td>
 </tr>
 <tr>
-<td>classc_clr_we</td>
+<td>classc_clr_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>classc_clr_wd</td>
+<td>classc_clr_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_clr_shadowed_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_clr_shadowed_wd</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2904,6 +3060,26 @@
 <tr>
 <td>classc_timeout_cyc_shadowed_wd</td>
 <td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_crashdump_trigger_shadowed_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_crashdump_trigger_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_crashdump_trigger_shadowed_qs</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classc_crashdump_trigger_shadowed_wd</td>
+<td>logic [1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -3147,12 +3323,22 @@
 <td></td>
 </tr>
 <tr>
-<td>classd_clr_we</td>
+<td>classd_clr_shadowed_re</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>classd_clr_wd</td>
+<td>classd_clr_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_clr_shadowed_qs</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_clr_shadowed_wd</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -3204,6 +3390,26 @@
 <tr>
 <td>classd_timeout_cyc_shadowed_wd</td>
 <td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_crashdump_trigger_shadowed_re</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_crashdump_trigger_shadowed_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_crashdump_trigger_shadowed_qs</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>classd_crashdump_trigger_shadowed_wd</td>
+<td>logic [1:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -3308,13 +3514,33 @@
 </tr>
 <tr>
 <td>addr_hit</td>
-<td>logic [101:0]</td>
+<td>logic [105:0]</td>
 <td></td>
+</tr>
+<tr>
+<td>shadow_busy</td>
+<td>logic</td>
+<td>shadow busy</td>
+</tr>
+<tr>
+<td>rst_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_rst_done</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>reg_busy_sel</td>
+<td>logic</td>
+<td>register busy</td>
 </tr>
 <tr>
 <td>unused_wdata</td>
 <td>logic</td>
-<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+<td>Unused signal tieoff  wdata / byte enable are not always fully used  add a blanket unused statement to handle lint waivers</td>
 </tr>
 <tr>
 <td>unused_be</td>
@@ -3360,10 +3586,16 @@
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Check sub-word write is permitted</p></div><ul>
+ Check sub-word write is permitted </p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Read data return </p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: ( @(posedge clk_i or negedge rst_shadowed_ni) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_chk: tlul_cmd_intg_chk</li>
 </ul><ul>
 <li>u_rsp_intg_gen: tlul_rsp_intg_gen</li>
@@ -3372,349 +3604,361 @@ Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
 </ul><ul>
 <li>u_intr_state_classa: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Register instances<br />
-R[intr_state]: V(False)<br />
-F[classa]: 0:0</p></div><ul>
+ Register instances<br />
+ R[intr_state]: V(False)<br />
+   F[classa]: 0:0</p></div><ul>
 <li>u_intr_state_classb: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classb]: 1:1</p></div><ul>
+   F[classb]: 1:1</p></div><ul>
 <li>u_intr_state_classc: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classc]: 2:2</p></div><ul>
+   F[classc]: 2:2</p></div><ul>
 <li>u_intr_state_classd: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classd]: 3:3</p></div><ul>
+   F[classd]: 3:3</p></div><ul>
 <li>u_intr_enable_classa: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_enable]: V(False)<br />
-F[classa]: 0:0</p></div><ul>
+ R[intr_enable]: V(False)<br />
+   F[classa]: 0:0</p></div><ul>
 <li>u_intr_enable_classb: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classb]: 1:1</p></div><ul>
+   F[classb]: 1:1</p></div><ul>
 <li>u_intr_enable_classc: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classc]: 2:2</p></div><ul>
+   F[classc]: 2:2</p></div><ul>
 <li>u_intr_enable_classd: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classd]: 3:3</p></div><ul>
+   F[classd]: 3:3</p></div><ul>
 <li>u_intr_test_classa: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_test]: V(True)<br />
-F[classa]: 0:0</p></div><ul>
+ R[intr_test]: V(True)<br />
+   F[classa]: 0:0</p></div><ul>
 <li>u_intr_test_classb: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classb]: 1:1</p></div><ul>
+   F[classb]: 1:1</p></div><ul>
 <li>u_intr_test_classc: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classc]: 2:2</p></div><ul>
+   F[classc]: 2:2</p></div><ul>
 <li>u_intr_test_classd: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[classd]: 3:3</p></div><ul>
+   F[classd]: 3:3</p></div><ul>
 <li>u_ping_timer_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ping_timer_regwen]: V(False)</p></div><ul>
+ R[ping_timer_regwen]: V(False)</p></div><ul>
 <li>u_ping_timeout_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ping_timeout_cyc_shadowed]: V(False)</p></div><ul>
+ R[ping_timeout_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_ping_timer_en_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ping_timer_en_shadowed]: V(False)</p></div><ul>
+ R[ping_timer_en_shadowed]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 0 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_0]: V(False)</p></div><ul>
+ Subregister 0 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_0]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 1 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_1]: V(False)</p></div><ul>
+ Subregister 1 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_1]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_2: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 2 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_2]: V(False)</p></div><ul>
+ Subregister 2 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_2]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_3: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 3 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_3]: V(False)</p></div><ul>
+ Subregister 3 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_3]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_4: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 4 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_4]: V(False)</p></div><ul>
+ Subregister 4 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_4]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_5: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 5 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_5]: V(False)</p></div><ul>
+ Subregister 5 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_5]: V(False)</p></div><ul>
 <li>u_loc_alert_regwen_6: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Subregister 6 of Multireg loc_alert_regwen<br />
-R[loc_alert_regwen_6]: V(False)</p></div><ul>
+ Subregister 6 of Multireg loc_alert_regwen<br />
+ R[loc_alert_regwen_6]: V(False)</p></div><ul>
 <li>u_classa_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_regwen]: V(False)</p></div><ul>
+ R[classa_regwen]: V(False)</p></div><ul>
 <li>u_classa_ctrl_shadowed_en: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_ctrl_shadowed]: V(False)<br />
-F[en]: 0:0</p></div><ul>
+ R[classa_ctrl_shadowed]: V(False)<br />
+   F[en]: 0:0</p></div><ul>
 <li>u_classa_ctrl_shadowed_lock: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lock]: 1:1</p></div><ul>
+   F[lock]: 1:1</p></div><ul>
 <li>u_classa_ctrl_shadowed_en_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e0]: 2:2</p></div><ul>
+   F[en_e0]: 2:2</p></div><ul>
 <li>u_classa_ctrl_shadowed_en_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e1]: 3:3</p></div><ul>
+   F[en_e1]: 3:3</p></div><ul>
 <li>u_classa_ctrl_shadowed_en_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e2]: 4:4</p></div><ul>
+   F[en_e2]: 4:4</p></div><ul>
 <li>u_classa_ctrl_shadowed_en_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e3]: 5:5</p></div><ul>
+   F[en_e3]: 5:5</p></div><ul>
 <li>u_classa_ctrl_shadowed_map_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e0]: 7:6</p></div><ul>
+   F[map_e0]: 7:6</p></div><ul>
 <li>u_classa_ctrl_shadowed_map_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e1]: 9:8</p></div><ul>
+   F[map_e1]: 9:8</p></div><ul>
 <li>u_classa_ctrl_shadowed_map_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e2]: 11:10</p></div><ul>
+   F[map_e2]: 11:10</p></div><ul>
 <li>u_classa_ctrl_shadowed_map_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e3]: 13:12</p></div><ul>
+   F[map_e3]: 13:12</p></div><ul>
 <li>u_classa_clr_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_clr_regwen]: V(False)</p></div><ul>
-<li>u_classa_clr: prim_subreg</li>
+ R[classa_clr_regwen]: V(False)</p></div><ul>
+<li>u_classa_clr_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_clr]: V(False)</p></div><ul>
+ R[classa_clr_shadowed]: V(False)</p></div><ul>
 <li>u_classa_accum_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_accum_cnt]: V(True)</p></div><ul>
+ R[classa_accum_cnt]: V(True)</p></div><ul>
 <li>u_classa_accum_thresh_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_accum_thresh_shadowed]: V(False)</p></div><ul>
+ R[classa_accum_thresh_shadowed]: V(False)</p></div><ul>
 <li>u_classa_timeout_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_timeout_cyc_shadowed]: V(False)</p></div><ul>
+ R[classa_timeout_cyc_shadowed]: V(False)</p></div><ul>
+<li>u_classa_crashdump_trigger_shadowed: prim_subreg_shadow</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ R[classa_crashdump_trigger_shadowed]: V(False)</p></div><ul>
 <li>u_classa_phase0_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_phase0_cyc_shadowed]: V(False)</p></div><ul>
+ R[classa_phase0_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classa_phase1_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_phase1_cyc_shadowed]: V(False)</p></div><ul>
+ R[classa_phase1_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classa_phase2_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_phase2_cyc_shadowed]: V(False)</p></div><ul>
+ R[classa_phase2_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classa_phase3_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_phase3_cyc_shadowed]: V(False)</p></div><ul>
+ R[classa_phase3_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classa_esc_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_esc_cnt]: V(True)</p></div><ul>
+ R[classa_esc_cnt]: V(True)</p></div><ul>
 <li>u_classa_state: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classa_state]: V(True)</p></div><ul>
+ R[classa_state]: V(True)</p></div><ul>
 <li>u_classb_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_regwen]: V(False)</p></div><ul>
+ R[classb_regwen]: V(False)</p></div><ul>
 <li>u_classb_ctrl_shadowed_en: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_ctrl_shadowed]: V(False)<br />
-F[en]: 0:0</p></div><ul>
+ R[classb_ctrl_shadowed]: V(False)<br />
+   F[en]: 0:0</p></div><ul>
 <li>u_classb_ctrl_shadowed_lock: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lock]: 1:1</p></div><ul>
+   F[lock]: 1:1</p></div><ul>
 <li>u_classb_ctrl_shadowed_en_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e0]: 2:2</p></div><ul>
+   F[en_e0]: 2:2</p></div><ul>
 <li>u_classb_ctrl_shadowed_en_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e1]: 3:3</p></div><ul>
+   F[en_e1]: 3:3</p></div><ul>
 <li>u_classb_ctrl_shadowed_en_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e2]: 4:4</p></div><ul>
+   F[en_e2]: 4:4</p></div><ul>
 <li>u_classb_ctrl_shadowed_en_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e3]: 5:5</p></div><ul>
+   F[en_e3]: 5:5</p></div><ul>
 <li>u_classb_ctrl_shadowed_map_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e0]: 7:6</p></div><ul>
+   F[map_e0]: 7:6</p></div><ul>
 <li>u_classb_ctrl_shadowed_map_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e1]: 9:8</p></div><ul>
+   F[map_e1]: 9:8</p></div><ul>
 <li>u_classb_ctrl_shadowed_map_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e2]: 11:10</p></div><ul>
+   F[map_e2]: 11:10</p></div><ul>
 <li>u_classb_ctrl_shadowed_map_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e3]: 13:12</p></div><ul>
+   F[map_e3]: 13:12</p></div><ul>
 <li>u_classb_clr_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_clr_regwen]: V(False)</p></div><ul>
-<li>u_classb_clr: prim_subreg</li>
+ R[classb_clr_regwen]: V(False)</p></div><ul>
+<li>u_classb_clr_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_clr]: V(False)</p></div><ul>
+ R[classb_clr_shadowed]: V(False)</p></div><ul>
 <li>u_classb_accum_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_accum_cnt]: V(True)</p></div><ul>
+ R[classb_accum_cnt]: V(True)</p></div><ul>
 <li>u_classb_accum_thresh_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_accum_thresh_shadowed]: V(False)</p></div><ul>
+ R[classb_accum_thresh_shadowed]: V(False)</p></div><ul>
 <li>u_classb_timeout_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_timeout_cyc_shadowed]: V(False)</p></div><ul>
+ R[classb_timeout_cyc_shadowed]: V(False)</p></div><ul>
+<li>u_classb_crashdump_trigger_shadowed: prim_subreg_shadow</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ R[classb_crashdump_trigger_shadowed]: V(False)</p></div><ul>
 <li>u_classb_phase0_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_phase0_cyc_shadowed]: V(False)</p></div><ul>
+ R[classb_phase0_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classb_phase1_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_phase1_cyc_shadowed]: V(False)</p></div><ul>
+ R[classb_phase1_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classb_phase2_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_phase2_cyc_shadowed]: V(False)</p></div><ul>
+ R[classb_phase2_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classb_phase3_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_phase3_cyc_shadowed]: V(False)</p></div><ul>
+ R[classb_phase3_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classb_esc_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_esc_cnt]: V(True)</p></div><ul>
+ R[classb_esc_cnt]: V(True)</p></div><ul>
 <li>u_classb_state: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classb_state]: V(True)</p></div><ul>
+ R[classb_state]: V(True)</p></div><ul>
 <li>u_classc_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_regwen]: V(False)</p></div><ul>
+ R[classc_regwen]: V(False)</p></div><ul>
 <li>u_classc_ctrl_shadowed_en: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_ctrl_shadowed]: V(False)<br />
-F[en]: 0:0</p></div><ul>
+ R[classc_ctrl_shadowed]: V(False)<br />
+   F[en]: 0:0</p></div><ul>
 <li>u_classc_ctrl_shadowed_lock: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lock]: 1:1</p></div><ul>
+   F[lock]: 1:1</p></div><ul>
 <li>u_classc_ctrl_shadowed_en_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e0]: 2:2</p></div><ul>
+   F[en_e0]: 2:2</p></div><ul>
 <li>u_classc_ctrl_shadowed_en_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e1]: 3:3</p></div><ul>
+   F[en_e1]: 3:3</p></div><ul>
 <li>u_classc_ctrl_shadowed_en_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e2]: 4:4</p></div><ul>
+   F[en_e2]: 4:4</p></div><ul>
 <li>u_classc_ctrl_shadowed_en_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e3]: 5:5</p></div><ul>
+   F[en_e3]: 5:5</p></div><ul>
 <li>u_classc_ctrl_shadowed_map_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e0]: 7:6</p></div><ul>
+   F[map_e0]: 7:6</p></div><ul>
 <li>u_classc_ctrl_shadowed_map_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e1]: 9:8</p></div><ul>
+   F[map_e1]: 9:8</p></div><ul>
 <li>u_classc_ctrl_shadowed_map_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e2]: 11:10</p></div><ul>
+   F[map_e2]: 11:10</p></div><ul>
 <li>u_classc_ctrl_shadowed_map_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e3]: 13:12</p></div><ul>
+   F[map_e3]: 13:12</p></div><ul>
 <li>u_classc_clr_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_clr_regwen]: V(False)</p></div><ul>
-<li>u_classc_clr: prim_subreg</li>
+ R[classc_clr_regwen]: V(False)</p></div><ul>
+<li>u_classc_clr_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_clr]: V(False)</p></div><ul>
+ R[classc_clr_shadowed]: V(False)</p></div><ul>
 <li>u_classc_accum_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_accum_cnt]: V(True)</p></div><ul>
+ R[classc_accum_cnt]: V(True)</p></div><ul>
 <li>u_classc_accum_thresh_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_accum_thresh_shadowed]: V(False)</p></div><ul>
+ R[classc_accum_thresh_shadowed]: V(False)</p></div><ul>
 <li>u_classc_timeout_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_timeout_cyc_shadowed]: V(False)</p></div><ul>
+ R[classc_timeout_cyc_shadowed]: V(False)</p></div><ul>
+<li>u_classc_crashdump_trigger_shadowed: prim_subreg_shadow</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ R[classc_crashdump_trigger_shadowed]: V(False)</p></div><ul>
 <li>u_classc_phase0_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_phase0_cyc_shadowed]: V(False)</p></div><ul>
+ R[classc_phase0_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classc_phase1_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_phase1_cyc_shadowed]: V(False)</p></div><ul>
+ R[classc_phase1_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classc_phase2_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_phase2_cyc_shadowed]: V(False)</p></div><ul>
+ R[classc_phase2_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classc_phase3_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_phase3_cyc_shadowed]: V(False)</p></div><ul>
+ R[classc_phase3_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classc_esc_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_esc_cnt]: V(True)</p></div><ul>
+ R[classc_esc_cnt]: V(True)</p></div><ul>
 <li>u_classc_state: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classc_state]: V(True)</p></div><ul>
+ R[classc_state]: V(True)</p></div><ul>
 <li>u_classd_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_regwen]: V(False)</p></div><ul>
+ R[classd_regwen]: V(False)</p></div><ul>
 <li>u_classd_ctrl_shadowed_en: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_ctrl_shadowed]: V(False)<br />
-F[en]: 0:0</p></div><ul>
+ R[classd_ctrl_shadowed]: V(False)<br />
+   F[en]: 0:0</p></div><ul>
 <li>u_classd_ctrl_shadowed_lock: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lock]: 1:1</p></div><ul>
+   F[lock]: 1:1</p></div><ul>
 <li>u_classd_ctrl_shadowed_en_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e0]: 2:2</p></div><ul>
+   F[en_e0]: 2:2</p></div><ul>
 <li>u_classd_ctrl_shadowed_en_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e1]: 3:3</p></div><ul>
+   F[en_e1]: 3:3</p></div><ul>
 <li>u_classd_ctrl_shadowed_en_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e2]: 4:4</p></div><ul>
+   F[en_e2]: 4:4</p></div><ul>
 <li>u_classd_ctrl_shadowed_en_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[en_e3]: 5:5</p></div><ul>
+   F[en_e3]: 5:5</p></div><ul>
 <li>u_classd_ctrl_shadowed_map_e0: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e0]: 7:6</p></div><ul>
+   F[map_e0]: 7:6</p></div><ul>
 <li>u_classd_ctrl_shadowed_map_e1: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e1]: 9:8</p></div><ul>
+   F[map_e1]: 9:8</p></div><ul>
 <li>u_classd_ctrl_shadowed_map_e2: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e2]: 11:10</p></div><ul>
+   F[map_e2]: 11:10</p></div><ul>
 <li>u_classd_ctrl_shadowed_map_e3: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[map_e3]: 13:12</p></div><ul>
+   F[map_e3]: 13:12</p></div><ul>
 <li>u_classd_clr_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_clr_regwen]: V(False)</p></div><ul>
-<li>u_classd_clr: prim_subreg</li>
+ R[classd_clr_regwen]: V(False)</p></div><ul>
+<li>u_classd_clr_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_clr]: V(False)</p></div><ul>
+ R[classd_clr_shadowed]: V(False)</p></div><ul>
 <li>u_classd_accum_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_accum_cnt]: V(True)</p></div><ul>
+ R[classd_accum_cnt]: V(True)</p></div><ul>
 <li>u_classd_accum_thresh_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_accum_thresh_shadowed]: V(False)</p></div><ul>
+ R[classd_accum_thresh_shadowed]: V(False)</p></div><ul>
 <li>u_classd_timeout_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_timeout_cyc_shadowed]: V(False)</p></div><ul>
+ R[classd_timeout_cyc_shadowed]: V(False)</p></div><ul>
+<li>u_classd_crashdump_trigger_shadowed: prim_subreg_shadow</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ R[classd_crashdump_trigger_shadowed]: V(False)</p></div><ul>
 <li>u_classd_phase0_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_phase0_cyc_shadowed]: V(False)</p></div><ul>
+ R[classd_phase0_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classd_phase1_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_phase1_cyc_shadowed]: V(False)</p></div><ul>
+ R[classd_phase1_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classd_phase2_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_phase2_cyc_shadowed]: V(False)</p></div><ul>
+ R[classd_phase2_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classd_phase3_cyc_shadowed: prim_subreg_shadow</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_phase3_cyc_shadowed]: V(False)</p></div><ul>
+ R[classd_phase3_cyc_shadowed]: V(False)</p></div><ul>
 <li>u_classd_esc_cnt: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_esc_cnt]: V(True)</p></div><ul>
+ R[classd_esc_cnt]: V(True)</p></div><ul>
 <li>u_classd_state: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[classd_state]: V(True)</p></div><br><br><br><br><br><br>
+ R[classd_state]: V(True)</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

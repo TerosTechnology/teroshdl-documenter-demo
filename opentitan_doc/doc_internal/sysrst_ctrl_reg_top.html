@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=sysrst_ctrl_reg_top><h1 id="entity-sysrst_ctrl_reg_top">Entity: sysrst_ctrl_reg_top</h1></a><ul>
 <li><strong>File</strong>: sysrst_ctrl_reg_top.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="110" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="105" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1037" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1042" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1047" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 385 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="280" height="150" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="276" height="145" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_aon_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_aon_ni </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="40" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="75" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1042" x1="45" y1="150" x2="60" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="360" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="325" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1047" x1="340" y1="30" x2="355" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="360" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="325" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1052" x1="340" y1="50" x2="355" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="360" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="325" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1057" x1="340" y1="70" x2="355" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1040,6 +1115,18 @@
 </tr>
 <tr>
 <td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_aon_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_aon_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1142,6 +1229,11 @@
 <td></td>
 </tr>
 <tr>
+<td>reg_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
 <td>tl_reg_h2d</td>
 <td>tlul_pkg::tl_h2d_t</td>
 <td></td>
@@ -1167,9 +1259,14 @@
 <td>outgoing integrity generation</td>
 </tr>
 <tr>
+<td>sync_aon_update</td>
+<td>logic</td>
+<td>cdc oversampling signals</td>
+</tr>
+<tr>
 <td>intr_state_we</td>
 <td>logic</td>
-<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+<td>Define SW related signals  Format: <reg><em><field></em>{wd</td>
 </tr>
 <tr>
 <td>intr_state_qs</td>
@@ -1242,8 +1339,8 @@
 <td></td>
 </tr>
 <tr>
-<td>ec_rst_ctl_wd</td>
-<td>logic [15:0]</td>
+<td>ec_rst_ctl_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1257,8 +1354,8 @@
 <td></td>
 </tr>
 <tr>
-<td>ulp_ac_debounce_ctl_wd</td>
-<td>logic [15:0]</td>
+<td>ulp_ac_debounce_ctl_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1272,8 +1369,8 @@
 <td></td>
 </tr>
 <tr>
-<td>ulp_lid_debounce_ctl_wd</td>
-<td>logic [15:0]</td>
+<td>ulp_lid_debounce_ctl_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1287,8 +1384,8 @@
 <td></td>
 </tr>
 <tr>
-<td>ulp_pwrb_debounce_ctl_wd</td>
-<td>logic [15:0]</td>
+<td>ulp_pwrb_debounce_ctl_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1298,11 +1395,11 @@
 </tr>
 <tr>
 <td>ulp_ctl_qs</td>
-<td>logic</td>
+<td>logic [0:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>ulp_ctl_wd</td>
+<td>ulp_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1313,26 +1410,26 @@
 </tr>
 <tr>
 <td>ulp_status_qs</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>ulp_status_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>ulp_status_wd</td>
+<td>wkup_status_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>wk_status_we</td>
-<td>logic</td>
+<td>wkup_status_qs</td>
+<td>logic [0:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>wk_status_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>wk_status_wd</td>
+<td>wkup_status_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1342,122 +1439,12 @@
 <td></td>
 </tr>
 <tr>
-<td>key_invert_ctl_key0_in_qs</td>
-<td>logic</td>
+<td>key_invert_ctl_qs</td>
+<td>logic [11:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>key_invert_ctl_key0_in_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key0_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key0_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key1_in_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key1_in_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key1_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key1_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key2_in_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key2_in_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key2_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_key2_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_pwrb_in_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_pwrb_in_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_pwrb_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_pwrb_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_ac_present_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_ac_present_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_bat_disable_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_bat_disable_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_lid_open_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_lid_open_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_z3_wakeup_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_invert_ctl_z3_wakeup_wd</td>
+<td>key_invert_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1467,142 +1454,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pin_allowed_ctl_bat_disable_0_qs</td>
-<td>logic</td>
+<td>pin_allowed_ctl_qs</td>
+<td>logic [15:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pin_allowed_ctl_bat_disable_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_ec_rst_l_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_ec_rst_l_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_pwrb_out_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_pwrb_out_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key0_out_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key0_out_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key1_out_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key1_out_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key2_out_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key2_out_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_z3_wakeup_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_z3_wakeup_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_bat_disable_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_bat_disable_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_ec_rst_l_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_ec_rst_l_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_pwrb_out_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_pwrb_out_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key0_out_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key0_out_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key1_out_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key1_out_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key2_out_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_key2_out_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_z3_wakeup_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_allowed_ctl_z3_wakeup_1_wd</td>
+<td>pin_allowed_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1612,72 +1469,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pin_out_ctl_bat_disable_qs</td>
-<td>logic</td>
+<td>pin_out_ctl_qs</td>
+<td>logic [7:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pin_out_ctl_bat_disable_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_ec_rst_l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_ec_rst_l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_pwrb_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_pwrb_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key0_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key0_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key1_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key1_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key2_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_key2_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_z3_wakeup_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_ctl_z3_wakeup_wd</td>
+<td>pin_out_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1687,72 +1484,12 @@
 <td></td>
 </tr>
 <tr>
-<td>pin_out_value_bat_disable_qs</td>
-<td>logic</td>
+<td>pin_out_value_qs</td>
+<td>logic [7:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>pin_out_value_bat_disable_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_ec_rst_l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_ec_rst_l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_pwrb_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_pwrb_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key0_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key0_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key1_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key1_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key2_out_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_key2_out_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_z3_wakeup_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>pin_out_value_z3_wakeup_wd</td>
+<td>pin_out_value_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1797,122 +1534,12 @@
 <td></td>
 </tr>
 <tr>
-<td>key_intr_ctl_pwrb_in_h2l_qs</td>
-<td>logic</td>
+<td>key_intr_ctl_qs</td>
+<td>logic [13:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_ctl_pwrb_in_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key0_in_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key0_in_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key1_in_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key1_in_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key2_in_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key2_in_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ac_present_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ac_present_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ec_rst_l_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ec_rst_l_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_pwrb_in_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_pwrb_in_l2h_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key0_in_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key0_in_l2h_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key1_in_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key1_in_l2h_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key2_in_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_key2_in_l2h_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ac_present_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ac_present_l2h_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ec_rst_l_l2h_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>key_intr_ctl_ec_rst_l_l2h_wd</td>
+<td>key_intr_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1927,8 +1554,8 @@
 <td></td>
 </tr>
 <tr>
-<td>key_intr_debounce_ctl_wd</td>
-<td>logic [15:0]</td>
+<td>key_intr_debounce_ctl_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1937,22 +1564,12 @@
 <td></td>
 </tr>
 <tr>
-<td>auto_block_debounce_ctl_debounce_timer_qs</td>
-<td>logic [15:0]</td>
+<td>auto_block_debounce_ctl_qs</td>
+<td>logic [16:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>auto_block_debounce_ctl_debounce_timer_wd</td>
-<td>logic [15:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_debounce_ctl_auto_block_enable_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_debounce_ctl_auto_block_enable_wd</td>
+<td>auto_block_debounce_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1962,62 +1579,12 @@
 <td></td>
 </tr>
 <tr>
-<td>auto_block_out_ctl_key0_out_sel_qs</td>
-<td>logic</td>
+<td>auto_block_out_ctl_qs</td>
+<td>logic [6:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>auto_block_out_ctl_key0_out_sel_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key1_out_sel_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key1_out_sel_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key2_out_sel_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key2_out_sel_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key0_out_value_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key0_out_value_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key1_out_value_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key1_out_value_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key2_out_value_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>auto_block_out_ctl_key2_out_value_wd</td>
+<td>auto_block_out_ctl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2027,52 +1594,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_0_key0_in_sel_0_qs</td>
-<td>logic</td>
+<td>com_sel_ctl_0_qs</td>
+<td>logic [4:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_0_key0_in_sel_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_key1_in_sel_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_key1_in_sel_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_key2_in_sel_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_key2_in_sel_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_pwrb_in_sel_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_pwrb_in_sel_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_ac_present_sel_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_0_ac_present_sel_0_wd</td>
+<td>com_sel_ctl_0_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2082,52 +1609,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_1_key0_in_sel_1_qs</td>
-<td>logic</td>
+<td>com_sel_ctl_1_qs</td>
+<td>logic [4:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_1_key0_in_sel_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_key1_in_sel_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_key1_in_sel_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_key2_in_sel_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_key2_in_sel_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_pwrb_in_sel_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_pwrb_in_sel_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_ac_present_sel_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_1_ac_present_sel_1_wd</td>
+<td>com_sel_ctl_1_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2137,52 +1624,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_2_key0_in_sel_2_qs</td>
-<td>logic</td>
+<td>com_sel_ctl_2_qs</td>
+<td>logic [4:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_2_key0_in_sel_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_key1_in_sel_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_key1_in_sel_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_key2_in_sel_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_key2_in_sel_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_pwrb_in_sel_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_pwrb_in_sel_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_ac_present_sel_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_2_ac_present_sel_2_wd</td>
+<td>com_sel_ctl_2_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2192,52 +1639,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_3_key0_in_sel_3_qs</td>
-<td>logic</td>
+<td>com_sel_ctl_3_qs</td>
+<td>logic [4:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_sel_ctl_3_key0_in_sel_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_key1_in_sel_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_key1_in_sel_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_key2_in_sel_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_key2_in_sel_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_pwrb_in_sel_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_pwrb_in_sel_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_ac_present_sel_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_sel_ctl_3_ac_present_sel_3_wd</td>
+<td>com_sel_ctl_3_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2252,8 +1659,8 @@
 <td></td>
 </tr>
 <tr>
-<td>com_det_ctl_0_wd</td>
-<td>logic [31:0]</td>
+<td>com_det_ctl_0_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -2267,8 +1674,8 @@
 <td></td>
 </tr>
 <tr>
-<td>com_det_ctl_1_wd</td>
-<td>logic [31:0]</td>
+<td>com_det_ctl_1_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -2282,8 +1689,8 @@
 <td></td>
 </tr>
 <tr>
-<td>com_det_ctl_2_wd</td>
-<td>logic [31:0]</td>
+<td>com_det_ctl_2_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -2297,8 +1704,8 @@
 <td></td>
 </tr>
 <tr>
-<td>com_det_ctl_3_wd</td>
-<td>logic [31:0]</td>
+<td>com_det_ctl_3_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -2307,42 +1714,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_0_bat_disable_0_qs</td>
-<td>logic</td>
+<td>com_out_ctl_0_qs</td>
+<td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_0_bat_disable_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_interrupt_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_interrupt_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_ec_rst_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_ec_rst_0_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_gsc_rst_0_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_0_gsc_rst_0_wd</td>
+<td>com_out_ctl_0_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2352,42 +1729,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_1_bat_disable_1_qs</td>
-<td>logic</td>
+<td>com_out_ctl_1_qs</td>
+<td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_1_bat_disable_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_interrupt_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_interrupt_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_ec_rst_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_ec_rst_1_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_gsc_rst_1_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_1_gsc_rst_1_wd</td>
+<td>com_out_ctl_1_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2397,42 +1744,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_2_bat_disable_2_qs</td>
-<td>logic</td>
+<td>com_out_ctl_2_qs</td>
+<td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_2_bat_disable_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_interrupt_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_interrupt_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_ec_rst_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_ec_rst_2_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_gsc_rst_2_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_2_gsc_rst_2_wd</td>
+<td>com_out_ctl_2_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2442,42 +1759,12 @@
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_3_bat_disable_3_qs</td>
-<td>logic</td>
+<td>com_out_ctl_3_qs</td>
+<td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>com_out_ctl_3_bat_disable_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_interrupt_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_interrupt_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_ec_rst_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_ec_rst_3_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_gsc_rst_3_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>com_out_ctl_3_gsc_rst_3_wd</td>
+<td>com_out_ctl_3_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2487,42 +1774,12 @@
 <td></td>
 </tr>
 <tr>
-<td>combo_intr_status_combo0_h2l_qs</td>
-<td>logic</td>
+<td>combo_intr_status_qs</td>
+<td>logic [3:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>combo_intr_status_combo0_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo1_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo1_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo2_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo2_h2l_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo3_h2l_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>combo_intr_status_combo3_h2l_wd</td>
+<td>combo_intr_status_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2532,122 +1789,1342 @@
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_pwrb_h2l_qs</td>
+<td>key_intr_status_qs</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>key_intr_status_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_pwrb_h2l_wd</td>
+<td>aon_ec_rst_ctl_qs_int</td>
+<td>logic [15:0]</td>
+<td>Define register CDC handling.  CDC handling is done on a per-reg instead of per-field boundary.</td>
+</tr>
+<tr>
+<td>aon_ec_rst_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ec_rst_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ec_rst_ctl_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key0_in_h2l_qs</td>
+<td>unused_aon_ec_rst_ctl_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key0_in_h2l_wd</td>
+<td>aon_ec_rst_ctl_regwen</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key1_in_h2l_qs</td>
+<td>aon_ulp_ac_debounce_ctl_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_ac_debounce_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_ac_debounce_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_ac_debounce_ctl_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key1_in_h2l_wd</td>
+<td>unused_aon_ulp_ac_debounce_ctl_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key2_in_h2l_qs</td>
+<td>aon_ulp_ac_debounce_ctl_regwen</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key2_in_h2l_wd</td>
+<td>aon_ulp_lid_debounce_ctl_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_lid_debounce_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_lid_debounce_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_lid_debounce_ctl_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ac_present_h2l_qs</td>
+<td>unused_aon_ulp_lid_debounce_ctl_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ac_present_h2l_wd</td>
+<td>aon_ulp_lid_debounce_ctl_regwen</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ec_rst_l_h2l_qs</td>
+<td>aon_ulp_pwrb_debounce_ctl_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_pwrb_debounce_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_pwrb_debounce_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_pwrb_debounce_ctl_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ec_rst_l_h2l_wd</td>
+<td>unused_aon_ulp_pwrb_debounce_ctl_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_pwrb_l2h_qs</td>
+<td>aon_ulp_pwrb_debounce_ctl_regwen</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_pwrb_l2h_wd</td>
+<td>aon_ulp_ctl_qs_int</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key0_in_l2h_qs</td>
+<td>aon_ulp_ctl_d</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_ctl_wdata</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_ctl_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key0_in_l2h_wd</td>
+<td>unused_aon_ulp_ctl_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key1_in_l2h_qs</td>
+<td>aon_ulp_status_qs_int</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key1_in_l2h_wd</td>
+<td>aon_ulp_status_d</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_status_wdata</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_ulp_status_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key2_in_l2h_qs</td>
+<td>unused_aon_ulp_status_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_key2_in_l2h_wd</td>
+<td>aon_wkup_status_qs_int</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ac_present_l2h_qs</td>
+<td>aon_wkup_status_d</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_status_wdata</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_status_we</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ac_present_l2h_wd</td>
+<td>unused_aon_wkup_status_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ec_rst_l_l2h_qs</td>
+<td>aon_key_invert_ctl_key0_in_qs_int</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>key_intr_status_ec_rst_l_l2h_wd</td>
+<td>aon_key_invert_ctl_key0_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_key1_in_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_key1_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_key2_in_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_key2_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_pwrb_in_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_pwrb_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_ac_present_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_bat_disable_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_lid_open_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_z3_wakeup_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_d</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_wdata</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_key_invert_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_invert_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_bat_disable_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_ec_rst_l_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_pwrb_out_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key0_out_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key1_out_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key2_out_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_z3_wakeup_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_flash_wp_l_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_bat_disable_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_ec_rst_l_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_pwrb_out_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key0_out_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key1_out_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_key2_out_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_z3_wakeup_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_flash_wp_l_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_pin_allowed_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_allowed_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_bat_disable_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_ec_rst_l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_pwrb_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_key0_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_key1_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_key2_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_z3_wakeup_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_flash_wp_l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_d</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_wdata</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_pin_out_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_bat_disable_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_ec_rst_l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_pwrb_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_key0_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_key1_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_key2_out_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_z3_wakeup_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_flash_wp_l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_d</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_wdata</td>
+<td>logic [7:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_pin_out_value_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_pin_out_value_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_pwrb_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key0_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key1_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key2_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_ac_present_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_ec_rst_l_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_pwrb_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key0_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key1_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_key2_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_ac_present_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_ec_rst_l_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_d</td>
+<td>logic [13:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_wdata</td>
+<td>logic [13:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_key_intr_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_debounce_ctl_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_debounce_ctl_d</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_debounce_ctl_wdata</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_debounce_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_key_intr_debounce_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_debounce_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_debounce_timer_qs_int</td>
+<td>logic [15:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_auto_block_enable_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_d</td>
+<td>logic [16:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_wdata</td>
+<td>logic [16:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_auto_block_debounce_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_debounce_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key0_out_sel_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key1_out_sel_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key2_out_sel_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key0_out_value_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key1_out_value_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_key2_out_value_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_d</td>
+<td>logic [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_wdata</td>
+<td>logic [6:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_auto_block_out_ctl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_auto_block_out_ctl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_key0_in_sel_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_key1_in_sel_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_key2_in_sel_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_pwrb_in_sel_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_ac_present_sel_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_d</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_wdata</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_sel_ctl_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_0_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_key0_in_sel_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_key1_in_sel_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_key2_in_sel_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_pwrb_in_sel_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_ac_present_sel_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_d</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_wdata</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_sel_ctl_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_1_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_key0_in_sel_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_key1_in_sel_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_key2_in_sel_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_pwrb_in_sel_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_ac_present_sel_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_d</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_wdata</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_sel_ctl_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_2_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_key0_in_sel_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_key1_in_sel_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_key2_in_sel_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_pwrb_in_sel_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_ac_present_sel_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_d</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_wdata</td>
+<td>logic [4:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_sel_ctl_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_sel_ctl_3_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_0_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_0_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_0_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_det_ctl_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_0_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_1_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_1_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_1_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_det_ctl_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_1_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_2_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_2_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_2_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_det_ctl_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_2_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_3_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_3_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_3_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_det_ctl_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_det_ctl_3_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_bat_disable_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_interrupt_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_ec_rst_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_rst_req_0_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_wdata</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_out_ctl_0_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_0_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_bat_disable_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_interrupt_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_ec_rst_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_rst_req_1_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_wdata</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_out_ctl_1_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_1_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_bat_disable_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_interrupt_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_ec_rst_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_rst_req_2_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_wdata</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_out_ctl_2_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_2_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_bat_disable_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_interrupt_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_ec_rst_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_rst_req_3_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_wdata</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_com_out_ctl_3_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_com_out_ctl_3_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_combo0_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_combo1_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_combo2_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_combo3_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_d</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_wdata</td>
+<td>logic [3:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_combo_intr_status_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_combo_intr_status_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_pwrb_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key0_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key1_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key2_in_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_ac_present_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_ec_rst_l_h2l_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_pwrb_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key0_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key1_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_key2_in_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_ac_present_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_ec_rst_l_l2h_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_d</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_wdata</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_key_intr_status_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_key_intr_status_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -2657,9 +3134,19 @@
 <td></td>
 </tr>
 <tr>
+<td>shadow_busy</td>
+<td>logic</td>
+<td>shadow busy</td>
+</tr>
+<tr>
+<td>reg_busy_sel</td>
+<td>logic</td>
+<td>register busy</td>
+</tr>
+<tr>
 <td>unused_wdata</td>
 <td>logic</td>
-<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+<td>Unused signal tieoff  wdata / byte enable are not always fully used  add a blanket unused statement to handle lint waivers</td>
 </tr>
 <tr>
 <td>unused_be</td>
@@ -2704,316 +3191,448 @@
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Check sub-word write is permitted</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Check sub-word write is permitted </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
+ Read data return </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_chk: tlul_cmd_intg_chk</li>
 </ul><ul>
 <li>u_rsp_intg_gen: tlul_rsp_intg_gen</li>
 </ul><ul>
 <li>u_reg_if: tlul_adapter_reg</li>
 </ul><ul>
+<li>u_aon_tgl: prim_pulse_sync</li>
+</ul><ul>
+<li>u_ec_rst_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_ulp_ac_debounce_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_ulp_lid_debounce_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_ulp_pwrb_debounce_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_ulp_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_ulp_status_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wkup_status_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_key_invert_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pin_allowed_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pin_out_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_pin_out_value_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_key_intr_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_key_intr_debounce_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_auto_block_debounce_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_auto_block_out_ctl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_sel_ctl_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_sel_ctl_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_sel_ctl_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_sel_ctl_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_det_ctl_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_det_ctl_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_det_ctl_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_det_ctl_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_out_ctl_0_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_out_ctl_1_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_out_ctl_2_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_com_out_ctl_3_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_combo_intr_status_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_key_intr_status_cdc: prim_reg_cdc</li>
+</ul><ul>
 <li>u_intr_state: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Register instances<br />
-R[intr_state]: V(False)</p></div><ul>
+ Register instances<br />
+ R[intr_state]: V(False)</p></div><ul>
 <li>u_intr_enable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_enable]: V(False)</p></div><ul>
+ R[intr_enable]: V(False)</p></div><ul>
 <li>u_intr_test: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_test]: V(True)</p></div><ul>
+ R[intr_test]: V(True)</p></div><ul>
 <li>u_alert_test: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[alert_test]: V(True)</p></div><ul>
+ R[alert_test]: V(True)</p></div><ul>
 <li>u_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[regwen]: V(False)</p></div><ul>
+ R[regwen]: V(False)</p></div><ul>
 <li>u_ec_rst_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ec_rst_ctl]: V(False)</p></div><ul>
+ R[ec_rst_ctl]: V(False)</p></div><ul>
 <li>u_ulp_ac_debounce_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ulp_ac_debounce_ctl]: V(False)</p></div><ul>
+ R[ulp_ac_debounce_ctl]: V(False)</p></div><ul>
 <li>u_ulp_lid_debounce_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ulp_lid_debounce_ctl]: V(False)</p></div><ul>
+ R[ulp_lid_debounce_ctl]: V(False)</p></div><ul>
 <li>u_ulp_pwrb_debounce_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ulp_pwrb_debounce_ctl]: V(False)</p></div><ul>
+ R[ulp_pwrb_debounce_ctl]: V(False)</p></div><ul>
 <li>u_ulp_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ulp_ctl]: V(False)</p></div><ul>
+ R[ulp_ctl]: V(False)</p></div><ul>
 <li>u_ulp_status: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[ulp_status]: V(False)</p></div><ul>
-<li>u_wk_status: prim_subreg</li>
+ R[ulp_status]: V(False)</p></div><ul>
+<li>u_wkup_status: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wk_status]: V(False)</p></div><ul>
+ R[wkup_status]: V(False)</p></div><ul>
 <li>u_key_invert_ctl_key0_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[key_invert_ctl]: V(False)<br />
-F[key0_in]: 0:0</p></div><ul>
+ R[key_invert_ctl]: V(False)<br />
+   F[key0_in]: 0:0</p></div><ul>
 <li>u_key_invert_ctl_key0_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out]: 1:1</p></div><ul>
+   F[key0_out]: 1:1</p></div><ul>
 <li>u_key_invert_ctl_key1_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in]: 2:2</p></div><ul>
+   F[key1_in]: 2:2</p></div><ul>
 <li>u_key_invert_ctl_key1_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out]: 3:3</p></div><ul>
+   F[key1_out]: 3:3</p></div><ul>
 <li>u_key_invert_ctl_key2_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in]: 4:4</p></div><ul>
+   F[key2_in]: 4:4</p></div><ul>
 <li>u_key_invert_ctl_key2_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out]: 5:5</p></div><ul>
+   F[key2_out]: 5:5</p></div><ul>
 <li>u_key_invert_ctl_pwrb_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_in]: 6:6</p></div><ul>
+   F[pwrb_in]: 6:6</p></div><ul>
 <li>u_key_invert_ctl_pwrb_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_out]: 7:7</p></div><ul>
+   F[pwrb_out]: 7:7</p></div><ul>
 <li>u_key_invert_ctl_ac_present: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ac_present]: 8:8</p></div><ul>
+   F[ac_present]: 8:8</p></div><ul>
 <li>u_key_invert_ctl_bat_disable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[bat_disable]: 9:9</p></div><ul>
+   F[bat_disable]: 9:9</p></div><ul>
 <li>u_key_invert_ctl_lid_open: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lid_open]: 10:10</p></div><ul>
+   F[lid_open]: 10:10</p></div><ul>
 <li>u_key_invert_ctl_z3_wakeup: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[z3_wakeup]: 11:11</p></div><ul>
+   F[z3_wakeup]: 11:11</p></div><ul>
 <li>u_pin_allowed_ctl_bat_disable_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[pin_allowed_ctl]: V(False)<br />
-F[bat_disable_0]: 0:0</p></div><ul>
+ R[pin_allowed_ctl]: V(False)<br />
+   F[bat_disable_0]: 0:0</p></div><ul>
 <li>u_pin_allowed_ctl_ec_rst_l_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_0]: 1:1</p></div><ul>
+   F[ec_rst_l_0]: 1:1</p></div><ul>
 <li>u_pin_allowed_ctl_pwrb_out_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_out_0]: 2:2</p></div><ul>
+   F[pwrb_out_0]: 2:2</p></div><ul>
 <li>u_pin_allowed_ctl_key0_out_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out_0]: 3:3</p></div><ul>
+   F[key0_out_0]: 3:3</p></div><ul>
 <li>u_pin_allowed_ctl_key1_out_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out_0]: 4:4</p></div><ul>
+   F[key1_out_0]: 4:4</p></div><ul>
 <li>u_pin_allowed_ctl_key2_out_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out_0]: 5:5</p></div><ul>
+   F[key2_out_0]: 5:5</p></div><ul>
 <li>u_pin_allowed_ctl_z3_wakeup_0: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[z3_wakeup_0]: 6:6</p></div><ul>
+   F[z3_wakeup_0]: 6:6</p></div><ul>
+<li>u_pin_allowed_ctl_flash_wp_l_0: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[flash_wp_l_0]: 7:7</p></div><ul>
 <li>u_pin_allowed_ctl_bat_disable_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[bat_disable_1]: 7:7</p></div><ul>
+   F[bat_disable_1]: 8:8</p></div><ul>
 <li>u_pin_allowed_ctl_ec_rst_l_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_1]: 8:8</p></div><ul>
+   F[ec_rst_l_1]: 9:9</p></div><ul>
 <li>u_pin_allowed_ctl_pwrb_out_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_out_1]: 9:9</p></div><ul>
+   F[pwrb_out_1]: 10:10</p></div><ul>
 <li>u_pin_allowed_ctl_key0_out_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out_1]: 10:10</p></div><ul>
+   F[key0_out_1]: 11:11</p></div><ul>
 <li>u_pin_allowed_ctl_key1_out_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out_1]: 11:11</p></div><ul>
+   F[key1_out_1]: 12:12</p></div><ul>
 <li>u_pin_allowed_ctl_key2_out_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out_1]: 12:12</p></div><ul>
+   F[key2_out_1]: 13:13</p></div><ul>
 <li>u_pin_allowed_ctl_z3_wakeup_1: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[z3_wakeup_1]: 13:13</p></div><ul>
+   F[z3_wakeup_1]: 14:14</p></div><ul>
+<li>u_pin_allowed_ctl_flash_wp_l_1: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[flash_wp_l_1]: 15:15</p></div><ul>
 <li>u_pin_out_ctl_bat_disable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[pin_out_ctl]: V(False)<br />
-F[bat_disable]: 0:0</p></div><ul>
+ R[pin_out_ctl]: V(False)<br />
+   F[bat_disable]: 0:0</p></div><ul>
 <li>u_pin_out_ctl_ec_rst_l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l]: 1:1</p></div><ul>
+   F[ec_rst_l]: 1:1</p></div><ul>
 <li>u_pin_out_ctl_pwrb_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_out]: 2:2</p></div><ul>
+   F[pwrb_out]: 2:2</p></div><ul>
 <li>u_pin_out_ctl_key0_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out]: 3:3</p></div><ul>
+   F[key0_out]: 3:3</p></div><ul>
 <li>u_pin_out_ctl_key1_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out]: 4:4</p></div><ul>
+   F[key1_out]: 4:4</p></div><ul>
 <li>u_pin_out_ctl_key2_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out]: 5:5</p></div><ul>
+   F[key2_out]: 5:5</p></div><ul>
 <li>u_pin_out_ctl_z3_wakeup: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[z3_wakeup]: 6:6</p></div><ul>
+   F[z3_wakeup]: 6:6</p></div><ul>
+<li>u_pin_out_ctl_flash_wp_l: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[flash_wp_l]: 7:7</p></div><ul>
 <li>u_pin_out_value_bat_disable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[pin_out_value]: V(False)<br />
-F[bat_disable]: 0:0</p></div><ul>
+ R[pin_out_value]: V(False)<br />
+   F[bat_disable]: 0:0</p></div><ul>
 <li>u_pin_out_value_ec_rst_l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l]: 1:1</p></div><ul>
+   F[ec_rst_l]: 1:1</p></div><ul>
 <li>u_pin_out_value_pwrb_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_out]: 2:2</p></div><ul>
+   F[pwrb_out]: 2:2</p></div><ul>
 <li>u_pin_out_value_key0_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out]: 3:3</p></div><ul>
+   F[key0_out]: 3:3</p></div><ul>
 <li>u_pin_out_value_key1_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out]: 4:4</p></div><ul>
+   F[key1_out]: 4:4</p></div><ul>
 <li>u_pin_out_value_key2_out: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out]: 5:5</p></div><ul>
+   F[key2_out]: 5:5</p></div><ul>
 <li>u_pin_out_value_z3_wakeup: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[z3_wakeup]: 6:6</p></div><ul>
+   F[z3_wakeup]: 6:6</p></div><ul>
+<li>u_pin_out_value_flash_wp_l: prim_subreg</li>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+   F[flash_wp_l]: 7:7</p></div><ul>
 <li>u_pin_in_value_ac_present: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[pin_in_value]: V(False)<br />
-F[ac_present]: 0:0</p></div><ul>
+ R[pin_in_value]: V(False)<br />
+   F[ac_present]: 0:0</p></div><ul>
 <li>u_pin_in_value_ec_rst_l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l]: 1:1</p></div><ul>
+   F[ec_rst_l]: 1:1</p></div><ul>
 <li>u_pin_in_value_pwrb_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_in]: 2:2</p></div><ul>
+   F[pwrb_in]: 2:2</p></div><ul>
 <li>u_pin_in_value_key0_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_in]: 3:3</p></div><ul>
+   F[key0_in]: 3:3</p></div><ul>
 <li>u_pin_in_value_key1_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in]: 4:4</p></div><ul>
+   F[key1_in]: 4:4</p></div><ul>
 <li>u_pin_in_value_key2_in: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in]: 5:5</p></div><ul>
+   F[key2_in]: 5:5</p></div><ul>
 <li>u_pin_in_value_lid_open: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[lid_open]: 6:6</p></div><ul>
+   F[lid_open]: 6:6</p></div><ul>
 <li>u_key_intr_ctl_pwrb_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[key_intr_ctl]: V(False)<br />
-F[pwrb_in_h2l]: 0:0</p></div><ul>
+ R[key_intr_ctl]: V(False)<br />
+   F[pwrb_in_h2l]: 0:0</p></div><ul>
 <li>u_key_intr_ctl_key0_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_in_h2l]: 1:1</p></div><ul>
+   F[key0_in_h2l]: 1:1</p></div><ul>
 <li>u_key_intr_ctl_key1_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in_h2l]: 2:2</p></div><ul>
+   F[key1_in_h2l]: 2:2</p></div><ul>
 <li>u_key_intr_ctl_key2_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in_h2l]: 3:3</p></div><ul>
+   F[key2_in_h2l]: 3:3</p></div><ul>
 <li>u_key_intr_ctl_ac_present_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ac_present_h2l]: 4:4</p></div><ul>
+   F[ac_present_h2l]: 4:4</p></div><ul>
 <li>u_key_intr_ctl_ec_rst_l_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_h2l]: 5:5</p></div><ul>
+   F[ec_rst_l_h2l]: 5:5</p></div><ul>
 <li>u_key_intr_ctl_pwrb_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_in_l2h]: 8:8</p></div><ul>
+   F[pwrb_in_l2h]: 8:8</p></div><ul>
 <li>u_key_intr_ctl_key0_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_in_l2h]: 9:9</p></div><ul>
+   F[key0_in_l2h]: 9:9</p></div><ul>
 <li>u_key_intr_ctl_key1_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in_l2h]: 10:10</p></div><ul>
+   F[key1_in_l2h]: 10:10</p></div><ul>
 <li>u_key_intr_ctl_key2_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in_l2h]: 11:11</p></div><ul>
+   F[key2_in_l2h]: 11:11</p></div><ul>
 <li>u_key_intr_ctl_ac_present_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ac_present_l2h]: 12:12</p></div><ul>
+   F[ac_present_l2h]: 12:12</p></div><ul>
 <li>u_key_intr_ctl_ec_rst_l_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_l2h]: 13:13</p></div><ul>
+   F[ec_rst_l_l2h]: 13:13</p></div><ul>
 <li>u_key_intr_debounce_ctl: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[key_intr_debounce_ctl]: V(False)</p></div><ul>
+ R[key_intr_debounce_ctl]: V(False)</p></div><ul>
 <li>u_auto_block_debounce_ctl_debounce_timer: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[auto_block_debounce_ctl]: V(False)<br />
-F[debounce_timer]: 15:0</p></div><ul>
+ R[auto_block_debounce_ctl]: V(False)<br />
+   F[debounce_timer]: 15:0</p></div><ul>
 <li>u_auto_block_debounce_ctl_auto_block_enable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[auto_block_enable]: 16:16</p></div><ul>
+   F[auto_block_enable]: 16:16</p></div><ul>
 <li>u_auto_block_out_ctl_key0_out_sel: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[auto_block_out_ctl]: V(False)<br />
-F[key0_out_sel]: 0:0</p></div><ul>
+ R[auto_block_out_ctl]: V(False)<br />
+   F[key0_out_sel]: 0:0</p></div><ul>
 <li>u_auto_block_out_ctl_key1_out_sel: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out_sel]: 1:1</p></div><ul>
+   F[key1_out_sel]: 1:1</p></div><ul>
 <li>u_auto_block_out_ctl_key2_out_sel: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out_sel]: 2:2</p></div><ul>
+   F[key2_out_sel]: 2:2</p></div><ul>
 <li>u_auto_block_out_ctl_key0_out_value: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_out_value]: 4:4</p></div><ul>
+   F[key0_out_value]: 4:4</p></div><ul>
 <li>u_auto_block_out_ctl_key1_out_value: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_out_value]: 5:5</p></div><ul>
+   F[key1_out_value]: 5:5</p></div><ul>
 <li>u_auto_block_out_ctl_key2_out_value: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_out_value]: 6:6</p></div><ul>
+   F[key2_out_value]: 6:6</p></div><ul>
 <li>u_combo_intr_status_combo0_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[combo_intr_status]: V(False)<br />
-F[combo0_h2l]: 0:0</p></div><ul>
+ R[combo_intr_status]: V(False)<br />
+   F[combo0_h2l]: 0:0</p></div><ul>
 <li>u_combo_intr_status_combo1_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[combo1_h2l]: 1:1</p></div><ul>
+   F[combo1_h2l]: 1:1</p></div><ul>
 <li>u_combo_intr_status_combo2_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[combo2_h2l]: 2:2</p></div><ul>
+   F[combo2_h2l]: 2:2</p></div><ul>
 <li>u_combo_intr_status_combo3_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[combo3_h2l]: 3:3</p></div><ul>
+   F[combo3_h2l]: 3:3</p></div><ul>
 <li>u_key_intr_status_pwrb_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[key_intr_status]: V(False)<br />
-F[pwrb_h2l]: 0:0</p></div><ul>
+ R[key_intr_status]: V(False)<br />
+   F[pwrb_h2l]: 0:0</p></div><ul>
 <li>u_key_intr_status_key0_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_in_h2l]: 1:1</p></div><ul>
+   F[key0_in_h2l]: 1:1</p></div><ul>
 <li>u_key_intr_status_key1_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in_h2l]: 2:2</p></div><ul>
+   F[key1_in_h2l]: 2:2</p></div><ul>
 <li>u_key_intr_status_key2_in_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in_h2l]: 3:3</p></div><ul>
+   F[key2_in_h2l]: 3:3</p></div><ul>
 <li>u_key_intr_status_ac_present_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ac_present_h2l]: 4:4</p></div><ul>
+   F[ac_present_h2l]: 4:4</p></div><ul>
 <li>u_key_intr_status_ec_rst_l_h2l: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_h2l]: 5:5</p></div><ul>
+   F[ec_rst_l_h2l]: 5:5</p></div><ul>
 <li>u_key_intr_status_pwrb_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pwrb_l2h]: 6:6</p></div><ul>
+   F[pwrb_l2h]: 6:6</p></div><ul>
 <li>u_key_intr_status_key0_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key0_in_l2h]: 7:7</p></div><ul>
+   F[key0_in_l2h]: 7:7</p></div><ul>
 <li>u_key_intr_status_key1_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key1_in_l2h]: 8:8</p></div><ul>
+   F[key1_in_l2h]: 8:8</p></div><ul>
 <li>u_key_intr_status_key2_in_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[key2_in_l2h]: 9:9</p></div><ul>
+   F[key2_in_l2h]: 9:9</p></div><ul>
 <li>u_key_intr_status_ac_present_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ac_present_l2h]: 10:10</p></div><ul>
+   F[ac_present_l2h]: 10:10</p></div><ul>
 <li>u_key_intr_status_ec_rst_l_l2h: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[ec_rst_l_l2h]: 11:11</p></div><br><br><br><br><br><br>
+   F[ec_rst_l_l2h]: 11:11</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

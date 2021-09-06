@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=aon_timer_reg_top><h1 id="entity-aon_timer_reg_top">Entity: aon_timer_reg_top</h1></a><ul>
 <li><strong>File</strong>: aon_timer_reg_top.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 375 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="270" height="110" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="266" height="105" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="350" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="315" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1037" x1="330" y1="30" x2="345" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="350" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="315" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1042" x1="330" y1="50" x2="345" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="350" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="350" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="315" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="315" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1047" x1="330" y1="70" x2="345" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 385 170"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="45,0 60,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="280" height="150" fill="black" x="60" y="15"></rect><rect id="SvgjsRect1007" width="276" height="145" fill="#fdfd96" x="62" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="40" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="75" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1012" x1="45" y1="30" x2="60" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="40" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="75" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1017" x1="45" y1="50" x2="60" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="40" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="75" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   clk_aon_i </tspan></text><line id="SvgjsLine1022" x1="45" y1="70" x2="60" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="40" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="75" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   rst_aon_ni </tspan></text><line id="SvgjsLine1027" x1="45" y1="90" x2="60" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="40" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="75" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   tl_i </tspan></text><line id="SvgjsLine1032" x1="45" y1="110" x2="60" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="40" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="75" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   hw2reg </tspan></text><line id="SvgjsLine1037" x1="45" y1="130" x2="60" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="40" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="40" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="75" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="75" svgjs:data="{&quot;newLined&quot;:true}">   devmode_i </tspan></text><line id="SvgjsLine1042" x1="45" y1="150" x2="60" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="360" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="325" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   tl_o </tspan></text><line id="SvgjsLine1047" x1="340" y1="30" x2="355" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="360" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="325" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   reg2hw </tspan></text><line id="SvgjsLine1052" x1="340" y1="50" x2="355" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="360" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="360" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="325" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="325" svgjs:data="{&quot;newLined&quot;:true}">   intg_err_o </tspan></text><line id="SvgjsLine1057" x1="340" y1="70" x2="355" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>Register Top module auto-generated by <code>reggen</code></p></div><h2 id="ports">Ports</h2>
 <table>
 <thead>
 <tr>
@@ -1040,6 +1115,18 @@
 </tr>
 <tr>
 <td>rst_ni</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>clk_aon_i</td>
+<td>input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rst_aon_ni</td>
 <td>input</td>
 <td></td>
 <td></td>
@@ -1142,6 +1229,11 @@
 <td></td>
 </tr>
 <tr>
+<td>reg_busy</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
 <td>tl_reg_h2d</td>
 <td>tlul_pkg::tl_h2d_t</td>
 <td></td>
@@ -1167,9 +1259,14 @@
 <td>outgoing integrity generation</td>
 </tr>
 <tr>
+<td>sync_aon_update</td>
+<td>logic</td>
+<td>cdc oversampling signals</td>
+</tr>
+<tr>
 <td>alert_test_we</td>
 <td>logic</td>
-<td>Define SW related signals Format: <reg><em><field></em>{wd</td>
+<td>Define SW related signals  Format: <reg><em><field></em>{wd</td>
 </tr>
 <tr>
 <td>alert_test_wd</td>
@@ -1182,23 +1279,13 @@
 <td></td>
 </tr>
 <tr>
-<td>wkup_ctrl_enable_qs</td>
+<td>wkup_ctrl_qs</td>
+<td>logic [12:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_ctrl_busy</td>
 <td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>wkup_ctrl_enable_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>wkup_ctrl_prescaler_qs</td>
-<td>logic [11:0]</td>
-<td></td>
-</tr>
-<tr>
-<td>wkup_ctrl_prescaler_wd</td>
-<td>logic [11:0]</td>
 <td></td>
 </tr>
 <tr>
@@ -1212,8 +1299,8 @@
 <td></td>
 </tr>
 <tr>
-<td>wkup_thold_wd</td>
-<td>logic [31:0]</td>
+<td>wkup_thold_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1227,8 +1314,8 @@
 <td></td>
 </tr>
 <tr>
-<td>wkup_count_wd</td>
-<td>logic [31:0]</td>
+<td>wkup_count_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1252,22 +1339,12 @@
 <td></td>
 </tr>
 <tr>
-<td>wdog_ctrl_enable_qs</td>
-<td>logic</td>
+<td>wdog_ctrl_qs</td>
+<td>logic [1:0]</td>
 <td></td>
 </tr>
 <tr>
-<td>wdog_ctrl_enable_wd</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>wdog_ctrl_pause_in_sleep_qs</td>
-<td>logic</td>
-<td></td>
-</tr>
-<tr>
-<td>wdog_ctrl_pause_in_sleep_wd</td>
+<td>wdog_ctrl_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1282,8 +1359,8 @@
 <td></td>
 </tr>
 <tr>
-<td>wdog_bark_thold_wd</td>
-<td>logic [31:0]</td>
+<td>wdog_bark_thold_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1297,8 +1374,8 @@
 <td></td>
 </tr>
 <tr>
-<td>wdog_bite_thold_wd</td>
-<td>logic [31:0]</td>
+<td>wdog_bite_thold_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1312,8 +1389,8 @@
 <td></td>
 </tr>
 <tr>
-<td>wdog_count_wd</td>
-<td>logic [31:0]</td>
+<td>wdog_count_busy</td>
+<td>logic</td>
 <td></td>
 </tr>
 <tr>
@@ -1363,11 +1440,236 @@
 </tr>
 <tr>
 <td>wkup_cause_qs</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>wkup_cause_busy</td>
 <td>logic</td>
 <td></td>
 </tr>
 <tr>
-<td>wkup_cause_wd</td>
+<td>aon_wkup_ctrl_enable_qs_int</td>
+<td>logic</td>
+<td>Define register CDC handling.  CDC handling is done on a per-reg instead of per-field boundary.</td>
+</tr>
+<tr>
+<td>aon_wkup_ctrl_prescaler_qs_int</td>
+<td>logic [11:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_ctrl_d</td>
+<td>logic [12:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_ctrl_wdata</td>
+<td>logic [12:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_ctrl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wkup_ctrl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_thold_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_thold_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_thold_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_thold_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wkup_thold_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_count_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_count_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_count_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_count_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wkup_count_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_enable_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_pause_in_sleep_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_d</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_wdata</td>
+<td>logic [1:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wdog_ctrl_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_ctrl_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bark_thold_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bark_thold_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bark_thold_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bark_thold_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wdog_bark_thold_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bark_thold_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bite_thold_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bite_thold_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bite_thold_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bite_thold_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wdog_bite_thold_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_bite_thold_regwen</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_count_qs_int</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_count_d</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_count_wdata</td>
+<td>logic [31:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wdog_count_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wdog_count_wdata</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_qs_int</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_d</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_wdata</td>
+<td>logic [0:0]</td>
+<td></td>
+</tr>
+<tr>
+<td>aon_wkup_cause_we</td>
+<td>logic</td>
+<td></td>
+</tr>
+<tr>
+<td>unused_aon_wkup_cause_wdata</td>
 <td>logic</td>
 <td></td>
 </tr>
@@ -1377,9 +1679,19 @@
 <td></td>
 </tr>
 <tr>
+<td>shadow_busy</td>
+<td>logic</td>
+<td>shadow busy</td>
+</tr>
+<tr>
+<td>reg_busy_sel</td>
+<td>logic</td>
+<td>register busy</td>
+</tr>
+<tr>
 <td>unused_wdata</td>
 <td>logic</td>
-<td>Unused signal tieoff wdata / byte enable are not always fully used add a blanket unused statement to handle lint waivers</td>
+<td>Unused signal tieoff  wdata / byte enable are not always fully used  add a blanket unused statement to handle lint waivers</td>
 </tr>
 <tr>
 <td>unused_be</td>
@@ -1424,70 +1736,106 @@
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Check sub-word write is permitted</p></div><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Read data return</p></div><h2 id="instantiations">Instantiations</h2><ul>
+ Check sub-word write is permitted </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
+ Read data return </p></div><ul>
+<li>unnamed: (  )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_chk: tlul_cmd_intg_chk</li>
 </ul><ul>
 <li>u_rsp_intg_gen: tlul_rsp_intg_gen</li>
 </ul><ul>
 <li>u_reg_if: tlul_adapter_reg</li>
 </ul><ul>
+<li>u_aon_tgl: prim_pulse_sync</li>
+</ul><ul>
+<li>u_wkup_ctrl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wkup_thold_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wkup_count_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wdog_ctrl_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wdog_bark_thold_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wdog_bite_thold_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wdog_count_cdc: prim_reg_cdc</li>
+</ul><ul>
+<li>u_wkup_cause_cdc: prim_reg_cdc</li>
+</ul><ul>
 <li>u_alert_test: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Register instances<br />
-R[alert_test]: V(True)</p></div><ul>
+ Register instances<br />
+ R[alert_test]: V(True)</p></div><ul>
 <li>u_wkup_ctrl_enable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wkup_ctrl]: V(False)<br />
-F[enable]: 0:0</p></div><ul>
+ R[wkup_ctrl]: V(False)<br />
+   F[enable]: 0:0</p></div><ul>
 <li>u_wkup_ctrl_prescaler: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[prescaler]: 12:1</p></div><ul>
+   F[prescaler]: 12:1</p></div><ul>
 <li>u_wkup_thold: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wkup_thold]: V(False)</p></div><ul>
+ R[wkup_thold]: V(False)</p></div><ul>
 <li>u_wkup_count: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wkup_count]: V(False)</p></div><ul>
+ R[wkup_count]: V(False)</p></div><ul>
 <li>u_wdog_regwen: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wdog_regwen]: V(False)</p></div><ul>
+ R[wdog_regwen]: V(False)</p></div><ul>
 <li>u_wdog_ctrl_enable: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wdog_ctrl]: V(False)<br />
-F[enable]: 0:0</p></div><ul>
+ R[wdog_ctrl]: V(False)<br />
+   F[enable]: 0:0</p></div><ul>
 <li>u_wdog_ctrl_pause_in_sleep: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[pause_in_sleep]: 1:1</p></div><ul>
+   F[pause_in_sleep]: 1:1</p></div><ul>
 <li>u_wdog_bark_thold: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wdog_bark_thold]: V(False)</p></div><ul>
+ R[wdog_bark_thold]: V(False)</p></div><ul>
 <li>u_wdog_bite_thold: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wdog_bite_thold]: V(False)</p></div><ul>
+ R[wdog_bite_thold]: V(False)</p></div><ul>
 <li>u_wdog_count: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wdog_count]: V(False)</p></div><ul>
+ R[wdog_count]: V(False)</p></div><ul>
 <li>u_intr_state_wkup_timer_expired: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_state]: V(False)<br />
-F[wkup_timer_expired]: 0:0</p></div><ul>
+ R[intr_state]: V(False)<br />
+   F[wkup_timer_expired]: 0:0</p></div><ul>
 <li>u_intr_state_wdog_timer_expired: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[wdog_timer_expired]: 1:1</p></div><ul>
+   F[wdog_timer_expired]: 1:1</p></div><ul>
 <li>u_intr_test_wkup_timer_expired: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[intr_test]: V(True)<br />
-F[wkup_timer_expired]: 0:0</p></div><ul>
+ R[intr_test]: V(True)<br />
+   F[wkup_timer_expired]: 0:0</p></div><ul>
 <li>u_intr_test_wdog_timer_expired: prim_subreg_ext</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-F[wdog_timer_expired]: 1:1</p></div><ul>
+   F[wdog_timer_expired]: 1:1</p></div><ul>
 <li>u_wkup_cause: prim_subreg</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-R[wkup_cause]: V(False)</p></div><br><br><br><br><br><br>
+ R[wkup_cause]: V(False)</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1075,25 +1150,26 @@
 <tr>
 <td>permissions_t</td>
 <td>(no_access,<br><span style="padding-left:20px"> write_only,<br><span style="padding-left:20px"> read_only,<br><span style="padding-left:20px"> read_and_write)</td>
-<td></td>
+<td>---------------------------------------------------  Memory access permission control functions ---------------------------------------------------</td>
 </tr>
 <tr>
 <td>buffer_t</td>
 <td></td>
-<td>Reference to an allocated buffer with the memory</td>
+<td>---------------------------------------------------  Memory buffer allocation ---------------------------------------------------  Reference to an allocated buffer with the memory</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>clear <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Empties the memory by removing all data and permissions</p></div><ul>
+ Empties the memory by removing all data and permissions</p></div><ul>
 <li>write_byte <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> byte : byte_t) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-memory-data-read-and-write-functions"> Memory data read and write functions</h2></div><ul>
 <li>write_word <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> word : std_logic_vector;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>write_integer <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> word : integer;<br><span style="padding-left:20px"> bytes_per_word : natural range 1 to 4 := 4;<br><span style="padding-left:20px"> endian : endianness_arg_t := default_endian) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Write integer</p></div><ul>
+ Write integer</p></div><ul>
 <li>set_permissions <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> permissions : permissions_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>clear_expected_byte <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural) </font> <font id="function_return">return ()</font></li>
@@ -1106,16 +1182,18 @@ Write integer</p></div><ul>
 </ul><ul>
 <li>check_expected_was_written <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> num_bytes : natural) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Check that all expected bytes within address range was writtenwith correct value</p></div><ul>
+ Check that all expected bytes within address range was written<br />
+ with correct value</p></div><ul>
 <li>check_expected_was_written <font id="function_arguments">(memory : memory_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Check that all expected bytes within the entire memory was writtenwith correct value</p></div><ul>
+ Check that all expected bytes within the entire memory was written<br />
+ with correct value</p></div><ul>
 <li>check_expected_was_written <font id="function_arguments">(buf : buffer_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Check that all expected bytes was written with correct value in buffer</p></div><ul>
+ Check that all expected bytes was written with correct value in buffer</p></div><ul>
 <li>write_byte_unchecked <font id="function_arguments">(memory : memory_t;<br><span style="padding-left:20px"> address : natural;<br><span style="padding-left:20px"> byte : byte_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Perform write of one byte without running any address or data checks</p></div><br><br><br><br><br><br>
+ Perform write of one byte without running any address or data checks</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

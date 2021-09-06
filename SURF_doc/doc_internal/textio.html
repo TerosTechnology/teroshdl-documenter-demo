@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1039,7 +1114,7 @@
 <tr>
 <td>text</td>
 <td></td>
-<td>A file of variable-length ASCII records. Note: in order to work correctly, the TEXT file type must be declared in the Textio package of library Std.  Otherwise, a file of string has a non-ASCII format.</td>
+<td>A file of variable-length ASCII records.   Note: in order to work correctly, the TEXT file type must be declared in   the Textio package of library Std.  Otherwise, a file of string has a   non-ASCII format.</td>
 </tr>
 <tr>
 <td>side</td>
@@ -1049,15 +1124,31 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>Justify <font id="function_arguments">(Value: String;<br><span style="padding-left:20px"> Justified : Side := Right;<br><span style="padding-left:20px"> Field: Width := 0 ) </font> <font id="function_return">return String </font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+ For specifying widths of output fields.<br />
+ standard text files<br />
+START-V08</p></div><ul>
 <li>readline <font id="function_arguments">(variable f: in text;<br><span style="padding-left:20px"> l: inout line) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-input routines for standard types</p></div><ul>
+V87</p></div><ul>
 <li>readline <font id="function_arguments">(file f: text;<br><span style="padding-left:20px"> l: inout line) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+!V87</p></div><ul>
 <li>read <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: out bit;<br><span style="padding-left:20px"> good: out boolean) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- In case of overflow (ie, if the number is out of the bounds of the type), the procedure will fail with an execution error. FIXME: this should not occur for a bad String.</p></div><ul>
+  For READ procedures:<br />
+  In this implementation, any L is accepted (ie, there is no constraints<br />
+  on direction, or left bound).  Therefore, even variable of type LINE<br />
+  not initialized by READLINE are accepted.  Strictly speaking, this is<br />
+  not required by LRM, nor prevented.  However, other implementations may<br />
+  fail at parsing such Strings.</p>
+<p>Also, in case of error (GOOD is false), this implementation do not<br />
+  modify L (as specified by the LRM) nor VALUE.</p>
+<p>For READ procedures without a GOOD argument, an assertion fails in case<br />
+  of error.</p>
+<p>In case of overflow (ie, if the number is out of the bounds of the type),<br />
+  the procedure will fail with an execution error.<br />
+  FIXME: this should not occur for a bad String.</p></div><ul>
 <li>read <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: out bit) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>read <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: out bit_vector;<br><span style="padding-left:20px"> good: out boolean) </font> <font id="function_return">return ()</font></li>
@@ -1086,11 +1177,14 @@ input routines for standard types</p></div><ul>
 </ul><ul>
 <li>read <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: out time;<br><span style="padding-left:20px"> good: out boolean) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- This implementation requires no space after the unit identifier, ie "7.5 nsv" is parsed as 7.5 ns. The unit identifier can be in lower case, upper case or mixed case.</p></div><ul>
+  This implementation requires no space after the unit identifier,<br />
+  ie "7.5 nsv" is parsed as 7.5 ns.<br />
+  The unit identifier can be in lower case, upper case or mixed case.</p></div><ul>
 <li>read <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: out time) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>Sread <font id="function_arguments">(L : inout Line;<br><span style="padding-left:20px"> Value : out String;<br><span style="padding-left:20px"> Strlen : out Natural) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+START-V08</p></div><ul>
 <li>Oread <font id="function_arguments">(L : inout Line;<br><span style="padding-left:20px"> Value : out Bit_Vector;<br><span style="padding-left:20px"> Good : out Boolean) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>Oread <font id="function_arguments">(L : inout Line;<br><span style="padding-left:20px"> Value : out Bit_Vector) </font> <font id="function_return">return ()</font></li>
@@ -1101,14 +1195,17 @@ input routines for standard types</p></div><ul>
 </ul><ul>
 <li>writeline <font id="function_arguments">(variable f: out text;<br><span style="padding-left:20px"> l: inout line) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-output routines for standard types</p></div><ul>
+V87</p></div><ul>
 <li>writeline <font id="function_arguments">(file f: text;<br><span style="padding-left:20px"> l: inout line) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+!V87</p></div><ul>
 <li>Tee <font id="function_arguments">(file f : Text;<br><span style="padding-left:20px"> L : inout LINE) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+START-V08</p></div><ul>
 <li>write <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: in bit;<br><span style="padding-left:20px"> justified: in side := right;<br><span style="padding-left:20px"> field: in width := 0) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- This implementation accept any value for all the types.</p></div><ul>
+END-V08<br />
+  This implementation accept any value for all the types.</p></div><ul>
 <li>write <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: in bit_vector;<br><span style="padding-left:20px"> justified: in side := right;<br><span style="padding-left:20px"> field: in width := 0) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>write <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value: in boolean;<br><span style="padding-left:20px"> justified: in side := right;<br><span style="padding-left:20px"> field: in width := 0) </font> <font id="function_return">return ()</font></li>
@@ -1123,7 +1220,11 @@ output routines for standard types</p></div><ul>
 </ul><ul>
 <li>write <font id="function_arguments">(l: inout line;<br><span style="padding-left:20px"> value : in time;<br><span style="padding-left:20px"> justified: in side := right;<br><span style="padding-left:20px"> field: in width := 0;<br><span style="padding-left:20px"> unit : in TIME := ns) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
- UNIT must be a unit name declared in std.standard.  Of course, no rules in the core VHDL language prevent you from using a value that is not a unit (eg: 10 ns or even 5 fs). An assertion error message is generated in this case, and question mark (?) is written at the place of the unit name.</p></div><ul>
+  UNIT must be a unit name declared in std.standard.  Of course, no rules<br />
+  in the core VHDL language prevent you from using a value that is not a<br />
+  unit (eg: 10 ns or even 5 fs).<br />
+  An assertion error message is generated in this case, and question mark<br />
+  (?) is written at the place of the unit name.</p></div><ul>
 <li>Owrite <font id="function_arguments">(L : inout line;<br><span style="padding-left:20px"> value : in Bit_Vector;<br><span style="padding-left:20px"> Justified : in Side := Right;<br><span style="padding-left:20px"> Field : in Width := 0) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>Hwrite <font id="function_arguments">(L : inout line;<br><span style="padding-left:20px"> value : in Bit_Vector;<br><span style="padding-left:20px"> Justified : in Side := Right;<br><span style="padding-left:20px"> Field : in Width := 0) </font> <font id="function_return">return ()</font></li>

@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=otbn_top_sim><h1 id="entity-otbn_top_sim">Entity: otbn_top_sim</h1></a><ul>
 <li><strong>File</strong>: otbn_top_sim.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 560 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="51.66666666666667,0 66.66666666666667,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="200" height="70" fill="black" x="66.66666666666667" y="0"></rect><rect id="SvgjsRect1007" width="196" height="65" fill="#bdecb6" x="68.66666666666667" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="46.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="81.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   ImemSizeByte </tspan></text><line id="SvgjsLine1012" x1="51.66666666666667" y1="15" x2="66.66666666666667" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="46.66666666666667" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="81.66666666666667" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   DmemSizeByte </tspan></text><line id="SvgjsLine1017" x1="51.66666666666667" y1="35" x2="66.66666666666667" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="46.66666666666667" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="81.66666666666667" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   ImemStartAddr </tspan></text><line id="SvgjsLine1022" x1="51.66666666666667" y1="55" x2="66.66666666666667" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="200" height="50" fill="black" x="66.66666666666667" y="75"></rect><rect id="SvgjsRect1024" width="196" height="45" fill="#fdfd96" x="68.66666666666667" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="46.66666666666667" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="81.66666666666667" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   IO_CLK </tspan></text><line id="SvgjsLine1029" x1="51.66666666666667" y1="90" x2="66.66666666666667" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="46.66666666666667" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="81.66666666666667" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   IO_RST_N </tspan></text><line id="SvgjsLine1034" x1="51.66666666666667" y1="110" x2="66.66666666666667" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 560 130"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="51.66666666666667,0 66.66666666666667,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="200" height="70" fill="black" x="66.66666666666667" y="0"></rect><rect id="SvgjsRect1007" width="196" height="65" fill="#bdecb6" x="68.66666666666667" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="46.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="81.66666666666667" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   ImemSizeByte </tspan></text><line id="SvgjsLine1012" x1="51.66666666666667" y1="15" x2="66.66666666666667" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="46.66666666666667" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="81.66666666666667" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   DmemSizeByte </tspan></text><line id="SvgjsLine1017" x1="51.66666666666667" y1="35" x2="66.66666666666667" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="46.66666666666667" y="34.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="81.66666666666667" y="34.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   ImemStartAddr </tspan></text><line id="SvgjsLine1022" x1="51.66666666666667" y1="55" x2="66.66666666666667" y2="55" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1023" width="200" height="50" fill="black" x="66.66666666666667" y="75"></rect><rect id="SvgjsRect1024" width="196" height="45" fill="#fdfd96" x="68.66666666666667" y="77"></rect><text id="SvgjsText1025" font-family="Helvetica" x="46.66666666666667" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="81.66666666666667" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   IO_CLK </tspan></text><line id="SvgjsLine1029" x1="51.66666666666667" y1="90" x2="66.66666666666667" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="46.66666666666667" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="46.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="81.66666666666667" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="81.66666666666667" svgjs:data="{&quot;newLined&quot;:true}">   IO_RST_N </tspan></text><line id="SvgjsLine1034" x1="51.66666666666667" y1="110" x2="66.66666666666667" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1114,7 +1189,7 @@
 <tr>
 <td>otbn_start_done</td>
 <td>logic</td>
-<td>Intialise otbn_start_done to 1 so that we only signal otbn_start after we have seen a reset. If you don't do this, we start OTBN before the reset, which can generate confusing trace messages.</td>
+<td>Intialise otbn_start_done to 1 so that we only signal otbn_start after we have seen a reset. If  you don't do this, we start OTBN before the reset, which can generate confusing trace messages.</td>
 </tr>
 <tr>
 <td>imem_req</td>
@@ -1229,7 +1304,7 @@
 <tr>
 <td>unused_imem_top_rdata</td>
 <td>logic</td>
-<td>The top bits of IMEM rdata aren't currently used (they will eventually be used for integrity checks both on the bus and within the core)</td>
+<td>The top bits of IMEM rdata aren't currently used (they will eventually be used for integrity  checks both on the bus and within the core)</td>
 </tr>
 <tr>
 <td>dmem_index</td>
@@ -1293,6 +1368,11 @@
 </tr>
 <tr>
 <td>model_err_latched</td>
+<td>bit</td>
+<td></td>
+</tr>
+<tr>
+<td>loop_warp_model_err</td>
 <td>bit</td>
 <td></td>
 </tr>
@@ -1367,7 +1447,7 @@
 <td>DesignScope</td>
 <td>string</td>
 <td>"..u_otbn_core"</td>
-<td>This runs in parallel with the real core above, with consistency checks between the two.</td>
+<td>The model<br>  This runs in parallel with the real core above, with consistency checks between the two.</td>
 </tr>
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
@@ -1386,7 +1466,9 @@
 <li>unnamed: ( @(posedge IO_CLK or negedge IO_RST_N) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
 <li>unnamed: ( @(posedge IO_CLK or negedge IO_RST_N) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><h2 id="instantiations">Instantiations</h2><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
+<li>unnamed: ( @(negedge IO_CLK or negedge IO_RST_N) )</li>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>u_otbn_core: otbn_core</li>
 </ul><ul>
 <li>u_mock_rnd_edn: otbn_mock_edn</li>

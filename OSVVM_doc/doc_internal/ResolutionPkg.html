@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1118,10 +1193,14 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>resolved_max <font id="function_arguments">( s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-resolved_max<br />
-  return maximum value.  <br />
-  No initializations required on ports, default of type'left is ok</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<p>Note that not all simulators support resolution functions of the form:<br />
+    subtype  std_logic_vector_max is (resolved_max) std_ulogic_vector ;</p>
+<p>Hence, types of the form are offered as a temporary workaround until they do: <br />
+    std_logic_vector_max_c is array (natural range &lt;&gt;) of std_logic_max ; -- for non VHDL-2008</p>
+<p>resolved_max<br />
+   return maximum value.  <br />
+   No initializations required on ports, default of type'left is ok</p></div><ul>
 <li>resolved_max <font id="function_arguments">( s : bit_vector) </font> <font id="function_return">return bit </font></li>
 </ul><ul>
 <li>resolved_max <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
@@ -1136,28 +1215,29 @@ resolved_max<br />
 </ul><ul>
 <li>resolved_sum <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-return sum of values that /= type'left<br />
-No initializations required on ports, default of type'left is ok</p></div><ul>
+ return sum of values that /= type'left<br />
+ No initializations required on ports, default of type'left is ok</p></div><ul>
 <li>resolved_sum <font id="function_arguments">( s : time_vector ) </font> <font id="function_return">return time </font></li>
 </ul><ul>
 <li>resolved_sum <font id="function_arguments">( s : real_vector ) </font> <font id="function_return">return real </font></li>
 </ul><ul>
 <li>resolved_weak <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-no init, type'left</p></div><ul>
+ no init, type'left</p></div><ul>
 <li>resolved <font id="function_arguments">( s : integer_vector ) </font> <font id="function_return">return integer </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-legacy stuff<br />
-requires ports to be initialized to 0 in the appropriate type.  </p></div><ul>
+ legacy stuff<br />
+ requires ports to be initialized to 0 in the appropriate type.  </p></div><ul>
 <li>resolved <font id="function_arguments">( s : time_vector ) </font> <font id="function_return">return time </font></li>
 </ul><ul>
 <li>resolved <font id="function_arguments">( s : real_vector ) </font> <font id="function_return">return real </font></li>
 </ul><ul>
 <li>resolved <font id="function_arguments">(s : string) </font> <font id="function_return">return character </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-same as resolved_max</p></div><ul>
+ same as resolved_max</p></div><ul>
 <li>resolved <font id="function_arguments">( s : boolean_vector) </font> <font id="function_return">return boolean </font></li>
-</ul><br><br><br><br><br><br>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+same as resolved_max  </p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

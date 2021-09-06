@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=EthMacPauseTb><h1 id="entity-ethmacpausetb">Entity: EthMacPauseTb</h1></a><ul>
 <li><strong>File</strong>: EthMacPauseTb.vhd</li>
-</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><p>Title      : SSI Protocol: <a href="https://confluence.slac.stanford.edu/x/0oyfD">https://confluence.slac.stanford.edu/x/0oyfD</a>Company    : SLAC National Accelerator LaboratoryDescription: Simulation Testbed for testing the EthMacPause moduleThis file is part of 'SLAC Firmware Standard Library'.It is subject to the license terms in the LICENSE.txt file found in thetop-level directory of this distribution and at:<a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.No part of 'SLAC Firmware Standard Library', including this file,may be copied, modified, propagated, or distributed except according tothe terms contained in the LICENSE.txt file.</p></div><h2 id="signals">Signals</h2>
+</ul><h2 id="diagram">Diagram</h2><h2 id="description">Description</h2><div id="teroshdl_description"><hr /> <h2 id="title-------ssi-protocol-httpsconfluenceslacstanfordedux0oyfd">Title      : SSI Protocol: <a href="https://confluence.slac.stanford.edu/x/0oyfD">https://confluence.slac.stanford.edu/x/0oyfD</a></h2> <h2 id="company-----slac-national-accelerator-laboratory">Company    : SLAC National Accelerator Laboratory</h2> <h2 id="description-simulation-testbed-for-testing-the-ethmacpause-module">Description: Simulation Testbed for testing the EthMacPause module</h2> <p>This file is part of 'SLAC Firmware Standard Library'.  It is subject to the license terms in the LICENSE.txt file found in the  top-level directory of this distribution and at:     <a href="https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html">https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html</a>.  No part of 'SLAC Firmware Standard Library', including this file,  may be copied, modified, propagated, or distributed except according to</p> <h2 id="the-terms-contained-in-the-licensetxt-file">the terms contained in the LICENSE.txt file.</h2></div><h2 id="signals">Signals</h2>
 <table>
 <thead>
 <tr>
@@ -1266,7 +1341,7 @@
 </table><h2 id="processes">Processes</h2><ul>
 <li>error_checking: ( clk )</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Error Checking</p></div><ul>
+---------------  Error Checking --------------- </p></div><ul>
 <li>results: ( clk )</li>
 </ul><ul>
 <li>unnamed: ( failed, passed )</li>
@@ -1274,23 +1349,23 @@ Error Checking</p></div><ul>
 <li>U_ClkRst: surf.ClkRst</li>
 </ul><ul>
 <li>U_Tx: surf.SsiPrbsTx</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Client: Data Source</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-client-data-source"> Client: Data Source</h2></div><ul>
 <li>U_CltUdp: work.UdpEngineWrapper</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Client: IPv4/ARP/UDP Engine</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-client-ipv4arpudp-engine"> Client: IPv4/ARP/UDP Engine</h2></div><ul>
 <li>U_CltMac: surf.EthMacTop</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Client: Ethernet MAC</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-client-ethernet-mac"> Client: Ethernet MAC</h2></div><ul>
 <li>U_SrvMac: surf.EthMacTop</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Server: Ethernet MAC</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-server-ethernet-mac"> Server: Ethernet MAC</h2></div><ul>
 <li>U_SrvUdp: work.UdpEngineWrapper</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Server: IPv4/ARP/UDP Engine</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-server-ipv4arpudp-engine"> Server: IPv4/ARP/UDP Engine</h2></div><ul>
 <li>U_Rx: surf.SsiPrbsRx</li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Server:Data Sink</p></div><br><br><br><br><br><br>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-serverdata-sink"> Server:Data Sink</h2></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

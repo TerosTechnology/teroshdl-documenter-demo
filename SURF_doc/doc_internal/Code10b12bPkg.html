@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,8 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=Code10b12bPkg><h1 id="package-code10b12bpkg">Package: Code10b12bPkg</h1></a><ul>
 <li><strong>File</strong>: Code10b12bPkg.vhd</li>
-</ul><h2 id="constants">Constants</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>use surf.TextUtilPkg.all;<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1167,7 +1243,7 @@
 <tr>
 <td>Code5b6bType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------------------------------------------------------------------  5B6B Code Constants -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>Code5b6bArray</td>
@@ -1177,7 +1253,8 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>toString <font id="function_arguments">(code : slv(9 downto 0);<br><span style="padding-left:20px"> k : sl) </font> <font id="function_return">return string </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-disparity-types-and-helper-functions"> Disparity types and helper functions</h2></div><ul>
 <li>conv <font id="function_arguments">(d : sl) </font> <font id="function_return">return DisparityType </font></li>
 </ul><ul>
 <li>conv <font id="function_arguments">(d : DisparityType) </font> <font id="function_return">return sl </font></li>
@@ -1186,7 +1263,7 @@
 </ul><ul>
 <li>encode10b12b <font id="function_arguments">( dataIn  : in  slv(9 downto 0);<br><span style="padding-left:20px"> dataKIn : in  sl;<br><span style="padding-left:20px"> dispIn  : in  sl;<br><span style="padding-left:20px"> dataOut : out slv(11 downto 0);<br><span style="padding-left:20px"> dispOut : out sl) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-("110101", -1, 1));</p></div><ul>
+ ("110101", -1, 1));</p></div><ul>
 <li>decode10b12b <font id="function_arguments">( dataIn    : in    slv(11 downto 0);<br><span style="padding-left:20px"> dispIn    : in    sl;<br><span style="padding-left:20px"> dataOut   : out   slv(9 downto 0);<br><span style="padding-left:20px"> dataKOut  : inout sl;<br><span style="padding-left:20px"> dispOut   : inout sl;<br><span style="padding-left:20px"> codeError : out   sl;<br><span style="padding-left:20px"> dispError : inout sl) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

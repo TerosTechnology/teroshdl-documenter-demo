@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1034,7 +1109,7 @@
 <tr>
 <td>T_SIM_WAVEFORM_TUPLE_SL</td>
 <td></td>
-<td>waveform description===========================================================================</td>
+<td>waveform description  ===========================================================================</td>
 </tr>
 <tr>
 <td>T_SIM_WAVEFORM_TUPLE_SLV_8</td>
@@ -1123,7 +1198,9 @@
 </ul><ul>
 <li>simGenerateWaveform <font id="function_arguments">( signal     Wave                   : out   boolean;<br><span style="padding-left:20px"> constant Waveform          : in    T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue   : in    boolean                 := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-waveform generation procedures===========================================================================TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others =&gt; 'U') ?</p></div><ul>
+ waveform generation procedures<br />
+ ===========================================================================<br />
+ TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others =&gt; 'U') ?</p></div><ul>
 <li>simGenerateWaveform <font id="function_arguments">( constant TestID                : in    T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal    Wave                   : out   boolean;<br><span style="padding-left:20px"> constant Waveform          : in    T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue   : in    boolean                 := FALSE ) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>simGenerateWaveform <font id="function_arguments">( signal     Wave                   : out   std_logic;<br><span style="padding-left:20px"> constant Waveform            : in    T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue   : in    std_logic               := '0' ) </font> <font id="function_return">return ()</font></li>
@@ -1160,7 +1237,10 @@ waveform generation procedures==================================================
 </ul><ul>
 <li>to_waveform <font id="function_arguments">(bv : bit_vector;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-function "&lt;" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;convert arrays to waveformsTODO: optimize waveform if input data doesn't changeTODO: write single bit variant</p></div><ul>
+ function "&lt;" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;<br />
+ convert arrays to waveforms<br />
+ TODO: optimize waveform if input data doesn't change<br />
+ TODO: write single bit variant</p></div><ul>
 <li>to_waveform <font id="function_arguments">(slv : std_logic_vector;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SL </font></li>
 </ul><ul>
 <li>to_waveform <font id="function_arguments">(slvv : T_SLVV_8;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_8 </font></li>
@@ -1177,7 +1257,7 @@ function "&lt;" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEF
 </ul><ul>
 <li>simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns;<br><span style="padding-left:20px"> ResetPulse : time := 10 ns) </font> <font id="function_return">return T_SIM_WAVEFORM </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-predefined common waveforms</p></div><br><br><br><br><br><br>
+ predefined common waveforms</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

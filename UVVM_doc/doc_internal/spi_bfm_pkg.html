@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,8 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=spi_bfm_pkg><h1 id="package-spi_bfm_pkg">Package: spi_bfm_pkg</h1></a><ul>
 <li><strong>File</strong>: spi_bfm_pkg.vhd</li>
-</ul><h2 id="constants">Constants</h2>
+</ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>=================================================================================================<br />
+</div></p><h2 id="constants">Constants</h2>
 <table>
 <thead>
 <tr>
@@ -1069,76 +1145,118 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>init_spi_if_signals <font id="function_arguments">( constant config      : in t_spi_bfm_config;<br><span style="padding-left:20px"> constant master_mode : in boolean := true ) </font> <font id="function_return">return t_spi_if </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong></p>
+</ul><div id="descriptions"><h1 id="description"><strong>Description</strong></h1>
+<h1 id="-bfm-procedures"> BFM procedures</h1>
+<hr />
+<h2 id="-init_spi_if_signals"> init_spi_if_signals</h2>
 <ul>
-<li>This function returns an SPI interface with initialized signals.- master_mode = true:   - ss_n initialized to 'H'   - if config.CPOL = '1', sclk initialized to 'H',     otherwise sclk initialized to 'L'   - miso and mosi initialized to 'Z'- master_mode = false:   - all signals initialized to 'Z'</li>
+<li>This function returns an SPI interface with initialized signals.</li>
+<li>master_mode = true:<ul>
+<li>ss_n initialized to 'H'</li>
+<li>if config.CPOL = '1', sclk initialized to 'H',<br />
+otherwise sclk initialized to 'L'</li>
+<li>miso and mosi initialized to 'Z'</li></ul></li>
+<li>master_mode = false:<ul>
+<li>all signals initialized to 'Z'</li></ul></li>
 </ul></div><ul>
 <li>spi_master_transmit_and_receive <font id="function_arguments">( constant tx_data                      : in    std_logic_vector;<br><span style="padding-left:20px"> variable rx_data                      : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal sclk                           : inout std_logic;<br><span style="padding-left:20px"> signal ss_n                           : inout std_logic;<br><span style="padding-left:20px"> signal mosi                           : inout std_logic;<br><span style="padding-left:20px"> signal miso                           : inout std_logic;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI slave DUTand receives 'rx_data' from the SPI slave DUT.</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_transmit_and_receive"> spi_master_transmit_and_receive</h2>
+<p>This procedure transmits data 'tx_data' to the SPI slave DUT<br />
+ and receives 'rx_data' from the SPI slave DUT.</p></div><ul>
 <li>spi_master_transmit_and_receive <font id="function_arguments">( constant tx_data                      : in    std_logic_vector;<br><span style="padding-left:20px"> variable rx_data                      : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI slave DUTand receives 'rx_data' from the SPI slave DUT.The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_transmit_and_receive"> spi_master_transmit_and_receive</h2>
+<p>This procedure transmits data 'tx_data' to the SPI slave DUT<br />
+ and receives 'rx_data' from the SPI slave DUT.<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_master_transmit_and_receive <font id="function_arguments">( constant tx_data                      : in    t_slv_array;<br><span style="padding-left:20px"> variable rx_data                      : out   t_slv_array;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant action_between_words         : in    t_action_between_words         := HOLD_LINE_BETWEEN_WORDS;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call                : in    string                         := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_master_transmit_and_check <font id="function_arguments">( constant tx_data                      : in    std_logic_vector;<br><span style="padding-left:20px"> constant data_exp                     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level                  : in    t_alert_level                  := error;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure …The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_transmit_and_check"> spi_master_transmit_and_check</h2>
+<p>This procedure …<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_master_transmit_and_check <font id="function_arguments">( constant tx_data                      : in    t_slv_array;<br><span style="padding-left:20px"> constant data_exp                     : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level                  : in    t_alert_level                  := error;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant action_between_words         : in    t_action_between_words         := HOLD_LINE_BETWEEN_WORDS;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_master_transmit <font id="function_arguments">( constant tx_data                      : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI DUTThe SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_transmit"> spi_master_transmit</h2>
+<p>This procedure transmits data 'tx_data' to the SPI DUT<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_master_transmit <font id="function_arguments">( constant tx_data                      : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant action_between_words         : in    t_action_between_words         := HOLD_LINE_BETWEEN_WORDS;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_master_receive <font id="function_arguments">( variable rx_data                      : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure receives data 'rx_data' from the SPI DUTThe SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_receive"> spi_master_receive</h2>
+<p>This procedure receives data 'rx_data' from the SPI DUT<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_master_receive <font id="function_arguments">( variable rx_data                      : out   t_slv_array;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant action_between_words         : in    t_action_between_words         := HOLD_LINE_BETWEEN_WORDS;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_master_check <font id="function_arguments">( constant data_exp                     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level                  : in    t_alert_level                  := error;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure receives an SPI transaction, and compares the read datato the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_master_check"> spi_master_check</h2>
+<p>This procedure receives an SPI transaction, and compares the read data<br />
+ to the expected data in 'data_exp'.<br />
+ If the read data is inconsistent with the expected data, an alert with<br />
+ severity 'alert_level' is triggered.<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_master_check <font id="function_arguments">( constant data_exp                     : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                          : in    string;<br><span style="padding-left:20px"> signal spi_if                         : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level                  : in    t_alert_level                  := error;<br><span style="padding-left:20px"> constant action_when_transfer_is_done : in    t_action_when_transfer_is_done := RELEASE_LINE_AFTER_TRANSFER;<br><span style="padding-left:20px"> constant action_between_words         : in    t_action_between_words         := HOLD_LINE_BETWEEN_WORDS;<br><span style="padding-left:20px"> constant scope                        : in    string                         := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel                 : in    t_msg_id_panel                 := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                       : in    t_spi_bfm_config               := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_slave_transmit_and_receive <font id="function_arguments">( constant tx_data                : in    std_logic_vector;<br><span style="padding-left:20px"> variable rx_data                : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal sclk                     : inout std_logic;<br><span style="padding-left:20px"> signal ss_n                     : inout std_logic;<br><span style="padding-left:20px"> signal mosi                     : inout std_logic;<br><span style="padding-left:20px"> signal miso                     : inout std_logic;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call          : in    string                   := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI master DUTand receives 'rx_data' from the SPI master DUT.</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_transmit_and_receive"> spi_slave_transmit_and_receive</h2>
+<p>This procedure transmits data 'tx_data' to the SPI master DUT<br />
+ and receives 'rx_data' from the SPI master DUT.</p></div><ul>
 <li>spi_slave_transmit_and_receive <font id="function_arguments">( constant tx_data                : in    std_logic_vector;<br><span style="padding-left:20px"> variable rx_data                : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call          : in    string                   := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI master DUTand receives 'rx_data' from the SPI master DUT.The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_transmit_and_receive"> spi_slave_transmit_and_receive</h2>
+<p>This procedure transmits data 'tx_data' to the SPI master DUT<br />
+ and receives 'rx_data' from the SPI master DUT.<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_transmit_and_receive <font id="function_arguments">( constant tx_data                : in    t_slv_array;<br><span style="padding-left:20px"> variable rx_data                : out   t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call          : in    string                   := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_slave_transmit_and_check <font id="function_arguments">( constant tx_data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant data_exp               : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level            : in    t_alert_level            := error;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure …The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_transmit_and_check"> spi_slave_transmit_and_check</h2>
+<p>This procedure …<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_transmit_and_check <font id="function_arguments">( constant tx_data                : in    t_slv_array;<br><span style="padding-left:20px"> constant data_exp               : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level            : in    t_alert_level            := error;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_slave_transmit <font id="function_arguments">( constant tx_data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure transmits data 'tx_data' to the SPI DUTThe SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_transmit"> spi_slave_transmit</h2>
+<p>This procedure transmits data 'tx_data' to the SPI DUT<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_transmit <font id="function_arguments">( constant tx_data                : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_slave_receive <font id="function_arguments">( variable rx_data                : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure receives data 'rx_data' from the SPI DUTThe SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_receive"> spi_slave_receive</h2>
+<p>This procedure receives data 'rx_data' from the SPI DUT<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_receive <font id="function_arguments">( variable rx_data                : out   t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><ul>
+ Multi-word</p></div><ul>
 <li>spi_slave_check <font id="function_arguments">( constant data_exp               : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level            : in    t_alert_level            := error;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-This procedure receives an SPI transaction, and compares the read datato the expected data in 'data_exp'.If the read data is inconsistent with the expected data, an alert withseverity 'alert_level' is triggered.The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-spi_slave_check"> spi_slave_check</h2>
+<p>This procedure receives an SPI transaction, and compares the read data<br />
+ to the expected data in 'data_exp'.<br />
+ If the read data is inconsistent with the expected data, an alert with<br />
+ severity 'alert_level' is triggered.<br />
+ The SPI interface in this procedure is given as a t_spi_if signal record</p></div><ul>
 <li>spi_slave_check <font id="function_arguments">( constant data_exp               : in    t_slv_array;<br><span style="padding-left:20px"> constant msg                    : in    string;<br><span style="padding-left:20px"> signal spi_if                   : inout t_spi_if;<br><span style="padding-left:20px"> constant alert_level            : in    t_alert_level            := error;<br><span style="padding-left:20px"> constant when_to_start_transfer : in    t_when_to_start_transfer := START_TRANSFER_ON_NEXT_SS;<br><span style="padding-left:20px"> constant scope                  : in    string                   := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel           : in    t_msg_id_panel           := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config                 : in    t_spi_bfm_config         := C_SPI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multi-word</p></div><br><br><br><br><br><br>
+ Multi-word</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

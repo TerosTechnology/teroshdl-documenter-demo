@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1028,7 +1103,7 @@
 </ul><ul>
 <li>fail <font id="function_arguments">(Message : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Assertions</p></div><ul>
+ Assertions</p></div><ul>
 <li>assertion <font id="function_arguments">(Condition : boolean;<br><span style="padding-left:20px"> Message : string := "") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>writeMessage <font id="function_arguments">(Message : string) </font> <font id="function_return">return ()</font></li>
@@ -1043,14 +1118,14 @@ Assertions</p></div><ul>
 </ul><ul>
 <li>createDefaultTest <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Test Management</p></div><ul>
+ Test Management</p></div><ul>
 <li>activateDefaultTest <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>finalizeTest <font id="function_arguments">(TestID : T_SIM_TEST_ID) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>stopAllClocks <font id="function_arguments">()</font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Clock Management</p></div><ul>
+ Clock Management</p></div><ul>
 <li>stopClocks <font id="function_arguments">(TestID        : T_SIM_TEST_ID := C_SIM_DEFAULT_TEST_ID) </font> <font id="function_return">return ()</font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

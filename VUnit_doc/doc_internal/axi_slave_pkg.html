@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1113,38 +1188,62 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>get_logger <font id="function_arguments">(axi_slave : axi_slave_t) </font> <font id="function_return">return logger_t </font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Get the logger used by the axi_slave</p></div><ul>
+ Get the logger used by the axi_slave</p></div><ul>
 <li>set_address_fifo_depth <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> depth : positive) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Set the maximum number address channel tokens that can be queued</p></div><ul>
+ Set the maximum number address channel tokens that can be queued</p></div><ul>
 <li>set_write_response_fifo_depth <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> depth : positive) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Set the maximum number write responses that can be queued</p></div><ul>
+ Set the maximum number write responses that can be queued</p></div><ul>
 <li>set_address_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Set the address channel stall probability</p></div><ul>
+ Set the address channel stall probability</p></div><ul>
 <li>set_data_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Set the data channel stall probability</p></div><ul>
+ Set the data channel stall probability</p></div><ul>
 <li>set_write_response_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Set the write response stall probability</p></div><ul>
+ Set the write response stall probability</p></div><ul>
 <li>set_response_latency <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> min_latency,<br><span style="padding-left:20px"> max_latency : delay_length) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-The response latency is randomly choosen in the uniform interval:[min_latency, max_latency]</p></div><ul>
+ Set the response latency</p>
+<p>For a write slave this is the time between the last write data<br />
+ and providing the write reponse. All write data is written to the<br />
+ memory model right before providing write response.<br />
+ Data address and expected value is still checked as soons as it arrives to<br />
+ the axi slave and is not delayed until the write response time.</p>
+<p>For a read slave this is the time between the read burst arrival and the<br />
+ first provided read data</p>
+<p>The response latency is randomly choosen in the uniform interval:<br />
+ [min_latency, max_latency]</p></div><ul>
 <li>set_response_latency <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> latency : delay_length) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Short hand for set_response_latency when min and max are the same</p></div><ul>
+ Short hand for set_response_latency when min and max are the same</p></div><ul>
 <li>enable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>disable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>get_statistics <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> variable stat  : inout axi_statistics_t;<br><span style="padding-left:20px"> clear : boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Get statistics object from axi slaveDynamically allocates new statistics object which must he deallocated whenusedThis procedure will automatically deallocate the input statistics objectif it is not null</p></div><ul>
+ Get statistics object from axi slave<br />
+ Dynamically allocates new statistics object which must he deallocated when<br />
+ used<br />
+ This procedure will automatically deallocate the input statistics object<br />
+ if it is not null</p></div><ul>
 <li>enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Check that bursts are well behaved, that is that data channel traffic isas compact as possibleFor write:1. awvalid never high without wvalid2. wvalid never goes low during active burst3. uses max awsize supported by data width4. bready never low during active burstFor read:1. rready never low during active burst2. uses max arsize supported by data width</p></div><br><br><br><br><br><br>
+ Check that bursts are well behaved, that is that data channel traffic is<br />
+ as compact as possible<br />
+ For write:</p>
+<ol>
+<li>awvalid never high without wvalid</li>
+<li>wvalid never goes low during active burst</li>
+<li>uses max awsize supported by data width</li>
+<li>bready never low during active burst<br />
+For read:</li>
+<li>rready never low during active burst</li>
+<li>uses max arsize supported by data width</li>
+</ol></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

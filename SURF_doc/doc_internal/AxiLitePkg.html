@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1161,7 +1236,7 @@
 <tr>
 <td>AxiLiteReadMasterType</td>
 <td></td>
-<td>Base Record</td>
+<td>Note: Any transaction that does not decode to a legal master interface destination,        or programmers view register, receives a DECERR response. For an AHB master,        the AXI DECERR is mapped back to an AHB ERROR. ------------------------------------------------------  AXI bus, read master signal record ------------------------------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiLiteReadMasterArray</td>
@@ -1171,7 +1246,7 @@
 <tr>
 <td>AxiLiteReadSlaveType</td>
 <td></td>
-<td>Base Record</td>
+<td>------------------------------------------------------  AXI bus, read slave signal record ------------------------------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiLiteReadSlaveArray</td>
@@ -1181,7 +1256,7 @@
 <tr>
 <td>AxiLiteWriteMasterType</td>
 <td></td>
-<td>Base Record</td>
+<td>------------------------------------------------------  AXI bus, write master signal record ------------------------------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiLiteWriteMasterArray</td>
@@ -1191,7 +1266,7 @@
 <tr>
 <td>AxiLiteWriteSlaveType</td>
 <td></td>
-<td>Base Record</td>
+<td>------------------------------------------------------  AXI bus, write slave signal record ------------------------------------------------------  Base Record</td>
 </tr>
 <tr>
 <td>AxiLiteWriteSlaveArray</td>
@@ -1206,12 +1281,12 @@
 <tr>
 <td>AxiLiteEndpointType</td>
 <td></td>
-<td></td>
+<td>------------------------------------------------------  AXI bus, read/write endpoint record, RTH 1/27/2016 ------------------------------------------------------</td>
 </tr>
 <tr>
 <td>AxiLiteReqType</td>
 <td></td>
-<td></td>
+<td>--------------------------------------------------------------------------------  Constants for endpoint abstractions (migrated from legacy AxiLiteMasterPkg.vhd) --------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>AxiLiteAckType</td>
@@ -1221,7 +1296,7 @@
 <tr>
 <td>AxiLiteCrossbarMasterConfigType</td>
 <td></td>
-<td></td>
+<td>-----------------------------------------------------------------------------------------------  Crossbar Config Generic Types -----------------------------------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>AxiLiteCrossbarMasterConfigArray</td>
@@ -1235,7 +1310,8 @@
 <li>axiLiteWriteSlaveEmptyInit <font id="function_arguments">( bresp : slv(1 downto 0) := AXI_RESP_OK_C) </font> <font id="function_return">return AxiLiteWriteSlaveType </font></li>
 </ul><ul>
 <li>axiWriteMasterInit <font id="function_arguments">(constant config : AxiLiteCrossbarMasterConfigArray) </font> <font id="function_return">return AxiLiteWriteMasterArray </font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-initilize-masters-with-uppder-address-bits-already-set-to-configuration-base-address"> Initilize masters with uppder address bits already set to configuration base address</h2></div><ul>
 <li>axiWriteMasterInit <font id="function_arguments">(constant config : AxiLiteCrossbarMasterConfigType) </font> <font id="function_return">return AxiLiteWriteMasterType </font></li>
 </ul><ul>
 <li>axiReadMasterInit <font id="function_arguments">(constant config  : AxiLiteCrossbarMasterConfigArray) </font> <font id="function_return">return AxiLiteReadMasterArray </font></li>
@@ -1243,7 +1319,8 @@
 <li>axiReadMasterInit <font id="function_arguments">(constant config  : AxiLiteCrossbarMasterConfigType) </font> <font id="function_return">return AxiLiteReadMasterType </font></li>
 </ul><ul>
 <li>axiSlaveWaitWriteTxn <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable writeEnable   : inout sl) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-slave-axi-processing-procedures"> Slave AXI Processing procedures</h2></div><ul>
 <li>axiSlaveWaitReadTxn <font id="function_arguments">( signal axiReadMaster  : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiReadSlave : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable readEnable   : inout sl) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>axiSlaveWaitTxn <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : inout AxiLiteStatusType) </font> <font id="function_return">return ()</font></li>
@@ -1253,7 +1330,8 @@
 <li>axiSlaveReadResponse <font id="function_arguments">( variable axiReadSlave : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> axiResp               : in    slv(1 downto 0) := AXI_RESP_OK_C) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>axiSlaveRegister <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : in    AxiLiteStatusType;<br><span style="padding-left:20px"> addr                   : in    slv;<br><span style="padding-left:20px"> offset                 : in    integer;<br><span style="padding-left:20px"> reg                    : inout slv;<br><span style="padding-left:20px"> constAssign            : in    boolean := false;<br><span style="padding-left:20px"> constVal               : in    slv     := "0") </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-address-decode-procedures"> Address decode procedures</h2></div><ul>
 <li>axiSlaveRegister <font id="function_arguments">( signal axiReadMaster  : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiReadSlave : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus    : in    AxiLiteStatusType;<br><span style="padding-left:20px"> addr                  : in    slv;<br><span style="padding-left:20px"> offset                : in    integer;<br><span style="padding-left:20px"> reg                   : in    slv) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>axiSlaveRegister <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : in    AxiLiteStatusType;<br><span style="padding-left:20px"> addr                   : in    slv;<br><span style="padding-left:20px"> offset                 : in    integer;<br><span style="padding-left:20px"> reg                    : inout sl;<br><span style="padding-left:20px"> constAssign            : in    boolean := false;<br><span style="padding-left:20px"> constVal               : in    sl      := '0') </font> <font id="function_return">return ()</font></li>
@@ -1263,7 +1341,8 @@
 <li>axiSlaveDefault <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : in    AxiLiteStatusType;<br><span style="padding-left:20px"> axiResp                : in    slv(1 downto 0) := AXI_RESP_OK_C;<br><span style="padding-left:20px"> extTxn                 : in    sl              := '0') </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>axiSlaveWaitTxn <font id="function_arguments">( variable ep            : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : in    AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : in    AxiLiteReadSlaveType) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-simplified-address-decode-procedures-rth-1272016"> Simplified Address decode procedures, RTH 1/27/2016</h2></div><ul>
 <li>axiSlaveRegisterLegacy <font id="function_arguments">( variable ep : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> addr        : in    slv;<br><span style="padding-left:20px"> offset      : in    integer;<br><span style="padding-left:20px"> reg         : inout slv;<br><span style="padding-left:20px"> constVal    : in    slv := "X") </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>axiSlaveRegister <font id="function_arguments">( variable ep : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> addr        : in    slv;<br><span style="padding-left:20px"> offset      : in    integer;<br><span style="padding-left:20px"> reg         : inout slv;<br><span style="padding-left:20px"> constVal    : in    slv := "X") </font> <font id="function_return">return ()</font></li>
@@ -1285,10 +1364,12 @@
 <li>axiSlaveDefault <font id="function_arguments">( variable ep            : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> axiResp                : in    slv(1 downto 0) := AXI_RESP_OK_C;<br><span style="padding-left:20px"> extTxn                 : in    sl              := '0') </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>genAxiLiteConfig <font id="function_arguments">(num      : positive;<br><span style="padding-left:20px"> base     : slv(31 downto 0);<br><span style="padding-left:20px"> baseBot  : integer range 1 to 32;<br><span style="padding-left:20px"> addrBits : integer range 0 to 31) </font> <font id="function_return">return AxiLiteCrossbarMasterConfigArray </font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Generate evenly distributed address map</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-slave-axi-processing-functions"> Slave AXI Processing functions</h2>
+<p>Generate evenly distributed address map</p></div><ul>
 <li>axiLiteBusSimWrite <font id="function_arguments">( signal axilClk         : in  sl;<br><span style="padding-left:20px"> signal axilWriteMaster : out AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axilWriteSlave  : in  AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> addr                   : in  slv(31 downto 0);<br><span style="padding-left:20px"> data                   : in  slv;<br><span style="padding-left:20px"> debug                  : in  boolean := false) </font> <font id="function_return">return ()</font></li>
-</ul><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-simulation-procedures"> Simulation procedures</h2></div><ul>
 <li>axiLiteBusSimRead <font id="function_arguments">( signal axilClk        : in  sl;<br><span style="padding-left:20px"> signal axilReadMaster : out AxiLiteReadMasterType;<br><span style="padding-left:20px"> signal axilReadSlave  : in  AxiLiteReadSlaveType;<br><span style="padding-left:20px"> addr                  : in  slv(31 downto 0);<br><span style="padding-left:20px"> data                  : out slv;<br><span style="padding-left:20px"> debug                 : in  boolean := false) </font> <font id="function_return">return ()</font></li>
 </ul><ul>
 <li>ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiLiteReadMasterType;<br><span style="padding-left:20px"> e : AxiLiteReadMasterType) </font> <font id="function_return">return AxiLiteReadMasterType </font></li>

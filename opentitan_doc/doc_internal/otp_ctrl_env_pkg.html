@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1110,6 +1185,11 @@
 <td></td>
 </tr>
 <tr>
+<td>VendorTestDigestOffset</td>
+<td>if</td>
+<td></td>
+</tr>
+<tr>
 <td>CreatorSwCfgDigestOffset</td>
 <td>if</td>
 <td></td>
@@ -1190,10 +1270,28 @@
 <td></td>
 </tr>
 <tr>
+<td>VENDOR_TEST_START_ADDR</td>
+<td>uint</td>
+<td>VendorTestOffset</td>
+<td>convert byte into TLUL width size</td>
+</tr>
+<tr>
+<td>VENDOR_TEST_DIGEST_ADDR</td>
+<td>uint</td>
+<td>VendorTestDigestOffset</td>
+<td></td>
+</tr>
+<tr>
+<td>VENDOR_TEST_END_ADDR</td>
+<td>uint</td>
+<td>VENDOR_TEST_DIGEST_ADDR - 1</td>
+<td></td>
+</tr>
+<tr>
 <td>CREATOR_SW_CFG_START_ADDR</td>
 <td>uint</td>
 <td>CreatorSwCfgOffset</td>
-<td>convert byte into TLUL width size</td>
+<td></td>
 </tr>
 <tr>
 <td>CREATOR_SW_CFG_DIGEST_ADDR</td>
@@ -1307,7 +1405,7 @@
 <td>uint</td>
 <td>uint</td>
 <td></td>
-<td>Total num of valid dai address, secret partitions have a granularity of 8, the rest have a granularity of 4. Subtract 8 for each digest.</td>
+<td>Total num of valid dai address, secret partitions have a granularity of 8, the rest have  a granularity of 4. Subtract 8 for each digest.</td>
 </tr>
 <tr>
 <td>SRAM_DATA_SIZE</td>
@@ -1348,7 +1446,7 @@
 <tr>
 <td>uint</td>
 <td>uint</td>
-<td>2</td>
+<td>3</td>
 <td></td>
 </tr>
 <tr>
@@ -1365,14 +1463,14 @@
 </tr>
 <tr>
 <td>FATAL_EXP_STATUS</td>
-<td>bit [8:0]</td>
+<td>bit [9:0]</td>
 <td>'1</td>
-<td>When fatal alert triggered, all partitions go to error state and status will be set to 1.</td>
+<td>When fatal alert triggered, all partitions go to error state and status will be  set to 1.</td>
 </tr>
 <tr>
 <td>PART_BASE_ADDRS</td>
 <td>int</td>
-<td>undefined</td>
+<td></td>
 <td>lc does not have dai access</td>
 </tr>
 <tr>
@@ -1394,13 +1492,8 @@
 </thead>
 <tbody>
 <tr>
-<td>otp_intr_e</td>
-<td>enum bit [1:0] {<br><span style="padding-left:20px">     OtpOperationDone,<br><span style="padding-left:20px">     OtpErr,<br><span style="padding-left:20px">     NumOtpCtrlIntr   }</td>
-<td>types</td>
-</tr>
-<tr>
 <td>otp_status_e</td>
-<td>enum bit [5:0] {<br><span style="padding-left:20px">     OtpCreatorSwCfgErrIdx,<br><span style="padding-left:20px">     OtpOwnerSwCfgErrIdx,<br><span style="padding-left:20px">     OtpHwCfgErrIdx,<br><span style="padding-left:20px">     OtpSecret0ErrIdx,<br><span style="padding-left:20px">     OtpSecret1ErrIdx,<br><span style="padding-left:20px">     OtpSecret2ErrIdx,<br><span style="padding-left:20px">     OtpLifeCycleErrIdx,<br><span style="padding-left:20px">     OtpDaiErrIdx,<br><span style="padding-left:20px">     OtpLciErrIdx,<br><span style="padding-left:20px">     OtpTimeoutErrIdx,<br><span style="padding-left:20px">     OtpLfsrFsmErrIdx,<br><span style="padding-left:20px">     OtpScramblingFsmErrIdx,<br><span style="padding-left:20px">     OtpDerivKeyFsmErrIdx,<br><span style="padding-left:20px">     OtpBusIntegErrorIdx,<br><span style="padding-left:20px">     OtpDaiIdleIdx,<br><span style="padding-left:20px">     OtpCheckPendingIdx,<br><span style="padding-left:20px">     OtpStatusFieldSize   }</td>
+<td>enum bit [5:0] {<br><span style="padding-left:20px">     OtpVendorTestErrIdx,<br><span style="padding-left:20px">     OtpCreatorSwCfgErrIdx,<br><span style="padding-left:20px">     OtpOwnerSwCfgErrIdx,<br><span style="padding-left:20px">     OtpHwCfgErrIdx,<br><span style="padding-left:20px">     OtpSecret0ErrIdx,<br><span style="padding-left:20px">     OtpSecret1ErrIdx,<br><span style="padding-left:20px">     OtpSecret2ErrIdx,<br><span style="padding-left:20px">     OtpLifeCycleErrIdx,<br><span style="padding-left:20px">     OtpDaiErrIdx,<br><span style="padding-left:20px">     OtpLciErrIdx,<br><span style="padding-left:20px">     OtpTimeoutErrIdx,<br><span style="padding-left:20px">     OtpLfsrFsmErrIdx,<br><span style="padding-left:20px">     OtpScramblingFsmErrIdx,<br><span style="padding-left:20px">     OtpDerivKeyFsmErrIdx,<br><span style="padding-left:20px">     OtpBusIntegErrorIdx,<br><span style="padding-left:20px">     OtpDaiIdleIdx,<br><span style="padding-left:20px">     OtpCheckPendingIdx,<br><span style="padding-left:20px">     OtpStatusFieldSize   }</td>
 <td></td>
 </tr>
 <tr>
@@ -1431,11 +1524,11 @@
 </ul><ul>
 <li>get_sw_window_offset <font id="function_arguments">(bit [TL_AW-1:0] dai_addr)</font> <font id="function_return">return (bit [TL_AW-1:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Resolve an offset within the software window as an offset within the whole otp_ctrl block.</p></div><ul>
+ Resolve an offset within the software window as an offset within the whole otp_ctrl block.</p></div><ul>
 <li>randomize_lc_tx_t_val <font id="function_arguments">()</font> <font id="function_return">return (lc_ctrl_pkg::lc_tx_t)</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-This function randomizes lc_tx_t with 25% lc_ctrl_pkg::On, 25% lc_ctrl_pkg::Off,<br />
-and 50% random values</p></div><ul>
+ This function randomizes lc_tx_t with 25% lc_ctrl_pkg::On, 25% lc_ctrl_pkg::Off,<br />
+ and 50% random values</p></div><ul>
 <li>normalize_dai_addr <font id="function_arguments">(bit [TL_DW-1:0] dai_addr)</font> <font id="function_return">return (bit [TL_DW-1:0])</font></li>
 </ul><br><br><br><br><br><br>
     </article class="markdown-body">

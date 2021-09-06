@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1035,6 +1110,36 @@
 </thead>
 <tbody>
 <tr>
+<td>loc_alert_cause</td>
+<td>logic    [N_LOC_ALERT-1:0]</td>
+<td>local alert cause bits</td>
+</tr>
+<tr>
+<td>class_trig</td>
+<td>logic    [N_CLASSES-1:0]</td>
+<td>class trigger</td>
+</tr>
+<tr>
+<td>class_esc_trig</td>
+<td>logic    [N_CLASSES-1:0]</td>
+<td>escalation trigger</td>
+</tr>
+<tr>
+<td>class_accum_cnt</td>
+<td>logic    [N_CLASSES-1:0][AccuCntDw-1:0]</td>
+<td>current accumulator value</td>
+</tr>
+<tr>
+<td>class_esc_cnt</td>
+<td>logic    [N_CLASSES-1:0][EscCntDw-1:0]</td>
+<td>current escalation counter value</td>
+</tr>
+<tr>
+<td>class_esc_state</td>
+<td>cstate_e [N_CLASSES-1:0]</td>
+<td>current escalation protocol state</td>
+</tr>
+<tr>
 <td>alert_pkg</td>
 <td>endpackage</td>
 <td></td>
@@ -1122,7 +1227,7 @@
 <td>LfsrWidth</td>
 <td>int</td>
 <td>32</td>
-<td>These LFSR parameters have been generated with $ util/design/gen-lfsr-seed.py --width 32 --seed 2700182644</td>
+<td>These LFSR parameters have been generated with  $ util/design/gen-lfsr-seed.py --width 32 --seed 2700182644</td>
 </tr>
 <tr>
 <td>RndCnstLfsrSeedDefault</td>
@@ -1135,6 +1240,12 @@
 <td>lfsr_perm_t</td>
 <td>160'hebd1e5d4a1cee5afdb866a9c7a0278b899020d31</td>
 <td></td>
+</tr>
+<tr>
+<td>ALERT_CRASHDUMP_DEFAULT</td>
+<td>alert_crashdump_t</td>
+<td>logic    [NAlerts-1:0]</td>
+<td>Default for dangling connection</td>
 </tr>
 </tbody>
 </table>
@@ -1166,16 +1277,11 @@
 <tr>
 <td>cstate_e</td>
 <td>struct packed {<br><span style="padding-left:20px">          logic    [NAlerts-1:0]                  alert_cause;<br><span style="padding-left:20px">          logic    [N_LOC_ALERT-1:0]              loc_alert_cause;<br><span style="padding-left:20px">           logic    [N_CLASSES-1:0][AccuCntDw-1:0] class_accum_cnt;<br><span style="padding-left:20px">      logic    [N_CLASSES-1:0][EscCntDw-1:0]  class_esc_cnt;<br><span style="padding-left:20px">        cstate_e [N_CLASSES-1:0]                class_esc_state;<br><span style="padding-left:20px">    }</td>
-<td>struct containing the current alert handler state can be used to gather crashdump information in HW</td>
-</tr>
-<tr>
-<td>cstate_e</td>
-<td>struct packed {<br><span style="padding-left:20px">          logic    [NAlerts-1:0]                  alert_cause;<br><span style="padding-left:20px">          logic    [N_LOC_ALERT-1:0]              loc_alert_cause;<br><span style="padding-left:20px">           logic    [N_CLASSES-1:0]                class_trig;<br><span style="padding-left:20px">           logic    [N_CLASSES-1:0]                class_esc_trig;<br><span style="padding-left:20px">       logic    [N_CLASSES-1:0][AccuCntDw-1:0] class_accum_cnt;<br><span style="padding-left:20px">      logic    [N_CLASSES-1:0][EscCntDw-1:0]  class_esc_cnt;<br><span style="padding-left:20px">        cstate_e [N_CLASSES-1:0]                class_esc_state;<br><span style="padding-left:20px">    }</td>
-<td>breakout wrapper structs</td>
+<td>struct containing the current alert handler state  can be used to gather crashdump information in HW</td>
 </tr>
 <tr>
 <td>reg2hw_wrap_t</td>
-<td>struct packed {<br><span style="padding-left:20px">          logic                                              shadowed_err_update;<br><span style="padding-left:20px">     logic                                              shadowed_err_storage;<br><span style="padding-left:20px">          logic                                              ping_enable;<br><span style="padding-left:20px">             logic [PING_CNT_DW-1:0]                            ping_timeout_cyc;<br><span style="padding-left:20px">        logic [NAlerts-1:0]                                alert_ping_en;<br><span style="padding-left:20px">                logic [N_LOC_ALERT-1:0]                            loc_alert_en;<br><span style="padding-left:20px">            logic [N_LOC_ALERT-1:0][CLASS_DW-1:0]              loc_alert_class;<br><span style="padding-left:20px">         logic [NAlerts-1:0]                                alert_en;<br><span style="padding-left:20px">                logic [NAlerts-1:0][CLASS_DW-1:0]                  alert_class;<br><span style="padding-left:20px">                  logic [N_CLASSES-1:0]                              class_en;<br><span style="padding-left:20px">                logic [N_CLASSES-1:0]                              class_clr;<br><span style="padding-left:20px">               logic [N_CLASSES-1:0][AccuCntDw-1:0]               class_accum_thresh;<br><span style="padding-left:20px">      logic [N_CLASSES-1:0][EscCntDw-1:0]                class_timeout_cyc;<br><span style="padding-left:20px">       logic [N_CLASSES-1:0][N_PHASES-1:0][EscCntDw-1:0]  class_phase_cyc;<br><span style="padding-left:20px">         logic [N_CLASSES-1:0][N_ESC_SEV-1:0]               class_esc_en;<br><span style="padding-left:20px">            logic [N_CLASSES-1:0][N_ESC_SEV-1:0][PHASE_DW-1:0] class_esc_map;<br><span style="padding-left:20px">         }</td>
+<td>struct packed {<br><span style="padding-left:20px">          logic                                              shadowed_err_update;<br><span style="padding-left:20px">     logic                                              shadowed_err_storage;<br><span style="padding-left:20px">          logic                                              ping_enable;<br><span style="padding-left:20px">             logic [PING_CNT_DW-1:0]                            ping_timeout_cyc;<br><span style="padding-left:20px">        logic [NAlerts-1:0]                                alert_ping_en;<br><span style="padding-left:20px">                logic [N_LOC_ALERT-1:0]                            loc_alert_en;<br><span style="padding-left:20px">            logic [N_LOC_ALERT-1:0][CLASS_DW-1:0]              loc_alert_class;<br><span style="padding-left:20px">         logic [NAlerts-1:0]                                alert_en;<br><span style="padding-left:20px">                logic [NAlerts-1:0][CLASS_DW-1:0]                  alert_class;<br><span style="padding-left:20px">                  logic [N_CLASSES-1:0]                              class_en;<br><span style="padding-left:20px">                logic [N_CLASSES-1:0]                              class_clr;<br><span style="padding-left:20px">               logic [N_CLASSES-1:0][AccuCntDw-1:0]               class_accum_thresh;<br><span style="padding-left:20px">      logic [N_CLASSES-1:0][EscCntDw-1:0]                class_timeout_cyc;<br><span style="padding-left:20px">       logic [N_CLASSES-1:0][N_PHASES-1:0][EscCntDw-1:0]  class_phase_cyc;<br><span style="padding-left:20px">         logic [N_CLASSES-1:0][N_ESC_SEV-1:0]               class_esc_en;<br><span style="padding-left:20px">            logic [N_CLASSES-1:0][N_ESC_SEV-1:0][PHASE_DW-1:0] class_esc_map;<br><span style="padding-left:20px">                logic [N_CLASSES-1:0][PHASE_DW-1:0]                class_crashdump_phase;<br><span style="padding-left:20px">   }</td>
 <td></td>
 </tr>
 </tbody>

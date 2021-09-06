@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,11 +1098,11 @@
 <li><strong>File</strong>: prim_cipher_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- This package holds common constants and functions for PRESENT- and<br />
- PRINCE-based scrambling devices.<br />
- See also: prim_present, prim_prince<br />
- References: - <a href="https://en.wikipedia.org/wiki/PRESENT">https://en.wikipedia.org/wiki/PRESENT</a><br />
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>This package holds common constants and functions for PRESENT- and<br />
+ PRINCE-based scrambling devices.</p>
+<p>See also: prim_present, prim_prince</p>
+<p>References: - <a href="https://en.wikipedia.org/wiki/PRESENT">https://en.wikipedia.org/wiki/PRESENT</a><br />
              - <a href="https://en.wikipedia.org/wiki/Prince_(cipher">https://en.wikipedia.org/wiki/Prince_(cipher</a>)<br />
              - <a href="http://www.lightweightcrypto.org/present/present_ches2007.pdf">http://www.lightweightcrypto.org/present/present_ches2007.pdf</a><br />
              - <a href="https://eprint.iacr.org/2012/529.pdf">https://eprint.iacr.org/2012/529.pdf</a><br />
@@ -1119,7 +1194,7 @@
 <td>PRESENT_SBOX4</td>
 <td>logic [15:0][3:0]</td>
 <td>{<br><span style="padding-left:20px">4'h2,<br><span style="padding-left:20px"> 4'h1,<br><span style="padding-left:20px"> 4'h7,<br><span style="padding-left:20px"> 4'h4,<br><span style="padding-left:20px"></td>
-<td>this is the sbox from the present cipher</td>
+<td>//////////////////  PRESENT Cipher // //////////////////  this is the sbox from the present cipher</td>
 </tr>
 <tr>
 <td>PRESENT_SBOX4_INV</td>
@@ -1131,7 +1206,7 @@
 <td>PRESENT_PERM32</td>
 <td>logic [31:0][4:0]</td>
 <td>{<br><span style="padding-left:20px">5'd31,<br><span style="padding-left:20px"> 5'd23,<br><span style="padding-left:20px"> 5'd15,<br><span style="padding-left:20px"> 5'd07,<br><span style="padding-left:20px"></td>
-<td>these are modified permutation indices for a 32bit version that follow the same pattern as for the 64bit version</td>
+<td>these are modified permutation indices for a 32bit version that  follow the same pattern as for the 64bit version</td>
 </tr>
 <tr>
 <td>PRESENT_PERM32_INV</td>
@@ -1155,42 +1230,45 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>prince_shiftrows_32bit <font id="function_arguments">(logic [31:0]      state_)</font> <font id="function_return">return (logic [31:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-nibble shifts</p></div><ul>
+ nibble shifts</p></div><ul>
 <li>prince_shiftrows_64bit <font id="function_arguments">(logic [63:0]      state_)</font> <font id="function_return">return (logic [63:0])</font></li>
 </ul><ul>
 <li>prince_nibble_red16 <font id="function_arguments">(logic [15:0])</font> <font id="function_return">return (logic [3:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-XOR reduction of four nibbles in a 16bit subvector</p></div><ul>
+ XOR reduction of four nibbles in a 16bit subvector</p></div><ul>
 <li>prince_mult_prime_32bit <font id="function_arguments">(logic [31:0] state_in)</font> <font id="function_return">return (logic [31:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-M prime multiplication</p></div><ul>
+ M prime multiplication</p></div><ul>
 <li>prince_mult_prime_64bit <font id="function_arguments">(logic [63:0] state_in)</font> <font id="function_return">return (logic [63:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-M prime multiplication</p></div><ul>
+ M prime multiplication</p></div><ul>
 <li>present_update_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-forward key schedule</p></div><ul>
+ forward key schedule</p></div><ul>
 <li>present_update_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font></li>
 </ul><ul>
 <li>present_update_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font></li>
 </ul><ul>
 <li>present_inv_update_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-inverse key schedule</p></div><ul>
+ inverse key schedule</p></div><ul>
 <li>present_inv_update_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font></li>
 </ul><ul>
 <li>present_inv_update_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font></li>
 </ul><ul>
 <li>present_get_dec_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-these functions can be used to derive the DEC key from the ENC key by<br />
-stepping the key by the correct number of rounds using the keyschedule functions above.</p></div><ul>
+ these functions can be used to derive the DEC key from the ENC key by<br />
+ stepping the key by the correct number of rounds using the keyschedule functions above.</p></div><ul>
 <li>present_get_dec_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font></li>
 </ul><ul>
 <li>present_get_dec_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font></li>
 </ul><ul>
 <li>sbox4_8bit <font id="function_arguments">(logic [7:0] state_in,<br><span style="padding-left:20px"> logic [15:0][3:0])</font> <font id="function_return">return (logic [7:0])</font></li>
-</ul><ul>
+</ul><div id="descriptions"><p><strong>Description</strong><br />
+///////////////////////<br />
+ Common Subfunctions //<br />
+///////////////////////</p></div><ul>
 <li>sbox4_16bit <font id="function_arguments">(logic [15:0] state_in,<br><span style="padding-left:20px"> logic [15:0][3:0])</font> <font id="function_return">return (logic [15:0])</font></li>
 </ul><ul>
 <li>sbox4_32bit <font id="function_arguments">(logic [31:0] state_in,<br><span style="padding-left:20px"> logic [15:0][3:0])</font> <font id="function_return">return (logic [31:0])</font></li>

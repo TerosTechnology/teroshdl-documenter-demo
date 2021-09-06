@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1023,9 +1098,9 @@
 <li><strong>File</strong>: aes_sbox_canright_pkg.sv</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.<br />
  Licensed under the Apache License, Version 2.0, see LICENSE for details.<br />
- SPDX-License-Identifier: Apache-2.0<br />
- AES Canright SBox package<br />
- For details, see the following documents:</p>
+ SPDX-License-Identifier: Apache-2.0</p>
+<p>AES Canright SBox package</p>
+<p>For details, see the following documents:</p>
 <ul>
 <li>Canright, "A very compact Rijndael S-box", technical report<br />
 available at <a href="https://hdl.handle.net/10945/25608">https://hdl.handle.net/10945/25608</a></li>
@@ -1047,7 +1122,7 @@ available at <a href="https://eprint.iacr.org/2009/011.pdf">https://eprint.iacr.
 <td>A2X</td>
 <td>logic [7:0]</td>
 <td>undefined</td>
-<td>Basis conversion matrices to convert between polynomial basis A, normal basis X and basis S incorporating the bit matrix of the SBox. More specifically, multiplication by X2X performs the transformation from normal basis X into polynomial basis A, followed by the affine transformation (substep 2). Likewise, multiplication by S2X performs the inverse affine transformation followed by the transformation from polynomial basis A to normal basis X. (see Appendix A of the technical report)</td>
+<td>Basis conversion matrices to convert between polynomial basis A, normal basis X  and basis S incorporating the bit matrix of the SBox. More specifically,  multiplication by X2X performs the transformation from normal basis X into  polynomial basis A, followed by the affine transformation (substep 2). Likewise,  multiplication by S2X performs the inverse affine transformation followed by the  transformation from polynomial basis A to normal basis X.  (see Appendix A of the technical report)</td>
 </tr>
 <tr>
 <td>X2A</td>
@@ -1073,24 +1148,24 @@ available at <a href="https://eprint.iacr.org/2009/011.pdf">https://eprint.iacr.
 </ul><ul>
 <li>aes_scale_omega2_gf2p2 <font id="function_arguments">(logic [1:0])</font> <font id="function_return">return (logic [1:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Scale by Omega^2 = N in GF(2^2), using normal basis [Omega^2, Omega]<br />
-(see Figure 16 in the technical report)</p></div><ul>
+ Scale by Omega^2 = N in GF(2^2), using normal basis [Omega^2, Omega]<br />
+ (see Figure 16 in the technical report)</p></div><ul>
 <li>aes_scale_omega_gf2p2 <font id="function_arguments">(logic [1:0])</font> <font id="function_return">return (logic [1:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Scale by Omega = N^2 in GF(2^2), using normal basis [Omega^2, Omega]<br />
-(see Figure 15 in the technical report)</p></div><ul>
+ Scale by Omega = N^2 in GF(2^2), using normal basis [Omega^2, Omega]<br />
+ (see Figure 15 in the technical report)</p></div><ul>
 <li>aes_square_gf2p2 <font id="function_arguments">(logic [1:0])</font> <font id="function_return">return (logic [1:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Square in GF(2^2), using normal basis [Omega^2, Omega]<br />
-(see Figures 8 and 10 in the technical report)</p></div><ul>
+ Square in GF(2^2), using normal basis [Omega^2, Omega]<br />
+ (see Figures 8 and 10 in the technical report)</p></div><ul>
 <li>aes_mul_gf2p4 <font id="function_arguments">(logic [3:0] gamma,<br><span style="padding-left:20px"> logic [3:0])</font> <font id="function_return">return (logic [3:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Multiplication in GF(2^4), using normal basis [alpha^8, alpha^2]<br />
-(see Figure 13 in the technical report)</p></div><ul>
+ Multiplication in GF(2^4), using normal basis [alpha^8, alpha^2]<br />
+ (see Figure 13 in the technical report)</p></div><ul>
 <li>aes_square_scale_gf2p4_gf2p2 <font id="function_arguments">(logic [3:0])</font> <font id="function_return">return (logic [3:0])</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Square and scale by nu in GF(2^4)/GF(2^2), using normal basis [alpha^8, alpha^2]<br />
-(see Figure 19 as well as Appendix A of the technical report)</p></div><br><br><br><br><br><br>
+ Square and scale by nu in GF(2^4)/GF(2^2), using normal basis [alpha^8, alpha^2]<br />
+ (see Figure 19 as well as Appendix A of the technical report)</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

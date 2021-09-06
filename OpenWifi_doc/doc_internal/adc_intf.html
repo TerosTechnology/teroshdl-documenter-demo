@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1073,7 +1148,7 @@
 <td>adc_valid</td>
 <td>input</td>
 <td>wire</td>
-<td></td>
+<td>input wire adc_sync,</td>
 </tr>
 <tr>
 <td>acc_clk</td>
@@ -1157,21 +1232,22 @@
 <li>unnamed: ( @( bb_gain, data_to_acc_internal) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><ul>
 <li>unnamed: ( @( posedge adc_clk ) )</li>
-</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><h2 id="instantiations">Instantiations</h2><ul>
+</ul><div id="descriptions"><p><strong>Type:</strong> always</p></div><div id="descriptions"><p><strong>Description</strong><br />
+decimate input by 2: 40Msps --&gt; 20Msps </p></div><h2 id="instantiations">Instantiations</h2><ul>
 <li>xpm_fifo_async_adc_intf: xpm_fifo_async</li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-fifo32_2clk_dep32 fifo32_2clk_dep32_i<br />
-(.DATAO(data_to_acc_internal),<br />
-.DI(adc_data_delay),<br />
-.EMPTY(EMPTY_internal),<br />
-.FULL(FULL_internal),<br />
-.RDCLK(acc_clk),<br />
-.RDEN(bb_ask_data),<br />
-.RD_DATA_COUNT(),<br />
-.RST(RST_internal),<br />
-.WRCLK(adc_clk),<br />
-.WREN(adc_valid_decimate),<br />
-.WR_DATA_COUNT());</p></div><br><br><br><br><br><br>
+ fifo32_2clk_dep32 fifo32_2clk_dep32_i<br />
+        (.DATAO(data_to_acc_internal),<br />
+         .DI(adc_data_delay),<br />
+         .EMPTY(EMPTY_internal),<br />
+         .FULL(FULL_internal),<br />
+         .RDCLK(acc_clk),<br />
+         .RDEN(bb_ask_data),<br />
+         .RD_DATA_COUNT(),<br />
+         .RST(RST_internal),<br />
+         .WRCLK(adc_clk),<br />
+         .WREN(adc_valid_decimate),<br />
+         .WR_DATA_COUNT());</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

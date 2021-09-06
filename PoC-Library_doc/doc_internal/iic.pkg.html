@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1054,7 +1129,7 @@
 <tr>
 <td>T_IO_IIC_BUSMODE</td>
 <td>( IO_IIC_BUSMODE_SMBUS,<br><span style="padding-left:20px">                            --   100 kHz;<br><span style="padding-left:20px"> additional timing restrictions IO_IIC_BUSMODE_STANDARDMODE,<br><span style="padding-left:20px">           --   100 kHz IO_IIC_BUSMODE_FASTMODE,<br><span style="padding-left:20px">                   --   400 kHz IO_IIC_BUSMODE_FASTMODEPLUS,<br><span style="padding-left:20px">           -- 1.000 kHz IO_IIC_BUSMODE_HIGHSPEEDMODE,<br><span style="padding-left:20px">          -- 3.400 kHz IO_IIC_BUSMODE_ULTRAFASTMODE           -- 5.000 kHz;<br><span style="padding-left:20px"> unidirectional )</td>
-<td>IICBusController==========================================================================================================================================================</td>
+<td>IICBusController  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IICBUS_COMMAND</td>
@@ -1069,7 +1144,7 @@
 <tr>
 <td>T_IO_IIC_COMMAND</td>
 <td>( IO_IIC_CMD_NONE,<br><span style="padding-left:20px"> IO_IIC_CMD_QUICKCOMMAND_READ,<br><span style="padding-left:20px">    -- use this to check for an device address IO_IIC_CMD_QUICKCOMMAND_WRITE,<br><span style="padding-left:20px"> IO_IIC_CMD_SEND_BYTES,<br><span style="padding-left:20px"> IO_IIC_CMD_RECEIVE_BYTES,<br><span style="padding-left:20px"> IO_IIC_CMD_PROCESS_CALL )</td>
-<td>IICController==========================================================================================================================================================</td>
+<td>IICController  ==========================================================================================================================================================</td>
 </tr>
 <tr>
 <td>T_IO_IIC_STATUS</td>
@@ -1100,7 +1175,8 @@
 </table><h2 id="functions">Functions</h2><ul>
 <li>io_tristate_driver <font id="function_arguments">( signal pad  : inout T_IO_IIC_SERIAL_PCB;<br><span style="padding-left:20px"> signal iot  : inout T_IO_IIC_SERIAL ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Drive std_logic values from Tri-State signals and in reverse.Use this procedure only in simulation</p></div><br><br><br><br><br><br>
+ Drive std_logic values from Tri-State signals and in reverse.<br />
+ Use this procedure only in simulation</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>

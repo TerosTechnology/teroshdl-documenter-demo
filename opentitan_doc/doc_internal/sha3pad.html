@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1021,7 +1096,7 @@
 <div id="teroshdl" class='templateTerosHDL'>
 <a id=sha3pad><h1 id="entity-sha3pad">Entity: sha3pad</h1></a><ul>
 <li><strong>File</strong>: sha3pad.sv</li>
-</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 915 330"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="265,0 280,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="390" height="50" fill="black" x="280" y="0"></rect><rect id="SvgjsRect1007" width="386" height="45" fill="#bdecb6" x="282" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="260" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="295" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   EnMasking </tspan></text><line id="SvgjsLine1012" x1="265" y1="15" x2="280" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="260" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="295" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   Share </tspan></text><line id="SvgjsLine1017" x1="265" y1="35" x2="280" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="390" height="270" fill="black" x="280" y="55"></rect><rect id="SvgjsRect1019" width="386" height="265" fill="#fdfd96" x="282" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="260" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="295" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1024" x1="265" y1="70" x2="280" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="260" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="295" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1029" x1="265" y1="90" x2="280" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="260" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="295" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_valid_i </tspan></text><line id="SvgjsLine1034" x1="265" y1="110" x2="280" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="260" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [MsgWidth-1:0] </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="295" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_data_i </tspan></text><line id="SvgjsLine1039" x1="265" y1="130" x2="280" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="260" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [MsgStrbW-1:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="295" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_strb_i </tspan></text><line id="SvgjsLine1044" x1="265" y1="150" x2="280" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="260" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [NSRegisterSize*8-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="295" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   ns_data_i </tspan></text><line id="SvgjsLine1049" x1="265" y1="170" x2="280" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="260" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="295" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   keccak_ready_i </tspan></text><line id="SvgjsLine1054" x1="265" y1="190" x2="280" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="260" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="295" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   keccak_complete_i </tspan></text><line id="SvgjsLine1059" x1="265" y1="210" x2="280" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="260" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   sha3_mode_e </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="295" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   mode_i </tspan></text><line id="SvgjsLine1064" x1="265" y1="230" x2="280" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="260" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   keccak_strength_e </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="295" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   strength_i </tspan></text><line id="SvgjsLine1069" x1="265" y1="250" x2="280" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="260" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="295" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   start_i </tspan></text><line id="SvgjsLine1074" x1="265" y1="270" x2="280" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="260" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="295" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   process_i </tspan></text><line id="SvgjsLine1079" x1="265" y1="290" x2="280" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="260" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="295" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   done_i </tspan></text><line id="SvgjsLine1084" x1="265" y1="310" x2="280" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="690" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="655" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   msg_ready_o </tspan></text><line id="SvgjsLine1089" x1="670" y1="70" x2="685" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="690" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="655" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_valid_o </tspan></text><line id="SvgjsLine1094" x1="670" y1="90" x2="685" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="690" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [KeccakMsgAddrW-1:0] </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="655" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_addr_o </tspan></text><line id="SvgjsLine1099" x1="670" y1="110" x2="685" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="690" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [MsgWidth-1:0] </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="655" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_data_o </tspan></text><line id="SvgjsLine1104" x1="670" y1="130" x2="685" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="690" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="655" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_run_o </tspan></text><line id="SvgjsLine1109" x1="670" y1="150" x2="685" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="690" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="655" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   absorbed_o </tspan></text><line id="SvgjsLine1114" x1="670" y1="170" x2="685" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.Licensed under the Apache License, Version 2.0, see LICENSE for details.SPDX-License-Identifier: Apache-2.0SHA3 padding logic</p></div><h2 id="generics">Generics</h2>
+</ul><h2 id="diagram">Diagram</h2><p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 915 330"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="265,0 280,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="390" height="50" fill="black" x="280" y="0"></rect><rect id="SvgjsRect1007" width="386" height="45" fill="#bdecb6" x="282" y="2"></rect><text id="SvgjsText1008" font-family="Helvetica" x="260" y="-5.698437500000001" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   bit </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="295" y="-5.698437500000001" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   EnMasking </tspan></text><line id="SvgjsLine1012" x1="265" y1="15" x2="280" y2="15" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="260" y="14.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   int </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="295" y="14.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   Share </tspan></text><line id="SvgjsLine1017" x1="265" y1="35" x2="280" y2="35" stroke-linecap="rec" stroke="black" stroke-width="5"></line><rect id="SvgjsRect1018" width="390" height="270" fill="black" x="280" y="55"></rect><rect id="SvgjsRect1019" width="386" height="265" fill="#fdfd96" x="282" y="57"></rect><text id="SvgjsText1020" font-family="Helvetica" x="260" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1022" font-family="Helvetica" x="295" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1023" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   clk_i </tspan></text><line id="SvgjsLine1024" x1="265" y1="70" x2="280" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1025" font-family="Helvetica" x="260" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1027" font-family="Helvetica" x="295" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1028" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   rst_ni </tspan></text><line id="SvgjsLine1029" x1="265" y1="90" x2="280" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1030" font-family="Helvetica" x="260" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1032" font-family="Helvetica" x="295" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1033" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_valid_i </tspan></text><line id="SvgjsLine1034" x1="265" y1="110" x2="280" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1035" font-family="Helvetica" x="260" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [MsgWidth-1:0] </tspan></text><text id="SvgjsText1037" font-family="Helvetica" x="295" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1038" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_data_i </tspan></text><line id="SvgjsLine1039" x1="265" y1="130" x2="280" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1040" font-family="Helvetica" x="260" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [MsgStrbW-1:0] </tspan></text><text id="SvgjsText1042" font-family="Helvetica" x="295" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1043" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   msg_strb_i </tspan></text><line id="SvgjsLine1044" x1="265" y1="150" x2="280" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1045" font-family="Helvetica" x="260" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   [NSRegisterSize*8-1:0] </tspan></text><text id="SvgjsText1047" font-family="Helvetica" x="295" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1048" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   ns_data_i </tspan></text><line id="SvgjsLine1049" x1="265" y1="170" x2="280" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1050" font-family="Helvetica" x="260" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1052" font-family="Helvetica" x="295" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1053" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   keccak_ready_i </tspan></text><line id="SvgjsLine1054" x1="265" y1="190" x2="280" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1055" font-family="Helvetica" x="260" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1057" font-family="Helvetica" x="295" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1058" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   keccak_complete_i </tspan></text><line id="SvgjsLine1059" x1="265" y1="210" x2="280" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1060" font-family="Helvetica" x="260" y="209.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   sha3_mode_e </tspan></text><text id="SvgjsText1062" font-family="Helvetica" x="295" y="209.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1063" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   mode_i </tspan></text><line id="SvgjsLine1064" x1="265" y1="230" x2="280" y2="230" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1065" font-family="Helvetica" x="260" y="229.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">   keccak_strength_e </tspan></text><text id="SvgjsText1067" font-family="Helvetica" x="295" y="229.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1068" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   strength_i </tspan></text><line id="SvgjsLine1069" x1="265" y1="250" x2="280" y2="250" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1070" font-family="Helvetica" x="260" y="249.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1072" font-family="Helvetica" x="295" y="249.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1073" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   start_i </tspan></text><line id="SvgjsLine1074" x1="265" y1="270" x2="280" y2="270" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1075" font-family="Helvetica" x="260" y="269.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1077" font-family="Helvetica" x="295" y="269.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1078" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   process_i </tspan></text><line id="SvgjsLine1079" x1="265" y1="290" x2="280" y2="290" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1080" font-family="Helvetica" x="260" y="289.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="260" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1082" font-family="Helvetica" x="295" y="289.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1083" dy="26" x="295" svgjs:data="{&quot;newLined&quot;:true}">   done_i </tspan></text><line id="SvgjsLine1084" x1="265" y1="310" x2="280" y2="310" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1085" font-family="Helvetica" x="690" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1087" font-family="Helvetica" x="655" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1088" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   msg_ready_o </tspan></text><line id="SvgjsLine1089" x1="670" y1="70" x2="685" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1090" font-family="Helvetica" x="690" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1092" font-family="Helvetica" x="655" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1093" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_valid_o </tspan></text><line id="SvgjsLine1094" x1="670" y1="90" x2="685" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1095" font-family="Helvetica" x="690" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1096" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [KeccakMsgAddrW-1:0] </tspan></text><text id="SvgjsText1097" font-family="Helvetica" x="655" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1098" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_addr_o </tspan></text><line id="SvgjsLine1099" x1="670" y1="110" x2="685" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1100" font-family="Helvetica" x="690" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1101" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">   [MsgWidth-1:0] </tspan></text><text id="SvgjsText1102" font-family="Helvetica" x="655" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1103" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_data_o </tspan></text><line id="SvgjsLine1104" x1="670" y1="130" x2="685" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1105" font-family="Helvetica" x="690" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1106" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1107" font-family="Helvetica" x="655" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1108" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   keccak_run_o </tspan></text><line id="SvgjsLine1109" x1="670" y1="150" x2="685" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1110" font-family="Helvetica" x="690" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1111" dy="26" x="690" svgjs:data="{&quot;newLined&quot;:true}">    </tspan></text><text id="SvgjsText1112" font-family="Helvetica" x="655" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1113" dy="26" x="655" svgjs:data="{&quot;newLined&quot;:true}">   absorbed_o </tspan></text><line id="SvgjsLine1114" x1="670" y1="170" x2="685" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg></p><h2 id="description">Description</h2><div id="teroshdl_description"><p>Copyright lowRISC contributors.  Licensed under the Apache License, Version 2.0, see LICENSE for details.  SPDX-License-Identifier: Apache-2.0</p> <p>SHA3 padding logic</p></div><h2 id="generics">Generics</h2>
 <table>
 <thead>
 <tr>
@@ -1127,7 +1202,7 @@
 <td>keccak_run_o</td>
 <td>output</td>
 <td></td>
-<td>keccak_round control and status<code>run</code> initiates the keccak_round to process full keccak_f (24rounds). <code>complete</code> is an input from keccak round showing the current keccak_f is completed.</td>
+<td>keccak_round control and status <code>run</code> initiates the keccak_round to process full keccak_f (24rounds).  <code>complete</code> is an input from keccak round showing the current keccak_f is  completed.</td>
 </tr>
 <tr>
 <td>keccak_complete_i</td>
@@ -1145,31 +1220,31 @@
 <td>strength_i</td>
 <td>input</td>
 <td>keccak_strength_e</td>
-<td>strength_i is used in bytepad operation. bytepad() is used in cSHAKE only.SHA3, SHAKE doesn't have encode_N,S</td>
+<td>strength_i is used in bytepad operation. bytepad() is used in cSHAKE only. SHA3, SHAKE doesn't have encode_N,S</td>
 </tr>
 <tr>
 <td>start_i</td>
 <td>input</td>
 <td></td>
-<td>control signalstart_i is a pulse signal triggers the padding logic (and the rest of SHA) to accept the incoming messages. This signal is used in the pad module, to initiate the prefix transmitting to keccak_round</td>
+<td>control signal start_i is a pulse signal triggers the padding logic (and the rest of SHA)  to accept the incoming messages. This signal is used in the pad module,  to initiate the prefix transmitting to keccak_round</td>
 </tr>
 <tr>
 <td>process_i</td>
 <td>input</td>
 <td></td>
-<td>process_i is a pulse signal triggers the pad logic to stop receiving themessage from MSG_FIFO and pad the trailing bits specified in the SHA3 standard. Look at <code>funcpad</code> signal for the values.</td>
+<td>process_i is a pulse signal triggers the pad logic to stop receiving the message from MSG_FIFO and pad the trailing bits specified in the SHA3  standard. Look at <code>funcpad</code> signal for the values.</td>
 </tr>
 <tr>
 <td>done_i</td>
 <td>input</td>
 <td></td>
-<td>done_i is a pulse signal to make the pad logic to clear internal variablesand to move back to the Idle state for next hashing process. done_i may not needed if sw controls the keccak_round directly.</td>
+<td>done_i is a pulse signal to make the pad logic to clear internal variables and to move back to the Idle state for next hashing process.  done_i may not needed if sw controls the keccak_round directly.</td>
 </tr>
 <tr>
 <td>absorbed_o</td>
 <td>output</td>
 <td></td>
-<td>Indication of the Keccak Sponge Absorbing is complete, it is time for SW tocontrol the Keccak-round if it needs more digest, or complete by asserting <code>done_i</code></td>
+<td>Indication of the Keccak Sponge Absorbing is complete, it is time for SW to control the Keccak-round if it needs more digest, or complete by asserting  <code>done_i</code></td>
 </tr>
 </tbody>
 </table><h2 id="signals">Signals</h2>
@@ -1185,17 +1260,17 @@
 <tr>
 <td>block_addr_limit</td>
 <td>logic [KeccakCountW-1:0]</td>
-<td></td>
+<td>//////////////////  Configurations // //////////////////</td>
 </tr>
 <tr>
 <td>sel_mux</td>
 <td>mux_sel_e</td>
-<td><code>sel_mux</code> selects the output data among the incoming or internally generated data. MuxFifo:    data from external (msg_data_i) MuxPrefix:  bytepad(encode_string(N)</td>
+<td>///////////////////  Control Signals // ///////////////////  <code>sel_mux</code> selects the output data among the incoming or internally generated data.  MuxFifo:    data from external (msg_data_i)  MuxPrefix:  bytepad(encode_string(N)</td>
 </tr>
 <tr>
 <td>sent_message</td>
 <td>logic [KeccakCountW-1:0]</td>
-<td><code>sent_message</code> indicates the number of entries sent to keccak round per block. The value shall be enough to cover Maximum entry of the Keccak storage as defined in sha3_pkg, <code>$clog2(KeccakEntries+1)</code>. Logically, it is not needed to have more than KeccakEntries but for safety in case of SHA3 context switch resuming the SHA3 from the middle of sponge construction. If needed, the software should be able to write whole 1600 bits. The <code>sent_message</code> is used to check sent_blocksize.</td>
+<td><code>sent_message</code> indicates the number of entries sent to keccak round per  block. The value shall be enough to cover Maximum entry of the Keccak  storage as defined in sha3_pkg, <code>$clog2(KeccakEntries+1)</code>. Logically,  it is not needed to have more than KeccakEntries but for safety in case of  SHA3 context switch resuming the SHA3 from the middle of sponge  construction. If needed, the software should be able to write whole 1600  bits. The <code>sent_message</code> is used to check sent_blocksize.</td>
 </tr>
 <tr>
 <td>inc_sentmsg</td>
@@ -1215,12 +1290,12 @@
 <tr>
 <td>fsm_keccak_valid</td>
 <td>logic</td>
-<td>fsm_keccak_valid is an output signal from FSM which to send data generated inside the pad logic to keccak_round</td>
+<td>fsm_keccak_valid is an output signal from FSM which to send data generated  inside the pad logic to keccak_round</td>
 </tr>
 <tr>
 <td>hold_msg</td>
 <td>logic</td>
-<td>hold_msg to prevent message from being forwarded into keccak_round and acked. Mainly the usage is to hold the message and initiates the keccak_round for current block.</td>
+<td>hold_msg to prevent message from being forwarded into keccak_round and  acked. Mainly the usage is to hold the message and initiates the  keccak_round for current block.</td>
 </tr>
 <tr>
 <td>en_msgbuf</td>
@@ -1235,7 +1310,7 @@
 <tr>
 <td>mode_eq_cshake</td>
 <td>logic</td>
-<td>Inputs FSM moves to StPrefix only when cSHAKE is enabled</td>
+<td>/////////////////  State Machine // /////////////////  Inputs  FSM moves to StPrefix only when cSHAKE is enabled</td>
 </tr>
 <tr>
 <td>keccak_data_o</td>
@@ -1260,7 +1335,7 @@
 <tr>
 <td>msg_buf</td>
 <td>logic [MsgWidth-8-1:0]</td>
-<td>For custom logic, it could be implemented by the 8 mux selection. for instance: (subject to be changed) unique case (sent_byte[2:0]) // generated from msg_strb_i 3'b 000: funcpad_merged = {end_of_block, 63'(function_pad)                  }; 3'b 001: funcpad_merged = {end_of_block, 55'(function_pad), msg_data_i[ 7:0]}; 3'b 010: funcpad_merged = {end_of_block, 47'(function_pad), msg_data_i[15:0]}; 3'b 011: funcpad_merged = {end_of_block, 39'(function_pad), msg_data_i[23:0]}; 3'b 100: funcpad_merged = {end_of_block, 31'(function_pad), msg_data_i[31:0]}; 3'b 101: funcpad_merged = {end_of_block, 23'(function_pad), msg_data_i[39:0]}; 3'b 110: funcpad_merged = {end_of_block, 15'(function_pad), msg_data_i[47:0]}; 3'b 111: funcpad_merged = {end_of_block,  7'(function_pad), msg_data_i[55:0]}; default: funcpad_merged = '0; endcase internal buffer to store partial write. It doesn't have to store last byte as it stores only when partial write.</td>
+<td>prim_packer : packing to 64bit to update keccak storage  two prim_packer in this module are used to pack the data received from  upper layer (KMAC core) and also the 5bit padding bits.  It is assumed that the message from upper layer could be partial at the  end of the message. Then the 2 or 4bit padding is required. It can be  handled by some custom logic or could be done by prim_packer.  If packer is used, the MSG_FIFO doesn't have to have another prim_packer  in front of the FIFO. This logic can handle the partial writes from the  software.<br>  If a custom logic is implemented here, prim_packer is necessary in front  of the FIFO, as this logic only appends at the end of the message when  <code>process_i</code> is asserted. Also, in this case, even prim_packer is not  needed, still 64bit registers to latch the partial write is required.  If not, the logic has to delay the acceptance of the incoming write  accesses. It may trigger the back-pressuring in some case which may result  that the software(or upper layer) may not set process_i.<br>  For custom logic, it could be implemented by the 8 mux selection.  for instance: (subject to be changed)    unique case (sent_byte[2:0]) // generated from msg_strb_i      3'b 000: funcpad_merged = {end_of_block, 63'(function_pad)                  };      3'b 001: funcpad_merged = {end_of_block, 55'(function_pad), msg_data_i[ 7:0]};      3'b 010: funcpad_merged = {end_of_block, 47'(function_pad), msg_data_i[15:0]};      3'b 011: funcpad_merged = {end_of_block, 39'(function_pad), msg_data_i[23:0]};      3'b 100: funcpad_merged = {end_of_block, 31'(function_pad), msg_data_i[31:0]};      3'b 101: funcpad_merged = {end_of_block, 23'(function_pad), msg_data_i[39:0]};      3'b 110: funcpad_merged = {end_of_block, 15'(function_pad), msg_data_i[47:0]};      3'b 111: funcpad_merged = {end_of_block,  7'(function_pad), msg_data_i[55:0]};      default: funcpad_merged = '0;    endcase  internal buffer to store partial write. It doesn't have to store last byte as it  stores only when partial write.</td>
 </tr>
 <tr>
 <td>msg_strb</td>
@@ -1270,22 +1345,22 @@
 <tr>
 <td>start_valid</td>
 <td>logic</td>
-<td>Process only asserts after start and all message are fed. These valid signals are qualifier of FPV to trigger the control signal It is a little bit hard to specify these criteria in SVA property so creating qualifiers in RTL form is easier.</td>
+<td>Process only asserts after start and all message are fed.  These valid signals are qualifier of FPV to trigger the control signal  It is a little bit hard to specify these criteria in SVA property so creating  qualifiers in RTL form is easier.</td>
 </tr>
 <tr>
 <td>process_valid</td>
 <td>logic</td>
-<td>Process only asserts after start and all message are fed. These valid signals are qualifier of FPV to trigger the control signal It is a little bit hard to specify these criteria in SVA property so creating qualifiers in RTL form is easier.</td>
+<td>Process only asserts after start and all message are fed.  These valid signals are qualifier of FPV to trigger the control signal  It is a little bit hard to specify these criteria in SVA property so creating  qualifiers in RTL form is easier.</td>
 </tr>
 <tr>
 <td>absorb_valid</td>
 <td>logic</td>
-<td>Process only asserts after start and all message are fed. These valid signals are qualifier of FPV to trigger the control signal It is a little bit hard to specify these criteria in SVA property so creating qualifiers in RTL form is easier.</td>
+<td>Process only asserts after start and all message are fed.  These valid signals are qualifier of FPV to trigger the control signal  It is a little bit hard to specify these criteria in SVA property so creating  qualifiers in RTL form is easier.</td>
 </tr>
 <tr>
 <td>done_valid</td>
 <td>logic</td>
-<td>Process only asserts after start and all message are fed. These valid signals are qualifier of FPV to trigger the control signal It is a little bit hard to specify these criteria in SVA property so creating qualifiers in RTL form is easier.</td>
+<td>Process only asserts after start and all message are fed.  These valid signals are qualifier of FPV to trigger the control signal  It is a little bit hard to specify these criteria in SVA property so creating  qualifiers in RTL form is easier.</td>
 </tr>
 <tr>
 <td>keccak_valid_o</td>
@@ -1326,7 +1401,7 @@
 <tr>
 <td>pad_st_e</td>
 <td>enum logic [3:0] {<br><span style="padding-left:20px">     StPadIdle,<br><span style="padding-left:20px">                     //               StPrefix,<br><span style="padding-left:20px">     StPrefixWait,<br><span style="padding-left:20px">                     //               StMessage,<br><span style="padding-left:20px">     StMessageWait,<br><span style="padding-left:20px">                     StPad,<br><span style="padding-left:20px">     StPadRun,<br><span style="padding-left:20px">                StPad01,<br><span style="padding-left:20px">           StPadFlush   }</td>
-<td>Padding States TODO: Make it has Hamming Distance &gt;= 3 to be resistent to glitch attacks.</td>
+<td>///////////////  Definitions // ///////////////  Padding States  TODO: Make it has Hamming Distance &gt;= 3 to be resistent to glitch attacks.</td>
 </tr>
 <tr>
 <td>mux_sel_e</td>
@@ -1337,10 +1412,7 @@
 </table><h2 id="processes">Processes</h2><ul>
 <li>unnamed: (  )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_comb</p></div><div id="descriptions"><p><strong>Description</strong><br />
-Block size based on the address.<br />
-This is used for bytepad() and also pad10*1()<br />
-assign block_addr_limit = KeccakRate[strength_i];<br />
-but below is easier to understand</p></div><ul>
+ Block size based on the address.  This is used for bytepad() and also pad10*1()  assign block_addr_limit = KeccakRate[strength_i];  but below is easier to understand </p></div><ul>
 <li>unnamed: ( @(posedge clk_i or negedge rst_ni) )</li>
 </ul><div id="descriptions"><p><strong>Type:</strong> always_ff</p></div><ul>
 <li>unnamed: (  )</li>

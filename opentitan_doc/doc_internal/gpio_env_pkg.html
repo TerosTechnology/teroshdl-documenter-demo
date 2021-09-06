@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1094,12 +1169,12 @@
 <tr>
 <td>gpio_transition_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     bit transition_occurred;<br><span style="padding-left:20px">     bit is_rising_edge;<br><span style="padding-left:20px">   }</td>
-<td>structure to indicate gpio pin transition and type of transition transition_occurred: 1-yes, 0-no is_rising_edge: 1-rising edge transition, 0-falling edge transition</td>
+<td>structure to indicate gpio pin transition and type of transition  transition_occurred: 1-yes, 0-no  is_rising_edge: 1-rising edge transition, 0-falling edge transition</td>
 </tr>
 <tr>
 <td>gpio_reg_update_due_t</td>
 <td>struct packed {<br><span style="padding-left:20px">     bit needs_update;<br><span style="padding-left:20px">     bit [TL_DW-1:0] reg_value;<br><span style="padding-left:20px">     time eval_time;<br><span style="padding-left:20px">   }</td>
-<td>structure to indicate whether or not register update is due for particular gpio register needs_update: 1-update is due, 0-update is not due reg_value: value to be updated when update is due eval_time: time stamp of event, which triggered interrupt update</td>
+<td>structure to indicate whether or not register update is due for particular gpio register  needs_update: 1-update is due, 0-update is not due  reg_value: value to be updated when update is due  eval_time: time stamp of event, which triggered interrupt update</td>
 </tr>
 </tbody>
 </table><br><br><br><br><br><br>

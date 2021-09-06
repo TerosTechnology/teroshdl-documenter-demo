@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1022,16 +1097,14 @@
 <a id=csv_file_reader_pkg><h1 id="package-csv_file_reader_pkg">Package: csv_file_reader_pkg</h1></a><ul>
 <li><strong>File</strong>: csv_file_reader_pkg.vhd</li>
 </ul><h2 id="description">Description</h2><div id="teroshdl_description"><p>Define operations to read formatted data from a comma-separated-values file<br />
-(CSV file). To use this package:</p>
-<ol>
-<li>Create a csv_file_reader:      variable csv: csv_file_reader_type;</li>
-<li>Open a csv file:               csv.initialize("c:\file.csv");</li>
-<li>Read one line at a time:       csv.readline;</li>
-<li>Start reading values:          my_integer := csv.read_integer;</li>
-<li>To read more values in the same line, call any of the read_* functions</li>
-<li>To move to the next line, call csv.readline() again<br />
-</div></li>
-</ol><h2 id="types">Types</h2>
+ (CSV file). To use this package:<br />
+    1. Create a csv_file_reader:      variable csv: csv_file_reader_type;<br />
+    2. Open a csv file:               csv.initialize("c:\file.csv");<br />
+    3. Read one line at a time:       csv.readline;<br />
+    4. Start reading values:          my_integer := csv.read_integer;<br />
+    5. To read more values in the same line, call any of the read_* functions<br />
+    6. To move to the next line, call csv.readline() again<br />
+</div></p><h2 id="types">Types</h2>
 <table>
 <thead>
 <tr>

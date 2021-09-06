@@ -1,6 +1,81 @@
 
 <style>
-  .markdown-body .octicon {
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -1039,7 +1114,7 @@
 <tr>
 <td>global_trigger_vvc_activity_register</td>
 <td>std_logic</td>
-<td></td>
+<td>----------------------------------------------------------------------  Common signals for triggering VVC activity in central VVC register ----------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>global_awaiting_completion</td>
@@ -1104,7 +1179,7 @@
 <tr>
 <td>t_immediate_or_queued</td>
 <td>(NO_command_type,<br><span style="padding-left:20px"> IMMEDIATE,<br><span style="padding-left:20px"> QUEUED)</td>
-<td></td>
+<td>----------------------------------------------------------------------  Common support types for UVVM ----------------------------------------------------------------------</td>
 </tr>
 <tr>
 <td>t_flag_record</td>
@@ -1174,53 +1249,74 @@
 </tbody>
 </table><h2 id="functions">Functions</h2><ul>
 <li>flag_handler <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Flag handler is a general flag/semaphore handling mechanism between two separate processes/threadsThe idea is to allow one process to set a flag and another to reset it. The flag may then be used by both - or othersMay be used for a message from process 1 to process 2 with acknowledge; - like do-something &amp; done, or valid &amp; ack</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-flag_handler"> flag_handler</h2>
+<p>Flag handler is a general flag/semaphore handling mechanism between two separate processes/threads<br />
+ The idea is to allow one process to set a flag and another to reset it. The flag may then be used by both - or others<br />
+ May be used for a message from process 1 to process 2 with acknowledge; - like do-something &amp; done, or valid &amp; ack</p></div><ul>
 <li>set_flag <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Sets reset and is_active to 'Z' and pulses set_flag</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-set_flag"> set_flag</h2>
+<p>Sets reset and is_active to 'Z' and pulses set_flag</p></div><ul>
 <li>reset_flag <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Sets set and is_active to 'Z' and pulses reset_flag</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-reset_flag"> reset_flag</h2>
+<p>Sets set and is_active to 'Z' and pulses reset_flag</p></div><ul>
 <li>await_uvvm_initialization <font id="function_arguments">( constant dummy : in t_void ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Waits until uvvm has been initialized</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-await_uvvm_initialization"> await_uvvm_initialization</h2>
+<p>Waits until uvvm has been initialized</p></div><ul>
 <li>enable_log_msg <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness := NON_QUIET;<br><span style="padding-left:20px"> constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Enables a log message for all VVCs</p></div><ul>
+</ul><div id="descriptions"><p><strong>Description</strong></p>
+<hr />
+<p>BROADCAST COMMANDS</p>
+<h2 id=""><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong>*</strong></h2>
+<h2 id="-enable_log_msg-broadcast"> enable_log_msg (Broadcast)</h2>
+<p>Enables a log message for all VVCs</p></div><ul>
 <li>disable_log_msg <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness := NON_QUIET;<br><span style="padding-left:20px"> constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Disables a log message for all VVCs</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-disable_log_msg-broadcast"> disable_log_msg (Broadcast)</h2>
+<p>Disables a log message for all VVCs</p></div><ul>
 <li>flush_command_queue <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant scope              : in string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Flushes the command queue for all VVCs</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-flush_command_queue-broadcast"> flush_command_queue (Broadcast)</h2>
+<p>Flushes the command queue for all VVCs</p></div><ul>
 <li>insert_delay <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant delay              : in natural;<br><span style="padding-left:20px">  -- in clock cycles constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Inserts delay into all VVCs (specified as number of clock cycles)</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-insert_delay-broadcast"> insert_delay (Broadcast)</h2>
+<p>Inserts delay into all VVCs (specified as number of clock cycles)</p></div><ul>
 <li>insert_delay <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant delay              : in time;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Inserts delay into all VVCs (specified as time)</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-insert_delay-broadcast"> insert_delay (Broadcast)</h2>
+<p>Inserts delay into all VVCs (specified as time)</p></div><ul>
 <li>await_completion <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant timeout            : in time;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Wait for all VVCs to finish (specified as time)</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-await_completion-broadcast"> await_completion (Broadcast)</h2>
+<p>Wait for all VVCs to finish (specified as time)</p></div><ul>
 <li>terminate_current_command <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-terminates all current tasks</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-terminate_current_command-broadcast"> terminate_current_command (Broadcast)</h2>
+<p>terminates all current tasks</p></div><ul>
 <li>terminate_all_commands <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-terminates all tasks</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-terminate_all_commands-broadcast"> terminate_all_commands (Broadcast)</h2>
+<p>terminates all tasks</p></div><ul>
 <li>transmit_broadcast <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant operation          : in t_broadcastable_cmd;<br><span style="padding-left:20px"> constant proc_call          : in string;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string       := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness  := NON_QUIET;<br><span style="padding-left:20px"> constant delay              : in time         := 0 ns;<br><span style="padding-left:20px"> constant delay_int          : in integer      := -1;<br><span style="padding-left:20px"> constant timeout            : in time         := std.env.resolution_limit;<br><span style="padding-left:20px"> constant scope              : in string       := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Common broadcast transmission routine</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-transmit_broadcast"> transmit_broadcast</h2>
+<p>Common broadcast transmission routine</p></div><ul>
 <li>await_completion <font id="function_arguments">( constant vvc_select    : in    t_vvc_select;<br><span style="padding-left:20px"> variable vvc_info_list : inout t_vvc_info_list;<br><span style="padding-left:20px"> constant timeout       : in    time;<br><span style="padding-left:20px"> constant list_action   : in    t_list_action := CLEAR_LIST;<br><span style="padding-left:20px"> constant msg           : in    string := "";<br><span style="padding-left:20px"> constant scope         : in    string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
-</ul><div id="descriptions"><p><strong>Description</strong><br />
-Awaits completion of any VVC in the list or until timeout.</p></div><ul>
+</ul><div id="descriptions"><h2 id="description"><strong>Description</strong></h2>
+<h2 id="-await_completion"> await_completion</h2>
+<p>Awaits completion of any VVC in the list or until timeout.</p></div><ul>
 <li>await_completion <font id="function_arguments">( constant vvc_select  : in    t_vvc_select;<br><span style="padding-left:20px"> constant timeout     : in    time;<br><span style="padding-left:20px"> constant list_action : in    t_list_action := CLEAR_LIST;<br><span style="padding-left:20px"> constant msg         : in    string := "";<br><span style="padding-left:20px"> constant scope       : in    string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-Awaits completion of all the VVCs in the activity register or until timeout.</p></div><ul>
+ Awaits completion of all the VVCs in the activity register or until timeout.</p></div><ul>
 <li>activity_watchdog <font id="function_arguments">( constant num_exp_vvc  : natural;<br><span style="padding-left:20px"> constant timeout      : time;<br><span style="padding-left:20px"> constant alert_level  : t_alert_level := TB_ERROR;<br><span style="padding-left:20px"> constant msg          : string := "Activity_Watchdog" ) </font> <font id="function_return">return ()</font></li>
 </ul><div id="descriptions"><p><strong>Description</strong><br />
-============================================================================Activity Watchdog============================================================================</p></div><br><br><br><br><br><br>
+ ============================================================================<br />
+ Activity Watchdog<br />
+ ============================================================================</p></div><br><br><br><br><br><br>
     </article class="markdown-body">
 
     </body>
