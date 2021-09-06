@@ -3,6 +3,12 @@ CordicHDL:
     folder: cordicHDL/src
     vhdl_symbol: "!"
     verilog_symbol: "!"
+    
+oh:
+    url: https://github.com/aolofsson/oh.git
+    folder: oh
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 verilog-axi:
     url: https://github.com/alexforencich/verilog-axi.git
