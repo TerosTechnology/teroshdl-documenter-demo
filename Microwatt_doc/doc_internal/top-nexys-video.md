@@ -22,21 +22,44 @@
 | SPI_FLASH_DEF_QUAD   | boolean  | true           |             |
 | LOG_LENGTH           | natural  | 2048           |             |
 | UART_IS_16550        | boolean  | true           |             |
+| USE_LITEETH          | boolean  | false          |             |
+| USE_LITESDCARD       | boolean  | false          |             |
 ## Ports
 
 | Port name        | Direction | Type                          | Description    |
 | ---------------- | --------- | ----------------------------- | -------------- |
 | ext_clk          | in        | std_ulogic                    |                |
-| ext_rst          | in        | std_ulogic                    |                |
+| ext_rst_n        | in        | std_ulogic                    |                |
 | uart_main_tx     | out       | std_ulogic                    | UART0 signals: |
 | uart_main_rx     | in        | std_ulogic                    |                |
-| led0             | out       | std_logic                     | LEDs           |
-| led1             | out       | std_logic                     |                |
+| led0             | out       | std_ulogic                    | LEDs           |
+| led1             | out       | std_ulogic                    |                |
+| led2             | out       | std_ulogic                    |                |
+| led3             | out       | std_ulogic                    |                |
+| led4             | out       | std_ulogic                    |                |
+| led5             | out       | std_ulogic                    |                |
+| led6             | out       | std_ulogic                    |                |
+| led7             | out       | std_ulogic                    |                |
 | spi_flash_cs_n   | out       | std_ulogic                    | SPI            |
 | spi_flash_mosi   | inout     | std_ulogic                    |                |
 | spi_flash_miso   | inout     | std_ulogic                    |                |
 | spi_flash_wp_n   | inout     | std_ulogic                    |                |
 | spi_flash_hold_n | inout     | std_ulogic                    |                |
+| eth_clocks_tx    | out       | std_ulogic                    | Ethernet       |
+| eth_clocks_rx    | in        | std_ulogic                    |                |
+| eth_rst_n        | out       | std_ulogic                    |                |
+| eth_int_n        | in        | std_ulogic                    |                |
+| eth_mdio         | inout     | std_ulogic                    |                |
+| eth_mdc          | out       | std_ulogic                    |                |
+| eth_rx_ctl       | in        | std_ulogic                    |                |
+| eth_rx_data      | in        | std_ulogic_vector(3 downto 0) |                |
+| eth_tx_ctl       | out       | std_ulogic                    |                |
+| eth_tx_data      | out       | std_ulogic_vector(3 downto 0) |                |
+| sdcard_data      | inout     | std_ulogic_vector(3 downto 0) | SD card        |
+| sdcard_cmd       | inout     | std_ulogic                    |                |
+| sdcard_clk       | out       | std_ulogic                    |                |
+| sdcard_cd        | in        | std_ulogic                    |                |
+| sdcard_reset     | out       | std_ulogic                    |                |
 | ddram_a          | out       | std_logic_vector(14 downto 0) | DRAM wires     |
 | ddram_ba         | out       | std_logic_vector(2 downto 0)  |                |
 | ddram_ras_n      | out       | std_logic                     |                |
@@ -53,24 +76,36 @@
 | ddram_reset_n    | out       | std_logic                     |                |
 ## Signals
 
-| Name                | Type                          | Description                        |
-| ------------------- | ----------------------------- | ---------------------------------- |
-| soc_rst             | std_ulogic                    |                                    |
-| pll_rst             | std_ulogic                    |                                    |
-| system_clk          | std_ulogic                    | Internal clock signals:            |
-| system_clk_locked   | std_ulogic                    |                                    |
-| wb_dram_in          | wishbone_master_out           | DRAM main data wishbone connection |
-| wb_dram_out         | wishbone_slave_out            |                                    |
-| wb_ext_io_in        | wb_io_master_out              | DRAM control wishbone connection   |
-| wb_ext_io_out       | wb_io_slave_out               |                                    |
-| wb_ext_is_dram_csr  | std_ulogic                    |                                    |
-| wb_ext_is_dram_init | std_ulogic                    |                                    |
-| core_alt_reset      | std_ulogic                    | Control/status                     |
-| spi_sck             | std_ulogic                    | SPI flash                          |
-| spi_cs_n            | std_ulogic                    |                                    |
-| spi_sdat_o          | std_ulogic_vector(3 downto 0) |                                    |
-| spi_sdat_oe         | std_ulogic_vector(3 downto 0) |                                    |
-| spi_sdat_i          | std_ulogic_vector(3 downto 0) |                                    |
+| Name                | Type                          | Description                                               |
+| ------------------- | ----------------------------- | --------------------------------------------------------- |
+| soc_rst             | std_ulogic                    |                                                           |
+| pll_rst             | std_ulogic                    |                                                           |
+| system_clk          | std_ulogic                    |  Internal clock signals:                                  |
+| system_clk_locked   | std_ulogic                    |                                                           |
+| wb_ext_io_in        | wb_io_master_out              |  External IOs from the SoC                                |
+| wb_ext_io_out       | wb_io_slave_out               |                                                           |
+| wb_ext_is_dram_csr  | std_ulogic                    |                                                           |
+| wb_ext_is_dram_init | std_ulogic                    |                                                           |
+| wb_ext_is_eth       | std_ulogic                    |                                                           |
+| wb_ext_is_sdcard    | std_ulogic                    |                                                           |
+| wb_dram_in          | wishbone_master_out           |  DRAM main data wishbone connection                       |
+| wb_dram_out         | wishbone_slave_out            |                                                           |
+| wb_dram_ctrl_out    | wb_io_slave_out               |  DRAM control wishbone connection                         |
+| ext_irq_eth         | std_ulogic                    |  LiteEth connection                                       |
+| wb_eth_out          | wb_io_slave_out               |                                                           |
+| ext_irq_sdcard      | std_ulogic                    |  LiteSDCard connection                                    |
+| wb_sdcard_out       | wb_io_slave_out               |                                                           |
+| wb_sddma_out        | wb_io_master_out              |                                                           |
+| wb_sddma_in         | wb_io_slave_out               |                                                           |
+| wb_sddma_nr         | wb_io_master_out              |                                                           |
+| wb_sddma_ir         | wb_io_slave_out               |                                                           |
+| wb_sddma_stb_sent   | std_ulogic                    |  for conversion from non-pipelined wishbone to pipelined  |
+| core_alt_reset      | std_ulogic                    |  Control/status                                           |
+| spi_sck             | std_ulogic                    |  SPI flash                                                |
+| spi_cs_n            | std_ulogic                    |                                                           |
+| spi_sdat_o          | std_ulogic_vector(3 downto 0) |                                                           |
+| spi_sdat_oe         | std_ulogic_vector(3 downto 0) |                                                           |
+| spi_sdat_i          | std_ulogic_vector(3 downto 0) |                                                           |
 ## Constants
 
 | Name         | Type    | Value             | Description |
@@ -80,7 +115,8 @@
 ## Functions
 - get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 **Description**
-Fixup various memory sizes based on generics
+ Fixup various memory sizes based on generics
+
 - get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 ## Instantiations
 

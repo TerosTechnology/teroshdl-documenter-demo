@@ -6,9 +6,11 @@
 ![Diagram](firReal_ram.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/05/26
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/05/26
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -40,5 +42,4 @@ Creation date : 2018/05/26
 - unnamed: ( clk_a )
 - unnamed: ( clk_b )
 **Description**
-Port B
-
+ Port B 

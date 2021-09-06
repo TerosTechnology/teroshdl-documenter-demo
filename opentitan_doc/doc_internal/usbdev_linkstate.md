@@ -6,11 +6,13 @@
 ![Diagram](usbdev_linkstate.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Link state detection
- 
+
+
 ## Ports
 
 | Port name         | Direction | Type  | Description |
@@ -34,33 +36,33 @@ Copyright lowRISC contributors.
 | link_state_o      | output    | [2:0] |             |
 ## Signals
 
-| Name                | Type              | Description                                                                                                                                                                                               |
-| ------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| link_state_d        | link_state_e      |                                                                                                                                                                                                           |
-| link_state_q        | link_state_e      |                                                                                                                                                                                                           |
-| see_pwr_sense       | logic             |                                                                                                                                                                                                           |
-| link_rst_timer_d    | logic [2:0]       | Reset FSM                                                                                                                                                                                                 |
-| link_rst_timer_q    | logic [2:0]       | Reset FSM                                                                                                                                                                                                 |
-| link_rst_state_d    | link_rst_state_e  |                                                                                                                                                                                                           |
-| link_rst_state_q    | link_rst_state_e  |                                                                                                                                                                                                           |
-| link_reset          | logic             | reset detected (level)                                                                                                                                                                                    |
-| monitor_inac        | logic             | monitor link inactivity                                                                                                                                                                                   |
-| link_inac_timer_d   | logic [11:0]      |                                                                                                                                                                                                           |
-| link_inac_timer_q   | logic [11:0]      |                                                                                                                                                                                                           |
-| link_inac_state_d   | link_inac_state_e |                                                                                                                                                                                                           |
-| link_inac_state_q   | link_inac_state_e |                                                                                                                                                                                                           |
-| ev_bus_active       | logic             | Events that are not triggered by a timeout                                                                                                                                                                |
-| ev_bus_inactive     | logic             | Events that are triggered by timeout                                                                                                                                                                      |
-| ev_reset            | logic             | Events that are triggered by timeout                                                                                                                                                                      |
-| see_se0             | logic             | If the PHY reflects the line state on rx pins when the device is driving then the usb_oe_i check isn't needed here. But it seems best to do the check to be robust in the face of different PHY designs.  |
-| line_se0_raw        | logic             | If the PHY reflects the line state on rx pins when the device is driving then the usb_oe_i check isn't needed here. But it seems best to do the check to be robust in the face of different PHY designs.  |
-| host_presence_timer | logic [12:0]      | host_lost if no sof in 4.096ms (supposed to be every 1ms) and the link is active                                                                                                                          |
+| Name                | Type              | Description                                                                                                                                                                                                  |
+| ------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| link_state_d        | link_state_e      |                                                                                                                                                                                                              |
+| link_state_q        | link_state_e      |                                                                                                                                                                                                              |
+| see_pwr_sense       | logic             |                                                                                                                                                                                                              |
+| link_rst_timer_d    | logic [2:0]       |  Reset FSM                                                                                                                                                                                                   |
+| link_rst_timer_q    | logic [2:0]       |  Reset FSM                                                                                                                                                                                                   |
+| link_rst_state_d    | link_rst_state_e  |                                                                                                                                                                                                              |
+| link_rst_state_q    | link_rst_state_e  |                                                                                                                                                                                                              |
+| link_reset          | logic             | reset detected (level)                                                                                                                                                                                       |
+| monitor_inac        | logic             | monitor link inactivity                                                                                                                                                                                      |
+| link_inac_timer_d   | logic [11:0]      |                                                                                                                                                                                                              |
+| link_inac_timer_q   | logic [11:0]      |                                                                                                                                                                                                              |
+| link_inac_state_d   | link_inac_state_e |                                                                                                                                                                                                              |
+| link_inac_state_q   | link_inac_state_e |                                                                                                                                                                                                              |
+| ev_bus_active       | logic             |  Events that are not triggered by a timeout                                                                                                                                                                  |
+| ev_bus_inactive     | logic             |  Events that are triggered by timeout                                                                                                                                                                        |
+| ev_reset            | logic             |  Events that are triggered by timeout                                                                                                                                                                        |
+| see_se0             | logic             |  If the PHY reflects the line state on rx pins when the device is driving  then the usb_oe_i check isn't needed here. But it seems best to do the check  to be robust in the face of different PHY designs.  |
+| line_se0_raw        | logic             |  If the PHY reflects the line state on rx pins when the device is driving  then the usb_oe_i check isn't needed here. But it seems best to do the check  to be robust in the face of different PHY designs.  |
+| host_presence_timer | logic [12:0]      | ///////////////////////  Host loss detection // ///////////////////////  host_lost if no sof in 4.096ms (supposed to be every 1ms)  and the link is active                                                   |
 ## Constants
 
-| Name            | Type         | Value    | Description                      |
-| --------------- | ------------ | -------- | -------------------------------- |
-| SUSPEND_TIMEOUT | logic [11:0] | 12'd3000 | 3ms by spec                      |
-| RESET_TIMEOUT   | logic [2:0]  | 3'd3     | 3us. Can be 2.5us - 10ms by spec |
+| Name            | Type         | Value    | Description                       |
+| --------------- | ------------ | -------- | --------------------------------- |
+| SUSPEND_TIMEOUT | logic [11:0] | 12'd3000 | 3ms by spec                       |
+| RESET_TIMEOUT   | logic [2:0]  | 3'd3     | 3us. Can be 2.5us - 10ms by spec  |
 ## Types
 
 | Name              | Type                                                                                                                                                                                                                                                                                                                                                                                                    | Description |
@@ -70,26 +72,29 @@ Copyright lowRISC contributors.
 | link_inac_state_e | enum logic [1:0] {<br><span style="padding-left:20px">     Active,<br><span style="padding-left:20px">     InactCnt,<br><span style="padding-left:20px">     InactPend   }                                                                                                                                                                                                                              |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+  - **Type:** always_ff
 - proc_rst_fsm: (  )
+  - **Type:** always_comb
 **Description**
-Here we clean up the SE0 signal and generate a signle ev_reset at
-the end of a valid reset
-
+///////////////////  Reset detection // ///////////////////   Here we clean up the SE0 signal and generate a signle ev_reset at   the end of a valid reset 
 - proc_reg_rst: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+  - **Type:** always_ff
 - proc_idle_det: (  )
+  - **Type:** always_comb
 **Description**
-Here we clean up the idle signal and generate a signle ev_bus_inactive
-after the timer expires
-
+//////////////////  Idle detection // //////////////////   Here we clean up the idle signal and generate a signle ev_bus_inactive   after the timer expires 
 - proc_reg_idle_det: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - filter_se0: prim_filter
 **Description**
-four ticks is a bit time
-Could completely filter out 2-cycle EOP SE0 here but
-does not seem needed
+ four ticks is a bit time
+ Could completely filter out 2-cycle EOP SE0 here but
+ does not seem needed
 
 - filter_pwr_sense: prim_filter

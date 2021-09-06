@@ -52,8 +52,8 @@
 | cmp_data_a_im_s      | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | cmp_data_b_re_s      | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | cmp_data_b_im_s      | std_logic_vector(DATA_SIZE-1 downto 0) |             |
-| port_b_addr_s        | std_logic_vector(ADDR_SIZE-1 downto 0) | ram mux     |
-|  port_a_addr_s       | std_logic_vector(ADDR_SIZE-1 downto 0) | ram mux     |
+| port_b_addr_s        | std_logic_vector(ADDR_SIZE-1 downto 0) |  ram mux    |
+|  port_a_addr_s       | std_logic_vector(ADDR_SIZE-1 downto 0) |  ram mux    |
 | port_a_data_re_s     | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | port_a_data_re_out_s | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | port_a_data_im_s     | std_logic_vector(DATA_SIZE-1 downto 0) |             |

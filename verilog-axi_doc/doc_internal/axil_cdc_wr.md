@@ -6,45 +6,47 @@
 ![Diagram](axil_cdc_wr.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name | Type | Value     | Description                                  |
-| ------------ | ---- | --------- | -------------------------------------------- |
-| DATA_WIDTH   |      | 32        | Width of data bus in bits                    |
-| ADDR_WIDTH   |      | 32        | Width of address bus in bits                 |
-| STRB_WIDTH   |      | undefined | Width of wstrb (width of data bus in words)  |
+| Generic name | Type | Value     | Description                                   |
+| ------------ | ---- | --------- | --------------------------------------------- |
+| DATA_WIDTH   |      | 32        |  Width of data bus in bits                    |
+| ADDR_WIDTH   |      | 32        |  Width of address bus in bits                 |
+| STRB_WIDTH   |      | undefined |  Width of wstrb (width of data bus in words)  |
 ## Ports
 
-| Port name      | Direction | Type                  | Description |
-| -------------- | --------- | --------------------- | ----------- |
-| s_clk          | input     | wire                  |             |
-| s_rst          | input     | wire                  |             |
-| s_axil_awaddr  | input     | wire [ADDR_WIDTH-1:0] |             |
-| s_axil_awprot  | input     | wire [2:0]            |             |
-| s_axil_awvalid | input     | wire                  |             |
-| s_axil_awready | output    | wire                  |             |
-| s_axil_wdata   | input     | wire [DATA_WIDTH-1:0] |             |
-| s_axil_wstrb   | input     | wire [STRB_WIDTH-1:0] |             |
-| s_axil_wvalid  | input     | wire                  |             |
-| s_axil_wready  | output    | wire                  |             |
-| s_axil_bresp   | output    | wire [1:0]            |             |
-| s_axil_bvalid  | output    | wire                  |             |
-| s_axil_bready  | input     | wire                  |             |
-| m_clk          | input     | wire                  |             |
-| m_rst          | input     | wire                  |             |
-| m_axil_awaddr  | output    | wire [ADDR_WIDTH-1:0] |             |
-| m_axil_awprot  | output    | wire [2:0]            |             |
-| m_axil_awvalid | output    | wire                  |             |
-| m_axil_awready | input     | wire                  |             |
-| m_axil_wdata   | output    | wire [DATA_WIDTH-1:0] |             |
-| m_axil_wstrb   | output    | wire [STRB_WIDTH-1:0] |             |
-| m_axil_wvalid  | output    | wire                  |             |
-| m_axil_wready  | input     | wire                  |             |
-| m_axil_bresp   | input     | wire [1:0]            |             |
-| m_axil_bvalid  | input     | wire                  |             |
-| m_axil_bready  | output    | wire                  |             |
+| Port name      | Direction | Type                  | Description                               |
+| -------------- | --------- | --------------------- | ----------------------------------------- |
+| s_clk          | input     | wire                  |      * AXI lite slave interface      */   |
+| s_rst          | input     | wire                  |                                           |
+| s_axil_awaddr  | input     | wire [ADDR_WIDTH-1:0] |                                           |
+| s_axil_awprot  | input     | wire [2:0]            |                                           |
+| s_axil_awvalid | input     | wire                  |                                           |
+| s_axil_awready | output    | wire                  |                                           |
+| s_axil_wdata   | input     | wire [DATA_WIDTH-1:0] |                                           |
+| s_axil_wstrb   | input     | wire [STRB_WIDTH-1:0] |                                           |
+| s_axil_wvalid  | input     | wire                  |                                           |
+| s_axil_wready  | output    | wire                  |                                           |
+| s_axil_bresp   | output    | wire [1:0]            |                                           |
+| s_axil_bvalid  | output    | wire                  |                                           |
+| s_axil_bready  | input     | wire                  |                                           |
+| m_clk          | input     | wire                  |      * AXI lite master interface      */  |
+| m_rst          | input     | wire                  |                                           |
+| m_axil_awaddr  | output    | wire [ADDR_WIDTH-1:0] |                                           |
+| m_axil_awprot  | output    | wire [2:0]            |                                           |
+| m_axil_awvalid | output    | wire                  |                                           |
+| m_axil_awready | input     | wire                  |                                           |
+| m_axil_wdata   | output    | wire [DATA_WIDTH-1:0] |                                           |
+| m_axil_wstrb   | output    | wire [STRB_WIDTH-1:0] |                                           |
+| m_axil_wvalid  | output    | wire                  |                                           |
+| m_axil_wready  | input     | wire                  |                                           |
+| m_axil_bresp   | input     | wire [1:0]            |                                           |
+| m_axil_bvalid  | input     | wire                  |                                           |
+| m_axil_bready  | output    | wire                  |                                           |
 ## Signals
 
 | Name               | Type                 | Description |
@@ -75,18 +77,19 @@ Language: Verilog 2001
 | m_axil_bvalid_reg  | reg                  |             |
 ## Processes
 - unnamed: ( @(posedge s_clk) )
+  - **Type:** always
 **Description**
-slave side
-
+ slave side 
 - unnamed: ( @(posedge s_clk) )
+  - **Type:** always
 **Description**
-synchronization
-
+ synchronization 
 - unnamed: ( @(posedge m_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge m_clk) )
+  - **Type:** always
 **Description**
-master side
-
+ master side 
 ## State machines
 
 - slave side![Diagram_state_machine_0]( stm_axil_cdc_wr_00.svg "Diagram")- master side![Diagram_state_machine_1]( stm_axil_cdc_wr_11.svg "Diagram")

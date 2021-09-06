@@ -6,12 +6,13 @@
 ![Diagram](prim_arbiter_fixed_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Testbench module for prim_arbiter_fixed.
  Intended to be used with a formal tool.
- 
+
 ## Generics
 
 | Generic name | Type | Value     | Description |

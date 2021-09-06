@@ -5,10 +5,14 @@
 - bitvis_assert <font id="function_arguments">( val        : boolean;<br><span style="padding-left:20px"> severeness : severity_level;<br><span style="padding-left:20px"> msg        : string;<br><span style="padding-left:20px"> scope      : string ) </font> <font id="function_return">return ()</font>
 - justify <font id="function_arguments">( val       : string;<br><span style="padding-left:20px"> width     : natural := 0;<br><span style="padding-left:20px"> justified : side := RIGHT;<br><span style="padding-left:20px"> format: t_format_string := AS_IS -- No defaults on 4 first param - to avoid ambiguity with std.textio ) </font> <font id="function_return">return string </font>
 **Description**
-DEPRECATED.Function will be removed in future versions of UVVM-Util
+ DEPRECATED.
+ Function will be removed in future versions of UVVM-Util
+
 - justify <font id="function_arguments">( val             : string;<br><span style="padding-left:20px"> justified       : side;<br><span style="padding-left:20px"> width           : natural;<br><span style="padding-left:20px"> format_spaces   : t_format_spaces;<br><span style="padding-left:20px"> truncate        : t_truncate_string ) </font> <font id="function_return">return string </font>
 **Description**
-DEPRECATED.Function will be removed in future versions of UVVM-Util
+ DEPRECATED.
+ Function will be removed in future versions of UVVM-Util
+
 - justify <font id="function_arguments">( val             : string;<br><span style="padding-left:20px"> justified       : t_justify_center;<br><span style="padding-left:20px"> width           : natural;<br><span style="padding-left:20px"> format_spaces   : t_format_spaces;<br><span style="padding-left:20px"> truncate        : t_truncate_string ) </font> <font id="function_return">return string </font>
 - pos_of_leftmost <font id="function_arguments">( target              : character;<br><span style="padding-left:20px"> vector              : string;<br><span style="padding-left:20px"> result_if_not_found : natural := 1 ) </font> <font id="function_return">return natural </font>
 - pos_of_rightmost <font id="function_arguments">( target              : character;<br><span style="padding-left:20px"> vector              : string;<br><span style="padding-left:20px"> result_if_not_found : natural := 1 ) </font> <font id="function_return">return natural </font>
@@ -30,12 +34,21 @@ DEPRECATED.Function will be removed in future versions of UVVM-Util
 - replace <font id="function_arguments">( val           : string;<br><span style="padding-left:20px"> target_char   : character;<br><span style="padding-left:20px"> exchange_char : character ) </font> <font id="function_return">return string </font>
 - replace <font id="function_arguments">( variable text_line : inout line;<br><span style="padding-left:20px"> target_char        : character;<br><span style="padding-left:20px"> exchange_char      : character ) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">( val             : boolean;<br><span style="padding-left:20px"> width           : natural;<br><span style="padding-left:20px"> justified       : side;<br><span style="padding-left:20px"> format_spaces   : t_format_spaces;<br><span style="padding-left:20px"> truncate        : t_truncate_string := DISALLOW_TRUNCATE ) </font> <font id="function_return">return string </font>
+**Description**
+========================================================
+ Handle missing overloads from 'standard_additions'
+========================================================
+
 - to_string <font id="function_arguments">( val       : boolean;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side        := right;<br><span style="padding-left:20px"> format: t_format_string := AS_IS ) </font> <font id="function_return">return string </font>
 **Description**
-This function has been deprecated and will be removed in the next major releaseDEPRECATED
+ This function has been deprecated and will be removed in the next major release
+ DEPRECATED
+
 - to_string <font id="function_arguments">( val       : integer;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side            := right;<br><span style="padding-left:20px"> format    : t_format_string := AS_IS ) </font> <font id="function_return">return string </font>
 **Description**
-This function has been deprecated and will be removed in the next major releaseDEPRECATED
+ This function has been deprecated and will be removed in the next major release
+ DEPRECATED
+
 - to_string <font id="function_arguments">( val     : std_logic_vector;<br><span style="padding-left:20px"> radix   : t_radix;<br><span style="padding-left:20px"> format  : t_format_zeros := KEEP_LEADING_0;<br><span style="padding-left:20px">  -- | SKIP_LEADING_0 prefix  : t_radix_prefix := EXCL_RADIX -- Insert radix prefix in string? ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val     : unsigned;<br><span style="padding-left:20px"> radix   : t_radix;<br><span style="padding-left:20px"> format  : t_format_zeros := KEEP_LEADING_0;<br><span style="padding-left:20px">  -- | SKIP_LEADING_0 prefix  : t_radix_prefix := EXCL_RADIX -- Insert radix prefix in string? ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val     : signed;<br><span style="padding-left:20px"> radix   : t_radix;<br><span style="padding-left:20px"> format  : t_format_zeros := KEEP_LEADING_0;<br><span style="padding-left:20px">  -- | SKIP_LEADING_0 prefix  : t_radix_prefix := EXCL_RADIX -- Insert radix prefix in string? ) </font> <font id="function_return">return string </font>
@@ -45,6 +58,11 @@ This function has been deprecated and will be removed in the next major releaseD
 - to_string <font id="function_arguments">( val     : real_vector ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val     : time_vector ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val       : t_alert_level;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side    := right ) </font> <font id="function_return">return string </font>
+**Description**
+========================================================
+ Handle types defined at lower levels
+========================================================
+
 - to_string <font id="function_arguments">( val       : t_msg_id;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side    := right ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val       : t_attention;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side    := right ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val       : t_check_type;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side    := right ) </font> <font id="function_return">return string </font>
@@ -54,8 +72,10 @@ This function has been deprecated and will be removed in the next major releaseD
 - char_to_ascii <font id="function_arguments">( char   : character ) </font> <font id="function_return">return integer </font>
 - to_string <font id="function_arguments">( val : string ) </font> <font id="function_return">return string </font>
 **Description**
-return string with only valid ascii characters
+ return string with only valid ascii characters
+
 - add_msg_delimiter <font id="function_arguments">( msg : string ) </font> <font id="function_return">return string </font>
 - timestamp_header <font id="function_arguments">( value : time;<br><span style="padding-left:20px"> txt   : string) </font> <font id="function_return">return string </font>
 **Description**
-Returns a string with a timestamp and a text. Used in report headers
+ Returns a string with a timestamp and a text. Used in report headers
+

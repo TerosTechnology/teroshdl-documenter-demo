@@ -6,11 +6,13 @@
 ![Diagram](entropy_src_core.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Description: entropy_src core module
- 
+
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -18,31 +20,31 @@ Copyright lowRISC contributors.
 | EsFifoDepth  | int  | 4     |             |
 ## Ports
 
-| Port name                    | Direction | Type                    | Description                    |
-| ---------------------------- | --------- | ----------------------- | ------------------------------ |
-| clk_i                        | input     |                         |                                |
-| rst_ni                       | input     |                         |                                |
-| reg2hw                       | input     |                         |                                |
-| hw2reg                       | output    |                         |                                |
-| efuse_es_sw_reg_en_i         | input     |                         | Efuse Interface                |
-| efuse_es_sw_ov_en_i          | input     |                         |                                |
-| rng_fips_o                   | output    |                         | RNG Interface                  |
-| entropy_src_hw_if_i          | input     | entropy_src_hw_if_req_t | Entropy Interface              |
-| entropy_src_hw_if_o          | output    | entropy_src_hw_if_rsp_t |                                |
-| entropy_src_rng_o            | output    | entropy_src_rng_req_t   | RNG Interface                  |
-| entropy_src_rng_i            | input     | entropy_src_rng_rsp_t   |                                |
-| cs_aes_halt_o                | output    | cs_aes_halt_req_t       | CSRNG Interface                |
-| cs_aes_halt_i                | input     | cs_aes_halt_rsp_t       |                                |
-| entropy_src_xht_o            | output    | entropy_src_xht_req_t   | External Health Test Interface |
-| entropy_src_xht_i            | input     | entropy_src_xht_rsp_t   |                                |
-| recov_alert_test_o           | output    |                         |                                |
-| fatal_alert_test_o           | output    |                         |                                |
-| recov_alert_o                | output    |                         |                                |
-| fatal_alert_o                | output    |                         |                                |
-| intr_es_entropy_valid_o      | output    |                         |                                |
-| intr_es_health_test_failed_o | output    |                         |                                |
-| intr_es_observe_fifo_ready_o | output    |                         |                                |
-| intr_es_fatal_err_o          | output    |                         |                                |
+| Port name                    | Direction | Type                    | Description                     |
+| ---------------------------- | --------- | ----------------------- | ------------------------------- |
+| clk_i                        | input     |                         |                                 |
+| rst_ni                       | input     |                         |                                 |
+| reg2hw                       | input     |                         |                                 |
+| hw2reg                       | output    |                         |                                 |
+| efuse_es_sw_reg_en_i         | input     |                         |  Efuse Interface                |
+| efuse_es_sw_ov_en_i          | input     |                         |                                 |
+| rng_fips_o                   | output    |                         |  RNG Interface                  |
+| entropy_src_hw_if_i          | input     | entropy_src_hw_if_req_t |  Entropy Interface              |
+| entropy_src_hw_if_o          | output    | entropy_src_hw_if_rsp_t |                                 |
+| entropy_src_rng_o            | output    | entropy_src_rng_req_t   |  RNG Interface                  |
+| entropy_src_rng_i            | input     | entropy_src_rng_rsp_t   |                                 |
+| cs_aes_halt_o                | output    | cs_aes_halt_req_t       |  CSRNG Interface                |
+| cs_aes_halt_i                | input     | cs_aes_halt_rsp_t       |                                 |
+| entropy_src_xht_o            | output    | entropy_src_xht_req_t   |  External Health Test Interface |
+| entropy_src_xht_i            | input     | entropy_src_xht_rsp_t   |                                 |
+| recov_alert_test_o           | output    |                         |                                 |
+| fatal_alert_test_o           | output    |                         |                                 |
+| recov_alert_o                | output    |                         |                                 |
+| fatal_alert_o                | output    |                         |                                 |
+| intr_es_entropy_valid_o      | output    |                         |                                 |
+| intr_es_health_test_failed_o | output    |                         |                                 |
+| intr_es_observe_fifo_ready_o | output    |                         |                                 |
+| intr_es_fatal_err_o          | output    |                         |                                 |
 ## Signals
 
 | Name                              | Type                            | Description |
@@ -58,7 +60,6 @@ Copyright lowRISC contributors.
 | es_enable_early                   | logic                           |             |
 | es_enable_lfsr                    | logic                           |             |
 | es_enable_rng                     | logic                           |             |
-| es_rng_rdy                        | logic                           |             |
 | rng_bit_en                        | logic                           |             |
 | rng_bit_sel                       | logic [1:0]                     |             |
 | lfsr_incr                         | logic                           |             |
@@ -108,7 +109,6 @@ Copyright lowRISC contributors.
 | alert_threshold_fail              | logic                           |             |
 | alert_threshold                   | logic [HalfRegWidth-1:0]        |             |
 | alert_threshold_inv               | logic [HalfRegWidth-1:0]        |             |
-| recov_alert_event                 | logic                           |             |
 | observe_fifo_thresh               | logic [Clog2ObserveFifoDepth:0] |             |
 | observe_fifo_thresh_met           | logic                           |             |
 | repcnt_active                     | logic                           |             |
@@ -294,6 +294,7 @@ Copyright lowRISC contributors.
 | es_main_sm_err_sum                | logic                           |             |
 | es_main_sm_err                    | logic                           |             |
 | es_main_sm_alert                  | logic                           |             |
+| es_bus_cmp_alert                  | logic                           |             |
 | es_main_sm_idle                   | logic                           |             |
 | es_main_sm_state                  | logic [7:0]                     |             |
 | fifo_write_err_sum                | logic                           |             |
@@ -314,12 +315,13 @@ Copyright lowRISC contributors.
 | sha3_msg_rdy                      | logic                           |             |
 | sha3_state                        | logic [sha3_pkg::StateW-1:0]    |             |
 | msg_data                          | logic [PreCondWidth-1:0]        |             |
+| es_rdata_capt_vld                 | logic                           |             |
 | unused_err_code_test_bit          | logic                           |             |
 | unused_sha3_state                 | logic                           |             |
 | unused_entropy_data               | logic                           |             |
 | unused_fw_ov_rd_data              | logic                           |             |
-| es_rate_cntr_q                    | logic [15:0]                    | flops       |
-| es_rate_cntr_d                    | logic [15:0]                    | flops       |
+| es_rate_cntr_q                    | logic [15:0]                    |  flops      |
+| es_rate_cntr_d                    | logic [15:0]                    |  flops      |
 | lfsr_incr_dly_q                   | logic                           |             |
 | lfsr_incr_dly_d                   | logic                           |             |
 | ht_esbus_dly_q                    | logic [RngBusWidth-1:0]         |             |
@@ -346,36 +348,49 @@ Copyright lowRISC contributors.
 | cs_aes_halt_d                     | logic                           |             |
 | es_enable_q                       | logic [1:0]                     |             |
 | es_enable_d                       | logic [1:0]                     |             |
-| rng_rdy_q                         | logic                           |             |
-| rng_rdy_d                         | logic                           |             |
+| es_rdata_capt_q                   | logic [63:0]                    |             |
+| es_rdata_capt_d                   | logic [63:0]                    |             |
+| es_rdata_capt_vld_q               | logic                           |             |
+| es_rdata_capt_vld_d               | logic                           |             |
 ## Constants
 
-| Name                  | Type | Value                    | Description                            |
-| --------------------- | ---- | ------------------------ | -------------------------------------- |
-| Clog2EsFifoDepth      | int  | $clog2(EsFifoDepth)      |                                        |
-| PostHTWidth           | int  | 32                       |                                        |
-| RngBusWidth           | int  | 4                        |                                        |
-| HalfRegWidth          | int  | 16                       |                                        |
-| FullRegWidth          | int  | 32                       |                                        |
-| EighthRegWidth        | int  | 4                        |                                        |
-| SeedLen               | int  | 384                      |                                        |
-| ObserveFifoWidth      | int  | 32                       |                                        |
-| ObserveFifoDepth      | int  | 64                       |                                        |
-| PreCondWidth          | int  | 64                       |                                        |
-| Clog2ObserveFifoDepth | int  | $clog2(ObserveFifoDepth) |                                        |
-| Sha3EnMasking         | bit  | 0                        | Do not enable masking                  |
-| Sha3ReuseShare        | bit  | 0                        | Needs EnMasking active to take effect  |
-| Sha3Share             | int  | logic [RngBusWidth-1:0]  | derived parameter                      |
+| Name                  | Type | Value                    | Description                                                                              |
+| --------------------- | ---- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| Clog2EsFifoDepth      | int  | $clog2(EsFifoDepth)      |                                                                                          |
+| PostHTWidth           | int  | 32                       |                                                                                          |
+| RngBusWidth           | int  | 4                        |                                                                                          |
+| HalfRegWidth          | int  | 16                       |                                                                                          |
+| FullRegWidth          | int  | 32                       |                                                                                          |
+| EighthRegWidth        | int  | 4                        |                                                                                          |
+| SeedLen               | int  | 384                      |                                                                                          |
+| ObserveFifoWidth      | int  | 32                       |                                                                                          |
+| ObserveFifoDepth      | int  | 64                       |                                                                                          |
+| PreCondWidth          | int  | 64                       |                                                                                          |
+| Clog2ObserveFifoDepth | int  | $clog2(ObserveFifoDepth) |                                                                                          |
+| Sha3EnMasking         | bit  | 0                        | -----------------------  SHA3 parameters -----------------------  Do not enable masking  |
+| Sha3ReuseShare        | bit  | 0                        |  Needs EnMasking active to take effect                                                   |
+| Sha3Share             | int  | logic [RngBusWidth-1:0]  |  derived parameter                                                                       |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - u_intr_hw_es_entropy_valid: prim_intr_hw
+**Description**
+--------------------------------------------
+ instantiate interrupt hardware primitives
+--------------------------------------------
+
 - u_intr_hw_es_health_test_failed: prim_intr_hw
 - u_intr_hw_es_observe_fifo_ready: prim_intr_hw
 - u_intr_hw_es_fatal_err: prim_intr_hw
 - u_prim_lfsr: prim_lfsr
 - u_prim_fifo_sync_esrng: prim_fifo_sync
+**Description**
+--------------------------------------------
+ receive in RNG bus input
+--------------------------------------------
+
 - u_prim_packer_fifo_esbit: prim_packer_fifo
 - u_entropy_src_watermark_reg_repcnt_thresh_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_repcnt_thresh_bypass: entropy_src_watermark_reg
@@ -396,14 +411,29 @@ Copyright lowRISC contributors.
 - u_entropy_src_watermark_reg_extht_lo_thresh_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_extht_lo_thresh_bypass: entropy_src_watermark_reg
 - u_entropy_src_repcnt_ht: entropy_src_repcnt_ht
+**Description**
+--------------------------------------------
+ repetitive count test
+--------------------------------------------
+
 - u_entropy_src_watermark_reg_repcnt_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_repcnt_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_repcnt: entropy_src_cntr_reg
 - u_entropy_src_repcnts_ht: entropy_src_repcnts_ht
+**Description**
+--------------------------------------------
+ repetitive count symbol test
+--------------------------------------------
+
 - u_entropy_src_watermark_reg_repcnts_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_repcnts_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_repcnts: entropy_src_cntr_reg
 - u_entropy_src_adaptp_ht: entropy_src_adaptp_ht
+**Description**
+--------------------------------------------
+ adaptive proportion test
+--------------------------------------------
+
 - u_entropy_src_watermark_reg_adaptp_hi_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_adaptp_hi_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_adaptp_hi: entropy_src_cntr_reg
@@ -411,10 +441,20 @@ Copyright lowRISC contributors.
 - u_entropy_src_watermark_reg_adaptp_lo_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_adaptp_lo: entropy_src_cntr_reg
 - u_entropy_src_bucket_ht: entropy_src_bucket_ht
+**Description**
+--------------------------------------------
+ bucket test
+--------------------------------------------
+
 - u_entropy_src_watermark_reg_bucket_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_bucket_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_bucket: entropy_src_cntr_reg
 - u_entropy_src_markov_ht: entropy_src_markov_ht
+**Description**
+--------------------------------------------
+ Markov test
+--------------------------------------------
+
 - u_entropy_src_watermark_reg_markov_hi_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_markov_hi_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_markov_hi: entropy_src_cntr_reg
@@ -430,40 +470,75 @@ Copyright lowRISC contributors.
 - u_entropy_src_cntr_reg_any_alert_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_repcnt_alert_fails: entropy_src_cntr_reg
 **Description**
-repcnt fail counter
+ repcnt fail counter
 
 - u_entropy_src_cntr_reg_repcnts_alert_fails: entropy_src_cntr_reg
 **Description**
-repcnts fail counter
+ repcnts fail counter
 
 - u_entropy_src_cntr_reg_adaptp_alert_hi_fails: entropy_src_cntr_reg
 **Description**
-adaptp fail counter hi and lo
+ adaptp fail counter hi and lo
 
 - u_entropy_src_cntr_reg_adaptp_alert_lo_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_bucket_alert_fails: entropy_src_cntr_reg
 **Description**
-bucket fail counter
+ bucket fail counter
 
 - u_entropy_src_cntr_reg_markov_alert_hi_fails: entropy_src_cntr_reg
 **Description**
-markov fail counter hi and lo
+ markov fail counter hi and lo
 
 - u_entropy_src_cntr_reg_markov_alert_lo_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_extht_alert_hi_fails: entropy_src_cntr_reg
 **Description**
-extht fail counter hi and lo
+ extht fail counter hi and lo
 
 - u_entropy_src_cntr_reg_extht_alert_lo_fails: entropy_src_cntr_reg
 - u_prim_packer_fifo_postht: prim_packer_fifo
+**Description**
+--------------------------------------------
+ pack tested entropy into 32 bit packer
+--------------------------------------------
+
 - u_prim_fifo_sync_observe: prim_fifo_sync
+**Description**
+--------------------------------------------
+ store entropy into a 64 entry deep FIFO
+--------------------------------------------
+
 - u_prim_packer_fifo_precon: prim_packer_fifo
+**Description**
+--------------------------------------------
+ pack entropy into 64 bit packer
+--------------------------------------------
+
 - u_sha3: sha3
 **Description**
-SHA3 hashing engine
+ SHA3 hashing engine
 
 - u_prim_packer_fifo_bypass: prim_packer_fifo
+**Description**
+--------------------------------------------
+ bypass SHA conditioner path
+--------------------------------------------
+
 - u_entropy_src_main_sm: entropy_src_main_sm
+**Description**
+--------------------------------------------
+ state machine to coordinate fifo flow
+--------------------------------------------
+
 - u_prim_fifo_sync_esfinal: prim_fifo_sync
+**Description**
+--------------------------------------------
+ send processed entropy to final fifo
+--------------------------------------------
+
 - u_entropy_src_ack_sm: entropy_src_ack_sm
 - u_prim_packer_fifo_swread: prim_packer_fifo
+**Description**
+--------------------------------------------
+ software es read path
+--------------------------------------------
+

@@ -6,30 +6,35 @@
 ![Diagram](HtspAxiL.svg "Diagram")
 ## Description
 
-Title      : HTSP: https://confluence.slac.stanford.edu/x/pQmODw
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite block to manage the HTSP Ethernet interface.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : HTSP: https://confluence.slac.stanford.edu/x/pQmODw
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite block to manage the HTSP Ethernet interface.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name     | Type                  | Value               | Description                               |
-| ---------------- | --------------------- | ------------------- | ----------------------------------------- |
-| TPD_G            | time                  | 1 ns                |                                           |
-| WRITE_EN_G       | boolean               | false               | Set to false when on remote end of a link |
-| AXIL_BASE_ADDR_G | slv(31 downto 0)      | (others => '0')     |                                           |
-| AXIL_CLK_FREQ_G  | real                  | 156.25E+6           |                                           |
-| LOOPBACK_G       | slv(2 downto 0)       | (others => '0')     |                                           |
-| RX_POLARITY_G    | slv(9 downto 0)       | (others => '0')     |                                           |
-| TX_POLARITY_G    | slv(9 downto 0)       | (others => '0')     |                                           |
-| TX_DIFF_CTRL_G   | Slv5Array(9 downto 0) | (others => "11000") |                                           |
-| TX_PRE_CURSOR_G  | Slv5Array(9 downto 0) | (others => "00000") |                                           |
-| TX_POST_CURSOR_G | Slv5Array(9 downto 0) | (others => "00000") |                                           |
+| Generic name     | Type                  | Value               | Description                                |
+| ---------------- | --------------------- | ------------------- | ------------------------------------------ |
+| TPD_G            | time                  | 1 ns                |                                            |
+| WRITE_EN_G       | boolean               | false               |  Set to false when on remote end of a link |
+| AXIL_BASE_ADDR_G | slv(31 downto 0)      | (others => '0')     |                                            |
+| AXIL_CLK_FREQ_G  | real                  | 156.25E+6           |                                            |
+| LOOPBACK_G       | slv(2 downto 0)       | (others => '0')     |                                            |
+| RX_POLARITY_G    | slv(9 downto 0)       | (others => '0')     |                                            |
+| TX_POLARITY_G    | slv(9 downto 0)       | (others => '0')     |                                            |
+| TX_DIFF_CTRL_G   | Slv5Array(9 downto 0) | (others => "11000") |                                            |
+| TX_PRE_CURSOR_G  | Slv5Array(9 downto 0) | (others => "00000") |                                            |
+| TX_POST_CURSOR_G | Slv5Array(9 downto 0) | (others => "00000") |                                            |
 ## Ports
 
 | Port name       | Direction | Type                   | Description                                  |

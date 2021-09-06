@@ -6,23 +6,27 @@
 ![Diagram](SlvArraytoAxiLite.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: SLV array to AXI-Lite Master Bridge
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: SLV array to AXI-Lite Master Bridge
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name | Type       | Value              | Description               |
-| ------------ | ---------- | ------------------ | ------------------------- |
-| TPD_G        | time       | 1 ns               |                           |
-| COMMON_CLK_G | boolean    | false              | Set true if axilClk = clk |
-| SIZE_G       | positive   | 1                  |                           |
-| ADDR_G       | Slv32Array | (0 => x"00000000") |                           |
+| Generic name | Type       | Value              | Description                |
+| ------------ | ---------- | ------------------ | -------------------------- |
+| TPD_G        | time       | 1 ns               |                            |
+| COMMON_CLK_G | boolean    | false              |  Set true if axilClk = clk |
+| SIZE_G       | positive   | 1                  |                            |
+| ADDR_G       | Slv32Array | (0 => x"00000000") |                            |
 ## Ports
 
 | Port name       | Direction | Type                          | Description               |

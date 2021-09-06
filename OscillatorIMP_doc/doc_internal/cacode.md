@@ -30,8 +30,8 @@
 | s1_s            | std_logic_vector(31 downto 0)   |             |
 |  s2_s           | std_logic_vector(31 downto 0)   |             |
 |  s1_2_s         | std_logic_vector(31 downto 0)   |             |
-| counter_s       | natural range 0 to PERIOD_LEN-1 | prescaler   |
-|  counter_next_s | natural range 0 to PERIOD_LEN-1 | prescaler   |
+| counter_s       | natural range 0 to PERIOD_LEN-1 |  prescaler  |
+|  counter_next_s | natural range 0 to PERIOD_LEN-1 |  prescaler  |
 | tick_s          | std_logic                       |             |
 | load_en_s       | std_logic                       |             |
 ## Processes

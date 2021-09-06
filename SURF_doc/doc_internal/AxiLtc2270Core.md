@@ -6,15 +6,19 @@
 ![Diagram](AxiLtc2270Core.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite interface to LTC2270 ADC IC
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite interface to LTC2270 ADC IC
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name       | Type                            | Value                                   | Description |
@@ -33,14 +37,14 @@ the terms contained in the LICENSE.txt file.
 | adcOut         | out       | AxiLtc2270OutType      |                                             |
 | adcInOut       | inout     | AxiLtc2270InOutType    |                                             |
 | adcValid       | out       | slv(0 to 1)            | ADC signals (axiClk domain)                 |
-| adcData        | out       | Slv16Array(0 to 1)     |                                             |
+| adcData        | out       | Slv16Array(0 to 1)     | 2's complement                              |
 | axiReadMaster  | in        | AxiLiteReadMasterType  | AXI-Lite Register Interface (axiClk domain) |
 | axiReadSlave   | out       | AxiLiteReadSlaveType   |                                             |
 | axiWriteMaster | in        | AxiLiteWriteMasterType |                                             |
 | axiWriteSlave  | out       | AxiLiteWriteSlaveType  |                                             |
 | axiClk         | in        | sl                     | Clocks and Resets                           |
 | axiRst         | in        | sl                     |                                             |
-| adcClk         | in        | sl                     | up to 20 MHz                                |
+| adcClk         | in        | sl                     |  up to 20 MHz                               |
 | refclk200MHz   | in        | sl                     |                                             |
 ## Signals
 

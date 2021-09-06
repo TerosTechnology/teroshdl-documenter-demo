@@ -6,15 +6,19 @@
 ![Diagram](EthMacTx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Ethernet MAC TX Wrapper
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Ethernet MAC TX Wrapper
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type                     | Value         | Description              |
@@ -76,13 +80,19 @@ the terms contained in the LICENSE.txt file.
 - U_Bypass: surf.EthMacTxBypass
 - U_Csum: surf.EthMacTxCsum
 **Description**
-TX Non-VLAN Checksum Module
+----------------------------
+ TX Non-VLAN Checksum Module
+----------------------------
 
 - U_Pause: surf.EthMacTxPause
 **Description**
-TX Pause Module
+----------------
+ TX Pause Module
+----------------
 
 - U_Export: surf.EthMacTxExport
 **Description**
-TX MAC Export Module
+---------------------
+ TX MAC Export Module
+---------------------
 

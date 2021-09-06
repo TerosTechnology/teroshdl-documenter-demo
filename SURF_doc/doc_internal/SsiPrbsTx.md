@@ -6,38 +6,43 @@
 ![Diagram](SsiPrbsTx.svg "Diagram")
 ## Description
 
-Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
-Company    : SLAC National Accelerator Laboratory
-Description:   This module generates
-               PseudoRandom Binary Sequence (PRBS) on Virtual Channel Lane.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:   This module generates
+                PseudoRandom Binary Sequence (PRBS) on Virtual Channel Lane.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name               | Type                    | Value                             | Description                               |
-| -------------------------- | ----------------------- | --------------------------------- | ----------------------------------------- |
-| TPD_G                      | time                    | 1 ns                              | General Configurations                    |
-| AXI_EN_G                   | sl                      | '1'                               |                                           |
-| AXI_DEFAULT_PKT_LEN_G      | slv(31 downto 0)        | x"00000FFF"                       |                                           |
-| AXI_DEFAULT_TRIG_DLY_G     | slv(31 downto 0)        | x"00000000"                       |                                           |
-| VALID_THOLD_G              | natural                 | 1                                 | FIFO Configurations                       |
-| VALID_BURST_MODE_G         | boolean                 | false                             |                                           |
-| SYNTH_MODE_G               | string                  | "inferred"                        |                                           |
-| MEMORY_TYPE_G              | string                  | "block"                           |                                           |
-| GEN_SYNC_FIFO_G            | boolean                 | false                             |                                           |
-| CASCADE_SIZE_G             | positive                | 1                                 |                                           |
-| FIFO_ADDR_WIDTH_G          | positive                | 9                                 |                                           |
-| FIFO_PAUSE_THRESH_G        | positive                | 2**8                              |                                           |
-| PRBS_SEED_SIZE_G           | natural range 32 to 512 | 32                                | PRBS Configurations                       |
-| PRBS_TAPS_G                | NaturalArray            | (0 => 31, 1 => 6, 2 => 2, 3 => 1) |                                           |
-| PRBS_INCREMENT_G           | boolean                 | false                             | Increment mode by default instead of PRBS |
-| MASTER_AXI_STREAM_CONFIG_G | AxiStreamConfigType     |                                   | AXI Stream Configurations                 |
-| MASTER_AXI_PIPE_STAGES_G   | natural range 0 to 16   | 0                                 |                                           |
+| Generic name               | Type                    | Value                             | Description                                |
+| -------------------------- | ----------------------- | --------------------------------- | ------------------------------------------ |
+| TPD_G                      | time                    | 1 ns                              | General Configurations                     |
+| AXI_EN_G                   | sl                      | '1'                               |                                            |
+| AXI_DEFAULT_PKT_LEN_G      | slv(31 downto 0)        | x"00000FFF"                       |                                            |
+| AXI_DEFAULT_TRIG_DLY_G     | slv(31 downto 0)        | x"00000000"                       |                                            |
+| VALID_THOLD_G              | natural                 | 1                                 | FIFO Configurations                        |
+| VALID_BURST_MODE_G         | boolean                 | false                             |                                            |
+| SYNTH_MODE_G               | string                  | "inferred"                        |                                            |
+| MEMORY_TYPE_G              | string                  | "block"                           |                                            |
+| GEN_SYNC_FIFO_G            | boolean                 | false                             |                                            |
+| CASCADE_SIZE_G             | positive                | 1                                 |                                            |
+| FIFO_ADDR_WIDTH_G          | positive                | 9                                 |                                            |
+| FIFO_PAUSE_THRESH_G        | positive                | 2**8                              |                                            |
+| PRBS_SEED_SIZE_G           | natural range 32 to 512 | 32                                | PRBS Configurations                        |
+| PRBS_TAPS_G                | NaturalArray            | (0 => 31, 1 => 6, 2 => 2, 3 => 1) |                                            |
+| PRBS_INCREMENT_G           | boolean                 | false                             |  Increment mode by default instead of PRBS |
+| MASTER_AXI_STREAM_CONFIG_G | AxiStreamConfigType     |                                   | AXI Stream Configurations                  |
+| MASTER_AXI_PIPE_STAGES_G   | natural range 0 to 16   | 0                                 |                                            |
 ## Ports
 
 | Port name       | Direction | Type                   | Description                                           |

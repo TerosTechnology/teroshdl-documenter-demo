@@ -6,9 +6,11 @@
 ![Diagram](shifterComplex_dyn.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2016/05/25
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2016/05/25
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value | Description                                    |
@@ -65,7 +67,7 @@ Creation date : 2016/05/25
 | ---------------- | ----------------------------------------- | ----------- |
 | shift_val_s      | std_logic_vector(SHFT_ADDR_SZ-1 downto 0) |             |
 | shift_val_sync_s | std_logic_vector(SHFT_ADDR_SZ-1 downto 0) |             |
-| addr_s           | std_logic_vector(1 downto 0)              | comm        |
+| addr_s           | std_logic_vector(1 downto 0)              |  comm       |
 | wr_en_s          | std_logic                                 |             |
 |  rd_en_s         | std_logic                                 |             |
 ## Constants
@@ -81,5 +83,5 @@ Creation date : 2016/05/25
 - shift_comm_inst: work.shifterComplex_dyn_comm
 - handle_comm: work.shifterComplex_dyn_handcomm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

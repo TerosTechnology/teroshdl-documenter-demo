@@ -6,33 +6,44 @@
 ![Diagram](uart_fifo.svg "Diagram")
 ## Description
 
-EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
-vim: tabstop=2:shiftwidth=2:noexpandtab
-kate: tab-width 2; replace-tabs off; indent-width 2;
-=============================================================================
-Authors:				 	Martin Zabel
-Entity:				 	UART Wrapper with Embedded FIFOs and Optional Flow Control
-Description:
--------------------------------------
-Small :abbr:`FIFO (first-in, first-out)` s are included in this module, if
-larger or asynchronous transmit / receive FIFOs are required, then they must
-be connected externally.
-old comments:
-  :abbr:`UART (Universal Asynchronous Receiver Transmitter)` BAUD rate generator
-  bclk	    = bit clock is rising
-  bclk_x8		= bit clock times 8 is rising
-License:
-=============================================================================
-Copyright 2008-2015 Technische Universitaet Dresden - Germany
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-=============================================================================
+ EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+ vim: tabstop=2:shiftwidth=2:noexpandtab
+ kate: tab-width 2; replace-tabs off; indent-width 2;
+ =============================================================================
+ Authors:				 	Martin Zabel
+									Patrick Lehmann
+
+ Entity:				 	UART Wrapper with Embedded FIFOs and Optional Flow Control
+
+ Description:
+ -------------------------------------
+ Small :abbr:`FIFO (first-in, first-out)` s are included in this module, if
+ larger or asynchronous transmit / receive FIFOs are required, then they must
+ be connected externally.
+
+ old comments:
+   :abbr:`UART (Universal Asynchronous Receiver Transmitter)` BAUD rate generator
+   bclk	    = bit clock is rising
+   bclk_x8		= bit clock times 8 is rising
+
+
+ License:
+ =============================================================================
+ Copyright 2008-2015 Technische Universitaet Dresden - Germany
+										 Chair of VLSI-Design, Diagnostics and Architecture
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ =============================================================================
 ## Generics
 
 | Generic name            | Type                         | Value                 | Description               |
@@ -45,9 +56,9 @@ limitations under the License.
 | RX_MIN_DEPTH            | positive                     | 16                    |                           |
 | RX_FSTATE_BITS          | natural                      | 0                     |                           |
 | FLOWCONTROL             | T_IO_UART_FLOWCONTROL_KIND   | UART_FLOWCONTROL_NONE | Flow Control              |
-| SWFC_XON_CHAR           | std_logic_vector(7 downto 0) | x"11"                 | ^Q                        |
+| SWFC_XON_CHAR           | std_logic_vector(7 downto 0) | x"11"                 |  ^Q                       |
 | SWFC_XON_TRIGGER        | real                         | 0.0625                |                           |
-| SWFC_XOFF_CHAR          | std_logic_vector(7 downto 0) | x"13"                 | ^S                        |
+| SWFC_XOFF_CHAR          | std_logic_vector(7 downto 0) | x"13"                 |  ^S                       |
 | SWFC_XOFF_TRIGGER       | real                         | 0.75                  |                           |
 ## Ports
 
@@ -90,16 +101,16 @@ limitations under the License.
 
 - TXFIFO: PoC.fifo_cc_got
 **Description**
-===========================================================================
-Transmit and Receive FIFOs
-===========================================================================
+ ===========================================================================
+ Transmit and Receive FIFOs
+ ===========================================================================
 
 - RXFIFO: PoC.fifo_cc_got
 - bclk: PoC.uart_bclk
 **Description**
-===========================================================================
-BitClock, Transmitter, Receiver
-===========================================================================
+ ===========================================================================
+ BitClock, Transmitter, Receiver
+ ===========================================================================
 
 - TX: PoC.uart_tx
 - RX: PoC.uart_rx

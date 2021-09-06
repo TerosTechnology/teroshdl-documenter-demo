@@ -6,9 +6,11 @@
 ![Diagram](nco_counter_cos_rom_a12_d16.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2015/04/08
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2015/04/08
+-------------------------------------------------------------------------
 ## Ports
 
 | Port name | Direction | Type                          | Description |

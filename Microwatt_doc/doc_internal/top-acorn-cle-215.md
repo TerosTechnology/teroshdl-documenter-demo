@@ -52,25 +52,25 @@
 | ddram_reset_n    | out       | std_logic                     |                         |
 ## Signals
 
-| Name                | Type                          | Description                        |
-| ------------------- | ----------------------------- | ---------------------------------- |
-| ext_clk             | std_ulogic                    |                                    |
-| soc_rst             | std_ulogic                    | Reset signals:                     |
-| pll_rst             | std_ulogic                    |                                    |
-| system_clk          | std_ulogic                    | Internal clock signals:            |
-| system_clk_locked   | std_ulogic                    |                                    |
-| wb_dram_in          | wishbone_master_out           | DRAM main data wishbone connection |
-| wb_dram_out         | wishbone_slave_out            |                                    |
-| wb_ext_io_in        | wb_io_master_out              | DRAM control wishbone connection   |
-| wb_ext_io_out       | wb_io_slave_out               |                                    |
-| wb_ext_is_dram_csr  | std_ulogic                    |                                    |
-| wb_ext_is_dram_init | std_ulogic                    |                                    |
-| core_alt_reset      | std_ulogic                    | Control/status                     |
-| spi_sck             | std_ulogic                    | SPI flash                          |
-| spi_cs_n            | std_ulogic                    |                                    |
-| spi_sdat_o          | std_ulogic_vector(3 downto 0) |                                    |
-| spi_sdat_oe         | std_ulogic_vector(3 downto 0) |                                    |
-| spi_sdat_i          | std_ulogic_vector(3 downto 0) |                                    |
+| Name                | Type                          | Description                          |
+| ------------------- | ----------------------------- | ------------------------------------ |
+| ext_clk             | std_ulogic                    |                                      |
+| soc_rst             | std_ulogic                    |  Reset signals:                      |
+| pll_rst             | std_ulogic                    |                                      |
+| system_clk          | std_ulogic                    |  Internal clock signals:             |
+| system_clk_locked   | std_ulogic                    |                                      |
+| wb_dram_in          | wishbone_master_out           |  DRAM main data wishbone connection  |
+| wb_dram_out         | wishbone_slave_out            |                                      |
+| wb_ext_io_in        | wb_io_master_out              |  DRAM control wishbone connection    |
+| wb_ext_io_out       | wb_io_slave_out               |                                      |
+| wb_ext_is_dram_csr  | std_ulogic                    |                                      |
+| wb_ext_is_dram_init | std_ulogic                    |                                      |
+| core_alt_reset      | std_ulogic                    |  Control/status                      |
+| spi_sck             | std_ulogic                    |  SPI flash                           |
+| spi_cs_n            | std_ulogic                    |                                      |
+| spi_sdat_o          | std_ulogic_vector(3 downto 0) |                                      |
+| spi_sdat_oe         | std_ulogic_vector(3 downto 0) |                                      |
+| spi_sdat_i          | std_ulogic_vector(3 downto 0) |                                      |
 ## Constants
 
 | Name         | Type    | Value             | Description |
@@ -80,7 +80,8 @@
 ## Functions
 - get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 **Description**
-Fixup various memory sizes based on generics
+ Fixup various memory sizes based on generics
+
 - get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 ## Instantiations
 

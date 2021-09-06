@@ -6,12 +6,12 @@
 ![Diagram](cordicAtan.svg "Diagram")
 ## Generics
 
-| Generic name  | Type    | Value    | Description           |
-| ------------- | ------- | -------- | --------------------- |
-| NB_ITER       | natural | 25       |                       |
-| DATA_IN_SIZE  | natural | 32       |                       |
-| DATA_OUT_SIZE | natural | 28       |                       |
-| PI_VALUE      | natural | 52707179 | M_PI * 2**(NB_ITER-1) |
+| Generic name  | Type    | Value    | Description            |
+| ------------- | ------- | -------- | ---------------------- |
+| NB_ITER       | natural | 25       |                        |
+| DATA_IN_SIZE  | natural | 32       |                        |
+| DATA_OUT_SIZE | natural | 28       |                        |
+| PI_VALUE      | natural | 52707179 |  M_PI * 2**(NB_ITER-1) |
 ## Ports
 
 | Port name  | Direction | Type                                       | Description |
@@ -61,6 +61,5 @@
 - unnamed: ( data_clk_i )
 - unnamed: ( sign_tmp_s, atan_s )
 **Description**
-correction
-
+ correction 
 - unnamed: ( data_clk_i )

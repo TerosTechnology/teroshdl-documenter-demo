@@ -6,16 +6,21 @@
 ![Diagram](AsyncGearbox.svg "Diagram")
 ## Description
 
-Title      : Asynchronous Gearbox
-Company    : SLAC National Accelerator Laboratory
-Description: A generic gearbox with asynchronous input and output clocks
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : Asynchronous Gearbox
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: A generic gearbox with asynchronous input and output clocks
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type     | Value         | Description          |
@@ -74,7 +79,7 @@ the terms contained in the LICENSE.txt file.
 - U_SynchronizerOneShot_1: surf.SynchronizerOneShot
 - U_slaveBitOrder: surf.Synchronizer
 **Description**
-[out]
+ [out]
 
 - U_masterBitOrder: surf.Synchronizer
 - U_Gearbox_1: surf.Gearbox

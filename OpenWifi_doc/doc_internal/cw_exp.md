@@ -6,8 +6,8 @@
 ![Diagram](cw_exp.svg "Diagram")
 ## Description
 
-`define DEBUG_PREFIX (*mark_debug="true",DONT_TOUCH="TRUE"*)
- 
+ `define DEBUG_PREFIX (*mark_debug="true",DONT_TOUCH="TRUE"*)
+
 ## Ports
 
 | Port name       | Direction | Type        | Description |
@@ -29,5 +29,8 @@
 | cw_update        | reg       |             |
 ## Processes
 - unnamed: ( @(tx_queue_idx,cw_combined) )
+  - **Type:** always
 - unnamed: ( @( posedge clk ) )
+  - **Type:** always
 - unnamed: ( @( posedge clk ) )
+  - **Type:** always

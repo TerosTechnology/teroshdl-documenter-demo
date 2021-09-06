@@ -6,10 +6,12 @@
 ![Diagram](tlul_socket_m1.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  TL-UL socket M:1 module
+
  Verilog parameters
    M:             Number of host ports.
    HReqPass:      M bit array to allow requests to pass through the host i
@@ -25,7 +27,7 @@ Copyright lowRISC contributors.
    DRspPass:      Same as HReqPass but for device response FIFO.
    DReqDepth:     Same as HReqDepth but for device request FIFO.
    DRspDepth:     Same as HReqDepth but for device response FIFO.
- 
+
 ## Generics
 
 | Generic name | Type          | Value     | Description |
@@ -68,13 +70,13 @@ Copyright lowRISC contributors.
 | dfifo_rspready_merged | logic              |             |
 ## Constants
 
-| Name  | Type         | Value           | Description                                                                    |
-| ----- | ------------ | --------------- | ------------------------------------------------------------------------------ |
-| IDW   | int unsigned | top_pkg::TL_AIW | Required ID width to distinguish between host ports Used in response steering  |
-| STIDW | int unsigned | $clog2(M)       |                                                                                |
+| Name  | Type         | Value           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IDW   | int unsigned | top_pkg::TL_AIW |  Signals<br>   tl_h_i/o[0] |  tl_h_i/o[1] | ... |  tl_h_i/o[M-1]       |              |                    |  u_hostfifo[0]  u_hostfifo[1]        u_hostfifo[M-1]       |              |                    |        hreq_fifo_o(i) / hrsp_fifo_i(i)      ---------------------------------------      |       request/grant/req_data        |      |                                     |      |           PRIM_ARBITER              |      |                                     |      |  arb_valid / arb_ready / arb_data   |      ---------------------------------------                      |                 dreq_fifo_i / drsp_fifo_o                      |                 u_devicefifo                      |                   tl_d_o/i<br>  Required ID width to distinguish between host ports   Used in response steering  |
+| STIDW | int unsigned | $clog2(M)       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 ## Instantiations
 
 - u_devicefifo: tlul_fifo_sync
 **Description**
-Device Req/Rsp FIFO
+ Device Req/Rsp FIFO
 

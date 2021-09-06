@@ -3,386 +3,386 @@
 - **File**: arch_package.sv
 ## Description
 
-MICRON TECHNOLOGY, INC. - CONFIDENTIAL AND PROPRIETARY INFORMATION
- 
+ MICRON TECHNOLOGY, INC. - CONFIDENTIAL AND PROPRIETARY INFORMATION
+
 
 ## Signals
 
-| Name        | Type                                                                                                                                        | Description          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| cmd         | UTYPE_cmdtype                                                                                                                               |                      |
-| raw_cmd     | UTYPE_cmdtype                                                                                                                               |                      |
-| rank        | int                                                                                                                                         |                      |
-| bank_group  | int                                                                                                                                         |                      |
-| bank        | int                                                                                                                                         |                      |
-| addr        | int                                                                                                                                         |                      |
-| odt         | bit                                                                                                                                         | Defaults to 0.       |
-| sim_time    | int                                                                                                                                         | Population optional. |
-| cycle_count | int                                                                                                                                         | Population optional. |
-| tCK         | int                                                                                                                                         |                      |
-| typedef     | endclass                                                                                                                                    |                      |
-| UTYPE_blreg | enum {<br><span style="padding-left:20px">rBL8=0,<br><span style="padding-left:20px"> rBLFLY=1,<br><span style="padding-left:20px"> rBL4=2} |                      |
-| _debug      | bit                                                                                                                                         |                      |
-| _by_mode    | int                                                                                                                                         |                      |
-| _num_dms    | int                                                                                                                                         |                      |
-| endpackage  | endclass                                                                                                                                    |                      |
+| Name        | Type                                                                                                                                        | Description           |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| cmd         | UTYPE_cmdtype                                                                                                                               |                       |
+| raw_cmd     | UTYPE_cmdtype                                                                                                                               |                       |
+| rank        | int                                                                                                                                         |                       |
+| bank_group  | int                                                                                                                                         |                       |
+| bank        | int                                                                                                                                         |                       |
+| addr        | int                                                                                                                                         |                       |
+| odt         | bit                                                                                                                                         | Defaults to 0.        |
+| sim_time    | int                                                                                                                                         | Population optional.  |
+| cycle_count | int                                                                                                                                         | Population optional.  |
+| tCK         | int                                                                                                                                         |                       |
+| typedef     | endclass                                                                                                                                    |                       |
+| UTYPE_blreg | enum {<br><span style="padding-left:20px">rBL8=0,<br><span style="padding-left:20px"> rBLFLY=1,<br><span style="padding-left:20px"> rBL4=2} |                       |
+| _debug      | bit                                                                                                                                         |                       |
+| _by_mode    | int                                                                                                                                         |                       |
+| _num_dms    | int                                                                                                                                         |                       |
+| endpackage  | endclass                                                                                                                                    |                       |
 ## Constants
 
-| Name                     | Type                     | Value                                                 | Description                            |
-| ------------------------ | ------------------------ | ----------------------------------------------------- | -------------------------------------- |
-| MAX_DM_BITS              | int                      | 2                                                     |                                        |
-| MAX_DBI_BITS             | int                      | MAX_DM_BITS                                           | DM/DBI share pins in current spec.     |
-| MAX_ADDR_BITS            | int                      | 21                                                    |                                        |
-| MAX_ROW_ADDR_BITS        | int                      | 18                                                    |                                        |
-| MAX_COL_ADDR_BITS        | int                      | 13                                                    | Include AP/BLFLY                       |
-| MAX_BANK_BITS            | int                      | 2                                                     |                                        |
-| MAX_RANK_BITS            | int                      | 3                                                     |                                        |
-| MAX_DQ_BITS              | int                      | 16                                                    |                                        |
-| MAX_DQS_BITS             | int                      | 2                                                     |                                        |
-| MAX_CRC_EQUATION         | int                      | 8                                                     |                                        |
-| MAX_CRC_TRANSFERS        | int                      | 2                                                     |                                        |
-| MAX_BANK_GROUP_BITS      | int                      | 2                                                     |                                        |
-| MAX_BURST_LEN            | int                      | 8                                                     |                                        |
-| AUTOPRECHARGEADDR        | int                      | 10                                                    |                                        |
-| BLFLYSELECT              | int                      | 12                                                    |                                        |
-| BANK_GROUP_SHIFT         | int                      | MAX_ADDR_BITS + MAX_BANK_BITS                         |                                        |
-| BANK_SHIFT               | int                      | MAX_ADDR_BITS                                         |                                        |
-| MAX_MODEREGS             | int                      | 2                                                     |                                        |
-| MODEREG_BITS             | int                      | MAX_ADDR_BITS + MAX_BANK_BITS + MAX_BANK_GROUP_BITS   |                                        |
-| MAX_MODEREG_SET_BITS     | int                      | 14                                                    |                                        |
-| MAX_BANKS_PER_GROUP      | int                      | 2                                                     |                                        |
-| MAX_BANK_GROUPS          | int                      | 2                                                     |                                        |
-| MAX_RANKS                | int                      | 2                                                     |                                        |
-| RTT_BITS                 | int                      | 16                                                    |                                        |
-| FAW_DEPTH                | int                      | 4                                                     |                                        |
-| LOAD_MODE_CMD            |                          | 5'b01000                                              | {cs, act, ras, cas, we}                |
-| MIN_BL                   | int                      | 4                                                     |                                        |
-| DEF_BL                   | int                      | 8                                                     |                                        |
-| MAX_BL                   | int                      | MAX_BURST_LEN                                         |                                        |
-| DEF_BT                   | UTYPE_bt                 | INT                                                   |                                        |
-| MIN_CL                   | int                      | 5                                                     |                                        |
-| MAX_CL                   | int                      | 32                                                    |                                        |
-| DEF_CL                   | int                      | 12                                                    |                                        |
-| MIN_AL                   | int                      | 0                                                     |                                        |
-| MAX_AL_REG               | int                      | 2                                                     |                                        |
-| MAX_AL_CLKS              | int                      | MAX_CL - 1                                            |                                        |
-| MIN_CWL                  | int                      | 9                                                     |                                        |
-| MAX_CWL                  | int                      | 20                                                    |                                        |
-| DEF_CWL                  | int                      | 12                                                    |                                        |
-| MIN_RL                   | int                      | MIN_CL - 1                                            | subtract one for the DLL disable mode. |
-| MAX_RL                   | int                      | MAX_CL + MAX_AL_CLKS                                  |                                        |
-| MIN_WL                   | int                      | 5                                                     |                                        |
-| MAX_WL                   | int                      | MAX_CWL + MAX_AL_CLKS                                 |                                        |
-| MIN_WR                   | int                      | 10                                                    |                                        |
-| MAX_WR                   | int                      | 28                                                    |                                        |
-| DEF_WR                   | int                      | 12                                                    |                                        |
-| MAX_CAL                  | int                      | 8                                                     |                                        |
-| DEF_CAL                  | int                      | 0                                                     |                                        |
-| DEF_LPASR                | UTYPE_lpasr              | LPASR_NORM                                            |                                        |
-| DEF_RTTW                 | UTYPE_rttw               | RTTW_DIS                                              |                                        |
-| DEF_MPR_MODE             | UTYPE_mpr                | SERIAL                                                |                                        |
-| DEF_DELAY_WRITE          | UTYPE_delay_write_crc_dm | DELAY_WRITE_4                                         |                                        |
-| MPR_DATA_BITS            | int                      | 8                                                     |                                        |
-| MPR_SELECT_BITS          | int                      | 2                                                     |                                        |
-| MAX_MPR_PATTERNS         | int                      | 2                                                     |                                        |
-| MPR_TEMP_BITS            | int                      | 2                                                     |                                        |
-| MAX_MPR_TEMPS            | int                      | 2                                                     |                                        |
-| MPR_TEMP0                | int                      | 'b0000_0000                                           |                                        |
-| MPR_TEMP1                | int                      | 'b0000_0001                                           |                                        |
-| MPR_TEMP2                | int                      | 'b0000_0010                                           |                                        |
-| MPR_TEMP3                | int                      | 'b0000_0011                                           |                                        |
-| MAX_MPR_DEFAULT_PATTERNS | int                      | 4                                                     |                                        |
-| MPR_PAT_DEFAULT0         | int                      | 'b0101_0101                                           |                                        |
-| MPR_PAT_DEFAULT1         | int                      | 'b0011_0011                                           |                                        |
-| MPR_PAT_DEFAULT2         | int                      | 'b0000_1111                                           |                                        |
-| MPR_PAT_DEFAULT3         | int                      | 'b0000_0000                                           |                                        |
-| MODE_REG_WIDTH           | int                      | MODEREG_BITS                                          | Mode Register Definitions              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | '0                                                    |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b01 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b10 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b11 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b00 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b01 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b10 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b11 << BANK_SHIFT |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_1000_0000                            | MR0 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_BLFLY                                             |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011                            |                                        |
-| NUM_BLMODE               | int                      | 4                                                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_SEQ                                               |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0101_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0101_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0110_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0110_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0111_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0111_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0001_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0001_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0010_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0010_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0011_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0011_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0111_0100                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_CL12                                              |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1010_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0010_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0100_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0110_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1000_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1010_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1100_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1110_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1110_0000_0000                            |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_WR12                                              |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0110_0000 | `MR1                     | MR1 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR1_AL0                                               |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0011_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0101_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0111_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0111_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR1_RTTN_DIS                                          |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR1                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0000_0000 | `MR2                     | MR2 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0100 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0100 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_1000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR2_CWL12                                             |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR2_LPASR_NORM                                        |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1010_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR2                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0000_0000 | `MR3                     | MR3 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_PATTERN                                       |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_DIS                                           |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR3                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_SERIAL                                        |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0010_0000 | `MR4                     | MR4 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR4_CAL0                                              |                                        |
-| MR4_CAL_SHIFT            | int                      | 6                                                     |                                        |
-| MR4_CAL_BITS             | int                      | 3                                                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR4                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0000_0000 | `MR5                     | MR5 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0101 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0111 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0111 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR5_RTTP_DIS                                          |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR5                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0000_0000 | `MR6                     | MR6 Codes                              |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1111 | `MR6                     |                                        |
-| MR6_VREF_OFFSET_SHIFT    | int                      | 0                                                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0100_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1100_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1100_0000_0000 | `MR6                     |                                        |
-| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1111_1111_1111_1111 | `MR7                     | MR7 Codes                              |
+| Name                     | Type                     | Value                                                 | Description                              |
+| ------------------------ | ------------------------ | ----------------------------------------------------- | ---------------------------------------- |
+| MAX_DM_BITS              | int                      | 2                                                     |                                          |
+| MAX_DBI_BITS             | int                      | MAX_DM_BITS                                           |  DM/DBI share pins in current spec.      |
+| MAX_ADDR_BITS            | int                      | 21                                                    |                                          |
+| MAX_ROW_ADDR_BITS        | int                      | 18                                                    |                                          |
+| MAX_COL_ADDR_BITS        | int                      | 13                                                    |  Include AP/BLFLY                        |
+| MAX_BANK_BITS            | int                      | 2                                                     |                                          |
+| MAX_RANK_BITS            | int                      | 3                                                     |                                          |
+| MAX_DQ_BITS              | int                      | 16                                                    |                                          |
+| MAX_DQS_BITS             | int                      | 2                                                     |                                          |
+| MAX_CRC_EQUATION         | int                      | 8                                                     |                                          |
+| MAX_CRC_TRANSFERS        | int                      | 2                                                     |                                          |
+| MAX_BANK_GROUP_BITS      | int                      | 2                                                     |                                          |
+| MAX_BURST_LEN            | int                      | 8                                                     |                                          |
+| AUTOPRECHARGEADDR        | int                      | 10                                                    |                                          |
+| BLFLYSELECT              | int                      | 12                                                    |                                          |
+| BANK_GROUP_SHIFT         | int                      | MAX_ADDR_BITS + MAX_BANK_BITS                         |                                          |
+| BANK_SHIFT               | int                      | MAX_ADDR_BITS                                         |                                          |
+| MAX_MODEREGS             | int                      | 2                                                     |                                          |
+| MODEREG_BITS             | int                      | MAX_ADDR_BITS + MAX_BANK_BITS + MAX_BANK_GROUP_BITS   |                                          |
+| MAX_MODEREG_SET_BITS     | int                      | 14                                                    |                                          |
+| MAX_BANKS_PER_GROUP      | int                      | 2                                                     |                                          |
+| MAX_BANK_GROUPS          | int                      | 2                                                     |                                          |
+| MAX_RANKS                | int                      | 2                                                     |                                          |
+| RTT_BITS                 | int                      | 16                                                    |                                          |
+| FAW_DEPTH                | int                      | 4                                                     |                                          |
+| LOAD_MODE_CMD            |                          | 5'b01000                                              |  {cs, act, ras, cas, we}                 |
+| MIN_BL                   | int                      | 4                                                     |                                          |
+| DEF_BL                   | int                      | 8                                                     |                                          |
+| MAX_BL                   | int                      | MAX_BURST_LEN                                         |                                          |
+| DEF_BT                   | UTYPE_bt                 | INT                                                   |                                          |
+| MIN_CL                   | int                      | 5                                                     |                                          |
+| MAX_CL                   | int                      | 32                                                    |                                          |
+| DEF_CL                   | int                      | 12                                                    |                                          |
+| MIN_AL                   | int                      | 0                                                     |                                          |
+| MAX_AL_REG               | int                      | 2                                                     |                                          |
+| MAX_AL_CLKS              | int                      | MAX_CL - 1                                            |                                          |
+| MIN_CWL                  | int                      | 9                                                     |                                          |
+| MAX_CWL                  | int                      | 20                                                    |                                          |
+| DEF_CWL                  | int                      | 12                                                    |                                          |
+| MIN_RL                   | int                      | MIN_CL - 1                                            |  subtract one for the DLL disable mode.  |
+| MAX_RL                   | int                      | MAX_CL + MAX_AL_CLKS                                  |                                          |
+| MIN_WL                   | int                      | 5                                                     |                                          |
+| MAX_WL                   | int                      | MAX_CWL + MAX_AL_CLKS                                 |                                          |
+| MIN_WR                   | int                      | 10                                                    |                                          |
+| MAX_WR                   | int                      | 28                                                    |                                          |
+| DEF_WR                   | int                      | 12                                                    |                                          |
+| MAX_CAL                  | int                      | 8                                                     |                                          |
+| DEF_CAL                  | int                      | 0                                                     |                                          |
+| DEF_LPASR                | UTYPE_lpasr              | LPASR_NORM                                            |                                          |
+| DEF_RTTW                 | UTYPE_rttw               | RTTW_DIS                                              |                                          |
+| DEF_MPR_MODE             | UTYPE_mpr                | SERIAL                                                |                                          |
+| DEF_DELAY_WRITE          | UTYPE_delay_write_crc_dm | DELAY_WRITE_4                                         |                                          |
+| MPR_DATA_BITS            | int                      | 8                                                     |                                          |
+| MPR_SELECT_BITS          | int                      | 2                                                     |                                          |
+| MAX_MPR_PATTERNS         | int                      | 2                                                     |                                          |
+| MPR_TEMP_BITS            | int                      | 2                                                     |                                          |
+| MAX_MPR_TEMPS            | int                      | 2                                                     |                                          |
+| MPR_TEMP0                | int                      | 'b0000_0000                                           |                                          |
+| MPR_TEMP1                | int                      | 'b0000_0001                                           |                                          |
+| MPR_TEMP2                | int                      | 'b0000_0010                                           |                                          |
+| MPR_TEMP3                | int                      | 'b0000_0011                                           |                                          |
+| MAX_MPR_DEFAULT_PATTERNS | int                      | 4                                                     |                                          |
+| MPR_PAT_DEFAULT0         | int                      | 'b0101_0101                                           |                                          |
+| MPR_PAT_DEFAULT1         | int                      | 'b0011_0011                                           |                                          |
+| MPR_PAT_DEFAULT2         | int                      | 'b0000_1111                                           |                                          |
+| MPR_PAT_DEFAULT3         | int                      | 'b0000_0000                                           |                                          |
+| MODE_REG_WIDTH           | int                      | MODEREG_BITS                                          |  Mode Register Definitions               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | '0                                                    |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b01 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b10 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b00 << BANK_GROUP_SHIFT | 2'b11 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b00 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b01 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b10 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0 | 2'b01 << BANK_GROUP_SHIFT | 2'b11 << BANK_SHIFT |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_1000_0000                            |  MR0 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_BLFLY                                             |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011                            |                                          |
+| NUM_BLMODE               | int                      | 4                                                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_SEQ                                               |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0101_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0101_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0110_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0110_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0111_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0111_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0001_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0001_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0010_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0010_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0011_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0011_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0111_0100                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_CL12                                              |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1010_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0010_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0100_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0110_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1000_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1010_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1100_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1110_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_1110_0000_0000                            |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR0_WR12                                              |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0110_0000 | `MR1                     |  MR1 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR1_AL0                                               |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0011_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0101_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0111_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0111_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR1_RTTN_DIS                                          |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR1                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0000_0000 | `MR2                     |  MR2 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0100 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0100 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_1000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_1000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR2_CWL12                                             |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR2_LPASR_NORM                                        |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1010_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1110_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR2                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0000_0000 | `MR3                     |  MR3 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_PATTERN                                       |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_DIS                                           |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0110_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR3                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR3_MPR_SERIAL                                        |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0010_0000 | `MR4                     |  MR4 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR4_CAL0                                              |                                          |
+| MR4_CAL_SHIFT            | int                      | 6                                                     |                                          |
+| MR4_CAL_BITS             | int                      | 3                                                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR4                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1100_0000_0000_0000 | `MR5                     |  MR5 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0001 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0010 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0011 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0100 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0101 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0110 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0111 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0111 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_1000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0001_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0010_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1100_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_0100_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0001_1100_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | MR5_RTTP_DIS                                          |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0010_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0010_0000_0000_0000 | `MR5                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1110_0000_0000_0000 | `MR6                     |  MR6 Codes                               |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0011_1111 | `MR6                     |                                          |
+| MR6_VREF_OFFSET_SHIFT    | int                      | 0                                                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0100_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_1000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_0100_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0000_1100_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_0100_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1000_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1100_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0000_0001_1100_0000_0000 | `MR6                     |                                          |
+| MODEREG_BITS             | reg[MODEREG_BITS:0]      | 'b0011_1111_1111_1111_1111 | `MR7                     |  MR7 Codes                               |
 ## Types
 
 | Name                     | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description |

@@ -3,10 +3,10 @@
 - **File**: crypto_dpi_prince_pkg.sv
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 
 ## Signals
 
@@ -37,4 +37,9 @@ Copyright lowRISC contributors.
 | NumRoundsHalf | int unsigned | 5     |             |
 ## Functions
 - sv_dpi_prince_encrypt <font id="function_arguments">(input bit [63:0]                      plaintext,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font>
+**Description**
+////////////////////////////////////////////////////
+ SV wrapper functions to be used by the testbench //
+////////////////////////////////////////////////////
+
 - sv_dpi_prince_decrypt <font id="function_arguments">(input bit [NumRoundsHalf-1:0][63:0]   ciphertex)</font> <font id="function_return">return (void)</font>

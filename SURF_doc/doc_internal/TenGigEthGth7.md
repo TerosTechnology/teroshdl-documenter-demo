@@ -6,15 +6,19 @@
 ![Diagram](TenGigEthGth7.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: 10GBASE-R Ethernet for Gth7
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: 10GBASE-R Ethernet for Gth7
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name  | Type                | Value              | Description                   |
@@ -90,22 +94,32 @@ the terms contained in the LICENSE.txt file.
 
 - U_AxiLiteAsync: surf.AxiLiteAsync
 **Description**
-Synchronization
+----------------
+ Synchronization
+----------------
 
 - U_Sync: surf.SynchronizerVector
 - U_MAC: surf.EthMacTop
 **Description**
-Ethernet MAC core
+------------------
+ Ethernet MAC core
+------------------
 
 - U_TenGigEthGth7Core: TenGigEthGth7Core
 **Description**
-10GBASE-R core
+---------------
+ 10GBASE-R core
+---------------
 
 - U_TenGigEthRst: surf.TenGigEthRst
 **Description**
-10GBASE-R's Reset Module
+-----------------------------------
+ 10GBASE-R's Reset Module
+-----------------------------------
 
 - U_TenGigEthReg: surf.TenGigEthReg
 **Description**
-Configuration/Status Register
+------------------------------
+ Configuration/Status Register
+------------------------------
 

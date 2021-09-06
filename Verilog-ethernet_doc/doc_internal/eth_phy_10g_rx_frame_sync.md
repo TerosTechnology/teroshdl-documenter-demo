@@ -6,8 +6,10 @@
 ![Diagram](eth_phy_10g_rx_frame_sync.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name        | Type | Value                                                                               | Description |
@@ -19,13 +21,13 @@ Language: Verilog 2001
 | BITSLIP_COUNT_WIDTH |      | $clog2(BITSLIP_MAX_CYCLES)                                                          |             |
 ## Ports
 
-| Port name         | Direction | Type                 | Description |
-| ----------------- | --------- | -------------------- | ----------- |
-| clk               | input     | wire                 |             |
-| rst               | input     | wire                 |             |
-| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0] |             |
-| serdes_rx_bitslip | output    | wire                 |             |
-| rx_block_lock     | output    | wire                 |             |
+| Port name         | Direction | Type                 | Description                      |
+| ----------------- | --------- | -------------------- | -------------------------------- |
+| clk               | input     | wire                 |                                  |
+| rst               | input     | wire                 |                                  |
+| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0] |      * SERDES interface      */  |
+| serdes_rx_bitslip | output    | wire                 |                                  |
+| rx_block_lock     | output    | wire                 |      * Status      */            |
 ## Signals
 
 | Name                   | Type                          | Description |
@@ -48,4 +50,6 @@ Language: Verilog 2001
 | SYNC_CTRL | [1:0] | 2'b01 |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

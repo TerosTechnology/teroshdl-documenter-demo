@@ -6,18 +6,20 @@
 ![Diagram](wb_gen_radar_prog.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2018
+-------------------------------------------------------------------------
 ## Generics
 
-| Generic name | Type    | Value | Description                 |
-| ------------ | ------- | ----- | --------------------------- |
-| id           | natural | 1     |                             |
-| NB_POINT     | natural | 16    |                             |
-| RXOFF        | natural | 2     | exprime' en cycle           |
-| TXON         | natural | 8     | idem                        |
-| wb_size      | natural | 16    | Data port size for wishbone |
+| Generic name | Type    | Value | Description                  |
+| ------------ | ------- | ----- | ---------------------------- |
+| id           | natural | 1     |                              |
+| NB_POINT     | natural | 16    |                              |
+| RXOFF        | natural | 2     |  exprime' en cycle           |
+| TXON         | natural | 8     |  idem                        |
+| wb_size      | natural | 16    |  Data port size for wishbone |
 ## Ports
 
 | Port name      | Direction | Type                                  | Description      |
@@ -51,6 +53,5 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 ## Processes
 - write_bloc: ( clk, reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

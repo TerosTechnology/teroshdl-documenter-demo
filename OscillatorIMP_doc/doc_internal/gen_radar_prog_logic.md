@@ -6,9 +6,11 @@
 ![Diagram](gen_radar_prog_logic.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2018
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -26,7 +28,7 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 | rxoff_i        | in        | std_logic_vector(15 downto 0)          | axi            |
 | txon_i         | in        | std_logic_vector(15 downto 0)          |                |
 | point_period_i | in        | std_logic_vector(15 downto 0)          |                |
-| data_i_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0) |                |
+| data_i_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0) | rocessing      |
 | data_q_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0) |                |
 | data_en_i      | in        | std_logic                              |                |
 | data_i_o       | out       | std_logic_vector(DATA_SIZE-1 downto 0) |                |

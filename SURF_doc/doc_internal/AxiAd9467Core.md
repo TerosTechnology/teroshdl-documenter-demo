@@ -6,26 +6,30 @@
 ![Diagram](AxiAd9467Core.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite interface to AD9467 ADC IC
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite interface to AD9467 ADC IC
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                  | Value                    | Description |
-| ------------------ | --------------------- | ------------------------ | ----------- |
-| TPD_G              | time                  | 1 ns                     |             |
-| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 32                       |             |
-| AXI_CLK_FREQ_G     | real                  | 125.0E+6                 | units of Hz |
-| ADC_CLK_FREQ_G     | real                  | 250.0E+6                 | units of Hz |
-| DEMUX_INIT_G       | sl                    | '0'                      |             |
-| DELAY_INIT_G       | Slv5Array(0 to 7)     | (others => "00000")      |             |
-| IODELAY_GROUP_G    | string                | "AXI_AD9467_IODELAY_GRP" |             |
+| Generic name       | Type                  | Value                    | Description  |
+| ------------------ | --------------------- | ------------------------ | ------------ |
+| TPD_G              | time                  | 1 ns                     |              |
+| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 32                       |              |
+| AXI_CLK_FREQ_G     | real                  | 125.0E+6                 |  units of Hz |
+| ADC_CLK_FREQ_G     | real                  | 250.0E+6                 |  units of Hz |
+| DEMUX_INIT_G       | sl                    | '0'                      |              |
+| DELAY_INIT_G       | Slv5Array(0 to 7)     | (others => "00000")      |              |
+| IODELAY_GROUP_G    | string                | "AXI_AD9467_IODELAY_GRP" |              |
 ## Ports
 
 | Port name      | Direction | Type                   | Description                                 |

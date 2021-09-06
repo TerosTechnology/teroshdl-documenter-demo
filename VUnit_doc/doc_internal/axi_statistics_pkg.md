@@ -14,6 +14,7 @@
 ## Functions
 - deallocate <font id="function_arguments">(variable stat : inout axi_statistics_t) </font> <font id="function_return">return ()</font>
 **Description**
-Free dynamically allocated memory
+ Free dynamically allocated memory
+
 - add_burst_length <font id="function_arguments">(stat : axi_statistics_t;<br><span style="padding-left:20px"> burst_length : natural) </font> <font id="function_return">return ()</font>
 - clear <font id="function_arguments">(stat : axi_statistics_t) </font> <font id="function_return">return ()</font>

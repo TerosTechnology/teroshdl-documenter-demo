@@ -6,27 +6,35 @@
 ![Diagram](mac_TX_SrcMAC_Prepender.svg "Diagram")
 ## Description
 
-EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
-vim: tabstop=2:shiftwidth=2:noexpandtab
-kate: tab-width 2; replace-tabs off; indent-width 2;
-=============================================================================
-Authors:				 	Patrick Lehmann
-Entity:				 	TODO
-Description:
--------------------------------------
-.. TODO:: No documentation available.
-License:
-=============================================================================
-Copyright 2007-2015 Technische Universitaet Dresden - Germany
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-=============================================================================
+ EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+ vim: tabstop=2:shiftwidth=2:noexpandtab
+ kate: tab-width 2; replace-tabs off; indent-width 2;
+ =============================================================================
+ Authors:				 	Patrick Lehmann
+
+ Entity:				 	TODO
+
+ Description:
+ -------------------------------------
+ .. TODO:: No documentation available.
+
+ License:
+ =============================================================================
+ Copyright 2007-2015 Technische Universitaet Dresden - Germany
+										 Chair of VLSI-Design, Diagnostics and Architecture
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ =============================================================================
 ## Generics
 
 | Generic name  | Type                     | Value                          | Description |
@@ -57,27 +65,27 @@ limitations under the License.
 | Out_Meta_DestMACAddress_Data | out       | T_SLV_8                                             |             |
 ## Signals
 
-| Name               | Type                                                                                      | Description                                                                                   |
-| ------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| State              | T_STATE                                                                                   |                                                                                               |
-| NextState          | T_STATE                                                                                   |                                                                                               |
-| LLMux_In_Valid     | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
-| LLMux_In_Data      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> T_SLV_8'range)              | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_Meta      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_BITS - 1 downto 0)     | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_Meta_rev  | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_REV_BITS - 1 downto 0) | necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
-| LLMux_In_SOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
-| LLMux_In_EOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
-| LLMux_In_Ack       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                               |
-| LLMux_Out_Valid    | std_logic                                                                                 |                                                                                               |
-| LLMux_Out_Data     | T_SLV_8                                                                                   |                                                                                               |
-| LLMux_Out_Meta     | std_logic_vector(META_BITS - 1 downto 0)                                                  |                                                                                               |
-| LLMux_Out_Meta_rev | std_logic_vector(META_REV_BITS - 1 downto 0)                                              |                                                                                               |
-| LLMux_Out_SOF      | std_logic                                                                                 |                                                                                               |
-| LLMux_Out_EOF      | std_logic                                                                                 |                                                                                               |
-| LLMux_Out_Ack      | std_logic                                                                                 |                                                                                               |
-| Is_DataFlow        | std_logic                                                                                 |                                                                                               |
-| Is_SOF             | std_logic                                                                                 |                                                                                               |
-| Is_EOF             | std_logic                                                                                 |                                                                                               |
+| Name               | Type                                                                                      | Description                                                                                    |
+| ------------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| State              | T_STATE                                                                                   |                                                                                                |
+| NextState          | T_STATE                                                                                   |                                                                                                |
+| LLMux_In_Valid     | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                                |
+| LLMux_In_Data      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> T_SLV_8'range)              |  necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_Meta      | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_BITS - 1 downto 0)     |  necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_Meta_rev  | T_SLM(PORTS - 1 downto 0,<br><span style="padding-left:20px"> META_REV_BITS - 1 downto 0) |  necessary default assignment 'Z' to get correct simulation results (iSIM, vSIM, ghdl/gtkwave) |
+| LLMux_In_SOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                                |
+| LLMux_In_EOF       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                                |
+| LLMux_In_Ack       | std_logic_vector(PORTS - 1 downto 0)                                                      |                                                                                                |
+| LLMux_Out_Valid    | std_logic                                                                                 |                                                                                                |
+| LLMux_Out_Data     | T_SLV_8                                                                                   |                                                                                                |
+| LLMux_Out_Meta     | std_logic_vector(META_BITS - 1 downto 0)                                                  |                                                                                                |
+| LLMux_Out_Meta_rev | std_logic_vector(META_REV_BITS - 1 downto 0)                                              |                                                                                                |
+| LLMux_Out_SOF      | std_logic                                                                                 |                                                                                                |
+| LLMux_Out_EOF      | std_logic                                                                                 |                                                                                                |
+| LLMux_Out_Ack      | std_logic                                                                                 |                                                                                                |
+| Is_DataFlow        | std_logic                                                                                 |                                                                                                |
+| Is_SOF             | std_logic                                                                                 |                                                                                                |
+| Is_EOF             | std_logic                                                                                 |                                                                                                |
 ## Constants
 
 | Name              | Type     | Value                 | Description |

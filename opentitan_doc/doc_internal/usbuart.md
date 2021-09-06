@@ -6,11 +6,13 @@
 ![Diagram](usbuart.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Description: USB UART top level wrapper file
- 
+
+
 ## Generics
 
 | Generic name | Type                  | Value     | Description |
@@ -24,11 +26,11 @@ Copyright lowRISC contributors.
 | rst_ni               | input     |                 | Reset synchronized to clk_i           |
 | clk_usb_48mhz_i      | input     |                 |                                       |
 | rst_usb_48mhz_ni     | input     |                 | Reset synchronized to clk_usb_48mhz_i |
-| tl_i                 | input     |                 | Bus Interface                         |
+| tl_i                 | input     |                 |  Bus Interface                        |
 | tl_o                 | output    |                 |                                       |
-| alert_rx_i           | input     | [NumAlerts-1:0] | Alerts                                |
+| alert_rx_i           | input     | [NumAlerts-1:0] |  Alerts                               |
 | alert_tx_o           | output    | [NumAlerts-1:0] |                                       |
-| cio_usb_dp_i         | input     |                 | Generic IO                            |
+| cio_usb_dp_i         | input     |                 |  Generic IO                           |
 | cio_usb_dp_o         | output    |                 |                                       |
 | cio_usb_dp_en_o      | output    |                 |                                       |
 | cio_usb_dn_i         | input     |                 |                                       |
@@ -37,7 +39,7 @@ Copyright lowRISC contributors.
 | cio_usb_sense_i      | input     |                 |                                       |
 | cio_pullup_o         | output    |                 |                                       |
 | cio_pullup_en_o      | output    |                 |                                       |
-| intr_tx_watermark_o  | output    |                 | Interrupts                            |
+| intr_tx_watermark_o  | output    |                 |  Interrupts                           |
 | intr_rx_watermark_o  | output    |                 |                                       |
 | intr_tx_overflow_o   | output    |                 |                                       |
 | intr_rx_overflow_o   | output    |                 |                                       |

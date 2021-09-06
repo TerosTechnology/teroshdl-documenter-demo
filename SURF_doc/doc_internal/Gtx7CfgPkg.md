@@ -24,11 +24,11 @@
 | QPLL_UPPER_BAND_HIGH_C   | real         |  12.5E9                                                                                                                                                                                                                                                                                        |             |
 ## Types
 
-| Name            | Type | Description |
-| --------------- | ---- | ----------- |
-| Gtx7CPllCfgType |      |             |
-| Gtx7QPllCfgType |      |             |
-| Gtx7CfgType     |      |             |
+| Name            | Type | Description                                                                                                                                                                                                                                              |
+| --------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gtx7CPllCfgType |      | -----------------------------------------------------------------------------------------------  CPLL Config Types, Constants and Function declarations -----------------------------------------------------------------------------------------------  |
+| Gtx7QPllCfgType |      | -----------------------------------------------------------------------------------------------  QPLL -----------------------------------------------------------------------------------------------                                                    |
+| Gtx7CfgType     |      | -----------------------------------------------------------------------------------------------  GT config -----------------------------------------------------------------------------------------------                                               |
 ## Functions
 - getGtx7CPllCfg <font id="function_arguments">(refClkFreq : real;<br><span style="padding-left:20px"> lineRate : real) </font> <font id="function_return">return Gtx7CPllCfgType </font>
 - getQPllFbdiv <font id="function_arguments">(fbdivInt : integer) </font> <font id="function_return">return bit_vector </font>

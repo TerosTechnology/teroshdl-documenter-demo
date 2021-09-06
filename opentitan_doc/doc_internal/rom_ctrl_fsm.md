@@ -6,11 +6,13 @@
 ![Diagram](rom_ctrl_fsm.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  The ROM checker FSM module
- 
+
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -19,51 +21,51 @@ Copyright lowRISC contributors.
 | TopCount     | int  | 8     |             |
 ## Ports
 
-| Port name        | Direction | Type                  | Description                                                                                                                                                                                             |
-| ---------------- | --------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| clk_i            | input     |                       |                                                                                                                                                                                                         |
-| rst_ni           | input     |                       |                                                                                                                                                                                                         |
-| digest_i         | input     | [TopCount*32-1:0]     | CSR inputs for DIGEST and EXP_DIGEST. To make the indexing look nicer, these are ordered sothat DIGEST_0 is the bottom 32 bits (they get reversed while we're shuffling around the wires in rom_ctrl).  |
-| exp_digest_i     | input     | [TopCount*32-1:0]     |                                                                                                                                                                                                         |
-| digest_o         | output    | [TopCount*32-1:0]     | CSR outputs for DIGEST and EXP_DIGEST. Ordered with word 0 as LSB.                                                                                                                                      |
-| digest_vld_o     | output    |                       |                                                                                                                                                                                                         |
-| exp_digest_o     | output    | [31:0]                |                                                                                                                                                                                                         |
-| exp_digest_vld_o | output    |                       |                                                                                                                                                                                                         |
-| exp_digest_idx_o | output    | [vbits(TopCount)-1:0] |                                                                                                                                                                                                         |
-| pwrmgr_data_o    | output    |                       | To power manager and key manager                                                                                                                                                                        |
-| keymgr_data_o    | output    |                       |                                                                                                                                                                                                         |
-| kmac_rom_rdy_i   | input     |                       | To KMAC (ROM data)                                                                                                                                                                                      |
-| kmac_rom_vld_o   | output    |                       |                                                                                                                                                                                                         |
-| kmac_rom_last_o  | output    |                       |                                                                                                                                                                                                         |
-| kmac_done_i      | input     |                       | To KMAC (digest data)                                                                                                                                                                                   |
-| kmac_digest_i    | input     | [TopCount*32-1:0]     |                                                                                                                                                                                                         |
-| rom_select_o     | output    |                       | To ROM mux                                                                                                                                                                                              |
-| rom_addr_o       | output    | [vbits(RomDepth)-1:0] |                                                                                                                                                                                                         |
-| rom_req_o        | output    |                       |                                                                                                                                                                                                         |
-| rom_data_i       | input     | [31:0]                | Raw bits from ROM                                                                                                                                                                                       |
-| alert_o          | output    |                       | To alert system                                                                                                                                                                                         |
+| Port name        | Direction | Type                  | Description                                                                                                                                                                                                |
+| ---------------- | --------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| clk_i            | input     |                       |                                                                                                                                                                                                            |
+| rst_ni           | input     |                       |                                                                                                                                                                                                            |
+| digest_i         | input     | [TopCount*32-1:0]     |  CSR inputs for DIGEST and EXP_DIGEST. To make the indexing look nicer, these are ordered so that DIGEST_0 is the bottom 32 bits (they get reversed while we're shuffling around the wires  in rom_ctrl).  |
+| exp_digest_i     | input     | [TopCount*32-1:0]     |                                                                                                                                                                                                            |
+| digest_o         | output    | [TopCount*32-1:0]     |  CSR outputs for DIGEST and EXP_DIGEST. Ordered with word 0 as LSB.                                                                                                                                        |
+| digest_vld_o     | output    |                       |                                                                                                                                                                                                            |
+| exp_digest_o     | output    | [31:0]                |                                                                                                                                                                                                            |
+| exp_digest_vld_o | output    |                       |                                                                                                                                                                                                            |
+| exp_digest_idx_o | output    | [vbits(TopCount)-1:0] |                                                                                                                                                                                                            |
+| pwrmgr_data_o    | output    |                       |  To power manager and key manager                                                                                                                                                                          |
+| keymgr_data_o    | output    |                       |                                                                                                                                                                                                            |
+| kmac_rom_rdy_i   | input     |                       |  To KMAC (ROM data)                                                                                                                                                                                        |
+| kmac_rom_vld_o   | output    |                       |                                                                                                                                                                                                            |
+| kmac_rom_last_o  | output    |                       |                                                                                                                                                                                                            |
+| kmac_done_i      | input     |                       |  To KMAC (digest data)                                                                                                                                                                                     |
+| kmac_digest_i    | input     | [TopCount*32-1:0]     |                                                                                                                                                                                                            |
+| rom_select_o     | output    |                       |  To ROM mux                                                                                                                                                                                                |
+| rom_addr_o       | output    | [vbits(RomDepth)-1:0] |                                                                                                                                                                                                            |
+| rom_req_o        | output    |                       |                                                                                                                                                                                                            |
+| rom_data_i       | input     | [31:0]                |  Raw bits from ROM                                                                                                                                                                                         |
+| alert_o          | output    |                       |  To alert system                                                                                                                                                                                           |
 ## Signals
 
-| Name                     | Type            | Description                                                                                  |
-| ------------------------ | --------------- | -------------------------------------------------------------------------------------------- |
-| counter_done             | logic           | The counter / address generator                                                              |
-| counter_read_addr        | logic [AW-1:0]  |                                                                                              |
-| counter_read_req         | logic           |                                                                                              |
-| counter_data_addr        | logic [AW-1:0]  |                                                                                              |
-| counter_data_rdy         | logic           |                                                                                              |
-| counter_data_vld         | logic           |                                                                                              |
-| counter_lnt              | logic           |                                                                                              |
-| start_checker_q          | logic           | The compare block (responsible for comparing CSR data and forwarding it to the key manager)  |
-| checker_done             | logic           |                                                                                              |
-| checker_good             | logic           |                                                                                              |
-| checker_alert            | logic           |                                                                                              |
-| state_q                  | logic [5:0]     |                                                                                              |
-| state_d                  | logic [5:0]     |                                                                                              |
-| fsm_alert                | logic           |                                                                                              |
-| reading_top              | logic           | Snoop on ROM reads to populate EXP_DIGEST, one word at a time                                |
-| rel_addr_wide            | logic [AW-1:0]  |                                                                                              |
-| rel_addr                 | logic [TAW-1:0] |                                                                                              |
-| unused_top_rel_addr_wide | logic           |                                                                                              |
+| Name                     | Type            | Description                                                                                   |
+| ------------------------ | --------------- | --------------------------------------------------------------------------------------------- |
+| counter_done             | logic           |  The counter / address generator                                                              |
+| counter_read_addr        | logic [AW-1:0]  |                                                                                               |
+| counter_read_req         | logic           |                                                                                               |
+| counter_data_addr        | logic [AW-1:0]  |                                                                                               |
+| counter_data_rdy         | logic           |                                                                                               |
+| counter_data_vld         | logic           |                                                                                               |
+| counter_lnt              | logic           |                                                                                               |
+| start_checker_q          | logic           |  The compare block (responsible for comparing CSR data and forwarding it to the key manager)  |
+| checker_done             | logic           |                                                                                               |
+| checker_good             | logic           |                                                                                               |
+| checker_alert            | logic           |                                                                                               |
+| state_q                  | logic [5:0]     |                                                                                               |
+| state_d                  | logic [5:0]     |                                                                                               |
+| fsm_alert                | logic           |                                                                                               |
+| reading_top              | logic           |  Snoop on ROM reads to populate EXP_DIGEST, one word at a time                                |
+| rel_addr_wide            | logic [AW-1:0]  |                                                                                               |
+| rel_addr                 | logic [TAW-1:0] |                                                                                               |
+| unused_top_rel_addr_wide | logic           |                                                                                               |
 ## Constants
 
 | Name            | Type         | Value               | Description |
@@ -74,15 +76,16 @@ Copyright lowRISC contributors.
 | TopStartAddr    | bit [AW-1:0] | undefined           |             |
 ## Types
 
-| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                        | Description |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| state_e | enum logic [5:0] {<br><span style="padding-left:20px">     ReadingLow  = 6'b111101,<br><span style="padding-left:20px">     ReadingHigh = 6'b110110,<br><span style="padding-left:20px">     RomAhead    = 6'b000011,<br><span style="padding-left:20px">     KmacAhead   = 6'b101010,<br><span style="padding-left:20px">     Checking    = 6'b010000,<br><span style="padding-left:20px">     Done        = 6'b001100   } |             |
+| Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| state_e | enum logic [5:0] {<br><span style="padding-left:20px">     ReadingLow  = 6'b111101,<br><span style="padding-left:20px">     ReadingHigh = 6'b110110,<br><span style="padding-left:20px">     RomAhead    = 6'b000011,<br><span style="padding-left:20px">     KmacAhead   = 6'b101010,<br><span style="padding-left:20px">     Checking    = 6'b010000,<br><span style="padding-left:20px">     Done        = 6'b001100   } |  Main FSM<br>  There are the following logical states<br>     ReadingLow:   We're reading the low part of ROM and passing it to KMAC     ReadingHigh:  We're reading the high part of ROM and waiting for KMAC     RomAhead:     We've finished reading the high part of ROM, but are still waiting for KMAC     KmacAhead:    KMAC is done, but we're still reading the high part of ROM     Checking:     We are comparing DIGEST and EXP_DIGEST and sending data to keymgr     Done:         Terminal state<br>  The FSM is linear, except for the branch where reading the high part of ROM races with getting  the result back from KMAC.<br>      digraph fsm {        ReadingLow -> ReadingHigh;        ReadingHigh -> RomAhead;        ReadingHigh -> KmacAhead;        RomAhead -> Checking;        KmacAhead -> Checking;        Checking -> Done;        Done [peripheries=2];      }<br>  Encoding generated with:  $ util/design/sparse-fsm-encode.py -d 3 -m 6 -n 6 -s 2 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3: |||||||||||||||||||| (53.33%)   4: ||||||||||||||| (40.00%)   5: || (6.67%)   6: --<br>  Minimum Hamming distance: 3  Maximum Hamming distance: 5  Minimum Hamming weight: 1  Maximum Hamming weight: 5<br>  |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Start the checker when transitioning into the "Checking" state
-
+ Start the checker when transitioning into the "Checking" state 
 ## Instantiations
 
 - u_counter: rom_ctrl_counter

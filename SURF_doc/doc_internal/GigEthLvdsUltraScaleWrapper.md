@@ -6,28 +6,32 @@
 ![Diagram](GigEthLvdsUltraScaleWrapper.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for SGMII/LVDS Ethernet
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for SGMII/LVDS Ethernet
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name    | Type                             | Value                          | Description                             |
-| --------------- | -------------------------------- | ------------------------------ | --------------------------------------- |
-| TPD_G           | time                             | 1 ns                           |                                         |
-| NUM_LANE_G      | positive                         | 1                              |                                         |
-| PAUSE_EN_G      | boolean                          | true                           |                                         |
-| USE_REFCLK_G    | boolean                          | false                          |  FALSE: sgmiiClkP/N,  TRUE: sgmiiRefClk |
-| CLKFBOUT_MULT_G | positive                         | 10                             |                                         |
-| CLKOUT1_PHASE_G | real                             | 90.0                           |                                         |
-| USE_BUFG_DIV_G  | boolean                          | false                          |                                         |
-| EN_AXI_REG_G    | boolean                          | false                          | AXI-Lite Configurations                 |
-| AXIS_CONFIG_G   | AxiStreamConfigArray(3 downto 0) | (others => EMAC_AXIS_CONFIG_C) | AXI Streaming Configurations            |
+| Generic name    | Type                             | Value                          | Description                              |
+| --------------- | -------------------------------- | ------------------------------ | ---------------------------------------- |
+| TPD_G           | time                             | 1 ns                           |                                          |
+| NUM_LANE_G      | positive                         | 1                              |                                          |
+| PAUSE_EN_G      | boolean                          | true                           |                                          |
+| USE_REFCLK_G    | boolean                          | false                          |   FALSE: sgmiiClkP/N,  TRUE: sgmiiRefClk |
+| CLKFBOUT_MULT_G | positive                         | 10                             |                                          |
+| CLKOUT1_PHASE_G | real                             | 90.0                           |                                          |
+| USE_BUFG_DIV_G  | boolean                          | false                          |                                          |
+| EN_AXI_REG_G    | boolean                          | false                          | AXI-Lite Configurations                  |
+| AXIS_CONFIG_G   | AxiStreamConfigArray(3 downto 0) | (others => EMAC_AXIS_CONFIG_C) | AXI Streaming Configurations             |
 ## Ports
 
 | Port name           | Direction | Type                                           | Description              |
@@ -53,9 +57,9 @@ the terms contained in the LICENSE.txt file.
 | mmcmLocked          | out       | sl                                             |                          |
 | speed_is_10_100     | in        | slv(NUM_LANE_G-1 downto 0)                     |                          |
 | speed_is_100        | in        | slv(NUM_LANE_G-1 downto 0)                     |                          |
-| sgmiiRefClk         | in        | sl                                             | 125 MHz                  |
-| sgmiiClkP           | in        | sl                                             | 625 MHz                  |
-| sgmiiClkN           | in        | sl                                             | 625 MHz                  |
+| sgmiiRefClk         | in        | sl                                             |  125 MHz                 |
+| sgmiiClkP           | in        | sl                                             |  625 MHz                 |
+| sgmiiClkN           | in        | sl                                             |  625 MHz                 |
 | sgmiiTxP            | out       | slv(NUM_LANE_G-1 downto 0)                     | MGT Ports                |
 | sgmiiTxN            | out       | slv(NUM_LANE_G-1 downto 0)                     |                          |
 | sgmiiRxP            | in        | slv(NUM_LANE_G-1 downto 0)                     |                          |
@@ -81,16 +85,20 @@ the terms contained in the LICENSE.txt file.
 
 - IBUFGDS_SGMII: IBUFGDS
 **Description**
-Select the Reference Clock
+---------------------------
+ Select the Reference Clock
+---------------------------
 
 - U_Bufg_sgmiiClk: BUFGCE_DIV
 - U_PwrUpRst: surf.PwrUpRst
 **Description**
-125 MHz
+ 125 MHz
 
 - U_PLL: PLLE3_ADV
 **Description**
-Clock Manager
+--------------
+ Clock Manager
+--------------
 
 - U_Bufg: BUFG
 - U_sysClk625: BUFG

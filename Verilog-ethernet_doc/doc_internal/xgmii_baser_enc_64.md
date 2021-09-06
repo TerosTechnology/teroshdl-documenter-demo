@@ -6,8 +6,10 @@
 ![Diagram](xgmii_baser_enc_64.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name | Type | Value     | Description |
@@ -17,25 +19,25 @@ Language: Verilog 2001
 | HDR_WIDTH    |      | 2         |             |
 ## Ports
 
-| Port name       | Direction | Type                  | Description |
-| --------------- | --------- | --------------------- | ----------- |
-| clk             | input     | wire                  |             |
-| rst             | input     | wire                  |             |
-| xgmii_txd       | input     | wire [DATA_WIDTH-1:0] |             |
-| xgmii_txc       | input     | wire [CTRL_WIDTH-1:0] |             |
-| encoded_tx_data | output    | wire [DATA_WIDTH-1:0] |             |
-| encoded_tx_hdr  | output    | wire [HDR_WIDTH-1:0]  |             |
+| Port name       | Direction | Type                  | Description                                 |
+| --------------- | --------- | --------------------- | ------------------------------------------- |
+| clk             | input     | wire                  |                                             |
+| rst             | input     | wire                  |                                             |
+| xgmii_txd       | input     | wire [DATA_WIDTH-1:0] |      * XGMII interface      */              |
+| xgmii_txc       | input     | wire [CTRL_WIDTH-1:0] |                                             |
+| encoded_tx_data | output    | wire [DATA_WIDTH-1:0] |      * 10GBASE-R encoded interface      */  |
+| encoded_tx_hdr  | output    | wire [HDR_WIDTH-1:0]  |                                             |
 ## Signals
 
-| Name                 | Type                     | Description              |
-| -------------------- | ------------------------ | ------------------------ |
-| encoded_ctrl         | reg [DATA_WIDTH*7/8-1:0] | D6 D5 D4 D3 D2 D1 D0 BT  |
-| encode_err           | reg [CTRL_WIDTH-1:0]     |                          |
-| encoded_tx_data_reg  | reg [DATA_WIDTH-1:0]     |                          |
-| encoded_tx_data_next | reg [DATA_WIDTH-1:0]     |                          |
-| encoded_tx_hdr_reg   | reg [HDR_WIDTH-1:0]      |                          |
-| encoded_tx_hdr_next  | reg [HDR_WIDTH-1:0]      |                          |
-| i                    | integer                  |                          |
+| Name                 | Type                     | Description                  |
+| -------------------- | ------------------------ | ---------------------------- |
+| encoded_ctrl         | reg [DATA_WIDTH*7/8-1:0] |     D6 D5 D4 D3 D2 D1 D0 BT  |
+| encode_err           | reg [CTRL_WIDTH-1:0]     |                              |
+| encoded_tx_data_reg  | reg [DATA_WIDTH-1:0]     |                              |
+| encoded_tx_data_next | reg [DATA_WIDTH-1:0]     |                              |
+| encoded_tx_hdr_reg   | reg [HDR_WIDTH-1:0]      |                              |
+| encoded_tx_hdr_next  | reg [HDR_WIDTH-1:0]      |                              |
+| i                    | integer                  |                              |
 ## Constants
 
 | Name                | Type  | Value | Description |
@@ -83,4 +85,6 @@ Language: Verilog 2001
 | BLOCK_TYPE_TERM_7   | [7:0] | 8'hff |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

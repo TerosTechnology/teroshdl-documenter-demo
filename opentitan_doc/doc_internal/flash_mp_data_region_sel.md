@@ -6,11 +6,13 @@
 ![Diagram](flash_mp_data_region_sel.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Flash Memory Properties
- 
+
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -27,17 +29,17 @@ Copyright lowRISC contributors.
 | sel_cfg_o      | output    | mp_region_cfg_t     |             |
 ## Signals
 
-| Name         | Type                | Description                                                                                      |
-| ------------ | ------------------- | ------------------------------------------------------------------------------------------------ |
-| region_end   | logic [AllPagesW:0] | There could be multiple region matches due to region overlap Lower indices always have priority  |
-| region_match | logic [Regions-1:0] |                                                                                                  |
-| region_sel   | logic [Regions-1:0] |                                                                                                  |
+| Name         | Type                | Description                                                                                        |
+| ------------ | ------------------- | -------------------------------------------------------------------------------------------------- |
+| region_end   | logic [AllPagesW:0] |  There could be multiple region matches due to region overlap  Lower indices always have priority  |
+| region_match | logic [Regions-1:0] |                                                                                                    |
+| region_sel   | logic [Regions-1:0] |                                                                                                    |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 **Description**
-check for region match
-
+ check for region match 
 - unnamed: (  )
+  - **Type:** always_comb
 **Description**
-select appropriate region configuration
-
+ select appropriate region configuration 

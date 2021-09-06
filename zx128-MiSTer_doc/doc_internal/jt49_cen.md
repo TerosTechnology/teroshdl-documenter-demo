@@ -6,13 +6,13 @@
 ![Diagram](jt49_cen.svg "Diagram")
 ## Description
 
- Th
- 
+  Th
+
 ## Generics
 
-| Generic name | Type | Value | Description                    |
-| ------------ | ---- | ----- | ------------------------------ |
-| CLKDIV       |      | 3     | use 3 for standalone JT49 or 2 |
+| Generic name | Type | Value | Description                      |
+| ------------ | ---- | ----- | -------------------------------- |
+| CLKDIV       |      | 3     |  use 3 for standalone JT49 or 2  |
 ## Ports
 
 | Port name | Direction | Type | Description                     |
@@ -34,7 +34,9 @@
 
 | Name | Type | Value  | Description |
 | ---- | ---- | ------ | ----------- |
-| eg   |      | CLKDIV |             |
+| eg   |      | CLKDIV | 8;          |
 ## Processes
 - unnamed: ( @(posedge clk, negedge rst_n) )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

@@ -6,15 +6,19 @@
 ![Diagram](AxiLiteToDrp.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite to Xilinx DRP Bridge
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite to Xilinx DRP Bridge
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name     | Type                   | Value | Description |
@@ -27,25 +31,25 @@ the terms contained in the LICENSE.txt file.
 | DATA_WIDTH_G     | positive range 1 to 32 | 16    |             |
 ## Ports
 
-| Port name       | Direction | Type                         | Description                     |
-| --------------- | --------- | ---------------------------- | ------------------------------- |
-| axilClk         | in        | sl                           | AXI-Lite Port                   |
-| axilRst         | in        | sl                           |                                 |
-| axilReadMaster  | in        | AxiLiteReadMasterType        |                                 |
-| axilReadSlave   | out       | AxiLiteReadSlaveType         |                                 |
-| axilWriteMaster | in        | AxiLiteWriteMasterType       |                                 |
-| axilWriteSlave  | out       | AxiLiteWriteSlaveType        |                                 |
-| drpClk          | in        | sl                           | DRP Interface                   |
-| drpRst          | in        | sl                           |                                 |
-| drpGnt          | in        | sl                           | Used if EN_ARBITRATION_G = true |
-| drpReq          | out       | sl                           | Used if EN_ARBITRATION_G = true |
-| drpRdy          | in        | sl                           |                                 |
-| drpEn           | out       | sl                           |                                 |
-| drpWe           | out       | sl                           |                                 |
-| drpUsrRst       | out       | sl                           |                                 |
-| drpAddr         | out       | slv(ADDR_WIDTH_G-1 downto 0) |                                 |
-| drpDi           | out       | slv(DATA_WIDTH_G-1 downto 0) |                                 |
-| drpDo           | in        | slv(DATA_WIDTH_G-1 downto 0) |                                 |
+| Port name       | Direction | Type                         | Description                      |
+| --------------- | --------- | ---------------------------- | -------------------------------- |
+| axilClk         | in        | sl                           | AXI-Lite Port                    |
+| axilRst         | in        | sl                           |                                  |
+| axilReadMaster  | in        | AxiLiteReadMasterType        |                                  |
+| axilReadSlave   | out       | AxiLiteReadSlaveType         |                                  |
+| axilWriteMaster | in        | AxiLiteWriteMasterType       |                                  |
+| axilWriteSlave  | out       | AxiLiteWriteSlaveType        |                                  |
+| drpClk          | in        | sl                           | DRP Interface                    |
+| drpRst          | in        | sl                           |                                  |
+| drpGnt          | in        | sl                           |  Used if EN_ARBITRATION_G = true |
+| drpReq          | out       | sl                           |  Used if EN_ARBITRATION_G = true |
+| drpRdy          | in        | sl                           |                                  |
+| drpEn           | out       | sl                           |                                  |
+| drpWe           | out       | sl                           |                                  |
+| drpUsrRst       | out       | sl                           |                                  |
+| drpAddr         | out       | slv(ADDR_WIDTH_G-1 downto 0) |                                  |
+| drpDi           | out       | slv(DATA_WIDTH_G-1 downto 0) |                                  |
+| drpDo           | in        | slv(DATA_WIDTH_G-1 downto 0) |                                  |
 ## Signals
 
 | Name        | Type                   | Description |

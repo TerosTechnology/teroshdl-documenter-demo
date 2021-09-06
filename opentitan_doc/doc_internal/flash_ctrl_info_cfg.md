@@ -6,12 +6,13 @@
 ![Diagram](flash_ctrl_info_cfg.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Flash info page protection assignment
  This module takes into account seed pages and assigns privileges accordingly.
- 
+
 ## Generics
 
 | Generic name   | Type                       | Value | Description |

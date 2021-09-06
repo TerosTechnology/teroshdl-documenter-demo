@@ -25,16 +25,16 @@
 | data_eof_o | out       | std_logic                               |             |
 ## Signals
 
-| Name             | Type                                   | Description   |
-| ---------------- | -------------------------------------- | ------------- |
-| del_eq_zero_s    | std_logic                              |               |
-| data_in_s        | std_logic_vector(DATA_SIZE+1 downto 0) |               |
-| data_tab_s       | data_tab(MX_NB_DEL-1 downto 0)         | delay         |
-|  data_tab_next_s | data_tab(MX_NB_DEL-1 downto 0)         | delay         |
-| data_del_s       | std_logic_vector(DATA_SIZE+1 downto 0) | future output |
-| mux_data_s       | std_logic_vector(DATA_SIZE-1 downto 0) | mux           |
-| mux_data_en_s    | std_logic                              |               |
-| mux_data_eof_s   | std_logic                              |               |
+| Name             | Type                                   | Description     |
+| ---------------- | -------------------------------------- | --------------- |
+| del_eq_zero_s    | std_logic                              |                 |
+| data_in_s        | std_logic_vector(DATA_SIZE+1 downto 0) |                 |
+| data_tab_s       | data_tab(MX_NB_DEL-1 downto 0)         |  delay          |
+|  data_tab_next_s | data_tab(MX_NB_DEL-1 downto 0)         |  delay          |
+| data_del_s       | std_logic_vector(DATA_SIZE+1 downto 0) |  future output  |
+| mux_data_s       | std_logic_vector(DATA_SIZE-1 downto 0) |  mux            |
+| mux_data_en_s    | std_logic                              |                 |
+| mux_data_eof_s   | std_logic                              |                 |
 ## Constants
 
 | Name      | Type                                    | Value                                  | Description |

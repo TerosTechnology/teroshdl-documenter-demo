@@ -6,15 +6,19 @@
 ![Diagram](AxiLtc2270Deser.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: ADC DDR Deserializer
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: ADC DDR Deserializer
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type                            | Value                                   | Description |
@@ -35,13 +39,13 @@ the terms contained in the LICENSE.txt file.
 | orP          | in        | sl                     |                                          |
 | orN          | in        | sl                     |                                          |
 | adcValid     | out       | slv(0 to 1)            | ADC Data Interface (axiClk domain)       |
-| adcData      | out       | Slv16Array(0 to 1)     | 2's complement                           |
+| adcData      | out       | Slv16Array(0 to 1)     |  2's complement                          |
 | dmode        | in        | slv(1 downto 0)        | Register Interface (axiClk domain)       |
 | delayin      | in        | AxiLtc2270DelayInType  | Register Interface (refclk200MHz domain) |
 | delayOut     | out       | AxiLtc2270DelayOutType |                                          |
 | axiClk       | in        | sl                     | Clocks and Resets                        |
 | axiRst       | in        | sl                     |                                          |
-| adcClk       | in        | sl                     | Up to 20 MHz                             |
+| adcClk       | in        | sl                     |  Up to 20 MHz                            |
 | refclk200MHz | in        | sl                     |                                          |
 ## Signals
 

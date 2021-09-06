@@ -6,11 +6,13 @@
 ![Diagram](uart_rx.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Description: UART Receive Module
- 
+
+
 ## Ports
 
 | Port name     | Direction | Type  | Description |
@@ -45,5 +47,8 @@ Copyright lowRISC contributors.
 | idle_q      | logic          |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

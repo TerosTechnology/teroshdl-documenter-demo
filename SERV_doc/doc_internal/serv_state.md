@@ -10,6 +10,7 @@
 | -------------- | ----- | ------ | ----------- |
 | RESET_STRATEGY |       | "MINI" |             |
 | WITH_CSR       | [0:0] | 1      |             |
+| MDU            | [0:0] | 0      |             |
 ## Ports
 
 | Port name       | Direction | Type       | Description |
@@ -54,17 +55,21 @@
 | i_mem_misalign  | input     | wire       |             |
 | o_cnt_done      | output    |            |             |
 | o_bufreg_en     | output    | wire       |             |
+| i_mdu_op        | input     | wire       | MDU         |
+| o_mdu_valid     | output    | wire       |             |
+| i_mdu_ready     | input     | wire       |             |
 ## Signals
 
-| Name               | Type      | Description |
-| ------------------ | --------- | ----------- |
-| stage_two_req      | reg       |             |
-| init_done          | reg       |             |
-| misalign_trap_sync | wire      |             |
-| o_cnt              | reg [4:2] |             |
-| o_cnt_r            | reg [3:0] |             |
-| ibus_cyc           | reg       |             |
-| take_branch        | wire      |             |
-| two_stage_op       | wire      |             |
+| Name               | Type      | Description                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| stage_two_req      | reg       |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| init_done          | reg       |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| misalign_trap_sync | wire      |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| two_stage_op       | wire      |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| o_cnt              | reg [4:2] |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| o_cnt_r            | reg [3:0] |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ibus_cyc           | reg       |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| take_branch        | wire      | Take branch for jump or branch instructions (opcode == 1x0xx) if a) It's an unconditional branch (opcode[0] == 1) b) It's a conditional branch (opcode[0] == 0) of type beq,blt,bltu (funct3[0] == 0) and ALU compare is true c) It's a conditional branch (opcode[0] == 0) of type bne,bge,bgeu (funct3[0] == 1) and ALU compare is false Only valid during the last cycle of INIT, when the branch condition has been calculated.  |
 ## Processes
 - unnamed: ( @(posedge i_clk) )
+  - **Type:** always

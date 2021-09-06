@@ -6,32 +6,37 @@
 ![Diagram](AxiDualPortRamIpIntegrator.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: IP Integrator Wrapper for surf.AxiVersion
-TCL Command: create_bd_cell -type module -reference AxiDualPortRamIpIntegrator AxiDualPortRam_0
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: IP Integrator Wrapper for surf.AxiVersion
+-----------------------------------------------------------------------------
+ TCL Command: create_bd_cell -type module -reference AxiDualPortRamIpIntegrator AxiDualPortRam_0
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name      | Type                 | Value      | Description                    |
-| ----------------- | -------------------- | ---------- | ------------------------------ |
-| EN_ERROR_RESP     | boolean              | false      |                                |
-| SYNTH_MODE        | string               | "inferred" |                                |
-| MEMORY_TYPE       | string               | "block"    |                                |
-| MEMORY_INIT_FILE  | string               | "none"     | Used for MEMORY_TYPE="XPM only |
-| MEMORY_INIT_PARAM | string               | "0"        | Used for MEMORY_TYPE="XPM only |
-| READ_LATENCY      | natural range 0 to 3 | 3          |                                |
-| AXI_WR_EN         | boolean              | true       |                                |
-| SYS_WR_EN         | boolean              | false      |                                |
-| SYS_BYTE_WR_EN    | boolean              | false      |                                |
-| COMMON_CLK        | boolean              | false      |                                |
-| ADDR_WIDTH        | positive             | 5          |                                |
-| DATA_WIDTH        | positive             | 32         |                                |
+| Generic name      | Type                 | Value      | Description                     |
+| ----------------- | -------------------- | ---------- | ------------------------------- |
+| EN_ERROR_RESP     | boolean              | false      |                                 |
+| SYNTH_MODE        | string               | "inferred" |                                 |
+| MEMORY_TYPE       | string               | "block"    |                                 |
+| MEMORY_INIT_FILE  | string               | "none"     |  Used for MEMORY_TYPE="XPM only |
+| MEMORY_INIT_PARAM | string               | "0"        |  Used for MEMORY_TYPE="XPM only |
+| READ_LATENCY      | natural range 0 to 3 | 3          |                                 |
+| AXI_WR_EN         | boolean              | true       |                                 |
+| SYS_WR_EN         | boolean              | false      |                                 |
+| SYS_BYTE_WR_EN    | boolean              | false      |                                 |
+| COMMON_CLK        | boolean              | false      |                                 |
+| ADDR_WIDTH        | positive             | 5          |                                 |
+| DATA_WIDTH        | positive             | 32         |                                 |
 ## Ports
 
 | Port name     | Direction | Type                                        | Description        |

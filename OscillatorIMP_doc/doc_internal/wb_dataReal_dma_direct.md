@@ -6,11 +6,11 @@
 ![Diagram](wb_dataReal_dma_direct.svg "Diagram")
 ## Generics
 
-| Generic name | Type    | Value | Description              |
-| ------------ | ------- | ----- | ------------------------ |
-| NB_INPUT     | natural | 1     | number of 32bits to send |
-| NB_SAMPLE    | natural | 10    |                          |
-| wb_size      | natural | 16    |                          |
+| Generic name | Type    | Value | Description               |
+| ------------ | ------- | ----- | ------------------------- |
+| NB_INPUT     | natural | 1     |  number of 32bits to send |
+| NB_SAMPLE    | natural | 10    |                           |
+| wb_size      | natural | 16    |                           |
 ## Ports
 
 | Port name     | Direction | Type                                 | Description      |
@@ -37,7 +37,7 @@
 | ----------- | ----------------------------- | ------------------------------------------------------------------- | ----------- |
 | REG_START   | std_logic_vector(1 downto 0)  |  "01"                                                               |             |
 | REG_SIZE    | std_logic_vector(1 downto 0)  |  "10"                                                               |             |
-| NB_BYTE     | natural                       |  NB_SAMPLE * 4                                                      | byte size   |
+| NB_BYTE     | natural                       |  NB_SAMPLE * 4                                                      |  byte size  |
 | CPT_SIZE    | natural                       |  natural(ceil(log2(real(NB_BYTE))))                                 |             |
 | SIZE_N      | natural                       |  CPT_SIZE                                                           |             |
 | buff_size_s | unsigned(CPT_SIZE-1 downto 0) |  to_unsigned(NB_BYTE,<br><span style="padding-left:20px"> CPT_SIZE) |             |
@@ -45,6 +45,5 @@
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk )

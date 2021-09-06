@@ -36,14 +36,7 @@
 ## Processes
 - pll_reset_0: ( ext_clk )
 **Description**
-Wait for external clock to become stable before starting the PLL
-By the time the FPGA has been loaded the clock should be well and
-truly stable, but lets give it a few cycles to be sure.
-[BenH] Some designs seem to require a lot more..
-
+ Wait for external clock to become stable before starting the PLL  By the time the FPGA has been loaded the clock should be well and  truly stable, but lets give it a few cycles to be sure.<br>  [BenH] Some designs seem to require a lot more.. 
 - soc_reset_0: ( pll_clk )
 **Description**
-Once our clock is stable and the external reset button isn't being
-pressed, assert the SOC reset for long enough for the CPU pipeline
-to clear completely.
-
+ Once our clock is stable and the external reset button isn't being  pressed, assert the SOC reset for long enough for the CPU pipeline  to clear completely. 

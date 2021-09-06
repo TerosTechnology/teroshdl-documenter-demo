@@ -6,13 +6,14 @@
 ![Diagram](prim_generic_flop_2sync.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Generic double-synchronizer flop
  This may need to be moved to prim_generic if libraries have a specific cell
  for synchronization
- 
+
 ## Generics
 
 | Generic name | Type              | Value | Description |

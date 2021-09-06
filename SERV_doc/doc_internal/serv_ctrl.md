@@ -17,21 +17,21 @@
 | ------------- | --------- | ------ | ----------- |
 | clk           | input     | wire   |             |
 | i_rst         | input     | wire   |             |
-| i_pc_en       | input     | wire   |             |
+| i_pc_en       | input     | wire   | State       |
 | i_cnt12to31   | input     | wire   |             |
 | i_cnt0        | input     | wire   |             |
 | i_cnt2        | input     | wire   |             |
-| i_jump        | input     | wire   |             |
+| i_jump        | input     | wire   | Control     |
 | i_jal_or_jalr | input     | wire   |             |
 | i_utype       | input     | wire   |             |
 | i_pc_rel      | input     | wire   |             |
 | i_trap        | input     | wire   |             |
-| i_imm         | input     | wire   |             |
+| i_imm         | input     | wire   | Data        |
 | i_buf         | input     | wire   |             |
 | i_csr_pc      | input     | wire   |             |
 | o_rd          | output    | wire   |             |
 | o_bad_pc      | output    | wire   |             |
-| o_ibus_adr    | output    | [31:0] |             |
+| o_ibus_adr    | output    | [31:0] | External    |
 ## Signals
 
 | Name                   | Type | Description |
@@ -50,3 +50,4 @@
 | offset_b               | wire |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

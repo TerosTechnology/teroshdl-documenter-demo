@@ -6,49 +6,54 @@
 ![Diagram](RssiRxFsm.svg "Diagram")
 ## Description
 
-Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
-Company    : SLAC National Accelerator Laboratory
-Description: Receiver FSM
-             Receiver has the following functionality:
-             Transport side FSM. Receive check and save segments to RX buffer.
-              - WAIT_SOF Waits for Transport side SOF,
-              - CHECK Determines the segment type and checks:
-                   ACK, NULL, DATA, or RST segment
-                   1. Validates checksum (when valid),
-                   2. Header length (number of bytes),
-                   3. Sequence number (Only current seqN or lastSeqN+1 allowed)
-                   4. Acknowledgment number (Valid range is lastAckN to lastAckN + txWindowSize)
-              - CHECK_SYN Toggles through SYN header addresses and saves the RSSI parameters
-                   Checks the following:
-                   1. Validates checksum (when valid),
-                   2. Validates Ack number if the ack is sent with the SYN segment
-              - DATA Receives the payload part of the DATA segment
-              - VALID Checks if next valid SEQn is received. If yes:
-                     1. increment the in order SEQn
-                     2. save seqN, type, and occupied to the window buffer at current rxBufferAddr
-                     3. increment rxBufferAddr
-              - DROP Just report dropped packet and got back to WAIT_SOF
-             Receiver side FSM. Send data to App side.
-               - CHECK_BUFFER and DATA Send the data frame to the Application
-                 when the data at the next txSegmentAddr is ready.
-               - SENT Release the windowbuffer at txBufferAddr.
-                      Increment txBufferAddr.
-                      Register the received SeqN for acknowledgment.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
+-----------------------------------------------------------------------------s
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Receiver FSM
+              Receiver has the following functionality:
+              Transport side FSM. Receive check and save segments to RX buffer.
+               - WAIT_SOF Waits for Transport side SOF,
+               - CHECK Determines the segment type and checks:
+                    ACK, NULL, DATA, or RST segment
+                    1. Validates checksum (when valid),
+                    2. Header length (number of bytes),
+                    3. Sequence number (Only current seqN or lastSeqN+1 allowed)
+                    4. Acknowledgment number (Valid range is lastAckN to lastAckN + txWindowSize)
+               - CHECK_SYN Toggles through SYN header addresses and saves the RSSI parameters
+                    Checks the following:
+                    1. Validates checksum (when valid),
+                    2. Validates Ack number if the ack is sent with the SYN segment
+               - DATA Receives the payload part of the DATA segment
+               - VALID Checks if next valid SEQn is received. If yes:
+                      1. increment the in order SEQn
+                      2. save seqN, type, and occupied to the window buffer at current rxBufferAddr
+                      3. increment rxBufferAddr
+               - DROP Just report dropped packet and got back to WAIT_SOF
+              Receiver side FSM. Send data to App side.
+                - CHECK_BUFFER and DATA Send the data frame to the Application
+                  when the data at the next txSegmentAddr is ready.
+                - SENT Release the windowbuffer at txBufferAddr.
+                       Increment txBufferAddr.
+                       Register the received SeqN for acknowledgment.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name        | Type     | Value | Description                                              |
-| ------------------- | -------- | ----- | -------------------------------------------------------- |
-| TPD_G               | time     | 1 ns  |                                                          |
-| WINDOW_ADDR_SIZE_G  | positive | 7     | 2^WINDOW_ADDR_SIZE_G  = Number of segments               |
-| HEADER_CHKSUM_EN_G  | boolean  | true  |                                                          |
-| SEGMENT_ADDR_SIZE_G | positive | 3     | 2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words |
+| Generic name        | Type     | Value | Description                                               |
+| ------------------- | -------- | ----- | --------------------------------------------------------- |
+| TPD_G               | time     | 1 ns  |                                                           |
+| WINDOW_ADDR_SIZE_G  | positive | 7     |  2^WINDOW_ADDR_SIZE_G  = Number of segments               |
+| HEADER_CHKSUM_EN_G  | boolean  | true  |                                                           |
+| SEGMENT_ADDR_SIZE_G | positive | 3     |  2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words |
 ## Ports
 
 | Port name      | Direction | Type                                                      | Description                                                               |
@@ -107,4 +112,6 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( r, rst_i, chksumValid_i, s_chksumOk, rxWindowSize_i, lastAckN_i, rxBufferSize_i,
                   txWindowSize_i, tspSsiMaster_i, connActive_i, rdBuffData_i, appSsiSlave_i )
+**Description**
+--------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )

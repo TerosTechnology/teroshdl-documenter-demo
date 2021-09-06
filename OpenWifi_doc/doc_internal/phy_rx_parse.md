@@ -6,8 +6,8 @@
 ![Diagram](phy_rx_parse.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Ports
 
 | Port name       | Direction | Type        | Description |
@@ -31,3 +31,4 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | src_addr_valid  | output    |             |             |
 ## Processes
 - unnamed: ( @( posedge clk ) )
+  - **Type:** always

@@ -6,12 +6,13 @@
 ![Diagram](alert_handler_ping_timer_assert_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Assertions for ping timer in alert handler. Intended to use with
  a formal tool.
- 
+
 ## Ports
 
 | Port name          | Direction | Type              | Description |
@@ -33,21 +34,21 @@ Copyright lowRISC contributors.
 | esc_ping_fail_o    | input     |                   |             |
 ## Signals
 
-| Name              | Type                          | Description                                              |
-| ----------------- | ----------------------------- | -------------------------------------------------------- |
-| ping_en_vector    | logic [PingEnDw-1:0]          |                                                          |
-| ping_en_mask      | logic [PingEnDw-1:0]          |                                                          |
-| ping_ok_vector    | logic [PingEnDw-1:0]          |                                                          |
-| ping_en_sel       | logic [$clog2(PingEnDw)-1:0]  | symbolic variables. we want to assess all valid indices  |
-| esc_idx           | logic [$clog2(N_ESC_SEV)-1:0] |                                                          |
-| alert_ping_fail_o | esc_ping_fail_o               |                                                          |
+| Name              | Type                          | Description                                               |
+| ----------------- | ----------------------------- | --------------------------------------------------------- |
+| ping_en_vector    | logic [PingEnDw-1:0]          |                                                           |
+| ping_en_mask      | logic [PingEnDw-1:0]          |                                                           |
+| ping_ok_vector    | logic [PingEnDw-1:0]          |                                                           |
+| ping_en_sel       | logic [$clog2(PingEnDw)-1:0]  |  symbolic variables. we want to assess all valid indices  |
+| esc_idx           | logic [$clog2(N_ESC_SEV)-1:0] |                                                           |
+| alert_ping_fail_o | esc_ping_fail_o               |                                                           |
 ## Constants
 
-| Name             | Type         | Value                          | Description     |
-| ---------------- | ------------ | ------------------------------ | --------------- |
-| PingEnDw         | int unsigned | N_ESC_SEV + NAlerts            |                 |
-| MaxWaitCntDw     | int          | 3                              |                 |
-| MarginFactor     | int          | 2                              |                 |
-| NumWaitCounts    | int          | 2                              |                 |
-| NumTimeoutCounts | int          | 2                              |                 |
-| PingPeriodBound  | int          | $rose(esc_ping_req_o[esc_idx]) | margin to apply |
+| Name             | Type         | Value                          | Description                                      |
+| ---------------- | ------------ | ------------------------------ | ------------------------------------------------ |
+| PingEnDw         | int unsigned | N_ESC_SEV + NAlerts            |                                                  |
+| MaxWaitCntDw     | int          | 3                              | ///////////////  Assumptions // ///////////////  |
+| MarginFactor     | int          | 2                              |                                                  |
+| NumWaitCounts    | int          | 2                              |                                                  |
+| NumTimeoutCounts | int          | 2                              |                                                  |
+| PingPeriodBound  | int          | $rose(esc_ping_req_o[esc_idx]) | margin to apply                                  |

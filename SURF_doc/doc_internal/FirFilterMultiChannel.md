@@ -6,27 +6,31 @@
 ![Diagram](FirFilterMultiChannel.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Multi-Channel Finite Impulse Response (FIR) Filter
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Multi-Channel Finite Impulse Response (FIR) Filter
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type     | Value         | Description                                       |
-| ------------------ | -------- | ------------- | ------------------------------------------------- |
-| TPD_G              | time     | 1 ns          |                                                   |
-| TAP_SIZE_G         | positive | 21            | Number of programmable taps                       |
-| CH_SIZE_G          | positive | 128           | Number of data channels                           |
-| PARALLEL_G         | positive | 4             | Number of parallel channel processing             |
-| WIDTH_G            | positive | 12            | Number of bits per data word                      |
-| MEMORY_INIT_FILE_G | string   | "none"        | Used to load tap coefficients into RAM at boot up |
-| MEMORY_TYPE_G      | string   | "distributed" |                                                   |
-| SYNTH_MODE_G       | string   | "inferred"    |                                                   |
+| Generic name       | Type     | Value         | Description                                        |
+| ------------------ | -------- | ------------- | -------------------------------------------------- |
+| TPD_G              | time     | 1 ns          |                                                    |
+| TAP_SIZE_G         | positive | 21            |  Number of programmable taps                       |
+| CH_SIZE_G          | positive | 128           |  Number of data channels                           |
+| PARALLEL_G         | positive | 4             |  Number of parallel channel processing             |
+| WIDTH_G            | positive | 12            |  Number of bits per data word                      |
+| MEMORY_INIT_FILE_G | string   | "none"        |  Used to load tap coefficients into RAM at boot up |
+| MEMORY_TYPE_G      | string   | "distributed" |                                                    |
+| SYNTH_MODE_G       | string   | "inferred"    |                                                    |
 ## Ports
 
 | Port name       | Direction | Type                   | Description                           |

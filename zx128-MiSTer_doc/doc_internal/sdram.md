@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](sdram.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -27,32 +31,34 @@
 | ramA      | output    | [12:0]     |             |
 ## Signals
 
-| Name     | Type      | Description |
-| -------- | --------- | ----------- |
-| ramQ     | reg[15:0] |             |
-| rs       | reg       |             |
-| rs2      | reg       |             |
-| rd       | reg       |             |
-| rd2      | reg       |             |
-| wr       | reg       |             |
-| wr2      | reg       |             |
-| rf       | reg       |             |
-| rf2      | reg       |             |
-| counting | reg       |             |
-| count    | reg[5:0]  |             |
-| state    | reg[2:0]  |             |
+| Name     | Type      | Description                                                                                         |
+| -------- | --------- | --------------------------------------------------------------------------------------------------- |
+| ramQ     | reg[15:0] | -------------------------------------------------------------------------------------------------  |
+| rs       | reg       | -----------------------------------------------------------------------------                      |
+| rs2      | reg       | -----------------------------------------------------------------------------                      |
+| rd       | reg       |                                                                                                     |
+| rd2      | reg       |                                                                                                     |
+| wr       | reg       |                                                                                                     |
+| wr2      | reg       |                                                                                                     |
+| rf       | reg       |                                                                                                     |
+| rf2      | reg       |                                                                                                     |
+| counting | reg       |                                                                                                     |
+| count    | reg[5:0]  |                                                                                                     |
+| state    | reg[2:0]  |                                                                                                     |
 ## Constants
 
-| Name     | Type | Value | Description |
-| -------- | ---- | ----- | ----------- |
-| sINIT    |      | 0     |             |
-| sIDLE    |      | 1     |             |
-| sREAD    |      | 2     |             |
-| sWRITE   |      | 3     |             |
-| sREFRESH |      | 4     |             |
+| Name     | Type | Value | Description                                                                     |
+| -------- | ---- | ----- | ------------------------------------------------------------------------------- |
+| sINIT    |      | 0     | -----------------------------------------------------------------------------  |
+| sIDLE    |      | 1     |                                                                                 |
+| sREAD    |      | 2     |                                                                                 |
+| sWRITE   |      | 3     |                                                                                 |
+| sREFRESH |      | 4     |                                                                                 |
 ## Processes
 - unnamed: ( @(negedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 ## State machines
 
 ![Diagram_state_machine_0]( stm_sdram_00.svg "Diagram")

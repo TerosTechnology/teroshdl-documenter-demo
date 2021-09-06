@@ -6,62 +6,67 @@
 ![Diagram](Pgp2bRxCell.svg "Diagram")
 ## Description
 
-Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
-Company    : SLAC National Accelerator Laboratory
-Description:
-Cell Receive interface module for the Pretty Good Protocol core.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Cell Receive interface module for the Pretty Good Protocol core.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name      | Type                 | Value | Description                  |
-| ----------------- | -------------------- | ----- | ---------------------------- |
-| TPD_G             | time                 | 1 ns  |                              |
-| RX_LANE_CNT_G     | integer range 1 to 2 | 1     | Number of receive lanes, 1-2 |
-| EN_SHORT_CELLS_G  | integer              | 1     | Enable short non-EOF cells   |
-| PAYLOAD_CNT_TOP_G | integer              | 7     | Top bit for payload counter  |
+| Generic name      | Type                 | Value | Description                   |
+| ----------------- | -------------------- | ----- | ----------------------------- |
+| TPD_G             | time                 | 1 ns  |                               |
+| RX_LANE_CNT_G     | integer range 1 to 2 | 1     |  Number of receive lanes, 1-2 |
+| EN_SHORT_CELLS_G  | integer              | 1     |  Enable short non-EOF cells   |
+| PAYLOAD_CNT_TOP_G | integer              | 7     |  Top bit for payload counter  |
 ## Ports
 
-| Port name        | Direction | Type                             | Description                   |
-| ---------------- | --------- | -------------------------------- | ----------------------------- |
-| pgpRxClkEn       | in        | sl                               | Master clock Enable           |
-| pgpRxClk         | in        | sl                               | Master clock                  |
-| pgpRxClkRst      | in        | sl                               | Synchronous reset input       |
-| pgpRxFlush       | in        | sl                               | Flush the link                |
-| pgpRxLinkReady   | in        | sl                               | Local side has link           |
-| pgpRxCellError   | out       | sl                               | A cell error has occured      |
-| cellRxPause      | in        | sl                               | Cell data pause               |
-| cellRxSOC        | in        | sl                               | Cell data start of cell       |
-| cellRxSOF        | in        | sl                               | Cell data start of frame      |
-| cellRxEOC        | in        | sl                               | Cell data end of cell         |
-| cellRxEOF        | in        | sl                               | Cell data end of frame        |
-| cellRxEOFE       | in        | sl                               | Cell data end of frame error  |
-| cellRxData       | in        | slv(RX_LANE_CNT_G*16-1 downto 0) | Cell data data                |
-| vcFrameRxSOF     | out       | sl                               | PGP frame data start of frame |
-| vcFrameRxEOF     | out       | sl                               | PGP frame data end of frame   |
-| vcFrameRxEOFE    | out       | sl                               | PGP frame data error          |
-| vcFrameRxData    | out       | slv(RX_LANE_CNT_G*16-1 downto 0) | PGP frame data                |
-| vc0FrameRxValid  | out       | sl                               | PGP frame data is valid       |
-| vc0RemAlmostFull | out       | sl                               | Remote buffer almost full     |
-| vc0RemOverflow   | out       | sl                               | Remote buffer overflow        |
-| vc1FrameRxValid  | out       | sl                               | PGP frame data is valid       |
-| vc1RemAlmostFull | out       | sl                               | Remote buffer almost full     |
-| vc1RemOverflow   | out       | sl                               | Remote buffer overflow        |
-| vc2FrameRxValid  | out       | sl                               | PGP frame data is valid       |
-| vc2RemAlmostFull | out       | sl                               | Remote buffer almost full     |
-| vc2RemOverflow   | out       | sl                               | Remote buffer overflow        |
-| vc3FrameRxValid  | out       | sl                               | PGP frame data is valid       |
-| vc3RemAlmostFull | out       | sl                               | Remote buffer almost full     |
-| vc3RemOverflow   | out       | sl                               | Remote buffer overflow        |
-| crcRxIn          | out       | slv(RX_LANE_CNT_G*16-1 downto 0) | Receive data for CRC          |
-| crcRxInit        | out       | sl                               | Receive CRC value init        |
-| crcRxValid       | out       | sl                               | Receive data for CRC is valid |
-| crcRxOut         | in        | slv(31 downto 0)                 | Receive calculated CRC value  |
+| Port name        | Direction | Type                             | Description                    |
+| ---------------- | --------- | -------------------------------- | ------------------------------ |
+| pgpRxClkEn       | in        | sl                               |  Master clock Enable           |
+| pgpRxClk         | in        | sl                               |  Master clock                  |
+| pgpRxClkRst      | in        | sl                               |  Synchronous reset input       |
+| pgpRxFlush       | in        | sl                               |  Flush the link                |
+| pgpRxLinkReady   | in        | sl                               |  Local side has link           |
+| pgpRxCellError   | out       | sl                               |  A cell error has occured      |
+| cellRxPause      | in        | sl                               |  Cell data pause               |
+| cellRxSOC        | in        | sl                               |  Cell data start of cell       |
+| cellRxSOF        | in        | sl                               |  Cell data start of frame      |
+| cellRxEOC        | in        | sl                               |  Cell data end of cell         |
+| cellRxEOF        | in        | sl                               |  Cell data end of frame        |
+| cellRxEOFE       | in        | sl                               |  Cell data end of frame error  |
+| cellRxData       | in        | slv(RX_LANE_CNT_G*16-1 downto 0) |  Cell data data                |
+| vcFrameRxSOF     | out       | sl                               |  PGP frame data start of frame |
+| vcFrameRxEOF     | out       | sl                               |  PGP frame data end of frame   |
+| vcFrameRxEOFE    | out       | sl                               |  PGP frame data error          |
+| vcFrameRxData    | out       | slv(RX_LANE_CNT_G*16-1 downto 0) |  PGP frame data                |
+| vc0FrameRxValid  | out       | sl                               |  PGP frame data is valid       |
+| vc0RemAlmostFull | out       | sl                               |  Remote buffer almost full     |
+| vc0RemOverflow   | out       | sl                               |  Remote buffer overflow        |
+| vc1FrameRxValid  | out       | sl                               |  PGP frame data is valid       |
+| vc1RemAlmostFull | out       | sl                               |  Remote buffer almost full     |
+| vc1RemOverflow   | out       | sl                               |  Remote buffer overflow        |
+| vc2FrameRxValid  | out       | sl                               |  PGP frame data is valid       |
+| vc2RemAlmostFull | out       | sl                               |  Remote buffer almost full     |
+| vc2RemOverflow   | out       | sl                               |  Remote buffer overflow        |
+| vc3FrameRxValid  | out       | sl                               |  PGP frame data is valid       |
+| vc3RemAlmostFull | out       | sl                               |  Remote buffer almost full     |
+| vc3RemOverflow   | out       | sl                               |  Remote buffer overflow        |
+| crcRxIn          | out       | slv(RX_LANE_CNT_G*16-1 downto 0) |  Receive data for CRC          |
+| crcRxInit        | out       | sl                               |  Receive CRC value init        |
+| crcRxValid       | out       | sl                               |  Receive data for CRC is valid |
+| crcRxOut         | in        | slv(31 downto 0)                 |  Receive calculated CRC value  |
 ## Signals
 
 | Name          | Type                             | Description |
@@ -152,17 +157,13 @@ the terms contained in the LICENSE.txt file.
 - unnamed: ( pgpRxClk )
 - unnamed: ( pgpRxClk )
 **Description**
-Detect current VC, check cell serial number
-
+ Detect current VC, check cell serial number 
 - unnamed: ( pgpRxClk )
 **Description**
-Receive cell tracking
-
+ Receive cell tracking 
 - unnamed: ( pgpRxClk )
 **Description**
-Data Output
-
+ Data Output 
 - unnamed: ( pgpRxClk )
 **Description**
-Update buffer status on successfull cell reception
-
+ Update buffer status on successfull cell reception 

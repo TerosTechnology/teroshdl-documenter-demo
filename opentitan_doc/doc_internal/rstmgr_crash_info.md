@@ -6,11 +6,11 @@
 ![Diagram](rstmgr_crash_info.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  This module implements the crash dump functionality
- 
+
 ## Generics
 
 | Generic name   | Type | Value                                     | Description |
@@ -46,4 +46,6 @@ Copyright lowRISC contributors.
 | TotalWidth     | int  | CrashStoreSlot * RdWidth                  |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb

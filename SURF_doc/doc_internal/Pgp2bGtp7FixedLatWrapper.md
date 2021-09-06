@@ -6,59 +6,64 @@
 ![Diagram](Pgp2bGtp7FixedLatWrapper.svg "Diagram")
 ## Description
 
-Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
-Company    : SLAC National Accelerator Laboratory
-Description: Gtp7 Fixed Latency Wrapper
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Gtp7 Fixed Latency Wrapper
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name            | Type                 | Value                             | Description                       |
-| ----------------------- | -------------------- | --------------------------------- | --------------------------------- |
-| TPD_G                   | time                 | 1 ns                              |                                   |
-| COMMON_CLK_G            | boolean              | false                             | set true if (stableClk = axilClk) |
-| SIM_GTRESET_SPEEDUP_G   | boolean              | false                             |                                   |
-| SIM_VERSION_G           | string               | "2.0"                             |                                   |
-| SIMULATION_G            | boolean              | false                             |                                   |
-| VC_INTERLEAVE_G         | integer              | 0                                 | No interleave Frames              |
-| PAYLOAD_CNT_TOP_G       | integer              | 7                                 | Top bit for payload counter       |
-| NUM_VC_EN_G             | integer range 1 to 4 | 4                                 |                                   |
-| AXIL_BASE_ADDR_G        | slv(31 downto 0)     | (others => '0')                   |                                   |
-| EXT_RST_POLARITY_G      | sl                   | '1'                               |                                   |
-| TX_POLARITY_G           | sl                   | '0'                               |                                   |
-| RX_POLARITY_G           | sl                   | '0'                               |                                   |
-| TX_ENABLE_G             | boolean              | true                              | Enable TX direction               |
-| RX_ENABLE_G             | boolean              | true                              | Enable RX direction               |
-| TX_CM_EN_G              | boolean              | true                              | CM Configurations                 |
-| TX_CM_TYPE_G            | string               | "MMCM"                            |                                   |
-| TX_CM_CLKIN_PERIOD_G    | real                 | 8.000                             |                                   |
-| TX_CM_DIVCLK_DIVIDE_G   | natural              | 8                                 |                                   |
-| TX_CM_CLKFBOUT_MULT_F_G | real                 | 8.000                             |                                   |
-| TX_CM_CLKOUT_DIVIDE_F_G | real                 | 8.000                             |                                   |
-| RX_CM_EN_G              | boolean              | true                              |                                   |
-| RX_CM_TYPE_G            | string               | "MMCM"                            |                                   |
-| RX_CM_CLKIN_PERIOD_G    | real                 | 8.000                             |                                   |
-| RX_CM_DIVCLK_DIVIDE_G   | natural              | 8                                 |                                   |
-| RX_CM_CLKFBOUT_MULT_F_G | real                 | 8.000                             |                                   |
-| RX_CM_CLKOUT_DIVIDE_F_G | real                 | 8.000                             |                                   |
-| PMA_RSV_G               | bit_vector           | x"00018480"                       | MGT Configurations                |
-| RX_OS_CFG_G             | bit_vector           | "0000010000000"                   | Set by wizard                     |
-| RXCDR_CFG_G             | bit_vector           | x"00003000023ff40200020"          | Set by wizard                     |
-| RXDFEXYDEN_G            | sl                   | '0'                               | Set by wizard                     |
-| STABLE_CLK_SRC_G        | string               | "stableClkIn"                     | or "gtClk0" or "gtClk1"           |
-| TX_REFCLK_SRC_G         | string               | "gtClk0"                          |                                   |
-| TX_USER_CLK_SRC_G       | string               | "txRefClk"                        | Could be txOutClk instead         |
-| RX_REFCLK_SRC_G         | string               | "gtClk0"                          |                                   |
-| TX_PLL_CFG_G            | Gtp7QPllCfgType      | getGtp7QPllCfg(156.25e6, 3.125e9) |                                   |
-| RX_PLL_CFG_G            | Gtp7QPllCfgType      | getGtp7QPllCfg(156.25e6, 3.125e9) |                                   |
-| DYNAMIC_QPLL_G          | boolean              | false                             |                                   |
-| TX_PLL_G                | string               | "PLL0"                            |                                   |
-| RX_PLL_G                | string               | "PLL0"                            |                                   |
+| Generic name            | Type                 | Value                             | Description                        |
+| ----------------------- | -------------------- | --------------------------------- | ---------------------------------- |
+| TPD_G                   | time                 | 1 ns                              |                                    |
+| COMMON_CLK_G            | boolean              | false                             |  set true if (stableClk = axilClk) |
+| SIM_GTRESET_SPEEDUP_G   | boolean              | false                             |                                    |
+| SIM_VERSION_G           | string               | "2.0"                             |                                    |
+| SIMULATION_G            | boolean              | false                             |                                    |
+| VC_INTERLEAVE_G         | integer              | 0                                 |  No interleave Frames              |
+| PAYLOAD_CNT_TOP_G       | integer              | 7                                 |  Top bit for payload counter       |
+| NUM_VC_EN_G             | integer range 1 to 4 | 4                                 |                                    |
+| AXIL_BASE_ADDR_G        | slv(31 downto 0)     | (others => '0')                   |                                    |
+| EXT_RST_POLARITY_G      | sl                   | '1'                               |                                    |
+| TX_POLARITY_G           | sl                   | '0'                               |                                    |
+| RX_POLARITY_G           | sl                   | '0'                               |                                    |
+| TX_ENABLE_G             | boolean              | true                              |  Enable TX direction               |
+| RX_ENABLE_G             | boolean              | true                              |  Enable RX direction               |
+| TX_CM_EN_G              | boolean              | true                              | CM Configurations                  |
+| TX_CM_TYPE_G            | string               | "MMCM"                            |                                    |
+| TX_CM_CLKIN_PERIOD_G    | real                 | 8.000                             |                                    |
+| TX_CM_DIVCLK_DIVIDE_G   | natural              | 8                                 |                                    |
+| TX_CM_CLKFBOUT_MULT_F_G | real                 | 8.000                             |                                    |
+| TX_CM_CLKOUT_DIVIDE_F_G | real                 | 8.000                             |                                    |
+| RX_CM_EN_G              | boolean              | true                              |                                    |
+| RX_CM_TYPE_G            | string               | "MMCM"                            |                                    |
+| RX_CM_CLKIN_PERIOD_G    | real                 | 8.000                             |                                    |
+| RX_CM_DIVCLK_DIVIDE_G   | natural              | 8                                 |                                    |
+| RX_CM_CLKFBOUT_MULT_F_G | real                 | 8.000                             |                                    |
+| RX_CM_CLKOUT_DIVIDE_F_G | real                 | 8.000                             |                                    |
+| PMA_RSV_G               | bit_vector           | x"00018480"                       | MGT Configurations                 |
+| RX_OS_CFG_G             | bit_vector           | "0000010000000"                   |  Set by wizard                     |
+| RXCDR_CFG_G             | bit_vector           | x"00003000023ff40200020"          |  Set by wizard                     |
+| RXDFEXYDEN_G            | sl                   | '0'                               |  Set by wizard                     |
+| STABLE_CLK_SRC_G        | string               | "stableClkIn"                     |  or "gtClk0" or "gtClk1"           |
+| TX_REFCLK_SRC_G         | string               | "gtClk0"                          |                                    |
+| TX_USER_CLK_SRC_G       | string               | "txRefClk"                        |  Could be txOutClk instead         |
+| RX_REFCLK_SRC_G         | string               | "gtClk0"                          |                                    |
+| TX_PLL_CFG_G            | Gtp7QPllCfgType      | getGtp7QPllCfg(156.25e6, 3.125e9) |                                    |
+| RX_PLL_CFG_G            | Gtp7QPllCfgType      | getGtp7QPllCfg(156.25e6, 3.125e9) |                                    |
+| DYNAMIC_QPLL_G          | boolean              | false                             |                                    |
+| TX_PLL_G                | string               | "PLL0"                            |                                    |
+| RX_PLL_G                | string               | "PLL0"                            |                                    |
 ## Ports
 
 | Port name        | Direction | Type                             | Description                                       |
@@ -151,18 +156,20 @@ the terms contained in the LICENSE.txt file.
 - BUFG_stableClkRef: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
 **Description**
-Power Up Reset
+ Power Up Reset
 
 - RstSync_pgpRxRst: surf.RstSync
 **Description**
-PGP RX Reset
+ PGP RX Reset
 
 - U_Gtp7QuadPll_1: surf.Gtp7QuadPll
 - Pgp2bGtp7Fixedlat_Inst: surf.Pgp2bGtp7FixedLat
 **Description**
-[out]
+ [out]
 
 - U_AxiLiteCrossbar_1: surf.AxiLiteCrossbar
 **Description**
-AXI-Lite crossbar
+-----------------------------------------------------------------------------------------------
+ AXI-Lite crossbar
+-----------------------------------------------------------------------------------------------
 

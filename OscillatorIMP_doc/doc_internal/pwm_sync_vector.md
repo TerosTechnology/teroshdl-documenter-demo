@@ -6,9 +6,11 @@
 ![Diagram](pwm_sync_vector.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2015/04/08
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2015/04/08
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

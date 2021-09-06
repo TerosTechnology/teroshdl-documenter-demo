@@ -6,16 +6,20 @@
 ![Diagram](AxiStreamScatterGather.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Takes 6 APV bursts with 128 channels of data each and
-transforms them into 128 "MultiSamples" with 6 samples each.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Takes 6 APV bursts with 128 channels of data each and
+ transforms them into 128 "MultiSamples" with 6 samples each.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name            | Type                | Value | Description |
@@ -64,10 +68,10 @@ the terms contained in the LICENSE.txt file.
 | REG_INIT_C           | RegType |  (       rxRamWrEn     => '0',<br><span style="padding-left:20px">       rxRamWrData   => (others => '0'),<br><span style="padding-left:20px">       rxRamWrAddr   => (others => '0'),<br><span style="padding-left:20px">       rxSofAddr     => (others => '0'),<br><span style="padding-left:20px">       rxFifoWrEn    => '0',<br><span style="padding-left:20px">       rxWordCount   => (others => '0'),<br><span style="padding-left:20px">       rxFrameNumber => (others => '0'),<br><span style="padding-left:20px">       rxError       => '0',<br><span style="padding-left:20px">        mSsiMaster    => ssiMasterInit(MASTER_AXIS_CONFIG_G),<br><span style="padding-left:20px">       txRamRdAddr   => (others => '0'),<br><span style="padding-left:20px">       txRamRdEn     => '0',<br><span style="padding-left:20px">       txFifoRdEn    => '0',<br><span style="padding-left:20px">       txWordCount   => (others => '0'),<br><span style="padding-left:20px">       txFrameNumber => (others => '0'),<br><span style="padding-left:20px">       txSof         => '1',<br><span style="padding-left:20px">        axilReadSlave  => AXI_LITE_READ_SLAVE_INIT_C,<br><span style="padding-left:20px">       axilWriteSlave => AXI_LITE_WRITE_SLAVE_INIT_C,<br><span style="padding-left:20px">        longWordCount => (others => '0'),<br><span style="padding-left:20px">       badWordCount  => (others => '0'),<br><span style="padding-left:20px">       longWords     => (others => '0'),<br><span style="padding-left:20px">       badWords      => (others => '0')) |             |
 ## Types
 
-| Name    | Type | Description |
-| ------- | ---- | ----------- |
-| RamType |      |             |
-| RegType |      |             |
+| Name    | Type | Description                                                                                                                                                                                           |
+| ------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RamType |      | -----------------------------------------------------------------------------------------------  RAM -----------------------------------------------------------------------------------------------  |
+| RegType |      | ------------------------------------------------------------------------------------------------                                                                                                      |
 ## Processes
 - ramProc: ( axiClk )
 - comb: ( axiRst, axilReadMaster, axilWriteMaster, r, sSsiMaster, txFifoRdData,
@@ -77,5 +81,7 @@ the terms contained in the LICENSE.txt file.
 
 - StatusFifo: surf.Fifo
 **Description**
-Use fifo to indicate to TX side that a new frame is ready
+-----------------------------------------------------------------------------------------------
+ Use fifo to indicate to TX side that a new frame is ready
+-----------------------------------------------------------------------------------------------
 

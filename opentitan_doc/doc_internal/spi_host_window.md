@@ -6,11 +6,13 @@
 ![Diagram](spi_host_window.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Module to manage TX FIFO window for Serial Peripheral Interface (SPI) host IP.
- 
+
+
 ## Ports
 
 | Port name  | Direction | Type   | Description |
@@ -26,10 +28,10 @@ Copyright lowRISC contributors.
 | rx_ready_o | output    |        |             |
 ## Signals
 
-| Name      | Type           | Description                                        |
-| --------- | -------------- | -------------------------------------------------- |
-| addr      | logic [AW-1:0] |                                                    |
-| win_error | logic          | Only support reads/writes to the data fifo window  |
+| Name      | Type           | Description                                         |
+| --------- | -------------- | --------------------------------------------------- |
+| addr      | logic [AW-1:0] |                                                     |
+| win_error | logic          |  Only support reads/writes to the data fifo window  |
 ## Constants
 
 | Name | Type | Value                     | Description |

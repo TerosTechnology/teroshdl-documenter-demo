@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](memory.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -36,38 +40,40 @@
 | ramA      | output    | wire[12:0] |             |
 ## Signals
 
-| Name     | Type        | Description |
-| -------- | ----------- | ----------- |
-| vduPage  | reg         |             |
-| romPage  | reg         |             |
-| noPaging | reg         |             |
-| ramPage  | reg[2:0]    |             |
-| mapForce | reg         |             |
-| mapAuto  | reg         |             |
-| mapRam   | reg         |             |
-| m1on     | reg         |             |
-| mapPage  | reg[3:0]    |             |
-| romQ     | wire [ 7:0] |             |
-| romA     | wire [14:0] |             |
-| esxQ     | wire [ 7:0] |             |
-| esxA     | wire [12:0] |             |
-| map      | wire        |             |
-| page     | wire [3:0]  |             |
-| sdrRf    | wire        |             |
-| sdrRd    | wire        |             |
-| sdrWr    | wire        |             |
-| sdrD     | wire [15:0] |             |
-| sdrQ     | wire [15:0] |             |
-| sdrA     | wire [23:0] |             |
-| ramQ     | wire [7:0]  |             |
-| va01     | wire        |             |
-| va11     | wire        |             |
-| dprWe2   | wire        |             |
-| dprA1    | wire [13:0] |             |
-| dprA2    | wire [13:0] |             |
+| Name     | Type        | Description                                                                                         |
+| -------- | ----------- | --------------------------------------------------------------------------------------------------- |
+| vduPage  | reg         | -------------------------------------------------------------------------------------------------  |
+| romPage  | reg         |                                                                                                     |
+| noPaging | reg         |                                                                                                     |
+| ramPage  | reg[2:0]    |                                                                                                     |
+| mapForce | reg         | -------------------------------------------------------------------------------------------------  |
+| mapAuto  | reg         |                                                                                                     |
+| mapRam   | reg         |                                                                                                     |
+| m1on     | reg         |                                                                                                     |
+| mapPage  | reg[3:0]    |                                                                                                     |
+| romQ     | wire [ 7:0] | -------------------------------------------------------------------------------------------------  |
+| romA     | wire [14:0] |                                                                                                     |
+| esxQ     | wire [ 7:0] | -------------------------------------------------------------------------------------------------  |
+| esxA     | wire [12:0] |                                                                                                     |
+| map      | wire        | -------------------------------------------------------------------------------------------------  |
+| page     | wire [3:0]  |                                                                                                     |
+| sdrRf    | wire        |                                                                                                     |
+| sdrRd    | wire        |                                                                                                     |
+| sdrWr    | wire        |                                                                                                     |
+| sdrD     | wire [15:0] |                                                                                                     |
+| sdrQ     | wire [15:0] |                                                                                                     |
+| sdrA     | wire [23:0] |                                                                                                     |
+| ramQ     | wire [7:0]  |                                                                                                     |
+| va01     | wire        | -------------------------------------------------------------------------------------------------  |
+| va11     | wire        |                                                                                                     |
+| dprWe2   | wire        |                                                                                                     |
+| dprA1    | wire [13:0] |                                                                                                     |
+| dprA2    | wire [13:0] |                                                                                                     |
 ## Processes
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 ## Instantiations
 
 - Rom: rom

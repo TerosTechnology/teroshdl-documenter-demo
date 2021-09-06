@@ -6,15 +6,19 @@
 ![Diagram](FwftCntTbSubModule.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Simulation sub module for testing the FwftCntTb
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Simulation sub module for testing the FwftCntTb
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type    | Value      | Description |
@@ -33,27 +37,27 @@ the terms contained in the LICENSE.txt file.
 | failed    | out       | sl   |             |
 ## Signals
 
-| Name          | Type                         | Description                 |
-| ------------- | ---------------------------- | --------------------------- |
-| r             | RegType                      |                             |
-| rin           | RegType                      |                             |
-| wr_en         | sl                           | Write Ports (wr_clk domain) |
-| din           | slv(DATA_WIDTH_C-1 downto 0) |                             |
-| wr_data_count | slv(ADDR_WIDTH_C-1 downto 0) |                             |
-| wr_ack        | sl                           |                             |
-| overflow      | sl                           |                             |
-| prog_full     | sl                           |                             |
-| almost_full   | sl                           |                             |
-| full          | sl                           |                             |
-| not_full      | sl                           |                             |
-| rd_en         | sl                           | Read Ports (rd_clk domain)  |
-| dout          | slv(DATA_WIDTH_C-1 downto 0) |                             |
-| rd_data_count | slv(ADDR_WIDTH_C-1 downto 0) |                             |
-| valid         | sl                           |                             |
-| underflow     | sl                           |                             |
-| prog_empty    | sl                           |                             |
-| almost_empty  | sl                           |                             |
-| empty         | sl                           |                             |
+| Name          | Type                         | Description                   |
+| ------------- | ---------------------------- | ----------------------------- |
+| r             | RegType                      |                               |
+| rin           | RegType                      |                               |
+| wr_en         | sl                           |  Write Ports (wr_clk domain)  |
+| din           | slv(DATA_WIDTH_C-1 downto 0) |                               |
+| wr_data_count | slv(ADDR_WIDTH_C-1 downto 0) |                               |
+| wr_ack        | sl                           |                               |
+| overflow      | sl                           |                               |
+| prog_full     | sl                           |                               |
+| almost_full   | sl                           |                               |
+| full          | sl                           |                               |
+| not_full      | sl                           |                               |
+| rd_en         | sl                           |  Read Ports (rd_clk domain)   |
+| dout          | slv(DATA_WIDTH_C-1 downto 0) |                               |
+| rd_data_count | slv(ADDR_WIDTH_C-1 downto 0) |                               |
+| valid         | sl                           |                               |
+| underflow     | sl                           |                               |
+| prog_empty    | sl                           |                               |
+| almost_empty  | sl                           |                               |
+| empty         | sl                           |                               |
 ## Constants
 
 | Name         | Type     | Value                                                                                                                                                                                                                                                                                                                               | Description |

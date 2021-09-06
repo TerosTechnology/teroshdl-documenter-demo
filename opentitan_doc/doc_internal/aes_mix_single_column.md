@@ -6,13 +6,15 @@
 ![Diagram](aes_mix_single_column.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  AES MixColumns for one single column of the state matrix
+
  For details, see Equations 4-7 of:
  Satoh et al., "A Compact Rijndael Hardware Architecture with S-Box Optimization"
- 
+
 ## Ports
 
 | Port name | Direction | Type  | Description |

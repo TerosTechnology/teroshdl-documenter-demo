@@ -6,16 +6,20 @@
 ![Diagram](AxiStreamDma.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Generic AXI Stream DMA block for frame at a time transfers.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Generic AXI Stream DMA block for frame at a time transfers.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name      | Type                 | Value       | Description |
@@ -118,8 +122,7 @@ the terms contained in the LICENSE.txt file.
 - unnamed: ( axiClk )
 - unnamed: ( axiRst, ib, intReadMasters, intWriteMasters, ob, popFifoValid, r )
 **Description**
-Local Register Space
-
+-----------------------------------  Local Register Space ----------------------------------- 
 - unnamed: ( axiRst, ib, ibAck, popFifoPFull, pushFifoDout, pushFifoValid, r )
 - unnamed: ( axiRst, ob, obAck, pushFifoDout, pushFifoValid, r )
 ## Instantiations
@@ -127,9 +130,13 @@ Local Register Space
 - U_SwFifos: surf.AxiLiteFifoPushPop
 - U_IbDma: surf.AxiStreamDmaWrite
 **Description**
-Inbound Controller
+-----------------------------------
+ Inbound Controller
+-----------------------------------
 
 - U_ObDma: surf.AxiStreamDmaRead
 **Description**
-Outbound Controller
+-----------------------------------
+ Outbound Controller
+-----------------------------------
 

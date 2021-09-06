@@ -6,22 +6,23 @@
 ![Diagram](prim_generic_ram_2p.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Synchronous dual-port SRAM register model
    This module is for simulation and small size SRAM.
    Implementing ECC should be done inside wrapper not this model.
- 
+
 ## Generics
 
-| Generic name    | Type | Value         | Description                               |
-| --------------- | ---- | ------------- | ----------------------------------------- |
-| Width           | int  | 32            | bit                                       |
-| Depth           | int  | 128           |                                           |
-| DataBitsPerMask | int  | 1             | Number of data bits per bit of write mask |
-| MemInitFile     |      | ""            | VMEM file to initialize the memory with   |
-| Aw              | int  | $clog2(Depth) | derived parameter                         |
+| Generic name    | Type | Value         | Description                                 |
+| --------------- | ---- | ------------- | ------------------------------------------- |
+| Width           | int  | 32            |  bit                                        |
+| Depth           | int  | 128           |                                             |
+| DataBitsPerMask | int  | 1             |  Number of data bits per bit of write mask  |
+| MemInitFile     |      | ""            |  VMEM file to initialize the memory with    |
+| Aw              | int  | $clog2(Depth) |  derived parameter                          |
 ## Ports
 
 | Port name | Direction | Type         | Description |
@@ -57,7 +58,7 @@ Copyright lowRISC contributors.
 | b_rdata_o  | begin                 |             |
 ## Constants
 
-| Name      | Type | Value                   | Description                                                                                                    |
-| --------- | ---- | ----------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Aw        | int  | $clog2(Depth)           | derived parameter                                                                                              |
-| MaskWidth | int  | Width / DataBitsPerMask | Width of internal write mask. Note *_wmask_i input into the module is always assumed to be the full bit mask.  |
+| Name      | Type | Value                   | Description                                                                                                      |
+| --------- | ---- | ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Aw        | int  | $clog2(Depth)           | derived parameter                                                                                                |
+| MaskWidth | int  | Width / DataBitsPerMask |  Width of internal write mask. Note *_wmask_i input into the module is always assumed  to be the full bit mask.  |

@@ -6,32 +6,40 @@
 ![Diagram](axi_spdif_rx.svg "Diagram")
 ## Description
 
-***************************************************************************
-***************************************************************************
-Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.
-In this HDL repository, there are many different and unique modules, consisting
-of various HDL (Verilog or VHDL) components. The individual modules are
-developed independently, and may be accompanied by separate and unique license
-terms.
-The user should read each of these license terms, and understand the
-freedoms and responsibilities that he or she has by using this source/core.
-This core is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-A PARTICULAR PURPOSE.
-Redistribution and use of source or resulting binaries, with or without modification
-of this file, are permitted under one of the following two license terms:
-  1. The GNU General Public License version 2 as published by the
-     Free Software Foundation, which can be found in the top level directory
-     of this repository (LICENSE_GPL2), and also online at:
-     <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
-OR
-  2. An ADI specific BSD license, which can be found in the top level directory
-     of this repository (LICENSE_ADIBSD), and also on-line at:
-     https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
-     This will allow to generate bit files and not release the source code,
-     as long as it attaches to an ADI device.
-***************************************************************************
-***************************************************************************
+ ***************************************************************************
+ ***************************************************************************
+ Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.
+
+ In this HDL repository, there are many different and unique modules, consisting
+ of various HDL (Verilog or VHDL) components. The individual modules are
+ developed independently, and may be accompanied by separate and unique license
+ terms.
+
+ The user should read each of these license terms, and understand the
+ freedoms and responsibilities that he or she has by using this source/core.
+
+ This core is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ A PARTICULAR PURPOSE.
+
+ Redistribution and use of source or resulting binaries, with or without modification
+ of this file, are permitted under one of the following two license terms:
+
+   1. The GNU General Public License version 2 as published by the
+      Free Software Foundation, which can be found in the top level directory
+      of this repository (LICENSE_GPL2), and also online at:
+      <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
+ OR
+
+   2. An ADI specific BSD license, which can be found in the top level directory
+      of this repository (LICENSE_ADIBSD), and also on-line at:
+      https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
+      This will allow to generate bit files and not release the source code,
+      as long as it attaches to an ADI device.
+
+ ***************************************************************************
+ ***************************************************************************
 ## Generics
 
 | Generic name       | Type    | Value | Description |
@@ -41,47 +49,47 @@ OR
 | C_DMA_TYPE         | integer | 0     |             |
 ## Ports
 
-| Port name       | Direction | Type                                                | Description |
-| --------------- | --------- | --------------------------------------------------- | ----------- |
-| rx_int_o        | out       | std_logic                                           |             |
-| spdif_rx_i      | in        | std_logic                                           |             |
-| spdif_rx_i_dbg  | out       | std_logic                                           |             |
-| s_axi_aclk      | in        | std_logic                                           |             |
-| s_axi_aresetn   | in        | std_logic                                           |             |
-| s_axi_awaddr    | in        | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)     |             |
-| s_axi_awvalid   | in        | std_logic                                           |             |
-| s_axi_wdata     | in        | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0)     |             |
-| s_axi_wstrb     | in        | std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0) |             |
-| s_axi_wvalid    | in        | std_logic                                           |             |
-| s_axi_bready    | in        | std_logic                                           |             |
-| s_axi_araddr    | in        | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)     |             |
-| s_axi_arvalid   | in        | std_logic                                           |             |
-| s_axi_rready    | in        | std_logic                                           |             |
-| s_axi_arready   | out       | std_logic                                           |             |
-| s_axi_rdata     | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0)     |             |
-| s_axi_rresp     | out       | std_logic_vector(1 downto 0)                        |             |
-| s_axi_rvalid    | out       | std_logic                                           |             |
-| s_axi_wready    | out       | std_logic                                           |             |
-| s_axi_bresp     | out       | std_logic_vector(1 downto 0)                        |             |
-| s_axi_bvalid    | out       | std_logic                                           |             |
-| s_axi_awready   | out       | std_logic                                           |             |
-| s_axi_awprot    | in        | std_logic_vector(2 downto 0)                        |             |
-| s_axi_arprot    | in        | std_logic_vector(2 downto 0)                        |             |
-| m_axis_aclk     | in        | std_logic                                           |             |
-| m_axis_tready   | in        | std_logic                                           |             |
-| m_axis_tdata    | out       | std_logic_vector(31 downto 0)                       |             |
-| m_axis_tlast    | out       | std_logic                                           |             |
-| m_axis_tvalid   | out       | std_logic                                           |             |
-| m_axis_tkeep    | out       | std_logic_vector(3 downto 0)                        |             |
-| dma_req_aclk    | in        | std_logic                                           |             |
-| dma_req_rstn    | in        | std_logic                                           |             |
-| dma_req_davalid | in        | std_logic                                           |             |
-| dma_req_datype  | in        | std_logic_vector(1 downto 0)                        |             |
-| dma_req_daready | out       | std_logic                                           |             |
-| dma_req_drvalid | out       | std_logic                                           |             |
-| dma_req_drtype  | out       | std_logic_vector(1 downto 0)                        |             |
-| dma_req_drlast  | out       | std_logic                                           |             |
-| dma_req_drready | in        | std_logic                                           |             |
+| Port name       | Direction | Type                                                | Description           |
+| --------------- | --------- | --------------------------------------------------- | --------------------- |
+| rx_int_o        | out       | std_logic                                           | PDIF ports            |
+| spdif_rx_i      | in        | std_logic                                           |                       |
+| spdif_rx_i_dbg  | out       | std_logic                                           |                       |
+| s_axi_aclk      | in        | std_logic                                           | XI Lite inter    face |
+| s_axi_aresetn   | in        | std_logic                                           |                       |
+| s_axi_awaddr    | in        | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)     |                       |
+| s_axi_awvalid   | in        | std_logic                                           |                       |
+| s_axi_wdata     | in        | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0)     |                       |
+| s_axi_wstrb     | in        | std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0) |                       |
+| s_axi_wvalid    | in        | std_logic                                           |                       |
+| s_axi_bready    | in        | std_logic                                           |                       |
+| s_axi_araddr    | in        | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)     |                       |
+| s_axi_arvalid   | in        | std_logic                                           |                       |
+| s_axi_rready    | in        | std_logic                                           |                       |
+| s_axi_arready   | out       | std_logic                                           |                       |
+| s_axi_rdata     | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0)     |                       |
+| s_axi_rresp     | out       | std_logic_vector(1 downto 0)                        |                       |
+| s_axi_rvalid    | out       | std_logic                                           |                       |
+| s_axi_wready    | out       | std_logic                                           |                       |
+| s_axi_bresp     | out       | std_logic_vector(1 downto 0)                        |                       |
+| s_axi_bvalid    | out       | std_logic                                           |                       |
+| s_axi_awready   | out       | std_logic                                           |                       |
+| s_axi_awprot    | in        | std_logic_vector(2 downto 0)                        |                       |
+| s_axi_arprot    | in        | std_logic_vector(2 downto 0)                        |                       |
+| m_axis_aclk     | in        | std_logic                                           | XI STREAM interface   |
+| m_axis_tready   | in        | std_logic                                           |                       |
+| m_axis_tdata    | out       | std_logic_vector(31 downto 0)                       |                       |
+| m_axis_tlast    | out       | std_logic                                           |                       |
+| m_axis_tvalid   | out       | std_logic                                           |                       |
+| m_axis_tkeep    | out       | std_logic_vector(3 downto 0)                        |                       |
+| dma_req_aclk    | in        | std_logic                                           | L330 DMA interface    |
+| dma_req_rstn    | in        | std_logic                                           |                       |
+| dma_req_davalid | in        | std_logic                                           |                       |
+| dma_req_datype  | in        | std_logic_vector(1 downto 0)                        |                       |
+| dma_req_daready | out       | std_logic                                           |                       |
+| dma_req_drvalid | out       | std_logic                                           |                       |
+| dma_req_drtype  | out       | std_logic_vector(1 downto 0)                        |                       |
+| dma_req_drlast  | out       | std_logic                                           |                       |
+| dma_req_drready | in        | std_logic                                           |                       |
 ## Signals
 
 | Name           | Type                                              | Description |
@@ -142,14 +150,22 @@ OR
 
 - STAT: rx_status_reg
 **Description**
-Status Register
+------------------------------------------------------------------------------
+ Status Register
+------------------------------------------------------------------------------
 
 - PDET: rx_phase_det
 **Description**
-Phase decoder
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Phase decoder
+------------------------------------------------------------------------------
 
 - FDEC: rx_decode
 **Description**
-Rx Decoder
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Rx Decoder
+------------------------------------------------------------------------------
 
 - ctrlif: axi_ctrlif

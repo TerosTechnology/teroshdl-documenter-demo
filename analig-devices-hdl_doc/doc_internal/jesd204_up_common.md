@@ -6,23 +6,30 @@
 ![Diagram](jesd204_up_common.svg "Diagram")
 ## Description
 
-The ADI JESD204 Core is released under the following license, which is
+
+ The ADI JESD204 Core is released under the following license, which is
  different than all other HDL cores in this repository.
+
  Please read this, and understand the freedoms and responsibilities you have
  by using this source code/core.
+
  The JESD204 HDL, is copyright © 2016-2017 Analog Devices Inc.
+
  This core is free software, you can use run, copy, study, change, ask
  questions about and improve this core. Distribution of source, or resulting
  binaries (including those inside an FPGA or ASIC) require you to release the
  source of the entire project (excluding the system libraries provide by the
  tools/compiler/FPGA vendor). These are the terms of the GNU General Public
  License version 2 as published by the Free Software Foundation.
+
  This core  is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
  You should have received a copy of the GNU General Public License version 2
  along with this source code, and binary.  If not, see
  <http://www.gnu.org/licenses/>.
+
  Commercial licenses (with commercial support) of this JESD204 core are also
  available under terms different than the General Public License. (e.g. they
  do not require you to accompany any image (FPGA or ASIC) using the JESD204
@@ -34,13 +41,15 @@ The ADI JESD204 Core is released under the following license, which is
  purchase a JESD204 license, end users of your product will also have a
  license to use this core in a commercial setting without releasing their
  source code).
+
  In addition, we kindly ask you to acknowledge ADI in any program, application
  or publication in which you use this JESD204 HDL core. (You are not required
  to do so; it is up to your common sense to decide whether you want to comply
  with this request or not.) For general publications, we suggest referencing :
  “The design and implementation of the JESD204 HDL Core used in this project
  is copyright © 2016-2017, Analog Devices, Inc.”
- 
+
+
 ## Generics
 
 | Generic name         | Type | Value | Description |
@@ -94,50 +103,61 @@ The ADI JESD204 Core is released under the following license, which is
 | status_synth_params2              | input     | [31:0]                        |             |
 ## Signals
 
-| Name                                  | Type                | Description                                                                                                                                                                                               |
-| ------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| up_scratch                            | reg [31:0]          |                                                                                                                                                                                                           |
-| up_cfg_octets_per_frame               | reg [7:0]           |                                                                                                                                                                                                           |
-| up_cfg_octets_per_multiframe          | reg [9:0]           |                                                                                                                                                                                                           |
-| up_cfg_beats_per_multiframe           | reg [7:0]           |                                                                                                                                                                                                           |
-| up_cfg_lanes_disable                  | reg [NUM_LANES-1:0] |                                                                                                                                                                                                           |
-| up_cfg_links_disable                  | reg [NUM_LINKS-1:0] |                                                                                                                                                                                                           |
-| up_cfg_disable_char_replacement       | reg                 |                                                                                                                                                                                                           |
-| up_cfg_disable_scrambler              | reg                 |                                                                                                                                                                                                           |
-| up_reset_vector                       | reg [2:0]           | Reset for the register map */                                                                                                                                                                             |
-| core_reset_vector                     | reg [4:0]           | Reset signal generation for the JESD core */                                                                                                                                                              |
-| device_reset_vector                   | reg [4:0]           |                                                                                                                                                                                                           |
-| up_reset_synchronizer_vector          | reg [1:0]           | Transfer the reset signal back to the up domain, used to keep the  * synchronizers in reset until the core is ready. This is done in order to  * prevent bogus data to propagate to the register map. */  |
-| up_core_reset_ext_synchronizer_vector | reg [1:0]           |                                                                                                                                                                                                           |
-| up_core_reset_ext                     | wire                |                                                                                                                                                                                                           |
-| core_cfg_transfer_en                  | wire                | Transfer two cycles before the core comes out of reset */                                                                                                                                                 |
-| device_cfg_transfer_en                | wire                |                                                                                                                                                                                                           |
-| up_reset_core                         | reg                 |                                                                                                                                                                                                           |
-| core_reset_all                        | wire                |                                                                                                                                                                                                           |
-| up_irq_enable                         | reg [NUM_IRQS-1:0]  | Interupt handling */                                                                                                                                                                                      |
-| up_irq_source                         | reg [NUM_IRQS-1:0]  |                                                                                                                                                                                                           |
-| up_irq_clear                          | reg [NUM_IRQS-1:0]  |                                                                                                                                                                                                           |
-| up_irq_pending                        | wire [NUM_IRQS-1:0] |                                                                                                                                                                                                           |
-| up_irq_event_cnt_bus                  | wire [8*16-1:0]     | Count link enable */                                                                                                                                                                                      |
-| up_link_enable_cnt_s                  | wire [15:0]         |                                                                                                                                                                                                           |
-| clk_mon_count                         | wire [20:0]         |                                                                                                                                                                                                           |
-| device_clk_mon_count                  | wire [20:0]         |                                                                                                                                                                                                           |
+| Name                                  | Type                | Description                                                                                                                                                                                                |
+| ------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| up_scratch                            | reg [31:0]          |                                                                                                                                                                                                            |
+| up_cfg_octets_per_frame               | reg [7:0]           |                                                                                                                                                                                                            |
+| up_cfg_octets_per_multiframe          | reg [9:0]           |                                                                                                                                                                                                            |
+| up_cfg_beats_per_multiframe           | reg [7:0]           |                                                                                                                                                                                                            |
+| up_cfg_lanes_disable                  | reg [NUM_LANES-1:0] |                                                                                                                                                                                                            |
+| up_cfg_links_disable                  | reg [NUM_LINKS-1:0] |                                                                                                                                                                                                            |
+| up_cfg_disable_char_replacement       | reg                 |                                                                                                                                                                                                            |
+| up_cfg_disable_scrambler              | reg                 |                                                                                                                                                                                                            |
+| up_reset_vector                       | reg [2:0]           |  Reset for the register map */                                                                                                                                                                             |
+| core_reset_vector                     | reg [4:0]           |  Reset signal generation for the JESD core */                                                                                                                                                              |
+| device_reset_vector                   | reg [4:0]           |                                                                                                                                                                                                            |
+| up_reset_synchronizer_vector          | reg [1:0]           |  Transfer the reset signal back to the up domain, used to keep the  * synchronizers in reset until the core is ready. This is done in order to  * prevent bogus data to propagate to the register map. */  |
+| up_core_reset_ext_synchronizer_vector | reg [1:0]           |   * Synchronize the external core reset to the register map domain so the status  * can be shown in the register map. This is useful for debugging.  */                                                    |
+| up_core_reset_ext                     | wire                |                                                                                                                                                                                                            |
+| core_cfg_transfer_en                  | wire                |  Transfer two cycles before the core comes out of reset */                                                                                                                                                 |
+| device_cfg_transfer_en                | wire                |                                                                                                                                                                                                            |
+| up_reset_core                         | reg                 |                                                                                                                                                                                                            |
+| core_reset_all                        | wire                |                                                                                                                                                                                                            |
+| up_irq_enable                         | reg [NUM_IRQS-1:0]  |  Interupt handling */                                                                                                                                                                                      |
+| up_irq_source                         | reg [NUM_IRQS-1:0]  |                                                                                                                                                                                                            |
+| up_irq_clear                          | reg [NUM_IRQS-1:0]  |                                                                                                                                                                                                            |
+| up_irq_pending                        | wire [NUM_IRQS-1:0] |                                                                                                                                                                                                            |
+| up_irq_event_cnt_bus                  | wire [8*16-1:0]     |  Count link enable */                                                                                                                                                                                      |
+| up_link_enable_cnt_s                  | wire [15:0]         |                                                                                                                                                                                                            |
+| clk_mon_count                         | wire [20:0]         |                                                                                                                                                                                                            |
+| device_clk_mon_count                  | wire [20:0]         |                                                                                                                                                                                                            |
 ## Processes
 - unnamed: ( @(posedge up_clk or negedge ext_resetn) )
+  - **Type:** always
 - unnamed: ( @(posedge core_clk or posedge core_reset_all) )
+  - **Type:** always
 - unnamed: ( @(posedge device_clk or posedge core_reset_all) )
+  - **Type:** always
 - unnamed: ( @(posedge up_clk or posedge core_reset) )
+  - **Type:** always
 - unnamed: ( @(posedge up_clk or posedge core_reset_ext) )
+  - **Type:** always
 - unnamed: ( @(posedge core_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge device_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge up_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge up_clk) )
+  - **Type:** always
 - unnamed: ( @(*) )
+  - **Type:** always
 - unnamed: ( @(*) )
+  - **Type:** always
 **Description**
-IRQ pending register is write-1-to-clear */
-
+ IRQ pending register is write-1-to-clear */ 
 - unnamed: ( @(posedge up_clk) )
+  - **Type:** always
 ## Instantiations
 
 - i_clock_mon: up_clock_mon

@@ -6,15 +6,19 @@
 ![Diagram](SpiMaster.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Generic SPI Master Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Generic SPI Master Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name      | Type                  | Value  | Description |
@@ -30,7 +34,7 @@ the terms contained in the LICENSE.txt file.
 
 | Port name  | Direction | Type                                 | Description        |
 | ---------- | --------- | ------------------------------------ | ------------------ |
-| clk        | in        | sl                                   |                    |
+| clk        | in        | sl                                   | lobal Signals      |
 | sRst       | in        | sl                                   |                    |
 | freeRunClk | in        | sl                                   | Parallel interface |
 | chipSel    | in        | slv(log2(NUM_CHIPS_G)-1 downto 0)    |                    |
@@ -40,7 +44,7 @@ the terms contained in the LICENSE.txt file.
 | rdEn       | out       | sl                                   |                    |
 | rdData     | out       | slv(DATA_SIZE_G-1 downto 0)          |                    |
 | shiftCount | out       | slv(bitSize(DATA_SIZE_G)-1 downto 0) |                    |
-| spiCsL     | out       | slv(NUM_CHIPS_G-1 downto 0)          |                    |
+| spiCsL     | out       | slv(NUM_CHIPS_G-1 downto 0)          | PI interface       |
 | spiSclk    | out       | sl                                   |                    |
 | spiSdi     | out       | sl                                   |                    |
 | spiSdo     | in        | sl                                   |                    |
@@ -62,7 +66,7 @@ the terms contained in the LICENSE.txt file.
 
 | Name      | Type                                                                                                                                                                                                      | Description |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| StateType | ( IDLE_S,<br><span style="padding-left:20px"> FREE_RUNNING_CLK_S,<br><span style="padding-left:20px"> SHIFT_S,<br><span style="padding-left:20px"> SAMPLE_S,<br><span style="padding-left:20px"> DONE_S)  | Types       |
+| StateType | ( IDLE_S,<br><span style="padding-left:20px"> FREE_RUNNING_CLK_S,<br><span style="padding-left:20px"> SHIFT_S,<br><span style="padding-left:20px"> SAMPLE_S,<br><span style="padding-left:20px"> DONE_S)  |  Types      |
 | RegType   |                                                                                                                                                                                                           |             |
 ## Processes
 - comb: ( chipSel, dataSize, freeRunClk, r, sRst, spiSdoRes, wrData,

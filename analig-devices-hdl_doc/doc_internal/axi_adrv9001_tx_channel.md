@@ -6,33 +6,41 @@
 ![Diagram](axi_adrv9001_tx_channel.svg "Diagram")
 ## Description
 
-***************************************************************************
+ ***************************************************************************
  ***************************************************************************
  Copyright 2014 - 2020 (c) Analog Devices, Inc. All rights reserved.
+
  In this HDL repository, there are many different and unique modules, consisting
  of various HDL (Verilog or VHDL) components. The individual modules are
  developed independently, and may be accompanied by separate and unique license
  terms.
+
  The user should read each of these license terms, and understand the
  freedoms and responsibilities that he or she has by using this source/core.
+
  This core is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE.
+
  Redistribution and use of source or resulting binaries, with or without modification
  of this file, are permitted under one of the following two license terms:
+
    1. The GNU General Public License version 2 as published by the
       Free Software Foundation, which can be found in the top level directory
       of this repository (LICENSE_GPL2), and also online at:
       <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
  OR
+
    2. An ADI specific BSD license, which can be found in the top level directory
       of this repository (LICENSE_ADIBSD), and also on-line at:
       https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
       This will allow to generate bit files and not release the source code,
       as long as it attaches to an ADI device.
+
  ***************************************************************************
  ***************************************************************************
- 
+
 ## Generics
 
 | Generic name            | Type | Value | Description |
@@ -48,47 +56,47 @@
 | DAC_DDS_CORDIC_PHASE_DW |      | 18    |             |
 ## Ports
 
-| Port name        | Direction | Type   | Description         |
-| ---------------- | --------- | ------ | ------------------- |
-| dac_clk          | input     |        | dac interface       |
-| dac_rst          | input     |        |                     |
-| dac_data_in_req  | output    |        |                     |
-| dac_data_in      | input     | [15:0] |                     |
-| dac_data_out_req | input     |        |                     |
-| dac_data_out     | output    | [15:0] |                     |
-| dac_data_iq_in   | input     | [15:0] |                     |
-| dac_data_iq_out  | output    | [15:0] |                     |
-| dac_enable       | output    | reg    | processor interface |
-| dac_data_sync    | input     |        |                     |
-| dac_dds_format   | input     |        |                     |
-| up_rstn          | input     |        | bus interface       |
-| up_clk           | input     |        |                     |
-| up_wreq          | input     |        |                     |
-| up_waddr         | input     | [13:0] |                     |
-| up_wdata         | input     | [31:0] |                     |
-| up_wack          | output    |        |                     |
-| up_rreq          | input     |        |                     |
-| up_raddr         | input     | [13:0] |                     |
-| up_rdata         | output    | [31:0] |                     |
-| up_rack          | output    |        |                     |
+| Port name        | Direction | Type   | Description          |
+| ---------------- | --------- | ------ | -------------------- |
+| dac_clk          | input     |        |  dac interface       |
+| dac_rst          | input     |        |                      |
+| dac_data_in_req  | output    |        |                      |
+| dac_data_in      | input     | [15:0] |                      |
+| dac_data_out_req | input     |        |                      |
+| dac_data_out     | output    | [15:0] |                      |
+| dac_data_iq_in   | input     | [15:0] |                      |
+| dac_data_iq_out  | output    | [15:0] |                      |
+| dac_enable       | output    | reg    |  processor interface |
+| dac_data_sync    | input     |        |                      |
+| dac_dds_format   | input     |        |                      |
+| up_rstn          | input     |        |  bus interface       |
+| up_clk           | input     |        |                      |
+| up_wreq          | input     |        |                      |
+| up_waddr         | input     | [13:0] |                      |
+| up_wdata         | input     | [31:0] |                      |
+| up_wack          | output    |        |                      |
+| up_rreq          | input     |        |                      |
+| up_raddr         | input     | [13:0] |                      |
+| up_rdata         | output    | [31:0] |                      |
+| up_rack          | output    |        |                      |
 ## Signals
 
-| Name                | Type           | Description         |
-| ------------------- | -------------- | ------------------- |
-| dac_pat_data        | reg     [15:0] | internal registers  |
-| full_ramp_counter   | reg     [15:0] |                     |
-| dac_dds_data_s      | wire [15:0]    | internal signals    |
-| dac_dds_scale_1_s   | wire [15:0]    |                     |
-| dac_dds_init_1_s    | wire [15:0]    |                     |
-| dac_dds_incr_1_s    | wire [15:0]    |                     |
-| dac_dds_scale_2_s   | wire [15:0]    |                     |
-| dac_dds_init_2_s    | wire [15:0]    |                     |
-| dac_dds_incr_2_s    | wire [15:0]    |                     |
-| dac_pat_data_1_s    | wire [15:0]    |                     |
-| dac_pat_data_2_s    | wire [15:0]    |                     |
-| dac_data_sel_s      | wire [ 3:0]    |                     |
-| dac_iqcor_enb_s     | wire           |                     |
-| dac_iqcor_coeff_1_s | wire [15:0]    |                     |
-| dac_iqcor_coeff_2_s | wire [15:0]    |                     |
-| pn7_data            | wire [15:0]    |                     |
-| pn15_data           | wire [15:0]    |                     |
+| Name                | Type           | Description          |
+| ------------------- | -------------- | -------------------- |
+| dac_pat_data        | reg     [15:0] |  internal registers  |
+| full_ramp_counter   | reg     [15:0] |                      |
+| dac_dds_data_s      | wire [15:0]    |  internal signals    |
+| dac_dds_scale_1_s   | wire [15:0]    |                      |
+| dac_dds_init_1_s    | wire [15:0]    |                      |
+| dac_dds_incr_1_s    | wire [15:0]    |                      |
+| dac_dds_scale_2_s   | wire [15:0]    |                      |
+| dac_dds_init_2_s    | wire [15:0]    |                      |
+| dac_dds_incr_2_s    | wire [15:0]    |                      |
+| dac_pat_data_1_s    | wire [15:0]    |                      |
+| dac_pat_data_2_s    | wire [15:0]    |                      |
+| dac_data_sel_s      | wire [ 3:0]    |                      |
+| dac_iqcor_enb_s     | wire           |                      |
+| dac_iqcor_coeff_1_s | wire [15:0]    |                      |
+| dac_iqcor_coeff_2_s | wire [15:0]    |                      |
+| pn7_data            | wire [15:0]    |                      |
+| pn15_data           | wire [15:0]    |                      |

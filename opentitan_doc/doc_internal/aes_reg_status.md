@@ -6,12 +6,14 @@
 ![Diagram](aes_reg_status.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  AES reg status
+
  This module tracks the collective status of multiple registers.
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -31,22 +33,23 @@ Copyright lowRISC contributors.
 | clean_o   | output    | sp2v_e      |             |
 ## Signals
 
-| Name         | Type                  | Description                                                                                                                                |
-| ------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| we_d         | logic [Width-1:0]     |                                                                                                                                            |
-| we_q         | logic [Width-1:0]     |                                                                                                                                            |
-| armed_d      | logic                 |                                                                                                                                            |
-| armed_q      | logic                 |                                                                                                                                            |
-| all_written  | sp2v_e                |                                                                                                                                            |
-| none_written | sp2v_e                |                                                                                                                                            |
-| new_d        | sp2v_e                |                                                                                                                                            |
-| new_q        | sp2v_e                |                                                                                                                                            |
-| clean_d      | sp2v_e                |                                                                                                                                            |
-| clean_q      | sp2v_e                |                                                                                                                                            |
-| new_q_raw    | logic [Sp2VWidth-1:0] | The following primitives are used to place a size-only constraint on the flops in order to prevent optimizations on these status signals.  |
-| clean_q_raw  | logic [Sp2VWidth-1:0] |                                                                                                                                            |
+| Name         | Type                  | Description                                                                                                                                  |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| we_d         | logic [Width-1:0]     |                                                                                                                                              |
+| we_q         | logic [Width-1:0]     |                                                                                                                                              |
+| armed_d      | logic                 |                                                                                                                                              |
+| armed_q      | logic                 |                                                                                                                                              |
+| all_written  | sp2v_e                |                                                                                                                                              |
+| none_written | sp2v_e                |                                                                                                                                              |
+| new_d        | sp2v_e                |                                                                                                                                              |
+| new_q        | sp2v_e                |                                                                                                                                              |
+| clean_d      | sp2v_e                |                                                                                                                                              |
+| clean_q      | sp2v_e                |                                                                                                                                              |
+| new_q_raw    | logic [Sp2VWidth-1:0] |  The following primitives are used to place a size-only constraint on the  flops in order to prevent optimizations on these status signals.  |
+| clean_q_raw  | logic [Sp2VWidth-1:0] |                                                                                                                                              |
 ## Processes
 - reg_ops: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - u_new_status_regs: prim_flop

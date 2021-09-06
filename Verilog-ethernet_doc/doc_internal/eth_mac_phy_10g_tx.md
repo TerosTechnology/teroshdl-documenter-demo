@@ -6,8 +6,10 @@
 ![Diagram](eth_mac_phy_10g_tx.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name      | Type | Value         | Description |
@@ -31,26 +33,26 @@ Language: Verilog 2001
 | SERDES_PIPELINE   |      | 0             |             |
 ## Ports
 
-| Port name           | Direction | Type                     | Description |
-| ------------------- | --------- | ------------------------ | ----------- |
-| clk                 | input     | wire                     |             |
-| rst                 | input     | wire                     |             |
-| s_axis_tdata        | input     | wire [DATA_WIDTH-1:0]    |             |
-| s_axis_tkeep        | input     | wire [KEEP_WIDTH-1:0]    |             |
-| s_axis_tvalid       | input     | wire                     |             |
-| s_axis_tready       | output    | wire                     |             |
-| s_axis_tlast        | input     | wire                     |             |
-| s_axis_tuser        | input     | wire [USER_WIDTH-1:0]    |             |
-| serdes_tx_data      | output    | wire [DATA_WIDTH-1:0]    |             |
-| serdes_tx_hdr       | output    | wire [HDR_WIDTH-1:0]     |             |
-| ptp_ts              | input     | wire [PTP_TS_WIDTH-1:0]  |             |
-| m_axis_ptp_ts       | output    | wire [PTP_TS_WIDTH-1:0]  |             |
-| m_axis_ptp_ts_tag   | output    | wire [PTP_TAG_WIDTH-1:0] |             |
-| m_axis_ptp_ts_valid | output    | wire                     |             |
-| tx_start_packet     | output    | wire [1:0]               |             |
-| tx_error_underflow  | output    | wire                     |             |
-| ifg_delay           | input     | wire [7:0]               |             |
-| tx_prbs31_enable    | input     | wire                     |             |
+| Port name           | Direction | Type                     | Description                      |
+| ------------------- | --------- | ------------------------ | -------------------------------- |
+| clk                 | input     | wire                     |                                  |
+| rst                 | input     | wire                     |                                  |
+| s_axis_tdata        | input     | wire [DATA_WIDTH-1:0]    |      * AXI input      */         |
+| s_axis_tkeep        | input     | wire [KEEP_WIDTH-1:0]    |                                  |
+| s_axis_tvalid       | input     | wire                     |                                  |
+| s_axis_tready       | output    | wire                     |                                  |
+| s_axis_tlast        | input     | wire                     |                                  |
+| s_axis_tuser        | input     | wire [USER_WIDTH-1:0]    |                                  |
+| serdes_tx_data      | output    | wire [DATA_WIDTH-1:0]    |      * SERDES interface      */  |
+| serdes_tx_hdr       | output    | wire [HDR_WIDTH-1:0]     |                                  |
+| ptp_ts              | input     | wire [PTP_TS_WIDTH-1:0]  |      * PTP      */               |
+| m_axis_ptp_ts       | output    | wire [PTP_TS_WIDTH-1:0]  |                                  |
+| m_axis_ptp_ts_tag   | output    | wire [PTP_TAG_WIDTH-1:0] |                                  |
+| m_axis_ptp_ts_valid | output    | wire                     |                                  |
+| tx_start_packet     | output    | wire [1:0]               |      * Status      */            |
+| tx_error_underflow  | output    | wire                     |                                  |
+| ifg_delay           | input     | wire [7:0]               |      * Configuration      */     |
+| tx_prbs31_enable    | input     | wire                     |                                  |
 ## Signals
 
 | Name            | Type                  | Description |

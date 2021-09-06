@@ -6,9 +6,11 @@
 ![Diagram](mva_synchronizer_vector.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2019
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2019
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

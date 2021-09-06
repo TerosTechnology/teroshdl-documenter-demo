@@ -19,20 +19,20 @@
 | AXI_LEN_INIT_C           | AxiLenType         |  (       valid => "00",<br><span style="padding-left:20px">       value => (others => '0'),<br><span style="padding-left:20px">       max   => 0,<br><span style="padding-left:20px">       req   => 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |             |
 ## Types
 
-| Name                | Type                                           | Description |
-| ------------------- | ---------------------------------------------- | ----------- |
-| AxiReadMasterType   |                                                |             |
-| AxiReadMasterArray  | array (natural range<>) of AxiReadMasterType   |             |
-| AxiReadSlaveType    |                                                |             |
-| AxiReadSlaveArray   | array (natural range<>) of AxiReadSlaveType    |             |
-| AxiWriteMasterType  |                                                |             |
-| AxiWriteMasterArray | array (natural range<>) of AxiWriteMasterType  |             |
-| AxiWriteSlaveType   |                                                |             |
-| AxiWriteSlaveArray  | array (natural range<>) of AxiWriteSlaveType   |             |
-| AxiCtrlType         |                                                |             |
-| AxiCtrlArray        | array (natural range<>) of AxiCtrlType         |             |
-| AxiConfigType       |                                                |             |
-| AxiLenType          |                                                |             |
+| Name                | Type                                           | Description                                                                                                     |
+| ------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| AxiReadMasterType   |                                                |                                                                                                                 |
+| AxiReadMasterArray  | array (natural range<>) of AxiReadMasterType   |                                                                                                                 |
+| AxiReadSlaveType    |                                                | ----------------------------------  AXI bus, read slave signal record ----------------------------------        |
+| AxiReadSlaveArray   | array (natural range<>) of AxiReadSlaveType    |                                                                                                                 |
+| AxiWriteMasterType  |                                                | ------------------------------------  AXI bus, write master signal record ------------------------------------  |
+| AxiWriteMasterArray | array (natural range<>) of AxiWriteMasterType  |                                                                                                                 |
+| AxiWriteSlaveType   |                                                | -----------------------------------  AXI bus, write slave signal record -----------------------------------     |
+| AxiWriteSlaveArray  | array (natural range<>) of AxiWriteSlaveType   |                                                                                                                 |
+| AxiCtrlType         |                                                | ----------------------  AXI bus, fifo control ----------------------                                            |
+| AxiCtrlArray        | array (natural range<>) of AxiCtrlType         |                                                                                                                 |
+| AxiConfigType       |                                                | ----------------------  AXI bus configuration ----------------------                                            |
+| AxiLenType          |                                                |                                                                                                                 |
 ## Functions
 - axiConfig <font id="function_arguments">( constant ADDR_WIDTH_C : in positive range 12 to 64 := 32;<br><span style="padding-left:20px"> constant DATA_BYTES_C : in positive range 1 to 128 := 4;<br><span style="padding-left:20px"> constant ID_BITS_C    : in positive range 1 to 32  := 12;<br><span style="padding-left:20px"> constant LEN_BITS_C   : in natural range 0 to 8    := 4) </font> <font id="function_return">return AxiConfigType </font>
 - axiWriteMasterInit <font id="function_arguments">( constant AXI_CONFIG_C : in AxiConfigType;<br><span style="padding-left:20px"> bready                : in sl              := '0';<br><span style="padding-left:20px"> constant AXI_BURST_C  : in slv(1 downto 0) := "01";<br><span style="padding-left:20px"> constant AXI_CACHE_C  : in slv(3 downto 0) := "1111") </font> <font id="function_return">return AxiWriteMasterType </font>
@@ -40,11 +40,18 @@
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiConfigType;<br><span style="padding-left:20px"> e : AxiConfigType) </font> <font id="function_return">return AxiConfigType </font>
 - getAxiLen <font id="function_arguments">( axiConfig  : AxiConfigType;<br><span style="padding-left:20px"> burstBytes : integer range 1 to 4096 := 4096) </font> <font id="function_return">return slv </font>
 **Description**
-Calculate number of txns in a burst based on number of bytes and bus configurationReturned value is number of txns-1, so can be assigned to AWLEN/ARLEN
+ Calculate number of txns in a burst based on number of bytes and bus configuration
+ Returned value is number of txns-1, so can be assigned to AWLEN/ARLEN
+
 - getAxiLen <font id="function_arguments">( axiConfig  : AxiConfigType;<br><span style="padding-left:20px"> burstBytes : integer range 1 to 4096 := 4096;<br><span style="padding-left:20px"> totalBytes : slv;<br><span style="padding-left:20px"> address    : slv) </font> <font id="function_return">return slv </font>
 **Description**
-Calculate number of txns in a burst based upon burst size, total remaining bytes,current address and bus configuration.Address is used to set a transaction size aligned to 4k boundariesReturned value is number of txns-1, so can be assigned to AWLEN/ARLEN
+ Calculate number of txns in a burst based upon burst size, total remaining bytes,
+ current address and bus configuration.
+ Address is used to set a transaction size aligned to 4k boundaries
+ Returned value is number of txns-1, so can be assigned to AWLEN/ARLEN
+
 - getAxiLenProc <font id="function_arguments">( axiConfig  : in AxiConfigType;<br><span style="padding-left:20px"> burstBytes : in integer range 1 to 4096 := 4096;<br><span style="padding-left:20px"> totalBytes : in slv;<br><span style="padding-left:20px"> address    : in slv;<br><span style="padding-left:20px"> r          : in    AxiLenType;<br><span style="padding-left:20px"> v          : inout AxiLenType) </font> <font id="function_return">return ()</font>
 - getAxiReadBytes <font id="function_arguments">( axiConfig : AxiConfigType;<br><span style="padding-left:20px"> axiRead   : AxiReadMasterType) </font> <font id="function_return">return slv </font>
 **Description**
-Calculate the byte count for a read request
+ Calculate the byte count for a read request
+

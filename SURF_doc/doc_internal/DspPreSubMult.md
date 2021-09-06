@@ -6,28 +6,32 @@
 ![Diagram](DspPreSubMult.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Generalized DSP inferred multiplier with pre-adder
-             configured as subtractor (based on UG901)
-Equation: p = (a - b) x c
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Generalized DSP inferred multiplier with pre-adder
+              configured as subtractor (based on UG901)
+ Equation: p = (a - b) x c
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name   | Type                 | Value | Description                                 |
-| -------------- | -------------------- | ----- | ------------------------------------------- |
-| TPD_G          | time                 | 1 ns  |                                             |
-| RST_POLARITY_G | sl                   | '1'   | '1' for active high rst, '0' for active low |
-| USE_DSP_G      | string               | "yes" |                                             |
-| PIPE_STAGES_G  | natural range 0 to 1 | 0     |                                             |
-| A_WIDTH_G      | natural              | 12    |                                             |
-| B_WIDTH_G      | natural              | 16    |                                             |
-| C_WIDTH_G      | natural              | 17    |                                             |
+| Generic name   | Type                 | Value | Description                                  |
+| -------------- | -------------------- | ----- | -------------------------------------------- |
+| TPD_G          | time                 | 1 ns  |                                              |
+| RST_POLARITY_G | sl                   | '1'   |  '1' for active high rst, '0' for active low |
+| USE_DSP_G      | string               | "yes" |                                              |
+| PIPE_STAGES_G  | natural range 0 to 1 | 0     |                                              |
+| A_WIDTH_G      | natural              | 12    |                                              |
+| B_WIDTH_G      | natural              | 16    |                                              |
+| C_WIDTH_G      | natural              | 17    |                                              |
 ## Ports
 
 | Port name | Direction | Type                                | Description        |

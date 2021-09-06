@@ -1,6 +1,10 @@
 # Package: axi_channel_handler_pkg
 
 - **File**: axi_channel_handler_pkg.vhd
+## Description
+
+=================================================================================================
+
 ## Constants
 
 | Name    | Type   | Value                  | Description |
@@ -9,16 +13,46 @@
 ## Functions
 - write_address_channel_write <font id="function_arguments">( constant awid_value     : in    std_logic_vector;<br><span style="padding-left:20px"> constant awaddr_value   : in    unsigned;<br><span style="padding-left:20px"> constant awlen_value    : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> constant awsize_value   : in    integer range 1 to 128;<br><span style="padding-left:20px"> constant awburst_value  : in    t_axburst;<br><span style="padding-left:20px"> constant awlock_value   : in    t_axlock;<br><span style="padding-left:20px"> constant awcache_value  : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant awprot_value   : in    t_axprot;<br><span style="padding-left:20px"> constant awqos_value    : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant awregion_value : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant awuser_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg            : in    string;<br><span style="padding-left:20px"> signal   clk            : in    std_logic;<br><span style="padding-left:20px"> signal   awid           : inout std_logic_vector;<br><span style="padding-left:20px"> signal   awaddr         : inout std_logic_vector;<br><span style="padding-left:20px"> signal   awlen          : inout std_logic_vector(7 downto 0);<br><span style="padding-left:20px"> signal   awsize         : inout std_logic_vector(2 downto 0);<br><span style="padding-left:20px"> signal   awburst        : inout std_logic_vector(1 downto 0);<br><span style="padding-left:20px"> signal   awlock         : inout std_logic;<br><span style="padding-left:20px"> signal   awcache        : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   awprot         : inout std_logic_vector(2 downto 0);<br><span style="padding-left:20px"> signal   awqos          : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   awregion       : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   awuser         : inout std_logic_vector;<br><span style="padding-left:20px"> signal   awvalid        : inout std_logic;<br><span style="padding-left:20px"> signal   awready        : in    std_logic;<br><span style="padding-left:20px"> constant scope          : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config         : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-This procedure writes adress on the write address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
+===============================================================================================
+ Procedures
+===============================================================================================
+----------------------------------------
+ write_address_channel_write
+----------------------------------------
+ This procedure writes adress on the write address channel
+ - When the write is completed, a log message is issued with ID_CHANNEL_BFM
+
 - write_data_channel_write <font id="function_arguments">( constant wdata_value  : in    t_slv_array;<br><span style="padding-left:20px"> constant wstrb_value  : in    t_slv_array;<br><span style="padding-left:20px"> constant wuser_value  : in    t_slv_array;<br><span style="padding-left:20px"> constant awlen_value  : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal   clk          : in    std_logic;<br><span style="padding-left:20px"> signal   wdata        : inout std_logic_vector;<br><span style="padding-left:20px"> signal   wstrb        : inout std_logic_vector;<br><span style="padding-left:20px"> signal   wlast        : inout std_logic;<br><span style="padding-left:20px"> signal   wuser        : inout std_logic_vector;<br><span style="padding-left:20px"> signal   wvalid       : inout std_logic;<br><span style="padding-left:20px"> signal   wready       : in    std_logic;<br><span style="padding-left:20px"> constant scope        : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-This procedure writes data on the write data channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
+----------------------------------------
+ write_data_channel_write
+----------------------------------------
+ This procedure writes data on the write data channel
+ - When the write is completed, a log message is issued with ID_CHANNEL_BFM
+
 - write_response_channel_receive <font id="function_arguments">( variable bid_value      : out   std_logic_vector;<br><span style="padding-left:20px"> variable bresp_value    : out   t_xresp;<br><span style="padding-left:20px"> variable buser_value    : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg            : in    string;<br><span style="padding-left:20px"> signal   clk            : in    std_logic;<br><span style="padding-left:20px"> signal   bid            : in    std_logic_vector;<br><span style="padding-left:20px"> signal   bresp          : in    std_logic_vector(1 downto 0);<br><span style="padding-left:20px"> signal   buser          : in    std_logic_vector;<br><span style="padding-left:20px"> signal   bvalid         : in    std_logic;<br><span style="padding-left:20px"> signal   bready         : inout std_logic;<br><span style="padding-left:20px"> constant alert_level    : in    t_alert_level         := error;<br><span style="padding-left:20px"> constant scope          : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config         : in    t_axi_bfm_config      := C_AXI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call  : in    string                := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
 **Description**
-This procedure receives the write response on the write response channeland returns the response data- When completed, a log message with ID id_for_bfm is issued.
+----------------------------------------
+ write_response_channel_receive
+----------------------------------------
+ This procedure receives the write response on the write response channel
+ and returns the response data
+ - When completed, a log message with ID id_for_bfm is issued.
+
 - read_address_channel_write <font id="function_arguments">( constant arid_value     : in    std_logic_vector;<br><span style="padding-left:20px"> constant araddr_value   : in    unsigned;<br><span style="padding-left:20px"> constant arlen_value    : in    unsigned(7 downto 0);<br><span style="padding-left:20px"> constant arsize_value   : in    integer range 1 to 128;<br><span style="padding-left:20px"> constant arburst_value  : in    t_axburst;<br><span style="padding-left:20px"> constant arlock_value   : in    t_axlock;<br><span style="padding-left:20px"> constant arcache_value  : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant arprot_value   : in    t_axprot;<br><span style="padding-left:20px"> constant arqos_value    : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant arregion_value : in    std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> constant aruser_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg            : in    string;<br><span style="padding-left:20px"> signal   clk            : in    std_logic;<br><span style="padding-left:20px"> signal   arid           : inout std_logic_vector;<br><span style="padding-left:20px"> signal   araddr         : inout std_logic_vector;<br><span style="padding-left:20px"> signal   arlen          : inout std_logic_vector(7 downto 0);<br><span style="padding-left:20px"> signal   arsize         : inout std_logic_vector(2 downto 0);<br><span style="padding-left:20px"> signal   arburst        : inout std_logic_vector(1 downto 0);<br><span style="padding-left:20px"> signal   arlock         : inout std_logic;<br><span style="padding-left:20px"> signal   arcache        : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   arprot         : inout std_logic_vector(2 downto 0);<br><span style="padding-left:20px"> signal   arqos          : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   arregion       : inout std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> signal   aruser         : inout std_logic_vector;<br><span style="padding-left:20px"> signal   arvalid        : inout std_logic;<br><span style="padding-left:20px"> signal   arready        : in    std_logic;<br><span style="padding-left:20px"> constant scope          : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel   : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config         : in    t_axi_bfm_config      := C_AXI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-This procedure writes adress on the read address channel- When the write is completed, a log message is issued with ID_CHANNEL_BFM
+----------------------------------------
+ read_address_channel_write
+----------------------------------------
+ This procedure writes adress on the read address channel
+ - When the write is completed, a log message is issued with ID_CHANNEL_BFM
+
 - read_data_channel_receive <font id="function_arguments">( variable read_result      : out   t_vvc_result;<br><span style="padding-left:20px"> variable read_data_queue  : inout t_axi_read_data_queue;<br><span style="padding-left:20px"> constant msg              : in    string;<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   rid              : in    std_logic_vector;<br><span style="padding-left:20px"> signal   rdata            : in    std_logic_vector;<br><span style="padding-left:20px"> signal   rresp            : in    std_logic_vector(1 downto 0);<br><span style="padding-left:20px"> signal   rlast            : in    std_logic;<br><span style="padding-left:20px"> signal   ruser            : in    std_logic_vector;<br><span style="padding-left:20px"> signal   rvalid           : in    std_logic;<br><span style="padding-left:20px"> signal   rready           : inout std_logic;<br><span style="padding-left:20px"> constant scope            : in    string                := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel        := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_axi_bfm_config  := C_AXI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call    : in    string                := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
 **Description**
-This procedure receives read data on the read data channel,and returns the read data- When completed, a log message with ID id_for_bfm is issued.
+----------------------------------------
+ read_data_channel_receive
+----------------------------------------
+ This procedure receives read data on the read data channel,
+ and returns the read data
+ - When completed, a log message with ID id_for_bfm is issued.
+

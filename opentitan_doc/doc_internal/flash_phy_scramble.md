@@ -6,14 +6,17 @@
 ![Diagram](flash_phy_scramble.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Flash Phy Scramble Module
+
  This module implements the flash scramble / de-scramble operation
  This operation is actually XEX.  However the components are broken
  in two and separately manipulated by the program and read pipelines.
- 
+
+
 ## Ports
 
 | Port name        | Direction | Type            | Description                      |
@@ -38,14 +41,14 @@ Copyright lowRISC contributors.
 | scrambled_data_o | output    | [DataWidth-1:0] |                                  |
 ## Signals
 
-| Name           | Type                    | Description                                                                                                                                          |
-| -------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| muxed_addr_key | logic [KeySize-1:0]     | unused portion of addr_key                                                                                                                           |
-| addr_key_sel   | logic                   |                                                                                                                                                      |
-| unused_key     | logic [UnusedWidth-1:0] |                                                                                                                                                      |
-| dec            | logic                   | Cipher portion                                                                                                                                       |
-| data           | logic [DataWidth-1:0]   |                                                                                                                                                      |
-| data_key_sel   | logic                   | Do not allow the key to change during a transaction. While this may be desirable for security reasons, it creates timing issues for physical design  |
+| Name           | Type                    | Description                                                                                                                                             |
+| -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| muxed_addr_key | logic [KeySize-1:0]     |  unused portion of addr_key                                                                                                                             |
+| addr_key_sel   | logic                   |                                                                                                                                                         |
+| unused_key     | logic [UnusedWidth-1:0] |                                                                                                                                                         |
+| dec            | logic                   |  Cipher portion                                                                                                                                         |
+| data           | logic [DataWidth-1:0]   |                                                                                                                                                         |
+| data_key_sel   | logic                   |  Do not allow the key to change during a transaction.  While this may be desirable for security reasons, it creates  timing issues for physical design  |
 ## Constants
 
 | Name         | Type | Value                  | Description |
@@ -54,7 +57,9 @@ Copyright lowRISC contributors.
 | UnusedWidth  | int  | KeySize - AddrPadWidth |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - u_cipher: prim_prince

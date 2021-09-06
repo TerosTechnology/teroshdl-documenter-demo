@@ -6,9 +6,11 @@
 ![Diagram](syncTrigStream.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2018
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value     | Description |
@@ -16,8 +18,8 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 | C_S00_AXI_DATA_WIDTH | integer | 32        |             |
 | C_S00_AXI_ADDR_WIDTH | integer | 4         |             |
 | USE_EXT_TRIG         | boolean | false     |             |
-| DFLT_PERIOD          | natural | 300000000 | 3s@100MHz   |
-| DFLT_DUTY            | natural | 100       | 1us@100MHz  |
+| DFLT_PERIOD          | natural | 300000000 |  3s@100MHz  |
+| DFLT_DUTY            | natural | 100       |  1us@100MHz |
 | GEN_SIZE             | natural | 32        |             |
 | DATA_SIZE            | natural | 16        |             |
 | NB_SAMPLE            | natural | 1024      |             |
@@ -97,5 +99,5 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 - wb_inst: work.syncTrigStream_comm
 - handle_comm: work.syncTrigStream_handComm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

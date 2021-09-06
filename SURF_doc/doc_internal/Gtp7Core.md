@@ -6,15 +6,19 @@
 ![Diagram](Gtp7Core.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for Xilinx 7-series GTP primitive
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for Xilinx 7-series GTP primitive
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name             | Type            | Value                    | Description                                                       |
@@ -23,17 +27,17 @@ the terms contained in the LICENSE.txt file.
 | SIM_GTRESET_SPEEDUP_G    | string          | "FALSE"                  | Sim Generics --                                                   |
 | SIM_VERSION_G            | string          | "1.0"                    |                                                                   |
 | SIMULATION_G             | boolean         | false                    |                                                                   |
-| STABLE_CLOCK_PERIOD_G    | real            | 4.0E-9                   |                                                                   |
-| REF_CLK_FREQ_G           | real            | 125.0E6                  | Only needed if Fixed Latency used                                 |
+| STABLE_CLOCK_PERIOD_G    | real            | 4.0E-9                   | units of seconds                                                  |
+| REF_CLK_FREQ_G           | real            | 125.0E6                  |  Only needed if Fixed Latency used                                |
 | RXOUT_DIV_G              | integer         | 2                        | TX/RX Settings --                                                 |
 | TXOUT_DIV_G              | integer         | 2                        |                                                                   |
-| RX_CLK25_DIV_G           | integer         | 5                        | Set by wizard                                                     |
-| TX_CLK25_DIV_G           | integer         | 5                        | Set by wizard                                                     |
-| PMA_RSV_G                | bit_vector      | x"00000333"              | Set by wizard                                                     |
-| RX_OS_CFG_G              | bit_vector      | "0001111110000"          | Set by wizard                                                     |
-| RXCDR_CFG_G              | bit_vector      | x"0000107FE206001041010" | Set by wizard                                                     |
-| RXLPM_INCM_CFG_G         | bit             | '1'                      | Set by wizard                                                     |
-| RXLPM_IPCM_CFG_G         | bit             | '0'                      | Set by wizard                                                     |
+| RX_CLK25_DIV_G           | integer         | 5                        |  Set by wizard                                                    |
+| TX_CLK25_DIV_G           | integer         | 5                        |  Set by wizard                                                    |
+| PMA_RSV_G                | bit_vector      | x"00000333"              |  Set by wizard                                                    |
+| RX_OS_CFG_G              | bit_vector      | "0001111110000"          |  Set by wizard                                                    |
+| RXCDR_CFG_G              | bit_vector      | x"0000107FE206001041010" |  Set by wizard                                                    |
+| RXLPM_INCM_CFG_G         | bit             | '1'                      |  Set by wizard                                                    |
+| RXLPM_IPCM_CFG_G         | bit             | '0'                      |  Set by wizard                                                    |
 | TX_PLL_G                 | string          | "PLL0"                   | Configure PLL sources                                             |
 | RX_PLL_G                 | string          | "PLL1"                   |                                                                   |
 | DYNAMIC_QPLL_G           | boolean         | false                    |                                                                   |
@@ -44,17 +48,17 @@ the terms contained in the LICENSE.txt file.
 | RX_INT_DATA_WIDTH_G      | integer         | 20                       |                                                                   |
 | RX_8B10B_EN_G            | boolean         | true                     |                                                                   |
 | TX_BUF_EN_G              | boolean         | true                     | Configure Buffer usage                                            |
-| TX_OUTCLK_SRC_G          | string          | "PLLREFCLK"              | or "OUTCLKPMA" when bypassing buffer                              |
-| TX_DLY_BYPASS_G          | sl              | '1'                      | 1 for bypass, 0 for delay                                         |
-| TX_PHASE_ALIGN_G         | string          | "AUTO"                   | Or "MANUAL" or "NONE"                                             |
-| TX_BUF_ADDR_MODE_G       | string          | "FAST"                   | Or "FULL"                                                         |
+| TX_OUTCLK_SRC_G          | string          | "PLLREFCLK"              |  or "OUTCLKPMA" when bypassing buffer                             |
+| TX_DLY_BYPASS_G          | sl              | '1'                      |  1 for bypass, 0 for delay                                        |
+| TX_PHASE_ALIGN_G         | string          | "AUTO"                   |  Or "MANUAL" or "NONE"                                            |
+| TX_BUF_ADDR_MODE_G       | string          | "FAST"                   |  Or "FULL"                                                        |
 | RX_BUF_EN_G              | boolean         | true                     |                                                                   |
-| RX_OUTCLK_SRC_G          | string          | "PLLREFCLK"              | or "OUTCLKPMA" when bypassing buffer                              |
-| RX_USRCLK_SRC_G          | string          | "RXOUTCLK"               | or "TXOUTCLK"                                                     |
-| RX_DLY_BYPASS_G          | sl              | '1'                      | 1 for bypass, 0 for delay                                         |
-| RX_DDIEN_G               | sl              | '0'                      | Supposed to be '1' when bypassing rx buffer                       |
+| RX_OUTCLK_SRC_G          | string          | "PLLREFCLK"              |  or "OUTCLKPMA" when bypassing buffer                             |
+| RX_USRCLK_SRC_G          | string          | "RXOUTCLK"               |  or "TXOUTCLK"                                                    |
+| RX_DLY_BYPASS_G          | sl              | '1'                      |  1 for bypass, 0 for delay                                        |
+| RX_DDIEN_G               | sl              | '0'                      |  Supposed to be '1' when bypassing rx buffer                      |
 | RX_BUF_ADDR_MODE_G       | string          | "FAST"                   |                                                                   |
-| RX_ALIGN_MODE_G          | string          | "GT"                     | Or "FIXED_LAT" or "NONE"                                          |
+| RX_ALIGN_MODE_G          | string          | "GT"                     |  Or "FIXED_LAT" or "NONE"                                         |
 | ALIGN_COMMA_DOUBLE_G     | string          | "FALSE"                  |                                                                   |
 | ALIGN_COMMA_ENABLE_G     | bit_vector      | "1111111111"             |                                                                   |
 | ALIGN_COMMA_WORD_G       | integer         | 2                        |                                                                   |
@@ -65,7 +69,7 @@ the terms contained in the LICENSE.txt file.
 | ALIGN_PCOMMA_VALUE_G     | bit_vector      | "0101111100"             |                                                                   |
 | ALIGN_PCOMMA_EN_G        | sl              | '0'                      |                                                                   |
 | SHOW_REALIGN_COMMA_G     | string          | "FALSE"                  |                                                                   |
-| RXSLIDE_MODE_G           | string          | "PCS"                    | Set to PMA for fixed latency operation                            |
+| RXSLIDE_MODE_G           | string          | "PCS"                    |  Set to PMA for fixed latency operation                           |
 | FIXED_COMMA_EN_G         | slv(3 downto 0) | "0011"                   | Fixed Latency comma alignment (If RX_ALIGN_MODE_G = "FIXED_LAT")  |
 | FIXED_ALIGN_COMMA_0_G    | slv             | "----------0101111100"   |                                                                   |
 | FIXED_ALIGN_COMMA_1_G    | slv             | "----------1010000011"   |                                                                   |
@@ -84,18 +88,18 @@ the terms contained in the LICENSE.txt file.
 | CLK_COR_REPEAT_WAIT_G    | integer         | 0                        |                                                                   |
 | CLK_COR_SEQ_LEN_G        | integer         | 1                        |                                                                   |
 | CLK_COR_SEQ_1_ENABLE_G   | bit_vector      | "1111"                   |                                                                   |
-| CLK_COR_SEQ_1_1_G        | bit_vector      | "0100000000"             | UG476 pg 249                                                      |
+| CLK_COR_SEQ_1_1_G        | bit_vector      | "0100000000"             |  UG476 pg 249                                                     |
 | CLK_COR_SEQ_1_2_G        | bit_vector      | "0000000000"             |                                                                   |
 | CLK_COR_SEQ_1_3_G        | bit_vector      | "0000000000"             |                                                                   |
 | CLK_COR_SEQ_1_4_G        | bit_vector      | "0000000000"             |                                                                   |
 | CLK_CORRECT_USE_G        | string          | "FALSE"                  |                                                                   |
 | CLK_COR_SEQ_2_ENABLE_G   | bit_vector      | "0000"                   |                                                                   |
-| CLK_COR_SEQ_2_1_G        | bit_vector      | "0100000000"             | UG476 pg 249                                                      |
+| CLK_COR_SEQ_2_1_G        | bit_vector      | "0100000000"             |  UG476 pg 249                                                     |
 | CLK_COR_SEQ_2_2_G        | bit_vector      | "0000000000"             |                                                                   |
 | CLK_COR_SEQ_2_3_G        | bit_vector      | "0000000000"             |                                                                   |
 | CLK_COR_SEQ_2_4_G        | bit_vector      | "0000000000"             |                                                                   |
 | RX_CHAN_BOND_EN_G        | boolean         | false                    | Configure Channel Bonding                                         |
-| RX_CHAN_BOND_MASTER_G    | boolean         | false                    |                                                                   |
+| RX_CHAN_BOND_MASTER_G    | boolean         | false                    | True: Master, False: Slave                                        |
 | CHAN_BOND_KEEP_ALIGN_G   | string          | "FALSE"                  |                                                                   |
 | CHAN_BOND_MAX_SKEW_G     | integer         | 1                        |                                                                   |
 | CHAN_BOND_SEQ_LEN_G      | integer         | 1                        |                                                                   |
@@ -117,7 +121,7 @@ the terms contained in the LICENSE.txt file.
 
 | Port name        | Direction | Type                                    | Description                                                     |
 | ---------------- | --------- | --------------------------------------- | --------------------------------------------------------------- |
-| stableClkIn      | in        | sl                                      | Freerunning clock needed to drive reset logic                   |
+| stableClkIn      | in        | sl                                      |  Freerunning clock needed to drive reset logic                  |
 | qPllRxSelect     | in        | slv(1 downto 0)                         |                                                                 |
 | qPllTxSelect     | in        | slv(1 downto 0)                         |                                                                 |
 | qPllRefClkIn     | in        | slv(1 downto 0)                         |                                                                 |
@@ -125,7 +129,7 @@ the terms contained in the LICENSE.txt file.
 | qPllLockIn       | in        | slv(1 downto 0)                         |                                                                 |
 | qPllRefClkLostIn | in        | slv(1 downto 0)                         |                                                                 |
 | qPllResetOut     | out       | slv(1 downto 0)                         |                                                                 |
-| gtRxRefClkBufg   | in        | sl                                      | In fixed latency mode, need BUF'd version of gt rx              |
+| gtRxRefClkBufg   | in        | sl                                      |  In fixed latency mode, need BUF'd version of gt rx             |
 | gtTxP            | out       | sl                                      | reference clock to check if recovered clock is stableSerial IO  |
 | gtTxN            | out       | sl                                      |                                                                 |
 | gtRxP            | in        | sl                                      |                                                                 |
@@ -141,8 +145,8 @@ the terms contained in the LICENSE.txt file.
 | rxDataValidIn    | in        | sl                                      | Manual Comma Align signals                                      |
 | rxSlideIn        | in        | sl                                      |                                                                 |
 | rxDataOut        | out       | slv(RX_EXT_DATA_WIDTH_G-1 downto 0)     | Rx Data and decode signals                                      |
-| rxCharIsKOut     | out       | slv((RX_EXT_DATA_WIDTH_G/8)-1 downto 0) | If WIDTH not mult of 8 then                                     |
-| rxDecErrOut      | out       | slv((RX_EXT_DATA_WIDTH_G/8)-1 downto 0) | not using 8b10b and these dont matter                           |
+| rxCharIsKOut     | out       | slv((RX_EXT_DATA_WIDTH_G/8)-1 downto 0) |  If WIDTH not mult of 8 then                                    |
+| rxDecErrOut      | out       | slv((RX_EXT_DATA_WIDTH_G/8)-1 downto 0) |  not using 8b10b and these dont matter                          |
 | rxDispErrOut     | out       | slv((RX_EXT_DATA_WIDTH_G/8)-1 downto 0) |                                                                 |
 | rxPolarityIn     | in        | sl                                      |                                                                 |
 | rxBufStatusOut   | out       | slv(2 downto 0)                         |                                                                 |
@@ -152,7 +156,7 @@ the terms contained in the LICENSE.txt file.
 | txOutClkOut      | out       | sl                                      | Tx Clock Related Signals                                        |
 | txUsrClkIn       | in        | sl                                      |                                                                 |
 | txUsrClk2In      | in        | sl                                      |                                                                 |
-| txUserRdyOut     | out       | sl                                      | txOutClk is valid                                               |
+| txUserRdyOut     | out       | sl                                      |  txOutClk is valid                                              |
 | txMmcmResetOut   | out       | sl                                      |                                                                 |
 | txMmcmLockedIn   | in        | sl                                      |                                                                 |
 | txUserResetIn    | in        | sl                                      | Tx User Reset signals                                           |
@@ -177,92 +181,92 @@ the terms contained in the LICENSE.txt file.
 | drpDo            | out       | slv(15 downto 0)                        |                                                                 |
 ## Signals
 
-| Name                   | Type                                   | Description        |
-| ---------------------- | -------------------------------------- | ------------------ |
-| rxPllSel               | slv(1 downto 0)                        |                    |
-| txPllSel               | slv(1 downto 0)                        |                    |
-| rxOutClk               | sl                                     | Rx Signals         |
-| rxOutClkBufg           | sl                                     |                    |
-| rxPllResets            | slv(1 downto 0)                        |                    |
-| gtRxReset              | sl                                     | GT GTRXRESET       |
-| rxResetDone            | sl                                     | GT RXRESETDONE     |
-| rxUserRdyInt           | sl                                     | GT RXUSERRDY       |
-| rxUserResetInt         | sl                                     |                    |
-| rxFsmResetDone         | sl                                     |                    |
-| rxRstTxUserRdy         | sl                                     |                    |
-| rxPmaResetDone         | sl                                     |                    |
-| rxRecClkStable         | sl                                     |                    |
-| rxRecClkMonitorRestart | sl                                     |                    |
-| rxCdrLockCnt           | integer range 0 to WAIT_TIME_CDRLOCK_C |                    |
-| rxRunPhaseAlignment    | sl                                     |                    |
-| rxPhaseAlignmentDone   | sl                                     |                    |
-| rxAlignReset           | sl                                     |                    |
-| rxDlySReset            | sl                                     | GT RXDLYSRESET     |
-| rxDlySResetDone        | sl                                     | GT RXDLYSRESETDONE |
-| rxPhAlignDone          | sl                                     | GT RXPHALIGNDONE   |
-| rxSlide                | sl                                     | GT RXSLIDE         |
-| rxCdrLock              | sl                                     | GT RXCDRLOCK       |
-| rxDfeAgcHold           | sl                                     |                    |
-| rxDfeLfHold            | sl                                     |                    |
-| rxLpmLfHold            | sl                                     |                    |
-| rxLpmHfHold            | sl                                     |                    |
-| rxDataInt              | slv(RX_EXT_DATA_WIDTH_G-1 downto 0)    | Rx Data            |
-| rxDataFull             | slv(31 downto 0)                       | GT RXDATA          |
-| rxCharIsKFull          | slv(3 downto 0)                        | GT RXCHARISK       |
-| rxDispErrFull          | slv(3 downto 0)                        | GT RXDISPERR       |
-| rxDecErrFull           | slv(3 downto 0)                        |                    |
-| txOutClk               | sl                                     | Tx Signals         |
-| txPllResets            | slv(1 downto 0)                        |                    |
-| gtTxReset              | sl                                     | GT GTTXRESET       |
-| txResetDone            | sl                                     | GT TXRESETDONE     |
-| txUserRdyInt           | sl                                     | GT TXUSERRDY       |
-| txFsmResetDone         | sl                                     |                    |
-| txPmaResetDone         | sl                                     |                    |
-| txResetPhaseAlignment  | sl                                     |                    |
-| txRunPhaseAlignment    | sl                                     |                    |
-| txPhaseAlignmentDone   | sl                                     |                    |
-| txPhAlignEn            | sl                                     | GT TXPHALIGNEN     |
-| txDlySReset            | sl                                     | GT TXDLYSRESET     |
-| txDlySResetDone        | sl                                     | GT TXDLYSRESETDONE |
-| txPhInit               | sl                                     | GT TXPHINIT        |
-| txPhInitDone           | sl                                     | GT TXPHINITDONE    |
-| txPhAlign              | sl                                     | GT TXPHALIGN       |
-| txPhAlignDone          | sl                                     | GT TXPHALIGNDONE   |
-| txDlyEn                | sl                                     | GT TXDLYEN         |
-| txDataFull             | slv(31 downto 0)                       | Tx Data Signals    |
-| txCharIsKFull          | slv(3 downto 0)                        |                    |
-| txCharDispMode         | slv(3 downto 0)                        |                    |
-| txCharDispVal          | slv(3 downto 0)                        |                    |
-| drpMuxAddr             | slv(8 downto 0)                        | DRP Signals        |
-| drpMuxDo               | slv(15 downto 0)                       |                    |
-| drpMuxDi               | slv(15 downto 0)                       |                    |
-| drpMuxRdy              | sl                                     |                    |
-| drpMuxEn               | sl                                     |                    |
-| drpMuxWe               | sl                                     |                    |
-| drpRstAddr             | slv(8 downto 0)                        |                    |
-| drpRstDo               | slv(15 downto 0)                       |                    |
-| drpRstDi               | slv(15 downto 0)                       |                    |
-| drpRstRdy              | sl                                     |                    |
-| drpRstEn               | sl                                     |                    |
-| drpRstWe               | sl                                     |                    |
-| drpRstDone             | sl                                     |                    |
-| gtRxRst                | sl                                     |                    |
+| Name                   | Type                                   | Description                                                                                                                                                                                                 |
+| ---------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| rxPllSel               | slv(1 downto 0)                        | ------------------------------------------------------------------------------------------------  Signals ------------------------------------------------------------------------------------------------  |
+| txPllSel               | slv(1 downto 0)                        |                                                                                                                                                                                                             |
+| rxOutClk               | sl                                     | --------------------------  Rx Signals                                                                                                                                                                      |
+| rxOutClkBufg           | sl                                     |                                                                                                                                                                                                             |
+| rxPllResets            | slv(1 downto 0)                        |                                                                                                                                                                                                             |
+| gtRxReset              | sl                                     |  GT GTRXRESET                                                                                                                                                                                               |
+| rxResetDone            | sl                                     |  GT RXRESETDONE                                                                                                                                                                                             |
+| rxUserRdyInt           | sl                                     |  GT RXUSERRDY                                                                                                                                                                                               |
+| rxUserResetInt         | sl                                     |                                                                                                                                                                                                             |
+| rxFsmResetDone         | sl                                     |                                                                                                                                                                                                             |
+| rxRstTxUserRdy         | sl                                     |                                                                                                                                                                                                             |
+| rxPmaResetDone         | sl                                     |                                                                                                                                                                                                             |
+| rxRecClkStable         | sl                                     |                                                                                                                                                                                                             |
+| rxRecClkMonitorRestart | sl                                     |                                                                                                                                                                                                             |
+| rxCdrLockCnt           | integer range 0 to WAIT_TIME_CDRLOCK_C |                                                                                                                                                                                                             |
+| rxRunPhaseAlignment    | sl                                     |                                                                                                                                                                                                             |
+| rxPhaseAlignmentDone   | sl                                     |                                                                                                                                                                                                             |
+| rxAlignReset           | sl                                     |                                                                                                                                                                                                             |
+| rxDlySReset            | sl                                     |  GT RXDLYSRESET                                                                                                                                                                                             |
+| rxDlySResetDone        | sl                                     |  GT RXDLYSRESETDONE                                                                                                                                                                                         |
+| rxPhAlignDone          | sl                                     |  GT RXPHALIGNDONE                                                                                                                                                                                           |
+| rxSlide                | sl                                     |  GT RXSLIDE                                                                                                                                                                                                 |
+| rxCdrLock              | sl                                     |  GT RXCDRLOCK                                                                                                                                                                                               |
+| rxDfeAgcHold           | sl                                     |                                                                                                                                                                                                             |
+| rxDfeLfHold            | sl                                     |                                                                                                                                                                                                             |
+| rxLpmLfHold            | sl                                     |                                                                                                                                                                                                             |
+| rxLpmHfHold            | sl                                     |                                                                                                                                                                                                             |
+| rxDataInt              | slv(RX_EXT_DATA_WIDTH_G-1 downto 0)    |  Rx Data                                                                                                                                                                                                    |
+| rxDataFull             | slv(31 downto 0)                       |  GT RXDATA                                                                                                                                                                                                  |
+| rxCharIsKFull          | slv(3 downto 0)                        |  GT RXCHARISK                                                                                                                                                                                               |
+| rxDispErrFull          | slv(3 downto 0)                        |  GT RXDISPERR                                                                                                                                                                                               |
+| rxDecErrFull           | slv(3 downto 0)                        |                                                                                                                                                                                                             |
+| txOutClk               | sl                                     | --------------------------  Tx Signals                                                                                                                                                                      |
+| txPllResets            | slv(1 downto 0)                        |                                                                                                                                                                                                             |
+| gtTxReset              | sl                                     |  GT GTTXRESET                                                                                                                                                                                               |
+| txResetDone            | sl                                     |  GT TXRESETDONE                                                                                                                                                                                             |
+| txUserRdyInt           | sl                                     |  GT TXUSERRDY                                                                                                                                                                                               |
+| txFsmResetDone         | sl                                     |                                                                                                                                                                                                             |
+| txPmaResetDone         | sl                                     |                                                                                                                                                                                                             |
+| txResetPhaseAlignment  | sl                                     |                                                                                                                                                                                                             |
+| txRunPhaseAlignment    | sl                                     |                                                                                                                                                                                                             |
+| txPhaseAlignmentDone   | sl                                     |                                                                                                                                                                                                             |
+| txPhAlignEn            | sl                                     |  GT TXPHALIGNEN                                                                                                                                                                                             |
+| txDlySReset            | sl                                     |  GT TXDLYSRESET                                                                                                                                                                                             |
+| txDlySResetDone        | sl                                     |  GT TXDLYSRESETDONE                                                                                                                                                                                         |
+| txPhInit               | sl                                     |  GT TXPHINIT                                                                                                                                                                                                |
+| txPhInitDone           | sl                                     |  GT TXPHINITDONE                                                                                                                                                                                            |
+| txPhAlign              | sl                                     |  GT TXPHALIGN                                                                                                                                                                                               |
+| txPhAlignDone          | sl                                     |  GT TXPHALIGNDONE                                                                                                                                                                                           |
+| txDlyEn                | sl                                     |  GT TXDLYEN                                                                                                                                                                                                 |
+| txDataFull             | slv(31 downto 0)                       |  Tx Data Signals                                                                                                                                                                                            |
+| txCharIsKFull          | slv(3 downto 0)                        |                                                                                                                                                                                                             |
+| txCharDispMode         | slv(3 downto 0)                        |                                                                                                                                                                                                             |
+| txCharDispVal          | slv(3 downto 0)                        |                                                                                                                                                                                                             |
+| drpMuxAddr             | slv(8 downto 0)                        |  DRP Signals                                                                                                                                                                                                |
+| drpMuxDo               | slv(15 downto 0)                       |                                                                                                                                                                                                             |
+| drpMuxDi               | slv(15 downto 0)                       |                                                                                                                                                                                                             |
+| drpMuxRdy              | sl                                     |                                                                                                                                                                                                             |
+| drpMuxEn               | sl                                     |                                                                                                                                                                                                             |
+| drpMuxWe               | sl                                     |                                                                                                                                                                                                             |
+| drpRstAddr             | slv(8 downto 0)                        |                                                                                                                                                                                                             |
+| drpRstDo               | slv(15 downto 0)                       |                                                                                                                                                                                                             |
+| drpRstDi               | slv(15 downto 0)                       |                                                                                                                                                                                                             |
+| drpRstRdy              | sl                                     |                                                                                                                                                                                                             |
+| drpRstEn               | sl                                     |                                                                                                                                                                                                             |
+| drpRstWe               | sl                                     |                                                                                                                                                                                                             |
+| drpRstDone             | sl                                     |                                                                                                                                                                                                             |
+| gtRxRst                | sl                                     |                                                                                                                                                                                                             |
 ## Constants
 
-| Name                | Type       | Value                                                                                                                    | Description |
-| ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| RX_SYSCLK_SEL_C     | slv        |  ite(RX_PLL_G = "PLL0",<br><span style="padding-left:20px"> "00",<br><span style="padding-left:20px"> "11")              |             |
-| TX_SYSCLK_SEL_C     | slv        |  ite(TX_PLL_G = "PLL0",<br><span style="padding-left:20px"> "00",<br><span style="padding-left:20px"> "11")              |             |
-| RX_PLL0_USED_C      | boolean    |  (RX_PLL_G = "PLL0")                                                                                                     |             |
-| TX_PLL0_USED_C      | boolean    |  (TX_PLL_G = "PLL0")                                                                                                     |             |
-| RX_XCLK_SEL_C       | string     |  ite(RX_BUF_EN_G,<br><span style="padding-left:20px"> "RXREC",<br><span style="padding-left:20px"> "RXUSR")              |             |
-| TX_XCLK_SEL_C       | string     |  ite(TX_BUF_EN_G,<br><span style="padding-left:20px"> "TXOUT",<br><span style="padding-left:20px"> "TXUSR")              |             |
-| RX_OUTCLK_SEL_C     | bit_vector |  getOutClkSelVal(RX_OUTCLK_SRC_G)                                                                                        |             |
-| TX_OUTCLK_SEL_C     | bit_vector |  getOutClkSelVal(TX_OUTCLK_SRC_G)                                                                                        |             |
-| RX_DATA_WIDTH_C     | integer    |  getDataWidth(RX_8B10B_EN_G,<br><span style="padding-left:20px"> RX_EXT_DATA_WIDTH_G)                                    |             |
-| TX_DATA_WIDTH_C     | integer    |  getDataWidth(TX_8B10B_EN_G,<br><span style="padding-left:20px"> TX_EXT_DATA_WIDTH_G)                                    |             |
-| GT_TYPE_C           | string     |  "GTP"                                                                                                                   |             |
-| WAIT_TIME_CDRLOCK_C | integer    |  ite(SIM_GTRESET_SPEEDUP_G = "TRUE",<br><span style="padding-left:20px"> 16,<br><span style="padding-left:20px"> 165520) |             |
+| Name                | Type       | Value                                                                                                                    | Description                                                                                                                                                                                                   |
+| ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RX_SYSCLK_SEL_C     | slv        |  ite(RX_PLL_G = "PLL0",<br><span style="padding-left:20px"> "00",<br><span style="padding-left:20px"> "11")              | ------------------------------------------------------------------------------------------------  Constants ------------------------------------------------------------------------------------------------  |
+| TX_SYSCLK_SEL_C     | slv        |  ite(TX_PLL_G = "PLL0",<br><span style="padding-left:20px"> "00",<br><span style="padding-left:20px"> "11")              |                                                                                                                                                                                                               |
+| RX_PLL0_USED_C      | boolean    |  (RX_PLL_G = "PLL0")                                                                                                     |                                                                                                                                                                                                               |
+| TX_PLL0_USED_C      | boolean    |  (TX_PLL_G = "PLL0")                                                                                                     |                                                                                                                                                                                                               |
+| RX_XCLK_SEL_C       | string     |  ite(RX_BUF_EN_G,<br><span style="padding-left:20px"> "RXREC",<br><span style="padding-left:20px"> "RXUSR")              |                                                                                                                                                                                                               |
+| TX_XCLK_SEL_C       | string     |  ite(TX_BUF_EN_G,<br><span style="padding-left:20px"> "TXOUT",<br><span style="padding-left:20px"> "TXUSR")              |                                                                                                                                                                                                               |
+| RX_OUTCLK_SEL_C     | bit_vector |  getOutClkSelVal(RX_OUTCLK_SRC_G)                                                                                        |                                                                                                                                                                                                               |
+| TX_OUTCLK_SEL_C     | bit_vector |  getOutClkSelVal(TX_OUTCLK_SRC_G)                                                                                        |                                                                                                                                                                                                               |
+| RX_DATA_WIDTH_C     | integer    |  getDataWidth(RX_8B10B_EN_G,<br><span style="padding-left:20px"> RX_EXT_DATA_WIDTH_G)                                    |                                                                                                                                                                                                               |
+| TX_DATA_WIDTH_C     | integer    |  getDataWidth(TX_8B10B_EN_G,<br><span style="padding-left:20px"> TX_EXT_DATA_WIDTH_G)                                    |                                                                                                                                                                                                               |
+| GT_TYPE_C           | string     |  "GTP"                                                                                                                   |                                                                                                                                                                                                               |
+| WAIT_TIME_CDRLOCK_C | integer    |  ite(SIM_GTRESET_SPEEDUP_G = "TRUE",<br><span style="padding-left:20px"> 16,<br><span style="padding-left:20px"> 165520) |                                                                                                                                                                                                               |
 ## Functions
 - getOutClkSelVal <font id="function_arguments">(OUT_CLK_SRC : string) </font> <font id="function_return">return bit_vector </font>
 - getDataWidth <font id="function_arguments">(USE_8B10B : boolean;<br><span style="padding-left:20px"> EXT_DATA_WIDTH : integer) </font> <font id="function_return">return integer </font>
@@ -272,42 +276,54 @@ the terms contained in the LICENSE.txt file.
 - unnamed: ( stableClkIn )
 - TX_DATA_8B10B_GLUE: ( txCharIsKIn, txDataIn )
 **Description**
-Tx Logic
-
+------------------------------------------------------------------------------------------------  Tx Logic ------------------------------------------------------------------------------------------------ 
 ## Instantiations
 
 - Gtp7RxRst_Inst: surf.Gtp7RxRst
 **Description**
-Rx Reset Module
-1. Reset RX PLL,
-2. Wait PLL Lock
-3. Wait recclk_stable
-4. Reset MMCM
-5. Wait MMCM Lock
-6. Assert gtRxUserRdy (gtRxUsrClk now usable)
-7. Wait gtRxResetDone
-8. Do phase alignment if necessary
-9. Wait DATA_VALID (aligned) - 100 us
+------------------------------------------------------------------------------------------------
+ Rx Reset Module
+ 1. Reset RX PLL,
+ 2. Wait PLL Lock
+ 3. Wait recclk_stable
+ 4. Reset MMCM
+ 5. Wait MMCM Lock
+ 6. Assert gtRxUserRdy (gtRxUsrClk now usable)
+ 7. Wait gtRxResetDone
+ 8. Do phase alignment if necessary
+ 9. Wait DATA_VALID (aligned) - 100 us
+10. Wait 1 us, Set rxFsmResetDone.
+------------------------------------------------------------------------------------------------
 
 - RstSync_RxResetDone: surf.RstSync
 **Description**
-Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
+------------------------------------------------------------------------------------------------
+ Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
+------------------------------------------------------------------------------------------------
 
 - BUFG_RX_OUT_CLK: BUFG
 **Description**
-Output
-Recovered clock monitor
+ Output
+-----------------------------------------------------------------------------------------------
+ Recovered clock monitor
+-----------------------------------------------------------------------------------------------
 
 - Gtp7TxRst_Inst: surf.Gtp7TxRst
 **Description**
-Tx Reset Module
+------------------------------------------------------------------------------------------------
+ Tx Reset Module
+------------------------------------------------------------------------------------------------
 
 - RstSync_Tx: surf.RstSync
 **Description**
-Might be interesting to look at
-Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
+ Might be interesting to look at
+------------------------------------------------------------------------------------------------
+ Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
+------------------------------------------------------------------------------------------------
 
 - gtpe2_i: GTPE2_CHANNEL
 **Description**
-GTX Instantiation
+------------------------------------------------------------------------------------------------
+ GTX Instantiation
+------------------------------------------------------------------------------------------------
 

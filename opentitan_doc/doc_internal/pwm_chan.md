@@ -6,10 +6,10 @@
 ![Diagram](pwm_chan.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Ports
 
 | Port name        | Direction | Type   | Description |
@@ -32,33 +32,41 @@ Copyright lowRISC contributors.
 | pwm_o            | output    |        |             |
 ## Signals
 
-| Name               | Type         | Description          |
-| ------------------ | ------------ | -------------------- |
-| duty_cycle_actual  | logic [15:0] |                      |
-| on_phase           | logic [15:0] |                      |
-| off_phase          | logic [15:0] |                      |
-| phase_wrap         | logic        |                      |
-| pwm_int            | logic        |                      |
-| blink_ctr_q        | logic [15:0] | Standard blink mode  |
-| blink_ctr_d        | logic [15:0] |                      |
-| duty_cycle_blink   | logic [15:0] |                      |
-| htbt_ctr_q         | logic [15:0] | Heartbeat mode       |
-| htbt_ctr_d         | logic [15:0] |                      |
-| duty_cycle_htbt    | logic [15:0] |                      |
-| dc_htbt_d          | logic [15:0] |                      |
-| dc_htbt_q          | logic [15:0] |                      |
-| dc_htbt_end        | logic        |                      |
-| htbt_direction     | logic        |                      |
-| dc_wrap            | logic        |                      |
-| pos_htbt           | logic        |                      |
-| neg_htbt           | logic        |                      |
-| pattern_repeat     | logic        |                      |
-| phase_delay_scaled | logic [15:0] |                      |
-| duty_cycle_scaled  | logic [15:0] |                      |
-| on_phase_exceeded  | logic        |                      |
-| off_phase_exceeded | logic        |                      |
+| Name               | Type         | Description           |
+| ------------------ | ------------ | --------------------- |
+| duty_cycle_actual  | logic [15:0] |                       |
+| on_phase           | logic [15:0] |                       |
+| off_phase          | logic [15:0] |                       |
+| phase_wrap         | logic        |                       |
+| pwm_int            | logic        |                       |
+| blink_ctr_q        | logic [15:0] |  Standard blink mode  |
+| blink_ctr_d        | logic [15:0] |                       |
+| duty_cycle_blink   | logic [15:0] |                       |
+| unused_sum         | logic        |                       |
+| blink_sum          | logic [15:0] |                       |
+| htbt_ctr_q         | logic [15:0] |  Heartbeat mode       |
+| htbt_ctr_d         | logic [15:0] |                       |
+| duty_cycle_htbt    | logic [15:0] |                       |
+| dc_htbt_d          | logic [15:0] |                       |
+| dc_htbt_q          | logic [15:0] |                       |
+| dc_htbt_end        | logic        |                       |
+| htbt_direction     | logic        |                       |
+| dc_wrap            | logic        |                       |
+| pos_htbt           | logic        |                       |
+| neg_htbt           | logic        |                       |
+| pattern_repeat     | logic        |                       |
+| phase_delay_scaled | logic [30:0] |                       |
+| duty_cycle_scaled  | logic [30:0] |                       |
+| lshift             | logic [3:0]  |                       |
+| unused_shift       | logic        |                       |
+| on_phase_exceeded  | logic        |                       |
+| off_phase_exceeded | logic        |                       |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

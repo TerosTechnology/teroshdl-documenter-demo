@@ -6,10 +6,11 @@
 ![Diagram](rv_core_addr_trans.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -27,15 +28,15 @@ Copyright lowRISC contributors.
 | addr_o       | output    | [AddrWidth-1:0]  |             |
 ## Signals
 
-| Name         | Type                                  | Description                                     |
-| ------------ | ------------------------------------- | ----------------------------------------------- |
-| region_ctrls | region_ctrls_t                        |                                                 |
-| input_masks  | logic [NumRegions-1:0][AddrWidth-1:0] |                                                 |
-| all_matches  | logic [NumRegions-1:0]                |                                                 |
-| sel_match    | logic                                 |                                                 |
-| sel_region   | region_ctrls_t                        |                                                 |
-| unused_clk   | logic                                 | unused clock/reset, only needed for assertions  |
-| unused_rst_n | logic                                 |                                                 |
+| Name         | Type                                  | Description                                      |
+| ------------ | ------------------------------------- | ------------------------------------------------ |
+| region_ctrls | region_ctrls_t                        |                                                  |
+| input_masks  | logic [NumRegions-1:0][AddrWidth-1:0] |                                                  |
+| all_matches  | logic [NumRegions-1:0]                |                                                  |
+| sel_match    | logic                                 |                                                  |
+| sel_region   | region_ctrls_t                        |                                                  |
+| unused_clk   | logic                                 |  unused clock/reset, only needed for assertions  |
+| unused_rst_n | logic                                 |                                                  |
 ## Types
 
 | Name           | Type                                                                                                                                                                                                         | Description |

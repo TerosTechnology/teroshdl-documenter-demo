@@ -6,13 +6,13 @@
 ![Diagram](jt49_exp.svg "Diagram")
 ## Description
 
- Th
+  Th
  Compression vs dynamic range
  0 -> 43.6dB
  1 -> 29.1
  2 -> 21.8
  3 -> 13.4
- 
+
 ## Ports
 
 | Port name | Direction | Type      | Description |
@@ -29,3 +29,4 @@
 | addr | wire [6:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

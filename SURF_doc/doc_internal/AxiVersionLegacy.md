@@ -6,34 +6,38 @@
 ![Diagram](AxiVersionLegacy.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Creates AXI accessible registers containing configuration
-information. This is a legacy version for backward compatibility.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Creates AXI accessible registers containing configuration
+ information. This is a legacy version for backward compatibility.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type             | Value                       | Description                      |
-| ------------------ | ---------------- | --------------------------- | -------------------------------- |
-| TPD_G              | time             | 1 ns                        |                                  |
-| BUILD_INFO_G       | BuildInfoType    |                             |                                  |
-| SIM_DNA_VALUE_G    | slv              | X"000000000000000000000000" |                                  |
-| DEVICE_ID_G        | slv(31 downto 0) | (others => '0')             |                                  |
-| CLK_PERIOD_G       | real             | 8.0E-9                      | units of seconds                 |
-| XIL_DEVICE_G       | string           | "7SERIES"                   | Either "7SERIES" or "ULTRASCALE" |
-| EN_DEVICE_DNA_G    | boolean          | false                       |                                  |
-| EN_DS2411_G        | boolean          | false                       |                                  |
-| EN_ICAP_G          | boolean          | false                       |                                  |
-| USE_SLOWCLK_G      | boolean          | false                       |                                  |
-| BUFR_CLK_DIV_G     | positive         | 8                           |                                  |
-| AUTO_RELOAD_EN_G   | boolean          | false                       |                                  |
-| AUTO_RELOAD_TIME_G | positive         | 10                          | units of seconds                 |
-| AUTO_RELOAD_ADDR_G | slv(31 downto 0) | (others => '0')             |                                  |
+| Generic name       | Type             | Value                       | Description                       |
+| ------------------ | ---------------- | --------------------------- | --------------------------------- |
+| TPD_G              | time             | 1 ns                        |                                   |
+| BUILD_INFO_G       | BuildInfoType    |                             |                                   |
+| SIM_DNA_VALUE_G    | slv              | X"000000000000000000000000" |                                   |
+| DEVICE_ID_G        | slv(31 downto 0) | (others => '0')             |                                   |
+| CLK_PERIOD_G       | real             | 8.0E-9                      |  units of seconds                 |
+| XIL_DEVICE_G       | string           | "7SERIES"                   |  Either "7SERIES" or "ULTRASCALE" |
+| EN_DEVICE_DNA_G    | boolean          | false                       |                                   |
+| EN_DS2411_G        | boolean          | false                       |                                   |
+| EN_ICAP_G          | boolean          | false                       |                                   |
+| USE_SLOWCLK_G      | boolean          | false                       |                                   |
+| BUFR_CLK_DIV_G     | positive         | 8                           |                                   |
+| AUTO_RELOAD_EN_G   | boolean          | false                       |                                   |
+| AUTO_RELOAD_TIME_G | positive         | 10                          |  units of seconds                 |
+| AUTO_RELOAD_ADDR_G | slv(31 downto 0) | (others => '0')             |                                   |
 ## Ports
 
 | Port name      | Direction | Type                   | Description                        |

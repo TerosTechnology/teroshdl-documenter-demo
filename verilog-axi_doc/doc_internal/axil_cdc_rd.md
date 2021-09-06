@@ -6,39 +6,41 @@
 ![Diagram](axil_cdc_rd.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name | Type | Value     | Description                                  |
-| ------------ | ---- | --------- | -------------------------------------------- |
-| DATA_WIDTH   |      | 32        | Width of data bus in bits                    |
-| ADDR_WIDTH   |      | 32        | Width of address bus in bits                 |
-| STRB_WIDTH   |      | undefined | Width of wstrb (width of data bus in words)  |
+| Generic name | Type | Value     | Description                                   |
+| ------------ | ---- | --------- | --------------------------------------------- |
+| DATA_WIDTH   |      | 32        |  Width of data bus in bits                    |
+| ADDR_WIDTH   |      | 32        |  Width of address bus in bits                 |
+| STRB_WIDTH   |      | undefined |  Width of wstrb (width of data bus in words)  |
 ## Ports
 
-| Port name      | Direction | Type                  | Description |
-| -------------- | --------- | --------------------- | ----------- |
-| s_clk          | input     | wire                  |             |
-| s_rst          | input     | wire                  |             |
-| s_axil_araddr  | input     | wire [ADDR_WIDTH-1:0] |             |
-| s_axil_arprot  | input     | wire [2:0]            |             |
-| s_axil_arvalid | input     | wire                  |             |
-| s_axil_arready | output    | wire                  |             |
-| s_axil_rdata   | output    | wire [DATA_WIDTH-1:0] |             |
-| s_axil_rresp   | output    | wire [1:0]            |             |
-| s_axil_rvalid  | output    | wire                  |             |
-| s_axil_rready  | input     | wire                  |             |
-| m_clk          | input     | wire                  |             |
-| m_rst          | input     | wire                  |             |
-| m_axil_araddr  | output    | wire [ADDR_WIDTH-1:0] |             |
-| m_axil_arprot  | output    | wire [2:0]            |             |
-| m_axil_arvalid | output    | wire                  |             |
-| m_axil_arready | input     | wire                  |             |
-| m_axil_rdata   | input     | wire [DATA_WIDTH-1:0] |             |
-| m_axil_rresp   | input     | wire [1:0]            |             |
-| m_axil_rvalid  | input     | wire                  |             |
-| m_axil_rready  | output    | wire                  |             |
+| Port name      | Direction | Type                  | Description                               |
+| -------------- | --------- | --------------------- | ----------------------------------------- |
+| s_clk          | input     | wire                  |      * AXI lite slave interface      */   |
+| s_rst          | input     | wire                  |                                           |
+| s_axil_araddr  | input     | wire [ADDR_WIDTH-1:0] |                                           |
+| s_axil_arprot  | input     | wire [2:0]            |                                           |
+| s_axil_arvalid | input     | wire                  |                                           |
+| s_axil_arready | output    | wire                  |                                           |
+| s_axil_rdata   | output    | wire [DATA_WIDTH-1:0] |                                           |
+| s_axil_rresp   | output    | wire [1:0]            |                                           |
+| s_axil_rvalid  | output    | wire                  |                                           |
+| s_axil_rready  | input     | wire                  |                                           |
+| m_clk          | input     | wire                  |      * AXI lite master interface      */  |
+| m_rst          | input     | wire                  |                                           |
+| m_axil_araddr  | output    | wire [ADDR_WIDTH-1:0] |                                           |
+| m_axil_arprot  | output    | wire [2:0]            |                                           |
+| m_axil_arvalid | output    | wire                  |                                           |
+| m_axil_arready | input     | wire                  |                                           |
+| m_axil_rdata   | input     | wire [DATA_WIDTH-1:0] |                                           |
+| m_axil_rresp   | input     | wire [1:0]            |                                           |
+| m_axil_rvalid  | input     | wire                  |                                           |
+| m_axil_rready  | output    | wire                  |                                           |
 ## Signals
 
 | Name               | Type                 | Description |
@@ -65,18 +67,19 @@ Language: Verilog 2001
 | m_axil_rvalid_reg  | reg                  |             |
 ## Processes
 - unnamed: ( @(posedge s_clk) )
+  - **Type:** always
 **Description**
-slave side
-
+ slave side 
 - unnamed: ( @(posedge s_clk) )
+  - **Type:** always
 **Description**
-synchronization
-
+ synchronization 
 - unnamed: ( @(posedge m_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge m_clk) )
+  - **Type:** always
 **Description**
-master side
-
+ master side 
 ## State machines
 
 - slave side![Diagram_state_machine_0]( stm_axil_cdc_rd_00.svg "Diagram")- master side![Diagram_state_machine_1]( stm_axil_cdc_rd_11.svg "Diagram")

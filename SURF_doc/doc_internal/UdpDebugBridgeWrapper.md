@@ -6,15 +6,19 @@
 ![Diagram](UdpDebugBridgeWrapper.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for UDP 'XVC' Server
-This file is part of 'xvc-udp-debug-bridge'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'xvc-udp-debug-bridge', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for UDP 'XVC' Server
+-----------------------------------------------------------------------------
+ This file is part of 'xvc-udp-debug-bridge'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'xvc-udp-debug-bridge', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -52,8 +56,7 @@ the terms contained in the LICENSE.txt file.
 - P_SOF_SEQ: ( clk )
 - P_SOF_SPLICE: ( mXvcServerTdo, rSof )
 **Description**
-splice in the SOF bit
-
+ splice in the SOF bit 
 ## Instantiations
 
 - U_XvcServer: component UdpDebugBridge

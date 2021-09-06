@@ -6,27 +6,32 @@
 ![Diagram](Pgp3AxiL.svg "Diagram")
 ## Description
 
-Title      : PGPv3: https://confluence.slac.stanford.edu/x/OndODQ
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite block to manage the PGPv3 interface
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv3: https://confluence.slac.stanford.edu/x/OndODQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite block to manage the PGPv3 interface
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                  | Value    | Description                                           |
-| ------------------ | --------------------- | -------- | ----------------------------------------------------- |
-| TPD_G              | time                  | 1 ns     |                                                       |
-| COMMON_TX_CLK_G    | boolean               | false    | Set to true if axiClk and pgpTxClk are the same clock |
-| COMMON_RX_CLK_G    | boolean               | false    | Set to true if axiClk and pgpRxClk are the same clock |
-| WRITE_EN_G         | boolean               | false    | Set to false when on remote end of a link             |
-| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 16       |                                                       |
-| ERROR_CNT_WIDTH_G  | natural range 1 to 32 | 8        |                                                       |
-| AXIL_CLK_FREQ_G    | real                  | 125.0E+6 |                                                       |
+| Generic name       | Type                  | Value    | Description                                            |
+| ------------------ | --------------------- | -------- | ------------------------------------------------------ |
+| TPD_G              | time                  | 1 ns     |                                                        |
+| COMMON_TX_CLK_G    | boolean               | false    |  Set to true if axiClk and pgpTxClk are the same clock |
+| COMMON_RX_CLK_G    | boolean               | false    |  Set to true if axiClk and pgpRxClk are the same clock |
+| WRITE_EN_G         | boolean               | false    |  Set to false when on remote end of a link             |
+| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 16       |                                                        |
+| ERROR_CNT_WIDTH_G  | natural range 1 to 32 | 8        |                                                        |
+| AXIL_CLK_FREQ_G    | real                  | 125.0E+6 |                                                        |
 ## Ports
 
 | Port name       | Direction | Type                   | Description                                  |
@@ -55,23 +60,23 @@ the terms contained in the LICENSE.txt file.
 | axilWriteSlave  | out       | AxiLiteWriteSlaveType  |                                              |
 ## Signals
 
-| Name            | Type                                                                                                              | Description                                                                                |
-| --------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| rxStatusSend    | sl                                                                                                                | Local signals                                                                              |
-| rxErrorOut      | slv(RX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                            |
-| rxErrorCntOut   | SlVectorArray(RX_ERROR_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> ERROR_CNT_WIDTH_G-1 downto 0)   |                                                                                            |
-| rxStatusCntOut  | SlVectorArray(RX_STATUS_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> STATUS_CNT_WIDTH_G-1 downto 0) |                                                                                            |
-| txErrorOut      | slv(TX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                            |
-| txErrorCntOut   | SlVectorArray(TX_ERROR_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> ERROR_CNT_WIDTH_G-1 downto 0)   |                                                                                            |
-| txStatusCntOut  | SlVectorArray(TX_STATUS_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> STATUS_CNT_WIDTH_G-1 downto 0) |                                                                                            |
-| rxErrorIrqEn    | slv(RX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                            |
-| syncFlowCntlDis | sl                                                                                                                |   signal txFlush         : sl;  signal rxFlush         : sl;  signal rxReset         : sl; |
-| syncSkpInterval | slv(31 downto 0)                                                                                                  |                                                                                            |
-| gearboxAlignCnt | SlVectorArray(0 downto 0,<br><span style="padding-left:20px"> 7 downto 0)                                         |                                                                                            |
-| r               | RegType                                                                                                           |                                                                                            |
-| rin             | RegType                                                                                                           |                                                                                            |
-| rxStatusSync    | RxStatusType                                                                                                      |                                                                                            |
-| txStatusSync    | TxStatusType                                                                                                      |                                                                                            |
+| Name            | Type                                                                                                              | Description                                                                                      |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| rxStatusSend    | sl                                                                                                                |  Local signals                                                                                   |
+| rxErrorOut      | slv(RX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                                  |
+| rxErrorCntOut   | SlVectorArray(RX_ERROR_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> ERROR_CNT_WIDTH_G-1 downto 0)   |                                                                                                  |
+| rxStatusCntOut  | SlVectorArray(RX_STATUS_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> STATUS_CNT_WIDTH_G-1 downto 0) |                                                                                                  |
+| txErrorOut      | slv(TX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                                  |
+| txErrorCntOut   | SlVectorArray(TX_ERROR_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> ERROR_CNT_WIDTH_G-1 downto 0)   |                                                                                                  |
+| txStatusCntOut  | SlVectorArray(TX_STATUS_COUNTERS_C-1 downto 0,<br><span style="padding-left:20px"> STATUS_CNT_WIDTH_G-1 downto 0) |                                                                                                  |
+| rxErrorIrqEn    | slv(RX_ERROR_COUNTERS_C-1 downto 0)                                                                               |                                                                                                  |
+| syncFlowCntlDis | sl                                                                                                                |    signal txFlush         : sl;    signal rxFlush         : sl;    signal rxReset         : sl;  |
+| syncSkpInterval | slv(31 downto 0)                                                                                                  |                                                                                                  |
+| gearboxAlignCnt | SlVectorArray(0 downto 0,<br><span style="padding-left:20px"> 7 downto 0)                                         |                                                                                                  |
+| r               | RegType                                                                                                           |                                                                                                  |
+| rin             | RegType                                                                                                           |                                                                                                  |
+| rxStatusSync    | RxStatusType                                                                                                      |                                                                                                  |
+| txStatusSync    | TxStatusType                                                                                                      |                                                                                                  |
 ## Constants
 
 | Name                 | Type    | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description |
@@ -95,23 +100,20 @@ the terms contained in the LICENSE.txt file.
 - U_RxErrorIrqEn: ( r )
 - unnamed: ( axilClk )
 **Description**
-AXI Registers
-Sync
-
+----------------------------------  AXI Registers ----------------------------------  Sync 
 - unnamed: ( axilRst, axilReadMaster, axilWriteMaster, r, rxStatusSync, txStatusSync )
 **Description**
-Async
-
+ Async 
 ## Instantiations
 
 - U_RxOpCodeSync: surf.SynchronizerFifo
 - U_RxError: surf.SyncStatusVector
 **Description**
-Errror counters and non counted values
+ Errror counters and non counted values
 
 - U_RxStatus: surf.SyncStatusVector
 **Description**
-Status counters
+ Status counters
 
 - U_RxClkFreq: surf.SyncClockFreq
 - U_RxEbDataSync: surf.SynchronizerFifo
@@ -120,21 +122,25 @@ Status counters
 - U_remLinkData: surf.SynchronizerFifo
 - U_TxOpCodeSync: surf.SynchronizerFifo
 **Description**
-Transmit Status
-OpCode Capture
+-------------------------------------
+ Transmit Status
+-------------------------------------
+ OpCode Capture
 
 - U_TxError: surf.SyncStatusVector
 **Description**
-Errror counters and non counted values
+ Errror counters and non counted values
 
 - U_TxStatus: surf.SyncStatusVector
 **Description**
-Status counters
+ Status counters
 
 - U_TxClkFreq: surf.SyncClockFreq
 - U_FlowCntlDis: surf.Synchronizer
 **Description**
-Tx Control Sync
-Sync flow cntl disable
+-----------------------------------
+ Tx Control Sync
+-----------------------------------
+ Sync flow cntl disable
 
 - U_SKP_SYNC: surf.SynchronizerFifo

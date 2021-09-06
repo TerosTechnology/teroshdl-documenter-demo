@@ -6,17 +6,21 @@
 ![Diagram](AxiStreamGearbox.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Block to resize AXI Streams. Re-sizing is always little endian.
-Resizer should not be used when interleaving tDests
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Block to resize AXI Streams. Re-sizing is always little endian.
+ Resizer should not be used when interleaving tDests
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name        | Type                | Value | Description                     |
@@ -24,7 +28,7 @@ the terms contained in the LICENSE.txt file.
 | TPD_G               | time                | 1 ns  | General Configurations          |
 | READY_EN_G          | boolean             | true  |                                 |
 | PIPE_STAGES_G       | natural             | 0     |                                 |
-| SIDE_BAND_WIDTH_G   | positive            | 1     | General purpose sideband        |
+| SIDE_BAND_WIDTH_G   | positive            | 1     |  General purpose sideband       |
 | SLAVE_AXI_CONFIG_G  | AxiStreamConfigType |       | AXI Stream Port Configurations  |
 | MASTER_AXI_CONFIG_G | AxiStreamConfigType |       |                                 |
 ## Ports

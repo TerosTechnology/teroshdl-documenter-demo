@@ -4,6 +4,9 @@
 ## Diagram
 
 ![Diagram](readComplexFromFile.svg "Diagram")
+## Description
+
+use work.sp_vision_test_pkg.all;
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -14,17 +17,17 @@
 | filename_im  | string  | ""    |             |
 ## Ports
 
-| Port name     | Direction | Type                                   | Description |
-| ------------- | --------- | -------------------------------------- | ----------- |
-| reset         | in        | std_logic                              |             |
-| clk           | in        | std_logic                              |             |
-| sl_clk_i      | in        | std_logic                              |             |
-| start_read_i  | in        | std_logic                              |             |
-| data_re_o     | out       | std_logic_vector(DATA_SIZE-1 downto 0) |             |
-| data_im_o     | out       | std_logic_vector(DATA_SIZE-1 downto 0) |             |
-| addr_o        | out       | std_logic_vector(ADDR_SIZE-1 downto 0) |             |
-| data_en_o     | out       | std_logic                              |             |
-| end_of_read_o | out       | std_logic                              |             |
+| Port name     | Direction | Type                                   | Description       |
+| ------------- | --------- | -------------------------------------- | ----------------- |
+| reset         | in        | std_logic                              |                   |
+| clk           | in        | std_logic                              |                   |
+| sl_clk_i      | in        | std_logic                              |                   |
+| start_read_i  | in        | std_logic                              | ichier : in text; |
+| data_re_o     | out       | std_logic_vector(DATA_SIZE-1 downto 0) |                   |
+| data_im_o     | out       | std_logic_vector(DATA_SIZE-1 downto 0) |                   |
+| addr_o        | out       | std_logic_vector(ADDR_SIZE-1 downto 0) |                   |
+| data_en_o     | out       | std_logic                              |                   |
+| end_of_read_o | out       | std_logic                              |                   |
 ## Signals
 
 | Name               | Type                                   | Description |

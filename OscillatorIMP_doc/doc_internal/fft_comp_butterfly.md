@@ -35,7 +35,7 @@
 | data_im_i         | in        | std_logic_vector(DATA_SIZE-1 downto 0)  |                     |
 | data_addr_i       | in        | std_logic_vector(ADDR_SIZE-1 downto 0)  |                     |
 | data_en_i         | in        | std_logic                               |                     |
-| read_coeff_re_o   | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
+| read_coeff_re_o   | out       | std_logic_vector(COEFF_SIZE-1 downto 0) | onfiguration        |
 | read_coeff_im_o   | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
 | coeff_re_i        | in        | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
 | coeff_re_addr_i   |           | std_logic_vector(ADDR_SIZE-1 downto 0)  |                     |
@@ -62,13 +62,13 @@
 | b_index_s           | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
 | a2_index_s          | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
 | sb_index            | natural range 0 to 2**ADDR_SIZE-1       |             |
-| enable_data_s       | std_logic                               | state       |
-|  enable_next_comp_s | std_logic                               | state       |
-| clear_accum_s       | std_logic                               | coeff       |
+| enable_data_s       | std_logic                               |  state      |
+|  enable_next_comp_s | std_logic                               |  state      |
+| clear_accum_s       | std_logic                               |  coeff      |
 | s_index_plus_one_s  | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
 | s_of_b_nat_s        | natural range 0 to 2**ADDR_SIZE-1       |             |
 | sob_minus_one_s     | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
-| comp_done_s         | std_logic                               | complex     |
+| comp_done_s         | std_logic                               |  complex    |
 | cplx_addr_a_s       | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
 | cplx_addr_b_s       | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
 | cplx_data_a_re_s    | std_logic_vector(DATA_SIZE-1 downto 0)  |             |
@@ -76,7 +76,7 @@
 | cplx_data_b_re_s    | std_logic_vector(DATA_SIZE-1 downto 0)  |             |
 | cplx_data_b_im_s    | std_logic_vector(DATA_SIZE-1 downto 0)  |             |
 | sb_index_slv_s      | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |
-| state_next_s        | state_type                              | new         |
+| state_next_s        | state_type                              |  new        |
 | clear_accum_next_s  | std_logic                               |             |
 | enable_next_data_s  | std_logic                               |             |
 | a_index_next_s      | std_logic_vector(ADDR_SIZE-1 downto 0)  |             |

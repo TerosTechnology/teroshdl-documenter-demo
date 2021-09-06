@@ -6,13 +6,15 @@
 ![Diagram](alert_handler_class.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  This module gates the alert triggers with their enable bits, and correctly bins
  the enabled alerts into the class that they have been assigned to. The module
  produces the alert cause and class trigger signals.
- 
+
+
 ## Ports
 
 | Port name         | Direction | Type                            | Description      |
@@ -28,12 +30,12 @@ Copyright lowRISC contributors.
 | class_trig_o      | output    | [N_CLASSES-1:0]                 | class triggered  |
 ## Signals
 
-| Name            | Type                                   | Description             |
-| --------------- | -------------------------------------- | ----------------------- |
-| class_masks     | logic [N_CLASSES-1:0][NAlerts-1:0]     | classification mapping  |
-| loc_class_masks | logic [N_CLASSES-1:0][N_LOC_ALERT-1:0] |                         |
+| Name            | Type                                   | Description              |
+| --------------- | -------------------------------------- | ------------------------ |
+| class_masks     | logic [N_CLASSES-1:0][NAlerts-1:0]     |  classification mapping  |
+| loc_class_masks | logic [N_CLASSES-1:0][N_LOC_ALERT-1:0] |                          |
 ## Processes
 - p_class_mask: (  )
+  - **Type:** always_comb
 **Description**
-this is basically an address to onehot0 decoder
-
+ this is basically an address to onehot0 decoder 

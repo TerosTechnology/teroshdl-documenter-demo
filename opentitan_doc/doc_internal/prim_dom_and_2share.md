@@ -6,15 +6,18 @@
 ![Diagram](prim_dom_and_2share.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Domain-Oriented Masking GF(2) Multiplier with 2-shares
  ref: Higher-Order Side-Channel Protected Implementations of Keccak
      https://eprint.iacr.org/2017/395.pdf
+
  q0 = a0 & b0 + (a0 & b1 + z)
  q1 = a1 & b1 + (a1 & b0 + z)
  () ==> registered
+
  all input should be stable for two clocks
  as the output is valid after a clock
  For z, it can use other slice from the state
@@ -26,13 +29,13 @@ Copyright lowRISC contributors.
     = a0&b0  + (a0&b1 + z0                    + 0)
  Q1 = t{1,1} + sig(j>1,1)(...) + sig(j<1,1)(t{1,j} + Z{j})
     = a1&b1  + (0              + a1&b0 + z0)
- 
+
 ## Generics
 
-| Generic name | Type | Value | Description                        |
-| ------------ | ---- | ----- | ---------------------------------- |
-| DW           | int  | 64    | Input width                        |
-| EnNegedge    | int  | 0     | Enable negedge of clk for register |
+| Generic name | Type | Value | Description                          |
+| ------------ | ---- | ----- | ------------------------------------ |
+| DW           | int  | 64    |  Input width                         |
+| EnNegedge    | int  | 0     |  Enable negedge of clk for register  |
 ## Ports
 
 | Port name | Direction | Type     | Description                  |

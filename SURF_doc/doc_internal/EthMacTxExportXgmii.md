@@ -6,15 +6,19 @@
 ![Diagram](EthMacTxExportXgmii.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: 10GbE Export MAC core with GMII interface
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: 10GbE Export MAC core with GMII interface
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type   | Value      | Description |
@@ -37,43 +41,43 @@ the terms contained in the LICENSE.txt file.
 | txLinkNotReady | out       | sl                  |                 |
 ## Signals
 
-| Name             | Type                | Description   |
-| ---------------- | ------------------- | ------------- |
-| macMaster        | AxiStreamMasterType | Local Signals |
-| macSlave         | AxiStreamSlaveType  |               |
-| intAdvance       | sl                  |               |
-| intDump          | sl                  |               |
-| intPad           | sl                  |               |
-| intLastLine      | sl                  |               |
-| intLastValidByte | slv(2 downto 0)     |               |
-| frameShift0      | sl                  |               |
-| frameShift1      | sl                  |               |
-| txEnable0        | sl                  |               |
-| txEnable1        | sl                  |               |
-| txEnable2        | sl                  |               |
-| txEnable3        | sl                  |               |
-| nxtMaskIn        | slv(7 downto 0)     |               |
-| nxtEOF           | sl                  |               |
-| intData          | slv(63 downto 0)    |               |
-| stateCount       | slv(3 downto 0)     |               |
-| stateCountRst    | sl                  |               |
-| wordCountRst     | sl                  |               |
-| exportWordCnt    | slv(3 downto 0)     |               |
-| crcFifoIn        | slv(71 downto 0)    |               |
-| crcFifoOut       | slv(71 downto 0)    |               |
-| crcTx            | slv(31 downto 0)    |               |
-| crcIn            | slv(63 downto 0)    |               |
-| crcInit          | sl                  |               |
-| crcMaskIn        | slv(7 downto 0)     |               |
-| crcInAdj         | slv(63 downto 0)    |               |
-| crcDataWidth     | slv(2 downto 0)     |               |
-| crcDataValid     | sl                  |               |
-| crcReset         | sl                  |               |
-| crcOut           | slv(31 downto 0)    |               |
-| intError         | sl                  |               |
-| nxtError         | sl                  |               |
-| curState         | slv(2 downto 0)     | MAC States    |
-| nxtState         | slv(2 downto 0)     |               |
+| Name             | Type                | Description     |
+| ---------------- | ------------------- | --------------- |
+| macMaster        | AxiStreamMasterType |  Local Signals  |
+| macSlave         | AxiStreamSlaveType  |                 |
+| intAdvance       | sl                  |                 |
+| intDump          | sl                  |                 |
+| intPad           | sl                  |                 |
+| intLastLine      | sl                  |                 |
+| intLastValidByte | slv(2 downto 0)     |                 |
+| frameShift0      | sl                  |                 |
+| frameShift1      | sl                  |                 |
+| txEnable0        | sl                  |                 |
+| txEnable1        | sl                  |                 |
+| txEnable2        | sl                  |                 |
+| txEnable3        | sl                  |                 |
+| nxtMaskIn        | slv(7 downto 0)     |                 |
+| nxtEOF           | sl                  |                 |
+| intData          | slv(63 downto 0)    |                 |
+| stateCount       | slv(3 downto 0)     |                 |
+| stateCountRst    | sl                  |                 |
+| wordCountRst     | sl                  |                 |
+| exportWordCnt    | slv(3 downto 0)     |                 |
+| crcFifoIn        | slv(71 downto 0)    |                 |
+| crcFifoOut       | slv(71 downto 0)    |                 |
+| crcTx            | slv(31 downto 0)    |                 |
+| crcIn            | slv(63 downto 0)    |                 |
+| crcInit          | sl                  |                 |
+| crcMaskIn        | slv(7 downto 0)     |                 |
+| crcInAdj         | slv(63 downto 0)    |                 |
+| crcDataWidth     | slv(2 downto 0)     |                 |
+| crcDataValid     | sl                  |                 |
+| crcReset         | sl                  |                 |
+| crcOut           | slv(31 downto 0)    |                 |
+| intError         | sl                  |                 |
+| nxtError         | sl                  |                 |
+| curState         | slv(2 downto 0)     |  MAC States     |
+| nxtState         | slv(2 downto 0)     |                 |
 ## Constants
 
 | Name         | Type                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
@@ -88,36 +92,30 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - unnamed: ( intPad, macMaster )
 **Description**
-Data processing
-
+ Data processing 
 - unnamed: ( ethClk )
 **Description**
-State machine logic
-
+ State machine logic 
 - unnamed: ( curState, exportWordCnt, intLastLine, macMaster )
 **Description**
-Pad runt frames
-
+ Pad runt frames 
 - unnamed: ( curState, ethRst, exportWordCnt, intError, macMaster, phyReady, stateCount )
 **Description**
-State machine
-
+ State machine 
 - unnamed: ( ethClk )
 **Description**
-Format data for input into CRC delay FIFO.
-
+ Format data for input into CRC delay FIFO. 
 - unnamed: ( ethClk )
 **Description**
-Output Stage to PHY
-
+ Output Stage to PHY 
 ## Instantiations
 
 - DATA_MUX: surf.AxiStreamFifoV2
 - U_CrcFifo: surf.Fifo
 **Description**
-CRC Delay FIFO
+ CRC Delay FIFO
 
 - U_Crc32: surf.Crc32Parallel
 **Description**
-CRC
+ CRC
 

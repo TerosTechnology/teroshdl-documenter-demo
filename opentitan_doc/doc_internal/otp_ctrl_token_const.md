@@ -6,20 +6,20 @@
 ![Diagram](otp_ctrl_token_const.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  This module contains the hash post-image constants for the all-zero and raw unlock tokens.
  This implementation relies on constant propagation to precompute these constants from the
  random netlist constants at compile time, and hence does not contain any "real" logic.
- 
+
 ## Generics
 
-| Generic name          | Type                    | Value                        | Description                                                |
-| --------------------- | ----------------------- | ---------------------------- | ---------------------------------------------------------- |
-| RndCnstDigestConst    | digest_const_array_t    | RndCnstDigestConstDefault    | Compile time random constants, to be overriden by topgen.  |
-| RndCnstDigestIV       | digest_iv_array_t       | RndCnstDigestIVDefault       |                                                            |
-| RndCnstRawUnlockToken | lc_ctrl_pkg::lc_token_t | RndCnstRawUnlockTokenDefault |                                                            |
+| Generic name          | Type                    | Value                        | Description                                                 |
+| --------------------- | ----------------------- | ---------------------------- | ----------------------------------------------------------- |
+| RndCnstDigestConst    | digest_const_array_t    | RndCnstDigestConstDefault    |  Compile time random constants, to be overriden by topgen.  |
+| RndCnstDigestIV       | digest_iv_array_t       | RndCnstDigestIVDefault       |                                                             |
+| RndCnstRawUnlockToken | lc_ctrl_pkg::lc_token_t | RndCnstRawUnlockTokenDefault |                                                             |
 ## Ports
 
 | Port name                 | Direction | Type | Description |

@@ -6,8 +6,8 @@
 ![Diagram](byte_to_word_fcs_sn_insert.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Ports
 
 | Port name          | Direction | Type   | Description |
@@ -41,11 +41,12 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | byte_count_final     | wire [15:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 **Description**
-delay and select to insert fcs
-
+ delay and select to insert fcs 
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 **Description**
-byte to word
-
+ byte to word 

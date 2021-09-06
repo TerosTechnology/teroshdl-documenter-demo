@@ -6,9 +6,11 @@
 ![Diagram](nco_counter.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2015/04/08
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2015/04/08
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name          | Type    | Value | Description                                    |
@@ -84,13 +86,13 @@ Creation date : 2015/04/08
 |  poff_sw_sync_s   | std_logic                                        |             |
 | enable_s          | std_logic                                        |             |
 |  enable_sync_s    | std_logic                                        |             |
-| addr_s            | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) | comm        |
+| addr_s            | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |  comm       |
 | write_en_s        | std_logic                                        |             |
 |  read_en_s        | std_logic                                        |             |
 | wave_en_s         | std_logic                                        |             |
 | step_scale_s      | std_logic_vector(LUT_SIZE-1 downto 0)            |             |
-| max_accum_s       | std_logic_vector(COUNTER_SIZE-1 downto 0)        | reset       |
-|  max_accum_sync_s | std_logic_vector(COUNTER_SIZE-1 downto 0)        | reset       |
+| max_accum_s       | std_logic_vector(COUNTER_SIZE-1 downto 0)        |  reset      |
+|  max_accum_sync_s | std_logic_vector(COUNTER_SIZE-1 downto 0)        |  reset      |
 ## Constants
 
 | Name                | Type    | Value | Description |
@@ -100,13 +102,19 @@ Creation date : 2015/04/08
 
 - nco_inst1: work.nco_counter_logic
 - pinc_syn: work.nco_counter_synchronizer_bit
+**Description**
+- synchro ---
+
 - poff_syn: work.nco_counter_synchronizer_bit
 - max_acc_syn: work.nco_counter_synchronizer_vector
 - cpt_off_syn: work.nco_counter_synchronizer_vector
 - cpt_step_syn: work.nco_counter_synchronizer_vector
 - enable_syn: work.nco_counter_synchronizer_bit
 - wb_nco_inst: work.wb_nco_counter
+**Description**
+-------------
+
 - handle_comm: work.nco_counter_handcomm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

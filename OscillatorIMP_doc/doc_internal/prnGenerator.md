@@ -6,9 +6,11 @@
 ![Diagram](prnGenerator.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2019/05/18
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2019/05/18
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

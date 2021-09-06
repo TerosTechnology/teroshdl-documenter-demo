@@ -3,10 +3,11 @@
 - **File**: hmac_pkg.sv
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
+
 
 ## Signals
 
@@ -16,13 +17,13 @@ Copyright lowRISC contributors.
 | hmac_pkg | endpackage  |             |
 ## Constants
 
-| Name           | Type       | Value               | Description      |
-| -------------- | ---------- | ------------------- | ---------------- |
-| MsgFifoDepth   | int        | 16                  |                  |
-| NumRound       | int        | 64                  | SHA-224, SHA-256 |
-| WordByte       | int        | $bits(sha_word_t)/8 |                  |
-| InitHash       | sha_word_t | undefined           |                  |
-| CubicRootPrime | sha_word_t | undefined           |                  |
+| Name           | Type       | Value               | Description       |
+| -------------- | ---------- | ------------------- | ----------------- |
+| MsgFifoDepth   | int        | 16                  |                   |
+| NumRound       | int        | 64                  | SHA-224, SHA-256  |
+| WordByte       | int        | $bits(sha_word_t)/8 |                   |
+| InitHash       | sha_word_t | undefined           |                   |
+| CubicRootPrime | sha_word_t | undefined           |                   |
 ## Types
 
 | Name       | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |

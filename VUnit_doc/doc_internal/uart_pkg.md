@@ -18,5 +18,6 @@
 ## Functions
 - set_baud_rate <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> uart_master : uart_master_t;<br><span style="padding-left:20px"> baud_rate : natural) </font> <font id="function_return">return ()</font>
 **Description**
-Set the baud rate [bits/s]
+ Set the baud rate [bits/s]
+
 - set_baud_rate <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> uart_slave : uart_slave_t;<br><span style="padding-left:20px"> baud_rate : natural) </font> <font id="function_return">return ()</font>

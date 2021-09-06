@@ -34,14 +34,14 @@
 | ------------------ | ------------------------------------------ | ----------- |
 | ready_s            | std_logic                                  |             |
 | must_rst_s         | std_logic                                  |             |
-| data_i_s           | std_logic_vector(DATA_SIZE-1 downto 0)     | i part      |
+| data_i_s           | std_logic_vector(DATA_SIZE-1 downto 0)     |  i part     |
 | mult_i_res         | std_logic_vector(MULT_SZ-1 downto 0)       |             |
 | mux_accum_i_s      | std_logic_vector(INT_SZ-1 downto 0)        |             |
 | res_i_s            | std_logic_vector(INT_SZ-1 downto 0)        |             |
 |  res_i_next_s      | std_logic_vector(INT_SZ-1 downto 0)        |             |
 | final_res_i_s      | std_logic_vector(DATA_OUT_SIZE-1 downto 0) |             |
 | final_res_i_next_s | std_logic_vector(DATA_OUT_SIZE-1 downto 0) |             |
-| data_q_s           | std_logic_vector(DATA_SIZE-1 downto 0)     | q part      |
+| data_q_s           | std_logic_vector(DATA_SIZE-1 downto 0)     |  q part     |
 | mult_q_res         | std_logic_vector(MULT_SZ-1 downto 0)       |             |
 | mux_accum_q_s      | std_logic_vector(INT_SZ-1 downto 0)        |             |
 | res_q_s            | std_logic_vector(INT_SZ-1 downto 0)        |             |

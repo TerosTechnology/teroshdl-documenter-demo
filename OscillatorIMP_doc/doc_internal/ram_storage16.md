@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](ram_storage16.svg "Diagram")
+## Description
+
+Library UNISIM;
+use UNISIM.vcomponents.all;
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -33,5 +37,4 @@
 - unnamed: ( clk_a )
 - unnamed: ( clk_b )
 **Description**
-Port B
-
+ Port B 

@@ -6,39 +6,47 @@
 ![Diagram](axi_i2s_adi.svg "Diagram")
 ## Description
 
-***************************************************************************
-***************************************************************************
-Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.
-In this HDL repository, there are many different and unique modules, consisting
-of various HDL (Verilog or VHDL) components. The individual modules are
-developed independently, and may be accompanied by separate and unique license
-terms.
-The user should read each of these license terms, and understand the
-freedoms and responsibilities that he or she has by using this source/core.
-This core is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-A PARTICULAR PURPOSE.
-Redistribution and use of source or resulting binaries, with or without modification
-of this file, are permitted under one of the following two license terms:
-  1. The GNU General Public License version 2 as published by the
-     Free Software Foundation, which can be found in the top level directory
-     of this repository (LICENSE_GPL2), and also online at:
-     <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
-OR
-  2. An ADI specific BSD license, which can be found in the top level directory
-     of this repository (LICENSE_ADIBSD), and also on-line at:
-     https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
-     This will allow to generate bit files and not release the source code,
-     as long as it attaches to an ADI device.
-***************************************************************************
-***************************************************************************
+ ***************************************************************************
+ ***************************************************************************
+ Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.
+
+ In this HDL repository, there are many different and unique modules, consisting
+ of various HDL (Verilog or VHDL) components. The individual modules are
+ developed independently, and may be accompanied by separate and unique license
+ terms.
+
+ The user should read each of these license terms, and understand the
+ freedoms and responsibilities that he or she has by using this source/core.
+
+ This core is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ A PARTICULAR PURPOSE.
+
+ Redistribution and use of source or resulting binaries, with or without modification
+ of this file, are permitted under one of the following two license terms:
+
+   1. The GNU General Public License version 2 as published by the
+      Free Software Foundation, which can be found in the top level directory
+      of this repository (LICENSE_GPL2), and also online at:
+      <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
+ OR
+
+   2. An ADI specific BSD license, which can be found in the top level directory
+      of this repository (LICENSE_ADIBSD), and also on-line at:
+      https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
+      This will allow to generate bit files and not release the source code,
+      as long as it attaches to an ADI device.
+
+ ***************************************************************************
+ ***************************************************************************
 ## Generics
 
 | Generic name        | Type    | Value     | Description                                                                                                                                           |
 | ------------------- | ------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SLOT_WIDTH          | integer | 24        | ADD USER GENERICS BELOW THIS LINE ---------------                                                                                                     |
-| LRCLK_POL           | integer | 0         | LRCLK Polarity (0 - Falling edge, 1 - Rising edge)                                                                                                    |
-| BCLK_POL            | integer | 0         | BCLK Polarity (0 - Falling edge, 1 - Rising edge)                                                                                                     |
+| LRCLK_POL           | integer | 0         |  LRCLK Polarity (0 - Falling edge, 1 - Rising edge)                                                                                                   |
+| BCLK_POL            | integer | 0         |  BCLK Polarity (0 - Falling edge, 1 - Rising edge)                                                                                                    |
 | S_AXI_DATA_WIDTH    | integer | 32        | ADD USER GENERICS ABOVE THIS LINE --------------- DO NOT EDIT BELOW THIS LINE --------------------- Bus protocol parameters, do not add to or delete  |
 | S_AXI_ADDRESS_WIDTH | integer | 32        |                                                                                                                                                       |
 | DEVICE_FAMILY       | string  | "virtex6" |                                                                                                                                                       |
@@ -67,7 +75,7 @@ OR
 | m_axis_tlast       | out       | std_logic                                         |                                |
 | m_axis_tvalid      | out       | std_logic                                         |                                |
 | m_axis_tkeep       | out       | std_logic_vector(3 downto 0)                      |                                |
-| dma_req_tx_aclk    | in        | std_logic                                         |                                |
+| dma_req_tx_aclk    | in        | std_logic                                         | L330 DMA TX interface          |
 | dma_req_tx_rstn    | in        | std_logic                                         |                                |
 | dma_req_tx_davalid | in        | std_logic                                         |                                |
 | dma_req_tx_datype  | in        | std_logic_vector(1 downto 0)                      |                                |
@@ -108,49 +116,49 @@ OR
 | s_axi_arprot       | in        | std_logic_vector(2 downto 0)                      |                                |
 ## Signals
 
-| Name                  | Type                                      | Description     |
-| --------------------- | ----------------------------------------- | --------------- |
-| i2s_reset             | std_logic                                 |                 |
-| tx_fifo_reset         | std_logic                                 |                 |
-| tx_enable             | Boolean                                   |                 |
-| tx_data               | std_logic_vector(SLOT_WIDTH - 1 downto 0) |                 |
-| tx_ack                | std_logic                                 |                 |
-| tx_stb                | std_logic                                 |                 |
-| rx_enable             | Boolean                                   |                 |
-| rx_fifo_reset         | std_logic                                 |                 |
-| rx_data               | std_logic_vector(SLOT_WIDTH - 1 downto 0) |                 |
-| rx_ack                | std_logic                                 |                 |
-| rx_stb                | std_logic                                 |                 |
-| const_1               | std_logic                                 |                 |
-| bclk_div_rate         | natural range 0 to 255                    |                 |
-| lrclk_div_rate        | natural range 0 to 255                    |                 |
-| period_len            | integer range 0 to 65535                  |                 |
-| I2S_RESET_REG         | std_logic_vector(31 downto 0)             |                 |
-| I2S_CONTROL_REG       | std_logic_vector(31 downto 0)             |                 |
-| I2S_CLK_CONTROL_REG   | std_logic_vector(31 downto 0)             |                 |
-| PERIOD_LEN_REG        | std_logic_vector(31 downto 0)             |                 |
-| audio_fifo_rx         | RAM_TYPE                                  | RX FIFO signals |
-| audio_fifo_rx_wr_addr | integer range 0 to 2**RAM_ADDR_WIDTH-1    |                 |
-| audio_fifo_rx_rd_addr | integer range 0 to 2**RAM_ADDR_WIDTH-1    |                 |
-| tvalid                | std_logic                                 |                 |
-| rx_tlast              | std_logic                                 |                 |
-| drain_tx_dma          | std_logic                                 |                 |
-| rx_sample             | std_logic_vector(23 downto 0)             |                 |
-| wr_data               | std_logic_vector(31 downto 0)             |                 |
-| rd_data               | std_logic_vector(31 downto 0)             |                 |
-| wr_addr               | integer range 0 to 11                     |                 |
-| rd_addr               | integer range 0 to 11                     |                 |
-| wr_stb                | std_logic                                 |                 |
-| rd_ack                | std_logic                                 |                 |
-| tx_fifo_stb           | std_logic                                 |                 |
-| rx_fifo_ack           | std_logic                                 |                 |
-| cnt                   | integer range 0 to 2**16-1                |                 |
+| Name                  | Type                                      | Description       |
+| --------------------- | ----------------------------------------- | ----------------- |
+| i2s_reset             | std_logic                                 |                   |
+| tx_fifo_reset         | std_logic                                 |                   |
+| tx_enable             | Boolean                                   |                   |
+| tx_data               | std_logic_vector(SLOT_WIDTH - 1 downto 0) |                   |
+| tx_ack                | std_logic                                 |                   |
+| tx_stb                | std_logic                                 |                   |
+| rx_enable             | Boolean                                   |                   |
+| rx_fifo_reset         | std_logic                                 |                   |
+| rx_data               | std_logic_vector(SLOT_WIDTH - 1 downto 0) |                   |
+| rx_ack                | std_logic                                 |                   |
+| rx_stb                | std_logic                                 |                   |
+| const_1               | std_logic                                 |                   |
+| bclk_div_rate         | natural range 0 to 255                    |                   |
+| lrclk_div_rate        | natural range 0 to 255                    |                   |
+| period_len            | integer range 0 to 65535                  |                   |
+| I2S_RESET_REG         | std_logic_vector(31 downto 0)             |                   |
+| I2S_CONTROL_REG       | std_logic_vector(31 downto 0)             |                   |
+| I2S_CLK_CONTROL_REG   | std_logic_vector(31 downto 0)             |                   |
+| PERIOD_LEN_REG        | std_logic_vector(31 downto 0)             |                   |
+| audio_fifo_rx         | RAM_TYPE                                  |  RX FIFO signals  |
+| audio_fifo_rx_wr_addr | integer range 0 to 2**RAM_ADDR_WIDTH-1    |                   |
+| audio_fifo_rx_rd_addr | integer range 0 to 2**RAM_ADDR_WIDTH-1    |                   |
+| tvalid                | std_logic                                 |                   |
+| rx_tlast              | std_logic                                 |                   |
+| drain_tx_dma          | std_logic                                 |                   |
+| rx_sample             | std_logic_vector(23 downto 0)             |                   |
+| wr_data               | std_logic_vector(31 downto 0)             |                   |
+| rd_data               | std_logic_vector(31 downto 0)             |                   |
+| wr_addr               | integer range 0 to 11                     |                   |
+| rd_addr               | integer range 0 to 11                     |                   |
+| wr_stb                | std_logic                                 |                   |
+| rd_ack                | std_logic                                 |                   |
+| tx_fifo_stb           | std_logic                                 |                   |
+| rx_fifo_ack           | std_logic                                 |                   |
+| cnt                   | integer range 0 to 2**16-1                |                   |
 ## Constants
 
-| Name           | Type    | Value                                          | Description        |
-| -------------- | ------- | ---------------------------------------------- | ------------------ |
-| FIFO_AWIDTH    | integer |  integer(ceil(log2(real(NUM_OF_CHANNEL * 8)))) |                    |
-| RAM_ADDR_WIDTH | integer |  7                                             | Audio samples FIFO |
+| Name           | Type    | Value                                          | Description          |
+| -------------- | ------- | ---------------------------------------------- | -------------------- |
+| FIFO_AWIDTH    | integer |  integer(ceil(log2(real(NUM_OF_CHANNEL * 8)))) |                      |
+| RAM_ADDR_WIDTH | integer |  7                                             |  Audio samples FIFO  |
 ## Types
 
 | Name     | Type | Description |

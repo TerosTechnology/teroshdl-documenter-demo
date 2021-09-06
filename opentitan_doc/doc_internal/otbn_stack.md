@@ -6,10 +6,11 @@
 ![Diagram](otbn_stack.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
 | Generic name | Type         | Value | Description |
@@ -50,5 +51,8 @@ Copyright lowRISC contributors.
 | StackDepthW | int unsigned | prim_util_pkg::vbits(StackDepth) |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always_ff

@@ -6,16 +6,17 @@
 ![Diagram](tlul_rsp_intg_chk.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Ports
 
-| Port name | Direction | Type     | Description     |
-| --------- | --------- | -------- | --------------- |
-| tl_i      | input     | tl_d2h_t | TL-UL interface |
-| err_o     | output    |          | error output    |
+| Port name | Direction | Type     | Description      |
+| --------- | --------- | -------- | ---------------- |
+| tl_i      | input     | tl_d2h_t |  TL-UL interface |
+| err_o     | output    |          |  error output    |
 ## Signals
 
 | Name      | Type              | Description |

@@ -6,8 +6,10 @@
 ![Diagram](xgmii_baser_dec_64.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name | Type | Value     | Description |
@@ -17,28 +19,28 @@ Language: Verilog 2001
 | HDR_WIDTH    |      | 2         |             |
 ## Ports
 
-| Port name       | Direction | Type                  | Description |
-| --------------- | --------- | --------------------- | ----------- |
-| clk             | input     | wire                  |             |
-| rst             | input     | wire                  |             |
-| encoded_rx_data | input     | wire [DATA_WIDTH-1:0] |             |
-| encoded_rx_hdr  | input     | wire [HDR_WIDTH-1:0]  |             |
-| xgmii_rxd       | output    | wire [DATA_WIDTH-1:0] |             |
-| xgmii_rxc       | output    | wire [CTRL_WIDTH-1:0] |             |
-| rx_bad_block    | output    | wire                  |             |
+| Port name       | Direction | Type                  | Description                             |
+| --------------- | --------- | --------------------- | --------------------------------------- |
+| clk             | input     | wire                  |                                         |
+| rst             | input     | wire                  |                                         |
+| encoded_rx_data | input     | wire [DATA_WIDTH-1:0] |      * 10GBASE-R encoded input      */  |
+| encoded_rx_hdr  | input     | wire [HDR_WIDTH-1:0]  |                                         |
+| xgmii_rxd       | output    | wire [DATA_WIDTH-1:0] |      * XGMII interface      */          |
+| xgmii_rxc       | output    | wire [CTRL_WIDTH-1:0] |                                         |
+| rx_bad_block    | output    | wire                  |      * Status      */                   |
 ## Signals
 
-| Name              | Type                 | Description              |
-| ----------------- | -------------------- | ------------------------ |
-| decoded_ctrl      | reg [DATA_WIDTH-1:0] | D6 D5 D4 D3 D2 D1 D0 BT  |
-| decode_err        | reg [CTRL_WIDTH-1:0] |                          |
-| xgmii_rxd_reg     | reg [DATA_WIDTH-1:0] |                          |
-| xgmii_rxd_next    | reg [DATA_WIDTH-1:0] |                          |
-| xgmii_rxc_reg     | reg [CTRL_WIDTH-1:0] |                          |
-| xgmii_rxc_next    | reg [CTRL_WIDTH-1:0] |                          |
-| rx_bad_block_reg  | reg                  |                          |
-| rx_bad_block_next | reg                  |                          |
-| i                 | integer              |                          |
+| Name              | Type                 | Description                  |
+| ----------------- | -------------------- | ---------------------------- |
+| decoded_ctrl      | reg [DATA_WIDTH-1:0] |     D6 D5 D4 D3 D2 D1 D0 BT  |
+| decode_err        | reg [CTRL_WIDTH-1:0] |                              |
+| xgmii_rxd_reg     | reg [DATA_WIDTH-1:0] |                              |
+| xgmii_rxd_next    | reg [DATA_WIDTH-1:0] |                              |
+| xgmii_rxc_reg     | reg [CTRL_WIDTH-1:0] |                              |
+| xgmii_rxc_next    | reg [CTRL_WIDTH-1:0] |                              |
+| rx_bad_block_reg  | reg                  |                              |
+| rx_bad_block_next | reg                  |                              |
+| i                 | integer              |                              |
 ## Constants
 
 | Name                | Type  | Value | Description |
@@ -86,4 +88,6 @@ Language: Verilog 2001
 | BLOCK_TYPE_TERM_7   | [7:0] | 8'hff |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

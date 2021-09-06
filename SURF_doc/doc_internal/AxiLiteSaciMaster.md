@@ -6,27 +6,32 @@
 ![Diagram](AxiLiteSaciMaster.svg "Diagram")
 ## Description
 
-Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
-Company    : SLAC National Accelerator Laboratory
-Description: New and improved version of the AxiLiteSaciMaster.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: New and improved version of the AxiLiteSaciMaster.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                  | Value  | Description         |
-| ------------------ | --------------------- | ------ | ------------------- |
-| TPD_G              | time                  | 1 ns   |                     |
-| AXIL_CLK_PERIOD_G  | real                  | 8.0e-9 | In units of seconds |
-| AXIL_TIMEOUT_G     | real                  | 1.0E-3 | In units of seconds |
-| SACI_CLK_PERIOD_G  | real                  | 1.0e-6 | In units of seconds |
-| SACI_CLK_FREERUN_G | boolean               | false  |                     |
-| SACI_NUM_CHIPS_G   | positive range 1 to 4 | 1      |                     |
-| SACI_RSP_BUSSED_G  | boolean               | false  |                     |
+| Generic name       | Type                  | Value  | Description          |
+| ------------------ | --------------------- | ------ | -------------------- |
+| TPD_G              | time                  | 1 ns   |                      |
+| AXIL_CLK_PERIOD_G  | real                  | 8.0e-9 |  In units of seconds |
+| AXIL_TIMEOUT_G     | real                  | 1.0E-3 |  In units of seconds |
+| SACI_CLK_PERIOD_G  | real                  | 1.0e-6 |  In units of seconds |
+| SACI_CLK_FREERUN_G | boolean               | false  |                      |
+| SACI_NUM_CHIPS_G   | positive range 1 to 4 | 1      |                      |
+| SACI_RSP_BUSSED_G  | boolean               | false  |                      |
 ## Ports
 
 | Port name       | Direction | Type                                                        | Description                   |
@@ -68,8 +73,7 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( ack, axilReadMaster, axilRst, axilWriteMaster, fail, r, rdData, saciBusGr )
 **Description**
-[in]
-
+ [in] 
 - seq: ( axilClk )
 ## Instantiations
 

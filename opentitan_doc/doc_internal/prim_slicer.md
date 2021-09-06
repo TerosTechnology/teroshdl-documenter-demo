@@ -6,12 +6,13 @@
 ![Diagram](prim_slicer.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Slicer chops the incoming bitstring into OutW granularity.
  It supports fractional InW/OutW which fills 0 at the end of message.
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |

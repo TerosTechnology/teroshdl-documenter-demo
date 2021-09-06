@@ -6,10 +6,11 @@
 ![Diagram](tb_axi_stream.svg "Diagram")
 ## Description
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this file,
-You can obtain one at http://mozilla.org/MPL/2.0/.
-Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ You can obtain one at http://mozilla.org/MPL/2.0/.
+
+ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
 
 | Generic name              | Type                   | Value | Description |
@@ -62,10 +63,10 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 | n_monitors          | natural                       |  3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |             |
 ## Types
 
-| Name                      | Type | Description                                          |
-| ------------------------- | ---- | ---------------------------------------------------- |
-| axis_stall_stats_fields_t |      | signals used for the statistics for stall evaluation |
-| axis_stall_stats_t        |      |                                                      |
+| Name                      | Type | Description                                                                                                                        |
+| ------------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| axis_stall_stats_fields_t |      | ---------------------------------------------------------------------------  signals used for the statistics for stall evaluation  |
+| axis_stall_stats_t        |      |                                                                                                                                    |
 ## Processes
 - main: (  )
 - statistics: ( aclk )

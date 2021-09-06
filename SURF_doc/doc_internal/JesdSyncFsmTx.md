@@ -6,23 +6,27 @@
 ![Diagram](JesdSyncFsmTx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Synchronizer TX Finite state machine
-             Finite state machine for sub-class 1 and sub-class 0 deterministic latency
-             lane synchronization.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Synchronizer TX Finite state machine
+              Finite state machine for sub-class 1 and sub-class 0 deterministic latency
+              lane synchronization.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name  | Type     | Value | Description                                     |
-| ------------- | -------- | ----- | ----------------------------------------------- |
-| TPD_G         | time     | 1 ns  |                                                 |
-| NUM_ILAS_MF_G | positive | 4     | Number of multi-frames in ILA sequence (4-255)  |
+| Generic name  | Type     | Value | Description                                                                       |
+| ------------- | -------- | ----- | --------------------------------------------------------------------------------- |
+| TPD_G         | time     | 1 ns  |                                                                                   |
+| NUM_ILAS_MF_G | positive | 4     | ESD204B class (0 and 1 supported) Number of multi-frames in ILA sequence (4-255)  |
 ## Ports
 
 | Port name   | Direction | Type | Description                                            |

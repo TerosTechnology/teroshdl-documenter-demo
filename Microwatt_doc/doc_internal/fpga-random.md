@@ -6,10 +6,10 @@
 ![Diagram](fpga-random.svg "Diagram")
 ## Description
 
-Random number generator for Microwatt
-Based on https://pdfs.semanticscholar.org/83ac/9e9c1bb3dad5180654984604c8d5d8137412.pdf
-"High Speed True Random Number Generators in Xilinx FPGAs"
-by Catalin Baetoniu, Xilinx Inc.
+ Random number generator for Microwatt
+ Based on https://pdfs.semanticscholar.org/83ac/9e9c1bb3dad5180654984604c8d5d8137412.pdf
+ "High Speed True Random Number Generators in Xilinx FPGAs"
+ by Catalin Baetoniu, Xilinx Inc.
 ## Ports
 
 | Port name | Direction | Type                           | Description |

@@ -6,17 +6,24 @@
 ![Diagram](keymgr_input_checks.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Key manager input checks
  Checks input data for errors
  We should also check for input validity
- 
+
+## Generics
+
+| Generic name  | Type | Value | Description |
+| ------------- | ---- | ----- | ----------- |
+| KmacEnMasking | bit  | 1'b1  |             |
 ## Ports
 
 | Port name          | Direction | Type                      | Description |
 | ------------------ | --------- | ------------------------- | ----------- |
+| rom_digest_i       | input     |                           |             |
 | max_key_versions_i | input     | [2**StageWidth-1:0][31:0] |             |
 | stage_sel_i        | input     | keymgr_stage_e            |             |
 | key_i              | input     | hw_key_req_t              |             |
@@ -31,22 +38,28 @@ Copyright lowRISC contributors.
 | health_state_vld_o | output    |                           |             |
 | key_version_vld_o  | output    |                           |             |
 | key_vld_o          | output    |                           |             |
+| rom_digest_vld_o   | output    |                           |             |
 ## Signals
 
-| Name                | Type                             | Description         |
-| ------------------- | -------------------------------- | ------------------- |
-| cur_max_key_version | logic [31:0]                     |                     |
-| creator_seed_padded | logic [MaxWidth-1:0]             | general data check  |
-| owner_seed_padded   | logic [MaxWidth-1:0]             | general data check  |
-| devid_padded        | logic [MaxWidth-1:0]             | general data check  |
-| health_state_padded | logic [MaxWidth-1:0]             | general data check  |
-| unused_key_vld      | logic                            | key check           |
-| key_padded          | logic [Shares-1:0][MaxWidth-1:0] |                     |
-| key_chk             | logic [Shares-1:0]               |                     |
+| Name                | Type                                | Description          |
+| ------------------- | ----------------------------------- | -------------------- |
+| cur_max_key_version | logic [31:0]                        |                      |
+| creator_seed_padded | logic [MaxWidth-1:0]                |  general data check  |
+| owner_seed_padded   | logic [MaxWidth-1:0]                |  general data check  |
+| devid_padded        | logic [MaxWidth-1:0]                |  general data check  |
+| health_state_padded | logic [MaxWidth-1:0]                |  general data check  |
+| unused_key_vld      | logic                               |  key check           |
+| key_padded          | logic [KeyShares-1:0][MaxWidth-1:0] |                      |
+| key_chk             | logic [KeyShares-1:0]               |                      |
+## Constants
+
+| Name      | Type | Value                      | Description |
+| --------- | ---- | -------------------------- | ----------- |
+| KeyShares | int  | KmacEnMasking ? Shares : 1 |             |
 ## Functions
 - valid_chk <font id="function_arguments">(logic [MaxWidth-1:0])</font> <font id="function_return">return (logic)</font>
 **Description**
-checks for all 0's or all 1's of value
+ checks for all 0's or all 1's of value
 
 ## Instantiations
 

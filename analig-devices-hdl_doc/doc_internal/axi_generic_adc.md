@@ -6,33 +6,41 @@
 ![Diagram](axi_generic_adc.svg "Diagram")
 ## Description
 
-***************************************************************************
+ ***************************************************************************
  ***************************************************************************
  Copyright 2014 - 2020 (c) Analog Devices, Inc. All rights reserved.
+
  In this HDL repository, there are many different and unique modules, consisting
  of various HDL (Verilog or VHDL) components. The individual modules are
  developed independently, and may be accompanied by separate and unique license
  terms.
+
  The user should read each of these license terms, and understand the
  freedoms and responsibilities that he or she has by using this source/core.
+
  This core is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE.
+
  Redistribution and use of source or resulting binaries, with or without modification
  of this file, are permitted under one of the following two license terms:
+
    1. The GNU General Public License version 2 as published by the
       Free Software Foundation, which can be found in the top level directory
       of this repository (LICENSE_GPL2), and also online at:
       <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
  OR
+
    2. An ADI specific BSD license, which can be found in the top level directory
       of this repository (LICENSE_ADIBSD), and also on-line at:
       https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
       This will allow to generate bit files and not release the source code,
       as long as it attaches to an ADI device.
+
  ***************************************************************************
  ***************************************************************************
- 
+
 ## Generics
 
 | Generic name    | Type | Value | Description |
@@ -69,34 +77,36 @@
 | s_axi_arprot  | input     | [ 2:0]                |             |
 ## Signals
 
-| Name       | Type        | Description       |
-| ---------- | ----------- | ----------------- |
-| up_rdata   | reg  [31:0] |                   |
-| up_rack    | reg         |                   |
-| up_wack    | reg         |                   |
-| adc_rst    | wire        |                   |
-| up_rstn    | wire        |                   |
-| up_clk     | wire        |                   |
-| up_waddr_s | wire [13:0] |                   |
-| up_raddr_s | wire [13:0] |                   |
-| up_sel_s   | wire        | internal signals  |
-| up_wr_s    | wire        |                   |
-| up_addr_s  | wire [13:0] |                   |
-| up_wdata_s | wire [31:0] |                   |
-| up_rdata_s | wire [31:0] |                   |
-| up_rack_s  | wire        |                   |
-| up_wack_s  | wire        |                   |
-| up_rdata_r | reg [31:0]  |                   |
-| up_rack_r  | reg         |                   |
-| up_wack_r  | reg         |                   |
-| j          | integer     |                   |
+| Name       | Type        | Description        |
+| ---------- | ----------- | ------------------ |
+| up_rdata   | reg  [31:0] |                    |
+| up_rack    | reg         |                    |
+| up_wack    | reg         |                    |
+| adc_rst    | wire        |                    |
+| up_rstn    | wire        |                    |
+| up_clk     | wire        |                    |
+| up_waddr_s | wire [13:0] |                    |
+| up_raddr_s | wire [13:0] |                    |
+| up_sel_s   | wire        |  internal signals  |
+| up_wr_s    | wire        |                    |
+| up_addr_s  | wire [13:0] |                    |
+| up_wdata_s | wire [31:0] |                    |
+| up_rdata_s | wire [31:0] |                    |
+| up_rack_s  | wire        |                    |
+| up_wack_s  | wire        |                    |
+| up_rdata_r | reg [31:0]  |                    |
+| up_rack_r  | reg         |                    |
+| up_wack_r  | reg         |                    |
+| j          | integer     |                    |
 ## Processes
 - unnamed: ( @(*) )
+  - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
+  - **Type:** always
 ## Instantiations
 
 - i_up_adc_common: up_adc_common
 - i_up_axi: up_axi
 **Description**
-up bus interface
+ up bus interface
 

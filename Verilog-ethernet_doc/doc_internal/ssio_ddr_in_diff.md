@@ -6,16 +6,18 @@
 ![Diagram](ssio_ddr_in_diff.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name      | Type | Value     | Description                                                                                                                                       |
-| ----------------- | ---- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TARGET            |      | "GENERIC" | target ("SIM", "GENERIC", "XILINX", "ALTERA")                                                                                                     |
-| IODDR_STYLE       |      | "IODDR2"  | IODDR style ("IODDR", "IODDR2") Use IODDR for Virtex-4, Virtex-5, Virtex-6, 7 Series, Ultrascale Use IODDR2 for Spartan-6                         |
-| CLOCK_INPUT_STYLE |      | "BUFIO2"  | Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2") Use BUFR for Virtex-5, Virtex-6, 7-series Use BUFG for Ultrascale Use BUFIO2 for Spartan-6  |
-| WIDTH             |      | 1         | Width of register in bits                                                                                                                         |
+| Generic name      | Type | Value     | Description                                                                                                                            |
+| ----------------- | ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| TARGET            |      | "GENERIC" |  target ("SIM", "GENERIC", "XILINX", "ALTERA")                                                                                         |
+| IODDR_STYLE       |      | "IODDR2"  |  IODDR style ("IODDR", "IODDR2")  Use IODDR for Virtex-4, Virtex-5, Virtex-6, 7 Series, Ultrascale  Use IODDR2 for Spartan-6           |
+| CLOCK_INPUT_STYLE |      | "BUFG"    |  Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2")  Use BUFR for Virtex-6, 7-series  Use BUFG for Virtex-5, Spartan-6, Ultrascale  |
+| WIDTH             |      | 1         |  Width of register in bits                                                                                                             |
 ## Ports
 
 | Port name   | Direction | Type             | Description |

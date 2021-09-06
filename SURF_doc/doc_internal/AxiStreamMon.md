@@ -6,23 +6,27 @@
 ![Diagram](AxiStreamMon.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI Stream Monitor Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI Stream Monitor Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name    | Type                | Value     | Description                 |
-| --------------- | ------------------- | --------- | --------------------------- |
-| TPD_G           | time                | 1 ns      |                             |
-| COMMON_CLK_G    | boolean             | false     | true if axisClk = statusClk |
-| AXIS_CLK_FREQ_G | real                | 156.25E+6 | units of Hz                 |
-| AXIS_CONFIG_G   | AxiStreamConfigType |           |                             |
+| Generic name    | Type                | Value     | Description                  |
+| --------------- | ------------------- | --------- | ---------------------------- |
+| TPD_G           | time                | 1 ns      |                              |
+| COMMON_CLK_G    | boolean             | false     |  true if axisClk = statusClk |
+| AXIS_CLK_FREQ_G | real                | 156.25E+6 |  units of Hz                 |
+| AXIS_CONFIG_G   | AxiStreamConfigType |           |                              |
 ## Ports
 
 | Port name    | Direction | Type                | Description           |
@@ -33,15 +37,15 @@ the terms contained in the LICENSE.txt file.
 | axisSlave    | in        | AxiStreamSlaveType  |                       |
 | statusClk    | in        | sl                  | Status Interface      |
 | statusRst    | in        | sl                  |                       |
-| frameCnt     | out       | slv(63 downto 0)    | units of frames       |
-| frameSize    | out       | slv(31 downto 0)    | units of Byte         |
-| frameSizeMax | out       | slv(31 downto 0)    | units of Byte         |
-| frameSizeMin | out       | slv(31 downto 0)    | units of Byte         |
-| frameRate    | out       | slv(31 downto 0)    | units of Hz           |
-| frameRateMax | out       | slv(31 downto 0)    | units of Hz           |
-| frameRateMin | out       | slv(31 downto 0)    | units of Hz           |
-| bandwidth    | out       | slv(63 downto 0)    | units of Byte/s       |
-| bandwidthMax | out       | slv(63 downto 0)    | units of Byte/s       |
+| frameCnt     | out       | slv(63 downto 0)    |  units of frames      |
+| frameSize    | out       | slv(31 downto 0)    |  units of Byte        |
+| frameSizeMax | out       | slv(31 downto 0)    |  units of Byte        |
+| frameSizeMin | out       | slv(31 downto 0)    |  units of Byte        |
+| frameRate    | out       | slv(31 downto 0)    |  units of Hz          |
+| frameRateMax | out       | slv(31 downto 0)    |  units of Hz          |
+| frameRateMin | out       | slv(31 downto 0)    |  units of Hz          |
+| bandwidth    | out       | slv(63 downto 0)    |  units of Byte/s      |
+| bandwidthMax | out       | slv(63 downto 0)    |  units of Byte/s      |
 | bandwidthMin | out       | slv(63 downto 0)    |                       |
 ## Signals
 

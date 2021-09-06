@@ -6,45 +6,49 @@
 ![Diagram](ClinkTop.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-CameraLink Top Level
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ CameraLink Top Level
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                 | Value     | Description            |
-| ------------------ | -------------------- | --------- | ---------------------- |
-| TPD_G              | time                 | 1 ns      |                        |
-| XIL_DEVICE_G       | string               | "7SERIES" |                        |
-| CHAN_COUNT_G       | integer range 1 to 2 | 1         |                        |
-| UART_READY_EN_G    | boolean              | true      |                        |
-| COMMON_AXIL_CLK_G  | boolean              | false     | true if axilClk=sysClk |
-| COMMON_DATA_CLK_G  | boolean              | false     | true if dataClk=sysClk |
-| DATA_AXIS_CONFIG_G | AxiStreamConfigType  |           |                        |
-| UART_AXIS_CONFIG_G | AxiStreamConfigType  |           |                        |
-| AXIL_BASE_ADDR_G   | slv(31 downto 0)     |           |                        |
+| Generic name       | Type                 | Value     | Description             |
+| ------------------ | -------------------- | --------- | ----------------------- |
+| TPD_G              | time                 | 1 ns      |                         |
+| XIL_DEVICE_G       | string               | "7SERIES" |                         |
+| CHAN_COUNT_G       | integer range 1 to 2 | 1         |                         |
+| UART_READY_EN_G    | boolean              | true      |                         |
+| COMMON_AXIL_CLK_G  | boolean              | false     |  true if axilClk=sysClk |
+| COMMON_DATA_CLK_G  | boolean              | false     |  true if dataClk=sysClk |
+| DATA_AXIS_CONFIG_G | AxiStreamConfigType  |           |                         |
+| UART_AXIS_CONFIG_G | AxiStreamConfigType  |           |                         |
+| AXIL_BASE_ADDR_G   | slv(31 downto 0)     |           |                         |
 ## Ports
 
 | Port name       | Direction | Type                                          | Description                         |
 | --------------- | --------- | --------------------------------------------- | ----------------------------------- |
-| cbl0Half0P      | inout     | slv(4 downto 0)                               | 15, 17,  5,  6,  3                  |
-| cbl0Half0M      | inout     | slv(4 downto 0)                               |  2,  4, 18, 19, 16                  |
-| cbl0Half1P      | inout     | slv(4 downto 0)                               |  8, 10, 11, 12,  9                  |
-| cbl0Half1M      | inout     | slv(4 downto 0)                               | 21, 23, 24, 25, 22                  |
-| cbl0SerP        | out       | sl                                            | 20                                  |
-| cbl0SerM        | out       | sl                                            | 7                                   |
-| cbl1Half0P      | inout     | slv(4 downto 0)                               |  2,  4,  5,  6, 3                   |
-| cbl1Half0M      | inout     | slv(4 downto 0)                               | 15, 17, 18, 19 16                   |
-| cbl1Half1P      | inout     | slv(4 downto 0)                               |  8, 10, 11, 12,  9                  |
-| cbl1Half1M      | inout     | slv(4 downto 0)                               | 21, 23, 24, 25, 22                  |
-| cbl1SerP        | out       | sl                                            | 20                                  |
-| cbl1SerM        | out       | sl                                            | 7                                   |
+| cbl0Half0P      | inout     | slv(4 downto 0)                               |  15, 17,  5,  6,  3                 |
+| cbl0Half0M      | inout     | slv(4 downto 0)                               |   2,  4, 18, 19, 16                 |
+| cbl0Half1P      | inout     | slv(4 downto 0)                               |   8, 10, 11, 12,  9                 |
+| cbl0Half1M      | inout     | slv(4 downto 0)                               |  21, 23, 24, 25, 22                 |
+| cbl0SerP        | out       | sl                                            |  20                                 |
+| cbl0SerM        | out       | sl                                            |  7                                  |
+| cbl1Half0P      | inout     | slv(4 downto 0)                               |   2,  4,  5,  6, 3                  |
+| cbl1Half0M      | inout     | slv(4 downto 0)                               |  15, 17, 18, 19 16                  |
+| cbl1Half1P      | inout     | slv(4 downto 0)                               |   8, 10, 11, 12,  9                 |
+| cbl1Half1M      | inout     | slv(4 downto 0)                               |  21, 23, 24, 25, 22                 |
+| cbl1SerP        | out       | sl                                            |  20                                 |
+| cbl1SerM        | out       | sl                                            |  7                                  |
 | dlyClk          | in        | sl                                            | Delay clock and reset, 200Mhz       |
 | dlyRst          | in        | sl                                            |                                     |
 | sysClk          | in        | sl                                            | System clock and reset, > 100 Mhz   |
@@ -101,34 +105,50 @@ the terms contained in the LICENSE.txt file.
 
 - U_IdelayCtrl: IDELAYCTRL
 **Description**
-IDELAYCTRL Modules
+-------------------
+ IDELAYCTRL Modules
+-------------------
 
 - U_AxilAsync: surf.AxiLiteAsync
 **Description**
-1-bit input: Active high reset input
-AXI-Lite Clock Transition
+ 1-bit input: Active high reset input
+--------------------------
+ AXI-Lite Clock Transition
+--------------------------
 
 - U_XBAR: surf.AxiLiteCrossbar
 **Description**
-AXI-Lite: Crossbar Core
+------------------------
+ AXI-Lite: Crossbar Core
+------------------------
 
 - U_ClinkReg: surf.ClinkReg
 **Description**
-AXI-Lite Register Module
+-------------------------
+ AXI-Lite Register Module
+-------------------------
 
 - U_Cbl0Half0: surf.ClinkCtrl
 **Description**
-Connector 0, Half 0, Control for Base,Medium,Full,Deca
+-------------------------------------------------------
+ Connector 0, Half 0, Control for Base,Medium,Full,Deca
+-------------------------------------------------------
 
 - U_Cbl0Half1: surf.ClinkData
 **Description**
-Connector 0, Half 1, Data X for Base,Medium,Full,Deca
+------------------------------------------------------
+ Connector 0, Half 1, Data X for Base,Medium,Full,Deca
+------------------------------------------------------
 
 - U_Cbl1Half1: surf.ClinkData
 **Description**
-Connector 1, Half 1, Data X for Base, Data Y for Med, Full, Deca
+-----------------------------------------------------------------
+ Connector 1, Half 1, Data X for Base, Data Y for Med, Full, Deca
+-----------------------------------------------------------------
 
 - U_Framer0: surf.ClinkFraming
 **Description**
-Data Processing
+----------------
+ Data Processing
+----------------
 

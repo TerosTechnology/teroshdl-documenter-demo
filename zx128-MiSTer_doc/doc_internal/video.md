@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](video.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -21,35 +25,43 @@
 | a         | output    | wire[12:0] |             |
 ## Signals
 
-| Name            | Type     | Description |
-| --------------- | -------- | ----------- |
-| hCount          | reg[8:0] |             |
-| hCountReset     | wire     |             |
-| vCount          | reg[8:0] |             |
-| vCountReset     | wire     |             |
-| fCount          | reg[4:0] |             |
-| dataEnable      | wire     |             |
-| videoEnable     | reg      |             |
-| videoEnableLoad | wire     |             |
-| dataInput       | reg[7:0] |             |
-| dataInputLoad   | wire     |             |
-| attrInput       | reg[7:0] |             |
-| attrInputLoad   | wire     |             |
-| dataOutput      | reg[7:0] |             |
-| dataOutputLoad  | wire     |             |
-| attrOutput      | reg[7:0] |             |
-| attrOutputLoad  | wire     |             |
-| dataSelect      | wire     |             |
-| r               | wire     |             |
-| g               | wire     |             |
-| b               | wire     |             |
-| i               | wire     |             |
+| Name            | Type     | Description                                                                                         |
+| --------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| hCount          | reg[8:0] | -------------------------------------------------------------------------------------------------  |
+| hCountReset     | wire     |                                                                                                     |
+| vCount          | reg[8:0] |                                                                                                     |
+| vCountReset     | wire     |                                                                                                     |
+| fCount          | reg[4:0] |                                                                                                     |
+| dataEnable      | wire     | -------------------------------------------------------------------------------------------------  |
+| videoEnable     | reg      |                                                                                                     |
+| videoEnableLoad | wire     |                                                                                                     |
+| dataInput       | reg[7:0] | -------------------------------------------------------------------------------------------------  |
+| dataInputLoad   | wire     |                                                                                                     |
+| attrInput       | reg[7:0] |                                                                                                     |
+| attrInputLoad   | wire     |                                                                                                     |
+| dataOutput      | reg[7:0] |                                                                                                     |
+| dataOutputLoad  | wire     |                                                                                                     |
+| attrOutput      | reg[7:0] |                                                                                                     |
+| attrOutputLoad  | wire     |                                                                                                     |
+| dataSelect      | wire     | -------------------------------------------------------------------------------------------------  |
+| r               | wire     |                                                                                                     |
+| g               | wire     |                                                                                                     |
+| b               | wire     |                                                                                                     |
+| i               | wire     |                                                                                                     |
 ## Processes
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always

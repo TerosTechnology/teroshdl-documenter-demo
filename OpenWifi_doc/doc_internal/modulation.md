@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](modulation.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -13,6 +17,6 @@
 | IQ        | output    | [31:0]     |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 **Description**
-combinatorial logic
-
+ combinatorial logic 

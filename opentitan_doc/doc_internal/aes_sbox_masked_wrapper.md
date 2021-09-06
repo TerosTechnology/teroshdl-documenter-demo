@@ -6,11 +6,12 @@
 ![Diagram](aes_sbox_masked_wrapper.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Wrapper to allow LEC of masked S-Boxes against LUT-based S-Box.
- 
+
 ## Ports
 
 | Port name | Direction | Type  | Description |

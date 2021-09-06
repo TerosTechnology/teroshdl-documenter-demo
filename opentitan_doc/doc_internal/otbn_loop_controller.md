@@ -6,10 +6,10 @@
 ![Diagram](otbn_loop_controller.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Generics
 
 | Generic name  | Type | Value | Description |
@@ -32,37 +32,37 @@ Copyright lowRISC contributors.
 | loop_jump_o         | output    |                     |             |
 | loop_jump_addr_o    | output    | [ImemAddrWidth-1:0] |             |
 | loop_err_o          | output    |                     |             |
-| branch_taken_i      | input     |                     |             |
+| jump_or_branch_i    | input     |                     |             |
 | otbn_stall_i        | input     |                     |             |
 ## Signals
 
-| Name                     | Type                       | Description |
-| ------------------------ | -------------------------- | ----------- |
-| loop_active_q            | logic                      |             |
-| loop_active_d            | logic                      |             |
-| current_loop_q           | loop_info_t                |             |
-| current_loop_d           | loop_info_t                |             |
-| at_current_loop_end_insn | logic                      |             |
-| current_loop_finish      | logic                      |             |
-| next_loop                | loop_info_t                |             |
-| next_loop_valid          | logic                      |             |
-| new_loop                 | loop_info_t                |             |
-| new_loop_end_addr_full   | logic [LoopEndAddrWidth:0] |             |
-| new_loop_end_addr_imem   | logic [ImemAddrWidth:0]    |             |
-| loop_stack_push_req      | logic                      |             |
-| loop_stack_push          | logic                      |             |
-| loop_stack_full          | logic                      |             |
-| loop_stack_pop           | logic                      |             |
-| loop_iteration_err       | logic                      |             |
-| loop_branch_err          | logic                      |             |
-| loop_stack_overflow_err  | logic                      |             |
-| loop_at_end_err          | logic                      |             |
+| Name                     | Type                         | Description |
+| ------------------------ | ---------------------------- | ----------- |
+| loop_active_q            | logic                        |             |
+| loop_active_d            | logic                        |             |
+| current_loop_q           | loop_info_t                  |             |
+| current_loop_d           | loop_info_t                  |             |
+| at_current_loop_end_insn | logic                        |             |
+| current_loop_finish      | logic                        |             |
+| next_loop                | loop_info_t                  |             |
+| next_loop_valid          | logic                        |             |
+| new_loop                 | loop_info_t                  |             |
+| new_loop_end_addr_full   | logic [LoopEndAddrWidth-1:0] |             |
+| new_loop_end_addr_imem   | logic [ImemAddrWidth:0]      |             |
+| loop_stack_push_req      | logic                        |             |
+| loop_stack_push          | logic                        |             |
+| loop_stack_full          | logic                        |             |
+| loop_stack_pop           | logic                        |             |
+| loop_iteration_err       | logic                        |             |
+| loop_branch_err          | logic                        |             |
+| loop_stack_overflow_err  | logic                        |             |
+| loop_at_end_err          | logic                        |             |
 ## Constants
 
-| Name             | Type         | Value                                   | Description                                                                                                                                                                            |
-| ---------------- | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LoopStackDepth   | int unsigned | 7                                       | The loop controller has a current loop and then a stack of outer loops, this sets the size of the stack so maximum loop nesting depth is LoopStackDepth + 1.                           |
-| LoopEndAddrWidth | int unsigned | ImemAddrWidth < 14 ? 14 : ImemAddrWidth | ISA has a fixed 12 bits for loop_bodysize. When IMEM size is less than 16 kB (ImemAddrWidth < 14) some of these bits are ignored as a loop body cannot be greater than the IMEM size.  |
+| Name             | Type         | Value | Description                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ---------------- | ------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LoopStackDepth   | int unsigned | 7     |  The loop controller has a current loop and then a stack of outer loops, this sets the size of  the stack so maximum loop nesting depth is LoopStackDepth + 1.                                                                                                                                                                                                                                                                                       |
+| LoopEndAddrWidth | int unsigned | 1     |  The ISA has a fixed 12 bits for loop_bodysize. The maximum possible address for the end of a  loop is the maximum address in Imem (2^ImemAddrWidth - 4) plus loop_bodysize instructions  (which take 4 * (2^12 - 1) bytes), plus 4 extra bytes. This simplifies to<br>     (1 << ImemAddrWidth) + (1 << 14) - 4<br>  which is strictly less than (1 << (max(ImemAddrWidth, 14) + 1)), so can be represented with  max(ImemAddrWidth, 14) + 1 bits.  |
 ## Types
 
 | Name        | Type                                                                                                                                                                                                                                                                                                 | Description |
@@ -70,5 +70,8 @@ Copyright lowRISC contributors.
 | loop_info_t | struct packed {<br><span style="padding-left:20px">     logic [ImemAddrWidth-1:0] loop_start;<br><span style="padding-left:20px">     logic [ImemAddrWidth:0]   loop_end;<br><span style="padding-left:20px">     logic [31:0]              loop_iterations;<br><span style="padding-left:20px">   } |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always_ff

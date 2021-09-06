@@ -6,9 +6,13 @@
 ![Diagram](mean_vector_axi_ram.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2019
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2019
+-------------------------------------------------------------------------
+Library UNISIM;
+use UNISIM.vcomponents.all;
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -38,5 +42,4 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 - unnamed: ( clk_a )
 - unnamed: ( clk_b )
 **Description**
-Port B
-
+ Port B 

@@ -9,4 +9,5 @@
 ## Functions
 - GetRssiCsum <font id="function_arguments">(              -- 2 clock cycle latency calculation init     : in    sl;<br><span style="padding-left:20px"> header   : in    slv(63 downto 0);<br><span style="padding-left:20px"> accumReg : in    slv(20 downto 0);<br><span style="padding-left:20px"> accumVar : inout slv(20 downto 0);<br><span style="padding-left:20px"> chksumOk : inout sl;<br><span style="padding-left:20px"> checksum : inout slv(15 downto 0)) </font> <font id="function_return">return ()</font>
 **Description**
-Up to 1kB bursting
+ Up to 1kB bursting
+

@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](ram_simo.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type                       | Description |
@@ -21,6 +25,6 @@
 | mem  | reg  [DEPTH*8-1:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 **Description**
-Data is latched on the positive edge of the clock
-
+ Data is latched on the positive edge of the clock 

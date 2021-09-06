@@ -6,13 +6,14 @@
 ![Diagram](pwrmgr_cdc_pulse.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Power Manager module to find slow clock edges
  The clock is not used directly to avoid STA issues, instead a toggle
  pulse is used.
- 
+
 ## Ports
 
 | Port name   | Direction | Type | Description |
@@ -38,15 +39,17 @@ Copyright lowRISC contributors.
 | valid          | logic |             |
 ## Processes
 - unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
+  - **Type:** always_ff
 **Description**
-toggle pulse generated on positive edge
-
+ toggle pulse generated on positive edge 
 - unnamed: ( @(negedge clk_slow_i or negedge rst_slow_ni) )
+  - **Type:** always_ff
 **Description**
-toggle pulse generated on negative edge
-
+ toggle pulse generated on negative edge 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - i_pos_sync: prim_flop_2sync

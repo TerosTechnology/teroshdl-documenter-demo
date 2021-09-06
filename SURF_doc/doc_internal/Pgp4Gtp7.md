@@ -6,52 +6,57 @@
 ![Diagram](Pgp4Gtp7.svg "Diagram")
 ## Description
 
-Title      : PGPv4: https://confluence.slac.stanford.edu/x/1dzgEQ
-Company    : SLAC National Accelerator Laboratory
-Description: PGPv4 GTP7 Core Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv4: https://confluence.slac.stanford.edu/x/1dzgEQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: PGPv4 GTP7 Core Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name                | Type                  | Value                            | Description                               |
-| --------------------------- | --------------------- | -------------------------------- | ----------------------------------------- |
-| TPD_G                       | time                  | 1 ns                             |                                           |
-| RATE_G                      | string                | "6.25Gbps"                       | or "3.125Gbps"                            |
-| CLKIN_PERIOD_G              | real                  |                                  |                                           |
-| BANDWIDTH_G                 | string                |                                  |                                           |
-| CLKFBOUT_MULT_G             | positive              |                                  |                                           |
-| CLKOUT0_DIVIDE_G            | positive              |                                  |                                           |
-| CLKOUT1_DIVIDE_G            | positive              |                                  |                                           |
-| CLKOUT2_DIVIDE_G            | positive              |                                  |                                           |
-| PGP_RX_ENABLE_G             | boolean               | true                             | PGP Settings                              |
-| RX_ALIGN_SLIP_WAIT_G        | integer               | 32                               |                                           |
-| PGP_TX_ENABLE_G             | boolean               | true                             |                                           |
-| NUM_VC_G                    | integer range 1 to 16 | 4                                |                                           |
-| TX_CELL_WORDS_MAX_G         | integer               | PGP4_DEFAULT_TX_CELL_WORDS_MAX_C | Number of 64-bit words per cell           |
-| TX_MUX_MODE_G               | string                | "INDEXED"                        | Or "ROUTED"                               |
-| TX_MUX_TDEST_ROUTES_G       | Slv8Array             | (0      => "--------")           | Only used in ROUTED mode                  |
-| TX_MUX_TDEST_LOW_G          | integer range 0 to 7  | 0                                |                                           |
-| TX_MUX_ILEAVE_EN_G          | boolean               | true                             |                                           |
-| TX_MUX_ILEAVE_ON_NOTVALID_G | boolean               | true                             |                                           |
-| EN_DRP_G                    | boolean               | false                            |                                           |
-| EN_PGP_MON_G                | boolean               | false                            |                                           |
-| WRITE_EN_G                  | boolean               | true                             | Set to false when on remote end of a link |
-| TX_POLARITY_G               | sl                    | '0'                              |                                           |
-| RX_POLARITY_G               | sl                    | '0'                              |                                           |
-| STATUS_CNT_WIDTH_G          | natural range 1 to 32 | 16                               |                                           |
-| ERROR_CNT_WIDTH_G           | natural range 1 to 32 | 8                                |                                           |
-| AXIL_BASE_ADDR_G            | slv(31 downto 0)      | (others => '0')                  |                                           |
-| AXIL_CLK_FREQ_G             | real                  | 156.25E+6                        |                                           |
+| Generic name                | Type                  | Value                            | Description                                                                                                                                                                                           |
+| --------------------------- | --------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TPD_G                       | time                  | 1 ns                             |                                                                                                                                                                                                       |
+| RATE_G                      | string                | "6.25Gbps"                       |  or "3.125Gbps"                                                                                                                                                                                       |
+| CLKIN_PERIOD_G              | real                  |                                  |                                                                                                                                                                                                       |
+| BANDWIDTH_G                 | string                |                                  |                                                                                                                                                                                                       |
+| CLKFBOUT_MULT_G             | positive              |                                  |                                                                                                                                                                                                       |
+| CLKOUT0_DIVIDE_G            | positive              |                                  |                                                                                                                                                                                                       |
+| CLKOUT1_DIVIDE_G            | positive              |                                  |                                                                                                                                                                                                       |
+| CLKOUT2_DIVIDE_G            | positive              |                                  |                                                                                                                                                                                                       |
+| PGP_RX_ENABLE_G             | boolean               | true                             | ------------------------------------------------------------------------------------------- PGP Settings -------------------------------------------------------------------------------------------  |
+| RX_ALIGN_SLIP_WAIT_G        | integer               | 32                               |                                                                                                                                                                                                       |
+| PGP_TX_ENABLE_G             | boolean               | true                             |                                                                                                                                                                                                       |
+| NUM_VC_G                    | integer range 1 to 16 | 4                                |                                                                                                                                                                                                       |
+| TX_CELL_WORDS_MAX_G         | integer               | PGP4_DEFAULT_TX_CELL_WORDS_MAX_C |  Number of 64-bit words per cell                                                                                                                                                                      |
+| TX_MUX_MODE_G               | string                | "INDEXED"                        |  Or "ROUTED"                                                                                                                                                                                          |
+| TX_MUX_TDEST_ROUTES_G       | Slv8Array             | (0      => "--------")           |  Only used in ROUTED mode                                                                                                                                                                             |
+| TX_MUX_TDEST_LOW_G          | integer range 0 to 7  | 0                                |                                                                                                                                                                                                       |
+| TX_MUX_ILEAVE_EN_G          | boolean               | true                             |                                                                                                                                                                                                       |
+| TX_MUX_ILEAVE_ON_NOTVALID_G | boolean               | true                             |                                                                                                                                                                                                       |
+| EN_DRP_G                    | boolean               | false                            |                                                                                                                                                                                                       |
+| EN_PGP_MON_G                | boolean               | false                            |                                                                                                                                                                                                       |
+| WRITE_EN_G                  | boolean               | true                             |  Set to false when on remote end of a link                                                                                                                                                            |
+| TX_POLARITY_G               | sl                    | '0'                              |                                                                                                                                                                                                       |
+| RX_POLARITY_G               | sl                    | '0'                              |                                                                                                                                                                                                       |
+| STATUS_CNT_WIDTH_G          | natural range 1 to 32 | 16                               |                                                                                                                                                                                                       |
+| ERROR_CNT_WIDTH_G           | natural range 1 to 32 | 8                                |                                                                                                                                                                                                       |
+| AXIL_BASE_ADDR_G            | slv(31 downto 0)      | (others => '0')                  |                                                                                                                                                                                                       |
+| AXIL_CLK_FREQ_G             | real                  | 156.25E+6                        |                                                                                                                                                                                                       |
 ## Ports
 
 | Port name       | Direction | Type                                      | Description                                  |
 | --------------- | --------- | ----------------------------------------- | -------------------------------------------- |
-| stableClk       | in        | sl                                        | GT needs a stable clock to "boot up"         |
+| stableClk       | in        | sl                                        |  GT needs a stable clock to "boot up"        |
 | stableRst       | in        | sl                                        |                                              |
 | qPllOutClk      | in        | slv(1 downto 0)                           | QPLL Interface                               |
 | qPllOutRefClk   | in        | slv(1 downto 0)                           |                                              |
@@ -85,32 +90,32 @@ the terms contained in the LICENSE.txt file.
 | axilWriteSlave  | out       | AxiLiteWriteSlaveType                     |                                              |
 ## Signals
 
-| Name             | Type                                                   | Description   |
-| ---------------- | ------------------------------------------------------ | ------------- |
-| phyRxClk         | sl                                                     |               |
-| phyRxRst         | sl                                                     |               |
-| phyTxClk         | sl                                                     |               |
-| phyTxRst         | sl                                                     |               |
-| phyRxInit        | sl                                                     | PgpRx Signals |
-| phyRxActive      | sl                                                     |               |
-| phyRxValid       | sl                                                     |               |
-| phyRxHeader      | slv(1 downto 0)                                        |               |
-| phyRxData        | slv(63 downto 0)                                       |               |
-| phyRxSlip        | sl                                                     |               |
-| locRxOut         | Pgp4RxOutType                                          |               |
-| phyTxActive      | sl                                                     | PgpTx Signals |
-| phyTxHeader      | slv(1 downto 0)                                        |               |
-| phyTxData        | slv(63 downto 0)                                       |               |
-| phyTxValid       | sl                                                     |               |
-| phyTxDataRdy     | sl                                                     |               |
-| axilReadMasters  | AxiLiteReadMasterArray(NUM_AXIL_MASTERS_C-1 downto 0)  |               |
-| axilReadSlaves   | AxiLiteReadSlaveArray(NUM_AXIL_MASTERS_C-1 downto 0)   |               |
-| axilWriteMasters | AxiLiteWriteMasterArray(NUM_AXIL_MASTERS_C-1 downto 0) |               |
-| axilWriteSlaves  | AxiLiteWriteSlaveArray(NUM_AXIL_MASTERS_C-1 downto 0)  |               |
-| loopback         | slv(2 downto 0)                                        |               |
-| txDiffCtrl       | slv(4 downto 0)                                        |               |
-| txPreCursor      | slv(4 downto 0)                                        |               |
-| txPostCursor     | slv(4 downto 0)                                        |               |
+| Name             | Type                                                   | Description     |
+| ---------------- | ------------------------------------------------------ | --------------- |
+| phyRxClk         | sl                                                     |                 |
+| phyRxRst         | sl                                                     |                 |
+| phyTxClk         | sl                                                     |                 |
+| phyTxRst         | sl                                                     |                 |
+| phyRxInit        | sl                                                     |  PgpRx Signals  |
+| phyRxActive      | sl                                                     |                 |
+| phyRxValid       | sl                                                     |                 |
+| phyRxHeader      | slv(1 downto 0)                                        |                 |
+| phyRxData        | slv(63 downto 0)                                       |                 |
+| phyRxSlip        | sl                                                     |                 |
+| locRxOut         | Pgp4RxOutType                                          |                 |
+| phyTxActive      | sl                                                     |  PgpTx Signals  |
+| phyTxHeader      | slv(1 downto 0)                                        |                 |
+| phyTxData        | slv(63 downto 0)                                       |                 |
+| phyTxValid       | sl                                                     |                 |
+| phyTxDataRdy     | sl                                                     |                 |
+| axilReadMasters  | AxiLiteReadMasterArray(NUM_AXIL_MASTERS_C-1 downto 0)  |                 |
+| axilReadSlaves   | AxiLiteReadSlaveArray(NUM_AXIL_MASTERS_C-1 downto 0)   |                 |
+| axilWriteMasters | AxiLiteWriteMasterArray(NUM_AXIL_MASTERS_C-1 downto 0) |                 |
+| axilWriteSlaves  | AxiLiteWriteSlaveArray(NUM_AXIL_MASTERS_C-1 downto 0)  |                 |
+| loopback         | slv(2 downto 0)                                        |                 |
+| txDiffCtrl       | slv(4 downto 0)                                        |                 |
+| txPreCursor      | slv(4 downto 0)                                        |                 |
+| txPostCursor     | slv(4 downto 0)                                        |                 |
 ## Constants
 
 | Name               | Type                                                            | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Description |
@@ -124,6 +129,8 @@ the terms contained in the LICENSE.txt file.
 - U_Pgp4Core: surf.Pgp4Core
 - U_Pgp3Gtp7IpWrapper: surf.Pgp3Gtp7IpWrapper
 **Description**
-[out]
-Wrapper for GTH IP core
+ [out]
+------------------------
+ Wrapper for GTH IP core
+------------------------
 

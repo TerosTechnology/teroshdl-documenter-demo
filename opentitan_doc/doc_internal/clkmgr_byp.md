@@ -6,11 +6,12 @@
 ![Diagram](clkmgr_byp.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Handle clock manager bypass requests
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -39,11 +40,12 @@ Copyright lowRISC contributors.
 | ast_clk_byp_req | lc_tx_t |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 ## Instantiations
 
 - u_clk_byp_req: prim_lc_sender
 - u_rcv: prim_lc_sync
 - u_send: prim_lc_sender
 **Description**
-only ack the lc_ctrl if it made a request.
+ only ack the lc_ctrl if it made a request.
 

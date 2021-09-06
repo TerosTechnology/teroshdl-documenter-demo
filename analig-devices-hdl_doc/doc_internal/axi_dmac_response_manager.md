@@ -6,33 +6,41 @@
 ![Diagram](axi_dmac_response_manager.svg "Diagram")
 ## Description
 
-***************************************************************************
+ ***************************************************************************
  ***************************************************************************
  Copyright 2014 - 2017 (c) Analog Devices, Inc. All rights reserved.
+
  In this HDL repository, there are many different and unique modules, consisting
  of various HDL (Verilog or VHDL) components. The individual modules are
  developed independently, and may be accompanied by separate and unique license
  terms.
+
  The user should read each of these license terms, and understand the
  freedoms and responsibilities that he or she has by using this source/core.
+
  This core is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE.
+
  Redistribution and use of source or resulting binaries, with or without modification
  of this file, are permitted under one of the following two license terms:
+
    1. The GNU General Public License version 2 as published by the
       Free Software Foundation, which can be found in the top level directory
       of this repository (LICENSE_GPL2), and also online at:
       <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
  OR
+
    2. An ADI specific BSD license, which can be found in the top level directory
       of this repository (LICENSE_ADIBSD), and also on-line at:
       https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
       This will allow to generate bit files and not release the source code,
       as long as it attaches to an ADI device.
+
  ***************************************************************************
  ***************************************************************************
- 
+
 ## Generics
 
 | Generic name             | Type | Value                        | Description |
@@ -45,27 +53,27 @@
 | ASYNC_CLK_DEST_REQ       |      | 1                            |             |
 ## Ports
 
-| Port name                       | Direction | Type                            | Description                   |
-| ------------------------------- | --------- | ------------------------------- | ----------------------------- |
-| dest_clk                        | input     |                                 | Interface to destination side |
-| dest_resetn                     | input     |                                 |                               |
-| dest_response_valid             | input     |                                 |                               |
-| dest_response_ready             | output    |                                 |                               |
-| dest_response_resp              | input     | [1:0]                           |                               |
-| dest_response_partial           | input     |                                 |                               |
-| dest_response_resp_eot          | input     |                                 |                               |
-| dest_response_data_burst_length | input     | [BYTES_PER_BURST_WIDTH-1:0]     |                               |
-| req_clk                         | input     |                                 | Interface to processor        |
-| req_resetn                      | input     |                                 |                               |
-| response_eot                    | output    |                                 |                               |
-| measured_burst_length           | output    | reg [BYTES_PER_BURST_WIDTH-1:0] |                               |
-| response_partial                | output    |                                 |                               |
-| response_valid                  | output    | reg                             |                               |
-| response_ready                  | input     |                                 |                               |
-| completion_req_valid            | input     |                                 | Interface to requester side   |
-| completion_req_ready            | output    | reg                             |                               |
-| completion_req_last             | input     |                                 |                               |
-| completion_transfer_id          | input     | [1:0]                           |                               |
+| Port name                       | Direction | Type                            | Description                    |
+| ------------------------------- | --------- | ------------------------------- | ------------------------------ |
+| dest_clk                        | input     |                                 |  Interface to destination side |
+| dest_resetn                     | input     |                                 |                                |
+| dest_response_valid             | input     |                                 |                                |
+| dest_response_ready             | output    |                                 |                                |
+| dest_response_resp              | input     | [1:0]                           |                                |
+| dest_response_partial           | input     |                                 |                                |
+| dest_response_resp_eot          | input     |                                 |                                |
+| dest_response_data_burst_length | input     | [BYTES_PER_BURST_WIDTH-1:0]     |                                |
+| req_clk                         | input     |                                 |  Interface to processor        |
+| req_resetn                      | input     |                                 |                                |
+| response_eot                    | output    |                                 |                                |
+| measured_burst_length           | output    | reg [BYTES_PER_BURST_WIDTH-1:0] |                                |
+| response_partial                | output    |                                 |                                |
+| response_valid                  | output    | reg                             |                                |
+| response_ready                  | input     |                                 |                                |
+| completion_req_valid            | input     |                                 |  Interface to requester side   |
+| completion_req_ready            | output    | reg                             |                                |
+| completion_req_last             | input     |                                 |                                |
+| completion_transfer_id          | input     | [1:0]                           |                                |
 ## Signals
 
 | Name                                | Type                             | Description |
@@ -101,29 +109,33 @@
 | BURST_LEN_WIDTH      |      | BYTES_PER_BURST_WIDTH - BYTES_PER_BEAT_WIDTH    |             |
 ## Processes
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 - unnamed: ( @(*) )
+  - **Type:** always
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 **Description**
-Once the last completion request from request generator is received
-we can wait for completions from the destination side
-
+ Once the last completion request from request generator is received  we can wait for completions from the destination side 
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 **Description**
-Once the last completion is received wit until all completions are done
-
+ Once the last completion is received wit until all completions are done 
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 **Description**
-Track transfers so we can tell when did the destination completed all its
-transfers
-
+ Track transfers so we can tell when did the destination completed all its  transfers 
 - unnamed: ( @(posedge req_clk) )
+  - **Type:** always
 **Description**
-Count how many transfers we need to complete
-
+ Count how many transfers we need to complete 
 ## Instantiations
 
 - i_dest_response_fifo: util_axis_fifo

@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](deltaSigma.svg "Diagram")
+## Description
+
+
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -36,4 +40,6 @@
 | BIT_INT |      | NB_BIT+2 |             |
 ## Processes
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always

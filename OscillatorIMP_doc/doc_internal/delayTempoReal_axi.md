@@ -66,9 +66,9 @@
 - sync_delay_inst: work.delayTempoReal_axi_sync_slv
 - delayTempoReal_axi_comm_inst: work.delayTempoReal_axi_comm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 - handle_comm: work.delayTempoReal_axi_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

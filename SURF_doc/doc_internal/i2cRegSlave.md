@@ -6,7 +6,7 @@
 ![Diagram](i2cRegSlave.svg "Diagram")
 ## Description
 
-                             -*- Mode: Verilog -*-
+                              -*- Mode: Verilog -*-
  Filename        : i2cRegSlave.sv
  Description     : Implements an I2C slave attached to a generic RAM interface.
  Author          : Benjamin Reese
@@ -16,7 +16,7 @@
  Update Count    : 0
  Status          : Unknown, Use with caution!
  i2cRegSlaveIntf
- 
+
 ## Generics
 
 | Generic name         | Type | Value | Description |
@@ -26,8 +26,8 @@
 | TENBIT_P             |      | 111   |             |
 | OUTPUT_EN_POLARITY_P |      | 0     |             |
 | FILTER_P             |      | 4     |             |
-| ADDR_SIZE_P          |      | 2     | in bytes    |
-| DATA_SIZE_P          |      | 2     | in bytes    |
+| ADDR_SIZE_P          |      | 2     |  in bytes   |
+| DATA_SIZE_P          |      | 2     |  in bytes   |
 | ENDIANNESS_P         |      | 0     |             |
 ## Ports
 
@@ -51,14 +51,17 @@
 | RegType   | struct {<br><span style="padding-left:20px">       StateType state;<br><span style="padding-left:20px">       logic [3:0] 		   byteCount;<br><span style="padding-left:20px">       logic 			   enable;<br><span style="padding-left:20px">       logic [ADDR_SIZE_P-1:0][7:0] addr ;<br><span style="padding-left:20px">       logic [DATA_SIZE_P-1:0][7:0] wrData;<br><span style="padding-left:20px">       logic 			   wrEn;<br><span style="padding-left:20px">       logic 			   rdEn;<br><span style="padding-left:20px">               logic 			   txValid;<br><span style="padding-left:20px">       logic [7:0] 		   txData;<br><span style="padding-left:20px">      } |             |
 ## Processes
 - unnamed: (  )
-- unnamed: ( @(posedge clk) )
+  - **Type:** always_comb
 **Description**
-always_comb
-
+(.clk(clk), .sRst(sRst), .i2cBus(i2cBus), .i2cSlave(i2cSlave)); 
+- unnamed: ( @(posedge clk) )
+  - **Type:** always_ff
+**Description**
+ always_comb 
 ## Instantiations
 
 - i2cSlaveIO: i2cSlaveIntf
 - i2cSlaveInst: i2cSlave
 **Description**
-Instantiate I2C Slave
+ Instantiate I2C Slave
 

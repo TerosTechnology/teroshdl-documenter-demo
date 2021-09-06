@@ -6,16 +6,21 @@
 ![Diagram](AxiStreamBatcherEventBuilder.svg "Diagram")
 ## Description
 
-Title      : AxiStream BatcherV1 Protocol: https://confluence.slac.stanford.edu/x/th1SDg
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper on AxiStreamBatcher for multi-AXI stream event building
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : AxiStream BatcherV1 Protocol: https://confluence.slac.stanford.edu/x/th1SDg
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper on AxiStreamBatcher for multi-AXI stream event building
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type                 | Value             | Description                                                                                                                                                       |
@@ -75,13 +80,14 @@ the terms contained in the LICENSE.txt file.
 - comb: ( axilReadMaster, axilWriteMaster, axisRst, batcherIdle,
                    blowoffExt, r, rxMasters, timeoutEvent, txSlave )
 **Description**
-greater than or equal to (a >= b)
-
+ greater than or equal to (a >= b) 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_DspComparator: surf.DspComparator
 - U_AxiStreamBatcher: surf.AxiStreamBatcher
 **Description**
-AxiStreamBatcher
+----------------
+ AxiStreamBatcher
+----------------
 

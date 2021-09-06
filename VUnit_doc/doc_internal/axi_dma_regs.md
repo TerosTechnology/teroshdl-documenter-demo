@@ -6,10 +6,11 @@
 ![Diagram](axi_dma_regs.svg "Diagram")
 ## Description
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this file,
-You can obtain one at http://mozilla.org/MPL/2.0/.
-Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ You can obtain one at http://mozilla.org/MPL/2.0/.
+
+ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Ports
 
 | Port name      | Direction | Type                          | Description |
@@ -36,7 +37,8 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Functions
 - cmp_word_address <font id="function_arguments">(byte_addr : std_logic_vector;<br><span style="padding-left:20px"> word_addr : natural) </font> <font id="function_return">return boolean </font>
 **Description**
-Compare addresses of 32-bit words discarding byte address
+ Compare addresses of 32-bit words discarding byte address
+
 ## Processes
 - main: (  )
 ## State machines

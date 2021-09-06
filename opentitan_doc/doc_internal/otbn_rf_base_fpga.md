@@ -6,10 +6,11 @@
 ![Diagram](otbn_rf_base_fpga.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Ports
 
 | Port name   | Direction | Type                | Description |
@@ -25,13 +26,13 @@ Copyright lowRISC contributors.
 | rd_data_b_o | output    | [BaseIntgWidth-1:0] |             |
 ## Signals
 
-| Name          | Type                      | Description                                           |
-| ------------- | ------------------------- | ----------------------------------------------------- |
-| rf_reg        | logic [BaseIntgWidth-1:0] |                                                       |
-| wr_en         | logic                     |                                                       |
-| unused_rst_ni | logic                     | The reset is not used in this register file version.  |
+| Name          | Type                      | Description                                            |
+| ------------- | ------------------------- | ------------------------------------------------------ |
+| rf_reg        | logic [BaseIntgWidth-1:0] |                                                        |
+| wr_en         | logic                     |                                                        |
+| unused_rst_ni | logic                     |  The reset is not used in this register file version.  |
 ## Processes
 - g_rf_reg: ( @(posedge clk_i) )
+  - **Type:** always_ff
 **Description**
-Sync write
-
+ Sync write 

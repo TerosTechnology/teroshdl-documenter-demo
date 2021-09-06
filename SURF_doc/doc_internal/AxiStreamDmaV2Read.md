@@ -6,17 +6,21 @@
 ![Diagram](AxiStreamDmaV2Read.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Block to transfer a single AXI Stream frame from memory using an AXI
-interface.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Block to transfer a single AXI Stream frame from memory using an AXI
+ interface.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type                     | Value | Description |
@@ -74,13 +78,12 @@ the terms contained in the LICENSE.txt file.
 - comb: ( axiCache, axiReadSlave, axiRst, dmaRdDescReq,
                    dmaRdDescRetAck, notReqDone, pause, r, sSlave )
 **Description**
- (a <  b)
-
+  (a <  b) 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_DspComparator: surf.DspComparator
 **Description**
-Check if last transfer completed
+ Check if last transfer completed
 
 - U_Pipeline: surf.AxiStreamPipeline

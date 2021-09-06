@@ -6,11 +6,13 @@
 ![Diagram](spi_host_shift_register.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Shift Register for Serial Peripheral Interface (SPI) Host IP.
- 
+
+
 ## Ports
 
 | Port name   | Direction | Type  | Description |
@@ -39,17 +41,18 @@ Copyright lowRISC contributors.
 | sw_rst_i    | input     |       |             |
 ## Signals
 
-| Name           | Type               | Description                                                                                                   |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| sr_q           | logic        [7:0] |                                                                                                               |
-| sr_d           | logic        [7:0] |                                                                                                               |
-| sd_i_q         | logic        [3:0] |                                                                                                               |
-| sd_i_d         | logic        [3:0] |                                                                                                               |
-| next_bits      | logic        [3:0] |                                                                                                               |
-| sr_shifted     | logic        [7:0] |                                                                                                               |
-| rx_buf_q       | logic        [8:0] | 9-bit buffer to hold shift register data and the cmd_end bit to indicate whether it is the last in a series.  |
-| rx_buf_d       | logic        [8:0] |                                                                                                               |
-| rx_buf_valid_q | logic              |                                                                                                               |
-| rx_buf_valid_d | logic              |                                                                                                               |
+| Name           | Type               | Description                                                                                                      |
+| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| sr_q           | logic        [7:0] |                                                                                                                  |
+| sr_d           | logic        [7:0] |                                                                                                                  |
+| sd_i_q         | logic        [3:0] |                                                                                                                  |
+| sd_i_d         | logic        [3:0] |                                                                                                                  |
+| next_bits      | logic        [3:0] |                                                                                                                  |
+| sr_shifted     | logic        [7:0] |                                                                                                                  |
+| rx_buf_q       | logic        [8:0] |  9-bit buffer to hold shift register data  and the cmd_end bit to indicate whether  it is the last in a series.  |
+| rx_buf_d       | logic        [8:0] |                                                                                                                  |
+| rx_buf_valid_q | logic              |                                                                                                                  |
+| rx_buf_valid_d | logic              |                                                                                                                  |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

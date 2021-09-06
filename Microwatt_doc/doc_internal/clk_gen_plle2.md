@@ -25,9 +25,9 @@
 | clkfb | std_ulogic |             |
 ## Constants
 
-| Name         | Type           | Value                                                                                            | Description |
-| ------------ | -------------- | ------------------------------------------------------------------------------------------------ | ----------- |
-| pll_settings | pll_settings_t |  gen_pll_settings(clk_input_hz,<br><span style="padding-left:20px"> 							       clk_output_hz) |             |
+| Name         | Type           | Value                                                                                                                                             | Description |
+| ------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| pll_settings | pll_settings_t |  gen_pll_settings(clk_input_hz,<br><span style="padding-left:20px">                                                                clk_output_hz) |             |
 ## Types
 
 | Name           | Type | Description |

@@ -6,31 +6,36 @@
 ![Diagram](RssiConnFsm.svg "Diagram")
 ## Description
 
-Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
-Company    : SLAC National Accelerator Laboratory
-Description: Connection establishment mechanism:
-               - Connection open/close request,
-               - Parameter negotiation,
-               - Server-client mode (More comments below).
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Connection establishment mechanism:
+                - Connection open/close request,
+                - Parameter negotiation,
+                - Server-client mode (More comments below).
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name        | Type     | Value   | Description                                                              |
 | ------------------- | -------- | ------- | ------------------------------------------------------------------------ |
 | TPD_G               | time     | 1 ns    |                                                                          |
 | SERVER_G            | boolean  | true    |                                                                          |
-| TIMEOUT_UNIT_G      | real     | 1.0E-6  | us                                                                       |
+| TIMEOUT_UNIT_G      | real     | 1.0E-6  |  us                                                                      |
 | CLK_FREQUENCY_G     | real     | 100.0E6 |                                                                          |
 | RETRANS_TOUT_G      | positive | 50      | Time the module waits for the response until it retransmits SYN segment  |
 | MAX_RETRANS_CNT_G   | positive | 2       |                                                                          |
 | WINDOW_ADDR_SIZE_G  | positive | 3       |                                                                          |
-| SEGMENT_ADDR_SIZE_G | positive | 7       | 2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words                 |
+| SEGMENT_ADDR_SIZE_G | positive | 7       |  2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words                |
 ## Ports
 
 | Port name      | Direction | Type                                          | Description                                              |

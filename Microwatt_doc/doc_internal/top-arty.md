@@ -26,6 +26,7 @@
 | UART_IS_16550        | boolean  | false          |             |
 | HAS_UART1            | boolean  | true           |             |
 | USE_LITESDCARD       | boolean  | false          |             |
+| HAS_GPIO             | boolean  | true           |             |
 | NGPIO                | natural  | 32             |             |
 ## Ports
 
@@ -83,44 +84,44 @@
 | ddram_reset_n    | out       | std_ulogic                     |                |
 ## Signals
 
-| Name                | Type                                  | Description                                                    |
-| ------------------- | ------------------------------------- | -------------------------------------------------------------- |
-| soc_rst             | std_ulogic                            |                                                                |
-| pll_rst             | std_ulogic                            |                                                                |
-| system_clk          | std_ulogic                            | Internal clock signals:                                        |
-| system_clk_locked   | std_ulogic                            |                                                                |
-| eth_clk_locked      | std_ulogic                            |                                                                |
-| wb_ext_io_in        | wb_io_master_out                      | External IOs from the SoC                                      |
-| wb_ext_io_out       | wb_io_slave_out                       |                                                                |
-| wb_ext_is_dram_csr  | std_ulogic                            |                                                                |
-| wb_ext_is_dram_init | std_ulogic                            |                                                                |
-| wb_ext_is_eth       | std_ulogic                            |                                                                |
-| wb_ext_is_sdcard    | std_ulogic                            |                                                                |
-| wb_dram_in          | wishbone_master_out                   | DRAM main data wishbone connection                             |
-| wb_dram_out         | wishbone_slave_out                    |                                                                |
-| wb_dram_ctrl_out    | wb_io_slave_out                       | DRAM control wishbone connection                               |
-| ext_irq_eth         | std_ulogic                            | LiteEth connection                                             |
-| wb_eth_out          | wb_io_slave_out                       |                                                                |
-| ext_irq_sdcard      | std_ulogic                            | LiteSDCard connection                                          |
-| wb_sdcard_out       | wb_io_slave_out                       |                                                                |
-| wb_sddma_out        | wb_io_master_out                      |                                                                |
-| wb_sddma_in         | wb_io_slave_out                       |                                                                |
-| wb_sddma_nr         | wb_io_master_out                      |                                                                |
-| wb_sddma_ir         | wb_io_slave_out                       |                                                                |
-| wb_sddma_stb_sent   | std_ulogic                            | for conversion from non-pipelined wishbone to pipelined        |
-| core_alt_reset      | std_ulogic                            | Control/status                                                 |
-| led0_b_pwm          | std_ulogic                            | Status LED                                                     |
-| led0_r_pwm          | std_ulogic                            |                                                                |
-| led0_g_pwm          | std_ulogic                            |                                                                |
-| pwm_counter         | std_ulogic_vector(8 downto 0)         | Dumb PWM for the LEDs, those RGB LEDs are too bright otherwise |
-| spi_sck             | std_ulogic                            | SPI flash                                                      |
-| spi_cs_n            | std_ulogic                            |                                                                |
-| spi_sdat_o          | std_ulogic_vector(3 downto 0)         |                                                                |
-| spi_sdat_oe         | std_ulogic_vector(3 downto 0)         |                                                                |
-| spi_sdat_i          | std_ulogic_vector(3 downto 0)         |                                                                |
-| gpio_in             | std_ulogic_vector(NGPIO - 1 downto 0) | GPIO                                                           |
-| gpio_out            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                |
-| gpio_dir            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                |
+| Name                | Type                                  | Description                                                      |
+| ------------------- | ------------------------------------- | ---------------------------------------------------------------- |
+| soc_rst             | std_ulogic                            |                                                                  |
+| pll_rst             | std_ulogic                            |                                                                  |
+| system_clk          | std_ulogic                            |  Internal clock signals:                                         |
+| system_clk_locked   | std_ulogic                            |                                                                  |
+| eth_clk_locked      | std_ulogic                            |                                                                  |
+| wb_ext_io_in        | wb_io_master_out                      |  External IOs from the SoC                                       |
+| wb_ext_io_out       | wb_io_slave_out                       |                                                                  |
+| wb_ext_is_dram_csr  | std_ulogic                            |                                                                  |
+| wb_ext_is_dram_init | std_ulogic                            |                                                                  |
+| wb_ext_is_eth       | std_ulogic                            |                                                                  |
+| wb_ext_is_sdcard    | std_ulogic                            |                                                                  |
+| wb_dram_in          | wishbone_master_out                   |  DRAM main data wishbone connection                              |
+| wb_dram_out         | wishbone_slave_out                    |                                                                  |
+| wb_dram_ctrl_out    | wb_io_slave_out                       |  DRAM control wishbone connection                                |
+| ext_irq_eth         | std_ulogic                            |  LiteEth connection                                              |
+| wb_eth_out          | wb_io_slave_out                       |                                                                  |
+| ext_irq_sdcard      | std_ulogic                            |  LiteSDCard connection                                           |
+| wb_sdcard_out       | wb_io_slave_out                       |                                                                  |
+| wb_sddma_out        | wb_io_master_out                      |                                                                  |
+| wb_sddma_in         | wb_io_slave_out                       |                                                                  |
+| wb_sddma_nr         | wb_io_master_out                      |                                                                  |
+| wb_sddma_ir         | wb_io_slave_out                       |                                                                  |
+| wb_sddma_stb_sent   | std_ulogic                            |  for conversion from non-pipelined wishbone to pipelined         |
+| core_alt_reset      | std_ulogic                            |  Control/status                                                  |
+| led0_b_pwm          | std_ulogic                            |  Status LED                                                      |
+| led0_r_pwm          | std_ulogic                            |                                                                  |
+| led0_g_pwm          | std_ulogic                            |                                                                  |
+| pwm_counter         | std_ulogic_vector(8 downto 0)         |  Dumb PWM for the LEDs, those RGB LEDs are too bright otherwise  |
+| spi_sck             | std_ulogic                            |  SPI flash                                                       |
+| spi_cs_n            | std_ulogic                            |                                                                  |
+| spi_sdat_o          | std_ulogic_vector(3 downto 0)         |                                                                  |
+| spi_sdat_oe         | std_ulogic_vector(3 downto 0)         |                                                                  |
+| spi_sdat_i          | std_ulogic_vector(3 downto 0)         |                                                                  |
+| gpio_in             | std_ulogic_vector(NGPIO - 1 downto 0) |  GPIO                                                            |
+| gpio_out            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                  |
+| gpio_dir            | std_ulogic_vector(NGPIO - 1 downto 0) |                                                                  |
 ## Constants
 
 | Name         | Type    | Value             | Description |
@@ -130,7 +131,8 @@
 ## Functions
 - get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 **Description**
-Fixup various memory sizes based on generics
+ Fixup various memory sizes based on generics
+
 - get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
 ## Processes
 - leds_pwm: ( system_clk )

@@ -34,7 +34,7 @@
 | data_addr_i     | in        | std_logic_vector(ADDR_SIZE-1 downto 0)  |                     |
 | data_en_i       | in        | std_logic                               |                     |
 | data_im_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0)  |                     |
-| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
+| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) | onfiguration        |
 | read_coeff_im_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
 | coeff_re_i      | in        | std_logic_vector(COEFF_SIZE-1 downto 0) |                     |
 | coeff_re_addr_i |           | std_logic_vector(ADDR_SIZE-1 downto 0)  |                     |
@@ -60,7 +60,7 @@
 | n_of_b_nat_s       | natural range 0 to 2**ADDR_SIZE        |             |
 | a2_index_s         | std_logic_vector(ADDR_SIZE-1 downto 0) |             |
 | nb_index_slv_s     | std_logic_vector(ADDR_SIZE-1 downto 0) |             |
-| state_next_s       | state_type                             | new         |
+| state_next_s       | state_type                             |  new        |
 | nb_index_next_s    | natural range 0 to 2**ADDR_SIZE-1      |             |
 | start_but_next_s   | std_logic                              |             |
 | a_index_next_s     | std_logic_vector(ADDR_SIZE-1 downto 0) |             |

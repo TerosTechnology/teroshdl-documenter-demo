@@ -6,15 +6,16 @@
 ![Diagram](otbn_rf_bignum.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
-| Generic name | Type      | Value     | Description                                               |
-| ------------ | --------- | --------- | --------------------------------------------------------- |
-| RegFile      | regfile_e | RegFileFF | Register file implementation selection, see otbn_pkg.sv.  |
+| Generic name | Type      | Value     | Description                                                |
+| ------------ | --------- | --------- | ---------------------------------------------------------- |
+| RegFile      | regfile_e | RegFileFF |  Register file implementation selection, see otbn_pkg.sv.  |
 ## Ports
 
 | Port name          | Direction | Type          | Description |

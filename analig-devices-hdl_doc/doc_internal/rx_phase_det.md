@@ -6,18 +6,70 @@
 ![Diagram](rx_phase_det.svg "Diagram")
 ## Description
 
-CVS Revision History
-$Log: not supported by cvs2svn $
-Revision 1.5  2004/07/19 16:58:37  gedra
-Fixed bug.
-Revision 1.4  2004/07/12 17:06:41  gedra
-Fixed bug with lock event generation.
-Revision 1.3  2004/07/11 16:19:50  gedra
-Bug-fix.
-Revision 1.2  2004/06/13 18:08:50  gedra
-Renamed generic and cleaned some lint's
-Revision 1.1  2004/06/06 15:43:02  gedra
-Early version of the bi-phase mark decoder.
+--------------------------------------------------------------------
+--                                                              ----
+-- WISHBONE SPDIF IP Core                                       ----
+--                                                              ----
+-- This file is part of the SPDIF project                       ----
+-- http://www.opencores.org/cores/spdif_interface/              ----
+--                                                              ----
+-- Description                                                  ----
+-- Oversampling phase detector. Decodes bi-phase mark encoded   ----
+-- signal. Clock must be at least 8 times higher than bit rate. ----
+-- The SPDIF bitrate must be minimum 100kHz.                    ----
+--                                                              ----
+-- To Do:                                                       ----
+-- -                                                            ----
+--                                                              ----
+-- Author(s):                                                   ----
+-- - Geir Drange, gedra@opencores.org                           ----
+--                                                              ----
+--------------------------------------------------------------------
+--                                                              ----
+-- Copyright (C) 2004 Authors and OPENCORES.ORG                 ----
+--                                                              ----
+-- This source file may be used and distributed without         ----
+-- restriction provided that this copyright statement is not    ----
+-- removed from the file and that any derivative work contains  ----
+-- the original copyright notice and the associated disclaimer. ----
+--                                                              ----
+-- This source file is free software; you can redistribute it   ----
+-- and/or modify it under the terms of the GNU Lesser General   ----
+-- Public License as published by the Free Software Foundation; ----
+-- either version 2.1 of the License, or (at your option) any   ----
+-- later version.                                               ----
+--                                                              ----
+-- This source is distributed in the hope that it will be       ----
+-- useful, but WITHOUT ANY WARRANTY; without even the implied   ----
+-- warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ----
+-- PURPOSE. See the GNU Lesser General Public License for more  ----
+-- details.                                                     ----
+--                                                              ----
+-- You should have received a copy of the GNU Lesser General    ----
+-- Public License along with this source; if not, download it   ----
+-- from http://www.opencores.org/lgpl.shtml                     ----
+--                                                              ----
+--------------------------------------------------------------------
+
+ CVS Revision History
+
+ $Log: not supported by cvs2svn $
+ Revision 1.5  2004/07/19 16:58:37  gedra
+ Fixed bug.
+
+ Revision 1.4  2004/07/12 17:06:41  gedra
+ Fixed bug with lock event generation.
+
+ Revision 1.3  2004/07/11 16:19:50  gedra
+ Bug-fix.
+
+ Revision 1.2  2004/06/13 18:08:50  gedra
+ Renamed generic and cleaned some lint's
+
+ Revision 1.1  2004/06/06 15:43:02  gedra
+ Early version of the bi-phase mark decoder.
+
+
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -25,23 +77,23 @@ Early version of the bi-phase mark decoder.
 | AXI_FREQ     | natural | 100   |             |
 ## Ports
 
-| Port name      | Direction | Type      | Description                      |
-| -------------- | --------- | --------- | -------------------------------- |
-| up_clk         | in        | std_logic | wishbone clock                   |
-| rxen           | in        | std_logic | phase detector enable            |
-| spdif          | in        | std_logic | SPDIF input signal               |
-| lock           | out       | std_logic | true if locked to spdif input    |
-| lock_evt       | out       | std_logic | lock status change event         |
-| rx_data        | out       | std_logic | recevied data                    |
-| rx_data_en     | out       | std_logic | received data enable             |
-| rx_block_start | out       | std_logic | start-of-block pulse             |
-| rx_frame_start | out       | std_logic | start-of-frame pulse             |
-| rx_channel_a   | out       | std_logic | 1 if channel A frame is recevied |
-| rx_error       | out       | std_logic | signal error was detected        |
-| ud_a_en        | out       | std_logic | user data ch. A enable           |
-| ud_b_en        | out       | std_logic | user data ch. B enable           |
-| cs_a_en        | out       | std_logic | channel status ch. A enable      |
-| cs_b_en        | out       | std_logic |                                  |
+| Port name      | Direction | Type      | Description                       |
+| -------------- | --------- | --------- | --------------------------------- |
+| up_clk         | in        | std_logic |  wishbone clock                   |
+| rxen           | in        | std_logic |  phase detector enable            |
+| spdif          | in        | std_logic |  SPDIF input signal               |
+| lock           | out       | std_logic |  true if locked to spdif input    |
+| lock_evt       | out       | std_logic |  lock status change event         |
+| rx_data        | out       | std_logic |  recevied data                    |
+| rx_data_en     | out       | std_logic |  received data enable             |
+| rx_block_start | out       | std_logic |  start-of-block pulse             |
+| rx_frame_start | out       | std_logic |  start-of-frame pulse             |
+| rx_channel_a   | out       | std_logic |  1 if channel A frame is recevied |
+| rx_error       | out       | std_logic |  signal error was detected        |
+| ud_a_en        | out       | std_logic |  user data ch. A enable           |
+| ud_b_en        | out       | std_logic |  user data ch. B enable           |
+| cs_a_en        | out       | std_logic |  channel status ch. A enable      |
+| cs_b_en        | out       | std_logic |                                   |
 ## Signals
 
 | Name           | Type                               | Description |
@@ -93,5 +145,4 @@ Early version of the bi-phase mark decoder.
 - PHDET: ( up_clk, rxen )
 - FRX: ( up_clk, rxen )
 **Description**
-State machine that hunt for and lock onto sub-frames
-
+ State machine that hunt for and lock onto sub-frames 

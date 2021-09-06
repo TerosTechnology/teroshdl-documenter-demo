@@ -6,14 +6,16 @@
 ![Diagram](prim_lc_sender.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Multibit life cycle signal sender module.
+
  This module is instantiates a hand-picked flop cell
  for each bit in the life cycle control signal such that tools do not
  optimize the multibit encoding.
- 
+
 ## Ports
 
 | Port name | Direction | Type | Description |

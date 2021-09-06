@@ -6,30 +6,34 @@
 ![Diagram](LutRam.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:   This module infers distributed RAM
-               with configurable number of outputs
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:   This module infers distributed RAM
+                with configurable number of outputs
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name   | Type     | Value       | Description                                 |
-| -------------- | -------- | ----------- | ------------------------------------------- |
-| TPD_G          | time     | 1 ns        |                                             |
-| RST_POLARITY_G | sl       | '1'         | '1' for active high rst, '0' for active low |
-| REG_EN_G       | boolean  | true        |                                             |
-| MODE_G         | string   | "no-change" |                                             |
-| BYTE_WR_EN_G   | boolean  | false       |                                             |
-| DATA_WIDTH_G   | positive | 16          |                                             |
-| BYTE_WIDTH_G   | positive | 8           |                                             |
-| ADDR_WIDTH_G   | positive | 4           |                                             |
-| NUM_PORTS_G    | positive |             |                                             |
-| INIT_G         | slv      | "0"         |                                             |
+| Generic name   | Type     | Value       | Description                                  |
+| -------------- | -------- | ----------- | -------------------------------------------- |
+| TPD_G          | time     | 1 ns        |                                              |
+| RST_POLARITY_G | sl       | '1'         |  '1' for active high rst, '0' for active low |
+| REG_EN_G       | boolean  | true        |                                              |
+| MODE_G         | string   | "no-change" |                                              |
+| BYTE_WR_EN_G   | boolean  | false       |                                              |
+| DATA_WIDTH_G   | positive | 16          |                                              |
+| BYTE_WIDTH_G   | positive | 8           |                                              |
+| ADDR_WIDTH_G   | positive | 4           |                                              |
+| NUM_PORTS_G    | positive |             |                                              |
+| INIT_G         | slv      | "0"         |                                              |
 ## Ports
 
 | Port name | Direction | Type                                                  | Description                        |
@@ -92,6 +96,6 @@ the terms contained in the LICENSE.txt file.
 | INIT_C            | slv(DATA_WIDTH_G-1 downto 0) |  ite(INIT_G = "0",<br><span style="padding-left:20px"> slvZero(DATA_WIDTH_G),<br><span style="padding-left:20px"> INIT_G) |             |
 ## Types
 
-| Name     | Type | Description   |
-| -------- | ---- | ------------- |
-| mem_type |      | Shared memory |
+| Name     | Type | Description     |
+| -------- | ---- | --------------- |
+| mem_type |      |  Shared memory  |

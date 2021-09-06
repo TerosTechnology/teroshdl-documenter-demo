@@ -6,11 +6,11 @@
 ![Diagram](switchComplex_wb.svg "Diagram")
 ## Generics
 
-| Generic name  | Type    | Value | Description                 |
-| ------------- | ------- | ----- | --------------------------- |
-| id            | natural | 1     |                             |
-| DEFAULT_INPUT | natural | 1     |                             |
-| wb_size       | natural | 16    | Data port size for wishbone |
+| Generic name  | Type    | Value | Description                  |
+| ------------- | ------- | ----- | ---------------------------- |
+| id            | natural | 1     |                              |
+| DEFAULT_INPUT | natural | 1     |                              |
+| wb_size       | natural | 16    |  Data port size for wishbone |
 ## Ports
 
 | Port name     | Direction | Type                                  | Description      |
@@ -38,6 +38,5 @@
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk )

@@ -6,15 +6,19 @@
 ![Diagram](RawEthFramerTx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Raw L2 Ethernet Framer's TX Engine
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Raw L2 Ethernet Framer's TX Engine
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type             | Value   | Description |
@@ -25,8 +29,8 @@ the terms contained in the LICENSE.txt file.
 
 | Port name   | Direction | Type                | Description                                         |
 | ----------- | --------- | ------------------- | --------------------------------------------------- |
-| localMac    | in        | slv(47 downto 0)    |  big-Endian configuration                           |
-| remoteMac   | in        | slv(47 downto 0)    |  big-Endian configuration                           |
+| localMac    | in        | slv(47 downto 0)    |   big-Endian configuration                          |
+| remoteMac   | in        | slv(47 downto 0)    |   big-Endian configuration                          |
 | tDest       | out       | slv(7 downto 0)     |                                                     |
 | req         | out       | sl                  |                                                     |
 | ack         | in        | sl                  |                                                     |

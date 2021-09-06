@@ -6,18 +6,22 @@
 ![Diagram](Csa3.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: 3 input add/sub module y = +/- a +/- b + c
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
-Manually instantie LUT6_2 and CARRY8 blocks for optimized 3 input adder
-See UG579 p. 62 == 3:2 compressor followed by 2 input adder
-see https://www.element14.com/community/groups/fpga-group/blog/2018/10/23/the-art-of-fpga-design-post-16
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: 3 input add/sub module y = +/- a +/- b + c
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Manually instantie LUT6_2 and CARRY8 blocks for optimized 3 input adder
+ See UG579 p. 62 == 3:2 compressor followed by 2 input adder
+ see https://www.element14.com/community/groups/fpga-group/blog/2018/10/23/the-art-of-fpga-design-post-16
 ## Generics
 
 | Generic name | Type    | Value             | Description |

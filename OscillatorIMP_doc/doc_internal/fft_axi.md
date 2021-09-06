@@ -22,7 +22,7 @@
 | writedata       | in        | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) |             |
 | read_en_i       | in        | std_logic                                       |             |
 | read_ack_o      | out       | std_logic                                       |             |
-| readdata        | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) |             |
+| readdata        | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) | ;           |
 | read_coeff_re_i | in        | std_logic_vector(COEFF_SIZE-1 downto 0)         |             |
 | read_coeff_im_i | in        | std_logic_vector(COEFF_SIZE-1 downto 0)         |             |
 | data_i          | in        | std_logic_vector(31 downto 0)                   |             |

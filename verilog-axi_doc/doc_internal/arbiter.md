@@ -6,17 +6,19 @@
 ![Diagram](arbiter.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name          | Type | Value | Description                                                        |
-| --------------------- | ---- | ----- | ------------------------------------------------------------------ |
-| PORTS                 |      | 4     |                                                                    |
-| ARB_TYPE_ROUND_ROBIN  |      | 0     | select round robin arbitration                                     |
-| ARB_BLOCK             |      | 0     | blocking arbiter enable                                            |
-| ARB_BLOCK_ACK         |      | 1     | block on acknowledge assert when nonzero, request deassert when 0  |
-| ARB_LSB_HIGH_PRIORITY |      | 0     | LSB priority selection                                             |
+| Generic name          | Type | Value | Description                                                         |
+| --------------------- | ---- | ----- | ------------------------------------------------------------------- |
+| PORTS                 |      | 4     |                                                                     |
+| ARB_TYPE_ROUND_ROBIN  |      | 0     |  select round robin arbitration                                     |
+| ARB_BLOCK             |      | 0     |  blocking arbiter enable                                            |
+| ARB_BLOCK_ACK         |      | 1     |  block on acknowledge assert when nonzero, request deassert when 0  |
+| ARB_LSB_HIGH_PRIORITY |      | 0     |  LSB priority selection                                             |
 ## Ports
 
 | Port name     | Direction | Type                     | Description |
@@ -48,7 +50,9 @@ Language: Verilog 2001
 | masked_request_mask  | wire [PORTS-1:0]         |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 ## Instantiations
 
 - priority_encoder_inst: priority_encoder

@@ -6,7 +6,7 @@
 ![Diagram](rtc_date.svg "Diagram")
 ## Description
 
-Copyright 2018 ETH Zurich and University of Bologna.
+ Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
  compliance with the License.  You may obtain a copy of the License at
@@ -15,7 +15,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  this License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
  CONDITIONS OF ANY KIND, either express or implied. See the License for the
  specific language governing permissions and limitations under the License.
- 
+
 ## Ports
 
 | Port name     | Direction | Type   | Description |
@@ -44,12 +44,14 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_year_div_4   | logic          |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 - proc_r_day: ( @(posedge clk_i or negedge rstn_i) )
+  - **Type:** always_ff
 **Description**
-Adjust the day of month
-
+ Adjust the day of month 
 - proc_r_month: ( @(posedge clk_i or negedge rstn_i) )
+  - **Type:** always_ff
 - proc_r_year: ( @(posedge clk_i or negedge rstn_i) )
+  - **Type:** always_ff
 **Description**
-proc_r_month
-
+ proc_r_month 

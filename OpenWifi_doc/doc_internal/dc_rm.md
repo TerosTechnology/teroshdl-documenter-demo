@@ -6,8 +6,8 @@
 ![Diagram](dc_rm.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Generics
 
 | Generic name | Type | Value | Description |

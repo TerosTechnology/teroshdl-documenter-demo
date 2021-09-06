@@ -6,23 +6,27 @@
 ![Diagram](ClinkFraming.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-CameraLink framing module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ CameraLink framing module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                | Value | Description            |
-| ------------------ | ------------------- | ----- | ---------------------- |
-| TPD_G              | time                | 1 ns  |                        |
-| COMMON_DATA_CLK_G  | boolean             | false | true if dataClk=sysClk |
-| DATA_AXIS_CONFIG_G | AxiStreamConfigType |       |                        |
+| Generic name       | Type                | Value | Description             |
+| ------------------ | ------------------- | ----- | ----------------------- |
+| TPD_G              | time                | 1 ns  |                         |
+| COMMON_DATA_CLK_G  | boolean             | false |  true if dataClk=sysClk |
+| DATA_AXIS_CONFIG_G | AxiStreamConfigType |       |                         |
 ## Ports
 
 | Port name  | Direction | Type                          | Description            |
@@ -51,7 +55,7 @@ the terms contained in the LICENSE.txt file.
 
 | Name         | Type                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Description |
 | ------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| SLV_CONFIG_C | AxiStreamConfigType |  ssiAxiStreamConfig(dataBytes => 10,<br><span style="padding-left:20px"> tDestBits => 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
+| SLV_CONFIG_C | AxiStreamConfigType |  ssiAxiStreamConfig(dataBytes => 16,<br><span style="padding-left:20px"> tDestBits => 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
 | MST_CONFIG_C | AxiStreamConfigType |  ssiAxiStreamConfig(dataBytes => 16,<br><span style="padding-left:20px"> tDestBits => 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
 | REG_INIT_C   | RegType             |  (       ready    => '1',<br><span style="padding-left:20px">       portData => CL_DATA_INIT_C,<br><span style="padding-left:20px">       byteData => CL_DATA_INIT_C,<br><span style="padding-left:20px">       bytes    => 1,<br><span style="padding-left:20px">       inFrame  => '0',<br><span style="padding-left:20px">       dump     => '0',<br><span style="padding-left:20px">       status   => CL_CHAN_STATUS_INIT_C,<br><span style="padding-left:20px">       master   => AXI_STREAM_MASTER_INIT_C,<br><span style="padding-left:20px">       pipeline => (others => AXI_STREAM_MASTER_INIT_C)) |             |
 ## Types
@@ -67,9 +71,13 @@ the terms contained in the LICENSE.txt file.
 
 - U_Pack: surf.AxiStreamBytePacker
 **Description**
-Frame Packing
+-------------------------------
+ Frame Packing
+-------------------------------
 
 - U_DataFifo: surf.AxiStreamFifoV2
 **Description**
-Data FIFO
+-------------------------------
+ Data FIFO
+-------------------------------
 

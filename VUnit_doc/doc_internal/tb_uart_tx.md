@@ -6,10 +6,11 @@
 ![Diagram](tb_uart_tx.svg "Diagram")
 ## Description
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this file,
-You can obtain one at http://mozilla.org/MPL/2.0/.
-Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ You can obtain one at http://mozilla.org/MPL/2.0/.
+
+ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
 
 | Generic name | Type   | Value | Description |
@@ -28,8 +29,8 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 
 | Name           | Type                | Value                                                                                                                                                                 | Description |
 | -------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| baud_rate      | integer             |  115200                                                                                                                                                               | bits / s    |
-| clk_period     | integer             |  20                                                                                                                                                                   | ns          |
+| baud_rate      | integer             |  115200                                                                                                                                                               |  bits / s   |
+| clk_period     | integer             |  20                                                                                                                                                                   |  ns         |
 | cycles_per_bit | integer             |  50 * 10**6 / baud_rate                                                                                                                                               |             |
 | uart_bfm       | uart_slave_t        |  new_uart_slave(initial_baud_rate => baud_rate,<br><span style="padding-left:20px">                                                      data_length => tdata'length) |             |
 | uart_stream    | stream_slave_t      |  as_stream(uart_bfm)                                                                                                                                                  |             |

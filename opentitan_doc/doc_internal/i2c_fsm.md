@@ -6,11 +6,12 @@
 ![Diagram](i2c_fsm.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Description: I2C finite state machine
- 
+
 ## Ports
 
 | Port name                | Direction | Type   | Description                                                 |
@@ -80,128 +81,129 @@ Copyright lowRISC contributors.
 | event_host_timeout_o     | output    |        | host ceased sending SCL pulses during ongoing transactn     |
 ## Signals
 
-| Name                 | Type         | Description                                                      |
-| -------------------- | ------------ | ---------------------------------------------------------------- |
-| tcount_q             | logic [19:0] | current counter for setting delays                               |
-| tcount_d             | logic [19:0] | next counter for setting delays                                  |
-| load_tcount          | logic        | indicates counter must be loaded                                 |
-| stretch              | logic [30:0] | counter for clock being stretched by target                      |
-| bit_index            | logic [2:0]  | bit being transmitted to or read from the bus                    |
-| bit_decr             | logic        | indicates bit_index must be decremented by 1                     |
-| bit_clr              | logic        | indicates bit_index must be reset to 7                           |
-| byte_num             | logic [8:0]  | number of bytes to read                                          |
-| byte_index           | logic [8:0]  | byte being read from the bus                                     |
-| byte_decr            | logic        | indicates byte_index must be decremented by 1                    |
-| byte_clr             | logic        | indicates byte_index must be reset to byte_num                   |
-| scl_temp             | logic        | scl internal                                                     |
-| sda_temp             | logic        | data internal                                                    |
-| scl_i_q              | logic        | scl_i delayed by one clock                                       |
-| sda_i_q              | logic        | sda_i delayed by one clock                                       |
-| read_byte            | logic [7:0]  | register for reads from target                                   |
-| read_byte_clr        | logic        | clear read_byte contents                                         |
-| shift_data_en        | logic        | indicates data must be shifted in from the bus                   |
-| no_stop              | logic        | indicates no stop has been issued before start                   |
-| log_start            | logic        | indicates start is been issued                                   |
-| log_stop             | logic        | indicates stop is been issued                                    |
-| restart              | logic        | indicates repeated start state is entered into                   |
-| start_det            | logic        | indicates start or repeated start is detected on the bus         |
-| stop_det             | logic        | indicates stop is detected on the bus                            |
-| address0_match       | logic        | indicates target's address0 matches the one sent by host         |
-| address1_match       | logic        | indicates target's address1 matches the one sent by host         |
-| address_match        | logic        | indicates one of target's addresses matches the one sent by host |
-| input_byte           | logic [7:0]  | register for reads from host                                     |
-| input_byte_clr       | logic        | clear input_byte contents                                        |
-| scl_high_cnt         | logic [31:0] | counter for continuously released scl_i                          |
-| addr_stop_tx         | logic        | indicates stretch_stop_tx and stretch_en_addr_tx are asserted    |
-| addr_stop_acq        | logic        | indicates stretch_stop_acq and stretch_en_addr_acq are asserted  |
-| stretch_stop_tx_clr  | logic        |                                                                  |
-| stretch_stop_acq_clr | logic        |                                                                  |
-| bit_idx              | logic [3:0]  | bit index including ack/nack                                     |
-| bit_ack              | logic        | indicates ACK bit been sent or received                          |
-| rw_bit               | logic        | indicates host wants to read (1) or write (0)                    |
-| host_ack             | logic        | indicates host acknowledged transmitted byte                     |
-| tcount_sel           | tcount_sel_e |                                                                  |
-| state_q              | state_e      |                                                                  |
-| state_d              | state_e      |                                                                  |
+| Name                 | Type         | Description                                                       |
+| -------------------- | ------------ | ----------------------------------------------------------------- |
+| tcount_q             | logic [19:0] | current counter for setting delays                                |
+| tcount_d             | logic [19:0] | next counter for setting delays                                   |
+| load_tcount          | logic        | indicates counter must be loaded                                  |
+| stretch              | logic [30:0] | counter for clock being stretched by target                       |
+| bit_index            | logic [2:0]  | bit being transmitted to or read from the bus                     |
+| bit_decr             | logic        | indicates bit_index must be decremented by 1                      |
+| bit_clr              | logic        | indicates bit_index must be reset to 7                            |
+| byte_num             | logic [8:0]  | number of bytes to read                                           |
+| byte_index           | logic [8:0]  | byte being read from the bus                                      |
+| byte_decr            | logic        | indicates byte_index must be decremented by 1                     |
+| byte_clr             | logic        | indicates byte_index must be reset to byte_num                    |
+| scl_temp             | logic        | scl internal                                                      |
+| sda_temp             | logic        | data internal                                                     |
+| scl_i_q              | logic        | scl_i delayed by one clock                                        |
+| sda_i_q              | logic        | sda_i delayed by one clock                                        |
+| read_byte            | logic [7:0]  | register for reads from target                                    |
+| read_byte_clr        | logic        | clear read_byte contents                                          |
+| shift_data_en        | logic        | indicates data must be shifted in from the bus                    |
+| no_stop              | logic        | indicates no stop has been issued before start                    |
+| log_start            | logic        | indicates start is been issued                                    |
+| log_stop             | logic        | indicates stop is been issued                                     |
+| restart              | logic        | indicates repeated start state is entered into                    |
+| start_det            | logic        | indicates start or repeated start is detected on the bus          |
+| stop_det             | logic        | indicates stop is detected on the bus                             |
+| address0_match       | logic        | indicates target's address0 matches the one sent by host          |
+| address1_match       | logic        | indicates target's address1 matches the one sent by host          |
+| address_match        | logic        | indicates one of target's addresses matches the one sent by host  |
+| input_byte           | logic [7:0]  | register for reads from host                                      |
+| input_byte_clr       | logic        | clear input_byte contents                                         |
+| scl_high_cnt         | logic [31:0] | counter for continuously released scl_i                           |
+| addr_stop_tx         | logic        | indicates stretch_stop_tx and stretch_en_addr_tx are asserted     |
+| addr_stop_acq        | logic        | indicates stretch_stop_acq and stretch_en_addr_acq are asserted   |
+| stretch_stop_tx_clr  | logic        |                                                                   |
+| stretch_stop_acq_clr | logic        |                                                                   |
+| bit_idx              | logic [3:0]  | bit index including ack/nack                                      |
+| bit_ack              | logic        | indicates ACK bit been sent or received                           |
+| rw_bit               | logic        | indicates host wants to read (1) or write (0)                     |
+| host_ack             | logic        | indicates host acknowledged transmitted byte                      |
+| tcount_sel           | tcount_sel_e |                                                                   |
+| state_q              | state_e      |                                                                   |
+| state_d              | state_e      |                                                                   |
 ## Types
 
-| Name         | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Description                   |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| tcount_sel_e | enum logic [3:0] {<br><span style="padding-left:20px">     tSetupStart,<br><span style="padding-left:20px"> tHoldStart,<br><span style="padding-left:20px"> tClockLow,<br><span style="padding-left:20px"> tSetupBit,<br><span style="padding-left:20px"> tClockPulse,<br><span style="padding-left:20px"> tHoldBit,<br><span style="padding-left:20px">         tClockStart,<br><span style="padding-left:20px"> tClockStop,<br><span style="padding-left:20px"> tSetupStop,<br><span style="padding-left:20px"> tHoldStop,<br><span style="padding-left:20px"> tNoDelay   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Clock counter implementation  |
-| state_e      | enum logic [5:0] {<br><span style="padding-left:20px">     Idle,<br><span style="padding-left:20px"> PopFmtFifo,<br><span style="padding-left:20px"> SetupStart,<br><span style="padding-left:20px"> HoldStart,<br><span style="padding-left:20px"> SetupStop,<br><span style="padding-left:20px"> HoldStop,<br><span style="padding-left:20px">         ClockLow,<br><span style="padding-left:20px"> SetupBit,<br><span style="padding-left:20px"> ClockPulse,<br><span style="padding-left:20px"> HoldBit,<br><span style="padding-left:20px">         ClockLowAck,<br><span style="padding-left:20px"> SetupDevAck,<br><span style="padding-left:20px"> ClockPulseAck,<br><span style="padding-left:20px"> HoldDevAck,<br><span style="padding-left:20px">         ReadClockLow,<br><span style="padding-left:20px"> ReadSetupBit,<br><span style="padding-left:20px"> ReadClockPulse,<br><span style="padding-left:20px"> ReadHoldBit,<br><span style="padding-left:20px">         HostClockLowAck,<br><span style="padding-left:20px"> HostSetupBitAck,<br><span style="padding-left:20px"> HostClockPulseAck,<br><span style="padding-left:20px"> HostHoldBitAck,<br><span style="padding-left:20px">         Active,<br><span style="padding-left:20px"> ClockStart,<br><span style="padding-left:20px"> ClockStop,<br><span style="padding-left:20px">         AcquireStart,<br><span style="padding-left:20px"> AddrRead,<br><span style="padding-left:20px"> AddrAckWait,<br><span style="padding-left:20px"> AddrAckSetup,<br><span style="padding-left:20px"> AddrAckPulse,<br><span style="padding-left:20px"> AddrAckHold,<br><span style="padding-left:20px">         TransmitWait,<br><span style="padding-left:20px"> TransmitSetup,<br><span style="padding-left:20px"> TransmitPulse,<br><span style="padding-left:20px"> TransmitHold,<br><span style="padding-left:20px"> TransmitAck,<br><span style="padding-left:20px">         AcquireByte,<br><span style="padding-left:20px"> AcquireAckWait,<br><span style="padding-left:20px"> AcquireAckSetup,<br><span style="padding-left:20px"> AcquireAckPulse,<br><span style="padding-left:20px"> AcquireAckHold,<br><span style="padding-left:20px">         PopTxFifo,<br><span style="padding-left:20px"> AcquireSrP,<br><span style="padding-left:20px"> StretchTxEmpty,<br><span style="padding-left:20px"> StretchAcqFull,<br><span style="padding-left:20px"> StretchAddrTransmit,<br><span style="padding-left:20px">         StretchAddrAcquire   } | State definitions             |
+| Name         | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Description                    |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| tcount_sel_e | enum logic [3:0] {<br><span style="padding-left:20px">     tSetupStart,<br><span style="padding-left:20px"> tHoldStart,<br><span style="padding-left:20px"> tClockLow,<br><span style="padding-left:20px"> tSetupBit,<br><span style="padding-left:20px"> tClockPulse,<br><span style="padding-left:20px"> tHoldBit,<br><span style="padding-left:20px">         tClockStart,<br><span style="padding-left:20px"> tClockStop,<br><span style="padding-left:20px"> tSetupStop,<br><span style="padding-left:20px"> tHoldStop,<br><span style="padding-left:20px"> tNoDelay   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |  Clock counter implementation  |
+| state_e      | enum logic [5:0] {<br><span style="padding-left:20px">     Idle,<br><span style="padding-left:20px"> PopFmtFifo,<br><span style="padding-left:20px"> SetupStart,<br><span style="padding-left:20px"> HoldStart,<br><span style="padding-left:20px"> SetupStop,<br><span style="padding-left:20px"> HoldStop,<br><span style="padding-left:20px">         ClockLow,<br><span style="padding-left:20px"> SetupBit,<br><span style="padding-left:20px"> ClockPulse,<br><span style="padding-left:20px"> HoldBit,<br><span style="padding-left:20px">         ClockLowAck,<br><span style="padding-left:20px"> SetupDevAck,<br><span style="padding-left:20px"> ClockPulseAck,<br><span style="padding-left:20px"> HoldDevAck,<br><span style="padding-left:20px">         ReadClockLow,<br><span style="padding-left:20px"> ReadSetupBit,<br><span style="padding-left:20px"> ReadClockPulse,<br><span style="padding-left:20px"> ReadHoldBit,<br><span style="padding-left:20px">         HostClockLowAck,<br><span style="padding-left:20px"> HostSetupBitAck,<br><span style="padding-left:20px"> HostClockPulseAck,<br><span style="padding-left:20px"> HostHoldBitAck,<br><span style="padding-left:20px">         Active,<br><span style="padding-left:20px"> ClockStart,<br><span style="padding-left:20px"> ClockStop,<br><span style="padding-left:20px">         AcquireStart,<br><span style="padding-left:20px"> AddrRead,<br><span style="padding-left:20px"> AddrAckWait,<br><span style="padding-left:20px"> AddrAckSetup,<br><span style="padding-left:20px"> AddrAckPulse,<br><span style="padding-left:20px"> AddrAckHold,<br><span style="padding-left:20px">         TransmitWait,<br><span style="padding-left:20px"> TransmitSetup,<br><span style="padding-left:20px"> TransmitPulse,<br><span style="padding-left:20px"> TransmitHold,<br><span style="padding-left:20px"> TransmitAck,<br><span style="padding-left:20px">         AcquireByte,<br><span style="padding-left:20px"> AcquireAckWait,<br><span style="padding-left:20px"> AcquireAckSetup,<br><span style="padding-left:20px"> AcquireAckPulse,<br><span style="padding-left:20px"> AcquireAckHold,<br><span style="padding-left:20px">         PopTxFifo,<br><span style="padding-left:20px"> AcquireSrP,<br><span style="padding-left:20px"> StretchTxEmpty,<br><span style="padding-left:20px"> StretchAcqFull,<br><span style="padding-left:20px"> StretchAddrTransmit,<br><span style="padding-left:20px">         StretchAddrAcquire   } |  State definitions             |
 ## Processes
 - counter_functions: (  )
+  - **Type:** always_comb
 - clk_counter: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - clk_stretch: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Clock stretching detection
-
+ Clock stretching detection 
 - bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Bit index implementation
-
+ Bit index implementation 
 - read_register: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Deserializer for a byte read from the bus
-
+ Deserializer for a byte read from the bus 
 - byte_number: (  )
+  - **Type:** always_comb
 **Description**
-Number of bytes to read
-
+ Number of bytes to read 
 - byte_counter: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Byte index implementation
-
+ Byte index implementation 
 - bus_prev: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-SDA and SCL at the previous clock edge
-
+ SDA and SCL at the previous clock edge 
 - stop_state: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Stop issued before
-
+ Stop issued before 
 - s_detect: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-(Repeated) Start condition detection by target
-
+ (Repeated) Start condition detection by target 
 - p_detect: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Stop condition detection by target
-
+ Stop condition detection by target 
 - tgt_bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-ack
-Increment counter on negative SCL edge
-
+ ack  Increment counter on negative SCL edge 
 - scl_high_counter: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Counter for continuously released SCL state
-
+ Counter for continuously released SCL state 
 - tgt_input_register: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Shift data in on positive SCL edge
-
+ Shift data in on positive SCL edge 
 - host_ack_register: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Detection by the target of ACK bit send by the host
-
+ Detection by the target of ACK bit send by the host 
 - stretch_addr_sp_tx: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Deasserting stretch_stop_tx bit after the first target address match for transmit
-
+ Deasserting stretch_stop_tx bit after the first target address match for transmit 
 - stretch_addr_sp_acq: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Deasserting stretch_stop_acq bit after the first target address match for acquire
-
+ Deasserting stretch_stop_acq bit after the first target address match for acquire 
 - state_outputs: (  )
+  - **Type:** always_comb
 **Description**
-Outputs for each state
-
+ Outputs for each state 
 - state_functions: (  )
+  - **Type:** always_comb
 **Description**
-Conditional state transition
-
+ Conditional state transition 
 - state_transition: ( @ (posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Synchronous state transition
-
+ Synchronous state transition 

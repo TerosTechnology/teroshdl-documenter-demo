@@ -6,15 +6,15 @@
 ![Diagram](wb_cvb.svg "Diagram")
 ## Generics
 
-| Generic name      | Type    | Value  | Description                 |
-| ----------------- | ------- | ------ | --------------------------- |
-| ACCUM_SIZE        | natural | 8      |                             |
-| ADDR_SIZE         | natural | 16     |                             |
-| DFLT_START_OFFSET | natural | 500    |                             |
-| DFLT_STOP_OFFSET  | natural | 1024   |                             |
-| DFLT_LIMIT        | natural | 100000 |                             |
-| id                | natural | 1      |                             |
-| wb_size           | natural | 16     | Data port size for wishbone |
+| Generic name      | Type    | Value  | Description                  |
+| ----------------- | ------- | ------ | ---------------------------- |
+| ACCUM_SIZE        | natural | 8      |                              |
+| ADDR_SIZE         | natural | 16     |                              |
+| DFLT_START_OFFSET | natural | 500    |                              |
+| DFLT_STOP_OFFSET  | natural | 1024   |                              |
+| DFLT_LIMIT        | natural | 100000 |                              |
+| id                | natural | 1      |                              |
+| wb_size           | natural | 16     |  Data port size for wishbone |
 ## Ports
 
 | Port name           | Direction | Type                                    | Description      |
@@ -48,6 +48,5 @@
 ## Processes
 - write_bloc: ( clk, reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

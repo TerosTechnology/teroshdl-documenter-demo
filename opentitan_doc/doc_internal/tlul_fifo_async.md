@@ -6,13 +6,14 @@
 ![Diagram](tlul_fifo_async.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  TL-UL fifo, used to add elasticity or an asynchronous clock crossing
  to an TL-UL bus.  This instantiates two FIFOs, one for the request side,
  and one for the response side.
- 
+
 ## Generics
 
 | Generic name | Type         | Value | Description |
@@ -33,10 +34,10 @@ Copyright lowRISC contributors.
 | tl_d_i    | input     |      |             |
 ## Constants
 
-| Name          | Type         | Value                        | Description                                              |
-| ------------- | ------------ | ---------------------------- | -------------------------------------------------------- |
-| REQFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_h2d_t)-2  | Put everything on the request side into one FIFO         |
-| RSPFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_d2h_t) -2 | Put everything on the response side into the other FIFO  |
+| Name          | Type         | Value                        | Description                                               |
+| ------------- | ------------ | ---------------------------- | --------------------------------------------------------- |
+| REQFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_h2d_t)-2  |  Put everything on the request side into one FIFO         |
+| RSPFIFO_WIDTH | int unsigned | $bits(tlul_pkg::tl_d2h_t) -2 |  Put everything on the response side into the other FIFO  |
 ## Instantiations
 
 - reqfifo: prim_fifo_async

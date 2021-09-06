@@ -6,17 +6,21 @@
 ![Diagram](SspDeframer.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: SimpleStreamingProtocol - A simple protocol layer for inserting
-idle and framing control characters into a raw data stream. The input of
-module should be attached to an 8b10b decoder.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: SimpleStreamingProtocol - A simple protocol layer for inserting
+ idle and framing control characters into a raw data stream. The input of
+ module should be attached to an 8b10b decoder.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value | Description |
@@ -43,7 +47,7 @@ the terms contained in the LICENSE.txt file.
 | dataIn         | in        | slv(WORD_SIZE_G-1 downto 0) |                  |
 | validIn        | in        | sl                          |                  |
 | decErrIn       | in        | sl                          |                  |
-| dispErrIn      | in        | sl                          | Unused           |
+| dispErrIn      | in        | sl                          |  Unused          |
 | gearboxAligned | in        | sl                          |                  |
 | dataOut        | out       | slv(WORD_SIZE_G-1 downto 0) | Output Interface |
 | validOut       | out       | sl                          |                  |
@@ -74,5 +78,4 @@ the terms contained in the LICENSE.txt file.
 - comb: ( dataIn, dataKIn, decErrIn, gearboxAligned, r, rst, validIn )
 - seq: ( clk, rst )
 **Description**
-Sequential process
-
+ Sequential process 

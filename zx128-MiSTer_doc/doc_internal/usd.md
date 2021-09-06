@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](usd.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Ports
 
 | Port name | Direction | Type      | Description |
@@ -23,17 +27,22 @@
 | mosi      | output    | wire      |             |
 ## Signals
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| iotx | wire |             |
-| iorx | wire |             |
-| tx   | reg  |             |
-| dtx  | reg  |             |
-| rx   | reg  |             |
-| drx  | reg  |             |
+| Name | Type | Description                                                                                         |
+| ---- | ---- | --------------------------------------------------------------------------------------------------- |
+| iotx | wire | -------------------------------------------------------------------------------------------------  |
+| iorx | wire |                                                                                                     |
+| tx   | reg  |                                                                                                     |
+| dtx  | reg  |                                                                                                     |
+| rx   | reg  |                                                                                                     |
+| drx  | reg  |                                                                                                     |
 ## Processes
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 ## Instantiations
 
 - Spi: spi
+**Description**
+-------------------------------------------------------------------------------------------------
+

@@ -6,29 +6,34 @@
 ![Diagram](AxiStreamPacketizer.svg "Diagram")
 ## Description
 
-Title      : AxiStreamPackerizerV0 Protocol: https://confluence.slac.stanford.edu/x/1oyfD
-Company    : SLAC National Accelerator Laboratory
-Description: AXI stream DePacketerizer Module (non-interleave only)
-   Formats an AXI-Stream for a transport link.
-   Sideband fields are placed into the data stream in a header.
-   Long frames are broken into smaller packets.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : AxiStreamPackerizerV0 Protocol: https://confluence.slac.stanford.edu/x/1oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI stream DePacketerizer Module (non-interleave only)
+    Formats an AXI-Stream for a transport link.
+    Sideband fields are placed into the data stream in a header.
+    Long frames are broken into smaller packets.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name         | Type            | Value | Description                         |
-| -------------------- | --------------- | ----- | ----------------------------------- |
-| TPD_G                | time            | 1 ns  |                                     |
-| MAX_PACKET_BYTES_G   | integer         | 1440  | Must be a multiple of 8             |
-| MIN_TKEEP_G          | slv(7 downto 0) | x"01" |                                     |
-| OUTPUT_SSI_G         | boolean         | true  | SSI compliant output (SOF on tuser) |
-| INPUT_PIPE_STAGES_G  | integer         | 0     |                                     |
-| OUTPUT_PIPE_STAGES_G | integer         | 0     |                                     |
+| Generic name         | Type            | Value | Description                          |
+| -------------------- | --------------- | ----- | ------------------------------------ |
+| TPD_G                | time            | 1 ns  |                                      |
+| MAX_PACKET_BYTES_G   | integer         | 1440  |  Must be a multiple of 8             |
+| MIN_TKEEP_G          | slv(7 downto 0) | x"01" |                                      |
+| OUTPUT_SSI_G         | boolean         | true  |  SSI compliant output (SOF on tuser) |
+| INPUT_PIPE_STAGES_G  | integer         | 0     |                                      |
+| OUTPUT_PIPE_STAGES_G | integer         | 0     |                                      |
 ## Ports
 
 | Port name   | Direction | Type                                          | Description                                                   |
@@ -75,9 +80,13 @@ the terms contained in the LICENSE.txt file.
 
 - U_Input: surf.AxiStreamPipeline
 **Description**
-Input pipeline
+---------------
+ Input pipeline
+---------------
 
 - U_Output: surf.AxiStreamPipeline
 **Description**
-Output pipeline
+----------------
+ Output pipeline
+----------------
 

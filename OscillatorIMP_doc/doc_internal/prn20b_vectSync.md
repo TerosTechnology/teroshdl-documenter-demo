@@ -6,9 +6,11 @@
 ![Diagram](prn20b_vectSync.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/06/11
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/06/11
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

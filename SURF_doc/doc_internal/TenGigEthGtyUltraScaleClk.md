@@ -6,22 +6,26 @@
 ![Diagram](TenGigEthGtyUltraScaleClk.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: 10GBASE-R Ethernet's Clock Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: 10GBASE-R Ethernet's Clock Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name      | Type            | Value     | Description                   |
-| ----------------- | --------------- | --------- | ----------------------------- |
-| TPD_G             | time            | 1 ns      |                               |
-| REF_CLK_FREQ_G    | real            | 156.25E+6 | Support 156.25MHz or 312.5MHz |
-| QPLL_REFCLK_SEL_G | slv(2 downto 0) | "001"     |                               |
+| Generic name      | Type            | Value     | Description                    |
+| ----------------- | --------------- | --------- | ------------------------------ |
+| TPD_G             | time            | 1 ns      |                                |
+| REF_CLK_FREQ_G    | real            | 156.25E+6 |  Support 156.25MHz or 312.5MHz |
+| QPLL_REFCLK_SEL_G | slv(2 downto 0) | "001"     |                                |
 ## Ports
 
 | Port name     | Direction | Type            | Description                 |

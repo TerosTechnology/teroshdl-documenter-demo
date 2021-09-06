@@ -6,12 +6,13 @@
 ![Diagram](alert_handler_ping_timer_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Testbench module for ping timer in alert handler. Intended to use with
  a formal tool.
- 
+
 ## Ports
 
 | Port name          | Direction | Type              | Description |

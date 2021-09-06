@@ -15,21 +15,21 @@
 
 
 
+ 
+
+ 
 
 
+ 
 
-
-
-
-
-
+ 
 ## Generics
 
-| Generic name  | Type    | Value    | Description                          |
-| ------------- | ------- | -------- | ------------------------------------ |
-| format        | string  | "signed" | tell if stream is signed or unsigned |
-| DATA_IN_SIZE  | natural | 16       | size of the input data stream        |
-| DATA_OUT_SIZE | natural | 16       | size of the output data stream       |
+| Generic name  | Type    | Value    | Description                           |
+| ------------- | ------- | -------- | ------------------------------------- |
+| format        | string  | "signed" |  tell if stream is signed or unsigned |
+| DATA_IN_SIZE  | natural | 16       |  size of the input data stream        |
+| DATA_OUT_SIZE | natural | 16       |  size of the output data stream       |
 ## Ports
 
 | Port name  | Direction | Type                                       | Description            |
@@ -50,18 +50,18 @@
 | data_clk_o | out       | std_logic                                  |                        |
 ## Signals
 
-| Name       | Type                                  | Description                          |
-| ---------- | ------------------------------------- | ------------------------------------ |
-| msb_i_s    | std_logic_vector(MSB_SIZE-1 downto 0) | dropped part of the I input signal   |
-| msb_q_s    | std_logic_vector(MSB_SIZE-1 downto 0) | dropped part of the Q input signal   |
-| is_zero_i  | boolean                               | check is high slice is fully 0 and 1 |
-|  is_one_i  | boolean                               | check is high slice is fully 0 and 1 |
-|  is_zero_q | boolean                               | check is high slice is fully 0 and 1 |
-|  is_one_q  | boolean                               | check is high slice is fully 0 and 1 |
+| Name       | Type                                  | Description                            |
+| ---------- | ------------------------------------- | -------------------------------------- |
+| msb_i_s    | std_logic_vector(MSB_SIZE-1 downto 0) |  dropped part of the I input signal    |
+| msb_q_s    | std_logic_vector(MSB_SIZE-1 downto 0) |  dropped part of the Q input signal    |
+| is_zero_i  | boolean                               |  check is high slice is fully 0 and 1  |
+|  is_one_i  | boolean                               |  check is high slice is fully 0 and 1  |
+|  is_zero_q | boolean                               |  check is high slice is fully 0 and 1  |
+|  is_one_q  | boolean                               |  check is high slice is fully 0 and 1  |
 ## Constants
 
-| Name     | Type    | Value                                                                               | Description                              |
-| -------- | ------- | ----------------------------------------------------------------------------------- | ---------------------------------------- |
-| MSB_SIZE | natural |  comp_unused_slice(DATA_IN_SIZE,<br><span style="padding-left:20px"> DATA_OUT_SIZE) | size of the dropped part of input signal |
+| Name     | Type    | Value                                                                               | Description                                |
+| -------- | ------- | ----------------------------------------------------------------------------------- | ------------------------------------------ |
+| MSB_SIZE | natural |  comp_unused_slice(DATA_IN_SIZE,<br><span style="padding-left:20px"> DATA_OUT_SIZE) |  size of the dropped part of input signal  |
 ## Functions
 - comp_unused_slice <font id="function_arguments">(in_size,<br><span style="padding-left:20px"> out_size: natural) </font> <font id="function_return">return natural </font>

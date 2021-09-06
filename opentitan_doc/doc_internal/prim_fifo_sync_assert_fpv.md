@@ -6,22 +6,23 @@
 ![Diagram](prim_fifo_sync_assert_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Assertions for prim_fifo_sync.
  Intended to be used with a formal tool.
- 
+
 ## Generics
 
-| Generic name    | Type         | Value           | Description                       |
-| --------------- | ------------ | --------------- | --------------------------------- |
-| EnableDataCheck | bit          | 1'b1            | can be desabled for deeper FIFOs  |
-| Width           | int unsigned | 16              |                                   |
-| Pass            | bit          | 1'b1            |                                   |
-| Depth           | int unsigned | 4               |                                   |
-| DepthWNorm      | int unsigned | $clog2(Depth+1) |                                   |
-| DepthW          | int unsigned | DepthWNorm      |                                   |
+| Generic name    | Type         | Value           | Description                        |
+| --------------- | ------------ | --------------- | ---------------------------------- |
+| EnableDataCheck | bit          | 1'b1            |  can be desabled for deeper FIFOs  |
+| Width           | int unsigned | 16              |                                    |
+| Pass            | bit          | 1'b1            |                                    |
+| Depth           | int unsigned | 4               |                                    |
+| DepthWNorm      | int unsigned | $clog2(Depth+1) |                                    |
+| DepthW          | int unsigned | DepthWNorm      |                                    |
 ## Ports
 
 | Port name | Direction | Type         | Description |

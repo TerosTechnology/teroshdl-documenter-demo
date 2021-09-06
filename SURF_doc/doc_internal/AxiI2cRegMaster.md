@@ -6,25 +6,29 @@
 ![Diagram](AxiI2cRegMaster.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite I2C Register Master
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite I2C Register Master
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name    | Type               | Value                        | Description      |
-| --------------- | ------------------ | ---------------------------- | ---------------- |
-| TPD_G           | time               | 1 ns                         |                  |
-| AXIL_PROXY_G    | boolean            | false                        |                  |
-| DEVICE_MAP_G    | I2cAxiLiteDevArray | I2C_AXIL_DEV_ARRAY_DEFAULT_C |                  |
-| I2C_SCL_FREQ_G  | real               | 100.0E+3                     | units of Hz      |
-| I2C_MIN_PULSE_G | real               | 100.0E-9                     | units of seconds |
-| AXI_CLK_FREQ_G  | real               | 156.25E+6                    |                  |
+| Generic name    | Type               | Value                        | Description       |
+| --------------- | ------------------ | ---------------------------- | ----------------- |
+| TPD_G           | time               | 1 ns                         |                   |
+| AXIL_PROXY_G    | boolean            | false                        |                   |
+| DEVICE_MAP_G    | I2cAxiLiteDevArray | I2C_AXIL_DEV_ARRAY_DEFAULT_C |                   |
+| I2C_SCL_FREQ_G  | real               | 100.0E+3                     |  units of Hz      |
+| I2C_MIN_PULSE_G | real               | 100.0E-9                     |  units of seconds |
+| AXI_CLK_FREQ_G  | real               | 156.25E+6                    |                   |
 ## Ports
 
 | Port name      | Direction | Type                                | Description                 |
@@ -50,5 +54,5 @@ the terms contained in the LICENSE.txt file.
 - IOBUF_SCL: IOBUF
 - IOBUF_SDA: IOBUF
 **Description**
-3-state enable input, high=input, low=output
+ 3-state enable input, high=input, low=output
 

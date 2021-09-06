@@ -17,7 +17,7 @@
 
 | Port name       | Direction | Type                                                  | Description |
 | --------------- | --------- | ----------------------------------------------------- | ----------- |
-| data_i_i        | in        | std_logic_vector(DATA_SIZE-1 downto 0)                |             |
+| data_i_i        | in        | std_logic_vector(DATA_SIZE-1 downto 0)                | rocessing   |
 | data_q_i        | in        | std_logic_vector(DATA_SIZE-1 downto 0)                |             |
 | data_eof_i      | in        | std_logic                                             |             |
 | data_en_i       | in        | std_logic                                             |             |
@@ -58,7 +58,7 @@
 |  data_q_s       | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | data_en_s       | std_logic                              |             |
 | cpt_s           | natural range 0 to 2**16-1             |             |
-| addr_s          | std_logic_vector(1 downto 0)           | comm        |
+| addr_s          | std_logic_vector(1 downto 0)           |  comm       |
 | write_en_s      | std_logic                              |             |
 |  read_en_s      | std_logic                              |             |
 | point_pos_s     | std_logic_vector(15 downto 0)          |             |
@@ -81,7 +81,7 @@
 - wb_edfb_inst: work.wb_edfb
 - handle_comm: work.edfb_handComm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 ## State machines
 

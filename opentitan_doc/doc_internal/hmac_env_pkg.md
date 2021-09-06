@@ -3,26 +3,26 @@
 - **File**: hmac_env_pkg.sv
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 
 ## Constants
 
-| Name                      | Type   | Value                                               | Description                                                                    |
-| ------------------------- | ------ | --------------------------------------------------- | ------------------------------------------------------------------------------ |
-| uint32                    | uint32 | 16                                                  | local parameters and types                                                     |
-| HMAC_MSG_FIFO_DEPTH_BYTES | uint32 | HMAC_MSG_FIFO_DEPTH * 4                             |                                                                                |
-| uint32                    | uint32 | 2048                                                |                                                                                |
-| uint32                    | uint32 | 32'h800                                             |                                                                                |
-| HMAC_MSG_FIFO_LAST_ADDR   | uint32 | HMAC_MSG_FIFO_BASE + HMAC_MSG_FIFO_SIZE - 1         |                                                                                |
-| uint32                    | uint32 | 64                                                  |                                                                                |
-| uint32                    | uint32 | 65                                                  | 48 cycles of hashing, 16 cycles to rd next 16 words, 1 cycle to update digest  |
-| uint32                    | uint32 | 80                                                  | 80 cycles for hmac key padding                                                 |
-| uint32                    | uint32 | 1                                                   | 1 cycles to write a msg word to hmac_msg_fifo                                  |
-| uint                      | uint   | 1                                                   | alerts                                                                         |
-| LIST_OF_ALERTS            | string | {<br><span style="padding-left:20px">"fatal_fault"} |                                                                                |
+| Name                      | Type   | Value                                               | Description                                                                     |
+| ------------------------- | ------ | --------------------------------------------------- | ------------------------------------------------------------------------------- |
+| uint32                    | uint32 | 16                                                  |  local parameters and types                                                     |
+| HMAC_MSG_FIFO_DEPTH_BYTES | uint32 | HMAC_MSG_FIFO_DEPTH * 4                             |                                                                                 |
+| uint32                    | uint32 | 2048                                                |                                                                                 |
+| uint32                    | uint32 | 32'h800                                             |                                                                                 |
+| HMAC_MSG_FIFO_LAST_ADDR   | uint32 | HMAC_MSG_FIFO_BASE + HMAC_MSG_FIFO_SIZE - 1         |                                                                                 |
+| uint32                    | uint32 | 64                                                  |                                                                                 |
+| uint32                    | uint32 | 65                                                  |  48 cycles of hashing, 16 cycles to rd next 16 words, 1 cycle to update digest  |
+| uint32                    | uint32 | 80                                                  |  80 cycles for hmac key padding                                                 |
+| uint32                    | uint32 | 1                                                   |  1 cycles to write a msg word to hmac_msg_fifo                                  |
+| uint                      | uint   | 1                                                   |  alerts                                                                         |
+| LIST_OF_ALERTS            | string | {<br><span style="padding-left:20px">"fatal_fault"} |                                                                                 |
 ## Types
 
 | Name                   | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Description |

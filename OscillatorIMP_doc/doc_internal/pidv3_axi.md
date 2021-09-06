@@ -6,9 +6,11 @@
 ![Diagram](pidv3_axi.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2019/04/20
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2019/04/20
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value | Description |
@@ -16,7 +18,7 @@ Creation date : 2019/04/20
 | C_S00_AXI_DATA_WIDTH | integer | 32    |             |
 | C_S00_AXI_ADDR_WIDTH | integer | 5     |             |
 | P_SIZE               | integer | 14    |             |
-| PSR                  | integer | 12    |             |
+| PSR                  | integer | 12    | PSR_SIZE    |
 | I_SIZE               | integer | 14    |             |
 | ISR                  | integer | 28    |             |
 | D_SIZE               | integer | 14    |             |
@@ -93,7 +95,7 @@ Creation date : 2019/04/20
 
 | Name                | Type    | Value | Description |
 | ------------------- | ------- | ----- | ----------- |
-| INTERNAL_ADDR_WIDTH | integer |  3    |             |
+| INTERNAL_ADDR_WIDTH | integer |  3    | comm        |
 ## Instantiations
 
 - pidv3_axiLogic: work.pidv3_axi_logic
@@ -105,7 +107,10 @@ Creation date : 2019/04/20
 - sign_syn: work.pidv3_axi_sync_bit
 - int_rst_syn: work.pidv3_axi_sync_bit
 - comm_inst: work.pidv3_axi_comm
+**Description**
+-------------
+
 - handle_comm: work.pidv3_axi_handComm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

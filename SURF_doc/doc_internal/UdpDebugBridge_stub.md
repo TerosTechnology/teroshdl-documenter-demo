@@ -6,17 +6,17 @@
 ![Diagram](UdpDebugBridge_stub.svg "Diagram")
 ## Description
 
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
---------------------------------------------------------------------------------
-Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-Date        : Wed Jun 26 13:06:07 2019
-Host        : rdsrv107.slac.stanford.edu running 64-bit Red Hat Enterprise Linux Server release 6.10 (Santiago)
-Command     : write_vhdl -force -mode synth_stub
-              /u/re/ruckman/projects/dpm-remote-ibert-tester/firmware/submodules/xvc-udp-debug-bridge/dcp/UltraScale/Stub/images/UdpDebugBridge_stub.vhd
-Design      : UdpDebugBridge
-Purpose     : Stub declaration of top-level module interface
-Device      : xcku040-ffva1156-2-e
---------------------------------------------------------------------------------
+ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+ --------------------------------------------------------------------------------
+ Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+ Date        : Wed Jun 26 13:06:07 2019
+ Host        : rdsrv107.slac.stanford.edu running 64-bit Red Hat Enterprise Linux Server release 6.10 (Santiago)
+ Command     : write_vhdl -force -mode synth_stub
+               /u/re/ruckman/projects/dpm-remote-ibert-tester/firmware/submodules/xvc-udp-debug-bridge/dcp/UltraScale/Stub/images/UdpDebugBridge_stub.vhd
+ Design      : UdpDebugBridge
+ Purpose     : Stub declaration of top-level module interface
+ Device      : xcku040-ffva1156-2-e
+ --------------------------------------------------------------------------------
 ## Ports
 
 | Port name          | Direction | Type                              | Description |

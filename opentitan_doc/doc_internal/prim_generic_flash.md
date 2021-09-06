@@ -6,24 +6,26 @@
 ![Diagram](prim_generic_flash.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Overall flash wrapper
- 
+
+
 ## Generics
 
-| Generic name   | Type | Value | Description          |
-| -------------- | ---- | ----- | -------------------- |
-| NumBanks       | int  | 2     | number of banks      |
-| InfosPerBank   | int  | 1     | info pages per bank  |
-| InfoTypes      | int  | 1     | different info types |
-| InfoTypesWidth | int  | 1     | different info types |
-| PagesPerBank   | int  | 256   | data pages per bank  |
-| WordsPerPage   | int  | 256   | words per page       |
-| DataWidth      | int  | 32    | bits per word        |
-| MetaDataWidth  | int  | 12    | metadata such as ECC |
-| TestModeWidth  | int  | 2     |                      |
+| Generic name   | Type | Value | Description            |
+| -------------- | ---- | ----- | ---------------------- |
+| NumBanks       | int  | 2     |  number of banks       |
+| InfosPerBank   | int  | 1     |  info pages per bank   |
+| InfoTypes      | int  | 1     |  different info types  |
+| InfoTypesWidth | int  | 1     |  different info types  |
+| PagesPerBank   | int  | 256   |  data pages per bank   |
+| WordsPerPage   | int  | 256   |  words per page        |
+| DataWidth      | int  | 32    |  bits per word         |
+| MetaDataWidth  | int  | 12    |  metadata such as ECC  |
+| TestModeWidth  | int  | 2     |                        |
 ## Ports
 
 | Port name               | Direction | Type                           | Description |
@@ -53,26 +55,26 @@ Copyright lowRISC contributors.
 | devmode_i               | input     |                                |             |
 ## Signals
 
-| Name                      | Type                      | Description                                |
-| ------------------------- | ------------------------- | ------------------------------------------ |
-| unused_devmode            | logic                     |                                            |
-| init                      | logic                     | convert this into a tlul write later       |
-| init_busy                 | logic [NumBanks-1:0]      |                                            |
-| unused_scanmode           | lc_ctrl_pkg::lc_tx_t      |                                            |
-| unused_scan_en            | logic                     |                                            |
-| unused_scan_rst_n         | logic                     |                                            |
-| unused_flash_test_mode    | logic [TestModeWidth-1:0] |                                            |
-| unused_flash_test_voltage | logic                     |                                            |
-| unused_tck                | logic                     |                                            |
-| unused_tdi                | logic                     |                                            |
-| unused_tms                | logic                     |                                            |
-| cfg_req                   | logic                     | fake memory used to emulate configuration  |
-| cfg_we                    | logic                     |                                            |
-| cfg_addr                  | logic [CfgAddrWidth-1:0]  |                                            |
-| cfg_wdata                 | logic [31:0]              |                                            |
-| cfg_rvalid                | logic                     |                                            |
-| cfg_rdata                 | logic [31:0]              |                                            |
-| unused_bist_enable        | lc_ctrl_pkg::lc_tx_t      |                                            |
+| Name                      | Type                      | Description                                 |
+| ------------------------- | ------------------------- | ------------------------------------------- |
+| unused_devmode            | logic                     |                                             |
+| init                      | logic                     |  convert this into a tlul write later       |
+| init_busy                 | logic [NumBanks-1:0]      |                                             |
+| unused_scanmode           | lc_ctrl_pkg::lc_tx_t      |                                             |
+| unused_scan_en            | logic                     |                                             |
+| unused_scan_rst_n         | logic                     |                                             |
+| unused_flash_test_mode    | logic [TestModeWidth-1:0] |                                             |
+| unused_flash_test_voltage | logic                     |                                             |
+| unused_tck                | logic                     |                                             |
+| unused_tdi                | logic                     |                                             |
+| unused_tms                | logic                     |                                             |
+| cfg_req                   | logic                     |  fake memory used to emulate configuration  |
+| cfg_we                    | logic                     |                                             |
+| cfg_addr                  | logic [CfgAddrWidth-1:0]  |                                             |
+| cfg_wdata                 | logic [31:0]              |                                             |
+| cfg_rvalid                | logic                     |                                             |
+| cfg_rdata                 | logic [31:0]              |                                             |
+| unused_bist_enable        | lc_ctrl_pkg::lc_tx_t      |                                             |
 ## Constants
 
 | Name         | Type | Value           | Description |
@@ -81,6 +83,7 @@ Copyright lowRISC contributors.
 | CfgAddrWidth | int  | $clog2(CfgRegs) |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - u_cfg: tlul_adapter_sram

@@ -6,10 +6,11 @@
 ![Diagram](otbn_mock_edn.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
 | Generic name | Type              | Value         | Description |
@@ -42,3 +43,4 @@ Copyright lowRISC contributors.
 | DelayWidth | int  | $clog2(Delay) |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always

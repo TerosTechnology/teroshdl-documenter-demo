@@ -6,9 +6,10 @@
 ![Diagram](multiplierReal.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2020/01/30
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2020/01/30
 ## Generics
 
 | Generic name  | Type    | Value | Description |
@@ -41,20 +42,20 @@ Creation date : 2020/01/30
 | data_rst_o  | out       | std_logic                                  |                 |
 ## Signals
 
-| Name            | Type                                       | Description   |
-| --------------- | ------------------------------------------ | ------------- |
-| data1_in_s      | std_logic_vector(DATA1_IN_SIZE-1 downto 0) | input latches |
-| data2_in_s      | std_logic_vector(DATA2_IN_SIZE-1 downto 0) |               |
-| data1_in_en_s   | std_logic                                  |               |
-|  data2_in_en_s  | std_logic                                  |               |
-| data1_in_eof_s  | std_logic                                  |               |
-|  data2_in_eof_s | std_logic                                  |               |
-| data1_in_sof_s  | std_logic                                  |               |
-|  data2_in_sof_s | std_logic                                  |               |
-| data_s          | std_logic_vector(INT_DATA_SZ-1 downto 0)   | mult          |
-| data_en_s       | std_logic                                  |               |
-| data_eof_s      | std_logic                                  |               |
-| data_sof_s      | std_logic                                  |               |
+| Name            | Type                                       | Description     |
+| --------------- | ------------------------------------------ | --------------- |
+| data1_in_s      | std_logic_vector(DATA1_IN_SIZE-1 downto 0) |  input latches  |
+| data2_in_s      | std_logic_vector(DATA2_IN_SIZE-1 downto 0) |                 |
+| data1_in_en_s   | std_logic                                  |                 |
+|  data2_in_en_s  | std_logic                                  |                 |
+| data1_in_eof_s  | std_logic                                  |                 |
+|  data2_in_eof_s | std_logic                                  |                 |
+| data1_in_sof_s  | std_logic                                  |                 |
+|  data2_in_sof_s | std_logic                                  |                 |
+| data_s          | std_logic_vector(INT_DATA_SZ-1 downto 0)   |  mult           |
+| data_en_s       | std_logic                                  |                 |
+| data_eof_s      | std_logic                                  |                 |
+| data_sof_s      | std_logic                                  |                 |
 ## Constants
 
 | Name        | Type    | Value                          | Description |

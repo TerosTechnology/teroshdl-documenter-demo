@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](punc_interlv_lut.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -14,3 +18,4 @@
 | punc_o    | output    | [1:0]      |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always

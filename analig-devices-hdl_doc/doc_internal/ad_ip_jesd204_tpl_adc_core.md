@@ -6,23 +6,29 @@
 ![Diagram](ad_ip_jesd204_tpl_adc_core.svg "Diagram")
 ## Description
 
-***************************************************************************
+ ***************************************************************************
  ***************************************************************************
  Copyright 2018 (c) Analog Devices, Inc. All rights reserved.
+
  Each core or library found in this collection may have its own licensing terms.
  The user should keep this in in mind while exploring these cores.
+
  Redistribution and use in source and binary forms,
  with or without modification of this file, are permitted under the terms of either
   (at the option of the user):
+
    1. The GNU General Public License version 2 as published by the
       Free Software Foundation, which can be found in the top level directory, or at:
  https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
  OR
+
    2.  An ADI specific BSD license as noted in the top level directory, or on-line at:
  https://github.com/analogdevicesinc/hdl/blob/dev/LICENSE
+
  ***************************************************************************
  ***************************************************************************
- 
+
 ## Generics
 
 | Generic name         | Type | Value                                                | Description |
@@ -70,16 +76,17 @@
 | adc_sync_d1    | reg                       |             |
 ## Constants
 
-| Name           | Type | Value                                  | Description                            |
-| -------------- | ---- | -------------------------------------- | -------------------------------------- |
-| CDW_RAW        |      | CONVERTER_RESOLUTION * DATA_PATH_WIDTH | Raw and formatted channel data widths  |
-| ADC_DATA_WIDTH |      | CDW_RAW * NUM_CHANNELS                 |                                        |
-| CDW_FMT        |      | DMA_BITS_PER_SAMPLE * DATA_PATH_WIDTH  |                                        |
+| Name           | Type | Value                                  | Description                             |
+| -------------- | ---- | -------------------------------------- | --------------------------------------- |
+| CDW_RAW        |      | CONVERTER_RESOLUTION * DATA_PATH_WIDTH |  Raw and formatted channel data widths  |
+| ADC_DATA_WIDTH |      | CDW_RAW * NUM_CHANNELS                 |                                         |
+| CDW_FMT        |      | DMA_BITS_PER_SAMPLE * DATA_PATH_WIDTH  |                                         |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 ## Instantiations
 
 - i_deframer: ad_ip_jesd204_tpl_adc_deframer
 **Description**
-synchronization logic
+ synchronization logic
 

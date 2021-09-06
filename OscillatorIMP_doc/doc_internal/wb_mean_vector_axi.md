@@ -6,9 +6,11 @@
 ![Diagram](wb_mean_vector_axi.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2019
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2019
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -48,6 +50,5 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 ## Processes
 - write_bloc: ( clk, reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

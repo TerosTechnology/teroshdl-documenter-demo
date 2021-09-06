@@ -6,12 +6,13 @@
 ![Diagram](prim_lc_dec.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Decoder for life cycle control signals with additional
  input buffers.
- 
+
 ## Ports
 
 | Port name   | Direction | Type | Description |

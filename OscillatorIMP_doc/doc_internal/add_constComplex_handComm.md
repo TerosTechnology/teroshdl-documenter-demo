@@ -36,78 +36,48 @@
 | S_AXI_RREADY  | in        | std_logic                                           | Read ready. This signal indicates that the master canaccept the read data and response information.                                                                              |
 | addr_o        | out       | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0)    |                                                                                                                                                                                  |
 | read_en_o     | out       | std_logic                                           |                                                                                                                                                                                  |
-| write_en_o    | out       | std_logic                                           |                                                                                                                                                                                  |
+| write_en_o    | out       | std_logic                                           | ;                                                                                                                                                                                |
 ## Signals
 
-| Name          | Type                                             | Description |
-| ------------- | ------------------------------------------------ | ----------- |
-| axi_awaddr    | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)  |             |
-| axi_awready   | std_logic                                        |             |
-| axi_wready    | std_logic                                        |             |
-| axi_bresp     | std_logic_vector(1 downto 0)                     |             |
-| axi_bvalid    | std_logic                                        |             |
-| axi_araddr    | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)  |             |
-| axi_arready   | std_logic                                        |             |
-| axi_rresp     | std_logic_vector(1 downto 0)                     |             |
-| axi_rvalid    | std_logic                                        |             |
-| slv_reg_rden  | std_logic                                        |             |
-| slv_reg_wren  | std_logic                                        |             |
-| addr_reg      | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |             |
-|  addr_s       | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |             |
-|  write_addr_s | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |             |
-|  read_addr_s  | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |             |
+| Name          | Type                                             | Description                                                                                                                                                                      |
+| ------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| axi_awaddr    | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)  |                                                                                                                                                                                  |
+| axi_awready   | std_logic                                        |                                                                                                                                                                                  |
+| axi_wready    | std_logic                                        |                                                                                                                                                                                  |
+| axi_bresp     | std_logic_vector(1 downto 0)                     |                                                                                                                                                                                  |
+| axi_bvalid    | std_logic                                        |                                                                                                                                                                                  |
+| axi_araddr    | std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0)  |                                                                                                                                                                                  |
+| axi_arready   | std_logic                                        |                                                                                                                                                                                  |
+| axi_rresp     | std_logic_vector(1 downto 0)                     | 	signal axi_rdata	: std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);                                                                                                             |
+| axi_rvalid    | std_logic                                        |                                                                                                                                                                                  |
+| slv_reg_rden  | std_logic                                        | ---------------------------------------------- -- Signals for user logic register space example ------------------------------------------------ -- Number of Slave Registers 4  |
+| slv_reg_wren  | std_logic                                        |                                                                                                                                                                                  |
+| addr_reg      | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |                                                                                                                                                                                  |
+|  addr_s       | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |                                                                                                                                                                                  |
+|  write_addr_s | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |                                                                                                                                                                                  |
+|  read_addr_s  | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |                                                                                                                                                                                  |
 ## Constants
 
-| Name              | Type    | Value                       | Description                                                                                                                                                                                                                            |
-| ----------------- | ------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ADDR_LSB          | integer |  (C_S_AXI_DATA_WIDTH/32)+ 1 | Example-specific design signalslocal parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTHADDR_LSB is used for addressing 32/64 bit registers/memoriesADDR_LSB = 2 for 32 bits (n downto 2)ADDR_LSB = 3 for 64 bits (n downto 3) |
-| OPT_MEM_ADDR_BITS | integer |  1                          |                                                                                                                                                                                                                                        |
+| Name              | Type    | Value                       | Description                                                                                                                                                                                                                                      |
+| ----------------- | ------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ADDR_LSB          | integer |  (C_S_AXI_DATA_WIDTH/32)+ 1 |  Example-specific design signals  local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH  ADDR_LSB is used for addressing 32/64 bit registers/memories  ADDR_LSB = 2 for 32 bits (n downto 2)  ADDR_LSB = 3 for 64 bits (n downto 3)  |
+| OPT_MEM_ADDR_BITS | integer |  1                          |                                                                                                                                                                                                                                                  |
 ## Processes
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement axi_awready generation
-axi_awready is asserted for one S_AXI_ACLK clock cycle when both
-S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
-de-asserted when reset is low.
-
+ Implement axi_awready generation  axi_awready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is  de-asserted when reset is low. 
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement axi_awaddr latching
-This process is used to latch the address when both 
-S_AXI_AWVALID and S_AXI_WVALID are valid. 
-
+ Implement axi_awaddr latching  This process is used to latch the address when both   S_AXI_AWVALID and S_AXI_WVALID are valid.  
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement axi_wready generation
-axi_wready is asserted for one S_AXI_ACLK clock cycle when both
-S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is 
-de-asserted when reset is low. 
-
+ Implement axi_wready generation  axi_wready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is   de-asserted when reset is low.  
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement write response logic generation
-The write response and response valid signals are asserted by the slave 
-when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.  
-This marks the acceptance of address and indicates the status of 
-write transaction.
-
+ Implement write response logic generation  The write response and response valid signals are asserted by the slave   when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.    This marks the acceptance of address and indicates the status of   write transaction. 
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement axi_arready generation
-axi_arready is asserted for one S_AXI_ACLK clock cycle when
-S_AXI_ARVALID is asserted. axi_awready is 
-de-asserted when reset (active low) is asserted. 
-The read address is also latched when S_AXI_ARVALID is 
-asserted. axi_araddr is reset to zero on reset assertion.
-
+ Implement axi_arready generation  axi_arready is asserted for one S_AXI_ACLK clock cycle when  S_AXI_ARVALID is asserted. axi_awready is   de-asserted when reset (active low) is asserted.   The read address is also latched when S_AXI_ARVALID is   asserted. axi_araddr is reset to zero on reset assertion. 
 - unnamed: ( S_AXI_ACLK )
 **Description**
-Implement axi_arvalid generation
-axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both 
-S_AXI_ARVALID and axi_arready are asserted. The slave registers 
-data are available on the axi_rdata bus at this instance. The 
-assertion of axi_rvalid marks the validity of read data on the 
-bus and axi_rresp indicates the status of read transaction.axi_rvalid 
-is deasserted on reset (active low). axi_rresp and axi_rdata are 
-cleared to zero on reset (active low).  
-
+ Implement axi_arvalid generation  axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both   S_AXI_ARVALID and axi_arready are asserted. The slave registers   data are available on the axi_rdata bus at this instance. The   assertion of axi_rvalid marks the validity of read data on the   bus and axi_rresp indicates the status of read transaction.axi_rvalid   is deasserted on reset (active low). axi_rresp and axi_rdata are   cleared to zero on reset (active low).   

@@ -6,17 +6,19 @@
 ![Diagram](wb_prn20b.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/06/11
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/06/11
+-------------------------------------------------------------------------
 ## Generics
 
-| Generic name | Type    | Value | Description                 |
-| ------------ | ------- | ----- | --------------------------- |
-| PRESC_SIZE   | natural | 16    |                             |
-| DFLT_PRESC   | natural | 15    |                             |
-| ADDR_SIZE    | natural | 4     |                             |
-| wb_size      | natural | 16    | Data port size for wishbone |
+| Generic name | Type    | Value | Description                  |
+| ------------ | ------- | ----- | ---------------------------- |
+| PRESC_SIZE   | natural | 16    |                              |
+| DFLT_PRESC   | natural | 15    |                              |
+| ADDR_SIZE    | natural | 4     |                              |
+| wb_size      | natural | 16    |  Data port size for wishbone |
 ## Ports
 
 | Port name     | Direction | Type                                    | Description      |
@@ -45,7 +47,6 @@ Creation date : 2018/06/11
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - unnamed: ( wbs_add, prescaler_s )
 - read_bloc: ( clk )

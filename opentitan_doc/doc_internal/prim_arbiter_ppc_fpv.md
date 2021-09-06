@@ -6,12 +6,13 @@
 ![Diagram](prim_arbiter_ppc_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Testbench module for prim_arbiter_ppc.
  Intended to be used with a formal tool.
- 
+
 ## Generics
 
 | Generic name | Type         | Value     | Description |
@@ -19,7 +20,6 @@ Copyright lowRISC contributors.
 | N            | int unsigned | 8         |             |
 | DW           | int unsigned | 32        |             |
 | EnDataPort   | bit          | 1         |             |
-| EnReqStabA   | bit          | 1         |             |
 | IdxW         | int          | $clog2(N) |             |
 ## Ports
 
@@ -27,6 +27,7 @@ Copyright lowRISC contributors.
 | --------- | --------- | ---------- | ----------- |
 | clk_i     | input     |            |             |
 | rst_ni    | input     |            |             |
+| req_chk_i | input     |            |             |
 | req_i     | input     | [ N-1:0]   |             |
 | data_i    | input     | [DW-1:0]   |             |
 | gnt_o     | output    | [ N-1:0]   |             |

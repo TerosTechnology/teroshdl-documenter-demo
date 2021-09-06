@@ -6,8 +6,10 @@
 ![Diagram](ptp_perout.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name   | Type | Value    | Description |
@@ -24,22 +26,22 @@ Language: Verilog 2001
 | OUT_WIDTH_FNS  |      | 16'h0000 |             |
 ## Ports
 
-| Port name          | Direction | Type        | Description |
-| ------------------ | --------- | ----------- | ----------- |
-| clk                | input     | wire        |             |
-| rst                | input     | wire        |             |
-| input_ts_96        | input     | wire [95:0] |             |
-| input_ts_step      | input     | wire        |             |
-| enable             | input     | wire        |             |
-| input_start        | input     | wire [95:0] |             |
-| input_start_valid  | input     | wire        |             |
-| input_period       | input     | wire [95:0] |             |
-| input_period_valid | input     | wire        |             |
-| input_width        | input     | wire [95:0] |             |
-| input_width_valid  | input     | wire        |             |
-| locked             | output    | wire        |             |
-| error              | output    | wire        |             |
-| output_pulse       | output    | wire        |             |
+| Port name          | Direction | Type        | Description                                    |
+| ------------------ | --------- | ----------- | ---------------------------------------------- |
+| clk                | input     | wire        |                                                |
+| rst                | input     | wire        |                                                |
+| input_ts_96        | input     | wire [95:0] |      * Timestamp input from PTP clock      */  |
+| input_ts_step      | input     | wire        |                                                |
+| enable             | input     | wire        |      * Control      */                         |
+| input_start        | input     | wire [95:0] |                                                |
+| input_start_valid  | input     | wire        |                                                |
+| input_period       | input     | wire [95:0] |                                                |
+| input_period_valid | input     | wire        |                                                |
+| input_width        | input     | wire [95:0] |                                                |
+| input_width_valid  | input     | wire        |                                                |
+| locked             | output    | wire        |      * Status      */                          |
+| error              | output    | wire        |                                                |
+| output_pulse       | output    | wire        |      * Pulse output      */                    |
 ## Signals
 
 | Name               | Type       | Description |
@@ -98,4 +100,6 @@ Language: Verilog 2001
 | STATE_WAIT_EDGE     | [2:0] | 3'd5  |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

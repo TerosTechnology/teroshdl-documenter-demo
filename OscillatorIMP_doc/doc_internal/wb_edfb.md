@@ -6,11 +6,11 @@
 ![Diagram](wb_edfb.svg "Diagram")
 ## Generics
 
-| Generic name | Type    | Value | Description                 |
-| ------------ | ------- | ----- | --------------------------- |
-| id           | natural | 1     |                             |
-| POINT_POS    | natural | 16    |                             |
-| wb_size      | natural | 16    | Data port size for wishbone |
+| Generic name | Type    | Value | Description                  |
+| ------------ | ------- | ----- | ---------------------------- |
+| id           | natural | 1     |                              |
+| POINT_POS    | natural | 16    |                              |
+| wb_size      | natural | 16    |  Data port size for wishbone |
 ## Ports
 
 | Port name      | Direction | Type                                  | Description      |
@@ -39,6 +39,5 @@
 ## Processes
 - write_bloc: ( clk, reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

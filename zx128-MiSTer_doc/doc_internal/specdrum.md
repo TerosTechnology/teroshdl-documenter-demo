@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](specdrum.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Ports
 
 | Port name | Direction | Type      | Description |
@@ -17,3 +21,6 @@
 | a         | input     | wire[7:4] |             |
 ## Processes
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
+**Description**
+------------------------------------------------------------------------------------------------- 

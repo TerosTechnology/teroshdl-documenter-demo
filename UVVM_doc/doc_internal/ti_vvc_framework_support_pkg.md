@@ -3,11 +3,11 @@
 - **File**: ti_vvc_framework_support_pkg.vhd
 ## Signals
 
-| Name                                 | Type                                              | Description            |
-| ------------------------------------ | ------------------------------------------------- | ---------------------- |
-| VVC_BROADCAST                        | std_logic                                         |                        |
-| global_trigger_vvc_activity_register | std_logic                                         |                        |
-| global_awaiting_completion           | std_logic_vector(C_MAX_NUM_SEQUENCERS-1 downto 0) | ACK on global triggers |
+| Name                                 | Type                                              | Description                                                                                                                                                                                                        |
+| ------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| VVC_BROADCAST                        | std_logic                                         |                                                                                                                                                                                                                    |
+| global_trigger_vvc_activity_register | std_logic                                         | ----------------------------------------------------------------------  Common signals for triggering VVC activity in central VVC register ----------------------------------------------------------------------  |
+| global_awaiting_completion           | std_logic_vector(C_MAX_NUM_SEQUENCERS-1 downto 0) |  ACK on global triggers                                                                                                                                                                                            |
 ## Constants
 
 | Name                                          | Type                                                                                                                                                                       | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
@@ -19,68 +19,133 @@
 | C_DUT_IF_FIELD_CONFIG_DIRECTION_ARRAY_DEFAULT | t_dut_if_field_config_direction_array(t_direction'low to t_direction'high)(0 to 0)(dut_address(0 downto 0),<br><span style="padding-left:20px"> field_description(1 to 7)) |  (others => (others => C_DUT_IF_FIELD_CONFIG_DEFAULT))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |             |
 ## Types
 
-| Name                                  | Type                                                                                                                                                                                                                                                                                                                                               | Description                                              |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| t_immediate_or_queued                 | (NO_command_type,<br><span style="padding-left:20px"> IMMEDIATE,<br><span style="padding-left:20px"> QUEUED)                                                                                                                                                                                                                                       |                                                          |
-| t_flag_record                         |                                                                                                                                                                                                                                                                                                                                                    |                                                          |
-| t_uvvm_state                          | (IDLE,<br><span style="padding-left:20px"> PHASE_A,<br><span style="padding-left:20px"> PHASE_B,<br><span style="padding-left:20px"> INIT_COMPLETED)                                                                                                                                                                                               |                                                          |
-| t_lastness                            | (LAST,<br><span style="padding-left:20px"> NOT_LAST)                                                                                                                                                                                                                                                                                               |                                                          |
-| t_broadcastable_cmd                   | (NO_CMD,<br><span style="padding-left:20px"> ENABLE_LOG_MSG,<br><span style="padding-left:20px"> DISABLE_LOG_MSG,<br><span style="padding-left:20px"> FLUSH_COMMAND_QUEUE,<br><span style="padding-left:20px"> INSERT_DELAY,<br><span style="padding-left:20px"> AWAIT_COMPLETION,<br><span style="padding-left:20px"> TERMINATE_CURRENT_COMMAND)  |                                                          |
-| t_vvc_broadcast_cmd_record            |                                                                                                                                                                                                                                                                                                                                                    |                                                          |
-| t_vvc_operation                       | (TRANSMIT,<br><span style="padding-left:20px"> RECEIVE)                                                                                                                                                                                                                                                                                            | Type of operation to be executed by the VVC              |
-| t_direction                           | (TRANSMIT,<br><span style="padding-left:20px"> RECEIVE)                                                                                                                                                                                                                                                                                            | Direction of the interface (used by the IF field config) |
-| t_field_position                      | (FIRST,<br><span style="padding-left:20px"> MIDDLE,<br><span style="padding-left:20px"> LAST,<br><span style="padding-left:20px"> FIRST_AND_LAST)                                                                                                                                                                                                  | Position of a field within a packet                      |
-| t_hvvc_to_bridge                      |                                                                                                                                                                                                                                                                                                                                                    |                                                          |
-| t_bridge_to_hvvc                      |                                                                                                                                                                                                                                                                                                                                                    |                                                          |
-| t_dut_if_field_config                 |                                                                                                                                                                                                                                                                                                                                                    |                                                          |
-| t_dut_if_field_config_array           | array (natural range <>) of t_dut_if_field_config                                                                                                                                                                                                                                                                                                  |                                                          |
-| t_dut_if_field_config_direction_array | array (t_direction range <>) of t_dut_if_field_config_array                                                                                                                                                                                                                                                                                        |                                                          |
+| Name                                  | Type                                                                                                                                                                                                                                                                                                                                               | Description                                                                                                                                                                   |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| t_immediate_or_queued                 | (NO_command_type,<br><span style="padding-left:20px"> IMMEDIATE,<br><span style="padding-left:20px"> QUEUED)                                                                                                                                                                                                                                       | ----------------------------------------------------------------------  Common support types for UVVM ----------------------------------------------------------------------  |
+| t_flag_record                         |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                               |
+| t_uvvm_state                          | (IDLE,<br><span style="padding-left:20px"> PHASE_A,<br><span style="padding-left:20px"> PHASE_B,<br><span style="padding-left:20px"> INIT_COMPLETED)                                                                                                                                                                                               |                                                                                                                                                                               |
+| t_lastness                            | (LAST,<br><span style="padding-left:20px"> NOT_LAST)                                                                                                                                                                                                                                                                                               |                                                                                                                                                                               |
+| t_broadcastable_cmd                   | (NO_CMD,<br><span style="padding-left:20px"> ENABLE_LOG_MSG,<br><span style="padding-left:20px"> DISABLE_LOG_MSG,<br><span style="padding-left:20px"> FLUSH_COMMAND_QUEUE,<br><span style="padding-left:20px"> INSERT_DELAY,<br><span style="padding-left:20px"> AWAIT_COMPLETION,<br><span style="padding-left:20px"> TERMINATE_CURRENT_COMMAND)  |                                                                                                                                                                               |
+| t_vvc_broadcast_cmd_record            |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                               |
+| t_vvc_operation                       | (TRANSMIT,<br><span style="padding-left:20px"> RECEIVE)                                                                                                                                                                                                                                                                                            |  Type of operation to be executed by the VVC                                                                                                                                  |
+| t_direction                           | (TRANSMIT,<br><span style="padding-left:20px"> RECEIVE)                                                                                                                                                                                                                                                                                            |  Direction of the interface (used by the IF field config)                                                                                                                     |
+| t_field_position                      | (FIRST,<br><span style="padding-left:20px"> MIDDLE,<br><span style="padding-left:20px"> LAST,<br><span style="padding-left:20px"> FIRST_AND_LAST)                                                                                                                                                                                                  |  Position of a field within a packet                                                                                                                                          |
+| t_hvvc_to_bridge                      |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                               |
+| t_bridge_to_hvvc                      |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                               |
+| t_dut_if_field_config                 |                                                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                               |
+| t_dut_if_field_config_array           | array (natural range <>) of t_dut_if_field_config                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                               |
+| t_dut_if_field_config_direction_array | array (t_direction range <>) of t_dut_if_field_config_array                                                                                                                                                                                                                                                                                        |                                                                                                                                                                               |
 ## Functions
 - flag_handler <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font>
 **Description**
-Flag handler is a general flag/semaphore handling mechanism between two separate processes/threadsThe idea is to allow one process to set a flag and another to reset it. The flag may then be used by both - or othersMay be used for a message from process 1 to process 2 with acknowledge; - like do-something & done, or valid & ack
+-----------------------------------------
+ flag_handler
+-----------------------------------------
+ Flag handler is a general flag/semaphore handling mechanism between two separate processes/threads
+ The idea is to allow one process to set a flag and another to reset it. The flag may then be used by both - or others
+ May be used for a message from process 1 to process 2 with acknowledge; - like do-something & done, or valid & ack
+
 - set_flag <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font>
 **Description**
-Sets reset and is_active to 'Z' and pulses set_flag
+-----------------------------------------
+ set_flag
+-----------------------------------------
+ Sets reset and is_active to 'Z' and pulses set_flag
+
 - reset_flag <font id="function_arguments">( signal flag : inout t_flag_record ) </font> <font id="function_return">return ()</font>
 **Description**
-Sets set and is_active to 'Z' and pulses reset_flag
+-----------------------------------------
+ reset_flag
+-----------------------------------------
+ Sets set and is_active to 'Z' and pulses reset_flag
+
 - await_uvvm_initialization <font id="function_arguments">( constant dummy : in t_void ) </font> <font id="function_return">return ()</font>
 **Description**
-Waits until uvvm has been initialized
+-----------------------------------------
+ await_uvvm_initialization
+-----------------------------------------
+ Waits until uvvm has been initialized
+
 - enable_log_msg <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness := NON_QUIET;<br><span style="padding-left:20px"> constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Enables a log message for all VVCs
+***********************************************
+ BROADCAST COMMANDS
+***********************************************
+-----------------------------------------
+ enable_log_msg (Broadcast)
+-----------------------------------------
+ Enables a log message for all VVCs
+
 - disable_log_msg <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness := NON_QUIET;<br><span style="padding-left:20px"> constant scope              : in string      := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Disables a log message for all VVCs
+-----------------------------------------
+ disable_log_msg (Broadcast)
+-----------------------------------------
+ Disables a log message for all VVCs
+
 - flush_command_queue <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string := "";<br><span style="padding-left:20px"> constant scope              : in string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Flushes the command queue for all VVCs
+-----------------------------------------
+ flush_command_queue (Broadcast)
+-----------------------------------------
+ Flushes the command queue for all VVCs
+
 - insert_delay <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant delay              : in natural;<br><span style="padding-left:20px">  -- in clock cycles constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Inserts delay into all VVCs (specified as number of clock cycles)
+-----------------------------------------
+ insert_delay (Broadcast)
+-----------------------------------------
+ Inserts delay into all VVCs (specified as number of clock cycles)
+
 - insert_delay <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant delay              : in time;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Inserts delay into all VVCs (specified as time)
+-----------------------------------------
+ insert_delay (Broadcast)
+-----------------------------------------
+ Inserts delay into all VVCs (specified as time)
+
 - await_completion <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant timeout            : in time;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Wait for all VVCs to finish (specified as time)
+-----------------------------------------
+ await_completion (Broadcast)
+-----------------------------------------
+ Wait for all VVCs to finish (specified as time)
+
 - terminate_current_command <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-terminates all current tasks
+-----------------------------------------
+ terminate_current_command (Broadcast)
+-----------------------------------------
+ terminates all current tasks
+
 - terminate_all_commands <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant msg                : in string  := "";<br><span style="padding-left:20px"> constant scope              : in string  := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-terminates all tasks
+-----------------------------------------
+ terminate_all_commands (Broadcast)
+-----------------------------------------
+ terminates all tasks
+
 - transmit_broadcast <font id="function_arguments">( signal VVC_BROADCAST        : inout std_logic;<br><span style="padding-left:20px"> constant operation          : in t_broadcastable_cmd;<br><span style="padding-left:20px"> constant proc_call          : in string;<br><span style="padding-left:20px"> constant msg_id             : in t_msg_id;<br><span style="padding-left:20px"> constant msg                : in string       := "";<br><span style="padding-left:20px"> constant quietness          : in t_quietness  := NON_QUIET;<br><span style="padding-left:20px"> constant delay              : in time         := 0 ns;<br><span style="padding-left:20px"> constant delay_int          : in integer      := -1;<br><span style="padding-left:20px"> constant timeout            : in time         := std.env.resolution_limit;<br><span style="padding-left:20px"> constant scope              : in string       := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Common broadcast transmission routine
+-----------------------------------------
+ transmit_broadcast
+-----------------------------------------
+ Common broadcast transmission routine
+
 - await_completion <font id="function_arguments">( constant vvc_select    : in    t_vvc_select;<br><span style="padding-left:20px"> variable vvc_info_list : inout t_vvc_info_list;<br><span style="padding-left:20px"> constant timeout       : in    time;<br><span style="padding-left:20px"> constant list_action   : in    t_list_action := CLEAR_LIST;<br><span style="padding-left:20px"> constant msg           : in    string := "";<br><span style="padding-left:20px"> constant scope         : in    string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Awaits completion of any VVC in the list or until timeout.
+-----------------------------------------
+ await_completion
+-----------------------------------------
+ Awaits completion of any VVC in the list or until timeout.
+
 - await_completion <font id="function_arguments">( constant vvc_select  : in    t_vvc_select;<br><span style="padding-left:20px"> constant timeout     : in    time;<br><span style="padding-left:20px"> constant list_action : in    t_list_action := CLEAR_LIST;<br><span style="padding-left:20px"> constant msg         : in    string := "";<br><span style="padding-left:20px"> constant scope       : in    string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return ()</font>
 **Description**
-Awaits completion of all the VVCs in the activity register or until timeout.
+ Awaits completion of all the VVCs in the activity register or until timeout.
+
 - activity_watchdog <font id="function_arguments">( constant num_exp_vvc  : natural;<br><span style="padding-left:20px"> constant timeout      : time;<br><span style="padding-left:20px"> constant alert_level  : t_alert_level := TB_ERROR;<br><span style="padding-left:20px"> constant msg          : string := "Activity_Watchdog" ) </font> <font id="function_return">return ()</font>
 **Description**
-============================================================================Activity Watchdog============================================================================
+ ============================================================================
+ Activity Watchdog
+ ============================================================================
+

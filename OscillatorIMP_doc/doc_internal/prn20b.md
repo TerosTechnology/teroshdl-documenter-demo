@@ -6,9 +6,11 @@
 ![Diagram](prn20b.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/06/11
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/06/11
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value | Description                                    |
@@ -76,5 +78,5 @@ Creation date : 2018/06/11
 - wb_inst: work.wb_prn20b
 - handle_comm: work.prn20b_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

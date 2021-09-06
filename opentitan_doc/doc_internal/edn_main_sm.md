@@ -6,12 +6,14 @@
 ![Diagram](edn_main_sm.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Description: edn csrng application request state machine module
+
    does hardware-based csrng app interface command requests
- 
+
 ## Ports
 
 | Port name              | Direction | Type | Description |
@@ -38,9 +40,9 @@ Copyright lowRISC contributors.
 | state_raw_q | logic [StateWidth-1:0] |             |
 ## Constants
 
-| Name       | Type | Value | Description |
-| ---------- | ---- | ----- | ----------- |
-| StateWidth | int  | 6     |             |
+| Name       | Type | Value | Description                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | ---- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| StateWidth | int  | 6     |  Encoding generated with:  $ ./util/design/sparse-fsm-encode.py -d 3 -m 8 -n 6 \       -s 3370065314 --language=sv<br>  Hamming distance histogram:<br>   0: --   1: --   2: --   3: |||||||||||||||||||| (57.14%)   4: ||||||||||||||| (42.86%)   5: --   6: --<br>  Minimum Hamming distance: 3  Maximum Hamming distance: 4  Minimum Hamming weight: 1  Maximum Hamming weight: 5<br>  |
 ## Types
 
 | Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description |
@@ -48,10 +50,11 @@ Copyright lowRISC contributors.
 | state_e | enum logic [StateWidth-1:0] {<br><span style="padding-left:20px">     Idle          = 6'b111011,<br><span style="padding-left:20px">      AckWait       = 6'b010111,<br><span style="padding-left:20px">      Dispatch      = 6'b011100,<br><span style="padding-left:20px">      CaptGenCnt    = 6'b110000,<br><span style="padding-left:20px">      SendGenCmd    = 6'b001001,<br><span style="padding-left:20px">      CaptReseedCnt = 6'b101110,<br><span style="padding-left:20px">      SendReseedCmd = 6'b000010,<br><span style="padding-left:20px">      Error         = 6'b100101     } |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 ## Instantiations
 
 - u_state_regs: prim_flop
 **Description**
-This primitive is used to place a size-only constraint on the
-flops in order to prevent FSM state encoding optimizations.
+ This primitive is used to place a size-only constraint on the
+ flops in order to prevent FSM state encoding optimizations.
 

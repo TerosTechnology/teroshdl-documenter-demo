@@ -30,9 +30,9 @@
 - lt_sz_inst: work.mixerComplex_sin
 - eq_sz_inst: work.mixerComplex_sin
 **Description**
-16x16 -1 => 31 => 16
+ 16x16 -1 => 31 => 16
 
 - gt_sz_inst: work.mixerComplex_sin
 **Description**
-16x16 -1 => 31 => 16
+ 16x16 -1 => 31 => 16
 

@@ -6,16 +6,21 @@
 ![Diagram](Pgp3Rx.svg "Diagram")
 ## Description
 
-Title      : PGPv3: https://confluence.slac.stanford.edu/x/OndODQ
-Company    : SLAC National Accelerator Laboratory
-Description: PGPv3 Receive Block
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv3: https://confluence.slac.stanford.edu/x/OndODQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: PGPv3 Receive Block
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name      | Type                  | Value | Description |
@@ -32,7 +37,7 @@ the terms contained in the LICENSE.txt file.
 | pgpRxIn        | in        | Pgp3RxInType                              |                               |
 | pgpRxOut       | out       | Pgp3RxOutType                             |                               |
 | pgpRxMasters   | out       | AxiStreamMasterArray(NUM_VC_G-1 downto 0) |                               |
-| pgpRxCtrl      | in        | AxiStreamCtrlArray(NUM_VC_G-1 downto 0)   | Unused                        |
+| pgpRxCtrl      | in        | AxiStreamCtrlArray(NUM_VC_G-1 downto 0)   |  Unused                       |
 | remRxFifoCtrl  | out       | AxiStreamCtrlArray(NUM_VC_G-1 downto 0)   | Status of local receive fifos |
 | remRxLinkReady | out       | sl                                        |                               |
 | locRxLinkReady | out       | sl                                        |                               |
@@ -79,26 +84,26 @@ the terms contained in the LICENSE.txt file.
 
 - U_Pgp3RxGearboxAligner_1: surf.Pgp3RxGearboxAligner
 **Description**
-Gearbox aligner
+ Gearbox aligner
 
 - U_Scrambler_1: surf.Scrambler
 - U_Pgp3RxEb_1: surf.Pgp3RxEb
 **Description**
-[out]
-Elastic Buffer
+ [out]
+ Elastic Buffer
 
 - U_Pgp3RxProtocol_1: surf.Pgp3RxProtocol
 **Description**
-[out]
-Main RX protocol logic
+ [out]
+ Main RX protocol logic
 
 - U_AxiStreamDepacketizer2_1: surf.AxiStreamDepacketizer2
 **Description**
-[in]
-Depacketize the RX data frames
+ [in]
+ Depacketize the RX data frames
 
 - U_AxiStreamDeMux_1: surf.AxiStreamDeMux
 **Description**
-[in]
-Demultiplex the depacketized streams
+ [in]
+ Demultiplex the depacketized streams
 

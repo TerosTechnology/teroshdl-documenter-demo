@@ -6,10 +6,11 @@
 ![Diagram](axi_lite_master.svg "Diagram")
 ## Description
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this file,
-You can obtain one at http://mozilla.org/MPL/2.0/.
-Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ You can obtain one at http://mozilla.org/MPL/2.0/.
+
+ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 ## Generics
 
 | Generic name | Type         | Value | Description |
@@ -47,9 +48,7 @@ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
 - main: (  )
 - bus_process: (  )
 **Description**
-Use separate process to always align to rising edge of clock
-
+ Use separate process to always align to rising edge of clock 
 - read_reply: (  )
 **Description**
-Reply in separate process do not destroy alignment with the clock
-
+ Reply in separate process do not destroy alignment with the clock 

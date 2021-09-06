@@ -6,23 +6,24 @@
 ![Diagram](avalon_master.svg "Diagram")
 ## Description
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this file,
-You can obtain one at http://mozilla.org/MPL/2.0/.
-Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
-Author Slawomir Siluk slaweksiluk@gazeta.pl
-Avalon Memory Mapped Master BFM
-TODO:
-- handle byteenable in bursts
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ You can obtain one at http://mozilla.org/MPL/2.0/.
+
+ Copyright (c) 2014-2021, Lars Asplund lars.anders.asplund@gmail.com
+ Author Slawomir Siluk slaweksiluk@gazeta.pl
+ Avalon Memory Mapped Master BFM
+ TODO:
+ - handle byteenable in bursts
 ## Generics
 
-| Generic name           | Type                  | Value | Description                                                             |
-| ---------------------- | --------------------- | ----- | ----------------------------------------------------------------------- |
-| bus_handle             | bus_master_t          |       |                                                                         |
-| use_readdatavalid      | boolean               | true  |                                                                         |
-| fixed_read_latency     | natural               | 1     | (bus cycles).  This parameter is ignored when use_readdatavalid is true |
-| write_high_probability | real range 0.0 to 1.0 | 1.0   |                                                                         |
-| read_high_probability  | real range 0.0 to 1.0 | 1.0   |                                                                         |
+| Generic name           | Type                  | Value | Description                                                              |
+| ---------------------- | --------------------- | ----- | ------------------------------------------------------------------------ |
+| bus_handle             | bus_master_t          |       |                                                                          |
+| use_readdatavalid      | boolean               | true  |                                                                          |
+| fixed_read_latency     | natural               | 1     |  (bus cycles).  This parameter is ignored when use_readdatavalid is true |
+| write_high_probability | real range 0.0 to 1.0 | 1.0   |                                                                          |
+| read_high_probability  | real range 0.0 to 1.0 | 1.0   |                                                                          |
 ## Ports
 
 | Port name     | Direction | Type             | Description |

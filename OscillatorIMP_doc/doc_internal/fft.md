@@ -12,7 +12,7 @@
 | USE_FIRST_BUFF       | boolean | true  |                                                |
 | USE_SEC_BUFF         | boolean | true  |                                                |
 | LOG_2_N_FFT          | natural | 11    |                                                |
-| SHIFT_VAL            | natural | 16    |                                                |
+| SHIFT_VAL            | natural | 16    | OEFF_SIZE : natural := 16;                     |
 | DATA_SIZE            | natural | 32    |                                                |
 | DATA_IN_SIZE         | natural | 16    |                                                |
 | C_S00_AXI_DATA_WIDTH | integer | 32    | Parameters of Axi Slave Bus Interface S00_AXI  |
@@ -87,14 +87,14 @@
 
 - fft_axi_inst: work.fft_axi
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 - fir_top_inst: work.fft_top_logic
 **Description**
-Add user logic here
+ Add user logic here
 
 - handle_comm: work.fft_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 - coeff_re_inst: work.fft_ram_coeff

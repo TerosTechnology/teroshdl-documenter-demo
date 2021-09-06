@@ -6,18 +6,22 @@
 ![Diagram](Ad9249ReadoutGroup.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-ADC Readout Controller
-Receives ADC Data from an AD9592 chip.
-Designed specifically for Xilinx Ultrascale series FPGAs
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ ADC Readout Controller
+ Receives ADC Data from an AD9592 chip.
+ Designed specifically for Xilinx Ultrascale series FPGAs
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name      | Type                 | Value           | Description |
@@ -43,8 +47,8 @@ the terms contained in the LICENSE.txt file.
 | axilReadMaster  | in        | AxiLiteReadMasterType                           |                                                                 |
 | axilReadSlave   | out       | AxiLiteReadSlaveType                            |                                                                 |
 | adcClkRst       | in        | sl                                              | Reset for adc deserializer (axilClk domain)                     |
-| adcBitClkIn     | in        | sl                                              | 350.0 MHz                                                       |
-| adcBitClkDiv4In | in        | sl                                              |  87.5 MHz                                                       |
+| adcBitClkIn     | in        | sl                                              |  350.0 MHz                                                      |
+| adcBitClkDiv4In | in        | sl                                              |   87.5 MHz                                                      |
 | adcBitRstIn     | in        | sl                                              |                                                                 |
 | adcBitRstDiv4In | in        | sl                                              |                                                                 |
 | adcSerial       | in        | Ad9249SerialGroupType                           | Serial Data from ADC                                            |
@@ -53,34 +57,34 @@ the terms contained in the LICENSE.txt file.
 | adcReady        | in        | slv(NUM_CHANNELS_G-1 downto 0)                  | optional ready to allow evenout samples readout in adcStreamClk |
 ## Signals
 
-| Name            | Type                                  | Description   |
-| --------------- | ------------------------------------- | ------------- |
-| lockedSync      | sl                                    |               |
-| lockedFallCount | slv(15 downto 0)                      |               |
-| axilR           | AxilRegType                           |               |
-| axilRin         | AxilRegType                           |               |
-| adcR            | AdcRegType                            |               |
-| adcRin          | AdcRegType                            |               |
-| adcDataValid    | slv(NUM_CHANNELS_G-1 downto 0)        |               |
-| adcFrameValid   | sl                                    |               |
-| adcDclk         | sl                                    | Local Signals |
-| adcBitClk       | sl                                    |               |
-| adcBitClkDiv4   | sl                                    |               |
-| adcBitRstDiv4   | sl                                    |               |
-| adcBitRst       | sl                                    |               |
-| adcClkRstSync   | sl                                    |               |
-| adcFrame        | slv(13 downto 0)                      |               |
-| adcFrameSync    | slv(13 downto 0)                      |               |
-| adcData         | Slv14Array(NUM_CHANNELS_G-1 downto 0) |               |
-| curDelayFrame   | slv(8 downto 0)                       |               |
-| curDelayData    | slv9Array(NUM_CHANNELS_G-1 downto 0)  |               |
-| fifoDataValid   | slv(NUM_CHANNELS_G-1 downto 0)        |               |
-| fifoDataRdEn    | slv(NUM_CHANNELS_G-1 downto 0)        |               |
-| debugDataValid  | slv(NUM_CHANNELS_G-1 downto 0)        |               |
-| debugData       | slv16Array(NUM_CHANNELS_G-1 downto 0) |               |
-| frameDelay      | slv(8 downto 0)                       |               |
-| frameDelaySet   | sl                                    |               |
-| invertSync      | sl                                    |               |
+| Name            | Type                                  | Description     |
+| --------------- | ------------------------------------- | --------------- |
+| lockedSync      | sl                                    |                 |
+| lockedFallCount | slv(15 downto 0)                      |                 |
+| axilR           | AxilRegType                           |                 |
+| axilRin         | AxilRegType                           |                 |
+| adcR            | AdcRegType                            |                 |
+| adcRin          | AdcRegType                            |                 |
+| adcDataValid    | slv(NUM_CHANNELS_G-1 downto 0)        |                 |
+| adcFrameValid   | sl                                    |                 |
+| adcDclk         | sl                                    |  Local Signals  |
+| adcBitClk       | sl                                    |                 |
+| adcBitClkDiv4   | sl                                    |                 |
+| adcBitRstDiv4   | sl                                    |                 |
+| adcBitRst       | sl                                    |                 |
+| adcClkRstSync   | sl                                    |                 |
+| adcFrame        | slv(13 downto 0)                      |                 |
+| adcFrameSync    | slv(13 downto 0)                      |                 |
+| adcData         | Slv14Array(NUM_CHANNELS_G-1 downto 0) |                 |
+| curDelayFrame   | slv(8 downto 0)                       |                 |
+| curDelayData    | slv9Array(NUM_CHANNELS_G-1 downto 0)  |                 |
+| fifoDataValid   | slv(NUM_CHANNELS_G-1 downto 0)        |                 |
+| fifoDataRdEn    | slv(NUM_CHANNELS_G-1 downto 0)        |                 |
+| debugDataValid  | slv(NUM_CHANNELS_G-1 downto 0)        |                 |
+| debugData       | slv16Array(NUM_CHANNELS_G-1 downto 0) |                 |
+| frameDelay      | slv(8 downto 0)                       |                 |
+| frameDelaySet   | sl                                    |                 |
+| invertSync      | sl                                    |                 |
 ## Constants
 
 | Name            | Type             | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Description |
@@ -90,21 +94,19 @@ the terms contained in the LICENSE.txt file.
 | ADC_REG_INIT_C  | AdcRegType       |  (       slip          => '0',<br><span style="padding-left:20px">       count         => (others => '0'),<br><span style="padding-left:20px">       --loadDelay      => '0',<br><span style="padding-left:20px">       --delayValue     => (others => '0'),<br><span style="padding-left:20px">       locked        => '0',<br><span style="padding-left:20px">       fifoWrData    => (others => (others => '0')),<br><span style="padding-left:20px">       fifoWrDataEn  => (others => '0')    )                                                                                                                                                                                                                                                                |             |
 ## Types
 
-| Name        | Type | Description |
-| ----------- | ---- | ----------- |
-| AxilRegType |      |             |
-| AdcRegType  |      |             |
+| Name        | Type | Description                                                                                                                                                                                                                     |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AxilRegType |      | -----------------------------------------------------------------------------------------------  AXIL Registers -----------------------------------------------------------------------------------------------                 |
+| AdcRegType  |      | -----------------------------------------------------------------------------------------------  ADC Readout Clocked Registers -----------------------------------------------------------------------------------------------  |
 ## Processes
 - axilComb: ( adcFrameSync, axilR, axilReadMaster, axilRst, axilWriteMaster, curDelayData,
                        curDelayFrame, debugData, debugDataValid, lockedFallCount, lockedSync, adcClkRst )
 **Description**
-AXIL Interface
-
+-----------------------------------------------------------------------------------------------  AXIL Interface ----------------------------------------------------------------------------------------------- 
 - axilSeq: ( axilClk )
 - adcComb: ( adcData, adcDataValid, adcFrame, adcFrameValid, adcR, invertSync )
 **Description**
-ADC Bit Clocked Logic
-
+-----------------------------------------------------------------------------------------------  ADC Bit Clocked Logic ----------------------------------------------------------------------------------------------- 
 - adcSeq: ( adcBitClkDiv4 )
 ## Instantiations
 
@@ -115,7 +117,9 @@ ADC Bit Clocked Logic
 - AdcClk_I_Ibufds: IBUFDS
 - U_FRAME_DESERIALIZER: surf.Ad9249Deserializer
 **Description**
-Deserializers
+-----------------------------------------------------------------------------------------------
+ Deserializers
+-----------------------------------------------------------------------------------------------
 
 - U_FrmDlyFifo: surf.SynchronizerFifo
 - RstSync_1: surf.RstSync

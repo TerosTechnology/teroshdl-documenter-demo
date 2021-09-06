@@ -6,9 +6,11 @@
 ![Diagram](axiStreamToComplex.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2016/09/22
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2016/09/22
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

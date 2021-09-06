@@ -6,18 +6,20 @@
 ![Diagram](pidv3_axi_comm.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2019/04/20
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2019/04/20
+-------------------------------------------------------------------------
 ## Generics
 
-| Generic name  | Type    | Value | Description    |
-| ------------- | ------- | ----- | -------------- |
-| P_SIZE        | integer | 14    |                |
-| I_SIZE        | integer | 14    |                |
-| D_SIZE        | integer | 14    |                |
-| SETPOINT_SIZE | natural | 32    |                |
-| BUS_SIZE      | natural | 32    | Data port size |
+| Generic name  | Type    | Value | Description     |
+| ------------- | ------- | ----- | --------------- |
+| P_SIZE        | integer | 14    |                 |
+| I_SIZE        | integer | 14    |                 |
+| D_SIZE        | integer | 14    |                 |
+| SETPOINT_SIZE | natural | 32    |                 |
+| BUS_SIZE      | natural | 32    |  Data port size |
 ## Ports
 
 | Port name   | Direction | Type                                       | Description    |
@@ -63,7 +65,6 @@ Creation date : 2019/04/20
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - read_async: ( addr_i, kp_s, ki_s, kd_s, setpoint_s, sign_s, is_input_s )
 - read_bloc: ( clk )

@@ -6,8 +6,8 @@
 ![Diagram](jt49_eg.svg "Diagram")
 ## Description
 
- Th
- 
+  Th
+
 ## Ports
 
 | Port name   | Direction | Type      | Description                                  |
@@ -39,5 +39,8 @@
 | rst_clr     | reg       |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 - unnamed: ( @( posedge clk, negedge rst_n ) )
+  - **Type:** always

@@ -6,8 +6,8 @@
 ![Diagram](jt49_noise.svg "Diagram")
 ## Description
 
- Th
- 
+  Th
+
 ## Ports
 
 | Port name | Direction | Type      | Description |
@@ -29,7 +29,9 @@
 | noise_up    | wire      |             |
 ## Processes
 - unnamed: ( @(posedge clk ) )
+  - **Type:** always
 - unnamed: ( @( posedge clk, negedge rst_n ) )
+  - **Type:** always
 ## Instantiations
 
 - u_div: jt49_div

@@ -6,15 +6,19 @@
 ![Diagram](IpV4EngineDeMux.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: IPv4 AXIS DEMUX module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: IPv4 AXIS DEMUX module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -23,17 +27,17 @@ the terms contained in the LICENSE.txt file.
 | VLAN_G       | boolean | false |             |
 ## Ports
 
-| Port name    | Direction | Type                | Description               |
-| ------------ | --------- | ------------------- | ------------------------- |
-| localMac     | in        | slv(47 downto 0)    |  big-Endian configuration |
-| obMacMaster  | in        | AxiStreamMasterType | Slave                     |
-| obMacSlave   | out       | AxiStreamSlaveType  |                           |
-| ibArpMaster  | out       | AxiStreamMasterType | Masters                   |
-| ibArpSlave   | in        | AxiStreamSlaveType  |                           |
-| ibIpv4Master | out       | AxiStreamMasterType |                           |
-| ibIpv4Slave  | in        | AxiStreamSlaveType  |                           |
-| clk          | in        | sl                  | Clock and Reset           |
-| rst          | in        | sl                  |                           |
+| Port name    | Direction | Type                | Description                |
+| ------------ | --------- | ------------------- | -------------------------- |
+| localMac     | in        | slv(47 downto 0)    |   big-Endian configuration |
+| obMacMaster  | in        | AxiStreamMasterType | Slave                      |
+| obMacSlave   | out       | AxiStreamSlaveType  |                            |
+| ibArpMaster  | out       | AxiStreamMasterType | Masters                    |
+| ibArpSlave   | in        | AxiStreamSlaveType  |                            |
+| ibIpv4Master | out       | AxiStreamMasterType |                            |
+| ibIpv4Slave  | in        | AxiStreamSlaveType  |                            |
+| clk          | in        | sl                  | Clock and Reset            |
+| rst          | in        | sl                  |                            |
 ## Signals
 
 | Name | Type    | Description |

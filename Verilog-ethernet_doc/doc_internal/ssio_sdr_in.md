@@ -6,15 +6,17 @@
 ![Diagram](ssio_sdr_in.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name      | Type | Value     | Description                                                                                                                                       |
-| ----------------- | ---- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TARGET            |      | "GENERIC" | target ("SIM", "GENERIC", "XILINX", "ALTERA")                                                                                                     |
-| CLOCK_INPUT_STYLE |      | "BUFIO2"  | Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2") Use BUFR for Virtex-5, Virtex-6, 7-series Use BUFG for Ultrascale Use BUFIO2 for Spartan-6  |
-| WIDTH             |      | 1         | Width of register in bits                                                                                                                         |
+| Generic name      | Type | Value     | Description                                                                                                                                           |
+| ----------------- | ---- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TARGET            |      | "GENERIC" |  target ("SIM", "GENERIC", "XILINX", "ALTERA")                                                                                                        |
+| CLOCK_INPUT_STYLE |      | "BUFIO2"  |  Clock input style ("BUFG", "BUFR", "BUFIO", "BUFIO2")  Use BUFR for Virtex-5, Virtex-6, 7-series  Use BUFG for Ultrascale  Use BUFIO2 for Spartan-6  |
+| WIDTH             |      | 1         |  Width of register in bits                                                                                                                            |
 ## Ports
 
 | Port name  | Direction | Type             | Description |
@@ -32,3 +34,4 @@ Language: Verilog 2001
 | output_q_reg | reg [WIDTH-1:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk_io) )
+  - **Type:** always

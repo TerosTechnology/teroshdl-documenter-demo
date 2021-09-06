@@ -35,5 +35,4 @@
 - unnamed: ( clk_a )
 - unnamed: ( clk_b )
 **Description**
-Port B
-
+ Port B 

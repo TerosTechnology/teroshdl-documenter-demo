@@ -1,6 +1,12 @@
 # Package: monitor_cmd_pkg
 
 - **File**: monitor_cmd_pkg.vhd
+## Description
+
+=================================================================================================
+=================================================================================================
+=================================================================================================
+
 ## Constants
 
 | Name                                    | Type                    | Value                                                                                                                                                                                                                                                                                                                                                                                                                   | Description |
@@ -11,10 +17,10 @@
 | C_UART_MONITOR_CONFIG_DEFAULT           | t_uart_monitor_config   |  (     scope_name               => (1 to 14 => "set scope name",<br><span style="padding-left:20px"> others => NUL),<br><span style="padding-left:20px">     msg_id_panel             => C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,<br><span style="padding-left:20px">     interface_config         => C_UART_MONITOR_INTERFACE_CONFIG_DEFAULT,<br><span style="padding-left:20px">     transaction_display_time => 0 ns   ) |             |
 ## Types
 
-| Name                        | Type                                                                                                       | Description |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------- |
-| t_uart_interface_config     |                                                                                                            |             |
-| t_uart_monitor_config       |                                                                                                            |             |
-| t_uart_monitor_config_array | array (t_channel range <>,<br><span style="padding-left:20px"> natural range <>) of t_uart_monitor_config  |             |
+| Name                        | Type                                                                                                       | Description                                                                                                                                                                                                                                                                                   |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| t_uart_interface_config     |                                                                                                            | ===============================================================================================  t_uart_interface_config  - Record type which holds the configurations of the UART interface ===============================================================================================  |
+| t_uart_monitor_config       |                                                                                                            | ===============================================================================================  t_uart_monitor_config  - Record type which holds the general configurations of the monitor ===============================================================================================   |
+| t_uart_monitor_config_array | array (t_channel range <>,<br><span style="padding-left:20px"> natural range <>) of t_uart_monitor_config  |                                                                                                                                                                                                                                                                                               |
 ## Functions
 - monitor_constructor <font id="function_arguments">( constant monitor_config        : in  t_uart_monitor_config;<br><span style="padding-left:20px"> variable shared_monitor_config : out t_uart_monitor_config ) </font> <font id="function_return">return ()</font>

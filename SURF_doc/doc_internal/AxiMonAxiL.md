@@ -6,24 +6,28 @@
 ![Diagram](AxiMonAxiL.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite Wrapper on AXI4 Monitor Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite Wrapper on AXI4 Monitor Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name    | Type          | Value     | Description              |
-| --------------- | ------------- | --------- | ------------------------ |
-| TPD_G           | time          | 1 ns      |                          |
-| COMMON_CLK_G    | boolean       | false     | true if axiClk = axilClk |
-| AXI_CLK_FREQ_G  | real          | 156.25E+6 | units of Hz              |
-| AXI_NUM_SLOTS_G | positive      | 1         |                          |
-| AXI_CONFIG_G    | AxiConfigType |           |                          |
+| Generic name    | Type          | Value     | Description               |
+| --------------- | ------------- | --------- | ------------------------- |
+| TPD_G           | time          | 1 ns      |                           |
+| COMMON_CLK_G    | boolean       | false     |  true if axiClk = axilClk |
+| AXI_CLK_FREQ_G  | real          | 156.25E+6 |  units of Hz              |
+| AXI_NUM_SLOTS_G | positive      | 1         |                           |
+| AXI_CONFIG_G    | AxiConfigType |           |                           |
 ## Ports
 
 | Port name        | Direction | Type                                            | Description                  |
@@ -55,5 +59,7 @@ the terms contained in the LICENSE.txt file.
 
 - U_Monitor: surf.AxiStreamMonAxiL
 **Description**
-Re-propose the existing AXI stream monitor as a AXI4 memory monitor
+--------------------------------------------------------------------
+ Re-propose the existing AXI stream monitor as a AXI4 memory monitor
+--------------------------------------------------------------------
 

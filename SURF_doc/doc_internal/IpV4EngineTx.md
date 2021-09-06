@@ -6,16 +6,20 @@
 ![Diagram](IpV4EngineTx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: IPv4 TX Engine Module
-Note: IPv4 checksum checked in EthMac core
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: IPv4 TX Engine Module
+ Note: IPv4 checksum checked in EthMac core
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type            | Value        | Description |
@@ -29,7 +33,7 @@ the terms contained in the LICENSE.txt file.
 
 | Port name         | Direction | Type                                             | Description                           |
 | ----------------- | --------- | ------------------------------------------------ | ------------------------------------- |
-| localMac          | in        | slv(47 downto 0)                                 |  big-Endian configuration             |
+| localMac          | in        | slv(47 downto 0)                                 |   big-Endian configuration            |
 | obIpv4Master      | out       | AxiStreamMasterType                              | Interface to Ethernet Frame MUX/DEMUX |
 | obIpv4Slave       | in        | AxiStreamSlaveType                               |                                       |
 | localhostMaster   | out       | AxiStreamMasterType                              |                                       |

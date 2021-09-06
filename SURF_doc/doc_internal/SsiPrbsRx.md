@@ -6,17 +6,22 @@
 ![Diagram](SsiPrbsRx.svg "Diagram")
 ## Description
 
-Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
-Company    : SLAC National Accelerator Laboratory
-Description:   This module generates
-               PseudoRandom Binary Sequence (PRBS) on Virtual Channel Lane.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:   This module generates
+                PseudoRandom Binary Sequence (PRBS) on Virtual Channel Lane.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name              | Type                     | Value                             | Description             |
@@ -52,7 +57,7 @@ the terms contained in the LICENSE.txt file.
 | axiWriteMaster  | in        | AxiLiteWriteMasterType |                                                                 |
 | axiWriteSlave   | out       | AxiLiteWriteSlaveType  |                                                                 |
 | updatedResults  | out       | sl                     | Error Detection Signals (sAxisClk domain)                       |
-| errorDet        | out       | sl                     | '1' if any error detected                                       |
+| errorDet        | out       | sl                     |  '1' if any error detected                                      |
 | busy            | out       | sl                     |                                                                 |
 | errMissedPacket | out       | sl                     |                                                                 |
 | errLength       | out       | sl                     |                                                                 |
@@ -124,8 +129,7 @@ the terms contained in the LICENSE.txt file.
                           overflow1Cnt, packetLengthSync, packetRateSync,
                           pause, pause0Cnt, pause1Cnt, rAxiLite )
 **Description**
-Configuration Register
-
+-----------------------------  Configuration Register ----------------------------- 
 - seqAxiLite: ( axiClk )
 ## Instantiations
 

@@ -6,14 +6,17 @@
 ![Diagram](flash_phy_core.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Flash Phy Core Module
+
+
  This module wraps every single flash bank and contains most of the region attribute,
  scramble, ECC, security and arbitration logic.
  Most of the items are TODO, at the moment only arbitration logic exists.
- 
+
 ## Generics
 
 | Generic name | Type         | Value | Description |
@@ -67,50 +70,50 @@ Copyright lowRISC contributors.
 | ecc_addr_o          | output    | [BusBankAddrW-1:0]         |                          |
 ## Signals
 
-| Name                | Type                         | Description                                                                              |
-| ------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| state_q             | arb_state_e                  |                                                                                          |
-| state_d             | arb_state_e                  |                                                                                          |
-| reqs                | logic [PhyOps-1:0]           | request signals to flash macro                                                           |
-| muxed_req_type      | tlul_pkg::tl_type_e          | the type of transaction to flash macro                                                   |
-| host_sel            | logic                        | host select for address                                                                  |
-| host_rsp            | logic                        | qualifier for host responses                                                             |
-| ctrl_rsp_vld        | logic                        | controller response valid                                                                |
-| ack                 | logic                        | ack to phy operations from flash macro                                                   |
-| done                | logic                        | done to phy operations from flash macro                                                  |
-| prog_ack            | logic                        | ack from flash_phy_prog to controller                                                    |
-| erase_ack           | logic                        | ack from flash_phy_erase to controller                                                   |
-| muxed_addr          | logic [BusBankAddrW-1:0]     | interface with flash macro                                                               |
-| muxed_part          | flash_ctrl_pkg::flash_part_e |                                                                                          |
-| muxed_scramble_en   | logic                        |                                                                                          |
-| muxed_ecc_en        | logic                        |                                                                                          |
-| rd_stage_idle       | logic                        | entire read stage is idle, inclusive of all stages                                       |
-| rd_stage_rdy        | logic                        | the read stage is ready to accept a new transaction                                      |
-| rd_stage_data_valid | logic                        | the read stage has valid response                                                        |
-| arb_cnt             | logic [CntWidth-1:0]         | arbitration counter If controller side has lost arbitration ArbCnt times, favor it once  |
-| inc_arb_cnt         | logic                        |                                                                                          |
-| clr_arb_cnt         | logic                        |                                                                                          |
-| host_req_masked     | logic                        |                                                                                          |
-| calc_ack            | logic                        | scramble / de-scramble connections                                                       |
-| op_ack              | logic                        |                                                                                          |
-| scramble_mask       | logic [DataWidth-1:0]        |                                                                                          |
-| flash_rd_req        | logic                        |                                                                                          |
-| flash_rdata         | logic [FullDataWidth-1:0]    |                                                                                          |
-| rd_calc_req         | logic                        |                                                                                          |
-| rd_calc_addr        | logic [BankAddrW-1:0]        |                                                                                          |
-| rd_op_req           | logic                        |                                                                                          |
-| rd_scrambled_data   | logic [DataWidth-1:0]        |                                                                                          |
-| rd_descrambled_data | logic [DataWidth-1:0]        |                                                                                          |
-| prog_full_data      | logic [FullDataWidth-1:0]    |                                                                                          |
-| prog_scrambled_data | logic [DataWidth-1:0]        |                                                                                          |
-| prog_data           | logic [DataWidth-1:0]        |                                                                                          |
-| prog_last           | logic                        |                                                                                          |
-| flash_prog_req      | logic                        |                                                                                          |
-| prog_calc_req       | logic                        |                                                                                          |
-| prog_op_req         | logic                        |                                                                                          |
-| flash_pg_erase_req  | logic                        |                                                                                          |
-| flash_bk_erase_req  | logic                        |                                                                                          |
-| scramble_muxed_addr | logic [BankAddrW-1:0]        |                                                                                          |
+| Name                | Type                         | Description                                                                                |
+| ------------------- | ---------------------------- | ------------------------------------------------------------------------------------------ |
+| state_q             | arb_state_e                  |                                                                                            |
+| state_d             | arb_state_e                  |                                                                                            |
+| reqs                | logic [PhyOps-1:0]           |  request signals to flash macro                                                            |
+| muxed_req_type      | tlul_pkg::tl_type_e          |  the type of transaction to flash macro                                                    |
+| host_sel            | logic                        |  host select for address                                                                   |
+| host_rsp            | logic                        |  qualifier for host responses                                                              |
+| ctrl_rsp_vld        | logic                        |  controller response valid                                                                 |
+| ack                 | logic                        |  ack to phy operations from flash macro                                                    |
+| done                | logic                        |  done to phy operations from flash macro                                                   |
+| prog_ack            | logic                        |  ack from flash_phy_prog to controller                                                     |
+| erase_ack           | logic                        |  ack from flash_phy_erase to controller                                                    |
+| muxed_addr          | logic [BusBankAddrW-1:0]     |  interface with flash macro                                                                |
+| muxed_part          | flash_ctrl_pkg::flash_part_e |                                                                                            |
+| muxed_scramble_en   | logic                        |                                                                                            |
+| muxed_ecc_en        | logic                        |                                                                                            |
+| rd_stage_idle       | logic                        |  entire read stage is idle, inclusive of all stages                                        |
+| rd_stage_rdy        | logic                        |  the read stage is ready to accept a new transaction                                       |
+| rd_stage_data_valid | logic                        |  the read stage has valid response                                                         |
+| arb_cnt             | logic [CntWidth-1:0]         |  arbitration counter  If controller side has lost arbitration ArbCnt times, favor it once  |
+| inc_arb_cnt         | logic                        |                                                                                            |
+| clr_arb_cnt         | logic                        |                                                                                            |
+| host_req_masked     | logic                        |                                                                                            |
+| calc_ack            | logic                        |  scramble / de-scramble connections                                                        |
+| op_ack              | logic                        |                                                                                            |
+| scramble_mask       | logic [DataWidth-1:0]        |                                                                                            |
+| flash_rd_req        | logic                        | //////////////////////  read pipeline //////////////////////                               |
+| flash_rdata         | logic [FullDataWidth-1:0]    |                                                                                            |
+| rd_calc_req         | logic                        |                                                                                            |
+| rd_calc_addr        | logic [BankAddrW-1:0]        |                                                                                            |
+| rd_op_req           | logic                        |                                                                                            |
+| rd_scrambled_data   | logic [DataWidth-1:0]        |                                                                                            |
+| rd_descrambled_data | logic [DataWidth-1:0]        |                                                                                            |
+| prog_full_data      | logic [FullDataWidth-1:0]    | //////////////////////  program pipeline //////////////////////                            |
+| prog_scrambled_data | logic [DataWidth-1:0]        |                                                                                            |
+| prog_data           | logic [DataWidth-1:0]        |                                                                                            |
+| prog_last           | logic                        |                                                                                            |
+| flash_prog_req      | logic                        |                                                                                            |
+| prog_calc_req       | logic                        |                                                                                            |
+| prog_op_req         | logic                        |                                                                                            |
+| flash_pg_erase_req  | logic                        | //////////////////////  erase pipeline //////////////////////                              |
+| flash_bk_erase_req  | logic                        |                                                                                            |
+| scramble_muxed_addr | logic [BankAddrW-1:0]        | //////////////////////  scrambling / de-scrambling primitive //////////////////////        |
 ## Constants
 
 | Name     | Type | Value              | Description |
@@ -123,8 +126,11 @@ Copyright lowRISC contributors.
 | arb_state_e | enum logic [2:0] {<br><span style="padding-left:20px">     StIdle,<br><span style="padding-left:20px">     StHostRead,<br><span style="padding-left:20px">     StCtrlRead,<br><span style="padding-left:20px">     StCtrlProg,<br><span style="padding-left:20px">     StCtrl,<br><span style="padding-left:20px">     StDisable   } |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb
 ## Instantiations
 
 - u_rd: flash_phy_rd

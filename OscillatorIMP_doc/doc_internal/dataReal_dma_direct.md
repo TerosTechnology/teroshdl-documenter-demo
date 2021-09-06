@@ -6,10 +6,10 @@
 ![Diagram](dataReal_dma_direct.svg "Diagram")
 ## Description
 
-currently only support up to 16bits per chan
-and only one or two input
-eof and sof are not supported
-two inputs must be synchronize (ie dataX_en_i high at the same time
+ currently only support up to 16bits per chan
+ and only one or two input
+ eof and sof are not supported
+ two inputs must be synchronize (ie dataX_en_i high at the same time
 ## Generics
 
 | Generic name           | Type    | Value | Description                                      |
@@ -69,23 +69,23 @@ two inputs must be synchronize (ie dataX_en_i high at the same time
 | s00_axi_rready  | in        | std_logic                                               |                                            |
 ## Signals
 
-| Name                     | Type                                       | Description      |
-| ------------------------ | ------------------------------------------ | ---------------- |
-| addr_s                   | std_logic_vector(1 downto 0)               |                  |
-| write_en_s               | std_logic                                  |                  |
-|  read_en_s               | std_logic                                  |                  |
-| data1_s                  | std_logic_vector(INT_DATA_SIZE-1 downto 0) | new              |
-| data2_s                  | std_logic_vector(INT_DATA_SIZE-1 downto 0) |                  |
-| data1_d1_s               | std_logic_vector(31 downto 0)              |                  |
-| data2_d1_s               | std_logic_vector(31 downto 0)              |                  |
-| data_en_s                | std_logic                                  |                  |
-| seq_pos_s                | std_logic                                  |                  |
-| data_sof_s               | std_logic                                  |                  |
-| data_eof_s               | std_logic                                  |                  |
-| start_acquisition_s      | std_logic                                  | axi4lite -> axis |
-| start_acquisition_sync_s | std_logic                                  |                  |
-| busy_s                   | std_logic                                  | axis -> axi4lite |
-|  busy_sync_s             | std_logic                                  | axis -> axi4lite |
+| Name                     | Type                                       | Description        |
+| ------------------------ | ------------------------------------------ | ------------------ |
+| addr_s                   | std_logic_vector(1 downto 0)               | axi                |
+| write_en_s               | std_logic                                  |                    |
+|  read_en_s               | std_logic                                  |                    |
+| data1_s                  | std_logic_vector(INT_DATA_SIZE-1 downto 0) |  new               |
+| data2_s                  | std_logic_vector(INT_DATA_SIZE-1 downto 0) |                    |
+| data1_d1_s               | std_logic_vector(31 downto 0)              |                    |
+| data2_d1_s               | std_logic_vector(31 downto 0)              |                    |
+| data_en_s                | std_logic                                  |                    |
+| seq_pos_s                | std_logic                                  |                    |
+| data_sof_s               | std_logic                                  |                    |
+| data_eof_s               | std_logic                                  |                    |
+| start_acquisition_s      | std_logic                                  |  axi4lite -> axis  |
+| start_acquisition_sync_s | std_logic                                  |                    |
+| busy_s                   | std_logic                                  |  axis -> axi4lite  |
+|  busy_sync_s             | std_logic                                  |  axis -> axi4lite  |
 ## Constants
 
 | Name          | Type    | Value                                                                                                                   | Description |
@@ -101,12 +101,12 @@ two inputs must be synchronize (ie dataX_en_i high at the same time
 
 - dma_flow_slave_axis_inst: work.axi_dataReal_dma_direct
 **Description**
-Instantiation of Axi Bus Interface M00_AXIS
+ Instantiation of Axi Bus Interface M00_AXIS
 
 - busy_sync: work.dataReal_dma_direct_sync
 - start_sync: work.dataReal_dma_direct_sync
 - wb_inst: work.wb_dataReal_dma_direct
 - handle_comm: work.dataReal_dma_direct_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

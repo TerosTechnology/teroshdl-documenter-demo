@@ -6,64 +6,71 @@
 ![Diagram](serv_top.svg "Diagram")
 ## Generics
 
-| Generic name   | Type | Value  | Description |
-| -------------- | ---- | ------ | ----------- |
-| WITH_CSR       |      | 1      |             |
-| PRE_REGISTER   |      | 1      |             |
-| RESET_STRATEGY |      | "MINI" |             |
-| RESET_PC       |      | 32'd0  |             |
+| Generic name   | Type  | Value  | Description |
+| -------------- | ----- | ------ | ----------- |
+| WITH_CSR       |       | 1      |             |
+| PRE_REGISTER   |       | 1      |             |
+| RESET_STRATEGY |       | "MINI" |             |
+| RESET_PC       |       | 32'd0  |             |
+| MDU            | [0:0] | 1'b0   |             |
 ## Ports
 
-| Port name      | Direction | Type                | Description |
-| -------------- | --------- | ------------------- | ----------- |
-| clk            | input     | wire                |             |
-| i_rst          | input     | wire                |             |
-| i_timer_irq    | input     | wire                |             |
-| rvfi_valid     | input     | reg                 |             |
-| rvfi_order     | output    | reg [63:0]          |             |
-| rvfi_insn      | output    | reg [31:0]          |             |
-| rvfi_trap      | output    | reg                 |             |
-| rvfi_halt      | output    | reg                 |             |
-| rvfi_intr      | output    | reg                 |             |
-| rvfi_mode      | output    | reg [1:0]           |             |
-| rvfi_ixl       | output    | reg [1:0]           |             |
-| rvfi_rs1_addr  | output    | [4:0]               |             |
-| rvfi_rs2_addr  | output    | [4:0]               |             |
-| rvfi_rs1_rdata | output    | [31:0]              |             |
-| rvfi_rs2_rdata | output    | [31:0]              |             |
-| rvfi_rd_addr   | output    | [4:0]               |             |
-| rvfi_rd_wdata  | output    | [31:0]              |             |
-| rvfi_pc_rdata  | output    | [31:0]              |             |
-| rvfi_pc_wdata  | output    | [31:0]              |             |
-| rvfi_mem_addr  | output    | [31:0]              |             |
-| rvfi_mem_rmask | output    | [3:0]               |             |
-| rvfi_mem_wmask | output    | [3:0]               |             |
-| rvfi_mem_rdata | output    | [31:0]              |             |
-| rvfi_mem_wdata | output    | [31:0]              |             |
-| o_rf_rreq      | output    | wire                |             |
-| o_rf_wreq      | output    | wire                |             |
-| i_rf_ready     | input     | wire                |             |
-| o_wreg0        | output    | wire [4+WITH_CSR:0] |             |
-| o_wreg1        | output    | wire [4+WITH_CSR:0] |             |
-| o_wen0         | output    | wire                |             |
-| o_wen1         | output    | wire                |             |
-| o_wdata0       | output    | wire                |             |
-| o_wdata1       | output    | wire                |             |
-| o_rreg0        | output    | wire [4+WITH_CSR:0] |             |
-| o_rreg1        | output    | wire [4+WITH_CSR:0] |             |
-| i_rdata0       | input     | wire                |             |
-| i_rdata1       | input     | wire                |             |
-| o_ibus_adr     | output    | wire [31:0]         |             |
-| o_ibus_cyc     | output    | wire                |             |
-| i_ibus_rdt     | input     | wire [31:0]         |             |
-| i_ibus_ack     | input     | wire                |             |
-| o_dbus_adr     | output    | wire [31:0]         |             |
-| o_dbus_dat     | output    | wire [31:0]         |             |
-| o_dbus_sel     | output    | wire [3:0]          |             |
-| o_dbus_we      | output    | wire                |             |
-| o_dbus_cyc     | output    | wire                |             |
-| i_dbus_rdt     | input     | wire [31:0]         |             |
-| i_dbus_ack     | input     | wire                |             |
+| Port name      | Direction | Type                | Description  |
+| -------------- | --------- | ------------------- | ------------ |
+| clk            | input     | wire                |              |
+| i_rst          | input     | wire                |              |
+| i_timer_irq    | input     | wire                |              |
+| rvfi_valid     | input     | reg                 |              |
+| rvfi_order     | output    | reg [63:0]          |              |
+| rvfi_insn      | output    | reg [31:0]          |              |
+| rvfi_trap      | output    | reg                 |              |
+| rvfi_halt      | output    | reg                 |              |
+| rvfi_intr      | output    | reg                 |              |
+| rvfi_mode      | output    | reg [1:0]           |              |
+| rvfi_ixl       | output    | reg [1:0]           |              |
+| rvfi_rs1_addr  | output    | [4:0]               |              |
+| rvfi_rs2_addr  | output    | [4:0]               |              |
+| rvfi_rs1_rdata | output    | [31:0]              |              |
+| rvfi_rs2_rdata | output    | [31:0]              |              |
+| rvfi_rd_addr   | output    | [4:0]               |              |
+| rvfi_rd_wdata  | output    | [31:0]              |              |
+| rvfi_pc_rdata  | output    | [31:0]              |              |
+| rvfi_pc_wdata  | output    | [31:0]              |              |
+| rvfi_mem_addr  | output    | [31:0]              |              |
+| rvfi_mem_rmask | output    | [3:0]               |              |
+| rvfi_mem_wmask | output    | [3:0]               |              |
+| rvfi_mem_rdata | output    | [31:0]              |              |
+| rvfi_mem_wdata | output    | [31:0]              |              |
+| o_rf_rreq      | output    | wire                | RF Interface |
+| o_rf_wreq      | output    | wire                |              |
+| i_rf_ready     | input     | wire                |              |
+| o_wreg0        | output    | wire [4+WITH_CSR:0] |              |
+| o_wreg1        | output    | wire [4+WITH_CSR:0] |              |
+| o_wen0         | output    | wire                |              |
+| o_wen1         | output    | wire                |              |
+| o_wdata0       | output    | wire                |              |
+| o_wdata1       | output    | wire                |              |
+| o_rreg0        | output    | wire [4+WITH_CSR:0] |              |
+| o_rreg1        | output    | wire [4+WITH_CSR:0] |              |
+| i_rdata0       | input     | wire                |              |
+| i_rdata1       | input     | wire                |              |
+| o_ibus_adr     | output    | wire [31:0]         |              |
+| o_ibus_cyc     | output    | wire                |              |
+| i_ibus_rdt     | input     | wire [31:0]         |              |
+| i_ibus_ack     | input     | wire                |              |
+| o_dbus_adr     | output    | wire [31:0]         |              |
+| o_dbus_dat     | output    | wire [31:0]         |              |
+| o_dbus_sel     | output    | wire [3:0]          |              |
+| o_dbus_we      | output    | wire                |              |
+| o_dbus_cyc     | output    | wire                |              |
+| i_dbus_rdt     | input     | wire [31:0]         |              |
+| i_dbus_ack     | input     | wire                |              |
+| o_ext_funct3   | output    | wire [ 2:0]         | Extension    |
+| i_ext_ready    | input     | wire                |              |
+| i_ext_rd       | input     | wire  [31:0]        |              |
+| o_ext_rs1      | output    | wire [31:0]         |              |
+| o_ext_rs2      | output    | wire [31:0]         |              |
+| o_mdu_valid    | output    | wire                | MDU          |
 ## Signals
 
 | Name             | Type       | Description |
@@ -83,6 +90,7 @@
 | shift_op         | wire       |             |
 | slt_op           | wire       |             |
 | rd_op            | wire       |             |
+| mdu_op           | wire       |             |
 | rd_alu_en        | wire       |             |
 | rd_csr_en        | wire       |             |
 | ctrl_rd          | wire       |             |
@@ -150,10 +158,11 @@
 | rs_en            | wire       |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 - unnamed: ( @(o_ibus_adr) )
+  - **Type:** always
 **Description**
-verilator lint_off COMBDLY */
-
+ verilator lint_off COMBDLY */ 
 ## Instantiations
 
 - state: serv_state

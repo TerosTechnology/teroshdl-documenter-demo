@@ -6,8 +6,8 @@
 ![Diagram](tx_iq_intf.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Generics
 
 | Generic name           | Type    | Value | Description |
@@ -33,8 +33,8 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | rf_i                | input     | wire signed [(IQ_DATA_WIDTH-1) : 0]  |             |
 | rf_q                | input     | wire signed [(IQ_DATA_WIDTH-1) : 0]  |             |
 | rf_iq_valid         | input     | wire                                 |             |
-| tx_iq_fifo_empty    | output    | wire                                 | to lbt      |
-| tx_hold             | output    | wire                                 | to tx core  |
+| tx_iq_fifo_empty    | output    | wire                                 |  to lbt     |
+| tx_hold             | output    | wire                                 |  to tx core |
 ## Signals
 
 | Name                        | Type                                  | Description |
@@ -50,23 +50,26 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | data_count                  | wire [9:0]                            |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 **Description**
-gain module
-
+ gain module 
 ## Instantiations
 
 - csi_fuzzer_i: csi_fuzzer
+**Description**
+csi fuzzer at fifo out
+
 - fifo32_1clk_dep512_i: xpm_fifo_sync
 **Description**
-fifo32_1clk_dep512 fifo32_1clk_dep512_i (
-.CLK(clk),
-.DATAO(tx_iq_fifo_out),
-.DI(tx_iq_fifo_in),
-.EMPTY(tx_iq_fifo_empty),
-.FULL(tx_iq_fifo_full),
-.RDEN(tx_iq_fifo_rden),
-.RST(~rstn),
-.WREN(tx_iq_fifo_wren),
-.data_count(data_count)
-);
+ fifo32_1clk_dep512 fifo32_1clk_dep512_i (
+     .CLK(clk),
+     .DATAO(tx_iq_fifo_out),
+     .DI(tx_iq_fifo_in),
+     .EMPTY(tx_iq_fifo_empty),
+     .FULL(tx_iq_fifo_full),
+     .RDEN(tx_iq_fifo_rden),
+     .RST(~rstn),
+     .WREN(tx_iq_fifo_wren),
+     .data_count(data_count)
+ );
 

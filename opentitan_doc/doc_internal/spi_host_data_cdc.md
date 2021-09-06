@@ -6,11 +6,13 @@
 ![Diagram](spi_host_data_cdc.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  CDC module for SPI_HOST RX and TX data
- 
+
+
 ## Generics
 
 | Generic name | Type  | Value | Description |
@@ -54,44 +56,44 @@ Copyright lowRISC contributors.
 | rx_wm_o         | output    |        |             |
 ## Signals
 
-| Name                  | Type                      | Description                     |
-| --------------------- | ------------------------- | ------------------------------- |
-| tx_data_ordered       | logic [31:0]              |                                 |
-| tx_be_ordered         | logic [3:0]               |                                 |
-| rx_data_unordered     | logic [31:0]              |                                 |
-| tx_data_be            | logic [35:0]              |                                 |
-| core_tx_data_be       | logic [35:0]              |                                 |
-| tx_data_be_async_fifo | logic [35:0]              | I/O connections to async fifos  |
-| tx_valid_async_fifo   | logic                     |                                 |
-| tx_ready_async_fifo   | logic                     |                                 |
-| rx_data_async_fifo    | logic [31:0]              |                                 |
-| rx_valid_async_fifo   | logic                     |                                 |
-| rx_ready_async_fifo   | logic                     |                                 |
-| tx_depth_async_fifo   | logic [TxAsyncDepthW-1:0] |                                 |
-| rx_depth_async_fifo   | logic [RxAsyncDepthW-1:0] |                                 |
-| tx_depth_total        | logic [7:0]               |                                 |
-| rx_depth_total        | logic [7:0]               |                                 |
+| Name                  | Type                      | Description                      |
+| --------------------- | ------------------------- | -------------------------------- |
+| tx_data_ordered       | logic [31:0]              |                                  |
+| tx_be_ordered         | logic [3:0]               |                                  |
+| rx_data_unordered     | logic [31:0]              |                                  |
+| tx_data_be            | logic [35:0]              |                                  |
+| core_tx_data_be       | logic [35:0]              |                                  |
+| tx_data_be_async_fifo | logic [35:0]              |  I/O connections to async fifos  |
+| tx_valid_async_fifo   | logic                     |                                  |
+| tx_ready_async_fifo   | logic                     |                                  |
+| rx_data_async_fifo    | logic [31:0]              |                                  |
+| rx_valid_async_fifo   | logic                     |                                  |
+| rx_ready_async_fifo   | logic                     |                                  |
+| tx_depth_async_fifo   | logic [TxAsyncDepthW-1:0] |                                  |
+| rx_depth_async_fifo   | logic [RxAsyncDepthW-1:0] |                                  |
+| tx_depth_total        | logic [7:0]               |                                  |
+| rx_depth_total        | logic [7:0]               |                                  |
 ## Constants
 
-| Name            | Type  | Value                               | Description |
-| --------------- | ----- | ----------------------------------- | ----------- |
-| TxDepthW        | int   | $clog2(TxDepth)                     |             |
-| RxDepthW        | int   | $clog2(RxDepth)                     |             |
-| TxAsyncOnlyFifo | logic | undefined                           |             |
-| RxAsyncOnlyFifo | logic | undefined                           |             |
-| TxAsyncDepth    | int   | TxAsyncOnlyFifo ? 2**TxDepthW       |             |
-| RxAsyncDepth    | int   | RxAsyncOnlyFifo ? 2**RxDepthW       |             |
-| TxSyncDepth     | int   | TxDepth - TxAsyncDepth              |             |
-| RxSyncDepth     | int   | RxDepth - RxAsyncDepth              |             |
-| TxAsyncDepthW   | int   | prim_util_pkg::vbits(TxAsyncDepth+1 |             |
-| RxAsyncDepthW   | int   | prim_util_pkg::vbits(RxAsyncDepth+1 |             |
-| TxSyncDepthW    | int   | prim_util_pkg::vbits(TxSyncDepth+1  |             |
-| RxSyncDepthW    | int   | prim_util_pkg::vbits(RxSyncDepth+1  |             |
+| Name            | Type  | Value                               | Description                                                                                                                                                                                                                                                          |
+| --------------- | ----- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TxDepthW        | int   | $clog2(TxDepth)                     |                                                                                                                                                                                                                                                                      |
+| RxDepthW        | int   | $clog2(RxDepth)                     |                                                                                                                                                                                                                                                                      |
+| TxAsyncOnlyFifo | logic | undefined                           |  As async FIFOs must have a power-of-two depth,  requests for non-power-of-two data queues  generate a second, synchronous FIFO to hold  extra data words.<br>  The second synchronous FIFO is placed on the bus side  of the CDC for ease of TL-UL monitoring.<br>  |
+| RxAsyncOnlyFifo | logic | undefined                           |                                                                                                                                                                                                                                                                      |
+| TxAsyncDepth    | int   | TxAsyncOnlyFifo ? 2**TxDepthW       |                                                                                                                                                                                                                                                                      |
+| RxAsyncDepth    | int   | RxAsyncOnlyFifo ? 2**RxDepthW       |                                                                                                                                                                                                                                                                      |
+| TxSyncDepth     | int   | TxDepth - TxAsyncDepth              |                                                                                                                                                                                                                                                                      |
+| RxSyncDepth     | int   | RxDepth - RxAsyncDepth              |                                                                                                                                                                                                                                                                      |
+| TxAsyncDepthW   | int   | prim_util_pkg::vbits(TxAsyncDepth+1 |                                                                                                                                                                                                                                                                      |
+| RxAsyncDepthW   | int   | prim_util_pkg::vbits(RxAsyncDepth+1 |                                                                                                                                                                                                                                                                      |
+| TxSyncDepthW    | int   | prim_util_pkg::vbits(TxSyncDepth+1  |                                                                                                                                                                                                                                                                      |
+| RxSyncDepthW    | int   | prim_util_pkg::vbits(RxSyncDepth+1  |                                                                                                                                                                                                                                                                      |
 ## Instantiations
 
 - u_tx_async_fifo: prim_fifo_async
 **Description**
-TODO: Establish better sw_rst technique
-Given the lack of external clear sw_rst just drains the fifo over ~64 clocks
+ TODO: Establish better sw_rst technique
+ Given the lack of external clear sw_rst just drains the fifo over ~64 clocks
 
 - u_rx_async_fifo: prim_fifo_async

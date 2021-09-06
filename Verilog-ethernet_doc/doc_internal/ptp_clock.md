@@ -6,8 +6,10 @@
 ![Diagram](ptp_clock.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name    | Type | Value                                                               | Description |
@@ -25,30 +27,30 @@ Language: Verilog 2001
 | INC_NS_WIDTH    |      | $clog2(2**PERIOD_NS_WIDTH + 2**OFFSET_NS_WIDTH + 2**DRIFT_NS_WIDTH) |             |
 ## Ports
 
-| Port name          | Direction | Type                       | Description |
-| ------------------ | --------- | -------------------------- | ----------- |
-| clk                | input     | wire                       |             |
-| rst                | input     | wire                       |             |
-| input_ts_96        | input     | wire [95:0]                |             |
-| input_ts_96_valid  | input     | wire                       |             |
-| input_ts_64        | input     | wire [63:0]                |             |
-| input_ts_64_valid  | input     | wire                       |             |
-| input_period_ns    | input     | wire [PERIOD_NS_WIDTH-1:0] |             |
-| input_period_fns   | input     | wire [FNS_WIDTH-1:0]       |             |
-| input_period_valid | input     | wire                       |             |
-| input_adj_ns       | input     | wire [OFFSET_NS_WIDTH-1:0] |             |
-| input_adj_fns      | input     | wire [FNS_WIDTH-1:0]       |             |
-| input_adj_count    | input     | wire [15:0]                |             |
-| input_adj_valid    | input     | wire                       |             |
-| input_adj_active   | output    | wire                       |             |
-| input_drift_ns     | input     | wire [DRIFT_NS_WIDTH-1:0]  |             |
-| input_drift_fns    | input     | wire [FNS_WIDTH-1:0]       |             |
-| input_drift_rate   | input     | wire [15:0]                |             |
-| input_drift_valid  | input     | wire                       |             |
-| output_ts_96       | output    | wire [95:0]                |             |
-| output_ts_64       | output    | wire [63:0]                |             |
-| output_ts_step     | output    | wire                       |             |
-| output_pps         | output    | wire                       |             |
+| Port name          | Direction | Type                       | Description                                          |
+| ------------------ | --------- | -------------------------- | ---------------------------------------------------- |
+| clk                | input     | wire                       |                                                      |
+| rst                | input     | wire                       |                                                      |
+| input_ts_96        | input     | wire [95:0]                |      * Timestamp inputs for synchronization      */  |
+| input_ts_96_valid  | input     | wire                       |                                                      |
+| input_ts_64        | input     | wire [63:0]                |                                                      |
+| input_ts_64_valid  | input     | wire                       |                                                      |
+| input_period_ns    | input     | wire [PERIOD_NS_WIDTH-1:0] |      * Period adjustment      */                     |
+| input_period_fns   | input     | wire [FNS_WIDTH-1:0]       |                                                      |
+| input_period_valid | input     | wire                       |                                                      |
+| input_adj_ns       | input     | wire [OFFSET_NS_WIDTH-1:0] |      * Offset adjustment      */                     |
+| input_adj_fns      | input     | wire [FNS_WIDTH-1:0]       |                                                      |
+| input_adj_count    | input     | wire [15:0]                |                                                      |
+| input_adj_valid    | input     | wire                       |                                                      |
+| input_adj_active   | output    | wire                       |                                                      |
+| input_drift_ns     | input     | wire [DRIFT_NS_WIDTH-1:0]  |      * Drift adjustment      */                      |
+| input_drift_fns    | input     | wire [FNS_WIDTH-1:0]       |                                                      |
+| input_drift_rate   | input     | wire [15:0]                |                                                      |
+| input_drift_valid  | input     | wire                       |                                                      |
+| output_ts_96       | output    | wire [95:0]                |      * Timestamp outputs      */                     |
+| output_ts_64       | output    | wire [63:0]                |                                                      |
+| output_ts_step     | output    | wire                       |                                                      |
+| output_pps         | output    | wire                       |      * PPS output      */                            |
 ## Signals
 
 | Name              | Type                      | Description |
@@ -79,3 +81,4 @@ Language: Verilog 2001
 | pps_reg           | reg                       |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

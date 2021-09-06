@@ -6,17 +6,21 @@
 ![Diagram](AxiLiteFifoPushPop.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Supports reading of general purpose FIFOs from the AxiLite bus.
-One address location per FIFO.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Supports reading of general purpose FIFOs from the AxiLite bus.
+ One address location per FIFO.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name       | Type                       | Value         | Description |
@@ -68,22 +72,22 @@ the terms contained in the LICENSE.txt file.
 | pushFifoRead   | in        | slv(PUSH_FIFO_COUNT_G-1 downto 0)        |                          |
 ## Signals
 
-| Name           | Type                                | Description   |
-| -------------- | ----------------------------------- | ------------- |
-| ipopFifoValid  | slv(POP_COUNT_C-1 downto 0)         | Local Signals |
-| ipopFifoDout   | Slv32Array(POP_COUNT_C-1 downto 0)  |               |
-| ipopFifoRead   | slv(POP_COUNT_C-1 downto 0)         |               |
-| iloopFifoDin   | slv(31 downto 0)                    |               |
-| iloopFifoWrite | Slv(LOOP_COUNT_C-1 downto 0)        |               |
-| iloopFifoValid | slv(LOOP_COUNT_C-1 downto 0)        |               |
-| iloopFifoDout  | Slv32Array(LOOP_COUNT_C-1 downto 0) |               |
-| iloopFifoRead  | slv(LOOP_COUNT_C-1 downto 0)        |               |
-| ipushFifoFull  | slv(PUSH_COUNT_C-1 downto 0)        |               |
-| ipushFifoAFull | slv(PUSH_COUNT_C-1 downto 0)        |               |
-| ipushFifoDin   | Slv(35 downto 0)                    |               |
-| ipushFifoWrite | slv(PUSH_COUNT_C-1 downto 0)        |               |
-| r              | RegType                             |               |
-| rin            | RegType                             |               |
+| Name           | Type                                | Description     |
+| -------------- | ----------------------------------- | --------------- |
+| ipopFifoValid  | slv(POP_COUNT_C-1 downto 0)         |  Local Signals  |
+| ipopFifoDout   | Slv32Array(POP_COUNT_C-1 downto 0)  |                 |
+| ipopFifoRead   | slv(POP_COUNT_C-1 downto 0)         |                 |
+| iloopFifoDin   | slv(31 downto 0)                    |                 |
+| iloopFifoWrite | Slv(LOOP_COUNT_C-1 downto 0)        |                 |
+| iloopFifoValid | slv(LOOP_COUNT_C-1 downto 0)        |                 |
+| iloopFifoDout  | Slv32Array(LOOP_COUNT_C-1 downto 0) |                 |
+| iloopFifoRead  | slv(LOOP_COUNT_C-1 downto 0)        |                 |
+| ipushFifoFull  | slv(PUSH_COUNT_C-1 downto 0)        |                 |
+| ipushFifoAFull | slv(PUSH_COUNT_C-1 downto 0)        |                 |
+| ipushFifoDin   | Slv(35 downto 0)                    |                 |
+| ipushFifoWrite | slv(PUSH_COUNT_C-1 downto 0)        |                 |
+| r              | RegType                             |                 |
+| rin            | RegType                             |                 |
 ## Constants
 
 | Name         | Type    | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Description |
@@ -103,11 +107,8 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - unnamed: ( axiClk )
 **Description**
-AXI Lite
-Sync
-
+---------------------------------------  AXI Lite ---------------------------------------  Sync 
 - unnamed: ( r, axiClkRst, axiReadMaster, axiWriteMaster, ipopFifoDout, ipopFifoValid,
             iloopFifoDout, iloopFifoValid, ipushFifoFull, ipushFifoAFull )
 **Description**
-Async
-
+ Async 

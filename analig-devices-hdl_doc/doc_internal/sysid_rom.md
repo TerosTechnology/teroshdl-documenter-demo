@@ -25,3 +25,4 @@
 | lut_rom | reg [ROM_WIDTH-1:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

@@ -3,10 +3,10 @@
 - **File**: prim_pad_wrapper_pkg.sv
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 
 ## Signals
 
@@ -15,12 +15,12 @@ Copyright lowRISC contributors.
 | prim_pad_wrapper_pkg | endpackage |             |
 ## Constants
 
-| Name       | Type | Value             | Description                           |
-| ---------- | ---- | ----------------- | ------------------------------------- |
-| DriveStrDw | int  | 4                 | Pad attributes                        |
-| SlewRateDw | int  | 2                 |                                       |
-| AttrDw     | int  | $bits(pad_attr_t) |                                       |
-| PokDw      | int  | 8                 | Power OK signals (library dependent)  |
+| Name       | Type | Value             | Description                            |
+| ---------- | ---- | ----------------- | -------------------------------------- |
+| DriveStrDw | int  | 4                 |  Pad attributes                        |
+| SlewRateDw | int  | 2                 |                                        |
+| AttrDw     | int  | $bits(pad_attr_t) |                                        |
+| PokDw      | int  | 8                 |  Power OK signals (library dependent)  |
 ## Types
 
 | Name        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Description |

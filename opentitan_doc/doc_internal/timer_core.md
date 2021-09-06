@@ -6,10 +6,11 @@
 ![Diagram](timer_core.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -36,3 +37,4 @@ Copyright lowRISC contributors.
 | tick_count | logic [11:0] |             |
 ## Processes
 - generate_tick: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

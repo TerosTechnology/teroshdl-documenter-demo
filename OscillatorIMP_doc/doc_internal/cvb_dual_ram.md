@@ -27,9 +27,9 @@
 
 | Name       | Type                                | Description |
 | ---------- | ----------------------------------- | ----------- |
-| r_select_s | std_logic                           | read        |
+| r_select_s | std_logic                           |  read       |
 | r_data_s   | data_tab(NB_RAM-1 downto 0)         |             |
-| w_select_s | std_logic                           | write       |
+| w_select_s | std_logic                           |  write      |
 | we_s       | std_logic_vector(NB_RAM-1 downto 0) |             |
 ## Constants
 

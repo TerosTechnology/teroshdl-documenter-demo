@@ -6,10 +6,11 @@
 ![Diagram](tlul_rsp_intg_gen.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
 | Generic name      | Type | Value | Description |
@@ -18,10 +19,10 @@ Copyright lowRISC contributors.
 | EnableDataIntgGen | bit  | 1'b1  |             |
 ## Ports
 
-| Port name | Direction | Type     | Description     |
-| --------- | --------- | -------- | --------------- |
-| tl_i      | input     | tl_d2h_t | TL-UL interface |
-| tl_o      | output    | tl_d2h_t |                 |
+| Port name | Direction | Type     | Description      |
+| --------- | --------- | -------- | ---------------- |
+| tl_i      | input     | tl_d2h_t |  TL-UL interface |
+| tl_o      | output    | tl_d2h_t |                  |
 ## Signals
 
 | Name      | Type                        | Description |
@@ -31,3 +32,4 @@ Copyright lowRISC contributors.
 | unused_tl | logic                       |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb

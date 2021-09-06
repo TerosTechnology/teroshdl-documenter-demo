@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](dprs.svg "Diagram")
+## Description
+
+-------------------------------------------------------------------------------------------------
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -23,9 +27,11 @@
 | a2        | input     | wire[$clog2(KB*1024)-1:0] |             |
 ## Signals
 
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| dpr  | reg[7:0] |             |
+| Name | Type     | Description                                                                                         |
+| ---- | -------- | --------------------------------------------------------------------------------------------------- |
+| dpr  | reg[7:0] | -------------------------------------------------------------------------------------------------  |
 ## Processes
 - unnamed: ( @(posedge clock) )
+  - **Type:** always
 - unnamed: ( @(posedge clock) )
+  - **Type:** always

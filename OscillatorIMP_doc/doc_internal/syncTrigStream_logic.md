@@ -6,9 +6,11 @@
 ![Diagram](syncTrigStream_logic.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2018
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -28,7 +30,7 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 | duty_cnt_i   | in        | std_logic_vector(GEN_SIZE-1 downto 0)  | axi            |
 | period_cnt_i | in        | std_logic_vector(GEN_SIZE-1 downto 0)  |                |
 | enable_i     | in        | std_logic                              |                |
-| data_en_i    | in        | std_logic                              |                |
+| data_en_i    | in        | std_logic                              | rocessing      |
 | data1_i_i    | in        | std_logic_vector(DATA_SIZE-1 downto 0) |                |
 | data1_q_i    | in        | std_logic_vector(DATA_SIZE-1 downto 0) |                |
 | data2_i_i    | in        | std_logic_vector(DATA_SIZE-1 downto 0) |                |

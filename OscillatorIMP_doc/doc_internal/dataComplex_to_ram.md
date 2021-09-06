@@ -6,9 +6,11 @@
 ![Diagram](dataComplex_to_ram.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/11/30
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/11/30
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value    | Description                                    |
@@ -17,14 +19,14 @@ Creation date : 2018/11/30
 | NB_INPUT             | natural | 12       |                                                |
 | DATA_FORMAT          | string  | "signed" |                                                |
 | DATA_SIZE            | natural | 32       |                                                |
-| NB_SAMPLE            | natural | 1024     |                                                |
+| NB_SAMPLE            | natural | 1024     | DDR_SIZE : natural := 12;                      |
 | C_S00_AXI_DATA_WIDTH | integer | 32       | Parameters of Axi Slave Bus Interface S00_AXI  |
 | C_S00_AXI_ADDR_WIDTH | integer | 4        |                                                |
 ## Ports
 
 | Port name       | Direction | Type                                                  | Description                              |
 | --------------- | --------- | ----------------------------------------------------- | ---------------------------------------- |
-| data1_i_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0)                |                                          |
+| data1_i_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0)                | nterrupt                                 |
 | data1_q_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0)                |                                          |
 | data1_en_i      | in        | std_logic                                             |                                          |
 | data1_clk_i     | in        | std_logic                                             |                                          |
@@ -120,50 +122,50 @@ Creation date : 2018/11/30
 | s00_axi_rready  | in        | std_logic                                             |                                          |
 ## Signals
 
-| Name                | Type                                               | Description      |
-| ------------------- | -------------------------------------------------- | ---------------- |
-| start_acquisition_s | std_logic                                          | control          |
-| busy_s              | std_logic                                          |                  |
-|  busy_d_s           | std_logic                                          |                  |
-| addr_s              | std_logic_vector(INT_ADDR_WIDTH-1 downto 0)        |                  |
-| write_en_s          | std_logic                                          |                  |
-|  read_en_s          | std_logic                                          |                  |
-| data_i_s            | std_logic_vector((MAX_WAY * DATA_SIZE)-1 downto 0) | input data merge |
-| data_q_s            | std_logic_vector((MAX_WAY * DATA_SIZE)-1 downto 0) |                  |
-| data_rst_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                  |
-| data_clk_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                  |
-| data_en_s           | std_logic_vector(MAX_WAY-1 downto 0)               |                  |
-| data_eof_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                  |
-| res_s               | std_logic_vector(AXI_SIZE-1 downto 0)              |                  |
-| ram_incr_s          | std_logic                                          |                  |
-| ram_reinit_s        | std_logic                                          |                  |
+| Name                | Type                                               | Description        |
+| ------------------- | -------------------------------------------------- | ------------------ |
+| start_acquisition_s | std_logic                                          |  control           |
+| busy_s              | std_logic                                          |                    |
+|  busy_d_s           | std_logic                                          |                    |
+| addr_s              | std_logic_vector(INT_ADDR_WIDTH-1 downto 0)        |                    |
+| write_en_s          | std_logic                                          |                    |
+|  read_en_s          | std_logic                                          |                    |
+| data_i_s            | std_logic_vector((MAX_WAY * DATA_SIZE)-1 downto 0) |  input data merge  |
+| data_q_s            | std_logic_vector((MAX_WAY * DATA_SIZE)-1 downto 0) |                    |
+| data_rst_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                    |
+| data_clk_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                    |
+| data_en_s           | std_logic_vector(MAX_WAY-1 downto 0)               |                    |
+| data_eof_s          | std_logic_vector(MAX_WAY-1 downto 0)               |                    |
+| res_s               | std_logic_vector(AXI_SIZE-1 downto 0)              |                    |
+| ram_incr_s          | std_logic                                          |                    |
+| ram_reinit_s        | std_logic                                          |                    |
 ## Constants
 
-| Name            | Type    | Value                                       | Description                                |
-| --------------- | ------- | ------------------------------------------- | ------------------------------------------ |
-| ADDR_SIZE       | natural |  natural(ceil(log2(real(NB_SAMPLE))))       |                                            |
-| MAX_WAY         | natural |  12                                         |                                            |
-| INT_DATA_SIZE   | natural |  comp_internal_size(DATA_SIZE)              |                                            |
-| INT_ADDR_WIDTH  | natural |  2                                          |                                            |
-| AXI_SIZE        | natural |  C_S00_AXI_DATA_WIDTH                       | read                                       |
-| CHAN_MUX_SZ     | natural |  natural(ceil(log2(real(NB_INPUT))))        | address adaptationbit used for chan muxing |
-| NB_PKT_PER_SAMP | natural |  ((2*INT_DATA_SIZE)/AXI_SIZE)               | number of pkt (32bits)                     |
-| PKT_MUX_SZ      | natural |  natural(ceil(log2(real(NB_PKT_PER_SAMP)))) | bit used for pkt (32bits) muxing           |
-| RD_ADDR_SZ      | natural |  ADDR_SIZE + CHAN_MUX_SZ + PKT_MUX_SZ       |                                            |
+| Name            | Type    | Value                                       | Description                                    |
+| --------------- | ------- | ------------------------------------------- | ---------------------------------------------- |
+| ADDR_SIZE       | natural |  natural(ceil(log2(real(NB_SAMPLE))))       |                                                |
+| MAX_WAY         | natural |  12                                         |                                                |
+| INT_DATA_SIZE   | natural |  comp_internal_size(DATA_SIZE)              |                                                |
+| INT_ADDR_WIDTH  | natural |  2                                          | axi                                            |
+| AXI_SIZE        | natural |  C_S00_AXI_DATA_WIDTH                       |  read                                          |
+| CHAN_MUX_SZ     | natural |  natural(ceil(log2(real(NB_INPUT))))        |  address adaptation  bit used for chan muxing  |
+| NB_PKT_PER_SAMP | natural |  ((2*INT_DATA_SIZE)/AXI_SIZE)               |  number of pkt (32bits)                        |
+| PKT_MUX_SZ      | natural |  natural(ceil(log2(real(NB_PKT_PER_SAMP)))) |  bit used for pkt (32bits) muxing              |
+| RD_ADDR_SZ      | natural |  ADDR_SIZE + CHAN_MUX_SZ + PKT_MUX_SZ       |                                                |
 ## Functions
 - comp_internal_size <font id="function_arguments">(in_size : natural) </font> <font id="function_return">return natural </font>
 **Description**
-compute upper near 2^n size for data extension
+ compute upper near 2^n size for data extension
+
 ## Processes
 - unnamed: ( s00_axi_aclk )
 **Description**
-interrupt
-
+ interrupt 
 ## Instantiations
 
 - data32_top_inst: work.dataComplex_to_ram_top
 - wb_inst: work.wb_dataComplex_to_ram
 - handle_comm: work.dataComplex_to_ram_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

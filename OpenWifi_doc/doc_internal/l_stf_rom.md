@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](l_stf_rom.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type   | Description |
@@ -12,3 +16,4 @@
 | dout      | output    | [31:0] |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always

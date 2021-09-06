@@ -30,7 +30,7 @@
 | data_i          | in        | std_logic_vector(DATA_IN_SIZE-1 downto 0) | input data     |
 | data_en_i       | in        | std_logic                                 |                |
 | data_eof_i      | in        | std_logic                                 |                |
-| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0)   |                |
+| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0)   | onfiguration   |
 | read_coeff_im_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0)   |                |
 | coeff_re_i      | in        | std_logic_vector(COEFF_SIZE-1 downto 0)   |                |
 | coeff_im_i      | in        | std_logic_vector(COEFF_SIZE-1 downto 0)   |                |
@@ -44,26 +44,26 @@
 | res_eof_o       | out       | std_logic                                 |                |
 ## Signals
 
-| Name                | Type                                   | Description     |
-| ------------------- | -------------------------------------- | --------------- |
-| NB_ELEM             | natural                                |                 |
-| state_s             | state_type                             |                 |
-|  state_next_s       | state_type                             |                 |
-| data_addr_s         | std_logic_vector(ADDR_SIZE-1 downto 0) |                 |
-| data_addr2_s        | std_logic_vector(ADDR_SIZE-1 downto 0) |                 |
-| data_addr_next_s    | std_logic_vector(ADDR_SIZE-1 downto 0) |                 |
-| start_fft_s         | std_logic                              |                 |
-|  done_fft_s         | std_logic                              |                 |
-| data_in_en_s        | std_logic                              |                 |
-| data_in_eof_s       | std_logic                              |                 |
-| result_addr_s       | std_logic_vector(ADDR_SIZE-1 downto 0) | results         |
-| tmp_im_s            | std_logic_vector(DATA_SIZE-1 downto 0) |                 |
-| tmp_re_s            | std_logic_vector(DATA_SIZE-1 downto 0) |                 |
-| done_transmit_s     | std_logic                              |                 |
-| data_in_s           | std_logic_vector(DATA_SIZE-1 downto 0) | size conversion |
-| transmit_en_s       | std_logic                              |                 |
-|  transmit_en_next_s | std_logic                              |                 |
-| start_fft_next_s    | std_logic                              |                 |
+| Name                | Type                                   | Description       |
+| ------------------- | -------------------------------------- | ----------------- |
+| NB_ELEM             | natural                                |                   |
+| state_s             | state_type                             |                   |
+|  state_next_s       | state_type                             |                   |
+| data_addr_s         | std_logic_vector(ADDR_SIZE-1 downto 0) |                   |
+| data_addr2_s        | std_logic_vector(ADDR_SIZE-1 downto 0) |                   |
+| data_addr_next_s    | std_logic_vector(ADDR_SIZE-1 downto 0) |                   |
+| start_fft_s         | std_logic                              |                   |
+|  done_fft_s         | std_logic                              |                   |
+| data_in_en_s        | std_logic                              |                   |
+| data_in_eof_s       | std_logic                              |                   |
+| result_addr_s       | std_logic_vector(ADDR_SIZE-1 downto 0) |  results          |
+| tmp_im_s            | std_logic_vector(DATA_SIZE-1 downto 0) |                   |
+| tmp_re_s            | std_logic_vector(DATA_SIZE-1 downto 0) |                   |
+| done_transmit_s     | std_logic                              |                   |
+| data_in_s           | std_logic_vector(DATA_SIZE-1 downto 0) |  size conversion  |
+| transmit_en_s       | std_logic                              |                   |
+|  transmit_en_next_s | std_logic                              |                   |
+| start_fft_next_s    | std_logic                              |                   |
 ## Constants
 
 | Name       | Type                                   | Value                            | Description |

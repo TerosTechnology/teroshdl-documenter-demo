@@ -6,12 +6,13 @@
 ![Diagram](prim_generic_usb_diff_rx.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Generic differential receiver for USB. Note that this is meant for emulation purposes only, and
  the pull-up, calibration and pok signals are not connected in this module.
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -24,7 +25,7 @@ Copyright lowRISC contributors.
 | input_pi      | input     | wire         | differential input                  |
 | input_ni      | input     | wire         | differential input                  |
 | input_en_i    | input     |              | input buffer enable                 |
-| core_pok_i    | input     |              | core power indication at VCC level  |
+| core_pok_h_i  | input     |              | core power indication at VCC level  |
 | pullup_p_en_i | input     |              | pullup enable for P                 |
 | pullup_n_en_i | input     |              | pullup enable for N                 |
 | calibration_i | input     | [CalibW-1:0] | calibration input                   |

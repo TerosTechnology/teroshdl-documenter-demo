@@ -6,28 +6,32 @@
 ![Diagram](Gtx7QuadPll.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for Xilinx 7-series GTX's QPLL
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for Xilinx 7-series GTX's QPLL
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name        | Type       | Value        | Description                                                                   |
-| ------------------- | ---------- | ------------ | ----------------------------------------------------------------------------- |
-| TPD_G               | time       | 1 ns         |                                                                               |
-| SIM_RESET_SPEEDUP_G | string     | "TRUE"       |                                                                               |
-| SIM_VERSION_G       | string     | "4.0"        |                                                                               |
-| QPLL_CFG_G          | bit_vector | x"0680181"   | QPLL_CFG_G[6] selects the QPLL frequency band: 0 = upper band, 1 = lower band |
-| QPLL_REFCLK_SEL_G   | bit_vector | "001"        |                                                                               |
-| QPLL_FBDIV_G        | bit_vector | "0100100000" |                                                                               |
-| QPLL_FBDIV_RATIO_G  | bit        | '1'          |                                                                               |
-| QPLL_REFCLK_DIV_G   | integer    | 1            |                                                                               |
-| EN_DRP_G            | boolean    | true         |                                                                               |
+| Generic name        | Type       | Value        | Description                                                                    |
+| ------------------- | ---------- | ------------ | ------------------------------------------------------------------------------ |
+| TPD_G               | time       | 1 ns         |                                                                                |
+| SIM_RESET_SPEEDUP_G | string     | "TRUE"       |                                                                                |
+| SIM_VERSION_G       | string     | "4.0"        |                                                                                |
+| QPLL_CFG_G          | bit_vector | x"0680181"   |  QPLL_CFG_G[6] selects the QPLL frequency band: 0 = upper band, 1 = lower band |
+| QPLL_REFCLK_SEL_G   | bit_vector | "001"        |                                                                                |
+| QPLL_FBDIV_G        | bit_vector | "0100100000" |                                                                                |
+| QPLL_FBDIV_RATIO_G  | bit        | '1'          |                                                                                |
+| QPLL_REFCLK_DIV_G   | integer    | 1            |                                                                                |
+| EN_DRP_G            | boolean    | true         |                                                                                |
 ## Ports
 
 | Port name       | Direction | Type                   | Description        |
@@ -36,7 +40,7 @@ the terms contained in the LICENSE.txt file.
 | qPllOutClk      | out       | sl                     |                    |
 | qPllOutRefClk   | out       | sl                     |                    |
 | qPllLock        | out       | sl                     |                    |
-| qPllLockDetClk  | in        | sl                     | Lock detect clock  |
+| qPllLockDetClk  | in        | sl                     |  Lock detect clock |
 | qPllRefClkLost  | out       | sl                     |                    |
 | qPllPowerDown   | in        | sl                     |                    |
 | qPllReset       | in        | sl                     |                    |

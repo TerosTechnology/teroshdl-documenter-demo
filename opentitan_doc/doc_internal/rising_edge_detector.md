@@ -6,10 +6,10 @@
 ![Diagram](rising_edge_detector.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Ports
 
 | Port name | Direction | Type | Description |
@@ -20,8 +20,9 @@ Copyright lowRISC contributors.
 | out_o     | output    |      |             |
 ## Signals
 
-| Name   | Type  | Description       |
-| ------ | ----- | ----------------- |
-| last_q | logic | Store last value  |
+| Name   | Type  | Description        |
+| ------ | ----- | ------------------ |
+| last_q | logic |  Store last value  |
 ## Processes
 - proc_last: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

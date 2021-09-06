@@ -6,20 +6,22 @@
 ![Diagram](axi_ram.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name     | Type | Value                           | Description                                  |
-| ---------------- | ---- | ------------------------------- | -------------------------------------------- |
-| DATA_WIDTH       |      | 32                              | Width of data bus in bits                    |
-| ADDR_WIDTH       |      | 16                              | Width of address bus in bits                 |
-| STRB_WIDTH       |      | undefined                       | Width of wstrb (width of data bus in words)  |
-| ID_WIDTH         |      | 8                               | Width of ID signal                           |
-| PIPELINE_OUTPUT  |      | 0                               | Extra pipeline register on output            |
-| VALID_ADDR_WIDTH |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                              |
-| WORD_WIDTH       |      | STRB_WIDTH                      |                                              |
-| WORD_SIZE        |      | DATA_WIDTH/WORD_WIDTH           |                                              |
+| Generic name     | Type | Value                           | Description                                   |
+| ---------------- | ---- | ------------------------------- | --------------------------------------------- |
+| DATA_WIDTH       |      | 32                              |  Width of data bus in bits                    |
+| ADDR_WIDTH       |      | 16                              |  Width of address bus in bits                 |
+| STRB_WIDTH       |      | undefined                       |  Width of wstrb (width of data bus in words)  |
+| ID_WIDTH         |      | 8                               |  Width of ID signal                           |
+| PIPELINE_OUTPUT  |      | 0                               |  Extra pipeline register on output            |
+| VALID_ADDR_WIDTH |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                               |
+| WORD_WIDTH       |      | STRB_WIDTH                      |                                               |
+| WORD_SIZE        |      | DATA_WIDTH/WORD_WIDTH           |                                               |
 ## Ports
 
 | Port name     | Direction | Type                  | Description |
@@ -63,63 +65,63 @@ Language: Verilog 2001
 | s_axi_rready  | input     | wire                  |             |
 ## Signals
 
-| Name                  | Type                        | Description              |
-| --------------------- | --------------------------- | ------------------------ |
-| read_state_reg        | reg [0:0]                   |                          |
-| read_state_next       | reg [0:0]                   |                          |
-| write_state_reg       | reg [1:0]                   |                          |
-| write_state_next      | reg [1:0]                   |                          |
-| mem_wr_en             | reg                         |                          |
-| mem_rd_en             | reg                         |                          |
-| read_id_reg           | reg [ID_WIDTH-1:0]          |                          |
-| read_id_next          | reg [ID_WIDTH-1:0]          |                          |
-| read_addr_reg         | reg [ADDR_WIDTH-1:0]        |                          |
-| read_addr_next        | reg [ADDR_WIDTH-1:0]        |                          |
-| read_count_reg        | reg [7:0]                   |                          |
-| read_count_next       | reg [7:0]                   |                          |
-| read_size_reg         | reg [2:0]                   |                          |
-| read_size_next        | reg [2:0]                   |                          |
-| read_burst_reg        | reg [1:0]                   |                          |
-| read_burst_next       | reg [1:0]                   |                          |
-| write_id_reg          | reg [ID_WIDTH-1:0]          |                          |
-| write_id_next         | reg [ID_WIDTH-1:0]          |                          |
-| write_addr_reg        | reg [ADDR_WIDTH-1:0]        |                          |
-| write_addr_next       | reg [ADDR_WIDTH-1:0]        |                          |
-| write_count_reg       | reg [7:0]                   |                          |
-| write_count_next      | reg [7:0]                   |                          |
-| write_size_reg        | reg [2:0]                   |                          |
-| write_size_next       | reg [2:0]                   |                          |
-| write_burst_reg       | reg [1:0]                   |                          |
-| write_burst_next      | reg [1:0]                   |                          |
-| s_axi_awready_reg     | reg                         |                          |
-| s_axi_awready_next    | reg                         |                          |
-| s_axi_wready_reg      | reg                         |                          |
-| s_axi_wready_next     | reg                         |                          |
-| s_axi_bid_reg         | reg [ID_WIDTH-1:0]          |                          |
-| s_axi_bid_next        | reg [ID_WIDTH-1:0]          |                          |
-| s_axi_bvalid_reg      | reg                         |                          |
-| s_axi_bvalid_next     | reg                         |                          |
-| s_axi_arready_reg     | reg                         |                          |
-| s_axi_arready_next    | reg                         |                          |
-| s_axi_rid_reg         | reg [ID_WIDTH-1:0]          |                          |
-| s_axi_rid_next        | reg [ID_WIDTH-1:0]          |                          |
-| s_axi_rdata_reg       | reg [DATA_WIDTH-1:0]        |                          |
-| s_axi_rdata_next      | reg [DATA_WIDTH-1:0]        |                          |
-| s_axi_rlast_reg       | reg                         |                          |
-| s_axi_rlast_next      | reg                         |                          |
-| s_axi_rvalid_reg      | reg                         |                          |
-| s_axi_rvalid_next     | reg                         |                          |
-| s_axi_rid_pipe_reg    | reg [ID_WIDTH-1:0]          |                          |
-| s_axi_rdata_pipe_reg  | reg [DATA_WIDTH-1:0]        |                          |
-| s_axi_rlast_pipe_reg  | reg                         |                          |
-| s_axi_rvalid_pipe_reg | reg                         |                          |
-| mem                   | reg [DATA_WIDTH-1:0]        | (* RAM_STYLE="BLOCK" *)  |
-| s_axi_awaddr_valid    | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| s_axi_araddr_valid    | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| read_addr_valid       | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| write_addr_valid      | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| i                     | integer                     |                          |
-| j                     | integer                     |                          |
+| Name                  | Type                        | Description               |
+| --------------------- | --------------------------- | ------------------------- |
+| read_state_reg        | reg [0:0]                   |                           |
+| read_state_next       | reg [0:0]                   |                           |
+| write_state_reg       | reg [1:0]                   |                           |
+| write_state_next      | reg [1:0]                   |                           |
+| mem_wr_en             | reg                         |                           |
+| mem_rd_en             | reg                         |                           |
+| read_id_reg           | reg [ID_WIDTH-1:0]          |                           |
+| read_id_next          | reg [ID_WIDTH-1:0]          |                           |
+| read_addr_reg         | reg [ADDR_WIDTH-1:0]        |                           |
+| read_addr_next        | reg [ADDR_WIDTH-1:0]        |                           |
+| read_count_reg        | reg [7:0]                   |                           |
+| read_count_next       | reg [7:0]                   |                           |
+| read_size_reg         | reg [2:0]                   |                           |
+| read_size_next        | reg [2:0]                   |                           |
+| read_burst_reg        | reg [1:0]                   |                           |
+| read_burst_next       | reg [1:0]                   |                           |
+| write_id_reg          | reg [ID_WIDTH-1:0]          |                           |
+| write_id_next         | reg [ID_WIDTH-1:0]          |                           |
+| write_addr_reg        | reg [ADDR_WIDTH-1:0]        |                           |
+| write_addr_next       | reg [ADDR_WIDTH-1:0]        |                           |
+| write_count_reg       | reg [7:0]                   |                           |
+| write_count_next      | reg [7:0]                   |                           |
+| write_size_reg        | reg [2:0]                   |                           |
+| write_size_next       | reg [2:0]                   |                           |
+| write_burst_reg       | reg [1:0]                   |                           |
+| write_burst_next      | reg [1:0]                   |                           |
+| s_axi_awready_reg     | reg                         |                           |
+| s_axi_awready_next    | reg                         |                           |
+| s_axi_wready_reg      | reg                         |                           |
+| s_axi_wready_next     | reg                         |                           |
+| s_axi_bid_reg         | reg [ID_WIDTH-1:0]          |                           |
+| s_axi_bid_next        | reg [ID_WIDTH-1:0]          |                           |
+| s_axi_bvalid_reg      | reg                         |                           |
+| s_axi_bvalid_next     | reg                         |                           |
+| s_axi_arready_reg     | reg                         |                           |
+| s_axi_arready_next    | reg                         |                           |
+| s_axi_rid_reg         | reg [ID_WIDTH-1:0]          |                           |
+| s_axi_rid_next        | reg [ID_WIDTH-1:0]          |                           |
+| s_axi_rdata_reg       | reg [DATA_WIDTH-1:0]        |                           |
+| s_axi_rdata_next      | reg [DATA_WIDTH-1:0]        |                           |
+| s_axi_rlast_reg       | reg                         |                           |
+| s_axi_rlast_next      | reg                         |                           |
+| s_axi_rvalid_reg      | reg                         |                           |
+| s_axi_rvalid_next     | reg                         |                           |
+| s_axi_rid_pipe_reg    | reg [ID_WIDTH-1:0]          |                           |
+| s_axi_rdata_pipe_reg  | reg [DATA_WIDTH-1:0]        |                           |
+| s_axi_rlast_pipe_reg  | reg                         |                           |
+| s_axi_rvalid_pipe_reg | reg                         |                           |
+| mem                   | reg [DATA_WIDTH-1:0]        |  (* RAM_STYLE="BLOCK" *)  |
+| s_axi_awaddr_valid    | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| s_axi_araddr_valid    | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| read_addr_valid       | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| write_addr_valid      | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| i                     | integer                     |                           |
+| j                     | integer                     |                           |
 ## Constants
 
 | Name              | Type  | Value | Description |
@@ -131,6 +133,10 @@ Language: Verilog 2001
 | WRITE_STATE_RESP  | [1:0] | 2'd2  |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

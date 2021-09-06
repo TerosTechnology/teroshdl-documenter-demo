@@ -56,8 +56,7 @@
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - read_async: ( addr_i, data_a_s, data_b_s,
 						data_a_en_always_high_s, data_b_en_always_high_s,
 						synchronize_chan_s )

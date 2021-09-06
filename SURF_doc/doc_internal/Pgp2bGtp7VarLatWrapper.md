@@ -6,24 +6,29 @@
 ![Diagram](Pgp2bGtp7VarLatWrapper.svg "Diagram")
 ## Description
 
-Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
-Company    : SLAC National Accelerator Laboratory
-Description: Example PGP2b front end wrapper
-Note: Default generic configurations are for the AC701 development board
-Note: Default uses 125 MHz reference clock to generate 3.125 Gbps PGP link
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Example PGP2b front end wrapper
+ Note: Default generic configurations are for the AC701 development board
+ Note: Default uses 125 MHz reference clock to generate 3.125 Gbps PGP link
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type                    | Value                    | Description                                                         |
 | -------------------- | ----------------------- | ------------------------ | ------------------------------------------------------------------- |
 | TPD_G                | time                    | 1 ns                     |                                                                     |
-| COMMON_CLK_G         | boolean                 | false                    | set true if (stableClk = axilClk)                                   |
+| COMMON_CLK_G         | boolean                 | false                    |  set true if (stableClk = axilClk)                                  |
 | SIMULATION_G         | boolean                 | false                    |                                                                     |
 | DYNAMIC_QPLL_G       | boolean                 | false                    |                                                                     |
 | CLKIN_PERIOD_G       | real                    | 6.4                      | MMCM Configurations                                                 |
@@ -46,8 +51,8 @@ the terms contained in the LICENSE.txt file.
 | RX_POLARITY_G        | sl                      | '0'                      |                                                                     |
 | TX_ENABLE_G          | boolean                 | true                     |                                                                     |
 | RX_ENABLE_G          | boolean                 | true                     |                                                                     |
-| PAYLOAD_CNT_TOP_G    | integer                 | 7                        | Top bit for payload counter                                         |
-| VC_INTERLEAVE_G      | integer                 | 1                        | Interleave Frames                                                   |
+| PAYLOAD_CNT_TOP_G    | integer                 | 7                        |  Top bit for payload counter                                        |
+| VC_INTERLEAVE_G      | integer                 | 1                        |  Interleave Frames                                                  |
 | NUM_VC_EN_G          | integer range 1 to 4    | 4                        |                                                                     |
 ## Ports
 

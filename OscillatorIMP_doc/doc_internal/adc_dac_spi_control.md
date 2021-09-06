@@ -13,16 +13,16 @@
 
 | Port name      | Direction | Type              | Description |
 | -------------- | --------- | ----------------- | ----------- |
-| conf_sel_spi   | input     |                   | Data input  |
+| conf_sel_spi   | input     |                   |  Data input |
 | conf_en_spi    | input     |                   |             |
 | conf_spi       | input     | [ CONF_SIZE-1: 0] |             |
-| dac_spi_clk_o  | output    |                   | SPI output  |
+| dac_spi_clk_o  | output    |                   |  SPI output |
 | dac_spi_csb_o  | output    |                   |             |
 | dac_spi_sdio_o | output    |                   |             |
 | adc_spi_clk_o  | output    |                   |             |
 | adc_spi_csb_o  | output    |                   |             |
 | adc_spi_sdio_o | output    |                   |             |
-| clk_i          | input     |                   | Clock       |
+| clk_i          | input     |                   |  Clock      |
 | rst_i          | input     |                   |             |
 ## Signals
 
@@ -36,6 +36,7 @@
 | adc_spi_clk_o  | reg  |             |
 ## Processes
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always
 ## Instantiations
 
 - spi_master: spi_master

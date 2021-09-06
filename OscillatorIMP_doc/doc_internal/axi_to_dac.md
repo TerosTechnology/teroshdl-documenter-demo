@@ -75,7 +75,7 @@
 | data_b_out_s                 | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | data_b_en_s                  | std_logic                              |             |
 | data_b_en_sync_s             | std_logic                              |             |
-| addr_s                       | std_logic_vector(1 downto 0)           | comm        |
+| addr_s                       | std_logic_vector(1 downto 0)           |  comm       |
 | write_en_s                   | std_logic                              |             |
 |  read_en_s                   | std_logic                              |             |
 ## Processes
@@ -88,5 +88,5 @@
 - wb_atd_inst: work.wb_axi_to_dac
 - handle_comm: work.axi_to_dac_handcomm
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

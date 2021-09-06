@@ -15,6 +15,7 @@
 | CLK_FREQUENCY        | positive | 100000000      |             |
 | HAS_FPU              | boolean  | true           |             |
 | HAS_BTC              | boolean  | false          |             |
+| ICACHE_NUM_LINES     | natural  | 64             |             |
 | LOG_LENGTH           | natural  | 512            |             |
 | DISABLE_FLATTEN_CORE | boolean  | false          |             |
 | UART_IS_16550        | boolean  | true           |             |
@@ -28,17 +29,17 @@
 | uart0_rxd | in        | std_ulogic |                |
 ## Signals
 
-| Name              | Type       | Description             |
-| ----------------- | ---------- | ----------------------- |
-| soc_rst           | std_ulogic |                         |
-| pll_rst           | std_ulogic |                         |
-| system_clk        | std_ulogic | Internal clock signals: |
-| system_clk_locked | std_ulogic |                         |
+| Name              | Type       | Description               |
+| ----------------- | ---------- | ------------------------- |
+| soc_rst           | std_ulogic |                           |
+| pll_rst           | std_ulogic |                           |
+| system_clk        | std_ulogic |  Internal clock signals:  |
+| system_clk_locked | std_ulogic |                           |
 ## Instantiations
 
 - reset_controller: work.soc_reset
 - clkgen: work.clock_generator
 - soc0: work.soc
 **Description**
-Main SoC
+ Main SoC
 

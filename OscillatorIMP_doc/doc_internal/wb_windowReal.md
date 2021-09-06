@@ -6,12 +6,12 @@
 ![Diagram](wb_windowReal.svg "Diagram")
 ## Generics
 
-| Generic name    | Type    | Value | Description                 |
-| --------------- | ------- | ----- | --------------------------- |
-| COEFF_ADDR_SIZE | natural | 8     |                             |
-| COEFF_SIZE      | natural | 16    |                             |
-| id              | natural | 1     |                             |
-| wb_size         | natural | 16    | Data port size for wishbone |
+| Generic name    | Type    | Value | Description                  |
+| --------------- | ------- | ----- | ---------------------------- |
+| COEFF_ADDR_SIZE | natural | 8     |                              |
+| COEFF_SIZE      | natural | 16    |                              |
+| id              | natural | 1     |                              |
+| wb_size         | natural | 16    |  Data port size for wishbone |
 ## Ports
 
 | Port name     | Direction | Type                                         | Description      |
@@ -45,6 +45,5 @@
 ## Processes
 - write_bloc: ( clk, reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

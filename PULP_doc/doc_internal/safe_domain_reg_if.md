@@ -6,7 +6,7 @@
 ![Diagram](safe_domain_reg_if.svg "Diagram")
 ## Description
 
-Copyright 2018 ETH Zurich and University of Bologna.
+ Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
  compliance with the License.  You may obtain a copy of the License at
@@ -21,7 +21,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
        apb_soc_ctrl)
  PMU REGISTERS
  PAD MUXING
- 
+
 ## Ports
 
 | Port name           | Direction | Type   | Description |
@@ -82,9 +82,13 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_rtc_timer         | logic [16:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk_i, negedge rstn_i) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i, negedge rstn_i) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: (  )
+  - **Type:** always_comb
 ## Instantiations
 
 - i_sync: pulp_sync_wedge

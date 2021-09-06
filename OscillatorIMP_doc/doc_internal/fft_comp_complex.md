@@ -42,43 +42,43 @@
 | comp_done_o   | out       | std_logic                               |                        |
 ## Signals
 
-| Name               | Type                                             | Description   |
-| ------------------ | ------------------------------------------------ | ------------- |
-| res_mult_re_cos    | std_logic_vector(MULT_SIZE-1 downto 0)           | internal      |
-| res_mult_re_sin    | std_logic_vector(MULT_SIZE-1 downto 0)           |               |
-| res_mult_im_cos    | std_logic_vector(MULT_SIZE-1 downto 0)           |               |
-| res_mult_im_sin    | std_logic_vector(MULT_SIZE-1 downto 0)           |               |
-| tmp_real_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-|  tmp_im_s          | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| tmp_re_s           | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-|  tmp_imag_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| res_mult_re_cos_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res_mult_re_sin_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res_mult_im_cos_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res_mult_im_sin_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res2_mult_re_cos_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res2_mult_re_sin_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res2_mult_im_cos_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| res2_mult_im_sin_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |               |
-| tmp_a_re_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-|  tmp_a_im_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| tmp_b_re_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-|  tmp_b_im_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_re_a_s        | std_logic_vector(DATA_SIZE-1 downto 0)           | output result |
-| data_im_a_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_re_b_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_im_b_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_addr_a_s      | std_logic_vector(ADDR_SIZE-1 downto 0)           |               |
-| data_addr_b_s      | std_logic_vector(ADDR_SIZE-1 downto 0)           |               |
-| coeff_re_in_s      | std_logic_vector(COEFF_SIZE-1 downto 0)          | new           |
-| coeff_im_in_s      | std_logic_vector(COEFF_SIZE-1 downto 0)          |               |
-| data_a_re_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_a_im_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_b_re_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_b_im_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |               |
-| data_en_s          | std_logic                                        |               |
-|  data2_en_s        | std_logic                                        |               |
-| truc               | std_logic_vector(MULT_SIZE-SHIFT_VAL-1 downto 0) |               |
+| Name               | Type                                             | Description     |
+| ------------------ | ------------------------------------------------ | --------------- |
+| res_mult_re_cos    | std_logic_vector(MULT_SIZE-1 downto 0)           |  internal       |
+| res_mult_re_sin    | std_logic_vector(MULT_SIZE-1 downto 0)           |                 |
+| res_mult_im_cos    | std_logic_vector(MULT_SIZE-1 downto 0)           |                 |
+| res_mult_im_sin    | std_logic_vector(MULT_SIZE-1 downto 0)           |                 |
+| tmp_real_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+|  tmp_im_s          | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| tmp_re_s           | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+|  tmp_imag_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| res_mult_re_cos_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res_mult_re_sin_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res_mult_im_cos_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res_mult_im_sin_s  | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res2_mult_re_cos_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res2_mult_re_sin_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res2_mult_im_cos_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| res2_mult_im_sin_s | std_logic_vector((UPPER_SIZE)-1 downto 0)        |                 |
+| tmp_a_re_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+|  tmp_a_im_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| tmp_b_re_s         | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+|  tmp_b_im_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_re_a_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |  output result  |
+| data_im_a_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_re_b_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_im_b_s        | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_addr_a_s      | std_logic_vector(ADDR_SIZE-1 downto 0)           |                 |
+| data_addr_b_s      | std_logic_vector(ADDR_SIZE-1 downto 0)           |                 |
+| coeff_re_in_s      | std_logic_vector(COEFF_SIZE-1 downto 0)          |  new            |
+| coeff_im_in_s      | std_logic_vector(COEFF_SIZE-1 downto 0)          |                 |
+| data_a_re_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_a_im_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_b_re_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_b_im_in_s     | std_logic_vector(DATA_SIZE-1 downto 0)           |                 |
+| data_en_s          | std_logic                                        |                 |
+|  data2_en_s        | std_logic                                        |                 |
+| truc               | std_logic_vector(MULT_SIZE-SHIFT_VAL-1 downto 0) |                 |
 ## Constants
 
 | Name       | Type    | Value                      | Description |

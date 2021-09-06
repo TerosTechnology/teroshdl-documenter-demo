@@ -6,37 +6,41 @@
 ![Diagram](SlaveAxiIpIntegrator.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Common shim layer between IP Integrator interface and surf AXI interface
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Common shim layer between IP Integrator interface and surf AXI interface
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name          | Type                      | Value   | Description              |
-| --------------------- | ------------------------- | ------- | ------------------------ |
-| INTERFACENAME         | string                    | "S_AXI" |                          |
-| EN_ERROR_RESP         | boolean                   | false   |                          |
-| MAX_BURST_LENGTH      | positive range 1 to 256   | 256     | [1, 256]                 |
-| NUM_WRITE_OUTSTANDING | natural range 0 to 32     | 1       | [0, 32]                  |
-| NUM_READ_OUTSTANDING  | natural range 0 to 32     | 1       | [0, 32]                  |
-| SUPPORTS_NARROW_BURST | natural range 0 to 1      | 1       |                          |
-| ADDR_WIDTH            | positive range 1 to 64    | 32      | [1, 64]                  |
-| ID_WIDTH              | positive                  | 1       |                          |
-| DATA_WIDTH            | positive range 32 to 1024 | 32      | [32,64,128,256,512,1024] |
-| HAS_BURST             | natural range 0 to 1      | 1       |                          |
-| HAS_CACHE             | natural range 0 to 1      | 1       |                          |
-| HAS_LOCK              | natural range 0 to 1      | 1       |                          |
-| HAS_PROT              | natural range 0 to 1      | 1       |                          |
-| HAS_QOS               | natural range 0 to 1      | 1       |                          |
-| HAS_REGION            | natural range 0 to 1      | 1       |                          |
-| HAS_WSTRB             | natural range 0 to 1      | 1       |                          |
-| HAS_BRESP             | natural range 0 to 1      | 1       |                          |
-| HAS_RRESP             | natural range 0 to 1      | 1       |                          |
+| Generic name          | Type                      | Value   | Description               |
+| --------------------- | ------------------------- | ------- | ------------------------- |
+| INTERFACENAME         | string                    | "S_AXI" |                           |
+| EN_ERROR_RESP         | boolean                   | false   |                           |
+| MAX_BURST_LENGTH      | positive range 1 to 256   | 256     |  [1, 256]                 |
+| NUM_WRITE_OUTSTANDING | natural range 0 to 32     | 1       |  [0, 32]                  |
+| NUM_READ_OUTSTANDING  | natural range 0 to 32     | 1       |  [0, 32]                  |
+| SUPPORTS_NARROW_BURST | natural range 0 to 1      | 1       |                           |
+| ADDR_WIDTH            | positive range 1 to 64    | 32      |  [1, 64]                  |
+| ID_WIDTH              | positive                  | 1       |                           |
+| DATA_WIDTH            | positive range 32 to 1024 | 32      |  [32,64,128,256,512,1024] |
+| HAS_BURST             | natural range 0 to 1      | 1       |                           |
+| HAS_CACHE             | natural range 0 to 1      | 1       |                           |
+| HAS_LOCK              | natural range 0 to 1      | 1       |                           |
+| HAS_PROT              | natural range 0 to 1      | 1       |                           |
+| HAS_QOS               | natural range 0 to 1      | 1       |                           |
+| HAS_REGION            | natural range 0 to 1      | 1       |                           |
+| HAS_WSTRB             | natural range 0 to 1      | 1       |                           |
+| HAS_BRESP             | natural range 0 to 1      | 1       |                           |
+| HAS_RRESP             | natural range 0 to 1      | 1       |                           |
 ## Ports
 
 | Port name      | Direction | Type                                        | Description                                                          |

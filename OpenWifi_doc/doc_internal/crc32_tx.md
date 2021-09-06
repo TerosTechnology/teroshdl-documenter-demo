@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](crc32_tx.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -21,4 +25,6 @@
 | crc_table | reg [31:0] |             |
 ## Processes
 - unnamed: ( @(*) )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

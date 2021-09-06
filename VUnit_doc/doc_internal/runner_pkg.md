@@ -3,12 +3,12 @@
 - **File**: runner_pkg.vhd
 ## Constants
 
-| Name                        | Type     | Value                      | Description |
-| --------------------------- | -------- | -------------------------- | ----------- |
-| runner_trace_logger         | logger_t |  get_logger("runner")      |             |
-| null_runner                 | runner_t |  (p_data => null_ptr)      |             |
-| unknown_num_of_test_cases   | integer  |  integer'left              |             |
-| unknown_num_of_test_cases_c | integer  |  unknown_num_of_test_cases | Deprecated  |
+| Name                        | Type     | Value                      | Description  |
+| --------------------------- | -------- | -------------------------- | ------------ |
+| runner_trace_logger         | logger_t |  get_logger("runner")      |              |
+| null_runner                 | runner_t |  (p_data => null_ptr)      |              |
+| unknown_num_of_test_cases   | integer  |  integer'left              |              |
+| unknown_num_of_test_cases_c | integer  |  unknown_num_of_test_cases |  Deprecated  |
 ## Types
 
 | Name     | Type | Description |
@@ -45,4 +45,5 @@
 - set_timeout <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> timeout : time) </font> <font id="function_return">return ()</font>
 - p_disable_simulation_exit <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font>
 **Description**
-Private procedures only use for VUnit internal testing
+ Private procedures only use for VUnit internal testing
+

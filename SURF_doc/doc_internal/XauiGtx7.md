@@ -6,15 +6,19 @@
 ![Diagram](XauiGtx7.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: 10 GigE XAUI for Gtx7
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: 10 GigE XAUI for Gtx7
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name  | Type                | Value              | Description                   |
@@ -70,15 +74,21 @@ the terms contained in the LICENSE.txt file.
 
 - U_MAC: surf.EthMacTop
 **Description**
-Ethernet MAC core
+------------------
+ Ethernet MAC core
+------------------
 
 - U_XauiGtx7Core: surf.XauiGtx7Core
 **Description**
-10 GigE XAUI Core
+------------------
+ 10 GigE XAUI Core
+------------------
 
 - RstSync_0: surf.RstSync
 - RstSync_1: surf.RstSync
 - U_XauiReg: surf.XauiReg
 **Description**
-Configuration/Status Register
+------------------------------
+ Configuration/Status Register
+------------------------------
 

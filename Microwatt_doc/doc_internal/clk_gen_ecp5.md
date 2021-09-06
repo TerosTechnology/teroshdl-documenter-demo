@@ -26,16 +26,16 @@
 | lock  | std_logic |             |
 ## Constants
 
-| Name          | Type    | Value                  | Description                               |
-| ------------- | ------- | ---------------------- | ----------------------------------------- |
-| PLL_IN        | natural |     2000000            | PLL constants based on prjtrellis example |
-| PLL_OUT       | natural |  600000000             |                                           |
-| PLL_CLKOP_DIV | natural |  PLL_OUT/CLK_OUTPUT_HZ | Configration for ECP5 PLL                 |
-| PLL_CLKFB_DIV | natural |  CLK_OUTPUT_HZ/PLL_IN  |                                           |
-| PLL_CLKI_DIV  | natural |  CLK_INPUT_HZ/PLL_IN   |                                           |
+| Name          | Type    | Value                  | Description                                 |
+| ------------- | ------- | ---------------------- | ------------------------------------------- |
+| PLL_IN        | natural |     2000000            |  PLL constants based on prjtrellis example  |
+| PLL_OUT       | natural |  600000000             |                                             |
+| PLL_CLKOP_DIV | natural |  PLL_OUT/CLK_OUTPUT_HZ |  Configration for ECP5 PLL                  |
+| PLL_CLKFB_DIV | natural |  CLK_OUTPUT_HZ/PLL_IN  |                                             |
+| PLL_CLKI_DIV  | natural |  CLK_INPUT_HZ/PLL_IN   |                                             |
 ## Instantiations
 
 - clkgen: EHXPLLL
 **Description**
-FIXME: EHXPLLL lock signal active low?!?
+ FIXME: EHXPLLL lock signal active low?!?
 

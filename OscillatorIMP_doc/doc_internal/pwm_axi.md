@@ -44,11 +44,11 @@
 
 | Name              | Type                                             | Description |
 | ----------------- | ------------------------------------------------ | ----------- |
-| addr_s            | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) | axi         |
+| addr_s            | std_logic_vector(INTERNAL_ADDR_WIDTH-1 downto 0) |  axi        |
 | write_en_s        | std_logic                                        |             |
 |  read_en_s        | std_logic                                        |             |
-| duty_s            | std_logic_vector(COUNTER_SIZE-1 downto 0)        | conf        |
-|  duty_sync_s      | std_logic_vector(COUNTER_SIZE-1 downto 0)        | conf        |
+| duty_s            | std_logic_vector(COUNTER_SIZE-1 downto 0)        |  conf       |
+|  duty_sync_s      | std_logic_vector(COUNTER_SIZE-1 downto 0)        |  conf       |
 | period_s          | std_logic_vector(COUNTER_SIZE-1 downto 0)        |             |
 |  period_sync_s    | std_logic_vector(COUNTER_SIZE-1 downto 0)        |             |
 | prescaler_s       | std_logic_vector(COUNTER_SIZE-1 downto 0)        |             |
@@ -73,5 +73,5 @@
 - pwm_comm_inst: work.pwm_comm
 - handle_comm: work.pwm_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

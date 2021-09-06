@@ -6,15 +6,19 @@
 ![Diagram](AxiLtc2270Reg.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite Register Access Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite Register Access Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name       | Type                            | Value                                   | Description |
@@ -69,15 +73,13 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( axiReadMaster, axiRst, axiWriteMaster, r, regIn, sdo )
 **Description**
-3-state enable input, high=input, low=output
-Configuration Register
-
+ 3-state enable input, high=input, low=output -----------------------------  Configuration Register ----------------------------- 
 - seq: ( axiClk )
 ## Instantiations
 
 - IOBUF_INST: IOBUF
 **Description**
-'0' = Normal Operation
+ '0' = Normal Operation
 
 - SyncOut_delayIn_load: surf.RstSync
 - SyncOut_delayIn_rst: surf.RstSync

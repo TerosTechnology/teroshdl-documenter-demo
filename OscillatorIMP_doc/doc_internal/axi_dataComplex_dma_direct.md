@@ -37,7 +37,7 @@
 | tlast_next_s        | std_logic                                         |             |
 | axis_tlast_delay    | std_logic                                         |             |
 | stream_data_out     | std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0) |             |
-| start_acquisition_s | std_logic                                         | new         |
+| start_acquisition_s | std_logic                                         |  new        |
 | stop_acquisition_s  | std_logic                                         |             |
 | busy_s              | std_logic                                         |             |
 | data_en_s           | std_logic                                         |             |

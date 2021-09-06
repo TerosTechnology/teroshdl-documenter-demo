@@ -6,8 +6,8 @@
 ![Diagram](iq_abs_avg.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Generics
 
 | Generic name  | Type    | Value | Description |
@@ -15,15 +15,15 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | IQ_DATA_WIDTH | integer | 16    |             |
 ## Ports
 
-| Port name     | Direction | Type                              | Description                  |
-| ------------- | --------- | --------------------------------- | ---------------------------- |
-| clk           | input     | wire                              |                              |
-| rstn          | input     | wire                              |                              |
-| ddc_i         | input     | wire signed [(IQ_DATA_WIDTH-1):0] | Ports to receive IQ from DDC |
-| ddc_q         | input     | wire signed [(IQ_DATA_WIDTH-1):0] |                              |
-| ddc_iq_valid  | input     | wire                              |                              |
-| iq_rssi       | output    | wire signed [(IQ_DATA_WIDTH-1):0] | result outputs               |
-| iq_rssi_valid | output    | wire                              |                              |
+| Port name     | Direction | Type                              | Description                   |
+| ------------- | --------- | --------------------------------- | ----------------------------- |
+| clk           | input     | wire                              |                               |
+| rstn          | input     | wire                              |                               |
+| ddc_i         | input     | wire signed [(IQ_DATA_WIDTH-1):0] |  Ports to receive IQ from DDC |
+| ddc_q         | input     | wire signed [(IQ_DATA_WIDTH-1):0] |                               |
+| ddc_iq_valid  | input     | wire                              |                               |
+| iq_rssi       | output    | wire signed [(IQ_DATA_WIDTH-1):0] |  result outputs               |
+| iq_rssi_valid | output    | wire                              |                               |
 ## Signals
 
 | Name                      | Type                         | Description |

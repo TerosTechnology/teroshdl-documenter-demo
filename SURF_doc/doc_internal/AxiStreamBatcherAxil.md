@@ -6,16 +6,21 @@
 ![Diagram](AxiStreamBatcherAxil.svg "Diagram")
 ## Description
 
-Title      : AxiStream BatcherV1 Protocol: https://confluence.slac.stanford.edu/x/th1SDg
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite wrapper for AXI-Stream Batcher
-This file is part of SURF. It is subject to
-the license terms in the LICENSE.txt file found in the top-level directory
-of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of SURF, including this file, may be
-copied, modified, propagated, or distributed except according to the terms
-contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : AxiStream BatcherV1 Protocol: https://confluence.slac.stanford.edu/x/th1SDg
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite wrapper for AXI-Stream Batcher
+-----------------------------------------------------------------------------
+ This file is part of SURF. It is subject to
+ the license terms in the LICENSE.txt file found in the top-level directory
+ of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of SURF, including this file, may be
+ copied, modified, propagated, or distributed except according to the terms
+ contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name                 | Type                | Value | Description |
@@ -68,13 +73,12 @@ contained in the LICENSE.txt file.
 ## Processes
 - comb: ( axisRst, r, syncAxilReadMaster, syncAxilWriteMaster )
 **Description**
-[in]
-
+ [in] 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_AxiStreamBatcher_1: surf.AxiStreamBatcher
 - U_AxiLiteAsync_1: surf.AxiLiteAsync
 **Description**
-[in]
+ [in]
 

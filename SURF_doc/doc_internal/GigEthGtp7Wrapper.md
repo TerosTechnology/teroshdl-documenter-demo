@@ -6,16 +6,20 @@
 ![Diagram](GigEthGtp7Wrapper.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Gtp7 Wrapper for 1000BASE-X Ethernet
-Note: This module supports up to a MGT QUAD of 1GigE interfaces
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Gtp7 Wrapper for 1000BASE-X Ethernet
+ Note: This module supports up to a MGT QUAD of 1GigE interfaces
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name       | Type                 | Value                     | Description                        |
@@ -93,14 +97,20 @@ the terms contained in the LICENSE.txt file.
 
 - IBUFDS_GTE2_Inst: IBUFDS_GTE2
 **Description**
-Select the Reference Clock
+---------------------------
+ Select the Reference Clock
+---------------------------
 
 - BUFG_Inst: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
 **Description**
-Power Up Reset
+---------------
+ Power Up Reset
+---------------
 
 - U_MMCM: surf.ClockManager7
 **Description**
-Clock Manager
+--------------
+ Clock Manager
+--------------
 

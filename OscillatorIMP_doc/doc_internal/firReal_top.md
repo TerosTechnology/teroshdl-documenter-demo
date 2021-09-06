@@ -6,9 +6,11 @@
 ![Diagram](firReal_top.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/05/26
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/05/26
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type    | Value    | Description |
@@ -55,8 +57,8 @@ Creation date : 2018/05/26
 | data_in_en_s      | std_logic                                  |             |
 | data_in_s         | std_logic_vector(DATA_SIZE-1 downto 0)     |             |
 | end_delay_macc_s  | std_logic                                  |             |
-| cpt_store_s       | natural range 0 to NB_THREAD-1             | last        |
-|  cpt_store_next_s | natural range 0 to NB_THREAD-1             | last        |
+| cpt_store_s       | natural range 0 to NB_THREAD-1             |  last       |
+|  cpt_store_next_s | natural range 0 to NB_THREAD-1             |  last       |
 | clr_cpt_store_s   | std_logic                                  |             |
 | data_out_s        | std_logic_vector(DATA_OUT_SIZE-1 downto 0) |             |
 |  data_out_next_s  | std_logic_vector(DATA_OUT_SIZE-1 downto 0) |             |

@@ -6,16 +6,21 @@
 ![Diagram](SaciSlaveWrapper.svg "Diagram")
 ## Description
 
-Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
-Company    : SLAC National Accelerator Laboratory
-Description: Simulation testbed for SaciSlaveWrapper
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Simulation testbed for SaciSlaveWrapper
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -27,7 +32,7 @@ the terms contained in the LICENSE.txt file.
 | --------- | --------- | ---- | ----------- |
 | asicRstL  | in        | sl   |             |
 | saciClk   | in        | sl   |             |
-| saciSelL  | in        | sl   | chipSelect  |
+| saciSelL  | in        | sl   |  chipSelect |
 | saciCmd   | in        | sl   |             |
 | saciRsp   | out       | sl   |             |
 ## Signals

@@ -6,20 +6,25 @@
 ![Diagram](AxiLiteMasterProxy.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: A Proxy module for sending transactions on an AXI-Lite bus.
-Usefull for situations with long transactions times, such as when the
-AXI-Lite bus is bridged to I2C. In this case, the AXI-Lite bus Master
-could be locked out for some time while waiting for the I2C transaction to
-complete. This module allows the transaction to be kicked off and then the
-response to be polled for later.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: A Proxy module for sending transactions on an AXI-Lite bus.
+
+ Usefull for situations with long transactions times, such as when the
+ AXI-Lite bus is bridged to I2C. In this case, the AXI-Lite bus Master
+ could be locked out for some time while waiting for the I2C transaction to
+ complete. This module allows the transaction to be kicked off and then the
+ response to be polled for later.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type | Value | Description |

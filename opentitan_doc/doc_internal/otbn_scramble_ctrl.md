@@ -6,36 +6,37 @@
 ![Diagram](otbn_scramble_ctrl.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
-| Generic name | Type                       | Value                             | Description                            |
-| ------------ | -------------------------- | --------------------------------- | -------------------------------------- |
-| otp_ctrl_pkg | otp_ctrl_pkg::otbn_key_t   | otbn_pkg::RndCnstOtbnKeyDefault   | Default seed and nonce for scrambling  |
-| otp_ctrl_pkg | otp_ctrl_pkg::otbn_nonce_t | otbn_pkg::RndCnstOtbnNonceDefault |                                        |
+| Generic name | Type                       | Value                             | Description                             |
+| ------------ | -------------------------- | --------------------------------- | --------------------------------------- |
+| otp_ctrl_pkg | otp_ctrl_pkg::otbn_key_t   | otbn_pkg::RndCnstOtbnKeyDefault   |  Default seed and nonce for scrambling  |
+| otp_ctrl_pkg | otp_ctrl_pkg::otbn_nonce_t | otbn_pkg::RndCnstOtbnNonceDefault |                                         |
 ## Ports
 
-| Port name                           | Direction | Type              | Description                   |
-| ----------------------------------- | --------- | ----------------- | ----------------------------- |
-| clk_i                               | input     |                   | OTBN clock                    |
-| rst_ni                              | input     |                   |                               |
-| clk_otp_i                           | input     |                   | OTP Clock (for key interface) |
-| rst_otp_ni                          | input     |                   |                               |
-| otbn_otp_key_o                      | output    |                   | OTP key interface             |
-| otbn_otp_key_i                      | input     |                   |                               |
-| otbn_dmem_scramble_key_o            | output    |                   |                               |
-| otbn_dmem_scramble_nonce_o          | output    | otbn_dmem_nonce_t |                               |
-| otbn_dmem_scramble_valid_o          | output    |                   |                               |
-| otbn_dmem_scramble_key_seed_valid_o | output    |                   |                               |
-| otbn_imem_scramble_key_o            | output    |                   |                               |
-| otbn_imem_scramble_nonce_o          | output    | otbn_imem_nonce_t |                               |
-| otbn_imem_scramble_valid_o          | output    |                   |                               |
-| otbn_imem_scramble_key_seed_valid_o | output    |                   |                               |
-| otbn_dmem_scramble_new_req_i        | input     |                   |                               |
-| otbn_imem_scramble_new_req_i        | input     |                   |                               |
+| Port name                           | Direction | Type              | Description                    |
+| ----------------------------------- | --------- | ----------------- | ------------------------------ |
+| clk_i                               | input     |                   |  OTBN clock                    |
+| rst_ni                              | input     |                   |                                |
+| clk_otp_i                           | input     |                   |  OTP Clock (for key interface) |
+| rst_otp_ni                          | input     |                   |                                |
+| otbn_otp_key_o                      | output    |                   |  OTP key interface             |
+| otbn_otp_key_i                      | input     |                   |                                |
+| otbn_dmem_scramble_key_o            | output    |                   |                                |
+| otbn_dmem_scramble_nonce_o          | output    | otbn_dmem_nonce_t |                                |
+| otbn_dmem_scramble_valid_o          | output    |                   |                                |
+| otbn_dmem_scramble_key_seed_valid_o | output    |                   |                                |
+| otbn_imem_scramble_key_o            | output    |                   |                                |
+| otbn_imem_scramble_nonce_o          | output    | otbn_imem_nonce_t |                                |
+| otbn_imem_scramble_valid_o          | output    |                   |                                |
+| otbn_imem_scramble_key_seed_valid_o | output    |                   |                                |
+| otbn_dmem_scramble_new_req_i        | input     |                   |                                |
+| otbn_imem_scramble_new_req_i        | input     |                   |                                |
 ## Signals
 
 | Name                        | Type                       | Description |
@@ -69,6 +70,7 @@ Copyright lowRISC contributors.
 | rst_ni                      | prim_sync_reqack_data      |             |
 | clk_otp_i                   | prim_sync_reqack_data      |             |
 | rst_otp_ni                  | prim_sync_reqack_data      |             |
+| req_chk_i                   | prim_sync_reqack_data      |             |
 | otp_key_req                 | prim_sync_reqack_data      |             |
 | otp_key_ack                 | prim_sync_reqack_data      |             |
 | req                         | prim_sync_reqack_data      |             |
@@ -86,6 +88,10 @@ Copyright lowRISC contributors.
 | scramble_ctrl_state_t | enum logic [1:0] {<br><span style="padding-left:20px">     ScrambleCtrlIdle,<br><span style="padding-left:20px">     ScrambleCtrlDmemReq,<br><span style="padding-left:20px">     ScrambleCtrlImemReq   } |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb

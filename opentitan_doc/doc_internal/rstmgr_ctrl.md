@@ -6,11 +6,13 @@
 ![Diagram](rstmgr_ctrl.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  This module implements generic reset controls
- 
+
+
 ## Ports
 
 | Port name     | Direction | Type               | Description  |
@@ -24,13 +26,13 @@ Copyright lowRISC contributors.
 | scan_rst_ni   | input     |                    |              |
 ## Signals
 
-| Name              | Type                     | Description                                                                                              |
-| ----------------- | ------------------------ | -------------------------------------------------------------------------------------------------------- |
-| rst_aon_n_premux  | logic                    | the always on root reset                                                                                 |
-| rst_aon_n         | logic                    | the always on root reset                                                                                 |
-| rst_pd_nd         | logic [OffDomains-1:0]   | the remaining resets                                                                                     |
-| rst_pd_nq         | logic [OffDomains-1:0]   | the remaining resets                                                                                     |
-| rst_parent_synced | logic [PowerDomains-1:0] | Parent resets may assert asynchronously, so we need to sync before using it as part of the control path  |
+| Name              | Type                     | Description                                                                                                |
+| ----------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| rst_aon_n_premux  | logic                    |  the always on root reset                                                                                  |
+| rst_aon_n         | logic                    |  the always on root reset                                                                                  |
+| rst_pd_nd         | logic [OffDomains-1:0]   |  the remaining resets                                                                                      |
+| rst_pd_nq         | logic [OffDomains-1:0]   |  the remaining resets                                                                                      |
+| rst_parent_synced | logic [PowerDomains-1:0] |  Parent resets may assert asynchronously, so we need to sync before using it as part  of the control path  |
 ## Constants
 
 | Name             | Type | Value            | Description |
@@ -41,6 +43,6 @@ Copyright lowRISC contributors.
 - u_lc: prim_flop_2sync
 - u_aon_rst: prim_flop
 **Description**
-always on handling
+ always on handling
 
 - u_rst_aon_mux: prim_clock_mux2

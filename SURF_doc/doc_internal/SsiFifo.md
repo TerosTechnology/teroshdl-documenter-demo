@@ -6,29 +6,35 @@
 ![Diagram](SsiFifo.svg "Diagram")
 ## Description
 
-Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper on the AxiStreamFifoV2 + inbound/outbound filters
-             The filters remove all malformed SSI frames from being sent
-             on the master AXI stream port.
-Note: This module does NOT support interleaved tDEST
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper on the AxiStreamFifoV2 + inbound/outbound filters
+              The filters remove all malformed SSI frames from being sent
+              on the master AXI stream port.
+-----------------------------------------------------------------------------
+ Note: This module does NOT support interleaved tDEST
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name           | Type                | Value      | Description                                                                                                                                                                                                                    |
 | ---------------------- | ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | TPD_G                  | time                | 1 ns       | General Configurations                                                                                                                                                                                                         |
-| INT_PIPE_STAGES_G      | natural             | 0          | Internal FIFO setting                                                                                                                                                                                                          |
+| INT_PIPE_STAGES_G      | natural             | 0          |  Internal FIFO setting                                                                                                                                                                                                         |
 | PIPE_STAGES_G          | natural             | 1          |                                                                                                                                                                                                                                |
 | SLAVE_READY_EN_G       | boolean             | true       |                                                                                                                                                                                                                                |
 | VALID_THOLD_G          | natural             | 1          | Valid threshold should always be 1 when using interleaved TDEST       =1 = normal operation       =0 = only when frame ready       >1 = only when frame ready or # entries                                                     |
-| VALID_BURST_MODE_G     | boolean             | false      | only used in VALID_THOLD_G>1                                                                                                                                                                                                   |
+| VALID_BURST_MODE_G     | boolean             | false      |  only used in VALID_THOLD_G>1                                                                                                                                                                                                  |
 | GEN_SYNC_FIFO_G        | boolean             | false      | FIFO configurations                                                                                                                                                                                                            |
 | FIFO_ADDR_WIDTH_G      | positive            | 9          |                                                                                                                                                                                                                                |
 | FIFO_FIXED_THRESH_G    | boolean             | true       |                                                                                                                                                                                                                                |
@@ -93,13 +99,19 @@ the terms contained in the LICENSE.txt file.
 
 - U_IbFilter: surf.SsiIbFrameFilter
 **Description**
-Inbound FIFO Filter
+--------------------
+ Inbound FIFO Filter
+--------------------
 
 - U_Fifo: surf.AxiStreamFifoV2
 **Description**
-AXI Stream FIFO
+----------------
+ AXI Stream FIFO
+----------------
 
 - U_ObFilter: surf.SsiObFrameFilter
 **Description**
-Outbound FIFO Filter
+---------------------
+ Outbound FIFO Filter
+---------------------
 

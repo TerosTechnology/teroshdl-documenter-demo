@@ -6,33 +6,41 @@
 ![Diagram](util_upack2.svg "Diagram")
 ## Description
 
-***************************************************************************
+ ***************************************************************************
  ***************************************************************************
  Copyright 2017 (c) Analog Devices, Inc. All rights reserved.
+
  In this HDL repository, there are many different and unique modules, consisting
  of various HDL (Verilog or VHDL) components. The individual modules are
  developed independently, and may be accompanied by separate and unique license
  terms.
+
  The user should read each of these license terms, and understand the
  freedoms and responsabilities that he or she has by using this source/core.
+
  This core is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE.
+
  Redistribution and use of source or resulting binaries, with or without modification
  of this file, are permitted under one of the following two license terms:
+
    1. The GNU General Public License version 2 as published by the
       Free Software Foundation, which can be found in the top level directory
       of this repository (LICENSE_GPL2), and also online at:
       <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+
  OR
+
    2. An ADI specific BSD license, which can be found in the top level directory
       of this repository (LICENSE_ADIBSD), and also on-line at:
       https://github.com/analogdevicesinc/hdl/blob/master/LICENSE_ADIBSD
       This will allow to generate bit files and not release the source code,
       as long as it attaches to an ADI device.
+
  ***************************************************************************
  ***************************************************************************
- 
+
 ## Generics
 
 | Generic name        | Type | Value | Description |
@@ -182,14 +190,14 @@
 | s_axis_data       | input     | [2**$clog2(NUM_OF_CHANNELS)*SAMPLE_DATA_WIDTH*SAMPLES_PER_CHANNEL-1:0] |             |
 ## Signals
 
-| Name           | Type                                               | Description                                       |
-| -------------- | -------------------------------------------------- | ------------------------------------------------- |
-| enable_s       | wire [63:0]                                        | FIXME: Find out how to do this in the IP-XACT */  |
-| fifo_rd_data   | wire [CHANNEL_DATA_WIDTH*REAL_NUM_OF_CHANNELS-1:0] |                                                   |
-| fifo_rd_data_s | wire [CHANNEL_DATA_WIDTH*64-1:0]                   |                                                   |
+| Name           | Type                                               | Description                                        |
+| -------------- | -------------------------------------------------- | -------------------------------------------------- |
+| enable_s       | wire [63:0]                                        |  FIXME: Find out how to do this in the IP-XACT */  |
+| fifo_rd_data   | wire [CHANNEL_DATA_WIDTH*REAL_NUM_OF_CHANNELS-1:0] |                                                    |
+| fifo_rd_data_s | wire [CHANNEL_DATA_WIDTH*64-1:0]                   |                                                    |
 ## Constants
 
-| Name                 | Type | Value                                   | Description |
-| -------------------- | ---- | --------------------------------------- | ----------- |
-| CHANNEL_DATA_WIDTH   |      | SAMPLE_DATA_WIDTH * SAMPLES_PER_CHANNEL |             |
-| REAL_NUM_OF_CHANNELS |      |                                         |             |
+| Name                 | Type | Value                                   | Description                                                                                    |
+| -------------------- | ---- | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| CHANNEL_DATA_WIDTH   |      | SAMPLE_DATA_WIDTH * SAMPLES_PER_CHANNEL |                                                                                                |
+| REAL_NUM_OF_CHANNELS |      |                                         |   * Round up to the next power of two and zero out the additional channels  * internally.  */  |

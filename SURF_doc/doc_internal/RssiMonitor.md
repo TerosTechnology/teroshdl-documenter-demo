@@ -6,38 +6,44 @@
 ![Diagram](RssiMonitor.svg "Diagram")
 ## Description
 
-Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
-Company    : SLAC National Accelerator Laboratory
-Description:
- Handles RSSI counters, timeouts, and statuses:
- - Re-transmission timeout and request,
- - NULL segment transmission (Client),
- - NULL timeout detection (Server),
- - Acknowledgment timeout and request,
- - Valid segment counter,
- - Dropped segment counter.
- Status register:
-   statusReg_o(0) : Connection Active
-   statusReg_o(1) : Maximum retransmissions exceeded r.retransMax and
-   statusReg_o(2) : Null timeout reached (server) r.nullTout;
-   statusReg_o(3) : Error in acknowledgment mechanism
-   statusReg_o(4) : SSI Frame length too long
-   statusReg_o(5) : Connection to peer timed out
-   statusReg_o(6) : Client rejected the connection (parameters out of range)
-                    Server proposed new parameters (parameters out of range)
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+  Handles RSSI counters, timeouts, and statuses:
+  - Re-transmission timeout and request,
+  - NULL segment transmission (Client),
+  - NULL timeout detection (Server),
+  - Acknowledgment timeout and request,
+  - Valid segment counter,
+  - Dropped segment counter.
+
+  Status register:
+    statusReg_o(0) : Connection Active
+    statusReg_o(1) : Maximum retransmissions exceeded r.retransMax and
+    statusReg_o(2) : Null timeout reached (server) r.nullTout;
+    statusReg_o(3) : Error in acknowledgment mechanism
+    statusReg_o(4) : SSI Frame length too long
+    statusReg_o(5) : Connection to peer timed out
+    statusReg_o(6) : Client rejected the connection (parameters out of range)
+                     Server proposed new parameters (parameters out of range)
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name        | Type     | Value   | Description |
 | ------------------- | -------- | ------- | ----------- |
 | TPD_G               | time     | 1 ns    |             |
-| TIMEOUT_UNIT_G      | real     | 1.0E-6  | us          |
+| TIMEOUT_UNIT_G      | real     | 1.0E-6  |  us         |
 | CLK_FREQUENCY_G     | real     | 100.0E6 |             |
 | SERVER_G            | boolean  | true    |             |
 | WINDOW_ADDR_SIZE_G  | positive | 7       |             |

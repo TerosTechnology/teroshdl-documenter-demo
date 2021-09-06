@@ -6,99 +6,105 @@
 ![Diagram](RssiTxFsm.svg "Diagram")
 ## Description
 
-Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
-Company    : SLAC National Accelerator Laboratory
-Description: Transmitter FSM
-             Transmitter has the following functionality:
-             Handle buffer addresses and buffer window (firstUnackAddr,nextSentAddr,lastSentAddr, bufferFull, bufferEmpty)
-             Application side FSM. Receive SSI frame and store into TX data buffer.
-                  - IDLE Waits until buffer window is free (not bufferFull),
-                  - Waits for Application side SOF,
-                  - Save the segment to Rx buffer at nextSentAddr. Disable sending of NULL segments with appBusy flag,
-                  - When EOF received save segment length and keep flags. Check length error,
-                  - Request data send at Transport side FSM and increment nextSentAddr
-                  - Wait until the data is processed and data segment sent by Transport side FSM
-                  - Release appBusy flag and go back to INIT.
-             Acknowledgment FSM.
-                  - IDLE Waits for ack_i (ack request) and ackN_i(ack number)(from RxFSM),
-                  - Increments firstUnackAddr until the ackN_i is found in Window buffer,
-                  - If it does not find the SEQ number it reports Ack Error,
-                  - Goes back to IDLE.
-             Transport side FSM. Send and resend various segments to Transport side.
-                  - INIT Initializes seqN to initSeqN. Waits until new connection requested. ConnFSM goin out od Closed state.
-                  - DISS_CONN allows sending SYN, ACK, or RST segments. Goes to CONN when connection becomes active.
-                  - CONN allows sending DATA, NULL, ACK, or RST segments.
-                    In Resend procedure the FSM resends all the unacknowledged (DATA, NULL, RST) segments in the buffer window.
-             Note:Sequence number is incremented with sending SYN, DATA, NULL, and RST segments.
-             Note:Only the following segments are saved into Tx buffer DATA, NULL, and RST.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : RSSI Protocol: https://confluence.slac.stanford.edu/x/1IyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Transmitter FSM
+              Transmitter has the following functionality:
+              Handle buffer addresses and buffer window (firstUnackAddr,nextSentAddr,lastSentAddr, bufferFull, bufferEmpty)
+              Application side FSM. Receive SSI frame and store into TX data buffer.
+                   - IDLE Waits until buffer window is free (not bufferFull),
+                   - Waits for Application side SOF,
+                   - Save the segment to Rx buffer at nextSentAddr. Disable sending of NULL segments with appBusy flag,
+                   - When EOF received save segment length and keep flags. Check length error,
+                   - Request data send at Transport side FSM and increment nextSentAddr
+                   - Wait until the data is processed and data segment sent by Transport side FSM
+                   - Release appBusy flag and go back to INIT.
+              Acknowledgment FSM.
+                   - IDLE Waits for ack_i (ack request) and ackN_i(ack number)(from RxFSM),
+                   - Increments firstUnackAddr until the ackN_i is found in Window buffer,
+                   - If it does not find the SEQ number it reports Ack Error,
+                   - Goes back to IDLE.
+              Transport side FSM. Send and resend various segments to Transport side.
+                   - INIT Initializes seqN to initSeqN. Waits until new connection requested. ConnFSM goin out od Closed state.
+                   - DISS_CONN allows sending SYN, ACK, or RST segments. Goes to CONN when connection becomes active.
+                   - CONN allows sending DATA, NULL, ACK, or RST segments.
+                     In Resend procedure the FSM resends all the unacknowledged (DATA, NULL, RST) segments in the buffer window.
+
+              Note:Sequence number is incremented with sending SYN, DATA, NULL, and RST segments.
+              Note:Only the following segments are saved into Tx buffer DATA, NULL, and RST.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name        | Type     | Value | Description                                              |
-| ------------------- | -------- | ----- | -------------------------------------------------------- |
-| TPD_G               | time     | 1 ns  |                                                          |
-| WINDOW_ADDR_SIZE_G  | positive | 3     | 2^WINDOW_ADDR_SIZE_G  = Number of segments               |
-| SEGMENT_ADDR_SIZE_G | positive | 7     | 2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words |
-| SYN_HEADER_SIZE_G   | natural  | 24    |                                                          |
-| ACK_HEADER_SIZE_G   | natural  | 8     |                                                          |
-| EACK_HEADER_SIZE_G  | natural  | 8     |                                                          |
-| RST_HEADER_SIZE_G   | natural  | 8     |                                                          |
-| NULL_HEADER_SIZE_G  | natural  | 8     |                                                          |
-| DATA_HEADER_SIZE_G  | natural  | 8     |                                                          |
-| HEADER_CHKSUM_EN_G  | boolean  | true  |                                                          |
+| Generic name        | Type     | Value | Description                                               |
+| ------------------- | -------- | ----- | --------------------------------------------------------- |
+| TPD_G               | time     | 1 ns  |                                                           |
+| WINDOW_ADDR_SIZE_G  | positive | 3     |  2^WINDOW_ADDR_SIZE_G  = Number of segments               |
+| SEGMENT_ADDR_SIZE_G | positive | 7     |  2^SEGMENT_ADDR_SIZE_G = Number of 64 bit wide data words |
+| SYN_HEADER_SIZE_G   | natural  | 24    |                                                           |
+| ACK_HEADER_SIZE_G   | natural  | 8     |                                                           |
+| EACK_HEADER_SIZE_G  | natural  | 8     |                                                           |
+| RST_HEADER_SIZE_G   | natural  | 8     |                                                           |
+| NULL_HEADER_SIZE_G  | natural  | 8     |                                                           |
+| DATA_HEADER_SIZE_G  | natural  | 8     |                                                           |
+| HEADER_CHKSUM_EN_G  | boolean  | true  |                                                           |
 ## Ports
 
-| Port name      | Direction | Type                                                     | Description                                                      |
-| -------------- | --------- | -------------------------------------------------------- | ---------------------------------------------------------------- |
-| clk_i          | in        | sl                                                       |                                                                  |
-| rst_i          | in        | sl                                                       |                                                                  |
-| connActive_i   | in        | sl                                                       | Connection FSM indicating active connection                      |
-| closed_i       | in        | sl                                                       | Closed state in connFSM (initialize seqN)                        |
-| injectFault_i  | in        | sl                                                       | Fault injection corrupts header checksum                         |
-| sndSyn_i       | in        | sl                                                       | Various segment requests                                         |
-| sndAck_i       | in        | sl                                                       |                                                                  |
-| sndRst_i       | in        | sl                                                       |                                                                  |
-| sndResend_i    | in        | sl                                                       |                                                                  |
-| sndNull_i      | in        | sl                                                       |                                                                  |
-| windowSize_i   | in        | integer range 1 to 2 ** (WINDOW_ADDR_SIZE_G)             | Window buff size (Depends on the number of outstanding segments) |
-| bufferSize_i   | in        | integer range 1 to 2 ** (SEGMENT_ADDR_SIZE_G)            |                                                                  |
-| wrBuffWe_o     | out       | sl                                                       | Buffer write                                                     |
-| wrBuffAddr_o   | out       | slv((SEGMENT_ADDR_SIZE_G+WINDOW_ADDR_SIZE_G)-1 downto 0) |                                                                  |
-| wrBuffData_o   | out       | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                  |
-| rdBuffAddr_o   | out       | slv((SEGMENT_ADDR_SIZE_G+WINDOW_ADDR_SIZE_G)-1 downto 0) | Buffer read                                                      |
-| rdBuffData_i   | in        | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                  |
-| rdHeaderAddr_o | out       | slv(7 downto 0)                                          | Header read                                                      |
-| rdHeaderData_i | in        | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                  |
-| headerRdy_i    | in        | sl                                                       |                                                                  |
-| headerLength_i | in        | positive                                                 | Unconnected for now will be used when EACK                       |
-| chksumValid_i  | in        | sl                                                       | Checksum control                                                 |
-| chksumEnable_o | out       | sl                                                       |                                                                  |
-| chksumStrobe_o | out       | sl                                                       |                                                                  |
-| chksum_i       | in        | slv(15 downto 0)                                         |                                                                  |
-| initSeqN_i     | in        | slv(7 downto 0)                                          | Initial sequence number                                          |
-| txSeqN_o       | out       | slv(7 downto 0)                                          | Tx data (input to header decoder module)                         |
-| synHeadSt_o    | out       | sl                                                       | FSM outs for header and data flow control                        |
-| ackHeadSt_o    | out       | sl                                                       |                                                                  |
-| dataHeadSt_o   | out       | sl                                                       |                                                                  |
-| dataSt_o       | out       | sl                                                       |                                                                  |
-| rstHeadSt_o    | out       | sl                                                       |                                                                  |
-| nullHeadSt_o   | out       | sl                                                       |                                                                  |
-| lastAckN_o     | out       | slv(7 downto 0)                                          | Last acked number (Used in Rx FSM to determine if AcnN is valid) |
-| ack_i          | in        | sl                                                       | From receiver module when a segment with valid ACK is received   |
-| ackN_i         | in        | slv(7 downto 0)                                          | Number being ACKed                                               |
-| appSsiMaster_i | in        | SsiMasterType                                            | SSI Application side interface IN                                |
-| appSsiSlave_o  | out       | SsiSlaveType                                             |                                                                  |
-| tspSsiSlave_i  | in        | SsiSlaveType                                             | SSI Transport side interface OUT                                 |
-| tspSsiMaster_o | out       | SsiMasterType                                            |                                                                  |
-| lenErr_o       | out       | sl                                                       | Errors (1 cc pulse)                                              |
-| ackErr_o       | out       | sl                                                       |                                                                  |
-| bufferEmpty_o  | out       | sl                                                       | Segment buffer indicator                                         |
+| Port name      | Direction | Type                                                     | Description                                                                                                                                                                                                                                              |
+| -------------- | --------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| clk_i          | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| rst_i          | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| connActive_i   | in        | sl                                                       | Connection FSM indicating active connection                                                                                                                                                                                                              |
+| closed_i       | in        | sl                                                       | Closed state in connFSM (initialize seqN)                                                                                                                                                                                                                |
+| injectFault_i  | in        | sl                                                       | Fault injection corrupts header checksum                                                                                                                                                                                                                 |
+| sndSyn_i       | in        | sl                                                       | Various segment requests                                                                                                                                                                                                                                 |
+| sndAck_i       | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| sndRst_i       | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| sndResend_i    | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| sndNull_i      | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| windowSize_i   | in        | integer range 1 to 2 ** (WINDOW_ADDR_SIZE_G)             | Window buff size (Depends on the number of outstanding segments)                                                                                                                                                                                         |
+| bufferSize_i   | in        | integer range 1 to 2 ** (SEGMENT_ADDR_SIZE_G)            |                                                                                                                                                                                                                                                          |
+| wrBuffWe_o     | out       | sl                                                       | Buffer write                                                                                                                                                                                                                                             |
+| wrBuffAddr_o   | out       | slv((SEGMENT_ADDR_SIZE_G+WINDOW_ADDR_SIZE_G)-1 downto 0) |                                                                                                                                                                                                                                                          |
+| wrBuffData_o   | out       | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                                                                                                                                                                                                          |
+| rdBuffAddr_o   | out       | slv((SEGMENT_ADDR_SIZE_G+WINDOW_ADDR_SIZE_G)-1 downto 0) | Buffer read                                                                                                                                                                                                                                              |
+| rdBuffData_i   | in        | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                                                                                                                                                                                                          |
+| rdHeaderAddr_o | out       | slv(7 downto 0)                                          | Header read                                                                                                                                                                                                                                              |
+| rdHeaderData_i | in        | slv(RSSI_WORD_WIDTH_C*8-1 downto 0)                      |                                                                                                                                                                                                                                                          |
+| headerRdy_i    | in        | sl                                                       |                                                                                                                                                                                                                                                          |
+| headerLength_i | in        | positive                                                 |  Unconnected for now will be used when EACK                                                                                                                                                                                                              |
+| chksumValid_i  | in        | sl                                                       | Checksum control                                                                                                                                                                                                                                         |
+| chksumEnable_o | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| chksumStrobe_o | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| chksum_i       | in        | slv(15 downto 0)                                         |                                                                                                                                                                                                                                                          |
+| initSeqN_i     | in        | slv(7 downto 0)                                          | Initial sequence number                                                                                                                                                                                                                                  |
+| txSeqN_o       | out       | slv(7 downto 0)                                          | Tx data (input to header decoder module)                                                                                                                                                                                                                 |
+| synHeadSt_o    | out       | sl                                                       | FSM outs for header and data flow control                                                                                                                                                                                                                |
+| ackHeadSt_o    | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| dataHeadSt_o   | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| dataSt_o       | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| rstHeadSt_o    | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| nullHeadSt_o   | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| lastAckN_o     | out       | slv(7 downto 0)                                          | Last acked number (Used in Rx FSM to determine if AcnN is valid)                                                                                                                                                                                         |
+| ack_i          | in        | sl                                                       |  From receiver module when a segment with valid ACK is received                                                                                                                                                                                          |
+| ackN_i         | in        | slv(7 downto 0)                                          |  Number being ACKed                                                                                                                                                                                                                                      |
+| appSsiMaster_i | in        | SsiMasterType                                            | ack_i        : in sl;                 -- From receiver module when a segment with valid EACK is receivedackSeqnArr_i : in Slv8Array(0 to MAX_RX_NUM_OUTS_SEG_G-1); -- Array of sequence numbers received out of order SSI Application side interface IN  |
+| appSsiSlave_o  | out       | SsiSlaveType                                             |                                                                                                                                                                                                                                                          |
+| tspSsiSlave_i  | in        | SsiSlaveType                                             | SSI Transport side interface OUT                                                                                                                                                                                                                         |
+| tspSsiMaster_o | out       | SsiMasterType                                            |                                                                                                                                                                                                                                                          |
+| lenErr_o       | out       | sl                                                       | Errors (1 cc pulse)                                                                                                                                                                                                                                      |
+| ackErr_o       | out       | sl                                                       |                                                                                                                                                                                                                                                          |
+| bufferEmpty_o  | out       | sl                                                       | Segment buffer indicator                                                                                                                                                                                                                                 |
 ## Signals
 
 | Name              | Type                                | Description |
@@ -126,4 +132,6 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( r, rst_i, appSsiMaster_i, sndSyn_i, sndAck_i, connActive_i, closed_i, sndRst_i, initSeqN_i, windowSize_i, headerRdy_i, ack_i, ackN_i, bufferSize_i,
                    sndResend_i, sndNull_i, tspSsiSlave_i, rdHeaderData_i, rdBuffData_i, s_headerAndChksum, chksumValid_i, headerLength_i, injectFault_i )
+**Description**
+--------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )

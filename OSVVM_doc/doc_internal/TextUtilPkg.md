@@ -14,11 +14,30 @@
 - isstd_logic <font id="function_arguments">(constant Char : character ) </font> <font id="function_return">return boolean </font>
 - IfElse <font id="function_arguments">(Expr : boolean ;<br><span style="padding-left:20px"> A,<br><span style="padding-left:20px"> B : string) </font> <font id="function_return">return string </font>
 **Description**
-Crutch until VHDL-2019 conditional initialization
+ Crutch until VHDL-2019 conditional initialization
+
 - SkipWhiteSpace <font id="function_arguments">( variable L     : InOut line ;<br><span style="padding-left:20px"> variable Empty : out   boolean ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+
 - SkipWhiteSpace <font id="function_arguments">(variable L : InOut line) </font> <font id="function_return">return ()</font>
 - EmptyOrCommentLine <font id="function_arguments">( variable L                : InOut  line ;<br><span style="padding-left:20px"> variable Empty            : InOut  boolean ;<br><span style="padding-left:20px"> variable MultiLineComment : inout  boolean ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+
 - ReadUntilDelimiterOrEOL <font id="function_arguments">( variable L         : InOut line ;<br><span style="padding-left:20px"> variable Name      : InOut line ;<br><span style="padding-left:20px"> constant Delimiter : In    character ;<br><span style="padding-left:20px"> variable ReadValid : Out   boolean ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+
 - FindDelimiter <font id="function_arguments">( variable L                : InOut line ;<br><span style="padding-left:20px"> constant Delimiter        : In    character ;<br><span style="padding-left:20px"> variable Found            : Out   boolean ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+
 - ReadHexToken <font id="function_arguments">( variable L      : InOut line ;<br><span style="padding-left:20px"> variable Result : Out   std_logic_vector ;<br><span style="padding-left:20px"> variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+
 - ReadBinaryToken <font id="function_arguments">( variable L      : InOut line ;<br><span style="padding-left:20px"> variable Result : Out   std_logic_vector ;<br><span style="padding-left:20px"> variable StrLen : Out   integer ) </font> <font id="function_return">return ()</font>
+**Description**
+----------------------------------------------------------
+

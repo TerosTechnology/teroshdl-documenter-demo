@@ -35,16 +35,16 @@
 | s00_axi_aclk    | in        | std_logic                                         | User ports endsDo not modify the ports beyond this line Ports of Axi Slave Bus Interface S00_AXI  |
 | s00_axi_reset   | in        | std_logic                                         |                                                                                                   |
 | s00_axi_awaddr  | in        | std_logic_vector(C_S00_AXI_ADDR_WIDTH-1 downto 0) |                                                                                                   |
-| s00_axi_awvalid | in        | std_logic                                         |                                                                                                   |
+| s00_axi_awvalid | in        | std_logic                                         | 00_axi_awprot	: in std_logic_vector(2 downto 0);                                                  |
 | s00_axi_awready | out       | std_logic                                         |                                                                                                   |
 | s00_axi_wdata   | in        | std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0) |                                                                                                   |
-| s00_axi_wvalid  | in        | std_logic                                         |                                                                                                   |
+| s00_axi_wvalid  | in        | std_logic                                         | 00_axi_wstrb	: in std_logic_vector((C_S00_AXI_DATA_WIDTH/8)-1 downto 0);                          |
 | s00_axi_wready  | out       | std_logic                                         |                                                                                                   |
 | s00_axi_bresp   | out       | std_logic_vector(1 downto 0)                      |                                                                                                   |
 | s00_axi_bvalid  | out       | std_logic                                         |                                                                                                   |
 | s00_axi_bready  | in        | std_logic                                         |                                                                                                   |
 | s00_axi_araddr  | in        | std_logic_vector(C_S00_AXI_ADDR_WIDTH-1 downto 0) |                                                                                                   |
-| s00_axi_arvalid | in        | std_logic                                         |                                                                                                   |
+| s00_axi_arvalid | in        | std_logic                                         | 00_axi_arprot	: in std_logic_vector(2 downto 0);                                                  |
 | s00_axi_arready | out       | std_logic                                         |                                                                                                   |
 | s00_axi_rdata   | out       | std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0) |                                                                                                   |
 | s00_axi_rresp   | out       | std_logic_vector(1 downto 0)                      |                                                                                                   |
@@ -72,13 +72,13 @@
 
 - firComplex_axi_inst: work.firComplex_axi
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 - fir_top_inst: work.firComplex_top
 **Description**
-Add user logic here
+ Add user logic here
 
 - handle_comm: work.firComplex_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

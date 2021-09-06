@@ -1,13 +1,17 @@
 # Entity: pp_fifo
 
 - **File**: pp_fifo.vhd
+- **Brief:** A generic FIFO module.
+! Adopted from the FIFO module in <https://github.com/skordal/smallthings>.
+
 ## Diagram
 
 ![Diagram](pp_fifo.svg "Diagram")
 ## Description
 
-The Potato Processor - A simple processor for FPGAs
-(c) Kristian Klomsten Skordal 2014 - 2015 <kristian.skordal@wafflemail.net>
+ The Potato Processor - A simple processor for FPGAs
+ (c) Kristian Klomsten Skordal 2014 - 2015 <kristian.skordal@wafflemail.net>
+! 
 ## Generics
 
 | Generic name | Type    | Value | Description |

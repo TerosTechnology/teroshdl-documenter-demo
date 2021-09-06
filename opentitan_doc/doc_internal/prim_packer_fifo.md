@@ -6,9 +6,10 @@
 ![Diagram](prim_packer_fifo.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Supports packed and unpacked modes
  Uses FIFO timing on the control signals
  No masking or flush functions supported
@@ -39,16 +40,16 @@ Copyright lowRISC contributors.
  rdata_o    ----------|Val       |-----------------------------------------
  rready_i   ________________|~~~~|_________________________________________
  depth_o    0000000000|1111111111|00000000000000000000000000000000000000000
- 
+
 ## Generics
 
-| Generic name | Type | Value             | Description         |
-| ------------ | ---- | ----------------- | ------------------- |
-| InW          | int  | 32                |                     |
-| OutW         | int  | 8                 |                     |
-| MaxW         | int  | InW               | derived parameters  |
-| MinW         | int  | InW               |                     |
-| DepthW       | int  | $clog2(MaxW/MinW) |                     |
+| Generic name | Type | Value             | Description          |
+| ------------ | ---- | ----------------- | -------------------- |
+| InW          | int  | 32                |                      |
+| OutW         | int  | 8                 |                      |
+| MaxW         | int  | InW               |  derived parameters  |
+| MinW         | int  | InW               |                      |
+| DepthW       | int  | $clog2(MaxW/MinW) |                      |
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -67,22 +68,23 @@ Copyright lowRISC contributors.
 
 | Name       | Type             | Description |
 | ---------- | ---------------- | ----------- |
-| load_data  | logic            | signals     |
+| load_data  | logic            |  signals    |
 | clear_data | logic            |             |
-| depth_q    | logic [DepthW:0] | flops       |
-| depth_d    | logic [DepthW:0] | flops       |
+| depth_q    | logic [DepthW:0] |  flops      |
+| depth_d    | logic [DepthW:0] |  flops      |
 | data_q     | logic [MaxW-1:0] |             |
 | data_d     | logic [MaxW-1:0] |             |
 | clr_q      | logic            |             |
 | clr_d      | logic            |             |
 ## Constants
 
-| Name       | Type           | Value                | Description         |
-| ---------- | -------------- | -------------------- | ------------------- |
-| MaxW       | int            | InW                  | derived parameters  |
-| MinW       | int            | InW                  |                     |
-| DepthW     | int            | $clog2(MaxW/MinW)    |                     |
-| WidthRatio | int unsigned   | MaxW / MinW          |                     |
-| FullDepth  | bit [DepthW:0] | WidthRatio[DepthW:0] |                     |
+| Name       | Type           | Value                | Description          |
+| ---------- | -------------- | -------------------- | -------------------- |
+| MaxW       | int            | InW                  |  derived parameters  |
+| MinW       | int            | InW                  |                      |
+| DepthW     | int            | $clog2(MaxW/MinW)    |                      |
+| WidthRatio | int unsigned   | MaxW / MinW          |                      |
+| FullDepth  | bit [DepthW:0] | WidthRatio[DepthW:0] |                      |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

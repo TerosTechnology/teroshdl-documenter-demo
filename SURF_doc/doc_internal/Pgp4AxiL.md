@@ -6,28 +6,33 @@
 ![Diagram](Pgp4AxiL.svg "Diagram")
 ## Description
 
-Title      : PGPv4: https://confluence.slac.stanford.edu/x/1dzgEQ
-Company    : SLAC National Accelerator Laboratory
-Description: AXI-Lite block to manage the PGPv4 interface
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv4: https://confluence.slac.stanford.edu/x/1dzgEQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI-Lite block to manage the PGPv4 interface
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type                  | Value    | Description                                           |
-| ------------------ | --------------------- | -------- | ----------------------------------------------------- |
-| TPD_G              | time                  | 1 ns     |                                                       |
-| COMMON_TX_CLK_G    | boolean               | false    | Set to true if axiClk and pgpTxClk are the same clock |
-| COMMON_RX_CLK_G    | boolean               | false    | Set to true if axiClk and pgpRxClk are the same clock |
-| WRITE_EN_G         | boolean               | true     | Set to false when on remote end of a link             |
-| NUM_VC_G           | integer range 1 to 16 | 4        |                                                       |
-| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 16       |                                                       |
-| ERROR_CNT_WIDTH_G  | natural range 1 to 32 | 8        |                                                       |
-| AXIL_CLK_FREQ_G    | real                  | 125.0E+6 |                                                       |
+| Generic name       | Type                  | Value    | Description                                            |
+| ------------------ | --------------------- | -------- | ------------------------------------------------------ |
+| TPD_G              | time                  | 1 ns     |                                                        |
+| COMMON_TX_CLK_G    | boolean               | false    |  Set to true if axiClk and pgpTxClk are the same clock |
+| COMMON_RX_CLK_G    | boolean               | false    |  Set to true if axiClk and pgpRxClk are the same clock |
+| WRITE_EN_G         | boolean               | true     |  Set to false when on remote end of a link             |
+| NUM_VC_G           | integer range 1 to 16 | 4        |                                                        |
+| STATUS_CNT_WIDTH_G | natural range 1 to 32 | 16       |                                                        |
+| ERROR_CNT_WIDTH_G  | natural range 1 to 32 | 8        |                                                        |
+| AXIL_CLK_FREQ_G    | real                  | 125.0E+6 |                                                        |
 ## Ports
 
 | Port name       | Direction | Type                   | Description                                  |
@@ -57,7 +62,7 @@ the terms contained in the LICENSE.txt file.
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
 | r                | RegType                                                                                                           |             |
 | rin              | RegType                                                                                                           |             |
-| rxClkFreq        | slv(31 downto 0)                                                                                                  | RX          |
+| rxClkFreq        | slv(31 downto 0)                                                                                                  |  RX         |
 | resetRx          | sl                                                                                                                |             |
 | remLinkData      | slv(47 downto 0)                                                                                                  |             |
 | rxOpCodeData     | slv(47 downto 0)                                                                                                  |             |
@@ -69,7 +74,7 @@ the terms contained in the LICENSE.txt file.
 | rxStatusCnt      | SlVectorArray(RX_STATUS_CNT_SIZE_C-1 downto 0,<br><span style="padding-left:20px"> STATUS_CNT_WIDTH_G-1 downto 0) |             |
 | rxError          | slv(RX_ERROR_CNT_SIZE_C-1 downto 0)                                                                               |             |
 | rxErrorCnt       | SlVectorArray(RX_ERROR_CNT_SIZE_C-1 downto 0,<br><span style="padding-left:20px"> ERROR_CNT_WIDTH_G-1 downto 0)   |             |
-| txClkFreq        | slv(31 downto 0)                                                                                                  | TX          |
+| txClkFreq        | slv(31 downto 0)                                                                                                  |  TX         |
 | skpInterval      | slv(31 downto 0)                                                                                                  |             |
 | flowCntlDis      | sl                                                                                                                |             |
 | txDisable        | sl                                                                                                                |             |
@@ -105,14 +110,15 @@ the terms contained in the LICENSE.txt file.
             rxOpCodeData, rxStatus, rxStatusCnt, txClkFreq, txError,
             txErrorCnt, txOpCodeData, txStatus, txStatusCnt )
 **Description**
-AXI-Lite Registers
-
+-------------------  AXI-Lite Registers ------------------- 
 - unnamed: ( axilClk )
 ## Instantiations
 
 - U_RxClkFreq: surf.SyncClockFreq
 **Description**
-RX SYNC
+--------------------------------------------------------------------------------------------
+ RX SYNC
+--------------------------------------------------------------------------------------------
 
 - U_RxSyncVec: surf.SynchronizerVector
 - U_remLinkData: surf.SynchronizerFifo
@@ -123,7 +129,9 @@ RX SYNC
 - U_rxErrorCnt: surf.SyncStatusVector
 - U_TxClkFreq: surf.SyncClockFreq
 **Description**
-TX SYNC
+--------------------------------------------------------------------------------------------
+ TX SYNC
+--------------------------------------------------------------------------------------------
 
 - U_SKP_SYNC: surf.SynchronizerVector
 - U_TxSyncVec: surf.SynchronizerVector

@@ -6,9 +6,11 @@
 ![Diagram](convertRealToComplex.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2015-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2015-2018
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

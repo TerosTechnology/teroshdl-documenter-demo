@@ -3,7 +3,9 @@
 - **File**: stdlib.vhd
 ## Description
 
-pragma translate_on
+ pragma translate_on
+library grlib;
+use grlib.version.all;
 
 ## Constants
 
@@ -40,7 +42,9 @@ pragma translate_on
 - conv_std_logic <font id="function_arguments">(b : boolean) </font> <font id="function_return">return std_ulogic </font>
 - tost <font id="function_arguments">(v:std_logic_vector) </font> <font id="function_return">return string </font>
 **Description**
-Reporting and diagnosticspragma translate_off
+ Reporting and diagnostics
+ pragma translate_off
+
 - tost <font id="function_arguments">(v:std_logic) </font> <font id="function_return">return string </font>
 - tost <font id="function_arguments">(i : integer) </font> <font id="function_return">return string </font>
 - tost_any <font id="function_arguments">(s: std_ulogic) </font> <font id="function_return">return string </font>

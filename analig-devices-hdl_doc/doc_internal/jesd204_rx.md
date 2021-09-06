@@ -6,23 +6,30 @@
 ![Diagram](jesd204_rx.svg "Diagram")
 ## Description
 
-The ADI JESD204 Core is released under the following license, which is
+
+ The ADI JESD204 Core is released under the following license, which is
  different than all other HDL cores in this repository.
+
  Please read this, and understand the freedoms and responsibilities you have
  by using this source code/core.
+
  The JESD204 HDL, is copyright © 2016-2017 Analog Devices Inc.
+
  This core is free software, you can use run, copy, study, change, ask
  questions about and improve this core. Distribution of source, or resulting
  binaries (including those inside an FPGA or ASIC) require you to release the
  source of the entire project (excluding the system libraries provide by the
  tools/compiler/FPGA vendor). These are the terms of the GNU General Public
  License version 2 as published by the Free Software Foundation.
+
  This core  is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
  A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
  You should have received a copy of the GNU General Public License version 2
  along with this source code, and binary.  If not, see
  <http://www.gnu.org/licenses/>.
+
  Commercial licenses (with commercial support) of this JESD204 core are also
  available under terms different than the General Public License. (e.g. they
  do not require you to accompany any image (FPGA or ASIC) using the JESD204
@@ -34,28 +41,30 @@ The ADI JESD204 Core is released under the following license, which is
  purchase a JESD204 license, end users of your product will also have a
  license to use this core in a commercial setting without releasing their
  source code).
+
  In addition, we kindly ask you to acknowledge ADI in any program, application
  or publication in which you use this JESD204 HDL core. (You are not required
  to do so; it is up to your common sense to decide whether you want to comply
  with this request or not.) For general publications, we suggest referencing :
  “The design and implementation of the JESD204 HDL Core used in this project
  is copyright © 2016-2017, Analog Devices, Inc.”
- 
+
+
 ## Generics
 
-| Generic name                 | Type | Value                  | Description                                                    |
-| ---------------------------- | ---- | ---------------------- | -------------------------------------------------------------- |
-| NUM_LANES                    |      | 1                      |                                                                |
-| NUM_LINKS                    |      | 1                      |                                                                |
-| NUM_INPUT_PIPELINE           |      | 1                      |                                                                |
-| NUM_OUTPUT_PIPELINE          |      | 1                      |                                                                |
-| LINK_MODE                    |      | 1                      | 2 - 64B/66B;  1 - 8B/10B                                       |
-| DATA_PATH_WIDTH              |      | LINK_MODE == 2 ? 8 : 4 | Only 4 is supported at the moment for 8b/10b and 8 for 64b */  |
-| ENABLE_FRAME_ALIGN_CHECK     |      | 1                      |                                                                |
-| ENABLE_FRAME_ALIGN_ERR_RESET |      | 0                      |                                                                |
-| ENABLE_CHAR_REPLACE          |      | 0                      |                                                                |
-| ASYNC_CLK                    |      | 1                      |                                                                |
-| TPL_DATA_PATH_WIDTH          |      | LINK_MODE == 2 ? 8 : 4 |                                                                |
+| Generic name                 | Type | Value                  | Description                                                     |
+| ---------------------------- | ---- | ---------------------- | --------------------------------------------------------------- |
+| NUM_LANES                    |      | 1                      |                                                                 |
+| NUM_LINKS                    |      | 1                      |                                                                 |
+| NUM_INPUT_PIPELINE           |      | 1                      |                                                                 |
+| NUM_OUTPUT_PIPELINE          |      | 1                      |                                                                 |
+| LINK_MODE                    |      | 1                      |  2 - 64B/66B;  1 - 8B/10B                                       |
+| DATA_PATH_WIDTH              |      | LINK_MODE == 2 ? 8 : 4 |  Only 4 is supported at the moment for 8b/10b and 8 for 64b */  |
+| ENABLE_FRAME_ALIGN_CHECK     |      | 1                      |                                                                 |
+| ENABLE_FRAME_ALIGN_ERR_RESET |      | 0                      |                                                                 |
+| ENABLE_CHAR_REPLACE          |      | 0                      |                                                                 |
+| ASYNC_CLK                    |      | 1                      |                                                                 |
+| TPL_DATA_PATH_WIDTH          |      | LINK_MODE == 2 ? 8 : 4 |                                                                 |
 ## Ports
 
 | Port name                           | Direction | Type                                  | Description                                                    |
@@ -150,24 +159,26 @@ The ADI JESD204 Core is released under the following license, which is
 | buffer_release_opportunity           | reg                    |             |
 ## Constants
 
-| Name                      | Type | Value                                                   | Description                       |
-| ------------------------- | ---- | ------------------------------------------------------- | --------------------------------- |
-| CHAR_INFO_REGISTERED      |      | 0                                                       |                                   |
-| ALIGN_MUX_REGISTERED      |      | 1                                                       |                                   |
-| SCRAMBLER_REGISTERED      |      | 0                                                       |                                   |
-| MAX_OCTETS_PER_FRAME      |      | 32                                                      |                                   |
-| MAX_OCTETS_PER_MULTIFRAME |      | 1024                                                    |                                   |
-| MAX_BEATS_PER_MULTIFRAME  |      | MAX_OCTETS_PER_MULTIFRAME / DATA_PATH_WIDTH             |                                   |
-| ELASTIC_BUFFER_SIZE       |      | MAX_BEATS_PER_MULTIFRAME                                |                                   |
-| DPW_LOG2                  |      | DATA_PATH_WIDTH == 8 ? 3 : DATA_PATH_WIDTH == 4 ? 2 : 1 |                                   |
-| LMFC_COUNTER_WIDTH        |      | MAX_BE                                                  |                                   |
-| DW                        |      | 8*DATA_PATH_WIDTH*NUM_LANES                             | Helper for common expressions */  |
-| ODW                       |      | 8*TPL_DATA_PATH_WIDTH*NUM_LANES                         |                                   |
-| CW                        |      | DATA_PATH_WIDTH*NUM_LANES                               |                                   |
-| HW                        |      | 2*NUM_LANES                                             |                                   |
+| Name                      | Type | Value                                                   | Description                                                                                                                       |
+| ------------------------- | ---- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| CHAR_INFO_REGISTERED      |      | 0                                                       |   * Can be used to enable additional pipeline stages to ease timing. Usually not  * necessary.  */                                |
+| ALIGN_MUX_REGISTERED      |      | 1                                                       |                                                                                                                                   |
+| SCRAMBLER_REGISTERED      |      | 0                                                       |                                                                                                                                   |
+| MAX_OCTETS_PER_FRAME      |      | 32                                                      |   * Maximum number of octets per multiframe for ADI JESD204 DACs is 256 (Adjust  * as necessary). Divide by data path width.  */  |
+| MAX_OCTETS_PER_MULTIFRAME |      | 1024                                                    |                                                                                                                                   |
+| MAX_BEATS_PER_MULTIFRAME  |      | MAX_OCTETS_PER_MULTIFRAME / DATA_PATH_WIDTH             |                                                                                                                                   |
+| ELASTIC_BUFFER_SIZE       |      | MAX_BEATS_PER_MULTIFRAME                                |                                                                                                                                   |
+| DPW_LOG2                  |      | DATA_PATH_WIDTH == 8 ? 3 : DATA_PATH_WIDTH == 4 ? 2 : 1 |                                                                                                                                   |
+| LMFC_COUNTER_WIDTH        |      | MAX_BE                                                  |                                                                                                                                   |
+| DW                        |      | 8*DATA_PATH_WIDTH*NUM_LANES                             |  Helper for common expressions */                                                                                                 |
+| ODW                       |      | 8*TPL_DATA_PATH_WIDTH*NUM_LANES                         |                                                                                                                                   |
+| CW                        |      | DATA_PATH_WIDTH*NUM_LANES                               |                                                                                                                                   |
+| HW                        |      | 2*NUM_LANES                                             |                                                                                                                                   |
 ## Processes
 - unnamed: ( @(posedge device_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge device_clk) )
+  - **Type:** always
 ## Instantiations
 
 - i_all_buffer_ready_cdc: sync_bits

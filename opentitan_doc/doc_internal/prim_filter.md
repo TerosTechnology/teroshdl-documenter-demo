@@ -6,16 +6,18 @@
 ![Diagram](prim_filter.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Primitive input filter, with enable.  Configurable number of cycles.
+
  when in reset, stored vector is zero
  when enable is false, output is input
  when enable is true, output is stored value,
    new input must be opposite value from stored value for
    #Cycles before switching to new value.
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -41,4 +43,6 @@ Copyright lowRISC contributors.
 | unused_stored_vector_q_msb | logic              |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

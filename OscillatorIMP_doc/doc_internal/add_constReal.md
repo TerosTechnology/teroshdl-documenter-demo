@@ -67,7 +67,10 @@
 - add_constRealLogic: work.add_constReal_logic
 - offset_syn: work.add_constReal_synchronizer_vector
 **Description**
-synchro --
+ synchro --
 
 - wb_add_constReal_inst: work.wb_add_constReal
+**Description**
+-----------
+
 - add_constRealHandComm: work.add_constReal_handComm

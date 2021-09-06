@@ -6,11 +6,12 @@
 ![Diagram](usbdev_flop_2syncpulse.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Generic double-synchronizer flop followed by pulse generation
- 
+
 ## Generics
 
 | Generic name | Type         | Value | Description |
@@ -26,12 +27,13 @@ Copyright lowRISC contributors.
 | q_o       | output    | [Width-1:0] |               |
 ## Signals
 
-| Name     | Type              | Description                    |
-| -------- | ----------------- | ------------------------------ |
-| d_sync   | logic [Width-1:0] | double-flop synchronizer cell  |
-| d_sync_q | logic [Width-1:0] | delay d_sync by 1 cycle        |
+| Name     | Type              | Description                     |
+| -------- | ----------------- | ------------------------------- |
+| d_sync   | logic [Width-1:0] |  double-flop synchronizer cell  |
+| d_sync_q | logic [Width-1:0] |  delay d_sync by 1 cycle        |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - prim_flop_2sync: prim_flop_2sync

@@ -6,11 +6,13 @@
 ![Diagram](spi_host_byte_merge.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Byte-merge module for collecting words in SPI Host IP
- 
+
+
 ## Ports
 
 | Port name    | Direction | Type   | Description |
@@ -38,6 +40,7 @@ Copyright lowRISC contributors.
 | byte_incoming | logic |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - u_packer: prim_packer_fifo

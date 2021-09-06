@@ -6,8 +6,10 @@
 ![Diagram](arp_cache.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name     | Type | Value | Description |
@@ -15,22 +17,22 @@ Language: Verilog 2001
 | CACHE_ADDR_WIDTH |      | 9     |             |
 ## Ports
 
-| Port name            | Direction | Type        | Description |
-| -------------------- | --------- | ----------- | ----------- |
-| clk                  | input     | wire        |             |
-| rst                  | input     | wire        |             |
-| query_request_valid  | input     | wire        |             |
-| query_request_ready  | output    | wire        |             |
-| query_request_ip     | input     | wire [31:0] |             |
-| query_response_valid | output    | wire        |             |
-| query_response_ready | input     | wire        |             |
-| query_response_error | output    | wire        |             |
-| query_response_mac   | output    | wire [47:0] |             |
-| write_request_valid  | input     | wire        |             |
-| write_request_ready  | output    | wire        |             |
-| write_request_ip     | input     | wire [31:0] |             |
-| write_request_mac    | input     | wire [47:0] |             |
-| clear_cache          | input     | wire        |             |
+| Port name            | Direction | Type        | Description                   |
+| -------------------- | --------- | ----------- | ----------------------------- |
+| clk                  | input     | wire        |                               |
+| rst                  | input     | wire        |                               |
+| query_request_valid  | input     | wire        |      * Cache query      */    |
+| query_request_ready  | output    | wire        |                               |
+| query_request_ip     | input     | wire [31:0] |                               |
+| query_response_valid | output    | wire        |                               |
+| query_response_ready | input     | wire        |                               |
+| query_response_error | output    | wire        |                               |
+| query_response_mac   | output    | wire [47:0] |                               |
+| write_request_valid  | input     | wire        |      * Cache write      */    |
+| write_request_ready  | output    | wire        |                               |
+| write_request_ip     | input     | wire [31:0] |                               |
+| write_request_mac    | input     | wire [47:0] |                               |
+| clear_cache          | input     | wire        |      * Configuration      */  |
 ## Signals
 
 | Name                      | Type                       | Description |
@@ -68,7 +70,9 @@ Language: Verilog 2001
 | i                         | integer                    |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 ## Instantiations
 
 - rd_hash: lfsr

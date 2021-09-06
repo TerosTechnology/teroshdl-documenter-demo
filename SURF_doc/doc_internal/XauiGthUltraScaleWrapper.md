@@ -6,26 +6,30 @@
 ![Diagram](XauiGthUltraScaleWrapper.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: GTH UltraScale+ Wrapper for 10 GigE XAUI
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: GTH UltraScale+ Wrapper for 10 GigE XAUI
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name      | Type                | Value              | Description                   |
-| ----------------- | ------------------- | ------------------ | ----------------------------- |
-| TPD_G             | time                | 1 ns               |                               |
-| PAUSE_EN_G        | boolean             | true               |                               |
-| EN_WDT_G          | boolean             | false              |                               |
-| EXT_REF_G         | boolean             | false              |                               |
-| STABLE_CLK_FREQ_G | real                | 156.25E+6          | Support 156.25MHz or 312.5MHz |
-| EN_AXI_REG_G      | boolean             | false              | AXI-Lite Configurations       |
-| AXIS_CONFIG_G     | AxiStreamConfigType | EMAC_AXIS_CONFIG_C | AXI Streaming Configurations  |
+| Generic name      | Type                | Value              | Description                    |
+| ----------------- | ------------------- | ------------------ | ------------------------------ |
+| TPD_G             | time                | 1 ns               |                                |
+| PAUSE_EN_G        | boolean             | true               |                                |
+| EN_WDT_G          | boolean             | false              |                                |
+| EXT_REF_G         | boolean             | false              |                                |
+| STABLE_CLK_FREQ_G | real                | 156.25E+6          |  Support 156.25MHz or 312.5MHz |
+| EN_AXI_REG_G      | boolean             | false              | AXI-Lite Configurations        |
+| AXIS_CONFIG_G     | AxiStreamConfigType | EMAC_AXIS_CONFIG_C | AXI Streaming Configurations   |
 ## Ports
 
 | Port name          | Direction | Type                   | Description                            |
@@ -75,5 +79,7 @@ the terms contained in the LICENSE.txt file.
 - U_refClk: IBUFDS_GTE4
 - XauiGthUltraScale_Inst: surf.XauiGthUltraScale
 **Description**
-10 GigE XAUI Module
+--------------------
+ 10 GigE XAUI Module
+--------------------
 

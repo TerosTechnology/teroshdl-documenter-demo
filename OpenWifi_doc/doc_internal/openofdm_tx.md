@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](openofdm_tx.svg "Diagram")
+## Description
+
+
+
 ## Generics
 
 | Generic name         | Type    | Value | Description |
@@ -48,13 +52,31 @@
 | s00_axi_rready  | input     | wire                                  |             |
 ## Signals
 
-| Name      | Type                              | Description                                              |
-| --------- | --------------------------------- | -------------------------------------------------------- |
-| slv_reg0  | wire [(C_S00_AXI_DATA_WIDTH-1):0] | reg0~19 for config write; from reg20 for reading status  |
-| slv_reg1  | wire [(C_S00_AXI_DATA_WIDTH-1):0] |                                                          |
-| slv_reg2  | wire [(C_S00_AXI_DATA_WIDTH-1):0] |                                                          |
-| slv_reg20 | wire [(C_S00_AXI_DATA_WIDTH-1):0] | read openofdm rx core internal state                     |
+| Name      | Type                              | Description                                               |
+| --------- | --------------------------------- | --------------------------------------------------------- |
+| slv_reg0  | wire [(C_S00_AXI_DATA_WIDTH-1):0] |  reg0~19 for config write; from reg20 for reading status  |
+| slv_reg1  | wire [(C_S00_AXI_DATA_WIDTH-1):0] |                                                           |
+| slv_reg2  | wire [(C_S00_AXI_DATA_WIDTH-1):0] |                                                           |
+| slv_reg20 | wire [(C_S00_AXI_DATA_WIDTH-1):0] | read openofdm rx core internal state                      |
 ## Instantiations
 
 - dot11_tx: dot11_tx
+**Description**
+
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg21;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg22;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg23;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg24;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg25;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg26;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg27;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg28;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg29;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg30;
+    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg31;
+    */
+
 - openofdm_tx_s_axi_i: openofdm_tx_s_axi
+**Description**
+assign bram_wen = 0;
+

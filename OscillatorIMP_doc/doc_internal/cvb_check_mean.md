@@ -34,17 +34,14 @@
 | in_mean_s       | std_logic                               |             |
 | neg_to_pos_i_s  | std_logic_vector(DATA-1 downto 0)       |             |
 | neg_to_pos_q_s  | std_logic_vector(DATA-1 downto 0)       |             |
-| accum_i_s       | std_logic_vector(ACCUM_SIZE-1 downto 0) | accum       |
-|  accum_i_next_s | std_logic_vector(ACCUM_SIZE-1 downto 0) | accum       |
+| accum_i_s       | std_logic_vector(ACCUM_SIZE-1 downto 0) |  accum      |
+|  accum_i_next_s | std_logic_vector(ACCUM_SIZE-1 downto 0) |  accum      |
 | accum_q_s       | std_logic_vector(ACCUM_SIZE-1 downto 0) |             |
 |  accum_q_next_s | std_logic_vector(ACCUM_SIZE-1 downto 0) |             |
-| frame_valid_s   | std_logic                               | last --     |
+| frame_valid_s   | std_logic                               |  last --    |
 ## Processes
 - unnamed: ( clk_i )
 - unnamed: ( accum_i_s, accum_q_s, max_allowed_val_i )
 **Description**
-last
-check if accum content if allowed --
-and output if valid or not when eof is high
-
+ last  check if accum content if allowed --  and output if valid or not when eof is high 
 - unnamed: ( clk_i )

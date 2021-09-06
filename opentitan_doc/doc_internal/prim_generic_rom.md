@@ -6,18 +6,18 @@
 ![Diagram](prim_generic_rom.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Generics
 
-| Generic name | Type | Value         | Description                             |
-| ------------ | ---- | ------------- | --------------------------------------- |
-| Width        | int  | 32            |                                         |
-| Depth        | int  | 2048          | 8kB default                             |
-| MemInitFile  |      | ""            | VMEM file to initialize the memory with |
-| Aw           | int  | $clog2(Depth) |                                         |
+| Generic name | Type | Value         | Description                               |
+| ------------ | ---- | ------------- | ----------------------------------------- |
+| Width        | int  | 32            |                                           |
+| Depth        | int  | 2048          |  8kB default                              |
+| MemInitFile  |      | ""            |  VMEM file to initialize the memory with  |
+| Aw           | int  | $clog2(Depth) |                                           |
 ## Ports
 
 | Port name | Direction | Type        | Description |
@@ -40,3 +40,4 @@ Copyright lowRISC contributors.
 | Aw   | int  | $clog2(Depth) |             |
 ## Processes
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always_ff

@@ -6,11 +6,13 @@
 ![Diagram](spi_host_byte_select.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Byte-select module for dispensing words in SPI Host IP
- 
+
+
 ## Ports
 
 | Port name    | Direction | Type   | Description |

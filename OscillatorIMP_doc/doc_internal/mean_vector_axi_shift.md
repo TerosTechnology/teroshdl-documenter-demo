@@ -6,9 +6,11 @@
 ![Diagram](mean_vector_axi_shift.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2019
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2019
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -25,9 +27,9 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 | data_o    | out       | std_logic_vector(DATA_O_SIZE-1 downto 0) |             |
 ## Signals
 
-| Name      | Type      | Description |
-| --------- | --------- | ----------- |
-| array_val | mux_array |             |
+| Name      | Type      | Description                      |
+| --------- | --------- | -------------------------------- |
+| array_val | mux_array | std_logic_vector(data_o'range);  |
 ## Constants
 
 | Name   | Type    | Value          | Description |

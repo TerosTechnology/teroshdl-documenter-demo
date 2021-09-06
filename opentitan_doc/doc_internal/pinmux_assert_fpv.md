@@ -6,11 +6,12 @@
 ![Diagram](pinmux_assert_fpv.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Assertions for pinmux. Intended to use with a formal tool.
- 
+
 ## Ports
 
 | Port name          | Direction | Type                                | Description |
@@ -27,9 +28,9 @@ Copyright lowRISC contributors.
 | mio_in_i           | input     | [pinmux_reg_pkg::NMioPads-1:0]      |             |
 ## Signals
 
-| Name         | Type                                              | Description              |
-| ------------ | ------------------------------------------------- | ------------------------ |
-| periph_sel_i | logic [$clog2(pinmux_reg_pkg::NMioPeriphIn)-1:0]  | symbolic inputs for FPV  |
-| mio_sel_i    | logic [$clog2(pinmux_reg_pkg::NMioPads)-1:0]      |                          |
-| periph_insel | pinmux_reg_pkg::pinmux_reg2hw_periph_insel_mreg_t |                          |
-| mio_outsel   | pinmux_reg_pkg::pinmux_reg2hw_mio_outsel_mreg_t   |                          |
+| Name         | Type                                              | Description                                                         |
+| ------------ | ------------------------------------------------- | ------------------------------------------------------------------- |
+| periph_sel_i | logic [$clog2(pinmux_reg_pkg::NMioPeriphIn)-1:0]  | /////////////  Input Mux // /////////////  symbolic inputs for FPV  |
+| mio_sel_i    | logic [$clog2(pinmux_reg_pkg::NMioPads)-1:0]      |                                                                     |
+| periph_insel | pinmux_reg_pkg::pinmux_reg2hw_periph_insel_mreg_t |                                                                     |
+| mio_outsel   | pinmux_reg_pkg::pinmux_reg2hw_mio_outsel_mreg_t   |                                                                     |

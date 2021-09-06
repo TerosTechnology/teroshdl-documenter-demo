@@ -6,31 +6,36 @@
 ![Diagram](PgpParallelSimModel.svg "Diagram")
 ## Description
 
-Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
-Company    : SLAC National Accelerator Laboratory
-Description: Simulation Testbed for PGP
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Simulation Testbed for PGP
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name          | Type                 | Value      | Description                                              |
-| --------------------- | -------------------- | ---------- | -------------------------------------------------------- |
-| TPD_G                 | time                 | 1 ns       |                                                          |
-| CLK_FREQ_G            | real                 | 156.250E+6 | In units of HZ                                           |
-| CABLE_LENGTH_G        | real                 | 1.0        | In units of meters                                       |
-| INDEX_OF_REFRACTION_G | real                 | 1.5        | Default is 1.5 index of refraction for fiber optic cable |
-| TX_SER_DELAY_C        | natural              | 5          |                                                          |
-| RX_SER_DELAY_C        | natural              | 5          |                                                          |
-| VC_INTERLEAVE_G       | integer              | 1          | Interleave Frames                                        |
-| PAYLOAD_CNT_TOP_G     | integer              | 7          | Top bit for payload counter                              |
-| NUM_VC_EN_G           | integer range 1 to 4 | 4          |                                                          |
-| TX_ENABLE_G           | boolean              | true       | Enable TX direction                                      |
-| RX_ENABLE_G           | boolean              | true       |                                                          |
+| Generic name          | Type                 | Value      | Description                                               |
+| --------------------- | -------------------- | ---------- | --------------------------------------------------------- |
+| TPD_G                 | time                 | 1 ns       |                                                           |
+| CLK_FREQ_G            | real                 | 156.250E+6 |  In units of HZ                                           |
+| CABLE_LENGTH_G        | real                 | 1.0        |  In units of meters                                       |
+| INDEX_OF_REFRACTION_G | real                 | 1.5        |  Default is 1.5 index of refraction for fiber optic cable |
+| TX_SER_DELAY_C        | natural              | 5          |                                                           |
+| RX_SER_DELAY_C        | natural              | 5          |                                                           |
+| VC_INTERLEAVE_G       | integer              | 1          |  Interleave Frames                                        |
+| PAYLOAD_CNT_TOP_G     | integer              | 7          |  Top bit for payload counter                              |
+| NUM_VC_EN_G           | integer range 1 to 4 | 4          |                                                           |
+| TX_ENABLE_G           | boolean              | true       |  Enable TX direction                                      |
+| RX_ENABLE_G           | boolean              | true       |                                                           |
 ## Ports
 
 | Port name    | Direction | Type                             | Description              |
@@ -60,14 +65,14 @@ the terms contained in the LICENSE.txt file.
 | phyRxLanesIn  | Pgp2bRxPhyLaneInArray(0 to 0)  |             |
 ## Constants
 
-| Name                | Type    | Value                                                                       | Description                      |
-| ------------------- | ------- | --------------------------------------------------------------------------- | -------------------------------- |
-| SPEED_OF_LIGHT_C    | real    |  299792458.0                                                                | speed of light in a vacuum (m/s) |
-| SPEED_OF_FIBER_C    | real    |  SPEED_OF_LIGHT_C / INDEX_OF_REFRACTION_G                                   | speed of light in a fiber (m/s)  |
-| CLK_PER_METER_C     | real    |  CLK_FREQ_G / SPEED_OF_FIBER_C                                              | # of clock cycles per meter      |
-| CABLE_DELAY_FLOAT_C | real    |  CABLE_LENGTH_G * CLK_PER_METER_C                                           |                                  |
-| CABLE_DELAY_C       | natural |  getTimeRatio(CABLE_DELAY_FLOAT_C,<br><span style="padding-left:20px"> 1.0) |                                  |
-| WIDTH_C             | natural |  20                                                                         | 2 bytes of 8B10B is 20 bits      |
+| Name                | Type    | Value                                                                       | Description                       |
+| ------------------- | ------- | --------------------------------------------------------------------------- | --------------------------------- |
+| SPEED_OF_LIGHT_C    | real    |  299792458.0                                                                |  speed of light in a vacuum (m/s) |
+| SPEED_OF_FIBER_C    | real    |  SPEED_OF_LIGHT_C / INDEX_OF_REFRACTION_G                                   |  speed of light in a fiber (m/s)  |
+| CLK_PER_METER_C     | real    |  CLK_FREQ_G / SPEED_OF_FIBER_C                                              |  # of clock cycles per meter      |
+| CABLE_DELAY_FLOAT_C | real    |  CABLE_LENGTH_G * CLK_PER_METER_C                                           |                                   |
+| CABLE_DELAY_C       | natural |  getTimeRatio(CABLE_DELAY_FLOAT_C,<br><span style="padding-left:20px"> 1.0) |                                   |
+| WIDTH_C             | natural |  20                                                                         |  2 bytes of 8B10B is 20 bits      |
 ## Instantiations
 
 - U_CableDelay: surf.SlvDelay

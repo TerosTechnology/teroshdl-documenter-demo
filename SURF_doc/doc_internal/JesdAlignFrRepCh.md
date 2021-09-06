@@ -6,25 +6,32 @@
 ![Diagram](JesdAlignFrRepCh.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Align bytes and replace control characters with data
-What is supported:
-             Frame sizes 1, 2, 4
-             GT Word sizes 2, 4  <--- I don't think 2 word is supported because hard coded in Jesd204bPkg.vhd
-         Note:
-         dataRx_i - is little endian and byte-swapped (directly from GTH)
-               First sample in time:  dataRx_i(7  downto 0) & dataRx_i(15 downto 8)
-               Second sample in time: dataRx_i(23 downto 16)& dataRx_i(31 downto 24)
-         sampleData_o is big endian and not byte-swapped
-               First sample in time:  sampleData_o(31 downto 16)
-               Second sample in time: sampleData_o(15 downto 0)
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Align bytes and replace control characters with data
+
+ What is supported:
+              Frame sizes 1, 2, 4
+              GT Word sizes 2, 4  <--- I don't think 2 word is supported because hard coded in Jesd204bPkg.vhd
+
+          Note:
+          dataRx_i - is little endian and byte-swapped (directly from GTH)
+                First sample in time:  dataRx_i(7  downto 0) & dataRx_i(15 downto 8)
+                Second sample in time: dataRx_i(23 downto 16)& dataRx_i(31 downto 24)
+
+          sampleData_o is big endian and not byte-swapped
+                First sample in time:  sampleData_o(31 downto 16)
+                Second sample in time: sampleData_o(15 downto 0)
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type     | Value | Description                 |
@@ -45,8 +52,8 @@ the terms contained in the LICENSE.txt file.
 | chariskRx_i       | in        | slv(GT_WORD_SIZE_C-1 downto 0)     |                                                                                         |
 | sampleData_o      | out       | slv((GT_WORD_SIZE_C*8)-1 downto 0) | Sample data output (after alignment, character replacement and scrambling)              |
 | sampleDataValid_o | out       | sl                                 |                                                                                         |
-| alignErr_o        | out       | sl                                 | Invalid or misaligned character in the data                                             |
-| positionErr_o     | out       | sl                                 | Invalid (comma) position received at time of alignment                                  |
+| alignErr_o        | out       | sl                                 |  Invalid or misaligned character in the data                                            |
+| positionErr_o     | out       | sl                                 |  Invalid (comma) position received at time of alignment                                 |
 ## Signals
 
 | Name | Type    | Description |

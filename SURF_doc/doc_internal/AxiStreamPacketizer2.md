@@ -6,32 +6,37 @@
 ![Diagram](AxiStreamPacketizer2.svg "Diagram")
 ## Description
 
-Title      : AxiStreamPackerizerV2 Protocol: https://confluence.slac.stanford.edu/x/3nh4DQ
-Company    : SLAC National Accelerator Laboratory
-Description: Formats an AXI-Stream for a transport link.
-Sideband fields are placed into the data stream in a header.
-Long frames are broken into smaller packets.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : AxiStreamPackerizerV2 Protocol: https://confluence.slac.stanford.edu/x/3nh4DQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Formats an AXI-Stream for a transport link.
+ Sideband fields are placed into the data stream in a header.
+ Long frames are broken into smaller packets.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name         | Type                   | Value         | Description             |
-| -------------------- | ---------------------- | ------------- | ----------------------- |
-| TPD_G                | time                   | 1 ns          |                         |
-| MEMORY_TYPE_G        | string                 | "distributed" |                         |
-| REG_EN_G             | boolean                | false         |                         |
-| CRC_MODE_G           | string                 | "DATA"        | or "NONE" or "FULL"     |
-| CRC_POLY_G           | slv(31 downto 0)       | x"04C11DB7"   |                         |
-| MAX_PACKET_BYTES_G   | positive               | 256*8         | Must be a multiple of 8 |
-| SEQ_CNT_SIZE_G       | positive range 4 to 16 | 16            |                         |
-| TDEST_BITS_G         | natural                | 8             |                         |
-| INPUT_PIPE_STAGES_G  | natural                | 0             |                         |
-| OUTPUT_PIPE_STAGES_G | natural                | 0             |                         |
+| Generic name         | Type                   | Value         | Description              |
+| -------------------- | ---------------------- | ------------- | ------------------------ |
+| TPD_G                | time                   | 1 ns          |                          |
+| MEMORY_TYPE_G        | string                 | "distributed" |                          |
+| REG_EN_G             | boolean                | false         |                          |
+| CRC_MODE_G           | string                 | "DATA"        |  or "NONE" or "FULL"     |
+| CRC_POLY_G           | slv(31 downto 0)       | x"04C11DB7"   |                          |
+| MAX_PACKET_BYTES_G   | positive               | 256*8         |  Must be a multiple of 8 |
+| SEQ_CNT_SIZE_G       | positive range 4 to 16 | 16            |                          |
+| TDEST_BITS_G         | natural                | 8             |                          |
+| INPUT_PIPE_STAGES_G  | natural                | 0             |                          |
+| OUTPUT_PIPE_STAGES_G | natural                | 0             |                          |
 ## Ports
 
 | Port name   | Direction | Type                                          | Description                                                   |
@@ -92,10 +97,14 @@ the terms contained in the LICENSE.txt file.
 
 - U_Input: surf.AxiStreamPipeline
 **Description**
-Input pipeline
+---------------
+ Input pipeline
+---------------
 
 - U_DualPortRam_1: surf.DualPortRam
 - U_Output: surf.AxiStreamPipeline
 **Description**
-Output pipeline
+----------------
+ Output pipeline
+----------------
 

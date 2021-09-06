@@ -6,9 +6,11 @@
 ![Diagram](firReal.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/05/26
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/05/26
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value    | Description                                    |
@@ -80,13 +82,13 @@ Creation date : 2018/05/26
 
 - firReal_axi_inst: work.firReal_axi
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 
 - fir_top_inst: work.firReal_top
 **Description**
-Add user logic here
+ Add user logic here
 
 - handle_comm: work.firReal_handCom
 **Description**
-Instantiation of Axi Bus Interface S00_AXI
+ Instantiation of Axi Bus Interface S00_AXI
 

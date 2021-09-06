@@ -3,9 +3,9 @@
 - **File**: codec.vhd
 ## Types
 
-| Name    | Type                             | Description |
-| ------- | -------------------------------- | ----------- |
-| range_t | array (integer range <>) of bit  |             |
+| Name    | Type                             | Description                                                                                                                                                       |
+| ------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range_t | array (integer range <>) of bit  | ---------------------------------------------------------------------------  Support ---------------------------------------------------------------------------  |
 ## Functions
 - encode <font id="function_arguments">( constant data : integer) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return integer </font>
@@ -28,6 +28,11 @@
 - encode <font id="function_arguments">( constant data : character) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return character </font>
 - encode <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font>
+**Description**
+---------------------------------------------------------------------------
+ Predefined composite types
+---------------------------------------------------------------------------
+
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return string </font>
 - encode <font id="function_arguments">( constant data : bit_vector) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return bit_vector </font>

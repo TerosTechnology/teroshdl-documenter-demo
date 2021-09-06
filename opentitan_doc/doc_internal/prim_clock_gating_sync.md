@@ -6,11 +6,12 @@
 ![Diagram](prim_clock_gating_sync.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  Common Library: Clock Gating cell with synchronizer
- 
+
 ## Ports
 
 | Port name  | Direction | Type | Description |

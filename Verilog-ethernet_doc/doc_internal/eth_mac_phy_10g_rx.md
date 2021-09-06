@@ -6,8 +6,10 @@
 ![Diagram](eth_mac_phy_10g_rx.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name        | Type | Value      | Description |
@@ -29,27 +31,27 @@ Language: Verilog 2001
 | COUNT_125US         |      | 125000/6.4 |             |
 ## Ports
 
-| Port name          | Direction | Type                    | Description |
-| ------------------ | --------- | ----------------------- | ----------- |
-| clk                | input     | wire                    |             |
-| rst                | input     | wire                    |             |
-| m_axis_tdata       | output    | wire [DATA_WIDTH-1:0]   |             |
-| m_axis_tkeep       | output    | wire [KEEP_WIDTH-1:0]   |             |
-| m_axis_tvalid      | output    | wire                    |             |
-| m_axis_tlast       | output    | wire                    |             |
-| m_axis_tuser       | output    | wire [USER_WIDTH-1:0]   |             |
-| serdes_rx_data     | input     | wire [DATA_WIDTH-1:0]   |             |
-| serdes_rx_hdr      | input     | wire [HDR_WIDTH-1:0]    |             |
-| serdes_rx_bitslip  | output    | wire                    |             |
-| ptp_ts             | input     | wire [PTP_TS_WIDTH-1:0] |             |
-| rx_start_packet    | output    | wire [1:0]              |             |
-| rx_error_count     | output    | wire [6:0]              |             |
-| rx_error_bad_frame | output    | wire                    |             |
-| rx_error_bad_fcs   | output    | wire                    |             |
-| rx_bad_block       | output    | wire                    |             |
-| rx_block_lock      | output    | wire                    |             |
-| rx_high_ber        | output    | wire                    |             |
-| rx_prbs31_enable   | input     | wire                    |             |
+| Port name          | Direction | Type                    | Description                      |
+| ------------------ | --------- | ----------------------- | -------------------------------- |
+| clk                | input     | wire                    |                                  |
+| rst                | input     | wire                    |                                  |
+| m_axis_tdata       | output    | wire [DATA_WIDTH-1:0]   |      * AXI output      */        |
+| m_axis_tkeep       | output    | wire [KEEP_WIDTH-1:0]   |                                  |
+| m_axis_tvalid      | output    | wire                    |                                  |
+| m_axis_tlast       | output    | wire                    |                                  |
+| m_axis_tuser       | output    | wire [USER_WIDTH-1:0]   |                                  |
+| serdes_rx_data     | input     | wire [DATA_WIDTH-1:0]   |      * SERDES interface      */  |
+| serdes_rx_hdr      | input     | wire [HDR_WIDTH-1:0]    |                                  |
+| serdes_rx_bitslip  | output    | wire                    |                                  |
+| ptp_ts             | input     | wire [PTP_TS_WIDTH-1:0] |      * PTP      */               |
+| rx_start_packet    | output    | wire [1:0]              |      * Status      */            |
+| rx_error_count     | output    | wire [6:0]              |                                  |
+| rx_error_bad_frame | output    | wire                    |                                  |
+| rx_error_bad_fcs   | output    | wire                    |                                  |
+| rx_bad_block       | output    | wire                    |                                  |
+| rx_block_lock      | output    | wire                    |                                  |
+| rx_high_ber        | output    | wire                    |                                  |
+| rx_prbs31_enable   | input     | wire                    |      * Configuration      */     |
 ## Signals
 
 | Name            | Type                  | Description |

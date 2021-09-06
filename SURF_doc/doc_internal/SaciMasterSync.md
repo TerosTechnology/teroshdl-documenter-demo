@@ -6,16 +6,21 @@
 ![Diagram](SaciMasterSync.svg "Diagram")
 ## Description
 
-Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
-Company    : SLAC National Accelerator Laboratory
-Description: Saci Master Synchronization Wrapper
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SACI Protocol: https://confluence.slac.stanford.edu/x/YYcRDQ
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Saci Master Synchronization Wrapper
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name          | Type    | Value | Description |
@@ -26,7 +31,7 @@ the terms contained in the LICENSE.txt file.
 
 | Port name     | Direction | Type                              | Description        |
 | ------------- | --------- | --------------------------------- | ------------------ |
-| clk           | in        | sl                                | Main clock         |
+| clk           | in        | sl                                |  Main clock        |
 | rst           | in        | sl                                |                    |
 | saciClk       | out       | sl                                | Serial interface   |
 | saciSelL      | out       | slv(SACI_NUM_SLAVES_C-1 downto 0) |                    |
@@ -67,7 +72,6 @@ the terms contained in the LICENSE.txt file.
 - saci_clk_p: ( clk, rst )
 - fall: ( clk, rst )
 **Description**
-Capture serial input
-
+------------------------------------------------------------------------------------------------  Capture serial input ------------------------------------------------------------------------------------------------ 
 - seq: ( clk, rst )
 - comb: ( r, saciRspFall, saciMasterIn, saciClkRising )

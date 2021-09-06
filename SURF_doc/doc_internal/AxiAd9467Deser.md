@@ -6,15 +6,19 @@
 ![Diagram](AxiAd9467Deser.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for AxiAd9467DeserBit modules
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for AxiAd9467DeserBit modules
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name    | Type              | Value                    | Description |
@@ -26,7 +30,7 @@ the terms contained in the LICENSE.txt file.
 
 | Port name    | Direction | Type                  | Description      |
 | ------------ | --------- | --------------------- | ---------------- |
-| adcDataOrP   | in        | sl                    |                  |
+| adcDataOrP   | in        | sl                    | DC I/O ports     |
 | adcDataOrN   | in        | sl                    |                  |
 | adcDataInP   | in        | slv(7 downto 0)       |                  |
 | adcDataInN   | in        | slv(7 downto 0)       |                  |

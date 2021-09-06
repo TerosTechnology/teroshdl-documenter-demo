@@ -6,8 +6,8 @@
 ![Diagram](jt49_div.svg "Diagram")
 ## Description
 
- Th
- 
+  Th
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -30,3 +30,4 @@
 | one   | wire [W-1:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk, negedge rst_n ) )
+  - **Type:** always

@@ -6,17 +6,21 @@
 ![Diagram](JesdTestSigGen.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Outputs a digital signal depending on thresholds
-             This is a test module so only F_G = 2
-             and is GT_WORD_SIZE_C = 4 is supported.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Outputs a digital signal depending on thresholds
+              This is a test module so only F_G = 2
+              and is GT_WORD_SIZE_C = 4 is supported.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type     | Value | Description                 |
@@ -54,8 +58,5 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( r, rst,s_sampleDataBr, thresoldLow_i, thresoldHigh_i, enable_i )
 **Description**
-Buffer two GT words. And compare previous and current samples to threshold.
-If the difference between the previous and current sample is higher than threshold
-output a pulse.
-
+ Buffer two GT words. And compare previous and current samples to threshold.  If the difference between the previous and current sample is higher than threshold  output a pulse. ------------------------------------------------------------------- ------------------------------------------------------------------- 
 - seq: ( clk )

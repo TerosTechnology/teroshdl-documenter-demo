@@ -33,8 +33,8 @@
 
 | Name              | Type                                  | Description |
 | ----------------- | ------------------------------------- | ----------- |
-| delay_s           | std_logic_vector(LENGTH-1 downto 0)   | control     |
-|  delay_next_s     | std_logic_vector(LENGTH-1 downto 0)   | control     |
+| delay_s           | std_logic_vector(LENGTH-1 downto 0)   |  control    |
+|  delay_next_s     | std_logic_vector(LENGTH-1 downto 0)   |  control    |
 | delay2_s          | std_logic_vector(LENGTH-1 downto 0)   |             |
 | prn_s             | std_logic_vector(LENGTH-1 downto 0)   |             |
 |  prn_next_s       | std_logic_vector(LENGTH-1 downto 0)   |             |
@@ -45,11 +45,11 @@
 |  delay_end_next_s | std_logic_vector(LENGTH-1 downto 0)   |             |
 | delay2_end_s      | std_logic_vector(LENGTH-1 downto 0)   |             |
 | end_cross_s       | std_logic                             |             |
-| data_en_s         | std_logic_vector(NB_BLK downto 0)     | xcorr       |
+| data_en_s         | std_logic_vector(NB_BLK downto 0)     |  xcorr      |
 | data_i_s          | data_tab(NB_BLK downto 0)             |             |
 |  data_q_s         | data_tab(NB_BLK downto 0)             |             |
-| cpt_store_s       | unsigned(CPT_SIZE-1 downto 0)         | last        |
-|  cpt_store_next_s | unsigned(CPT_SIZE-1 downto 0)         | last        |
+| cpt_store_s       | unsigned(CPT_SIZE-1 downto 0)         |  last       |
+|  cpt_store_next_s | unsigned(CPT_SIZE-1 downto 0)         |  last       |
 | data_en_next      | std_logic                             |             |
 | data_out_i_next_s | std_logic_vector(OUT_SIZE-1 downto 0) |             |
 |  data_out_i_s     | std_logic_vector(OUT_SIZE-1 downto 0) |             |
@@ -66,7 +66,7 @@
 | V1       | natural                           |  LENGTH/NB_BLK                     |             |
 | V2       | natural                           |  LENGTH - (V1 * NB_BLK)            |             |
 | ALL_ZERO | std_logic_vector(NB_BLK downto 0) |  (others => '0')                   |             |
-| CPT_SIZE | natural                           |  natural(ceil(log2(real(LENGTH)))) | cpt         |
+| CPT_SIZE | natural                           |  natural(ceil(log2(real(LENGTH)))) |  cpt        |
 ## Types
 
 | Name     | Type                                                               | Description |

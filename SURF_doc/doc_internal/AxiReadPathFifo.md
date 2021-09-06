@@ -6,15 +6,19 @@
 ![Diagram](AxiReadPathFifo.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: FIFO for AXI write path transactions.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: FIFO for AXI write path transactions.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name           | Type                       | Value   | Description                  |
@@ -84,23 +88,26 @@ the terms contained in the LICENSE.txt file.
 ## Functions
 - addrToSlv <font id="function_arguments">(din : AxiReadMasterType) </font> <font id="function_return">return slv </font>
 **Description**
-Convert address record to slv
+ Convert address record to slv
+
 - slvToAddr <font id="function_arguments">(din    : in    slv(ADDR_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> slave  : in    AxiReadMasterType;<br><span style="padding-left:20px"> master : inout AxiReadMasterType ) </font> <font id="function_return">return ()</font>
 **Description**
-Convert slv to address record
+ Convert slv to address record
+
 - dataToSlv <font id="function_arguments">(din : AxiReadSlaveType) </font> <font id="function_return">return slv </font>
 **Description**
-Convert data record to slv
+ Convert data record to slv
+
 - slvToData <font id="function_arguments">(din    : in    slv(DATA_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> master : in    AxiReadMasterType;<br><span style="padding-left:20px"> slave  : inout AxiReadSlaveType ) </font> <font id="function_return">return ()</font>
 **Description**
-Convert slv to data record
+ Convert slv to data record
+
 ## Processes
 - unnamed: ( sAxiReadMaster, mAxiReadSlave,
              addrFifoDout, addrFifoAFull, addrFifoValid,
              dataFifoDout, dataFifoAFull, dataFifoValid )
 **Description**
-Fifo Outputs
-
+-----------------------  Fifo Outputs ----------------------- 
 ## Instantiations
 
 - U_AddrFifo: surf.FifoCascade

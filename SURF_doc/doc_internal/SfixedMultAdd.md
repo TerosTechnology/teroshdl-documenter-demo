@@ -6,31 +6,35 @@
 ![Diagram](SfixedMultAdd.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: signed fixed point multiplier using VHDL2008 fixed_pkg and
-             unconstrained input/output ports.  Can infer 27x18 mult
-             (1 DSP48) with latency >= 3 or 35x27 mult (2 DSP48) with
-             lantecy >= 4
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
-sfixed multiplier use LATENCY_G >= 3 for 27x18 (1 DSP48E2 slice)
-sfixed multiplier use LATENCY_G >= 4 for 35x27 (2 DSP48E2 slices)
-Using the reset may cause issues inferring correct DSP48 structure
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: signed fixed point multiplier using VHDL2008 fixed_pkg and
+              unconstrained input/output ports.  Can infer 27x18 mult
+              (1 DSP48) with latency >= 3 or 35x27 mult (2 DSP48) with
+              lantecy >= 4
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ sfixed multiplier use LATENCY_G >= 3 for 27x18 (1 DSP48E2 slice)
+ sfixed multiplier use LATENCY_G >= 4 for 35x27 (2 DSP48E2 slices)
+ Using the reset may cause issues inferring correct DSP48 structure
 ## Generics
 
-| Generic name         | Type                      | Value          | Description                                     |
-| -------------------- | ------------------------- | -------------- | ----------------------------------------------- |
-| TPD_G                | time                      | 1 ns           |                                                 |
-| LATENCY_G            | natural range 3 to 100    | 3              |                                                 |
-| BYPASS_CREG_G        | boolean                   | false          |                                                 |
-| RND_SIMPLE_G         | boolean                   | false          | may interfere with large mult inference (35x27) |
-| OUT_OVERFLOW_STYLE_G | fixed_overflow_style_type | fixed_wrap     |                                                 |
-| OUT_ROUNDING_STYLE_G | fixed_round_style_type    | fixed_truncate |                                                 |
+| Generic name         | Type                      | Value          | Description                                      |
+| -------------------- | ------------------------- | -------------- | ------------------------------------------------ |
+| TPD_G                | time                      | 1 ns           |                                                  |
+| LATENCY_G            | natural range 3 to 100    | 3              |                                                  |
+| BYPASS_CREG_G        | boolean                   | false          |                                                  |
+| RND_SIMPLE_G         | boolean                   | false          |  may interfere with large mult inference (35x27) |
+| OUT_OVERFLOW_STYLE_G | fixed_overflow_style_type | fixed_wrap     |                                                  |
+| OUT_ROUNDING_STYLE_G | fixed_round_style_type    | fixed_truncate |                                                  |
 ## Ports
 
 | Port name | Direction | Type   | Description                          |

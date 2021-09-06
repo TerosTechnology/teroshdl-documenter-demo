@@ -3,22 +3,22 @@
 - **File**: sim_waveform.vhdl
 ## Types
 
-| Name                        | Type                                                    | Description                                                                                     |
-| --------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| T_SIM_WAVEFORM_TUPLE_SL     |                                                         | waveform description=========================================================================== |
-| T_SIM_WAVEFORM_TUPLE_SLV_8  |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_TUPLE_SLV_16 |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_TUPLE_SLV_24 |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_TUPLE_SLV_32 |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_TUPLE_SLV_48 |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_TUPLE_SLV_64 |                                                         |                                                                                                 |
-| T_SIM_WAVEFORM_SL           | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SL      | use predefined physical type TIME here                                                          |
-| T_SIM_WAVEFORM_SLV_8        | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_8   |                                                                                                 |
-| T_SIM_WAVEFORM_SLV_16       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_16  |                                                                                                 |
-| T_SIM_WAVEFORM_SLV_24       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_24  |                                                                                                 |
-| T_SIM_WAVEFORM_SLV_32       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_32  |                                                                                                 |
-| T_SIM_WAVEFORM_SLV_48       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_48  |                                                                                                 |
-| T_SIM_WAVEFORM_SLV_64       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_64  |                                                                                                 |
+| Name                        | Type                                                    | Description                                                                                         |
+| --------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| T_SIM_WAVEFORM_TUPLE_SL     |                                                         |  waveform description  ===========================================================================  |
+| T_SIM_WAVEFORM_TUPLE_SLV_8  |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_TUPLE_SLV_16 |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_TUPLE_SLV_24 |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_TUPLE_SLV_32 |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_TUPLE_SLV_48 |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_TUPLE_SLV_64 |                                                         |                                                                                                     |
+| T_SIM_WAVEFORM_SL           | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SL      |  use predefined physical type TIME here                                                             |
+| T_SIM_WAVEFORM_SLV_8        | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_8   |                                                                                                     |
+| T_SIM_WAVEFORM_SLV_16       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_16  |                                                                                                     |
+| T_SIM_WAVEFORM_SLV_24       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_24  |                                                                                                     |
+| T_SIM_WAVEFORM_SLV_32       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_32  |                                                                                                     |
+| T_SIM_WAVEFORM_SLV_48       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_48  |                                                                                                     |
+| T_SIM_WAVEFORM_SLV_64       | array(natural range <>) of T_SIM_WAVEFORM_TUPLE_SLV_64  |                                                                                                     |
 ## Functions
 - simGenerateClock <font id="function_arguments">( signal	 Clock			: out	std_logic;<br><span style="padding-left:20px"> constant Frequency	: in	FREQ;<br><span style="padding-left:20px"> constant Phase			: in	T_PHASE			:=	0 deg;<br><span style="padding-left:20px"> constant DutyCycle	: in	T_DUTYCYCLE	:= 50 percent;<br><span style="padding-left:20px"> constant Wander			: in	T_WANDER		:=	0 permil ) </font> <font id="function_return">return ()</font>
 - simGenerateClock <font id="function_arguments">( constant TestID			: in	T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal	 Clock			: out	std_logic;<br><span style="padding-left:20px"> constant Frequency	: in	FREQ;<br><span style="padding-left:20px"> constant Phase			: in	T_PHASE			:=	0 deg;<br><span style="padding-left:20px"> constant DutyCycle	: in	T_DUTYCYCLE	:= 50 percent;<br><span style="padding-left:20px"> constant Wander			: in	T_WANDER		:=	0 permil ) </font> <font id="function_return">return ()</font>
@@ -31,7 +31,10 @@
 - simGenerateClock2 <font id="function_arguments">(constant TestID : in T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal Clock : out std_logic;<br><span style="padding-left:20px"> signal Debug : out REAL;<br><span style="padding-left:20px"> constant Period : in time) </font> <font id="function_return">return ()</font>
 - simGenerateWaveform <font id="function_arguments">( signal	 Wave					: out	boolean;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue	: in	boolean					:= FALSE ) </font> <font id="function_return">return ()</font>
 **Description**
-waveform generation procedures===========================================================================TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others => 'U') ?
+ waveform generation procedures
+ ===========================================================================
+ TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others => 'U') ?
+
 - simGenerateWaveform <font id="function_arguments">( constant TestID				: in	T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal	 Wave					: out	boolean;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue	: in	boolean					:= FALSE ) </font> <font id="function_return">return ()</font>
 - simGenerateWaveform <font id="function_arguments">( signal	 Wave					: out	std_logic;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue	: in	std_logic				:= '0' ) </font> <font id="function_return">return ()</font>
 - simGenerateWaveform <font id="function_arguments">( constant TestID				: in	T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal	 Wave					: out	std_logic;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue	: in	std_logic				:= '0' ) </font> <font id="function_return">return ()</font>
@@ -51,7 +54,11 @@ waveform generation procedures==================================================
 - simGenerateWaveform <font id="function_arguments">( constant TestID				: in	T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal	 Wave					: out	T_SLV_64;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM_SLV_64;<br><span style="padding-left:20px"> constant InitialValue	: in	T_SLV_64				:= (others => '0') ) </font> <font id="function_return">return ()</font>
 - to_waveform <font id="function_arguments">(bv : bit_vector;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM </font>
 **Description**
-function "<" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;convert arrays to waveformsTODO: optimize waveform if input data doesn't changeTODO: write single bit variant
+ function "<" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;
+ convert arrays to waveforms
+ TODO: optimize waveform if input data doesn't change
+ TODO: write single bit variant
+
 - to_waveform <font id="function_arguments">(slv : std_logic_vector;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SL </font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_8;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_8 </font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_16;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_16 </font>
@@ -61,4 +68,5 @@ function "<" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_64;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_64 </font>
 - simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns;<br><span style="padding-left:20px"> ResetPulse : time := 10 ns) </font> <font id="function_return">return T_SIM_WAVEFORM </font>
 **Description**
-predefined common waveforms
+ predefined common waveforms
+

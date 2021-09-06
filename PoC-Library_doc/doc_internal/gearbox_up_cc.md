@@ -6,31 +6,39 @@
 ![Diagram](gearbox_up_cc.svg "Diagram")
 ## Description
 
-EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
-vim: tabstop=2:shiftwidth=2:noexpandtab
-kate: tab-width 2; replace-tabs off; indent-width 2;
-=============================================================================
-Authors:				 	Patrick Lehmann
-Entity:				 	A upscaling gearbox module with a commonc clock (cc) interface.
-Description:
--------------------------------------
-This module provides a downscaling gearbox with a common clock (cc)
-interface. It perfoems a 'byte' to 'word' collection. The default order is
-LITTLE_ENDIAN (starting at byte(0)). Input "In_Data" and output "Out_Data"
-are of the same clock domain "Clock". Optional input and output registers
-can be added by enabling (ADD_***PUT_REGISTERS = TRUE).
-License:
-=============================================================================
-Copyright 2007-2016 Technische Universitaet Dresden - Germany
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-=============================================================================
+ EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+ vim: tabstop=2:shiftwidth=2:noexpandtab
+ kate: tab-width 2; replace-tabs off; indent-width 2;
+ =============================================================================
+ Authors:				 	Patrick Lehmann
+
+ Entity:				 	A upscaling gearbox module with a commonc clock (cc) interface.
+
+ Description:
+ -------------------------------------
+ This module provides a downscaling gearbox with a common clock (cc)
+ interface. It perfoems a 'byte' to 'word' collection. The default order is
+ LITTLE_ENDIAN (starting at byte(0)). Input "In_Data" and output "Out_Data"
+ are of the same clock domain "Clock". Optional input and output registers
+ can be added by enabling (ADD_***PUT_REGISTERS = TRUE).
+
+ License:
+ =============================================================================
+ Copyright 2007-2016 Technische Universitaet Dresden - Germany
+										 Chair of VLSI-Design, Diagnostics and Architecture
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ =============================================================================
 ## Generics
 
 | Generic name         | Type     | Value | Description |
@@ -90,15 +98,15 @@ limitations under the License.
 | Out_Last_d       | std_logic                                        |             |
 ## Constants
 
-| Name                  | Type                   | Value                                                                               | Description |
-| --------------------- | ---------------------- | ----------------------------------------------------------------------------------- | ----------- |
-| C_VERBOSE             | boolean                |  FALSE                                                                              |             |
-| BITS_PER_CHUNK        | positive               |  greatestCommonDivisor(INPUT_BITS,<br><span style="padding-left:20px"> OUTPUT_BITS) |             |
-| INPUT_CHUNKS          | positive               |  INPUT_BITS / BITS_PER_CHUNK                                                        |             |
-| OUTPUT_CHUNKS         | positive               |  OUTPUT_BITS / BITS_PER_CHUNK                                                       |             |
-| STAGES                | positive               |  div_ceil(OUTPUT_CHUNKS,<br><span style="padding-left:20px"> INPUT_CHUNKS)          |             |
-| COUNTER_TRANSLATION   | T_COUNTER_DESCRIPTIONS |  genCounterDescription                                                              |             |
-| MUX_INPUT_TRANSLATION | T_MUX_DESCRIPTIONS     |  genMuxDescription                                                                  |             |
+| Name                  | Type                   | Value                                                                               | Description  |
+| --------------------- | ---------------------- | ----------------------------------------------------------------------------------- | ------------ |
+| C_VERBOSE             | boolean                |  FALSE                                                                              | POC_VERBOSE; |
+| BITS_PER_CHUNK        | positive               |  greatestCommonDivisor(INPUT_BITS,<br><span style="padding-left:20px"> OUTPUT_BITS) |              |
+| INPUT_CHUNKS          | positive               |  INPUT_BITS / BITS_PER_CHUNK                                                        |              |
+| OUTPUT_CHUNKS         | positive               |  OUTPUT_BITS / BITS_PER_CHUNK                                                       |              |
+| STAGES                | positive               |  div_ceil(OUTPUT_CHUNKS,<br><span style="padding-left:20px"> INPUT_CHUNKS)          |              |
+| COUNTER_TRANSLATION   | T_COUNTER_DESCRIPTIONS |  genCounterDescription                                                              |              |
+| MUX_INPUT_TRANSLATION | T_MUX_DESCRIPTIONS     |  genMuxDescription                                                                  |              |
 ## Types
 
 | Name                   | Type                                                                  | Description |
@@ -115,9 +123,11 @@ limitations under the License.
 - genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS </font>
 - to_chunkv <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return T_CHUNK_VECTOR </font>
 **Description**
-create vector-vector from vector (4 bit)
+ create vector-vector from vector (4 bit)
+
 - to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
 **Description**
-convert vector-vector to flatten vector
+ convert vector-vector to flatten vector
+
 ## Processes
 - unnamed: ( Clock )

@@ -6,8 +6,8 @@
 ![Diagram](iq_rssi_to_db.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Generics
 
 | Generic name          | Type    | Value | Description |
@@ -16,14 +16,14 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | IQ_RSSI_HALF_DB_WIDTH | integer | 9     |             |
 ## Ports
 
-| Port name             | Direction | Type                                      | Description                              |
-| --------------------- | --------- | ----------------------------------------- | ---------------------------------------- |
-| clk                   | input     | wire                                      |                                          |
-| rstn                  | input     | wire                                      |                                          |
-| iq_rssi               | input     | wire signed [(IQ_DATA_WIDTH-1):0]         | Ports to receive iq rssi from iq_abs_avg |
-| iq_rssi_valid         | input     | wire                                      |                                          |
-| iq_rssi_half_db       | output    | wire signed [(IQ_RSSI_HALF_DB_WIDTH-1):0] | step size is 0.5dB not 1dB!              |
-| iq_rssi_half_db_valid | output    | wire                                      |                                          |
+| Port name             | Direction | Type                                      | Description                               |
+| --------------------- | --------- | ----------------------------------------- | ----------------------------------------- |
+| clk                   | input     | wire                                      |                                           |
+| rstn                  | input     | wire                                      |                                           |
+| iq_rssi               | input     | wire signed [(IQ_DATA_WIDTH-1):0]         |  Ports to receive iq rssi from iq_abs_avg |
+| iq_rssi_valid         | input     | wire                                      |                                           |
+| iq_rssi_half_db       | output    | wire signed [(IQ_RSSI_HALF_DB_WIDTH-1):0] | step size is 0.5dB not 1dB!               |
+| iq_rssi_half_db_valid | output    | wire                                      |                                           |
 ## Signals
 
 | Name                      | Type                                 | Description |
@@ -43,16 +43,17 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | iq_rssi_half_db_valid_reg | reg signed                           |             |
 ## Constants
 
-| Name           | Type  | Value  | Description |
-| -------------- | ----- | ------ | ----------- |
-| WAIT_FOR_VALID | [2:0] | 3'b000 |             |
-| PREPARE_P1P2P3 | [2:0] | 3'b001 |             |
-| MULT_P1P2      | [2:0] | 3'b010 |             |
-| ADD_P1P2       | [2:0] | 3'b011 |             |
-| ADD_P3         | [2:0] | 3'b100 |             |
-| GEN_FINAL      | [2:0] | 3'b101 |             |
+| Name           | Type  | Value  | Description                                                                                       |
+| -------------- | ----- | ------ | ------------------------------------------------------------------------------------------------- |
+| WAIT_FOR_VALID | [2:0] | 3'b000 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
+| PREPARE_P1P2P3 | [2:0] | 3'b001 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
+| MULT_P1P2      | [2:0] | 3'b010 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
+| ADD_P1P2       | [2:0] | 3'b011 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
+| ADD_P3         | [2:0] | 3'b100 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
+| GEN_FINAL      | [2:0] | 3'b101 | let's use FSM to do calculation. remember, after a iq_rssi_valid, you have 8 clock to do the job  |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 ## State machines
 
 ![Diagram_state_machine_0]( stm_iq_rssi_to_db_00.svg "Diagram")

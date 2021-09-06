@@ -6,20 +6,25 @@
 ![Diagram](SsiIbFrameFilter.svg "Diagram")
 ## Description
 
-Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
-Company    : SLAC National Accelerator Laboratory
-Description: Inbound AXI Stream FIFO SSI Filter ....
-             Tags frames with EOFE on double SOFs
-             Drops frames that are missing SOF frame marker
-             Tags frames with EOFE on change in TDEST during move
-             Generates the overflow FIFO signal for user logic
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : SSI Protocol: https://confluence.slac.stanford.edu/x/0oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Inbound AXI Stream FIFO SSI Filter ....
+              Tags frames with EOFE on double SOFs
+              Drops frames that are missing SOF frame marker
+              Tags frames with EOFE on change in TDEST during move
+              Generates the overflow FIFO signal for user logic
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name     | Type                | Value | Description |
@@ -34,8 +39,8 @@ the terms contained in the LICENSE.txt file.
 | sAxisMaster    | in        | AxiStreamMasterType | Slave Interface (User Application Interface) |
 | sAxisSlave     | out       | AxiStreamSlaveType  |                                              |
 | sAxisCtrl      | out       | AxiStreamCtrlType   |                                              |
-| sAxisDropWord  | out       | sl                  | Word dropped status output                   |
-| sAxisDropFrame | out       | sl                  | Frame dropped status output                  |
+| sAxisDropWord  | out       | sl                  |  Word dropped status output                  |
+| sAxisDropFrame | out       | sl                  |  Frame dropped status output                 |
 | mAxisMaster    | out       | AxiStreamMasterType | Master Interface (AXIS FIFO Write Interface) |
 | mAxisSlave     | in        | AxiStreamSlaveType  |                                              |
 | mAxisCtrl      | in        | AxiStreamCtrlType   |                                              |

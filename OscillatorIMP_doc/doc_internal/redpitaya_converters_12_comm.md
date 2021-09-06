@@ -50,6 +50,5 @@
 ## Processes
 - write_bloc: ( clk,reset )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

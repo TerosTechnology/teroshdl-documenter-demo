@@ -6,9 +6,9 @@
 ![Diagram](rx_intf_m_axis.svg "Diagram")
 ## Description
 
-based on Xilinx module template
+ based on Xilinx module template
  Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+
 ## Generics
 
 | Generic name           | Type    | Value | Description |
@@ -38,57 +38,60 @@ based on Xilinx module template
 | M_AXIS_TREADY         | input     | wire                                  |             |
 ## Signals
 
-| Name             | Type                        | Description        |
-| ---------------- | --------------------------- | ------------------ |
-| mst_exec_state   | reg [1:0]                   | In this state the  |
-| read_pointer     | reg [bit_num-1:0]           |                    |
-| count            | reg [WAIT_COUNT_BITS-1 : 0] |                    |
-| axis_tvalid      | wire                        |                    |
-| axis_tlast       | wire                        |                    |
-| axis_tlast_delay | reg                         |                    |
-| tx_en            | wire                        |                    |
-| tx_done          | reg                         |                    |
-| EMPTY            | wire                        |                    |
-| init_txn_ff      | reg                         |                    |
-| init_txn_pulse   | wire                        |                    |
-| FULL             | wire                        |                    |
+| Name             | Type                        | Description                                   |
+| ---------------- | --------------------------- | --------------------------------------------- |
+| mst_exec_state   | reg [1:0]                   |  In this state the                            |
+| read_pointer     | reg [bit_num-1:0]           |                                               |
+| count            | reg [WAIT_COUNT_BITS-1 : 0] |                                               |
+| axis_tvalid      | wire                        |                                               |
+| axis_tlast       | wire                        |                                               |
+| axis_tlast_delay | reg                         |                                               |
+| tx_en            | wire                        |                                               |
+| tx_done          | reg                         |                                               |
+| EMPTY            | wire                        |                                               |
+| init_txn_ff      | reg                         |                                               |
+| init_txn_pulse   | wire                        |                                               |
+| FULL             | wire                        |                                               |
 ## Constants
 
-| Name         | Type    | Value                      | Description                    |
-| ------------ | ------- | -------------------------- | ------------------------------ |
-| bit_num      | integer | clogb2(MAX_NUM_DMA_SYMBOL) |                                |
-| IDLE         | [1:0]   | 2'b00                      | This is the initial/idle state |
-| INIT_COUNTER | [1:0]   | 2'b01                      | This is the initial/idle state |
-| SEND_STREAM  | [1:0]   | 2'b10                      | This is the initial/idle state |
+| Name         | Type    | Value                      | Description                     |
+| ------------ | ------- | -------------------------- | ------------------------------- |
+| bit_num      | integer | clogb2(MAX_NUM_DMA_SYMBOL) |                                 |
+| IDLE         | [1:0]   | 2'b00                      | This is the initial/idle state  |
+| INIT_COUNTER | [1:0]   | 2'b01                      | This is the initial/idle state  |
+| SEND_STREAM  | [1:0]   | 2'b10                      | This is the initial/idle state  |
 ## Functions
 - clogb2 <font id="function_arguments">(input integer bit_depth)</font> <font id="function_return">return (integer)</font>
 ## Processes
 - unnamed: ( @(posedge M_AXIS_ACLK) )
-- unnamed: ( @(posedge M_AXIS_ACLK) )
+  - **Type:** always
 **Description**
-Control state machine implementation
-
+Generate a pulse to initiate AXI transaction. 
 - unnamed: ( @(posedge M_AXIS_ACLK) )
+  - **Type:** always
 **Description**
-Delay the axis_tvalid and axis_tlast signal by one clock cycle
-to match the latency of M_AXIS_TDATA
-
+ Control state machine implementation                              
 - unnamed: ( @(posedge M_AXIS_ACLK) )
+  - **Type:** always
+**Description**
+ Delay the axis_tvalid and axis_tlast signal by one clock cycle                                to match the latency of M_AXIS_TDATA                                                         
+- unnamed: ( @(posedge M_AXIS_ACLK) )
+  - **Type:** always
 ## Instantiations
 
 - xpm_fifo_sync_rx_intf_m_axis: xpm_fifo_sync
 **Description**
-fifo64_1clk fifo64_1clk_i (
-.CLK(M_AXIS_ACLK),
-.DATAO(M_AXIS_TDATA),
-.DI(DATA_FROM_ACC),
-.EMPTY(EMPTY),
-.FULL(FULL),
-.RDEN(tx_en),
-.RST(!M_AXIS_ARESETN),
-.WREN(ACC_DATA_READY),
-.data_count(data_count)
-);
+ fifo64_1clk fifo64_1clk_i (
+     .CLK(M_AXIS_ACLK),
+     .DATAO(M_AXIS_TDATA),
+     .DI(DATA_FROM_ACC),
+     .EMPTY(EMPTY),
+     .FULL(FULL),
+     .RDEN(tx_en),
+     .RST(!M_AXIS_ARESETN),
+     .WREN(ACC_DATA_READY),
+     .data_count(data_count)
+ );
 
 ## State machines
 

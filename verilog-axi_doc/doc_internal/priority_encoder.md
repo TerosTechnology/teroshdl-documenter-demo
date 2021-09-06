@@ -6,16 +6,18 @@
 ![Diagram](priority_encoder.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name      | Type | Value         | Description             |
-| ----------------- | ---- | ------------- | ----------------------- |
-| WIDTH             |      | 4             |                         |
-| LSB_HIGH_PRIORITY |      | 0             | LSB priority selection  |
-| LEVELS            |      | $clog2(WIDTH) |                         |
-| W                 |      | 2**LEVELS     |                         |
+| Generic name      | Type | Value         | Description              |
+| ----------------- | ---- | ------------- | ------------------------ |
+| WIDTH             |      | 4             |                          |
+| LSB_HIGH_PRIORITY |      | 0             |  LSB priority selection  |
+| LEVELS            |      | $clog2(WIDTH) |                          |
+| W                 |      | 2**LEVELS     |                          |
 ## Ports
 
 | Port name        | Direction | Type                     | Description |
@@ -26,8 +28,8 @@ Language: Verilog 2001
 | output_unencoded | output    | wire [WIDTH-1:0]         |             |
 ## Signals
 
-| Name         | Type           | Description                     |
-| ------------ | -------------- | ------------------------------- |
-| input_padded | wire [W-1:0]   | pad input to even power of two  |
-| stage_valid  | wire [W/2-1:0] |                                 |
-| stage_enc    | wire [W/2-1:0] |                                 |
+| Name         | Type           | Description                      |
+| ------------ | -------------- | -------------------------------- |
+| input_padded | wire [W-1:0]   |  pad input to even power of two  |
+| stage_valid  | wire [W/2-1:0] |                                  |
+| stage_enc    | wire [W/2-1:0] |                                  |

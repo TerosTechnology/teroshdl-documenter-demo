@@ -55,7 +55,7 @@
 | coeff_en_s   | std_logic                                    |             |
 | coeff_s      | std_logic_vector(COEFF_SIZE downto 0)        |             |
 | coeff_addr_s | std_logic_vector(COEFF_ADDR_SIZE-1 downto 0) |             |
-| addr_s       | std_logic_vector(1 downto 0)                 | comm        |
+| addr_s       | std_logic_vector(1 downto 0)                 |  comm       |
 | write_en_s   | std_logic                                    |             |
 |  read_en_s   | std_logic                                    |             |
 ## Instantiations

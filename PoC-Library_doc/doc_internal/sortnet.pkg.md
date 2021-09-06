@@ -3,9 +3,9 @@
 - **File**: sortnet.pkg.vhdl
 ## Description
 
-use			PoC.utils.all;
-use			PoC.vectors.all;
-use			PoC.strings.all;
+ use			PoC.utils.all;
+ use			PoC.vectors.all;
+ use			PoC.strings.all;
 
 ## Types
 

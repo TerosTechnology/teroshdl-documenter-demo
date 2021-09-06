@@ -16,10 +16,11 @@
 ## Functions
 - Set <font id="function_arguments">(ID : NameIDType ;<br><span style="padding-left:20px"> NameIn : String) </font> <font id="function_return">return ()</font>
 **Description**
- impure function NewID     (NameIn : String ; Size : positive ) return NameStoreIDArrayType ;
+  impure function NewID     (NameIn : String ; Size : positive ) return NameStoreIDArrayType ;
+
 - Clear <font id="function_arguments">(ID : NameIDType) </font> <font id="function_return">return ()</font>
 **Description**
-clear name
+ clear name
 - Deallocate <font id="function_arguments">(ID : NameIDType) </font> <font id="function_return">return ()</font>
 **Description**
-effectively alias to clear name
+ effectively alias to clear name

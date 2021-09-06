@@ -6,15 +6,19 @@
 ![Diagram](UdpEngineArp.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: UDP Client's ARP Messaging Module
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: UDP Client's ARP Messaging Module
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name   | Type     | Value      | Description |
@@ -28,10 +32,10 @@ the terms contained in the LICENSE.txt file.
 
 | Port name       | Direction | Type                                           | Description                       |
 | --------------- | --------- | ---------------------------------------------- | --------------------------------- |
-| localIp         | in        | slv(31 downto 0)                               |  big-Endian configuration         |
-| arpReqMasters   | out       | AxiStreamMasterArray(CLIENT_SIZE_G-1 downto 0) | Request via IP address            |
+| localIp         | in        | slv(31 downto 0)                               |   big-Endian configuration        |
+| arpReqMasters   | out       | AxiStreamMasterArray(CLIENT_SIZE_G-1 downto 0) |  Request via IP address           |
 | arpReqSlaves    | in        | AxiStreamSlaveArray(CLIENT_SIZE_G-1 downto 0)  |                                   |
-| arpAckMasters   | in        | AxiStreamMasterArray(CLIENT_SIZE_G-1 downto 0) | Respond with MAC address          |
+| arpAckMasters   | in        | AxiStreamMasterArray(CLIENT_SIZE_G-1 downto 0) |  Respond with MAC address         |
 | arpAckSlaves    | out       | AxiStreamSlaveArray(CLIENT_SIZE_G-1 downto 0)  |                                   |
 | clientRemoteDet | in        | slv(CLIENT_SIZE_G-1 downto 0)                  | Interface to UDP Client engine(s) |
 | clientRemoteIp  | in        | Slv32Array(CLIENT_SIZE_G-1 downto 0)           |                                   |

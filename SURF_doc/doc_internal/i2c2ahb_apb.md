@@ -6,28 +6,34 @@
 ![Diagram](i2c2ahb_apb.svg "Diagram")
 ## Description
 
- This file is a part of the GRLIB VHDL IP LIBRARY
- Copyright (C) 2003 - 2008, Gaisler Research
- Copyright (C) 2008 - 2012, Aeroflex Gaisler
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-Entity:      i2c2ahb_apb
-File:        i2c2ahb_apb.vhd
-Author:      Jan Andersson - Aeroflex Gaisler AB
-Contact:     support@gaisler.com
-Description: Simple I2C-slave providing a bridge to AMBA AHB
-             This entity provides an APB interface for setting defining the
-             AHB address window that can be accessed from I2C.
-             See i2c2ahbx.vhd and GRIP for documentation
+----------------------------------------------------------------------------
+  This file is a part of the GRLIB VHDL IP LIBRARY
+  Copyright (C) 2003 - 2008, Gaisler Research
+  Copyright (C) 2008 - 2012, Aeroflex Gaisler
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-----------------------------------------------------------------------------
+ Entity:      i2c2ahb_apb
+ File:        i2c2ahb_apb.vhd
+ Author:      Jan Andersson - Aeroflex Gaisler AB
+ Contact:     support@gaisler.com
+ Description: Simple I2C-slave providing a bridge to AMBA AHB
+              This entity provides an APB interface for setting defining the
+              AHB address window that can be accessed from I2C.
+              See i2c2ahbx.vhd and GRIP for documentation
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type                   | Value   | Description        |
@@ -38,7 +44,7 @@ Description: Simple I2C-slave providing a bridge to AMBA AHB
 | ahbmaskh     | integer                | 0       |                    |
 | ahbmaskl     | integer                | 0       |                    |
 | resen        | integer                | 0       |                    |
-| pindex       | integer                | 0       | slave bus index    |
+| pindex       | integer                | 0       |  slave bus index   |
 | paddr        | integer                | 0       |                    |
 | pmask        | integer                | 16#fff# |                    |
 | pirq         | integer                | 0       |                    |
@@ -75,7 +81,7 @@ Description: Simple I2C-slave providing a bridge to AMBA AHB
 | MASK_OFF | std_logic_vector(4 downto 2) |  "011"                                                                                                                                                                                                                                                                                                                          |             |
 | SLVA_OFF | std_logic_vector(4 downto 2) |  "100"                                                                                                                                                                                                                                                                                                                          |             |
 | SLVC_OFF | std_logic_vector(4 downto 2) |  "101"                                                                                                                                                                                                                                                                                                                          |             |
-| PCONFIG  | apb_config_type              |  (     0 => ahb_device_reg(VENDOR_GAISLER,<br><span style="padding-left:20px"> GAISLER_I2C2AHB,<br><span style="padding-left:20px"> 0,<br><span style="padding-left:20px"> 0,<br><span style="padding-left:20px"> 0),<br><span style="padding-left:20px">     1 => apb_iobar(paddr,<br><span style="padding-left:20px"> pmask)) | AMBA PnP    |
+| PCONFIG  | apb_config_type              |  (     0 => ahb_device_reg(VENDOR_GAISLER,<br><span style="padding-left:20px"> GAISLER_I2C2AHB,<br><span style="padding-left:20px"> 0,<br><span style="padding-left:20px"> 0,<br><span style="padding-left:20px"> 0),<br><span style="padding-left:20px">     1 => apb_iobar(paddr,<br><span style="padding-left:20px"> pmask)) |  AMBA PnP   |
 ## Types
 
 | Name         | Type | Description |

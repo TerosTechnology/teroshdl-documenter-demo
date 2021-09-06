@@ -3,12 +3,12 @@
 - **File**: otbn_memutil_pkg.sv
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
  Imports for the functions defined in otbn_memutil.h. There are documentation comments explaining
  what the functions do there.
- 
+
 
 ## Signals
 
@@ -32,3 +32,15 @@ Copyright lowRISC contributors.
 | word_off   | chandle    |             |
 | output     | chandle    |             |
 | data_value | bit [31:0] |             |
+| mem_util   | chandle    |             |
+| bit        | chandle    |             |
+| bit        | chandle    |             |
+| to_cnt     | bit [31:0] |             |
+| mem_util   | chandle    |             |
+| int        | chandle    |             |
+| output     | chandle    |             |
+| addr       | bit [31:0] |             |
+| output     | bit [31:0] |             |
+| from_cnt   | bit [31:0] |             |
+| output     | bit [31:0] |             |
+| to_cnt     | bit [31:0] |             |

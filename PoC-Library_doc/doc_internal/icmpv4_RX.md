@@ -6,27 +6,35 @@
 ![Diagram](icmpv4_RX.svg "Diagram")
 ## Description
 
-EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
-vim: tabstop=2:shiftwidth=2:noexpandtab
-kate: tab-width 2; replace-tabs off; indent-width 2;
-=============================================================================
-Authors:				 	Patrick Lehmann
-Entity:				 	TODO
-Description:
--------------------------------------
-.. TODO:: No documentation available.
-License:
-=============================================================================
-Copyright 2007-2015 Technische Universitaet Dresden - Germany
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-=============================================================================
+ EMACS settings: -*-  tab-width: 2; indent-tabs-mode: t -*-
+ vim: tabstop=2:shiftwidth=2:noexpandtab
+ kate: tab-width 2; replace-tabs off; indent-width 2;
+ =============================================================================
+ Authors:				 	Patrick Lehmann
+
+ Entity:				 	TODO
+
+ Description:
+ -------------------------------------
+ .. TODO:: No documentation available.
+
+ License:
+ =============================================================================
+ Copyright 2007-2015 Technische Universitaet Dresden - Germany
+										 Chair of VLSI-Design, Diagnostics and Architecture
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ =============================================================================
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -75,31 +83,31 @@ limitations under the License.
 | Out_Meta_Payload_Data         | out       | T_SLV_8                 |               |
 ## Signals
 
-| Name               | Type                         | Description       |
-| ------------------ | ---------------------------- | ----------------- |
-| State              | T_STATE                      |                   |
-| NextState          | T_STATE                      |                   |
-| Register_rst       | std_logic                    |                   |
-| Type_en            | std_logic                    | UDP header fields |
-| Code_en            | std_logic                    |                   |
-| Checksum_en0       | std_logic                    |                   |
-| Checksum_en1       | std_logic                    |                   |
-| Identification_en0 | std_logic                    |                   |
-| Identification_en1 | std_logic                    |                   |
-| SequenceNumber_en0 | std_logic                    |                   |
-| SequenceNumber_en1 | std_logic                    |                   |
-| Type_d             | T_SLV_8                      |                   |
-| Code_d             | T_SLV_8                      |                   |
-| Checksum_d         | T_SLV_16                     |                   |
-| Identification_d   | T_SLV_16                     |                   |
-| SequenceNumber_d   | T_SLV_16                     |                   |
-| MetaFIFO_put       | std_logic                    |                   |
-| MetaFIFO_DataIn    | std_logic_vector(8 downto 0) |                   |
-| MetaFIFO_Full      | std_logic                    |                   |
-| MetaFIFO_Commit    | std_logic                    |                   |
-| MetaFIFO_Rollback  | std_logic                    |                   |
-| MetaFIFO_DataOut   | std_logic_vector(8 downto 0) |                   |
-| MetaFIFO_got       | std_logic                    |                   |
+| Name               | Type                         | Description                                  |
+| ------------------ | ---------------------------- | -------------------------------------------- |
+| State              | T_STATE                      |                                              |
+| NextState          | T_STATE                      |                                              |
+| Register_rst       | std_logic                    |                                              |
+| Type_en            | std_logic                    |  UDP header fields                           |
+| Code_en            | std_logic                    |                                              |
+| Checksum_en0       | std_logic                    |                                              |
+| Checksum_en1       | std_logic                    |                                              |
+| Identification_en0 | std_logic                    |                                              |
+| Identification_en1 | std_logic                    |                                              |
+| SequenceNumber_en0 | std_logic                    |                                              |
+| SequenceNumber_en1 | std_logic                    |                                              |
+| Type_d             | T_SLV_8                      |                                              |
+| Code_d             | T_SLV_8                      |                                              |
+| Checksum_d         | T_SLV_16                     |                                              |
+| Identification_d   | T_SLV_16                     |                                              |
+| SequenceNumber_d   | T_SLV_16                     |                                              |
+| MetaFIFO_put       | std_logic                    |                                              |
+| MetaFIFO_DataIn    | std_logic_vector(8 downto 0) |                                              |
+| MetaFIFO_Full      | std_logic                    |                                              |
+| MetaFIFO_Commit    | std_logic                    |                                              |
+| MetaFIFO_Rollback  | std_logic                    |                                              |
+| MetaFIFO_DataOut   | std_logic_vector(8 downto 0) | 	signal MetaFIFO_Valid									: STD_LOGIC;  |
+| MetaFIFO_got       | std_logic                    |                                              |
 ## Types
 
 | Name    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Description |
@@ -113,5 +121,5 @@ limitations under the License.
 
 - PayloadFIFO: PoC.fifo_cc_got_tempgot
 **Description**
-FIXME: monitor MetaFIFO_Full signal
+ FIXME: monitor MetaFIFO_Full signal
 

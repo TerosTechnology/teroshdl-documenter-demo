@@ -6,9 +6,11 @@
 ![Diagram](dataReal_sync.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2018/12/16
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2018/12/16
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |

@@ -6,10 +6,10 @@
 ![Diagram](otbn_mac_bignum.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Ports
 
 | Port name            | Direction | Type                   | Description |
@@ -42,18 +42,17 @@ Copyright lowRISC contributors.
 | acc_en                  | logic              |             |
 ## Constants
 
-| Name  | Type         | Value    | Description                                                                           |
-| ----- | ------------ | -------- | ------------------------------------------------------------------------------------- |
-| QWLEN | int unsigned | WLEN / 4 | The MAC operates on quarter-words, QWLEN gives the number of bits in a quarter-word.  |
+| Name  | Type         | Value    | Description                                                                            |
+| ----- | ------------ | -------- | -------------------------------------------------------------------------------------- |
+| QWLEN | int unsigned | WLEN / 4 |  The MAC operates on quarter-words, QWLEN gives the number of bits in a quarter-word.  |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 **Description**
-Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the
-instruction (operand_[a|b]_qw_sel).
-
+ Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the  instruction (operand_[a|b]_qw_sel). 
 - unnamed: (  )
+  - **Type:** always_comb
 **Description**
-Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount
-supplied in the instruction (pre_acc_shift_imm).
-
+ Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount  supplied in the instruction (pre_acc_shift_imm). 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff

@@ -23,13 +23,13 @@
 | data_addr_o | out       | std_logic_vector(ADDR-1 downto 0) |             |
 ## Signals
 
-| Name         | Type                              | Description |
-| ------------ | --------------------------------- | ----------- |
-| ready_s      | std_logic                         |             |
-| data_en_s    | std_logic                         |             |
-| data_eof_s   | std_logic                         |             |
-| addr_s       | std_logic_vector(ADDR-1 downto 0) | counter RAM |
-|  addr_next_s | std_logic_vector(ADDR-1 downto 0) | counter RAM |
+| Name         | Type                              | Description   |
+| ------------ | --------------------------------- | ------------- |
+| ready_s      | std_logic                         |               |
+| data_en_s    | std_logic                         |               |
+| data_eof_s   | std_logic                         |               |
+| addr_s       | std_logic_vector(ADDR-1 downto 0) |  counter RAM  |
+|  addr_next_s | std_logic_vector(ADDR-1 downto 0) |  counter RAM  |
 ## Processes
 - unnamed: ( clk_i )
 - unnamed: ( clk_i )

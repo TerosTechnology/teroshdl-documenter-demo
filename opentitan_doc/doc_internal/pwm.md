@@ -6,10 +6,10 @@
 ![Diagram](pwm.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Generics
 
 | Generic name | Type                  | Value     | Description |
@@ -31,12 +31,12 @@ Copyright lowRISC contributors.
 | cio_pwm_en_o | output    | [NOutputs-1:0]  |             |
 ## Signals
 
-| Name         | Type                      | Description                                                |
-| ------------ | ------------------------- | ---------------------------------------------------------- |
-| unused_regen | logic                     | TODO: Deal with Regen in this block, on TLUL clock domain  |
-| reg2hw       | pwm_reg_pkg::pwm_reg2hw_t |                                                            |
-| alert_test   | logic [NumAlerts-1:0]     |                                                            |
-| alerts       | logic [NumAlerts-1:0]     |                                                            |
+| Name         | Type                      | Description                                                 |
+| ------------ | ------------------------- | ----------------------------------------------------------- |
+| unused_regen | logic                     |  TODO: Deal with Regen in this block, on TLUL clock domain  |
+| reg2hw       | pwm_reg_pkg::pwm_reg2hw_t |                                                             |
+| alert_test   | logic [NumAlerts-1:0]     |                                                             |
+| alerts       | logic [NumAlerts-1:0]     |                                                             |
 ## Instantiations
 
 - u_reg: pwm_reg_top

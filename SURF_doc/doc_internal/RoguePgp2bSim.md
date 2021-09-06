@@ -6,16 +6,21 @@
 ![Diagram](RoguePgp2bSim.svg "Diagram")
 ## Description
 
-Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper on RogueStreamSim to simulate a PGPv3
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : PGPv2b: https://confluence.slac.stanford.edu/x/q86fD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper on RogueStreamSim to simulate a PGPv3
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name  | Type                        | Value | Description |
@@ -38,7 +43,7 @@ the terms contained in the LICENSE.txt file.
 | pgpTxSlaves     | out       | AxiStreamSlaveArray(NUM_VC_G-1 downto 0)  |                          |
 | pgpRxMasters    | out       | AxiStreamMasterArray(NUM_VC_G-1 downto 0) | Frame Receive Interface  |
 | pgpRxSlaves     | in        | AxiStreamSlaveArray(NUM_VC_G-1 downto 0)  |                          |
-| axilClk         | in        | sl                                        | Stable Clock             |
+| axilClk         | in        | sl                                        |  Stable Clock            |
 | axilRst         | in        | sl                                        |                          |
 | axilReadMaster  | in        | AxiLiteReadMasterType                     |                          |
 | axilReadSlave   | out       | AxiLiteReadSlaveType                      |                          |

@@ -30,7 +30,7 @@
 | data_im_i       | in        | std_logic_vector(DATA_SIZE-1 downto 0)  |                |
 | data_addr_i     | in        | std_logic_vector(ADDR_SIZE-1 downto 0)  |                |
 | data_en_i       | in        | std_logic                               |                |
-| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                |
+| read_coeff_re_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) | onfiguration   |
 | read_coeff_im_o | out       | std_logic_vector(COEFF_SIZE-1 downto 0) |                |
 | coeff_re_i      | in        | std_logic_vector(COEFF_SIZE-1 downto 0) |                |
 | coeff_re_addr_i |           | std_logic_vector(ADDR_SIZE-1 downto 0)  |                |
@@ -57,7 +57,7 @@
 |  radix_done_s      | std_logic                              |             |
 | start_radix_next_s | std_logic                              |             |
 | stage_slv_s        | std_logic_vector(ADDR_SIZE-1 downto 0) |             |
-| done_fft_next_s    | std_logic                              |             |
+| done_fft_next_s    | std_logic                              | new         |
 ## Constants
 
 | Name        | Type                                   | Value                                 | Description |

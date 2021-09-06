@@ -6,8 +6,10 @@
 ![Diagram](eth_phy_10g_rx_if.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name        | Type | Value      | Description |
@@ -23,19 +25,19 @@ Language: Verilog 2001
 | COUNT_125US         |      | 125000/6.4 |             |
 ## Ports
 
-| Port name         | Direction | Type                  | Description |
-| ----------------- | --------- | --------------------- | ----------- |
-| clk               | input     | wire                  |             |
-| rst               | input     | wire                  |             |
-| encoded_rx_data   | output    | wire [DATA_WIDTH-1:0] |             |
-| encoded_rx_hdr    | output    | wire [HDR_WIDTH-1:0]  |             |
-| serdes_rx_data    | input     | wire [DATA_WIDTH-1:0] |             |
-| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0]  |             |
-| serdes_rx_bitslip | output    | wire                  |             |
-| rx_error_count    | output    | wire [6:0]            |             |
-| rx_block_lock     | output    | wire                  |             |
-| rx_high_ber       | output    | wire                  |             |
-| rx_prbs31_enable  | input     | wire                  |             |
+| Port name         | Direction | Type                  | Description                                 |
+| ----------------- | --------- | --------------------- | ------------------------------------------- |
+| clk               | input     | wire                  |                                             |
+| rst               | input     | wire                  |                                             |
+| encoded_rx_data   | output    | wire [DATA_WIDTH-1:0] |      * 10GBASE-R encoded interface      */  |
+| encoded_rx_hdr    | output    | wire [HDR_WIDTH-1:0]  |                                             |
+| serdes_rx_data    | input     | wire [DATA_WIDTH-1:0] |      * SERDES interface      */             |
+| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0]  |                                             |
+| serdes_rx_bitslip | output    | wire                  |                                             |
+| rx_error_count    | output    | wire [6:0]            |      * Status      */                       |
+| rx_block_lock     | output    | wire                  |                                             |
+| rx_high_ber       | output    | wire                  |                                             |
+| rx_prbs31_enable  | input     | wire                  |      * Configuration      */                |
 ## Signals
 
 | Name                  | Type                            | Description |
@@ -61,7 +63,9 @@ Language: Verilog 2001
 | serdes_rx_bitslip_int | wire                            |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always
 ## Instantiations
 
 - descrambler_inst: lfsr

@@ -6,28 +6,32 @@
 ![Diagram](Caui4GtyIpWrapper.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name       | Type     | Value | Description                                |
-| ------------------ | -------- | ----- | ------------------------------------------ |
-| TPD_G              | time     | 1 ns  |                                            |
-| SIM_SPEEDUP_G      | boolean  | false |                                            |
-| REFCLK_TYPE_G      | boolean  | true  | false = 156.25 MHz, true = 161.1328125 MHz |
-| MAX_PAYLOAD_SIZE_G | positive | 8192  |                                            |
+| Generic name       | Type     | Value | Description                                 |
+| ------------------ | -------- | ----- | ------------------------------------------- |
+| TPD_G              | time     | 1 ns  |                                             |
+| SIM_SPEEDUP_G      | boolean  | false |                                             |
+| REFCLK_TYPE_G      | boolean  | true  |  false = 156.25 MHz, true = 161.1328125 MHz |
+| MAX_PAYLOAD_SIZE_G | positive | 8192  |                                             |
 ## Ports
 
 | Port name    | Direction | Type                  | Description           |
 | ------------ | --------- | --------------------- | --------------------- |
-| stableClk    | in        | sl                    | 156.25 MHz            |
+| stableClk    | in        | sl                    |  156.25 MHz           |
 | stableRst    | in        | sl                    |                       |
 | phyClk       | out       | sl                    | PHY Clock and Reset   |
 | phyRst       | out       | sl                    |                       |

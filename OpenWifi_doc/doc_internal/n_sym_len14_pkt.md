@@ -6,8 +6,8 @@
 ![Diagram](n_sym_len14_pkt.svg "Diagram")
 ## Description
 
-Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
- 
+ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -22,3 +22,6 @@ Xianjun jiao. putaoshu@msn.com; xianjun.jiao@imec.be;
 | num_data_ofdm_symbol | reg [2:0] |             |
 ## Processes
 - unnamed: ( @( ht_flag, rate_mcs ) )
+  - **Type:** always
+**Description**
+ lookup table for how many data OFDM symbol will be used for ACK/CTS (length 14)  to decide recv_ack_timeout_top and others always @( signal_rate[7],signal_rate[3:0] ) 

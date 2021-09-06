@@ -6,17 +6,21 @@
 ![Diagram](AxiStreamMux.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Block to connect multiple incoming AXI streams into a single encoded
-outbound stream. The destination field is updated accordingly.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Block to connect multiple incoming AXI streams into a single encoded
+ outbound stream. The destination field is updated accordingly.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type                    | Value             | Description                                                                                                                                                                                                            |
@@ -24,7 +28,7 @@ the terms contained in the LICENSE.txt file.
 | TPD_G                | time                    | 1 ns              |                                                                                                                                                                                                                        |
 | PIPE_STAGES_G        | integer range 0 to 16   | 0                 |                                                                                                                                                                                                                        |
 | NUM_SLAVES_G         | integer range 1 to 256  | 4                 |                                                                                                                                                                                                                        |
-| MODE_G               | string                  | "INDEXED"         | Note: Planning to rename "MODE_G" to "TDEST_MODE_G" in a future MAJOR release of SURF                                                                                                                                  |
+| MODE_G               | string                  | "INDEXED"         |  Note: Planning to rename "MODE_G" to "TDEST_MODE_G" in a future MAJOR release of SURF                                                                                                                                 |
 | TDEST_ROUTES_G       | Slv8Array               | (0 => "--------") | In ROUTED mode, an array mapping how TDEST should be assigned for each slave port Each TDEST bit can be set to '0', '1' or '-' for passthrough from slave TDEST.                                                       |
 | TID_MODE_G           | string                  | "PASSTHROUGH"     | In INDEXED mode, the output TID is set based on the selected slave index In ROUTED mode, TID is set according to the TID_ROUTES_G table In PASSTHROUGH mode, TID is passed through from the slave untouched (default)  |
 | TID_ROUTES_G         | Slv8Array               | (0 => "--------") | In ROUTED mode, an array mapping how TID should be assigned for each slave port                                                                                                                                        |
@@ -71,13 +75,12 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - ROUTE_TABLE_REMAP: ( sAxisMasters )
 **Description**
-Override TDESTS and TIDs according to the routing tables
-
+ Override TDESTS and TIDs according to the routing tables 
 - comb: ( axisRst, disableSel, ileaveRearb, pipeAxisSlave, r, rearbitrate, sAxisMastersTmp )
 - seq: ( axisClk )
 ## Instantiations
 
 - AxiStreamPipeline_1: surf.AxiStreamPipeline
 **Description**
-Optional output pipeline registers to ease timing
+ Optional output pipeline registers to ease timing
 

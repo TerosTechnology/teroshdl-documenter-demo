@@ -6,34 +6,39 @@
 ![Diagram](Jesd204bRx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: JESD204b multi-lane receiver module
-             Receiver JESD204b module.
-             Supports a subset of features from JESD204b standard.
-             Supports sub-class 1 deterministic latency.
-             Supports sub-class 0 non deterministic latency.
-             Features:
-             - Synchronization of LMFC to SYSREF
-             - Multi-lane operation (L_G: 1-16)
-             - Lane alignment using RX buffers
-             - Serial lane error check
-             - Alignment character replacement and alignment check
-         Note: sampleDataArr_o is little endian and not byte-swapped
-               First sample in time:  sampleData_o(15 downto 0)
-               Second sample in time: sampleData_o(31 downto 16)
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: JESD204b multi-lane receiver module
+              Receiver JESD204b module.
+              Supports a subset of features from JESD204b standard.
+              Supports sub-class 1 deterministic latency.
+              Supports sub-class 0 non deterministic latency.
+              Features:
+              - Synchronization of LMFC to SYSREF
+              - Multi-lane operation (L_G: 1-16)
+              - Lane alignment using RX buffers
+              - Serial lane error check
+              - Alignment character replacement and alignment check
+
+          Note: sampleDataArr_o is little endian and not byte-swapped
+                First sample in time:  sampleData_o(15 downto 0)
+                Second sample in time: sampleData_o(31 downto 16)
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type                   | Value | Description                                          |
 | ------------ | ---------------------- | ----- | ---------------------------------------------------- |
 | TPD_G        | time                   | 1 ns  |                                                      |
-| GEN_ASYNC_G  | boolean                | false | default false don't add synchronizer                 |
+| GEN_ASYNC_G  | boolean                | false |  default false don't add synchronizer                |
 | TEST_G       | boolean                | false | Test tx module instead of GTX                        |
 | F_G          | positive               | 2     | JESD generics Number of bytes in a frame (1,2,or 4)  |
 | K_G          | positive               | 32    | Number of frames in a multi frame (32)               |
@@ -63,37 +68,37 @@ the terms contained in the LICENSE.txt file.
 | leds_o          | out       | slv(1 downto 0)                       |                                                                        |
 ## Signals
 
-| Name              | Type                                  | Description                                      |
-| ----------------- | ------------------------------------- | ------------------------------------------------ |
-| r                 | RegType                               |                                                  |
-| rin               | RegType                               |                                                  |
-| s_lmfc            | sl                                    | Internal signalsLocal Multi Frame Clock          |
-| s_nSyncVec        | slv(L_G-1 downto 0)                   | Synchronization output generation                |
-| s_nSyncVecEn      | slv(L_G-1 downto 0)                   |                                                  |
-| s_dataValidVec    | slv(L_G-1 downto 0)                   |                                                  |
-| s_nSyncAll        | sl                                    |                                                  |
-| s_nSyncAny        | sl                                    |                                                  |
-| s_sysrefDlyRx     | slv(SYSRF_DLY_WIDTH_C-1 downto 0)     |                                                  |
-| s_enableRx        | slv(L_G-1 downto 0)                   |                                                  |
-| s_replEnable      | sl                                    |                                                  |
-| s_scrEnable       | sl                                    |                                                  |
-| s_invertData      | slv(L_G-1 downto 0)                   |                                                  |
-| s_subClass        | sl                                    | JESD subclass selection (from AXI lite register) |
-| s_gtReset         | sl                                    | User reset (from AXI lite register)              |
-| s_invertSync      | sl                                    |                                                  |
-| s_clearErr        | sl                                    |                                                  |
-| s_statusRxArr     | rxStatuRegisterArray(L_G-1 downto 0)  |                                                  |
-| s_thresoldHighArr | Slv16Array(L_G-1 downto 0)            |                                                  |
-| s_thresoldLowArr  | Slv16Array(L_G-1 downto 0)            |                                                  |
-| s_dlyTxArr        | Slv4Array(L_G-1 downto 0)             | Testing registers                                |
-| s_alignTxArr      | alignTxArray(L_G-1 downto 0)          |                                                  |
-| s_sampleDataArr   | sampleDataArray(L_G-1 downto 0)       |                                                  |
-| s_sysrefSync      | sl                                    | Sysref conditioning                              |
-| s_sysrefD         | sl                                    |                                                  |
-| s_sysrefRe        | sl                                    |                                                  |
-| s_jesdGtRxArr     | jesdGtRxLaneTypeArray(L_G-1 downto 0) | Record containing GT signals                     |
-| s_rawData         | slv32Array(L_G-1 downto 0)            |                                                  |
-| s_linkErrMask     | slv(5 downto 0)                       | Generate pause signal logic OR                   |
+| Name              | Type                                  | Description                                                                                  |
+| ----------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- |
+| r                 | RegType                               |                                                                                              |
+| rin               | RegType                               |                                                                                              |
+| s_lmfc            | sl                                    |  Internal signals  Local Multi Frame Clock                                                   |
+| s_nSyncVec        | slv(L_G-1 downto 0)                   |  Synchronization output generation                                                           |
+| s_nSyncVecEn      | slv(L_G-1 downto 0)                   |                                                                                              |
+| s_dataValidVec    | slv(L_G-1 downto 0)                   |                                                                                              |
+| s_nSyncAll        | sl                                    |                                                                                              |
+| s_nSyncAny        | sl                                    |                                                                                              |
+| s_sysrefDlyRx     | slv(SYSRF_DLY_WIDTH_C-1 downto 0)     |  Control and status from AxiLite ----------------------------------------------------------  |
+| s_enableRx        | slv(L_G-1 downto 0)                   |                                                                                              |
+| s_replEnable      | sl                                    |                                                                                              |
+| s_scrEnable       | sl                                    |                                                                                              |
+| s_invertData      | slv(L_G-1 downto 0)                   |                                                                                              |
+| s_subClass        | sl                                    |  JESD subclass selection (from AXI lite register)                                            |
+| s_gtReset         | sl                                    |  User reset (from AXI lite register)                                                         |
+| s_invertSync      | sl                                    |                                                                                              |
+| s_clearErr        | sl                                    |                                                                                              |
+| s_statusRxArr     | rxStatuRegisterArray(L_G-1 downto 0)  |                                                                                              |
+| s_thresoldHighArr | Slv16Array(L_G-1 downto 0)            |                                                                                              |
+| s_thresoldLowArr  | Slv16Array(L_G-1 downto 0)            |                                                                                              |
+| s_dlyTxArr        | Slv4Array(L_G-1 downto 0)             |  Testing registers                                                                           |
+| s_alignTxArr      | alignTxArray(L_G-1 downto 0)          |                                                                                              |
+| s_sampleDataArr   | sampleDataArray(L_G-1 downto 0)       |                                                                                              |
+| s_sysrefSync      | sl                                    |  Sysref conditioning                                                                         |
+| s_sysrefD         | sl                                    |                                                                                              |
+| s_sysrefRe        | sl                                    |                                                                                              |
+| s_jesdGtRxArr     | jesdGtRxLaneTypeArray(L_G-1 downto 0) |  Record containing GT signals                                                                |
+| s_rawData         | slv32Array(L_G-1 downto 0)            |                                                                                              |
+| s_linkErrMask     | slv(5 downto 0)                       |  Generate pause signal logic OR                                                              |
 ## Constants
 
 | Name       | Type    | Value                              | Description |
@@ -107,20 +112,19 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( devRst_i, s_nSyncAny )
 **Description**
-DFF
-
+ DFF 
 - seq: ( devClk_i )
 ## Instantiations
 
 - U_Reg: surf.JesdRxReg
 **Description**
-axiLite register interface
+ axiLite register interface
 
 - U_SysrefDly: surf.SlvDelay
 **Description**
-Delay SYSREF input (for 1 to 256 c-c)
+ Delay SYSREF input (for 1 to 256 c-c)
 
 - LmfcGen_INST: surf.JesdLmfcGen
 **Description**
-LMFC period generator aligned to SYSREF input
+ LMFC period generator aligned to SYSREF input
 

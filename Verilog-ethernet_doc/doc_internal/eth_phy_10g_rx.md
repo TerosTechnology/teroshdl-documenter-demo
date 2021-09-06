@@ -6,8 +6,10 @@
 ![Diagram](eth_phy_10g_rx.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name        | Type | Value      | Description |
@@ -24,20 +26,20 @@ Language: Verilog 2001
 | COUNT_125US         |      | 125000/6.4 |             |
 ## Ports
 
-| Port name         | Direction | Type                  | Description |
-| ----------------- | --------- | --------------------- | ----------- |
-| clk               | input     | wire                  |             |
-| rst               | input     | wire                  |             |
-| xgmii_rxd         | output    | wire [DATA_WIDTH-1:0] |             |
-| xgmii_rxc         | output    | wire [CTRL_WIDTH-1:0] |             |
-| serdes_rx_data    | input     | wire [DATA_WIDTH-1:0] |             |
-| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0]  |             |
-| serdes_rx_bitslip | output    | wire                  |             |
-| rx_error_count    | output    | wire [6:0]            |             |
-| rx_bad_block      | output    | wire                  |             |
-| rx_block_lock     | output    | wire                  |             |
-| rx_high_ber       | output    | wire                  |             |
-| rx_prbs31_enable  | input     | wire                  |             |
+| Port name         | Direction | Type                  | Description                      |
+| ----------------- | --------- | --------------------- | -------------------------------- |
+| clk               | input     | wire                  |                                  |
+| rst               | input     | wire                  |                                  |
+| xgmii_rxd         | output    | wire [DATA_WIDTH-1:0] |      * XGMII interface      */   |
+| xgmii_rxc         | output    | wire [CTRL_WIDTH-1:0] |                                  |
+| serdes_rx_data    | input     | wire [DATA_WIDTH-1:0] |      * SERDES interface      */  |
+| serdes_rx_hdr     | input     | wire [HDR_WIDTH-1:0]  |                                  |
+| serdes_rx_bitslip | output    | wire                  |                                  |
+| rx_error_count    | output    | wire [6:0]            |      * Status      */            |
+| rx_bad_block      | output    | wire                  |                                  |
+| rx_block_lock     | output    | wire                  |                                  |
+| rx_high_ber       | output    | wire                  |                                  |
+| rx_prbs31_enable  | input     | wire                  |      * Configuration      */     |
 ## Signals
 
 | Name            | Type                  | Description |

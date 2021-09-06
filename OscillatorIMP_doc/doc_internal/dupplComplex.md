@@ -6,9 +6,11 @@
 ![Diagram](dupplComplex.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-Creation date : 2014/10/14
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ Creation date : 2014/10/14
+-------------------------------------------------------------------------
 ## Generics
 
 | Generic name | Type    | Value | Description |
@@ -26,7 +28,7 @@ Creation date : 2014/10/14
 | data_sof_i   | in        | std_logic                              |             |
 | data_i_i     | in        | std_logic_vector(DATA_SIZE-1 downto 0) |             |
 | data_q_i     | in        | std_logic_vector(DATA_SIZE-1 downto 0) |             |
-| data1_en_o   | out       | std_logic                              |             |
+| data1_en_o   | out       | std_logic                              | ext         |
 | data1_clk_o  | out       | std_logic                              |             |
 | data1_rst_o  | out       | std_logic                              |             |
 | data1_eof_o  | out       | std_logic                              |             |

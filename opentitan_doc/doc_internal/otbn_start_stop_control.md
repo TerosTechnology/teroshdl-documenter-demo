@@ -6,16 +6,17 @@
 ![Diagram](otbn_start_stop_control.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
-| Generic name  | Type | Value                              | Description                               |
-| ------------- | ---- | ---------------------------------- | ----------------------------------------- |
-| ImemSizeByte  | int  | 4096                               | Size of the instruction memory, in bytes  |
-| ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |                                           |
+| Generic name  | Type | Value                              | Description                                |
+| ------------- | ---- | ---------------------------------- | ------------------------------------------ |
+| ImemSizeByte  | int  | 4096                               |  Size of the instruction memory, in bytes  |
+| ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |                                            |
 ## Ports
 
 | Port name               | Direction | Type                | Description |
@@ -47,5 +48,8 @@ Copyright lowRISC contributors.
 | ImemAddrWidth | int  | prim_util_pkg::vbits(ImemSizeByte) |             |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb

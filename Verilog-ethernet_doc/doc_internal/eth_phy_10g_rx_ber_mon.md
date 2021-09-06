@@ -6,8 +6,10 @@
 ![Diagram](eth_phy_10g_rx_ber_mon.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
 | Generic name | Type | Value               | Description |
@@ -17,12 +19,12 @@ Language: Verilog 2001
 | COUNT_WIDTH  |      | $clog2(COUNT_125US) |             |
 ## Ports
 
-| Port name     | Direction | Type                 | Description |
-| ------------- | --------- | -------------------- | ----------- |
-| clk           | input     | wire                 |             |
-| rst           | input     | wire                 |             |
-| serdes_rx_hdr | input     | wire [HDR_WIDTH-1:0] |             |
-| rx_high_ber   | output    | wire                 |             |
+| Port name     | Direction | Type                 | Description                      |
+| ------------- | --------- | -------------------- | -------------------------------- |
+| clk           | input     | wire                 |                                  |
+| rst           | input     | wire                 |                                  |
+| serdes_rx_hdr | input     | wire [HDR_WIDTH-1:0] |      * SERDES interface      */  |
+| rx_high_ber   | output    | wire                 |      * Status      */            |
 ## Signals
 
 | Name             | Type                  | Description |
@@ -41,4 +43,6 @@ Language: Verilog 2001
 | SYNC_CTRL | [1:0] | 2'b01 |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

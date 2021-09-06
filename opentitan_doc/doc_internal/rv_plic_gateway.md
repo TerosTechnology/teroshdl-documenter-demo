@@ -6,11 +6,12 @@
 ![Diagram](rv_plic_gateway.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
+
  RISC-V Platform-Level Interrupt Gateways module
- 
+
 ## Generics
 
 | Generic name | Type | Value | Description |
@@ -29,25 +30,21 @@ Copyright lowRISC contributors.
 | ip_o       | output    | [N_SOURCE-1:0] |                      |
 ## Signals
 
-| Name  | Type                 | Description                            |
-| ----- | -------------------- | -------------------------------------- |
-| ia    | logic [N_SOURCE-1:0] | Interrupt Active                       |
-| set   | logic [N_SOURCE-1:0] | Set: (le_i) ? src_i & ~src_q : src_i ; |
-| src_q | logic [N_SOURCE-1:0] |                                        |
+| Name  | Type                 | Description                             |
+| ----- | -------------------- | --------------------------------------- |
+| ia    | logic [N_SOURCE-1:0] | Interrupt Active                        |
+| set   | logic [N_SOURCE-1:0] | Set: (le_i) ? src_i & ~src_q : src_i ;  |
+| src_q | logic [N_SOURCE-1:0] |                                         |
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 - unnamed: (  )
+  - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Interrupt pending is set by source (depends on le_i), cleared by claim_i.
-Until interrupt is claimed, set doesn't affect ip_o.
-RISC-V PLIC spec mentioned it can have counter for edge triggered
-But skipped the feature as counter consumes substantial logic size.
-
+ Interrupt pending is set by source (depends on le_i), cleared by claim_i.  Until interrupt is claimed, set doesn't affect ip_o.  RISC-V PLIC spec mentioned it can have counter for edge triggered  But skipped the feature as counter consumes substantial logic size. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
+  - **Type:** always_ff
 **Description**
-Interrupt active is to control ip_o. If ip_o is set then until completed
-by target, ip_o shouldn't be set by source even claim_i can clear ip_o.
-ia can be cleared only when ia was set. If `set` and `complete_i` happen
-at the same time, always `set` wins.
-
+ Interrupt active is to control ip_o. If ip_o is set then until completed  by target, ip_o shouldn't be set by source even claim_i can clear ip_o.  ia can be cleared only when ia was set. If `set` and `complete_i` happen  at the same time, always `set` wins. 

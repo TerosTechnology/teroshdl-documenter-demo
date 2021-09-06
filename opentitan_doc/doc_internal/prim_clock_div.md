@@ -6,10 +6,10 @@
 ![Diagram](prim_clock_div.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+
 ## Generics
 
 | Generic name | Type  | Value | Description |
@@ -28,11 +28,11 @@ Copyright lowRISC contributors.
 | clk_o           | output    |      |                         |
 ## Signals
 
-| Name          | Type  | Description                                                                                                      |
-| ------------- | ----- | ---------------------------------------------------------------------------------------------------------------- |
-| step_down_req | logic | It is assumed the flops in this module are NOT on the scan-chain, as a result only the input values are guarded  |
-| clk_int       | logic |                                                                                                                  |
-| clk_muxed     | logic | anchor points for constraints                                                                                    |
+| Name          | Type  | Description                                                                                                        |
+| ------------- | ----- | ------------------------------------------------------------------------------------------------------------------ |
+| step_down_req | logic |  It is assumed the flops in this module are NOT on the scan-chain, as a result only  the input values are guarded  |
+| clk_int       | logic |                                                                                                                    |
+| clk_muxed     | logic |  anchor points for constraints                                                                                     |
 ## Instantiations
 
 - u_clk_mux: prim_clock_mux2

@@ -6,7 +6,7 @@
 ![Diagram](jtag_tap_top.svg "Diagram")
 ## Description
 
-Copyright 2018 ETH Zurich and University of Bologna.
+ Copyright 2018 ETH Zurich and University of Bologna.
  Copyright and related rights are licensed under the Solderpad Hardware
  License, Version 0.51 (the "License"); you may not use this file except in
  compliance with the License.  You may obtain a copy of the License at
@@ -15,7 +15,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
  this License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
  CONDITIONS OF ANY KIND, either express or implied. See the License for the
  specific language governing permissions and limitations under the License.
- 
+
 ## Ports
 
 | Port name          | Direction | Type  | Description |
@@ -30,7 +30,7 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | soc_jtag_reg_i     | input     | [7:0] |             |
 | soc_jtag_reg_o     | output    | [7:0] |             |
 | sel_fll_clk_o      | output    |       |             |
-| jtag_shift_dr_o    | output    |       | tap         |
+| jtag_shift_dr_o    | output    |       |  tap        |
 | jtag_update_dr_o   | output    |       |             |
 | jtag_capture_dr_o  | output    |       |             |
 | axireg_sel_o       | output    |       |             |
@@ -50,13 +50,14 @@ Copyright 2018 ETH Zurich and University of Bologna.
 | s_soc_jtag_reg_sync | logic [7:0] |             |
 ## Processes
 - unnamed: ( @(posedge tck_i or negedge trst_ni) )
+  - **Type:** always_ff
 ## Instantiations
 
 - tap_top_i: tap_top
 **Description**
-jtag tap controller
+ jtag tap controller
 
 - confreg: jtagreg
 **Description**
-pulp configuration register
+ pulp configuration register
 

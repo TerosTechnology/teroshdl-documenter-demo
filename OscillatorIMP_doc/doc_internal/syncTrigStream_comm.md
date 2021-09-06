@@ -6,17 +6,19 @@
 ![Diagram](syncTrigStream_comm.svg "Diagram")
 ## Description
 
-(c) Copyright: OscillatorIMP Digital
-Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
-2013-2018
+-------------------------------------------------------------------------
+ (c) Copyright: OscillatorIMP Digital
+ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
+ 2013-2018
+-------------------------------------------------------------------------
 ## Generics
 
-| Generic name | Type    | Value     | Description    |
-| ------------ | ------- | --------- | -------------- |
-| DFLT_PERIOD  | natural | 300000000 | 3s@100MHz      |
-| DFLT_DUTY    | natural | 100       | 1us@100MHz     |
-| GEN_SIZE     | natural | 32        |                |
-| bus_size     | natural | 32        | Data port size |
+| Generic name | Type    | Value     | Description     |
+| ------------ | ------- | --------- | --------------- |
+| DFLT_PERIOD  | natural | 300000000 |  3s@100MHz      |
+| DFLT_DUTY    | natural | 100       |  1us@100MHz     |
+| GEN_SIZE     | natural | 32        |                 |
+| bus_size     | natural | 32        |  Data port size |
 ## Ports
 
 | Port name    | Direction | Type                                  | Description    |
@@ -49,6 +51,5 @@ Author : Gwenhael Goavec-Merou<gwenhael.goavec-merou@trabucayre.com>
 ## Processes
 - write_bloc: ( clk )
 **Description**
-manage register
-
+ manage register 
 - read_bloc: ( clk, reset )

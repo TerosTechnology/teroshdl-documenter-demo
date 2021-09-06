@@ -6,18 +6,22 @@
 ![Diagram](AxiStreamShift.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description:
-Block to shift data bytes within an AXI stream. Both left and right shifting
-are allowed. This block will move a packet at a time. Transfer of a new packet
-will pause until a new shift command is provided.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description:
+ Block to shift data bytes within an AXI stream. Both left and right shifting
+ are allowed. This block will move a packet at a time. Transfer of a new packet
+ will pause until a new shift command is provided.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name   | Type                  | Value | Description |
@@ -29,17 +33,17 @@ the terms contained in the LICENSE.txt file.
 | BYP_SHIFT_G    | boolean               | false |             |
 ## Ports
 
-| Port name   | Direction | Type                | Description           |
-| ----------- | --------- | ------------------- | --------------------- |
-| axisClk     | in        | sl                  | Clock and reset       |
-| axisRst     | in        | sl                  |                       |
-| axiStart    | in        | sl                  | Start control         |
-| axiShiftDir | in        | sl                  | 0 = left (lsb to msb) |
-| axiShiftCnt | in        | slv(3 downto 0)     |                       |
-| sAxisMaster | in        | AxiStreamMasterType | Slave                 |
-| sAxisSlave  | out       | AxiStreamSlaveType  |                       |
-| mAxisMaster | out       | AxiStreamMasterType | Master                |
-| mAxisSlave  | in        | AxiStreamSlaveType  |                       |
+| Port name   | Direction | Type                | Description            |
+| ----------- | --------- | ------------------- | ---------------------- |
+| axisClk     | in        | sl                  | Clock and reset        |
+| axisRst     | in        | sl                  |                        |
+| axiStart    | in        | sl                  | Start control          |
+| axiShiftDir | in        | sl                  |  0 = left (lsb to msb) |
+| axiShiftCnt | in        | slv(3 downto 0)     |                        |
+| sAxisMaster | in        | AxiStreamMasterType | Slave                  |
+| sAxisSlave  | out       | AxiStreamSlaveType  |                        |
+| mAxisMaster | out       | AxiStreamMasterType | Master                 |
+| mAxisSlave  | in        | AxiStreamSlaveType  |                        |
 ## Signals
 
 | Name           | Type                | Description |
@@ -62,4 +66,5 @@ the terms contained in the LICENSE.txt file.
 ## Functions
 - shiftData <font id="function_arguments">(shiftBytes : in    slv(3 downto 0);<br><span style="padding-left:20px"> shiftDir   : in    sl;<br><span style="padding-left:20px"> shiftFirst : in    boolean;<br><span style="padding-left:20px"> mInput     : in    AxiStreamMasterType;<br><span style="padding-left:20px"> mDelay     : in    AxiStreamMasterType;<br><span style="padding-left:20px"> mOut       : inout AxiStreamMasterType) </font> <font id="function_return">return ()</font>
 **Description**
-Set shift ranges
+ Set shift ranges
+

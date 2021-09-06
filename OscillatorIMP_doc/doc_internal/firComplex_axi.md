@@ -24,7 +24,7 @@
 | writedata    | in        | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) |             |
 | read_en_i    | in        | std_logic                                       |             |
 | read_ack_o   | out       | std_logic                                       |             |
-| readdata     | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) |             |
+| readdata     | out       | std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) | ;           |
 | coeff_en_o   | out       | std_logic                                       | end of test |
 | coeff_val_o  | out       | std_logic_vector(COEFF_SIZE-1 downto 0)         |             |
 | coeff_read_i | in        | std_logic_vector(COEFF_SIZE-1 downto 0)         |             |

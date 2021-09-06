@@ -6,19 +6,24 @@
 ![Diagram](AxiStreamDepacketizer.svg "Diagram")
 ## Description
 
-Title      : AxiStreamPackerizerV0 Protocol: https://confluence.slac.stanford.edu/x/1oyfD
-Company    : SLAC National Accelerator Laboratory
-Description: AXI stream DePacketerizer Module (non-interleave only)
-   Formats an AXI-Stream for a transport link.
-   Sideband fields are placed into the data stream in a header.
-   Long frames are broken into smaller packets.
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Title      : AxiStreamPackerizerV0 Protocol: https://confluence.slac.stanford.edu/x/1oyfD
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: AXI stream DePacketerizer Module (non-interleave only)
+    Formats an AXI-Stream for a transport link.
+    Sideband fields are placed into the data stream in a header.
+    Long frames are broken into smaller packets.
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type    | Value | Description |
@@ -28,15 +33,15 @@ the terms contained in the LICENSE.txt file.
 | OUTPUT_PIPE_STAGES_G | integer | 0     |             |
 ## Ports
 
-| Port name   | Direction | Type                | Description                               |
-| ----------- | --------- | ------------------- | ----------------------------------------- |
-| axisClk     | in        | sl                  | AXI-Lite Interface for local registers    |
-| axisRst     | in        | sl                  |                                           |
-| restart     | in        | sl                  | Reset the expected frame number back to 0 |
-| sAxisMaster | in        | AxiStreamMasterType |                                           |
-| sAxisSlave  | out       | AxiStreamSlaveType  |                                           |
-| mAxisMaster | out       | AxiStreamMasterType |                                           |
-| mAxisSlave  | in        | AxiStreamSlaveType  |                                           |
+| Port name   | Direction | Type                | Description                                |
+| ----------- | --------- | ------------------- | ------------------------------------------ |
+| axisClk     | in        | sl                  | AXI-Lite Interface for local registers     |
+| axisRst     | in        | sl                  |                                            |
+| restart     | in        | sl                  |  Reset the expected frame number back to 0 |
+| sAxisMaster | in        | AxiStreamMasterType |                                            |
+| sAxisSlave  | out       | AxiStreamSlaveType  |                                            |
+| mAxisMaster | out       | AxiStreamMasterType |                                            |
+| mAxisSlave  | in        | AxiStreamSlaveType  |                                            |
 ## Signals
 
 | Name             | Type                | Description |
@@ -63,15 +68,15 @@ the terms contained in the LICENSE.txt file.
 ## Processes
 - comb: ( axisRst, inputAxisMaster, outputAxisSlave, r, restart )
 **Description**
-[in]
-Accumulation sequencing, DMA ring buffer, and AXI-Lite logic
-
+ [in] -----------------------------------------------------------------------------------------------  Accumulation sequencing, DMA ring buffer, and AXI-Lite logic ----------------------------------------------------------------------------------------------- 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_AxiStreamPipeline_Input: surf.AxiStreamPipeline
 - U_AxiStreamPipeline_Output: surf.AxiStreamPipeline
 **Description**
-[in]
-Output pipeline
+ [in]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Output pipeline
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

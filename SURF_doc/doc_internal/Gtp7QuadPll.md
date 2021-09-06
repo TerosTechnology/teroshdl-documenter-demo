@@ -6,15 +6,19 @@
 ![Diagram](Gtp7QuadPll.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Wrapper for Xilinx 7-series GTP's QPLL
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Wrapper for Xilinx 7-series GTP's QPLL
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
 | Generic name         | Type                 | Value  | Description |
@@ -39,7 +43,7 @@ the terms contained in the LICENSE.txt file.
 | qPllOutClk      | out       | slv(1 downto 0)        |                    |
 | qPllOutRefClk   | out       | slv(1 downto 0)        |                    |
 | qPllLock        | out       | slv(1 downto 0)        |                    |
-| qPllLockDetClk  | in        | slv(1 downto 0)        | Lock detect clock  |
+| qPllLockDetClk  | in        | slv(1 downto 0)        |  Lock detect clock |
 | qPllRefClkLost  | out       | slv(1 downto 0)        |                    |
 | qPllPowerDown   | in        | slv(1 downto 0)        |                    |
 | qPllReset       | in        | slv(1 downto 0)        |                    |

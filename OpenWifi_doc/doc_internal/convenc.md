@@ -4,6 +4,10 @@
 ## Diagram
 
 ![Diagram](convenc.svg "Diagram")
+## Description
+
+
+
 ## Ports
 
 | Port name | Direction | Type       | Description |
@@ -20,3 +24,4 @@
 | state | reg [5:0] |             |
 ## Processes
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

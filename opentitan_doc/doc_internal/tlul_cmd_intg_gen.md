@@ -6,21 +6,22 @@
 ![Diagram](tlul_cmd_intg_gen.svg "Diagram")
 ## Description
 
-Copyright lowRISC contributors.
+ Copyright lowRISC contributors.
  Licensed under the Apache License, Version 2.0, see LICENSE for details.
  SPDX-License-Identifier: Apache-2.0
- 
+*
+
 ## Generics
 
-| Generic name      | Type | Value | Description                                                                             |
-| ----------------- | ---- | ----- | --------------------------------------------------------------------------------------- |
-| EnableDataIntgGen | bit  | 1'b1  | TODO: default generation of data integrity is on until host native generation is ready  |
+| Generic name      | Type | Value | Description                                                                               |
+| ----------------- | ---- | ----- | ----------------------------------------------------------------------------------------- |
+| EnableDataIntgGen | bit  | 1'b1  |  TODO: default generation of data integrity is on until host native  generation is ready  |
 ## Ports
 
-| Port name | Direction | Type     | Description     |
-| --------- | --------- | -------- | --------------- |
-| tl_i      | input     | tl_h2d_t | TL-UL interface |
-| tl_o      | output    | tl_h2d_t |                 |
+| Port name | Direction | Type     | Description      |
+| --------- | --------- | -------- | ---------------- |
+| tl_i      | input     | tl_h2d_t |  TL-UL interface |
+| tl_o      | output    | tl_h2d_t |                  |
 ## Signals
 
 | Name               | Type                        | Description |
@@ -33,6 +34,7 @@ Copyright lowRISC contributors.
 | unused_tl          | logic                       |             |
 ## Processes
 - unnamed: (  )
+  - **Type:** always_comb
 ## Instantiations
 
 - u_cmd_gen: prim_secded_64_57_enc

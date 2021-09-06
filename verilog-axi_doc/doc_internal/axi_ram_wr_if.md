@@ -6,69 +6,71 @@
 ![Diagram](axi_ram_wr_if.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name     | Type | Value                           | Description                                  |
-| ---------------- | ---- | ------------------------------- | -------------------------------------------- |
-| DATA_WIDTH       |      | 32                              | Width of data bus in bits                    |
-| ADDR_WIDTH       |      | 16                              | Width of address bus in bits                 |
-| STRB_WIDTH       |      | undefined                       | Width of wstrb (width of data bus in words)  |
-| ID_WIDTH         |      | 8                               | Width of ID signal                           |
-| AWUSER_ENABLE    |      | 0                               | Propagate awuser signal                      |
-| AWUSER_WIDTH     |      | 1                               | Width of awuser signal                       |
-| WUSER_ENABLE     |      | 0                               | Propagate wuser signal                       |
-| WUSER_WIDTH      |      | 1                               | Width of wuser signal                        |
-| BUSER_ENABLE     |      | 0                               | Propagate buser signal                       |
-| BUSER_WIDTH      |      | 1                               | Width of buser signal                        |
-| VALID_ADDR_WIDTH |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                              |
-| WORD_WIDTH       |      | STRB_WIDTH                      |                                              |
-| WORD_SIZE        |      | DATA_WIDTH/WORD_WIDTH           |                                              |
+| Generic name     | Type | Value                           | Description                                   |
+| ---------------- | ---- | ------------------------------- | --------------------------------------------- |
+| DATA_WIDTH       |      | 32                              |  Width of data bus in bits                    |
+| ADDR_WIDTH       |      | 16                              |  Width of address bus in bits                 |
+| STRB_WIDTH       |      | undefined                       |  Width of wstrb (width of data bus in words)  |
+| ID_WIDTH         |      | 8                               |  Width of ID signal                           |
+| AWUSER_ENABLE    |      | 0                               |  Propagate awuser signal                      |
+| AWUSER_WIDTH     |      | 1                               |  Width of awuser signal                       |
+| WUSER_ENABLE     |      | 0                               |  Propagate wuser signal                       |
+| WUSER_WIDTH      |      | 1                               |  Width of wuser signal                        |
+| BUSER_ENABLE     |      | 0                               |  Propagate buser signal                       |
+| BUSER_WIDTH      |      | 1                               |  Width of buser signal                        |
+| VALID_ADDR_WIDTH |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                               |
+| WORD_WIDTH       |      | STRB_WIDTH                      |                                               |
+| WORD_SIZE        |      | DATA_WIDTH/WORD_WIDTH           |                                               |
 ## Ports
 
-| Port name         | Direction | Type                    | Description |
-| ----------------- | --------- | ----------------------- | ----------- |
-| clk               | input     | wire                    |             |
-| rst               | input     | wire                    |             |
-| s_axi_awid        | input     | wire [ID_WIDTH-1:0]     |             |
-| s_axi_awaddr      | input     | wire [ADDR_WIDTH-1:0]   |             |
-| s_axi_awlen       | input     | wire [7:0]              |             |
-| s_axi_awsize      | input     | wire [2:0]              |             |
-| s_axi_awburst     | input     | wire [1:0]              |             |
-| s_axi_awlock      | input     | wire                    |             |
-| s_axi_awcache     | input     | wire [3:0]              |             |
-| s_axi_awprot      | input     | wire [2:0]              |             |
-| s_axi_awqos       | input     | wire [3:0]              |             |
-| s_axi_awregion    | input     | wire [3:0]              |             |
-| s_axi_awuser      | input     | wire [AWUSER_WIDTH-1:0] |             |
-| s_axi_awvalid     | input     | wire                    |             |
-| s_axi_awready     | output    | wire                    |             |
-| s_axi_wdata       | input     | wire [DATA_WIDTH-1:0]   |             |
-| s_axi_wstrb       | input     | wire [STRB_WIDTH-1:0]   |             |
-| s_axi_wlast       | input     | wire                    |             |
-| s_axi_wuser       | input     | wire [WUSER_WIDTH-1:0]  |             |
-| s_axi_wvalid      | input     | wire                    |             |
-| s_axi_wready      | output    | wire                    |             |
-| s_axi_bid         | output    | wire [ID_WIDTH-1:0]     |             |
-| s_axi_bresp       | output    | wire [1:0]              |             |
-| s_axi_buser       | output    | wire [BUSER_WIDTH-1:0]  |             |
-| s_axi_bvalid      | output    | wire                    |             |
-| s_axi_bready      | input     | wire                    |             |
-| ram_wr_cmd_id     | output    | wire [ID_WIDTH-1:0]     |             |
-| ram_wr_cmd_addr   | output    | wire [ADDR_WIDTH-1:0]   |             |
-| ram_wr_cmd_lock   | output    | wire                    |             |
-| ram_wr_cmd_cache  | output    | wire [3:0]              |             |
-| ram_wr_cmd_prot   | output    | wire [2:0]              |             |
-| ram_wr_cmd_qos    | output    | wire [3:0]              |             |
-| ram_wr_cmd_region | output    | wire [3:0]              |             |
-| ram_wr_cmd_auser  | output    | wire [AWUSER_WIDTH-1:0] |             |
-| ram_wr_cmd_data   | output    | wire [DATA_WIDTH-1:0]   |             |
-| ram_wr_cmd_strb   | output    | wire [STRB_WIDTH-1:0]   |             |
-| ram_wr_cmd_user   | output    | wire [WUSER_WIDTH-1:0]  |             |
-| ram_wr_cmd_en     | output    | wire                    |             |
-| ram_wr_cmd_last   | output    | wire                    |             |
-| ram_wr_cmd_ready  | input     | wire                    |             |
+| Port name         | Direction | Type                    | Description                         |
+| ----------------- | --------- | ----------------------- | ----------------------------------- |
+| clk               | input     | wire                    |                                     |
+| rst               | input     | wire                    |                                     |
+| s_axi_awid        | input     | wire [ID_WIDTH-1:0]     |      * AXI slave interface      */  |
+| s_axi_awaddr      | input     | wire [ADDR_WIDTH-1:0]   |                                     |
+| s_axi_awlen       | input     | wire [7:0]              |                                     |
+| s_axi_awsize      | input     | wire [2:0]              |                                     |
+| s_axi_awburst     | input     | wire [1:0]              |                                     |
+| s_axi_awlock      | input     | wire                    |                                     |
+| s_axi_awcache     | input     | wire [3:0]              |                                     |
+| s_axi_awprot      | input     | wire [2:0]              |                                     |
+| s_axi_awqos       | input     | wire [3:0]              |                                     |
+| s_axi_awregion    | input     | wire [3:0]              |                                     |
+| s_axi_awuser      | input     | wire [AWUSER_WIDTH-1:0] |                                     |
+| s_axi_awvalid     | input     | wire                    |                                     |
+| s_axi_awready     | output    | wire                    |                                     |
+| s_axi_wdata       | input     | wire [DATA_WIDTH-1:0]   |                                     |
+| s_axi_wstrb       | input     | wire [STRB_WIDTH-1:0]   |                                     |
+| s_axi_wlast       | input     | wire                    |                                     |
+| s_axi_wuser       | input     | wire [WUSER_WIDTH-1:0]  |                                     |
+| s_axi_wvalid      | input     | wire                    |                                     |
+| s_axi_wready      | output    | wire                    |                                     |
+| s_axi_bid         | output    | wire [ID_WIDTH-1:0]     |                                     |
+| s_axi_bresp       | output    | wire [1:0]              |                                     |
+| s_axi_buser       | output    | wire [BUSER_WIDTH-1:0]  |                                     |
+| s_axi_bvalid      | output    | wire                    |                                     |
+| s_axi_bready      | input     | wire                    |                                     |
+| ram_wr_cmd_id     | output    | wire [ID_WIDTH-1:0]     |      * RAM interface      */        |
+| ram_wr_cmd_addr   | output    | wire [ADDR_WIDTH-1:0]   |                                     |
+| ram_wr_cmd_lock   | output    | wire                    |                                     |
+| ram_wr_cmd_cache  | output    | wire [3:0]              |                                     |
+| ram_wr_cmd_prot   | output    | wire [2:0]              |                                     |
+| ram_wr_cmd_qos    | output    | wire [3:0]              |                                     |
+| ram_wr_cmd_region | output    | wire [3:0]              |                                     |
+| ram_wr_cmd_auser  | output    | wire [AWUSER_WIDTH-1:0] |                                     |
+| ram_wr_cmd_data   | output    | wire [DATA_WIDTH-1:0]   |                                     |
+| ram_wr_cmd_strb   | output    | wire [STRB_WIDTH-1:0]   |                                     |
+| ram_wr_cmd_user   | output    | wire [WUSER_WIDTH-1:0]  |                                     |
+| ram_wr_cmd_en     | output    | wire                    |                                     |
+| ram_wr_cmd_last   | output    | wire                    |                                     |
+| ram_wr_cmd_ready  | input     | wire                    |                                     |
 ## Signals
 
 | Name                  | Type                   | Description |
@@ -116,4 +118,6 @@ Language: Verilog 2001
 | STATE_RESP  | [1:0] | 2'd2  |             |
 ## Processes
 - unnamed: ( @* )
+  - **Type:** always
 - unnamed: ( @(posedge clk) )
+  - **Type:** always

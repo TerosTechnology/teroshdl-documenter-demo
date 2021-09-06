@@ -6,23 +6,25 @@
 ![Diagram](axi_dp_ram.svg "Diagram")
 ## Description
 
-Language: Verilog 2001
- 
+
+ Language: Verilog 2001
+
+
 ## Generics
 
-| Generic name      | Type | Value                           | Description                                       |
-| ----------------- | ---- | ------------------------------- | ------------------------------------------------- |
-| DATA_WIDTH        |      | 32                              | Width of data bus in bits                         |
-| ADDR_WIDTH        |      | 16                              | Width of address bus in bits                      |
-| STRB_WIDTH        |      | undefined                       | Width of wstrb (width of data bus in words)       |
-| ID_WIDTH          |      | 8                               | Width of ID signal                                |
-| A_PIPELINE_OUTPUT |      | 0                               | Extra pipeline register on output port A          |
-| B_PIPELINE_OUTPUT |      | 0                               | Extra pipeline register on output port B          |
-| A_INTERLEAVE      |      | 0                               | Interleave read and write burst cycles on port A  |
-| B_INTERLEAVE      |      | 0                               | Interleave read and write burst cycles on port B  |
-| VALID_ADDR_WIDTH  |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                                   |
-| WORD_WIDTH        |      | STRB_WIDTH                      |                                                   |
-| WORD_SIZE         |      | DATA_WIDTH/WORD_WIDTH           |                                                   |
+| Generic name      | Type | Value                           | Description                                        |
+| ----------------- | ---- | ------------------------------- | -------------------------------------------------- |
+| DATA_WIDTH        |      | 32                              |  Width of data bus in bits                         |
+| ADDR_WIDTH        |      | 16                              |  Width of address bus in bits                      |
+| STRB_WIDTH        |      | undefined                       |  Width of wstrb (width of data bus in words)       |
+| ID_WIDTH          |      | 8                               |  Width of ID signal                                |
+| A_PIPELINE_OUTPUT |      | 0                               |  Extra pipeline register on output port A          |
+| B_PIPELINE_OUTPUT |      | 0                               |  Extra pipeline register on output port B          |
+| A_INTERLEAVE      |      | 0                               |  Interleave read and write burst cycles on port A  |
+| B_INTERLEAVE      |      | 0                               |  Interleave read and write burst cycles on port B  |
+| VALID_ADDR_WIDTH  |      | ADDR_WIDTH - $clog2(STRB_WIDTH) |                                                    |
+| WORD_WIDTH        |      | STRB_WIDTH                      |                                                    |
+| WORD_SIZE         |      | DATA_WIDTH/WORD_WIDTH           |                                                    |
 ## Ports
 
 | Port name       | Direction | Type                  | Description |
@@ -103,42 +105,44 @@ Language: Verilog 2001
 | s_axi_b_rready  | input     | wire                  |             |
 ## Signals
 
-| Name                    | Type                        | Description              |
-| ----------------------- | --------------------------- | ------------------------ |
-| ram_a_cmd_id            | wire [ID_WIDTH-1:0]         |                          |
-| ram_a_cmd_addr          | wire [ADDR_WIDTH-1:0]       |                          |
-| ram_a_cmd_wr_data       | wire [DATA_WIDTH-1:0]       |                          |
-| ram_a_cmd_wr_strb       | wire [STRB_WIDTH-1:0]       |                          |
-| ram_a_cmd_wr_en         | wire                        |                          |
-| ram_a_cmd_rd_en         | wire                        |                          |
-| ram_a_cmd_last          | wire                        |                          |
-| ram_a_cmd_ready         | wire                        |                          |
-| ram_a_rd_resp_id_reg    | reg  [ID_WIDTH-1:0]         |                          |
-| ram_a_rd_resp_data_reg  | reg  [DATA_WIDTH-1:0]       |                          |
-| ram_a_rd_resp_last_reg  | reg                         |                          |
-| ram_a_rd_resp_valid_reg | reg                         |                          |
-| ram_a_rd_resp_ready     | wire                        |                          |
-| ram_b_cmd_id            | wire [ID_WIDTH-1:0]         |                          |
-| ram_b_cmd_addr          | wire [ADDR_WIDTH-1:0]       |                          |
-| ram_b_cmd_wr_data       | wire [DATA_WIDTH-1:0]       |                          |
-| ram_b_cmd_wr_strb       | wire [STRB_WIDTH-1:0]       |                          |
-| ram_b_cmd_wr_en         | wire                        |                          |
-| ram_b_cmd_rd_en         | wire                        |                          |
-| ram_b_cmd_last          | wire                        |                          |
-| ram_b_cmd_ready         | wire                        |                          |
-| ram_b_rd_resp_id_reg    | reg  [ID_WIDTH-1:0]         |                          |
-| ram_b_rd_resp_data_reg  | reg  [DATA_WIDTH-1:0]       |                          |
-| ram_b_rd_resp_last_reg  | reg                         |                          |
-| ram_b_rd_resp_valid_reg | reg                         |                          |
-| ram_b_rd_resp_ready     | wire                        |                          |
-| mem                     | reg [DATA_WIDTH-1:0]        | (* RAM_STYLE="BLOCK" *)  |
-| addr_a_valid            | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| addr_b_valid            | wire [VALID_ADDR_WIDTH-1:0] |                          |
-| i                       | integer                     |                          |
-| j                       | integer                     |                          |
+| Name                    | Type                        | Description               |
+| ----------------------- | --------------------------- | ------------------------- |
+| ram_a_cmd_id            | wire [ID_WIDTH-1:0]         |                           |
+| ram_a_cmd_addr          | wire [ADDR_WIDTH-1:0]       |                           |
+| ram_a_cmd_wr_data       | wire [DATA_WIDTH-1:0]       |                           |
+| ram_a_cmd_wr_strb       | wire [STRB_WIDTH-1:0]       |                           |
+| ram_a_cmd_wr_en         | wire                        |                           |
+| ram_a_cmd_rd_en         | wire                        |                           |
+| ram_a_cmd_last          | wire                        |                           |
+| ram_a_cmd_ready         | wire                        |                           |
+| ram_a_rd_resp_id_reg    | reg  [ID_WIDTH-1:0]         |                           |
+| ram_a_rd_resp_data_reg  | reg  [DATA_WIDTH-1:0]       |                           |
+| ram_a_rd_resp_last_reg  | reg                         |                           |
+| ram_a_rd_resp_valid_reg | reg                         |                           |
+| ram_a_rd_resp_ready     | wire                        |                           |
+| ram_b_cmd_id            | wire [ID_WIDTH-1:0]         |                           |
+| ram_b_cmd_addr          | wire [ADDR_WIDTH-1:0]       |                           |
+| ram_b_cmd_wr_data       | wire [DATA_WIDTH-1:0]       |                           |
+| ram_b_cmd_wr_strb       | wire [STRB_WIDTH-1:0]       |                           |
+| ram_b_cmd_wr_en         | wire                        |                           |
+| ram_b_cmd_rd_en         | wire                        |                           |
+| ram_b_cmd_last          | wire                        |                           |
+| ram_b_cmd_ready         | wire                        |                           |
+| ram_b_rd_resp_id_reg    | reg  [ID_WIDTH-1:0]         |                           |
+| ram_b_rd_resp_data_reg  | reg  [DATA_WIDTH-1:0]       |                           |
+| ram_b_rd_resp_last_reg  | reg                         |                           |
+| ram_b_rd_resp_valid_reg | reg                         |                           |
+| ram_b_rd_resp_ready     | wire                        |                           |
+| mem                     | reg [DATA_WIDTH-1:0]        |  (* RAM_STYLE="BLOCK" *)  |
+| addr_a_valid            | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| addr_b_valid            | wire [VALID_ADDR_WIDTH-1:0] |                           |
+| i                       | integer                     |                           |
+| j                       | integer                     |                           |
 ## Processes
 - unnamed: ( @(posedge a_clk) )
+  - **Type:** always
 - unnamed: ( @(posedge b_clk) )
+  - **Type:** always
 ## Instantiations
 
 - a_if: axi_ram_wr_rd_if

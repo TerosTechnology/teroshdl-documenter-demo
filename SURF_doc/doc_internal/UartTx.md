@@ -6,24 +6,28 @@
 ![Diagram](UartTx.svg "Diagram")
 ## Description
 
-Company    : SLAC National Accelerator Laboratory
-Description: Uart Transmitter
-This file is part of 'SLAC Firmware Standard Library'.
-It is subject to the license terms in the LICENSE.txt file found in the
-top-level directory of this distribution and at:
-   https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
-No part of 'SLAC Firmware Standard Library', including this file,
-may be copied, modified, propagated, or distributed except according to
-the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
+ Company    : SLAC National Accelerator Laboratory
+-----------------------------------------------------------------------------
+ Description: Uart Transmitter
+-----------------------------------------------------------------------------
+ This file is part of 'SLAC Firmware Standard Library'.
+ It is subject to the license terms in the LICENSE.txt file found in the
+ top-level directory of this distribution and at:
+    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ No part of 'SLAC Firmware Standard Library', including this file,
+ may be copied, modified, propagated, or distributed except according to
+ the terms contained in the LICENSE.txt file.
+-----------------------------------------------------------------------------
 ## Generics
 
-| Generic name | Type                  | Value  | Description         |
-| ------------ | --------------------- | ------ | ------------------- |
-| TPD_G        | time                  | 1 ns   |                     |
-| STOP_BITS_G  | integer range 1 to 2  | 1      |                     |
-| PARITY_G     | string                | "NONE" | "NONE" "ODD" "EVEN" |
-| BAUD_MULT_G  | integer range 2 to 16 | 16     |                     |
-| DATA_WIDTH_G | integer range 5 to 8  | 8      |                     |
+| Generic name | Type                  | Value  | Description          |
+| ------------ | --------------------- | ------ | -------------------- |
+| TPD_G        | time                  | 1 ns   |                      |
+| STOP_BITS_G  | integer range 1 to 2  | 1      |                      |
+| PARITY_G     | string                | "NONE" |  "NONE" "ODD" "EVEN" |
+| BAUD_MULT_G  | integer range 2 to 16 | 16     |                      |
+| DATA_WIDTH_G | integer range 5 to 8  | 8      |                      |
 ## Ports
 
 | Port name | Direction | Type                         | Description |
