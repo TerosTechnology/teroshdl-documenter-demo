@@ -164,18 +164,18 @@
 ## Instantiations
 
 - ep_packetizer: axi_usb_fx3_core
-**Description**
+</br>**Description**
  packetizer, TPM/TPG and DMA interface
 
 - fx3_registers: axi_usb_fx3_reg
-**Description**
+</br>**Description**
  register map
 
 - fx3_if: axi_usb_fx3_if
-**Description**
+</br>**Description**
  GPIF II interface
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

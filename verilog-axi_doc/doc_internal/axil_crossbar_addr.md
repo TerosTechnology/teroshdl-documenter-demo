@@ -77,7 +77,7 @@
 | STATE_DECODE | [2:0] | 3'd1  |             |
 ## Functions
 - calcBaseAddrs <font id="function_arguments">(input [31:0])</font> <font id="function_return">return ([M_COUNT*M_REGIONS*ADDR_WIDTH-1:0])</font>
-**Description**
+</br>**Description**
  default address computation
 
 ## Processes

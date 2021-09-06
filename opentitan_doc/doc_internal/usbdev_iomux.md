@@ -73,26 +73,26 @@
   - **Type:** always_comb
 - proc_mux_pwr_sense: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Power sense mux 
 ## Instantiations
 
 - cdc_io_to_sys: prim_flop_2sync
-**Description**
+</br>**Description**
 ////////
  CDCs //
 ////////
  USB pins sense (to sysclk)
 
 - cdc_io_to_usb: prim_flop_2sync
-**Description**
+</br>**Description**
  USB input pins (to usbclk)
 
 - i_mux_tx_d_flip: prim_clock_mux2
 - i_mux_dp_pull_flip: prim_clock_mux2
 - i_mux_dn_pull_flip: prim_clock_mux2
 - i_mux_tx_d: prim_clock_mux2
-**Description**
+</br>**Description**
  Use explicit muxes for the critical output signals, we do this
  to avoid glitches from synthesized logic on these signals.
  Clock muxes should be used here to achieve the best match between

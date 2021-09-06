@@ -88,15 +88,15 @@
 ## Processes
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sample select (p/n) swap 
 ## Instantiations
 
 - i_adc_or: ad_data_in
-**Description**
+</br>**Description**
  over-range interface
 
 - i_adc_clk: ad_data_clk
-**Description**
+</br>**Description**
  clock
 

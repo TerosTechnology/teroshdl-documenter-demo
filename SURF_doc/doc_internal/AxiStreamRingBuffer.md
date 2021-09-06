@@ -91,25 +91,25 @@
 ## Processes
 - dataComb: ( bufferClear, bufferClearSync, bufferEnable,
                        bufferEnableSync, dataR, dataRst, dataValid, dataValue )
-**Description**
+</br>**Description**
 ------------------------  Main AXI-Stream process ------------------------ 
 - dataSeq: ( dataClk )
 - axiComb: ( armed, axilR, axilReadMaster, axilRst, axilWriteMaster,
                       bufferLength, cleared, extBufferClear, extBufferEnable,
                       firstAddr, ramRdData, readReq, txSlave )
-**Description**
+</br>**Description**
 ----------------------  Main AXI-Lite process ---------------------- 
 - axiSeq: ( axilClk )
 ## Instantiations
 
 - U_SyncVec_dataClk: surf.SynchronizerVector
-**Description**
+</br>**Description**
 ------------------------------------------------
  Synchronize AXI registers to data clock dataClk
 ------------------------------------------------
 
 - U_Sync_ReadReq: surf.SynchronizerFifo
-**Description**
+</br>**Description**
 ---------------------------------------------------
  Synchronize write address across to AXI-Lite clock
 ---------------------------------------------------

@@ -55,7 +55,7 @@
 - xpm_cdc_array_single_inst_src_sel: xpm_cdc_array_single
 - xpm_cdc_array_single_inst_ant_flag: xpm_cdc_array_single
 - fifo32_2clk_dep32_i: xpm_fifo_async
-**Description**
+</br>**Description**
  always @( posedge acc_clk )
  begin
    if ( acc_rstn == 1'b0 ) begin

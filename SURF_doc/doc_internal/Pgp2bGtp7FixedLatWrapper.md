@@ -155,20 +155,20 @@
 
 - BUFG_stableClkRef: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
-**Description**
+</br>**Description**
  Power Up Reset
 
 - RstSync_pgpRxRst: surf.RstSync
-**Description**
+</br>**Description**
  PGP RX Reset
 
 - U_Gtp7QuadPll_1: surf.Gtp7QuadPll
 - Pgp2bGtp7Fixedlat_Inst: surf.Pgp2bGtp7FixedLat
-**Description**
+</br>**Description**
  [out]
 
 - U_AxiLiteCrossbar_1: surf.AxiLiteCrossbar
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  AXI-Lite crossbar
 -----------------------------------------------------------------------------------------------

@@ -109,13 +109,13 @@
             remRxPause, remRxPauseCnt, rxClkFreq, rxError, rxErrorCnt,
             rxOpCodeData, rxStatus, rxStatusCnt, txClkFreq, txError,
             txErrorCnt, txOpCodeData, txStatus, txStatusCnt )
-**Description**
+</br>**Description**
 -------------------  AXI-Lite Registers ------------------- 
 - unnamed: ( axilClk )
 ## Instantiations
 
 - U_RxClkFreq: surf.SyncClockFreq
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------
  RX SYNC
 --------------------------------------------------------------------------------------------
@@ -128,7 +128,7 @@
 - U_rxStatusCnt: surf.SyncStatusVector
 - U_rxErrorCnt: surf.SyncStatusVector
 - U_TxClkFreq: surf.SyncClockFreq
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------
  TX SYNC
 --------------------------------------------------------------------------------------------

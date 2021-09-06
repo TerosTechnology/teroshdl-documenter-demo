@@ -73,6 +73,6 @@
 ## Instantiations
 
 - AxiStreamPipeline_1: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
  Optional output pipeline registers to ease timing
 

@@ -85,7 +85,7 @@
 ## Instantiations
 
 - i_pnmon: axi_ad9671_pnmon
-**Description**
+</br>**Description**
  instantiations
 
 - i_ad_datafmt: ad_datafmt

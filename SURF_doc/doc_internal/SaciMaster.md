@@ -63,18 +63,18 @@
 ## Functions
 - synchronize <font id="function_arguments">( input   : in  sl;<br><span style="padding-left:20px"> current : in  SynchronizerType;<br><span style="padding-left:20px"> nextOut : out SynchronizerType) </font> <font id="function_return">return ()</font>
 - synchronize <font id="function_arguments">( var   : inout SynchronizerType;<br><span style="padding-left:20px"> input : in    sl) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Simplified. Can be used when v := r has already been called.
 
 - synchronize <font id="function_arguments">( input   : in  slv;<br><span style="padding-left:20px"> current : in  SynchronizerArray;<br><span style="padding-left:20px"> nextOut : out SynchronizerArray) </font> <font id="function_return">return ()</font>
 - synchronize <font id="function_arguments">( var   : inout SynchronizerArray;<br><span style="padding-left:20px"> input : in    slv) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Simplified. Can be used when v := r has already been called.
 
 - shiftInLeft <font id="function_arguments">( i : in  sl;<br><span style="padding-left:20px"> r : in  slv;<br><span style="padding-left:20px"> v : out slv) </font> <font id="function_return">return ()</font>
 ## Processes
 - fall: ( clk, rst )
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------  Capture serial input on falling edge of clock ------------------------------------------------------------------------------------------------ 
 - seq: ( clk, rst )
 - comb: ( r, saciRspFall, saciMasterIn )

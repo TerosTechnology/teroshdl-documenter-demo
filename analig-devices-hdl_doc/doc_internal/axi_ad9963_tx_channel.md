@@ -117,27 +117,27 @@
 ## Processes
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dac iq correction 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dac mux 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pattern 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
 ## Instantiations
 
 - i_dds: ad_dds
-**Description**
+</br>**Description**
  dds
 
 - i_up_dac_channel: up_dac_channel
-**Description**
+</br>**Description**
  single channel processor
 

@@ -46,7 +46,7 @@
 - axiLiteReadSlaveEmptyInit <font id="function_arguments">( rresp : slv(1 downto 0)  := AXI_RESP_OK_C;<br><span style="padding-left:20px"> rdata : slv(31 downto 0) := (others => '0')) </font> <font id="function_return">return AxiLiteReadSlaveType </font>
 - axiLiteWriteSlaveEmptyInit <font id="function_arguments">( bresp : slv(1 downto 0) := AXI_RESP_OK_C) </font> <font id="function_return">return AxiLiteWriteSlaveType </font>
 - axiWriteMasterInit <font id="function_arguments">(constant config : AxiLiteCrossbarMasterConfigArray) </font> <font id="function_return">return AxiLiteWriteMasterArray </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Initilize masters with uppder address bits already set to configuration base address
 -----------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 - axiReadMasterInit <font id="function_arguments">(constant config  : AxiLiteCrossbarMasterConfigArray) </font> <font id="function_return">return AxiLiteReadMasterArray </font>
 - axiReadMasterInit <font id="function_arguments">(constant config  : AxiLiteCrossbarMasterConfigType) </font> <font id="function_return">return AxiLiteReadMasterType </font>
 - axiSlaveWaitWriteTxn <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable writeEnable   : inout sl) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Slave AXI Processing procedures
 -----------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@
 - axiSlaveWriteResponse <font id="function_arguments">( variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> axiResp                : in    slv(1 downto 0) := AXI_RESP_OK_C) </font> <font id="function_return">return ()</font>
 - axiSlaveReadResponse <font id="function_arguments">( variable axiReadSlave : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> axiResp               : in    slv(1 downto 0) := AXI_RESP_OK_C) </font> <font id="function_return">return ()</font>
 - axiSlaveRegister <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : in    AxiLiteStatusType;<br><span style="padding-left:20px"> addr                   : in    slv;<br><span style="padding-left:20px"> offset                 : in    integer;<br><span style="padding-left:20px"> reg                    : inout slv;<br><span style="padding-left:20px"> constAssign            : in    boolean := false;<br><span style="padding-left:20px"> constVal               : in    slv     := "0") </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Address decode procedures
 -----------------------------------------------------------------------------------------------
@@ -75,7 +75,7 @@
 - axiSlaveRegister <font id="function_arguments">( signal axiReadMaster  : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiReadSlave : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus    : in    AxiLiteStatusType;<br><span style="padding-left:20px"> addr                  : in    slv;<br><span style="padding-left:20px"> offset                : in    integer;<br><span style="padding-left:20px"> reg                   : in    sl) </font> <font id="function_return">return ()</font>
 - axiSlaveDefault <font id="function_arguments">( signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> variable axiStatus     : in    AxiLiteStatusType;<br><span style="padding-left:20px"> axiResp                : in    slv(1 downto 0) := AXI_RESP_OK_C;<br><span style="padding-left:20px"> extTxn                 : in    sl              := '0') </font> <font id="function_return">return ()</font>
 - axiSlaveWaitTxn <font id="function_arguments">( variable ep            : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> signal axiWriteMaster  : in    AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axiReadMaster   : in    AxiLiteReadMasterType;<br><span style="padding-left:20px"> variable axiWriteSlave : in    AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : in    AxiLiteReadSlaveType) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Simplified Address decode procedures, RTH 1/27/2016
 -----------------------------------------------------------------------------------------------
@@ -91,14 +91,14 @@
 - axiRdDetect <font id="function_arguments">( variable ep : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> addr        : in    slv;<br><span style="padding-left:20px"> reg         : inout sl) </font> <font id="function_return">return ()</font>
 - axiSlaveDefault <font id="function_arguments">( variable ep            : inout AxiLiteEndpointType;<br><span style="padding-left:20px"> variable axiWriteSlave : inout AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> variable axiReadSlave  : inout AxiLiteReadSlaveType;<br><span style="padding-left:20px"> axiResp                : in    slv(1 downto 0) := AXI_RESP_OK_C;<br><span style="padding-left:20px"> extTxn                 : in    sl              := '0') </font> <font id="function_return">return ()</font>
 - genAxiLiteConfig <font id="function_arguments">(num      : positive;<br><span style="padding-left:20px"> base     : slv(31 downto 0);<br><span style="padding-left:20px"> baseBot  : integer range 1 to 32;<br><span style="padding-left:20px"> addrBits : integer range 0 to 31) </font> <font id="function_return">return AxiLiteCrossbarMasterConfigArray </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Slave AXI Processing functions
 -----------------------------------------------------------------------------------------------
  Generate evenly distributed address map
 
 - axiLiteBusSimWrite <font id="function_arguments">( signal axilClk         : in  sl;<br><span style="padding-left:20px"> signal axilWriteMaster : out AxiLiteWriteMasterType;<br><span style="padding-left:20px"> signal axilWriteSlave  : in  AxiLiteWriteSlaveType;<br><span style="padding-left:20px"> addr                   : in  slv(31 downto 0);<br><span style="padding-left:20px"> data                   : in  slv;<br><span style="padding-left:20px"> debug                  : in  boolean := false) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Simulation procedures
 -----------------------------------------------------------------------------------------------

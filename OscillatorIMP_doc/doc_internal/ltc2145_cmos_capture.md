@@ -30,5 +30,5 @@
 |  data_b_s | std_logic_vector(13 downto 0) |             |
 ## Processes
 - latch_d: ( clk_in_i, resetn )
-**Description**
+</br>**Description**
 '1'; end generate dis_cdcs; en_cdcs: if CLOCK_DUTY_CYCLE_STABILIZER_EN /= false generate 	clk_cdcs <= '1'; end generate en_cdcs; 

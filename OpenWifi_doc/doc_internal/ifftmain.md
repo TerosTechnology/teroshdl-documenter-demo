@@ -136,6 +136,6 @@
 - stage_4: qtrstage
 - stage_2: laststage
 - revstage: bitreverse
-**Description**
+</br>**Description**
  Now for the bit-reversal stage.
 

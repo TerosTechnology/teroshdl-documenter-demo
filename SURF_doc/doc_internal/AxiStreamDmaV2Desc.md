@@ -100,20 +100,20 @@
                    dmaWrDescRet, holdoffCompare, idBuffCompare, intSwAckEn,
                    invalidCount, r, rdFifoDout, rdFifoValid, wrFifoDout,
                    wrFifoValid )
-**Description**
+</br>**Description**
 ---------------------------------------  Control Logic --------------------------------------- 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_invalidCount: surf.DspComparator
-**Description**
+</br>**Description**
 ---------------------------------------
  Interrupt ACK Counter
 ---------------------------------------
  Check for invalid count
 
 - U_diffCnt: surf.DspAddSub
-**Description**
+</br>**Description**
   (a <  b) <--> r.intAckCount > r.intReqCount
 
 - U_holdoffCompare: surf.DspComparator

@@ -107,14 +107,14 @@
 ## Instantiations
 
 - i_if: axi_ad9162_if
-**Description**
+</br>**Description**
  device interface
 
 - i_core: axi_ad9162_core
-**Description**
+</br>**Description**
  core
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

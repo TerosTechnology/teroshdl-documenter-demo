@@ -70,23 +70,23 @@
 ## Processes
 - fill_w: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Fill up w 
 - compress_round: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Update engine 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Digest 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  round 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  w_index 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

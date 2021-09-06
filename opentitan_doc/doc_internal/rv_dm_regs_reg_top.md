@@ -64,11 +64,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -78,7 +78,7 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
 

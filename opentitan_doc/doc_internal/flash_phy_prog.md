@@ -90,7 +90,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  If the first beat of an incoming transaction is not aligned to word boundary (for example  if each flash word is 4 bus words wide, and the first word to program starts at index 1),  the fsm pre-packs the flash word with empty words until the supplied index.  Once at the index, real data supplied from the flash controller is packed until the last  beat of data.  At the last beat of data, if it is not also aligned (index 3 in this example),  more empty words are packed at the end to fill out the word.<br> 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

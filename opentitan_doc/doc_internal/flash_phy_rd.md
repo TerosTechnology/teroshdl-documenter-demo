@@ -137,30 +137,30 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  buffer enable cannot be changed unless the entire read pipeline is idle 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  generate the mask calculation request  mask calculation is done in parallel to the read stage 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  select among the buffers 
 ## Instantiations
 
 - i_valid_random: prim_arbiter_tree
 - i_rsp_order_fifo: prim_fifo_sync
-**Description**
+</br>**Description**
  response order FIFO
 
 - u_rd_storage: prim_fifo_sync
-**Description**
+</br>**Description**
 TODO: Cleanup the FIFO popping a bit more
 
 - u_mask_storage: prim_fifo_sync
-**Description**
+</br>**Description**
  storage for mask calculations
 

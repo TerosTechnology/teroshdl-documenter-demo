@@ -71,6 +71,6 @@
 ## Instantiations
 
 - u_req_fifo: prim_fifo_sync
-**Description**
+</br>**Description**
  Request FIFO
 

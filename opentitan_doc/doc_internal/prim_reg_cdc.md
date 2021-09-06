@@ -60,7 +60,7 @@
 ## Processes
 - unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  busy indication back-pressures upstream if the register is accessed  again.  The busy indication is also used as a "commit" indication for  resolving software and hardware write conflicts 
 - unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )
   - **Type:** always_ff

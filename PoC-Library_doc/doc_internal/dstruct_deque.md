@@ -95,16 +95,16 @@
 - unnamed: ( combined, stackpointerA, stackpointerB, last_operation, ctrl )
 - unnamed: ( clk )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 stackpointerA operations 
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  stackpointerB operations 
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  delayed_valid register 
 - unnamed: ( sub, last_operation, delayed_valid )
-**Description**
+</br>**Description**
  sub of B and A 
 ## Instantiations
 

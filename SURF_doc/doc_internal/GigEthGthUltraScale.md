@@ -86,19 +86,19 @@
 
 - U_PwrUpRst: surf.PwrUpRst
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_GigEthGthUltraScaleCore: GigEthGthUltraScaleCore
-**Description**
+</br>**Description**
 ----------------
  1000BASE-X core
 ----------------
 
 - U_GigEthReg: surf.GigEthReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

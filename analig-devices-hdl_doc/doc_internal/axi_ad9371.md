@@ -156,27 +156,27 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_if: axi_ad9371_if
-**Description**
+</br>**Description**
  device interface
 
 - i_rx: axi_ad9371_rx
-**Description**
+</br>**Description**
  receive
 
 - i_rx_os: axi_ad9371_rx_os
-**Description**
+</br>**Description**
  receive (o/s)
 
 - i_tx: axi_ad9371_tx
-**Description**
+</br>**Description**
  transmit
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  axi interface
 

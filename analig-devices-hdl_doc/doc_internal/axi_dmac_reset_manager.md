@@ -103,7 +103,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * If ctrl_enable goes from 1 to 0 a shutdown procedure is initiated. During the  * shutdown procedure all domains are signaled that a shutdown should occur. The  * domains will then complete any active transactions that are required to  * complete according to the interface semantics. Once a domain has completed  * its transactions it will indicate that it has been shutdown. Once all domains  * indicate that they have been disabled a reset pulse will be generated to all  * domains to clear all residual state. The reset pulse is long enough so that it  * is active in all domains for at least 4 clock cycles.  *  * Once the reset signal is de-asserted the DMA is in an idle state and can be  * enabled again. If the DMA receives a enable while it is performing a shutdown  * sequence it will only be re-enabled once the shutdown sequence has  * successfully completed.  *  * If ctrl_pause is asserted all domains will be disabled. But there will be no  * reset, so when the ctrl_pause signal is de-asserted again the DMA will resume  * with its previous state.  *  */<br>  * If ctrl_enable goes low, even for a single clock cycle, we want to go through  * a full reset sequence. This might happen when the state machine is busy, e.g.  * going through a startup sequence. To avoid missing the event store it for  * later.  */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

@@ -68,5 +68,5 @@
 ## Processes
 - unnamed: ( @(posedge adc_os_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  instantiations 

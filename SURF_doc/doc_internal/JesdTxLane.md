@@ -84,12 +84,12 @@
 
 - syncFSM_INST: surf.JesdSyncFsmTx
 - ilasGen_INST: surf.JesdIlasGen
-**Description**
+</br>**Description**
 --------------------------------------------------
  Initial Synchronization Data Sequence (ILAS)
 
 - AlignChGen_INST: surf.JesdAlignChGen
-**Description**
+</br>**Description**
 --------------------------------------------------
  Sample data with added synchronization characters TODO
 

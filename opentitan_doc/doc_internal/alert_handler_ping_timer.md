@@ -102,7 +102,7 @@
 ## Instantiations
 
 - u_prim_buf_spurious_alert_ping: prim_buf
-**Description**
+</br>**Description**
  under normal operation, these signals should never be asserted.
  we place hand instantiated buffers here such that these signals are not
  optimized away during synthesis (these buffers will receive a keep or size_only

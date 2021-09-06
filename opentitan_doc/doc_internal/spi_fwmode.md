@@ -108,7 +108,7 @@
 ## Instantiations
 
 - u_rx_fifo: prim_fifo_async
-**Description**
+</br>**Description**
 /////////////
  Instances //
 /////////////
@@ -116,14 +116,14 @@
 
 - u_tx_fifo: prim_fifo_async
 - u_rxf_ctrl: spi_fwm_rxf_ctrl
-**Description**
+</br>**Description**
  RX Fifo control (FIFO Read port --> SRAM request)
 
 - u_txf_ctrl: spi_fwm_txf_ctrl
-**Description**
+</br>**Description**
  TX Fifo control (SRAM read request --> FIFO write)
 
 - u_fwmode_arb: prim_sram_arbiter
-**Description**
+</br>**Description**
  TODO: Assume other 7bits in a byte are same to the first bit
 

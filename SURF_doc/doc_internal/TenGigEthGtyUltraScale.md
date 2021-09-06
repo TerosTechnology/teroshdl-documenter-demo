@@ -86,31 +86,31 @@
 ## Instantiations
 
 - U_AxiLiteAsync: surf.AxiLiteAsync
-**Description**
+</br>**Description**
 ----------------
  Synchronization
 ----------------
 
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_TenGigEthGtyUltraScaleCore: TenGigEthGtyUltraScale156p25MHzCore
-**Description**
+</br>**Description**
 ---------------
  10GBASE-R core
 ---------------
 
 - U_TenGigEthRst: surf.TenGigEthGtyUltraScaleRst
-**Description**
+</br>**Description**
 -------------------------
  10GBASE-R's Reset Module
 -------------------------
 
 - U_TenGigEthReg: surf.TenGigEthReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

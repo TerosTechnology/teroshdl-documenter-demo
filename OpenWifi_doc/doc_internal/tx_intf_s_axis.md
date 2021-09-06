@@ -88,7 +88,7 @@
 ## Instantiations
 
 - fifo64_i0: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo64_1clk_dep4k fifo64_1clk_dep4k_i0 ( //queue0
      .CLK(S_AXIS_ACLK),
      .DATAO(DATA_TO_ACC0),
@@ -102,7 +102,7 @@
  );
 
 - fifo64_i1: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo64_1clk_dep4k fifo64_1clk_dep4k_i1 ( //queue1
      .CLK(S_AXIS_ACLK),
      .DATAO(DATA_TO_ACC1),
@@ -116,7 +116,7 @@
  );
 
 - fifo64_i2: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo64_1clk fifo64_1clk_dep4k_i2 ( //queue2
      .CLK(S_AXIS_ACLK),
      .DATAO(DATA_TO_ACC2),
@@ -130,7 +130,7 @@
  );
 
 - fifo64_i3: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo64_1clk fifo64_1clk_dep4k_i3 ( //queue3
      .CLK(S_AXIS_ACLK),
      .DATAO(DATA_TO_ACC3),

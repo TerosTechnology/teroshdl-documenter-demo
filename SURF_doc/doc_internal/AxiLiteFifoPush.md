@@ -70,8 +70,8 @@
 | RegType |      |             |
 ## Processes
 - unnamed: ( axiClk )
-**Description**
+</br>**Description**
 ---------------------------------------  AXI Lite ---------------------------------------  Sync 
 - unnamed: ( r, axiClkRst, axiReadMaster, axiWriteMaster, ipushFifoFull, ipushFifoAFull )
-**Description**
+</br>**Description**
  Async 

@@ -278,11 +278,11 @@
   - **Type:** always
 - unnamed: ( @(posedge src_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * Make sure that we do not request more data than what fits into the  * store-and-forward burst memory.  * Throttler must be blocked during rewind since it does not tolerate  * a decrement of the request ID.  */ 
 - unnamed: ( @(posedge src_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Save the descriptor in the source clock domain since the submission to  destination is delayed. 
 - unnamed: ( @(posedge src_clk) )
   - **Type:** always

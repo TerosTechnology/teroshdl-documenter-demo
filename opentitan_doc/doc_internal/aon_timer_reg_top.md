@@ -164,11 +164,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -187,71 +187,71 @@
 - u_wdog_count_cdc: prim_reg_cdc
 - u_wkup_cause_cdc: prim_reg_cdc
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
 
 - u_wkup_ctrl_enable: prim_subreg
-**Description**
+</br>**Description**
  R[wkup_ctrl]: V(False)
    F[enable]: 0:0
 
 - u_wkup_ctrl_prescaler: prim_subreg
-**Description**
+</br>**Description**
    F[prescaler]: 12:1
 
 - u_wkup_thold: prim_subreg
-**Description**
+</br>**Description**
  R[wkup_thold]: V(False)
 
 - u_wkup_count: prim_subreg
-**Description**
+</br>**Description**
  R[wkup_count]: V(False)
 
 - u_wdog_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[wdog_regwen]: V(False)
 
 - u_wdog_ctrl_enable: prim_subreg
-**Description**
+</br>**Description**
  R[wdog_ctrl]: V(False)
    F[enable]: 0:0
 
 - u_wdog_ctrl_pause_in_sleep: prim_subreg
-**Description**
+</br>**Description**
    F[pause_in_sleep]: 1:1
 
 - u_wdog_bark_thold: prim_subreg
-**Description**
+</br>**Description**
  R[wdog_bark_thold]: V(False)
 
 - u_wdog_bite_thold: prim_subreg
-**Description**
+</br>**Description**
  R[wdog_bite_thold]: V(False)
 
 - u_wdog_count: prim_subreg
-**Description**
+</br>**Description**
  R[wdog_count]: V(False)
 
 - u_intr_state_wkup_timer_expired: prim_subreg
-**Description**
+</br>**Description**
  R[intr_state]: V(False)
    F[wkup_timer_expired]: 0:0
 
 - u_intr_state_wdog_timer_expired: prim_subreg
-**Description**
+</br>**Description**
    F[wdog_timer_expired]: 1:1
 
 - u_intr_test_wkup_timer_expired: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[wkup_timer_expired]: 0:0
 
 - u_intr_test_wdog_timer_expired: prim_subreg_ext
-**Description**
+</br>**Description**
    F[wdog_timer_expired]: 1:1
 
 - u_wkup_cause: prim_subreg
-**Description**
+</br>**Description**
  R[wkup_cause]: V(False)
 

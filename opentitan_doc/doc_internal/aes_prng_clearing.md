@@ -55,10 +55,10 @@
 ## Instantiations
 
 - u_prim_packer_fifo: prim_packer_fifo
-**Description**
+</br>**Description**
  Upsizing of entropy input to correct width for LFSR reseeding.
 
 - u_lfsr: prim_lfsr
-**Description**
+</br>**Description**
  LFSR instance
 

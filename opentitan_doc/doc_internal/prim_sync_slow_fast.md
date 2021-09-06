@@ -45,15 +45,15 @@
 ## Processes
 - unnamed: ( @(posedge clk_fast_i or negedge rst_fast_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Register the synchronized clk 
 - unnamed: ( @(posedge clk_fast_i or negedge rst_fast_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Sample the slow data on the negative edge 
 ## Instantiations
 
 - sync_slow_clk: prim_flop_2sync
-**Description**
+</br>**Description**
  Synchronize the slow clock to the fast domain
 

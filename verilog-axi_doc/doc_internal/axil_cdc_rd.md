@@ -68,17 +68,17 @@
 ## Processes
 - unnamed: ( @(posedge s_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  slave side 
 - unnamed: ( @(posedge s_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  synchronization 
 - unnamed: ( @(posedge m_clk) )
   - **Type:** always
 - unnamed: ( @(posedge m_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  master side 
 ## State machines
 

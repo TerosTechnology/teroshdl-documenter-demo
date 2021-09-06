@@ -116,35 +116,35 @@
 ## Processes
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  internal reset generation 
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  status register indicating that the module is in initialization phase 
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  save the last write address 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  DAC / Read interface 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  The memory module is ready if it's not empty 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync lastaddr to dac clock domain 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  define underflow  underflow make sense just if bypass is enabled 
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
@@ -152,7 +152,7 @@
   - **Type:** always
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  the util_dacfifo is always ready for the DMA 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
@@ -162,10 +162,10 @@
 - i_dac_waddr_g2b: ad_g2b
 - i_dac_lastaddr_g2b: ad_g2b
 - i_mem_fifo: ad_mem
-**Description**
+</br>**Description**
  memory instantiation
 
 - i_dacfifo_bypass: util_dacfifo_bypass
-**Description**
+</br>**Description**
  bypass logic
 

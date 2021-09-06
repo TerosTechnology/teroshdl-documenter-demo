@@ -181,36 +181,36 @@
 ## Processes
 - unnamed: ( closeRq, openRq, s_appRssiParamReg, s_closeRqReg, s_initSeqNReg,
             s_intCloseRq, s_modeReg, s_openRqReg )
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------              Connection, Auto Negotiation and Monitoring                -- -------------------------------------------------------------------------- ---------------------  Parameter assignment --------------------- 
 ## Instantiations
 
 - U_Reg: surf.RssiAxiLiteRegItf
-**Description**
+</br>**Description**
 -------------------
  Register interface
 -------------------
 
 - U_ConnFSM: surf.RssiConnFsm
-**Description**
+</br>**Description**
 --------------------------------
  Connection Finite State Machine
 --------------------------------
 
 - U_Monitor: surf.RssiMonitor
-**Description**
+</br>**Description**
 -----------------------------
  Connection Monitoring Module
 -----------------------------
 
 - U_HeaderReg: surf.RssiHeaderReg
-**Description**
+</br>**Description**
 ----------------------------------
  Outbound Header Generation Module
 ----------------------------------
 
 - U_AppIn: surf.AxiStreamResize
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------
                 From Application layer to Transport Layer               --
 --------------------------------------------------------------------------
@@ -219,19 +219,19 @@
 ------------------
 
 - U_TxFSM: surf.AxiRssiTxFsm
-**Description**
+</br>**Description**
 ---------------------------------
  Transmitter Finite State Machine
 ---------------------------------
 
 - U_TspOut: surf.AxiStreamResize
-**Description**
+</br>**Description**
 ----------------
  Transport Layer
 ----------------
 
 - U_TspIn: surf.AxiStreamResize
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------
                 From Transport layer to Application Layer               --
 --------------------------------------------------------------------------
@@ -240,13 +240,13 @@
 ----------------
 
 - U_RxFSM: surf.AxiRssiRxFsm
-**Description**
+</br>**Description**
 ------------------------------
  Receiver Finite State Machine
 ------------------------------
 
 - U_AppOut: surf.AxiStreamResize
-**Description**
+</br>**Description**
  Acknowledge valid packet
 ------------------
  Application Layer

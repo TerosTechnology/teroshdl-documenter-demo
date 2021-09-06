@@ -41,6 +41,6 @@
 
 - i_ethernet_tx: work.ethernet_tx_vvc
 - i_ethernet_rx: work.ethernet_rx_vvc
-**Description**
+</br>**Description**
  ETHERNET RX VVC
 

@@ -64,6 +64,6 @@
 | REG_CTRL2       | std_logic_vector | "111"  |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk )

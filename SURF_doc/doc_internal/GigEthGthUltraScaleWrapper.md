@@ -97,7 +97,7 @@
 ## Instantiations
 
 - U_IBUFDS: IBUFDS_GTE4
-**Description**
+</br>**Description**
 ---------------------------
  Select the Reference Clock
 ---------------------------

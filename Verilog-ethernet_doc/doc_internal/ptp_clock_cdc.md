@@ -126,7 +126,7 @@
   - **Type:** always
 - unnamed: ( @(posedge output_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  CDC logic 
 - unnamed: ( @(posedge sample_clk) )
   - **Type:** always

@@ -72,7 +72,7 @@
 | RegType   |                                                                                                            |             |
 ## Processes
 - comb: ( ack, axilReadMaster, axilRst, axilWriteMaster, fail, r, rdData, saciBusGr )
-**Description**
+</br>**Description**
  [in] 
 - seq: ( axilClk )
 ## Instantiations

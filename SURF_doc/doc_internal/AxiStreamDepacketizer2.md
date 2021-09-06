@@ -91,14 +91,14 @@
 ## Instantiations
 
 - U_Input: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
 ---------------
  Input pipeline
 ---------------
 
 - U_DualPortRam_1: surf.DualPortRam
 - U_Output: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
 ----------------
  Output pipeline
 ----------------

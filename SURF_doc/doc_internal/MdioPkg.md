@@ -15,26 +15,26 @@
 | MdioProgramArray | array (natural range <>) of MdioInstType  |  A sequence of instructions. The 'MdioSeqCore' module  processes a sequence of commands up to and including one  that has the 'theLast' flag set.  An array may typically contain more than one sequence  of instructions. The user submits the index of the  first instruction to the MdioSeqCore which then executes  commands up to the next one that has the 'last' flag set.<br>  Example:     constant seq1 : MdioProgramArray := (        mdioWriteInst( PHY, REG0, DATA0 );        mdioWriteInst( PHY, REG1, DATA1 );        mdioWriteInst( PHY, REG2, DATA2, true );     );     constant seq2 : MdioProgramArray := (        mdioWriteInst( PHY, REGx, DATAx );        mdioWriteInst( PHY, REGy, DATAy, true );     );<br>     constant PROGRAMS_C : MdioProgramArray := ( seq1 & seq2 );     constant SEQ_1_START_C : natural := 0;     constant SEQ_2_START_C : natural := SEQ_1_START_C + seq1'length;<br>  PROGRAMS_C is then used as the MDIO_PROG_G generic (MdioSeqCore) and  the indices 'SEQ_1_START_C', 'SEQ_2_START_C' etc. are used to  initiate processing of the respective sequences.  |
 ## Functions
 - mdioReadCommand <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural ) </font> <font id="function_return">return MdioCommandType </font>
-**Description**
+</br>**Description**
  create a READ command
 
 - mdioWriteCommand <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> dataOut : in slv(15 downto 0) ) </font> <font id="function_return">return MdioCommandType </font>
-**Description**
+</br>**Description**
  create a WRITE command
 
 - mdioReadInst <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> theLast : in boolean := false ) </font> <font id="function_return">return MdioInstType </font>
-**Description**
+</br>**Description**
  create/initialize a READ instruction. 'theLast' must
  be set to 'true' if this instruction is the last one
  of a sequence.
 
 - mdioWriteInst <font id="function_arguments">( phyAddr : in natural;<br><span style="padding-left:20px"> regAddr : in natural;<br><span style="padding-left:20px"> dataOut : in slv(15 downto 0);<br><span style="padding-left:20px"> theLast : in boolean := false ) </font> <font id="function_return">return MdioInstType </font>
-**Description**
+</br>**Description**
  create/initialize a WRITE instruction. 'theLast' must
  be set to 'true' if this instruction is the last one
  of a sequence.
 
 - mdioProgNumReadTransactions <font id="function_arguments">( prog : in MdioProgramArray ) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
  calculate the number of read transactions in a sequence
 

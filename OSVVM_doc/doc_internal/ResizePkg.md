@@ -9,7 +9,7 @@
 - FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return std_logic_vector </font>
 - FromTransaction <font id="function_arguments">(A: std_logic_vector_max_c) </font> <font id="function_return">return integer </font>
 - ToTransaction <font id="function_arguments">(A : std_logic_vector) </font> <font id="function_return">return std_logic_vector_max </font>
-**Description**
+</br>**Description**
 
  ToTransaction and FromTransaction for _max provided to support a 
  common methodology, conversions are not needed

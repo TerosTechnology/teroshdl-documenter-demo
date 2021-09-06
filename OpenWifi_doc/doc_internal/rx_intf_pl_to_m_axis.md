@@ -89,15 +89,15 @@
   - **Type:** always
 - unnamed: ( @( posedge clk ) )
   - **Type:** always
-**Description**
+</br>**Description**
 lock tsf runtime value by sig_valid 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
 state machine to control m_axis to ARM 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  process to generate delayed interrupt after receive s2mm_intr 
 ## State machines
 

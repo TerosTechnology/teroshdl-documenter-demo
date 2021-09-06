@@ -70,37 +70,37 @@
 ## Processes
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
      assign SLV_REG3 = slv_reg3;     assign SLV_REG4 = slv_reg4;     assign SLV_REG5 = slv_reg5;     assign SLV_REG6 = slv_reg6;     assign SLV_REG7 = slv_reg7;     assign SLV_REG8 = slv_reg8;     assign SLV_REG9 = slv_reg9;     assign SLV_REG10 = slv_reg10;     assign SLV_REG11 = slv_reg11;     assign SLV_REG12 = slv_reg12;     assign SLV_REG13 = slv_reg13;     assign SLV_REG14 = slv_reg14;     assign SLV_REG15 = slv_reg15;     assign SLV_REG16 = slv_reg16;     assign SLV_REG17 = slv_reg17;     assign SLV_REG18 = slv_reg18;     assign SLV_REG19 = slv_reg19;*/  Implement axi_awready generation  axi_awready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is  de-asserted when reset is low. 
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Implement axi_awaddr latching  This process is used to latch the address when both   S_AXI_AWVALID and S_AXI_WVALID are valid.  
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Implement axi_wready generation  axi_wready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is   de-asserted when reset is low.  
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Implement write response logic generation  The write response and response valid signals are asserted by the slave   when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.    This marks the acceptance of address and indicates the status of   write transaction. 
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Implement axi_arready generation  axi_arready is asserted for one S_AXI_ACLK clock cycle when  S_AXI_ARVALID is asserted. axi_awready is   de-asserted when reset (active low) is asserted.   The read address is also latched when S_AXI_ARVALID is   asserted. axi_araddr is reset to zero on reset assertion. 
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Implement axi_arvalid generation  axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both   S_AXI_ARVALID and axi_arready are asserted. The slave registers   data are available on the axi_rdata bus at this instance. The   assertion of axi_rvalid marks the validity of read data on the   bus and axi_rresp indicates the status of read transaction.axi_rvalid   is deasserted on reset (active low). axi_rresp and axi_rdata are   cleared to zero on reset (active low).   
 - unnamed: ( @(*) )
   - **Type:** always
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Output register or memory read data 
 - unnamed: ( @( posedge S_AXI_ACLK ) )
   - **Type:** always
-**Description**
+</br>**Description**
  Add user logic here 

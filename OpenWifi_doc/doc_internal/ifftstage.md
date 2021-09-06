@@ -134,13 +134,13 @@
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
 Need to make certain here that we don't read 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Read the values from our input memory, and use them to feed first of two  butterfly inputs 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
@@ -148,7 +148,7 @@ Need to make certain here that we don't read
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Only write to the memory on the first half of the outputs  We'll use the memory value on the second half of the outputs 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always

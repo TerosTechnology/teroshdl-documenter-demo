@@ -49,7 +49,7 @@
       rstDly | sl               |             |
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  Reduce the fanout of the reset signal to help with timing 
 ## Instantiations
 

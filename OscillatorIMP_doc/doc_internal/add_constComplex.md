@@ -68,11 +68,11 @@
 
 - add_constComplexLogic: work.add_constComplex_logic
 - offset_syn: work.add_constComplex_synchronizer_vector
-**Description**
+</br>**Description**
  synchro --
 
 - wb_add_constComplex_inst: work.wb_add_constComplex
-**Description**
+</br>**Description**
 -----------
 
 - add_constComplexHandComm: work.add_constComplex_handComm

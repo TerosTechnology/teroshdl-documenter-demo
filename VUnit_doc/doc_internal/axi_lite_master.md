@@ -47,8 +47,8 @@
 ## Processes
 - main: (  )
 - bus_process: (  )
-**Description**
+</br>**Description**
  Use separate process to always align to rising edge of clock 
 - read_reply: (  )
-**Description**
+</br>**Description**
  Reply in separate process do not destroy alignment with the clock 

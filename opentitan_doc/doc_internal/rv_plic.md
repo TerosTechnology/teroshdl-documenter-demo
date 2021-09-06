@@ -77,13 +77,13 @@
 ## Instantiations
 
 - u_gateway: rv_plic_gateway
-**Description**
+</br>**Description**
 ////////////
  Gateways //
 ////////////
 
 - u_reg: rv_plic_reg_top
-**Description**
+</br>**Description**
 //////////////////////
  Register interface //
 //////////////////////

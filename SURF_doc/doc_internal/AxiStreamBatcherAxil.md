@@ -72,13 +72,13 @@
 | RegType |      |             |
 ## Processes
 - comb: ( axisRst, r, syncAxilReadMaster, syncAxilWriteMaster )
-**Description**
+</br>**Description**
  [in] 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_AxiStreamBatcher_1: surf.AxiStreamBatcher
 - U_AxiLiteAsync_1: surf.AxiLiteAsync
-**Description**
+</br>**Description**
  [in]
 

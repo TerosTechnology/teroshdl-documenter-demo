@@ -87,7 +87,7 @@
 ## Processes
 - unnamed: ( Clock1 )
 - unnamed: ( Clock2 )
-**Description**
+</br>**Description**
  D-FF for level change detection (both edges) 
 ## Instantiations
 

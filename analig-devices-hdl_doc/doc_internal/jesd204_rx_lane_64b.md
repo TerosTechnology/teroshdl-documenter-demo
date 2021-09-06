@@ -113,11 +113,11 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Control when data is written to the elastic buffer  Start writing to the buffer when current lane is multiblock locked, but if  other lanes are not writing in the next half multiblock period stop  writing.  This limits the supported lane skew to half of the multiframe 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Measure the delay from the eoemb to the next LMFC edge. 
 ## Instantiations
 

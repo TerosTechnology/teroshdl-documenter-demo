@@ -55,11 +55,11 @@
 ## Instantiations
 
 - u_adc_ctrl_fsm: adc_ctrl_fsm
-**Description**
+</br>**Description**
 instantiate the main state machine
 
 - u_oneshot_done_sync: prim_pulse_sync
 - u_adc_ctrl_intr: adc_ctrl_intr
-**Description**
+</br>**Description**
 Instantiate the interrupt module
 

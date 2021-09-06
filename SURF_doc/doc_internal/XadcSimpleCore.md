@@ -169,7 +169,7 @@
 - convTemp <font id="function_arguments">(temp : real) </font> <font id="function_return">return slv </font>
 - convPwr <font id="function_arguments">(pwr : real) </font> <font id="function_return">return slv </font>
 - INIT_40_C <font id="function_arguments">()</font> <font id="function_return">return bit_vector </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Global config registers
 -----------------------------------------------------------------------------------------------
@@ -177,7 +177,7 @@
 - INIT_41_C <font id="function_arguments">()</font> <font id="function_return">return bit_vector </font>
 - INIT_42_C <font id="function_arguments">()</font> <font id="function_return">return bit_vector </font>
 - INIT_48_C <font id="function_arguments">()</font> <font id="function_return">return bit_vector </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Sequencer registers
 -----------------------------------------------------------------------------------------------
@@ -189,6 +189,6 @@
 
 - U_AxiLiteToDrp_1: surf.AxiLiteToDrp
 - XADC_Inst: XADC
-**Description**
+</br>**Description**
  [in]
 

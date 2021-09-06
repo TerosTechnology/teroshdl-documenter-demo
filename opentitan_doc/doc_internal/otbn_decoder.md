@@ -106,9 +106,9 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////////  Decoder // /////////// 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////////////////////////  Decoder for ALU control // /////////////////////////// 

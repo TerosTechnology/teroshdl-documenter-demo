@@ -130,7 +130,7 @@
 | PAYLOAD_SIZE | natural |  get_payload_size |             |
 ## Functions
 - get_bram_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
  Fixup various memory sizes based on generics
 
 - get_payload_size <font id="function_arguments">()</font> <font id="function_return">return natural </font>

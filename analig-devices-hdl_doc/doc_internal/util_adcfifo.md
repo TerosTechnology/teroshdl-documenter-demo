@@ -102,7 +102,7 @@
 ## Processes
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  optional capture synchronization 
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
@@ -117,11 +117,11 @@
 ## Instantiations
 
 - i_adc_rst_sync: ad_rst
-**Description**
+</br>**Description**
  synchronize the adc_rst to the adc_clk clock domain
 
 - i_dma_waddr_sync: sync_gray
-**Description**
+</br>**Description**
  write address synchronization
 
 - i_axis_inf: ad_axis_inf_rx

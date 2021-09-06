@@ -72,13 +72,13 @@
 - U_clkInFreq: surf.SyncClockFreq
 - U_clinkClkFreq: surf.SyncClockFreq
 - U_MMCM: surf.ClockManagerUltraScale
-**Description**
+</br>**Description**
 ------------------------------------
  Clock Generation
 ------------------------------------
 
 - U_SyncDelay: surf.SynchronizerFifo
-**Description**
+</br>**Description**
 ------------------------------------
  Sync delay inputs
 ------------------------------------

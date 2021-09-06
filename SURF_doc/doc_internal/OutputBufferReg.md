@@ -48,7 +48,7 @@
 | outputSig | sl   |             |
 ## Processes
 - unnamed: ( C )
-**Description**
+</br>**Description**
 ------------------------  Generate a delayed copy ------------------------ 
 ## Instantiations
 

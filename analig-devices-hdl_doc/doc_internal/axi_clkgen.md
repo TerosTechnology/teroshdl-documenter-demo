@@ -117,14 +117,14 @@
 ## Instantiations
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 
 - i_up_clkgen: up_clkgen
-**Description**
+</br>**Description**
  processor interface
 
 - i_mmcm_drp: ad_mmcm_drp
-**Description**
+</br>**Description**
  mmcm instantiations
 

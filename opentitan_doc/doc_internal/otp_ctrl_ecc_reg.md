@@ -55,6 +55,6 @@
 ## Instantiations
 
 - u_prim_secded_72_64_enc: prim_secded_72_64_enc
-**Description**
+</br>**Description**
  Only one encoder is needed.
 

@@ -54,7 +54,7 @@
 ## Instantiations
 
 - u_state_regs: prim_flop
-**Description**
+</br>**Description**
  This primitive is used to place a size-only constraint on the
  flops in order to prevent FSM state encoding optimizations.
 

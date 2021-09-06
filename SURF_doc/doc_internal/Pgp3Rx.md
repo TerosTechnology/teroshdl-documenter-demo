@@ -83,27 +83,27 @@
 ## Instantiations
 
 - U_Pgp3RxGearboxAligner_1: surf.Pgp3RxGearboxAligner
-**Description**
+</br>**Description**
  Gearbox aligner
 
 - U_Scrambler_1: surf.Scrambler
 - U_Pgp3RxEb_1: surf.Pgp3RxEb
-**Description**
+</br>**Description**
  [out]
  Elastic Buffer
 
 - U_Pgp3RxProtocol_1: surf.Pgp3RxProtocol
-**Description**
+</br>**Description**
  [out]
  Main RX protocol logic
 
 - U_AxiStreamDepacketizer2_1: surf.AxiStreamDepacketizer2
-**Description**
+</br>**Description**
  [in]
  Depacketize the RX data frames
 
 - U_AxiStreamDeMux_1: surf.AxiStreamDeMux
-**Description**
+</br>**Description**
  [in]
  Demultiplex the depacketized streams
 

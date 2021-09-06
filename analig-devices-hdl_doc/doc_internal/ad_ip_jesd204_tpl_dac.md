@@ -124,10 +124,10 @@
 ## Instantiations
 
 - i_regmap: ad_ip_jesd204_tpl_dac_regmap
-**Description**
+</br>**Description**
  regmap
 
 - i_core: ad_ip_jesd204_tpl_dac_core
-**Description**
+</br>**Description**
  core
 

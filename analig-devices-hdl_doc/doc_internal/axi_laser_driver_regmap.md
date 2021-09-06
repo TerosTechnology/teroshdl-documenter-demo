@@ -114,7 +114,7 @@
 ## Instantiations
 
 - i_driver_otw_sync: sync_bits
-**Description**
+</br>**Description**
  CDC logic
 
 - i_pulse_sync: sync_bits

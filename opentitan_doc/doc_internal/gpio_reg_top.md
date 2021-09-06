@@ -119,11 +119,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -133,87 +133,87 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_data_in: prim_subreg
-**Description**
+</br>**Description**
  R[data_in]: V(False)
 
 - u_direct_out: prim_subreg_ext
-**Description**
+</br>**Description**
  R[direct_out]: V(True)
 
 - u_masked_out_lower_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[masked_out_lower]: V(True)
    F[data]: 15:0
 
 - u_masked_out_lower_mask: prim_subreg_ext
-**Description**
+</br>**Description**
    F[mask]: 31:16
 
 - u_masked_out_upper_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[masked_out_upper]: V(True)
    F[data]: 15:0
 
 - u_masked_out_upper_mask: prim_subreg_ext
-**Description**
+</br>**Description**
    F[mask]: 31:16
 
 - u_direct_oe: prim_subreg_ext
-**Description**
+</br>**Description**
  R[direct_oe]: V(True)
 
 - u_masked_oe_lower_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[masked_oe_lower]: V(True)
    F[data]: 15:0
 
 - u_masked_oe_lower_mask: prim_subreg_ext
-**Description**
+</br>**Description**
    F[mask]: 31:16
 
 - u_masked_oe_upper_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[masked_oe_upper]: V(True)
    F[data]: 15:0
 
 - u_masked_oe_upper_mask: prim_subreg_ext
-**Description**
+</br>**Description**
    F[mask]: 31:16
 
 - u_intr_ctrl_en_rising: prim_subreg
-**Description**
+</br>**Description**
  R[intr_ctrl_en_rising]: V(False)
 
 - u_intr_ctrl_en_falling: prim_subreg
-**Description**
+</br>**Description**
  R[intr_ctrl_en_falling]: V(False)
 
 - u_intr_ctrl_en_lvlhigh: prim_subreg
-**Description**
+</br>**Description**
  R[intr_ctrl_en_lvlhigh]: V(False)
 
 - u_intr_ctrl_en_lvllow: prim_subreg
-**Description**
+</br>**Description**
  R[intr_ctrl_en_lvllow]: V(False)
 
 - u_ctrl_en_input_filter: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl_en_input_filter]: V(False)
 

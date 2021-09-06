@@ -55,7 +55,7 @@
 - P_SOF_COMB: ( ibServerSlave, mXvcServerTdo, rSof )
 - P_SOF_SEQ: ( clk )
 - P_SOF_SPLICE: ( mXvcServerTdo, rSof )
-**Description**
+</br>**Description**
  splice in the SOF bit 
 ## Instantiations
 

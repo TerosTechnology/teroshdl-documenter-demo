@@ -244,14 +244,14 @@ use xil_defaultlib.mylib.all;
 ## Instantiations
 
 - MUXrealNto1_synch_inst: work.MUXrealNto1_synch
-**Description**
+</br>**Description**
 clock domain synchronizer 
 
 - MUXrealWb_inst: work.MUXrealNto1_wb
-**Description**
+</br>**Description**
 inteface between AXI and MUX block
 
 - handle_comm: work.MUXreal_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

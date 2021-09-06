@@ -48,11 +48,11 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Extract QWLEN multiply operands from WLEN operand inputs based on chosen quarter word from the  instruction (operand_[a|b]_qw_sel). 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Shift the QWLEN multiply result into a WLEN word before accumulating using the shift amount  supplied in the instruction (pre_acc_shift_imm). 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

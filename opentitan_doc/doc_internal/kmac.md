@@ -163,13 +163,13 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////////////////////////////////  Connecting Register IF to logics // ////////////////////////////////////  Function-name N and Customization input string S 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Secret Key  Secret key is defined as external register. So the logic latches when SW  writes to KEY_SHARE0 , KEY_SHARE1 registers. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -178,7 +178,7 @@
 ## Instantiations
 
 - intr_kmac_done: prim_intr_hw
-**Description**
+</br>**Description**
  Hash process absorbed interrupt
 
 - intr_fifo_empty: prim_intr_hw

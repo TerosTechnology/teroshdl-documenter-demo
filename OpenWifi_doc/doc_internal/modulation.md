@@ -18,5 +18,5 @@
 ## Processes
 - unnamed: ( @* )
   - **Type:** always
-**Description**
+</br>**Description**
  combinatorial logic 

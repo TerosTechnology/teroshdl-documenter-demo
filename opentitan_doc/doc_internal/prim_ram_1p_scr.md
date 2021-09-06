@@ -115,14 +115,14 @@
   - **Type:** always_comb
 - p_wdata_buf: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////////  Registers // ///////////// 
 ## Instantiations
 
 - u_intg_err_macro_req: prim_buf
 - u_intg_err_data_scr: prim_buf
 - u_prim_ram_1p_adv: prim_ram_1p_adv
-**Description**
+</br>**Description**
 ////////////////
  Memory Macro //
 ////////////////

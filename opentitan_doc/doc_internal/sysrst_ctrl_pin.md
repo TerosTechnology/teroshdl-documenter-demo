@@ -63,7 +63,7 @@
 ## Instantiations
 
 - u_cfg_ac_present_i_pin: prim_flop_2sync
-**Description**
+</br>**Description**
  Synchronize between GPIO and cfg(24MHz)
  Use the raw input values here (not the inverted pass through values)
 

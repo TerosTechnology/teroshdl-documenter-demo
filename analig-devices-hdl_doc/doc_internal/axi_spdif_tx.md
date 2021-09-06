@@ -127,7 +127,7 @@
 ## Instantiations
 
 - TENC: tx_encoder
-**Description**
+</br>**Description**
  Transmit encoder
 
 - ctrlif: axi_ctrlif

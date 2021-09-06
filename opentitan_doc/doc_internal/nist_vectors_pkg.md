@@ -33,7 +33,7 @@
 ## Functions
 - vector2string <font id="function_arguments">(nist_vector_t vector)</font> <font id="function_return">return (string)</font>
 - get_vectors <font id="function_arguments">(ref nist_vector_t nist_vectors[])</font> <font id="function_return">return (void)</font>
-**Description**
+</br>**Description**
  new
 
 - get_num_vectors <font id="function_arguments">()</font> <font id="function_return">return (int)</font>

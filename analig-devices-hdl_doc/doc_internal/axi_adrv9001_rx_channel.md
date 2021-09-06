@@ -125,7 +125,7 @@
 ## Processes
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  input pipeline stage to protect logic if data comes from an async clock domain 
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always

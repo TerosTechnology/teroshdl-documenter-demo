@@ -22,31 +22,31 @@
 | axi_slave_t |      |             |
 ## Functions
 - get_logger <font id="function_arguments">(axi_slave : axi_slave_t) </font> <font id="function_return">return logger_t </font>
-**Description**
+</br>**Description**
  Get the logger used by the axi_slave
 
 - set_address_fifo_depth <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> depth : positive) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the maximum number address channel tokens that can be queued
 
 - set_write_response_fifo_depth <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> depth : positive) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the maximum number write responses that can be queued
 
 - set_address_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the address channel stall probability
 
 - set_data_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the data channel stall probability
 
 - set_write_response_stall_probability <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> probability : probability_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the write response stall probability
 
 - set_response_latency <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> min_latency,<br><span style="padding-left:20px"> max_latency : delay_length) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the response latency
 
  For a write slave this is the time between the last write data
@@ -62,13 +62,13 @@
  [min_latency, max_latency]
 
 - set_response_latency <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> latency : delay_length) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Short hand for set_response_latency when min and max are the same
 
 - enable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font>
 - disable_4kbyte_boundary_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font>
 - get_statistics <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t;<br><span style="padding-left:20px"> variable stat  : inout axi_statistics_t;<br><span style="padding-left:20px"> clear : boolean := false) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Get statistics object from axi slave
  Dynamically allocates new statistics object which must he deallocated when
  used
@@ -76,7 +76,7 @@
  if it is not null
 
 - enable_well_behaved_check <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_slave : axi_slave_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Check that bursts are well behaved, that is that data channel traffic is
  as compact as possible
  For write:

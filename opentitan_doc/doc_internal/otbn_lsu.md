@@ -58,7 +58,7 @@
 | BaseWordAddrW    | int  | prim_util_pkg::vbits(WLEN/8        |             |
 ## Functions
 - wmask_from_word_addr <font id="function_arguments">(logic [BaseWordAddrW-1:2])</font> <font id="function_return">return (logic [ExtWLEN-1:0])</font>
-**Description**
+</br>**Description**
  Produce a WLEN bit mask for 32-bit writes given the 32-bit word write address. This doesn't
  propagate X so a separate assertion must be used to check the input isn't X when a valid output
  is desired.

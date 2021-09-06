@@ -71,7 +71,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  state machine handling 
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
@@ -81,6 +81,6 @@
 
 - u_sync_fifo: prim_fifo_sync
 - u_intg_gen: tlul_cmd_intg_gen
-**Description**
+</br>**Description**
  outgoing tlul transactions
 

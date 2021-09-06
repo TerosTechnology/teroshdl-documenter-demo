@@ -157,7 +157,7 @@
 - u_prim_clock_mux2: prim_clock_mux2
 - u_prim_rst_n_mux2: prim_clock_mux2
 - dap: dmi_jtag
-**Description**
+</br>**Description**
  JTAG TAP
 
 - tl_adapter_device_mem: tlul_adapter_sram

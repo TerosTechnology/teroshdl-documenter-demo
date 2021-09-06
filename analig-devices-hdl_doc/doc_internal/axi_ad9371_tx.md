@@ -105,7 +105,7 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
@@ -114,6 +114,6 @@
 - i_tx_channel_2: axi_ad9371_tx_channel
 - i_tx_channel_3: axi_ad9371_tx_channel
 - i_up_dac_common: up_dac_common
-**Description**
+</br>**Description**
  dac common processor interface
 

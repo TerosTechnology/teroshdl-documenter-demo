@@ -214,15 +214,15 @@
   - **Type:** always_ff
 - p_rvalid: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Steer response back to the partition where this request originated. 
 - p_mutex: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Since the ready_i signal of the arbiter is statically set to 1'b0 above, we are always in a  "backpressure" situation, where the RR arbiter will automatically advance the internal RR state  to give the current winner max priority in subsequent cycles in order to keep the decision  stable. Rearbitration occurs once the winning agent deasserts its request. 
 - p_scmrbl_resp: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  steer back responses 
 - p_init_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -237,7 +237,7 @@
 - u_tlul_adapter_sram: tlul_adapter_sram
 - u_part_sel_idx: prim_arbiter_fixed
 - u_intr_operation_done: prim_intr_hw
-**Description**
+</br>**Description**
 ////////////////////////////////
  Interrupts and Alert Senders //
 ////////////////////////////////
@@ -246,7 +246,7 @@
 - u_otp_ctrl_lfsr_timer: otp_ctrl_lfsr_timer
 - u_edn_arb: prim_arbiter_tree
 - u_prim_edn_req: prim_edn_req
-**Description**
+</br>**Description**
  This synchronizes the data coming from EDN and stacks the
  32bit EDN words to achieve an internal entropy width of 64bit.
 

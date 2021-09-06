@@ -88,7 +88,7 @@
 ## Instantiations
 
 - u_otp_ctrl_ecc_reg: otp_ctrl_ecc_reg
-**Description**
+</br>**Description**
 //////////////
  Digest Reg //
 //////////////

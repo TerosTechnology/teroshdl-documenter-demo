@@ -110,19 +110,19 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 always_ff @(posedge clk_i or negedge rst_ni) begin   if (!rst_ni) begin     pb_freeze <= 0;   end else begin     if (pb_done && ~in_ep_acked_i) begin       pb_freeze <= 1;     end else if (~do_setup && in_ep_acked_i) begin       pb_freeze <= 0;     end   end end 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////////////////////  control transfer state machine // ////////////////////////////////// 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Check of upper put_addr bits needed because CRC will be sent (10 bytes total) 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

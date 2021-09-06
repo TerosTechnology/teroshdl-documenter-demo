@@ -90,17 +90,17 @@
 | processing_t |      |  (post-)processing core --  |
 ## Processes
 - rw_access: ( clk_i )
-**Description**
+</br>**Description**
  Read/Write Access ----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - array_intercon: ( processing.enable, osc_array_en_out )
-**Description**
+</br>**Description**
  RO enable chain -- 
 - neumann_debiasing_sync: ( clk_i )
-**Description**
+</br>**Description**
  John von Neumann De-Biasing ------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - neumann_debiasing_comb: ( debiasing )
-**Description**
+</br>**Description**
  Edge detector -- 
 - processing_core: ( clk_i )
-**Description**
+</br>**Description**
  Processing Core ------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

@@ -97,8 +97,8 @@
 | RegType |      |             |
 ## Processes
 - unnamed: ( axiClk )
-**Description**
+</br>**Description**
 ---------------------------------------  AXI Lite ---------------------------------------  Sync 
 - unnamed: ( r, axiClkRst, axiReadMaster, axiWriteMaster, ipopFifoDout, ipopFifoValid, iloopFifoDout, iloopFifoValid )
-**Description**
+</br>**Description**
  Async 

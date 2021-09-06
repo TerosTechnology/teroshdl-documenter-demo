@@ -69,14 +69,14 @@
 ## Instantiations
 
 - i_csc_R: ad_csc
-**Description**
+</br>**Description**
  red
 
 - i_csc_G: ad_csc
-**Description**
+</br>**Description**
  green
 
 - i_csc_B: ad_csc
-**Description**
+</br>**Description**
  blue
 

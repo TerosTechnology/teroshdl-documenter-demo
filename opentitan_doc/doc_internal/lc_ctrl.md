@@ -160,7 +160,7 @@
 - u_prim_rst_n_mux2: prim_clock_mux2
 - u_dmi_jtag: dmi_jtag
 - u_tap_tlul_host: tlul_adapter_host
-**Description**
+</br>**Description**
  DMI to TL-UL transducing
 
 - u_prim_lc_sync: prim_lc_sync
@@ -169,7 +169,7 @@
 - u_prim_flop_2sync_init: prim_flop_2sync
 - u_lc_ctrl_kmac_if: lc_ctrl_kmac_if
 - u_lc_ctrl_fsm: lc_ctrl_fsm
-**Description**
+</br>**Description**
 //////////
  LC FSM //
 //////////

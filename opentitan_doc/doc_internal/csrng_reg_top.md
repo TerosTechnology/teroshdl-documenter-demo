@@ -157,11 +157,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -171,257 +171,257 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_cs_cmd_req_done: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[cs_cmd_req_done]: 0:0
 
 - u_intr_state_cs_entropy_req: prim_subreg
-**Description**
+</br>**Description**
    F[cs_entropy_req]: 1:1
 
 - u_intr_state_cs_hw_inst_exc: prim_subreg
-**Description**
+</br>**Description**
    F[cs_hw_inst_exc]: 2:2
 
 - u_intr_state_cs_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[cs_fatal_err]: 3:3
 
 - u_intr_enable_cs_cmd_req_done: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[cs_cmd_req_done]: 0:0
 
 - u_intr_enable_cs_entropy_req: prim_subreg
-**Description**
+</br>**Description**
    F[cs_entropy_req]: 1:1
 
 - u_intr_enable_cs_hw_inst_exc: prim_subreg
-**Description**
+</br>**Description**
    F[cs_hw_inst_exc]: 2:2
 
 - u_intr_enable_cs_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[cs_fatal_err]: 3:3
 
 - u_intr_test_cs_cmd_req_done: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[cs_cmd_req_done]: 0:0
 
 - u_intr_test_cs_entropy_req: prim_subreg_ext
-**Description**
+</br>**Description**
    F[cs_entropy_req]: 1:1
 
 - u_intr_test_cs_hw_inst_exc: prim_subreg_ext
-**Description**
+</br>**Description**
    F[cs_hw_inst_exc]: 2:2
 
 - u_intr_test_cs_fatal_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[cs_fatal_err]: 3:3
 
 - u_alert_test_recov_alert: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
    F[recov_alert]: 0:0
 
 - u_alert_test_fatal_alert: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_alert]: 1:1
 
 - u_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[regwen]: V(False)
 
 - u_ctrl_enable: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl]: V(False)
    F[enable]: 3:0
 
 - u_ctrl_sw_app_enable: prim_subreg
-**Description**
+</br>**Description**
    F[sw_app_enable]: 7:4
 
 - u_ctrl_read_int_state: prim_subreg
-**Description**
+</br>**Description**
    F[read_int_state]: 11:8
 
 - u_cmd_req: prim_subreg
-**Description**
+</br>**Description**
  R[cmd_req]: V(False)
 
 - u_sw_cmd_sts_cmd_rdy: prim_subreg
-**Description**
+</br>**Description**
  R[sw_cmd_sts]: V(False)
    F[cmd_rdy]: 0:0
 
 - u_sw_cmd_sts_cmd_sts: prim_subreg
-**Description**
+</br>**Description**
    F[cmd_sts]: 1:1
 
 - u_genbits_vld_genbits_vld: prim_subreg_ext
-**Description**
+</br>**Description**
  R[genbits_vld]: V(True)
    F[genbits_vld]: 0:0
 
 - u_genbits_vld_genbits_fips: prim_subreg_ext
-**Description**
+</br>**Description**
    F[genbits_fips]: 1:1
 
 - u_genbits: prim_subreg_ext
-**Description**
+</br>**Description**
  R[genbits]: V(True)
 
 - u_int_state_num: prim_subreg
-**Description**
+</br>**Description**
  R[int_state_num]: V(False)
 
 - u_int_state_val: prim_subreg_ext
-**Description**
+</br>**Description**
  R[int_state_val]: V(True)
 
 - u_hw_exc_sts: prim_subreg
-**Description**
+</br>**Description**
  R[hw_exc_sts]: V(False)
 
 - u_recov_alert_sts_enable_field_alert: prim_subreg
-**Description**
+</br>**Description**
  R[recov_alert_sts]: V(False)
    F[enable_field_alert]: 0:0
 
 - u_recov_alert_sts_sw_app_enable_field_alert: prim_subreg
-**Description**
+</br>**Description**
    F[sw_app_enable_field_alert]: 1:1
 
 - u_recov_alert_sts_read_int_state_field_alert: prim_subreg
-**Description**
+</br>**Description**
    F[read_int_state_field_alert]: 2:2
 
 - u_err_code_sfifo_cmd_err: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
    F[sfifo_cmd_err]: 0:0
 
 - u_err_code_sfifo_genbits_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_genbits_err]: 1:1
 
 - u_err_code_sfifo_cmdreq_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_cmdreq_err]: 2:2
 
 - u_err_code_sfifo_rcstage_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_rcstage_err]: 3:3
 
 - u_err_code_sfifo_keyvrc_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_keyvrc_err]: 4:4
 
 - u_err_code_sfifo_updreq_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_updreq_err]: 5:5
 
 - u_err_code_sfifo_bencreq_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_bencreq_err]: 6:6
 
 - u_err_code_sfifo_bencack_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_bencack_err]: 7:7
 
 - u_err_code_sfifo_pdata_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_pdata_err]: 8:8
 
 - u_err_code_sfifo_final_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_final_err]: 9:9
 
 - u_err_code_sfifo_gbencack_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_gbencack_err]: 10:10
 
 - u_err_code_sfifo_grcstage_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_grcstage_err]: 11:11
 
 - u_err_code_sfifo_ggenreq_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_ggenreq_err]: 12:12
 
 - u_err_code_sfifo_gadstage_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_gadstage_err]: 13:13
 
 - u_err_code_sfifo_ggenbits_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_ggenbits_err]: 14:14
 
 - u_err_code_sfifo_blkenc_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_blkenc_err]: 15:15
 
 - u_err_code_cmd_stage_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[cmd_stage_sm_err]: 20:20
 
 - u_err_code_main_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[main_sm_err]: 21:21
 
 - u_err_code_drbg_gen_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[drbg_gen_sm_err]: 22:22
 
 - u_err_code_drbg_updbe_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[drbg_updbe_sm_err]: 23:23
 
 - u_err_code_drbg_updob_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[drbg_updob_sm_err]: 24:24
 
 - u_err_code_aes_cipher_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[aes_cipher_sm_err]: 25:25
 
 - u_err_code_fifo_write_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_write_err]: 28:28
 
 - u_err_code_fifo_read_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_read_err]: 29:29
 
 - u_err_code_fifo_state_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_state_err]: 30:30
 
 - u_err_code_test: prim_subreg
-**Description**
+</br>**Description**
  R[err_code_test]: V(False)
 
 - u_sel_tracking_sm: prim_subreg
-**Description**
+</br>**Description**
  R[sel_tracking_sm]: V(False)
 
 - u_tracking_sm_obs_tracking_sm_obs0: prim_subreg
-**Description**
+</br>**Description**
  R[tracking_sm_obs]: V(False)
    F[tracking_sm_obs0]: 7:0
 
 - u_tracking_sm_obs_tracking_sm_obs1: prim_subreg
-**Description**
+</br>**Description**
    F[tracking_sm_obs1]: 15:8
 
 - u_tracking_sm_obs_tracking_sm_obs2: prim_subreg
-**Description**
+</br>**Description**
    F[tracking_sm_obs2]: 23:16
 
 - u_tracking_sm_obs_tracking_sm_obs3: prim_subreg
-**Description**
+</br>**Description**
    F[tracking_sm_obs3]: 31:24
 

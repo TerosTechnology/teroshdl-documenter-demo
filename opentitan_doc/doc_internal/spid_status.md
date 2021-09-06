@@ -72,11 +72,11 @@
 ## Processes
 - unnamed: ( @(posedge sys_clk_i or negedge sys_rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
   BUSY 
 - unnamed: ( @(posedge sys_clk_i or negedge sys_rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
   rest of STATUS 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -84,11 +84,11 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge sys_rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Status in SCK 
 - unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 ///////////////  Data Return // ///////////////  Latch in clk_out 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -96,7 +96,7 @@
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  State Machine 
 - unnamed: (  )
   - **Type:** always_comb

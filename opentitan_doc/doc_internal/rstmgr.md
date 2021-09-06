@@ -85,7 +85,7 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge local_rst_n) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  first reset is a flag that blocks reset recording until first de-assertion 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -96,11 +96,11 @@
 - u_reg: rstmgr_reg_top
 - u_sync: prim_flop_2sync
 - u_lc_src: rstmgr_ctrl
-**Description**
+</br>**Description**
  lc reset sources
 
 - u_sys_src: rstmgr_ctrl
-**Description**
+</br>**Description**
  sys reset sources
 
 - u_aon_por: prim_flop_2sync

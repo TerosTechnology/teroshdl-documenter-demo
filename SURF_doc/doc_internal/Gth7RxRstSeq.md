@@ -122,7 +122,7 @@
 - unnamed: ( DRPCLK )
 - unnamed: ( DRPRDY, gtrxreset_ss, pmarstdone_fall_edge, state )
 - unnamed: ( DRPDO, DRPRDY, flag, gtrxreset_ss, original_rd_data, rd_data, state )
-**Description**
+</br>**Description**
  drives DRP interface and GTRXRESET_OUT 
 - unnamed: ( DRPCLK )
 ## Instantiations

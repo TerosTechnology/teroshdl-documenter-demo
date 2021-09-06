@@ -107,23 +107,23 @@
 ## Instantiations
 
 - U_Reg: surf.JesdTxReg
-**Description**
+</br>**Description**
 -------------------
  AXI-Lite registers
 -------------------
 
 - Synchronizer_sysref_INST: surf.Synchronizer
-**Description**
+</br>**Description**
 ---------------------------------------------------------
  SYSREF, SYNC, and LMFC
 ---------------------------------------------------------
  Synchronize SYSREF input to devClk_i
 
 - Synchronizer_nsync_INST: surf.SynchronizerVector
-**Description**
+</br>**Description**
  Synchronize nSync input to devClk_i
 
 - U_SysrefDly: surf.SlvDelay
-**Description**
+</br>**Description**
  Delay SYSREF input (for 1 to 256 c-c)
 

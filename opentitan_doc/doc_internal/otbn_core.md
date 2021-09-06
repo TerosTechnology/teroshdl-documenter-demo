@@ -151,29 +151,29 @@
 ## Instantiations
 
 - u_otbn_start_stop_control: otbn_start_stop_control
-**Description**
+</br>**Description**
  Start stop control start OTBN execution when requested and deals with any pre start or post
  stop actions.
 
 - u_otbn_instruction_fetch: otbn_instruction_fetch
-**Description**
+</br>**Description**
  Instruction fetch unit
 
 - u_otbn_decoder: otbn_decoder
-**Description**
+</br>**Description**
  Instruction decoder
 
 - u_otbn_controller: otbn_controller
-**Description**
+</br>**Description**
  Controller: coordinate between functional units, prepare their inputs (e.g. by muxing between
  operand sources), and post-process their outputs as needed.
 
 - u_otbn_lsu: otbn_lsu
-**Description**
+</br>**Description**
  Load store unit: read and write data from data memory
 
 - u_otbn_rf_base: otbn_rf_base
-**Description**
+</br>**Description**
  Base Instruction Subset =======================================================================
 
 - u_otbn_alu_base: otbn_alu_base

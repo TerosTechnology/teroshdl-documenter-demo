@@ -93,13 +93,13 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////////////////////  control transfer state machine // ////////////////////////////////// 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Check of upper put_addr bits needed because CRC will be sent (10 bytes total) 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

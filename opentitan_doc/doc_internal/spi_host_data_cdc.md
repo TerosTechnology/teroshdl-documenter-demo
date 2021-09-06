@@ -92,7 +92,7 @@
 ## Instantiations
 
 - u_tx_async_fifo: prim_fifo_async
-**Description**
+</br>**Description**
  TODO: Establish better sw_rst technique
  Given the lack of external clear sw_rst just drains the fifo over ~64 clocks
 

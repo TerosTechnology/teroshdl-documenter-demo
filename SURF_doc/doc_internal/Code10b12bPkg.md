@@ -37,7 +37,7 @@ use surf.TextUtilPkg.all;
 | Code5b6bArray | array (natural range <>) of Code5b6bType  |                                                                                                                                                                                                                       |
 ## Functions
 - toString <font id="function_arguments">(code : slv(9 downto 0);<br><span style="padding-left:20px"> k : sl) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Disparity types and helper functions
 -----------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ use surf.TextUtilPkg.all;
 - conv <font id="function_arguments">(d : DisparityType) </font> <font id="function_return">return sl </font>
 - getDisparity <font id="function_arguments">(vec : slv) </font> <font id="function_return">return integer </font>
 - encode10b12b <font id="function_arguments">( dataIn  : in  slv(9 downto 0);<br><span style="padding-left:20px"> dataKIn : in  sl;<br><span style="padding-left:20px"> dispIn  : in  sl;<br><span style="padding-left:20px"> dataOut : out slv(11 downto 0);<br><span style="padding-left:20px"> dispOut : out sl) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ("110101", -1, 1));
 
 - decode10b12b <font id="function_arguments">( dataIn    : in    slv(11 downto 0);<br><span style="padding-left:20px"> dispIn    : in    sl;<br><span style="padding-left:20px"> dataOut   : out   slv(9 downto 0);<br><span style="padding-left:20px"> dataKOut  : inout sl;<br><span style="padding-left:20px"> dispOut   : inout sl;<br><span style="padding-left:20px"> codeError : out   sl;<br><span style="padding-left:20px"> dispError : inout sl) </font> <font id="function_return">return ()</font>

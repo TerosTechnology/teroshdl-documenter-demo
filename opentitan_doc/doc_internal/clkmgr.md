@@ -63,7 +63,7 @@
 - i_fixed_cg: prim_clock_gating_sync
 - i_usb_48mhz_cg: prim_clock_gating_sync
 - i_roots_en_sync: prim_flop_2sync
-**Description**
+</br>**Description**
  Sync the OR back into clkmgr domain for feedback to pwrmgr.
  Since the signal is combo / converged on the other side, de-bounce
  the signal prior to output

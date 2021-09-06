@@ -45,28 +45,28 @@
 - push_msg_type <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> msg_type : msg_type_t;<br><span style="padding-left:20px"> logger : logger_t := com_logger) </font> <font id="function_return">return ()</font>
 - handle_message <font id="function_arguments">(variable msg_type : inout msg_type_t) </font> <font id="function_return">return ()</font>
 - delete <font id="function_arguments">(msg : inout msg_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Delete message. Memory allocated by the message is deallocated.
 
 - sender <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return actor_t </font>
-**Description**
+</br>**Description**
  Return sending actor of message if defined, null_actor otherwise
 
 - receiver <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return actor_t </font>
-**Description**
+</br>**Description**
  Return sending actor of message if defined, null_actor otherwise
 
 - message_type <font id="function_arguments">(msg : msg_t) </font> <font id="function_return">return msg_type_t </font>
-**Description**
+</br>**Description**
  Return message type of message without consuming it as pop_msg_type would
 
 - push <font id="function_arguments">(queue : queue_t;<br><span style="padding-left:20px"> variable value : inout msg_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Push message into a queue.
  The message is set to null to avoid duplicate ownership
 
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : integer) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Subprograms for pushing/popping data to/from a message. Data is popped
  from a message in the same order they were pushed (FIFO)
@@ -91,15 +91,15 @@
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : string) </font> <font id="function_return">return ()</font>
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : time) </font> <font id="function_return">return ()</font>
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout integer_vector_ptr_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  The value is set to null to avoid duplicate ownership
 
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout string_ptr_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  The value is set to null to avoid duplicate ownership
 
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> variable value : inout queue_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  The value is set to null to avoid duplicate ownership
 
 - push <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> value : boolean_vector) </font> <font id="function_return">return ()</font>

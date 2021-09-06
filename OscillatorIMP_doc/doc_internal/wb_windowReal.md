@@ -44,6 +44,6 @@
 | REG_RESET_COEFF | std_logic_vector | "10"  |             |
 ## Processes
 - write_bloc: ( clk, reset )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk, reset )

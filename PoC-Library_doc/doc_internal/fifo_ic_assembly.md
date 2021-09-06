@@ -88,6 +88,6 @@
 ## Instantiations
 
 - ram: ocram_sdp
-**Description**
+</br>**Description**
  Backing internal assembly memory
 

@@ -119,37 +119,37 @@
 | RdRegType |      |             |
 ## Functions
 - iAxiToSlv <font id="function_arguments">(din : AxiStreamMasterType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert record to slv
 
 - iSlvToAxi <font id="function_arguments">(din     : in    slv(FIFO_BITS_C-1 downto 0);<br><span style="padding-left:20px"> valid   : in    sl;<br><span style="padding-left:20px"> master  : inout AxiStreamMasterType;<br><span style="padding-left:20px"> byteCnt : inout integer) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to record
 
 ## Processes
 - wrComb: ( fifoReady, sAxisMaster, wrR )
-**Description**
+</br>**Description**
 -----------------------  Write Logic ----------------------- 
 - wrSeq: ( sAxisClk )
 - unnamed: ( fifoPFullVec, sAxisClk )
-**Description**
+</br>**Description**
 -----------------------  FIFO -----------------------  Pause generation 
 - rdComb: ( axisSlave, fifoDout, fifoValid, rdR )
-**Description**
+</br>**Description**
 -----------------------  Read Logic ----------------------- 
 - rdSeq: ( mAxisClk )
-**Description**
+</br>**Description**
  If fifo is asynchronous, must use async reset on rd side. 
 ## Instantiations
 
 - U_Fifo: surf.FifoCascade
 - Synchronizer_1: surf.Synchronizer
-**Description**
+</br>**Description**
  Synchronize master side tvalid back to slave side ctrl.idle
  This is a total hack
 
 - U_Pipe: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
 -----------------------
  Pipeline Logic
 -----------------------

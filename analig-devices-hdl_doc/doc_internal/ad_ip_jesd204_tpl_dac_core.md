@@ -101,10 +101,10 @@
 ## Instantiations
 
 - i_framer: ad_ip_jesd204_tpl_dac_framer
-**Description**
+</br>**Description**
  device interface
 
 - i_pn_gen: ad_ip_jesd204_tpl_dac_pn
-**Description**
+</br>**Description**
  PN generator
 

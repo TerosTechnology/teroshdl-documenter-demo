@@ -51,11 +51,11 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_edn_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  capture the data on edn domain since the ack interface  finishes before the source domain is able to see it 
 ## Instantiations
 
 - u_reqack: prim_sync_reqack
-**Description**
+</br>**Description**
 req/ack interface to edn
 

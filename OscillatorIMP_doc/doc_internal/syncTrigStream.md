@@ -98,6 +98,6 @@
 - sync_en: work.syncTrigStream_sync_bit
 - wb_inst: work.syncTrigStream_comm
 - handle_comm: work.syncTrigStream_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

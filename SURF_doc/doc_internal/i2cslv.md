@@ -137,7 +137,7 @@
 | i2cslv_reg_type  |                                                                                                                                                                                                                                                      |                                                                                                                                                                 |
 ## Functions
 - compaddr1stb <font id="function_arguments">( ibyte : std_logic_vector(7 downto 0);<br><span style="padding-left:20px">      -- I2C byte sr    : slvaddr_reg_type) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Subprograms
 ---------------------------------------------------------------------------
@@ -145,7 +145,7 @@
  address. The tba input determines if the slave is using a ten bit address.
 
 - compaddr2ndb <font id="function_arguments">( ibyte   : std_logic_vector(7 downto 0);<br><span style="padding-left:20px">               -- I2C byte slvaddr : std_logic_vector((I2CADDRLEN-1) downto 0)) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  purpose: Compares the 2nd byte of a ten bit address with the slave address
 
 ## Processes
@@ -154,7 +154,7 @@
 ## Instantiations
 
 - bootmsg: report_version
-**Description**
+</br>**Description**
  Boot message
  pragma translate_off
 

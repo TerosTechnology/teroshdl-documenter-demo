@@ -22,7 +22,7 @@
 | t_avalon_st_bfm_config |      |  Configuration record to be assigned in the test harness.  |
 ## Functions
 - init_avalon_st_if_signals <font id="function_arguments">( is_master        : boolean;<br><span style="padding-left:20px"> -- When true,<br><span style="padding-left:20px"> this BFM drives data signals channel_width    : natural;<br><span style="padding-left:20px"> data_width       : natural;<br><span style="padding-left:20px"> data_error_width : natural;<br><span style="padding-left:20px"> empty_width      : natural ) </font> <font id="function_return">return t_avalon_st_if </font>
-**Description**
+</br>**Description**
 ==========================================================================================
  BFM procedures
 ==========================================================================================
@@ -31,7 +31,7 @@
  All output signals are initialized to Z
 
 - avalon_st_transmit <font id="function_arguments">( constant channel_value    : in    std_logic_vector;<br><span style="padding-left:20px"> constant data_array       : in    t_slv_array;<br><span style="padding-left:20px"> constant msg              : in    string                 := "";<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   avalon_st_if     : inout t_avalon_st_if;<br><span style="padding-left:20px"> constant scope            : in    string                 := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel         := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_avalon_st_bfm_config := C_AVALON_ST_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  Avalon-ST Transmit
  BFM -> DUT
@@ -39,7 +39,7 @@
 
 - avalon_st_transmit <font id="function_arguments">( constant data_array       : in    t_slv_array;<br><span style="padding-left:20px"> constant msg              : in    string                 := "";<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   avalon_st_if     : inout t_avalon_st_if;<br><span style="padding-left:20px"> constant scope            : in    string                 := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel         := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_avalon_st_bfm_config := C_AVALON_ST_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
 - avalon_st_receive <font id="function_arguments">( variable channel_value    : out   std_logic_vector;<br><span style="padding-left:20px"> variable data_array       : out   t_slv_array;<br><span style="padding-left:20px"> constant msg              : in    string                 := "";<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   avalon_st_if     : inout t_avalon_st_if;<br><span style="padding-left:20px"> constant scope            : in    string                 := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel         := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_avalon_st_bfm_config := C_AVALON_ST_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call    : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  Avalon-ST Receive
  DUT -> BFM
@@ -47,7 +47,7 @@
 
 - avalon_st_receive <font id="function_arguments">( variable data_array       : out   t_slv_array;<br><span style="padding-left:20px"> constant msg              : in    string                 := "";<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   avalon_st_if     : inout t_avalon_st_if;<br><span style="padding-left:20px"> constant scope            : in    string                 := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel         := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_avalon_st_bfm_config := C_AVALON_ST_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call    : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
 - avalon_st_expect <font id="function_arguments">( constant channel_exp      : in    std_logic_vector;<br><span style="padding-left:20px"> constant data_exp         : in    t_slv_array;<br><span style="padding-left:20px"> constant msg              : in    string                 := "";<br><span style="padding-left:20px"> signal   clk              : in    std_logic;<br><span style="padding-left:20px"> signal   avalon_st_if     : inout t_avalon_st_if;<br><span style="padding-left:20px"> constant alert_level      : in    t_alert_level          := error;<br><span style="padding-left:20px"> constant scope            : in    string                 := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel     : in    t_msg_id_panel         := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config           : in    t_avalon_st_bfm_config := C_AVALON_ST_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  Avalon-ST Expect
 -------------------------------------------------------------------------------------------

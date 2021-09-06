@@ -59,11 +59,11 @@
 | adc_data_inv_s   | wire [47:0]    |                      |
 ## Functions
 - pn9 <font id="function_arguments">()</font> <font id="function_return">return ([47:0])</font>
-**Description**
+</br>**Description**
  prbs pn9 function
 
 - pn23 <font id="function_arguments">()</font> <font id="function_return">return ([47:0])</font>
-**Description**
+</br>**Description**
  prbs pn23 function
 
 ## Processes
@@ -72,6 +72,6 @@
 ## Instantiations
 
 - i_pnmon: ad_pnmon
-**Description**
+</br>**Description**
  pn oos & pn err
 

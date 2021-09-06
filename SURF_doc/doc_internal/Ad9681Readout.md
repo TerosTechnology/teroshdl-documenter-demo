@@ -105,14 +105,14 @@
 ## Processes
 - axilComb: ( adcFrameSync, axilR, axilReadMaster, axilRst, axilWriteMaster, curDelay,
                        debugDataTmp, debugDataValid, errorDetCount, lockedFallCount, lockedSync )
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------  AXIL Interface ----------------------------------------------------------------------------------------------- 
 - axilSeq: ( axilClk )
 - GLUE_COMB: ( adcData, invertSync, locked )
 ## Instantiations
 
 - U_DataFifo: surf.SynchronizerFifo
-**Description**
+</br>**Description**
  Single fifo to synchronize adc data to the Stream clock
 
 - U_DataFifoDebug: surf.SynchronizerFifo

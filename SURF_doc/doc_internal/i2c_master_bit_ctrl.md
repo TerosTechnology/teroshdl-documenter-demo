@@ -232,7 +232,7 @@
 ## Processes
 - gen_clken: ( clk, nReset )
 - nxt_state_decoder: ( clk, nReset, c_state, cmd )
-**Description**
+</br>**Description**
  generate statemachine 
 ## State machines
 

@@ -101,11 +101,11 @@
 ## Processes
 - axilComb: ( adcFrameSync, axilR, axilReadMaster, axilRst, axilWriteMaster, curDelayData,
                        curDelayFrame, debugData, debugDataValid, lockedFallCount, lockedSync, adcClkRst )
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------  AXIL Interface ----------------------------------------------------------------------------------------------- 
 - axilSeq: ( axilClk )
 - adcComb: ( adcData, adcDataValid, adcFrame, adcFrameValid, adcR, invertSync )
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------  ADC Bit Clocked Logic ----------------------------------------------------------------------------------------------- 
 - adcSeq: ( adcBitClkDiv4 )
 ## Instantiations
@@ -116,7 +116,7 @@
 - Synchronizer_2: surf.Synchronizer
 - AdcClk_I_Ibufds: IBUFDS
 - U_FRAME_DESERIALIZER: surf.Ad9249Deserializer
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Deserializers
 -----------------------------------------------------------------------------------------------

@@ -173,7 +173,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk_out) )
   - **Type:** always
-**Description**
+</br>**Description**
  adc path 'rate delay' given by axi_adc_decimate 
 - unnamed: ( @(posedge clk_out) )
   - **Type:** always
@@ -181,17 +181,17 @@
   - **Type:** always
 - unnamed: ( @(posedge clk_out) )
   - **Type:** always
-**Description**
+</br>**Description**
  downsampler logic analyzer 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk_out) )
   - **Type:** always
-**Description**
+</br>**Description**
  upsampler pattern generator 
 - unnamed: ( @(posedge clk_out) )
   - **Type:** always
@@ -203,6 +203,6 @@
 - i_trigger: axi_logic_analyzer_trigger
 - i_registers: axi_logic_analyzer_reg
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  axi interface
 

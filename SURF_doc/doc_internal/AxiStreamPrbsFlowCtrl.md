@@ -61,7 +61,7 @@
 | RegType |      |             |
 ## Processes
 - comb: ( pause, r, rst, rxMaster, txSlave )
-**Description**
+</br>**Description**
   (a <  b) 
 - seq: ( clk )
 ## Instantiations

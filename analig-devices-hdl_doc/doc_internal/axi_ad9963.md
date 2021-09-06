@@ -154,23 +154,23 @@
 ## Processes
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_dev_if: axi_ad9963_if
-**Description**
+</br>**Description**
  device interface
 
 - i_rx: axi_ad9963_rx
-**Description**
+</br>**Description**
  receive
 
 - i_tx: axi_ad9963_tx
-**Description**
+</br>**Description**
  transmit
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  axi interface
 

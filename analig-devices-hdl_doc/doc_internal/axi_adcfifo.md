@@ -128,7 +128,7 @@
 ## Instantiations
 
 - i_adc_if: axi_adcfifo_adc
-**Description**
+</br>**Description**
  instantiations
 
 - i_wr: axi_adcfifo_wr

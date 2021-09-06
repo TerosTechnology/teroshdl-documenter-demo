@@ -100,7 +100,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Alignment error counter  Resets upon good alignment 
 ## Instantiations
 

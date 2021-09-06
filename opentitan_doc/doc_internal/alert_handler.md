@@ -72,7 +72,7 @@
 - u_edn_req: prim_edn_req
 - u_ping_timer: alert_handler_ping_timer
 - u_class: alert_handler_class
-**Description**
+</br>**Description**
 /////////////////////////////////////
  Set alert cause bits and classify //
 /////////////////////////////////////

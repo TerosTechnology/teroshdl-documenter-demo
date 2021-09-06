@@ -40,6 +40,6 @@
 - reset_controller: work.soc_reset
 - clkgen: work.clock_generator
 - soc0: work.soc
-**Description**
+</br>**Description**
  Main SoC
 

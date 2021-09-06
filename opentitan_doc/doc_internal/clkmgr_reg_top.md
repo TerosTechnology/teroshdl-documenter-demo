@@ -75,11 +75,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -89,30 +89,30 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_clk_enables_clk_fixed_peri_en: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[clk_enables]: V(False)
    F[clk_fixed_peri_en]: 0:0
 
 - u_clk_enables_clk_usb_48mhz_peri_en: prim_subreg
-**Description**
+</br>**Description**
    F[clk_usb_48mhz_peri_en]: 1:1
 
 - u_clk_hints_clk_main_aes_hint: prim_subreg
-**Description**
+</br>**Description**
  R[clk_hints]: V(False)
    F[clk_main_aes_hint]: 0:0
 
 - u_clk_hints_clk_main_hmac_hint: prim_subreg
-**Description**
+</br>**Description**
    F[clk_main_hmac_hint]: 1:1
 
 - u_clk_hints_status_clk_main_aes_val: prim_subreg
-**Description**
+</br>**Description**
  R[clk_hints_status]: V(False)
    F[clk_main_aes_val]: 0:0
 
 - u_clk_hints_status_clk_main_hmac_val: prim_subreg
-**Description**
+</br>**Description**
    F[clk_main_hmac_val]: 1:1
 

@@ -75,7 +75,7 @@
 - prod_nb_iter <font id="function_arguments">(in_size,<br><span style="padding-left:20px"> axi_size,<br><span style="padding-left:20px"> nb_way: natural) </font> <font id="function_return">return natural </font>
 ## Processes
 - unnamed: ( ram_addr_s, incr_addr_s )
-**Description**
+</br>**Description**
  select ram addr part 
 - unnamed: ( cpu_clk_i )
 - unnamed: ( cpu_clk_i )

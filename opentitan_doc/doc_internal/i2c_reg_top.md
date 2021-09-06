@@ -255,11 +255,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -269,454 +269,454 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_fmt_watermark: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[fmt_watermark]: 0:0
 
 - u_intr_state_rx_watermark: prim_subreg
-**Description**
+</br>**Description**
    F[rx_watermark]: 1:1
 
 - u_intr_state_fmt_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[fmt_overflow]: 2:2
 
 - u_intr_state_rx_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[rx_overflow]: 3:3
 
 - u_intr_state_nak: prim_subreg
-**Description**
+</br>**Description**
    F[nak]: 4:4
 
 - u_intr_state_scl_interference: prim_subreg
-**Description**
+</br>**Description**
    F[scl_interference]: 5:5
 
 - u_intr_state_sda_interference: prim_subreg
-**Description**
+</br>**Description**
    F[sda_interference]: 6:6
 
 - u_intr_state_stretch_timeout: prim_subreg
-**Description**
+</br>**Description**
    F[stretch_timeout]: 7:7
 
 - u_intr_state_sda_unstable: prim_subreg
-**Description**
+</br>**Description**
    F[sda_unstable]: 8:8
 
 - u_intr_state_trans_complete: prim_subreg
-**Description**
+</br>**Description**
    F[trans_complete]: 9:9
 
 - u_intr_state_tx_empty: prim_subreg
-**Description**
+</br>**Description**
    F[tx_empty]: 10:10
 
 - u_intr_state_tx_nonempty: prim_subreg
-**Description**
+</br>**Description**
    F[tx_nonempty]: 11:11
 
 - u_intr_state_tx_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[tx_overflow]: 12:12
 
 - u_intr_state_acq_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[acq_overflow]: 13:13
 
 - u_intr_state_ack_stop: prim_subreg
-**Description**
+</br>**Description**
    F[ack_stop]: 14:14
 
 - u_intr_state_host_timeout: prim_subreg
-**Description**
+</br>**Description**
    F[host_timeout]: 15:15
 
 - u_intr_enable_fmt_watermark: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[fmt_watermark]: 0:0
 
 - u_intr_enable_rx_watermark: prim_subreg
-**Description**
+</br>**Description**
    F[rx_watermark]: 1:1
 
 - u_intr_enable_fmt_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[fmt_overflow]: 2:2
 
 - u_intr_enable_rx_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[rx_overflow]: 3:3
 
 - u_intr_enable_nak: prim_subreg
-**Description**
+</br>**Description**
    F[nak]: 4:4
 
 - u_intr_enable_scl_interference: prim_subreg
-**Description**
+</br>**Description**
    F[scl_interference]: 5:5
 
 - u_intr_enable_sda_interference: prim_subreg
-**Description**
+</br>**Description**
    F[sda_interference]: 6:6
 
 - u_intr_enable_stretch_timeout: prim_subreg
-**Description**
+</br>**Description**
    F[stretch_timeout]: 7:7
 
 - u_intr_enable_sda_unstable: prim_subreg
-**Description**
+</br>**Description**
    F[sda_unstable]: 8:8
 
 - u_intr_enable_trans_complete: prim_subreg
-**Description**
+</br>**Description**
    F[trans_complete]: 9:9
 
 - u_intr_enable_tx_empty: prim_subreg
-**Description**
+</br>**Description**
    F[tx_empty]: 10:10
 
 - u_intr_enable_tx_nonempty: prim_subreg
-**Description**
+</br>**Description**
    F[tx_nonempty]: 11:11
 
 - u_intr_enable_tx_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[tx_overflow]: 12:12
 
 - u_intr_enable_acq_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[acq_overflow]: 13:13
 
 - u_intr_enable_ack_stop: prim_subreg
-**Description**
+</br>**Description**
    F[ack_stop]: 14:14
 
 - u_intr_enable_host_timeout: prim_subreg
-**Description**
+</br>**Description**
    F[host_timeout]: 15:15
 
 - u_intr_test_fmt_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[fmt_watermark]: 0:0
 
 - u_intr_test_rx_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_watermark]: 1:1
 
 - u_intr_test_fmt_overflow: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fmt_overflow]: 2:2
 
 - u_intr_test_rx_overflow: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_overflow]: 3:3
 
 - u_intr_test_nak: prim_subreg_ext
-**Description**
+</br>**Description**
    F[nak]: 4:4
 
 - u_intr_test_scl_interference: prim_subreg_ext
-**Description**
+</br>**Description**
    F[scl_interference]: 5:5
 
 - u_intr_test_sda_interference: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sda_interference]: 6:6
 
 - u_intr_test_stretch_timeout: prim_subreg_ext
-**Description**
+</br>**Description**
    F[stretch_timeout]: 7:7
 
 - u_intr_test_sda_unstable: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sda_unstable]: 8:8
 
 - u_intr_test_trans_complete: prim_subreg_ext
-**Description**
+</br>**Description**
    F[trans_complete]: 9:9
 
 - u_intr_test_tx_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_empty]: 10:10
 
 - u_intr_test_tx_nonempty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_nonempty]: 11:11
 
 - u_intr_test_tx_overflow: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_overflow]: 12:12
 
 - u_intr_test_acq_overflow: prim_subreg_ext
-**Description**
+</br>**Description**
    F[acq_overflow]: 13:13
 
 - u_intr_test_ack_stop: prim_subreg_ext
-**Description**
+</br>**Description**
    F[ack_stop]: 14:14
 
 - u_intr_test_host_timeout: prim_subreg_ext
-**Description**
+</br>**Description**
    F[host_timeout]: 15:15
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_ctrl_enablehost: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl]: V(False)
    F[enablehost]: 0:0
 
 - u_ctrl_enabletarget: prim_subreg
-**Description**
+</br>**Description**
    F[enabletarget]: 1:1
 
 - u_ctrl_llpbk: prim_subreg
-**Description**
+</br>**Description**
    F[llpbk]: 2:2
 
 - u_status_fmtfull: prim_subreg_ext
-**Description**
+</br>**Description**
  R[status]: V(True)
    F[fmtfull]: 0:0
 
 - u_status_rxfull: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rxfull]: 1:1
 
 - u_status_fmtempty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fmtempty]: 2:2
 
 - u_status_hostidle: prim_subreg_ext
-**Description**
+</br>**Description**
    F[hostidle]: 3:3
 
 - u_status_targetidle: prim_subreg_ext
-**Description**
+</br>**Description**
    F[targetidle]: 4:4
 
 - u_status_rxempty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rxempty]: 5:5
 
 - u_status_txfull: prim_subreg_ext
-**Description**
+</br>**Description**
    F[txfull]: 6:6
 
 - u_status_acqfull: prim_subreg_ext
-**Description**
+</br>**Description**
    F[acqfull]: 7:7
 
 - u_status_txempty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[txempty]: 8:8
 
 - u_status_acqempty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[acqempty]: 9:9
 
 - u_rdata: prim_subreg_ext
-**Description**
+</br>**Description**
  R[rdata]: V(True)
 
 - u_fdata_fbyte: prim_subreg
-**Description**
+</br>**Description**
  R[fdata]: V(False)
    F[fbyte]: 7:0
 
 - u_fdata_start: prim_subreg
-**Description**
+</br>**Description**
    F[start]: 8:8
 
 - u_fdata_stop: prim_subreg
-**Description**
+</br>**Description**
    F[stop]: 9:9
 
 - u_fdata_read: prim_subreg
-**Description**
+</br>**Description**
    F[read]: 10:10
 
 - u_fdata_rcont: prim_subreg
-**Description**
+</br>**Description**
    F[rcont]: 11:11
 
 - u_fdata_nakok: prim_subreg
-**Description**
+</br>**Description**
    F[nakok]: 12:12
 
 - u_fifo_ctrl_rxrst: prim_subreg
-**Description**
+</br>**Description**
  R[fifo_ctrl]: V(False)
    F[rxrst]: 0:0
 
 - u_fifo_ctrl_fmtrst: prim_subreg
-**Description**
+</br>**Description**
    F[fmtrst]: 1:1
 
 - u_fifo_ctrl_rxilvl: prim_subreg
-**Description**
+</br>**Description**
    F[rxilvl]: 4:2
 
 - u_fifo_ctrl_fmtilvl: prim_subreg
-**Description**
+</br>**Description**
    F[fmtilvl]: 6:5
 
 - u_fifo_ctrl_acqrst: prim_subreg
-**Description**
+</br>**Description**
    F[acqrst]: 7:7
 
 - u_fifo_ctrl_txrst: prim_subreg
-**Description**
+</br>**Description**
    F[txrst]: 8:8
 
 - u_fifo_status_fmtlvl: prim_subreg_ext
-**Description**
+</br>**Description**
  R[fifo_status]: V(True)
    F[fmtlvl]: 6:0
 
 - u_fifo_status_txlvl: prim_subreg_ext
-**Description**
+</br>**Description**
    F[txlvl]: 14:8
 
 - u_fifo_status_rxlvl: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rxlvl]: 22:16
 
 - u_fifo_status_acqlvl: prim_subreg_ext
-**Description**
+</br>**Description**
    F[acqlvl]: 30:24
 
 - u_ovrd_txovrden: prim_subreg
-**Description**
+</br>**Description**
  R[ovrd]: V(False)
    F[txovrden]: 0:0
 
 - u_ovrd_sclval: prim_subreg
-**Description**
+</br>**Description**
    F[sclval]: 1:1
 
 - u_ovrd_sdaval: prim_subreg
-**Description**
+</br>**Description**
    F[sdaval]: 2:2
 
 - u_val_scl_rx: prim_subreg_ext
-**Description**
+</br>**Description**
  R[val]: V(True)
    F[scl_rx]: 15:0
 
 - u_val_sda_rx: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sda_rx]: 31:16
 
 - u_timing0_thigh: prim_subreg
-**Description**
+</br>**Description**
  R[timing0]: V(False)
    F[thigh]: 15:0
 
 - u_timing0_tlow: prim_subreg
-**Description**
+</br>**Description**
    F[tlow]: 31:16
 
 - u_timing1_t_r: prim_subreg
-**Description**
+</br>**Description**
  R[timing1]: V(False)
    F[t_r]: 15:0
 
 - u_timing1_t_f: prim_subreg
-**Description**
+</br>**Description**
    F[t_f]: 31:16
 
 - u_timing2_tsu_sta: prim_subreg
-**Description**
+</br>**Description**
  R[timing2]: V(False)
    F[tsu_sta]: 15:0
 
 - u_timing2_thd_sta: prim_subreg
-**Description**
+</br>**Description**
    F[thd_sta]: 31:16
 
 - u_timing3_tsu_dat: prim_subreg
-**Description**
+</br>**Description**
  R[timing3]: V(False)
    F[tsu_dat]: 15:0
 
 - u_timing3_thd_dat: prim_subreg
-**Description**
+</br>**Description**
    F[thd_dat]: 31:16
 
 - u_timing4_tsu_sto: prim_subreg
-**Description**
+</br>**Description**
  R[timing4]: V(False)
    F[tsu_sto]: 15:0
 
 - u_timing4_t_buf: prim_subreg
-**Description**
+</br>**Description**
    F[t_buf]: 31:16
 
 - u_timeout_ctrl_val: prim_subreg
-**Description**
+</br>**Description**
  R[timeout_ctrl]: V(False)
    F[val]: 30:0
 
 - u_timeout_ctrl_en: prim_subreg
-**Description**
+</br>**Description**
    F[en]: 31:31
 
 - u_target_id_address0: prim_subreg
-**Description**
+</br>**Description**
  R[target_id]: V(False)
    F[address0]: 6:0
 
 - u_target_id_mask0: prim_subreg
-**Description**
+</br>**Description**
    F[mask0]: 13:7
 
 - u_target_id_address1: prim_subreg
-**Description**
+</br>**Description**
    F[address1]: 20:14
 
 - u_target_id_mask1: prim_subreg
-**Description**
+</br>**Description**
    F[mask1]: 27:21
 
 - u_acqdata_abyte: prim_subreg_ext
-**Description**
+</br>**Description**
  R[acqdata]: V(True)
    F[abyte]: 7:0
 
 - u_acqdata_signal: prim_subreg_ext
-**Description**
+</br>**Description**
    F[signal]: 9:8
 
 - u_txdata: prim_subreg
-**Description**
+</br>**Description**
  R[txdata]: V(False)
 
 - u_stretch_ctrl_en_addr_tx: prim_subreg
-**Description**
+</br>**Description**
  R[stretch_ctrl]: V(False)
    F[en_addr_tx]: 0:0
 
 - u_stretch_ctrl_en_addr_acq: prim_subreg
-**Description**
+</br>**Description**
    F[en_addr_acq]: 1:1
 
 - u_stretch_ctrl_stop_tx: prim_subreg
-**Description**
+</br>**Description**
    F[stop_tx]: 2:2
 
 - u_stretch_ctrl_stop_acq: prim_subreg
-**Description**
+</br>**Description**
    F[stop_acq]: 3:3
 
 - u_host_timeout_ctrl: prim_subreg
-**Description**
+</br>**Description**
  R[host_timeout_ctrl]: V(False)
 

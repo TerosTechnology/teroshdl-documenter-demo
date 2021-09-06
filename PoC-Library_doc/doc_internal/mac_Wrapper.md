@@ -124,10 +124,10 @@
 
 - RX_DestMAC: PoC.mac_RX_DestMAC_Switch
 - TX_SrcMAC: PoC.mac_TX_SrcMAC_Prepender
-**Description**
+</br>**Description**
  Ethernet SourceMAC prepender
 
 - TX_DestMAC: PoC.mac_TX_DestMAC_Prepender
-**Description**
+</br>**Description**
  Ethernet SourceMAC prepender
 

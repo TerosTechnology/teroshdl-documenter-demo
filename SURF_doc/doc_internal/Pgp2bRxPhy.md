@@ -114,15 +114,15 @@
 | ST_READY_C | slv(2 downto 0) |  "101" |                       |
 ## Processes
 - unnamed: ( pgpRxClk, pgpRxClkRst )
-**Description**
+</br>**Description**
  State transition sync logic. 
 - unnamed: ( curState, stateCnt, ltsCnt, rxDetectLts, rxDetectLtsOk,
             rxDetectInvert, intRxPolarity, phyRxReady, dly1RxDecErr, dly1RxDispErr )
-**Description**
+</br>**Description**
  Link control state machine 
 - unnamed: ( pgpRxClk, pgpRxClkRst )
-**Description**
+</br>**Description**
  Receive data pipeline 
 - unnamed: ( pgpRxClk, pgpRxClkRst )
-**Description**
+</br>**Description**
  Link init ordered set detect 

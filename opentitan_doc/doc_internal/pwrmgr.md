@@ -104,13 +104,13 @@
 - u_esc_rx: prim_esc_receiver
 - u_reg: pwrmgr_reg_top
 - i_cdc: pwrmgr_cdc
-**Description**
+</br>**Description**
 //////////////////////////
 /  cdc handling
 //////////////////////////
 
 - i_slow_fsm: pwrmgr_slow_fsm
-**Description**
+</br>**Description**
 //////////////////////////
 /  clk_slow FSM
 //////////////////////////
@@ -118,7 +118,7 @@
 - i_fsm: pwrmgr_fsm
 - i_wake_info: pwrmgr_wake_info
 - intr_wakeup: prim_intr_hw
-**Description**
+</br>**Description**
 //////////////////////////
 /  Interrupts
 //////////////////////////

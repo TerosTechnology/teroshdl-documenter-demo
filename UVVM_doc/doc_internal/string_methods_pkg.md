@@ -4,12 +4,12 @@
 ## Functions
 - bitvis_assert <font id="function_arguments">( val        : boolean;<br><span style="padding-left:20px"> severeness : severity_level;<br><span style="padding-left:20px"> msg        : string;<br><span style="padding-left:20px"> scope      : string ) </font> <font id="function_return">return ()</font>
 - justify <font id="function_arguments">( val       : string;<br><span style="padding-left:20px"> width     : natural := 0;<br><span style="padding-left:20px"> justified : side := RIGHT;<br><span style="padding-left:20px"> format: t_format_string := AS_IS -- No defaults on 4 first param - to avoid ambiguity with std.textio ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  DEPRECATED.
  Function will be removed in future versions of UVVM-Util
 
 - justify <font id="function_arguments">( val             : string;<br><span style="padding-left:20px"> justified       : side;<br><span style="padding-left:20px"> width           : natural;<br><span style="padding-left:20px"> format_spaces   : t_format_spaces;<br><span style="padding-left:20px"> truncate        : t_truncate_string ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  DEPRECATED.
  Function will be removed in future versions of UVVM-Util
 
@@ -34,18 +34,18 @@
 - replace <font id="function_arguments">( val           : string;<br><span style="padding-left:20px"> target_char   : character;<br><span style="padding-left:20px"> exchange_char : character ) </font> <font id="function_return">return string </font>
 - replace <font id="function_arguments">( variable text_line : inout line;<br><span style="padding-left:20px"> target_char        : character;<br><span style="padding-left:20px"> exchange_char      : character ) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">( val             : boolean;<br><span style="padding-left:20px"> width           : natural;<br><span style="padding-left:20px"> justified       : side;<br><span style="padding-left:20px"> format_spaces   : t_format_spaces;<br><span style="padding-left:20px"> truncate        : t_truncate_string := DISALLOW_TRUNCATE ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 ========================================================
  Handle missing overloads from 'standard_additions'
 ========================================================
 
 - to_string <font id="function_arguments">( val       : boolean;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side        := right;<br><span style="padding-left:20px"> format: t_format_string := AS_IS ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  This function has been deprecated and will be removed in the next major release
  DEPRECATED
 
 - to_string <font id="function_arguments">( val       : integer;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side            := right;<br><span style="padding-left:20px"> format    : t_format_string := AS_IS ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  This function has been deprecated and will be removed in the next major release
  DEPRECATED
 
@@ -58,7 +58,7 @@
 - to_string <font id="function_arguments">( val     : real_vector ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val     : time_vector ) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">( val       : t_alert_level;<br><span style="padding-left:20px"> width     : natural;<br><span style="padding-left:20px"> justified : side    := right ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 ========================================================
  Handle types defined at lower levels
 ========================================================
@@ -71,11 +71,11 @@
 - ascii_to_char <font id="function_arguments">( ascii_pos   : integer range 0 to 255;<br><span style="padding-left:20px"> ascii_allow : t_ascii_allow := ALLOW_ALL ) </font> <font id="function_return">return character </font>
 - char_to_ascii <font id="function_arguments">( char   : character ) </font> <font id="function_return">return integer </font>
 - to_string <font id="function_arguments">( val : string ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  return string with only valid ascii characters
 
 - add_msg_delimiter <font id="function_arguments">( msg : string ) </font> <font id="function_return">return string </font>
 - timestamp_header <font id="function_arguments">( value : time;<br><span style="padding-left:20px"> txt   : string) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  Returns a string with a timestamp and a text. Used in report headers
 

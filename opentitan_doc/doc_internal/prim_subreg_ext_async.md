@@ -46,7 +46,7 @@
 ## Instantiations
 
 - u_reg_cdc: prim_subreg_cdc
-**Description**
+</br>**Description**
  Capture both data and write-enable
  write enable is needed to determine whether qe or qre should be generated
  in the desitnation domain.

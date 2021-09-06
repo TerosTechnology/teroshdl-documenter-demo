@@ -79,20 +79,20 @@
 ## Instantiations
 
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_XauiGtyUltraScaleCore: XauiGtyUltraScale156p25MHz10GigECore
-**Description**
+</br>**Description**
 ------------------
  10 GigE XAUI Core
 ------------------
 
 - RstSync_Inst: surf.RstSync
 - U_XauiReg: surf.XauiReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

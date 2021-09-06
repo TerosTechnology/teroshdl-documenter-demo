@@ -73,25 +73,25 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_wr_i or negedge rst_wr_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  gray-coded version 
 - unnamed: ( @(posedge clk_rd_i or negedge rst_rd_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_rd_i or negedge rst_rd_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  gray-coded version 
 - unnamed: ( @(posedge clk_wr_i or negedge rst_wr_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Registered version of synced read pointer 
 ## Instantiations
 
 - sync_wptr: prim_flop_2sync
-**Description**
+</br>**Description**
  sync gray-coded pointer to read clk
 
 - sync_rptr: prim_flop_2sync
-**Description**
+</br>**Description**
  sync gray-coded pointer to write clk
 

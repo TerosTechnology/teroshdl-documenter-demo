@@ -76,15 +76,15 @@
 
 - logic_inst1: work.mean_vector_axi_logic
 - nb_iter_syn: work.mva_synchronizer_vector
-**Description**
+</br>**Description**
  synchro --
 
 - shift_syn: work.mva_synchronizer_vector
 - wb_shift_inst: work.wb_mean_vector_axi
-**Description**
+</br>**Description**
 -----------
 
 - handle_comm: work.mean_vector_axi_handcomm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

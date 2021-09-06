@@ -96,7 +96,7 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pll reset 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -111,7 +111,7 @@
 ## Instantiations
 
 - i_altlvds_rx: altlvds_rx
-**Description**
+</br>**Description**
  instantiations
 
 - i_altlvds_tx: altlvds_tx

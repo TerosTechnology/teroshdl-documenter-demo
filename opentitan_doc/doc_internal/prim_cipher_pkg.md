@@ -46,43 +46,43 @@
 | PRESENT_PERM64_INV       | logic [63:0][5:0] | {<br><span style="padding-left:20px">6'd63,<br><span style="padding-left:20px"> 6'd59,<br><span style="padding-left:20px"> 6'd55,<br><span style="padding-left:20px"> 6'd51,<br><span style="padding-left:20px"> |                                                                                                                     |
 ## Functions
 - prince_shiftrows_32bit <font id="function_arguments">(logic [31:0]      state_)</font> <font id="function_return">return (logic [31:0])</font>
-**Description**
+</br>**Description**
  nibble shifts
 
 - prince_shiftrows_64bit <font id="function_arguments">(logic [63:0]      state_)</font> <font id="function_return">return (logic [63:0])</font>
 - prince_nibble_red16 <font id="function_arguments">(logic [15:0])</font> <font id="function_return">return (logic [3:0])</font>
-**Description**
+</br>**Description**
  XOR reduction of four nibbles in a 16bit subvector
 
 - prince_mult_prime_32bit <font id="function_arguments">(logic [31:0] state_in)</font> <font id="function_return">return (logic [31:0])</font>
-**Description**
+</br>**Description**
  M prime multiplication
 
 - prince_mult_prime_64bit <font id="function_arguments">(logic [63:0] state_in)</font> <font id="function_return">return (logic [63:0])</font>
-**Description**
+</br>**Description**
  M prime multiplication
 
 - present_update_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font>
-**Description**
+</br>**Description**
  forward key schedule
 
 - present_update_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font>
 - present_update_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font>
 - present_inv_update_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font>
-**Description**
+</br>**Description**
  inverse key schedule
 
 - present_inv_update_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font>
 - present_inv_update_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font>
 - present_get_dec_key64 <font id="function_arguments">(logic [63:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [63:0])</font>
-**Description**
+</br>**Description**
  these functions can be used to derive the DEC key from the ENC key by
  stepping the key by the correct number of rounds using the keyschedule functions above.
 
 - present_get_dec_key80 <font id="function_arguments">(logic [79:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [79:0])</font>
 - present_get_dec_key128 <font id="function_arguments">(logic [127:0] key_in,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [127:0])</font>
 - sbox4_8bit <font id="function_arguments">(logic [7:0] state_in,<br><span style="padding-left:20px"> logic [15:0][3:0])</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
 ///////////////////////
  Common Subfunctions //
 ///////////////////////

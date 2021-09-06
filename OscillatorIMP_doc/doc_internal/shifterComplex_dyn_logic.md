@@ -68,5 +68,5 @@
 | rest_array |      |             |
 ## Processes
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  store data before shift 

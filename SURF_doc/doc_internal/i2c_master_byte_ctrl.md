@@ -140,10 +140,10 @@
 | I2C_CMD_WRITE | std_logic_vector(3 downto 0) |  "1000" |                                     |
 ## Processes
 - shift_register: ( clk, nReset )
-**Description**
+</br>**Description**
  generate shift register 
 - data_cnt: ( clk, nReset )
-**Description**
+</br>**Description**
  generate data-counter 
 ## Instantiations
 

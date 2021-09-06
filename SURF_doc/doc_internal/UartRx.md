@@ -60,7 +60,7 @@
 | RegType   |                                                                                                                                                                                                                                                                                                                        |             |
 ## Processes
 - comb: ( baudClkEn, r, rdReady, rst, rxFall, rxSync )
-**Description**
+</br>**Description**
  [out] 
 - sync: ( clk )
 ## Instantiations

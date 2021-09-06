@@ -243,7 +243,7 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  calibration (offset & gain only) 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
@@ -257,13 +257,13 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync register(s) 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  delay register(s) 
 - unnamed: ( @(negedge up_clk) )
   - **Type:** always
@@ -271,19 +271,19 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  spi register(s) 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  scratch register(s) 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  calibration at receive clock 
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
@@ -291,7 +291,7 @@
   - **Type:** always
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sysref-control at receive clock 
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
@@ -305,12 +305,12 @@
 
 - i_calcor: axi_fmcadc5_sync_calcor
 - i_obufds_rx_sync_1: OBUFDS
-**Description**
+</br>**Description**
  sync buffers
 
 - i_obufds_rx_sync_0: OBUFDS
 - i_rx_sysref: ad_data_out
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up == micro("u") processor
 

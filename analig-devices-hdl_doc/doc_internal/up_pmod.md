@@ -80,19 +80,19 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor write interface 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_adc_rst_reg: ad_rst
-**Description**
+</br>**Description**
  resets
 
 - i_pmod_xfer_status: up_xfer_status
-**Description**
+</br>**Description**
  adc control & status
 

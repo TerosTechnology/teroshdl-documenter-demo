@@ -150,7 +150,7 @@
 - u_cmd_cdc: spi_host_command_cdc
 - u_window: spi_host_window
 - u_data_cdc: spi_host_data_cdc
-**Description**
+</br>**Description**
  Note on ByteOrder and ByteSwapping.
  ByteOrder == 1 is for Little-Endian transmission (i.e. LSB first), which is acheived by default
  with the prim_packer_fifo implementation.  Thus we have to swap if Big-Endian transmission

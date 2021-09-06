@@ -49,19 +49,19 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_root_n) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  filter the POR 
 - unnamed: ( @(posedge clk_i or negedge rst_clean_n) )
   - **Type:** always_ff
 ## Instantiations
 
 - rst_sync: prim_flop_2sync
-**Description**
+</br>**Description**
  sync the POR
 
 - u_rst_root_mux: prim_clock_mux2
 - u_rst_clean_mux: prim_clock_mux2
-**Description**
+</br>**Description**
  The stable is a vote of all filter stages.
  Only when all the stages agree is the reset considered stable and count allowed.
 

@@ -214,9 +214,9 @@
            downcnt_done,
            same_bank_row, last_write_r,
            user_cmd_valid, user_write, user_wdata_valid )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  FSM --------------------------------------------------------------------------- 
 - unnamed: ( sd_a_sel, reset_dll, row_addr, col_addr, precharge_all )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  SD_BA_SEL_ADDR ---------------------------------------------------------------------------  Registers --------------------------------------------------------------------------- 

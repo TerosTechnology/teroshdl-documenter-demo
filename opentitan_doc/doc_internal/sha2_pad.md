@@ -60,9 +60,9 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Next state 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  tx_count 

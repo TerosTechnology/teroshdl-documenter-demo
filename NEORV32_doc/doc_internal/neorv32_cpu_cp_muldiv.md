@@ -115,10 +115,10 @@
 ## Processes
 - coprocessor_ctrl: ( rstn_i, clk_i )
 - mul_update: ( mul_product, mul_sign_cycle, mul_p_sext, rs1_is_signed, rs1_i )
-**Description**
+</br>**Description**
  do another addition (bit-serial) -- 
 - operation_result: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Data Output ----------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 ## State machines
 

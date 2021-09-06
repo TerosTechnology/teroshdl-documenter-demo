@@ -93,13 +93,13 @@ use surf.TextUtilPkg.all;
 - toBlockDisparityType <font id="function_arguments">(d : slv(1 downto 0)) </font> <font id="function_return">return BlockDisparityType </font>
 - getDisparity <font id="function_arguments">(vec       : slv) </font> <font id="function_return">return BlockDisparityType </font>
 - toString <font id="function_arguments">(code : slv(11 downto 0);<br><span style="padding-left:20px"> k : sl) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  Convert a 12 bit code into "D/K.x.y" form
 
 - makeEncode7b8bTable <font id="function_arguments">(a : slv8Array(0 to 127)) </font> <font id="function_return">return Encode7b8bArray </font>
 - makeEncode5b6bTable <font id="function_arguments">(a : slv6Array(0 to 31)) </font> <font id="function_return">return Encode5b6bArray </font>
 - encode12b14b <font id="function_arguments">( constant CODES_C : in    EncodeTableType;<br><span style="padding-left:20px"> dataIn           : in    slv(11 downto 0);<br><span style="padding-left:20px"> dataKIn          : in    sl;<br><span style="padding-left:20px"> dispIn           : in    slv(1 downto 0);<br><span style="padding-left:20px"> dataOut          : inout slv(13 downto 0);<br><span style="padding-left:20px"> dispOut          : inout slv(1 downto 0);<br><span style="padding-left:20px"> invalidK         : out   sl) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Procedures for encoding and decoding
 -----------------------------------------------------------------------------------------------

@@ -83,7 +83,7 @@
 ## Instantiations
 
 - u_cmd_intg_gen: tlul_cmd_intg_gen
-**Description**
+</br>**Description**
  TODO #7966 disable data intgrity overwrite once dv support available
 
 - u_rsp_chk: tlul_rsp_intg_chk

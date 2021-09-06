@@ -115,7 +115,7 @@
 
 - U_Pgp3Core_1: surf.Pgp3Core
 - U_Pgp3GtyUsIpWrapper_1: surf.Pgp3GtyUsIpWrapper
-**Description**
+</br>**Description**
  [out]
 ------------------------
  Wrapper for GTH IP core

@@ -23,7 +23,7 @@
 - receive_reply <font id="function_arguments">( signal net          : inout network_t;<br><span style="padding-left:20px"> constant receiver   : in    actor_t;<br><span style="padding-left:20px"> constant request_id : in    message_id_t;<br><span style="padding-left:20px"> variable message    : inout message_ptr_t;<br><span style="padding-left:20px"> constant timeout    : in    time := max_timeout_c) </font> <font id="function_return">return ()</font>
 - receive_reply <font id="function_arguments">( signal net            : inout network_t;<br><span style="padding-left:20px"> constant receiver     : in    actor_t;<br><span style="padding-left:20px"> constant request_id   : in    message_id_t;<br><span style="padding-left:20px"> variable positive_ack : out   boolean;<br><span style="padding-left:20px"> variable status       : out   com_status_t;<br><span style="padding-left:20px"> constant timeout      : in    time := max_timeout_c) </font> <font id="function_return">return ()</font>
 - send <font id="function_arguments">( signal net        : inout network_t;<br><span style="padding-left:20px"> constant sender   : in    actor_t;<br><span style="padding-left:20px"> constant receiver : in    actor_t;<br><span style="padding-left:20px"> constant payload  : in    string := "";<br><span style="padding-left:20px"> variable receipt  : out   receipt_t;<br><span style="padding-left:20px"> constant timeout  : in    time   := max_timeout_c) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Secondary send and receive related subprograms
 ---------------------------------------------------------------------------
@@ -41,7 +41,7 @@
 - acknowledge <font id="function_arguments">( signal net            : inout network_t;<br><span style="padding-left:20px"> constant receiver     : in    actor_t;<br><span style="padding-left:20px"> constant request_id   : in    message_id_t;<br><span style="padding-left:20px"> constant positive_ack : in    boolean := true;<br><span style="padding-left:20px"> variable receipt      : out   receipt_t;<br><span style="padding-left:20px"> constant timeout      : in    time    := max_timeout_c) </font> <font id="function_return">return ()</font>
 - wait_for_messages <font id="function_arguments">( signal net               : in  network_t;<br><span style="padding-left:20px"> constant receiver        : in  actor_t;<br><span style="padding-left:20px"> variable status          : out com_status_t;<br><span style="padding-left:20px"> constant receive_timeout : in  time := max_timeout_c) </font> <font id="function_return">return ()</font>
 - subscribe <font id="function_arguments">( constant subscriber : in  actor_t;<br><span style="padding-left:20px"> constant publisher  : in  actor_t;<br><span style="padding-left:20px"> variable status     : out com_status_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Receive related subprograms
 ---------------------------------------------------------------------------

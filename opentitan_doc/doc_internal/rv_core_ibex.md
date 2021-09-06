@@ -168,7 +168,7 @@
 - tl_adapter_host_d_ibex: tlul_adapter_host
 - fifo_d: tlul_fifo_sync
 - u_illegal_preprocessor_branch_taken: illegal_preprocessor_branch_taken
-**Description**
+</br>**Description**
  Induce a compilation error by instantiating a non-existent module.
 
 - ibex_tracer_i: ibex_tracer

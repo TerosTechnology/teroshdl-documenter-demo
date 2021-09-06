@@ -44,5 +44,5 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  clearing the configure enable always has higher priority than setting 

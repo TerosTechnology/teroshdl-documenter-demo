@@ -94,15 +94,15 @@
 | PRBS_P20 |      | 3     |             |
 ## Functions
 - brfn <font id="function_arguments">()</font> <font id="function_return">return ([11:0])</font>
-**Description**
+</br>**Description**
  bit reversal function
 
 - pn0fn <font id="function_arguments">()</font> <font id="function_return">return ([15:0])</font>
-**Description**
+</br>**Description**
  device-specific prbs function
 
 - pn1fn <font id="function_arguments">()</font> <font id="function_return">return ([23:0])</font>
-**Description**
+</br>**Description**
  standard prbs functions
 
 ## Processes
@@ -112,11 +112,11 @@
   - **Type:** always
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pn mux 
 ## Instantiations
 
 - i_pnmon: ad_pnmon
-**Description**
+</br>**Description**
  pn oos & pn err
 

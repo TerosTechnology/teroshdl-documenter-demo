@@ -150,18 +150,18 @@
 ## Instantiations
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  axi interface
 
 - i_up: up_hdmi_tx
-**Description**
+</br>**Description**
  processor interface
 
 - i_vdma: axi_hdmi_tx_vdma
-**Description**
+</br>**Description**
  vdma interface
 
 - i_tx_core: axi_hdmi_tx_core
-**Description**
+</br>**Description**
  hdmi interface
 

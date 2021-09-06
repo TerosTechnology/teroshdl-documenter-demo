@@ -216,7 +216,7 @@
 					BCRcv_RequestReceived, BCRcv_Error, BCRcv_SenderMACAddress_Data, BCRcv_SenderIPv4Address_Data, BCRcv_TargetIPv4Address_Data,
 					IPPool_PoolResult, IPPool_IPv4Address_nxt,
 					UCRsp_Address_rst, UCRsp_SenderMACAddress_nxt, UCRsp_SenderIPv4Address_nxt, UCRsp_TargetMACAddress_nxt, UCRsp_TargetIPv4Address_nxt, UCRsp_Complete )
-**Description**
+</br>**Description**
  sequencer INTERFACE_MACAddress_Data 
 - unnamed: ( Clock )
 - unnamed: ( FSMCache_State,
@@ -226,12 +226,12 @@
 					ARPCache_Status, ARPCache_CacheResult, ARPCache_IPv4Address_rst, ARPCache_IPv4Address_nxt, ARPCache_MACAddress_Data, ARPCache_NewMACAddress_nxt, ARPCache_NewIPv4Address_nxt,
 					BCReq_Address_rst, BCReq_SenderMACAddress_nxt, BCReq_SenderIPv4Address_nxt, BCReq_TargetMACAddress_nxt, BCReq_TargetIPv4Address_nxt, BCReq_Complete )
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  ARP request expiration timer 
 ## Instantiations
 
 - MACSeq1: PoC.misc_Sequencer
-**Description**
+</br>**Description**
  =============================================================================
  Responder Path
  =============================================================================
@@ -240,7 +240,7 @@
 - IPPool: PoC.arp_IPPool
 - UCRsp: PoC.arp_UniCast_Responder
 - MACSeq2: PoC.misc_Sequencer
-**Description**
+</br>**Description**
  =============================================================================
  ARPCache Path
  =============================================================================

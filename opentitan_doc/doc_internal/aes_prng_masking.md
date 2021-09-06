@@ -76,6 +76,6 @@
 ## Instantiations
 
 - u_prim_packer_fifo: prim_packer_fifo
-**Description**
+</br>**Description**
  Upsizing of entropy input to correct width for PRNG reseeding.
 

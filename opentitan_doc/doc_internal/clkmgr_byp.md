@@ -46,6 +46,6 @@
 - u_clk_byp_req: prim_lc_sender
 - u_rcv: prim_lc_sync
 - u_send: prim_lc_sender
-**Description**
+</br>**Description**
  only ack the lc_ctrl if it made a request.
 

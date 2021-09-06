@@ -15,11 +15,11 @@
 | VALID_NEXT_STATES | dec_lc_state_e |  associative array cannot declare parameter here, so we used const instead  |
 ## Functions
 - is_test_unlocked_state <font id="function_arguments">(dec_lc_state_e curr_state,<br><span style="padding-left:20px"> int first,<br><span style="padding-left:20px"> int)</font> <font id="function_return">return (bit)</font>
-**Description**
+</br>**Description**
  Checks whether the current state is a test unlocked state within the given index range.
 
 - is_test_locked_state <font id="function_arguments">(dec_lc_state_e curr_state,<br><span style="padding-left:20px"> int first,<br><span style="padding-left:20px"> int)</font> <font id="function_return">return (bit)</font>
-**Description**
+</br>**Description**
  Checks whether the current state is a test locked state within the given index range.
 
 - dec_lc_state <font id="function_arguments">(lc_state_e curr_state)</font> <font id="function_return">return (dec_lc_state_e)</font>

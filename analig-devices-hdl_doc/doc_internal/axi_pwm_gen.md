@@ -133,7 +133,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  offset counter 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

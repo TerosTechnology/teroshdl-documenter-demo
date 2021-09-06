@@ -100,5 +100,5 @@
 | d_enable       | std_logic_vector(3 downto 0)  |             |
 ## Processes
 - CDAT: ( clk, rst )
-**Description**
+</br>**Description**
  capture data register 

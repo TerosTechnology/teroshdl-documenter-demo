@@ -76,17 +76,17 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  flop the desired period 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  phase align to the first sync pulse until another load_config 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  a free running counter 
 - unnamed: ( @ (posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  generate pulse with a specified width 

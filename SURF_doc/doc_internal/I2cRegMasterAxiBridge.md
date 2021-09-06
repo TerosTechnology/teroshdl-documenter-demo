@@ -65,5 +65,5 @@
 ## Processes
 - comb: ( axiReadMaster, axiRst, axiWriteMaster, i2cRegMasterOut, r )
 - seq: ( axiClk )
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------  Sequential Process ----------------------------------------------------------------------------------------------- 

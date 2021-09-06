@@ -86,5 +86,5 @@
 - div_step <font id="function_arguments">(av : residue;<br><span style="padding-left:20px"> dv : divisor) </font> <font id="function_return">return residue </font>
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Registers 

@@ -191,36 +191,36 @@
 ## Instantiations
 
 - u_state_regs: prim_flop
-**Description**
+</br>**Description**
  This primitive is used to place a size-only constraint on the
  flops in order to prevent FSM state encoding optimizations.
 
 - u_prim_fifo_sync_genreq: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  input request fifo for staging gen request
 --------------------------------------------
 
 - u_prim_fifo_sync_adstage: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  fifo to stage key, v, rc, and adata, waiting for update block to ack
 --------------------------------------------
 
 - u_prim_fifo_sync_bencack: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  block_encrypt response fifo from block encrypt
 --------------------------------------------
 
 - u_prim_fifo_sync_rcstage: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  fifo to stage rc, waiting for update block to ack
 --------------------------------------------
 
 - u_prim_fifo_sync_genbits: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  final cmd block processing
 --------------------------------------------

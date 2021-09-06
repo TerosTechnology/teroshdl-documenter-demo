@@ -123,54 +123,54 @@
 | normalizer_t       |                                                       |  normalizer interface (normalization & rounding and int-to-float) --  |
 ## Processes
 - number_classifier: ( op_data )
-**Description**
+</br>**Description**
  flush mantissa to zero if subnormal  Number Classifier ----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - control_engine_fsm: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Co-Processor Control Engine ------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - float_comparator: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Floating-Point Comparator --------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - float_comparison: ( fpu_operands, ctrl_i, comp_equal_ff, comp_less_ff )
-**Description**
+</br>**Description**
  Comparison (FEQ/FLT/FLE) ---------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - min_max_select: ( fpu_operands, comp_less_ff, fu_compare, ctrl_i )
-**Description**
+</br>**Description**
  does not generate exceptions here, but normalizer can generate exceptions  Min/Max Select (FMIN/FMAX) -------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - sign_injector: ( ctrl_i, fpu_operands )
-**Description**
+</br>**Description**
  Sign-Injection (FSGNJ) -----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - convert_i2f: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Convert: [unsigned] Integer to Float (FCVT.W.S) ----------------------------------------  ------------------------------------------------------------------------------------------- 
 - multiplier_core: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Multiplier Core (FMUL) -----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - multiplier_class_core: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  inexcat: not possible here  result class --  
 - adder_subtractor_core: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Adder/Subtractor Core (FADD, FSUB) -----------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - adder_subtractor_class_core: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  result class --  
 - normalizer_input_select: ( funct_ff, addsub, multiplier, fu_conv_i2f )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  FPU Core - Normalize & Round  ****************************************************************************************************************************  Normalizer Input -----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - output_gate: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  FPU Core - Result  ****************************************************************************************************************************  Result Output to CPU Pipeline ----------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 ## Instantiations
 
 - neorv32_cpu_cp_fpu_f2i_inst: neorv32_cpu_cp_fpu_f2i
-**Description**
+</br>**Description**
  does not generate exceptions here, but normalizer can generate exceptions
  Convert: Float to [unsigned] Integer (FCVT.S.W) ----------------------------------------
  -------------------------------------------------------------------------------------------
 
 - neorv32_cpu_cp_fpu_normalizer_inst: neorv32_cpu_cp_fpu_normalizer
-**Description**
+</br>**Description**
  Normalizer & Rounding Unit -------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 

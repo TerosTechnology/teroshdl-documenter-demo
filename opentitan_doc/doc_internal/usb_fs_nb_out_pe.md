@@ -104,7 +104,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////////////////  out transfer state machine // ////////////////////////////// 
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -116,11 +116,11 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  put data strobe follows the rx strobe (which will latch the data) 
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  nack an OUT if any data comes in with the endpoint full  Note that if there is a full size packet buffer this will only be all or nothing  but in the case there was a FIFO with less than a max packet size free you  could get lucky and the packet received be small and fit with no need to NAK 
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff

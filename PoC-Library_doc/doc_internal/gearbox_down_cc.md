@@ -115,11 +115,11 @@
 ## Functions
 - genMuxDescription <font id="function_arguments">()</font> <font id="function_return">return T_MUX_DESCRIPTIONS </font>
 - to_chunkv <font id="function_arguments">(slv : std_logic_vector) </font> <font id="function_return">return T_CHUNK_VECTOR </font>
-**Description**
+</br>**Description**
  create vector-vector from vector (4 bit)
 
 - to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  convert vector-vector to flatten vector
 
 ## Processes

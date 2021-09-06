@@ -30,7 +30,7 @@
 - simWaitUntilFallingEdge <font id="function_arguments">(constant TestID : in T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal Clock : in std_logic;<br><span style="padding-left:20px"> constant Times : in positive) </font> <font id="function_return">return ()</font>
 - simGenerateClock2 <font id="function_arguments">(constant TestID : in T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal Clock : out std_logic;<br><span style="padding-left:20px"> signal Debug : out REAL;<br><span style="padding-left:20px"> constant Period : in time) </font> <font id="function_return">return ()</font>
 - simGenerateWaveform <font id="function_arguments">( signal	 Wave					: out	boolean;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM;<br><span style="padding-left:20px"> constant InitialValue	: in	boolean					:= FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  waveform generation procedures
  ===========================================================================
  TODO: get initial value from Waveform(0) if .Delay = o fs, otherwise use (others => 'U') ?
@@ -53,7 +53,7 @@
 - simGenerateWaveform <font id="function_arguments">( signal	 Wave					: out	T_SLV_64;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM_SLV_64;<br><span style="padding-left:20px"> constant InitialValue	: in	T_SLV_64				:= (others => '0') ) </font> <font id="function_return">return ()</font>
 - simGenerateWaveform <font id="function_arguments">( constant TestID				: in	T_SIM_TEST_ID;<br><span style="padding-left:20px"> signal	 Wave					: out	T_SLV_64;<br><span style="padding-left:20px"> constant Waveform			: in	T_SIM_WAVEFORM_SLV_64;<br><span style="padding-left:20px"> constant InitialValue	: in	T_SLV_64				:= (others => '0') ) </font> <font id="function_return">return ()</font>
 - to_waveform <font id="function_arguments">(bv : bit_vector;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM </font>
-**Description**
+</br>**Description**
  function "<" (Wave : T_SIM_WAVEFORM_SLV_64; Offset : TIME) return T_SIM_WAVEFORM_SLV_64;
  convert arrays to waveforms
  TODO: optimize waveform if input data doesn't change
@@ -67,6 +67,6 @@
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_48;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_48 </font>
 - to_waveform <font id="function_arguments">(slvv : T_SLVV_64;<br><span style="padding-left:20px"> Delay : time) </font> <font id="function_return">return T_SIM_WAVEFORM_SLV_64 </font>
 - simGenerateWaveform_Reset <font id="function_arguments">(constant Pause : time := 0 ns;<br><span style="padding-left:20px"> ResetPulse : time := 10 ns) </font> <font id="function_return">return T_SIM_WAVEFORM </font>
-**Description**
+</br>**Description**
  predefined common waveforms
 

@@ -52,16 +52,16 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 (.clk(clk), .sRst(sRst), .i2cBus(i2cBus), .i2cSlave(i2cSlave)); 
 - unnamed: ( @(posedge clk) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  always_comb 
 ## Instantiations
 
 - i2cSlaveIO: i2cSlaveIntf
 - i2cSlaveInst: i2cSlave
-**Description**
+</br>**Description**
  Instantiate I2C Slave
 

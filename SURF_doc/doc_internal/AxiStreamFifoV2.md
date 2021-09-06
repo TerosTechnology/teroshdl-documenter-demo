@@ -104,25 +104,25 @@
 | FIFO_USER_BITS_C       | integer               |  FIFO_CONFIG_C.TUSER_BITS_C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                   |
 ## Processes
 - unnamed: ( fifoPFullVec, sAxisClk )
-**Description**
+</br>**Description**
 -----------------------  FIFO -----------------------  Pause generation 
 ## Instantiations
 
 - U_SlaveResize: surf.AxiStreamGearbox
-**Description**
+</br>**Description**
 -----------------------
  Slave Resize
 -----------------------
 
 - U_Fifo: surf.FifoCascade
 - U_MasterResize: surf.AxiStreamGearbox
-**Description**
+</br>**Description**
 -----------------------
  Master Resize
 -----------------------
 
 - Synchronizer_1: surf.Synchronizer
-**Description**
+</br>**Description**
 -----------------------
  Idle Generation
 -----------------------
@@ -130,7 +130,7 @@
  This is a total hack
 
 - U_Pipe: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
 -----------------------
  Pipeline Logic
 -----------------------

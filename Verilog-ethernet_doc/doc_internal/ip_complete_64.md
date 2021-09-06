@@ -165,19 +165,19 @@
 ## Instantiations
 
 - eth_arb_mux_inst: eth_arb_mux
-**Description**
+</br>**Description**
 
  * Output arbiter
  */
 
 - ip_inst: ip_64
-**Description**
+</br>**Description**
 
  * IP module
  */
 
 - arp_inst: arp
-**Description**
+</br>**Description**
 
  * ARP module
  */

@@ -77,6 +77,6 @@
 - prescSync: work.prn20b_vectSync
 - wb_inst: work.wb_prn20b
 - handle_comm: work.prn20b_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

@@ -52,10 +52,10 @@
 - cpu_write: ( clk, reset )
 - p_rising_edge_detector: ( clk )
 - spi_proc: ( clk, reset )
-**Description**
+</br>**Description**
 * SPI transfer state machine  
 - spi_clock_gen: ( clk, reset )
-**Description**
+</br>**Description**
 * Generate SPI clock  
 ## State machines
 

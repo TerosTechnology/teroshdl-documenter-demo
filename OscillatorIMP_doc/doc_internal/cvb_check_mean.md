@@ -42,6 +42,6 @@
 ## Processes
 - unnamed: ( clk_i )
 - unnamed: ( accum_i_s, accum_q_s, max_allowed_val_i )
-**Description**
+</br>**Description**
  last  check if accum content if allowed --  and output if valid or not when eof is high 
 - unnamed: ( clk_i )

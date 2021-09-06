@@ -198,12 +198,12 @@
 | ctrl_t   |      |  AXI bridge control --     |
 ## Processes
 - axi_access_arbiter: ( rstn_i_int, clk_i_int )
-**Description**
+</br>**Description**
  Wishbone to AXI4-Lite Bridge -----------------------------------------------------------  -------------------------------------------------------------------------------------------  access arbiter -- 
 ## Instantiations
 
 - neorv32_top_inst: neorv32_top
-**Description**
+</br>**Description**
  The Core Of The Problem ----------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 

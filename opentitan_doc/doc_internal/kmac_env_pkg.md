@@ -52,7 +52,7 @@
 | sideload_vif  | virtual kmac_sideload_if                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                               |
 ## Functions
 - get_key_size_bytes <font id="function_arguments">(kmac_pkg::key_len_e)</font> <font id="function_return">return (int)</font>
-**Description**
+</br>**Description**
  Helper functions that returns the KMAC key size in bytes/words/blocks
 
 - get_key_size_words <font id="function_arguments">(kmac_pkg::key_len_e)</font> <font id="function_return">return (int)</font>

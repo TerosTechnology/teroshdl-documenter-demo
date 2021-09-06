@@ -19,13 +19,13 @@
 | T_IO_LCDBUS_STATUS               | ( IO_LCDBUS_STATUS_RESETTING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_IDLE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_READING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_READ_COMPLETE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_WRITING,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_WRITE_COMPLETE,<br><span style="padding-left:20px"> IO_LCDBUS_STATUS_ERROR )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                              |
 ## Functions
 - io_tristate_driver <font id="function_arguments">( signal pad      : inout std_logic_vector;<br><span style="padding-left:20px"> signal tristate : inout T_IO_TRISTATE_VECTOR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Drive a std_logic_vector from a Tri-State bus and in reverse.
  Use this procedure only in simulation, see also
  :ref:`ISSUES:General:inout_records`.
 
 - io_7SegmentDisplayEncoding <font id="function_arguments">(hex	: std_logic_vector(3 downto 0);<br><span style="padding-left:20px"> dot : std_logic := '0';<br><span style="padding-left:20px"> WITH_DOT : boolean := FALSE) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
 constant C_IO_7SEGMENT_CHAR_ENCODING		: T_IO_7SEGMENT_CHAR_ENCODING := (
 IO_7SEGMENT_CHAR_0
 IO_7SEGMENT_CHAR_1

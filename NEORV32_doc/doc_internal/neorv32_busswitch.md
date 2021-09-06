@@ -110,9 +110,9 @@
 ## Processes
 - access_buffer: ( rstn_i, clk_i )
 - arbiter_sync: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Access Arbiter Sync --------------------------------------------------------------------  -------------------------------------------------------------------------------------------  for registers that require a specific reset state -- 
 - arbiter_comb: ( arbiter, ca_req_current, cb_req_current, ca_req_buffered, cb_req_buffered,
                         ca_rd_req_buf, ca_wr_req_buf, cb_rd_req_buf, cb_wr_req_buf, p_bus_ack_i, p_bus_err_i )
-**Description**
+</br>**Description**
  Peripheral Bus Arbiter -----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

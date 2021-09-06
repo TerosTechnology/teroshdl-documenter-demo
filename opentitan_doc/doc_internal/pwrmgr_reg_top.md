@@ -114,11 +114,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -128,73 +128,73 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_ctrl_cfg_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[ctrl_cfg_regwen]: V(True)
 
 - u_control_low_power_hint: prim_subreg
-**Description**
+</br>**Description**
  R[control]: V(False)
    F[low_power_hint]: 0:0
 
 - u_control_core_clk_en: prim_subreg
-**Description**
+</br>**Description**
    F[core_clk_en]: 4:4
 
 - u_control_io_clk_en: prim_subreg
-**Description**
+</br>**Description**
    F[io_clk_en]: 5:5
 
 - u_control_usb_clk_en_lp: prim_subreg
-**Description**
+</br>**Description**
    F[usb_clk_en_lp]: 6:6
 
 - u_control_usb_clk_en_active: prim_subreg
-**Description**
+</br>**Description**
    F[usb_clk_en_active]: 7:7
 
 - u_control_main_pd_n: prim_subreg
-**Description**
+</br>**Description**
    F[main_pd_n]: 8:8
 
 - u_cfg_cdc_sync: prim_subreg
-**Description**
+</br>**Description**
  R[cfg_cdc_sync]: V(False)
 
 - u_wakeup_en_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[wakeup_en_regwen]: V(False)
 
 - u_reset_en_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[reset_en_regwen]: V(False)
 
 - u_wake_info_capture_dis: prim_subreg
-**Description**
+</br>**Description**
  R[wake_info_capture_dis]: V(False)
 
 - u_wake_info_reasons: prim_subreg_ext
-**Description**
+</br>**Description**
  R[wake_info]: V(True)
    F[reasons]: 0:0
 
 - u_wake_info_fall_through: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fall_through]: 1:1
 
 - u_wake_info_abort: prim_subreg_ext
-**Description**
+</br>**Description**
    F[abort]: 2:2
 

@@ -32,7 +32,7 @@
 | t_transaction_info_array | array (natural range <>) of t_transaction_info  |                                                                         |
 ## Functions
 - wishbone_write <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ==========================================================================================
  Methods dedicated to this VVC 
  - These procedures are called from the testbench in order for the VVC to execute
@@ -46,13 +46,13 @@
 - wishbone_read <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font>
 - wishbone_check <font id="function_arguments">( signal   VVCT                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx    : in    integer;<br><span style="padding-left:20px"> constant addr                : in    unsigned;<br><span style="padding-left:20px"> constant data                : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg                 : in    string;<br><span style="padding-left:20px"> constant alert_level         : in    t_alert_level  := ERROR;<br><span style="padding-left:20px"> constant scope               : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel : in    t_msg_id_panel := C_UNUSED_MSG_ID_PANEL -- Only intended for usage by parent HVVCs ) </font> <font id="function_return">return ()</font>
 - update_vvc_activity_register <font id="function_arguments">( signal global_trigger_vvc_activity_register : inout std_logic;<br><span style="padding-left:20px"> variable vvc_status                         : inout t_vvc_status;<br><span style="padding-left:20px"> constant activity                           : in    t_activity;<br><span style="padding-left:20px"> constant entry_num_in_vvc_activity_register : in    integer;<br><span style="padding-left:20px"> constant last_cmd_idx_executed              : in    natural;<br><span style="padding-left:20px"> constant command_queue_is_empty             : in    boolean;<br><span style="padding-left:20px"> constant scope                              : in    string := C_VVC_NAME) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ==============================================================================
  VVC Activity
 ==============================================================================
 
 - pad_wishbone_sb <font id="function_arguments">( constant data : in std_logic_vector ) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
 ==============================================================================
  VVC Scoreboard helper method
 ==============================================================================

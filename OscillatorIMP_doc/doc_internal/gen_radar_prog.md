@@ -75,6 +75,6 @@
 - gr_logic_inst: work.gen_radar_prog_logic
 - wb_inst: work.wb_gen_radar_prog
 - handle_comm: work.gen_radar_prog_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

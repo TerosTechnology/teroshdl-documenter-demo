@@ -74,7 +74,7 @@
 ## Instantiations
 
 - cvbLogic: work.cvb_logic
-**Description**
+</br>**Description**
 	data_i_o <= data_i_i;
 	data_q_o <= data_q_i;
 	data_eof_o <= data_eof_i;

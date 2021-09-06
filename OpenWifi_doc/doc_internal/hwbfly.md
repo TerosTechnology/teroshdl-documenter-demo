@@ -193,7 +193,7 @@
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Induction helpers 
 ## Instantiations
 

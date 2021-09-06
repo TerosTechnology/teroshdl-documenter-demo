@@ -50,7 +50,7 @@
 
 - u_prim_filter: prim_filter
 - u_prim_flop_2sync_filter: prim_flop_2sync
-**Description**
+</br>**Description**
  Run this through a 2 stage synchronizer to
  prevent metastability.
 

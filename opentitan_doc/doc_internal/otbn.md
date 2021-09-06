@@ -196,27 +196,27 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Flop `illegal_bus_access_q` so we know an illegal bus access has happened and to break a timing  path from the TL interface into the OTBN core. 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  STATUS register 
 - unnamed: ( @(posedge clk_i or negedge rst_n) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  OTBN Core ================================================================= 
 ## Instantiations
 
 - u_lc_escalate_en_sync: prim_lc_sync
 - u_intr_hw_done: prim_intr_hw
-**Description**
+</br>**Description**
  Interrupts ================================================================
 
 - u_otbn_scramble_ctrl: otbn_scramble_ctrl
 - u_imem: prim_ram_1p_scr
 - u_imem_intg_check: prim_secded_39_32_dec
-**Description**
+</br>**Description**
  Separate check for imem read data integrity outside of `u_imem` as `prim_ram_1p_adv` doesn't
  have functionality for only integrity checking, just fully integrated ECC.
 
@@ -225,14 +225,14 @@
 - u_tlul_adapter_sram_dmem: tlul_adapter_sram
 - u_reg: otbn_reg_top
 - u_prim_edn_rnd_req: prim_edn_req
-**Description**
+</br>**Description**
  These synchronize the data coming from EDN and stack the 32 bit EDN words to achieve an
  internal entropy width of 256 bit.
 
 - u_prim_edn_urnd_req: prim_edn_req
 - u_otbn_core_model: otbn_core_model
 - u_otbn_core: otbn_core
-**Description**
+</br>**Description**
  RTL implementation
 
 - u_otbn_core: otbn_core

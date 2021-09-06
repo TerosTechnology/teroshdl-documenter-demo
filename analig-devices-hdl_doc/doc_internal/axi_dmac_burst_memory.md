@@ -155,15 +155,15 @@
   - **Type:** always
 - unnamed: ( @(posedge dest_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * The data valid signal for the destination side is asserted if there are one  * or more pending bursts. It is de-asserted if there are no more pending burst  * and it is the last beat of the current burst  */ 
 - unnamed: ( @(posedge dest_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * The output register of the memory creates a extra clock cycle of latency on  * the data path. We need to handle this more the handshaking signals. If data  * is available in the memory it will be available one clock cycle later in the  * output register.  */ 
 - unnamed: ( @(posedge dest_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * This clears dest_data_last after the last beat. Strictly speaking this is not  * necessary if this followed AXI handshaking rules since dest_data_last would  * be qualified by dest_data_valid and it is OK to retain the previous value of  * dest_data_last when dest_data_valid is not asserted. But clearing the signal  * here doesn't cost much and can simplify some of the more congested  * combinatorical logic further up the pipeline since we can assume that  * fifo_last == 1'b1 implies fifo_valid == 1'b1.  */ 
 - unnamed: ( @(posedge dest_clk) )
   - **Type:** always

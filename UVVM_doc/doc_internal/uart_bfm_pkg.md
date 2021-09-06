@@ -23,7 +23,7 @@
 | t_uart_bfm_config               |                                                                            |             |
 ## Functions
 - uart_transmit <font id="function_arguments">( constant data_value         : in  std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal tx                   : inout std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config  := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string             := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel     := shared_msg_id_panel ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 --------------------------------------------------
  BFM procedures
 --------------------------------------------------
@@ -34,7 +34,7 @@
  - The TX configuration can be set in the config parameter
 
 - uart_receive <font id="function_arguments">( variable data_value         : out std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in  string;<br><span style="padding-left:20px"> signal rx                   : in  std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in  std_logic;<br><span style="padding-left:20px"> constant config             : in  t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in  string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in  t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant ext_proc_call      : in  string            := "" -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  uart_receive
 ----------------------------------------
@@ -42,7 +42,7 @@
  - The RX configuration can be set in the config parameter
 
 - uart_expect <font id="function_arguments">( constant data_exp           : in std_logic_vector;<br><span style="padding-left:20px"> constant msg                : in string;<br><span style="padding-left:20px"> signal rx                   : in std_logic;<br><span style="padding-left:20px"> signal terminate_loop       : in std_logic;<br><span style="padding-left:20px"> constant max_receptions     : in natural           := 1;<br><span style="padding-left:20px"> constant timeout            : in time              := -1 ns;<br><span style="padding-left:20px"> constant alert_level        : in t_alert_level     := ERROR;<br><span style="padding-left:20px"> constant config             : in t_uart_bfm_config := C_UART_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant scope              : in string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel       : in t_msg_id_panel    := shared_msg_id_panel ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  uart_expect
 ----------------------------------------
@@ -59,7 +59,7 @@
  - The RX configuration can be set in the config parameter
 
 - odd_parity <font id="function_arguments">( constant data : std_logic_vector(7 downto 0)) </font> <font id="function_return">return std_logic </font>
-**Description**
+</br>**Description**
 ----------------------------------------
  odd_parity
 ----------------------------------------

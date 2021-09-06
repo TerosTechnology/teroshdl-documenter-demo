@@ -38,6 +38,6 @@
 | REG_POINT_POS | std_logic_vector | "01"  |             |
 ## Processes
 - write_bloc: ( clk, reset )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk, reset )

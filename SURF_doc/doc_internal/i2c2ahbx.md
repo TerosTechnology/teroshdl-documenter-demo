@@ -138,7 +138,7 @@
 
 - ahbmst0: ahbmst
 - bootmsg: report_version
-**Description**
+</br>**Description**
  Boot message
  pragma translate_off
 

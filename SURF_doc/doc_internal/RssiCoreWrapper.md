@@ -107,7 +107,7 @@
 | MAX_SEGS_BITS_C          | positive            |  bitSize(MAX_SEG_SIZE_G)                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                             |
 ## Processes
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  Register to help with timing 
 ## Instantiations
 

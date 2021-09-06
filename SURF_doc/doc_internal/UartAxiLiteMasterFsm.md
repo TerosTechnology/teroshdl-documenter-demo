@@ -62,13 +62,13 @@
 | RegType   |                                                                                                                                                                                                                                                                                                                                                                                                                     |             |
 ## Functions
 - hexToSlv <font id="function_arguments">(hex : slv(7 downto 0)) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  translate a hex character 0-9 A-F into an slv
 
 - slvToHex <font id="function_arguments">(nibble : slv(3 downto 0)) </font> <font id="function_return">return slv </font>
 ## Processes
 - comb: ( axilAck, axilRst, r, uartRxData, uartRxValid, uartTxReady )
-**Description**
+</br>**Description**
  [in] 
 - seq: ( axilClk )
 ## Instantiations

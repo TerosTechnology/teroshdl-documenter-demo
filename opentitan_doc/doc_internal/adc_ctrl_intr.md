@@ -39,6 +39,6 @@
 ## Instantiations
 
 - i_adc_ctrl_intr_o: prim_intr_hw
-**Description**
+</br>**Description**
  instantiate interrupt hardware primitive
 

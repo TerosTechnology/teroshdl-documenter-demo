@@ -15,7 +15,7 @@
 - test_runner_setup <font id="function_arguments">( signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant runner_cfg : in string := runner_cfg_default) </font> <font id="function_return">return ()</font>
 - test_runner_cleanup <font id="function_arguments">( signal runner: inout runner_sync_t;<br><span style="padding-left:20px"> external_failure : boolean := false;<br><span style="padding-left:20px"> allow_disabled_errors : boolean := false;<br><span style="padding-left:20px"> allow_disabled_failures : boolean := false;<br><span style="padding-left:20px"> fail_on_warning : boolean := false) </font> <font id="function_return">return ()</font>
 - set_timeout <font id="function_arguments">(signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> constant timeout : in time) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set watchdog timeout dynamically relative to current time
  Overrides time argument to test_runner_watchdog procedure
 
@@ -29,6 +29,6 @@
 - entry_gate <font id="function_arguments">( signal runner : inout runner_sync_t) </font> <font id="function_return">return ()</font>
 - exit_gate <font id="function_arguments">( signal runner : in runner_sync_t) </font> <font id="function_return">return ()</font>
 - notify <font id="function_arguments">(signal runner : inout runner_sync_t;<br><span style="padding-left:20px"> idx : natural := runner_event_idx) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Private
 

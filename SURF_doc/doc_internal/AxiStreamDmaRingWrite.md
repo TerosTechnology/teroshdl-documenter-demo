@@ -108,14 +108,14 @@
 - comb: ( axiRst, axisDataMaster, bufferClear, bufferClearEn, dmaAck, endRamDout,
                    modeRamDout, modeWrAddr, modeWrData, modeWrStrobe, modeWrValid, nextRamDout, r,
                    startRamDout, statusRamDout, trigRamDout )
-**Description**
+</br>**Description**
  [in] -----------------------------------------------------------------------------------------------  Main logic ----------------------------------------------------------------------------------------------- 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_AxiLiteCrossbar_1: surf.AxiLiteCrossbar
 - U_AxiDualPortRam_Start: surf.AxiDualPortRam
-**Description**
+</br>**Description**
  [in]
 -----------------------------------------------------------------------------------------------
  AXI RAMs store buffer information
@@ -123,22 +123,22 @@
  Start Addresses. AXIL writeable
 
 - U_AxiDualPortRam_End: surf.AxiDualPortRam
-**Description**
+</br>**Description**
  End Addresses. AXIL writeable
 
 - U_AxiDualPortRam_Next: surf.AxiDualPortRam
-**Description**
+</br>**Description**
  Next Addresses. System writeable
 
 - U_AxiDualPortRam_Trigger: surf.AxiDualPortRam
 - U_AxiDualPortRam_Mode: surf.AxiDualPortRam
 - U_AxiDualPortRam_Status: surf.AxiDualPortRam
 - U_AxiStreamDmaWrite_1: surf.AxiStreamDmaWrite
-**Description**
+</br>**Description**
  DMA Write block
 
 - U_AxiStreamFifo_MSG: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
  [in]
  Pass status message through a small fifo to convert to statusClk
  And convert width

@@ -95,13 +95,13 @@
 | T_CHUNK_VECTOR | array(natural range <>) of T_CHUNK  |             |
 ## Functions
 - to_slv <font id="function_arguments">(slvv : T_CHUNK_VECTOR) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  convert chunk-vector to flatten vector
 
 ## Processes
 - unnamed: ( Clock1 )
-**Description**
+</br>**Description**
  byte alignment counter @Clock1 
 - unnamed: ( Clock1 )
-**Description**
+</br>**Description**
  delay registers @Clock1 

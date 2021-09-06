@@ -70,7 +70,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Output registered stage 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

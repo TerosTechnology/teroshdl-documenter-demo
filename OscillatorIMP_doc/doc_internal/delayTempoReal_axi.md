@@ -65,10 +65,10 @@
 - delay_logic_inst: work.delayTempoReal_axi_logic
 - sync_delay_inst: work.delayTempoReal_axi_sync_slv
 - delayTempoReal_axi_comm_inst: work.delayTempoReal_axi_comm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 
 - handle_comm: work.delayTempoReal_axi_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

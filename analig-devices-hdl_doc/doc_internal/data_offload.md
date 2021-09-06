@@ -171,23 +171,23 @@
 ## Processes
 - unnamed: ( @(posedge s_axis_aclk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Beat counter on the source interface *  * The storage unit can have size of a couple of Gbyte, which in case of an RX  * path would mean to fill up all that memory space before pushing over the  * stream to the RX DMA. (ADC can not generate a tlast) To make things more  * practical, user can set an arbitrary transfer length using the  * transfer_length register, which will be used to generate an internal tlast  * signal for the source FSM. If the register is set to zero, all the memory  * will be filled up, before passing control to the destination FSM.  *  */ 
 ## Instantiations
 
 - i_data_offload_fsm: data_offload_fsm
-**Description**
+</br>**Description**
  Offload FSM and control
 
 - i_rx_axis_inf: ad_axis_inf_rx
 - i_bypass_fifo: util_axis_fifo_asym
-**Description**
+</br>**Description**
  Bypass module instance -- the same FIFO, just a smaller depth
  NOTE: Generating an overflow is making sense just in BYPASS mode, and
  it's supported just with the FIFO interface
 
 - i_regmap: data_offload_regmap
-**Description**
+</br>**Description**
  register map
 
 - i_up_axi: up_axi

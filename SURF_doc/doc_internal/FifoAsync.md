@@ -96,7 +96,7 @@
 - U_rdRdy: surf.Synchronizer
 - U_WR_FSM: surf.FifoWrFsm
 - U_rdRst: surf.RstSync
-**Description**
+</br>**Description**
 ---------------------------------------
        rd_clk clock domain
 ---------------------------------------

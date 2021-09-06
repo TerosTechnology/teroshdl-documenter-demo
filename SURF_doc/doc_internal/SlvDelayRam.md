@@ -70,5 +70,5 @@
 - comb: ( en, maxCount, doutInt, rst, r )
 - seq: ( clk )
 - MEM_PROC: ( clk, rst )
-**Description**
+</br>**Description**
  read before write single port RAM 

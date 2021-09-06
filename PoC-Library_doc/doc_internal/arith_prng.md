@@ -75,8 +75,8 @@
 | T_TAPPOSITION_VECTOR | array (natural range <>) of T_TAPPOSITION  |             |
 ## Processes
 - unnamed: ( val_r )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Datapath ---------------------------------------------------------------------------  XNOR used so that all-zero is valid and all-one is forbidden. 
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Register --------------------------------------------------------------------------- 

@@ -56,5 +56,5 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  when error'd, continue to complete existing read transaction but fill in with all 1's  if this is not done, software may continue to attempt to read out of the fifo  and eventually cause a bus deadlock as the fifo would be empty  This scheme is similar to burst completion up an error 

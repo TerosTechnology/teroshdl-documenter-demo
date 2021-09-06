@@ -87,7 +87,7 @@
 
 - SlaveAxiStreamFifo: surf.SsiFifo
 - MasterAxiStreamFifo: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
 ------------
  Output FIFO
 ------------

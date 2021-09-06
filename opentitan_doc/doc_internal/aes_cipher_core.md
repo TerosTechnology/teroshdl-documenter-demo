@@ -231,7 +231,7 @@
 ## Processes
 - state_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////  Data // ////////  State registers 
 - state_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -239,13 +239,13 @@
   - **Type:** always_comb
 - key_full_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////  Key // ///////  Full Key registers 
 - key_full_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - key_dec_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Decryption Key registers 
 - key_dec_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -253,27 +253,27 @@
   - **Type:** always_comb
 - reg_sp_enc_err: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  We need to register the collected error signal to avoid circular loops in the cipher core  controller related to out_valid_o and detecting errors in state_we_o and sub_bytes_out_ack. 
 ## Instantiations
 
 - u_aes_sub_bytes: aes_sub_bytes
-**Description**
+</br>**Description**
  Cipher data path
 
 - u_aes_key_expand: aes_key_expand
-**Description**
+</br>**Description**
  Key expand data path
 
 - u_aes_cipher_control: aes_cipher_control
-**Description**
+</br>**Description**
 ///////////
  Control //
 ///////////
  Control
 
 - u_aes_state_sel_buf_chk: aes_sel_buf_chk
-**Description**
+</br>**Description**
 /////////////
  Selectors //
 /////////////

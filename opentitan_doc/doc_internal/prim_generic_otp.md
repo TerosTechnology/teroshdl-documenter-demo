@@ -118,7 +118,7 @@
   - **Type:** always_comb
 - p_output_map: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Output data without ECC bits. 
 - p_regs: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -126,7 +126,7 @@
 
 - u_tlul_adapter_sram: tlul_adapter_sram
 - u_enc: prim_secded_hamming_22_16_enc
-**Description**
+</br>**Description**
  Use a standard Hamming ECC for OTP.
 
 - u_dec: prim_secded_hamming_22_16_dec

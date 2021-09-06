@@ -138,7 +138,7 @@
 | keymgr_ctrl_data_state_e | enum logic [1:0] {<br><span style="padding-left:20px">     StCtrlDataIdle,<br><span style="padding-left:20px">     StCtrlDataEn,<br><span style="padding-left:20px">     StCtrlDataDis,<br><span style="padding-left:20px">     StCtrlDataWait   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | /////////////////////////////  Suppress kmac return data /////////////////////////////  This is a separate data path from the FSM used to control the data_en_o output  |
 ## Functions
 - valid_data_chk <font id="function_arguments">(logic [KeyWidth-1:0])</font> <font id="function_return">return (logic)</font>
-**Description**
+</br>**Description**
 /////////////////////////////
  Functions
 /////////////////////////////
@@ -150,7 +150,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  key state is intentionally not reset 
 - unnamed: (  )
   - **Type:** always_comb
@@ -162,7 +162,7 @@
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 ///////////////////////  Operateion state, handle advance and generate /////////////////////// 
 - unnamed: (  )
   - **Type:** always_comb
@@ -176,7 +176,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  The below control path is used for modulating the datapath to sideload and sw keys.  This path is separate from the data_valid_o path, thus creating two separate attack points.  The data is only enabled when a non-advance operation is invoked.  When an advance operation is called, the data is disabled. It will stay disabled until an  entire completion sequence is seen (op_done_o assert -> start_i de-assertion).  When a generate operation is called, the data is enabled.  However, any indication of this  supposedly being an advance call will force the path to disable again. 
 ## Instantiations
 

@@ -111,7 +111,7 @@
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
   * Once rewind request is received we need to stop incrementing the burst ID.  *  * If the current segment matches the segment that was interrupted and  * if it was a last segment we ignore consecutive segments until the last  * segment is received, in other case we can jump to the next segment.  *  * If the current segment is newer than the one got interrupted and the  * interrupted one was a last segment we need to replay the current  * segment with the adjusted burst ID. If the interrupted segment was not last  * we need to consume/ignore all segments until a last segment is received.  *  * Completion requests are generated for every segment that is  * consumed/ignored. These are handled by the response_manager once the  * interrupted segment got transferred to the destination.  */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

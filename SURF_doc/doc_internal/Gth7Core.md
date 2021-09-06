@@ -288,12 +288,12 @@
 ## Processes
 - RX_DATA_8B10B_GLUE: ( rxCharIsKFull, rxDataFull, rxDecErrFull, rxDispErrFull )
 - TX_DATA_8B10B_GLUE: ( txCharIsKIn, txDataIn )
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------  Tx Logic ------------------------------------------------------------------------------------------------ 
 ## Instantiations
 
 - Gth7RxRst_Inst: surf.Gth7RxRst
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  Rx Reset Module
  1. Reset RX PLL,
@@ -309,38 +309,38 @@
 ------------------------------------------------------------------------------------------------
 
 - RstSync_RxResetDone: surf.RstSync
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
 ------------------------------------------------------------------------------------------------
 
 - BUFG_RX_OUT_CLK: BUFG
-**Description**
+</br>**Description**
  Output
 -----------------------------------------------------------------------------------------------
  Recovered clock monitor
 -----------------------------------------------------------------------------------------------
 
 - Gth7TxRst_Inst: surf.Gth7TxRst
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  Tx Reset Module
 ------------------------------------------------------------------------------------------------
 
 - RstSync_Tx: surf.RstSync
-**Description**
+</br>**Description**
  Might be interesting to look at
 ------------------------------------------------------------------------------------------------
  Synchronize rxFsmResetDone to rxUsrClk to use as reset for external logic.
 ------------------------------------------------------------------------------------------------
 
 - gthe2_i: GTHE2_CHANNEL
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  GTX Instantiation
 ------------------------------------------------------------------------------------------------
 
 - Gth7RxRstSeq_Inst: surf.Gth7RxRstSeq
-**Description**
+</br>**Description**
 ----------------------- Soft Fix for Production Silicon----------------------
 

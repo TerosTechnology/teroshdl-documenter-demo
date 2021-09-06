@@ -497,11 +497,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -541,413 +541,413 @@
 - u_combo_intr_status_cdc: prim_reg_cdc
 - u_key_intr_status_cdc: prim_reg_cdc
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[regwen]: V(False)
 
 - u_ec_rst_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[ec_rst_ctl]: V(False)
 
 - u_ulp_ac_debounce_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[ulp_ac_debounce_ctl]: V(False)
 
 - u_ulp_lid_debounce_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[ulp_lid_debounce_ctl]: V(False)
 
 - u_ulp_pwrb_debounce_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[ulp_pwrb_debounce_ctl]: V(False)
 
 - u_ulp_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[ulp_ctl]: V(False)
 
 - u_ulp_status: prim_subreg
-**Description**
+</br>**Description**
  R[ulp_status]: V(False)
 
 - u_wkup_status: prim_subreg
-**Description**
+</br>**Description**
  R[wkup_status]: V(False)
 
 - u_key_invert_ctl_key0_in: prim_subreg
-**Description**
+</br>**Description**
  R[key_invert_ctl]: V(False)
    F[key0_in]: 0:0
 
 - u_key_invert_ctl_key0_out: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out]: 1:1
 
 - u_key_invert_ctl_key1_in: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in]: 2:2
 
 - u_key_invert_ctl_key1_out: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out]: 3:3
 
 - u_key_invert_ctl_key2_in: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in]: 4:4
 
 - u_key_invert_ctl_key2_out: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out]: 5:5
 
 - u_key_invert_ctl_pwrb_in: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_in]: 6:6
 
 - u_key_invert_ctl_pwrb_out: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_out]: 7:7
 
 - u_key_invert_ctl_ac_present: prim_subreg
-**Description**
+</br>**Description**
    F[ac_present]: 8:8
 
 - u_key_invert_ctl_bat_disable: prim_subreg
-**Description**
+</br>**Description**
    F[bat_disable]: 9:9
 
 - u_key_invert_ctl_lid_open: prim_subreg
-**Description**
+</br>**Description**
    F[lid_open]: 10:10
 
 - u_key_invert_ctl_z3_wakeup: prim_subreg
-**Description**
+</br>**Description**
    F[z3_wakeup]: 11:11
 
 - u_pin_allowed_ctl_bat_disable_0: prim_subreg
-**Description**
+</br>**Description**
  R[pin_allowed_ctl]: V(False)
    F[bat_disable_0]: 0:0
 
 - u_pin_allowed_ctl_ec_rst_l_0: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_0]: 1:1
 
 - u_pin_allowed_ctl_pwrb_out_0: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_out_0]: 2:2
 
 - u_pin_allowed_ctl_key0_out_0: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out_0]: 3:3
 
 - u_pin_allowed_ctl_key1_out_0: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out_0]: 4:4
 
 - u_pin_allowed_ctl_key2_out_0: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out_0]: 5:5
 
 - u_pin_allowed_ctl_z3_wakeup_0: prim_subreg
-**Description**
+</br>**Description**
    F[z3_wakeup_0]: 6:6
 
 - u_pin_allowed_ctl_flash_wp_l_0: prim_subreg
-**Description**
+</br>**Description**
    F[flash_wp_l_0]: 7:7
 
 - u_pin_allowed_ctl_bat_disable_1: prim_subreg
-**Description**
+</br>**Description**
    F[bat_disable_1]: 8:8
 
 - u_pin_allowed_ctl_ec_rst_l_1: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_1]: 9:9
 
 - u_pin_allowed_ctl_pwrb_out_1: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_out_1]: 10:10
 
 - u_pin_allowed_ctl_key0_out_1: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out_1]: 11:11
 
 - u_pin_allowed_ctl_key1_out_1: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out_1]: 12:12
 
 - u_pin_allowed_ctl_key2_out_1: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out_1]: 13:13
 
 - u_pin_allowed_ctl_z3_wakeup_1: prim_subreg
-**Description**
+</br>**Description**
    F[z3_wakeup_1]: 14:14
 
 - u_pin_allowed_ctl_flash_wp_l_1: prim_subreg
-**Description**
+</br>**Description**
    F[flash_wp_l_1]: 15:15
 
 - u_pin_out_ctl_bat_disable: prim_subreg
-**Description**
+</br>**Description**
  R[pin_out_ctl]: V(False)
    F[bat_disable]: 0:0
 
 - u_pin_out_ctl_ec_rst_l: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l]: 1:1
 
 - u_pin_out_ctl_pwrb_out: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_out]: 2:2
 
 - u_pin_out_ctl_key0_out: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out]: 3:3
 
 - u_pin_out_ctl_key1_out: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out]: 4:4
 
 - u_pin_out_ctl_key2_out: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out]: 5:5
 
 - u_pin_out_ctl_z3_wakeup: prim_subreg
-**Description**
+</br>**Description**
    F[z3_wakeup]: 6:6
 
 - u_pin_out_ctl_flash_wp_l: prim_subreg
-**Description**
+</br>**Description**
    F[flash_wp_l]: 7:7
 
 - u_pin_out_value_bat_disable: prim_subreg
-**Description**
+</br>**Description**
  R[pin_out_value]: V(False)
    F[bat_disable]: 0:0
 
 - u_pin_out_value_ec_rst_l: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l]: 1:1
 
 - u_pin_out_value_pwrb_out: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_out]: 2:2
 
 - u_pin_out_value_key0_out: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out]: 3:3
 
 - u_pin_out_value_key1_out: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out]: 4:4
 
 - u_pin_out_value_key2_out: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out]: 5:5
 
 - u_pin_out_value_z3_wakeup: prim_subreg
-**Description**
+</br>**Description**
    F[z3_wakeup]: 6:6
 
 - u_pin_out_value_flash_wp_l: prim_subreg
-**Description**
+</br>**Description**
    F[flash_wp_l]: 7:7
 
 - u_pin_in_value_ac_present: prim_subreg
-**Description**
+</br>**Description**
  R[pin_in_value]: V(False)
    F[ac_present]: 0:0
 
 - u_pin_in_value_ec_rst_l: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l]: 1:1
 
 - u_pin_in_value_pwrb_in: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_in]: 2:2
 
 - u_pin_in_value_key0_in: prim_subreg
-**Description**
+</br>**Description**
    F[key0_in]: 3:3
 
 - u_pin_in_value_key1_in: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in]: 4:4
 
 - u_pin_in_value_key2_in: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in]: 5:5
 
 - u_pin_in_value_lid_open: prim_subreg
-**Description**
+</br>**Description**
    F[lid_open]: 6:6
 
 - u_key_intr_ctl_pwrb_in_h2l: prim_subreg
-**Description**
+</br>**Description**
  R[key_intr_ctl]: V(False)
    F[pwrb_in_h2l]: 0:0
 
 - u_key_intr_ctl_key0_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key0_in_h2l]: 1:1
 
 - u_key_intr_ctl_key1_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in_h2l]: 2:2
 
 - u_key_intr_ctl_key2_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in_h2l]: 3:3
 
 - u_key_intr_ctl_ac_present_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[ac_present_h2l]: 4:4
 
 - u_key_intr_ctl_ec_rst_l_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_h2l]: 5:5
 
 - u_key_intr_ctl_pwrb_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_in_l2h]: 8:8
 
 - u_key_intr_ctl_key0_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key0_in_l2h]: 9:9
 
 - u_key_intr_ctl_key1_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in_l2h]: 10:10
 
 - u_key_intr_ctl_key2_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in_l2h]: 11:11
 
 - u_key_intr_ctl_ac_present_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[ac_present_l2h]: 12:12
 
 - u_key_intr_ctl_ec_rst_l_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_l2h]: 13:13
 
 - u_key_intr_debounce_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[key_intr_debounce_ctl]: V(False)
 
 - u_auto_block_debounce_ctl_debounce_timer: prim_subreg
-**Description**
+</br>**Description**
  R[auto_block_debounce_ctl]: V(False)
    F[debounce_timer]: 15:0
 
 - u_auto_block_debounce_ctl_auto_block_enable: prim_subreg
-**Description**
+</br>**Description**
    F[auto_block_enable]: 16:16
 
 - u_auto_block_out_ctl_key0_out_sel: prim_subreg
-**Description**
+</br>**Description**
  R[auto_block_out_ctl]: V(False)
    F[key0_out_sel]: 0:0
 
 - u_auto_block_out_ctl_key1_out_sel: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out_sel]: 1:1
 
 - u_auto_block_out_ctl_key2_out_sel: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out_sel]: 2:2
 
 - u_auto_block_out_ctl_key0_out_value: prim_subreg
-**Description**
+</br>**Description**
    F[key0_out_value]: 4:4
 
 - u_auto_block_out_ctl_key1_out_value: prim_subreg
-**Description**
+</br>**Description**
    F[key1_out_value]: 5:5
 
 - u_auto_block_out_ctl_key2_out_value: prim_subreg
-**Description**
+</br>**Description**
    F[key2_out_value]: 6:6
 
 - u_combo_intr_status_combo0_h2l: prim_subreg
-**Description**
+</br>**Description**
  R[combo_intr_status]: V(False)
    F[combo0_h2l]: 0:0
 
 - u_combo_intr_status_combo1_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[combo1_h2l]: 1:1
 
 - u_combo_intr_status_combo2_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[combo2_h2l]: 2:2
 
 - u_combo_intr_status_combo3_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[combo3_h2l]: 3:3
 
 - u_key_intr_status_pwrb_h2l: prim_subreg
-**Description**
+</br>**Description**
  R[key_intr_status]: V(False)
    F[pwrb_h2l]: 0:0
 
 - u_key_intr_status_key0_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key0_in_h2l]: 1:1
 
 - u_key_intr_status_key1_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in_h2l]: 2:2
 
 - u_key_intr_status_key2_in_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in_h2l]: 3:3
 
 - u_key_intr_status_ac_present_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[ac_present_h2l]: 4:4
 
 - u_key_intr_status_ec_rst_l_h2l: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_h2l]: 5:5
 
 - u_key_intr_status_pwrb_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[pwrb_l2h]: 6:6
 
 - u_key_intr_status_key0_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key0_in_l2h]: 7:7
 
 - u_key_intr_status_key1_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key1_in_l2h]: 8:8
 
 - u_key_intr_status_key2_in_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[key2_in_l2h]: 9:9
 
 - u_key_intr_status_ac_present_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[ac_present_l2h]: 10:10
 
 - u_key_intr_status_ec_rst_l_l2h: prim_subreg
-**Description**
+</br>**Description**
    F[ec_rst_l_l2h]: 11:11
 

@@ -80,7 +80,7 @@
 ## Instantiations
 
 - U_Mux: surf.AxiStreamMux
-**Description**
+</br>**Description**
 ----------------------------------------------------
  Multiplex the incoming TX streams with interleaving
 ----------------------------------------------------

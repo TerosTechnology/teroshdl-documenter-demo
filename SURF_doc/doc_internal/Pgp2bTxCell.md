@@ -164,16 +164,16 @@
              vc3FrameTxValid, vc3FrameTxSOF, vc3FrameTxEOF, vc3FrameTxEOFE, vc3FrameTxData, Vc3RemAlmostFull,
              vc0Serial, vc1Serial, vc2Serial, vc3Serial, schTxDataVc )
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Simple state machine to control transmission of data frames 
 - unnamed: ( curState, schTxIdle, schTxReq, intTimeout, cellCnt, eocWord, socWord, curTypeLast,
             muxFrameTxValid, muxFrameTxSOF, muxFrameTxEOF, muxFrameTxEOFE, muxFrameTxData,
             muxRemAlmostFull )
-**Description**
+</br>**Description**
  Async state control 
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Delay chain to allow CRC data to catch up. 
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Output stage 

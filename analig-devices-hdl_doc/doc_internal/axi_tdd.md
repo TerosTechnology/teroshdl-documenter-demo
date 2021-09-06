@@ -133,11 +133,11 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  syncronization control signal 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  tx/rx data flow control 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -146,7 +146,7 @@
 ## Instantiations
 
 - i_up_tdd_cntrl: up_tdd_cntrl
-**Description**
+</br>**Description**
  instantiations
 
 - i_tdd_control: ad_tdd_control

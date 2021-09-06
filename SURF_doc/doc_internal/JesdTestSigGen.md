@@ -57,6 +57,6 @@
 | RegType |      |             |
 ## Processes
 - comb: ( r, rst,s_sampleDataBr, thresoldLow_i, thresoldHigh_i, enable_i )
-**Description**
+</br>**Description**
  Buffer two GT words. And compare previous and current samples to threshold.  If the difference between the previous and current sample is higher than threshold  output a pulse. ------------------------------------------------------------------- ------------------------------------------------------------------- 
 - seq: ( clk )

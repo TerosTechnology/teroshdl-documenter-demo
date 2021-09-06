@@ -93,32 +93,32 @@
 ## Instantiations
 
 - U_AxiLiteAsync: surf.AxiLiteAsync
-**Description**
+</br>**Description**
 ----------------
  Synchronization
 ----------------
 
 - U_Sync: surf.SynchronizerVector
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_TenGigEthGth7Core: TenGigEthGth7Core
-**Description**
+</br>**Description**
 ---------------
  10GBASE-R core
 ---------------
 
 - U_TenGigEthRst: surf.TenGigEthRst
-**Description**
+</br>**Description**
 -----------------------------------
  10GBASE-R's Reset Module
 -----------------------------------
 
 - U_TenGigEthReg: surf.TenGigEthReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

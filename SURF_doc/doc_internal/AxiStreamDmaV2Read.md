@@ -77,13 +77,13 @@
 ## Processes
 - comb: ( axiCache, axiReadSlave, axiRst, dmaRdDescReq,
                    dmaRdDescRetAck, notReqDone, pause, r, sSlave )
-**Description**
+</br>**Description**
   (a <  b) 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_DspComparator: surf.DspComparator
-**Description**
+</br>**Description**
  Check if last transfer completed
 
 - U_Pipeline: surf.AxiStreamPipeline

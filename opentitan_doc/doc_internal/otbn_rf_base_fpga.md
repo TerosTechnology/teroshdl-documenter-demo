@@ -34,5 +34,5 @@
 ## Processes
 - g_rf_reg: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Sync write 

@@ -151,7 +151,7 @@
 ## Processes
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always

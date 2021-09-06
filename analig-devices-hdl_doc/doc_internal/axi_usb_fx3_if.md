@@ -102,7 +102,7 @@
   - **Type:** always
 - unnamed: ( @(posedge pclk) )
   - **Type:** always
-**Description**
+</br>**Description**
  STATE MACHINE GPIF II 
 - unnamed: ( @(*) )
   - **Type:** always

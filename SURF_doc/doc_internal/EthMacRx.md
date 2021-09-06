@@ -73,25 +73,25 @@
 
 - U_Import: surf.EthMacRxImport
 - U_Pause: surf.EthMacRxPause
-**Description**
+</br>**Description**
 ----------------
  RX Pause Module
 ----------------
 
 - U_Csum: surf.EthMacRxCsum
-**Description**
+</br>**Description**
 ----------------------------
  RX Non-VLAN Checksum Module
 ----------------------------
 
 - U_Bypass: surf.EthMacRxBypass
-**Description**
+</br>**Description**
 -----------------
  RX Bypass Module
 -----------------
 
 - U_Filter: surf.EthMacRxFilter
-**Description**
+</br>**Description**
 -----------------
  RX Filter Module
 -----------------

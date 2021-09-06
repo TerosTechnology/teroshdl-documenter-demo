@@ -64,7 +64,7 @@
 - selectMapBitSwapping <font id="function_arguments">(input : slv) </font> <font id="function_return">return slv </font>
 ## Processes
 - comb: ( bootAddressSync, icape2Rst, r, rdy, startEdge )
-**Description**
+</br>**Description**
  1-bit input: Read/Write Select input 
 - seq: ( icape2Clk )
 ## Instantiations

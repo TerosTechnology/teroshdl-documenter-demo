@@ -20,12 +20,12 @@
 | valid_fpstate    | (nan,<br><span style="padding-left:20px">           -- Signaling NaN (C FP_NAN) quiet_nan,<br><span style="padding-left:20px">     -- Quiet NaN (C FP_NAN) neg_inf,<br><span style="padding-left:20px">       -- Negative infinity (C FP_INFINITE) neg_normal,<br><span style="padding-left:20px">    -- negative normalized nonzero neg_denormal,<br><span style="padding-left:20px">  -- negative denormalized (FP_SUBNORMAL) neg_zero,<br><span style="padding-left:20px">      -- -0 (C FP_ZERO) pos_zero,<br><span style="padding-left:20px">      -- +0 (C FP_ZERO) pos_denormal,<br><span style="padding-left:20px">  -- Positive denormalized (FP_SUBNORMAL) pos_normal,<br><span style="padding-left:20px">    -- positive normalized nonzero pos_inf,<br><span style="padding-left:20px">       -- positive infinity isx)  | ---------------------------------------------------------------------------  The 128 bit floating point number is "long double" in C (on  some systems this is a 70 bit floating point number) and FLOAT*32  in Fortran.  The exponent is 15 bits wide and the fraction is 112  bits wide. This number can handle approximately 33 decimal digits.  Infinity is 2**32,767 in this number system. ---------------------------------------------------------------------------  purpose: Checks for a valid floating point number  |
 ## Functions
 - Classfp <font id="function_arguments">( x           : UNRESOLVED_float;<br><span style="padding-left:20px">              -- floating point input check_error : BOOLEAN := float_check_error) </font> <font id="function_return">return valid_fpstate </font>
-**Description**
+</br>**Description**
  deferred constant
  Returns the class which X falls into
 
 - add <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Basic parameter list
  round_style - Selects the rounding algorithm to use
  guard - extra bits added to the end if the operation to add precision
@@ -38,21 +38,21 @@
 - remainder <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
 - modulo <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
 - reciprocal <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  reciprocal
 
 - dividebyp2 <font id="function_arguments">( l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
 - mac <font id="function_arguments">( l,<br><span style="padding-left:20px"> r,<br><span style="padding-left:20px"> c              : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px">  -- number of guard bits constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Multiply accumulate  result = l*r + c
 
 - sqrt <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px"> constant guard       : NATURAL    := float_guard_bits;<br><span style="padding-left:20px"> constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px"> constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Square root (all 754 based implementations need this)
 
 - Is_Negative <font id="function_arguments">(arg : UNRESOLVED_float) </font> <font id="function_return">return BOOLEAN </font>
 - eq <font id="function_arguments">(                               -- equal = l,<br><span style="padding-left:20px"> r                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant check_error : BOOLEAN := float_check_error;<br><span style="padding-left:20px"> constant denormalize : BOOLEAN := float_denormalize) </font> <font id="function_return">return BOOLEAN </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  compare functions
  =, /=, >=, <=, <, >, maximum, minimum
@@ -74,7 +74,7 @@
 - maximum <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - minimum <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - resize <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px">  -- Floating point input constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error    : BOOLEAN    := float_check_error;<br><span style="padding-left:20px"> constant denormalize_in : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  conversion functions
  Converts one floating point number into another.
 
@@ -83,118 +83,118 @@
 - to_float64 <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error    : BOOLEAN    := float_check_error;<br><span style="padding-left:20px"> constant denormalize_in : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float64 </font>
 - to_float128 <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error    : BOOLEAN    := float_check_error;<br><span style="padding-left:20px"> constant denormalize_in : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float128 </font>
 - to_slv <font id="function_arguments">(arg : UNRESOLVED_float) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  Converts an fp into an SLV (needed for synthesis)
 
 - to_sulv <font id="function_arguments">(arg : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  Converts an fp into an std_ulogic_vector (sulv)
 
 - to_float <font id="function_arguments">( arg                     : STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  std_ulogic_vector to float
 
 - to_float <font id="function_arguments">( arg                     : INTEGER;<br><span style="padding-left:20px"> constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Integer to float
 
 - to_float <font id="function_arguments">( arg                     : REAL;<br><span style="padding-left:20px"> constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  real to float
 
 - to_float <font id="function_arguments">( arg                     : UNSIGNED;<br><span style="padding-left:20px"> constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  unsigned to float
 
 - to_float <font id="function_arguments">( arg                     : SIGNED;<br><span style="padding-left:20px"> constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  signed to float
 
 - to_float <font id="function_arguments">( arg                     : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- unsigned fixed point input constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- width of exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- width of fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  unsigned fixed point to float
 
 - to_float <font id="function_arguments">( arg                     : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- length of FP output fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding constant denormalize    : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  signed fixed point to float
 
 - to_float <font id="function_arguments">( arg                  : INTEGER;<br><span style="padding-left:20px"> size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  size_res functions
  Integer to float
 
 - to_float <font id="function_arguments">( arg                  : REAL;<br><span style="padding-left:20px"> size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  real to float
 
 - to_float <font id="function_arguments">( arg                  : UNSIGNED;<br><span style="padding-left:20px"> size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  unsigned to float
 
 - to_float <font id="function_arguments">( arg                  : SIGNED;<br><span style="padding-left:20px"> size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  signed to float
 
 - to_float <font id="function_arguments">( arg      : STD_ULOGIC_VECTOR;<br><span style="padding-left:20px"> size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  sulv to float
 
 - to_float <font id="function_arguments">( arg                  : UNRESOLVED_ufixed;<br><span style="padding-left:20px">  -- unsigned fixed point input size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  unsigned fixed point to float
 
 - to_float <font id="function_arguments">( arg                  : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> size_res             : UNRESOLVED_float;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  signed fixed point to float
 
 - to_unsigned <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant size        : NATURAL;<br><span style="padding-left:20px">     -- length of output constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error) </font> <font id="function_return">return UNSIGNED </font>
-**Description**
+</br>**Description**
  float to unsigned
 
 - to_signed <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant size        : NATURAL;<br><span style="padding-left:20px">     -- length of output constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error) </font> <font id="function_return">return SIGNED </font>
-**Description**
+</br>**Description**
  float to signed
 
 - to_ufixed <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px">  -- fp input constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- integer part constant right_index    : INTEGER;<br><span style="padding-left:20px">  -- fraction part constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px">  -- saturate constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px">  -- rounding constant check_error    : BOOLEAN                   := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize    : BOOLEAN                   := float_denormalize) </font> <font id="function_return">return UNRESOLVED_ufixed </font>
-**Description**
+</br>**Description**
  purpose: Converts a float to unsigned fixed point
 
 - to_sfixed <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px">  -- fp input constant left_index     : INTEGER;<br><span style="padding-left:20px">  -- integer part constant right_index    : INTEGER;<br><span style="padding-left:20px">  -- fraction part constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px">  -- saturate constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px">  -- rounding constant check_error    : BOOLEAN                   := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize    : BOOLEAN                   := float_denormalize) </font> <font id="function_return">return UNRESOLVED_sfixed </font>
-**Description**
+</br>**Description**
  float to signed fixed point
 
 - to_unsigned <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input size_res             : UNSIGNED;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error) </font> <font id="function_return">return UNSIGNED </font>
-**Description**
+</br>**Description**
  size_res versions
  float to unsigned
 
 - to_signed <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input size_res             : SIGNED;<br><span style="padding-left:20px"> constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error) </font> <font id="function_return">return SIGNED </font>
-**Description**
+</br>**Description**
  float to signed
 
 - to_ufixed <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px">  -- fp input size_res                : UNRESOLVED_ufixed;<br><span style="padding-left:20px"> constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px">  -- saturate constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px">  -- rounding constant check_error    : BOOLEAN                   := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize    : BOOLEAN                   := float_denormalize) </font> <font id="function_return">return UNRESOLVED_ufixed </font>
-**Description**
+</br>**Description**
  purpose: Converts a float to unsigned fixed point
 
 - to_sfixed <font id="function_arguments">( arg                     : UNRESOLVED_float;<br><span style="padding-left:20px">  -- fp input size_res                : UNRESOLVED_sfixed;<br><span style="padding-left:20px"> constant overflow_style : fixed_overflow_style_type := fixed_overflow_style;<br><span style="padding-left:20px">  -- saturate constant round_style    : fixed_round_style_type    := fixed_round_style;<br><span style="padding-left:20px">  -- rounding constant check_error    : BOOLEAN                   := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize    : BOOLEAN                   := float_denormalize) </font> <font id="function_return">return UNRESOLVED_sfixed </font>
-**Description**
+</br>**Description**
  float to signed fixed point
 
 - to_real <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return REAL </font>
-**Description**
+</br>**Description**
  float to real
 
 - to_integer <font id="function_arguments">( arg                  : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error) </font> <font id="function_return">return INTEGER </font>
-**Description**
+</br>**Description**
  float to integer
 
 - realtobits <font id="function_arguments">(arg : REAL) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  For Verilog compatability
 
 - bitstoreal <font id="function_arguments">(arg : STD_ULOGIC_VECTOR) </font> <font id="function_return">return REAL </font>
 - to_01 <font id="function_arguments">( arg  : UNRESOLVED_float;<br><span style="padding-left:20px">            -- floating point input XMAP : STD_LOGIC := '0') </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Maps metalogical values
 
 - Is_X <font id="function_arguments">(arg    : UNRESOLVED_float) </font> <font id="function_return">return BOOLEAN </font>
@@ -202,7 +202,7 @@
 - to_X01Z <font id="function_arguments">(arg : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - to_UX01 <font id="function_arguments">(arg : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - break_number <font id="function_arguments">( arg         : in  UNRESOLVED_float;<br><span style="padding-left:20px"> denormalize : in  BOOLEAN := float_denormalize;<br><span style="padding-left:20px"> check_error : in  BOOLEAN := float_check_error;<br><span style="padding-left:20px"> fract       : out UNSIGNED;<br><span style="padding-left:20px"> expon       : out SIGNED;<br><span style="padding-left:20px">  -- NOTE:  Add 1 to get the real exponent! sign        : out STD_ULOGIC) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  These two procedures were copied out of the body because they proved
  very useful for vendor specific algorithm development
  Break_number converts a floating point number into it's parts
@@ -210,18 +210,18 @@
 
 - break_number <font id="function_arguments">( arg         : in  UNRESOLVED_float;<br><span style="padding-left:20px"> denormalize : in  BOOLEAN := float_denormalize;<br><span style="padding-left:20px"> check_error : in  BOOLEAN := float_check_error;<br><span style="padding-left:20px"> fract       : out ufixed;<br><span style="padding-left:20px">           -- a number between 1.0 and 2.0 expon       : out SIGNED;<br><span style="padding-left:20px">  -- NOTE:  Add 1 to get the real exponent! sign        : out STD_ULOGIC) </font> <font id="function_return">return ()</font>
 - normalize <font id="function_arguments">( fract                   : UNSIGNED;<br><span style="padding-left:20px">           -- fraction,<br><span style="padding-left:20px"> unnormalized expon                   : SIGNED;<br><span style="padding-left:20px">   -- exponent - 1,<br><span style="padding-left:20px"> normalized sign                    : STD_ULOGIC;<br><span style="padding-left:20px">         -- sign bit sticky                  : STD_ULOGIC := '0';<br><span style="padding-left:20px">  -- Sticky bit (rounding) constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- size of output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- size of output fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize    : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant nguard         : NATURAL    := float_guard_bits) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Normalize takes a fraction and and exponent and converts them into
  a floating point number.  Does the shifting and the rounding.
  Exponent is assumed to be biased by -1
 
 - normalize <font id="function_arguments">( fract                   : ufixed;<br><span style="padding-left:20px">   -- unsigned fixed point expon                   : SIGNED;<br><span style="padding-left:20px">   -- exponent - 1,<br><span style="padding-left:20px"> normalized sign                    : STD_ULOGIC;<br><span style="padding-left:20px">         -- sign bit sticky                  : STD_ULOGIC := '0';<br><span style="padding-left:20px">  -- Sticky bit (rounding) constant exponent_width : NATURAL    := float_exponent_width;<br><span style="padding-left:20px">  -- size of output exponent constant fraction_width : NATURAL    := float_fraction_width;<br><span style="padding-left:20px">  -- size of output fraction constant round_style    : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize    : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant nguard         : NATURAL    := float_guard_bits) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Exponent is assumed to be biased by -1
 
 - normalize <font id="function_arguments">( fract                : UNSIGNED;<br><span style="padding-left:20px">    -- unsigned expon                : SIGNED;<br><span style="padding-left:20px">      -- exponent - 1,<br><span style="padding-left:20px"> normalized sign                 : STD_ULOGIC;<br><span style="padding-left:20px">  -- sign bit sticky               : STD_ULOGIC := '0';<br><span style="padding-left:20px">  -- Sticky bit (rounding) size_res             : UNRESOLVED_float;<br><span style="padding-left:20px">   -- used for sizing only constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant nguard      : NATURAL    := float_guard_bits) </font> <font id="function_return">return UNRESOLVED_float </font>
 - normalize <font id="function_arguments">( fract                : ufixed;<br><span style="padding-left:20px">      -- unsigned fixed point expon                : SIGNED;<br><span style="padding-left:20px">      -- exponent - 1,<br><span style="padding-left:20px"> normalized sign                 : STD_ULOGIC;<br><span style="padding-left:20px">  -- sign bit sticky               : STD_ULOGIC := '0';<br><span style="padding-left:20px">  -- Sticky bit (rounding) size_res             : UNRESOLVED_float;<br><span style="padding-left:20px">   -- used for sizing only constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant denormalize : BOOLEAN    := float_denormalize;<br><span style="padding-left:20px">  -- Use IEEE extended FP constant nguard      : NATURAL    := float_guard_bits) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Exponent is assumed to be biased by -1
 
 - \?=\ <font id="function_arguments">(l : UNRESOLVED_float;<br><span style="padding-left:20px"> r : REAL) </font> <font id="function_return">return STD_ULOGIC </font>
@@ -249,7 +249,7 @@
 - \?<\ <font id="function_arguments">(l : INTEGER;<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
 - \?<=\ <font id="function_arguments">(l : INTEGER;<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
 - maximum <font id="function_arguments">(l : UNRESOLVED_float;<br><span style="padding-left:20px"> r : REAL) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  minimum and maximum overloads
 
 - minimum <font id="function_arguments">(l : UNRESOLVED_float;<br><span style="padding-left:20px"> r : REAL) </font> <font id="function_return">return UNRESOLVED_float </font>
@@ -260,7 +260,7 @@
 - maximum <font id="function_arguments">(l : INTEGER;<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - minimum <font id="function_arguments">(l : INTEGER;<br><span style="padding-left:20px"> r : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - and_reduce <font id="function_arguments">(l : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
-**Description**
+</br>**Description**
  Reduction operators, same as numeric_std functions
 
 - nand_reduce <font id="function_arguments">(l : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
@@ -269,7 +269,7 @@
 - xor_reduce <font id="function_arguments">(l : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
 - xnor_reduce <font id="function_arguments">(l : UNRESOLVED_float) </font> <font id="function_return">return STD_ULOGIC </font>
 - Copysign <font id="function_arguments">(x,<br><span style="padding-left:20px"> y : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Note: "sla", "sra", "sll", "slr", "rol" and "ror" not implemented.
 ---------------------------------------------------------------------------
  Recommended Functions from the IEEE 754 Appendix
@@ -277,30 +277,30 @@
  returns x with the sign of y.
 
 - Scalb <font id="function_arguments">( y                    : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input N                    : INTEGER;<br><span style="padding-left:20px">     -- exponent to add constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Returns y * 2**n for integral values of N without computing 2**n
 
 - Scalb <font id="function_arguments">( y                    : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input N                    : SIGNED;<br><span style="padding-left:20px">      -- exponent to add constant round_style : round_type := float_round_style;<br><span style="padding-left:20px">  -- rounding option constant check_error : BOOLEAN    := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN    := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Returns y * 2**n for integral values of N without computing 2**n
 
 - Logb <font id="function_arguments">(x : UNRESOLVED_float) </font> <font id="function_return">return INTEGER </font>
-**Description**
+</br>**Description**
  returns the unbiased exponent of x
 
 - Logb <font id="function_arguments">(x : UNRESOLVED_float) </font> <font id="function_return">return SIGNED </font>
 - Nextafter <font id="function_arguments">( x,<br><span style="padding-left:20px"> y                 : UNRESOLVED_float;<br><span style="padding-left:20px">  -- floating point input constant check_error : BOOLEAN := float_check_error;<br><span style="padding-left:20px">  -- check for errors constant denormalize : BOOLEAN := float_denormalize) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  returns the next representable neighbor of x in the direction toward y
 
 - Unordered <font id="function_arguments">(x,<br><span style="padding-left:20px"> y : UNRESOLVED_float) </font> <font id="function_return">return BOOLEAN </font>
-**Description**
+</br>**Description**
  Returns TRUE if X is unordered with Y.
 
 - Finite <font id="function_arguments">(x       : UNRESOLVED_float) </font> <font id="function_return">return BOOLEAN </font>
 - Isnan <font id="function_arguments">(x        : UNRESOLVED_float) </font> <font id="function_return">return BOOLEAN </font>
 - zerofp <font id="function_arguments">( constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  Function to return constants.
 
 - nanfp <font id="function_arguments">( constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
@@ -309,7 +309,7 @@
 - neg_inffp <font id="function_arguments">( constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
 - neg_zerofp <font id="function_arguments">( constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
 - zerofp <font id="function_arguments">( size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  size_res versions
 
 - nanfp <font id="function_arguments">( size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
@@ -318,7 +318,7 @@
 - neg_inffp <font id="function_arguments">( size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - neg_zerofp <font id="function_arguments">( size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - WRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">              -- access type (pointer) VALUE     : in    UNRESOLVED_float;<br><span style="padding-left:20px">  -- value to write JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px">    -- which side to justify text FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ===========================================================================
  string and textio Functions
  ===========================================================================
@@ -327,38 +327,38 @@
  writes S:EEEE:FFFFFFFF
 
 - READ <font id="function_arguments">(L : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  width of field
  Reads SEEEEFFFFFFFF, "." and ":" are ignored
 
 - READ <font id="function_arguments">(L    : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float;<br><span style="padding-left:20px"> GOOD : out   BOOLEAN) </font> <font id="function_return">return ()</font>
 - OWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">              -- access type (pointer) VALUE     : in    UNRESOLVED_float;<br><span style="padding-left:20px">  -- value to write JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px">    -- which side to justify text FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font>
 - OREAD <font id="function_arguments">(L : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  width of field
  Octal read with padding, no separators used
 
 - OREAD <font id="function_arguments">(L    : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float;<br><span style="padding-left:20px"> GOOD : out   BOOLEAN) </font> <font id="function_return">return ()</font>
 - HWRITE <font id="function_arguments">( L         : inout LINE;<br><span style="padding-left:20px">              -- access type (pointer) VALUE     : in    UNRESOLVED_float;<br><span style="padding-left:20px">  -- value to write JUSTIFIED : in    SIDE  := right;<br><span style="padding-left:20px">    -- which side to justify text FIELD     : in    WIDTH := 0) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Hex write with padding, no separators
 
 - HREAD <font id="function_arguments">(L : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  width of field
  Hex read with padding, no separators used
 
 - HREAD <font id="function_arguments">(L    : inout LINE;<br><span style="padding-left:20px"> VALUE : out UNRESOLVED_float;<br><span style="padding-left:20px"> GOOD : out   BOOLEAN) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">(value : UNRESOLVED_float) </font> <font id="function_return">return STRING </font>
-**Description**
+</br>**Description**
  returns "S:EEEE:FFFFFFFF"
 
 - to_hstring <font id="function_arguments">(value : UNRESOLVED_float) </font> <font id="function_return">return STRING </font>
-**Description**
+</br>**Description**
  Returns a HEX string, with padding
 
 - to_ostring <font id="function_arguments">(value : UNRESOLVED_float) </font> <font id="function_return">return STRING </font>
-**Description**
+</br>**Description**
  Returns and octal string, with padding
 
 - from_string <font id="function_arguments">( bstring                 : STRING;<br><span style="padding-left:20px">   -- binary string constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px"> constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
@@ -368,7 +368,7 @@
 - from_ostring <font id="function_arguments">( ostring  : STRING;<br><span style="padding-left:20px">                  -- Octal string size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - from_hstring <font id="function_arguments">( hstring  : STRING;<br><span style="padding-left:20px">                  -- hex string size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - to_float <font id="function_arguments">( arg                     : STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> constant exponent_width : NATURAL := float_exponent_width;<br><span style="padding-left:20px">  -- length of FP output exponent constant fraction_width : NATURAL := float_fraction_width) </font> <font id="function_return">return UNRESOLVED_float </font>
-**Description**
+</br>**Description**
  rtl_synthesis on
  pragma synthesis_on
  IN VHDL-2006 std_logic_vector is a subtype of std_ulogic_vector, so these
@@ -376,7 +376,7 @@
 
 - to_float <font id="function_arguments">( arg      : STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> size_res : UNRESOLVED_float) </font> <font id="function_return">return UNRESOLVED_float </font>
 - realtobits <font id="function_arguments">(arg : REAL) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  For Verilog compatability
 
 - bitstoreal <font id="function_arguments">(arg : STD_LOGIC_VECTOR) </font> <font id="function_return">return REAL </font>

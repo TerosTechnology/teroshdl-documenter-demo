@@ -99,20 +99,20 @@
 ## Processes
 - U_RxErrorIrqEn: ( r )
 - unnamed: ( axilClk )
-**Description**
+</br>**Description**
 ----------------------------------  AXI Registers ----------------------------------  Sync 
 - unnamed: ( axilRst, axilReadMaster, axilWriteMaster, r, rxStatusSync, txStatusSync )
-**Description**
+</br>**Description**
  Async 
 ## Instantiations
 
 - U_RxOpCodeSync: surf.SynchronizerFifo
 - U_RxError: surf.SyncStatusVector
-**Description**
+</br>**Description**
  Errror counters and non counted values
 
 - U_RxStatus: surf.SyncStatusVector
-**Description**
+</br>**Description**
  Status counters
 
 - U_RxClkFreq: surf.SyncClockFreq
@@ -121,23 +121,23 @@
 - U_RxGearboxStatus: surf.SyncStatusVector
 - U_remLinkData: surf.SynchronizerFifo
 - U_TxOpCodeSync: surf.SynchronizerFifo
-**Description**
+</br>**Description**
 -------------------------------------
  Transmit Status
 -------------------------------------
  OpCode Capture
 
 - U_TxError: surf.SyncStatusVector
-**Description**
+</br>**Description**
  Errror counters and non counted values
 
 - U_TxStatus: surf.SyncStatusVector
-**Description**
+</br>**Description**
  Status counters
 
 - U_TxClkFreq: surf.SyncClockFreq
 - U_FlowCntlDis: surf.Synchronizer
-**Description**
+</br>**Description**
 -----------------------------------
  Tx Control Sync
 -----------------------------------

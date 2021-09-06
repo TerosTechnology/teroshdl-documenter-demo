@@ -57,8 +57,8 @@
 | C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> GC_CHANNEL) |             |
 ## Processes
 - cmd_interpreter: (  )
-**Description**
+</br>**Description**
 ========================================================================================== ==========================================================================================  Command interpreter  - Interpret, decode and acknowledge commands from the central sequencer ========================================================================================== 
 - cmd_executor: (  )
-**Description**
+</br>**Description**
 ========================================================================================== ==========================================================================================  Command executor  - Fetch and execute the commands ========================================================================================== 

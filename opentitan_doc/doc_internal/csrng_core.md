@@ -347,7 +347,7 @@
 ## Instantiations
 
 - u_intr_hw_cs_cmd_req_done: prim_intr_hw
-**Description**
+</br>**Description**
 --------------------------------------------
  instantiate interrupt hardware primitives
 --------------------------------------------
@@ -357,19 +357,19 @@
 - u_intr_hw_cs_hw_inst_exc: prim_intr_hw
 - u_intr_hw_cs_fatal_err: prim_intr_hw
 - u_prim_packer_fifo_sw_genbits: prim_packer_fifo
-**Description**
+</br>**Description**
  pack the gen bits into a 32 bit register sized word
 
 - u_prim_arbiter_ppc_acmd: prim_arbiter_ppc
 - u_csrng_main_sm: csrng_main_sm
-**Description**
+</br>**Description**
  sm to process all instantiation requests
 
 - u_prim_packer_fifo_adata: prim_packer_fifo
 - u_csrng_state_db: csrng_state_db
 - u_csrng_ctr_drbg_cmd: csrng_ctr_drbg_cmd
 - u_csrng_ctr_drbg_upd: csrng_ctr_drbg_upd
-**Description**
+</br>**Description**
 -------------------------------------
  csrng_ctr_drbg_upd instantiation
 -------------------------------------
@@ -381,12 +381,12 @@
  these two blocks.
 
 - u_prim_arbiter_ppc_updblk_arb: prim_arbiter_ppc
-**Description**
+</br>**Description**
  update block  arbiter
 
 - u_prim_lc_sync: prim_lc_sync
 - u_csrng_block_encrypt: csrng_block_encrypt
-**Description**
+</br>**Description**
 -------------------------------------
  csrng_block_encrypt instantiation
 -------------------------------------

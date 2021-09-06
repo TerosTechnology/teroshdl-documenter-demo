@@ -115,12 +115,12 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - ia_if: ad7401
-**Description**
+</br>**Description**
  adc interfaces
 
 - ib_if: ad7401
@@ -129,10 +129,10 @@
 - i_up_adc_channel_ib: up_adc_channel
 - i_up_adc_channel_vbus: up_adc_channel
 - i_up_adc_common: up_adc_common
-**Description**
+</br>**Description**
  common processor control
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

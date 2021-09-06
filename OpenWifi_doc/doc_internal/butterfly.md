@@ -217,7 +217,7 @@
 ## Processes
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Set up the input to the multiply 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
@@ -243,13 +243,13 @@
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
  Let's see if we can improve our performance at all by  moving our test one clock earlier.  If nothing else, it should  help induction finish one (or more) clocks ealier than  otherwise 
 - unnamed: ( @(*) )
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Induction helpers 
 - unnamed: ( @(*) )
   - **Type:** always

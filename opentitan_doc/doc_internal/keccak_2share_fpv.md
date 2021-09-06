@@ -72,7 +72,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i, negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Compare with keccak Unmasking 
 - unnamed: (  )
   - **Type:** always_comb

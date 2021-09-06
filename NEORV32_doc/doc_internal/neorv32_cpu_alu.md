@@ -88,24 +88,24 @@
 | cp_ctrl_t |      |  co-processor arbiter and interface --  |
 ## Processes
 - binary_arithmetic_core: ( ctrl_i, opa, opb )
-**Description**
+</br>**Description**
  operand b (second ALU input operand)  Binary Adder/Subtracter ----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - arithmetic_core: ( ctrl_i, addsub_res )
-**Description**
+</br>**Description**
  ALU arithmetic logic core -- 
 - cp_arbiter: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Co-Processor Arbiter -------------------------------------------------------------------  -------------------------------------------------------------------------------------------  Interface:  Co-processor "valid" signal has to be asserted (for one cycle) one cycle before asserting output data  Co-processor "output data" has to be always zero unless co-processor was explicitly triggered 
 - alu_logic_core: ( ctrl_i, rs1_i, opb )
-**Description**
+</br>**Description**
  ALU Logic Core -------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - alu_function_mux: ( ctrl_i, arith_res, logic_res, csr_i, cp_res )
-**Description**
+</br>**Description**
  ALU Function Select --------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 ## Instantiations
 
 - neorv32_cpu_cp_shifter_inst: neorv32_cpu_cp_shifter
-**Description**
+</br>**Description**
  **************************************************************************************************************************
  Co-Processors
  **************************************************************************************************************************

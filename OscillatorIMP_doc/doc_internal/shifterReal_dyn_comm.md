@@ -46,7 +46,7 @@
 | REG_SHIFT_VAL | std_logic_vector |  "01" |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_async_bloc: ( shift_val_s, addr_i )
 - read_bloc: ( clk )

@@ -57,10 +57,10 @@
 ## Processes
 - p_sbi_write_regs: ( clk )
 - p_sbi_read_regs: ( sbi_cs, sbi_rena, sbi_addr )
-**Description**
+</br>**Description**
  Read the Ethernet MAC dummy register 
 - p_gmii_send_frame: ( clk )
-**Description**
+</br>**Description**
 ----------------------------------------------------------------------------------  GMII interface ----------------------------------------------------------------------------------  Send Ethernet frames once they have been completely stored in the internal registers. 
 ## State machines
 

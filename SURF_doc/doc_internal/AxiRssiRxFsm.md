@@ -110,7 +110,7 @@
 - comb: ( axiOffset_i, connActive_i, lastAckN_i, r, rdAck, rst_i,
                    rxBufferSize_i, rxWindowSize_i, tspMaster_i, txWindowSize_i,
                    wrAck, wrDmaSlave )
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )
 ## Instantiations

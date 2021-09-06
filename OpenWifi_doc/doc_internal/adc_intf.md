@@ -42,12 +42,12 @@
   - **Type:** always
 - unnamed: ( @( posedge adc_clk ) )
   - **Type:** always
-**Description**
+</br>**Description**
 decimate input by 2: 40Msps --> 20Msps 
 ## Instantiations
 
 - xpm_fifo_async_adc_intf: xpm_fifo_async
-**Description**
+</br>**Description**
  fifo32_2clk_dep32 fifo32_2clk_dep32_i
         (.DATAO(data_to_acc_internal),
          .DI(adc_data_delay),

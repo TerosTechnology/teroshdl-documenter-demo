@@ -93,7 +93,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  trigger logic:  0 OR  1 AND 
 - unnamed: ( @(*) )
   - **Type:** always
@@ -101,5 +101,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  external trigger detect 

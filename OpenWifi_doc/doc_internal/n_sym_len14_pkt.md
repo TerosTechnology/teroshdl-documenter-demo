@@ -23,5 +23,5 @@
 ## Processes
 - unnamed: ( @( ht_flag, rate_mcs ) )
   - **Type:** always
-**Description**
+</br>**Description**
  lookup table for how many data OFDM symbol will be used for ACK/CTS (length 14)  to decide recv_ack_timeout_top and others always @( signal_rate[7],signal_rate[3:0] ) 

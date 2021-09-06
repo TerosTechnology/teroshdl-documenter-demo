@@ -108,11 +108,11 @@
   - **Type:** always
 - unnamed: ( @(posedge m_axi_aclk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * There is a requirement that data_id <= address_id (modulo 2**ID_WIDTH).  We  * know that we will never receive data before we have requested it so there is  * an implicit dependency between data_id and address_id and no need to  * explicitly track it.  */ 
 - unnamed: ( @(posedge m_axi_aclk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * We need to complete all bursts for which an address has been put onto the  * AXI-MM interface.  */ 
 ## Instantiations
 

@@ -104,22 +104,22 @@
 | wb_state_type | (IDLE,<br><span style="padding-left:20px"> WRITE_ACK,<br><span style="padding-left:20px"> READ_ACK)                                             |  Wishbone signals:               |
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  Add a few FFs on the RX input to avoid metastability issues 
 - uart_receive: ( clk )
 - sample_counter: ( clk )
 - uart_transmit: ( clk )
 - uart_tx_clock_generator: ( clk )
 - sample_clock_generator: ( clk )
-**Description**
+</br>**Description**
 -------- Sample clock generator ---------- 
 - wishbone: ( clk )
-**Description**
+</br>**Description**
 -------- Wishbone Interface ----------  
 ## Instantiations
 
 - send_buffer: work.pp_fifo
-**Description**
+</br>**Description**
 -------- Data Buffers ----------
 
 - recv_buffer: work.pp_fifo

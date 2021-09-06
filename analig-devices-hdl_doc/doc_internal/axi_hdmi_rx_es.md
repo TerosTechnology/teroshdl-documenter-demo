@@ -89,9 +89,9 @@
 ## Processes
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  delay to get rid of eav's 4 bytes 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  check for sav and eav and generate the corresponding enables 

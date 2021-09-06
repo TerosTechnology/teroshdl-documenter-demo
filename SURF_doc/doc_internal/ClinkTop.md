@@ -104,50 +104,50 @@
 ## Instantiations
 
 - U_IdelayCtrl: IDELAYCTRL
-**Description**
+</br>**Description**
 -------------------
  IDELAYCTRL Modules
 -------------------
 
 - U_AxilAsync: surf.AxiLiteAsync
-**Description**
+</br>**Description**
  1-bit input: Active high reset input
 --------------------------
  AXI-Lite Clock Transition
 --------------------------
 
 - U_XBAR: surf.AxiLiteCrossbar
-**Description**
+</br>**Description**
 ------------------------
  AXI-Lite: Crossbar Core
 ------------------------
 
 - U_ClinkReg: surf.ClinkReg
-**Description**
+</br>**Description**
 -------------------------
  AXI-Lite Register Module
 -------------------------
 
 - U_Cbl0Half0: surf.ClinkCtrl
-**Description**
+</br>**Description**
 -------------------------------------------------------
  Connector 0, Half 0, Control for Base,Medium,Full,Deca
 -------------------------------------------------------
 
 - U_Cbl0Half1: surf.ClinkData
-**Description**
+</br>**Description**
 ------------------------------------------------------
  Connector 0, Half 1, Data X for Base,Medium,Full,Deca
 ------------------------------------------------------
 
 - U_Cbl1Half1: surf.ClinkData
-**Description**
+</br>**Description**
 -----------------------------------------------------------------
  Connector 1, Half 1, Data X for Base, Data Y for Med, Full, Deca
 -----------------------------------------------------------------
 
 - U_Framer0: surf.ClinkFraming
-**Description**
+</br>**Description**
 ----------------
  Data Processing
 ----------------

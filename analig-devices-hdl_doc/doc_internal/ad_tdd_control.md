@@ -160,11 +160,11 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  synchronization of tdd_sync 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  ***************************************************************************  tdd counter (state machine)  *************************************************************************** 
 - unnamed: ( @* )
   - **Type:** always
@@ -172,17 +172,17 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  tdd free running counter 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  tdd burst counter 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  ***************************************************************************  generate control signals  ***************************************************************************  start/stop rx vco 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -192,7 +192,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  start/stop tx vco 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -202,7 +202,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  start/stop rx rf path 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -212,7 +212,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  start/stop tx rf path 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -222,7 +222,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  start/stop tx data path 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -232,7 +232,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  start/stop rx data path 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -255,7 +255,7 @@
 ## Instantiations
 
 - i_vco_rx_on_1_comp: ad_addsub
-**Description**
+</br>**Description**
  control-path delay compensation
 
 - i_vco_rx_off_1_comp: ad_addsub
@@ -274,7 +274,7 @@
 - i_tx_on_2_comp: ad_addsub
 - i_tx_off_2_comp: ad_addsub
 - i_tx_dp_on_1_comp: ad_addsub
-**Description**
+</br>**Description**
  internal data-path delay compensation
 
 - i_tx_dp_on_2_comp: ad_addsub

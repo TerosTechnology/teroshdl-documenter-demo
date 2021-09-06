@@ -143,26 +143,26 @@
 ## Instantiations
 
 - i_rx_channel_0: axi_ad9361_rx_channel
-**Description**
+</br>**Description**
  channel 0 (i)
 
 - i_rx_channel_1: axi_ad9361_rx_channel
-**Description**
+</br>**Description**
  channel 1 (q)
 
 - i_rx_channel_2: axi_ad9361_rx_channel
-**Description**
+</br>**Description**
  channel 2 (i)
 
 - i_rx_channel_3: axi_ad9361_rx_channel
-**Description**
+</br>**Description**
  channel 3 (q)
 
 - i_up_adc_common: up_adc_common
-**Description**
+</br>**Description**
  common processor control
 
 - i_delay_cntrl: up_delay_cntrl
-**Description**
+</br>**Description**
  adc delay control
 

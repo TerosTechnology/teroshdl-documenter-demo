@@ -147,11 +147,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -161,85 +161,85 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test_fatal_sw_err: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
    F[fatal_sw_err]: 0:0
 
 - u_alert_test_recov_sw_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[recov_sw_err]: 1:1
 
 - u_alert_test_fatal_hw_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_hw_err]: 2:2
 
 - u_alert_test_recov_hw_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[recov_hw_err]: 3:3
 
 - u_sw_alert_regwen_0: prim_subreg
-**Description**
+</br>**Description**
  Subregister 0 of Multireg sw_alert_regwen
  R[sw_alert_regwen_0]: V(False)
 
 - u_sw_alert_regwen_1: prim_subreg
-**Description**
+</br>**Description**
  Subregister 1 of Multireg sw_alert_regwen
  R[sw_alert_regwen_1]: V(False)
 
 - u_ibus_regwen_0: prim_subreg
-**Description**
+</br>**Description**
  Subregister 0 of Multireg ibus_regwen
  R[ibus_regwen_0]: V(False)
 
 - u_ibus_regwen_1: prim_subreg
-**Description**
+</br>**Description**
  Subregister 1 of Multireg ibus_regwen
  R[ibus_regwen_1]: V(False)
 
 - u_dbus_regwen_0: prim_subreg
-**Description**
+</br>**Description**
  Subregister 0 of Multireg dbus_regwen
  R[dbus_regwen_0]: V(False)
 
 - u_dbus_regwen_1: prim_subreg
-**Description**
+</br>**Description**
  Subregister 1 of Multireg dbus_regwen
  R[dbus_regwen_1]: V(False)
 
 - u_nmi_enable_alert_en: prim_subreg
-**Description**
+</br>**Description**
  R[nmi_enable]: V(False)
    F[alert_en]: 0:0
 
 - u_nmi_enable_wdog_en: prim_subreg
-**Description**
+</br>**Description**
    F[wdog_en]: 1:1
 
 - u_nmi_state_alert: prim_subreg
-**Description**
+</br>**Description**
  R[nmi_state]: V(False)
    F[alert]: 0:0
 
 - u_nmi_state_wdog: prim_subreg
-**Description**
+</br>**Description**
    F[wdog]: 1:1
 
 - u_err_status_reg_intg_err: prim_subreg
-**Description**
+</br>**Description**
  R[err_status]: V(False)
    F[reg_intg_err]: 0:0
 
 - u_err_status_fatal_intg_err: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_intg_err]: 8:8
 
 - u_err_status_fatal_core_err: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_core_err]: 9:9
 
 - u_err_status_recov_core_err: prim_subreg
-**Description**
+</br>**Description**
    F[recov_core_err]: 10:10
 

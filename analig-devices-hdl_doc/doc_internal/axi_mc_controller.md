@@ -115,20 +115,20 @@
 ## Processes
 - unnamed: ( @(posedge ref_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  clock generation 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - motor_driver_inst: motor_driver
-**Description**
+</br>**Description**
  main (device interface)
 
 - control_reg_inst: control_registers
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

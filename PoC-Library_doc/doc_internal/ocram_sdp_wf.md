@@ -84,7 +84,7 @@
 | ram_q | std_logic_vector(q'range) |  RAM output         |
 ## Functions
 - addr_equal <font id="function_arguments">(a1 : unsigned;<br><span style="padding-left:20px"> a2 : unsigned) </font> <font id="function_return">return X01 </font>
-**Description**
+</br>**Description**
  Compares two addresses, returns 'X' if either ``a1`` or ``a2`` contains
  meta-values, otherwise returns '1' if ``a1 == a2`` is true else
  '0'. Returns 'X' even when the addresses contain '-' values, to signal an

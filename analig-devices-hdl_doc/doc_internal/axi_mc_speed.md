@@ -102,12 +102,12 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - position_0: debouncer
-**Description**
+</br>**Description**
  HALL sensors debouncers
 
 - position_1: debouncer
@@ -115,10 +115,10 @@
 - delay_30_degrees_i1: delay_30_degrees
 - speed_detector_inst: speed_detector
 - i_up_adc_common: up_adc_common
-**Description**
+</br>**Description**
  common processor control
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

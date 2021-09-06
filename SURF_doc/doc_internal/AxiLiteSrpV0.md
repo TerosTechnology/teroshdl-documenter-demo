@@ -80,14 +80,14 @@
 | RegType   |                                                                                                                       |             |
 ## Processes
 - comb: ( axilRst, r, rxFifoAxisMaster, sAxilReadMaster, sAxilWriteMaster, txFifoAxisSlave )
-**Description**
+</br>**Description**
 -----------------------------------  Master State Machine ----------------------------------- 
 - seq: ( axilClk )
 ## Instantiations
 
 - TxAxiStreamFifo: surf.AxiStreamFifoV2
 - RxAxiStreamFifo: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
 --------------------------------
  Input FIFO
 --------------------------------

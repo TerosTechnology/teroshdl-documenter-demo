@@ -100,15 +100,15 @@
 ## Processes
 - unnamed: ( @(posedge adc_div_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  adc status: adc is up, if both the MMCM_OR_BUFR_N and DELAY blocks are up 
 ## Instantiations
 
 - i_adc_data: ad_serdes_in
-**Description**
+</br>**Description**
  data interface
 
 - i_serdes_clk: ad_serdes_clk
-**Description**
+</br>**Description**
  clock input buffers and MMCM_OR_BUFR_N
 

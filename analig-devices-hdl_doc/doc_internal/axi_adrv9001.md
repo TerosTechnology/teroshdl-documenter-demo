@@ -251,10 +251,10 @@
 
 - i_if: axi_adrv9001_if
 - i_core: axi_ad9001_core
-**Description**
+</br>**Description**
  common processor control
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

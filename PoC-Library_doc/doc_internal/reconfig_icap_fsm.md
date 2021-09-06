@@ -103,10 +103,10 @@
 - combi: ( reset, nxt_state, cur_state, in_data, in_data_valid, in_data_valid_re,
 						sync_state, sync_state_flag, out_data_full, readback_cnt, pr_reset )
 - readback_cnt_p: ( clk )
-**Description**
+</br>**Description**
  readback counter process 
 - sync_p: ( clk )
-**Description**
+</br>**Description**
  update sync status 
 ## State machines
 

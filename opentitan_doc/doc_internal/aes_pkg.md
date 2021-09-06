@@ -100,40 +100,40 @@
 | ctrl_reg_t             | struct packed {<br><span style="padding-left:20px">   logic      force_zero_masks;<br><span style="padding-left:20px">   logic      manual_operation;<br><span style="padding-left:20px">   key_len_e  key_len;<br><span style="padding-left:20px">   aes_mode_e mode;<br><span style="padding-left:20px">   aes_op_e   operation;<br><span style="padding-left:20px"> }                                                                                                                                                                                                                   |  Control register type  |
 ## Functions
 - aes_mul2 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
  Multiplication by {02} (i.e. x) on GF(2^8)
  with field generating polynomial {01}{1b} (9'h11b)
  Sometimes also denoted by xtime().
 
 - aes_mul4 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
  Multiplication by {04} (i.e. x^2) on GF(2^8)
  with field generating polynomial {01}{1b} (9'h11b)
 
 - aes_div2 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
  Division by {02} (i.e. x) on GF(2^8)
  with field generating polynomial {01}{1b} (9'h11b)
  This is the inverse of aes_mul2() or xtime().
 
 - aes_circ_byte_shift <font id="function_arguments">(logic [31:0] in,<br><span style="padding-left:20px"> logic [1:0])</font> <font id="function_return">return (logic [31:0])</font>
-**Description**
+</br>**Description**
  Circular byte shift to the left
 
 - aes_transpose <font id="function_arguments">(logic [3:0][3:0][7:0])</font> <font id="function_return">return (logic [3:0][3:0][7:0])</font>
-**Description**
+</br>**Description**
  Transpose state matrix
 
 - aes_col_get <font id="function_arguments">(logic [3:0][3:0][7:0] in,<br><span style="padding-left:20px"> logic [1:0])</font> <font id="function_return">return (logic [3:0][7:0])</font>
-**Description**
+</br>**Description**
  Extract single column from state matrix
 
 - aes_mvm <font id="function_arguments">(logic [7:0] vec_b,<br><span style="padding-left:20px">)</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
  Matrix-vector multiplication in GF(2^8): c = A * b
 
 - aes_prd_get_lsbs <font id="function_arguments">(logic [(4*WidthPRDSBox)-1:0])</font> <font id="function_return">return (logic [3:0][7:0])</font>
-**Description**
+</br>**Description**
  Function for extracting LSBs of the per-S-Box pseudo-random data (PRD) from the output of the
  masking PRNG.
 

@@ -108,6 +108,6 @@
 
 - U_RstSync_TX: surf.RstSync
 - U_RstSync_RX: surf.RstSync
-**Description**
+</br>**Description**
  [out]
 

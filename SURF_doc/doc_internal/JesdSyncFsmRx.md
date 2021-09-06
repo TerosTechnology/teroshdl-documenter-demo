@@ -75,6 +75,6 @@
 | RegType   |                                                                                                                                                                                                                                                                                       |             |
 ## Processes
 - comb: ( rst, r, enable_i,sysRef_i, dataRx_i,subClass_i, chariskRx_i, lmfc_i, nSyncAnyD1_i, nSyncAny_i, linkErr_i, gtReady_i, s_kDetected, s_kStable )
-**Description**
+</br>**Description**
  State machine 
 - seq: ( clk )

@@ -133,7 +133,7 @@
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dds 
 ## Instantiations
 
@@ -154,6 +154,6 @@
 - i_dds_14: ad_dds_2
 - i_dds_15: ad_dds_2
 - i_up_dac_channel: up_dac_channel
-**Description**
+</br>**Description**
  single channel processor
 

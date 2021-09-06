@@ -135,14 +135,14 @@
 ## Instantiations
 
 - arp_eth_rx_inst: arp_eth_rx
-**Description**
+</br>**Description**
 
  * ARP frame processing
  */
 
 - arp_eth_tx_inst: arp_eth_tx
 - arp_cache_inst: arp_cache
-**Description**
+</br>**Description**
 
  * ARP cache
  */

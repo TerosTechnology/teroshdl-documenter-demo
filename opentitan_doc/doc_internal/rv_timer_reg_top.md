@@ -93,11 +93,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -107,32 +107,32 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
 
 - u_cfg0_prescale: prim_subreg
-**Description**
+</br>**Description**
  R[cfg0]: V(False)
    F[prescale]: 11:0
 
 - u_cfg0_step: prim_subreg
-**Description**
+</br>**Description**
    F[step]: 23:16
 
 - u_timer_v_lower0: prim_subreg
-**Description**
+</br>**Description**
  R[timer_v_lower0]: V(False)
 
 - u_timer_v_upper0: prim_subreg
-**Description**
+</br>**Description**
  R[timer_v_upper0]: V(False)
 
 - u_compare_lower0_0: prim_subreg
-**Description**
+</br>**Description**
  R[compare_lower0_0]: V(False)
 
 - u_compare_upper0_0: prim_subreg
-**Description**
+</br>**Description**
  R[compare_upper0_0]: V(False)
 

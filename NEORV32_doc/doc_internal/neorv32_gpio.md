@@ -72,5 +72,5 @@
 | lo_abb_c | natural |  index_size_f(gpio_size_c) |  low address boundary bit  |
 ## Processes
 - rw_access: ( clk_i )
-**Description**
+</br>**Description**
  word aligned  Read/Write Access ----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

@@ -56,16 +56,16 @@
 | C_VVC_LABELS | t_vvc_labels |  assign_vvc_labels(C_SCOPE,<br><span style="padding-left:20px"> C_VVC_NAME,<br><span style="padding-left:20px"> GC_INSTANCE_IDX,<br><span style="padding-left:20px"> GC_CHANNEL) |             |
 ## Functions
 - get_msg_id_panel <font id="function_arguments">( constant command    : in t_vvc_cmd_record;<br><span style="padding-left:20px"> constant vvc_config : in t_vvc_config ) </font> <font id="function_return">return t_msg_id_panel </font>
-**Description**
+</br>**Description**
 UVVM: temporary fix for HVVC, remove function below in v3.0
 
 ## Processes
 - cmd_interpreter: (  )
-**Description**
+</br>**Description**
 =============================================================================================== ===============================================================================================  Command interpreter  - Interpret, decode and acknowledge commands from the central sequencer =============================================================================================== 
 - cmd_executor: (  )
-**Description**
+</br>**Description**
 =============================================================================================== ===============================================================================================  Command executor  - Fetch and execute the commands =============================================================================================== 
 - p_checker: (  )
-**Description**
+</br>**Description**
  flag: is_active, set, reset =============================================================================================== 

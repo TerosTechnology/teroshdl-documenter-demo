@@ -60,7 +60,7 @@
 
 - U_UartWrapper_1: surf.UartWrapper
 - U_Fsm: surf.UartAxiLiteMasterFsm
-**Description**
+</br>**Description**
  [in]
 ---------------------
  Finite State Machine

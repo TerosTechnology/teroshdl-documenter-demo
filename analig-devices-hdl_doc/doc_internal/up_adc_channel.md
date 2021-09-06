@@ -142,7 +142,7 @@
 | up_adc_or_s                    | wire           |                      |
 ## Functions
 - sm2tc <font id="function_arguments">()</font> <font id="function_return">return ([15:0])</font>
-**Description**
+</br>**Description**
  2's complement function
 
 ## Processes
@@ -156,16 +156,16 @@
   - **Type:** always
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  change coefficients to 2's complements 
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  data/pn sources 
 ## Instantiations
 
 - i_xfer_cntrl: up_xfer_cntrl
-**Description**
+</br>**Description**
  adc control & status
 
 - i_xfer_status: up_xfer_status

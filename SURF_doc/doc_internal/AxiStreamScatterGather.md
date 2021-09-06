@@ -80,7 +80,7 @@
 ## Instantiations
 
 - StatusFifo: surf.Fifo
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Use fifo to indicate to TX side that a new frame is ready
 -----------------------------------------------------------------------------------------------

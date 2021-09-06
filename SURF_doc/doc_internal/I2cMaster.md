@@ -95,7 +95,7 @@
 ## Instantiations
 
 - byte_ctrl: i2c_master_byte_ctrl
-**Description**
+</br>**Description**
  Byte Controller from OpenCores I2C master,
  by Richard Herveille (richard@asics.ws). The asynchronous
  reset is tied to '1'. Only the synchronous reset is used.

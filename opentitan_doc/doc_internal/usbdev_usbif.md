@@ -145,19 +145,19 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Pop the available fifo after the write that used the previous value 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Need extra read at start of packet to get the first word of data  Delay by one cycle from the in_endpoint update 
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Capture frame number (host sends evert 1ms) 
 ## Instantiations
 

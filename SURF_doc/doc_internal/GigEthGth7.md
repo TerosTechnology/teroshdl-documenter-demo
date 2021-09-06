@@ -81,19 +81,19 @@
 - U_AxiLiteAsync: surf.AxiLiteAsync
 - U_PwrUpRst: surf.PwrUpRst
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_GigEthGth7Core: GigEthGth7Core
-**Description**
+</br>**Description**
 ----------------
  1000BASE-X core
 ----------------
 
 - U_GigEthReg: surf.GigEthReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

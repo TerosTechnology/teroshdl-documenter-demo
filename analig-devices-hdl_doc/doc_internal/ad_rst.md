@@ -60,9 +60,9 @@
 ## Processes
 - unnamed: ( @(posedge clk or posedge rst_async) )
   - **Type:** always
-**Description**
+</br>**Description**
  simple reset synchronizer 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  two-stage synchronizer to prevent metastability on the falling edge 

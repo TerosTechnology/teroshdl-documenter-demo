@@ -81,7 +81,7 @@
 
 - i_pack_shell: pack_shell
 - i_deinterleave: ad_perfect_shuffle
-**Description**
+</br>**Description**
 
    * Data at the output of the routing network is interleaved. The upack
    * core is supposed to produce deinterleaved data. This just rearrange the

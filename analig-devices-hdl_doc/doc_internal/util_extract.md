@@ -67,5 +67,5 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  compensate delay in the FIFO 

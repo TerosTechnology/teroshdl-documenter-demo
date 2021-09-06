@@ -124,13 +124,13 @@
   - **Type:** always_comb
 - proc_bitstuff_history_d: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////////////////////////////////////////////////  Undo bit stuffing and detect bit stuffing errors // //////////////////////////////////////////////////// 
 - proc_bitstuff_history_q: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - proc_bistuff_error_d: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  remember the bitstuff errors 
 - proc_bitstuff_error_q: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -148,5 +148,5 @@
   - **Type:** always_comb
 - proc_gp_regs: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////////  Registers // ///////////// 

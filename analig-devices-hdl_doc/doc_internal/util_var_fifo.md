@@ -98,7 +98,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  in case the interpolation is on, the data is available with one sample  delay. If interpolation is off, the data is available with two or three  sample delay. Add an extra delay if interpolation is on. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

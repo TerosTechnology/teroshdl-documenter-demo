@@ -29,6 +29,6 @@
 | pwm_regs_t   | struct {<br><span style="padding-left:20px">          rand bit [3:0] dc_resn;<br><span style="padding-left:20px">     rand bit [26:0] clk_div;<br><span style="padding-left:20px">     bit cntr_en;<br><span style="padding-left:20px">          rand bit [PWM_NUM_CHANNELS-1:0] pwm_en;<br><span style="padding-left:20px">          rand bit [PWM_NUM_CHANNELS-1:0] invert;<br><span style="padding-left:20px">          rand bit [PWM_NUM_CHANNELS-1:0] blink_en;<br><span style="padding-left:20px">     rand bit [PWM_NUM_CHANNELS-1:0] htbt_en;<br><span style="padding-left:20px">     rand bit [PWM_NUM_CHANNELS-1:0][15:0] phase_delay;<br><span style="padding-left:20px">          rand bit [PWM_NUM_CHANNELS-1:0][15:0] duty_cycle_a;<br><span style="padding-left:20px">     rand bit [PWM_NUM_CHANNELS-1:0][15:0] duty_cycle_b;<br><span style="padding-left:20px">          rand bit [PWM_NUM_CHANNELS-1:0][15:0] blink_param_x;<br><span style="padding-left:20px">     rand bit [PWM_NUM_CHANNELS-1:0][15:0] blink_param_y;<br><span style="padding-left:20px">          rand pwm_mode_e [PWM_NUM_CHANNELS-1:0] pwm_mode;<br><span style="padding-left:20px">          bit [27:0] beat_cycle;<br><span style="padding-left:20px">       bit [16:0] pulse_cycle;<br><span style="padding-left:20px">     } |             |
 ## Functions
 - get_pwm_mode <font id="function_arguments">(bit [1:0])</font> <font id="function_return">return (pwm_mode_e)</font>
-**Description**
+</br>**Description**
  function
 

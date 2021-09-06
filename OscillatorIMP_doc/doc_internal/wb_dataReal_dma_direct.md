@@ -44,6 +44,6 @@
 | plop2       | unsigned(SIZE_N-1 downto 0)   |  buff_size_s                                                        |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk )

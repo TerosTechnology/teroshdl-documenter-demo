@@ -50,6 +50,6 @@
 | REG_PRESCALER | std_logic_vector(2 downto 0) |  "100" |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk, reset )

@@ -66,7 +66,7 @@
 | RegType |      |             |
 ## Processes
 - unnamed: ( data, gt, ls, r, resetStat, valid, wrRst )
-**Description**
+</br>**Description**
   Using gtEq because better performance than gt in the DspComparator.vhd, and gtEq give the same result as gt with respect to this module's implementation 
 - unnamed: ( wrClk )
 ## Instantiations
@@ -74,7 +74,7 @@
 - U_rstStat: surf.SynchronizerOneShot
 - U_LessThan: surf.DspComparator
 - U_GreaterThan: surf.DspComparator
-**Description**
+</br>**Description**
   (a <  b)
 
 - U_dataOut: surf.SynchronizerFifo

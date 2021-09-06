@@ -86,7 +86,7 @@
 | RegType |      |             |
 ## Functions
 - localToSlv <font id="function_arguments">(r : AxiReadDmaReqType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Using a local version (instead of AxiDmaPkg generalized functions) that's better logic optimized for this module
 
 - localToAxiReadDmaReq <font id="function_arguments">(din : slv;<br><span style="padding-left:20px"> valid : sl) </font> <font id="function_return">return AxiReadDmaReqType </font>
@@ -97,19 +97,19 @@
 ## Instantiations
 
 - U_IbDma: surf.AxiStreamDmaWrite
-**Description**
+</br>**Description**
 -------------------
  Inbound Controller
 -------------------
 
 - U_ObDma: surf.AxiStreamDmaRead
-**Description**
+</br>**Description**
 --------------------
  Outbound Controller
 --------------------
 
 - U_ReadQueue: surf.FifoCascade
-**Description**
+</br>**Description**
 -----------
  Read Queue
 -----------

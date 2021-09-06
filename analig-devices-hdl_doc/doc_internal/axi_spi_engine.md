@@ -181,7 +181,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  the software reset should reset all the registers 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

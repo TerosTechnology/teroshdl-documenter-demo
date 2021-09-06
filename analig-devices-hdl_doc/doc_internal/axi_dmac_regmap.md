@@ -141,7 +141,7 @@
   - **Type:** always
 - unnamed: ( @(posedge s_axi_aclk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Register Interface 
 - unnamed: ( @(posedge s_axi_aclk) )
   - **Type:** always

@@ -72,14 +72,14 @@
 
 - u_reg: aes_reg_top
 - u_prim_lc_sync: prim_lc_sync
-**Description**
+</br>**Description**
  Synchronize life cycle input
 
 - u_prim_sync_reqack_data: prim_sync_reqack_data
-**Description**
+</br>**Description**
  Synchronize EDN interface
 
 - u_aes_core: aes_core
-**Description**
+</br>**Description**
  AES core
 

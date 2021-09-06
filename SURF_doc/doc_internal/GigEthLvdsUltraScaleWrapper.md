@@ -84,18 +84,18 @@
 ## Instantiations
 
 - IBUFGDS_SGMII: IBUFGDS
-**Description**
+</br>**Description**
 ---------------------------
  Select the Reference Clock
 ---------------------------
 
 - U_Bufg_sgmiiClk: BUFGCE_DIV
 - U_PwrUpRst: surf.PwrUpRst
-**Description**
+</br>**Description**
  125 MHz
 
 - U_PLL: PLLE3_ADV
-**Description**
+</br>**Description**
 --------------
  Clock Manager
 --------------

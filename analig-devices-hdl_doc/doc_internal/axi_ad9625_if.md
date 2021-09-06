@@ -108,11 +108,11 @@
   - **Type:** always
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  status 
 ## Instantiations
 
 - i_mem: ad_mem
-**Description**
+</br>**Description**
  alignment fifo
 

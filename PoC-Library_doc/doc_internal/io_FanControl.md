@@ -87,7 +87,7 @@
 ## Instantiations
 
 - PWM: PoC.io_PulseWidthModulation
-**Description**
+</br>**Description**
  PWM signal modulator
  ==========================================================================================================================================================
 

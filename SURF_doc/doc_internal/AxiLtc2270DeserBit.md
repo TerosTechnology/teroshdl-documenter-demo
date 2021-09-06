@@ -51,6 +51,6 @@
 - IBUFDS_Inst: IBUFDS
 - IDELAYE2_inst: IDELAYE2
 - IDDR_Inst: IDDR
-**Description**
+</br>**Description**
  1-bit input: Active-high reset tap-delay input
 

@@ -68,7 +68,7 @@
 ## Functions
 - gray_encode <font id="function_arguments">(val : natural;<br><span style="padding-left:20px"> len : positive) </font> <font id="function_return">return unsigned </font>
 - parity <font id="function_arguments">(val : unsigned) </font> <font id="function_return">return std_logic </font>
-**Description**
+</br>**Description**
  purpose: parity generation
 
 ## Processes

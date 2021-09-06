@@ -114,11 +114,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -128,76 +128,76 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_done_ch0: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[done_ch0]: 0:0
 
 - u_intr_state_done_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[done_ch1]: 1:1
 
 - u_intr_enable_done_ch0: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[done_ch0]: 0:0
 
 - u_intr_enable_done_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[done_ch1]: 1:1
 
 - u_intr_test_done_ch0: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[done_ch0]: 0:0
 
 - u_intr_test_done_ch1: prim_subreg_ext
-**Description**
+</br>**Description**
    F[done_ch1]: 1:1
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_ctrl_enable_ch0: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl]: V(False)
    F[enable_ch0]: 0:0
 
 - u_ctrl_enable_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[enable_ch1]: 1:1
 
 - u_ctrl_polarity_ch0: prim_subreg
-**Description**
+</br>**Description**
    F[polarity_ch0]: 2:2
 
 - u_ctrl_polarity_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[polarity_ch1]: 3:3
 
 - u_prediv_ch0: prim_subreg
-**Description**
+</br>**Description**
  R[prediv_ch0]: V(False)
 
 - u_prediv_ch1: prim_subreg
-**Description**
+</br>**Description**
  R[prediv_ch1]: V(False)
 
 - u_size_len_ch0: prim_subreg
-**Description**
+</br>**Description**
  R[size]: V(False)
    F[len_ch0]: 5:0
 
 - u_size_reps_ch0: prim_subreg
-**Description**
+</br>**Description**
    F[reps_ch0]: 15:6
 
 - u_size_len_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[len_ch1]: 21:16
 
 - u_size_reps_ch1: prim_subreg
-**Description**
+</br>**Description**
    F[reps_ch1]: 31:22
 

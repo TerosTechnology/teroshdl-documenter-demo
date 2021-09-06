@@ -58,7 +58,7 @@
 ## Instantiations
 
 - U_Monitor: surf.AxiStreamMonAxiL
-**Description**
+</br>**Description**
 --------------------------------------------------------------------
  Re-propose the existing AXI stream monitor as a AXI4 memory monitor
 --------------------------------------------------------------------

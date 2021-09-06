@@ -71,11 +71,11 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  addr_align_err     Raised if addr isn't aligned with the size     Read size error is checked in tlul_assert.sv     Here is it added due to the limitation of register interface. 
 ## Instantiations
 
 - u_err: tlul_err
-**Description**
+</br>**Description**
  tl_err : separate checker
 

@@ -40,7 +40,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  generate the record enbale signal  HW enables the recording  Software can suppress the recording or disable it 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

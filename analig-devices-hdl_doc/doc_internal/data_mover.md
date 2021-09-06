@@ -110,7 +110,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * If req_sync_transfer_start is set all incoming beats will be skipped until  * one has s_axi_sync set. This will be the first beat that is passsed through.  */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

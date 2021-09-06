@@ -64,6 +64,6 @@
 - switch_sync: work.switchReal_synch
 - switchRealWb_inst: work.switchReal_wb
 - handle_comm: work.switchReal_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

@@ -10,7 +10,7 @@
 | std_logic_vector  | array (natural range <>) of std_logic                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |   Vector of std_logic.    |
 ## Functions
 - resolved <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return std_ulogic </font>
-**Description**
+</br>**Description**
   Resolution function.
   If S is empty, returns 'Z'.
   If S has one element, return the element.
@@ -22,7 +22,7 @@
        then  'Z'.
 
 - to_bit <font id="function_arguments">(s : std_ulogic;<br><span style="padding-left:20px"> xmap : bit := '0') </font> <font id="function_return">return bit </font>
-**Description**
+</br>**Description**
   Conversion functions.
   The result range (for vectors) is S'Length - 1 downto 0.
   XMAP is return for values not in '0', '1', 'L', 'H'.
@@ -35,7 +35,7 @@
 - to_stdulogicvector <font id="function_arguments">(b : bit_vector) </font> <font id="function_return">return std_ulogic_vector </font>
 - to_stdulogicvector <font id="function_arguments">(s : std_logic_vector) </font> <font id="function_return">return std_ulogic_vector </font>
 - to_X01 <font id="function_arguments">(s : std_logic_vector) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
   Normalization.
   The result range (for vectors) is 1 to S'Length.
 
@@ -57,14 +57,14 @@
 - to_UX01 <font id="function_arguments">(b : bit_vector) </font> <font id="function_return">return std_ulogic_vector </font>
 - to_UX01 <font id="function_arguments">(b : bit) </font> <font id="function_return">return UX01 </font>
 - rising_edge <font id="function_arguments">(signal s : std_ulogic) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
   Edge detection.
   An edge is detected in case of event on s, and X01 normalized value
   rises from 0 to 1 or falls from 1 to 0.
 
 - falling_edge <font id="function_arguments">(signal s : std_ulogic) </font> <font id="function_return">return boolean </font>
 - is_X <font id="function_arguments">(s : std_ulogic_vector) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
   Test for unknown.  Only 0, 1, L and H are known values.
 
 - is_X <font id="function_arguments">(s : std_logic_vector) </font> <font id="function_return">return boolean </font>

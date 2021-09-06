@@ -87,6 +87,6 @@
 - conf_sync: work.axi_to_dac_sync_vect
 - wb_atd_inst: work.wb_axi_to_dac
 - handle_comm: work.axi_to_dac_handcomm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

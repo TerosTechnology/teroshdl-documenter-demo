@@ -99,46 +99,46 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  2's complement versions 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  select partial products 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  unit-sine 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  2's complement versions 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  select partial products 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  corrected-sine 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  corrected sum 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 ## Instantiations
 
 - i_mul_s1: ad_mul
-**Description**
+</br>**Description**
  level 1 - intermediate
 
 - i_mul_s2: ad_mul
-**Description**
+</br>**Description**
  level 2 - final
 
 - i_mul_s3_2: ad_mul
-**Description**
+</br>**Description**
  full-scale
 
 - i_mul_s3_1: ad_mul

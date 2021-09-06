@@ -21,7 +21,7 @@
 ## Functions
 - asicBaseAddr <font id="function_arguments">( asic : natural ) </font> <font id="function_return">return slv </font>
 - getNumColumns <font id="function_arguments">( version : slv ) </font> <font id="function_return">return integer </font>
-**Description**
+</br>**Description**
 Functions to allow use of EPIX100 or 10k
 
 - getWordsPerSuperRow <font id="function_arguments">( version : slv ) </font> <font id="function_return">return integer </font>

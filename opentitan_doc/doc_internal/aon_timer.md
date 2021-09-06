@@ -75,15 +75,15 @@
 
 - u_sync_sleep_mode: prim_flop_2sync
 - u_reg: aon_timer_reg_top
-**Description**
+</br>**Description**
  registers instantiation
 
 - u_lc_sync_escalate_en: prim_lc_sync
-**Description**
+</br>**Description**
  Lifecycle sync
 
 - u_core: aon_timer_core
-**Description**
+</br>**Description**
 //////////////
  Timer Core //
 //////////////

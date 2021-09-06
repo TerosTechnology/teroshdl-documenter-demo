@@ -39,12 +39,12 @@
 - axiReadMasterInit <font id="function_arguments">( constant AXI_CONFIG_C : in AxiConfigType;<br><span style="padding-left:20px"> constant AXI_BURST_C  : in slv(1 downto 0) := "01";<br><span style="padding-left:20px"> constant AXI_CACHE_C  : in slv(3 downto 0) := "1111") </font> <font id="function_return">return AxiReadMasterType </font>
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiConfigType;<br><span style="padding-left:20px"> e : AxiConfigType) </font> <font id="function_return">return AxiConfigType </font>
 - getAxiLen <font id="function_arguments">( axiConfig  : AxiConfigType;<br><span style="padding-left:20px"> burstBytes : integer range 1 to 4096 := 4096) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Calculate number of txns in a burst based on number of bytes and bus configuration
  Returned value is number of txns-1, so can be assigned to AWLEN/ARLEN
 
 - getAxiLen <font id="function_arguments">( axiConfig  : AxiConfigType;<br><span style="padding-left:20px"> burstBytes : integer range 1 to 4096 := 4096;<br><span style="padding-left:20px"> totalBytes : slv;<br><span style="padding-left:20px"> address    : slv) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Calculate number of txns in a burst based upon burst size, total remaining bytes,
  current address and bus configuration.
  Address is used to set a transaction size aligned to 4k boundaries
@@ -52,6 +52,6 @@
 
 - getAxiLenProc <font id="function_arguments">( axiConfig  : in AxiConfigType;<br><span style="padding-left:20px"> burstBytes : in integer range 1 to 4096 := 4096;<br><span style="padding-left:20px"> totalBytes : in slv;<br><span style="padding-left:20px"> address    : in slv;<br><span style="padding-left:20px"> r          : in    AxiLenType;<br><span style="padding-left:20px"> v          : inout AxiLenType) </font> <font id="function_return">return ()</font>
 - getAxiReadBytes <font id="function_arguments">( axiConfig : AxiConfigType;<br><span style="padding-left:20px"> axiRead   : AxiReadMasterType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Calculate the byte count for a read request
 

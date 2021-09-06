@@ -78,16 +78,16 @@
   - **Type:** always_comb
 - p_regs: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////////  Registers // ///////////// 
 ## Instantiations
 
 - u_prim_buf_esc: prim_buf
-**Description**
+</br>**Description**
  This prevents further tool optimizations of the differential signal.
 
 - u_decode_esc: prim_diff_decode
 - u_prim_generic_flop: prim_generic_flop
-**Description**
+</br>**Description**
  This prevents further tool optimizations of the differential signal.
 

@@ -119,13 +119,13 @@
 | PRBS_P20 |      | 3          |              |
 ## Functions
 - pn1fn <font id="function_arguments">()</font> <font id="function_return">return ([23:0])</font>
-**Description**
+</br>**Description**
  standard prbs functions
 
 ## Processes
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  global toggle 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
@@ -133,17 +133,17 @@
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  prbs sequences 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pattern 
 ## Instantiations
 
 - i_ad_iqcor: ad_iqcor
 - i_dds: ad_dds
-**Description**
+</br>**Description**
  dds
 
 - i_up_dac_channel: up_dac_channel

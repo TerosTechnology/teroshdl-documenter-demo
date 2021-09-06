@@ -75,11 +75,11 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  if possible, we should simulate below with random delays through  flop_2sync 
 - unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  only register configurations can be sync'd using slow_cdc_sync 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

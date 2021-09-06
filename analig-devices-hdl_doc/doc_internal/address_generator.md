@@ -94,7 +94,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  If we already asserted addr_valid we have to wait until it is accepted before  we can disable the address generator. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

@@ -82,5 +82,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Use sof_d[2] for frame size of 4 beats  Use sof_d[4,6] for frame size of 8 beats 

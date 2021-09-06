@@ -33,7 +33,7 @@
 | lc_ctrl_vif  | virtual lc_ctrl_if                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |             |
 ## Functions
 - valid_state_for_trans <font id="function_arguments">(lc_state_e curr_state)</font> <font id="function_return">return (bit)</font>
-**Description**
+</br>**Description**
  functions
 
 - get_exp_token <font id="function_arguments">(dec_lc_state_e curr_state)</font> <font id="function_return">return (lc_ctrl_pkg::token_idx_e)</font>

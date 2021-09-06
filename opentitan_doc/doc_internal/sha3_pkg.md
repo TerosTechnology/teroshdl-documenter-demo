@@ -46,7 +46,7 @@
 | err_t             | struct packed {<br><span style="padding-left:20px">     logic        valid;<br><span style="padding-left:20px">     err_code_e   code;<br><span style="padding-left:20px">      logic [23:0] info;<br><span style="padding-left:20px">    }                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                             |
 ## Functions
 - encode_bytepad_len <font id="function_arguments">(keccak_strength_e kstrength)</font> <font id="function_return">return (logic [15:0])</font>
-**Description**
+</br>**Description**
 /////////////
  Functions //
 /////////////

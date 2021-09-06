@@ -237,7 +237,7 @@
 - pad_control_i: pad_control
 - i_rstgen: rstgen
 - i_slow_clk_gen: fpga_slow_clk_gen
-**Description**
+</br>**Description**
 Don't use the supplied clock directly for the FPGA target. On some boards
 the reference clock is a very fast (e.g. 200MHz) clock that cannot be used
 directly as the "slow_clk". Therefore we slow it down if a FPGA/board

@@ -137,17 +137,17 @@
 | BUF_THRESHOLD_HI |      | 8'd250                      |             |
 ## Functions
 - b2g <font id="function_arguments">()</font> <font id="function_return">return ([7:0])</font>
-**Description**
+</br>**Description**
  binary to grey conversion
 
 - g2b <font id="function_arguments">()</font> <font id="function_return">return ([7:0])</font>
-**Description**
+</br>**Description**
  grey to binary conversion
 
 ## Processes
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  fifo interface 
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
@@ -155,13 +155,13 @@
   - **Type:** always
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
-**Description**
+</br>**Description**
  transfer request is required to keep things in sync 
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
-**Description**
+</br>**Description**
  send read request for every burst about to be completed 
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
@@ -169,15 +169,15 @@
   - **Type:** always
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
-**Description**
+</br>**Description**
  fifo needs a reset 
 ## Instantiations
 
 - i_axis_inf: ad_axis_inf_rx
-**Description**
+</br>**Description**
  interface handler
 
 - i_mem: ad_mem
-**Description**
+</br>**Description**
  buffer
 

@@ -19,7 +19,7 @@
 | t_sbi_bfm_config |      |  Configuration record to be assigned in the test harness.  |
 ## Functions
 - init_sbi_if_signals <font id="function_arguments">( addr_width : natural;<br><span style="padding-left:20px"> data_width : natural ) </font> <font id="function_return">return t_sbi_if </font>
-**Description**
+</br>**Description**
 ===============================================================================================
  BFM procedures
 ===============================================================================================
@@ -31,7 +31,7 @@
  - All SBI output signals are initialized to Z
 
 - sbi_write <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal wdata          : inout std_logic_vector;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_write
 ----------------------------------------
@@ -39,7 +39,7 @@
  - The SBI interface in this procedure is given as individual signals
 
 - sbi_write <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_value   : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_write
 ----------------------------------------
@@ -47,7 +47,7 @@
  - The SBI interface in this procedure is given as a t_sbi_if signal record
 
 - sbi_read <font id="function_arguments">( constant addr_value    : in    unsigned;<br><span style="padding-left:20px"> variable data_value    : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg           : in    string;<br><span style="padding-left:20px"> signal clk             : in    std_logic;<br><span style="padding-left:20px"> signal cs              : inout std_logic;<br><span style="padding-left:20px"> signal addr            : inout unsigned;<br><span style="padding-left:20px"> signal rena            : inout std_logic;<br><span style="padding-left:20px"> signal wena            : inout std_logic;<br><span style="padding-left:20px"> signal ready           : in    std_logic;<br><span style="padding-left:20px"> signal rdata           : in    std_logic_vector;<br><span style="padding-left:20px"> constant scope         : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure  ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_read
 ----------------------------------------
@@ -56,7 +56,7 @@
  - The SBI interface in this procedure is given as individual signals
 
 - sbi_read <font id="function_arguments">( constant addr_value    : in    unsigned;<br><span style="padding-left:20px"> variable data_value    : out   std_logic_vector;<br><span style="padding-left:20px"> constant msg           : in    string;<br><span style="padding-left:20px"> signal clk             : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if          : inout t_sbi_if;<br><span style="padding-left:20px"> constant scope         : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string           := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_read
 ----------------------------------------
@@ -65,7 +65,7 @@
  - The SBI interface in this procedure is given as a t_sbi_if signal record
 
 - sbi_check <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal rdata          : in    std_logic_vector;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_check
 ----------------------------------------
@@ -76,7 +76,7 @@
  - The SBI interface in this procedure is given as individual signals
 
 - sbi_check <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_check
 ----------------------------------------
@@ -87,7 +87,7 @@
  - The SBI interface in this procedure is given as a t_sbi_if signal record
 
 - sbi_poll_until <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant max_polls    : in    integer          := 1;<br><span style="padding-left:20px"> constant timeout      : in    time             := 0 ns;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal cs             : inout std_logic;<br><span style="padding-left:20px"> signal addr           : inout unsigned;<br><span style="padding-left:20px"> signal rena           : inout std_logic;<br><span style="padding-left:20px"> signal wena           : inout std_logic;<br><span style="padding-left:20px"> signal ready          : in    std_logic;<br><span style="padding-left:20px"> signal rdata          : in    std_logic_vector;<br><span style="padding-left:20px"> signal terminate_loop : in    std_logic;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_poll_until
 ----------------------------------------
@@ -105,7 +105,7 @@
  - The SBI interface in this procedure is given as individual signals
 
 - sbi_poll_until <font id="function_arguments">( constant addr_value   : in    unsigned;<br><span style="padding-left:20px"> constant data_exp     : in    std_logic_vector;<br><span style="padding-left:20px"> constant max_polls    : in    integer          := 1;<br><span style="padding-left:20px"> constant timeout      : in    time             := 0 ns;<br><span style="padding-left:20px"> constant msg          : in    string;<br><span style="padding-left:20px"> signal clk            : in    std_logic;<br><span style="padding-left:20px"> signal sbi_if         : inout t_sbi_if;<br><span style="padding-left:20px"> signal terminate_loop : in    std_logic;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level    := error;<br><span style="padding-left:20px"> constant scope        : in    string           := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel   := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_sbi_bfm_config := C_SBI_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------
  sbi_poll_until
 ----------------------------------------

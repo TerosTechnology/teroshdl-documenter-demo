@@ -235,17 +235,17 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Create steering logic 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -254,168 +254,168 @@
 - u_chk: tlul_cmd_intg_chk
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_socket: tlul_socket_1n
-**Description**
+</br>**Description**
  Create Socket_1n
 
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_kmac_done: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[kmac_done]: 0:0
 
 - u_intr_state_fifo_empty: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_state_kmac_err: prim_subreg
-**Description**
+</br>**Description**
    F[kmac_err]: 2:2
 
 - u_intr_enable_kmac_done: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[kmac_done]: 0:0
 
 - u_intr_enable_fifo_empty: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_enable_kmac_err: prim_subreg
-**Description**
+</br>**Description**
    F[kmac_err]: 2:2
 
 - u_intr_test_kmac_done: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[kmac_done]: 0:0
 
 - u_intr_test_fifo_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_test_kmac_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[kmac_err]: 2:2
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_cfg_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cfg_regwen]: V(True)
 
 - u_cfg_kmac_en: prim_subreg
-**Description**
+</br>**Description**
  R[cfg]: V(False)
    F[kmac_en]: 0:0
 
 - u_cfg_kstrength: prim_subreg
-**Description**
+</br>**Description**
    F[kstrength]: 3:1
 
 - u_cfg_mode: prim_subreg
-**Description**
+</br>**Description**
    F[mode]: 5:4
 
 - u_cfg_msg_endianness: prim_subreg
-**Description**
+</br>**Description**
    F[msg_endianness]: 8:8
 
 - u_cfg_state_endianness: prim_subreg
-**Description**
+</br>**Description**
    F[state_endianness]: 9:9
 
 - u_cfg_sideload: prim_subreg
-**Description**
+</br>**Description**
    F[sideload]: 12:12
 
 - u_cfg_entropy_mode: prim_subreg
-**Description**
+</br>**Description**
    F[entropy_mode]: 17:16
 
 - u_cfg_entropy_fast_process: prim_subreg
-**Description**
+</br>**Description**
    F[entropy_fast_process]: 19:19
 
 - u_cfg_entropy_ready: prim_subreg
-**Description**
+</br>**Description**
    F[entropy_ready]: 24:24
 
 - u_cfg_err_processed: prim_subreg
-**Description**
+</br>**Description**
    F[err_processed]: 25:25
 
 - u_cmd_cmd: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cmd]: V(True)
    F[cmd]: 3:0
 
 - u_cmd_entropy_req: prim_subreg_ext
-**Description**
+</br>**Description**
    F[entropy_req]: 8:8
 
 - u_cmd_hash_cnt_clr: prim_subreg_ext
-**Description**
+</br>**Description**
    F[hash_cnt_clr]: 9:9
 
 - u_status_sha3_idle: prim_subreg_ext
-**Description**
+</br>**Description**
  R[status]: V(True)
    F[sha3_idle]: 0:0
 
 - u_status_sha3_absorb: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_absorb]: 1:1
 
 - u_status_sha3_squeeze: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_squeeze]: 2:2
 
 - u_status_fifo_depth: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_depth]: 12:8
 
 - u_status_fifo_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_empty]: 14:14
 
 - u_status_fifo_full: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_full]: 15:15
 
 - u_entropy_period_prescaler: prim_subreg
-**Description**
+</br>**Description**
  R[entropy_period]: V(False)
    F[prescaler]: 9:0
 
 - u_entropy_period_wait_timer: prim_subreg
-**Description**
+</br>**Description**
    F[wait_timer]: 31:16
 
 - u_entropy_refresh_threshold: prim_subreg
-**Description**
+</br>**Description**
  R[entropy_refresh]: V(False)
    F[threshold]: 9:0
 
 - u_entropy_refresh_hash_cnt: prim_subreg
-**Description**
+</br>**Description**
    F[hash_cnt]: 25:16
 
 - u_entropy_seed_lower: prim_subreg
-**Description**
+</br>**Description**
  R[entropy_seed_lower]: V(False)
 
 - u_entropy_seed_upper: prim_subreg
-**Description**
+</br>**Description**
  R[entropy_seed_upper]: V(False)
 
 - u_key_len: prim_subreg
-**Description**
+</br>**Description**
  R[key_len]: V(False)
 
 - u_err_code: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
 

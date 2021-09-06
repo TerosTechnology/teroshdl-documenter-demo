@@ -96,8 +96,8 @@
 ## Processes
 - tap_control: ( rstn_i, clk_i )
 - reg_access: ( clk_i )
-**Description**
+</br>**Description**
  Tap Register Access --------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - dmi_controller: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  version  Debug Module Interface Access Register (dmi) -- 

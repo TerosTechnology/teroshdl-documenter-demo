@@ -42,6 +42,6 @@
 | rdata_i | std_logic_vector(7 downto 0) |                             |
 ## Processes
 - p_aux: ( wdata, addr, cs, wr, rd )
-**Description**
+</br>**Description**
   Auxiliary Register Control.<br>    Provides read/write/trigger strobes and write data to auxiliary    registers and fields, i.e., registers and fields implemented in core.<br> 
 - p_read_reg: ( cs, addr, rd, c2p, p2c_i )

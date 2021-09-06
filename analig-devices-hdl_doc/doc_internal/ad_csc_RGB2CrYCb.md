@@ -69,14 +69,14 @@
 ## Instantiations
 
 - j_csc_1_Cr: ad_csc
-**Description**
+</br>**Description**
  Cr (red-diff)
 
 - j_csc_1_Y: ad_csc
-**Description**
+</br>**Description**
  Y (luma)
 
 - j_csc_1_Cb: ad_csc
-**Description**
+</br>**Description**
  Cb (blue-diff)
 

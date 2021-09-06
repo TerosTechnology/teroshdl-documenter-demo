@@ -81,23 +81,23 @@
 ## Processes
 - unnamed: ( @(posedge sequence_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sequence counter 
 - unnamed: ( @(posedge sequence_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sequence output mux 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor write interface 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_xfer_cntrl: up_xfer_cntrl
-**Description**
+</br>**Description**
  CDC
 

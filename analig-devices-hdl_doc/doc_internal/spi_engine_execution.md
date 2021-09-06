@@ -163,7 +163,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Load the interface configurations from the 'Configuration Write'  instruction 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -187,11 +187,11 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Load the SDO parallel data into the SDO shift register. In case of a custom  data width, additional bit shifting must done at load. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  In case of an interface with high clock rate (SCLK > 50MHz), the latch of  the SDI line can be delayed with 1, 2 or 3 SPI core clock cycle.  Taking the fact that in high SCLK frequencies the pre-scaler most likely will  be set to 0, to reduce the core clock's speed, this delay will mean that SDI will  be latched at one of the next consecutive SCLK edge. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -209,5 +209,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Additional register stage to improve timing 

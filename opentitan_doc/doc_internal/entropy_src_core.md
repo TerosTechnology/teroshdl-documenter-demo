@@ -376,7 +376,7 @@
 ## Instantiations
 
 - u_intr_hw_es_entropy_valid: prim_intr_hw
-**Description**
+</br>**Description**
 --------------------------------------------
  instantiate interrupt hardware primitives
 --------------------------------------------
@@ -386,7 +386,7 @@
 - u_intr_hw_es_fatal_err: prim_intr_hw
 - u_prim_lfsr: prim_lfsr
 - u_prim_fifo_sync_esrng: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  receive in RNG bus input
 --------------------------------------------
@@ -411,7 +411,7 @@
 - u_entropy_src_watermark_reg_extht_lo_thresh_fips: entropy_src_watermark_reg
 - u_entropy_src_watermark_reg_extht_lo_thresh_bypass: entropy_src_watermark_reg
 - u_entropy_src_repcnt_ht: entropy_src_repcnt_ht
-**Description**
+</br>**Description**
 --------------------------------------------
  repetitive count test
 --------------------------------------------
@@ -420,7 +420,7 @@
 - u_entropy_src_watermark_reg_repcnt_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_repcnt: entropy_src_cntr_reg
 - u_entropy_src_repcnts_ht: entropy_src_repcnts_ht
-**Description**
+</br>**Description**
 --------------------------------------------
  repetitive count symbol test
 --------------------------------------------
@@ -429,7 +429,7 @@
 - u_entropy_src_watermark_reg_repcnts_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_repcnts: entropy_src_cntr_reg
 - u_entropy_src_adaptp_ht: entropy_src_adaptp_ht
-**Description**
+</br>**Description**
 --------------------------------------------
  adaptive proportion test
 --------------------------------------------
@@ -441,7 +441,7 @@
 - u_entropy_src_watermark_reg_adaptp_lo_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_adaptp_lo: entropy_src_cntr_reg
 - u_entropy_src_bucket_ht: entropy_src_bucket_ht
-**Description**
+</br>**Description**
 --------------------------------------------
  bucket test
 --------------------------------------------
@@ -450,7 +450,7 @@
 - u_entropy_src_watermark_reg_bucket_bypass: entropy_src_watermark_reg
 - u_entropy_src_cntr_reg_bucket: entropy_src_cntr_reg
 - u_entropy_src_markov_ht: entropy_src_markov_ht
-**Description**
+</br>**Description**
 --------------------------------------------
  Markov test
 --------------------------------------------
@@ -469,75 +469,75 @@
 - u_entropy_src_cntr_reg_extht_lo: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_any_alert_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_repcnt_alert_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  repcnt fail counter
 
 - u_entropy_src_cntr_reg_repcnts_alert_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  repcnts fail counter
 
 - u_entropy_src_cntr_reg_adaptp_alert_hi_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  adaptp fail counter hi and lo
 
 - u_entropy_src_cntr_reg_adaptp_alert_lo_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_bucket_alert_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  bucket fail counter
 
 - u_entropy_src_cntr_reg_markov_alert_hi_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  markov fail counter hi and lo
 
 - u_entropy_src_cntr_reg_markov_alert_lo_fails: entropy_src_cntr_reg
 - u_entropy_src_cntr_reg_extht_alert_hi_fails: entropy_src_cntr_reg
-**Description**
+</br>**Description**
  extht fail counter hi and lo
 
 - u_entropy_src_cntr_reg_extht_alert_lo_fails: entropy_src_cntr_reg
 - u_prim_packer_fifo_postht: prim_packer_fifo
-**Description**
+</br>**Description**
 --------------------------------------------
  pack tested entropy into 32 bit packer
 --------------------------------------------
 
 - u_prim_fifo_sync_observe: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  store entropy into a 64 entry deep FIFO
 --------------------------------------------
 
 - u_prim_packer_fifo_precon: prim_packer_fifo
-**Description**
+</br>**Description**
 --------------------------------------------
  pack entropy into 64 bit packer
 --------------------------------------------
 
 - u_sha3: sha3
-**Description**
+</br>**Description**
  SHA3 hashing engine
 
 - u_prim_packer_fifo_bypass: prim_packer_fifo
-**Description**
+</br>**Description**
 --------------------------------------------
  bypass SHA conditioner path
 --------------------------------------------
 
 - u_entropy_src_main_sm: entropy_src_main_sm
-**Description**
+</br>**Description**
 --------------------------------------------
  state machine to coordinate fifo flow
 --------------------------------------------
 
 - u_prim_fifo_sync_esfinal: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  send processed entropy to final fifo
 --------------------------------------------
 
 - u_entropy_src_ack_sm: entropy_src_ack_sm
 - u_prim_packer_fifo_swread: prim_packer_fifo
-**Description**
+</br>**Description**
 --------------------------------------------
  software es read path
 --------------------------------------------

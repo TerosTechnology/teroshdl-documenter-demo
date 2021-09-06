@@ -518,11 +518,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -536,473 +536,473 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_classa: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[classa]: 0:0
 
 - u_intr_state_classb: prim_subreg
-**Description**
+</br>**Description**
    F[classb]: 1:1
 
 - u_intr_state_classc: prim_subreg
-**Description**
+</br>**Description**
    F[classc]: 2:2
 
 - u_intr_state_classd: prim_subreg
-**Description**
+</br>**Description**
    F[classd]: 3:3
 
 - u_intr_enable_classa: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[classa]: 0:0
 
 - u_intr_enable_classb: prim_subreg
-**Description**
+</br>**Description**
    F[classb]: 1:1
 
 - u_intr_enable_classc: prim_subreg
-**Description**
+</br>**Description**
    F[classc]: 2:2
 
 - u_intr_enable_classd: prim_subreg
-**Description**
+</br>**Description**
    F[classd]: 3:3
 
 - u_intr_test_classa: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[classa]: 0:0
 
 - u_intr_test_classb: prim_subreg_ext
-**Description**
+</br>**Description**
    F[classb]: 1:1
 
 - u_intr_test_classc: prim_subreg_ext
-**Description**
+</br>**Description**
    F[classc]: 2:2
 
 - u_intr_test_classd: prim_subreg_ext
-**Description**
+</br>**Description**
    F[classd]: 3:3
 
 - u_ping_timer_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[ping_timer_regwen]: V(False)
 
 - u_ping_timeout_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[ping_timeout_cyc_shadowed]: V(False)
 
 - u_ping_timer_en_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[ping_timer_en_shadowed]: V(False)
 
 - u_loc_alert_regwen_0: prim_subreg
-**Description**
+</br>**Description**
  Subregister 0 of Multireg loc_alert_regwen
  R[loc_alert_regwen_0]: V(False)
 
 - u_loc_alert_regwen_1: prim_subreg
-**Description**
+</br>**Description**
  Subregister 1 of Multireg loc_alert_regwen
  R[loc_alert_regwen_1]: V(False)
 
 - u_loc_alert_regwen_2: prim_subreg
-**Description**
+</br>**Description**
  Subregister 2 of Multireg loc_alert_regwen
  R[loc_alert_regwen_2]: V(False)
 
 - u_loc_alert_regwen_3: prim_subreg
-**Description**
+</br>**Description**
  Subregister 3 of Multireg loc_alert_regwen
  R[loc_alert_regwen_3]: V(False)
 
 - u_loc_alert_regwen_4: prim_subreg
-**Description**
+</br>**Description**
  Subregister 4 of Multireg loc_alert_regwen
  R[loc_alert_regwen_4]: V(False)
 
 - u_loc_alert_regwen_5: prim_subreg
-**Description**
+</br>**Description**
  Subregister 5 of Multireg loc_alert_regwen
  R[loc_alert_regwen_5]: V(False)
 
 - u_loc_alert_regwen_6: prim_subreg
-**Description**
+</br>**Description**
  Subregister 6 of Multireg loc_alert_regwen
  R[loc_alert_regwen_6]: V(False)
 
 - u_classa_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classa_regwen]: V(False)
 
 - u_classa_ctrl_shadowed_en: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_ctrl_shadowed]: V(False)
    F[en]: 0:0
 
 - u_classa_ctrl_shadowed_lock: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[lock]: 1:1
 
 - u_classa_ctrl_shadowed_en_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e0]: 2:2
 
 - u_classa_ctrl_shadowed_en_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e1]: 3:3
 
 - u_classa_ctrl_shadowed_en_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e2]: 4:4
 
 - u_classa_ctrl_shadowed_en_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e3]: 5:5
 
 - u_classa_ctrl_shadowed_map_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e0]: 7:6
 
 - u_classa_ctrl_shadowed_map_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e1]: 9:8
 
 - u_classa_ctrl_shadowed_map_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e2]: 11:10
 
 - u_classa_ctrl_shadowed_map_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e3]: 13:12
 
 - u_classa_clr_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classa_clr_regwen]: V(False)
 
 - u_classa_clr_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_clr_shadowed]: V(False)
 
 - u_classa_accum_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classa_accum_cnt]: V(True)
 
 - u_classa_accum_thresh_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_accum_thresh_shadowed]: V(False)
 
 - u_classa_timeout_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_timeout_cyc_shadowed]: V(False)
 
 - u_classa_crashdump_trigger_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_crashdump_trigger_shadowed]: V(False)
 
 - u_classa_phase0_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_phase0_cyc_shadowed]: V(False)
 
 - u_classa_phase1_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_phase1_cyc_shadowed]: V(False)
 
 - u_classa_phase2_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_phase2_cyc_shadowed]: V(False)
 
 - u_classa_phase3_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classa_phase3_cyc_shadowed]: V(False)
 
 - u_classa_esc_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classa_esc_cnt]: V(True)
 
 - u_classa_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classa_state]: V(True)
 
 - u_classb_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classb_regwen]: V(False)
 
 - u_classb_ctrl_shadowed_en: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_ctrl_shadowed]: V(False)
    F[en]: 0:0
 
 - u_classb_ctrl_shadowed_lock: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[lock]: 1:1
 
 - u_classb_ctrl_shadowed_en_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e0]: 2:2
 
 - u_classb_ctrl_shadowed_en_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e1]: 3:3
 
 - u_classb_ctrl_shadowed_en_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e2]: 4:4
 
 - u_classb_ctrl_shadowed_en_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e3]: 5:5
 
 - u_classb_ctrl_shadowed_map_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e0]: 7:6
 
 - u_classb_ctrl_shadowed_map_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e1]: 9:8
 
 - u_classb_ctrl_shadowed_map_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e2]: 11:10
 
 - u_classb_ctrl_shadowed_map_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e3]: 13:12
 
 - u_classb_clr_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classb_clr_regwen]: V(False)
 
 - u_classb_clr_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_clr_shadowed]: V(False)
 
 - u_classb_accum_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classb_accum_cnt]: V(True)
 
 - u_classb_accum_thresh_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_accum_thresh_shadowed]: V(False)
 
 - u_classb_timeout_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_timeout_cyc_shadowed]: V(False)
 
 - u_classb_crashdump_trigger_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_crashdump_trigger_shadowed]: V(False)
 
 - u_classb_phase0_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_phase0_cyc_shadowed]: V(False)
 
 - u_classb_phase1_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_phase1_cyc_shadowed]: V(False)
 
 - u_classb_phase2_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_phase2_cyc_shadowed]: V(False)
 
 - u_classb_phase3_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classb_phase3_cyc_shadowed]: V(False)
 
 - u_classb_esc_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classb_esc_cnt]: V(True)
 
 - u_classb_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classb_state]: V(True)
 
 - u_classc_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classc_regwen]: V(False)
 
 - u_classc_ctrl_shadowed_en: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_ctrl_shadowed]: V(False)
    F[en]: 0:0
 
 - u_classc_ctrl_shadowed_lock: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[lock]: 1:1
 
 - u_classc_ctrl_shadowed_en_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e0]: 2:2
 
 - u_classc_ctrl_shadowed_en_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e1]: 3:3
 
 - u_classc_ctrl_shadowed_en_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e2]: 4:4
 
 - u_classc_ctrl_shadowed_en_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e3]: 5:5
 
 - u_classc_ctrl_shadowed_map_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e0]: 7:6
 
 - u_classc_ctrl_shadowed_map_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e1]: 9:8
 
 - u_classc_ctrl_shadowed_map_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e2]: 11:10
 
 - u_classc_ctrl_shadowed_map_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e3]: 13:12
 
 - u_classc_clr_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classc_clr_regwen]: V(False)
 
 - u_classc_clr_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_clr_shadowed]: V(False)
 
 - u_classc_accum_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classc_accum_cnt]: V(True)
 
 - u_classc_accum_thresh_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_accum_thresh_shadowed]: V(False)
 
 - u_classc_timeout_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_timeout_cyc_shadowed]: V(False)
 
 - u_classc_crashdump_trigger_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_crashdump_trigger_shadowed]: V(False)
 
 - u_classc_phase0_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_phase0_cyc_shadowed]: V(False)
 
 - u_classc_phase1_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_phase1_cyc_shadowed]: V(False)
 
 - u_classc_phase2_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_phase2_cyc_shadowed]: V(False)
 
 - u_classc_phase3_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classc_phase3_cyc_shadowed]: V(False)
 
 - u_classc_esc_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classc_esc_cnt]: V(True)
 
 - u_classc_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classc_state]: V(True)
 
 - u_classd_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classd_regwen]: V(False)
 
 - u_classd_ctrl_shadowed_en: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_ctrl_shadowed]: V(False)
    F[en]: 0:0
 
 - u_classd_ctrl_shadowed_lock: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[lock]: 1:1
 
 - u_classd_ctrl_shadowed_en_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e0]: 2:2
 
 - u_classd_ctrl_shadowed_en_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e1]: 3:3
 
 - u_classd_ctrl_shadowed_en_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e2]: 4:4
 
 - u_classd_ctrl_shadowed_en_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[en_e3]: 5:5
 
 - u_classd_ctrl_shadowed_map_e0: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e0]: 7:6
 
 - u_classd_ctrl_shadowed_map_e1: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e1]: 9:8
 
 - u_classd_ctrl_shadowed_map_e2: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e2]: 11:10
 
 - u_classd_ctrl_shadowed_map_e3: prim_subreg_shadow
-**Description**
+</br>**Description**
    F[map_e3]: 13:12
 
 - u_classd_clr_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[classd_clr_regwen]: V(False)
 
 - u_classd_clr_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_clr_shadowed]: V(False)
 
 - u_classd_accum_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classd_accum_cnt]: V(True)
 
 - u_classd_accum_thresh_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_accum_thresh_shadowed]: V(False)
 
 - u_classd_timeout_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_timeout_cyc_shadowed]: V(False)
 
 - u_classd_crashdump_trigger_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_crashdump_trigger_shadowed]: V(False)
 
 - u_classd_phase0_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_phase0_cyc_shadowed]: V(False)
 
 - u_classd_phase1_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_phase1_cyc_shadowed]: V(False)
 
 - u_classd_phase2_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_phase2_cyc_shadowed]: V(False)
 
 - u_classd_phase3_cyc_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[classd_phase3_cyc_shadowed]: V(False)
 
 - u_classd_esc_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classd_esc_cnt]: V(True)
 
 - u_classd_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[classd_state]: V(True)
 

@@ -161,7 +161,7 @@
   - **Type:** always
 - unnamed: ( @(o_ibus_adr) )
   - **Type:** always
-**Description**
+</br>**Description**
  verilator lint_off COMBDLY */ 
 ## Instantiations
 

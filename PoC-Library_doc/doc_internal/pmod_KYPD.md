@@ -69,7 +69,7 @@
 ## Instantiations
 
 - scanner: PoC.io_KeyPadScanner
-**Description**
+</br>**Description**
  initialize a 4x4 matrix scanner
 
 - debounce: PoC.io_Debounce

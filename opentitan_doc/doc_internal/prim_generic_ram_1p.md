@@ -49,5 +49,5 @@
 ## Processes
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always
-**Description**
+</br>**Description**
  using always instead of always_ff to avoid 'ICPD  - illegal combination of drivers' error  thrown when using $readmemh system task to backdoor load an image 

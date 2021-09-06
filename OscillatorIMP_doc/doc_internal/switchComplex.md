@@ -67,6 +67,6 @@
 - switch_sync: work.switchComplex_synch
 - switchComplexWb_inst: work.switchComplex_wb
 - handle_comm: work.switchComplex_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

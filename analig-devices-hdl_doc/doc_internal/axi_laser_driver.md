@@ -128,34 +128,34 @@
 ## Processes
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  read interface merge 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  data path reset generation  this logic will generate a reset signal right before the generated pulse  in order to use it for resetting the cpack module, to synchronize it to  the driver pulse 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  TIA sequencer 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 ## Instantiations
 
 - i_pwm_regmap: axi_pulse_gen_regmap
-**Description**
+</br>**Description**
  register maps
 
 - i_laser_driver_regmap: axi_laser_driver_regmap
 - i_laser_driver_pulse: util_pulse_gen
-**Description**
+</br>**Description**
  generic PWM generator's
 
 - i_clock_mon: up_clock_mon
-**Description**
+</br>**Description**
  clock monitor for the external clock
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  AXI Memory Mapped Wrapper
 

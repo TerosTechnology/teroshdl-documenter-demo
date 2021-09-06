@@ -103,17 +103,17 @@
 | RdDataArray |      |             |
 ## Processes
 - wrComb: ( din, wrR, wr_en )
-**Description**
+</br>**Description**
 ------------  Write Logic ------------ 
 - wrSeq: ( rst, wr_clk )
 - rdComb: ( fifo_dout, fifo_empty, fifo_valid, rdR, rd_en )
 - rdSeq: ( rdRst, rd_clk )
-**Description**
+</br>**Description**
  If fifo is asynchronous, must use async reset on rd side. 
 ## Instantiations
 
 - RstSync_RdRst: surf.RstSync
-**Description**
+</br>**Description**
 -----------
  Read logic
 -----------
@@ -121,7 +121,7 @@
  Must synchronize it over to the rd_clk
 
 - FifoCascade_Inst: surf.FifoCascade
-**Description**
+</br>**Description**
 ------
  Fifo
 ------

@@ -42,7 +42,7 @@ hdlunit:tb
 | C_ADDR_TX_READY      | unsigned(2 downto 0) |  "011"                                                                  |                                 |
 ## Processes
 - p_main: (  )
-**Description**
+</br>**Description**
 ----------------------------------------------  PROCESS: p_main ---------------------------------------------- 
 ## Instantiations
 

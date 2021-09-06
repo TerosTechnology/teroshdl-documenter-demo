@@ -89,17 +89,17 @@
 | ST_GAP_C_C | slv(2 downto 0) |  "110" |                   |
 ## Processes
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  State transition logic 
 - unnamed: ( curState, arbValid, arbVc, currVc, schTxAck, vcInFrame, currValid, vcTimeout )
-**Description**
+</br>**Description**
  Scheduler state machine 
 - unnamed: ( currVc, gateTxValid )
-**Description**
+</br>**Description**
  Arbitrate for the next VC value based upon current VC value and status of valid inputs 
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Lock in the status of the last cell transmitted 
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Detect frame transmit timeout, enabled only in VC non interleave mode 

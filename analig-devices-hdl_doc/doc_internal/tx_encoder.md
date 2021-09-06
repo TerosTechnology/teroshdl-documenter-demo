@@ -132,7 +132,7 @@
 - SRD: ( up_clk )
 - TXSYNC: ( data_clk )
 - FRST: ( up_clk )
-**Description**
+</br>**Description**
  State machine that generates sub-frames and blocks 
 ## State machines
 

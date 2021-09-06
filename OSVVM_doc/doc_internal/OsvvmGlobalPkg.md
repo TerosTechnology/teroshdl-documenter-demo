@@ -26,15 +26,15 @@
 | OsvvmDefaultTimeUnitsPType |                                                                                                                                                                                                                                                              |             |
 ## Functions
 - IsEnabled <font id="function_arguments">(A : OsvvmOptionsType) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Requires that TRUE is last and ENABLED is 2nd to last
 - to_OsvvmOptionsType <font id="function_arguments">(A : boolean) </font> <font id="function_return">return OsvvmOptionsType </font>
 - SetOsvvmGlobalOptions <font id="function_arguments">( WritePassFail   : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteBinInfo    : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteCount      : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAnyIllegal : OsvvmOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WritePrefix     : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> DoneName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PassName        : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailName        : string := OSVVM_STRING_INIT_PARM_DETECT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - ResolveOsvvmOption <font id="function_arguments">(A,<br><span style="padding-left:20px"> B,<br><span style="padding-left:20px"> C : OsvvmOptionsType) </font> <font id="function_return">return OsvvmOptionsType </font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Accessor Functions
 

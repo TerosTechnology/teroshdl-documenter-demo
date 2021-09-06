@@ -397,11 +397,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -437,102 +437,102 @@
 - u_adc_wakeup_ctl_cdc: prim_reg_cdc
 - u_filter_status_cdc: prim_reg_cdc
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_adc_en_ctl_adc_enable: prim_subreg
-**Description**
+</br>**Description**
  R[adc_en_ctl]: V(False)
    F[adc_enable]: 0:0
 
 - u_adc_en_ctl_oneshot_mode: prim_subreg
-**Description**
+</br>**Description**
    F[oneshot_mode]: 1:1
 
 - u_adc_pd_ctl_lp_mode: prim_subreg
-**Description**
+</br>**Description**
  R[adc_pd_ctl]: V(False)
    F[lp_mode]: 0:0
 
 - u_adc_pd_ctl_pwrup_time: prim_subreg
-**Description**
+</br>**Description**
    F[pwrup_time]: 7:4
 
 - u_adc_pd_ctl_wakeup_time: prim_subreg
-**Description**
+</br>**Description**
    F[wakeup_time]: 31:8
 
 - u_adc_lp_sample_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[adc_lp_sample_ctl]: V(False)
 
 - u_adc_sample_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[adc_sample_ctl]: V(False)
 
 - u_adc_fsm_rst: prim_subreg
-**Description**
+</br>**Description**
  R[adc_fsm_rst]: V(False)
 
 - u_adc_wakeup_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[adc_wakeup_ctl]: V(False)
 
 - u_filter_status: prim_subreg
-**Description**
+</br>**Description**
  R[filter_status]: V(False)
 
 - u_adc_intr_ctl: prim_subreg
-**Description**
+</br>**Description**
  R[adc_intr_ctl]: V(False)
 
 - u_adc_intr_status_cc_sink_det: prim_subreg
-**Description**
+</br>**Description**
  R[adc_intr_status]: V(False)
    F[cc_sink_det]: 0:0
 
 - u_adc_intr_status_cc_1a5_sink_det: prim_subreg
-**Description**
+</br>**Description**
    F[cc_1a5_sink_det]: 1:1
 
 - u_adc_intr_status_cc_3a0_sink_det: prim_subreg
-**Description**
+</br>**Description**
    F[cc_3a0_sink_det]: 2:2
 
 - u_adc_intr_status_cc_src_det: prim_subreg
-**Description**
+</br>**Description**
    F[cc_src_det]: 3:3
 
 - u_adc_intr_status_cc_1a5_src_det: prim_subreg
-**Description**
+</br>**Description**
    F[cc_1a5_src_det]: 4:4
 
 - u_adc_intr_status_cc_src_det_flip: prim_subreg
-**Description**
+</br>**Description**
    F[cc_src_det_flip]: 5:5
 
 - u_adc_intr_status_cc_1a5_src_det_flip: prim_subreg
-**Description**
+</br>**Description**
    F[cc_1a5_src_det_flip]: 6:6
 
 - u_adc_intr_status_cc_discon: prim_subreg
-**Description**
+</br>**Description**
    F[cc_discon]: 7:7
 
 - u_adc_intr_status_oneshot: prim_subreg
-**Description**
+</br>**Description**
    F[oneshot]: 8:8
 

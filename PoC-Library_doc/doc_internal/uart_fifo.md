@@ -100,14 +100,14 @@
 ## Instantiations
 
 - TXFIFO: PoC.fifo_cc_got
-**Description**
+</br>**Description**
  ===========================================================================
  Transmit and Receive FIFOs
  ===========================================================================
 
 - RXFIFO: PoC.fifo_cc_got
 - bclk: PoC.uart_bclk
-**Description**
+</br>**Description**
  ===========================================================================
  BitClock, Transmitter, Receiver
  ===========================================================================

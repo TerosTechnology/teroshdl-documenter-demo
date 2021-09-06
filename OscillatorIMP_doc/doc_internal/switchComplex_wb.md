@@ -37,6 +37,6 @@
 | REG_INPUT | std_logic_vector(1 downto 0) | "01"  |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk )

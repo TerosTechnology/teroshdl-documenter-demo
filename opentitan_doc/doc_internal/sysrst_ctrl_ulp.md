@@ -44,7 +44,7 @@
 ## Processes
 - p_ulp_cond_met: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  delay the level signal to generate a pulse 
 ## Instantiations
 

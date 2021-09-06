@@ -67,25 +67,25 @@
 ## Processes
 - src_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  REQ-side FSM (SRC domain) 
 - dst_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  ACK-side FSM (DST domain) 
 - unnamed: ( @(posedge clk_src_i or negedge rst_src_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Registers 
 - unnamed: ( @(posedge clk_dst_i or negedge rst_dst_ni) )
   - **Type:** always_ff
 ## Instantiations
 
 - req_sync: prim_flop_2sync
-**Description**
+</br>**Description**
  Move REQ over to DST domain.
 
 - ack_sync: prim_flop_2sync
-**Description**
+</br>**Description**
  Move ACK over to SRC domain.
 

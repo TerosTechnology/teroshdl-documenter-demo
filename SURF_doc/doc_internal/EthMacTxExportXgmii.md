@@ -91,31 +91,31 @@
 | ST_PAD_C     | slv(2 downto 0)     |  "100"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |             |
 ## Processes
 - unnamed: ( intPad, macMaster )
-**Description**
+</br>**Description**
  Data processing 
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  State machine logic 
 - unnamed: ( curState, exportWordCnt, intLastLine, macMaster )
-**Description**
+</br>**Description**
  Pad runt frames 
 - unnamed: ( curState, ethRst, exportWordCnt, intError, macMaster, phyReady, stateCount )
-**Description**
+</br>**Description**
  State machine 
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  Format data for input into CRC delay FIFO. 
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  Output Stage to PHY 
 ## Instantiations
 
 - DATA_MUX: surf.AxiStreamFifoV2
 - U_CrcFifo: surf.Fifo
-**Description**
+</br>**Description**
  CRC Delay FIFO
 
 - U_Crc32: surf.Crc32Parallel
-**Description**
+</br>**Description**
  CRC
 

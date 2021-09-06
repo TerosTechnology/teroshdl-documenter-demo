@@ -110,14 +110,14 @@
 | RegType   |                                                                                                                                                                                                                                                                                                                                                                                                              |             |
 ## Processes
 - comb: ( axiLiteRst, mAxiLiteReadSlave, mAxiLiteWriteSlave, mFifoAxisCtrl, r, sFifoAxisMaster )
-**Description**
+</br>**Description**
 -----------------------------------  Master State Machine ----------------------------------- 
 - seq: ( axiLiteClk )
 ## Instantiations
 
 - SlaveAxiStreamFifo: surf.AxiStreamFifoV2
 - MasterAxiStreamFifo: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
 --------------------------------
  Output FIFO
 --------------------------------

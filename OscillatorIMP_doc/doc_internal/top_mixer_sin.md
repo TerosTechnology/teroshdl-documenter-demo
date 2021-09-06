@@ -28,10 +28,10 @@
 
 - lt_sz_inst: work.mixer_sin
 - eq_sz_inst: work.mixer_sin
-**Description**
+</br>**Description**
  16x16 -1 => 31 => 16
 
 - gt_sz_inst: work.mixer_sin
-**Description**
+</br>**Description**
  16x16 -1 => 31 => 16
 

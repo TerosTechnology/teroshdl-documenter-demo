@@ -85,25 +85,25 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Write pointer update 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Depth 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 timer 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Byte Enable control 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  If FIFO is not empty, initiate SRAM write.  As FIFOWidth and SRAM Width are different, RMW is required.  If host writes always DWord size, it is easy but it is not guaranteed.<br>  Next State & output logic 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

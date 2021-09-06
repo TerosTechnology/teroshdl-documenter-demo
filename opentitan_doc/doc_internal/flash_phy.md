@@ -95,11 +95,11 @@
 ## Instantiations
 
 - u_bank_sequence_fifo: prim_fifo_sync
-**Description**
+</br>**Description**
  This fifo holds the expected return order
 
 - u_region_sel: flash_mp_data_region_sel
-**Description**
+</br>**Description**
  the region decode only accepts page address
 
 - u_flash_disable_sync: prim_lc_sync

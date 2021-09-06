@@ -77,5 +77,5 @@
   - **Type:** always_comb
 - p_pre_round_xor: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  pre-round XOR 

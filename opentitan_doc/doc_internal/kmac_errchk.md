@@ -84,15 +84,15 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 /////////////////  Error Checker // /////////////////  SW sequence Error  info field: Current state, Received command 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  sw_cmd_o latch  To reduce the command path delay, sw_cmd is latched here 
 - check_modestrength: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Mode & Strength 
 - check_prefix: (  )
   - **Type:** always_comb

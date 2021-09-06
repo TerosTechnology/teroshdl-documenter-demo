@@ -278,14 +278,14 @@ use xil_defaultlib.mylib.all;
 ## Instantiations
 
 - MUXcomplexNto1_synch_inst: work.MUXcomplexNto1_synch
-**Description**
+</br>**Description**
 clock domain synchronizer 
 
 - MUXComplexWb_inst: work.MUXcomplexNto1_wb
-**Description**
+</br>**Description**
 inteface between AXI and MUX block
 
 - handle_comm: work.MUXComplex_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

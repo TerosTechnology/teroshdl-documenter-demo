@@ -92,11 +92,11 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  delay signals 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pipeline DSPs for multiplications and additions 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

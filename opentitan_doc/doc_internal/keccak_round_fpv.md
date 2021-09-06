@@ -71,7 +71,7 @@
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Data input : SHA3-256 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -82,7 +82,7 @@
 ## Instantiations
 
 - u_masked: keccak_round
-**Description**
+</br>**Description**
  Masked Keccak round
 
 - u_unmasked: keccak_round

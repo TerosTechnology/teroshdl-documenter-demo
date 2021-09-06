@@ -85,11 +85,11 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  txcount     Looks like txcount can be removed entirely here in hmac_core     In the first round (InnerPaddedKey), it can just watch process and hash_done     In the second round, it only needs count 256 bits for hash digest to trigger     hash_process to SHA2 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  reg_hash_process trigger logic 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

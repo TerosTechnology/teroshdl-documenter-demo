@@ -206,12 +206,12 @@
 ## Processes
 - combParamAssign: ( closeRq_i, openRq_i, s_appRssiParamReg, s_closeRqReg, s_initSeqNReg,
                               s_intCloseRq, s_modeReg, s_openRqReg )
-**Description**
+</br>**Description**
  ///////////////////////////////////////////////////////// ----------------------------------------------------------  Parameter assignment ----------------------------------------------------------  ///////////////////////////////////////////////////////// 
 ## Instantiations
 
 - AxiLiteRegItf_INST: surf.RssiAxiLiteRegItf
-**Description**
+</br>**Description**
  /////////////////////////////////////////////////////////
 ----------------------------------------------------------
  Register interface
@@ -219,15 +219,15 @@
  /////////////////////////////////////////////////////////
 
 - U_AppIn: surf.AxiStreamResize
-**Description**
+</br>**Description**
  Application side
 
 - U_TspIn: surf.AxiStreamResize
-**Description**
+</br>**Description**
  Transport side
 
 - ConnFSM_INST: surf.RssiConnFsm
-**Description**
+</br>**Description**
  /////////////////////////////////////////////////////////
 ----------------------------------------------------------
  Connection and monitoring part
@@ -235,7 +235,7 @@
 
 - Monitor_INST: surf.RssiMonitor
 - HeaderReg_INST: surf.RssiHeaderReg
-**Description**
+</br>**Description**
  /////////////////////////////////////////////////////////
 ----------------------------------------------------------
  TX part
@@ -244,12 +244,12 @@
  Header decoder module
 
 - TxFSM_INST: surf.RssiTxFsm
-**Description**
+</br>**Description**
 
 
 - tx_Chksum_INST: surf.RssiChksum
 - RxFSM_INST: surf.RssiRxFsm
-**Description**
+</br>**Description**
  /////////////////////////////////////////////////////////
 ----------------------------------------------------------
  RX part
@@ -258,7 +258,7 @@
 
 - rx_Chksum_INST: surf.RssiChksum
 - AppFifoOut_INST: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
  /////////////////////////////////////////////////////////
 ----------------------------------------------------------
  Output AXIS fifos
@@ -267,6 +267,6 @@
  Application side
 
 - TspFifoOut_INST: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
  Transport side
 

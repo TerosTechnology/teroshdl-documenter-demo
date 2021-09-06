@@ -35,7 +35,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk_10mhz or negedge pll_ff_rst) )
   - **Type:** always
-**Description**
+</br>**Description**
  FF PLL functionality 
 - unnamed: ( @(posedge pll_ref_i or negedge pll_ff_rst) )
   - **Type:** always

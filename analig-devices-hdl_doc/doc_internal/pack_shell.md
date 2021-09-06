@@ -82,9 +82,9 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
     * Internal copy of the enable signals. This is used to detect changes in the    * channel selection and reset the internal state when that happens.    */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
     * The internal state is reset whenever the selected channels change. The    * control path is pipelined and computed one clock cycle in advance. This    * means the control path needs to be taken out of reset one clock cycle    * before the data path and a special startup cycles are required to compute    * the first sets of control signals.    *    * In the case where there is only one channel no control signals are needed    * and hence no startup cycle. In the case where there are two channels the    * control signal pipeline is one cycle, so one startup cycle is required. For    * more than two channels the startup pipeline is two channels and two startup    * cycles are required.    */ 

@@ -21,7 +21,7 @@
 | SsiSlaveType  |      |                                                                                                                                                                                                                                                   |
 ## Functions
 - ssiAxiStreamConfig <font id="function_arguments">( dataBytes : positive;<br><span style="padding-left:20px"> tKeepMode : TKeepModeType         := TKEEP_COMP_C;<br><span style="padding-left:20px"> tUserMode : TUserModeType         := TUSER_FIRST_LAST_C;<br><span style="padding-left:20px"> tDestBits : natural  range 0 to 8 := SSI_TDEST_BITS_C;<br><span style="padding-left:20px"> tUserBits : positive range 2 to 8 := SSI_TUSER_BITS_C;<br><span style="padding-left:20px"> tIdBits   : natural  range 0 to 8 := SSI_TID_BITS_C) </font> <font id="function_return">return AxiStreamConfigType </font>
-**Description**
+</br>**Description**
  EOFE
 -----------------------------------------------------------------------------------------------
  Build an SSI configuration
@@ -35,7 +35,7 @@
 - ssiMasterInit <font id="function_arguments">( axisConfig : AxiStreamConfigType) </font> <font id="function_return">return SsiMasterType </font>
 - ssiSlaveInit <font id="function_arguments">( axisConfig : AxiStreamConfigType) </font> <font id="function_return">return SsiSlaveType </font>
 - ssiGetUserEofe <font id="function_arguments">( axisConfig : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : AxiStreamMasterType) </font> <font id="function_return">return sl </font>
-**Description**
+</br>**Description**
    constant SSI_MASTER_INIT_C : SsiMasterType := axis2SsiMaster(SSI_CONFIG_INIT_C, AXI_STREAM_MASTER_INIT_C);
    constant SSI_SLAVE_INIT_C  : SsiSlaveType  := axis2SsiSlave(AXI_STREAM_SLAVE_INIT_C, AXI_STREAM_CTRL_UNUSED_C);
 -----------------------------------------------------------------------------------------------

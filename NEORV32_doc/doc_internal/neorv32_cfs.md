@@ -91,8 +91,8 @@
 | cfs_regs_t |      |  just implement 4 registers for this example |
 ## Processes
 - host_access: ( clk_i )
-**Description**
+</br>**Description**
  not used for this minimal example  Read/Write Access ----------------------------------------------------------------------  -------------------------------------------------------------------------------------------  Here we are reading/writing from/to the interface registers of the module. Please note that the peripheral/IO  modules of the NEORV32 can only be written in full word mode (32-bit). Any other write access (half-word or byte)  will trigger a store bus access fault exception.<br>  The CFS provides up to 32 memory-mapped 32-bit interface register. For instance, these could be used to provide  a <control register> for global control of the unit, a <data register> for reading/writing from/to a data FIFO, a <command register>  for issuing commands and a <status register> for status information.<br>  Following the interface protocol, each read or write access has to be acknowledged in the following cycle using the ack_o signal (or even later  if the module needs additional time; the maximum latency until an unacknowledged access will trigger a bus exception is defined via the package's  global "bus_timeout_c" constant). If no ACK is generated, the bus access will time out and cause a store bus access fault exception.  Host access: Read and write access to the interface registers + bus transfer acknowledge.  This example only implements four physical r/w register (the four lowest CF register). The remaining addresses of the CFS are not  associated with any writable or readable register - an access to those is simply ignored but still acknowledged. 
 - cfs_core: ( cfs_reg_wr )
-**Description**
+</br>**Description**
  CFS Function Core ----------------------------------------------------------------------  -------------------------------------------------------------------------------------------  This is where the actual functionality can be implemented.  In this example we are just implementing four r/w registers that invert any value written to them. 

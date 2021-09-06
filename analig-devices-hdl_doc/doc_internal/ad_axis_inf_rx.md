@@ -88,7 +88,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  write interface 
 - unnamed: ( @(rcnt or wlast_0 or wdata_0 or wlast_1 or wdata_1 or )
   - **Type:** always

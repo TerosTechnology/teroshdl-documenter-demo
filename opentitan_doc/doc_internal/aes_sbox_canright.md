@@ -30,7 +30,7 @@
 | data_inverse | logic [7:0] | /////////////////  Canright SBox // /////////////////  |
 ## Functions
 - aes_inverse_gf2p4 <font id="function_arguments">(logic [3:0])</font> <font id="function_return">return (logic [3:0])</font>
-**Description**
+</br>**Description**
 /////////////
  Functions //
 /////////////
@@ -38,7 +38,7 @@
  (see Figure 12 in the technical report)
 
 - aes_inverse_gf2p8 <font id="function_arguments">(logic [7:0])</font> <font id="function_return">return (logic [7:0])</font>
-**Description**
+</br>**Description**
  Inverse in GF(2^8), using normal basis [d^16, d]
  (see Figure 11 in the technical report)
 

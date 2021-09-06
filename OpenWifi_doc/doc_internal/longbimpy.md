@@ -125,7 +125,7 @@
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
 One clk after p[0],p[1] become valid 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
@@ -145,7 +145,7 @@ One clk after p[0],p[1] become valid
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
  The following properties artificially restrict the inputs  to this long binary multiplier to only those values whose  absolute value is 0..7.  It is used by the formal proof of  the BUTTERFLY to artificially limit the scope of the proof.  By the time the butterfly sees this code, it will be known  that the long binary multiply works.  At issue will no longer  be whether or not this works, but rather whether it works in  context.  For that purpose, we'll need to check timing, not  results.  Checking against inputs of +/- 1 and 0 are perfect  for that task.  The below assumptions (yes they are assumptions  just go a little bit further.<br>  THEREFORE, THESE PROPERTIES ARE NOT NECESSARY TO PROVING THAT  THIS MODULE WORKS, AND THEY WILL INTERFERE WITH THAT PROOF.<br>  This just limits the proof for the butterfly, the parent.  module that calls this one<br>  Start by assuming that all inputs have an absolute value less  than eight. 
 - unnamed: ( @(*) )
   - **Type:** always

@@ -12,7 +12,7 @@
 ## Functions
 - _clog2 <font id="function_arguments">(integer)</font> <font id="function_return">return (integer)</font>
 - vbits <font id="function_arguments">(integer)</font> <font id="function_return">return (integer)</font>
-**Description**
+</br>**Description**
 *
    * Math function: Number of bits needed to address |value| items.
    *

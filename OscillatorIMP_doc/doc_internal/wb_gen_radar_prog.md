@@ -52,6 +52,6 @@
 | REG_TXON         | std_logic_vector(1 downto 0) | "11"  |             |
 ## Processes
 - write_bloc: ( clk, reset )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk, reset )

@@ -141,12 +141,12 @@
 ## Instantiations
 
 - IBUFDS_GTE2_Inst: IBUFDS_GTE2
-**Description**
+</br>**Description**
  GT Reference Clock
 
 - BUFG_G: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
-**Description**
+</br>**Description**
  Power Up Reset
 
 - mmcm_adv_inst: MMCME2_ADV

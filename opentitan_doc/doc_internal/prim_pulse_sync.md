@@ -38,7 +38,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_dst_i or negedge rst_dst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  delay dst_level by 1 cycle 
 ## Instantiations
 

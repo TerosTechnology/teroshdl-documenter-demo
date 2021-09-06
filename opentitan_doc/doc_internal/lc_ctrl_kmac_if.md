@@ -60,12 +60,12 @@
 ## Processes
 - p_kmac: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Serialize the 128bit token into two 64bit beats. 
 ## Instantiations
 
 - u_prim_sync_reqack_data_out: prim_sync_reqack_data
-**Description**
+</br>**Description**
  The transition_token_i register is guaranteed to remain stable once a life cycle
  transition has been initiated.
  Hence no further synchronization registers are required on the outgoing data.

@@ -75,7 +75,7 @@
 
 - U_refClk: IBUFDS_GTE4
 - XauiGtyUltraScale_Inst: surf.XauiGtyUltraScale
-**Description**
+</br>**Description**
 --------------------
  10 GigE XAUI Module
 --------------------

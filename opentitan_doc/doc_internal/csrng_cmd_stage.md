@@ -115,18 +115,18 @@
 ## Instantiations
 
 - u_prim_fifo_cmd: prim_fifo_sync
-**Description**
+</br>**Description**
 ---------------------------------------------------------
  capture the transfer length of data behind the command
 ---------------------------------------------------------
 
 - u_state_regs: prim_flop
-**Description**
+</br>**Description**
  This primitive is used to place a size-only constraint on the
  flops in order to prevent FSM state encoding optimizations.
 
 - u_prim_fifo_genbits: prim_fifo_sync
-**Description**
+</br>**Description**
 ---------------------------------------------------------
  genbits fifo
 ---------------------------------------------------------

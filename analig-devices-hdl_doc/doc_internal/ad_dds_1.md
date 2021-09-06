@@ -71,11 +71,11 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dds data 
 ## Instantiations
 
 - i_dds_scale: ad_mul
-**Description**
+</br>**Description**
  scale for a sine generator
 

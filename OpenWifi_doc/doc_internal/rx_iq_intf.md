@@ -56,20 +56,20 @@
 ## Processes
 - unnamed: ( @( posedge clk ) )
   - **Type:** always
-**Description**
+</br>**Description**
  rate control to make sure ofdm rx get I/Q as uniform as possible 
 - unnamed: ( @( posedge clk ) )
   - **Type:** always
-**Description**
+</br>**Description**
  20MHz en 
 - unnamed: ( @( posedge clk ) )
   - **Type:** always
-**Description**
+</br>**Description**
 delay I/Q valid to wifi receiver for loop back mode 
 ## Instantiations
 
 - xpm_fifo_sync_rx_iq_intf: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo32_1clk_dep32 fifo32_1clk_dep32_i (
      .CLK(clk),
      .DATAO(rf_iq),

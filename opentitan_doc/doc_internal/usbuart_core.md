@@ -111,11 +111,11 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_usb_48mhz_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Sys loopback is done at the bottom of the fifos  TODO could do line loopback in a similar way at top of fifos? 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////////  Interrupt & Status // ////////////////////// 
 - unnamed: (  )
   - **Type:** always_comb
@@ -124,17 +124,17 @@
 ## Instantiations
 
 - usbuart_txfifo: prim_fifo_async
-**Description**
+</br>**Description**
  Character fifo also crosses to USB clock domain
 `$dfifo_uart_tx->mname()`
 
 - usbuart_rxfifo: prim_fifo_async
-**Description**
+</br>**Description**
 `$dfifo_uart_rx->mname()`
 
 - usbuart_usbif: usbuart_usbif
 - intr_hw_tx_watermark: prim_intr_hw
-**Description**
+</br>**Description**
  TODO is there a related USB error?
  instantiate interrupt hardware primitives
 

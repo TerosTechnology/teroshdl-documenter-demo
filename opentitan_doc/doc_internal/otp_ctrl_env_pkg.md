@@ -92,11 +92,11 @@
 - is_digest <font id="function_arguments">(bit [TL_DW-1:0])</font> <font id="function_return">return (bit)</font>
 - is_sw_part <font id="function_arguments">(bit [TL_DW-1:0])</font> <font id="function_return">return (bit)</font>
 - get_sw_window_offset <font id="function_arguments">(bit [TL_AW-1:0] dai_addr)</font> <font id="function_return">return (bit [TL_AW-1:0])</font>
-**Description**
+</br>**Description**
  Resolve an offset within the software window as an offset within the whole otp_ctrl block.
 
 - randomize_lc_tx_t_val <font id="function_arguments">()</font> <font id="function_return">return (lc_ctrl_pkg::lc_tx_t)</font>
-**Description**
+</br>**Description**
  This function randomizes lc_tx_t with 25% lc_ctrl_pkg::On, 25% lc_ctrl_pkg::Off,
  and 50% random values
 

@@ -101,17 +101,17 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Create steering logic 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -120,111 +120,111 @@
 - u_chk: tlul_cmd_intg_chk
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_socket: tlul_socket_1n
-**Description**
+</br>**Description**
  Create Socket_1n
 
 - u_reg_if: tlul_adapter_reg
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_alert_test_fatal: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
    F[fatal]: 0:0
 
 - u_alert_test_recov: prim_subreg_ext
-**Description**
+</br>**Description**
    F[recov]: 1:1
 
 - u_cmd: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cmd]: V(True)
 
 - u_status: prim_subreg_ext
-**Description**
+</br>**Description**
  R[status]: V(True)
 
 - u_err_bits_bad_data_addr: prim_subreg
-**Description**
+</br>**Description**
  R[err_bits]: V(False)
    F[bad_data_addr]: 0:0
 
 - u_err_bits_bad_insn_addr: prim_subreg
-**Description**
+</br>**Description**
    F[bad_insn_addr]: 1:1
 
 - u_err_bits_call_stack: prim_subreg
-**Description**
+</br>**Description**
    F[call_stack]: 2:2
 
 - u_err_bits_illegal_insn: prim_subreg
-**Description**
+</br>**Description**
    F[illegal_insn]: 3:3
 
 - u_err_bits_loop: prim_subreg
-**Description**
+</br>**Description**
    F[loop]: 4:4
 
 - u_err_bits_fatal_imem: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_imem]: 5:5
 
 - u_err_bits_fatal_dmem: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_dmem]: 6:6
 
 - u_err_bits_fatal_reg: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_reg]: 7:7
 
 - u_err_bits_fatal_illegal_bus_access: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_illegal_bus_access]: 8:8
 
 - u_err_bits_fatal_lifecycle_escalation: prim_subreg
-**Description**
+</br>**Description**
    F[fatal_lifecycle_escalation]: 9:9
 
 - u_start_addr: prim_subreg
-**Description**
+</br>**Description**
  R[start_addr]: V(False)
 
 - u_fatal_alert_cause_bus_integrity_error: prim_subreg
-**Description**
+</br>**Description**
  R[fatal_alert_cause]: V(False)
    F[bus_integrity_error]: 0:0
 
 - u_fatal_alert_cause_imem_error: prim_subreg
-**Description**
+</br>**Description**
    F[imem_error]: 1:1
 
 - u_fatal_alert_cause_dmem_error: prim_subreg
-**Description**
+</br>**Description**
    F[dmem_error]: 2:2
 
 - u_fatal_alert_cause_reg_error: prim_subreg
-**Description**
+</br>**Description**
    F[reg_error]: 3:3
 
 - u_fatal_alert_cause_illegal_bus_access: prim_subreg
-**Description**
+</br>**Description**
    F[illegal_bus_access]: 4:4
 
 - u_fatal_alert_cause_lifecycle_escalation: prim_subreg
-**Description**
+</br>**Description**
    F[lifecycle_escalation]: 5:5
 
 - u_insn_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[insn_cnt]: V(True)
 

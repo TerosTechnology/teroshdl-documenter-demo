@@ -116,21 +116,21 @@
 ## Processes
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dma interface 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  32 bit interface 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sof, enable and data on 422 and 444 domains 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  horizontal and vertical sync counters, active video size & mismatch 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
@@ -139,18 +139,18 @@
 ## Instantiations
 
 - i_ss: ad_ss_422to444
-**Description**
+</br>**Description**
  super sampling, 422 to 444
 
 - i_csc: ad_csc_CrYCb2RGB
-**Description**
+</br>**Description**
  color space conversion, CrYCb to RGB
 
 - i_es: axi_hdmi_rx_es
-**Description**
+</br>**Description**
  embedded sync
 
 - i_tpm: axi_hdmi_rx_tpm
-**Description**
+</br>**Description**
  test pattern matcher
 

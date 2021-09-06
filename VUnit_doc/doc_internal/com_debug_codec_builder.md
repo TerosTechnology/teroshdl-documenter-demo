@@ -9,7 +9,7 @@
 - create_array_group <font id="function_arguments">( constant arr           : string;<br><span style="padding-left:20px"> constant range_left1   : string;<br><span style="padding-left:20px"> constant range_right1  : string;<br><span style="padding-left:20px"> constant is_ascending1 : boolean;<br><span style="padding-left:20px"> constant range_left2   : string  := "";<br><span style="padding-left:20px"> constant range_right2  : string  := "";<br><span style="padding-left:20px"> constant is_ascending2 : boolean := true) </font> <font id="function_return">return string </font>
 - escape_special_characters <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font>
 - split_group <font id="function_arguments">( constant grp                 : in    string;<br><span style="padding-left:20px"> variable elements            : inout lines_t;<br><span style="padding-left:20px"> constant max_num_of_elements : in    natural;<br><span style="padding-left:20px"> variable length              : inout natural) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Decoding support
 ---------------------------------------------------------------------------

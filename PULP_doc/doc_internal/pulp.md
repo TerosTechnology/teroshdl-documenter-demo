@@ -430,7 +430,7 @@
 ## Instantiations
 
 - pad_frame_i: pad_frame
-**Description**
+</br>**Description**
 APB_BUS        apb_debug();  //not used
 XBAR_TCDM_BUS  lint_debug(); //not used
 ***********************************************************
@@ -438,13 +438,13 @@ XBAR_TCDM_BUS  lint_debug(); //not used
 ***********************************************************
 
 - safe_domain_i: safe_domain
-**Description**
+</br>**Description**
 ***********************************************************
 ********** SAFE DOMAIN ************************************
 ***********************************************************
 
 - soc_domain_i: soc_domain
-**Description**
+</br>**Description**
  SOC DOMAIN
 
 - cluster_domain_i: cluster_domain

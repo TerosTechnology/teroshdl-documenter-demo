@@ -83,6 +83,6 @@
 | keymgr_lc_en_usage_e   | enum logic [1:0] {<br><span style="padding-left:20px">     KeyMgrEnCtrl,<br><span style="padding-left:20px">     KeyMgrEnCfgEn,<br><span style="padding-left:20px">     KeyMgrEnSwBindingEn,<br><span style="padding-left:20px">     KeyMgrEnLast   }                                                                                                                                                                                                                                                                     |  The following structs should be sourced from other modules  defined here temporarily  lc keymgr enable usage                                                                                                                                                                                     |
 ## Functions
 - perm_data <font id="function_arguments">()</font> <font id="function_return">return (logic[RandWidth-1:0])</font>
-**Description**
+</br>**Description**
  perm_data
 

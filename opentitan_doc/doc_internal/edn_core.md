@@ -187,32 +187,32 @@
 ## Instantiations
 
 - u_intr_hw_edn_cmd_req_done: prim_intr_hw
-**Description**
+</br>**Description**
 --------------------------------------------
  instantiate interrupt hardware primitives
 --------------------------------------------
 
 - u_intr_hw_edn_fatal_err: prim_intr_hw
 - u_prim_fifo_sync_rescmd: prim_fifo_sync
-**Description**
+</br>**Description**
  rescmd fifo
 
 - u_prim_fifo_sync_gencmd: prim_fifo_sync
-**Description**
+</br>**Description**
  gencmd fifo
 
 - u_edn_main_sm: edn_main_sm
-**Description**
+</br>**Description**
  sm to process csrng commands
 
 - u_prim_arbiter_ppc_packer_arb: prim_arbiter_ppc
-**Description**
+</br>**Description**
 --------------------------------------------
  packer arbitration
 --------------------------------------------
 
 - u_prim_packer_fifo_cs: prim_packer_fifo
-**Description**
+</br>**Description**
 --------------------------------------------
  csrng interface packer
 --------------------------------------------

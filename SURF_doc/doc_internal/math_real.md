@@ -29,13 +29,13 @@
 - ROUND <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font>
 - TRUNC <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font>
 - REALMAX <font id="function_arguments">(X,<br><span style="padding-left:20px"> Y : REAL) </font> <font id="function_return">return REAL </font>
-**Description**
+</br>**Description**
   Contrary to fmod, the sign of the result is the sign of Y.
 
 - REALMIN <font id="function_arguments">(X,<br><span style="padding-left:20px"> Y : REAL) </font> <font id="function_return">return REAL </font>
 - UNIFORM <font id="function_arguments">(SEED1,<br><span style="padding-left:20px"> SEED2 : inout POSITIVE;<br><span style="padding-left:20px"> X : out REAL) </font> <font id="function_return">return ()</font>
 - SQRT <font id="function_arguments">(X : REAL) </font> <font id="function_return">return REAL </font>
-**Description**
+</br>**Description**
   Algorithm from: Pierre L'Ecuyer, CACM June 1988 Volume 31 Number 6
   page 747 figure 3.
 

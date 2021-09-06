@@ -17,11 +17,11 @@
 | log_handler_vec_t       | array (natural range <>) of log_handler_t                                                                                                                                             |                                              |
 ## Functions
 - set_format <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> format : log_format_t;<br><span style="padding-left:20px"> use_color : boolean := false) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set the format to be used by the log handler
 
 - get_format <font id="function_arguments">(constant log_handler : in log_handler_t;<br><span style="padding-left:20px"> variable format : out log_format_t;<br><span style="padding-left:20px"> variable use_color : out boolean) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Get the format used by the log handler
 
 - update_max_logger_name_length <font id="function_arguments">(log_handler : log_handler_t;<br><span style="padding-left:20px"> value : natural) </font> <font id="function_return">return ()</font>

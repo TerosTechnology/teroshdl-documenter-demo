@@ -118,6 +118,6 @@
 - AddSub <font id="function_arguments">(A        : std_logic_vector;<br><span style="padding-left:20px"> B        : std_logic_vector;<br><span style="padding-left:20px"> Sub      : std_logic;<br><span style="padding-left:20px"> Carry_In : std_logic;<br><span style="padding-left:20px"> signal Res      : out std_logic_vector;<br><span style="padding-left:20px"> signal Carry    : out std_logic) </font> <font id="function_return">return ()</font>
 ## Processes
 - unnamed: ( Carry_v, Carry7_v, Q_v )
-**Description**
+</br>**Description**
  bug fix - parity flag is just parity for 8080, also overflow for Z80 
 - unnamed: ( Arith16, ALU_OP, F_In, BusA, BusB, IR, Q_v, Carry_v, HalfCarry_v, OverFlow_v, BitMask, ISet, Z16, WZ, XY_State )

@@ -86,17 +86,17 @@
 | RegType |      |             |
 ## Processes
 - comb: ( axiRst, r, rdDmaAck, srpReq, wrDmaAck )
-**Description**
+</br>**Description**
  [in] 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_SrpV3Core_1: surf.SrpV3Core
 - U_AxiStreamDmaWrite_1: surf.AxiStreamDmaWrite
-**Description**
+</br>**Description**
  [out]
 
 - U_AxiStreamDmaRead_1: surf.AxiStreamDmaRead
-**Description**
+</br>**Description**
  [in]
 

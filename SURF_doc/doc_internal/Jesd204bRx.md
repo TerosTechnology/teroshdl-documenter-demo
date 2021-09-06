@@ -111,20 +111,20 @@
 | RegType |      |             |
 ## Processes
 - comb: ( devRst_i, s_nSyncAny )
-**Description**
+</br>**Description**
  DFF 
 - seq: ( devClk_i )
 ## Instantiations
 
 - U_Reg: surf.JesdRxReg
-**Description**
+</br>**Description**
  axiLite register interface
 
 - U_SysrefDly: surf.SlvDelay
-**Description**
+</br>**Description**
  Delay SYSREF input (for 1 to 256 c-c)
 
 - LmfcGen_INST: surf.JesdLmfcGen
-**Description**
+</br>**Description**
  LMFC period generator aligned to SYSREF input
 

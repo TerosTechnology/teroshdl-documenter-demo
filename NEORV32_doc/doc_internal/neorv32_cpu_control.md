@@ -167,76 +167,76 @@
 ## Processes
 - fetch_engine_fsm_sync: ( rstn_i, clk_i )
 - fetch_engine_fsm_comb: ( fetch_engine, execute_engine, ipb, instr_i, bus_i_wait_i, be_instr_i, ma_instr_i )
-**Description**
+</br>**Description**
  half-word aligned  Fetch Engine FSM Comb ------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - issue_engine_fsm_sync: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  Instruction Issue (recoding of compressed instructions and 32-bit instruction word construction)  ****************************************************************************************************************************  Issue Engine FSM Sync ------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - issue_engine_fsm_comb: ( issue_engine, ipb, execute_engine, ci_illegal, ci_instr32 )
-**Description**
+</br>**Description**
  Issue Engine FSM Comb ------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - imm_gen: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  Instruction Execution  ****************************************************************************************************************************  Immediate Generator --------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - branch_check: ( execute_engine.i_reg, cmp_i )
-**Description**
+</br>**Description**
  Branch Condition Check -----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - execute_engine_fsm_sync: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Execute Engine FSM Sync ----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - ctrl_output: ( ctrl, fetch_engine, trap_ctrl, bus_fast_ir, execute_engine, csr, debug_ctrl )
-**Description**
+</br>**Description**
  CPU Control Bus Output -----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - decode_helper: ( execute_engine )
-**Description**
+</br>**Description**
  Decoding Helper Logic ------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - execute_engine_fsm_comb: ( execute_engine, debug_ctrl, trap_ctrl, decode_aux, fetch_engine, cmd_issue,
                                    csr, ctrl, csr_acc_valid, alu_idone_i, bus_d_wait_i, excl_state_i )
-**Description**
+</br>**Description**
  Execute Engine FSM Comb ----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - csr_access_check: ( execute_engine.i_reg, csr, debug_ctrl )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  Invalid Instruction / CSR access check  ****************************************************************************************************************************  CSR Access Check -----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - illegal_instruction_check: ( execute_engine, decode_aux, csr, csr_acc_valid, debug_ctrl )
-**Description**
+</br>**Description**
  Illegal Instruction Check --------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - trap_controller: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  Exception and Interrupt (= Trap) Control  ****************************************************************************************************************************  Trap Controller ------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - trap_priority: ( trap_ctrl )
-**Description**
+</br>**Description**
  "NMI" for debug mode entry  Trap Priority Encoder ------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - csr_write_data: ( execute_engine.i_reg, csr.rdata, rs1_i )
-**Description**
+</br>**Description**
  ****************************************************************************************************************************  Control and Status Registers (CSRs)  ****************************************************************************************************************************  Control and Status Registers Write Data ------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - csr_write_access: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Control and Status Registers - Write Access --------------------------------------------  ------------------------------------------------------------------------------------------- 
 - pmp_output: ( csr )
-**Description**
+</br>**Description**
  PMP configuration output to bus unit -- 
 - pmp_rd_dummy: ( csr )
-**Description**
+</br>**Description**
  PMP config read dummy -- 
 - csr_counters: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Control and Status Registers - Counters ------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - hpm_rd_dummy: ( csr )
-**Description**
+</br>**Description**
  hpm counter read -- 
 - hpmcnt_ctrl: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Hardware Performance Monitor - Counter Event Control -----------------------------------  ------------------------------------------------------------------------------------------- 
 - csr_read_access: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  illegal operation  Control and Status Registers - Read Access ---------------------------------------------  ------------------------------------------------------------------------------------------- 
 - debug_control: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Debug Control --------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 ## Instantiations
 
 - instr_prefetch_buffer: neorv32_fifo
-**Description**
+</br>**Description**
  ****************************************************************************************************************************
  Instruction Prefetch Buffer
  ****************************************************************************************************************************

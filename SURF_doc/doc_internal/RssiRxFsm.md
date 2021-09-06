@@ -112,6 +112,6 @@
 ## Processes
 - comb: ( r, rst_i, chksumValid_i, s_chksumOk, rxWindowSize_i, lastAckN_i, rxBufferSize_i,
                   txWindowSize_i, tspSsiMaster_i, connActive_i, rdBuffData_i, appSsiSlave_i )
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )

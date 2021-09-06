@@ -122,19 +122,19 @@
   - **Type:** always
 - unnamed: ( @(posedge req_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Once the last completion request from request generator is received  we can wait for completions from the destination side 
 - unnamed: ( @(posedge req_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Once the last completion is received wit until all completions are done 
 - unnamed: ( @(posedge req_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Track transfers so we can tell when did the destination completed all its  transfers 
 - unnamed: ( @(posedge req_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Count how many transfers we need to complete 
 ## Instantiations
 

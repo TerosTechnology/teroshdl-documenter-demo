@@ -84,7 +84,7 @@
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Start the checker when transitioning into the "Checking" state 
 ## Instantiations
 

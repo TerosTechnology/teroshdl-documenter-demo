@@ -36,20 +36,20 @@
 | sram_avail_type_e | enum bit {<br><span style="padding-left:20px">     SramDataAvail,<br><span style="padding-left:20px">     SramSpaceAvail   }                                                                                                                                                                                                                                                                             |                              |
 ## Functions
 - get_sram_space_bytes <font id="function_arguments">(uint wptr,<br><span style="padding-left:20px"> uint rpt)</font> <font id="function_return">return (uint)</font>
-**Description**
+</br>**Description**
  functions
  get size of empty space in mem
 
 - get_sram_filled_bytes <font id="function_arguments">(uint wptr,<br><span style="padding-left:20px"> uint rpt)</font> <font id="function_return">return (uint)</font>
-**Description**
+</br>**Description**
  get size of filled data in mem
 
 - get_allocated_sram_size_bytes <font id="function_arguments">(uint base,<br><span style="padding-left:20px"> uint)</font> <font id="function_return">return (uint)</font>
-**Description**
+</br>**Description**
  get the memory size
 
 - get_sram_new_ptr <font id="function_arguments">(uint ptr,<br><span style="padding-left:20px">)</font> <font id="function_return">return (uint)</font>
-**Description**
+</br>**Description**
  use this function to calculate the new ptr value
  if new rx_rptr exceeds programmed sram size in bytes, then wrap it and flip the phase bit
  else, restore the 'saved' phase bit

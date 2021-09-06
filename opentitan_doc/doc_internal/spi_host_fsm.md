@@ -137,13 +137,13 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  FSM main body: Controls state transitions and command_ready_o signaling<br>  command_ready_o Note: New commands should may be acknowled as we enter into the idle condition  with two subtle exceptions:    1. During stall conditions the FSM does not actually perform transitions and so       command_ready_o should be held low during stalls regardless of the current state    2. In cases where the next segment is for a different CSID, command_ready_o is held       explicitly low to enforce CSNTRAIL, CSIDLE requirements for the previous segment.       Holding command_ready_o low in this case defers updates of the internal state variables 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  We can calculate byte transitions for CHPA=1 by noting  that in this implmentation, the sck edges have a 1-1  correspondence with FSM transitions.  New bytes are loaded exactly one state transition behind the time  when they would be loaded if CPHA=0 
 - unnamed: (  )
   - **Type:** always_comb

@@ -109,7 +109,7 @@
   - **Type:** always
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always
-**Description**
+</br>**Description**
  read data channel 
 - unnamed: ( @(posedge axi_clk or negedge axi_resetn) )
   - **Type:** always

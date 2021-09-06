@@ -62,22 +62,22 @@
 ## Processes
 - unnamed: ( @(posedge M_AXIS_ACLK) )
   - **Type:** always
-**Description**
+</br>**Description**
 Generate a pulse to initiate AXI transaction. 
 - unnamed: ( @(posedge M_AXIS_ACLK) )
   - **Type:** always
-**Description**
+</br>**Description**
  Control state machine implementation                              
 - unnamed: ( @(posedge M_AXIS_ACLK) )
   - **Type:** always
-**Description**
+</br>**Description**
  Delay the axis_tvalid and axis_tlast signal by one clock cycle                                to match the latency of M_AXIS_TDATA                                                         
 - unnamed: ( @(posedge M_AXIS_ACLK) )
   - **Type:** always
 ## Instantiations
 
 - m_axis_xpm_fifo_sync0: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo64_1clk fifo64_1clk_i (
      .CLK(M_AXIS_ACLK),
      .DATAO(M_AXIS_TDATA),

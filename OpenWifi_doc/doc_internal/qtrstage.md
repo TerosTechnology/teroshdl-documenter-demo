@@ -139,11 +139,11 @@
   - **Type:** always
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  This is the pipeline[-1] stage, pipeline[0] will be set next. 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  pipeline[1] takes sum_x and diff_x and produces rnd_x  Now for pipeline[2].  We can actually do this at all i_ce  clock times, since nothing will listen unless pipeline[3]  on the next clock.  Thus, we simplify this logic and do  it independent of pipeline[2]. 
 - unnamed: ( @(posedge i_clk) )
   - **Type:** always

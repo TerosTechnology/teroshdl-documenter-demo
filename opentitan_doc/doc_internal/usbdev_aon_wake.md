@@ -55,7 +55,7 @@
 
 - u_cdc_suspend_req: prim_flop_2sync
 - filter_activity: prim_filter
-**Description**
+</br>**Description**
  aon clock is ~200kHz so 4 cycle filter is about 20us
  as well as noise debounce this gives the main IP time to detect resume if it didn't turn off
 

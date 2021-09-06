@@ -61,7 +61,7 @@
 - shiftInLeft <font id="function_arguments">( i : in    sl;<br><span style="padding-left:20px"> v : inout slv) </font> <font id="function_return">return ()</font>
 ## Processes
 - fall: ( saciClk, rstInL )
-**Description**
+</br>**Description**
  Clock in serial input on falling edge 
 - seq: ( saciClk, rstInL )
 - comb: ( r, saciCmdFall, ack, rdData, saciSelL )

@@ -44,6 +44,6 @@
 ## Instantiations
 
 - u_jt49: jt49
-**Description**
+</br>**Description**
 note that input ports are not multiplexed
 

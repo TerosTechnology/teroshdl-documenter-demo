@@ -141,7 +141,7 @@
 | SETS | positive |  CACHE_LINES / ASSOCIATIVITY |             |
 ## Functions
 - contains_x <font id="function_arguments">(value : unsigned) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Returns true if unsigned value contains metalogical values.
  Similar function is_x(unsigned) is only shipped with VHDL'08.
 

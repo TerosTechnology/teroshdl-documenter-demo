@@ -78,14 +78,14 @@
 ## Processes
 - comb: ( axiRst, axiWriteSlave, dmaWrDescAck, dmaWrDescRetAck,
                    intAxisMaster, trackData, pause, r, axiCache )
-**Description**
+</br>**Description**
  State machine 
 - seq: ( axiClk )
 ## Instantiations
 
 - U_Pipeline: surf.AxiStreamPipeline
 - U_TrackRam: surf.DualPortRam
-**Description**
+</br>**Description**
 ------------------------
  Tracking RAM
 ------------------------

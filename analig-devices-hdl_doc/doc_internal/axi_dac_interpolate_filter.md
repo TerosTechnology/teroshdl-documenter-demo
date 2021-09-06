@@ -104,7 +104,7 @@
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  - for start synchronized, wait until the DMA has valid data on both channels  - for non synchronized channels the start of transmission gets the 2 data  paths randomly ready, only when using data buffers 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always

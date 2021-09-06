@@ -34,7 +34,7 @@
  .. wavedrom::
 
     
-![alt text](wavedrom_zrB10.svg "title") 
+![alt text](wavedrom_9Jxw0.svg "title") 
 
 
  ``Pad`` must be connected to a PAD because FPGAs only have these registers in

@@ -71,7 +71,7 @@
 
 - U_UartBrg_1: surf.UartBrg
 - U_UartTx_1: surf.UartTx
-**Description**
+</br>**Description**
  [out]
 -----------------------------------------------------------------------------------------------
  UART transmitter
@@ -79,7 +79,7 @@
 
 - U_Fifo_Tx: surf.Fifo
 - U_UartRx_1: surf.UartRx
-**Description**
+</br>**Description**
  [out]
 -----------------------------------------------------------------------------------------------
  UART Receiver

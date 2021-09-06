@@ -74,12 +74,12 @@
 | t_slv_array |      |             |
 ## Processes
 - p_rx_s: ( clk, arst )
-**Description**
+</br>**Description**
  synchronize rx input (async) 
 - uart_tx: ( clk, arst )
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------  Transmit process; drives tx serial output.<br>  Stores 4 pending bytes in the tx_data array, and the byte currently  being output in the tx_buffer register.<br>  Tx_buffer is filled with data from tx_data(0) if there is valid data  available (tx_data_valid is active), and no other byte is currently  being output (tx_active is inactive).<br>  Data received via SBI is inserted in tx_data at the index pointed to  by vr_tx_data_idx. vr_tx_data_idx is incremented when a new byte is  received via SBI, and decremented when a new byte is loaded into  tx_buffer. ------------------------------------------------------------------------- 
 - uart_rx: ( clk, arst )
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------  Receive process ------------------------------------------------------------------------- 
 - p_busy_assert: ( clk )

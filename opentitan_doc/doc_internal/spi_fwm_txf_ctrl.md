@@ -82,7 +82,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  State Machine next , output logic 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -92,7 +92,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Depth 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

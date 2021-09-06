@@ -93,5 +93,5 @@
 | pro_mode      | std_logic                                 |             |
 ## Processes
 - CDAT: ( up_clk, lock )
-**Description**
+</br>**Description**
  extract channel status bits to be used 

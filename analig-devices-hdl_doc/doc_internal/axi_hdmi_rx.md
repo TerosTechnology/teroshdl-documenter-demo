@@ -110,14 +110,14 @@
 ## Instantiations
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  axi interface
 
 - i_up: up_hdmi_rx
-**Description**
+</br>**Description**
  processor interface
 
 - i_rx_core: axi_hdmi_rx_core
-**Description**
+</br>**Description**
  hdmi interface
 

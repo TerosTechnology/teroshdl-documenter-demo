@@ -157,23 +157,23 @@
   - **Type:** always
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  timer with premature termination 
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
 ## Instantiations
 
 - i_mmcm_rst_reg: ad_rst
-**Description**
+</br>**Description**
  resets
 
 - i_core_rst_reg: ad_rst
 - i_xfer_cntrl: up_xfer_cntrl
-**Description**
+</br>**Description**
  adc control & status
 
 - i_xfer_status: up_xfer_status
 - i_clock_mon: up_clock_mon
-**Description**
+</br>**Description**
  adc clock monitor
 

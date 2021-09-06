@@ -61,31 +61,31 @@
 | C_UART_MONITOR_CONFIG           | t_uart_monitor_config   |  (     scope_name               => (1 to 12 => "UART Monitor",<br><span style="padding-left:20px"> others => NUL),<br><span style="padding-left:20px">     msg_id_panel             => C_UART_MONITOR_MSG_ID_PANEL_DEFAULT,<br><span style="padding-left:20px">     interface_config         => C_UART_MONITOR_INTERFACE_CONFIG,<br><span style="padding-left:20px">     transaction_display_time => 0 ns     ) |                |
 ## Processes
 - p_model: (  )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Model<br>    Subscribe to SBI and UART transaction infos, and send to Scoreboard or    send VVC commands based on transaction info content.<br> --------------------------------------------------------------------------- 
 ## Instantiations
 
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - i_uart: bitvis_uart.uart
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Instantiate DUT
 ---------------------------------------------------------------------------
 
 - i1_sbi_vvc: bitvis_vip_sbi.sbi_vvc
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  SBI VVC
 ---------------------------------------------------------------------------
 
 - i1_uart_vvc: bitvis_vip_uart.uart_vvc
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  UART VVC
 ---------------------------------------------------------------------------
 
 - i1_uart_monitor: bitvis_vip_uart.uart_monitor
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Monitor - UART
 
@@ -94,7 +94,7 @@
 ---------------------------------------------------------------------------
 
 - i_clock_generator_vvc: bitvis_vip_clock_generator.clock_generator_vvc
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Clock Generator VVC
 ---------------------------------------------------------------------------

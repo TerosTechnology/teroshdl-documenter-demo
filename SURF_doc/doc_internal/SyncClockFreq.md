@@ -71,16 +71,16 @@
 | CLK_UPPER_LIMIT_C | natural |  getTimeRatio(CLK_UPPER_LIMIT_G,<br><span style="padding-left:20px"> 1.0E+0)      |  upper limit |
 ## Processes
 - unnamed: ( clkIn )
-**Description**
+</br>**Description**
 -------------------------  Free Running Counter ------------------------- 
 - unnamed: ( refClk )
 - unnamed: ( locClk )
-**Description**
+</br>**Description**
 -------------------------  Clock Monitoring Process ------------------------- 
 ## Instantiations
 
 - SynchronizerFifo_In: surf.SynchronizerFifo
-**Description**
+</br>**Description**
 ----------------------------------------------
  Calculate the frequency of the input clock
 ----------------------------------------------

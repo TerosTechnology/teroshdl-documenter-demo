@@ -98,21 +98,21 @@
 | state_almost_full | std_logic_vector(STATE_BITS -1 downto 0) |  (0 => '0',<br><span style="padding-left:20px"> others => '1') |             |
 ## Processes
 - in_data_buffer_p: ( clk_icap )
-**Description**
+</br>**Description**
  buffer some data before starting the icap, icap needs to be sync'ed before it can be paused 
 - icap_reg_p: ( clk_icap )
-**Description**
+</br>**Description**
  icap 
 ## Instantiations
 
 - fifo_in: poc.fifo_ic_got
-**Description**
+</br>**Description**
  sync the written pci data into the user clk
  writer: pci
  reader: core
 
 - fifo_out: poc.fifo_ic_got
-**Description**
+</br>**Description**
  sync data from this core to the pci bus
  writer: core
  reader: pci

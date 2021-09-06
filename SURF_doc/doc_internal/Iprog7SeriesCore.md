@@ -67,6 +67,6 @@
 
 - SynchronizerAddress_1: surf.SynchronizerVector
 - SynchronizerStart_1: surf.SynchronizerEdge
-**Description**
+</br>**Description**
  Capture edge of start on icapClk
 

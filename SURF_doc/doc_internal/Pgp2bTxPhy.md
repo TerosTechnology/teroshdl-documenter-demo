@@ -98,13 +98,13 @@
 | ST_EMPTY_C | slv(3 downto 0) |  "1000" |                       |
 ## Processes
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  State transition sync logic. 
 - unnamed: ( curState, intTxLinkReady, cellTxEOC, algnCnt,
              skpAData, skpADataK, skpBData, skpBDataK, alnAData, alnADataK, alnBData,
              alnBDataK, ltsAData, ltsADataK, ltsBData, ltsBDataK, cellData, cellDataK )
-**Description**
+</br>**Description**
  Link control state machine 
 - unnamed: ( pgpTxClk )
-**Description**
+</br>**Description**
  Delay chain select, used when an opcode is transmitted.  opcode will overwrite current position and delay chain will  be selected until an EOC is transmitted. At that time the  non-delayed chain will be select. An empty position is inserted  after EOC so that valid opcodes are not lost. 

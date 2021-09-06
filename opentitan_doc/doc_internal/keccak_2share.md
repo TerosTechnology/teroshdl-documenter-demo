@@ -84,7 +84,7 @@
 | col_t   | logic      [4:0]        | (y) identical to row_t      |
 ## Functions
 - bitarray_to_box <font id="function_arguments">(logic [Width-1:0])</font> <font id="function_return">return (box_t)</font>
-**Description**
+</br>**Description**
 /////////////
  Functions //
 /////////////
@@ -95,7 +95,7 @@
  >    A[x,y,z]=S[w(5y+x)+z]
 
 - box_to_bitarray <font id="function_arguments">(box_t)</font> <font id="function_return">return (logic [Width-1:0])</font>
-**Description**
+</br>**Description**
  Convert 3D cube to bitarray
 
 - theta <font id="function_arguments">(box_t)</font> <font id="function_return">return (box_t)</font>

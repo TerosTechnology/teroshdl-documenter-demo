@@ -95,29 +95,29 @@
 | RDY_THRESHOLD_HI |      | 9'd500 |             |
 ## Functions
 - g2b <font id="function_arguments">()</font> <font id="function_return">return ([8:0])</font>
-**Description**
+</br>**Description**
  grey to binary conversion
 
 ## Processes
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi frame sync 
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dma frame sync 
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync dma and hdmi frames 
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  accept new frame from dma 
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  vdma write 
 - unnamed: ( @(posedge vdma_clk) )
   - **Type:** always

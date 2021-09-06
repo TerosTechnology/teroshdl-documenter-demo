@@ -212,24 +212,24 @@
 - sendHeaderNow <font id="function_arguments">( v          : inout RegType ) </font> <font id="function_return">return ()</font>
 ## Processes
 - P_MUX_TDI: ( r, mAxisReq, s )
-**Description**
+</br>**Description**
  Control flow of the input stream to the AxisToJtagCore.  We stop the flow while inspecting the header or during  playback from memory (when we discard the input stream) 
 - P_TKEEP: ( s )
-**Description**
+</br>**Description**
  output stream; splice in TKEEP 
 - P_COMB: ( r, mAxisReq, sAxisTdo, s, memOut )
 - P_SEQ: ( axisClk )
 ## Instantiations
 
 - U_MUX: surf.AxiStreamSelector
-**Description**
+</br>**Description**
  A stream multiplexer; depending on 'sel' either Ib(0) or Ib(1)
  is routed to Ob.
  We use this to splice locally generated info (reply header and
  memory playback data) into the output stream.
 
 - U_JTAG: surf.AxisToJtagCore
-**Description**
+</br>**Description**
  The core which does all the JTAG work (while this module deals with
  the protocol and housekeeping.
 

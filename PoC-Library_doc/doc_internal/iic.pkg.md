@@ -20,7 +20,7 @@
 | T_IO_IIC_ERROR_VECTOR      | array(natural range <>) of T_IO_IIC_ERROR                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                                |
 ## Functions
 - io_tristate_driver <font id="function_arguments">( signal pad  : inout T_IO_IIC_SERIAL_PCB;<br><span style="padding-left:20px"> signal iot  : inout T_IO_IIC_SERIAL ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Drive std_logic values from Tri-State signals and in reverse.
  Use this procedure only in simulation
 

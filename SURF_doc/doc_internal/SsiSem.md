@@ -89,19 +89,19 @@
 
 - U_Sem: surf.SemWrapper
 - U_SyncFifo: surf.SynchronizerFifo
-**Description**
+</br>**Description**
 ----------------------
  Sync the Module index
 ----------------------
 
 - U_AxiLiteAsync: surf.AxiLiteAsync
-**Description**
+</br>**Description**
 -----------------------------------
  Synchronize AXI-Lite bus to semClk
 -----------------------------------
 
 - U_TxFifo: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
 -------------------------------
  Synchronize AXIS bus to semClk
 -------------------------------

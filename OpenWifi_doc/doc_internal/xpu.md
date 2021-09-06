@@ -202,7 +202,7 @@
 ## Instantiations
 
 - tx_on_detection_i: tx_on_detection
-**Description**
+</br>**Description**
  assign slv_reg60 = rssi_half_db;
  assign slv_reg61 = iq_rssi_half_db;
 
@@ -213,6 +213,6 @@
 - phy_rx_parse_i: phy_rx_parse
 - time_slice_gen_i: time_slice_gen
 - xpu_s_axi_i: xpu_s_axi
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

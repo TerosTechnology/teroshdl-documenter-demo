@@ -128,7 +128,7 @@
                           errWordStrbSync, overflow, overflow0Cnt,
                           overflow1Cnt, packetLengthSync, packetRateSync,
                           pause, pause0Cnt, pause1Cnt, rAxiLite )
-**Description**
+</br>**Description**
 -----------------------------  Configuration Register ----------------------------- 
 - seqAxiLite: ( axiClk )
 ## Instantiations

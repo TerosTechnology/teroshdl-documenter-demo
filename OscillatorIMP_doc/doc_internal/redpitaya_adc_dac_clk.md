@@ -47,11 +47,11 @@
 ## Instantiations
 
 - i_clk: IBUFDS
-**Description**
+</br>**Description**
 differential clock input
 
 - i_adc_buf: BUFG
-**Description**
+</br>**Description**
 use global clock buffer
 
 - i_dac_plle2: PLLE2_ADV

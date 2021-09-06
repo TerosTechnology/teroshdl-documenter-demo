@@ -89,7 +89,7 @@
 ## Instantiations
 
 - i_pnmon: axi_ad9265_pnmon
-**Description**
+</br>**Description**
  iq correction inputs
 
 - i_up_adc_channel: up_adc_channel

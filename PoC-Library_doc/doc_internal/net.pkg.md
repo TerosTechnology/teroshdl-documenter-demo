@@ -173,7 +173,7 @@
 | T_NET_UDP_PORTPAIR_VECTOR               | array(natural range <>) of T_NET_UDP_PORTPAIR                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                  |
 ## Functions
 - to_net_eth_RSDataInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_RS_DATA_INTERFACE </font>
-**Description**
+</br>**Description**
  ==========================================================================================================================================================
  Ethernet: ????????????????????
  ==========================================================================================================================================================
@@ -182,7 +182,7 @@
 - to_net_eth_PHYManagementInterface <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_MANAGEMENT_INTERFACE </font>
 - to_net_eth_PHYDevice <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_ETH_PHY_DEVICE </font>
 - to_net_mac_address <font id="function_arguments">(slv : T_SLV_48) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font>
-**Description**
+</br>**Description**
  type conversion functions
 
 - to_net_mac_address <font id="function_arguments">(slvv : T_SLVV_8) </font> <font id="function_return">return T_NET_MAC_ADDRESS </font>
@@ -195,24 +195,24 @@
 - to_string <font id="function_arguments">(mac : T_NET_MAC_ADDRESS) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">(Ethtype : T_NET_MAC_ETHERNETTYPE) </font> <font id="function_return">return string </font>
 - getPortCount <font id="function_arguments">(MACConfiguration : T_NET_MAC_CONFIGURATION_VECTOR) </font> <font id="function_return">return positive </font>
-**Description**
+</br>**Description**
  functions
 
 - to_net_ipv4_address <font id="function_arguments">(slv : T_SLV_32) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font>
-**Description**
+</br>**Description**
  type conversion functions
 
 - to_net_ipv4_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV4_ADDRESS </font>
 - to_net_ipv4_TYPE_of_service <font id="function_arguments">(slv : T_SLV_8) </font> <font id="function_return">return T_NET_IPV4_TYPE_OF_SERVICE </font>
 - to_slv <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return std_logic_vector </font>
 - to_slv <font id="function_arguments">(tos : T_NET_IPV4_TYPE_OF_SERVICE) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
 	function to_slv(proto : T_NET_IPV4_PROTOCOL)				return STD_LOGIC_VECTOR;
 
 - to_slvv_8 <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return T_SLVV_8 </font>
 - to_string <font id="function_arguments">(ip : T_NET_IPV4_ADDRESS) </font> <font id="function_return">return string </font>
 - to_net_ipv6_address <font id="function_arguments">(slv : T_SLV_128) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font>
-**Description**
+</br>**Description**
  type conversion functions
 
 - to_net_ipv6_address <font id="function_arguments">(str : string) </font> <font id="function_return">return T_NET_IPV6_ADDRESS </font>

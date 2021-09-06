@@ -71,10 +71,10 @@
 
 - lmfcDly_INST: surf.SlvDelay
 - nsyncDly_INST: surf.SlvDelay
-**Description**
+</br>**Description**
  Delay nsync input (for 1 to 16 c-c) to
 
 - syncFSM_INST: surf.JesdSyncFsmTxTest
-**Description**
+</br>**Description**
  Synchronization FSM
 

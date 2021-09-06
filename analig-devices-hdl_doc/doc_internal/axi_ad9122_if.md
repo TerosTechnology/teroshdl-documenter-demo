@@ -108,23 +108,23 @@
 ## Processes
 - unnamed: ( @(posedge dac_div_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dac status 
 ## Instantiations
 
 - i_serdes_out_data: ad_serdes_out
-**Description**
+</br>**Description**
  dac data output serdes(s) & buffers
 
 - i_serdes_out_frame: ad_serdes_out
-**Description**
+</br>**Description**
  dac frame output serdes & buffer
 
 - i_serdes_out_clk: ad_serdes_out
-**Description**
+</br>**Description**
  dac clock output serdes & buffer
 
 - i_serdes_clk: ad_serdes_clk
-**Description**
+</br>**Description**
  dac clock input buffers
 

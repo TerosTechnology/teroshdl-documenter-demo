@@ -138,19 +138,19 @@
 | rdata_r  | std_logic_vector(15 downto 0) |                                                                               |
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  Output clock 180 deg phase-shifted with respect to control/data signals sd_ck_off : altddio_out   generic map (     WIDTH => 1)   port map (     datain_h   => "0",     datain_l   => "1",     dataout(0) => sd_ck,     outclock   => clk); ---------------------------------------------------------------------------  SDRAM command & address<br>  These registers should be placed in the I/O blocks.  Use appriopate timing constraints. --------------------------------------------------------------------------- 
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Write data<br>  These registers should be placed in the I/O blocks.  Use appriopate timing constraints. --------------------------------------------------------------------------- 
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Read data capture --------------------------------------------------------------------------- 
 ## Instantiations
 
 - sd_ck_obuf: altiobuf_out
 - dq_obuf: altiobuf_out
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  DQ I/O Buffers
 ---------------------------------------------------------------------------

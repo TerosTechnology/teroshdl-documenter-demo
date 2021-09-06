@@ -71,7 +71,7 @@
 | res_tab | array (natural range <>) of std_logic_vector(AXI_SIZE-1 downto 0)  |             |
 ## Processes
 - unnamed: ( ram_addr_s, incr_addr_s )
-**Description**
+</br>**Description**
  select ram addr part ram_addr_s <= result_addr_i(RAM_H-1 downto RAM_L); 
 - unnamed: ( cpu_clk_i )
 - unnamed: ( cpu_clk_i )

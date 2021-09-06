@@ -81,7 +81,7 @@
 - unnamed: ( clk )
 - unnamed: ( clk )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  compteur d'adresse pour la RAM  wr est en retard d'une valeur sur read pour precharger  la sortie alors que le wr est en direct  le wr est également utilise pour le mux sur les infos en entrees 
 - unnamed: ( clk )
 ## Instantiations

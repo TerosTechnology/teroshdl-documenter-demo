@@ -233,19 +233,19 @@
 ## Instantiations
 
 - ip_arb_mux_inst: ip_arb_mux
-**Description**
+</br>**Description**
 
  * Output arbiter
  */
 
 - ip_complete_inst: ip_complete
-**Description**
+</br>**Description**
 
  * IP stack
  */
 
 - udp_inst: udp
-**Description**
+</br>**Description**
 
  * UDP interface
  */

@@ -103,7 +103,7 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  The input invalid check is done whenever transactions are ongoing with kmac  once set, it cannot be unset until transactions are fully complete 
 - unnamed: (  )
   - **Type:** always_comb

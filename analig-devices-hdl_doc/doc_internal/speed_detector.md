@@ -90,7 +90,7 @@
 ## Processes
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------ ----------- Assign/Always Blocks --------------------------------------------- ------------------------------------------------------------------------------  Count ticks per position 
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always
@@ -100,5 +100,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always
-**Description**
+</br>**Description**
  Stable sampling frequency of the motor speed 

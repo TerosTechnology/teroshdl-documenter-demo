@@ -67,7 +67,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  a/b reg, m-reg, p-reg delay match 
 ## Instantiations
 

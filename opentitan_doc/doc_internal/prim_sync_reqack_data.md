@@ -47,7 +47,7 @@
 ## Instantiations
 
 - u_prim_sync_reqack: prim_sync_reqack
-**Description**
+</br>**Description**
 //////////////////////////////////
  REQ/ACK synchronizer primitive //
 //////////////////////////////////

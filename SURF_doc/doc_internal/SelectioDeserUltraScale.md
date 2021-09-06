@@ -74,7 +74,7 @@
 ## Instantiations
 
 - U_Bufg: BUFGCE_DIV
-**Description**
+</br>**Description**
 ----------------------------------------------------------------------------------------------------
  clkx1 is the ISERDESE3/OSERDESE3's CLKDIV port
  Refer to "Figure 3-49: Sub-Optimal to Optimal Clocking Topologies for OSERDESE3" in UG949 (v2018.2)

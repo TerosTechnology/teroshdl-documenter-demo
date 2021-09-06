@@ -120,11 +120,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -134,131 +134,131 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_edn_cmd_req_done: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[edn_cmd_req_done]: 0:0
 
 - u_intr_state_edn_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[edn_fatal_err]: 1:1
 
 - u_intr_enable_edn_cmd_req_done: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[edn_cmd_req_done]: 0:0
 
 - u_intr_enable_edn_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[edn_fatal_err]: 1:1
 
 - u_intr_test_edn_cmd_req_done: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[edn_cmd_req_done]: 0:0
 
 - u_intr_test_edn_fatal_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[edn_fatal_err]: 1:1
 
 - u_alert_test_recov_alert: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
    F[recov_alert]: 0:0
 
 - u_alert_test_fatal_alert: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_alert]: 1:1
 
 - u_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[regwen]: V(False)
 
 - u_ctrl_edn_enable: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl]: V(False)
    F[edn_enable]: 3:0
 
 - u_ctrl_boot_req_mode: prim_subreg
-**Description**
+</br>**Description**
    F[boot_req_mode]: 7:4
 
 - u_ctrl_auto_req_mode: prim_subreg
-**Description**
+</br>**Description**
    F[auto_req_mode]: 11:8
 
 - u_ctrl_cmd_fifo_rst: prim_subreg
-**Description**
+</br>**Description**
    F[cmd_fifo_rst]: 15:12
 
 - u_sum_sts_req_mode_sm_sts: prim_subreg
-**Description**
+</br>**Description**
  R[sum_sts]: V(False)
    F[req_mode_sm_sts]: 0:0
 
 - u_sum_sts_boot_inst_ack: prim_subreg
-**Description**
+</br>**Description**
    F[boot_inst_ack]: 1:1
 
 - u_sw_cmd_req: prim_subreg_ext
-**Description**
+</br>**Description**
  R[sw_cmd_req]: V(True)
 
 - u_sw_cmd_sts_cmd_rdy: prim_subreg
-**Description**
+</br>**Description**
  R[sw_cmd_sts]: V(False)
    F[cmd_rdy]: 0:0
 
 - u_sw_cmd_sts_cmd_sts: prim_subreg
-**Description**
+</br>**Description**
    F[cmd_sts]: 1:1
 
 - u_reseed_cmd: prim_subreg_ext
-**Description**
+</br>**Description**
  R[reseed_cmd]: V(True)
 
 - u_generate_cmd: prim_subreg_ext
-**Description**
+</br>**Description**
  R[generate_cmd]: V(True)
 
 - u_max_num_reqs_between_reseeds: prim_subreg
-**Description**
+</br>**Description**
  R[max_num_reqs_between_reseeds]: V(False)
 
 - u_recov_alert_sts: prim_subreg
-**Description**
+</br>**Description**
  R[recov_alert_sts]: V(False)
 
 - u_err_code_sfifo_rescmd_err: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
    F[sfifo_rescmd_err]: 0:0
 
 - u_err_code_sfifo_gencmd_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_gencmd_err]: 1:1
 
 - u_err_code_edn_ack_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[edn_ack_sm_err]: 20:20
 
 - u_err_code_edn_main_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[edn_main_sm_err]: 21:21
 
 - u_err_code_fifo_write_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_write_err]: 28:28
 
 - u_err_code_fifo_read_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_read_err]: 29:29
 
 - u_err_code_fifo_state_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_state_err]: 30:30
 
 - u_err_code_test: prim_subreg
-**Description**
+</br>**Description**
  R[err_code_test]: V(False)
 

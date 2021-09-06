@@ -37,7 +37,7 @@
 | NumRoundsHalf | int unsigned | 5     |             |
 ## Functions
 - sv_dpi_prince_encrypt <font id="function_arguments">(input bit [63:0]                      plaintext,<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font>
-**Description**
+</br>**Description**
 ////////////////////////////////////////////////////
  SV wrapper functions to be used by the testbench //
 ////////////////////////////////////////////////////

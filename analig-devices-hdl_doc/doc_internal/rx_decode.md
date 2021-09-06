@@ -121,7 +121,7 @@
 | samp_states | (IDLE,<br><span style="padding-left:20px"> CHA_SYNC,<br><span style="padding-left:20px"> GET_SAMP,<br><span style="padding-left:20px"> PAR_CHK)  |             |
 ## Processes
 - SAEX: ( up_clk, conf_rxen )
-**Description**
+</br>**Description**
  State machine extracting audio samples 
 ## State machines
 

@@ -41,7 +41,7 @@ use grlib.version.all;
 - conv_std_logic_vector_signed <font id="function_arguments">(i : integer;<br><span style="padding-left:20px"> w : integer) </font> <font id="function_return">return std_logic_vector </font>
 - conv_std_logic <font id="function_arguments">(b : boolean) </font> <font id="function_return">return std_ulogic </font>
 - tost <font id="function_arguments">(v:std_logic_vector) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  Reporting and diagnostics
  pragma translate_off
 

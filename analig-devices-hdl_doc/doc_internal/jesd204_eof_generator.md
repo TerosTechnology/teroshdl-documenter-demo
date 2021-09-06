@@ -90,5 +90,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Only 1, 2 and multiples of 4 are supported atm */ 

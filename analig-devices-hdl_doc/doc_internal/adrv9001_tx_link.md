@@ -96,15 +96,15 @@
 ## Processes
 - unnamed: ( @(posedge tx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Serialization factor Per data lane 32 
 - unnamed: ( @(posedge tx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Serialization factor Per data lane 16 
 - unnamed: ( @(posedge tx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Serialization factor Per data lane 8 
 - unnamed: ( @(posedge tx_clk) )
   - **Type:** always

@@ -22,7 +22,7 @@
 ## Functions
 - resolved <font id="function_arguments">( input_vector : t_vvc_target_record_drivers) </font> <font id="function_return">return t_vvc_target_record_unresolved </font>
 - to_string <font id="function_arguments">( value         : t_vvc_target_record;<br><span style="padding-left:20px"> vvc_instance  : integer   := -1;<br><span style="padding-left:20px"> vvc_channel   : t_channel := NA ) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 -----------------------------------------
  to_string
 -----------------------------------------
@@ -30,7 +30,7 @@
  - If channel is set to NA, it will not be included in the string
 
 - send_command_to_vvc <font id="function_arguments">(                  -- VVC dedicated shared command used  shared_vvc_cmd signal   vvc_target   : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant timeout      : in    time                 := std.env.resolution_limit;<br><span style="padding-left:20px"> constant scope        : in    string               := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel       := shared_msg_id_panel ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  send_command_to_vvc
 -----------------------------------------
@@ -39,35 +39,35 @@
  - Logs with ID_UVVM_CMD_ACK when ACK or timeout occurs
 
 - set_vvc_target_defaults <font id="function_arguments">( constant  vvc_name  : in string;<br><span style="padding-left:20px"> constant  scope     : in string := C_VVC_CMD_SCOPE_DEFAULT ) </font> <font id="function_return">return t_vvc_target_record </font>
-**Description**
+</br>**Description**
 -----------------------------------------
  set_vvc_target_defaults
 -----------------------------------------
  Returns a vvc target record with vvc_name and values specified in C_VVC_TARGET_RECORD_DEFAULT
 
 - set_general_target_and_command_fields <font id="function_arguments">(   -- VVC dedicated shared command used  shared_vvc_cmd signal target               : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx   : in integer;<br><span style="padding-left:20px"> constant proc_call          : in string;<br><span style="padding-left:20px"> constant msg                : in string;<br><span style="padding-left:20px"> constant command_type       : in t_immediate_or_queued;<br><span style="padding-left:20px"> constant operation          : in t_operation ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  set_general_target_and_command_fields
 -----------------------------------------
  Sets target index and channel, and updates shared_vvc_cmd
 
 - set_general_target_and_command_fields <font id="function_arguments">(  -- VVC dedicated shared command used  shared_vvc_cmd signal target               : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx   : in integer;<br><span style="padding-left:20px"> constant vvc_channel        : in t_channel;<br><span style="padding-left:20px"> constant proc_call          : in string;<br><span style="padding-left:20px"> constant msg                : in string;<br><span style="padding-left:20px"> constant command_type       : in t_immediate_or_queued;<br><span style="padding-left:20px"> constant operation          : in t_operation ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  set_general_target_and_command_fields
 -----------------------------------------
  Sets target index and channel, and updates shared_vvc_cmd
 
 - acknowledge_cmd <font id="function_arguments">( signal   vvc_ack      : inout std_logic;<br><span style="padding-left:20px"> constant command_idx  : in natural ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  acknowledge_cmd
 -----------------------------------------
  Drives global_vvc_ack signal (to '1') for 1 delta cycle, then sets it back to 'Z'.
 
 - get_vvc_index_in_activity_register <font id="function_arguments">( signal   vvc_target                	    : in t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          	    : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               	    : in    t_channel;<br><span style="padding-left:20px"> variable vvc_idx_in_activity_register   : inout t_integer_array(0 to C_MAX_TB_VVC_NUM);<br><span style="padding-left:20px"> variable num_vvc_instances              : inout natural range 0 to C_MAX_TB_VVC_NUM ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 
  Helper procedure for getting the VVC index in the VVC activity register
  and the number of instances of this VVC.

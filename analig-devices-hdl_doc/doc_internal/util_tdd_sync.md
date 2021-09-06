@@ -72,13 +72,13 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  synchronization logic 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 ## Instantiations
 
 - i_tdd_sync: util_pulse_gen
-**Description**
+</br>**Description**
  pulse generator
 

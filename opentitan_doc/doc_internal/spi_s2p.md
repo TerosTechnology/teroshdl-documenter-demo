@@ -51,13 +51,13 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  total bit count 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Bitcount in a byte 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  data valid 

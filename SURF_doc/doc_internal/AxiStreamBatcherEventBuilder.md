@@ -79,14 +79,14 @@
 - TDEST_REMAP: ( sAxisMasters )
 - comb: ( axilReadMaster, axilWriteMaster, axisRst, batcherIdle,
                    blowoffExt, r, rxMasters, timeoutEvent, txSlave )
-**Description**
+</br>**Description**
  greater than or equal to (a >= b) 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_DspComparator: surf.DspComparator
 - U_AxiStreamBatcher: surf.AxiStreamBatcher
-**Description**
+</br>**Description**
 ----------------
  AxiStreamBatcher
 ----------------

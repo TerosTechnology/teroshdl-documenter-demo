@@ -89,5 +89,5 @@
 | mem_rom         | mem32_t(0 to IMEM_SIZE/4-1) |  mem32_init_f(application_init_image,<br><span style="padding-left:20px"> IMEM_SIZE/4) |  ROM - initialized with executable code --                                                                                             |
 ## Processes
 - bus_feedback: ( clk_i )
-**Description**
+</br>**Description**
  Bus Feedback ---------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

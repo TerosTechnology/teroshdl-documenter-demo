@@ -14,7 +14,7 @@ use SYNOPSYS.attributes.all;
 | MINOMAX  |                                                                                                                                                                                                                                                                                                                                                                                                                                           | synopsys synthesis_off  |
 ## Functions
 - strength_map <font id="function_arguments">(input: STD_ULOGIC;<br><span style="padding-left:20px"> strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------
 
  functions for mapping the STD_(U)LOGIC according to STRENGTH
@@ -23,7 +23,7 @@ use SYNOPSYS.attributes.all;
 
 - strength_map_z <font id="function_arguments">(input:STD_ULOGIC;<br><span style="padding-left:20px"> strn:STRENGTH) </font> <font id="function_return">return STD_LOGIC </font>
 - Drive <font id="function_arguments">(V: STD_ULOGIC_VECTOR) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------
 
  conversion functions for STD_ULOGIC_VECTOR and STD_LOGIC_VECTOR
@@ -33,7 +33,7 @@ synopsys synthesis_on
 
 - Drive <font id="function_arguments">(V: STD_LOGIC_VECTOR) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font>
 - Sense <font id="function_arguments">(V: STD_ULOGIC;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_LOGIC </font>
-**Description**
+</br>**Description**
 synopsys synthesis_off
 attribute CLOSELY_RELATED_TCF of Drive: function is TRUE;
 -------------------------------------------------------------------
@@ -49,7 +49,7 @@ attribute CLOSELY_RELATED_TCF of Drive: function is TRUE;
 - Sense <font id="function_arguments">(V: STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
 - Sense <font id="function_arguments">(V: STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: STD_ULOGIC) </font> <font id="function_return">return STD_ULOGIC_VECTOR </font>
 - STD_LOGIC_VECTORtoBIT_VECTOR <font id="function_arguments">(V: STD_LOGIC_VECTOR ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT_VECTOR </font>
-**Description**
+</br>**Description**
 synopsys synthesis_on
 -------------------------------------------------------------------
 
@@ -72,7 +72,7 @@ synopsys synthesis_on
 
 - STD_ULOGIC_VECTORtoBIT_VECTOR <font id="function_arguments">(V: STD_ULOGIC_VECTOR ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT_VECTOR </font>
 - STD_ULOGICtoBIT <font id="function_arguments">(V: STD_ULOGIC ;<br><span style="padding-left:20px"> vX,<br><span style="padding-left:20px"> vZ,<br><span style="padding-left:20px"> vU,<br><span style="padding-left:20px"> vDC: BIT := '0';<br><span style="padding-left:20px"> Xflag,<br><span style="padding-left:20px"> Zflag,<br><span style="padding-left:20px"> Uflag,<br><span style="padding-left:20px"> DCflag: BOOLEAN := FALSE ) </font> <font id="function_return">return BIT </font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------
 
 	Function: STD_ULOGICtoBIT
@@ -93,7 +93,7 @@ synopsys synthesis_on
 -------------------------------------------------------------------
 
 - AND_REDUCE <font id="function_arguments">(ARG: STD_LOGIC_VECTOR) </font> <font id="function_return">return UX01 </font>
-**Description**
+</br>**Description**
 ------------------------------------------------------------------
 
 - NAND_REDUCE <font id="function_arguments">(ARG: STD_LOGIC_VECTOR) </font> <font id="function_return">return UX01 </font>
@@ -108,7 +108,7 @@ synopsys synthesis_on
 - XOR_REDUCE <font id="function_arguments">(ARG: STD_ULOGIC_VECTOR) </font> <font id="function_return">return UX01 </font>
 - XNOR_REDUCE <font id="function_arguments">(ARG: STD_ULOGIC_VECTOR) </font> <font id="function_return">return UX01 </font>
 - fun_BUF3S <font id="function_arguments">(Input,<br><span style="padding-left:20px"> Enable: UX01;<br><span style="padding-left:20px"> Strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font>
-**Description**
+</br>**Description**
 synopsys synthesis_off
 
 - fun_BUF3SL <font id="function_arguments">(Input,<br><span style="padding-left:20px"> Enable: UX01;<br><span style="padding-left:20px"> Strn: STRENGTH) </font> <font id="function_return">return STD_LOGIC </font>

@@ -90,10 +90,10 @@
 | AdcRegType         |                                                     | -----------------------------------------------------------------------------------------------  |
 ## Processes
 - unnamed: (  )
-**Description**
+</br>**Description**
  [out] -----------------------------------------------------------------------------------------------  Create local clocks -----------------------------------------------------------------------------------------------    ClkRst_1 : entity surf.ClkRst       generic map (          RST_HOLD_TIME_G => 50 us)       port map (          rst => pllRst); 
 - comb: ( addr, r, vin, wrData, wrEn )
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------  Configuration register logic ----------------------------------------------------------------------------------------------- 
 - seq: ( cfgClk )
 - adcComb: ( adcR )
@@ -102,7 +102,7 @@
 
 - U_ClkRst_1: surf.ClkRst
 - U_CtrlClockManager7: surf.ClockManager7
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Use a clock manager to create the serial clock
  There's probably a better way but this works.
@@ -110,7 +110,7 @@
 
 - RstSync_1: surf.RstSync
 - AdiConfigSlave_1: surf.AdiConfigSlave
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Instantiate configuration interface
 -----------------------------------------------------------------------------------------------

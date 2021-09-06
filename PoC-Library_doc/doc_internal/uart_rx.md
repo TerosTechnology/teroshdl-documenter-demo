@@ -61,7 +61,7 @@
 | Vld  | std_logic                    |  Output strobe                                                                                                                                                                                                                                                                                        |
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  Reception state 
 ## Instantiations
 

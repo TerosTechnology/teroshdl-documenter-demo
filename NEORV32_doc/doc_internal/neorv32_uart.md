@@ -154,17 +154,17 @@
 | uart_rx_t     |      |                   |
 ## Processes
 - rw_access: ( clk_i )
-**Description**
+</br>**Description**
  Read/Write Access ----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - uart_tx_unit: ( clk_i )
-**Description**
+</br>**Description**
  UART Transmitter -----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - uart_rx_unit: ( clk_i )
-**Description**
+</br>**Description**
  UART Receiver --------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - flow_control_buffer: ( clk_i )
-**Description**
+</br>**Description**
  output is low-active  flow-control input/output synchronizer -- 
 - sim_output: ( clk_i )
-**Description**
+</br>**Description**
  SIMULATION Output ----------------------------------------------------------------------  -------------------------------------------------------------------------------------------  pragma translate_off  synthesis translate_off  RTL_SYNTHESIS OFF 

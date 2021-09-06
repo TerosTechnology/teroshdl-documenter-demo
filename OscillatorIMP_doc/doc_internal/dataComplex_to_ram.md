@@ -154,18 +154,18 @@
 | RD_ADDR_SZ      | natural |  ADDR_SIZE + CHAN_MUX_SZ + PKT_MUX_SZ       |                                                |
 ## Functions
 - comp_internal_size <font id="function_arguments">(in_size : natural) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
  compute upper near 2^n size for data extension
 
 ## Processes
 - unnamed: ( s00_axi_aclk )
-**Description**
+</br>**Description**
  interrupt 
 ## Instantiations
 
 - data32_top_inst: work.dataComplex_to_ram_top
 - wb_inst: work.wb_dataComplex_to_ram
 - handle_comm: work.dataComplex_to_ram_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

@@ -131,27 +131,27 @@
 ## Instantiations
 
 - U_Pgp2bLane: surf.Pgp2bLane
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  PGP Core
 ------------------------------------------------------------------------------------------------
 
 - U_gtRxUserReset: surf.SynchronizerOneShot
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Oneshot the phy init because clock may drop out and leave it stuck high
 -----------------------------------------------------------------------------------------------
 
 - Decoder8b10b_1: surf.Decoder8b10b
 - U_Pgp3RxGearboxAligner_1: surf.Pgp3RxGearboxAligner
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Filter on dataValid so that it doesn't drop immediately on errors
  Not currently hooked up but leaving it in so we can try it someday.
 -----------------------------------------------------------------------------------------------
 
 - Gtp7Core_1: surf.Gtp7Core
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  GTP 7 Core in Fixed Latency mode
 ------------------------------------------------------------------------------------------------

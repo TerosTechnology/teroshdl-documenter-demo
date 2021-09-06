@@ -137,73 +137,73 @@
   - **Type:** always_ff
 - clk_stretch: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Clock stretching detection 
 - bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Bit index implementation 
 - read_register: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Deserializer for a byte read from the bus 
 - byte_number: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Number of bytes to read 
 - byte_counter: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Byte index implementation 
 - bus_prev: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  SDA and SCL at the previous clock edge 
 - stop_state: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Stop issued before 
 - s_detect: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  (Repeated) Start condition detection by target 
 - p_detect: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Stop condition detection by target 
 - tgt_bit_counter: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  ack  Increment counter on negative SCL edge 
 - scl_high_counter: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Counter for continuously released SCL state 
 - tgt_input_register: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Shift data in on positive SCL edge 
 - host_ack_register: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Detection by the target of ACK bit send by the host 
 - stretch_addr_sp_tx: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Deasserting stretch_stop_tx bit after the first target address match for transmit 
 - stretch_addr_sp_acq: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Deasserting stretch_stop_acq bit after the first target address match for acquire 
 - state_outputs: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Outputs for each state 
 - state_functions: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Conditional state transition 
 - state_transition: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Synchronous state transition 

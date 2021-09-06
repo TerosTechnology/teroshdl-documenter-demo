@@ -25,7 +25,7 @@
 | WindowTypeArray | array (natural range<>) of WindowType  |  Arrays                                                                                                                                                       |
 ## Functions
 - endianSwap64 <font id="function_arguments">(data_slv : slv(63 downto 0)) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------
  Function declarations
 ------------------------------------------------------------------------

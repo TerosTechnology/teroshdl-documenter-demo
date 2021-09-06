@@ -44,10 +44,10 @@
 ## Instantiations
 
 - u_reg: adc_ctrl_reg_top
-**Description**
+</br>**Description**
  Register module
 
 - u_adc_ctrl_core: adc_ctrl_core
-**Description**
+</br>**Description**
  Instantiate DCD core module
 

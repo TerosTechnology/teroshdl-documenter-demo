@@ -77,7 +77,7 @@
 ## Instantiations
 
 - U_PwrUpRst0: surf.PwrUpRst
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------
  We must hold reset for >10ms and then wait >5ms until we may talk
  to it (we actually wait also >10ms) which is indicated by 'extPhyReady'
@@ -85,14 +85,14 @@
 
 - U_PwrUpRst1: surf.PwrUpRst
 - U_PhyInitRstSync: surf.RstSync
-**Description**
+</br>**Description**
 --------------------------------------------------------------------
  The MDIO controller which talks to the external PHY must be held
  in reset until extPhyReady; it works in a different clock domain...
 --------------------------------------------------------------------
 
 - U_PhyCtrl: surf.Sgmii88E1111Mdio
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------
  The SaltCore does not support auto-negotiation on the SGMII link
  (mac<->phy) - however, the Marvell PHY (by default) assumes it does.
@@ -102,7 +102,7 @@
 ---------------------------------------------------------------------
 
 - U_SyncMdi: surf.Synchronizer
-**Description**
+</br>**Description**
 --------------------------------------------------
  synchronize MDI and IRQ signals into 'clk' domain
 --------------------------------------------------

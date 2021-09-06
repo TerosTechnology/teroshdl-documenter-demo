@@ -478,17 +478,17 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Create steering logic 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -497,410 +497,410 @@
 - u_chk: tlul_cmd_intg_chk
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_socket: tlul_socket_1n
-**Description**
+</br>**Description**
  Create Socket_1n
 
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_pkt_received: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[pkt_received]: 0:0
 
 - u_intr_state_pkt_sent: prim_subreg
-**Description**
+</br>**Description**
    F[pkt_sent]: 1:1
 
 - u_intr_state_disconnected: prim_subreg
-**Description**
+</br>**Description**
    F[disconnected]: 2:2
 
 - u_intr_state_host_lost: prim_subreg
-**Description**
+</br>**Description**
    F[host_lost]: 3:3
 
 - u_intr_state_link_reset: prim_subreg
-**Description**
+</br>**Description**
    F[link_reset]: 4:4
 
 - u_intr_state_link_suspend: prim_subreg
-**Description**
+</br>**Description**
    F[link_suspend]: 5:5
 
 - u_intr_state_link_resume: prim_subreg
-**Description**
+</br>**Description**
    F[link_resume]: 6:6
 
 - u_intr_state_av_empty: prim_subreg
-**Description**
+</br>**Description**
    F[av_empty]: 7:7
 
 - u_intr_state_rx_full: prim_subreg
-**Description**
+</br>**Description**
    F[rx_full]: 8:8
 
 - u_intr_state_av_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[av_overflow]: 9:9
 
 - u_intr_state_link_in_err: prim_subreg
-**Description**
+</br>**Description**
    F[link_in_err]: 10:10
 
 - u_intr_state_rx_crc_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_crc_err]: 11:11
 
 - u_intr_state_rx_pid_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_pid_err]: 12:12
 
 - u_intr_state_rx_bitstuff_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_bitstuff_err]: 13:13
 
 - u_intr_state_frame: prim_subreg
-**Description**
+</br>**Description**
    F[frame]: 14:14
 
 - u_intr_state_connected: prim_subreg
-**Description**
+</br>**Description**
    F[connected]: 15:15
 
 - u_intr_state_link_out_err: prim_subreg
-**Description**
+</br>**Description**
    F[link_out_err]: 16:16
 
 - u_intr_enable_pkt_received: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[pkt_received]: 0:0
 
 - u_intr_enable_pkt_sent: prim_subreg
-**Description**
+</br>**Description**
    F[pkt_sent]: 1:1
 
 - u_intr_enable_disconnected: prim_subreg
-**Description**
+</br>**Description**
    F[disconnected]: 2:2
 
 - u_intr_enable_host_lost: prim_subreg
-**Description**
+</br>**Description**
    F[host_lost]: 3:3
 
 - u_intr_enable_link_reset: prim_subreg
-**Description**
+</br>**Description**
    F[link_reset]: 4:4
 
 - u_intr_enable_link_suspend: prim_subreg
-**Description**
+</br>**Description**
    F[link_suspend]: 5:5
 
 - u_intr_enable_link_resume: prim_subreg
-**Description**
+</br>**Description**
    F[link_resume]: 6:6
 
 - u_intr_enable_av_empty: prim_subreg
-**Description**
+</br>**Description**
    F[av_empty]: 7:7
 
 - u_intr_enable_rx_full: prim_subreg
-**Description**
+</br>**Description**
    F[rx_full]: 8:8
 
 - u_intr_enable_av_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[av_overflow]: 9:9
 
 - u_intr_enable_link_in_err: prim_subreg
-**Description**
+</br>**Description**
    F[link_in_err]: 10:10
 
 - u_intr_enable_rx_crc_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_crc_err]: 11:11
 
 - u_intr_enable_rx_pid_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_pid_err]: 12:12
 
 - u_intr_enable_rx_bitstuff_err: prim_subreg
-**Description**
+</br>**Description**
    F[rx_bitstuff_err]: 13:13
 
 - u_intr_enable_frame: prim_subreg
-**Description**
+</br>**Description**
    F[frame]: 14:14
 
 - u_intr_enable_connected: prim_subreg
-**Description**
+</br>**Description**
    F[connected]: 15:15
 
 - u_intr_enable_link_out_err: prim_subreg
-**Description**
+</br>**Description**
    F[link_out_err]: 16:16
 
 - u_intr_test_pkt_received: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[pkt_received]: 0:0
 
 - u_intr_test_pkt_sent: prim_subreg_ext
-**Description**
+</br>**Description**
    F[pkt_sent]: 1:1
 
 - u_intr_test_disconnected: prim_subreg_ext
-**Description**
+</br>**Description**
    F[disconnected]: 2:2
 
 - u_intr_test_host_lost: prim_subreg_ext
-**Description**
+</br>**Description**
    F[host_lost]: 3:3
 
 - u_intr_test_link_reset: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_reset]: 4:4
 
 - u_intr_test_link_suspend: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_suspend]: 5:5
 
 - u_intr_test_link_resume: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_resume]: 6:6
 
 - u_intr_test_av_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[av_empty]: 7:7
 
 - u_intr_test_rx_full: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_full]: 8:8
 
 - u_intr_test_av_overflow: prim_subreg_ext
-**Description**
+</br>**Description**
    F[av_overflow]: 9:9
 
 - u_intr_test_link_in_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_in_err]: 10:10
 
 - u_intr_test_rx_crc_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_crc_err]: 11:11
 
 - u_intr_test_rx_pid_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_pid_err]: 12:12
 
 - u_intr_test_rx_bitstuff_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_bitstuff_err]: 13:13
 
 - u_intr_test_frame: prim_subreg_ext
-**Description**
+</br>**Description**
    F[frame]: 14:14
 
 - u_intr_test_connected: prim_subreg_ext
-**Description**
+</br>**Description**
    F[connected]: 15:15
 
 - u_intr_test_link_out_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_out_err]: 16:16
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_usbctrl_enable: prim_subreg
-**Description**
+</br>**Description**
  R[usbctrl]: V(False)
    F[enable]: 0:0
 
 - u_usbctrl_device_address: prim_subreg
-**Description**
+</br>**Description**
    F[device_address]: 22:16
 
 - u_usbstat_frame: prim_subreg_ext
-**Description**
+</br>**Description**
  R[usbstat]: V(True)
    F[frame]: 10:0
 
 - u_usbstat_host_lost: prim_subreg_ext
-**Description**
+</br>**Description**
    F[host_lost]: 11:11
 
 - u_usbstat_link_state: prim_subreg_ext
-**Description**
+</br>**Description**
    F[link_state]: 14:12
 
 - u_usbstat_sense: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sense]: 15:15
 
 - u_usbstat_av_depth: prim_subreg_ext
-**Description**
+</br>**Description**
    F[av_depth]: 18:16
 
 - u_usbstat_av_full: prim_subreg_ext
-**Description**
+</br>**Description**
    F[av_full]: 23:23
 
 - u_usbstat_rx_depth: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_depth]: 26:24
 
 - u_usbstat_rx_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_empty]: 31:31
 
 - u_avbuffer: prim_subreg
-**Description**
+</br>**Description**
  R[avbuffer]: V(False)
 
 - u_rxfifo_buffer: prim_subreg_ext
-**Description**
+</br>**Description**
  R[rxfifo]: V(True)
    F[buffer]: 4:0
 
 - u_rxfifo_size: prim_subreg_ext
-**Description**
+</br>**Description**
    F[size]: 14:8
 
 - u_rxfifo_setup: prim_subreg_ext
-**Description**
+</br>**Description**
    F[setup]: 19:19
 
 - u_rxfifo_ep: prim_subreg_ext
-**Description**
+</br>**Description**
    F[ep]: 23:20
 
 - u_phy_pins_sense_rx_dp_i: prim_subreg_ext
-**Description**
+</br>**Description**
  R[phy_pins_sense]: V(True)
    F[rx_dp_i]: 0:0
 
 - u_phy_pins_sense_rx_dn_i: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_dn_i]: 1:1
 
 - u_phy_pins_sense_rx_d_i: prim_subreg_ext
-**Description**
+</br>**Description**
    F[rx_d_i]: 2:2
 
 - u_phy_pins_sense_tx_dp_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_dp_o]: 8:8
 
 - u_phy_pins_sense_tx_dn_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_dn_o]: 9:9
 
 - u_phy_pins_sense_tx_d_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_d_o]: 10:10
 
 - u_phy_pins_sense_tx_se0_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_se0_o]: 11:11
 
 - u_phy_pins_sense_tx_oe_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[tx_oe_o]: 12:12
 
 - u_phy_pins_sense_suspend_o: prim_subreg_ext
-**Description**
+</br>**Description**
    F[suspend_o]: 13:13
 
 - u_phy_pins_sense_pwr_sense: prim_subreg_ext
-**Description**
+</br>**Description**
    F[pwr_sense]: 16:16
 
 - u_phy_pins_drive_dp_o: prim_subreg
-**Description**
+</br>**Description**
  R[phy_pins_drive]: V(False)
    F[dp_o]: 0:0
 
 - u_phy_pins_drive_dn_o: prim_subreg
-**Description**
+</br>**Description**
    F[dn_o]: 1:1
 
 - u_phy_pins_drive_d_o: prim_subreg
-**Description**
+</br>**Description**
    F[d_o]: 2:2
 
 - u_phy_pins_drive_se0_o: prim_subreg
-**Description**
+</br>**Description**
    F[se0_o]: 3:3
 
 - u_phy_pins_drive_oe_o: prim_subreg
-**Description**
+</br>**Description**
    F[oe_o]: 4:4
 
 - u_phy_pins_drive_tx_mode_se_o: prim_subreg
-**Description**
+</br>**Description**
    F[tx_mode_se_o]: 5:5
 
 - u_phy_pins_drive_dp_pullup_en_o: prim_subreg
-**Description**
+</br>**Description**
    F[dp_pullup_en_o]: 6:6
 
 - u_phy_pins_drive_dn_pullup_en_o: prim_subreg
-**Description**
+</br>**Description**
    F[dn_pullup_en_o]: 7:7
 
 - u_phy_pins_drive_suspend_o: prim_subreg
-**Description**
+</br>**Description**
    F[suspend_o]: 8:8
 
 - u_phy_pins_drive_en: prim_subreg
-**Description**
+</br>**Description**
    F[en]: 16:16
 
 - u_phy_config_rx_differential_mode: prim_subreg
-**Description**
+</br>**Description**
  R[phy_config]: V(False)
    F[rx_differential_mode]: 0:0
 
 - u_phy_config_tx_differential_mode: prim_subreg
-**Description**
+</br>**Description**
    F[tx_differential_mode]: 1:1
 
 - u_phy_config_eop_single_bit: prim_subreg
-**Description**
+</br>**Description**
    F[eop_single_bit]: 2:2
 
 - u_phy_config_override_pwr_sense_en: prim_subreg
-**Description**
+</br>**Description**
    F[override_pwr_sense_en]: 3:3
 
 - u_phy_config_override_pwr_sense_val: prim_subreg
-**Description**
+</br>**Description**
    F[override_pwr_sense_val]: 4:4
 
 - u_phy_config_pinflip: prim_subreg
-**Description**
+</br>**Description**
    F[pinflip]: 5:5
 
 - u_phy_config_usb_ref_disable: prim_subreg
-**Description**
+</br>**Description**
    F[usb_ref_disable]: 6:6
 
 - u_phy_config_tx_osc_test_mode: prim_subreg
-**Description**
+</br>**Description**
    F[tx_osc_test_mode]: 7:7
 
 - u_wake_config_wake_en: prim_subreg
-**Description**
+</br>**Description**
  R[wake_config]: V(False)
    F[wake_en]: 0:0
 
 - u_wake_config_wake_ack: prim_subreg
-**Description**
+</br>**Description**
    F[wake_ack]: 1:1
 
 - u_wake_debug: prim_subreg
-**Description**
+</br>**Description**
  R[wake_debug]: V(False)
 

@@ -181,7 +181,7 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  reset-controller 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always

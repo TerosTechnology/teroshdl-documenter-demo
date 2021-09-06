@@ -108,5 +108,5 @@
   - **Type:** always
 - unnamed: ( @(posedge rx_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  run-time peaks 

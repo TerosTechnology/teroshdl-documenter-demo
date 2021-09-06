@@ -66,7 +66,7 @@
 | col_t   | logic      [4:0]        | (y) identical to row_t      |
 ## Functions
 - bitarray_to_box <font id="function_arguments">(logic [Width-1:0])</font> <font id="function_return">return (box_t)</font>
-**Description**
+</br>**Description**
  Keccak-f only
 /////////////
  Functions //
@@ -78,11 +78,11 @@
  >    A[x,y,z]=S[w(5y+x)+z]
 
 - box_to_bitarray <font id="function_arguments">(box_t)</font> <font id="function_return">return (logic [Width-1:0])</font>
-**Description**
+</br>**Description**
  Convert 3D cube to bitarray
 
 - theta <font id="function_arguments">(box_t)</font> <font id="function_return">return (box_t)</font>
-**Description**
+</br>**Description**
  Step Mapping =============================================================
  theta
  XOR each bit in the state with the parity of two columns
@@ -92,7 +92,7 @@
 
 - pi <font id="function_arguments">(box_t)</font> <font id="function_return">return (box_t)</font>
 - chi <font id="function_arguments">(box_t)</font> <font id="function_return">return (box_t)</font>
-**Description**
+</br>**Description**
  chi
  chi[x,y,z] = state[x,y,z] ^ ((state[x+1,y,z] ^ 1) & state[x+2,y,z])
 

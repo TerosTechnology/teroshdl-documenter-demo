@@ -42,19 +42,19 @@
 <text text-anchor="middle" x="295.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">MUXcomplexNto1top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_handComm.vhd -->
-<g id="edge4" class="edge">
+<g id="edge2" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M208.4332,-438.3251C158.1759,-429.6129 101.9973,-415.7777 86.6802,-396 72.2892,-377.4181 83.4552,-351.7058 96.2237,-332.5205"/>
 <polygon fill="#000000" stroke="#000000" points="99.1852,-334.3951 102.1171,-324.214 93.4761,-330.3446 99.1852,-334.3951"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_synch.vhd -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_synch.vhd</title>
 <path fill="none" stroke="#000000" d="M270.446,-431.8314C257.8922,-422.7927 242.5519,-411.7476 229.0411,-402.0198"/>
 <polygon fill="#000000" stroke="#000000" points="231.0668,-399.1655 220.9063,-396.1628 226.9766,-404.8463 231.0668,-399.1655"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_wb.vhd -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_wb.vhd</title>
 <path fill="none" stroke="#000000" d="M383.092,-435.6491C426.6109,-426.5365 472.6841,-413.2045 485.6802,-396 500.0827,-376.9337 487.4342,-351.3309 473.3113,-332.3077"/>
 <polygon fill="#000000" stroke="#000000" points="475.9672,-330.0233 467.0275,-324.3372 470.4701,-334.3571 475.9672,-330.0233"/>
@@ -68,19 +68,19 @@
 <text text-anchor="middle" x="394.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">_MUXcomplexNto1.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd</title>
 <path fill="none" stroke="#000000" d="M320.6621,-431.8314C332.973,-422.8779 347.9909,-411.9558 361.2739,-402.2955"/>
 <polygon fill="#000000" stroke="#000000" points="363.6775,-404.8752 369.7063,-396.1628 359.5603,-399.214 363.6775,-404.8752"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_handComm.vhd -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M325.1389,-359.9243C286.2013,-349.8033 237.5008,-337.1447 197.0717,-326.6361"/>
 <polygon fill="#000000" stroke="#000000" points="197.809,-323.2115 187.2501,-324.0831 196.0479,-329.9863 197.809,-323.2115"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_wb.vhd -->
-<g id="edge5" class="edge">
+<g id="edge6" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/_MUXcomplexNto1.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXcomplexNto1/hdl/MUXcomplexNto1_wb.vhd</title>
 <path fill="none" stroke="#000000" d="M408.559,-359.8314C414.8938,-351.5386 422.5186,-341.557 429.4728,-332.4533"/>
 <polygon fill="#000000" stroke="#000000" points="432.3254,-334.4847 435.6145,-324.4133 426.7627,-330.2353 432.3254,-334.4847"/>
@@ -146,13 +146,13 @@
 <polygon fill="#000000" stroke="#000000" points="789.7618,-396.0947 779.1669,-396.0831 787.4421,-402.6992 789.7618,-396.0947"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1_synch.vhd -->
-<g id="edge10" class="edge">
+<g id="edge8" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1_synch.vhd</title>
 <path fill="none" stroke="#000000" d="M932.6802,-431.8314C932.6802,-424.131 932.6802,-414.9743 932.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="936.1803,-406.4132 932.6802,-396.4133 929.1803,-406.4133 936.1803,-406.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1_wb.vhd -->
-<g id="edge8" class="edge">
+<g id="edge10" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/MUXrealNto1/hdl/MUXrealNto1_wb.vhd</title>
 <path fill="none" stroke="#000000" d="M977.8495,-431.8314C1002.0025,-422.1162 1031.918,-410.0831 1057.3358,-399.8592"/>
 <polygon fill="#000000" stroke="#000000" points="1058.8643,-403.017 1066.8358,-396.038 1056.252,-396.5227 1058.8643,-403.017"/>
@@ -196,7 +196,7 @@
 <text text-anchor="middle" x="1565.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">add_constComplex_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex_logic.vhd -->
-<g id="edge11" class="edge">
+<g id="edge14" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M1600.0725,-431.8314C1594.8824,-423.7079 1588.657,-413.9637 1582.9377,-405.0118"/>
 <polygon fill="#000000" stroke="#000000" points="1585.7776,-402.9559 1577.4442,-396.4133 1579.8787,-406.7246 1585.7776,-402.9559"/>
@@ -210,7 +210,7 @@
 <text text-anchor="middle" x="1830.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">add_constComplex_synchronizer_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex_synchronizer_vector.vhd -->
-<g id="edge12" class="edge">
+<g id="edge11" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex_synchronizer_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M1666.6605,-431.9243C1696.8594,-421.9959 1734.486,-409.6255 1766.0806,-399.2382"/>
 <polygon fill="#000000" stroke="#000000" points="1767.2707,-402.5313 1775.6773,-396.0831 1765.0844,-395.8815 1767.2707,-402.5313"/>
@@ -224,7 +224,7 @@
 <text text-anchor="middle" x="2090.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_add_constComplex.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/wb_add_constComplex.vhd -->
-<g id="edge14" class="edge">
+<g id="edge12" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/add_constComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constComplex/hdl/wb_add_constComplex.vhd</title>
 <path fill="none" stroke="#000000" d="M1692.8348,-439.0697C1766.7512,-428.9477 1879.1859,-413.1364 1986.6289,-396.144"/>
 <polygon fill="#000000" stroke="#000000" points="1987.348,-399.5737 1996.6757,-394.5492 1986.2506,-392.6603 1987.348,-399.5737"/>
@@ -290,7 +290,7 @@
 <text text-anchor="middle" x="2592.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">add_constReal_handComm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal_handComm.vhd -->
-<g id="edge18" class="edge">
+<g id="edge20" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M2644.2686,-359.8314C2636.1592,-351.3694 2626.3646,-341.1489 2617.4982,-331.8971"/>
 <polygon fill="#000000" stroke="#000000" points="2619.7723,-329.2115 2610.3262,-324.4133 2614.7184,-334.0549 2619.7723,-329.2115"/>
@@ -318,7 +318,7 @@
 <text text-anchor="middle" x="3043.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">add_constReal_synchronizer_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal_synchronizer_vector.vhd -->
-<g id="edge20" class="edge">
+<g id="edge18" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal_synchronizer_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M2729.534,-365.2108C2787.3478,-354.314 2871.4032,-338.4711 2938.022,-325.9146"/>
 <polygon fill="#000000" stroke="#000000" points="2938.9591,-329.2997 2948.1378,-324.008 2937.6625,-322.4208 2938.9591,-329.2997"/>
@@ -354,13 +354,13 @@
 <text text-anchor="middle" x="2618.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top_enable_tb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd -->
-<g id="edge22" class="edge">
+<g id="edge21" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd</title>
 <path fill="none" stroke="#000000" d="M2629.5309,-431.8314C2634.3825,-423.7079 2640.2019,-413.9637 2645.5482,-405.0118"/>
 <polygon fill="#000000" stroke="#000000" points="2648.5608,-406.7933 2650.6834,-396.4133 2642.551,-403.2041 2648.5608,-406.7933"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd</title>
 <path fill="none" stroke="#000000" d="M2552.7813,-434.3676C2549.0297,-433.5485 2545.3095,-432.7536 2541.6802,-432 2457.1845,-414.4538 2432.8911,-414.4229 2344.4164,-396.0905"/>
 <polygon fill="#000000" stroke="#000000" points="2344.9883,-392.6344 2334.4834,-394.0119 2343.5545,-399.486 2344.9883,-392.6344"/>
@@ -374,13 +374,13 @@
 <text text-anchor="middle" x="2466.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top_enable_tb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation_signed_ext/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd -->
-<g id="edge24" class="edge">
+<g id="edge23" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation_signed_ext/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/hdl/add_constReal.vhd</title>
 <path fill="none" stroke="#000000" d="M2515.6352,-431.9243C2542.177,-422.1243 2575.1625,-409.945 2603.066,-399.6422"/>
 <polygon fill="#000000" stroke="#000000" points="2604.5364,-402.8303 2612.705,-396.0831 2602.1117,-396.2636 2604.5364,-402.8303"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation_signed_ext/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/add_constReal/simulation_signed_ext/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd</title>
 <path fill="none" stroke="#000000" d="M2416.972,-431.9243C2389.9043,-422.0815 2356.2363,-409.8386 2327.8253,-399.5073"/>
 <polygon fill="#000000" stroke="#000000" points="2329.0029,-396.2114 2318.4088,-396.0831 2326.6107,-402.7899 2329.0029,-396.2114"/>
@@ -434,7 +434,7 @@
 <text text-anchor="middle" x="7279.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">axi_deltaSigma.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_ctrlif.vhd -->
-<g id="edge26" class="edge">
+<g id="edge25" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_ctrlif.vhd</title>
 <path fill="none" stroke="#000000" d="M7240.8195,-431.8314C7220.406,-422.2874 7195.2079,-410.5065 7173.5942,-400.4013"/>
 <polygon fill="#000000" stroke="#000000" points="7174.8027,-397.1027 7164.2615,-396.038 7171.8379,-403.4439 7174.8027,-397.1027"/>
@@ -448,7 +448,7 @@
 <text text-anchor="middle" x="7279.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">deltaSigma_controller.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/deltaSigma_controller.vhd -->
-<g id="edge25" class="edge">
+<g id="edge27" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/deltaSigma_controller.vhd</title>
 <path fill="none" stroke="#000000" d="M7279.6802,-431.8314C7279.6802,-424.131 7279.6802,-414.9743 7279.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="7283.1803,-406.4132 7279.6802,-396.4133 7276.1803,-406.4133 7283.1803,-406.4132"/>
@@ -462,7 +462,7 @@
 <text text-anchor="middle" x="7455.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pl330_dma_fifo.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/pl330_dma_fifo.vhd -->
-<g id="edge27" class="edge">
+<g id="edge26" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/axi_deltaSigma.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/axi_deltaSigma/hdl/pl330_dma_fifo.vhd</title>
 <path fill="none" stroke="#000000" d="M7324.0924,-431.8314C7347.8406,-422.1162 7377.2548,-410.0831 7402.2466,-399.8592"/>
 <polygon fill="#000000" stroke="#000000" points="7403.6571,-403.0638 7411.5873,-396.038 7401.0066,-396.585 7403.6571,-403.0638"/>
@@ -662,7 +662,7 @@
 <text text-anchor="middle" x="5669.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">cvb_handComm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/check_valid_burst.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_handComm.vhd -->
-<g id="edge41" class="edge">
+<g id="edge39" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/check_valid_burst.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M5605.3816,-431.8314C5615.8723,-423.0485 5628.6257,-412.3712 5639.9996,-402.8489"/>
 <polygon fill="#000000" stroke="#000000" points="5642.5649,-405.2659 5647.9857,-396.1628 5638.0713,-399.8986 5642.5649,-405.2659"/>
@@ -676,7 +676,7 @@
 <text text-anchor="middle" x="5249.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">cvb_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/check_valid_burst.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd -->
-<g id="edge39" class="edge">
+<g id="edge41" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/check_valid_burst.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M5506.371,-433.943C5503.0978,-433.2828 5499.8569,-432.6327 5496.6802,-432 5416.3417,-415.998 5392.9777,-416.3874 5309.9804,-396.2014"/>
 <polygon fill="#000000" stroke="#000000" points="5310.6586,-392.7639 5300.112,-393.7737 5308.9863,-399.5613 5310.6586,-392.7639"/>
@@ -742,13 +742,13 @@
 <text text-anchor="middle" x="5069.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">cvb_gen_new_flow.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_check_mean.vhd -->
-<g id="edge46" class="edge">
+<g id="edge45" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_check_mean.vhd</title>
 <path fill="none" stroke="#000000" d="M5248.1661,-359.8314C5247.5244,-352.131 5246.7614,-342.9743 5246.0483,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="5249.5331,-334.088 5245.2146,-324.4133 5242.5573,-334.6694 5249.5331,-334.088"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_cpt_en.vhd -->
-<g id="edge43" class="edge">
+<g id="edge46" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_cpt_en.vhd</title>
 <path fill="none" stroke="#000000" d="M5286.2698,-359.8314C5305.4041,-350.3302 5329.0031,-338.6121 5349.2924,-328.5374"/>
 <polygon fill="#000000" stroke="#000000" points="5350.9537,-331.6203 5358.3537,-324.038 5347.8405,-325.3506 5350.9537,-331.6203"/>
@@ -760,7 +760,7 @@
 <polygon fill="#000000" stroke="#000000" points="5460.4009,-327.6478 5469.3154,-321.9223 5458.7761,-320.8389 5460.4009,-327.6478"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_gen_new_flow.vhd -->
-<g id="edge45" class="edge">
+<g id="edge43" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_gen_new_flow.vhd</title>
 <path fill="none" stroke="#000000" d="M5204.2586,-359.8314C5179.9707,-350.1162 5149.888,-338.0831 5124.3282,-327.8592"/>
 <polygon fill="#000000" stroke="#000000" points="5125.3598,-324.5023 5114.7752,-324.038 5122.7601,-331.0016 5125.3598,-324.5023"/>
@@ -818,19 +818,19 @@
 <text text-anchor="middle" x="5249.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top_cvb_tb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd -->
-<g id="edge49" class="edge">
+<g id="edge51" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M5249.6802,-431.8314C5249.6802,-424.131 5249.6802,-414.9743 5249.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="5253.1803,-406.4132 5249.6802,-396.4133 5246.1803,-406.4133 5253.1803,-406.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_ram.vhd -->
-<g id="edge51" class="edge">
+<g id="edge50" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/hdl/cvb_ram.vhd</title>
 <path fill="none" stroke="#000000" d="M5194.222,-432.025C5122.5802,-407.5517 5004.1327,-362.3953 4979.6802,-324 4971.0854,-310.5045 4969.5453,-300.3807 4979.6802,-288 5005.6491,-256.2767 5118.6117,-242.7778 5189.3321,-237.3531"/>
 <polygon fill="#000000" stroke="#000000" points="5189.7277,-240.8336 5199.4443,-236.6102 5189.2147,-233.8524 5189.7277,-240.8336"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/readComplexFromFile.vhd -->
-<g id="edge50" class="edge">
+<g id="edge49" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/check_valid_burst/simulation/top_cvb_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/readComplexFromFile.vhd</title>
 <path fill="none" stroke="#000000" d="M5194.1986,-433.7085C5190.9941,-433.0573 5187.8052,-432.4791 5184.6802,-432 4720.4969,-360.8408 4597.2365,-427.3806 4128.6802,-396 4102.9531,-394.277 4075.2141,-391.8078 4049.3997,-389.2482"/>
 <polygon fill="#000000" stroke="#000000" points="4049.5306,-385.7438 4039.2306,-388.2256 4048.8302,-392.7087 4049.5306,-385.7438"/>
@@ -928,7 +928,7 @@
 <text text-anchor="middle" x="10334.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataComplex_dma_direct.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/axi_dataComplex_dma_direct.vhd -->
-<g id="edge56" class="edge">
+<g id="edge57" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/axi_dataComplex_dma_direct.vhd</title>
 <path fill="none" stroke="#000000" d="M10428.0713,-431.9243C10481.4594,-421.5911 10548.514,-408.6128 10603.4605,-397.978"/>
 <polygon fill="#000000" stroke="#000000" points="10604.4206,-401.3572 10613.5733,-396.0207 10603.0904,-394.4848 10604.4206,-401.3572"/>
@@ -942,7 +942,7 @@
 <text text-anchor="middle" x="9937.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataComplex_dma_direct_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct_handCom.vhd -->
-<g id="edge54" class="edge">
+<g id="edge55" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M10235.2687,-431.9707C10178.0588,-421.5951 10106.0796,-408.5409 10047.2425,-397.8702"/>
 <polygon fill="#000000" stroke="#000000" points="10047.6325,-394.384 10037.1684,-396.0432 10046.3833,-401.2716 10047.6325,-394.384"/>
@@ -956,7 +956,7 @@
 <text text-anchor="middle" x="10209.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataComplex_dma_direct_sync.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct_sync.vhd -->
-<g id="edge55" class="edge">
+<g id="edge56" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M10303.1374,-431.8314C10287.0011,-422.5368 10267.1816,-411.1208 10249.953,-401.1971"/>
 <polygon fill="#000000" stroke="#000000" points="10251.6252,-398.1212 10241.2129,-396.1628 10248.1313,-404.187 10251.6252,-398.1212"/>
@@ -970,7 +970,7 @@
 <text text-anchor="middle" x="10460.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_dataComplex_dma_direct.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/wb_dataComplex_dma_direct.vhd -->
-<g id="edge57" class="edge">
+<g id="edge54" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/dataComplex_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_dma_direct/hdl/wb_dataComplex_dma_direct.vhd</title>
 <path fill="none" stroke="#000000" d="M10366.4753,-431.8314C10382.7407,-422.5368 10402.7188,-411.1208 10420.0853,-401.1971"/>
 <polygon fill="#000000" stroke="#000000" points="10421.9493,-404.1631 10428.8953,-396.1628 10418.4763,-398.0854 10421.9493,-404.1631"/>
@@ -1070,7 +1070,7 @@
 <text text-anchor="middle" x="11633.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataComplex_to_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_handCom.vhd -->
-<g id="edge65" class="edge">
+<g id="edge64" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M11585.4828,-431.8314C11559.4836,-422.0306 11527.2266,-409.8709 11499.9521,-399.5894"/>
 <polygon fill="#000000" stroke="#000000" points="11501.1228,-396.2904 11490.531,-396.038 11498.6536,-402.8404 11501.1228,-396.2904"/>
@@ -1084,7 +1084,7 @@
 <text text-anchor="middle" x="11633.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataComplex_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_top.vhd -->
-<g id="edge63" class="edge">
+<g id="edge65" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_top.vhd</title>
 <path fill="none" stroke="#000000" d="M11633.6802,-431.8314C11633.6802,-424.131 11633.6802,-414.9743 11633.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="11637.1803,-406.4132 11633.6802,-396.4133 11630.1803,-406.4133 11637.1803,-406.4132"/>
@@ -1098,7 +1098,7 @@
 <text text-anchor="middle" x="11802.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_dataComplex.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/wb_dataComplex.vhd -->
-<g id="edge64" class="edge">
+<g id="edge63" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/dataComplex_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataComplex_to_ram/hdl/wb_dataComplex.vhd</title>
 <path fill="none" stroke="#000000" d="M11676.326,-431.8314C11699.0292,-422.159 11727.1253,-410.1891 11751.0544,-399.9944"/>
 <polygon fill="#000000" stroke="#000000" points="11752.513,-403.1775 11760.341,-396.038 11749.7693,-396.7376 11752.513,-403.1775"/>
@@ -1154,7 +1154,7 @@
 <text text-anchor="middle" x="11142.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_dma_direct_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct_handCom.vhd -->
-<g id="edge70" class="edge">
+<g id="edge71" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M11179.3154,-359.8314C11173.7293,-351.6232 11167.0172,-341.7606 11160.873,-332.7323"/>
 <polygon fill="#000000" stroke="#000000" points="11163.7312,-330.7112 11155.2115,-324.4133 11157.9442,-334.6496 11163.7312,-330.7112"/>
@@ -1182,7 +1182,7 @@
 <text text-anchor="middle" x="11613.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_dataReal_dma_direct.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/wb_dataReal_dma_direct.vhd -->
-<g id="edge71" class="edge">
+<g id="edge70" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/dataReal_dma_direct.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_dma_direct/hdl/wb_dataReal_dma_direct.vhd</title>
 <path fill="none" stroke="#000000" d="M11279.6316,-362.9941C11344.4418,-351.9364 11433.0599,-336.8167 11502.736,-324.9289"/>
 <polygon fill="#000000" stroke="#000000" points="11503.6047,-328.3313 11512.8736,-323.1992 11502.4273,-321.431 11503.6047,-328.3313"/>
@@ -1218,7 +1218,7 @@
 <text text-anchor="middle" x="12255.6802" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_resizer.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_resizer.vhd -->
-<g id="edge75" class="edge">
+<g id="edge74" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_resizer.vhd</title>
 <path fill="none" stroke="#000000" d="M12382.0344,-287.8314C12359.3312,-278.159 12331.2351,-266.1891 12307.306,-255.9944"/>
 <polygon fill="#000000" stroke="#000000" points="12308.5911,-252.7376 12298.0194,-252.038 12305.8474,-259.1775 12308.5911,-252.7376"/>
@@ -1232,7 +1232,7 @@
 <text text-anchor="middle" x="12424.6802" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_storage.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_storage.vhd -->
-<g id="edge74" class="edge">
+<g id="edge73" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_storage.vhd</title>
 <path fill="none" stroke="#000000" d="M12424.6802,-287.8314C12424.6802,-280.131 12424.6802,-270.9743 12424.6802,-262.4166"/>
 <polygon fill="#000000" stroke="#000000" points="12428.1803,-262.4132 12424.6802,-252.4133 12421.1803,-262.4133 12428.1803,-262.4132"/>
@@ -1246,7 +1246,7 @@
 <text text-anchor="middle" x="12586.6802" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_sync.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_sync.vhd -->
-<g id="edge73" class="edge">
+<g id="edge75" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M12465.5596,-287.8314C12487.2262,-278.2018 12514.0165,-266.295 12536.888,-256.1299"/>
 <polygon fill="#000000" stroke="#000000" points="12538.3781,-259.2978 12546.0947,-252.038 12535.5351,-252.9011 12538.3781,-259.2978"/>
@@ -1260,7 +1260,7 @@
 <text text-anchor="middle" x="12424.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_to_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_handCom.vhd -->
-<g id="edge76" class="edge">
+<g id="edge78" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M12383.2961,-431.8314C12361.362,-422.2018 12334.241,-410.295 12311.0871,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="12312.3302,-396.8532 12301.7667,-396.038 12309.5162,-403.2627 12312.3302,-396.8532"/>
@@ -1274,7 +1274,7 @@
 <text text-anchor="middle" x="12424.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">dataReal_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_top.vhd -->
-<g id="edge78" class="edge">
+<g id="edge77" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_top.vhd</title>
 <path fill="none" stroke="#000000" d="M12424.6802,-431.8314C12424.6802,-424.131 12424.6802,-414.9743 12424.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="12428.1803,-406.4132 12424.6802,-396.4133 12421.1803,-406.4133 12428.1803,-406.4132"/>
@@ -1288,7 +1288,7 @@
 <text text-anchor="middle" x="12567.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_dataReal.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/wb_dataReal.vhd -->
-<g id="edge77" class="edge">
+<g id="edge76" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/dataReal_to_ram.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/dataReal_to_ram/hdl/wb_dataReal.vhd</title>
 <path fill="none" stroke="#000000" d="M12460.7651,-431.8314C12479.4791,-422.4089 12502.5234,-410.8062 12522.4202,-400.7883"/>
 <polygon fill="#000000" stroke="#000000" points="12524.2491,-403.7861 12531.6068,-396.1628 12521.101,-397.5339 12524.2491,-403.7861"/>
@@ -1316,7 +1316,7 @@
 <text text-anchor="middle" x="12757.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">delayTempoReal_axi_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_comm.vhd -->
-<g id="edge81" class="edge">
+<g id="edge80" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M13047.7154,-433.3913C12992.4189,-422.8307 12920.5065,-409.0968 12862.123,-397.9466"/>
 <polygon fill="#000000" stroke="#000000" points="12862.611,-394.4767 12852.132,-396.0385 12861.2978,-401.3524 12862.611,-394.4767"/>
@@ -1330,7 +1330,7 @@
 <text text-anchor="middle" x="13006.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">delayTempoReal_axi_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_handCom.vhd -->
-<g id="edge80" class="edge">
+<g id="edge82" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M13102.3804,-431.8314C13085.8568,-422.5368 13065.5616,-411.1208 13047.9195,-401.1971"/>
 <polygon fill="#000000" stroke="#000000" points="13049.4014,-398.015 13038.9697,-396.1628 13045.9695,-404.116 13049.4014,-398.015"/>
@@ -1344,7 +1344,7 @@
 <text text-anchor="middle" x="13504.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">delayTempoReal_axi_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_logic.vhd -->
-<g id="edge82" class="edge">
+<g id="edge81" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/delayTempoReal_axi/hdl/delayTempoReal_axi_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M13221.8965,-433.0282C13275.8105,-422.5368 13345.2731,-409.0198 13401.8607,-398.0081"/>
 <polygon fill="#000000" stroke="#000000" points="13402.7608,-401.3987 13411.9081,-396.0529 13401.4237,-394.5276 13402.7608,-401.3987"/>
@@ -1520,7 +1520,7 @@
 <text text-anchor="middle" x="3198.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_handCom.vhd -->
-<g id="edge92" class="edge">
+<g id="edge90" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M3300.3226,-434.7307C3282.7494,-424.9223 3259.5961,-411.9996 3239.8268,-400.9655"/>
 <polygon fill="#000000" stroke="#000000" points="3241.4516,-397.8642 3231.0139,-396.0467 3238.04,-403.9766 3241.4516,-397.8642"/>
@@ -1534,7 +1534,7 @@
 <text text-anchor="middle" x="3534.6802" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_ram_coeff.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_ram_coeff.vhd -->
-<g id="edge90" class="edge">
+<g id="edge91" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_ram_coeff.vhd</title>
 <path fill="none" stroke="#000000" d="M3343.8558,-431.707C3351.8439,-421.7696 3360.9689,-408.9009 3366.6802,-396 3383.2295,-358.6178 3385.6802,-346.8816 3385.6802,-306 3385.6802,-306 3385.6802,-306 3385.6802,-162 3385.6802,-121.1184 3378.5763,-103.4626 3404.6802,-72 3419.5649,-54.0596 3441.4053,-41.9916 3462.9517,-33.9105"/>
 <polygon fill="#000000" stroke="#000000" points="3464.1912,-37.1849 3472.4743,-30.5787 3461.8794,-30.5776 3464.1912,-37.1849"/>
@@ -1548,7 +1548,7 @@
 <text text-anchor="middle" x="3781.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_top_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd -->
-<g id="edge91" class="edge">
+<g id="edge92" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3355.0535,-438.0445C3361.0989,-435.7564 3367.535,-433.5841 3373.6802,-432 3490.4586,-401.8968 3630.6015,-388.0151 3712.5394,-382.0505"/>
 <polygon fill="#000000" stroke="#000000" points="3712.9997,-385.5267 3722.727,-381.3279 3712.5044,-378.5442 3712.9997,-385.5267"/>
@@ -1576,7 +1576,7 @@
 <text text-anchor="middle" x="3568.6802" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_comp_butterfly.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_comp_butterfly.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_coeff_handler.vhd -->
-<g id="edge95" class="edge">
+<g id="edge94" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_comp_butterfly.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_coeff_handler.vhd</title>
 <path fill="none" stroke="#000000" d="M3591.8957,-143.8314C3603.2272,-134.9632 3617.0266,-124.1637 3629.2829,-114.5718"/>
 <polygon fill="#000000" stroke="#000000" points="3631.7542,-117.0822 3637.4721,-108.1628 3627.44,-111.5697 3631.7542,-117.0822"/>
@@ -1604,7 +1604,7 @@
 <text text-anchor="middle" x="3285.6802" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_data_handler.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_comp_butterfly.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_data_handler.vhd -->
-<g id="edge94" class="edge">
+<g id="edge95" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_comp_butterfly.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_data_handler.vhd</title>
 <path fill="none" stroke="#000000" d="M3497.6326,-143.9243C3457.7674,-133.7819 3407.8857,-121.0912 3366.5295,-110.5694"/>
 <polygon fill="#000000" stroke="#000000" points="3367.3113,-107.1569 3356.757,-108.0831 3365.5853,-113.9408 3367.3113,-107.1569"/>
@@ -1652,7 +1652,7 @@
 <polygon fill="#000000" stroke="#000000" points="3695.8027,-253.1027 3685.2615,-252.038 3692.8379,-259.4439 3695.8027,-253.1027"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_loop_stage.vhd -->
-<g id="edge101" class="edge">
+<g id="edge100" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_loop_stage.vhd</title>
 <path fill="none" stroke="#000000" d="M3786.4747,-359.8314C3788.5291,-352.0463 3790.9762,-342.7729 3793.2558,-334.1347"/>
 <polygon fill="#000000" stroke="#000000" points="3796.6537,-334.9753 3795.8211,-324.4133 3789.8854,-333.1892 3796.6537,-334.9753"/>
@@ -1666,7 +1666,7 @@
 <text text-anchor="middle" x="3940.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">fft_transfert.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_transfert.vhd -->
-<g id="edge100" class="edge">
+<g id="edge101" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_transfert.vhd</title>
 <path fill="none" stroke="#000000" d="M3821.8026,-359.8314C3842.9734,-350.2446 3869.1285,-338.4008 3891.5105,-328.2655"/>
 <polygon fill="#000000" stroke="#000000" points="3893.1805,-331.3515 3900.8463,-324.038 3890.293,-324.9748 3893.1805,-331.3515"/>
@@ -1716,25 +1716,25 @@
 <text text-anchor="middle" x="3781.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top_fft_tb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd -->
-<g id="edge106" class="edge">
+<g id="edge107" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/hdl/fft_top_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3781.6802,-431.8314C3781.6802,-424.131 3781.6802,-414.9743 3781.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="3785.1803,-406.4132 3781.6802,-396.4133 3778.1803,-406.4133 3785.1803,-406.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/readComplexFromFile.vhd -->
-<g id="edge104" class="edge">
+<g id="edge105" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/readComplexFromFile.vhd</title>
 <path fill="none" stroke="#000000" d="M3823.8214,-431.8314C3846.1566,-422.2018 3873.7738,-410.295 3897.3512,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="3899.0449,-403.2112 3906.8421,-396.038 3896.2735,-396.7831 3899.0449,-403.2112"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd -->
-<g id="edge105" class="edge">
+<g id="edge104" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd</title>
 <path fill="none" stroke="#000000" d="M3832.0222,-433.8092C3834.9356,-433.1323 3837.8361,-432.521 3840.6802,-432 3911.7281,-418.9849 4386.4265,-392.4229 4576.3531,-382.1684"/>
 <polygon fill="#000000" stroke="#000000" points="4576.7458,-385.6524 4586.5429,-381.6192 4576.369,-378.6626 4576.7458,-385.6524"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd -->
-<g id="edge107" class="edge">
+<g id="edge106" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/fft/simulation/top_fft_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd</title>
 <path fill="none" stroke="#000000" d="M3832.0797,-434.0902C3834.9784,-433.3418 3837.86,-432.6381 3840.6802,-432 3893.876,-419.9645 4038.9834,-399.6117 4127.8859,-387.6276"/>
 <polygon fill="#000000" stroke="#000000" points="4128.4614,-391.0818 4137.9058,-386.2803 4127.5285,-384.1443 4128.4614,-391.0818"/>
@@ -1756,7 +1756,7 @@
 <text text-anchor="middle" x="3051.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firComplex_axi.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_axi.vhd -->
-<g id="edge108" class="edge">
+<g id="edge110" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_axi.vhd</title>
 <path fill="none" stroke="#000000" d="M3051.6802,-431.8314C3051.6802,-424.131 3051.6802,-414.9743 3051.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="3055.1803,-406.4132 3051.6802,-396.4133 3048.1803,-406.4133 3055.1803,-406.4132"/>
@@ -1770,7 +1770,7 @@
 <text text-anchor="middle" x="2877.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firComplex_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_handCom.vhd -->
-<g id="edge110" class="edge">
+<g id="edge109" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M3007.7727,-431.8314C2984.3978,-422.159 2955.4705,-410.1891 2930.8334,-399.9944"/>
 <polygon fill="#000000" stroke="#000000" points="2931.8504,-396.6275 2921.272,-396.038 2929.1739,-403.0956 2931.8504,-396.6275"/>
@@ -1784,7 +1784,7 @@
 <text text-anchor="middle" x="3483.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firComplex_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd -->
-<g id="edge109" class="edge">
+<g id="edge108" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd</title>
 <path fill="none" stroke="#000000" d="M3106.3933,-440.8812C3182.0669,-428.2689 3319.1022,-405.4297 3405.5395,-391.0234"/>
 <polygon fill="#000000" stroke="#000000" points="3406.2733,-394.4495 3415.5618,-389.3531 3405.1224,-387.5448 3406.2733,-394.4495"/>
@@ -1806,13 +1806,13 @@
 <text text-anchor="middle" x="3484.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firComplex_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_proc.vhd -->
-<g id="edge112" class="edge">
+<g id="edge111" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_proc.vhd</title>
 <path fill="none" stroke="#000000" d="M3524.5596,-359.8314C3546.2262,-350.2018 3573.0165,-338.295 3595.888,-328.1299"/>
 <polygon fill="#000000" stroke="#000000" points="3597.3781,-331.2978 3605.0947,-324.038 3594.5351,-324.9011 3597.3781,-331.2978"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_ram.vhd -->
-<g id="edge111" class="edge">
+<g id="edge112" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_ram.vhd</title>
 <path fill="none" stroke="#000000" d="M3483.9325,-359.8314C3484.0395,-352.131 3484.1667,-342.9743 3484.2855,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="3487.7851,-334.4609 3484.4245,-324.4133 3480.7858,-334.3637 3487.7851,-334.4609"/>
@@ -1854,25 +1854,25 @@
 <text text-anchor="middle" x="3448.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top_enable_tb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd -->
-<g id="edge117" class="edge">
+<g id="edge116" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/hdl/firComplex_top.vhd</title>
 <path fill="none" stroke="#000000" d="M3457.5122,-431.8314C3461.3788,-423.8771 3466.0008,-414.369 3470.277,-405.5723"/>
 <polygon fill="#000000" stroke="#000000" points="3473.5051,-406.9371 3474.7293,-396.4133 3467.2095,-403.8768 3473.5051,-406.9371"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd -->
-<g id="edge115" class="edge">
+<g id="edge118" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd</title>
 <path fill="none" stroke="#000000" d="M3382.9758,-434.9106C3376.4813,-433.7733 3369.9685,-432.7709 3363.6802,-432 2916.7328,-377.2091 2794.9231,-456.0666 2344.4149,-395.9113"/>
 <polygon fill="#000000" stroke="#000000" points="2344.7676,-392.4272 2334.389,-394.557 2343.8304,-399.3642 2344.7676,-392.4272"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd -->
-<g id="edge116" class="edge">
+<g id="edge115" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd</title>
 <path fill="none" stroke="#000000" d="M3514.3956,-433.4901C3517.5247,-432.9366 3520.6312,-432.4347 3523.6802,-432 3530.2072,-431.0694 4320.9278,-393.7352 4576.1994,-381.6986"/>
 <polygon fill="#000000" stroke="#000000" points="4576.6785,-385.18 4586.5025,-381.2129 4576.3487,-378.1878 4576.6785,-385.18"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd -->
-<g id="edge118" class="edge">
+<g id="edge117" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firComplex/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd</title>
 <path fill="none" stroke="#000000" d="M3514.4073,-433.5692C3517.5332,-432.9946 3520.6359,-432.4665 3523.6802,-432 3754.4241,-396.6378 3815.2479,-417.644 4047.6802,-396 4073.7776,-393.5698 4102.3151,-390.3625 4127.6002,-387.3291"/>
 <polygon fill="#000000" stroke="#000000" points="4128.3447,-390.7647 4137.8513,-386.0878 4127.5031,-383.8154 4128.3447,-390.7647"/>
@@ -1894,7 +1894,7 @@
 <text text-anchor="middle" x="5983.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firReal_axi.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_axi.vhd -->
-<g id="edge119" class="edge">
+<g id="edge121" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_axi.vhd</title>
 <path fill="none" stroke="#000000" d="M5873.0268,-431.8314C5892.5571,-422.3302 5916.6443,-410.6121 5937.3533,-400.5374"/>
 <polygon fill="#000000" stroke="#000000" points="5939.1409,-403.56 5946.6021,-396.038 5936.0786,-397.2654 5939.1409,-403.56"/>
@@ -1908,7 +1908,7 @@
 <text text-anchor="middle" x="5835.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firReal_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_handCom.vhd -->
-<g id="edge120" class="edge">
+<g id="edge119" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M5835.6802,-431.8314C5835.6802,-424.131 5835.6802,-414.9743 5835.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="5839.1803,-406.4132 5835.6802,-396.4133 5832.1803,-406.4133 5839.1803,-406.4132"/>
@@ -1922,7 +1922,7 @@
 <text text-anchor="middle" x="4843.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firReal_top.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd -->
-<g id="edge121" class="edge">
+<g id="edge120" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd</title>
 <path fill="none" stroke="#000000" d="M5794.1138,-444.9948C5760.5663,-441.0754 5712.1333,-435.6877 5669.6802,-432 5386.8395,-407.4312 5048.6322,-388.6236 4908.9508,-381.3167"/>
 <polygon fill="#000000" stroke="#000000" points="4909.0098,-377.8152 4898.8411,-380.7899 4908.6454,-384.8057 4909.0098,-377.8152"/>
@@ -1944,13 +1944,13 @@
 <text text-anchor="middle" x="4715.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">firReal_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_proc.vhd -->
-<g id="edge122" class="edge">
+<g id="edge123" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_proc.vhd</title>
 <path fill="none" stroke="#000000" d="M4845.1943,-359.8314C4845.836,-352.131 4846.599,-342.9743 4847.3121,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="4850.8031,-334.6694 4848.1458,-324.4133 4843.8273,-334.088 4850.8031,-334.6694"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_ram.vhd -->
-<g id="edge123" class="edge">
+<g id="edge122" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_top.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/hdl/firReal_ram.vhd</title>
 <path fill="none" stroke="#000000" d="M4811.3804,-359.8314C4794.8568,-350.5368 4774.5616,-339.1208 4756.9195,-329.1971"/>
 <polygon fill="#000000" stroke="#000000" points="4758.4014,-326.015 4747.9697,-324.1628 4754.9695,-332.116 4758.4014,-326.015"/>
@@ -1998,19 +1998,19 @@
 <polygon fill="#000000" stroke="#000000" points="4779.2601,-393.1305 4788.467,-387.888 4778.0004,-386.2448 4779.2601,-393.1305"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd -->
-<g id="edge126" class="edge">
+<g id="edge129" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/simulation/top_enable_tb.vhd</title>
 <path fill="none" stroke="#000000" d="M4425.0542,-433.2394C4422.2341,-432.7718 4419.4341,-432.3544 4416.6802,-432 3962.9479,-373.609 2817.1135,-452.9683 2344.3893,-395.8673"/>
 <polygon fill="#000000" stroke="#000000" points="2344.7351,-392.3835 2334.3801,-394.6249 2343.8727,-399.3302 2344.7351,-392.3835"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd -->
-<g id="edge127" class="edge">
+<g id="edge126" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/ram_storage16.vhd</title>
 <path fill="none" stroke="#000000" d="M4532.0643,-431.8314C4553.9984,-422.2018 4581.1194,-410.295 4604.2733,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="4605.8442,-403.2627 4613.5937,-396.038 4603.0302,-396.8532 4605.8442,-403.2627"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd -->
-<g id="edge129" class="edge">
+<g id="edge127" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/firReal/simulation/top_enable_tb.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/simulation/readFromFile.vhd</title>
 <path fill="none" stroke="#000000" d="M4424.8747,-433.6621C4379.786,-422.4677 4319.9599,-407.6143 4273.4497,-396.0669"/>
 <polygon fill="#000000" stroke="#000000" points="4274.2859,-392.6683 4263.7371,-393.6555 4272.5991,-399.4621 4274.2859,-392.6683"/>
@@ -2046,7 +2046,7 @@
 <text text-anchor="middle" x="1951.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">gen_radar_prog_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog_logic.vhd -->
-<g id="edge131" class="edge">
+<g id="edge132" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M2352.6536,-361.6339C2349.6266,-361.0583 2346.6259,-360.5104 2343.6802,-360 2217.1373,-338.0724 2181.535,-343.6055 2050.834,-324.1207"/>
 <polygon fill="#000000" stroke="#000000" points="2051.2509,-320.644 2040.84,-322.61 2050.2046,-327.5654 2051.2509,-320.644"/>
@@ -2060,7 +2060,7 @@
 <text text-anchor="middle" x="2382.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_gen_radar_prog.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/wb_gen_radar_prog.vhd -->
-<g id="edge132" class="edge">
+<g id="edge131" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/gen_radar_prog.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/gen_radar_prog/hdl/wb_gen_radar_prog.vhd</title>
 <path fill="none" stroke="#000000" d="M2413.3342,-359.8314C2408.7565,-351.7925 2403.275,-342.1666 2398.2214,-333.2918"/>
 <polygon fill="#000000" stroke="#000000" points="2401.1554,-331.3712 2393.1655,-324.4133 2395.0725,-334.8351 2401.1554,-331.3712"/>
@@ -2176,7 +2176,7 @@
 <text text-anchor="middle" x="15919.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">mean_vector_axi_handcomm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_handcomm.vhd -->
-<g id="edge141" class="edge">
+<g id="edge138" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_handcomm.vhd</title>
 <path fill="none" stroke="#000000" d="M16006.4085,-431.8314C15991.5714,-422.6221 15973.3787,-411.3301 15957.494,-401.4706"/>
 <polygon fill="#000000" stroke="#000000" points="15959.2847,-398.4628 15948.9425,-396.1628 15955.5932,-404.4102 15959.2847,-398.4628"/>
@@ -2204,7 +2204,7 @@
 <text text-anchor="middle" x="16151.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">mva_synchronizer_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mva_synchronizer_vector.vhd -->
-<g id="edge140" class="edge">
+<g id="edge141" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mva_synchronizer_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M16064.9519,-431.8314C16079.789,-422.6221 16097.9817,-411.3301 16113.8664,-401.4706"/>
 <polygon fill="#000000" stroke="#000000" points="16115.7672,-404.4102 16122.4179,-396.1628 16112.0757,-398.4628 16115.7672,-404.4102"/>
@@ -2218,7 +2218,7 @@
 <text text-anchor="middle" x="16357.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_mean_vector_axi.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/wb_mean_vector_axi.vhd -->
-<g id="edge138" class="edge">
+<g id="edge140" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/wb_mean_vector_axi.vhd</title>
 <path fill="none" stroke="#000000" d="M16110.3628,-433.3008C16157.031,-422.8657 16217.4369,-409.3588 16266.8675,-398.3059"/>
 <polygon fill="#000000" stroke="#000000" points="16267.9243,-401.6562 16276.9195,-396.0583 16266.3967,-394.8249 16267.9243,-401.6562"/>
@@ -2232,7 +2232,7 @@
 <text text-anchor="middle" x="15595.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">mean_vector_axi_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_ram.vhd -->
-<g id="edge143" class="edge">
+<g id="edge142" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_ram.vhd</title>
 <path fill="none" stroke="#000000" d="M15670.446,-359.8314C15657.8922,-350.7927 15642.5519,-339.7476 15629.0411,-330.0198"/>
 <polygon fill="#000000" stroke="#000000" points="15631.0668,-327.1655 15620.9063,-324.1628 15626.9766,-332.8463 15631.0668,-327.1655"/>
@@ -2246,7 +2246,7 @@
 <text text-anchor="middle" x="15795.6802" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">mean_vector_axi_shift.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_shift.vhd -->
-<g id="edge142" class="edge">
+<g id="edge143" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/mean_vector_axi/hdl/mean_vector_axi_shift.vhd</title>
 <path fill="none" stroke="#000000" d="M15720.9144,-359.8314C15733.4682,-350.7927 15748.8085,-339.7476 15762.3193,-330.0198"/>
 <polygon fill="#000000" stroke="#000000" points="15764.3838,-332.8463 15770.4541,-324.1628 15760.2936,-327.1655 15764.3838,-332.8463"/>
@@ -2396,7 +2396,7 @@
 <text text-anchor="middle" x="17474.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">nco_counter_handcomm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_handcomm.vhd -->
-<g id="edge155" class="edge">
+<g id="edge153" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_handcomm.vhd</title>
 <path fill="none" stroke="#000000" d="M17647.6873,-431.9243C17615.6964,-421.9531 17575.803,-409.5188 17542.3889,-399.104"/>
 <polygon fill="#000000" stroke="#000000" points="17543.2855,-395.7174 17532.6969,-396.0831 17541.2024,-402.4004 17543.2855,-395.7174"/>
@@ -2410,7 +2410,7 @@
 <text text-anchor="middle" x="17280.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">nco_counter_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd -->
-<g id="edge154" class="edge">
+<g id="edge155" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M17645.7046,-441.2624C17580.1385,-431.5205 17471.7474,-414.8609 17368.8418,-396.1738"/>
 <polygon fill="#000000" stroke="#000000" points="17369.3679,-392.7121 17358.9019,-394.3592 17368.1107,-399.5983 17369.3679,-392.7121"/>
@@ -2438,7 +2438,7 @@
 <text text-anchor="middle" x="17964.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">nco_counter_synchronizer_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_synchronizer_vector.vhd -->
-<g id="edge153" class="edge">
+<g id="edge152" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_synchronizer_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M17765.4252,-433.3913C17802.4722,-423.0926 17850.3754,-409.7759 17889.9276,-398.7807"/>
 <polygon fill="#000000" stroke="#000000" points="17891.0944,-402.0891 17899.7916,-396.0385 17889.2195,-395.3448 17891.0944,-402.0891"/>
@@ -2452,7 +2452,7 @@
 <text text-anchor="middle" x="18181.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_nco_counter.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/wb_nco_counter.vhd -->
-<g id="edge152" class="edge">
+<g id="edge154" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/wb_nco_counter.vhd</title>
 <path fill="none" stroke="#000000" d="M17765.6539,-443.2913C17841.0528,-434.5206 17974.6375,-417.8687 18098.7978,-396.0819"/>
 <polygon fill="#000000" stroke="#000000" points="18099.6259,-399.4898 18108.8629,-394.3006 18098.406,-392.5969 18099.6259,-399.4898"/>
@@ -2496,13 +2496,13 @@
 <polygon fill="#000000" stroke="#000000" points="17119.0348,-323.7305 17108.4458,-324.0831 17116.9435,-330.4109 17119.0348,-323.7305"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_cos_rom_a12_d16.vhd -->
-<g id="edge157" class="edge">
+<g id="edge158" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_cos_rom_a12_d16.vhd</title>
 <path fill="none" stroke="#000000" d="M17280.6802,-359.8314C17280.6802,-352.131 17280.6802,-342.9743 17280.6802,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="17284.1803,-334.4132 17280.6802,-324.4133 17277.1803,-334.4133 17284.1803,-334.4132"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_cos_rom_a16_d16.vhd -->
-<g id="edge158" class="edge">
+<g id="edge157" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_logic.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/nco_counter/hdl/nco_counter_cos_rom_a16_d16.vhd</title>
 <path fill="none" stroke="#000000" d="M17346.2046,-359.9243C17382.6605,-349.8675 17428.199,-337.3052 17466.1487,-326.8363"/>
 <polygon fill="#000000" stroke="#000000" points="17467.4197,-330.1165 17476.1288,-324.0831 17465.5581,-323.3685 17467.4197,-330.1165"/>
@@ -2552,7 +2552,7 @@
 <text text-anchor="middle" x="18528.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pidv3_axi_handComm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_handComm.vhd -->
-<g id="edge162" class="edge">
+<g id="edge165" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M18661.7633,-431.8314C18637.7452,-422.1162 18607.9968,-410.0831 18582.721,-399.8592"/>
 <polygon fill="#000000" stroke="#000000" points="18583.8569,-396.5432 18573.2741,-396.038 18581.232,-403.0325 18583.8569,-396.5432"/>
@@ -2566,7 +2566,7 @@
 <text text-anchor="middle" x="18706.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pidv3_axi_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_logic.vhd -->
-<g id="edge163" class="edge">
+<g id="edge164" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M18706.6802,-431.8314C18706.6802,-424.131 18706.6802,-414.9743 18706.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="18710.1803,-406.4132 18706.6802,-396.4133 18703.1803,-406.4133 18710.1803,-406.4132"/>
@@ -2580,7 +2580,7 @@
 <text text-anchor="middle" x="18873.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pidv3_axi_sync_bit.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_sync_bit.vhd -->
-<g id="edge165" class="edge">
+<g id="edge163" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_sync_bit.vhd</title>
 <path fill="none" stroke="#000000" d="M18748.8214,-431.8314C18771.1566,-422.2018 18798.7738,-410.295 18822.3512,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="18824.0449,-403.2112 18831.8421,-396.038 18821.2735,-396.7831 18824.0449,-403.2112"/>
@@ -2594,7 +2594,7 @@
 <text text-anchor="middle" x="19063.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pidv3_axi_sync_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_sync_vector.vhd -->
-<g id="edge164" class="edge">
+<g id="edge162" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pidv3_axi/hdl/pidv3_axi_sync_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M18757.4505,-439.7606C18811.0081,-428.9591 18896.7826,-411.66 18963.9467,-398.1143"/>
 <polygon fill="#000000" stroke="#000000" points="18965.0256,-401.4673 18974.1362,-396.0593 18963.6416,-394.6055 18965.0256,-401.4673"/>
@@ -2616,7 +2616,7 @@
 <text text-anchor="middle" x="19537.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">prn20b_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_handCom.vhd -->
-<g id="edge170" class="edge">
+<g id="edge167" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M19537.6802,-431.8314C19537.6802,-424.131 19537.6802,-414.9743 19537.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="19541.1803,-406.4132 19537.6802,-396.4133 19534.1803,-406.4133 19541.1803,-406.4132"/>
@@ -2630,7 +2630,7 @@
 <text text-anchor="middle" x="19380.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">prn20b_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_logic.vhd -->
-<g id="edge167" class="edge">
+<g id="edge166" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M19498.0625,-431.8314C19477.158,-422.2446 19451.3319,-410.4008 19429.2314,-400.2655"/>
 <polygon fill="#000000" stroke="#000000" points="19430.5618,-397.0252 19420.013,-396.038 19427.6438,-403.388 19430.5618,-397.0252"/>
@@ -2658,7 +2658,7 @@
 <text text-anchor="middle" x="19708.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">prn20b_vectSync.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_vectSync.vhd -->
-<g id="edge168" class="edge">
+<g id="edge170" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b_vectSync.vhd</title>
 <path fill="none" stroke="#000000" d="M19580.8307,-431.8314C19603.8026,-422.159 19632.2311,-410.1891 19656.4434,-399.9944"/>
 <polygon fill="#000000" stroke="#000000" points="19657.9818,-403.1443 19665.84,-396.038 19655.2654,-396.6929 19657.9818,-403.1443"/>
@@ -2672,7 +2672,7 @@
 <text text-anchor="middle" x="19857.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">wb_prn20b.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/wb_prn20b.vhd -->
-<g id="edge166" class="edge">
+<g id="edge168" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/prn20b.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/prn20b/hdl/wb_prn20b.vhd</title>
 <path fill="none" stroke="#000000" d="M19580.7252,-441.7241C19629.5825,-432.1445 19711.8601,-415.4508 19791.9621,-396.1046"/>
 <polygon fill="#000000" stroke="#000000" points="19792.8276,-399.4962 19801.7175,-393.7325 19791.1736,-392.6944 19792.8276,-399.4962"/>
@@ -2744,7 +2744,7 @@
 <text text-anchor="middle" x="20134.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pwm_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_comm.vhd -->
-<g id="edge177" class="edge">
+<g id="edge175" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M20386.9326,-439.1649C20341.8401,-429.038 20272.7105,-413.25 20203.4018,-396.1443"/>
 <polygon fill="#000000" stroke="#000000" points="20204.1715,-392.7292 20193.6233,-393.7223 20202.4885,-399.5239 20204.1715,-392.7292"/>
@@ -2758,7 +2758,7 @@
 <text text-anchor="middle" x="20281.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pwm_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_handCom.vhd -->
-<g id="edge176" class="edge">
+<g id="edge174" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M20396.8195,-431.8314C20376.406,-422.2874 20351.2079,-410.5065 20329.5942,-400.4013"/>
 <polygon fill="#000000" stroke="#000000" points="20330.8027,-397.1027 20320.2615,-396.038 20327.8379,-403.4439 20330.8027,-397.1027"/>
@@ -2772,7 +2772,7 @@
 <text text-anchor="middle" x="20746.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pwm_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_logic.vhd -->
-<g id="edge174" class="edge">
+<g id="edge177" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M20484.6183,-440.188C20532.4472,-430.3996 20607.5307,-414.5074 20682.2163,-396.0406"/>
 <polygon fill="#000000" stroke="#000000" points="20683.4125,-399.3497 20692.271,-393.5379 20681.7217,-392.5569 20683.4125,-399.3497"/>
@@ -2800,7 +2800,7 @@
 <text text-anchor="middle" x="20596.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">pwm_sync_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_sync_vector.vhd -->
-<g id="edge175" class="edge">
+<g id="edge176" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/pwm_axi/hdl/pwm_sync_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M20476.3073,-431.8314C20497.8401,-422.2018 20524.4651,-410.295 20547.1954,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="20548.6454,-403.3155 20556.3452,-396.038 20545.7876,-396.9254 20548.6454,-403.3155"/>
@@ -2954,19 +2954,19 @@
 <polygon fill="#000000" stroke="#000000" points="21666.9562,-392.4449 21656.3792,-393.0589 21665.0306,-399.1749 21666.9562,-392.4449"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/ad9746.v -->
-<g id="edge188" class="edge">
+<g id="edge185" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/ad9746.v</title>
 <path fill="none" stroke="#000000" d="M21879.492,-431.9116C21844.8607,-422.8643 21802.8377,-411.1858 21758.0014,-396.2986"/>
 <polygon fill="#000000" stroke="#000000" points="21758.9867,-392.9375 21748.3927,-393.0729 21756.7589,-399.5735 21758.9867,-392.9375"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/adc_dac_spi_control.v -->
-<g id="edge185" class="edge">
+<g id="edge186" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/adc_dac_spi_control.v</title>
 <path fill="none" stroke="#000000" d="M21925.1749,-431.8314C21911.3622,-422.7074 21894.4546,-411.539 21879.6273,-401.7449"/>
 <polygon fill="#000000" stroke="#000000" points="21881.4498,-398.7541 21871.1767,-396.1628 21877.5916,-404.5949 21881.4498,-398.7541"/>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_adc_dac_clk.v -->
-<g id="edge190" class="edge">
+<g id="edge187" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_adc_dac_clk.v</title>
 <path fill="none" stroke="#000000" d="M21854.3233,-437.2946C21780.1709,-427.4101 21675.7266,-412.8394 21575.0028,-396.1836"/>
 <polygon fill="#000000" stroke="#000000" points="21575.3929,-392.7004 21564.9543,-394.5128 21574.2448,-399.6056 21575.3929,-392.7004"/>
@@ -2980,7 +2980,7 @@
 <text text-anchor="middle" x="22060.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">redpitaya_converters_12_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_comm.vhd -->
-<g id="edge191" class="edge">
+<g id="edge184" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M21979.9332,-431.8314C21993.6191,-422.7074 22010.3717,-411.539 22025.0629,-401.7449"/>
 <polygon fill="#000000" stroke="#000000" points="22027.0569,-404.6221 22033.436,-396.1628 22023.174,-398.7977 22027.0569,-404.6221"/>
@@ -2994,7 +2994,7 @@
 <text text-anchor="middle" x="22338.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">redpitaya_converters_12_handComm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_handComm.vhd -->
-<g id="edge187" class="edge">
+<g id="edge190" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M22049.5861,-431.9243C22105.0983,-421.5697 22174.8503,-408.5589 22231.9306,-397.9118"/>
 <polygon fill="#000000" stroke="#000000" points="22232.8807,-401.2951 22242.0693,-396.0207 22231.5971,-394.4138 22232.8807,-401.2951"/>
@@ -3008,7 +3008,7 @@
 <text text-anchor="middle" x="22622.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">redpitaya_converters_12_sync_bit.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_sync_bit.vhd -->
-<g id="edge184" class="edge">
+<g id="edge188" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_sync_bit.vhd</title>
 <path fill="none" stroke="#000000" d="M22051.0114,-440.9189C22155.738,-431.046 22326.6318,-414.3605 22484.3442,-396.1375"/>
 <polygon fill="#000000" stroke="#000000" points="22485.1824,-399.5639 22494.7126,-394.935 22484.3759,-392.6105 22485.1824,-399.5639"/>
@@ -3022,7 +3022,7 @@
 <text text-anchor="middle" x="22907.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">redpitaya_converters_12_sync_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_sync_vector.vhd -->
-<g id="edge186" class="edge">
+<g id="edge191" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/redpitaya_converters_12/hdl/redpitaya_converters_12_sync_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M22050.956,-445.1453C22201.1195,-437.344 22496.9166,-420.4685 22757.8249,-396.1502"/>
 <polygon fill="#000000" stroke="#000000" points="22758.2423,-399.6265 22767.8719,-395.2084 22757.5889,-392.6571 22758.2423,-399.6265"/>
@@ -3060,7 +3060,7 @@
 <text text-anchor="middle" x="23170.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterComplex_dyn_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_comm.vhd -->
-<g id="edge195" class="edge">
+<g id="edge192" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M23477.4938,-434.6425C23419.3104,-423.901 23341.0676,-409.4561 23278.1589,-397.8422"/>
 <polygon fill="#000000" stroke="#000000" points="23278.6688,-394.3773 23268.1995,-396.0036 23277.3979,-401.261 23278.6688,-394.3773"/>
@@ -3074,7 +3074,7 @@
 <text text-anchor="middle" x="23416.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterComplex_dyn_handcomm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_handcomm.vhd -->
-<g id="edge192" class="edge">
+<g id="edge194" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_handcomm.vhd</title>
 <path fill="none" stroke="#000000" d="M23524.3429,-431.8314C23505.3406,-422.3302 23481.9044,-410.6121 23461.755,-400.5374"/>
 <polygon fill="#000000" stroke="#000000" points="23463.2657,-397.3797 23452.7562,-396.038 23460.1352,-403.6407 23463.2657,-397.3797"/>
@@ -3088,7 +3088,7 @@
 <text text-anchor="middle" x="23974.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterComplex_dyn_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_logic.vhd -->
-<g id="edge194" class="edge">
+<g id="edge195" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterComplex_dyn/hdl/shifterComplex_dyn_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M23643.9613,-435.5163C23706.9765,-424.5572 23794.1531,-409.396 23863.1825,-397.3909"/>
 <polygon fill="#000000" stroke="#000000" points="23863.9781,-400.8052 23873.2305,-395.6434 23862.7787,-393.9087 23863.9781,-400.8052"/>
@@ -3146,7 +3146,7 @@
 <text text-anchor="middle" x="24186.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterReal_dyn_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_comm.vhd -->
-<g id="edge198" class="edge">
+<g id="edge200" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M24466.6937,-435.6028C24414.3626,-424.8375 24342.1506,-409.9825 24284.1668,-398.0544"/>
 <polygon fill="#000000" stroke="#000000" points="24284.7532,-394.6018 24274.253,-396.015 24283.3426,-401.4582 24284.7532,-394.6018"/>
@@ -3160,7 +3160,7 @@
 <text text-anchor="middle" x="24405.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterReal_dyn_handcomm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_handcomm.vhd -->
-<g id="edge197" class="edge">
+<g id="edge199" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_handcomm.vhd</title>
 <path fill="none" stroke="#000000" d="M24503.6234,-431.8314C24486.7125,-422.5368 24465.9417,-411.1208 24447.8861,-401.1971"/>
 <polygon fill="#000000" stroke="#000000" points="24449.1759,-397.9122 24438.7265,-396.1628 24445.8042,-404.0468 24449.1759,-397.9122"/>
@@ -3174,7 +3174,7 @@
 <text text-anchor="middle" x="24910.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterReal_dyn_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_logic.vhd -->
-<g id="edge199" class="edge">
+<g id="edge198" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M24606.588,-436.5418C24664.4864,-425.3956 24747.4435,-409.4252 24812.0899,-396.9799"/>
 <polygon fill="#000000" stroke="#000000" points="24813.1434,-400.3415 24822.3014,-395.0141 24811.8201,-393.4677 24813.1434,-400.3415"/>
@@ -3188,7 +3188,7 @@
 <text text-anchor="middle" x="24668.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">shifterReal_dyn_synchronizer_vector.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_synchronizer_vector.vhd -->
-<g id="edge200" class="edge">
+<g id="edge197" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/shifterReal_dyn/hdl/shifterReal_dyn_synchronizer_vector.vhd</title>
 <path fill="none" stroke="#000000" d="M24569.9894,-431.8314C24587.1075,-422.4942 24608.1508,-411.016 24626.4024,-401.0606"/>
 <polygon fill="#000000" stroke="#000000" points="24628.2787,-404.024 24635.3817,-396.1628 24624.9267,-397.8788 24628.2787,-404.024"/>
@@ -3224,7 +3224,7 @@
 <text text-anchor="middle" x="25100.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">slv_to_sl_axi_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_comm.vhd -->
-<g id="edge203" class="edge">
+<g id="edge204" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M25248.972,-431.9243C25221.9043,-422.0815 25188.2363,-409.8386 25159.8253,-399.5073"/>
 <polygon fill="#000000" stroke="#000000" points="25161.0029,-396.2114 25150.4088,-396.0831 25158.6107,-402.7899 25161.0029,-396.2114"/>
@@ -3238,7 +3238,7 @@
 <text text-anchor="middle" x="25298.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">slv_to_sl_axi_handCom.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_handCom.vhd -->
-<g id="edge202" class="edge">
+<g id="edge203" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_handCom.vhd</title>
 <path fill="none" stroke="#000000" d="M25298.6802,-431.8314C25298.6802,-424.131 25298.6802,-414.9743 25298.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="25302.1803,-406.4132 25298.6802,-396.4133 25295.1803,-406.4133 25302.1803,-406.4132"/>
@@ -3252,7 +3252,7 @@
 <text text-anchor="middle" x="25504.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">slv_to_sl_axi_sync_slv.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_sync_slv.vhd -->
-<g id="edge204" class="edge">
+<g id="edge202" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/slv_to_sl_axi/hdl/slv_to_sl_axi_sync_slv.vhd</title>
 <path fill="none" stroke="#000000" d="M25350.3968,-431.9243C25378.5582,-422.0815 25413.5864,-409.8386 25443.1455,-399.5073"/>
 <polygon fill="#000000" stroke="#000000" points="25444.6571,-402.6866 25452.9423,-396.0831 25442.3475,-396.0786 25444.6571,-402.6866"/>
@@ -3282,7 +3282,7 @@
 <text text-anchor="middle" x="25722.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">switchComplex_handComm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex_handComm.vhd -->
-<g id="edge206" class="edge">
+<g id="edge207" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex_handComm.vhd</title>
 <path fill="none" stroke="#000000" d="M25885.202,-431.9243C25855.2789,-421.9959 25817.9959,-409.6255 25786.6898,-399.2382"/>
 <polygon fill="#000000" stroke="#000000" points="25787.7742,-395.9104 25777.1808,-396.0831 25785.5698,-402.5543 25787.7742,-395.9104"/>
@@ -3296,7 +3296,7 @@
 <text text-anchor="middle" x="25939.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">switchComplex_synch.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex_synch.vhd -->
-<g id="edge207" class="edge">
+<g id="edge206" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchComplex/hdl/switchComplex_synch.vhd</title>
 <path fill="none" stroke="#000000" d="M25939.6802,-431.8314C25939.6802,-424.131 25939.6802,-414.9743 25939.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="25943.1803,-406.4132 25939.6802,-396.4133 25936.1803,-406.4133 25943.1803,-406.4132"/>
@@ -3346,7 +3346,7 @@
 <text text-anchor="middle" x="26513.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">switchReal_synch.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal_synch.vhd -->
-<g id="edge208" class="edge">
+<g id="edge210" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal_synch.vhd</title>
 <path fill="none" stroke="#000000" d="M26513.6802,-431.8314C26513.6802,-424.131 26513.6802,-414.9743 26513.6802,-406.4166"/>
 <polygon fill="#000000" stroke="#000000" points="26517.1803,-406.4132 26513.6802,-396.4133 26510.1803,-406.4133 26517.1803,-406.4132"/>
@@ -3360,7 +3360,7 @@
 <text text-anchor="middle" x="26676.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">switchReal_wb.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal_wb.vhd -->
-<g id="edge210" class="edge">
+<g id="edge208" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/switchReal/hdl/switchReal_wb.vhd</title>
 <path fill="none" stroke="#000000" d="M26554.812,-431.8314C26576.6123,-422.2018 26603.568,-410.295 26626.5806,-400.1299"/>
 <polygon fill="#000000" stroke="#000000" points="26628.111,-403.2802 26635.8442,-396.038 26625.2826,-396.877 26628.111,-403.2802"/>
@@ -3382,7 +3382,7 @@
 <text text-anchor="middle" x="26855.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">syncTrigStream_comm.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream_comm.vhd -->
-<g id="edge211" class="edge">
+<g id="edge212" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream_comm.vhd</title>
 <path fill="none" stroke="#000000" d="M27234.1661,-439.4553C27166.2688,-429.2042 27060.4032,-412.9654 26959.1493,-396.2288"/>
 <polygon fill="#000000" stroke="#000000" points="26959.4887,-392.7374 26949.051,-394.5554 26958.3442,-399.6432 26959.4887,-392.7374"/>
@@ -3410,7 +3410,7 @@
 <text text-anchor="middle" x="27751.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">syncTrigStream_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream_logic.vhd -->
-<g id="edge212" class="edge">
+<g id="edge211" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/syncTrigStream/hdl/syncTrigStream_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M27374.9629,-439.7188C27443.3054,-429.5861 27550.3146,-413.3642 27653.0944,-396.0752"/>
 <polygon fill="#000000" stroke="#000000" points="27653.7482,-399.5144 27663.0262,-394.3989 27652.5832,-392.612 27653.7482,-399.5144"/>
@@ -3474,7 +3474,7 @@
 <text text-anchor="middle" x="6154.6802" y="-445.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">windowReal.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/wb_windowReal.vhd -->
-<g id="edge217" class="edge">
+<g id="edge219" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/wb_windowReal.vhd</title>
 <path fill="none" stroke="#000000" d="M6202.3729,-431.8314C6227.9875,-422.0734 6259.7404,-409.977 6286.6542,-399.7242"/>
 <polygon fill="#000000" stroke="#000000" points="6288.2316,-402.8687 6296.3305,-396.038 6285.7396,-396.3273 6288.2316,-402.8687"/>
@@ -3502,7 +3502,7 @@
 <text text-anchor="middle" x="5502.6802" y="-373.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">windowReal_logic.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal_logic.vhd -->
-<g id="edge219" class="edge">
+<g id="edge217" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/windowReal/hdl/windowReal_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M6095.7494,-446.5441C5994.3267,-440.1225 5780.1221,-424.485 5589.8634,-396.091"/>
 <polygon fill="#000000" stroke="#000000" points="5590.3718,-392.6281 5579.9617,-394.5983 5589.3283,-399.5499 5590.3718,-392.6281"/>
@@ -3598,7 +3598,7 @@
 <text text-anchor="middle" x="8499.6802" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">xcorr_prn_slow_complex_correl.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_mux.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_correl.vhd -->
-<g id="edge228" class="edge">
+<g id="edge227" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_mux.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_correl.vhd</title>
 <path fill="none" stroke="#000000" d="M8593.8851,-287.8314C8577.6197,-278.5368 8557.6416,-267.1208 8540.2751,-257.1971"/>
 <polygon fill="#000000" stroke="#000000" points="8541.8841,-254.0854 8531.4651,-252.1628 8538.4111,-260.1631 8541.8841,-254.0854"/>
@@ -3612,7 +3612,7 @@
 <text text-anchor="middle" x="8752.6802" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">xcorr_prn_slow_complex_ram.vhd</text>
 </g>
 <!-- /home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_mux.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_ram.vhd -->
-<g id="edge227" class="edge">
+<g id="edge228" class="edge">
 <title>/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_mux.vhd&#45;&gt;/home/runner/work/teroshdl&#45;documenter&#45;demo/teroshdl&#45;documenter&#45;demo/fpga_ip/xcorr_prn_slow_complex/hdl/xcorr_prn_slow_complex_ram.vhd</title>
 <path fill="none" stroke="#000000" d="M8657.7277,-287.8314C8674.1222,-278.5368 8694.2588,-267.1208 8711.7631,-257.1971"/>
 <polygon fill="#000000" stroke="#000000" points="8713.6699,-260.1395 8720.643,-252.1628 8710.2176,-254.05 8713.6699,-260.1395"/>

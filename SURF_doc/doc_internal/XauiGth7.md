@@ -73,13 +73,13 @@
 ## Instantiations
 
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_XauiGth7Core: surf.XauiGth7Core
-**Description**
+</br>**Description**
 ------------------
  10 GigE XAUI Core
 ------------------
@@ -87,7 +87,7 @@
 - RstSync_0: surf.RstSync
 - RstSync_1: surf.RstSync
 - U_XauiReg: surf.XauiReg
-**Description**
+</br>**Description**
 ------------------------------
  Configuration/Status Register
 ------------------------------

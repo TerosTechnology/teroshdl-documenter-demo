@@ -108,19 +108,19 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Command Filter: CSb control 
 - unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Bitcnt counter / Bitcnt increases until it hit the max value then wait reset. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Search opcode @ 7th opcode 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -134,7 +134,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Address swap should happen in outclk domain.  The state machine operates in inclk domain.  The state generates mux selection signal.  The signal latched in outclk domain then activates the mux. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -146,7 +146,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  - END:   Passthrough Mux (!important) ------------------------------------ /////////////////  State Machine // ///////////////// 
 - unnamed: (  )
   - **Type:** always_comb

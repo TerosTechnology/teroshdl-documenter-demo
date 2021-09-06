@@ -81,7 +81,7 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Block size based on the address.  This is used for bytepad() and also pad10*1()  assign block_addr_limit = KeccakRate[strength_i];  but below is easier to understand 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

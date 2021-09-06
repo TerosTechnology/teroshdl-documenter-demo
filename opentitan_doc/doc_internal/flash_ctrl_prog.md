@@ -70,5 +70,5 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  when error'd, continue to drain all program fifo contents like normal operation  if this is not done, software may fill up the fifo without anyone  draining the contents, leading to a lockup 

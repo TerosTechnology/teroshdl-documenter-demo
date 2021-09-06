@@ -110,7 +110,7 @@
 ## Processes
 - unnamed: ( data_clk, resetn )
 - unnamed: ( data_clk )
-**Description**
+</br>**Description**
  Generate tick signal in the DATA_CLK_I domain 
 - unnamed: ( clk )
 - unnamed: ( data_clk )

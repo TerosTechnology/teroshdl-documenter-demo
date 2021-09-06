@@ -77,15 +77,15 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dcfilt_coeff is flopped so to remove warnings from vivado 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  removing dc offset 
 ## Instantiations
 
 - i_dsp48e1: DSP48E1
-**Description**
+</br>**Description**
  dsp slice instance ((D-A)*B)+C
 

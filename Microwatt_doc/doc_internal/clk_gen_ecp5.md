@@ -36,6 +36,6 @@
 ## Instantiations
 
 - clkgen: EHXPLLL
-**Description**
+</br>**Description**
  FIXME: EHXPLLL lock signal active low?!?
 

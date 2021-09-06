@@ -154,7 +154,7 @@
 ## Processes
 - rx_oversampling: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Sample scl_i and sda_i at system clock 
 - watermark_transition: ( @ (posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -169,7 +169,7 @@
 - u_i2c_txfifo: prim_fifo_sync
 - u_i2c_acqfifo: prim_fifo_sync
 - u_i2c_sync_scl: prim_flop_2sync
-**Description**
+</br>**Description**
  sync the incoming SCL and SDA signals
 
 - u_i2c_sync_sda: prim_flop_2sync

@@ -57,7 +57,7 @@
 - to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_8) </font> <font id="function_return">return string </font>
 - to_string <font id="function_arguments">(stmw : T_SIM_STREAM_WORD_32) </font> <font id="function_return">return string </font>
 - sim_CRC8 <font id="function_arguments">(words		: T_SIM_STREAM_WORD_VECTOR_8) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  checksum functions
  ================================================================
 

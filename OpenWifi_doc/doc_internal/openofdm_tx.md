@@ -61,7 +61,7 @@
 ## Instantiations
 
 - dot11_tx: dot11_tx
-**Description**
+</br>**Description**
 
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg21;
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg22;
@@ -77,6 +77,6 @@
     */
 
 - openofdm_tx_s_axi_i: openofdm_tx_s_axi
-**Description**
+</br>**Description**
 assign bram_wen = 0;
 

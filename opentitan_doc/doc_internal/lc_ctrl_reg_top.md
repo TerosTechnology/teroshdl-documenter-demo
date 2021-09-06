@@ -154,11 +154,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -168,97 +168,97 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test_fatal_prog_error: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
    F[fatal_prog_error]: 0:0
 
 - u_alert_test_fatal_state_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_state_error]: 1:1
 
 - u_alert_test_fatal_bus_integ_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_bus_integ_error]: 2:2
 
 - u_status_ready: prim_subreg_ext
-**Description**
+</br>**Description**
  R[status]: V(True)
    F[ready]: 0:0
 
 - u_status_transition_successful: prim_subreg_ext
-**Description**
+</br>**Description**
    F[transition_successful]: 1:1
 
 - u_status_transition_count_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[transition_count_error]: 2:2
 
 - u_status_transition_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[transition_error]: 3:3
 
 - u_status_token_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[token_error]: 4:4
 
 - u_status_flash_rma_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[flash_rma_error]: 5:5
 
 - u_status_otp_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[otp_error]: 6:6
 
 - u_status_state_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[state_error]: 7:7
 
 - u_status_bus_integ_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bus_integ_error]: 8:8
 
 - u_status_otp_partition_error: prim_subreg_ext
-**Description**
+</br>**Description**
    F[otp_partition_error]: 9:9
 
 - u_claim_transition_if: prim_subreg_ext
-**Description**
+</br>**Description**
  R[claim_transition_if]: V(True)
 
 - u_transition_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[transition_regwen]: V(True)
 
 - u_transition_cmd: prim_subreg_ext
-**Description**
+</br>**Description**
  R[transition_cmd]: V(True)
 
 - u_transition_ctrl: prim_subreg_ext
-**Description**
+</br>**Description**
  R[transition_ctrl]: V(True)
 
 - u_transition_target: prim_subreg_ext
-**Description**
+</br>**Description**
  R[transition_target]: V(True)
 
 - u_otp_vendor_test_ctrl: prim_subreg_ext
-**Description**
+</br>**Description**
  R[otp_vendor_test_ctrl]: V(True)
 
 - u_otp_vendor_test_status: prim_subreg_ext
-**Description**
+</br>**Description**
  R[otp_vendor_test_status]: V(True)
 
 - u_lc_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[lc_state]: V(True)
 
 - u_lc_transition_cnt: prim_subreg_ext
-**Description**
+</br>**Description**
  R[lc_transition_cnt]: V(True)
 
 - u_lc_id_state: prim_subreg_ext
-**Description**
+</br>**Description**
  R[lc_id_state]: V(True)
 

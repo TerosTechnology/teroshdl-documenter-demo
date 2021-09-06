@@ -26,5 +26,5 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Data is latched on the positive edge of the clock 

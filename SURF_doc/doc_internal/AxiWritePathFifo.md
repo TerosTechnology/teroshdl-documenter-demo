@@ -100,27 +100,27 @@
 | RESP_FIFO_SIZE_C | integer |  RESP_BITS_C + ID_BITS_C                                                                                                                                    |             |
 ## Functions
 - addrToSlv <font id="function_arguments">(din : AxiWriteMasterType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert address record to slv
 
 - slvToAddr <font id="function_arguments">(din    : in    slv(ADDR_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> slave  : in    AxiWriteMasterType;<br><span style="padding-left:20px"> master : inout AxiWriteMasterType ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to address record
 
 - dataToSlv <font id="function_arguments">(din : AxiWriteMasterType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert data record to slv
 
 - slvToData <font id="function_arguments">(din    : in    slv(DATA_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> slave  : in    AxiWriteMasterType;<br><span style="padding-left:20px"> master : inout AxiWriteMasterType ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to data record
 
 - respToSlv <font id="function_arguments">(din : AxiWriteSlaveType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert resp record to slv
 
 - slvToResp <font id="function_arguments">(din    : in    slv(RESP_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> master : in    AxiWriteMasterType;<br><span style="padding-left:20px"> slave  : inout AxiWriteSlaveType  ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to resp record
 
 ## Processes
@@ -128,7 +128,7 @@
              addrFifoDout, addrFifoAFull, addrFifoValid,
              dataFifoDout, dataFifoAFull, dataFifoValid,
              respFifoDout, respFifoAFull, respFifoValid )
-**Description**
+</br>**Description**
 -----------------------  Fifo Outputs ----------------------- 
 ## Instantiations
 

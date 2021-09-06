@@ -28,7 +28,7 @@
 - encode <font id="function_arguments">( constant data : character) </font> <font id="function_return">return string </font>
 - decode <font id="function_arguments">( constant code : string) </font> <font id="function_return">return character </font>
 - encode <font id="function_arguments">( constant data : string) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Predefined composite types
 ---------------------------------------------------------------------------

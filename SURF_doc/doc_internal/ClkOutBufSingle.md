@@ -44,6 +44,6 @@
 ## Instantiations
 
 - OBUFT_I: OBUFT
-**Description**
+</br>**Description**
  Single ended output buffer
 

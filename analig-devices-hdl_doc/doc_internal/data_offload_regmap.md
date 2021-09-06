@@ -107,11 +107,11 @@
 ## Processes
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  write interface 
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
 read interface for common registers 
 - unnamed: ( @(posedge src_clk) )
   - **Type:** always
@@ -120,7 +120,7 @@ read interface for common registers
 ## Instantiations
 
 - i_dst_fsm_status: sync_data
-**Description**
+</br>**Description**
  read interface */
  Clock Domain Crossing Logic for reset, control and status signals
 

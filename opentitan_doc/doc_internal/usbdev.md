@@ -210,25 +210,25 @@
 ## Processes
 - proc_map_rxenable: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  RX enables 
 - proc_map_stall: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  STALL for both directions 
 - proc_map_iso: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  CDC: ok, quasi-static 
 - proc_map_buf_size: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  CDC: flop_2sync for ready bit covers others so assigns are ok 
 - proc_map_rdy_reg2hw: (  )
   - **Type:** always_comb
 - proc_data_toggle_clear_qe: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  CDC: We synchronize the qe (write pulse) and assume that the  rest of the register remains stable 
 - proc_usb_data_toggle_clear: (  )
   - **Type:** always_comb
@@ -244,17 +244,17 @@
   - **Type:** always_comb
 - proc_map_pend: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Update the pending bit by copying the ready bit that is about to clear 
 - proc_stall_tieoff: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Clear the stall flag when a SETUP is received  CDC: usb_out_endpoint is synchronized implicitly by  setup_received, as it is stable 
 - unnamed: ( @(posedge clk_usb_48mhz_i or negedge rst_usb_48mhz_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 ///////////////////////////////////////  USB aon detector signaling          // /////////////////////////////////////// 
 - unnamed: ( @(posedge clk_aon_i or negedge rst_aon_ni) )
   - **Type:** always_ff
@@ -268,13 +268,13 @@
 - usbdev_rdysync: prim_flop_2sync
 - usbdev_data_toggle_clear: prim_pulse_sync
 - usbdev_setsent: prim_pulse_sync
-**Description**
+</br>**Description**
  Clear of ready and set of sent is a pulse in USB clock domain
  but needs to ensure register bit is cleared/set in TLUL domain
  usbdev_pulsesync takes pulse in clk_src to pulse in clk_dst
 
 - usbdev_sync_in_err: prim_pulse_sync
-**Description**
+</br>**Description**
  Event (pulse) synchronization
 
 - usbdev_sync_out_err: prim_pulse_sync
@@ -284,57 +284,57 @@
 - sync_usb_event_rx_bitstuff_err: prim_pulse_sync
 - sync_usb_event_frame: prim_pulse_sync
 - usbdev_impl: usbdev_usbif
-**Description**
+</br>**Description**
 //////////////////////////////////////////////////////
  USB interface -- everything is in USB clock domain //
 //////////////////////////////////////////////////////
 
 - cdc_usb_to_sys: prim_flop_2sync
-**Description**
+</br>**Description**
 ///////////////////////////////
  Control signal / status CDC //
 ///////////////////////////////
  USB clk -> sys clk
 
 - cdc_sys_to_usb: prim_flop_2sync
-**Description**
+</br>**Description**
  sys clk -> USB clk
 
 - syncevent: usbdev_flop_2syncpulse
-**Description**
+</br>**Description**
  CDC for event signals (arguably they are there for a long time so would be ok)
  Just want a pulse to ensure only one interrupt for an event
 
 - usbdev_resume: prim_pulse_sync
-**Description**
+</br>**Description**
  Resume is a single pulse so needs pulsesync
 
 - usbdev_devclr: prim_pulse_sync
-**Description**
+</br>**Description**
  resets etc cause the device address to clear
 
 - sync_usb_event_av_empty: prim_pulse_sync
-**Description**
+</br>**Description**
  AV empty is a single pulse so needs pulsesync
 
 - sync_usb_event_rx_full: prim_pulse_sync
-**Description**
+</br>**Description**
  RX full is a single pulse so needs pulsesync
 
 - u_tlul2sram: tlul_adapter_sram
-**Description**
+</br>**Description**
  TL-UL to SRAM adapter
 
 - u_memory_2p: prim_ram_2p_async_adv
-**Description**
+</br>**Description**
  SRAM Wrapper
 
 - u_reg: usbdev_reg_top
-**Description**
+</br>**Description**
  Register module
 
 - intr_hw_pkt_received: prim_intr_hw
-**Description**
+</br>**Description**
  Interrupts
 
 - intr_hw_pkt_sent: prim_intr_hw
@@ -355,7 +355,7 @@
 - intr_frame: prim_intr_hw
 - i_usbdev_iomux: usbdev_iomux
 - usbdev_sync_phy_config: prim_flop_2sync
-**Description**
+</br>**Description**
  sys clk -> USB clk
 
 - u_tgl_sync: prim_flop_2sync

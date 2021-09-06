@@ -125,7 +125,7 @@
 ## Instantiations
 
 - ip_eth_rx_inst: ip_eth_rx
-**Description**
+</br>**Description**
 
  * IP frame processing
  */

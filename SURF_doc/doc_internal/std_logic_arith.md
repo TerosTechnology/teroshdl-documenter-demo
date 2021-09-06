@@ -29,13 +29,13 @@
 - CONV_STD_LOGIC_VECTOR <font id="function_arguments">(ARG: SIGNED;<br><span style="padding-left:20px"> SIZE: INTEGER) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
 - CONV_STD_LOGIC_VECTOR <font id="function_arguments">(ARG: STD_ULOGIC;<br><span style="padding-left:20px"> SIZE: INTEGER) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
 - EXT <font id="function_arguments">(ARG: STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> SIZE: INTEGER) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  zero extend STD_LOGIC_VECTOR (ARG) to SIZE, 
  SIZE < 0 is same as SIZE = 0
  returns STD_LOGIC_VECTOR(SIZE-1 downto 0)
 
 - SXT <font id="function_arguments">(ARG: STD_LOGIC_VECTOR;<br><span style="padding-left:20px"> SIZE: INTEGER) </font> <font id="function_return">return STD_LOGIC_VECTOR </font>
-**Description**
+</br>**Description**
  sign extend STD_LOGIC_VECTOR (ARG) to SIZE, 
  SIZE < 0 is same as SIZE = 0
  return STD_LOGIC_VECTOR(SIZE-1 downto 0)

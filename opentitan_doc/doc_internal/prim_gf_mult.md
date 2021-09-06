@@ -69,14 +69,14 @@
 | CntWidth | int  | $clog2(Loops)          |             |
 ## Functions
 - gf_mult2 <font id="function_arguments">(logic [Width-1:0] operand)</font> <font id="function_return">return (logic [Width-1:0])</font>
-**Description**
+</br>**Description**
  GF(2^Width) * x
 
 - gen_matrix <font id="function_arguments">(logic)</font> <font id="function_return">return (logic [StagesPerCycle-1:0][Width-1:0])</font>
-**Description**
+</br>**Description**
  Matrix generate step
 
 - gf_mult <font id="function_arguments">(logic [StagesPerCycle-1:0][Width-1)</font> <font id="function_return">return (logic [Width-1:0])</font>
-**Description**
+</br>**Description**
  Galois multiply step
 

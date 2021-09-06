@@ -101,14 +101,14 @@
 | ctrl_twi_busy_c   | natural |  31                        |  r/-: Set if TWI unit is busy                     |
 ## Processes
 - rw_access: ( clk_i )
-**Description**
+</br>**Description**
  Read/Write Access ----------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - clock_phase_gen: ( clk_i )
-**Description**
+</br>**Description**
  generate four non-overlapping clock ticks at twi_clk/4 -- 
 - twi_rtx_unit: ( clk_i )
-**Description**
+</br>**Description**
  last step  TWI Transceiver ------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - clock_stretching: ( ctrl, arbiter, twi_scl_o, twi_scl_i_ff1 )
-**Description**
+</br>**Description**
  Clock Stretching Detector --------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

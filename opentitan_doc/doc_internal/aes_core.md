@@ -165,7 +165,7 @@
 ## Processes
 - key_init_get: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////  Inputs // ////////// 
 - iv_get: (  )
   - **Type:** always_comb
@@ -175,45 +175,45 @@
   - **Type:** always_comb
 - key_init_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////////////////  Key, IV and Data // ////////////////////  Initial Key registers 
 - key_init_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - iv_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  IV registers 
 - iv_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - data_in_prev_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Previous input data register 
 - data_in_prev_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - state_in_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Convert input data/IV to state format (every word corresponds to one state column).  Mux for state input 
 - add_state_in_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Mux for addition to state input 
 - add_state_out_mux: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Mux for addition to state output 
 - data_in_reg_clear: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Input data register clear 
 - reg_sp_enc_err: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  We need to register the collected error signal to avoid circular loops in the core controller  related to iv_we and data_out_we. 
 - data_out_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 ///////////  Outputs // /////////// 
 - key_reg_put: (  )
   - **Type:** always_comb
@@ -223,40 +223,40 @@
   - **Type:** always_comb
 - ctrl_err_storage_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Fatal alert conditions need to remain asserted until reset. 
 ## Instantiations
 
 - u_aes_prng_clearing: aes_prng_clearing
-**Description**
+</br>**Description**
  The clearing PRNG provides pseudo-random data for register clearing purposes.
 
 - u_aes_ctr: aes_ctr
-**Description**
+</br>**Description**
 ///////////
  Counter //
 ///////////
 
 - u_aes_cipher_core: aes_cipher_core
-**Description**
+</br>**Description**
  Cipher core
 
 - u_ctrl_reg_shadowed: aes_ctrl_reg_shadowed
-**Description**
+</br>**Description**
 ////////////////////
  Control Register //
 ////////////////////
  Shadowed register primitve
 
 - u_aes_control: aes_control
-**Description**
+</br>**Description**
 ///////////
  Control //
 ///////////
  Control
 
 - u_aes_data_in_prev_sel_buf_chk: aes_sel_buf_chk
-**Description**
+</br>**Description**
 /////////////
  Selectors //
 /////////////

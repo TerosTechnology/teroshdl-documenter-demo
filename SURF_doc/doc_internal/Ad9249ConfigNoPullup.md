@@ -91,11 +91,11 @@
 - comb: ( adcAck, adcRdData, axilReadMaster, axilRst, axilWriteMaster, r )
 - seq: ( axilClk )
 - unnamed: ( axilClk )
-**Description**
+</br>**Description**
  Generate clock enable for state machine 
 - unnamed: ( axilClk )
-**Description**
+</br>**Description**
  Control shift memory register 
 - unnamed: ( curState, adcWrReq, adcRdReq, shiftCntEn )
-**Description**
+</br>**Description**
  State machine control 

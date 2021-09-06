@@ -124,27 +124,27 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_channel: axi_ad9265_channel
-**Description**
+</br>**Description**
  channel
 
 - i_if: axi_ad9265_if
-**Description**
+</br>**Description**
  main (device interface)
 
 - i_delay_cntrl: up_delay_cntrl
-**Description**
+</br>**Description**
  adc delay control
 
 - i_up_adc_common: up_adc_common
-**Description**
+</br>**Description**
  common processor control
 
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  up bus interface
 

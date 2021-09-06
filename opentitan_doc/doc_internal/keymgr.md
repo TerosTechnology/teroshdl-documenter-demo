@@ -154,24 +154,24 @@
 - u_lfsr: prim_lfsr
 - u_ctrl: keymgr_ctrl
 - u_cfgen: keymgr_cfg_en
-**Description**
+</br>**Description**
  key manager registers cannot be changed once an operation starts
 
 - u_sw_binding_regwen: keymgr_cfg_en
-**Description**
+</br>**Description**
  software clears the enable
  hardware restores it upon successful advance
 
 - u_checks: keymgr_input_checks
 - u_kmac_if: keymgr_kmac_if
 - u_sideload_ctrl: keymgr_sideload_key_ctrl
-**Description**
+</br>**Description**
 ///////////////////////////////////
   Side load key storage
 ///////////////////////////////////
 
 - u_intr_op_done: prim_intr_hw
-**Description**
+</br>**Description**
 ///////////////////////////////////
   Alerts and Interrupts
 ///////////////////////////////////

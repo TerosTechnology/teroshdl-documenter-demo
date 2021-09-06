@@ -28,7 +28,7 @@
  .. wavedrom::
 
     
-![alt text](wavedrom_p0Yl0.svg "title") 
+![alt text](wavedrom_SeN90.svg "title") 
 
 
  After power-up, the output ports ``DataIn_high`` and ``DataIn_low`` both equal

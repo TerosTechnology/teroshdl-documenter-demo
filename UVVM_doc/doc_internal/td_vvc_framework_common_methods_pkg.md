@@ -4,14 +4,14 @@
 ## Functions
 - await_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant timeout                   : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
 - await_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant timeout                   : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  await_completion
 -----------------------------------------
  See description above
 
 - await_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> constant timeout                   : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  await_completion
 -----------------------------------------
@@ -20,14 +20,14 @@
    until timeout.
 
 - await_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> constant timeout                   : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  await_completion
 -----------------------------------------
  See description above
 
 - await_any_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant lastness                  : in    t_lastness;<br><span style="padding-left:20px"> constant timeout                   : in    time           := 100 ns;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant awaiting_completion_idx   : in    natural        := 0;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  await_any_completion
 -----------------------------------------
@@ -37,21 +37,21 @@
    - until global_awaiting_completion /= '1' (any of the other involved VVCs completed).
 
 - await_any_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant lastness                  : in    t_lastness;<br><span style="padding-left:20px"> constant timeout                   : in    time           := 100 ns;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant awaiting_completion_idx   : in    natural        := 0;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Overload without vvc_channel
 
 - await_any_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> constant lastness                  : in    t_lastness;<br><span style="padding-left:20px"> constant timeout                   : in    time           := 100 ns;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant awaiting_completion_idx   : in    natural        := 0;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Overload with wanted_idx
  - Awaits completion of the specified command 'wanted_idx' in the queue for the specified VVC, or
    - until global_awaiting_completion /= '1' (any of the other involved VVCs completed).
 
 - await_any_completion <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> constant lastness                  : in    t_lastness;<br><span style="padding-left:20px"> constant timeout                   : in    time           := 100 ns;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant awaiting_completion_idx   : in    natural        := 0;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Overload without vvc_channel
 
 - disable_log_msg <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant msg_id                    : in    t_msg_id;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant quietness                 : in    t_quietness    := NON_QUIET;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  disable_log_msg
 -----------------------------------------
@@ -59,14 +59,14 @@
  - Disables the specified msg_id for the VVC
 
 - disable_log_msg <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant msg_id                    : in    t_msg_id;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant quietness                 : in    t_quietness    := NON_QUIET;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  disable_log_msg
 -----------------------------------------
  See description above
 
 - enable_log_msg <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant msg_id                    : in    t_msg_id;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant quietness                 : in    t_quietness    := NON_QUIET;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  enable_log_msg
 -----------------------------------------
@@ -74,14 +74,14 @@
  - Enables the specified msg_id for the VVC
 
 - enable_log_msg <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant msg_id                    : in    t_msg_id;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant quietness                 : in    t_quietness    := NON_QUIET;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  enable_log_msg
 -----------------------------------------
  See description above
 
 - flush_command_queue <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  flush_command_queue
 -----------------------------------------
@@ -89,14 +89,14 @@
  - Flushes the command queue of the specified VVC
 
 - flush_command_queue <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  flush_command_queue
 -----------------------------------------
  See description above
 
 - fetch_result <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> variable result                    : out   t_vvc_result;<br><span style="padding-left:20px"> variable fetch_is_accepted         : out   boolean;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant alert_level               : in    t_alert_level  := TB_ERROR;<br><span style="padding-left:20px"> constant caller_name               : in    string         := "base_procedure";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  fetch_result
 -----------------------------------------
@@ -108,24 +108,24 @@
  support that the BFM returns something other than a std_logic_vector.
 
 - fetch_result <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> variable result                    : out   t_vvc_result;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant alert_level               : in    t_alert_level  := TB_ERROR;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -- Same as above but without fetch_is_accepted.
  -- Will trigger alert with alert_level if not OK.
 
 - fetch_result <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> variable result                    : out   t_vvc_result;<br><span style="padding-left:20px"> variable fetch_is_accepted         : out   boolean;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant alert_level               : in    t_alert_level  := TB_ERROR;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -- - This version does not use vvc_channel.
  -- - Fetches result from a VVC
  -- - Requires that result is available (i.e. already executed in respective VVC)
  -- - Logs with ID ID_UVVM_CMD_RESULT
 
 - fetch_result <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant wanted_idx                : in    integer;<br><span style="padding-left:20px"> variable result                    : out   t_vvc_result;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant alert_level               : in    t_alert_level  := TB_ERROR;<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -- Same as above but without fetch_is_accepted.
  -- Will trigger alert with alert_level if not OK.
 
 - insert_delay <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant delay                     : in    natural;<br><span style="padding-left:20px">  -- in clock cycles constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  insert_delay
 -----------------------------------------
@@ -133,14 +133,14 @@
  - Inserts delay for 'delay' clock cycles
 
 - insert_delay <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant delay                     : in    natural;<br><span style="padding-left:20px">  -- in clock cycles constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  insert_delay
 -----------------------------------------
  See description above
 
 - insert_delay <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant delay                     : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  insert_delay
 -----------------------------------------
@@ -148,14 +148,14 @@
  - Inserts delay for a given time
 
 - insert_delay <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant delay                     : in    time;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  insert_delay
 -----------------------------------------
  See description above
 
 - terminate_current_command <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  terminate_current_command
 -----------------------------------------
@@ -163,11 +163,11 @@
  - Terminates the current command being processed in the VVC executor
 
 - terminate_current_command <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Overload without VVC channel
 
 - terminate_all_commands <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant vvc_channel               : in    t_channel;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -----------------------------------------
  terminate_all_commands
 -----------------------------------------
@@ -176,6 +176,6 @@
    flushes the command queue
 
 - terminate_all_commands <font id="function_arguments">( signal   vvc_target                : inout t_vvc_target_record;<br><span style="padding-left:20px"> constant vvc_instance_idx          : in    integer;<br><span style="padding-left:20px"> constant msg                       : in    string         := "";<br><span style="padding-left:20px"> constant scope                     : in    string         := C_VVC_CMD_SCOPE_DEFAULT;<br><span style="padding-left:20px"> constant parent_msg_id_panel       : in    t_msg_id_panel := shared_msg_id_panel --UVVM: temporary fix for HVVC,<br><span style="padding-left:20px"> replace for C_UNUSED_MSG_ID_PANEL in v3.0 ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Overload without VVC channel
 

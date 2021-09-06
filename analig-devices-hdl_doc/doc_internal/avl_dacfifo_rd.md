@@ -148,25 +148,25 @@
 ## Processes
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  loop back the avl_xfer_req to the WRITE module -- this way we can make  sure, that in case of a new DMA transfer, the last avalon read burst is  finished, so the upcomming avalon writes will not block the interface 
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  FSM to generate the necessary Avalon Write transactions 
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Avalon address generation and read control signaling 
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Avalon burstcounter 
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  write data from Avalon interface into the async FIFO 
 - unnamed: ( @(posedge avl_clk) )
   - **Type:** always
@@ -189,7 +189,7 @@
 ## Instantiations
 
 - i_mem_asym: ad_mem_asym_rd
-**Description**
+</br>**Description**
  An asymmetric memory to transfer data from Avalon interface to DAC
  interface
 

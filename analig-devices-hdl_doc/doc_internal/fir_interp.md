@@ -157,11 +157,11 @@
 ## Processes
 - ce_output: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  Block Statements 
 - Delay_Pipeline_process: ( @( posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
    ---------------- Delay Registers ---------------- 
 - sumdelay_pipeline_process1: ( @ (posedge clk or posedge reset) )
   - **Type:** always

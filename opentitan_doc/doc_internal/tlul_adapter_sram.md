@@ -135,7 +135,7 @@
 - u_rsp_gen: tlul_rsp_intg_gen
 - u_err: tlul_err
 - u_reqfifo: prim_fifo_sync
-**Description**
+</br>**Description**
  FIFO instance: REQ, RSP
  ReqFIFO is to store the Access type to match to the Response data.
     For instance, SRAM accepts the write request but doesn't return the
@@ -153,14 +153,14 @@
  ready_i to ready_o, which may not be desireable.
 
 - u_sramreqfifo: prim_fifo_sync
-**Description**
+</br>**Description**
  sramreqfifo:
     While the ReqFIFO holds the request until it is sent back via TL-UL, the
     sramreqfifo only needs to hold the mask and word offset until the read
     data returns from memory.
 
 - u_rspfifo: prim_fifo_sync
-**Description**
+</br>**Description**
  Rationale having #Outstanding depth in response FIFO.
     In normal case, if the host or the crossbar accepts the response data,
     response FIFO isn't needed. But if in any case it has a chance to be

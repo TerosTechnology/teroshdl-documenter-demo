@@ -51,16 +51,16 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  gain module 
 ## Instantiations
 
 - csi_fuzzer_i: csi_fuzzer
-**Description**
+</br>**Description**
 csi fuzzer at fifo out
 
 - fifo32_1clk_dep512_i: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo32_1clk_dep512 fifo32_1clk_dep512_i (
      .CLK(clk),
      .DATAO(tx_iq_fifo_out),

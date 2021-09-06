@@ -64,7 +64,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  We have to wait for all responses before we can disable the response handler 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

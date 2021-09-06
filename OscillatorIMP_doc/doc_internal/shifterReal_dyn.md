@@ -80,6 +80,6 @@
 - shift_sync: work.shifterReal_dyn_synchronizer_vector
 - shift_comm_inst: work.shifterReal_dyn_comm
 - handle_comm: work.shifterReal_dyn_handcomm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

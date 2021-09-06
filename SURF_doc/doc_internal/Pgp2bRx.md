@@ -78,22 +78,22 @@
 | overflow         | slv(3 downto 0)                    |                                       |
 ## Processes
 - wrap: ( intPhyRxPolarity, phyRxLanesIn )
-**Description**
+</br>**Description**
  Interface connection 
 - unnamed: ( overflow, pause )
-**Description**
+</br>**Description**
  Pass FIFO status 
 - unnamed: ( pgpRxClk )
-**Description**
+</br>**Description**
  Generate valid/vc 
 ## Instantiations
 
 - U_Pgp2bRxPhy: surf.Pgp2bRxPhy
-**Description**
+</br>**Description**
  PHY Logic
 
 - U_Pgp2bRxCell: surf.Pgp2bRxCell
-**Description**
+</br>**Description**
  Cell Receiver
 
 - Rx_CRC: surf.CRC32Rtl

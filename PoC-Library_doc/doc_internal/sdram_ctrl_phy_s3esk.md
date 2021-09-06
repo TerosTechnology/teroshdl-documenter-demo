@@ -177,21 +177,21 @@
 | rdata_r       | std_logic_vector(31 downto 0) |                                    |
 ## Processes
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  SDRAM command & address --------------------------------------------------------------------------- 
 - unnamed: ( clk )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
   Write Data<br> 
 - unnamed: ( clk_n )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Read data capture ---------------------------------------------------------------------------  Register read enable  rden1_r is a separate signal for simple identification in constraints.  This signal must be kept. 
 - unnamed: ( clk_fb90_n )
-**Description**
+</br>**Description**
  Register read enable with clk_fb90_n which equals sd_ck_p + 270 degrees  delayed by external feedback.  NOTE: Timing constraints must ensure, that read enable is captured with  the rising edge of clk_fb90_n directly following rising edge of clk. 
 - unnamed: ( clk_fb90_n )
-**Description**
+</br>**Description**
  Delay once more  If timing is critical, then rden3_r should be duplicated before it used as  clock enable for input FFs. 
 - unnamed: ( clk_fb90_n )
 ## Instantiations
@@ -199,7 +199,7 @@
 - sd_ck_p_off: ODDR2
 - sd_ck_n_off: ODDR2
 - ldqs_obuf: OBUFT
-**Description**
+</br>**Description**
  Explicit instantiation of I/O buffers. Required if entity is part of a
  netlist, which is used in another design.
 

@@ -47,13 +47,13 @@ hdlunit:tb
 | C_PULSE_WIDTH        | time                                      |  20 ns           |             |
 ## Processes
 - p_sequencer: (  )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Testbench sequencer --------------------------------------------------------------------------- 
 ## Instantiations
 
 - i_ti_uvvm_engine: uvvm_vvc_framework.ti_uvvm_engine
 - error_injector_sl: work.error_injection_sl
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------
  Error injector
 ---------------------------------------------------------------------------

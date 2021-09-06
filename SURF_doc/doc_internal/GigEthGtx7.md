@@ -107,20 +107,20 @@
 - U_XBAR: surf.AxiLiteCrossbar
 - U_PwrUpRst: surf.PwrUpRst
 - U_MAC: surf.EthMacTop
-**Description**
+</br>**Description**
 ------------------
  Ethernet MAC core
 ------------------
 
 - U_GigEthGtx7Core: GigEthGtx7Core
-**Description**
+</br>**Description**
 ----------------
  1000BASE-X core
 ----------------
 
 - U_AxiLiteToDrp_1: surf.AxiLiteToDrp
 - U_GigEthReg: surf.GigEthReg
-**Description**
+</br>**Description**
  [in]
 ------------------------------
  Configuration/Status Register

@@ -262,11 +262,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -280,135 +280,135 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
 
 - u_intr_enable: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
 
 - u_intr_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
 
 - u_alert_test_fatal_fault_err: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
    F[fatal_fault_err]: 0:0
 
 - u_alert_test_recov_operation_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[recov_operation_err]: 1:1
 
 - u_cfg_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cfg_regwen]: V(True)
 
 - u_control_start: prim_subreg
-**Description**
+</br>**Description**
  R[control]: V(False)
    F[start]: 0:0
 
 - u_control_operation: prim_subreg
-**Description**
+</br>**Description**
    F[operation]: 6:4
 
 - u_control_cdi_sel: prim_subreg
-**Description**
+</br>**Description**
    F[cdi_sel]: 7:7
 
 - u_control_dest_sel: prim_subreg
-**Description**
+</br>**Description**
    F[dest_sel]: 14:12
 
 - u_sideload_clear: prim_subreg
-**Description**
+</br>**Description**
  R[sideload_clear]: V(False)
 
 - u_reseed_interval_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[reseed_interval_shadowed]: V(False)
 
 - u_sw_binding_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[sw_binding_regwen]: V(True)
 
 - u_max_creator_key_ver_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[max_creator_key_ver_regwen]: V(False)
 
 - u_max_creator_key_ver_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[max_creator_key_ver_shadowed]: V(False)
 
 - u_max_owner_int_key_ver_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[max_owner_int_key_ver_regwen]: V(False)
 
 - u_max_owner_int_key_ver_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[max_owner_int_key_ver_shadowed]: V(False)
 
 - u_max_owner_key_ver_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[max_owner_key_ver_regwen]: V(False)
 
 - u_max_owner_key_ver_shadowed: prim_subreg_shadow
-**Description**
+</br>**Description**
  R[max_owner_key_ver_shadowed]: V(False)
 
 - u_working_state: prim_subreg
-**Description**
+</br>**Description**
  R[working_state]: V(False)
 
 - u_op_status: prim_subreg
-**Description**
+</br>**Description**
  R[op_status]: V(False)
 
 - u_err_code_invalid_op: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
    F[invalid_op]: 0:0
 
 - u_err_code_invalid_kmac_input: prim_subreg
-**Description**
+</br>**Description**
    F[invalid_kmac_input]: 1:1
 
 - u_err_code_invalid_shadow_update: prim_subreg
-**Description**
+</br>**Description**
    F[invalid_shadow_update]: 2:2
 
 - u_fault_status_cmd: prim_subreg
-**Description**
+</br>**Description**
  R[fault_status]: V(False)
    F[cmd]: 0:0
 
 - u_fault_status_kmac_fsm: prim_subreg
-**Description**
+</br>**Description**
    F[kmac_fsm]: 1:1
 
 - u_fault_status_kmac_op: prim_subreg
-**Description**
+</br>**Description**
    F[kmac_op]: 2:2
 
 - u_fault_status_kmac_out: prim_subreg
-**Description**
+</br>**Description**
    F[kmac_out]: 3:3
 
 - u_fault_status_regfile_intg: prim_subreg
-**Description**
+</br>**Description**
    F[regfile_intg]: 4:4
 
 - u_fault_status_shadow: prim_subreg
-**Description**
+</br>**Description**
    F[shadow]: 5:5
 
 - u_fault_status_ctrl_fsm_intg: prim_subreg
-**Description**
+</br>**Description**
    F[ctrl_fsm_intg]: 6:6
 
 - u_fault_status_ctrl_fsm_cnt: prim_subreg
-**Description**
+</br>**Description**
    F[ctrl_fsm_cnt]: 7:7
 

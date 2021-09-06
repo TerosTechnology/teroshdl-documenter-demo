@@ -137,7 +137,7 @@
 | up_rreq_s                      | wire           |                      |
 ## Functions
 - sm2tc <font id="function_arguments">()</font> <font id="function_return">return ([15:0])</font>
-**Description**
+</br>**Description**
  2's complement function
 
 ## Processes
@@ -153,15 +153,15 @@
   - **Type:** always
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  change coefficients to 2's complements 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  backward compatibility 
 ## Instantiations
 
 - i_xfer_cntrl: up_xfer_cntrl
-**Description**
+</br>**Description**
  dac control & status
 

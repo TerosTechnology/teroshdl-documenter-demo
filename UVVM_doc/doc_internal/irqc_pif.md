@@ -45,8 +45,8 @@
 ## Processes
 - p_read_reg: ( cs, addr, rd, c2p, p2c_i )
 - p_write_reg: ( clk, arst )
-**Description**
+</br>**Description**
  Writing to registers that are not functionally manipulated 
 - p_aux: ( wr, addr, din )
-**Description**
+</br>**Description**
  Writing to registers that are functionally manipulated and/or located outside PIF (or dummy registers) 

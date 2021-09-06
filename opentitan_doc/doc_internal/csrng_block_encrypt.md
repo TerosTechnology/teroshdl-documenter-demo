@@ -77,11 +77,11 @@
 ## Instantiations
 
 - u_aes_cipher_core: aes_cipher_core
-**Description**
+</br>**Description**
  Cipher core
 
 - u_prim_fifo_sync_blkenc: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  cmd / id tracking fifo
 --------------------------------------------

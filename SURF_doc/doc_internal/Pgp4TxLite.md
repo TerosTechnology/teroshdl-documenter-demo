@@ -70,19 +70,19 @@
 | protTxHeader       | slv(1 downto 0)                         |                    |
 ## Processes
 - DISABLE_SEL: ( pgpTxIn, syncRemRxFifoCtrl )
-**Description**
+</br>**Description**
 ----------------------------------------------------------------------  Use synchronized remote status to disable channels from mux selection  All flow control overridden by pgpTxIn 'disable' and 'flowCntlDis' ---------------------------------------------------------------------- 
 ## Instantiations
 
 - U_Protocol: surf.Pgp4TxLiteProtocol
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------
  Feed packets into PGP TX Protocol engine
  Translates Packetizer2 frames, status, and opcodes into unscrambled 64b66b characters
 --------------------------------------------------------------------------------------
 
 - U_Scrambler_1: surf.Scrambler
-**Description**
+</br>**Description**
  [out]
  Scramble the data for 64b66b
 

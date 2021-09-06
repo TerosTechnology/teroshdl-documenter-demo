@@ -177,21 +177,21 @@
 | hdmi_es_data_s           | wire [15:0]    |                      |
 ## Functions
 - b2g <font id="function_arguments">()</font> <font id="function_return">return ([8:0])</font>
-**Description**
+</br>**Description**
  binary to grey conversion
 
 ## Processes
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  status and enable 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi counters 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi start of frame 
 - unnamed: ( @(posedge hdmi_clk or posedge hdmi_rst) )
   - **Type:** always
@@ -199,51 +199,51 @@
   - **Type:** always
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi sync signals 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  control and data pipe line 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi data select 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Color space conversion bypass (RGB/YCbCr) 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi clipping 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi csc 16, 24 and 36 outputs 
 - unnamed: ( @(posedge hdmi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  hdmi embedded sync 
 ## Instantiations
 
 - i_mem: ad_mem
-**Description**
+</br>**Description**
  data memory
 
 - i_csc_RGB2CrYCb: ad_csc_RGB2CrYCb
-**Description**
+</br>**Description**
  color space coversion, RGB to CrYCb
 
 - i_ss_444to422: ad_ss_444to422
-**Description**
+</br>**Description**
  sub sampling, 444 to 422
 
 - i_es: axi_hdmi_tx_es
-**Description**
+</br>**Description**
  embedded sync
 

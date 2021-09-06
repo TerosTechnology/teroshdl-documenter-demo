@@ -92,15 +92,15 @@
 
 - U_LinkReady: surf.Synchronizer
 - U_Pgp2bTxPhy: surf.Pgp2bTxPhy
-**Description**
+</br>**Description**
  Physical Interface
 
 - U_Pgp2bTxSched: surf.Pgp2bTxSched
-**Description**
+</br>**Description**
  Scheduler
 
 - U_Pgp2bTxCell: surf.Pgp2bTxCell
-**Description**
+</br>**Description**
  Cell Transmitter
 
 - Tx_CRC: surf.CRC32Rtl

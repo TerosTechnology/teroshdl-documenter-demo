@@ -53,11 +53,11 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 ////////////  Datapath // ////////////  Jedec latch 
 - unnamed: ( @(posedge clk_out_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Output to Parallel-to-Serial 
 - p2s_byte_logic: (  )
   - **Type:** always_comb
@@ -65,7 +65,7 @@
   - **Type:** always_ff
 - state_latch: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////  State // ///////// 
 - next_state_logic: (  )
   - **Type:** always_comb

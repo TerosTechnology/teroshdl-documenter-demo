@@ -100,7 +100,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   * Unfortunately setup and hold are often ignored on the sysref signal relative  * to the device clock. The device will often still work fine, just not  * deterministic. Reduce the probability that the meta-stability creeps into the  * reset of the system and causes non-reproducible issues.  */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -108,7 +108,7 @@
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
   * The configuration must be static when the core is out of reset. Otherwise  * undefined behaviour might occur.  * E.g. lmfc_counter > beats_per_multiframe  *  * To change the configuration first assert reset, then update the configuration  * setting, finally deassert reset.  */<br>  * For DATA_PATH_WIDTH == 8, F*K%8=4, set  * cfg_beats_per_multiframe = cfg_beats_per_multiframe*2  * LMFC will be twice the actual length  */ 
 - unnamed: ( @(*) )
   - **Type:** always
@@ -120,13 +120,13 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  1 MultiBlock = 32 blocks 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  End of Extended MultiBlock 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

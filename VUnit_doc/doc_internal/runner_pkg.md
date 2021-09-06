@@ -44,6 +44,6 @@
 - set_cfg <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> new_value : string) </font> <font id="function_return">return ()</font>
 - set_timeout <font id="function_arguments">(runner : runner_t;<br><span style="padding-left:20px"> timeout : time) </font> <font id="function_return">return ()</font>
 - p_disable_simulation_exit <font id="function_arguments">(runner : runner_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Private procedures only use for VUnit internal testing
 

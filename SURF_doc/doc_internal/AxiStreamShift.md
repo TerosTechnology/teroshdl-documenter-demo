@@ -65,6 +65,6 @@
 | RegType   |                                                                                                                                                         |             |
 ## Functions
 - shiftData <font id="function_arguments">(shiftBytes : in    slv(3 downto 0);<br><span style="padding-left:20px"> shiftDir   : in    sl;<br><span style="padding-left:20px"> shiftFirst : in    boolean;<br><span style="padding-left:20px"> mInput     : in    AxiStreamMasterType;<br><span style="padding-left:20px"> mDelay     : in    AxiStreamMasterType;<br><span style="padding-left:20px"> mOut       : inout AxiStreamMasterType) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Set shift ranges
 

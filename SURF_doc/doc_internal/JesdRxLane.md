@@ -136,19 +136,19 @@
 ## Instantiations
 
 - RX_buffer_fifo_INST: surf.FifoSync
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------
  Buffer samples between first data and LMFC Min size one LMFC period
 ---------------------------------------------------------------------
 
 - syncFSM_INST: surf.JesdSyncFsmRx
-**Description**
+</br>**Description**
 --------------------
  Synchronization FSM
 --------------------
 
 - alignFrRepCh_INST: surf.JesdAlignFrRepCh
-**Description**
+</br>**Description**
 ----------------------------------------------------------------
  Align the rx data within the GT word and replace the characters
 ----------------------------------------------------------------

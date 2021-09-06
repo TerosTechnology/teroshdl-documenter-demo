@@ -165,17 +165,17 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Create steering logic 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -184,197 +184,197 @@
 - u_chk: tlul_cmd_intg_chk
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_socket: tlul_socket_1n
-**Description**
+</br>**Description**
  Create Socket_1n
 
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_error: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[error]: 0:0
 
 - u_intr_state_spi_event: prim_subreg
-**Description**
+</br>**Description**
    F[spi_event]: 1:1
 
 - u_intr_enable_error: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[error]: 0:0
 
 - u_intr_enable_spi_event: prim_subreg
-**Description**
+</br>**Description**
    F[spi_event]: 1:1
 
 - u_intr_test_error: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[error]: 0:0
 
 - u_intr_test_spi_event: prim_subreg_ext
-**Description**
+</br>**Description**
    F[spi_event]: 1:1
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_control_rx_watermark: prim_subreg
-**Description**
+</br>**Description**
  R[control]: V(False)
    F[rx_watermark]: 7:0
 
 - u_control_tx_watermark: prim_subreg
-**Description**
+</br>**Description**
    F[tx_watermark]: 15:8
 
 - u_control_sw_rst: prim_subreg
-**Description**
+</br>**Description**
    F[sw_rst]: 30:30
 
 - u_control_spien: prim_subreg
-**Description**
+</br>**Description**
    F[spien]: 31:31
 
 - u_status_txqd: prim_subreg
-**Description**
+</br>**Description**
  R[status]: V(False)
    F[txqd]: 7:0
 
 - u_status_rxqd: prim_subreg
-**Description**
+</br>**Description**
    F[rxqd]: 15:8
 
 - u_status_rxwm: prim_subreg
-**Description**
+</br>**Description**
    F[rxwm]: 20:20
 
 - u_status_byteorder: prim_subreg
-**Description**
+</br>**Description**
    F[byteorder]: 22:22
 
 - u_status_rxstall: prim_subreg
-**Description**
+</br>**Description**
    F[rxstall]: 23:23
 
 - u_status_rxempty: prim_subreg
-**Description**
+</br>**Description**
    F[rxempty]: 24:24
 
 - u_status_rxfull: prim_subreg
-**Description**
+</br>**Description**
    F[rxfull]: 25:25
 
 - u_status_txwm: prim_subreg
-**Description**
+</br>**Description**
    F[txwm]: 26:26
 
 - u_status_txstall: prim_subreg
-**Description**
+</br>**Description**
    F[txstall]: 27:27
 
 - u_status_txempty: prim_subreg
-**Description**
+</br>**Description**
    F[txempty]: 28:28
 
 - u_status_txfull: prim_subreg
-**Description**
+</br>**Description**
    F[txfull]: 29:29
 
 - u_status_active: prim_subreg
-**Description**
+</br>**Description**
    F[active]: 30:30
 
 - u_status_ready: prim_subreg
-**Description**
+</br>**Description**
    F[ready]: 31:31
 
 - u_csid: prim_subreg
-**Description**
+</br>**Description**
  R[csid]: V(False)
 
 - u_command_len: prim_subreg
-**Description**
+</br>**Description**
  R[command]: V(False)
    F[len]: 8:0
 
 - u_command_csaat: prim_subreg
-**Description**
+</br>**Description**
    F[csaat]: 9:9
 
 - u_command_speed: prim_subreg
-**Description**
+</br>**Description**
    F[speed]: 11:10
 
 - u_command_direction: prim_subreg
-**Description**
+</br>**Description**
    F[direction]: 13:12
 
 - u_error_enable_cmdbusy: prim_subreg
-**Description**
+</br>**Description**
  R[error_enable]: V(False)
    F[cmdbusy]: 0:0
 
 - u_error_enable_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[overflow]: 1:1
 
 - u_error_enable_underflow: prim_subreg
-**Description**
+</br>**Description**
    F[underflow]: 2:2
 
 - u_error_enable_cmdinval: prim_subreg
-**Description**
+</br>**Description**
    F[cmdinval]: 3:3
 
 - u_error_enable_csidinval: prim_subreg
-**Description**
+</br>**Description**
    F[csidinval]: 4:4
 
 - u_error_status_cmdbusy: prim_subreg
-**Description**
+</br>**Description**
  R[error_status]: V(False)
    F[cmdbusy]: 0:0
 
 - u_error_status_overflow: prim_subreg
-**Description**
+</br>**Description**
    F[overflow]: 1:1
 
 - u_error_status_underflow: prim_subreg
-**Description**
+</br>**Description**
    F[underflow]: 2:2
 
 - u_error_status_cmdinval: prim_subreg
-**Description**
+</br>**Description**
    F[cmdinval]: 3:3
 
 - u_error_status_csidinval: prim_subreg
-**Description**
+</br>**Description**
    F[csidinval]: 4:4
 
 - u_event_enable_rxfull: prim_subreg
-**Description**
+</br>**Description**
  R[event_enable]: V(False)
    F[rxfull]: 0:0
 
 - u_event_enable_txempty: prim_subreg
-**Description**
+</br>**Description**
    F[txempty]: 1:1
 
 - u_event_enable_rxwm: prim_subreg
-**Description**
+</br>**Description**
    F[rxwm]: 2:2
 
 - u_event_enable_txwm: prim_subreg
-**Description**
+</br>**Description**
    F[txwm]: 3:3
 
 - u_event_enable_ready: prim_subreg
-**Description**
+</br>**Description**
    F[ready]: 4:4
 
 - u_event_enable_idle: prim_subreg
-**Description**
+</br>**Description**
    F[idle]: 5:5
 

@@ -94,18 +94,18 @@
 | ctrl_t              |                                                                                                                                                                                                                                                                                                                                                                                                                                                |                      |
 ## Processes
 - ctrl_engine_fsm_sync_rst: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Control Engine FSM Sync ----------------------------------------------------------------  -------------------------------------------------------------------------------------------  registers that REQUIRE a specific reset state -- 
 - ctrl_engine_fsm_sync: ( clk_i )
-**Description**
+</br>**Description**
  registers that do not require a specific reset state -- 
 - ctrl_engine_fsm_comb: ( ctrl, cache, clear_i, host_addr_i, host_re_i, bus_rdata_i, bus_ack_i, bus_err_i )
-**Description**
+</br>**Description**
  Control Engine FSM Comb ----------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 ## Instantiations
 
 - neorv32_icache_memory_inst: neorv32_icache_memory
-**Description**
+</br>**Description**
  Cache Memory ---------------------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 

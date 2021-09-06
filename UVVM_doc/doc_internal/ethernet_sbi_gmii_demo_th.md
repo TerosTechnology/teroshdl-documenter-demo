@@ -48,20 +48,20 @@
 ## Instantiations
 
 - i1_ethernet_vvc: bitvis_vip_ethernet.ethernet_vvc
-**Description**
+</br>**Description**
 ----------------------------------------
  CPU to MAC interface
 ----------------------------------------
 
 - i1_sbi_vvc: bitvis_vip_sbi.sbi_vvc
 - i_ethernet_mac: work.ethernet_mac
-**Description**
+</br>**Description**
 ----------------------------------------
  Ethernet MAC
 ----------------------------------------
 
 - i2_ethernet_vvc: bitvis_vip_ethernet.ethernet_vvc
-**Description**
+</br>**Description**
 ----------------------------------------
  MAC to PHY interface
 ----------------------------------------

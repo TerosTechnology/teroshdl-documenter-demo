@@ -113,7 +113,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  break_err edges in same cycle as event_rx_frame_err edges ; that way the  reset-on-read works the same way for break and frame error interrupts. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -127,7 +127,7 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////////  Interrupt & Status // ////////////////////// 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -140,7 +140,7 @@
 - u_uart_txfifo: prim_fifo_sync
 - uart_tx: uart_tx
 - sync_rx: prim_flop_2sync
-**Description**
+</br>**Description**
 ////////////
  RX Logic //
 ////////////
@@ -149,7 +149,7 @@
 - uart_rx: uart_rx
 - u_uart_rxfifo: prim_fifo_sync
 - intr_hw_tx_watermark: prim_intr_hw
-**Description**
+</br>**Description**
  instantiate interrupt hardware primitives
 
 - intr_hw_rx_watermark: prim_intr_hw

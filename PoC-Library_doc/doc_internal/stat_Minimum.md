@@ -72,7 +72,7 @@
 | T_COUNTER_MEMORY | array(natural range <>) of unsigned(COUNTER_BITS - 1 downto 0)  |             |
 ## Functions
 - to_slm <font id="function_arguments">(usv : T_TAG_MEMORY) </font> <font id="function_return">return T_SLM </font>
-**Description**
+</br>**Description**
  create matrix from vector-vector
 
 - to_slm <font id="function_arguments">(usv : T_COUNTER_MEMORY) </font> <font id="function_return">return T_SLM </font>

@@ -74,27 +74,27 @@
 ## Processes
 - unnamed: ( @(data_in) )
   - **Type:** always
-**Description**
+</br>**Description**
  Perform the Sinc action */ 
 - unnamed: ( @(negedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Accumulator (Integrator) Perform the accumulation (IIR) at the speed of    * the modulator. Z = one sample delay MCLKOUT = modulators conversion    * bit rate */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  decimation stage (MCLKOUT/WORD_CLK) */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Differentiator (including decimation stage)    * Perform the differentiation stage (FIR) at a lower speed.    * Z = one sample delay WORD_EN = output word rate */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Clock the Sinc output into an output register    * WORD_EN = output word rate */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Synchronize Data Output */ 

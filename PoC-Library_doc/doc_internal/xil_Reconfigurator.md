@@ -91,12 +91,12 @@
 | T_STATE | ( ST_IDLE,<br><span style="padding-left:20px"> ST_READ_BEGIN,<br><span style="padding-left:20px">	ST_READ_WAIT,<br><span style="padding-left:20px"> ST_WRITE_BEGIN,<br><span style="padding-left:20px">	ST_WRITE_WAIT,<br><span style="padding-left:20px"> ST_DONE )  |             |
 ## Processes
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  configuration index counter 
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  data buffer for DRP configuration words 
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  DRP read-modify-write statemachine 
 - unnamed: ( State, Reconfig, ROM_LastConfigWord, DRP_Ack )

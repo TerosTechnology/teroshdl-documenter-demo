@@ -58,10 +58,10 @@
 ## Instantiations
 
 - intr_hw: prim_intr_hw
-**Description**
+</br>**Description**
  instantiate interrupt hardware primitive
 
 - u_reg: gpio_reg_top
-**Description**
+</br>**Description**
  Register module
 

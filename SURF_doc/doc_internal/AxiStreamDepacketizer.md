@@ -67,14 +67,14 @@
 | RegType   |                                                                                                                                                  |             |
 ## Processes
 - comb: ( axisRst, inputAxisMaster, outputAxisSlave, r, restart )
-**Description**
+</br>**Description**
  [in] -----------------------------------------------------------------------------------------------  Accumulation sequencing, DMA ring buffer, and AXI-Lite logic ----------------------------------------------------------------------------------------------- 
 - seq: ( axisClk )
 ## Instantiations
 
 - U_AxiStreamPipeline_Input: surf.AxiStreamPipeline
 - U_AxiStreamPipeline_Output: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
  [in]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  Output pipeline

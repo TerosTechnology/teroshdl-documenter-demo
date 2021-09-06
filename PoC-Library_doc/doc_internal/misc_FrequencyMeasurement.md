@@ -80,7 +80,7 @@
 - unnamed: ( Reference_Clock )
 - unnamed: ( Input_Clock )
 - unnamed: ( Reference_Clock )
-**Description**
+</br>**Description**
  Result_d can becaptured from Frequency_Counter_us, because it's stable  for more than one clock cycle and will not change until the next Start 
 ## Instantiations
 

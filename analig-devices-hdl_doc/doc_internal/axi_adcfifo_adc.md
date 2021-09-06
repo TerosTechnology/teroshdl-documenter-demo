@@ -75,11 +75,11 @@
 ## Processes
 - unnamed: ( @(posedge adc_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  write interface: supports only 64, 128, 256 and 512 against 512 
 ## Instantiations
 
 - i_xfer_status: up_xfer_status
-**Description**
+</br>**Description**
  instantiations
 

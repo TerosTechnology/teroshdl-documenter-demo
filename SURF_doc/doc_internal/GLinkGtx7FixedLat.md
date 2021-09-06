@@ -130,6 +130,6 @@
 ## Instantiations
 
 - Gtx7Core_Inst: surf.GLinkGtx7Core
-**Description**
+</br>**Description**
  GTX 7 Core in Fixed Latency mode
 

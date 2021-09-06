@@ -62,13 +62,13 @@
 ## Processes
 - unnamed: ( @(posedge clk_i or negedge sys_rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Flip event handling 
 - unnamed: ( @(posedge clk_i or negedge sys_rst_ni) )
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////////////  State Machine // ///////////////// 
 - unnamed: (  )
   - **Type:** always_comb

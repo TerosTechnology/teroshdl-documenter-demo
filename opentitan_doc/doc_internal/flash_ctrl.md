@@ -228,7 +228,7 @@
 ## Processes
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Final muxing to flash macro module 
 - unnamed: (  )
   - **Type:** always_comb
@@ -240,7 +240,7 @@
 
 - u_reg_core: flash_ctrl_core_reg_top
 - u_lc_creator_seed_sw_rw_en_sync: prim_lc_sync
-**Description**
+</br>**Description**
  synchronize enables into local domain
 
 - u_lc_owner_seed_sw_rw_en_sync: prim_lc_sync
@@ -249,11 +249,11 @@
 - u_lc_seed_hw_rd_en_sync: prim_lc_sync
 - u_lfsr: prim_lfsr
 - u_ctrl_arb: flash_ctrl_arb
-**Description**
+</br>**Description**
  flash control arbitration between softawre / harware interfaces
 
 - u_flash_hw_if: flash_ctrl_lcmgr
-**Description**
+</br>**Description**
  hardware interface
 
 - u_to_prog_fifo: tlul_adapter_sram
@@ -262,7 +262,7 @@
 - u_flash_ctrl_rd: flash_ctrl_rd
 - u_flash_ctrl_erase: flash_ctrl_erase
 - u_flash_mp: flash_mp
-**Description**
+</br>**Description**
  Flash memory Properties
  Memory property is page based and thus should use phy addressing
  This should move to flash_phy long term

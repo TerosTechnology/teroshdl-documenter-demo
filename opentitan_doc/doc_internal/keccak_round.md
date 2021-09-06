@@ -87,24 +87,24 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Next state logic and output logic 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Storage register input  The incoming message is XORed with the existing storage registers.  The logic can accept not a block size incoming message chunk but  the size defined in `DInWidth` parameter with its position. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Round number 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  completion signal 
 ## Instantiations
 
 - u_keccak_p: keccak_2share
-**Description**
+</br>**Description**
 ////////////
  Datapath //
 ////////////

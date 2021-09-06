@@ -126,7 +126,7 @@
 ## Processes
 - aes_cipher_ctrl_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  FSM 
 - reg_fsm: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -134,7 +134,7 @@
 
 - u_state_regs: prim_flop
 - u_rnd_ctr_regs: prim_flop
-**Description**
+</br>**Description**
 ////////////////////////////
  Round Counter Protection //
 ////////////////////////////

@@ -133,19 +133,19 @@
 ## Instantiations
 
 - u_prim_fifo_sync_cmdreq: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  input request fifo for staging cmd request
 --------------------------------------------
 
 - u_prim_fifo_sync_rcstage: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  fifo to stage rc and command, waiting for update block to ack
 --------------------------------------------
 
 - u_prim_fifo_sync_keyvrc: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  final cmd block processing
 --------------------------------------------

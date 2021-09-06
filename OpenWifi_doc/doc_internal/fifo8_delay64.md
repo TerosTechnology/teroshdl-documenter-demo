@@ -49,7 +49,7 @@
 ## Instantiations
 
 - fifo8_1clk_dep64_i: xpm_fifo_sync
-**Description**
+</br>**Description**
  fifo8_1clk_dep64 fifo8_1clk_dep64_i (
      .CLK(clk),
      .DATAO(data_out),

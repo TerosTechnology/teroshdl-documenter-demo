@@ -78,7 +78,7 @@
 
 - U_SynchronizerOneShot_1: surf.SynchronizerOneShot
 - U_slaveBitOrder: surf.Synchronizer
-**Description**
+</br>**Description**
  [out]
 
 - U_masterBitOrder: surf.Synchronizer

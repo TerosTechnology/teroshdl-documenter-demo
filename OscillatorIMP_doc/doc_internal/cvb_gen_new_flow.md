@@ -40,7 +40,7 @@
 | need_rst_s      | std_logic                         |               |
 ## Processes
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  used because RAM out is delayed by one cycle 
 - unnamed: ( clk_i )
 - unnamed: ( clk_i )

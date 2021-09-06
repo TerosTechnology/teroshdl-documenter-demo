@@ -206,16 +206,16 @@
 - timeout_buffer_bypass: ( RXUSERCLK )
 - unnamed: ( qPllRxSelect,PLL0REFCLKLOST,PLL1REFCLKLOST )
 - reset_fsm: ( STABLE_CLOCK )
-**Description**
+</br>**Description**
 FSM for resetting the GTX/GTH/GTP in the 7-series. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>  Following steps are performed:  1) After configuration wait for approximately 500 ns as specified in     answer-record 43482  2) Assert all resets on the GT and on an MMCM potentially connected.     After that wait until a reference-clock has been detected.  3) Release the reset to the GT and wait until the GT-PLL has locked.  4) Release the MMCM-reset and wait until the MMCM has signalled lock.     Also get info from the TX-side which PLL has been reset.  5) Wait for the RESET_DONE-signal from the GT.  6) Signal to start the phase-alignment procedure and wait for it to     finish.  7) Reset-sequence has successfully run through. Signal this to the     rest of the design by asserting RX_FSM_RESET_DONE. 
 ## Instantiations
 
 - sync2_rxpmaresetdone: surf.SynchronizerEdge
-**Description**
+</br>**Description**
  Synchronize PMARESETDONE to STABLE_CLOCK
 
 - sync_run_phase_alignment_int: surf.Synchronizer
-**Description**
+</br>**Description**
  Clock Domain Crossing
 
 - sync_rx_fsm_reset_done_int: surf.Synchronizer
@@ -227,7 +227,7 @@ FSM for resetting the GTX/GTH/GTP in the 7-series. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - sync_PLL0LOCK: surf.Synchronizer
 - sync_PLL1LOCK: surf.Synchronizer
 - Synchronizer_PHALIGNMENT_DONE: surf.Synchronizer
-**Description**
+</br>**Description**
  Phase aligner might run on rxusrclk in some cases
  Synchronize it just in case
 

@@ -130,6 +130,6 @@
 | AN     | positive |  A_BITS + 1            |             |
 ## Processes
 - unnamed: ( clk_wr )
-**Description**
+</br>**Description**
  Update Write Pointer upon puti 
 - unnamed: ( clk_rd )

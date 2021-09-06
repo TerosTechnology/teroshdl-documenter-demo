@@ -96,20 +96,20 @@
 ## Instantiations
 
 - IBUFDS_GTE2_Inst: IBUFDS_GTE2
-**Description**
+</br>**Description**
 ---------------------------
  Select the Reference Clock
 ---------------------------
 
 - BUFG_Inst: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
-**Description**
+</br>**Description**
 ---------------
  Power Up Reset
 ---------------
 
 - U_MMCM: surf.ClockManager7
-**Description**
+</br>**Description**
 --------------
  Clock Manager
 --------------

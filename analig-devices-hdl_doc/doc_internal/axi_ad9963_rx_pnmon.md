@@ -61,11 +61,11 @@
 | adc_pn_data_pn_s | wire [31:0]    |  internal signals    |
 ## Functions
 - brfn <font id="function_arguments">()</font> <font id="function_return">return ([11:0])</font>
-**Description**
+</br>**Description**
  bit reversal function
 
 - pn23 <font id="function_arguments">()</font> <font id="function_return">return ([23:0])</font>
-**Description**
+</br>**Description**
  standard prbs functions
 
 ## Processes
@@ -74,6 +74,6 @@
 ## Instantiations
 
 - i_pnmon: ad_pnmon
-**Description**
+</br>**Description**
  pn oos & pn err
 

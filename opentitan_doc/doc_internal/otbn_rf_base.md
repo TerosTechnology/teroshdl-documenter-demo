@@ -69,7 +69,7 @@
 - u_wr_data_intg_enc: prim_secded_39_32_enc
 - u_call_stack: otbn_stack
 - u_rd_data_a_intg_dec: prim_secded_39_32_dec
-**Description**
+</br>**Description**
  Integrity decoders used to detect errors only, corrections (`syndrome_o`/`d_o`) are ignored
 
 - u_rd_data_b_intg_dec: prim_secded_39_32_dec

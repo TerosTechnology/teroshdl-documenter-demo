@@ -64,14 +64,14 @@
 - p_init: (  )
 - p_fifo_ready: ( clk )
 - p_read_reg_sbi_1: ( sbi_if_1.cs, sbi_if_1.rena, sbi_if_1.addr, fifo_ready_1 )
-**Description**
+</br>**Description**
  Read registers for SBI IF 1 
 - p_write_reg_sbi_1: ( clk )
-**Description**
+</br>**Description**
  Write registers for SBI IF 1 
 - p_read_reg_sbi_2: ( sbi_if_2.cs, sbi_if_2.rena, sbi_if_2.addr, fifo_ready_2 )
-**Description**
+</br>**Description**
  Read registers for SBI IF 2 
 - p_write_reg_sbi_2: ( clk )
-**Description**
+</br>**Description**
  Write registers for SBI IF 2 

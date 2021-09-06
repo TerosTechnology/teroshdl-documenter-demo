@@ -90,17 +90,17 @@
 - U_RstSync_1: surf.PwrUpRst
 - U_RstSync_4: surf.SynchronizerOneShot
 - U_RstSync_2: surf.PwrUpRst
-**Description**
+</br>**Description**
  [out]
  Sync pgpRxIn.rxReset to stableClk and tie to gtRxUserReset
 
 - U_RstSync_3: surf.PwrUpRst
 - U_Pgp2bLane: surf.Pgp2bLane
-**Description**
+</br>**Description**
  [out]
 
 - PgpGtyCoreWrapper_1: surf.PgpGtyCoreWrapper
-**Description**
+</br>**Description**
 ------------------------
  Wrapper for GTY IP core
 ------------------------

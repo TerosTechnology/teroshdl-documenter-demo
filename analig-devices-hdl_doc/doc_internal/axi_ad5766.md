@@ -152,11 +152,11 @@
   - **Type:** always
 - unnamed: ( @(posedge dma_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  request data from the DMA at the desired rate 
 - unnamed: ( @(negedge up_rstn or posedge spi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  offset of the sequencer registers are 8'h40 
 ## Instantiations
 
@@ -164,6 +164,6 @@
 - i_sequencer: up_ad5766_sequencer
 - i_dac_common: up_dac_common
 - i_up_axi: up_axi
-**Description**
+</br>**Description**
  AXI wrapper
 

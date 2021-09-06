@@ -99,13 +99,13 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor write interface 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  convertion start generator  NOTE: + The minimum convertion cycle is 1 us        + The rate of the cnvst must be defined in a way,           to not lose any data. cnvst_rate >= t_conversion + t_aquisition   See the AD7616 datasheet for more information. 
 - unnamed: ( @(cnvst_counter, up_conv_rate) )
   - **Type:** always

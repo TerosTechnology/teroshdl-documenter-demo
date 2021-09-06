@@ -139,11 +139,11 @@
 
 - BUFG_stableClkRef: BUFG
 - PwrUpRst_Inst: surf.PwrUpRst
-**Description**
+</br>**Description**
  Power Up Reset
 
 - RstSync_pgpTxRst: surf.RstSync
-**Description**
+</br>**Description**
  PGP RX Reset
 
 - Pgp2bGtx7Fixedlat_Inst: surf.Pgp2bGtx7Fixedlat

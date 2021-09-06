@@ -71,11 +71,11 @@
 | FREQUENCYCOUNTER_BITS | positive |  RESOLUTION                                                               |             |
 ## Processes
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  timebase counter 
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  frequency counter 
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
  hold counter value until next TimeBaseCounter event 

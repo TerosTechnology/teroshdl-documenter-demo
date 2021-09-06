@@ -238,36 +238,36 @@
 | resp_bus_t       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |  module response bus --               |
 ## Processes
 - reset_generator: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Reset Generator ------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - clock_generator: ( sys_rstn, clk_i )
-**Description**
+</br>**Description**
  Clock Generator ------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - bus_response: ( resp_bus, bus_keeper_err )
-**Description**
+</br>**Description**
  bus response -- 
 - mtime_sync: ( clk_i )
-**Description**
+</br>**Description**
  system time output LO -- 
 ## Instantiations
 
 - neorv32_cpu_inst: neorv32_cpu
-**Description**
+</br>**Description**
  CPU Core -------------------------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 
 - neorv32_busswitch_inst: neorv32_busswitch
-**Description**
+</br>**Description**
  CPU Bus Switch -------------------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 
 - neorv32_bus_keeper_inst: neorv32_bus_keeper
-**Description**
+</br>**Description**
  Processor-Internal Bus Keeper (BUS_KEEPER) ---------------------------------------------
  -------------------------------------------------------------------------------------------
 
 - neorv32_sysinfo_inst: neorv32_sysinfo
-**Description**
+</br>**Description**
  System Configuration Information Memory (SYSINFO) --------------------------------------
  -------------------------------------------------------------------------------------------
 

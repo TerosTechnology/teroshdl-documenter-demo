@@ -129,29 +129,29 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor write interface 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_core_rst_reg: ad_rst
-**Description**
+</br>**Description**
  resets
 
 - i_vdma_rst_reg: ad_rst
 - i_xfer_cntrl: up_xfer_cntrl
-**Description**
+</br>**Description**
  hdmi control & status
 
 - i_xfer_status: up_xfer_status
 - i_clock_mon: up_clock_mon
-**Description**
+</br>**Description**
  hdmi clock monitor
 
 - i_vdma_xfer_status: up_xfer_status
-**Description**
+</br>**Description**
  vdma control & status
 

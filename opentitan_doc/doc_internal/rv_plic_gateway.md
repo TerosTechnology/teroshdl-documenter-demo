@@ -42,9 +42,9 @@
   - **Type:** always_comb
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Interrupt pending is set by source (depends on le_i), cleared by claim_i.  Until interrupt is claimed, set doesn't affect ip_o.  RISC-V PLIC spec mentioned it can have counter for edge triggered  But skipped the feature as counter consumes substantial logic size. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Interrupt active is to control ip_o. If ip_o is set then until completed  by target, ip_o shouldn't be set by source even claim_i can clear ip_o.  ia can be cleared only when ia was set. If `set` and `complete_i` happen  at the same time, always `set` wins. 

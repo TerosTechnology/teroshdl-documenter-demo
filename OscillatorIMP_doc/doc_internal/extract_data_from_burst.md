@@ -80,7 +80,7 @@
 
 - wb_edfb_inst: work.wb_edfb
 - handle_comm: work.edfb_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 
 ## State machines

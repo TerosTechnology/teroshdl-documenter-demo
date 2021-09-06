@@ -46,7 +46,7 @@
 | REG_PRESCALER | std_logic_vector(ADDR_SIZE-1 downto 0) |  "0"  |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - unnamed: ( wbs_add, prescaler_s )
 - read_bloc: ( clk )

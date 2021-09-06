@@ -80,13 +80,13 @@
 ## Instantiations
 
 - dma_flow_slave_axis_inst: work.axi_dataComplex_dma_direct
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface M00_AXIS
 
 - busy_sync: work.dataComplex_dma_direct_sync
 - start_sync: work.dataComplex_dma_direct_sync
 - wb_inst: work.wb_dataComplex_dma_direct
 - handle_comm: work.dataComplex_dma_direct_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

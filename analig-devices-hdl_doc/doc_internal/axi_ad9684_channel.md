@@ -87,7 +87,7 @@
 ## Instantiations
 
 - i_pnmon: axi_ad9684_pnmon
-**Description**
+</br>**Description**
  instantiations
 
 - i_up_adc_channel: up_adc_channel

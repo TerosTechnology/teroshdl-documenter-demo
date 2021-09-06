@@ -69,13 +69,13 @@
 ## Processes
 - unnamed: ( @(posedge core_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  bring the enable signal to JESD core clock domain 
 - unnamed: ( @(posedge core_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  free running counter for periodic SYSREF generation 
 - unnamed: ( @(posedge core_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  generate SYSREF 

@@ -40,11 +40,11 @@
 ## Processes
 - unnamed: ( @(posedge clk_slow_i or negedge rst_slow_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  toggle pulse generated on positive edge 
 - unnamed: ( @(negedge clk_slow_i or negedge rst_slow_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  toggle pulse generated on negative edge 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff

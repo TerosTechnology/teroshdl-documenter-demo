@@ -68,19 +68,19 @@
 | TEMP_SIZE          | natural |  INTERNAL_DATA_SIZE          |             |
 ## Processes
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  latch data from previous block  for security and time propagation 
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  frame synchro:  wait for the first eof before starting  propagation.  Avoid to propagate a partial frame 
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  when count_frame = NB_FRAME   ie last accum  serie of data is propagated instead of  storing in a ram 
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  counter data part  incr for each new data  reset when eof is received 
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
  counter frame part  incr for each new eof  reset when overflow 
 ## Instantiations
 

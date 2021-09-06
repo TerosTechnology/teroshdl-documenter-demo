@@ -98,7 +98,7 @@
 - u_prim_xor_q1_r_sq: prim_xor2
 - u_prim_xor_q0_q1: prim_xor2
 - u_prim_c1_inv: prim_xor2
-**Description**
+</br>**Description**
  Generate c1_inv and c2_inv.
 
 - u_prim_c2_inv: prim_xor2

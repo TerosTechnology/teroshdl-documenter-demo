@@ -79,19 +79,19 @@
 
 - U_Bypass: surf.EthMacTxBypass
 - U_Csum: surf.EthMacTxCsum
-**Description**
+</br>**Description**
 ----------------------------
  TX Non-VLAN Checksum Module
 ----------------------------
 
 - U_Pause: surf.EthMacTxPause
-**Description**
+</br>**Description**
 ----------------
  TX Pause Module
 ----------------
 
 - U_Export: surf.EthMacTxExport
-**Description**
+</br>**Description**
 ---------------------
  TX MAC Export Module
 ---------------------

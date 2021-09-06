@@ -70,8 +70,8 @@
 | mem_type |      |  Shared memory  |
 ## Processes
 - unnamed: ( clka )
-**Description**
+</br>**Description**
  Port A 
 - unnamed: ( clkb )
-**Description**
+</br>**Description**
  Port B 

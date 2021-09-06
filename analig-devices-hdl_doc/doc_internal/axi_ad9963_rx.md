@@ -111,21 +111,21 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 - unnamed: ( @(*) )
   - **Type:** always
 ## Instantiations
 
 - i_rx_channel_0: axi_ad9963_rx_channel
-**Description**
+</br>**Description**
  channel 0 (i)
 
 - i_rx_channel_1: axi_ad9963_rx_channel
-**Description**
+</br>**Description**
  channel 1 (q)
 
 - i_up_adc_common: up_adc_common
-**Description**
+</br>**Description**
  common processor control
 

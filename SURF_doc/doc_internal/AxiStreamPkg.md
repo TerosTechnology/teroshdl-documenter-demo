@@ -50,7 +50,7 @@
 - toSlv <font id="function_arguments">(din             : AxiStreamMasterType;<br><span style="padding-left:20px"> c : AxiStreamConfigType) </font> <font id="function_return">return slv </font>
 - toAxiStreamMaster <font id="function_arguments">(din : slv;<br><span style="padding-left:20px"> valid : sl;<br><span style="padding-left:20px"> c : AxiStreamConfigType) </font> <font id="function_return">return AxiStreamMasterType </font>
 - axiStreamPacked <font id="function_arguments">( constant CONFIG_C : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster        : AxiStreamMasterType) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------------------------
  Helper function prototypes
 -----------------------------------------------------------------------------------------------
@@ -60,11 +60,11 @@
 - axiStreamGetUserBit <font id="function_arguments">( axisConfig : AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : AxiStreamMasterType;<br><span style="padding-left:20px"> bitPos     : integer;<br><span style="padding-left:20px"> bytePos    : integer := -1) </font> <font id="function_return">return sl </font>
 - axiStreamSetUserField <font id="function_arguments">( axisConfig : in    AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : inout AxiStreamMasterType;<br><span style="padding-left:20px"> fieldValue : in    slv;<br><span style="padding-left:20px"> bytePos    : in    integer := -1) </font> <font id="function_return">return ()</font>
 - axiStreamSetUserBit <font id="function_arguments">( axisConfig : in    AxiStreamConfigType;<br><span style="padding-left:20px"> axisMaster : inout AxiStreamMasterType;<br><span style="padding-left:20px"> bitPos     : in    integer;<br><span style="padding-left:20px"> bitValue   : in    sl;<br><span style="padding-left:20px"> bytePos    : in    integer := -1) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -1 = last
 
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiStreamConfigType;<br><span style="padding-left:20px"> e : AxiStreamConfigType) </font> <font id="function_return">return AxiStreamConfigType </font>
-**Description**
+</br>**Description**
  -1 = last
 
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : AxiStreamMasterType;<br><span style="padding-left:20px"> e : AxiStreamMasterType) </font> <font id="function_return">return AxiStreamMasterType </font>

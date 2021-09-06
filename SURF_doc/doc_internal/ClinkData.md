@@ -70,17 +70,17 @@
 | RegType   |                                                                                                                                                                                                                                                                                                                                                |  Each delay tap = 1/(32 * 2 * 200Mhz) = 78ps  Input rate = 85Mhz * 7 = 595Mhz = 1.68nS = 21.55 taps  |
 ## Processes
 - comb: ( clinkRst, parClock, r, rstFsm )
-**Description**
+</br>**Description**
 -----------------------------  State Machine ----------------------------- 
 - seq: ( clinkClk )
-**Description**
+</br>**Description**
  sync logic 
 ## Instantiations
 
 - U_DataShift: surf.ClinkDataShift
 - U_RstSync: surf.RstSync
 - U_DataFifo: surf.Fifo
-**Description**
+</br>**Description**
 ------------------------------------
  Output FIFO and status
 ------------------------------------

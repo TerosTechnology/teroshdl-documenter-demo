@@ -81,8 +81,8 @@
 | lo_abb_c | natural |  index_size_f(DMEM_SIZE) |  low address boundary bit  |
 ## Processes
 - mem_access: ( clk_i )
-**Description**
+</br>**Description**
  word aligned  Memory Access --------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - bus_feedback: ( clk_i )
-**Description**
+</br>**Description**
  Bus Feedback ---------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

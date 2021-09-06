@@ -76,7 +76,7 @@
 | M_PI_C         | sfixed(2 downto -15) |  to_sfixed(MATH_PI,<br><span style="padding-left:20px"> 2,<br><span style="padding-left:20px"> -15) |             |
 ## Processes
 - seq: ( clk )
-**Description**
+</br>**Description**
  reset handled by DOREG reset in SinCosLut module 
 ## Instantiations
 

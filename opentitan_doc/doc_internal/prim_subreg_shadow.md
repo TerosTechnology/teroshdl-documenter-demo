@@ -63,7 +63,7 @@
 ## Processes
 - phase_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Phase tracker:  - Reads from SW clear the phase back to 0.  - Writes have priority (can come from SW or HW). 
 ## Instantiations
 

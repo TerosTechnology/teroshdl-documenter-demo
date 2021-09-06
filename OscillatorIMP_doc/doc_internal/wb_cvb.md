@@ -47,6 +47,6 @@
 | REG_CPT_MAX | std_logic_vector | "11"  |             |
 ## Processes
 - write_bloc: ( clk, reset )
-**Description**
+</br>**Description**
  manage register 
 - read_bloc: ( clk, reset )

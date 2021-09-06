@@ -28,5 +28,5 @@
 ## Processes
 - p_lc_state_decode: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////////////////////  Signal Decoder Logic // ////////////////////////  The decoder logic below decodes the life cycle state vector and counter  into a format that can be exposed in the CSRs. If the state is invalid,  this will be flagged as well. 

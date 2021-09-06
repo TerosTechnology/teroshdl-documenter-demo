@@ -126,7 +126,7 @@
   - **Type:** always
 - unnamed: ( @(eof, data) )
   - **Type:** always
-**Description**
+</br>**Description**
  Capture single EOF in current cycle 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

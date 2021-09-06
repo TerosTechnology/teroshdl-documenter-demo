@@ -17,7 +17,7 @@
 | COMPLEX_POLAR |      |                         |
 ## Functions
 - CMPLX <font id="function_arguments">(X : in REAL;<br><span style="padding-left:20px"> Y : in REAL := 0.0) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns TRUE if L is not equal to R and returns FALSE
          otherwise
@@ -39,7 +39,7 @@
 
 
 - GET_PRINCIPAL_VALUE <font id="function_arguments">(X : in REAL) </font> <font id="function_return">return PRINCIPAL_VALUE </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns COMPLEX number X + iY
  Special values:
@@ -55,7 +55,7 @@
          None
 
 - COMPLEX_TO_POLAR <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of angle X; X in radians
  Special values:
@@ -70,7 +70,7 @@
          None
 
 - POLAR_TO_COMPLEX <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value COMPLEX_POLAR of Z
  Special values:
@@ -88,7 +88,7 @@
          None
 
 - ARG <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return PRINCIPAL_VALUE </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns absolute value (magnitude) of Z
  Special values:
@@ -103,7 +103,7 @@
          ABS(Z) = Z.MAG
 
 - ARG <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return PRINCIPAL_VALUE </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns argument (angle) in radians of the principal
          value of Z
@@ -121,7 +121,7 @@
          ARG(Z) = ARCTAN(Z.IM, Z.RE)
 
 - CONJ <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of unary minus of Z
  Special values:
@@ -138,7 +138,7 @@
                 Z.ARG /= 0.0
 
 - CONJ <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns complex conjugate of Z
  Special values:
@@ -153,7 +153,7 @@
          Returns x -jy for Z= x + jy
 
 - SQRT <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of complex conjugate of Z
  Special values:
@@ -169,7 +169,7 @@
          Returns COMPLEX_POLAR'(Z.MAG, -Z.ARG) if Z.ARG /= MATH_PI
 
 - SQRT <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns square root of Z with positive real part
          or, if the real part is zero, the one with nonnegative
@@ -186,7 +186,7 @@
          None
 
 - EXP <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns square root of Z with positive real part
          or, if the real part is zero, the one with nonnegative
@@ -204,7 +204,7 @@
          None
 
 - EXP <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns exponential of Z
  Special values:
@@ -222,7 +222,7 @@
          None
 
 - LOG <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of exponential of Z
  Special values:
@@ -247,7 +247,7 @@
          None
 
 - LOG2 <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns natural logarithm of Z
  Special values:
@@ -266,7 +266,7 @@
          None
 
 - LOG10 <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns logarithm base 2 of Z
  Special values:
@@ -282,7 +282,7 @@
          None
 
 - LOG <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns logarithm base 10 of Z
  Special values:
@@ -298,7 +298,7 @@
          None
 
 - LOG2 <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of natural logarithm of Z
  Special values:
@@ -325,7 +325,7 @@
          None
 
 - LOG10 <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of logarithm base 2 of Z
  Special values:
@@ -346,7 +346,7 @@
         None
 
 - LOG <font id="function_arguments">(Z : in COMPLEX;<br><span style="padding-left:20px"> BASE : in REAL) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of logarithm base 10 of Z
  Special values:
@@ -367,7 +367,7 @@
          None
 
 - LOG <font id="function_arguments">(Z : in COMPLEX_POLAR;<br><span style="padding-left:20px"> BASE : in REAL) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns logarithm base BASE of Z
  Special values:
@@ -387,7 +387,7 @@
          None
 
 - SIN <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of logarithm base BASE of Z
  Special values:
@@ -412,7 +412,7 @@
          None
 
 - SIN <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns sine of Z
  Special values:
@@ -429,7 +429,7 @@
          None
 
 - COS <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of sine of Z
  Special values:
@@ -448,7 +448,7 @@
          None
 
 - COS <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns cosine of Z
  Special values:
@@ -465,7 +465,7 @@
          None
 
 - SINH <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of cosine of Z
  Special values:
@@ -484,7 +484,7 @@
          None
 
 - SINH <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns hyperbolic sine of Z
  Special values:
@@ -505,7 +505,7 @@
          None
 
 - COSH <font id="function_arguments">(Z : in COMPLEX) </font> <font id="function_return">return COMPLEX </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns principal value of hyperbolic sine of Z
  Special values:
@@ -528,7 +528,7 @@
          None
 
 - COSH <font id="function_arguments">(Z : in COMPLEX_POLAR) </font> <font id="function_return">return COMPLEX_POLAR </font>
-**Description**
+</br>**Description**
  Purpose:
          Returns hyperbolic cosine of Z
  Special values:

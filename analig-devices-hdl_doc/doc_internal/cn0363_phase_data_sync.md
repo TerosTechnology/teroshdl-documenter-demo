@@ -79,7 +79,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  If the STAT register is included in the sample we get 4 bytes per sample and  * are able to detect channel swaps and synchronize the first output sample to  * the first channel. If the STAT register is not included we only get 3 bytes  * per sample and rely on that the first sample will always be from the first  * channel */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

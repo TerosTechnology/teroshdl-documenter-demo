@@ -87,26 +87,26 @@
 | DATA_FIFO_SIZE_C | integer |  1 + DATA_BITS_C + RESP_BITS_C + ID_BITS_C                                                                                                                  |             |
 ## Functions
 - addrToSlv <font id="function_arguments">(din : AxiReadMasterType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert address record to slv
 
 - slvToAddr <font id="function_arguments">(din    : in    slv(ADDR_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> slave  : in    AxiReadMasterType;<br><span style="padding-left:20px"> master : inout AxiReadMasterType ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to address record
 
 - dataToSlv <font id="function_arguments">(din : AxiReadSlaveType) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Convert data record to slv
 
 - slvToData <font id="function_arguments">(din    : in    slv(DATA_FIFO_SIZE_C-1 downto 0);<br><span style="padding-left:20px"> valid  : in    sl;<br><span style="padding-left:20px"> master : in    AxiReadMasterType;<br><span style="padding-left:20px"> slave  : inout AxiReadSlaveType ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Convert slv to data record
 
 ## Processes
 - unnamed: ( sAxiReadMaster, mAxiReadSlave,
              addrFifoDout, addrFifoAFull, addrFifoValid,
              dataFifoDout, dataFifoAFull, dataFifoValid )
-**Description**
+</br>**Description**
 -----------------------  Fifo Outputs ----------------------- 
 ## Instantiations
 

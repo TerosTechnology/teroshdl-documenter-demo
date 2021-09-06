@@ -36,7 +36,7 @@
 | hmac    | int unsigned     |             |
 ## Functions
 - sv_dpi_get_sha_digest <font id="function_arguments">(input bit[7:0] msg[],<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font>
-**Description**
+</br>**Description**
  sv wrapper functions
 
 - sv_dpi_get_sha256_digest <font id="function_arguments">(input bit[7:0] msg[],<br><span style="padding-left:20px">)</font> <font id="function_return">return (void)</font>

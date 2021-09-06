@@ -29,5 +29,5 @@
 ## Processes
 - p_lc_state_transition: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ////////////////////////  Signal Decoder Logic // ////////////////////////  The decoder logic below checks whether a given transition edge  is valid and computes the next lc counter ans state vectors. 

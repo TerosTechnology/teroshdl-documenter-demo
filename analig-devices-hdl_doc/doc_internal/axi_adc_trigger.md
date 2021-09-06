@@ -200,17 +200,17 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  External trigger output hold 100000 clock cycles(1ms) on polarity change.  All trigger signals that are to be outputted on the external trigger after a  trigger out is acknowledged by the hold counter will be disregarded for 1ms.  This was done to avoid noise created by high frequency switches on long  wires. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  1. keep data in sync with the trigger. The trigger bypasses the variable  fifo. The data goes through and it is delayed with 4 clock cycles)  2. For non max sample rate of the ADC, the trigger signal that originates  from an external source is stored until the valid acknowledges the trigger. 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  delay out trigger 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

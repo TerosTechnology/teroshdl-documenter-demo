@@ -55,7 +55,7 @@
 - bool_to_sl <font id="function_arguments">(b_val: boolean) </font> <font id="function_return">return std_logic </font>
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_async: ( addr_i, data_a_s, data_b_s,
 						data_a_en_always_high_s, data_b_en_always_high_s,

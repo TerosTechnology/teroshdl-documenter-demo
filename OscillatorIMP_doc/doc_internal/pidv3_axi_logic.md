@@ -68,20 +68,20 @@
 | MSB_SIZE  | natural |  comp_unused_slice(PID_SZ,<br><span style="padding-left:20px"> DATA_OUT_SIZE) |  size of the dropped part of input signal                   |
 ## Functions
 - sel <font id="function_arguments">(P,<br><span style="padding-left:20px"> I: natural) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
 signal I_s	  : std_logic_vector(33-1 downto 0);
 
 - comp_unused_slice <font id="function_arguments">(in_size,<br><span style="padding-left:20px"> out_size: natural) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
  return static size or difference between input and output size
  if in_size > out_size
 
 ## Processes
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
 error signal 
 - unnamed: ( clk_i )
 - unnamed: ( clk_i )
 - unnamed: ( clk_i )
-**Description**
+</br>**Description**
 derivative --none for the moment sum + sat + integr desat 

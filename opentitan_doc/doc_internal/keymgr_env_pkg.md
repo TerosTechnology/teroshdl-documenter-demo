@@ -31,7 +31,7 @@
 | keymgr_cdi_type_e | enum {<br><span style="padding-left:20px">     Sealing,<br><span style="padding-left:20px">     Attestation   }      |             |
 ## Functions
 - get_next_state <font id="function_arguments">(keymgr_pkg::keymgr_working_state_e current_state)</font> <font id="function_return">return (keymgr_pkg::keymgr_working_state_e)</font>
-**Description**
+</br>**Description**
  functions
  state is incremental, if it's not in defined enum, consider as StDisabled
 

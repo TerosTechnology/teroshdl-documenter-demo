@@ -54,10 +54,10 @@
 ## Instantiations
 
 - tap_top_i: tap_top
-**Description**
+</br>**Description**
  jtag tap controller
 
 - confreg: jtagreg
-**Description**
+</br>**Description**
  pulp configuration register
 

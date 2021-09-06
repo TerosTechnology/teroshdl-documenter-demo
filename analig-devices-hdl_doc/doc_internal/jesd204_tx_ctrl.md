@@ -137,7 +137,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Timeline  *  * #1 lmfc_edge == 1, ilas_reset update  * #3 {lane_,}cgs_enable, tx_ready update  *  * One multi-frame should at least be 3 clock cycles (TBD 64-bit data path)  */ 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

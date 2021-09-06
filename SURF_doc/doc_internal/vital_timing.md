@@ -48,7 +48,7 @@
 ## Functions
 - VitalTimingDataInit <font id="function_arguments">()</font> <font id="function_return">RETURN VitalTimingDataType </font>
 - VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType ) </font> <font id="function_return">RETURN VitalDelayType01Z </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalExtendToFillDelay
@@ -93,7 +93,7 @@
 - VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType01 ) </font> <font id="function_return">RETURN VitalDelayType01Z </font>
 - VitalExtendToFillDelay <font id="function_arguments">( CONSTANT Delay : IN VitalDelayType01Z ) </font> <font id="function_return">RETURN VitalDelayType01Z </font>
 - VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType ) </font> <font id="function_return">RETURN TIME </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalCalcDelay
@@ -147,7 +147,7 @@
 - VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType01 ) </font> <font id="function_return">RETURN TIME </font>
 - VitalCalcDelay <font id="function_arguments">( CONSTANT NewVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT OldVal : IN std_ulogic   := 'X';<br><span style="padding-left:20px"> CONSTANT Delay  : IN VitalDelayType01Z ) </font> <font id="function_return">RETURN TIME </font>
 - VitalPathDelay <font id="function_arguments">( SIGNAL   OutSignal     : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData    : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp       : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths         : IN    VitalPathArrayType;<br><span style="padding-left:20px"> CONSTANT DefaultDelay  : IN    VitalDelayType      := VitalZeroDelay;<br><span style="padding-left:20px"> CONSTANT Mode          : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn           : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN    SEVERITY_LEVEL      := WARNING ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalPathDelay
@@ -263,7 +263,7 @@
 - VitalPathDelay01 <font id="function_arguments">( SIGNAL   OutSignal     : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData    : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp       : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths         : IN    VitalPathArray01Type;<br><span style="padding-left:20px"> CONSTANT DefaultDelay  : IN    VitalDelayType01    := VitalZeroDelay01;<br><span style="padding-left:20px"> CONSTANT Mode          : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn           : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN    SEVERITY_LEVEL      := WARNING ) </font> <font id="function_return">return ()</font>
 - VitalPathDelay01Z <font id="function_arguments">( SIGNAL   OutSignal     : OUT   std_logic;<br><span style="padding-left:20px"> VARIABLE GlitchData    : INOUT VitalGlitchDataType;<br><span style="padding-left:20px"> CONSTANT OutSignalName : IN    string;<br><span style="padding-left:20px"> CONSTANT OutTemp       : IN    std_logic;<br><span style="padding-left:20px"> CONSTANT Paths         : IN    VitalPathArray01ZType;<br><span style="padding-left:20px"> CONSTANT DefaultDelay  : IN    VitalDelayType01Z   := VitalZeroDelay01Z;<br><span style="padding-left:20px"> CONSTANT Mode          : IN    VitalGlitchKindType := OnEvent;<br><span style="padding-left:20px"> CONSTANT XOn           : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN    BOOLEAN             := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN    SEVERITY_LEVEL      := WARNING;<br><span style="padding-left:20px"> CONSTANT OutputMap     : IN    VitalOutputMapType := VitalDefaultOutputMap ) </font> <font id="function_return">return ()</font>
 - VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalWireDelay
@@ -306,7 +306,7 @@
 - VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType01 ) </font> <font id="function_return">return ()</font>
 - VitalWireDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT twire      : IN    VitalDelayType01Z ) </font> <font id="function_return">return ()</font>
 - VitalSignalDelay <font id="function_arguments">( SIGNAL   OutSig     : OUT   std_ulogic;<br><span style="padding-left:20px"> SIGNAL   InSig      : IN    std_ulogic;<br><span style="padding-left:20px"> CONSTANT dly        : IN   TIME ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalSignalDelay
@@ -337,7 +337,7 @@
  -------------------------------------------------------------------------
 
 - VitalSetupHoldCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupLow      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldHigh      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldLow       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:  VitalSetupHoldCheck
@@ -441,7 +441,7 @@
 
 - VitalSetupHoldCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupHigh     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT SetupLow      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldHigh      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT HoldLow       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font>
 - VitalRecoveryRemovalCheck <font id="function_arguments">( VARIABLE Violation     : OUT    X01;<br><span style="padding-left:20px"> VARIABLE TimingData    : INOUT  VitalTimingDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal    : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName: IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay     : IN     TIME := 0 ns;<br><span style="padding-left:20px"> SIGNAL   RefSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT RefSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT RefDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Recovery      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Removal       : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT ActiveLow     : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT CheckEnabled  : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT RefTransition : IN     VitalEdgeSymbolType;<br><span style="padding-left:20px"> CONSTANT HeaderMsg     : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn           : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn         : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity   : IN     SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:   VitalRecoveryRemovalCheck
@@ -524,7 +524,7 @@
  -------------------------------------------------------------------------
 
 - VitalPeriodPulseCheck <font id="function_arguments">( VARIABLE Violation      : OUT    X01;<br><span style="padding-left:20px"> VARIABLE PeriodData     : INOUT  VitalPeriodDataType;<br><span style="padding-left:20px"> SIGNAL   TestSignal     : IN     std_ulogic;<br><span style="padding-left:20px"> CONSTANT TestSignalName : IN     STRING := "";<br><span style="padding-left:20px"> CONSTANT TestDelay      : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT Period         : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT PulseWidthHigh : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT PulseWidthLow  : IN     TIME := 0 ns;<br><span style="padding-left:20px"> CONSTANT CheckEnabled   : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT HeaderMsg      : IN     STRING := " ";<br><span style="padding-left:20px"> CONSTANT XOn            : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgOn          : IN     BOOLEAN := TRUE;<br><span style="padding-left:20px"> CONSTANT MsgSeverity    : IN     SEVERITY_LEVEL := WARNING ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Function Name:  VitalPeriodPulseCheck

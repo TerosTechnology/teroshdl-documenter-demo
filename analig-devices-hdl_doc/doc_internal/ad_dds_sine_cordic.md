@@ -84,5 +84,5 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  x and y are cos(angle) and sin(angle) 

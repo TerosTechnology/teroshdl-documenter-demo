@@ -58,7 +58,7 @@
 | KeyShares | int  | KmacEnMasking ? Shares : 1 |             |
 ## Functions
 - valid_chk <font id="function_arguments">(logic [MaxWidth-1:0])</font> <font id="function_return">return (logic)</font>
-**Description**
+</br>**Description**
  checks for all 0's or all 1's of value
 
 ## Instantiations

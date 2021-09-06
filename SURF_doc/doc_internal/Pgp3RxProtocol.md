@@ -69,7 +69,7 @@
 ## Processes
 - comb: ( pgpRxIn, pgpRxRst, phyRxActiveSync, phyRxActiveSyncFall, protRxData,
                    protRxHeader, protRxValid, r )
-**Description**
+</br>**Description**
  [out] 
 - seq: ( pgpRxClk )
 ## Instantiations

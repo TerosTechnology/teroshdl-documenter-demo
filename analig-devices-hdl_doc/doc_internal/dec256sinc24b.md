@@ -74,23 +74,23 @@ Use a timescale that is best for simulation.
 ## Processes
 - unnamed: ( @(mdata_i) )
   - **Type:** always
-**Description**
+</br>**Description**
  Perform the Sinc ACTION */ 
 - unnamed: ( @(negedge mclkout_i or posedge reset_i) )
   - **Type:** always
-**Description**
+</br>**Description**
 ACCUMULATOR (INTEGRATOR) * Perform the accumulation (IIR) at the speed of the modulator. * mclkout_i = modulators conversion bit rate */ 
 - unnamed: ( @(posedge mclkout_i or posedge reset_i ) )
   - **Type:** always
-**Description**
+</br>**Description**
 DECIMATION STAGE (MCLKOUT_I/ WORD_CLK) */ 
 - unnamed: ( @(word_count) )
   - **Type:** always
 - unnamed: ( @(posedge word_clk or posedge reset_i) )
   - **Type:** always
-**Description**
+</br>**Description**
 DIFFERENTIATOR (including decimation stage) * Perform the differentiation stage (FIR) at a lower speed. WORD_CLK = output word rate */ 
 - unnamed: ( @(posedge word_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
   Clock the Sinc output into an output register     Clocking Sinc Output into an Output Register WORD_CLK = output word rate */ 

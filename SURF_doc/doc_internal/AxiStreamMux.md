@@ -74,13 +74,13 @@
 | RegType |      |             |
 ## Processes
 - ROUTE_TABLE_REMAP: ( sAxisMasters )
-**Description**
+</br>**Description**
  Override TDESTS and TIDs according to the routing tables 
 - comb: ( axisRst, disableSel, ileaveRearb, pipeAxisSlave, r, rearbitrate, sAxisMastersTmp )
 - seq: ( axisClk )
 ## Instantiations
 
 - AxiStreamPipeline_1: surf.AxiStreamPipeline
-**Description**
+</br>**Description**
  Optional output pipeline registers to ease timing
 

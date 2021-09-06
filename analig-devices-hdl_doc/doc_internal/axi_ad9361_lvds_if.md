@@ -153,7 +153,7 @@
   - **Type:** always
 - unnamed: ( @(posedge l_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  intel-equivalence 
 - unnamed: ( @(posedge l_clk) )
   - **Type:** always
@@ -161,11 +161,11 @@
   - **Type:** always
 - unnamed: ( @(posedge l_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  adc-status 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dac-tx interface 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -173,7 +173,7 @@
   - **Type:** always
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  tdd/ensm control 
 - unnamed: ( @(posedge clk or posedge rst) )
   - **Type:** always
@@ -182,22 +182,22 @@
 ## Instantiations
 
 - i_rx_frame: ad_data_in
-**Description**
+</br>**Description**
  receive frame interface, ibuf -> idelay -> iddr
 
 - i_tx_frame: ad_data_out
-**Description**
+</br>**Description**
  transmit frame interface, oddr -> obuf
 
 - i_tx_clk: ad_data_out
-**Description**
+</br>**Description**
  transmit clock interface, oddr -> obuf
 
 - i_enable: ad_data_out
-**Description**
+</br>**Description**
  enable, oddr -> obuf
 
 - i_txnrx: ad_data_out
-**Description**
+</br>**Description**
  txnrx, oddr -> obuf
 

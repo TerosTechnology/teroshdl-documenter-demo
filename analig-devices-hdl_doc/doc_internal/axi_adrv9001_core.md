@@ -210,16 +210,16 @@
   - **Type:** always
 - unnamed: ( @(posedge tx2_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Use tx1_r1_mode as clock enable when the two clocks have different frequency 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_rx1_ctrl_sync: sync_bits
-**Description**
+</br>**Description**
  rx1_r1_mode and tx1_r1_mode considered static during operation
  rx1_r1_mode should be 0 only when rx1_clk and rx2_clk have the same frequency
  tx1_r1_mode should be 0 only when tx1_clk and tx2_clk have the same frequency
@@ -230,7 +230,7 @@
 - i_tx1: axi_adrv9001_tx
 - i_tx2: axi_adrv9001_tx
 - i_delay_cntrl_rx1: up_delay_cntrl
-**Description**
+</br>**Description**
  adc delay control
 
 - i_delay_cntrl_rx2: up_delay_cntrl

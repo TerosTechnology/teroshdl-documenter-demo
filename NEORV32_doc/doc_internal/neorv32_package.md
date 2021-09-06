@@ -631,7 +631,7 @@
 | mem8_t        | array (natural range <>) of std_ulogic_vector(07 downto 0)  |  memory with 8-bit entries                                                                                                                                                              |
 ## Functions
 - index_size_f <font id="function_arguments">(input : natural) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
  Helper Functions -----------------------------------------------------------------------
  -------------------------------------------------------------------------------------------
 

@@ -39,7 +39,7 @@
 ## Instantiations
 
 - dut: rv_plic
-**Description**
+</br>**Description**
  TODO: once the PLIC is fully parameterizable in RTL, generate
  several instances with different NumSrc and NumTarget configs here
  (in a similar way as this has been done in prim_lfsr_fpv)

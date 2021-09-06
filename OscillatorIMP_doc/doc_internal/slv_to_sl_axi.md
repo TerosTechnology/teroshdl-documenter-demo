@@ -60,10 +60,10 @@
 
 - sync_offset_inst: work.slv_to_sl_axi_sync_slv
 - slv_to_sl_axi_comm_inst: work.slv_to_sl_axi_comm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 
 - handle_comm: work.slv_to_sl_axi_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

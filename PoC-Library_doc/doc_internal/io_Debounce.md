@@ -79,5 +79,5 @@
 | LOCK_COUNT_X | integer |  TimingToCycles(BOUNCE_TIME,<br><span style="padding-left:20px"> CLOCK_FREQ) - 1 |             |
 ## Processes
 - unnamed: ( Clock )
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------  Bounce Filter 

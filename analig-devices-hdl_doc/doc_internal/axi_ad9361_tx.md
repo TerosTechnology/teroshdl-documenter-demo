@@ -140,7 +140,7 @@
   - **Type:** always
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  rate counters and data sync signals 
 - unnamed: ( @(posedge dac_clk) )
   - **Type:** always
@@ -149,26 +149,26 @@
 ## Instantiations
 
 - i_tx_channel_0: axi_ad9361_tx_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_tx_channel_1: axi_ad9361_tx_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_tx_channel_2: axi_ad9361_tx_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_tx_channel_3: axi_ad9361_tx_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_up_dac_common: up_dac_common
-**Description**
+</br>**Description**
  dac common processor interface
 
 - i_delay_cntrl: up_delay_cntrl
-**Description**
+</br>**Description**
  dac delay control
 

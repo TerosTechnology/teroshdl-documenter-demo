@@ -102,15 +102,15 @@
 ## Instantiations
 
 - bufgctrl_adc: BUFGCTRL
-**Description**
+</br>**Description**
  device clock interface (receive clock)
 
 - i_rx_iq: ad_data_in
-**Description**
+</br>**Description**
  receive iq interface, ibuf -> idelay -> iddr
 
 - i_div_clk_buf: BUFR
-**Description**
+</br>**Description**
  transmit data interface
 
 - bufgctrl_dac: BUFGCTRL

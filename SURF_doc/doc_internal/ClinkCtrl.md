@@ -60,13 +60,13 @@
 | cblSerOut | sl              |             |
 ## Processes
 - unnamed: ( camCtrl, chanConfig )
-**Description**
+</br>**Description**
 -----------------------------  Camera control bits ----------------------------- 
 ## Instantiations
 
 - U_SerOut: OBUFDS
 - U_Uart: surf.ClinkUart
-**Description**
+</br>**Description**
 -----------------------------
  UART
 -----------------------------

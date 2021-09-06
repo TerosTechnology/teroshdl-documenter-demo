@@ -102,5 +102,5 @@
 | BYTE_ADDR_BITS | positive |  log2ceil(D_BITS/8) |             |
 ## Processes
 - unnamed: ( mem_addr )
-**Description**
+</br>**Description**
  1 word of D_BITS  address 

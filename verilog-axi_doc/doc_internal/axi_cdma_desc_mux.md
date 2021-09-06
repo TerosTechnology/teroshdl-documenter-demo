@@ -98,6 +98,6 @@
 ## Instantiations
 
 - arb_inst: arbiter
-**Description**
+</br>**Description**
  arbiter instance
 

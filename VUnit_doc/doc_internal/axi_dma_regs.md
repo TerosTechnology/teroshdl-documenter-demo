@@ -36,7 +36,7 @@
 | state_t | (idle,<br><span style="padding-left:20px"> writing,<br><span style="padding-left:20px"> write_response,<br><span style="padding-left:20px"> reading)  |             |
 ## Functions
 - cmp_word_address <font id="function_arguments">(byte_addr : std_logic_vector;<br><span style="padding-left:20px"> word_addr : natural) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Compare addresses of 32-bit words discarding byte address
 
 ## Processes

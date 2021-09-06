@@ -102,7 +102,7 @@
 
 - nco_inst1: work.nco_counter_logic
 - pinc_syn: work.nco_counter_synchronizer_bit
-**Description**
+</br>**Description**
 - synchro ---
 
 - poff_syn: work.nco_counter_synchronizer_bit
@@ -111,10 +111,10 @@
 - cpt_step_syn: work.nco_counter_synchronizer_vector
 - enable_syn: work.nco_counter_synchronizer_bit
 - wb_nco_inst: work.wb_nco_counter
-**Description**
+</br>**Description**
 -------------
 
 - handle_comm: work.nco_counter_handcomm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

@@ -79,33 +79,33 @@
 | RegType   |                                                                                                                                                                                                                                                                                                                                                                |             |
 ## Processes
 - comb: ( axilAck, axilRst, dmaAck, intStatusMaster, r )
-**Description**
+</br>**Description**
  [in] 
 - seq: ( axilClk )
 ## Instantiations
 
 - U_AxiLiteMaster_1: surf.AxiLiteMaster
 - U_AxiStreamDmaRead_1: surf.AxiStreamDmaRead
-**Description**
+</br>**Description**
  [in]
  DMA Write block
 
 - U_Synchronizer_Req: surf.Synchronizer
-**Description**
+</br>**Description**
  [in]
  Main logic runs on AXI-Lite clk, which may be different from the DMA AXI clk
  Synchronize the request/ack bus if necessary
 
 - U_SynchronizerFifo_ReqData: surf.SynchronizerVector
-**Description**
+</br>**Description**
  [out]
 
 - U_Synchronizer_Ack: surf.Synchronizer
 - U_SynchronizerFifo_Ack: surf.SynchronizerVector
-**Description**
+</br>**Description**
  [out]
 
 - U_AxiStreamFifo_Status: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
  [out]
 

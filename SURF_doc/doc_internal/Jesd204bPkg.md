@@ -34,53 +34,53 @@
 | alignTxArray          | array (natural range <>) of slv((GT_WORD_SIZE_C)-1 downto 0)                                                        |                                                                                      |
 ## Functions
 - detKcharFunc <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic </font>
-**Description**
+</br>**Description**
  Functions
 ------------------------------------------------------------------------
  Detect K character
 
 - varIndexOutFunc <font id="function_arguments">(shft_slv : slv;<br><span style="padding-left:20px"> index_slv : slv) </font> <font id="function_return">return std_logic </font>
-**Description**
+</br>**Description**
  Output variable index from SLV (use in variable length shift register)
 
 - detectPosFuncSwap <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Detect position of first non K character (Swapped)
 
 - detectPosFunc <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> charisk_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Detect position of first non K character
 
 - byteSwapSlv <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Byte swap slv (bytes int 2 or 4)
 
 - endianSwapSlv <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Swap little and big endians (bytes int 2 or 4)
 
 - JesdDataAlign <font id="function_arguments">(data_slv : slv;<br><span style="padding-left:20px"> position_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Align the data within the data buffer according to the position of the byte alignment word
 
 - JesdCharAlign <font id="function_arguments">(char_slv : slv;<br><span style="padding-left:20px"> position_slv : slv;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Align the character within the buffer according to the position of the byte alignment word
 
 - slvToInt <font id="function_arguments">(data_slv : slv) </font> <font id="function_return">return integer </font>
-**Description**
+</br>**Description**
  Convert standard logic vector to integer
 
 - intToSlv <font id="function_arguments">(data_int : integer;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Convert integer to standard logic vector
 
 - outSampleZero <font id="function_arguments">(F_int : positive;<br><span style="padding-left:20px"> bytes_int : positive) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Output offset binary zero
 
 - invSigned <font id="function_arguments">(input : slv) </font> <font id="function_return">return std_logic_vector </font>
-**Description**
+</br>**Description**
  Invert functions
  Invert signed
 

@@ -177,15 +177,15 @@
 - dac_intf_i: dac_intf
 - duc_bank_core_i: duc_bank_core
 - tx_intf_s_axi_i: tx_intf_s_axi
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 
 - tx_status_fifo_i: tx_status_fifo
-**Description**
+</br>**Description**
 hooked to slv_reg22!
 
 - tx_intf_s_axis_i: tx_intf_s_axis
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXIS
 
 - tx_interrupt_selection_i: tx_interrupt_selection

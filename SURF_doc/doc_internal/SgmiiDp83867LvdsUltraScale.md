@@ -79,7 +79,7 @@
 ## Instantiations
 
 - U_PwrUpRst0: surf.PwrUpRst
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------
  We must hold reset for >10ms and then wait >5ms until we may talk
  to it (we actually wait also >10ms) which is indicated by 'phyInitRst'
@@ -87,7 +87,7 @@
 
 - U_PwrUpRst1: surf.PwrUpRst
 - U_PhyCtrl: surf.SgmiiDp83867Mdio
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------
  The SaltCore does not support auto-negotiation on the SGMII link
  (mac<->phy) - however, the DP83867ISRGZ PHY (by default) assumes it does.
@@ -97,7 +97,7 @@
 ---------------------------------------------------------------------
 
 - U_SyncMdi: surf.Synchronizer
-**Description**
+</br>**Description**
 --------------------------------------------------
  synchronize MDI and IRQ signals into 'clk' domain
 --------------------------------------------------

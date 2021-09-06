@@ -78,5 +78,5 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  coefficients are flopped to remove warnings from vivado 

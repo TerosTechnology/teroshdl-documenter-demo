@@ -107,6 +107,6 @@
 - u_sysrst_ctrl_pin: sysrst_ctrl_pin
 - u_prim_flop_2sync: prim_flop_2sync
 - u_prim_intr_hw: prim_intr_hw
-**Description**
+</br>**Description**
  Instantiate the interrupt module
 

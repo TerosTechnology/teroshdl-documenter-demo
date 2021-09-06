@@ -144,5 +144,5 @@
 ## Processes
 - PHDET: ( up_clk, rxen )
 - FRX: ( up_clk, rxen )
-**Description**
+</br>**Description**
  State machine that hunt for and lock onto sub-frames 

@@ -63,20 +63,20 @@
 | OPT_MEM_ADDR_BITS | integer |  1                          |                                                                                                                                                                                                                                                  |
 ## Processes
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement axi_awready generation  axi_awready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is  de-asserted when reset is low. 
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement axi_awaddr latching  This process is used to latch the address when both   S_AXI_AWVALID and S_AXI_WVALID are valid.  
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement axi_wready generation  axi_wready is asserted for one S_AXI_ACLK clock cycle when both  S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is   de-asserted when reset is low.  
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement write response logic generation  The write response and response valid signals are asserted by the slave   when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.    This marks the acceptance of address and indicates the status of   write transaction. 
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement axi_arready generation  axi_arready is asserted for one S_AXI_ACLK clock cycle when  S_AXI_ARVALID is asserted. axi_awready is   de-asserted when reset (active low) is asserted.   The read address is also latched when S_AXI_ARVALID is   asserted. axi_araddr is reset to zero on reset assertion. 
 - unnamed: ( S_AXI_ACLK )
-**Description**
+</br>**Description**
  Implement axi_arvalid generation  axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both   S_AXI_ARVALID and axi_arready are asserted. The slave registers   data are available on the axi_rdata bus at this instance. The   assertion of axi_rvalid marks the validity of read data on the   bus and axi_rresp indicates the status of read transaction.axi_rvalid   is deasserted on reset (active low). axi_rresp and axi_rdata are   cleared to zero on reset (active low).   

@@ -146,7 +146,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  state machine 
 - unnamed: ( @(*) )
   - **Type:** always
@@ -156,7 +156,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  dma2fx3 
 - unnamed: ( @(*) )
   - **Type:** always

@@ -219,11 +219,11 @@
 - TX_StmMux: PoC.stream_Mux
 - TX_FCS: PoC.net_FrameChecksum
 - TX_UDP: PoC.udp_TX
-**Description**
+</br>**Description**
 	TX_FCS_Meta_Length								<= TX_FCS_MetaOut_Data(high(TX_FCS_META_BITS, TX_FCS_META_STREAMID_LEN)			 downto low(TX_FCS_META_BITS, TX_FCS_META_STREAMID_LEN));
 
 - RX_UDP: PoC.udp_RX
-**Description**
+</br>**Description**
  =============================================================================
  RX Path
  =============================================================================

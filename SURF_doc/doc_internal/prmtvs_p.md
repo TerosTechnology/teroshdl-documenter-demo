@@ -9,7 +9,7 @@
 | VitalStateTableType | ARRAY ( NATURAL RANGE <>,<br><span style="padding-left:20px"> NATURAL RANGE <> ) OF VitalStateSymbolType  |             |
 ## Functions
 - VitalAND <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
  VITAL Primitives
  
@@ -78,7 +78,7 @@
 - VitalNOR <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalXNOR <font id="function_arguments">( CONSTANT      Data : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT ResultMap : IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalAND <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -122,7 +122,7 @@
 - VitalNOR <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalXNOR <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalAND2 <font id="function_arguments">( CONSTANT       a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Sequential 
@@ -180,7 +180,7 @@
 - VitalNOR4 <font id="function_arguments">( CONSTANT a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalXNOR4 <font id="function_arguments">( CONSTANT a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalAND2 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         a,<br><span style="padding-left:20px"> b :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -253,7 +253,7 @@
 - VitalNOR4 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL   a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_c_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_d_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalXNOR4 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL   a,<br><span style="padding-left:20px"> b,<br><span style="padding-left:20px"> c,<br><span style="padding-left:20px"> d :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_b_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_c_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    tpd_d_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalBUF <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Sequential 
@@ -301,7 +301,7 @@
 - VitalBUFIF1 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalIDENT <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalBUF <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -356,7 +356,7 @@
 - VitalBUFIF1 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font>
 - VitalIDENT <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">return ()</font>
 - VitalINV <font id="function_arguments">( CONSTANT         Data :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Sequential 
@@ -396,7 +396,7 @@
 - VitalINVIF0 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalINVIF1 <font id="function_arguments">( CONSTANT Data,<br><span style="padding-left:20px"> Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalINV <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL            a :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT    tpd_a_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -447,7 +447,7 @@
 - VitalINVIF0 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font>
 - VitalINVIF1 <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01Z   := VitalDefDelay01Z;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultZMapType := VitalDefaultResultZMap) </font> <font id="function_return">return ()</font>
 - VitalMUX <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Sequential 
@@ -497,7 +497,7 @@
 - VitalMUX4 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector4;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalMUX8 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector8;<br><span style="padding-left:20px"> CONSTANT    dSelect :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_ulogic </font>
 - VitalMUX <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -562,7 +562,7 @@
 - VitalMUX4 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector4;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalMUX8 <font id="function_arguments">( SIGNAL            q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL         Data :  IN std_logic_vector8;<br><span style="padding-left:20px"> SIGNAL         dSel :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_dsel_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalDECODER <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector </font>
-**Description**
+</br>**Description**
  ------------------------------------------------------------------------
 
  Sequential 
@@ -615,7 +615,7 @@
 - VitalDECODER4 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector2;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector4 </font>
 - VitalDECODER8 <font id="function_arguments">( CONSTANT       Data :  IN std_logic_vector3;<br><span style="padding-left:20px"> CONSTANT     Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT  ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">RETURN std_logic_vector8 </font>
 - VitalDECODER <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Concurrent
@@ -678,7 +678,7 @@
 - VitalDECODER4 <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector4;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector2;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalDECODER8 <font id="function_arguments">( SIGNAL              q : OUT std_logic_vector8;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector3;<br><span style="padding-left:20px"> SIGNAL         Enable :  IN std_ulogic;<br><span style="padding-left:20px"> CONSTANT   tpd_data_q :  IN VitalDelayArrayType01;<br><span style="padding-left:20px"> CONSTANT tpd_enable_q :  IN VitalDelayType01    := VitalDefDelay01;<br><span style="padding-left:20px"> CONSTANT    ResultMap :  IN VitalResultMapType := VitalDefaultResultMap ) </font> <font id="function_return">return ()</font>
 - VitalTruthTable <font id="function_arguments">( CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> CONSTANT DataIn       : IN std_logic_vector ) </font> <font id="function_return">RETURN std_logic_vector </font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
  Function Name:   VitalTruthTable
 
@@ -736,7 +736,7 @@
 - VitalTruthTable <font id="function_arguments">( SIGNAL   Result       : OUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn       : IN std_logic_vector     -- IR#236 ) </font> <font id="function_return">return ()</font>
 - VitalTruthTable <font id="function_arguments">( SIGNAL   Result       : OUT std_logic;<br><span style="padding-left:20px"> CONSTANT TruthTable   : IN VitalTruthTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn       : IN std_logic_vector     -- IR#236 ) </font> <font id="function_return">return ()</font>
 - VitalStateTable <font id="function_arguments">( VARIABLE Result         : INOUT std_logic_vector;<br><span style="padding-left:20px"> VARIABLE PreviousDataIn : INOUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT StateTable     : IN VitalStateTableType;<br><span style="padding-left:20px"> CONSTANT DataIn         : IN  std_logic_vector;<br><span style="padding-left:20px"> CONSTANT NumStates      : IN NATURAL ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Function Name:   VitalStateTable
@@ -822,7 +822,7 @@
 - VitalStateTable <font id="function_arguments">( SIGNAL   Result     : INOUT std_logic_vector;<br><span style="padding-left:20px"> CONSTANT StateTable : IN VitalStateTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn     : IN std_logic_vector;<br><span style="padding-left:20px"> CONSTANT NumStates  : IN NATURAL ) </font> <font id="function_return">return ()</font>
 - VitalStateTable <font id="function_arguments">( SIGNAL   Result     : INOUT std_logic;<br><span style="padding-left:20px"> CONSTANT StateTable : IN VitalStateTableType;<br><span style="padding-left:20px"> SIGNAL   DataIn     : IN std_logic_vector ) </font> <font id="function_return">return ()</font>
 - VitalResolve <font id="function_arguments">( SIGNAL              q : OUT std_ulogic;<br><span style="padding-left:20px"> SIGNAL           Data :  IN std_logic_vector) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  -------------------------------------------------------------------------
 
  Function Name:   VitalResolve

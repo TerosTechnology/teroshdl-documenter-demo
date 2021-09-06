@@ -52,7 +52,7 @@
 ## Instantiations
 
 - i_nopass1: prim_fifo_sync
-**Description**
+</br>**Description**
  need to instantiate by hand since bind statements inside
  generate blocks are currently not supported
 //////////////////
@@ -64,7 +64,7 @@
 - i_nopass15: prim_fifo_sync
 - i_nopass16: prim_fifo_sync
 - i_pass0: prim_fifo_sync
-**Description**
+</br>**Description**
 //////////////
  pass FIFOs //
 //////////////

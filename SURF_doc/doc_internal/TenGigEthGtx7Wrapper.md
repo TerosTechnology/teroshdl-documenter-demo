@@ -83,7 +83,7 @@
 ## Instantiations
 
 - TenGigEthGtx7Clk_Inst: surf.TenGigEthGtx7Clk
-**Description**
+</br>**Description**
 --------------------
  Common Clock Module
 --------------------

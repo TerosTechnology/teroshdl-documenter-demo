@@ -121,7 +121,7 @@
 ## Processes
 - unnamed: ( axiClk )
 - unnamed: ( axiRst, ib, intReadMasters, intWriteMasters, ob, popFifoValid, r )
-**Description**
+</br>**Description**
 -----------------------------------  Local Register Space ----------------------------------- 
 - unnamed: ( axiRst, ib, ibAck, popFifoPFull, pushFifoDout, pushFifoValid, r )
 - unnamed: ( axiRst, ob, obAck, pushFifoDout, pushFifoValid, r )
@@ -129,13 +129,13 @@
 
 - U_SwFifos: surf.AxiLiteFifoPushPop
 - U_IbDma: surf.AxiStreamDmaWrite
-**Description**
+</br>**Description**
 -----------------------------------
  Inbound Controller
 -----------------------------------
 
 - U_ObDma: surf.AxiStreamDmaRead
-**Description**
+</br>**Description**
 -----------------------------------
  Outbound Controller
 -----------------------------------

@@ -289,11 +289,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -303,491 +303,491 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_es_entropy_valid: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[es_entropy_valid]: 0:0
 
 - u_intr_state_es_health_test_failed: prim_subreg
-**Description**
+</br>**Description**
    F[es_health_test_failed]: 1:1
 
 - u_intr_state_es_observe_fifo_ready: prim_subreg
-**Description**
+</br>**Description**
    F[es_observe_fifo_ready]: 2:2
 
 - u_intr_state_es_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[es_fatal_err]: 3:3
 
 - u_intr_enable_es_entropy_valid: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[es_entropy_valid]: 0:0
 
 - u_intr_enable_es_health_test_failed: prim_subreg
-**Description**
+</br>**Description**
    F[es_health_test_failed]: 1:1
 
 - u_intr_enable_es_observe_fifo_ready: prim_subreg
-**Description**
+</br>**Description**
    F[es_observe_fifo_ready]: 2:2
 
 - u_intr_enable_es_fatal_err: prim_subreg
-**Description**
+</br>**Description**
    F[es_fatal_err]: 3:3
 
 - u_intr_test_es_entropy_valid: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[es_entropy_valid]: 0:0
 
 - u_intr_test_es_health_test_failed: prim_subreg_ext
-**Description**
+</br>**Description**
    F[es_health_test_failed]: 1:1
 
 - u_intr_test_es_observe_fifo_ready: prim_subreg_ext
-**Description**
+</br>**Description**
    F[es_observe_fifo_ready]: 2:2
 
 - u_intr_test_es_fatal_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[es_fatal_err]: 3:3
 
 - u_alert_test_recov_alert: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
    F[recov_alert]: 0:0
 
 - u_alert_test_fatal_alert: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_alert]: 1:1
 
 - u_regwen: prim_subreg_ext
-**Description**
+</br>**Description**
  R[regwen]: V(True)
 
 - u_conf_enable: prim_subreg
-**Description**
+</br>**Description**
  R[conf]: V(False)
    F[enable]: 1:0
 
 - u_conf_boot_bypass_disable: prim_subreg
-**Description**
+</br>**Description**
    F[boot_bypass_disable]: 3:3
 
 - u_conf_repcnt_disable: prim_subreg
-**Description**
+</br>**Description**
    F[repcnt_disable]: 4:4
 
 - u_conf_adaptp_disable: prim_subreg
-**Description**
+</br>**Description**
    F[adaptp_disable]: 5:5
 
 - u_conf_bucket_disable: prim_subreg
-**Description**
+</br>**Description**
    F[bucket_disable]: 6:6
 
 - u_conf_markov_disable: prim_subreg
-**Description**
+</br>**Description**
    F[markov_disable]: 7:7
 
 - u_conf_health_test_clr: prim_subreg
-**Description**
+</br>**Description**
    F[health_test_clr]: 8:8
 
 - u_conf_rng_bit_en: prim_subreg
-**Description**
+</br>**Description**
    F[rng_bit_en]: 9:9
 
 - u_conf_rng_bit_sel: prim_subreg
-**Description**
+</br>**Description**
    F[rng_bit_sel]: 11:10
 
 - u_conf_extht_enable: prim_subreg
-**Description**
+</br>**Description**
    F[extht_enable]: 12:12
 
 - u_conf_repcnts_disable: prim_subreg
-**Description**
+</br>**Description**
    F[repcnts_disable]: 13:13
 
 - u_rate: prim_subreg
-**Description**
+</br>**Description**
  R[rate]: V(False)
 
 - u_entropy_control_es_route: prim_subreg
-**Description**
+</br>**Description**
  R[entropy_control]: V(False)
    F[es_route]: 0:0
 
 - u_entropy_control_es_type: prim_subreg
-**Description**
+</br>**Description**
    F[es_type]: 1:1
 
 - u_entropy_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[entropy_data]: V(True)
 
 - u_health_test_windows_fips_window: prim_subreg
-**Description**
+</br>**Description**
  R[health_test_windows]: V(False)
    F[fips_window]: 15:0
 
 - u_health_test_windows_bypass_window: prim_subreg
-**Description**
+</br>**Description**
    F[bypass_window]: 31:16
 
 - u_repcnt_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnt_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_repcnt_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_repcnts_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnts_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_repcnts_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_adaptp_hi_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_hi_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_adaptp_hi_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_adaptp_lo_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_lo_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_adaptp_lo_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_bucket_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[bucket_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_bucket_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_markov_hi_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_hi_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_markov_hi_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_markov_lo_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_lo_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_markov_lo_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_extht_hi_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_hi_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_extht_hi_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_extht_lo_thresholds_fips_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_lo_thresholds]: V(True)
    F[fips_thresh]: 15:0
 
 - u_extht_lo_thresholds_bypass_thresh: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_thresh]: 31:16
 
 - u_repcnt_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnt_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_repcnt_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_repcnts_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnts_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_repcnts_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_adaptp_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_adaptp_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_adaptp_lo_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_lo_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_adaptp_lo_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_extht_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_extht_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_extht_lo_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_lo_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_extht_lo_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_bucket_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[bucket_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_bucket_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_markov_hi_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_hi_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_markov_hi_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_markov_lo_watermarks_fips_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_lo_watermarks]: V(True)
    F[fips_watermark]: 15:0
 
 - u_markov_lo_watermarks_bypass_watermark: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bypass_watermark]: 31:16
 
 - u_repcnt_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnt_total_fails]: V(True)
 
 - u_repcnts_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[repcnts_total_fails]: V(True)
 
 - u_adaptp_hi_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_hi_total_fails]: V(True)
 
 - u_adaptp_lo_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[adaptp_lo_total_fails]: V(True)
 
 - u_bucket_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[bucket_total_fails]: V(True)
 
 - u_markov_hi_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_hi_total_fails]: V(True)
 
 - u_markov_lo_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[markov_lo_total_fails]: V(True)
 
 - u_extht_hi_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_hi_total_fails]: V(True)
 
 - u_extht_lo_total_fails: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_lo_total_fails]: V(True)
 
 - u_alert_threshold_alert_threshold: prim_subreg
-**Description**
+</br>**Description**
  R[alert_threshold]: V(False)
    F[alert_threshold]: 15:0
 
 - u_alert_threshold_alert_threshold_inv: prim_subreg
-**Description**
+</br>**Description**
    F[alert_threshold_inv]: 31:16
 
 - u_alert_summary_fail_counts: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_summary_fail_counts]: V(True)
 
 - u_alert_fail_counts_repcnt_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_fail_counts]: V(True)
    F[repcnt_fail_count]: 7:4
 
 - u_alert_fail_counts_adaptp_hi_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[adaptp_hi_fail_count]: 11:8
 
 - u_alert_fail_counts_adaptp_lo_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[adaptp_lo_fail_count]: 15:12
 
 - u_alert_fail_counts_bucket_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[bucket_fail_count]: 19:16
 
 - u_alert_fail_counts_markov_hi_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[markov_hi_fail_count]: 23:20
 
 - u_alert_fail_counts_markov_lo_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[markov_lo_fail_count]: 27:24
 
 - u_alert_fail_counts_repcnts_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[repcnts_fail_count]: 31:28
 
 - u_extht_fail_counts_extht_hi_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
  R[extht_fail_counts]: V(True)
    F[extht_hi_fail_count]: 3:0
 
 - u_extht_fail_counts_extht_lo_fail_count: prim_subreg_ext
-**Description**
+</br>**Description**
    F[extht_lo_fail_count]: 7:4
 
 - u_fw_ov_control_fw_ov_mode: prim_subreg
-**Description**
+</br>**Description**
  R[fw_ov_control]: V(False)
    F[fw_ov_mode]: 0:0
 
 - u_fw_ov_control_fw_ov_entropy_insert: prim_subreg
-**Description**
+</br>**Description**
    F[fw_ov_entropy_insert]: 1:1
 
 - u_fw_ov_rd_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[fw_ov_rd_data]: V(True)
 
 - u_fw_ov_wr_data: prim_subreg_ext
-**Description**
+</br>**Description**
  R[fw_ov_wr_data]: V(True)
 
 - u_observe_fifo_thresh: prim_subreg
-**Description**
+</br>**Description**
  R[observe_fifo_thresh]: V(False)
 
 - u_debug_status_entropy_fifo_depth: prim_subreg_ext
-**Description**
+</br>**Description**
  R[debug_status]: V(True)
    F[entropy_fifo_depth]: 2:0
 
 - u_debug_status_sha3_fsm: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_fsm]: 5:3
 
 - u_debug_status_sha3_block_pr: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_block_pr]: 6:6
 
 - u_debug_status_sha3_squeezing: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_squeezing]: 7:7
 
 - u_debug_status_sha3_absorbed: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_absorbed]: 8:8
 
 - u_debug_status_sha3_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha3_err]: 9:9
 
 - u_debug_status_main_sm_idle: prim_subreg_ext
-**Description**
+</br>**Description**
    F[main_sm_idle]: 16:16
 
 - u_debug_status_main_sm_state: prim_subreg_ext
-**Description**
+</br>**Description**
    F[main_sm_state]: 31:24
 
 - u_seed: prim_subreg
-**Description**
+</br>**Description**
  R[seed]: V(False)
 
 - u_recov_alert_sts_es_main_sm_alert: prim_subreg
-**Description**
+</br>**Description**
  R[recov_alert_sts]: V(False)
    F[es_main_sm_alert]: 12:12
 
 - u_recov_alert_sts_es_bus_cmp_alert: prim_subreg
-**Description**
+</br>**Description**
    F[es_bus_cmp_alert]: 13:13
 
 - u_err_code_sfifo_esrng_err: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
    F[sfifo_esrng_err]: 0:0
 
 - u_err_code_sfifo_observe_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_observe_err]: 1:1
 
 - u_err_code_sfifo_esfinal_err: prim_subreg
-**Description**
+</br>**Description**
    F[sfifo_esfinal_err]: 2:2
 
 - u_err_code_es_ack_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[es_ack_sm_err]: 20:20
 
 - u_err_code_es_main_sm_err: prim_subreg
-**Description**
+</br>**Description**
    F[es_main_sm_err]: 21:21
 
 - u_err_code_fifo_write_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_write_err]: 28:28
 
 - u_err_code_fifo_read_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_read_err]: 29:29
 
 - u_err_code_fifo_state_err: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_state_err]: 30:30
 
 - u_err_code_test: prim_subreg
-**Description**
+</br>**Description**
  R[err_code_test]: V(False)
 

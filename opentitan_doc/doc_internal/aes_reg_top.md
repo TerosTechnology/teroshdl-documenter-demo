@@ -146,11 +146,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -160,79 +160,79 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test_recov_ctrl_update_err: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
    F[recov_ctrl_update_err]: 0:0
 
 - u_alert_test_fatal_fault: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fatal_fault]: 1:1
 
 - u_ctrl_shadowed_operation: prim_subreg_ext
-**Description**
+</br>**Description**
  R[ctrl_shadowed]: V(True)
    F[operation]: 0:0
 
 - u_ctrl_shadowed_mode: prim_subreg_ext
-**Description**
+</br>**Description**
    F[mode]: 6:1
 
 - u_ctrl_shadowed_key_len: prim_subreg_ext
-**Description**
+</br>**Description**
    F[key_len]: 9:7
 
 - u_ctrl_shadowed_manual_operation: prim_subreg_ext
-**Description**
+</br>**Description**
    F[manual_operation]: 10:10
 
 - u_ctrl_shadowed_force_zero_masks: prim_subreg_ext
-**Description**
+</br>**Description**
    F[force_zero_masks]: 11:11
 
 - u_trigger_start: prim_subreg
-**Description**
+</br>**Description**
  R[trigger]: V(False)
    F[start]: 0:0
 
 - u_trigger_key_iv_data_in_clear: prim_subreg
-**Description**
+</br>**Description**
    F[key_iv_data_in_clear]: 1:1
 
 - u_trigger_data_out_clear: prim_subreg
-**Description**
+</br>**Description**
    F[data_out_clear]: 2:2
 
 - u_trigger_prng_reseed: prim_subreg
-**Description**
+</br>**Description**
    F[prng_reseed]: 3:3
 
 - u_status_idle: prim_subreg
-**Description**
+</br>**Description**
  R[status]: V(False)
    F[idle]: 0:0
 
 - u_status_stall: prim_subreg
-**Description**
+</br>**Description**
    F[stall]: 1:1
 
 - u_status_output_lost: prim_subreg
-**Description**
+</br>**Description**
    F[output_lost]: 2:2
 
 - u_status_output_valid: prim_subreg
-**Description**
+</br>**Description**
    F[output_valid]: 3:3
 
 - u_status_input_ready: prim_subreg
-**Description**
+</br>**Description**
    F[input_ready]: 4:4
 
 - u_status_alert_recov_ctrl_update_err: prim_subreg
-**Description**
+</br>**Description**
    F[alert_recov_ctrl_update_err]: 5:5
 
 - u_status_alert_fatal_fault: prim_subreg
-**Description**
+</br>**Description**
    F[alert_fatal_fault]: 6:6
 

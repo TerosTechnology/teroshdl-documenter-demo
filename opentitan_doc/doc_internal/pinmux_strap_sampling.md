@@ -83,14 +83,14 @@
 - u_prim_lc_sync_dft: prim_lc_sync
 - u_buf_hold_tap: prim_buf
 - u_pinmux_jtag_buf_lc: pinmux_jtag_buf
-**Description**
+</br>**Description**
  Insert hand instantiated buffers for
  these signals to prevent further optimization.
 
 - u_pinmux_jtag_buf_rv: pinmux_jtag_buf
 - u_pinmux_jtag_buf_dft: pinmux_jtag_buf
 - u_rst_por_aon_n_mux: prim_clock_mux2
-**Description**
+</br>**Description**
  Note that this resets the selected TAP controller in
  scanmode. If the TAP controller needs to be active during
  reset, this reset bypass needs to be adapted accordingly.

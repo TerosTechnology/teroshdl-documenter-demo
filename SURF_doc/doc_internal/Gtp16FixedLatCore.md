@@ -94,33 +94,33 @@
 
 - RX_REC_CLK_BUFG: BUFG
 - RX_REC_CLK_PLL: PLL_BASE
-**Description**
+</br>**Description**
  From GTP RXRECCLK
 
 - RX_REC_CLK_PLL_FB_BUFG: BUFG
-**Description**
+</br>**Description**
  Feedback for PLL
 
 - RX_USR_CLK_BUFG: BUFG
-**Description**
+</br>**Description**
  Buffer pll outputs
 
 - RX_USR_CLK2_BUFMUX: BUFGMUX_CTRL
 - RstSync_1: surf.RstSync
 - GtpRxCommaAligner_1: surf.GtpRxCommaAligner
-**Description**
+</br>**Description**
  Manual comma aligner
 
 - Decoder8b10b_1: surf.Decoder8b10b
 - GtpTxPhaseAligner_1: surf.GtpTxPhaseAligner
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  Tx Data Path
 ------------------------------------------------------------------------------------------------
 
 - REFCLK_BUFG: BUFG
 - UGtpDual: GTP_DUAL
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  GTP Instance
 ------------------------------------------------------------------------------------------------

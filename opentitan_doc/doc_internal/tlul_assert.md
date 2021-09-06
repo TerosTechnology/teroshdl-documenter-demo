@@ -47,5 +47,5 @@
 ## Processes
 - unnamed: ( @(negedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 //////////////////////////////////  keep track of pending requests // //////////////////////////////////  use negedge clk to avoid possible race conditions 

@@ -73,5 +73,5 @@
 | mem_rom               | mem32_t(0 to boot_rom_size_c/4-1) |  mem32_init_f(bootloader_init_image,<br><span style="padding-left:20px"> boot_rom_size_c/4) |  ROM - initialized with executable code --  |
 ## Processes
 - mem_file_access: ( clk_i )
-**Description**
+</br>**Description**
  word aligned  Memory Access --------------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 

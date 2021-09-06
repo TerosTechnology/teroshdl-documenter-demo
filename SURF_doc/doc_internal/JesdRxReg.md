@@ -105,52 +105,52 @@
 - U_JesdSysrefMon: surf.JesdSysrefMon
 - U_SyncStatusVector: surf.SyncStatusVector
 - U_sysrefDlyRx: surf.SynchronizerVector
-**Description**
+</br>**Description**
  Output assignment and synchronization
 
 - U_sysrefDlyRx_Pipeline: surf.RstPipelineVector
 - U_enableRx: surf.SynchronizerVector
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_enableRx_Pipeline: surf.RstPipelineVector
 - U_subClass: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_subClass_Pipeline: surf.RstPipeline
 - U_replEnable: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_replEnable_Pipeline: surf.RstPipeline
 - U_gtReset: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_gtReset_Pipeline: surf.RstPipeline
 - U_clearErr: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_clearErr_Pipeline: surf.RstPipeline
 - U_invertSync: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_invertSync_Pipeline: surf.RstPipeline
 - U_scrEnable: surf.Synchronizer
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_scrEnable_Pipeline: surf.RstPipeline
 - U_linkErrMask: surf.SynchronizerVector
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_linkErrMask_Pipeline: surf.RstPipelineVector
 - U_invertData: surf.SynchronizerVector
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - U_invertData_Pipeline: surf.RstPipelineVector

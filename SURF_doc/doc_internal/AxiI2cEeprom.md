@@ -70,6 +70,6 @@
 - U_AxiI2cEepromCore: surf.AxiI2cEepromCore
 - IOBUF_SCL: IOBUF
 - IOBUF_SDA: IOBUF
-**Description**
+</br>**Description**
  3-state enable input, high=input, low=output
 

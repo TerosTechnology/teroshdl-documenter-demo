@@ -64,7 +64,7 @@
 | REG_INPUT    | std_logic_vector(2 downto 0) |  "110" |             |
 ## Processes
 - write_bloc: ( clk )
-**Description**
+</br>**Description**
  manage register 
 - read_async: ( addr_i, kp_s, ki_s, kd_s, setpoint_s, sign_s, is_input_s )
 - read_bloc: ( clk )

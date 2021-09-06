@@ -125,7 +125,7 @@
 - U_Pgp2bLane: surf.Pgp2bLane
 - Decoder8b10b_1: surf.Decoder8b10b
 - Gth7Core_1: surf.Gth7Core
-**Description**
+</br>**Description**
 ------------------------------------------------------------------------------------------------
  GTX 7 Core in Fixed Latency mode
 ------------------------------------------------------------------------------------------------

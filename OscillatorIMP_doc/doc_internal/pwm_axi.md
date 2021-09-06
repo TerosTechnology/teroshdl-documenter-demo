@@ -72,6 +72,6 @@
 - sync_invert: work.pwm_sync_bit
 - pwm_comm_inst: work.pwm_comm
 - handle_comm: work.pwm_handCom
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

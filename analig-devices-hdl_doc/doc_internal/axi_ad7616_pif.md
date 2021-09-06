@@ -97,7 +97,7 @@
 ## Processes
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  FSM state register 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -107,11 +107,11 @@
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
  FSM next state logic 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  sync will be asserted at the first valid data right after the convertion start 

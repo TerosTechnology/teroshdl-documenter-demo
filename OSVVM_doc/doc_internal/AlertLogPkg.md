@@ -27,30 +27,30 @@
 | LogEnableType        |                                                                                                                                                                                       |                                          |
 ## Functions
 - Alert <font id="function_arguments">( AlertLogID   : AlertLogIDType ;<br><span style="padding-left:20px"> Message      : string ;<br><span style="padding-left:20px"> Level        : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
   Alert always goes to the transcript file
 
 - Alert <font id="function_arguments">( Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - IncAlertCount <font id="function_arguments">(   -- A silent form of alert AlertLogID   : AlertLogIDType ;<br><span style="padding-left:20px"> Level        : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - IncAlertCount <font id="function_arguments">( Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIf <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Similar to assert, except condition is positive
 
 - AlertIf <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIfNot <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Direct replacement for assert
 
 - AlertIfNot <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIfEqual <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px">  L,<br><span style="padding-left:20px"> R : std_logic ;<br><span style="padding-left:20px">         Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  overloading for common functionality
 
@@ -90,7 +90,7 @@
 - AlertIfNotEqual <font id="function_arguments">( L,<br><span style="padding-left:20px"> R : string ;<br><span style="padding-left:20px">           Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIfNotEqual <font id="function_arguments">( L,<br><span style="padding-left:20px"> R : time ;<br><span style="padding-left:20px">             Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIfDiff <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Name1,<br><span style="padding-left:20px"> Name2 : string;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Simple Diff for file comparisons
 
@@ -98,7 +98,7 @@
 - AlertIfDiff <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> file File1,<br><span style="padding-left:20px"> File2 : text;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AlertIfDiff <font id="function_arguments">(file File1,<br><span style="padding-left:20px"> File2 : text;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
 - AffirmIf <font id="function_arguments">( AlertLogID       : AlertLogIDType ;<br><span style="padding-left:20px"> condition        : boolean ;<br><span style="padding-left:20px"> ReceivedMessage  : string ;<br><span style="padding-left:20px"> ExpectedMessage  : string ;<br><span style="padding-left:20px"> Enable           : boolean  := FALSE   -- override internal enable ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 ----------------------------------------------------------
 ----------------------------------------------------------
@@ -107,24 +107,24 @@
 - AffirmIf <font id="function_arguments">( AlertLogID   : AlertLogIDType ;<br><span style="padding-left:20px"> condition    : boolean ;<br><span style="padding-left:20px"> Message      : string ;<br><span style="padding-left:20px"> Enable       : boolean := FALSE -- override internal enable ) </font> <font id="function_return">return ()</font>
 - AffirmIf <font id="function_arguments">(condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px">  Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfNot <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> ReceivedMessage,<br><span style="padding-left:20px"> ExpectedMessage : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - AffirmIfNot <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> ReceivedMessage,<br><span style="padding-left:20px"> ExpectedMessage : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfNot <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - AffirmIfNot <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmPassed <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - AffirmPassed <font id="function_arguments">( Message : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmError <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Message : string ) </font> <font id="function_return">return ()</font>
 - AffirmError <font id="function_arguments">( Message : string ) </font> <font id="function_return">return ()</font>
 - AffirmIfEqual <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Received,<br><span style="padding-left:20px"> Expected : boolean ;<br><span style="padding-left:20px">  Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - AffirmIfEqual <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Received,<br><span style="padding-left:20px"> Expected : std_logic ;<br><span style="padding-left:20px">  Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
@@ -137,7 +137,7 @@
 - AffirmIfEqual <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Received,<br><span style="padding-left:20px"> Expected : string ;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfEqual <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Received,<br><span style="padding-left:20px"> Expected : time ;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfEqual <font id="function_arguments">( Received,<br><span style="padding-left:20px"> Expected : boolean ;<br><span style="padding-left:20px">  Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Without AlertLogID
 ----------------------------------------------------------
 
@@ -151,20 +151,20 @@
 - AffirmIfEqual <font id="function_arguments">( Received,<br><span style="padding-left:20px"> Expected : string ;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfEqual <font id="function_arguments">( Received,<br><span style="padding-left:20px"> Expected : time ;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfDiff <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Name1,<br><span style="padding-left:20px"> Name2 : string;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - AffirmIfDiff <font id="function_arguments">(Name1,<br><span style="padding-left:20px"> Name2 : string;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfDiff <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> file File1,<br><span style="padding-left:20px"> File2 : text;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIfDiff <font id="function_arguments">(file File1,<br><span style="padding-left:20px"> File2 : text;<br><span style="padding-left:20px"> Message : string := "" ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - AffirmIf <font id="function_arguments">( RequirementsIDName : string ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> ReceivedMessage,<br><span style="padding-left:20px"> ExpectedMessage : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Support for Specification / Requirements Tracking
 
 - AffirmIf <font id="function_arguments">( RequirementsIDName : string ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Enable : boolean := FALSE ) </font> <font id="function_return">return ()</font>
 - SetAlertLogJustify <font id="function_arguments">(Enable : boolean := TRUE) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - ReportAlerts <font id="function_arguments">( Name : String ;<br><span style="padding-left:20px"> AlertCount : AlertCountType ) </font> <font id="function_return">return ()</font>
@@ -183,29 +183,29 @@
 - ClearAlertStopCounts <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - ClearAlertCounts <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - Log <font id="function_arguments">( AlertLogID   : AlertLogIDType ;<br><span style="padding-left:20px"> Message      : string ;<br><span style="padding-left:20px"> Level        : LogType := ALWAYS ;<br><span style="padding-left:20px"> Enable       : boolean := FALSE    -- override internal enable ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
   log filtering for verbosity control, optionally has a separate file parameter
 
 - Log <font id="function_arguments">( Message : string ;<br><span style="padding-left:20px"> Level : LogType := ALWAYS ;<br><span style="padding-left:20px"> Enable : boolean := FALSE) </font> <font id="function_return">return ()</font>
 - SetAlertEnable <font id="function_arguments">(Level : AlertType ;<br><span style="padding-left:20px">  Enable : boolean) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  Alert Enables
 
 - SetAlertEnable <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px">  Level : AlertType ;<br><span style="padding-left:20px">  Enable : boolean ;<br><span style="padding-left:20px"> DescendHierarchy : boolean := TRUE) </font> <font id="function_return">return ()</font>
 - SetLogEnable <font id="function_arguments">(Level : LogType ;<br><span style="padding-left:20px">  Enable : boolean) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Log Enables
 
 - SetLogEnable <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px">  Level : LogType ;<br><span style="padding-left:20px">  Enable : boolean ;<br><span style="padding-left:20px"> DescendHierarchy : boolean := TRUE) </font> <font id="function_return">return ()</font>
 - ReportLogEnables <font id="function_arguments">()</font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  same as GetLogEnable
 
 - SetAlertLogName <font id="function_arguments">(Name : string ) </font> <font id="function_return">return ()</font>
 - DeallocateAlertLogStruct <font id="function_arguments">()</font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  synthesis translate_on
 
 - InitializeAlertLogStruct <font id="function_arguments">()</font> <font id="function_return">return ()</font>
@@ -213,12 +213,12 @@
 - SetAlertLogPrefix <font id="function_arguments">(AlertLogID : AlertLogIDType;<br><span style="padding-left:20px"> Name : string ) </font> <font id="function_return">return ()</font>
 - UnSetAlertLogPrefix <font id="function_arguments">(AlertLogID : AlertLogIDType) </font> <font id="function_return">return ()</font>
 - SetAlertLogSuffix <font id="function_arguments">(AlertLogID : AlertLogIDType;<br><span style="padding-left:20px"> Name : string ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  synthesis translate_on
 
 - UnSetAlertLogSuffix <font id="function_arguments">(AlertLogID : AlertLogIDType) </font> <font id="function_return">return ()</font>
 - SetGlobalAlertEnable <font id="function_arguments">(A : boolean := TRUE) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  synthesis translate_on
 ----------------------------------------------------------
  Accessor Methods
@@ -228,22 +228,22 @@
 - SetAlertStopCount <font id="function_arguments">(AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px">  Level : AlertType ;<br><span style="padding-left:20px">  Count : integer) </font> <font id="function_return">return ()</font>
 - SetAlertStopCount <font id="function_arguments">(Level : AlertType ;<br><span style="padding-left:20px">  Count : integer) </font> <font id="function_return">return ()</font>
 - SetAlertLogOptions <font id="function_arguments">( FailOnWarning            : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailOnDisabledErrors     : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailOnRequirementErrors  : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> ReportHierarchy          : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAlertErrorCount     : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAlertLevel          : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAlertName           : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteAlertTime           : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteLogErrorCount       : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteLogLevel            : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteLogName             : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> WriteLogTime             : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PrintPassed              : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PrintAffirmations        : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PrintDisabledAlerts      : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PrintRequirements        : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PrintIfHaveRequirements  : AlertLogOptionsType := OPT_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> DefaultPassedGoal        : integer             := integer'left ;<br><span style="padding-left:20px"> AlertPrefix              : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> LogPrefix                : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> ReportPrefix             : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> DoneName                 : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> PassName                 : string := OSVVM_STRING_INIT_PARM_DETECT ;<br><span style="padding-left:20px"> FailName                 : string := OSVVM_STRING_INIT_PARM_DETECT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
 
 - ReportAlertLogOptions <font id="function_arguments">()</font> <font id="function_return">return ()</font>
 - IsLogEnableType <font id="function_arguments">(Name : String) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  File Reading Utilities
 
 - ReadLogEnables <font id="function_arguments">(file AlertLogInitFile : text) </font> <font id="function_return">return ()</font>
 - ReadLogEnables <font id="function_arguments">(FileName : string) </font> <font id="function_return">return ()</font>
 - PathTail <font id="function_arguments">(A : string) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
  String Helper Functions -- This should be in a more general string package
 
 - MetaMatch <font id="function_arguments">(l,<br><span style="padding-left:20px"> r : std_ulogic) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
 ----------------------------------------------------------
  MetaMatch
    Similar to STD_MATCH, except 
@@ -259,7 +259,7 @@
 - MetaMatch <font id="function_arguments">(L,<br><span style="padding-left:20px"> R : unresolved_unsigned) </font> <font id="function_return">return boolean </font>
 - MetaMatch <font id="function_arguments">(L,<br><span style="padding-left:20px"> R : unresolved_signed) </font> <font id="function_return">return boolean </font>
 - AlertIf <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  synthesis translate_on
   ------------------------------------------------------------
  Deprecated
@@ -267,11 +267,11 @@
  deprecated
 
 - AlertIfNot <font id="function_arguments">( condition : boolean ;<br><span style="padding-left:20px"> AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> Level : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  deprecated
 
 - AffirmIf <font id="function_arguments">( AlertLogID   : AlertLogIDType ;<br><span style="padding-left:20px"> condition    : boolean ;<br><span style="padding-left:20px"> Message      : string ;<br><span style="padding-left:20px"> LogLevel     : LogType  ;<br><span style="padding-left:20px">  -- := PASSED AlertLevel   : AlertType := ERROR ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  deprecated
 
 - AffirmIf <font id="function_arguments">( AlertLogID : AlertLogIDType ;<br><span style="padding-left:20px"> condition : boolean ;<br><span style="padding-left:20px"> Message : string ;<br><span style="padding-left:20px"> AlertLevel : AlertType ) </font> <font id="function_return">return ()</font>

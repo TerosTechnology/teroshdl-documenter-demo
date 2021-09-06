@@ -32,21 +32,21 @@
 ## Functions
 - push_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_master_t;<br><span style="padding-left:20px"> tdata      : std_logic_vector;<br><span style="padding-left:20px"> tlast      : std_logic        := '1';<br><span style="padding-left:20px"> tkeep      : std_logic_vector := "";<br><span style="padding-left:20px"> tstrb      : std_logic_vector := "";<br><span style="padding-left:20px"> tid        : std_logic_vector := "";<br><span style="padding-left:20px"> tdest      : std_logic_vector := "";<br><span style="padding-left:20px"> tuser      : std_logic_vector := "" ) </font> <font id="function_return">return ()</font>
 - pop_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable tdata : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast : out std_logic;<br><span style="padding-left:20px"> variable tkeep : out std_logic_vector;<br><span style="padding-left:20px"> variable tstrb : out std_logic_vector;<br><span style="padding-left:20px"> variable tid   : out std_logic_vector;<br><span style="padding-left:20px"> variable tdest : out std_logic_vector;<br><span style="padding-left:20px"> variable tuser : out std_logic_vector ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Blocking: pop a value from the axi stream
 
 - pop_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable tdata : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast : out std_logic ) </font> <font id="function_return">return ()</font>
 - pop_axi_stream <font id="function_arguments">(signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream : axi_stream_slave_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Non-blocking: pop a value from the axi stream to be read in the future
 
 - await_pop_axi_stream_reply <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t;<br><span style="padding-left:20px"> variable tdata     : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast     : out std_logic;<br><span style="padding-left:20px"> variable tkeep     : out std_logic_vector;<br><span style="padding-left:20px"> variable tstrb     : out std_logic_vector;<br><span style="padding-left:20px"> variable tid       : out std_logic_vector;<br><span style="padding-left:20px"> variable tdest     : out std_logic_vector;<br><span style="padding-left:20px"> variable tuser     : out std_logic_vector ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Blocking: Wait for reply to non-blocking pop
 
 - await_pop_axi_stream_reply <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> variable reference : inout axi_stream_reference_t;<br><span style="padding-left:20px"> variable tdata     : out std_logic_vector;<br><span style="padding-left:20px"> variable tlast     : out std_logic ) </font> <font id="function_return">return ()</font>
 - check_axi_stream <font id="function_arguments">( signal net : inout network_t;<br><span style="padding-left:20px"> axi_stream   : axi_stream_slave_t;<br><span style="padding-left:20px"> expected : std_logic_vector;<br><span style="padding-left:20px"> tlast    : std_logic        := '1';<br><span style="padding-left:20px"> tkeep    : std_logic_vector := "";<br><span style="padding-left:20px"> tstrb    : std_logic_vector := "";<br><span style="padding-left:20px"> tid      : std_logic_vector := "";<br><span style="padding-left:20px"> tdest    : std_logic_vector := "";<br><span style="padding-left:20px"> tuser    : std_logic_vector := "";<br><span style="padding-left:20px"> msg      : string           := "";<br><span style="padding-left:20px"> blocking : boolean          := true ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
  Blocking: read axi stream and check result against expected value
 
 - push_axi_stream_transaction <font id="function_arguments">(msg : msg_t;<br><span style="padding-left:20px"> axi_stream_transaction : axi_stream_transaction_t) </font> <font id="function_return">return ()</font>

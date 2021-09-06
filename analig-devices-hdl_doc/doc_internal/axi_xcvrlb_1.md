@@ -98,7 +98,7 @@
 | up_tx_rst_done_s   | wire           |                      |
 ## Functions
 - pn31 <font id="function_arguments">()</font> <font id="function_return">return ([31:0])</font>
-**Description**
+</br>**Description**
  pn31 function
 
 ## Processes
@@ -108,14 +108,14 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  transmit 
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
 ## Instantiations
 
 - i_pnmon: ad_pnmon
-**Description**
+</br>**Description**
  instantiations
 
 - i_xfer_status: up_xfer_status

@@ -88,13 +88,13 @@
 ## Processes
 - proc_pid: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  save packet parameters at pkt_start_i 
 - proc_bitstuff: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
 - proc_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////  FSM // /////// 
 - proc_byte_str: (  )
   - **Type:** always_comb
@@ -102,11 +102,11 @@
   - **Type:** always_comb
 - proc_reg: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
 /////////////////////  Regular Registers // ///////////////////// 
 - proc_out_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 /////////////////////////////////  nrzi and differential driving // /////////////////////////////////  Output FSM 
 - proc_diff: (  )
   - **Type:** always_comb

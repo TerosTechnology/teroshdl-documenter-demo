@@ -78,5 +78,5 @@
 ## Processes
 - unnamed: ( lfsr, din )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
  Remainder Register 

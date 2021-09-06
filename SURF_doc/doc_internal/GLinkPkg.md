@@ -39,7 +39,7 @@
 - toSlv <font id="function_arguments">(vec     : GLinkRxType) </font> <font id="function_return">return slv </font>
 - toGLinkRx <font id="function_arguments">(vec : slv(23 downto 0)) </font> <font id="function_return">return GLinkRxType </font>
 - toGLinkWord <font id="function_arguments">(data        : slv(19 downto 0)) </font> <font id="function_return">return GLinkWordType </font>
-**Description**
+</br>**Description**
  Functions for working with GLinkWordType
 
 - toSlv <font id="function_arguments">(word             : GLinkWordType) </font> <font id="function_return">return slv </font>

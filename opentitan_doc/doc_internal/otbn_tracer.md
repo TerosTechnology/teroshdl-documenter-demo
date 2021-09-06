@@ -39,26 +39,26 @@
 | cycle_count         | unsigned     |             |
 ## Functions
 - otbn_wlen_data_str <font id="function_arguments">(logic [WLEN-1:0])</font> <font id="function_return">return (string)</font>
-**Description**
+</br>**Description**
  Given a WLEN size word output a hex string with the data split into 32-bit chunks separated
  with '_'. WLEN must be a multiple of 32.
 
 - otbn_dmem_write_str <font id="function_arguments">(logic [31:0] add)</font> <font id="function_return">return (string)</font>
-**Description**
+</br>**Description**
  Produce trace output string for dmem writes. For a 256-bit write, the address and full data is
  output. For 32-bit writes (determined by looking at the mask) only the relevant 32-bit chunk is
  output along with the address modified so it refers to that chunk.
 
 - otbn_ispr_name_str <font id="function_arguments">(ispr_e)</font> <font id="function_return">return (string)</font>
-**Description**
+</br>**Description**
  Determine name for an ISPR
 
 - otbn_flags_str <font id="function_arguments">(flags_t)</font> <font id="function_return">return (string)</font>
-**Description**
+</br>**Description**
  Format flag information into a string
 
 - output_trace <font id="function_arguments">(string prefix,<br><span style="padding-left:20px"> string trace_line)</font> <font id="function_return">return (void)</font>
-**Description**
+</br>**Description**
  Called by other trace functions to append their trace lines to the output buffer
 
 - trace_base_rf <font id="function_arguments">()</font> <font id="function_return">return (void)</font>

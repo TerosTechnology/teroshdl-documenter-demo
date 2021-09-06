@@ -78,19 +78,19 @@
 ## Processes
 - get_rnd_type: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  For AES-192, there are four different types of rounds. 
 - rcon_usage: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Depending on operation, key length and round, Rcon may not be used thus must not be updated. 
 - rcon_update: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Generate Rcon 
 - reg_rcon: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Rcon register 
 ## Instantiations
 

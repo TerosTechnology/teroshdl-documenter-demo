@@ -63,7 +63,7 @@
 | RegType |      |             |
 ## Functions
 - computeIndicies <font id="function_arguments">()</font> <font id="function_return">return IntegerArray </font>
-**Description**
+</br>**Description**
  Vivado chokes if you try to calculate these on the fly inside the comb process.
  Precompute all of the assignment indicies instead
 

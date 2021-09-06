@@ -44,7 +44,7 @@
 | syncInt | sl   |             |
 ## Processes
 - OUT_REG: ( clk, asyncRst )
-**Description**
+</br>**Description**
  Final stage does not have async constraints applied, can be duplicated to ease timing 
 ## Instantiations
 

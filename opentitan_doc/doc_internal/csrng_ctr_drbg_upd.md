@@ -173,45 +173,45 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 --------------------------------------------  state machine to send values to block_encrypt -------------------------------------------- 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 --------------------------------------------  state machine to receive values from block_encrypt -------------------------------------------- 
 ## Instantiations
 
 - u_blk_enc_state_regs: prim_flop
-**Description**
+</br>**Description**
  This primitive is used to place a size-only constraint on the
  flops in order to prevent FSM state encoding optimizations.
 
 - u_outblk_state_regs: prim_flop
-**Description**
+</br>**Description**
  This primitive is used to place a size-only constraint on the
  flops in order to prevent FSM state encoding optimizations.
 
 - u_prim_fifo_sync_updreq: prim_fifo_sync
-**Description**
+</br>**Description**
  else: !if(!rst_ni)
 --------------------------------------------
  input request fifo for staging update requests
 --------------------------------------------
 
 - u_prim_fifo_sync_bencreq: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  block_encrypt request fifo for staging aes requests
 --------------------------------------------
 
 - u_prim_fifo_sync_bencack: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  block_encrypt response fifo from block encrypt
 --------------------------------------------
 
 - u_prim_fifo_sync_pdata: prim_fifo_sync
-**Description**
+</br>**Description**
 --------------------------------------------
  fifo to stage provided_data, waiting for blk_encrypt to ack
 --------------------------------------------

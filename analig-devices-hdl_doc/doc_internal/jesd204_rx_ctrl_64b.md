@@ -97,7 +97,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Wait n consecutive valid cycles before jumping into next state 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

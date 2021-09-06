@@ -323,11 +323,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -360,24 +360,24 @@
 - u_blink_param_4_cdc: prim_reg_cdc
 - u_blink_param_5_cdc: prim_reg_cdc
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
 
 - u_regen: prim_subreg
-**Description**
+</br>**Description**
  R[regen]: V(False)
 
 - u_cfg_clk_div: prim_subreg
-**Description**
+</br>**Description**
  R[cfg]: V(False)
    F[clk_div]: 26:0
 
 - u_cfg_dc_resn: prim_subreg
-**Description**
+</br>**Description**
    F[dc_resn]: 30:27
 
 - u_cfg_cntr_en: prim_subreg
-**Description**
+</br>**Description**
    F[cntr_en]: 31:31
 

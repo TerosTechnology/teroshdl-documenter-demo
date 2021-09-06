@@ -72,13 +72,13 @@
 | RegType   |                                                                                                           |             |
 ## Processes
 - comb: ( axiReadMaster, axiRst, axiWriteMaster, r, regIn, sdo )
-**Description**
+</br>**Description**
  3-state enable input, high=input, low=output -----------------------------  Configuration Register ----------------------------- 
 - seq: ( axiClk )
 ## Instantiations
 
 - IOBUF_INST: IOBUF
-**Description**
+</br>**Description**
  '0' = Normal Operation
 
 - SyncOut_delayIn_load: surf.RstSync

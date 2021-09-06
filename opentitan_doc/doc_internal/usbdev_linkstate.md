@@ -77,13 +77,13 @@
   - **Type:** always_ff
 - proc_rst_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////////////////  Reset detection // ///////////////////   Here we clean up the SE0 signal and generate a signle ev_reset at   the end of a valid reset 
 - proc_reg_rst: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
 - proc_idle_det: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 //////////////////  Idle detection // //////////////////   Here we clean up the idle signal and generate a signle ev_bus_inactive   after the timer expires 
 - proc_reg_idle_det: ( @(posedge clk_48mhz_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -92,7 +92,7 @@
 ## Instantiations
 
 - filter_se0: prim_filter
-**Description**
+</br>**Description**
  four ticks is a bit time
  Could completely filter out 2-cycle EOP SE0 here but
  does not seem needed

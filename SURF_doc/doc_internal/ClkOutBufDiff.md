@@ -45,6 +45,6 @@
 ## Instantiations
 
 - OBUFDS_I: OBUFTDS
-**Description**
+</br>**Description**
  Differential output buffer
 

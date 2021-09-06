@@ -48,14 +48,14 @@
 ## Instantiations
 
 - RstSync_Inst: surf.RstSync
-**Description**
+</br>**Description**
  Synchronize reset to icapClk
 
 - Iprog7SeriesCore_1: surf.Iprog7SeriesCore
-**Description**
+</br>**Description**
  IPROG logic
 
 - ICAPE2_Inst: ICAPE2
-**Description**
+</br>**Description**
  ICAP Primative
 

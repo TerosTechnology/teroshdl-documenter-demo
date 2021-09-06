@@ -95,25 +95,25 @@
 - comb: ( phyRxChar, phyRxdata, r )
 - seq: ( ethClk )
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  Convert to AXI stream 
 - unnamed: ( crcDataValid, crcDataWidth, phyRxc, phyRxcDly, rxdAlign )
-**Description**
+</br>**Description**
  Logic to dermine CRC width and valid clear timing. 
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  Delay stages and input to CRC block 
 - unnamed: ( ethClk )
-**Description**
+</br>**Description**
  Delay stages for output of CRC delay chain 
 ## Instantiations
 
 - U_Resize: surf.AxiStreamResize
 - U_CrcFifo: surf.Fifo
-**Description**
+</br>**Description**
  CRC Delay FIFO
 
 - U_Crc32: surf.Crc32Parallel
-**Description**
+</br>**Description**
  CRC
 

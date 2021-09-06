@@ -63,33 +63,33 @@
 | aes_ctr_e | enum logic [StateWidth-1:0] {<br><span style="padding-left:20px">     IDLE  = 5'b01110,<br><span style="padding-left:20px">     INCR  = 5'b11000,<br><span style="padding-left:20px">     ERROR = 5'b00001   } |             |
 ## Functions
 - aes_rev_order_byte <font id="function_arguments">(logic [15:0][7:0])</font> <font id="function_return">return (logic [15:0][7:0])</font>
-**Description**
+</br>**Description**
  Reverse byte order - unrelated to NumSlicesCtr and SliceSizeCtr
 
 - aes_rev_order_sp2v <font id="function_arguments">(sp2v_e [NumSlicesCtr-1:0])</font> <font id="function_return">return (sp2v_e [NumSlicesCtr-1:0])</font>
-**Description**
+</br>**Description**
  Reverse sp2v order
 
 ## Processes
 - reg_out_ack_err: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Need to register errors in incr to avoid circular loops in the main  controller related to start. 
 - aes_ctr_fsm: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////////  Control // ///////////  FSM 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  Registers 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
 ///////////  Outputs // ///////////  Combine input and counter output. 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Generate the sliced write enable. 
 ## Instantiations
 

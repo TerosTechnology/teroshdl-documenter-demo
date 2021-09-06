@@ -42,7 +42,7 @@
 
 - u_lc: prim_flop_2sync
 - u_aon_rst: prim_flop
-**Description**
+</br>**Description**
  always on handling
 
 - u_rst_aon_mux: prim_clock_mux2

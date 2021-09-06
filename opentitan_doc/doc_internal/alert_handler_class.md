@@ -37,5 +37,5 @@
 ## Processes
 - p_class_mask: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  this is basically an address to onehot0 decoder 

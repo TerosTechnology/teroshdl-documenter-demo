@@ -70,13 +70,13 @@
 ## Instantiations
 
 - U_Pack: surf.AxiStreamBytePacker
-**Description**
+</br>**Description**
 -------------------------------
  Frame Packing
 -------------------------------
 
 - U_DataFifo: surf.AxiStreamFifoV2
-**Description**
+</br>**Description**
 -------------------------------
  Data FIFO
 -------------------------------

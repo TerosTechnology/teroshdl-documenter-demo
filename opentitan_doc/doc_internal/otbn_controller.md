@@ -184,7 +184,7 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Determine if there are any errors related to the Imem fetch address. 
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
@@ -192,35 +192,35 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Choose increment to write back to base register file, only one increment can be written as  there is only one write port. Note that where an instruction is incrementing the indirect  reference to its destination register (insn_dec_bignum_i.d_inc) that reference is read on the  B read port so the B increment is written back. 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Base RF read/write address, enable and commit control 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Base ALU Operand A MUX 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Base ALU Operand B MUX 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Register file write MUX 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Base ALU Operand B MUX 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Bignum Register file write control 
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  For BN.LID sample the indirect destination register index in first cycle as an increment might  change it for the second cycle where the load data is written to the bignum register file. 
 - unnamed: (  )
   - **Type:** always_comb
@@ -230,11 +230,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Specialised read data handling for CSR reads where raw read data needs modification. 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Specialised write data handling for CSR writes where raw write data needs modification. 
 - unnamed: (  )
   - **Type:** always_comb

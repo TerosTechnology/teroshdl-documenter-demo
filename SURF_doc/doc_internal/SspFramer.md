@@ -73,5 +73,5 @@
 ## Processes
 - comb: ( dataIn, eof, r, readyOut, rst, sof, validIn )
 - seq: ( clk, rst )
-**Description**
+</br>**Description**
  Sequential process 

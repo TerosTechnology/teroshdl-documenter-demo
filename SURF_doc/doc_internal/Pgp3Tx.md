@@ -75,21 +75,21 @@
 | protTxHeader       | slv(1 downto 0)                         |                    |
 ## Processes
 - DISABLE_SEL: ( pgpTxIn, syncRemRxFifoCtrl )
-**Description**
+</br>**Description**
  Use synchronized remote status to disable channels from mux selection  All flow control overriden by pgpTxIn 'disable' and 'flowCntlDis' 
 ## Instantiations
 
 - U_Synchronizer_REM: surf.Synchronizer
 - U_Synchronizer_LOC: surf.Synchronizer
-**Description**
+</br>**Description**
  Synchronize local rx status
 
 - U_AxiStreamMux_1: surf.AxiStreamMux
-**Description**
+</br>**Description**
  Multiplex the incomming tx streams with interleaving
 
 - U_AxiStreamPacketizer2_1: surf.AxiStreamPacketizer2
-**Description**
+</br>**Description**
  [in]
  Feed muxed stream to packetizer
  Note that the mux is doing the work of chunking
@@ -97,13 +97,13 @@
  rearbitrate signal doesn't really do anything (yet)
 
 - U_Pgp3TxProtocol_1: surf.Pgp3TxProtocol
-**Description**
+</br>**Description**
  [in]
  Feed packets into PGP TX Protocol engine
  Translates Packetizer2 frames, status, and opcodes into unscrambled 64b66b charachters
 
 - U_Scrambler_1: surf.Scrambler
-**Description**
+</br>**Description**
  [out]
  Scramble the data for 64b66b
 

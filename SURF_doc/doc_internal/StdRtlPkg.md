@@ -542,13 +542,13 @@
 | BuildInfoRetType    |                                                                                                    |                                                                                                                                                                          |
 ## Functions
 - slvAll <font id="function_arguments">(size  : positive;<br><span style="padding-left:20px"> value : sl) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Create an arbitrary sized slv with all bits set high or low
 
 - slvZero <font id="function_arguments">(size : positive) </font> <font id="function_return">return slv </font>
 - slvOne <font id="function_arguments">(size  : positive) </font> <font id="function_return">return slv </font>
 - isPowerOf2 <font id="function_arguments">(number       : natural) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Very useful functions
 
 - isPowerOf2 <font id="function_arguments">(vector       : slv) </font> <font id="function_return">return boolean </font>
@@ -559,16 +559,16 @@
 - wordCount <font id="function_arguments">(number : positive;<br><span style="padding-left:20px"> wordSize : positive := 8) </font> <font id="function_return">return natural </font>
 - endianSwap <font id="function_arguments">(vector : slv) </font> <font id="function_return">return slv </font>
 - list <font id="function_arguments">(constant start,<br><span style="padding-left:20px"> size,<br><span style="padding-left:20px"> step : integer) </font> <font id="function_return">return IntegerArray </font>
-**Description**
+</br>**Description**
  Similar to python's range() function
 
 - decode <font id="function_arguments">(v    : slv) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Simple decoder and mux functions
 
 - genmux <font id="function_arguments">(s,<br><span style="padding-left:20px"> v : slv) </font> <font id="function_return">return sl </font>
 - toBoolean <font id="function_arguments">(logic : sl) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  This should be unnecessary in VHDL 2008
 
 - toSl <font id="function_arguments">(bool       : boolean) </font> <font id="function_return">return sl </font>
@@ -577,36 +577,36 @@
 - toSlv <font id="function_arguments">(bools      : BooleanArray) </font> <font id="function_return">return slv </font>
 - toBooleanArray <font id="function_arguments">(vec : slv) </font> <font id="function_return">return BooleanArray </font>
 - uOr <font id="function_arguments">(vec  : slv) </font> <font id="function_return">return sl </font>
-**Description**
+</br>**Description**
  Unary reduction operators, also unnecessary in VHDL 2008
 
 - uAnd <font id="function_arguments">(vec : slv) </font> <font id="function_return">return sl </font>
 - uXor <font id="function_arguments">(vec : slv) </font> <font id="function_return">return sl </font>
 - allBits <font id="function_arguments">(vec : slv;<br><span style="padding-left:20px"> test : sl) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Test if all bits in a vector are set to a given logic value
 
 - noBits <font id="function_arguments">(vec  : slv;<br><span style="padding-left:20px"> test : sl) </font> <font id="function_return">return boolean </font>
 - evenParity <font id="function_arguments">(vec : slv) </font> <font id="function_return">return sl </font>
-**Description**
+</br>**Description**
  These just use uXor to calculate parity
  Output is parity bit value needed to achieve that parity given vec.
 
 - oddParity <font id="function_arguments">(vec  : slv) </font> <font id="function_return">return sl </font>
 - onesCountU <font id="function_arguments">(vec : slv) </font> <font id="function_return">return unsigned </font>
-**Description**
+</br>**Description**
  Functions for counting the number of '1' in a slv bus
 
 - onesCount <font id="function_arguments">(vec : slv) </font> <font id="function_return">return slv </font>
 - grayEncode <font id="function_arguments">(vec : unsigned) </font> <font id="function_return">return unsigned </font>
-**Description**
+</br>**Description**
  Gray Code functions
 
 - grayEncode <font id="function_arguments">(vec : slv) </font> <font id="function_return">return slv </font>
 - grayDecode <font id="function_arguments">(vec : unsigned) </font> <font id="function_return">return unsigned </font>
 - grayDecode <font id="function_arguments">(vec : slv) </font> <font id="function_return">return slv </font>
 - lfsrShift <font id="function_arguments">(lfsr : slv;<br><span style="padding-left:20px"> constant taps : NaturalArray;<br><span style="padding-left:20px"> input : sl := '0') </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Linear Feedback Shift Register function
 
 - maximum <font id="function_arguments">(left,<br><span style="padding-left:20px"> right : integer) </font> <font id="function_return">return integer </font>
@@ -616,7 +616,7 @@
 - sort <font id="function_arguments">(a : IntegerArray) </font> <font id="function_return">return IntegerArray </font>
 - median <font id="function_arguments">(a : IntegerArray) </font> <font id="function_return">return integer </font>
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : boolean;<br><span style="padding-left:20px"> e : boolean) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  One line if-then-else functions. Useful for assigning constants based on generics.
 
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : sl;<br><span style="padding-left:20px"> e : sl) </font> <font id="function_return">return sl </font>
@@ -629,12 +629,12 @@
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : real;<br><span style="padding-left:20px"> e : real) </font> <font id="function_return">return real </font>
 - ite <font id="function_arguments">(i : boolean;<br><span style="padding-left:20px"> t : time;<br><span style="padding-left:20px"> e : time) </font> <font id="function_return">return time </font>
 - toSlv <font id="function_arguments">(ARG : integer;<br><span style="padding-left:20px"> SIZE : integer) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  conv_std_logic_vector functions
 
 - adcConversion <font id="function_arguments">(ain : real;<br><span style="padding-left:20px"> low : real;<br><span style="padding-left:20px"> high : real;<br><span style="padding-left:20px"> bits : positive;<br><span style="padding-left:20px"> twosComp : boolean) </font> <font id="function_return">return slv </font>
 - getTimeRatio <font id="function_arguments">(T1,<br><span style="padding-left:20px"> T2 : time) </font> <font id="function_return">return natural </font>
-**Description**
+</br>**Description**
 not supported by Vivado
 - getTimeRatio <font id="function_arguments">(T1,<br><span style="padding-left:20px"> T2 : real) </font> <font id="function_return">return natural </font>
 - assignSlv <font id="function_arguments">(i : inout integer;<br><span style="padding-left:20px"> vector : inout slv;<br><span style="padding-left:20px"> value  : in    slv) </font> <font id="function_return">return ()</font>
@@ -642,12 +642,12 @@ not supported by Vivado
 - assignRecord <font id="function_arguments">(i : inout integer;<br><span style="padding-left:20px"> vector : in    slv;<br><span style="padding-left:20px"> value  : inout slv) </font> <font id="function_return">return ()</font>
 - assignRecord <font id="function_arguments">(i : inout integer;<br><span style="padding-left:20px"> vector : in    slv;<br><span style="padding-left:20px"> value  : inout sl) </font> <font id="function_return">return ()</font>
 - resize <font id="function_arguments">(vec : slv;<br><span style="padding-left:20px"> newSize : integer;<br><span style="padding-left:20px"> pad : sl := '0') </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Resize vector types, either by trimming or padding upper indicies
 
 - resize <font id="function_arguments">(str : string;<br><span style="padding-left:20px"> newSize : integer;<br><span style="padding-left:20px"> pad : character := nul) </font> <font id="function_return">return string </font>
 - StdMatch <font id="function_arguments">(L,<br><span style="padding-left:20px"> R: std_ulogic) </font> <font id="function_return">return boolean </font>
-**Description**
+</br>**Description**
  Match Functions
 
 - StdMatch <font id="function_arguments">(L,<br><span style="padding-left:20px"> R: unsigned) </font> <font id="function_return">return boolean </font>
@@ -655,7 +655,7 @@ not supported by Vivado
 - StdMatch <font id="function_arguments">(L,<br><span style="padding-left:20px"> R: slv) </font> <font id="function_return">return boolean </font>
 - toTime <font id="function_arguments">(f : frequency) </font> <font id="function_return">return time </font>
 - muxSlVectorArray <font id="function_arguments">(vec : SlVectorArray;<br><span style="padding-left:20px"> addr : natural;<br><span style="padding-left:20px"> allowOutOfRange : boolean := false) </font> <font id="function_return">return slv </font>
-**Description**
+</br>**Description**
  Mux a SlVectorArray into an SLV
 
 - toBuildInfo <font id="function_arguments">(din : slv) </font> <font id="function_return">return BuildInfoRetType </font>

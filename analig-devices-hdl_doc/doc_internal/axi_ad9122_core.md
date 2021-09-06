@@ -123,19 +123,19 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_channel_0: axi_ad9122_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_channel_1: axi_ad9122_channel
-**Description**
+</br>**Description**
  dac channel
 
 - i_up_dac_common: up_dac_common
-**Description**
+</br>**Description**
  dac common processor interface
 

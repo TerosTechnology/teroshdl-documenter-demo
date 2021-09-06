@@ -70,6 +70,6 @@
 
 - U_Resize: surf.AxiStreamResize
 - U_Crc32: surf.Crc32Parallel
-**Description**
+</br>**Description**
  CRC
 

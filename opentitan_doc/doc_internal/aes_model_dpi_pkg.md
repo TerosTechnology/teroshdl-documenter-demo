@@ -68,7 +68,7 @@
 | key_o     | bit[7:0][31:0]     |                                                        |
 ## Functions
 - sv_dpi_aes_crypt_block <font id="function_arguments">(input  bit             impl_i)</font> <font id="function_return">return (void)</font>
-**Description**
+</br>**Description**
  wrapper function that converts from register format (4x32bit)
  to the 4x4x8 format of the c functions and back
  this ensures that RTL and refence models have same input and output format.

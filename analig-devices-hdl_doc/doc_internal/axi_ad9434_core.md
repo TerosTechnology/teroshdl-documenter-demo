@@ -106,17 +106,17 @@
 ## Processes
 - unnamed: ( @(negedge up_rstn or posedge up_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  processor read interface 
 ## Instantiations
 
 - i_pnmon: axi_ad9434_pnmon
-**Description**
+</br>**Description**
  instantiations
 
 - i_adc_common: up_adc_common
 - i_adc_channel: up_adc_channel
 - i_delay_cntrl: up_delay_cntrl
-**Description**
+</br>**Description**
  adc delay control
 

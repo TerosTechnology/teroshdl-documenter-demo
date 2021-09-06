@@ -77,5 +77,5 @@
 ## Processes
 - comb: ( dataIn, dataKIn, decErrIn, gearboxAligned, r, rst, validIn )
 - seq: ( clk, rst )
-**Description**
+</br>**Description**
  Sequential process 

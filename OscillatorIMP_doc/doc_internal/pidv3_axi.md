@@ -107,10 +107,10 @@
 - sign_syn: work.pidv3_axi_sync_bit
 - int_rst_syn: work.pidv3_axi_sync_bit
 - comm_inst: work.pidv3_axi_comm
-**Description**
+</br>**Description**
 -------------
 
 - handle_comm: work.pidv3_axi_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 

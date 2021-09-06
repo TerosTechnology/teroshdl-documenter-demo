@@ -92,11 +92,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -106,37 +106,37 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_reset_info_por: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[reset_info]: V(False)
    F[por]: 0:0
 
 - u_reset_info_low_power_exit: prim_subreg
-**Description**
+</br>**Description**
    F[low_power_exit]: 1:1
 
 - u_reset_info_ndm_reset: prim_subreg
-**Description**
+</br>**Description**
    F[ndm_reset]: 2:2
 
 - u_reset_info_hw_req: prim_subreg
-**Description**
+</br>**Description**
    F[hw_req]: 3:3
 
 - u_alert_info_ctrl_en: prim_subreg
-**Description**
+</br>**Description**
  R[alert_info_ctrl]: V(False)
    F[en]: 0:0
 
 - u_alert_info_ctrl_index: prim_subreg
-**Description**
+</br>**Description**
    F[index]: 7:4
 
 - u_alert_info_attr: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_info_attr]: V(True)
 
 - u_alert_info: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_info]: V(True)
 

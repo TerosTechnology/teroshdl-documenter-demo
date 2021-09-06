@@ -140,17 +140,17 @@
   - **Type:** always_ff
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Create steering logic 
 - unnamed: (  )
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -159,106 +159,106 @@
 - u_chk: tlul_cmd_intg_chk
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_socket: tlul_socket_1n
-**Description**
+</br>**Description**
  Create Socket_1n
 
 - u_reg_if: tlul_adapter_reg
 - u_intr_state_hmac_done: prim_subreg
-**Description**
+</br>**Description**
  Register instances
  R[intr_state]: V(False)
    F[hmac_done]: 0:0
 
 - u_intr_state_fifo_empty: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_state_hmac_err: prim_subreg
-**Description**
+</br>**Description**
    F[hmac_err]: 2:2
 
 - u_intr_enable_hmac_done: prim_subreg
-**Description**
+</br>**Description**
  R[intr_enable]: V(False)
    F[hmac_done]: 0:0
 
 - u_intr_enable_fifo_empty: prim_subreg
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_enable_hmac_err: prim_subreg
-**Description**
+</br>**Description**
    F[hmac_err]: 2:2
 
 - u_intr_test_hmac_done: prim_subreg_ext
-**Description**
+</br>**Description**
  R[intr_test]: V(True)
    F[hmac_done]: 0:0
 
 - u_intr_test_fifo_empty: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_empty]: 1:1
 
 - u_intr_test_hmac_err: prim_subreg_ext
-**Description**
+</br>**Description**
    F[hmac_err]: 2:2
 
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  R[alert_test]: V(True)
 
 - u_cfg_hmac_en: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cfg]: V(True)
    F[hmac_en]: 0:0
 
 - u_cfg_sha_en: prim_subreg_ext
-**Description**
+</br>**Description**
    F[sha_en]: 1:1
 
 - u_cfg_endian_swap: prim_subreg_ext
-**Description**
+</br>**Description**
    F[endian_swap]: 2:2
 
 - u_cfg_digest_swap: prim_subreg_ext
-**Description**
+</br>**Description**
    F[digest_swap]: 3:3
 
 - u_cmd_hash_start: prim_subreg_ext
-**Description**
+</br>**Description**
  R[cmd]: V(True)
    F[hash_start]: 0:0
 
 - u_cmd_hash_process: prim_subreg_ext
-**Description**
+</br>**Description**
    F[hash_process]: 1:1
 
 - u_status_fifo_empty: prim_subreg_ext
-**Description**
+</br>**Description**
  R[status]: V(True)
    F[fifo_empty]: 0:0
 
 - u_status_fifo_full: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_full]: 1:1
 
 - u_status_fifo_depth: prim_subreg_ext
-**Description**
+</br>**Description**
    F[fifo_depth]: 8:4
 
 - u_err_code: prim_subreg
-**Description**
+</br>**Description**
  R[err_code]: V(False)
 
 - u_wipe_secret: prim_subreg_ext
-**Description**
+</br>**Description**
  R[wipe_secret]: V(True)
 
 - u_msg_length_lower: prim_subreg
-**Description**
+</br>**Description**
  R[msg_length_lower]: V(False)
 
 - u_msg_length_upper: prim_subreg
-**Description**
+</br>**Description**
  R[msg_length_upper]: V(False)
 

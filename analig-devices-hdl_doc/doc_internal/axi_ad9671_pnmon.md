@@ -63,11 +63,11 @@
 | adc_pn_data_pn_s | wire [31:0]    |                      |
 ## Functions
 - pn23 <font id="function_arguments">()</font> <font id="function_return">return ([31:0])</font>
-**Description**
+</br>**Description**
  PN23 function
 
 - pn9 <font id="function_arguments">()</font> <font id="function_return">return ([31:0])</font>
-**Description**
+</br>**Description**
  PN9 function
 
 ## Processes
@@ -76,6 +76,6 @@
 ## Instantiations
 
 - i_pnmon: ad_pnmon
-**Description**
+</br>**Description**
  pn oos & pn err
 

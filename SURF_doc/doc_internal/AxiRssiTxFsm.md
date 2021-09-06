@@ -126,7 +126,7 @@
                    rdDmaMaster, rdHeaderData_i, rst_i, sndAck_i, sndNull_i,
                    sndResend_i, sndRst_i, sndSyn_i, tspSlave_i, windowSize_i,
                    wrAck, wrDmaSlave )
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )
 ## Instantiations

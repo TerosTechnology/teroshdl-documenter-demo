@@ -43,9 +43,9 @@
 | axilWriteSlave  | in        | AxiLiteWriteSlaveType  |                |
 ## Processes
 - unnamed: ( axiWriteMaster )
-**Description**
+</br>**Description**
   Collapse Axi wdata onto 32-bit AxiLite wdata    Assumes only active 32 bits are asserted,      otherwise could use wstrb to pick correct 32 bits<br> 
 - unnamed: ( axilReadSlave )
 - unnamed: ( axiClk )
-**Description**
+</br>**Description**
  ID Tracking 

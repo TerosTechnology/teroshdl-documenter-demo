@@ -172,7 +172,7 @@
   - **Type:** always
 - unnamed: ( @(posedge fifo_src_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  it helps to flush the source CDC FIFO 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
@@ -182,54 +182,54 @@
   - **Type:** always
 - awvalid_control: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  WRITE address and data channel control 
 - wvalid_control: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  awvalid_control */ 
 - awaddr_control: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  wvalid_control */ 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  latch AWLEN for WLAST generation 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  WRITE beat counter to assert WLAST at the right time 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  NOTE: the write CDC FIFO has a 2x4KB depth, so we need to save the last  burst length when the level is less than 4KB  WARNING: if the CDC depth changes for some reason this will brake 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  the bridge is in a constant read state after the write was finished, until  resets (e.g. before the next initialization/write) 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  status flag to indicate an active read transfer 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  the bridge needs to predict the last read burst to specify its length  this is done by counting the write and read burst, and presuming that after  a X number of write burst will follow n*X number of read burst, where n is  an integer number 
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
 - unnamed: ( @(posedge axi_clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  READ address generation 
 - unnamed: ( @(posedge fifo_dst_clk) )
   - **Type:** always
 ## Instantiations
 
 - i_source_cdc_fifo: util_axis_fifo_asym
-**Description**
+</br>**Description**
 -----------------------------------------------------------------------------
  Source side logic - CDC FIFO instance
 -----------------------------------------------------------------------------
@@ -237,11 +237,11 @@
 
 - i_axi_fifo_src_last_received_sync: sync_bits
 - i_axi_fifo_resetn_sync: sync_bits
-**Description**
+</br>**Description**
  transfer FIFO resets to AXI clock domain
 
 - i_destination_cdc_fifo: util_axis_fifo_asym
-**Description**
+</br>**Description**
  Destination CDC FIFO - storage unit's clock domain to destination clock
  domain
 

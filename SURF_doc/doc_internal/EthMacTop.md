@@ -110,31 +110,31 @@
 ## Instantiations
 
 - U_TxFifo: surf.EthMacTxFifo
-**Description**
+</br>**Description**
 --------
  TX FIFO
 --------
 
 - U_Tx: surf.EthMacTx
-**Description**
+</br>**Description**
 ----------
  TX Module
 ----------
 
 - U_FlowCtrl: surf.EthMacFlowCtrl
-**Description**
+</br>**Description**
 -------------------
  Flow Control Logic
 -------------------
 
 - U_Rx: surf.EthMacRx
-**Description**
+</br>**Description**
 ----------
  RX Module
 ----------
 
 - U_RxFifo: surf.EthMacRxFifo
-**Description**
+</br>**Description**
 --------
  RX FIFO
 --------

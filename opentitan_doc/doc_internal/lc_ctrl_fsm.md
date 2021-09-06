@@ -123,7 +123,7 @@
 - u_state_regs: prim_flop
 - u_cnt_regs: prim_flop
 - u_lc_ctrl_state_decode: lc_ctrl_state_decode
-**Description**
+</br>**Description**
 //////////////////////////////////////////////////////////////////
  Decoding and transition logic for redundantly encoded LC state //
 //////////////////////////////////////////////////////////////////
@@ -132,15 +132,15 @@
  main FSM into INVALID right away.
 
 - u_lc_ctrl_state_transition: lc_ctrl_state_transition
-**Description**
+</br>**Description**
  LC transition checker logic and next state generation.
 
 - u_lc_ctrl_signal_decode: lc_ctrl_signal_decode
-**Description**
+</br>**Description**
  LC signal decoder and broadcasting logic.
 
 - u_prim_lc_sender_clk_byp_req: prim_lc_sender
-**Description**
+</br>**Description**
  Conditional signals set by main FSM.
 
 - u_prim_lc_sender_flash_rma_req: prim_lc_sender

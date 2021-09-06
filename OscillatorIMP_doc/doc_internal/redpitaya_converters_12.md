@@ -108,7 +108,7 @@
 
 - redpitaya_clk: redpitaya_adc_dac_clk
 - spi_en_conf: work.redpitaya_converters_12_sync_bit
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------------------------------------------------------
  AXI COMM
 ---------------------------------------------------------------------------------------------------------------------------
@@ -118,17 +118,17 @@
 - pll_cfg_en: work.redpitaya_converters_12_sync_bit
 - comm_inst: work.redpitaya_converters_12_comm
 - handle_comm: work.redpitaya_converters_12_handComm
-**Description**
+</br>**Description**
  Instantiation of Axi Bus Interface S00_AXI
 
 - spi_control: adc_dac_spi_control
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------------------------------------------------------
  ADC DAC SPI CONTROL
 ---------------------------------------------------------------------------------------------------------------------------
 
 - pll_to_vcxo: Si571_pll
-**Description**
+</br>**Description**
 ---------------------------------------------------------------------------------------------------------------------------
  PLL ENABLE 
 ---------------------------------------------------------------------------------------------------------------------------                    

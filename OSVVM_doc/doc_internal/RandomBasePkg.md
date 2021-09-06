@@ -22,7 +22,7 @@
 | RandomParmType |                                                                                                                                                                                                                                               |                                                                                                                        |
 ## Functions
 - Uniform <font id="function_arguments">(Result : out real ;<br><span style="padding-left:20px">  Seed : inout RandomSeedType) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------
  Uniform
    Generate a random number with a Uniform distribution
@@ -36,7 +36,7 @@
 
 
 - to_string <font id="function_arguments">(A : RandomSeedType) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------
 - RandomSeedType IO
 
@@ -44,7 +44,7 @@
 - read <font id="function_arguments">(variable L: inout line ;<br><span style="padding-left:20px"> A : out RandomSeedType ;<br><span style="padding-left:20px"> good : out boolean ) </font> <font id="function_return">return ()</font>
 - read <font id="function_arguments">(variable L: inout line ;<br><span style="padding-left:20px"> A : out RandomSeedType ) </font> <font id="function_return">return ()</font>
 - to_string <font id="function_arguments">(A : RandomDistType) </font> <font id="function_return">return string </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------
  RandomParm IO
 
@@ -56,7 +56,7 @@
 - read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomParmType ;<br><span style="padding-left:20px"> good : out boolean ) </font> <font id="function_return">return ()</font>
 - read <font id="function_arguments">(variable L : inout line ;<br><span style="padding-left:20px"> A : out RandomParmType ) </font> <font id="function_return">return ()</font>
 - Scale <font id="function_arguments">(A,<br><span style="padding-left:20px"> Min,<br><span style="padding-left:20px"> Max : real) </font> <font id="function_return">return real </font>
-**Description**
+</br>**Description**
 ---------------------------------------------------------------
 -  Randomization Support
 -    Scale                - Scale a value to be within a given range

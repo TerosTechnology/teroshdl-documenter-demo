@@ -168,43 +168,43 @@
   - **Type:** always
 - input_reg_process: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
    ------------------ Input Register ------------------ 
 - comb_delay_section1: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section1: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section1 
 - comb_delay_section2: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section2: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section2 
 - comb_delay_section3: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section3: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section3 
 - comb_delay_section4: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section4: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section4 
 - comb_delay_section5: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section5: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section5 
 - comb_delay_section6: ( @ (posedge clk or posedge reset) )
   - **Type:** always
 - cic_pipeline_process_section6: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
  comb_delay_section6 
 - integrator_delay_section7: ( @ (posedge clk or posedge reset) )
   - **Type:** always
@@ -220,9 +220,9 @@
   - **Type:** always
 - unnamed: ( @(rate_unsigned) )
   - **Type:** always
-**Description**
+</br>**Description**
  integrator_delay_section12 
 - output_reg_process: ( @ (posedge clk or posedge reset) )
   - **Type:** always
-**Description**
+</br>**Description**
    ------------------ Output Register ------------------ 

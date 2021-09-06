@@ -20,7 +20,7 @@
 | t_wishbone_bfm_config |      |  Configuration record to be assigned in the test harness.  |
 ## Functions
 - init_wishbone_if_signals <font id="function_arguments">( addr_width : natural;<br><span style="padding-left:20px"> data_width : natural ) </font> <font id="function_return">return t_wishbone_if </font>
-**Description**
+</br>**Description**
 ========================================================================================================================
  BFM procedures
 ========================================================================================================================

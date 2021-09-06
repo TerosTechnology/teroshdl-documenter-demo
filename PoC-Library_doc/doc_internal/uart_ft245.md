@@ -98,5 +98,5 @@
 - unnamed: ( clk )
 - unnamed: ( fsm_state, snd_strobe, reg_delay, ff_susp, ff_rxf, ff_txe )
 - unnamed: ( clk )
-**Description**
+</br>**Description**
 --------------------------------------------  registers 

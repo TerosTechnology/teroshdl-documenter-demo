@@ -103,9 +103,9 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  no reset on state 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  since only one of the internal states is active at a time, a  logical "or" is made of all of the buses into one 

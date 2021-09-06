@@ -142,41 +142,41 @@
 | pmp_t         |      |                                 |
 ## Processes
 - mem_adr_reg: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Data Interface: Access Address ---------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - misaligned_d_check: ( mar, ctrl_i )
-**Description**
+</br>**Description**
  alignment check -- 
 - mem_do_reg: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Data Interface: Write Data -------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - byte_enable: ( mar, mdo, ctrl_i )
-**Description**
+</br>**Description**
  byte enable and output data alignment -- 
 - mem_di_reg: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Data Interface: Read Data --------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - read_align: ( mdi, mar, ctrl_i )
-**Description**
+</br>**Description**
  input data alignment and sign extension -- 
 - data_access_arbiter: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Data Access Arbiter --------------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - pmp_dbus_buffer: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c -- 
 - exclusive_access_controller: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Reservation Controller (LR/SC [A extension]) -------------------------------------------  ------------------------------------------------------------------------------------------- 
 - ifetch_arbiter: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Instruction Fetch Arbiter --------------------------------------------------------------  ------------------------------------------------------------------------------------------- 
 - pmp_ibus_buffer: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  32-bit accesses only  additional register stage for control signals if using PMP_NUM_REGIONS > pmp_num_regions_critical_c -- 
 - pmp_masks: ( rstn_i, clk_i )
-**Description**
+</br>**Description**
  Physical Memory Protection (PMP) -------------------------------------------------------  -------------------------------------------------------------------------------------------  compute address masks (ITERATIVE!!!) -- 
 - pmp_check_permission: ( pmp, pmp_ctrl_i, ctrl_i )
-**Description**
+</br>**Description**
  r  check access type and region's permissions -- 

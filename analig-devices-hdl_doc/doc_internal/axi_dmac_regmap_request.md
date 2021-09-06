@@ -124,7 +124,7 @@
   - **Type:** always
 - unnamed: ( @(posedge clk) )
   - **Type:** always
-**Description**
+</br>**Description**
  Request ID and Request done bitmap handling 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
@@ -139,6 +139,6 @@
 ## Instantiations
 
 - i_transfer_lenghts_fifo: util_axis_fifo
-**Description**
+</br>**Description**
  Buffer the length and transfer ID of partial transfers
 

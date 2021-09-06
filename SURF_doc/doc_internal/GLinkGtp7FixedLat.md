@@ -112,6 +112,6 @@
 ## Instantiations
 
 - Gtp7Core_Inst: surf.Gtp7Core
-**Description**
+</br>**Description**
  GTP 7 Core in Fixed Latency mode
 

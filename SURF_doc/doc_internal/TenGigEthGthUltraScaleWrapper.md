@@ -82,13 +82,13 @@
 ## Instantiations
 
 - PwrUpRst_Inst: surf.PwrUpRst
-**Description**
+</br>**Description**
 ---------------
  Power Up Reset
 ---------------
 
 - TenGigEthGthUltraScaleClk_Inst: surf.TenGigEthGthUltraScaleClk
-**Description**
+</br>**Description**
 --------------------
  Common Clock Module
 --------------------

@@ -134,7 +134,7 @@
   - **Type:** always_ff
 - unnamed: ( @(posedge clk_i or negedge rst_ni) )
   - **Type:** always_ff
-**Description**
+</br>**Description**
  prog_pend_q is necessary to emulate flash behavior that a bit written to 0 cannot be written  back to 1 without an erase 
 - unnamed: (  )
   - **Type:** always_comb

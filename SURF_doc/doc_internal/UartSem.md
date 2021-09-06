@@ -56,7 +56,7 @@
 
 - U_Sem: surf.SemWrapper
 - U_Uart: surf.UartWrapper
-**Description**
+</br>**Description**
 ------------------
   UART Serdes Core
 ------------------

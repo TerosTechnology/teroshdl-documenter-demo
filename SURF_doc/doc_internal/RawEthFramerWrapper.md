@@ -54,7 +54,7 @@
 
 - U_Core: surf.RawEthFramer
 - U_RemoteMacLut: surf.AxiDualPortRam
-**Description**
+</br>**Description**
 ---------------
  Remote MAC LUT
 ---------------

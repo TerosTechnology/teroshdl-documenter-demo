@@ -87,6 +87,6 @@
 ## Instantiations
 
 - i_deframer: ad_ip_jesd204_tpl_adc_deframer
-**Description**
+</br>**Description**
  synchronization logic
 

@@ -154,7 +154,7 @@
   - **Type:** always
 - unnamed: ( @(*) )
   - **Type:** always
-**Description**
+</br>**Description**
  IRQ pending register is write-1-to-clear */ 
 - unnamed: ( @(posedge up_clk) )
   - **Type:** always

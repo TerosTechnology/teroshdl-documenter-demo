@@ -69,7 +69,7 @@
 
 - IBUFDS_GTE2_Inst: IBUFDS_GTE2
 - XauiGth7_Inst: surf.XauiGth7
-**Description**
+</br>**Description**
 --------------------
  10 GigE XAUI Module
 --------------------

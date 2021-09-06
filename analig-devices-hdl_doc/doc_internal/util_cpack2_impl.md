@@ -86,7 +86,7 @@
 ## Instantiations
 
 - i_interleave: ad_perfect_shuffle
-**Description**
+</br>**Description**
 
    * Data at the input of the routing network should be interleaved. The cpack
    * core is supposed to accept deinterleaved data. This just rearrange the bits

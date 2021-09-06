@@ -102,19 +102,19 @@
 ## Processes
 - unnamed: ( @* )
   - **Type:** always
-**Description**
+</br>**Description**
  Write logic 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @* )
   - **Type:** always
-**Description**
+</br>**Description**
  Read logic 
 - unnamed: ( @(posedge clk) )
   - **Type:** always
 - unnamed: ( @* )
   - **Type:** always
-**Description**
+</br>**Description**
  Output register 
 - unnamed: ( @(posedge clk) )
   - **Type:** always

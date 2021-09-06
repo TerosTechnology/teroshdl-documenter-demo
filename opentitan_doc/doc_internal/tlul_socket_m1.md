@@ -77,6 +77,6 @@
 ## Instantiations
 
 - u_devicefifo: tlul_fifo_sync
-**Description**
+</br>**Description**
  Device Req/Rsp FIFO
 

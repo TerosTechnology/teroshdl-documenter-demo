@@ -21,7 +21,7 @@
 | t_gmii_bfm_config |      |  Configuration record to be assigned in the test harness.  |
 ## Functions
 - init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_tx_if </font>
-**Description**
+</br>**Description**
 ==========================================================================================
  BFM procedures 
 ==========================================================================================
@@ -31,21 +31,21 @@
 
 - init_gmii_if_signals <font id="function_arguments">()</font> <font id="function_return">return t_gmii_rx_if </font>
 - gmii_write <font id="function_arguments">( constant data_array   : in    t_slv_array;<br><span style="padding-left:20px"> constant msg          : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_tx_if   : inout t_gmii_tx_if;<br><span style="padding-left:20px"> constant scope        : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  GMII Write
  BFM -> DUT
 -------------------------------------------------------------------------------------------
 
 - gmii_read <font id="function_arguments">( variable data_array    : out   t_slv_array;<br><span style="padding-left:20px"> variable data_len      : out   natural;<br><span style="padding-left:20px"> constant msg           : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_rx_if    : inout t_gmii_rx_if;<br><span style="padding-left:20px"> constant scope         : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel  : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config        : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT;<br><span style="padding-left:20px"> constant ext_proc_call : in    string := ""  -- External proc_call. Overwrite if called from another BFM procedure ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  GMII Read
  DUT -> BFM
 -------------------------------------------------------------------------------------------
 
 - gmii_expect <font id="function_arguments">( constant data_exp     : in    t_slv_array;<br><span style="padding-left:20px"> constant msg          : in    string            := "";<br><span style="padding-left:20px"> signal   gmii_rx_if   : inout t_gmii_rx_if;<br><span style="padding-left:20px"> constant alert_level  : in    t_alert_level     := ERROR;<br><span style="padding-left:20px"> constant scope        : in    string            := C_SCOPE;<br><span style="padding-left:20px"> constant msg_id_panel : in    t_msg_id_panel    := shared_msg_id_panel;<br><span style="padding-left:20px"> constant config       : in    t_gmii_bfm_config := C_GMII_BFM_CONFIG_DEFAULT ) </font> <font id="function_return">return ()</font>
-**Description**
+</br>**Description**
 -------------------------------------------------------------------------------------------
  GMII Expect
 -------------------------------------------------------------------------------------------

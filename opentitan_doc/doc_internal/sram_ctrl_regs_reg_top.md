@@ -83,11 +83,11 @@
   - **Type:** always_comb
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Check sub-word write is permitted 
 - unnamed: (  )
   - **Type:** always_comb
-**Description**
+</br>**Description**
  Read data return 
 - unnamed: (  )
   - **Type:** always_comb
@@ -97,53 +97,53 @@
 - u_rsp_intg_gen: tlul_rsp_intg_gen
 - u_reg_if: tlul_adapter_reg
 - u_alert_test: prim_subreg_ext
-**Description**
+</br>**Description**
  Register instances
  R[alert_test]: V(True)
 
 - u_status_bus_integ_error: prim_subreg
-**Description**
+</br>**Description**
  R[status]: V(False)
    F[bus_integ_error]: 0:0
 
 - u_status_init_error: prim_subreg
-**Description**
+</br>**Description**
    F[init_error]: 1:1
 
 - u_status_escalated: prim_subreg
-**Description**
+</br>**Description**
    F[escalated]: 2:2
 
 - u_status_scr_key_valid: prim_subreg
-**Description**
+</br>**Description**
    F[scr_key_valid]: 3:3
 
 - u_status_scr_key_seed_valid: prim_subreg
-**Description**
+</br>**Description**
    F[scr_key_seed_valid]: 4:4
 
 - u_status_init_done: prim_subreg
-**Description**
+</br>**Description**
    F[init_done]: 5:5
 
 - u_exec_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[exec_regwen]: V(False)
 
 - u_exec: prim_subreg
-**Description**
+</br>**Description**
  R[exec]: V(False)
 
 - u_ctrl_regwen: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl_regwen]: V(False)
 
 - u_ctrl_renew_scr_key: prim_subreg
-**Description**
+</br>**Description**
  R[ctrl]: V(False)
    F[renew_scr_key]: 0:0
 
 - u_ctrl_init: prim_subreg
-**Description**
+</br>**Description**
    F[init]: 1:1
 

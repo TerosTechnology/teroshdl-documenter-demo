@@ -132,6 +132,6 @@
 ## Processes
 - comb: ( r, rst_i, appSsiMaster_i, sndSyn_i, sndAck_i, connActive_i, closed_i, sndRst_i, initSeqN_i, windowSize_i, headerRdy_i, ack_i, ackN_i, bufferSize_i,
                    sndResend_i, sndNull_i, tspSsiSlave_i, rdHeaderData_i, rdBuffData_i, s_headerAndChksum, chksumValid_i, headerLength_i, injectFault_i )
-**Description**
+</br>**Description**
 --------------------------------------------------------------------------------------------- 
 - seq: ( clk_i )
