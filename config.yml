@@ -106,6 +106,12 @@ OSVVM:
     folder: OSVVM/
     vhdl_symbol: ""
     verilog_symbol: ""
+    
+htfft:
+    url: https://github.com/benreynwar/htfft.git
+    folder: htfft/htfft
+    vhdl_symbol: ""
+    verilog_symbol: ""
 
 
 
